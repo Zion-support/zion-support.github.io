@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
-import analytics from '../utils/analytics';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
+import { analytics } from '../utils/analytics';
 
-export const usePerformance = () => {
+/**
+ * Custom hook for performance monitoring
+ */
+const usePerformance = () => {
   useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
-    const observer = new PerformanceObserver(list => {
-      list.getEntries().forEach(entry => {
+    // Monitor long tasks
+    const observer = performanceOptimizer.monitorLongTasks(entries => {
+      entries.forEach(entry => {
         analytics.track(
           'long_task',
           'performance',
@@ -18,31 +19,12 @@ export const usePerformance = () => {
         );
       });
     });
-import { analytics } from '../utils/analytics';
 
-export const usePerformance = () => {
-  useEffect(() => {
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          analytics.track(
-            'long_task',
-            'performance',
-            'detected',
-            undefined,
-            entry.duration
-          );
-        });
-      });
-
-      observer.observe({ entryTypes: ['longtask'] });
-
-      return () => {
-        if (observer && typeof observer.disconnect === 'function') {
-          observer.disconnect();
-        }
-      };
-    }
+    return () => {
+      if (observer && typeof observer.disconnect === 'function') {
+        observer.disconnect();
+      }
+    };
   }, []);
 };
 
