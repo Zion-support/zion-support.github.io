@@ -83,7 +83,7 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              )}origin/main
+              )}
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@ const Navigation: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                )}origin/main
+                )}
               </div>
 
               <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
