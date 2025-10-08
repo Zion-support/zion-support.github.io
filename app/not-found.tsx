@@ -179,7 +179,6 @@ export default function NotFound() {
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-17a6
         </div>
       </div>
     </div>

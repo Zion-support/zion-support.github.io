@@ -50,11 +50,7 @@ class PerformanceMonitor {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-<<<<<<< HEAD
             (this.metrics[metricKey] as number) = entry.startTime;
-=======
-            (this.metrics as any)[metricKey] = entry.startTime;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fd0a
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
