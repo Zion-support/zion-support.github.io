@@ -150,6 +150,9 @@ const App: React.FC = () => {
       >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d190
         <PerformanceOptimizer>
           <AccessibilityEnhancer>
             <SEOEnhancer
@@ -204,6 +207,7 @@ const App: React.FC = () => {
                     </Suspense>
                   </main>
                   <Footer />
+<<<<<<< HEAD
                 </div>
               </Router>
 =======
@@ -267,6 +271,9 @@ const App: React.FC = () => {
                 <Footer />cursor/analyze-improve-and-deploy-application-3d67
 >>>>>>> cursor/fix-errors-and-merge-to-main-a8ed
 
+=======
+                  
+>>>>>>> cursor/fix-errors-and-merge-to-main-d190
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />
                   

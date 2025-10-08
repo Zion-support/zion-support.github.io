@@ -1,6 +1,10 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
+<<<<<<< HEAD
 const _React = require('react');
+=======
+const React = require('react');
+>>>>>>> cursor/fix-errors-and-merge-to-main-d190
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -46,7 +50,10 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+<<<<<<< HEAD
   const mockReact = require('react');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d190
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -58,11 +65,9 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
-      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
@@ -77,7 +82,6 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
-      const React = require('react');
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
