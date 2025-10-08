@@ -267,11 +267,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   };
 
-  // Expose utility functions
-  React.useImperativeHandle(ref, () => ({
-    announceToScreenReader,
-    setFontSize: (size: number) => setFontSize(size),
-  }), []);
+  // Font size setter wrapper
+  const setFontSize = useCallback((size: number) => {
+    _setFontSize(size);
+  }, []);
   // Helper functions
   const addSkipLinks = useCallback(() => {
     const skipLinksContainer = document.createElement('div');
