@@ -1,4 +1,5 @@
 import Link from 'next/link';
+
 export default function MultiAgentOpsControlTowerBlueprintPage() {
   return (
     <div>
@@ -7,4 +8,10 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
           <div>
             <div>
               <span>🛰️ MULTI-AGENT OPS CONTROL</span>
-import Link from 'next/link';
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -17,12 +17,8 @@ export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message);
   
-<<<<<<< HEAD
-  // eslint-disable-next-line no-console
+ 
     console.error({
-=======
-  logger.error({
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),

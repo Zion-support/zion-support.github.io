@@ -99,30 +99,19 @@ export class ErrorReporter {
   private logToConsole(report: ErrorReport): void {
     const style = this.getConsoleStyle(report.severity);
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-<<<<<<< HEAD
-    if (process.env['NODE_ENV'] === 'development') { // eslint-disable-next-line no-console
+if (process.env['NODE_ENV'] === 'development') {  
     console.log('Message:', report.message); }
-    if (process.env['NODE_ENV'] === 'development') { // eslint-disable-next-line no-console
+    if (process.env['NODE_ENV'] === 'development') {  
     console.log('Timestamp:', report.timestamp); }
-    if (process.env['NODE_ENV'] === 'development') { // eslint-disable-next-line no-console
+    if (process.env['NODE_ENV'] === 'development') {  
     console.log('URL:', report.url); }
     if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') { // eslint-disable-next-line no-console
+      if (process.env['NODE_ENV'] === 'development') {  
     console.log('Stack:', report.stack); }
     }
     if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') { // eslint-disable-next-line no-console
+      if (process.env['NODE_ENV'] === 'development') {  
     console.log('Context:', report.context); }
-=======
-    if (process.env['NODE_ENV'] === 'development') { logger.info('Message:', report.message); }
-    if (process.env['NODE_ENV'] === 'development') { logger.info('Timestamp:', report.timestamp); }
-    if (process.env['NODE_ENV'] === 'development') { logger.info('URL:', report.url); }
-    if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') { logger.info('Stack:', report.stack); }
-    }
-    if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') { logger.info('Context:', report.context); }
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
     console.groupEnd();
   }

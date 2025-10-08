@@ -401,12 +401,8 @@ class AdvancedAnalytics {
         body: JSON.stringify(event)
       });
     } catch (error) {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
+ 
     console.warn('Failed to send analytics event:', error);
-=======
-      logger.warn('Failed to send analytics event:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
@@ -596,12 +592,8 @@ class AdvancedAnalytics {
         body: JSON.stringify(session)
       });
     } catch (error) {
-<<<<<<< HEAD
-      // eslint-disable-next-line no-console
+ 
     console.warn('Failed to send session data:', error);
-=======
-      logger.warn('Failed to send session data:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
     }
   }
 
