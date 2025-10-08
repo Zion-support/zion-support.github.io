@@ -162,7 +162,14 @@ class SecurityEnhancer {
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch;
     window.fetch = async (input, init) => {
-      const url = typeof input === 'string' ? input : input.url;
+      let url: string;
+      if (typeof input === 'string') {
+        url = input;
+      } else if (input instanceof Request) {
+        url = input.url;
+      } else {
+        url = input.toString();
+      }
       
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
