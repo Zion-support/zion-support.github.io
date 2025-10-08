@@ -10,6 +10,24 @@ Please check your build settings
 ## Root Cause
 The `@netlify/plugin-nextjs` plugin is installed in your Netlify site settings, but **this is a Vite project, not a Next.js project**. The plugin is looking for Next.js build output and failing because it only finds Vite's output in the `dist/` directory.
 
+## ✅ CODE FIXES APPLIED
+
+The following fixes have been applied to remove Next.js dependencies from the active codebase:
+
+1. **Fixed `/src/components/Layout.tsx`**
+   - Changed: `import Link from 'next/link'` → `import { Link } from 'react-router-dom'`
+   - Now uses React Router's Link component
+
+2. **Disabled `/src/middleware.ts`**
+   - Commented out Next.js middleware code
+   - Security headers are configured in `netlify.toml` instead
+
+3. **Disabled `/middleware.ts`**
+   - Commented out Next.js middleware with rate limiting
+   - Not compatible with Vite build system
+
+These changes ensure no active code imports from Next.js, which should prevent auto-detection.
+
 ## Solution
 
 ### Step 1: Remove the Next.js Plugin from Netlify UI (REQUIRED)
