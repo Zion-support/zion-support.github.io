@@ -173,8 +173,13 @@ class MonitoringService {
       })
     }
     // Send to analytics (if configured)
+<<<<<<< HEAD
     if (typeof gtag === 'function') {
       gtag('event', name, {
+=======
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'web_vitals', {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-cd0d
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',
         non_interaction: true,
