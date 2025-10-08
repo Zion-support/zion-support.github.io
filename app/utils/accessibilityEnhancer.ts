@@ -678,12 +678,17 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
-- Total Issues: ${metrics.totalIssues}
-- Critical Issues: ${metrics.criticalIssues}
-- Warnings: ${metrics.warnings}
-- Violations Fixed: ${metrics.violationsFixed}
+
+- Focus Traps: ${metrics.focusTraps}
+- ARIA Issues: ${metrics.ariaIssues}
+- Keyboard Issues: ${metrics.keyboardIssues}
+- Color Contrast Issues: ${metrics.colorContrastIssues}
+- Alt Text Missing: ${metrics.altTextMissing}
+- Heading Structure Issues: ${metrics.headingStructureIssues}
+- Link Text Issues: ${metrics.linkTextIssues}
+- Form Label Issues: ${metrics.formLabelIssues}
+- Language Issues: ${metrics.languageIssues}
+- Semantic Issues: ${metrics.semanticIssues}
     `;
   }
 }
-
-export default new AccessibilityEnhancer();

@@ -42,9 +42,7 @@ const ContactPage: React.FC = () => {
                     Phone
                   </h3>
                   <p className='text-gray-600'>
-                    <a href='tel:+1-302-464-0950' className='hover:text-blue-600'>
-                      +1-302-464-0950
-                    </a>
+                    <a href="tel:+1-302-464-0950" className="hover:text-blue-600">+1-302-464-0950</a>
                   </p>
                 </div>
                 <div>
@@ -52,9 +50,7 @@ const ContactPage: React.FC = () => {
                     Email
                   </h3>
                   <p className='text-gray-600'>
-                    <a href='mailto:kleber@ziontechgroup.com' className='hover:text-blue-600'>
-                      kleber@ziontechgroup.com
-                    </a>
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</a>
                   </p>
                 </div>
               </div>

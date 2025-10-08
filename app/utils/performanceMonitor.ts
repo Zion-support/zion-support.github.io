@@ -234,11 +234,13 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
-- Performance Score: ${score}/100
-- Total Metrics: ${Object.keys(metrics).length}
-- Critical Metrics: ${Object.values(metrics).filter((m: any) => m?.score && m.score < 50).length}
+
+- Score: ${score}
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
     `;
   }
 }
-
-export default new PerformanceMonitor();
