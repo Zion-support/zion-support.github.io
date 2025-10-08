@@ -1,40 +1,43 @@
-// Error handling utilities
+/**
+ * Error handler utilities
+ */
 
-export class AppError extends Error {
-  statusCode: number;
-  isOperational: boolean;
+export class ErrorHandler {
+  private errors: Error[] = [];
 
-  constructor(message: string, statusCode: number = 500, isOperational: boolean = true) {
-    super(message);
-    this.statusCode = statusCode;
-    this.isOperational = isOperational;
-    Object.setPrototypeOf(this, AppError.prototype);
+  handleError(error: Error) {
+    this.errors.push(error);
+    console.error('Error:', error);
+  }
+
+  reportError(errorData: any) {
+    console.error('Error reported:', errorData);
+  }
+
+  getErrors() {
+    return this.errors;
   }
 }
 
-export const handleError = (error: Error | AppError): void => {
-  const statusCode = error instanceof AppError ? error.statusCode : 500;
-  const message = error.message || 'Internal Server Error';
+export const errorHandler = new ErrorHandler();
 
-  console.error('Error:', {
-    message,
-    statusCode,
-    stack: error.stack,
-  });
+export enum ErrorSeverity {
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
+}
 
-  // In production, you might want to send errors to a logging service
-  if (process.env.NODE_ENV === 'production') {
-    // Send to logging service
-  }
-};
+export enum ErrorCategory {
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  SYSTEM = 'system',
+  USER = 'user',
+}
 
-export const asyncErrorHandler = (fn: Function) => {
-  return async (...args: any[]) => {
-    try {
-      return await fn(...args);
-    } catch (error) {
-      handleError(error as Error);
-      throw error;
-    }
-  };
-};
+export interface ErrorInfo {
+  message: string;
+  severity: ErrorSeverity;
+  category: ErrorCategory;
+  timestamp: number;
+}

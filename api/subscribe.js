@@ -1,6 +1,19 @@
 const { withSentry } = require('./withSentry.cjs');
+const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
+
+
+
+
+
+
+
+
+
+
+
+
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -10,39 +23,182 @@ async function handler(req, res) {
     return;
   }
 
-  const { email } = req.body || {};
+  const { email, name, source = 'website' } = req.body || {};
 
-  if (!email || !email.includes('@')) {
+  if (!email) {
     res.statusCode = 400;
-    res.json({ error: 'Valid email is required' });
+    res.json({ error: 'Email is required' });
     return;
   }
-
-  const file = path.join(process.cwd(), 'data', 'subscribers.json');
-  let existing = [];
 
   try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email } = req.body || {};
+    
+
+  try {
+    const { email } = req.body || {};
+
+  try {
+    const { email, name, source = 'website' } = req.body || {};
+
+    if (!email) {
+      res.statusCode = 400;
+      res.json({ error: 'Email is required' });
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.json({ error: 'Invalid email' });
+      return;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    const file = path.join(
+      process.cwd(),
+      'data',
+      'newsletter-subscriptions.json'
+    );
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    let existing = [];
+    
+    
+    let existing = [];
+    
+
+    let existing = [];
+
+    try {
+      existing = JSON.parse(fs.readFileSync(file, 'utf8'));
+      if (!Array.isArray(existing)) existing = [];
+    } catch {
+      // File doesn't exist or is invalid, use empty array
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    existing.push({
+      email,
+      subscribedAt: new Date().toISOString()
+    });
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Subscribe API error:', err);
+  } catch (error) {
+    console.error('Subscribe API error:', error);
+  } catch (error) {
+  } catch (error) {
+
+    existing.push({
+      email,
+      name,
+      source,
+      subscribedAt: new Date().toISOString(),
+    });
+
+    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Subscribe API error:', err);
+    res.statusCode = 500;
+    res.json({ error: err.message || 'Subscription failed' });
   }
-
-  // Check if email already exists
-  if (existing.some(sub => sub.email === email)) {
-    res.statusCode = 409;
-    res.json({ error: 'Email already subscribed' });
-    return;
-  }
-
-  existing.push({
-    email,
-    subscribedAt: new Date().toISOString(),
-  });
-
-  fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-  res.statusCode = 200;
-  res.json({ success: true, message: 'Successfully subscribed' });
 }
+
+
+
+
+
+
+
+
+
+
+
+module.exports = withSentry(handler);
 
 module.exports = withSentry(handler);

@@ -1,9 +1,5 @@
 import type { ProviderConnection, SyncLogEntry } from './types';
-
-// Simple UUID generator
-const generateId = (): string => {
-  return `${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-};
+import type { ProviderConnection, SyncLogEntry } from './types';
 
 export async function simulateAction<T = unknown>(
   connection: ProviderConnection,
@@ -11,83 +7,199 @@ export async function simulateAction<T = unknown>(
   details: Record<string, unknown> = {}
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
+    id: Math.random().toString(36).substr(2, 9),
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import type { ProviderConnection, SyncLogEntry } from './types';
+// Simple UUID generator since uuid package is not available
+const generateId = (): string => {
+  return Math.random().toString(36).substr(2, 9);
+};
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+import type { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+
+export async function simulateAction<T = any>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any> = {}
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    id: uuidv4(),
+    id: uuidv4(),
     id: generateId(),
-    connectionId: connection.id,
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    id: uuidv4(),
+    timestamp: Date.now(),
     providerId: connection.providerId,
+    level: 'info',
+    connectionId: connection.id,
     action,
     status: 'success',
-    timestamp: Date.now(),
+    message: `Action ${action} completed successfully`,
     details,
+    timestamp: new Date(),
   };
 
-  // Simulate async operation
-  await new Promise(resolve => setTimeout(resolve, 100));
+  // Simulate occasional errors
+  if (Math.random() < 0.1) {
+    log.status = 'error';
+    log.message = `Action ${action} failed: Simulated error`;
+    throw new Error(log.message);
+  }
+
+  // Simulate occasional warnings
+  if (Math.random() < 0.2) {
+    log.status = 'warning';
+    log.message = `Action ${action} completed with warnings`;
+  }
 
   const result = {
     success: true,
-    message: `Action ${action} completed successfully`,
     data: details,
+    timestamp: new Date().toISOString(),
   } as T;
 
   return { log, result };
 }
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
 
-export async function syncData(
-  connection: ProviderConnection,
-  syncType: 'full' | 'incremental' = 'incremental'
-): Promise<SyncLogEntry> {
-  const log: SyncLogEntry = {
-    id: generateId(),
-    connectionId: connection.id,
-    providerId: connection.providerId,
-    action: `sync_${syncType}`,
-    status: 'in_progress',
-    timestamp: Date.now(),
-    details: { syncType },
-  };
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
 
-  try {
-    // Simulate sync operation
-    await new Promise(resolve => setTimeout(resolve, 500));
-    
-    log.status = 'success';
-    log.details = {
-      ...log.details,
-      recordsProcessed: Math.floor(Math.random() * 1000) + 100,
-      duration: 500,
-    };
-  } catch (error) {
-    log.status = 'error';
-    log.details = {
-      ...log.details,
-      error: error instanceof Error ? error.message : 'Unknown error',
-    };
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
+};
+// ATS actions
+export const ats = {
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant });
+  },
+  
 
-  return log;
-}
-
-export async function testConnection(connection: ProviderConnection): Promise<boolean> {
+export async function testConnection(
+  connection: ProviderConnection
+): Promise<boolean> {
   try {
-    await new Promise(resolve => setTimeout(resolve, 200));
+    await simulateAction(connection, 'test_connection');
     return true;
   } catch {
     return false;
   }
 }
 
-export async function refreshToken(connection: ProviderConnection): Promise<string> {
-  // Simulate token refresh
-  await new Promise(resolve => setTimeout(resolve, 300));
-  return `new_token_${generateId()}`;
-}
+export async function syncData(
+  connection: ProviderConnection
+): Promise<SyncLogEntry[]> {
+  const logs: SyncLogEntry[] = [];
 
-export interface SyncLogEntry {
-  id: string;
-  connectionId: string;
-  providerId: string;
-  action: string;
-  status: 'in_progress' | 'success' | 'error';
-  timestamp: number;
-  details: Record<string, unknown>;
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+
+// CRM actions
+export const crm = {
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+    return simulateAction(connection, 'crm.syncContact', { contact });
+  },
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note });
+  },
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
+  try {
+    const { log } = await simulateAction(connection, 'sync_data', {
+      lastSync: connection.lastSync?.toISOString(),
+    });
+    logs.push(log);
+  } catch (error) {
+    logs.push({
+      id: Math.random().toString(36).substr(2, 9),
+      connectionId: connection.id,
+      action: 'sync_data',
+      status: 'error',
+      message: error instanceof Error ? error.message : 'Unknown error',
+      timestamp: new Date(),
+    });
+  }
+
+
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+    return simulateAction(connection, 'ats.updateStatus', { change });
+  }
+};
+  return logs;
 }

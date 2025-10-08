@@ -4,11 +4,7 @@
  * Optimizes banner loading by implementing lazy loading and code splitting
  * to improve initial page load performance.
  */
-=======
 import { lazy, ComponentType } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3f25:utils/bannerLazyLoader.ts
 
 import { lazy, ComponentType } from 'react';
 
@@ -19,11 +15,6 @@ interface LazyBannerConfig {
   onError?: (error: Error) => void;
 }
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
 export class BannerLazyLoader {
   private loadedBanners: Map<string, ComponentType<any>> = new Map();
   private loadingPromises: Map<string, Promise<ComponentType<any>>> = new Map();
@@ -120,7 +111,6 @@ export const lazyLoadBanner = (
             .catch(retryError => {
               console.error(
                 `Retry failed for banner: ${componentName}`,
->>>>>>> origin/main
                 retryError
               );
               // Return a fallback component
@@ -141,11 +131,6 @@ export const lazyLoadBanner = (
  * Preload banner components for better performance
  */
 export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
-=======
   if (typeof window !== 'undefined') {
     // Use requestIdleCallback for non-blocking preloading
     if ('requestIdleCallback' in window) {
@@ -185,15 +170,12 @@ export const getBannerPriority = (bannerName: string): number => {
 export const sortBannersByPriority = (bannerNames: string[]): string[] => {
   return [...bannerNames].sort((a, b) => {
     return getBannerPriority(a) - getBannerPriority(b);
->>>>>>> origin/main
   });
 };
 
 /**
-=======
  * Banner loading state management
  */
->>>>>>> origin/main
 export class BannerObserver {
   private observer: IntersectionObserver | null = null;
   private loadedBanners = new Set<string>();
@@ -225,8 +207,6 @@ export class BannerObserver {
       }, 100);
     }
   }
-=======
->>>>>>> origin/main
 
   observe(element: Element): void {
     this.observer?.observe(element);
@@ -244,9 +224,6 @@ export class BannerObserver {
 /**
  * Hook for banner loading state
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9008
-=======
 /**
  * Banner loading state management
  */
@@ -286,7 +263,6 @@ export const bannerLoader = new BannerLoader();
 /**
  * Hook for banner loading state
  */
->>>>>>> origin/main
 export const trackBannerPerformance = (
   bannerName: string,
   metrics: {
@@ -399,8 +375,6 @@ export const createBannerConfig = (
  */
 export class BannerManager {
   private configs: BannerConfig[] = [];
-=======
->>>>>>> origin/main
   private loadedBanners: Map<string, ComponentType<any>> = new Map();
 
   addBanner(config: BannerConfig): void {

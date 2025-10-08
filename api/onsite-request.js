@@ -2,6 +2,17 @@ const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 const path = require('path');
 
+
+
+
+
+
+
+
+
+
+
+
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -9,6 +20,17 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
 
   const {
     name,
@@ -19,6 +41,17 @@ async function handler(req, res) {
     details: _details,
   } = req.body || {};
 
+
+
+
+
+
+
+
+
+
+
+
   if (!name || !email || !location) {
     res.statusCode = 400;
     res.json({ error: 'Missing required fields' });
@@ -27,6 +60,10 @@ async function handler(req, res) {
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   let existing = [];
+  
+  
+  
+  
 
   try {
     existing = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -34,6 +71,17 @@ async function handler(req, res) {
   } catch {
     // File doesn't exist or is invalid, use empty array
   }
+
+
+
+
+
+
+
+
+
+
+
 
   existing.push({
     name,
@@ -45,9 +93,32 @@ async function handler(req, res) {
     createdAt: new Date().toISOString(),
   });
 
+
+
+
+
+
+
+
+
+
+
+
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
   res.json({ success: true });
 }
+
+
+
+
+
+
+
+
+
+
+
+module.exports = withSentry(handler);
 
 module.exports = withSentry(handler);

@@ -3,18 +3,12 @@
 /**
  * Get banners by category
  */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
-=======
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
-=======
 :utils/bannerRegistry.ts
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
@@ -28,25 +22,20 @@ export function getBannersByCategory(category: BannerConfig['category']): Banner
 export function getBannersByCategory(category: BannerConfig['category']): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => banner.category === category && banner.enabled);
 }
->>>>>>> origin/main
 
 /**
  * Get banners by priority range
  */
-=======
 :utils/bannerRegistry.ts
->>>>>>> origin/main
 export function getBannersByPriority(minPriority: number, maxPriority: number): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner =>
       banner.priority >= minPriority &&
       banner.priority <= maxPriority &&
       banner.enabled
   );
-=======
   );
 :utils/bannerRegistry.ts
 }
->>>>>>> origin/main
 };
 
 /**
@@ -65,8 +54,6 @@ export function getBannersByTags(tags: string[]): BannerConfig[] {
     banner => tags.some(tag => banner.tags.includes(tag)) && banner.enabled
   );
 }
-=======
->>>>>>> origin/main
 
 /**
  * Get enabled banners sorted by priority
@@ -79,7 +66,6 @@ export function getBannersByTags(tags: string[]): BannerConfig[] {
 /**
  * Get banners by tags (duplicate function - removing)
  */
-=======
 :utils/bannerRegistry.ts
 export function getBannersByTags(tags: string[]): BannerConfig[] {
   return BANNER_REGISTRY.filter(banner => 
@@ -103,4 +89,3 @@ export function getRecentBanners(days: number = 30): BannerConfig[] {
 }
 <:utils/bannerRegistry.ts
 export default BANNER_REGISTRY;
->>>>>>> origin/main

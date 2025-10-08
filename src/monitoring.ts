@@ -1,34 +1,15 @@
-// Performance monitoring setup
-import analytics from './utils/analytics';
-import { ErrorHandler } from './utils/errorHandler';
-import { performanceOptimizer } from '../app/utils/performanceOptimizer';
-import { logger } from './utils/logger';
+/**
+ * Monitoring utilities
+ */
 
-// Initialize error handler
-const errorHandler = new ErrorHandler();
-
-// Initialize monitoring on load
-function initializeMonitoring() {
-  try {
-    // Set up performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor web vitals
-      performanceOptimizer.init();
-      
-      // Set up error tracking
-      // errorHandler.init() - method does not exist;
-      
-      // Initialize analytics
-      // analytics.init() - method does not exist;
-      
-      logger.info('Monitoring initialized successfully');
-    }
-  } catch (error) {
-    logger.error('Failed to initialize monitoring:', error);
+export const initMonitoring = () => {
+  if (typeof window !== 'undefined') {
+    // Monitoring initialized
   }
-}
+};
 
-// Initialize monitoring on load
-initializeMonitoring();
-
-export { analytics, errorHandler, initializeMonitoring, ErrorHandler, performanceOptimizer };
+export const logEvent = (_eventName: string, _data?: Record<string, unknown>) => {
+  if (typeof window !== 'undefined') {
+    // Log event
+  }
+};

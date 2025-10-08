@@ -1,53 +1,41 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Enterprise Solutions - Zion Tech Group',
-  description: 'Enterprise-grade AI and IT solutions for large organizations',
-};
 
 export default function EnterprisePage() {
   return (
-    <div className='min-h-screen bg-gray-50 py-12'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='text-center mb-12'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            Enterprise Solutions
-          </h1>
-          <p className='text-xl text-gray-600'>
-            Scalable AI and IT solutions for large organizations
-          </p>
-        </div>
+    <>
+      <div className="min-h-screen bg-white">
+        <section className="py-20 bg-gradient-to-br from-blue-600 to-purple-700 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold mb-6">
+                Enterprise Solutions
+              </h1>
+              <p className="text-xl mb-8">
+                Transform your business with our cutting-edge enterprise solutions
+              </p>
+            </div>
+          </div>
+        </section>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h3 className='text-xl font-bold text-gray-900 mb-3'>
-              Enterprise AI
-            </h3>
-            <p className='text-gray-600'>
-              Custom AI solutions tailored for enterprise scale and security
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Why Choose Our Enterprise Solutions
+            </h2>
+          </div>
+        </section>
+
+        <section className="py-24">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-8">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Contact us today to learn more
             </p>
           </div>
-
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h3 className='text-xl font-bold text-gray-900 mb-3'>
-              Cloud Infrastructure
-            </h3>
-            <p className='text-gray-600'>
-              Scalable cloud solutions with enterprise-grade security
-            </p>
-          </div>
-
-          <div className='bg-white rounded-lg shadow-lg p-6'>
-            <h3 className='text-xl font-bold text-gray-900 mb-3'>
-              Digital Transformation
-            </h3>
-            <p className='text-gray-600'>
-              Complete modernization of enterprise systems and processes
-            </p>
-          </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 }

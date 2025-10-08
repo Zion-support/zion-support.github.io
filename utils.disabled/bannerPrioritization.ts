@@ -19,7 +19,6 @@ export class BannerPrioritizationEngine {
     const now = new Date();
     // Weighted combination
     return recencyScore * 0.6 + valueScore * 0.3 + banner.priority * 0.1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-98a8
   }
 
   /**
@@ -36,20 +35,14 @@ export class BannerPrioritizationEngine {
   /**
    * Get visible banners (above the fold)
    */
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ee0f
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values()).filter(banner => banner.loadStrategy === strategy && banner.isVisible);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1f83
-=======
   getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values()).filter(
       banner => banner.loadStrategy === strategy && banner.isVisible
     );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2051
   }
 
-=======
 :utils/bannerPrioritization.ts
     const daysSincePublish = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
     
@@ -129,7 +122,6 @@ export class BannerPrioritizationEngine {
     );
   }
 
->>>>>>> origin/main
   /**
    * Get lazy load banners
    */
@@ -212,5 +204,3 @@ export class BannerPrioritizationEngine {
 
 export const bannerPrioritizer = new BannerPrioritizer();
 export default bannerPrioritizer;
-=======
->>>>>>> origin/main
