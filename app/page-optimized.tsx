@@ -10,10 +10,16 @@ const UnifiedBanner = dynamic(() => import('./components/NewestContent2025Banner
   ssr: false
 });
 
-const ContentPromotion = dynamic(() => import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: () => null as any })), {
-  loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
-  ssr: false
-});
+const ContentPromotion = dynamic(
+  () => import('./components/UltimateBusinessIntelligence2025Banner')
+    .then(mod => mod)
+    .catch(() => import('./components/NewestContent2025Banner'))
+    .catch(() => ({ default: () => <div className="p-4" /> })),
+  {
+    loading: () => <div className="animate-pulse bg-gray-200 h-64 rounded-lg"></div>,
+    ssr: false
+  }
+);
 
 const ContentShowcase = dynamic(() => import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: () => null as any })), {
   loading: () => <div className="animate-pulse bg-gray-200 h-48 rounded-lg"></div>,
@@ -25,11 +31,11 @@ export default function OptimizedHomePage() {
     <main className="min-h-screen">
       <SEOOptimizer />
       <PerformanceMonitor />
-      <AccessibilityEnhancer />
-      
-      <UnifiedBanner />
-      <ContentPromotion />
-      <ContentShowcase />
+      <AccessibilityEnhancer>
+        <UnifiedBanner />
+        <ContentPromotion />
+        <ContentShowcase />
+      </AccessibilityEnhancer>
     </main>
   );
 }

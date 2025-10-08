@@ -93,3 +93,4 @@ const UltimateBusinessIntelligence2025Banner: React.FC = () => {
     </section>
   );
 };
+export default UltimateBusinessIntelligence2025Banner;
