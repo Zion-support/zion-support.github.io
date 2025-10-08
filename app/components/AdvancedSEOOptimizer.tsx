@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -38,10 +38,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-<<<<<<< HEAD
-=======
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
@@ -165,8 +162,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-<<<<<<< HEAD
-=======
   // const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
   //   const metaTag = document.createElement('meta');
   //   metaTag.setAttribute(attribute, name);
@@ -225,8 +220,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //     });
   //   }
   // };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
   return (
     <Helmet>
       {/* Basic Meta Tags */}

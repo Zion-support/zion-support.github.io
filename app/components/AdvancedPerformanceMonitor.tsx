@@ -49,11 +49,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
-<<<<<<< HEAD
-      } catch {
-=======
-      } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+} catch {
         // LCP observer not supported
       }
     }
@@ -79,11 +75,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-<<<<<<< HEAD
-      } catch {
-=======
-      } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+} catch {
         // FID observer not supported
       }
     }
@@ -110,11 +102,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-<<<<<<< HEAD
-      } catch {
-=======
-      } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+} catch {
         // CLS observer not supported
       }
     }
@@ -138,11 +126,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ttfb,
         memory,
       }));
-<<<<<<< HEAD
-    } catch {
-=======
-    } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+} catch {
       // Performance measurement failed
     }
 
@@ -151,11 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       observers.forEach(observer => {
         try {
           observer.disconnect();
-<<<<<<< HEAD
-        } catch {
-=======
-        } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
+} catch {
           // Error disconnecting observer
         }
       });
@@ -172,14 +152,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
       // Slow resources detected - could be logged to monitoring service
-<<<<<<< HEAD
-=======
       const _slowResourceData = slowResources.map((r: PerformanceResourceTiming) => ({
         name: r.name,
         duration: r.duration,
         size: r.transferSize,
       }));
->>>>>>> cursor/fix-errors-and-merge-to-main-add2
       // Could send to monitoring service here
     }
   }, []);
