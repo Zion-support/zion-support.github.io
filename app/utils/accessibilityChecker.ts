@@ -505,6 +505,7 @@ export class AccessibilityChecker {
   private checkLandmarks(element: Element): void {
     const hasMain = element.querySelector('main, [role="main"]');
     const _hasNav = element.querySelector('nav, [role="navigation"]');
+
     if (!hasMain) {
       this.addIssue({
         type: 'missing-main-landmark',
