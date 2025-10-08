@@ -5,6 +5,7 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function RootLayout({
   children,
@@ -186,6 +187,7 @@ export default function RootLayout({
               <PerformanceOptimizer />
               <PWAInstaller />
               {children}
+              <ScrollToTop />
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>

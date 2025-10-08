@@ -5,8 +5,6 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
-=======
 
   const services = [
     { name: 'All Services', url: '/services' },
@@ -49,50 +47,25 @@ const Navigation: React.FC = () => {
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Sitemap', url: '/sitemap' },
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text">
-=======
-          <Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">
-            <span className="text-3xl mr-2">⚡</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-=======
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
             <span className="text-3xl mr-2">⚡</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
             Zion Tech Group
           </Link>
 
           {/* Desktop Menu */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
-=======
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
-              About
-            </Link>
-=======
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-73aa
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              About
+            </Link>
             
             {/* Services Dropdown */}
             <div className="relative">

@@ -10,20 +10,13 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const metrics: PerformanceMetrics = {
       lcp: null,
       fid: null,
       cls: null,
       fcp: null,
       ttfb: null
-=======
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
+    };
 
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as
@@ -35,11 +28,10 @@ const PerformanceMonitor: React.FC = () => {
 
     const getPerformanceScore = (): number => {
       let score = 100;
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
+      if (metrics.lcp && metrics.lcp > 1500) score -= 15;
+      if (metrics.fcp && metrics.fcp > 3000) score -= 20;
+      if (memory && memory.usedJSHeapSize > 50) score -= 10;
       return Math.max(0, score);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     };
 
     // Measure Core Web Vitals
