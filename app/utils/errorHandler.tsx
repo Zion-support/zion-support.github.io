@@ -463,12 +463,12 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
   // Get error statistics
   getErrorStatistics() {
     const total = this.errors.length;
-    const byType = this.errors.reduce((_acc, _error) => {
+    const byType = this.errors.reduce((__acc, __error) => {
       acc[error.type] = (acc[error.type] || 0) + 1;
       return acc;
     }, {} as Record<ErrorType, number>);
 
-    const bySeverity = this.errors.reduce((_acc, _error) => {
+    const bySeverity = this.errors.reduce((__acc, __error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1;
       return acc;
     }, {} as Record<ErrorSeverity, number>);
@@ -491,12 +491,12 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
   init(): void {
     if (typeof window !== 'undefined') {
       // Set up global error handler
-      window.addEventListener('error', (_event) => {
+      window.addEventListener('error', (__event) => {
         this.handleError(event.error || new Error(event.message));
       });
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', (_event) => {
+      window.addEventListener('unhandledrejection', (__event) => {
         this.handleError(new Error(event.reason));
       });
     }

@@ -150,7 +150,7 @@ export class AccessibilityChecker {
   private checkImages(element: Element): void {
     const images = element.querySelectorAll('img');
     
-    images.forEach((_img, _index) => {
+    images.forEach((__img, __index) => {
       const alt = img.getAttribute('alt');
       const role = img.getAttribute('role');
 
@@ -197,7 +197,7 @@ export class AccessibilityChecker {
 
     let previousLevel = 0;
 
-    headings.forEach((_heading, _index) => {
+    headings.forEach((__heading, __index) => {
       const level = parseInt(heading.tagName.charAt(1));
 
       // Check for skipped heading levels
@@ -254,7 +254,7 @@ export class AccessibilityChecker {
   private checkLinks(element: Element): void {
     const links = element.querySelectorAll('a');
 
-    links.forEach((_link, _index) => {
+    links.forEach((__link, __index) => {
       const text = link.textContent?.trim();
       const ariaLabel = link.getAttribute('aria-label');
       const ariaLabelledBy = link.getAttribute('aria-labelledby');
@@ -314,7 +314,7 @@ export class AccessibilityChecker {
   private checkButtons(element: Element): void {
     const buttons = element.querySelectorAll('button');
 
-    buttons.forEach((_button, _index) => {
+    buttons.forEach((__button, __index) => {
       const text = button.textContent?.trim();
       const ariaLabel = button.getAttribute('aria-label');
       const ariaLabelledBy = button.getAttribute('aria-labelledby');
@@ -344,7 +344,7 @@ export class AccessibilityChecker {
   private checkForms(element: Element): void {
     const inputs = element.querySelectorAll('input, select, textarea');
 
-    inputs.forEach((_input, _index) => {
+    inputs.forEach((__input, __index) => {
       const id = input.getAttribute('id');
       const ariaLabel = input.getAttribute('aria-label');
       const ariaLabelledBy = input.getAttribute('aria-labelledby');
@@ -381,7 +381,7 @@ export class AccessibilityChecker {
     // computing actual rendered colors which is complex
     const elementsWithColor = element.querySelectorAll('[style*="color"]');
 
-    elementsWithColor.forEach((_el) => {
+    elementsWithColor.forEach((__el) => {
       const style = el.getAttribute('style');
       if (style?.includes('color:') && !style.includes('background')) {
         this.addIssue({
@@ -407,7 +407,7 @@ export class AccessibilityChecker {
     // Check for interactive elements with tabindex="-1"
     const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
 
-    interactiveElements.forEach((_el) => {
+    interactiveElements.forEach((__el) => {
       const tabindex = el.getAttribute('tabindex');
       if (tabindex === '-1') {
         this.addIssue({
@@ -426,7 +426,7 @@ export class AccessibilityChecker {
     // Check for divs/spans with onclick but no keyboard handler
     const clickableNonInteractive = element.querySelectorAll('[onclick]:not(a):not(button)');
 
-    clickableNonInteractive.forEach((_el) => {
+    clickableNonInteractive.forEach((__el) => {
       const role = el.getAttribute('role');
       const tabindex = el.getAttribute('tabindex');
       const onKeyDown = el.getAttribute('onkeydown');
@@ -455,7 +455,7 @@ export class AccessibilityChecker {
   private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll('[role], [aria-label], [aria-labelledby], [aria-describedby]');
 
-    elementsWithAria.forEach((_el) => {
+    elementsWithAria.forEach((__el) => {
       const role = el.getAttribute('role');
 
       // Check for invalid ARIA roles
@@ -557,7 +557,7 @@ export class AccessibilityChecker {
       [A11ySeverity.CRITICAL]: 15,
     };
 
-    const totalPenalty = this.issues.reduce((_sum, _issue) => {
+    const totalPenalty = this.issues.reduce((__sum, __issue) => {
       return sum + severityWeights[issue.severity];
     }, 0);
 
@@ -606,7 +606,7 @@ export class AccessibilityChecker {
       const issues = this.getIssuesBySeverity(severity);
       if (issues.length > 0) {
         report += `${severity} (${issues.length}):\n`;
-        issues.forEach((_issue, _index) => {
+        issues.forEach((__issue, __index) => {
           report += `  ${index + 1}. ${issue.message}\n`;
           if (issue.fix) {
             report += `     Fix: ${issue.fix}\n`;

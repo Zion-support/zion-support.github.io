@@ -69,8 +69,8 @@ class PerformanceMonitor {
       // Observe paint metrics
       if ('PerformanceObserver' in window) {
         // First Contentful Paint
-        this.observeEntry('paint', (_entries) => {
-          entries.forEach((_entry) => {
+        this.observeEntry('paint', (__entries) => {
+          entries.forEach((__entry) => {
             if (entry.name === 'first-contentful-paint') {
               this.recordMetric('FCP', entry.startTime);
             }
@@ -78,7 +78,7 @@ class PerformanceMonitor {
         });
 
         // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', (_entries) => {
+        this.observeEntry('largest-contentful-paint', (__entries) => {
           const lastEntry = entries[entries.length - 1] as any;
           if (lastEntry) {
             this.recordMetric('LCP', lastEntry.renderTime || lastEntry.loadTime || lastEntry.startTime);
@@ -86,7 +86,7 @@ class PerformanceMonitor {
         });
 
         // First Input Delay
-        this.observeEntry('first-input', (_entries) => {
+        this.observeEntry('first-input', (__entries) => {
           const firstInput = entries[0] as any;
           if (firstInput && firstInput.processingStart !== undefined) {
             const fid = firstInput.processingStart - firstInput.startTime;
@@ -95,7 +95,7 @@ class PerformanceMonitor {
         });
 
         // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (_entries) => {
+        this.observeEntry('layout-shift', (__entries) => {
           let clsValue = 0;
           entries.forEach((entry: unknown) => {
             if (!entry.hadRecentInput) {
@@ -120,7 +120,7 @@ class PerformanceMonitor {
     callback: (entries: PerformanceEntry[]) => void
   ): void {
     try {
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((__list) => {
         callback(list.getEntries());
       });
       observer.observe({ type, buffered: true });
@@ -173,8 +173,8 @@ class PerformanceMonitor {
   private setupResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((_list) => {
-          list.getEntries().forEach((_entry) => {
+        const observer = new PerformanceObserver((__list) => {
+          list.getEntries().forEach((__entry) => {
             if (entry.entryType === 'resource') {
               const resourceEntry = entry as PerformanceResourceTiming;
               this.trackResourceLoad(resourceEntry);
@@ -210,7 +210,7 @@ class PerformanceMonitor {
         category: 'performance',
         label: type,
         value: Math.round(duration),
-        _metadata: {
+        __metadata: {
           url: entry.name,
           size: entry.transferSize,
         },
@@ -375,7 +375,7 @@ class PerformanceMonitor {
     const metricsObj: Record<string, PerformanceMetric> = {};
     const summary = { good: 0, needsImprovement: 0, poor: 0 };
 
-    this.metrics.forEach((_metric, _name) => {
+    this.metrics.forEach((__metric, __name) => {
       metricsObj[name] = metric;
       summary[metric.rating === 'needs-improvement' ? 'needsImprovement' : metric.rating]++;
     });
@@ -402,7 +402,7 @@ class PerformanceMonitor {
    * Disconnect all observers
    */
   disconnect(): void {
-    this.observers.forEach((_observer) => {
+    this.observers.forEach((__observer) => {
       try {
         observer.disconnect();
       } catch (error) {

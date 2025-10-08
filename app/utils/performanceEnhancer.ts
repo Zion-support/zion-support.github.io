@@ -82,8 +82,8 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
       return;
     }
 
-    const observer = new PerformanceObserver((_list) => {
-      list.getEntries().forEach((_entry) => {
+    const observer = new PerformanceObserver((__list) => {
+      list.getEntries().forEach((__entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
  
     console.warn(`[Performance] Long task detected: ${entry.duration.toFixed(2)}ms`);
@@ -132,8 +132,8 @@ export const lazyLoadImages = () => {
   if (typeof window === 'undefined') return;
 
   const images = document.querySelectorAll('img[data-src]');
-  const imageObserver = new IntersectionObserver((_entries) => {
-    entries.forEach((_entry) => {
+  const imageObserver = new IntersectionObserver((__entries) => {
+    entries.forEach((__entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         img['src'] = img.dataset['src'] || '';
@@ -143,7 +143,7 @@ export const lazyLoadImages = () => {
     });
   });
 
-  images.forEach((_img) => imageObserver.observe(img));
+  images.forEach((__img) => imageObserver.observe(img));
 };
 
 // Preload critical resources
@@ -155,7 +155,7 @@ export const preloadCriticalResources = () => {
     '/css/critical.css',
   ];
 
-  criticalResources.forEach((_resource) => {
+  criticalResources.forEach((__resource) => {
     const link = document.createElement('link');
     link.rel = 'preload';
     link.href = resource;
@@ -196,7 +196,7 @@ export const optimizeScrollPerformance = () => {
       value: number;
     }
 
-    const observer = new PerformanceObserver((_list) => {
+    const observer = new PerformanceObserver((__list) => {
       for (const entry of list.getEntries()) {
         const layoutEntry = entry as LayoutShiftEntry;
         if (!layoutEntry.hadRecentInput) {
@@ -215,7 +215,7 @@ export const optimizeScrollPerformance = () => {
   };
 
   const trackLCP = () => {
-    const observer = new PerformanceObserver((_list) => {
+    const observer = new PerformanceObserver((__list) => {
       for (const entry of list.getEntries()) {
 if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {  
     console.log('[Web Vitals] LCP:', entry.startTime); } }
@@ -232,7 +232,7 @@ if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {
       processingStart: number;
     }
     
-    const observer = new PerformanceObserver((_list) => {
+    const observer = new PerformanceObserver((__list) => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
@@ -289,8 +289,8 @@ export const collectPerformanceMetrics = () => {
       totalTime: navigation.loadEventEnd - navigation.fetchStart,
     },
     paint: {
-      firstPaint: paint.find((_entry) => entry.name === 'first-paint')?.startTime || 0,
-      firstContentfulPaint: paint.find((_entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
+      firstPaint: paint.find((__entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((__entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage(),
   };

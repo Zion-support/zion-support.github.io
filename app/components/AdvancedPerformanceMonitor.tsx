@@ -292,7 +292,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {recommendations.map((_rec, _index) => (
+              {recommendations.map((__rec, __index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>

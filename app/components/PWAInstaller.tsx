@@ -30,7 +30,7 @@ const PWAInstaller: React.FC = () => {
     if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
       navigator.serviceWorker
         .register('/service-worker.js')
-        .then((_registration) => {
+        .then((__registration) => {
           // Service Worker registered
 
           // Check for updates periodically

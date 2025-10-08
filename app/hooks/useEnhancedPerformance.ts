@@ -94,7 +94,7 @@ export function useEnhancedPerformance(
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
       if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, _metadata);
+        analytics.trackCustomEvent('User Action', action, component, undefined, __metadata);
       }
     },
     [component, trackAnalytics]

@@ -218,8 +218,8 @@ export function setupLazyImages(
 ): () => void {
   const images = document.querySelectorAll<HTMLImageElement>(selector);
   
-  const observer = new IntersectionObserver((_entries) => {
-    entries.forEach((_entry) => {
+  const observer = new IntersectionObserver((__entries) => {
+    entries.forEach((__entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset['src'];
@@ -233,7 +233,7 @@ export function setupLazyImages(
     });
   }, options);
 
-  images.forEach((_img) => observer.observe(img));
+  images.forEach((__img) => observer.observe(img));
 
   return () => observer.disconnect();
 }

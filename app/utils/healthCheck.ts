@@ -108,8 +108,8 @@ logger._error(`Health check "${name}" failed`, _error as Error);
     }
 
     // Determine overall status
-    const hasFailures = checks.some((_c) => c.status === 'fail');
-    const hasWarnings = checks.some((_c) => c.status === 'warn');
+    const hasFailures = checks.some((__c) => c.status === 'fail');
+    const hasWarnings = checks.some((__c) => c.status === 'warn');
     
     let status: 'healthy' | 'degraded' | 'unhealthy';
     if (hasFailures) {
@@ -247,7 +247,7 @@ logger._error(`Health check "${name}" failed`, _error as Error);
 
     const missingAPIs: string[] = [];
 
-    requiredAPIs.forEach((_api) => {
+    requiredAPIs.forEach((__api) => {
       if (typeof window !== 'undefined' && !(api in window)) {
         missingAPIs.push(api);
       }

@@ -53,7 +53,7 @@ class MonitoringService {
     if ('PerformanceObserver' in window) {
       try {
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((_list) => {
+        const lcpObserver = new PerformanceObserver((__list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
@@ -62,7 +62,7 @@ class MonitoringService {
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay
-        const fidObserver = new PerformanceObserver((_list) => {
+        const fidObserver = new PerformanceObserver((__list) => {
           const entries = list.getEntries();
           entries.forEach((entry: unknown) => {
             this.metrics.fid = entry.processingStart - entry.startTime;
@@ -73,7 +73,7 @@ class MonitoringService {
 
         // Cumulative Layout Shift
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((_list) => {
+        const clsObserver = new PerformanceObserver((__list) => {
           for (const entry of list.getEntries() as any[]) {
             if (!entry.hadRecentInput) {
               clsValue += entry.value;
@@ -85,9 +85,9 @@ class MonitoringService {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((_list) => {
+        const fcpObserver = new PerformanceObserver((__list) => {
           const entries = list.getEntries();
-          entries.forEach((_entry) => {
+          entries.forEach((__entry) => {
             this.metrics.fcp = entry.startTime;
             this.reportMetric('fcp', entry.startTime);
           });
@@ -104,7 +104,7 @@ class MonitoringService {
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-        const longTaskObserver = new PerformanceObserver((_list) => {
+        const longTaskObserver = new PerformanceObserver((__list) => {
           for (const entry of list.getEntries()) {
  
     console.warn('Long task detected:', {
@@ -123,7 +123,7 @@ class MonitoringService {
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const resourceObserver = new PerformanceObserver((_list) => {
+        const resourceObserver = new PerformanceObserver((__list) => {
           const entries = list.getEntries();
           entries.forEach((entry: unknown) => {
             if (entry.duration > 1000) {
@@ -146,7 +146,7 @@ class MonitoringService {
 
   private setupErrorHandling(): void {
     // Global error handler
-    window.addEventListener('error', (_event) => {
+    window.addEventListener('error', (__event) => {
       this.logError({
         message: event.message,
         stack: event.error?.stack,
@@ -157,7 +157,7 @@ class MonitoringService {
     });
 
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (_event) => {
+    window.addEventListener('unhandledrejection', (__event) => {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
         timestamp: Date.now(),

@@ -102,7 +102,7 @@ class PerformanceOptimizer {
 
   private observeLCP() {
     try {
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
@@ -116,9 +116,9 @@ class PerformanceOptimizer {
 
   private observeFID() {
     try {
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           this.metrics.fid = entry.processingStart - entry.startTime;
         });
       });
@@ -132,9 +132,9 @@ class PerformanceOptimizer {
   private observeCLS() {
     try {
       let clsValue = 0;
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
           }
@@ -150,9 +150,9 @@ class PerformanceOptimizer {
 
   private observeFCP() {
     try {
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((_entry) => {
+        entries.forEach((entry: any) => {
           if (entry.name === 'first-contentful-paint') {
             this.metrics.fcp = entry.startTime;
           }
@@ -167,9 +167,9 @@ class PerformanceOptimizer {
 
   private observeTTFB() {
     try {
-      const observer = new PerformanceObserver((_list) => {
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: unknown) => {
+        entries.forEach((entry: any) => {
           if (entry.responseStart > 0) {
             this.metrics.ttfb = entry.responseStart - entry.requestStart;
           }
@@ -195,8 +195,8 @@ class PerformanceOptimizer {
     const images = document.querySelectorAll('img[data-src]');
     
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((_entries) => {
-        entries.forEach((_entry) => {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src');
@@ -209,10 +209,10 @@ class PerformanceOptimizer {
         });
       });
 
-      images.forEach((_img) => imageObserver.observe(img));
+      images.forEach((img) => imageObserver.observe(img));
     } else {
       // Fallback for browsers without IntersectionObserver
-      images.forEach((_img) => {
+      images.forEach((img) => {
         const src = img.getAttribute('data-src');
         if (src) {
           (img as HTMLImageElement).src = src;
@@ -231,7 +231,7 @@ class PerformanceOptimizer {
       '/js/critical.js'
     ];
 
-    criticalResources.forEach((_resource) => {
+    criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
@@ -245,11 +245,11 @@ class PerformanceOptimizer {
 
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
-        .then((_registration) => {
+        .then((registration) => {
            
           console.log('SW registered: ', registration);
         })
-        .catch((_registrationError) => {
+        .catch((registrationError) => {
            
           console.log('SW registration failed: ', registrationError);
         });
