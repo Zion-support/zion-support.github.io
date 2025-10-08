@@ -1,4 +1,6 @@
 /* Global styles */
+@import './styles/futuristic.css';
+
 html {
   scroll-behavior: smooth;
 }
