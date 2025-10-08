@@ -1,3 +1,12 @@
+# ==============================================================================
+# IMPORTANT: This is a VITE project, NOT a Next.js project!
+# ==============================================================================
+# If build fails with "@netlify/plugin-nextjs" error, you need to:
+# 1. Go to Netlify Dashboard > Site Settings > Build & deploy > Build plugins
+# 2. Remove/Uninstall the "@netlify/plugin-nextjs" plugin
+# 3. See NETLIFY_BUILD_FIX.md for detailed instructions
+# ==============================================================================
+
 [build]
   publish = "dist"
   command = "npm run build"
