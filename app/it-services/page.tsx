@@ -135,6 +135,139 @@ const ITServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Backup & Recovery',
       technologies: ['Veeam', 'Commvault', 'AWS Backup', 'Azure Backup', 'VMware']
+    },
+    // New Innovative IT Services
+    {
+      title: 'AI-Powered IT Operations (AIOps)',
+      description: 'Intelligent IT operations with predictive analytics, automated incident response, and self-healing infrastructure.',
+      icon: '🤖',
+      price: 'Starting at $4,500/month',
+      features: ['Predictive analytics', 'Automated incident response', 'Self-healing systems', 'Anomaly detection', 'Root cause analysis'],
+      benefits: ['Reduce MTTR by 70%', 'Prevent 80% of incidents', 'Improve system reliability'],
+      marketPrice: '$7,000-15,000/month',
+      category: 'AIOps',
+      technologies: ['Machine Learning', 'Splunk', 'DataDog', 'New Relic', 'Custom AI Models']
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: '🛡️',
+      price: 'Starting at $5,000/month',
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Policy enforcement', 'Threat detection'],
+      benefits: ['Eliminate lateral movement', 'Reduce attack surface', 'Improve compliance'],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Security',
+      technologies: ['Okta', 'Palo Alto', 'Cisco', 'Microsoft', 'Custom Solutions']
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT deployments.',
+      icon: '🌐',
+      price: 'Starting at $3,500/month',
+      features: ['Edge node deployment', 'Content delivery optimization', 'IoT integration', 'Latency optimization', 'Distributed monitoring'],
+      benefits: ['Reduce latency by 60%', 'Improve user experience', 'Enable real-time applications'],
+      marketPrice: '$5,000-12,000/month',
+      category: 'Edge Computing',
+      technologies: ['Kubernetes', 'Docker', 'CDN', 'IoT Platforms', '5G Networks']
+    },
+    {
+      title: 'Quantum-Safe Cryptography Implementation',
+      description: 'Future-proof cryptographic solutions resistant to quantum computing attacks.',
+      icon: '🔐',
+      price: 'Starting at $6,000/month',
+      features: ['Post-quantum cryptography', 'Key management', 'Migration planning', 'Compliance assessment', 'Security auditing'],
+      benefits: ['Future-proof security', 'Meet compliance requirements', 'Protect against quantum threats'],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Advanced Security',
+      technologies: ['NIST Standards', 'Quantum Algorithms', 'Custom Implementation', 'Hardware Security']
+    },
+    {
+      title: 'Multi-Cloud Orchestration Platform',
+      description: 'Unified management and orchestration across multiple cloud providers with cost optimization.',
+      icon: '☁️',
+      price: 'Starting at $4,000/month',
+      features: ['Multi-cloud management', 'Cost optimization', 'Workload portability', 'Unified monitoring', 'Governance'],
+      benefits: ['Reduce cloud costs by 35%', 'Avoid vendor lock-in', 'Improve flexibility'],
+      marketPrice: '$6,000-15,000/month',
+      category: 'Cloud Services',
+      technologies: ['Terraform', 'Kubernetes', 'CloudFormation', 'Custom Orchestration']
+    },
+    {
+      title: '5G Network Infrastructure',
+      description: '5G network design, implementation, and optimization for enterprise applications.',
+      icon: '📡',
+      price: 'Starting at $8,000/month',
+      features: ['5G network design', 'Core network implementation', 'Edge computing integration', 'Performance optimization', 'Security implementation'],
+      benefits: ['Enable ultra-low latency', 'Support massive IoT', 'Improve connectivity'],
+      marketPrice: '$15,000-50,000/month',
+      category: 'Network Infrastructure',
+      technologies: ['5G Core', 'OpenRAN', 'Network Slicing', 'Edge Computing']
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts, tokenization, and decentralized applications.',
+      icon: '⛓️',
+      price: 'Starting at $3,000/month',
+      features: ['Blockchain implementation', 'Smart contract development', 'Tokenization services', 'DApp development', 'Consensus mechanisms'],
+      benefits: ['Increase transparency', 'Reduce intermediaries', 'Improve security'],
+      marketPrice: '$5,000-20,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Hyperledger', 'Polkadot', 'Solana', 'Custom Chains']
+    },
+    {
+      title: 'IoT Platform & Device Management',
+      description: 'Comprehensive IoT platform with device management, data processing, and analytics.',
+      icon: '🌐',
+      price: 'Starting at $2,500/month',
+      features: ['Device management', 'Data ingestion', 'Real-time processing', 'Analytics dashboard', 'Security management'],
+      benefits: ['Scale IoT deployments', 'Improve operational efficiency', 'Enable data-driven decisions'],
+      marketPrice: '$4,000-10,000/month',
+      category: 'IoT',
+      technologies: ['AWS IoT', 'Azure IoT', 'MQTT', 'Time Series DB', 'Edge Computing']
+    },
+    {
+      title: 'High-Performance Computing (HPC)',
+      description: 'Supercomputing solutions for complex simulations, data analysis, and scientific computing.',
+      icon: '💻',
+      price: 'Starting at $5,000/month',
+      features: ['HPC cluster setup', 'Parallel processing', 'GPU acceleration', 'Scientific computing', 'Performance optimization'],
+      benefits: ['Accelerate computations', 'Handle complex simulations', 'Improve research efficiency'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'HPC',
+      technologies: ['CUDA', 'OpenMP', 'MPI', 'Slurm', 'NVIDIA GPUs']
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT infrastructure with energy optimization, carbon footprint reduction, and green computing.',
+      icon: '🌱',
+      price: 'Starting at $2,000/month',
+      features: ['Energy optimization', 'Carbon tracking', 'Green computing', 'Sustainable procurement', 'Waste reduction'],
+      benefits: ['Reduce carbon footprint', 'Lower energy costs', 'Meet sustainability goals'],
+      marketPrice: '$3,500-8,000/month',
+      category: 'Sustainability',
+      technologies: ['Energy Monitoring', 'Carbon Tracking', 'Green Hardware', 'Renewable Energy']
+    },
+    {
+      title: 'Digital Twin Technology',
+      description: 'Digital replicas of physical systems for simulation, monitoring, and optimization.',
+      icon: '👥',
+      price: 'Starting at $4,500/month',
+      features: ['Digital twin creation', 'Real-time synchronization', 'Simulation capabilities', 'Predictive modeling', 'Optimization algorithms'],
+      benefits: ['Improve system efficiency', 'Enable predictive maintenance', 'Optimize operations'],
+      marketPrice: '$7,000-20,000/month',
+      category: 'Digital Twin',
+      technologies: ['IoT', 'AI/ML', 'Simulation Software', 'Real-time Data', '3D Modeling']
+    },
+    {
+      title: 'AR/VR Infrastructure Services',
+      description: 'Immersive technology infrastructure for augmented and virtual reality applications.',
+      icon: '🥽',
+      price: 'Starting at $3,500/month',
+      features: ['AR/VR platform setup', 'Content management', 'User management', 'Performance optimization', 'Analytics'],
+      benefits: ['Enable immersive experiences', 'Improve training effectiveness', 'Enhance customer engagement'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Immersive Tech',
+      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'Cloud Rendering', 'Spatial Computing']
     }
   ];
 

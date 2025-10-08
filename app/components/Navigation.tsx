@@ -32,22 +32,43 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border py-2 z-50">
-                  <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    IT Services
-                  </Link>
-                  <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                    Advertising Services
-                  </Link>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border py-2 z-50">
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <h4 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">Core Services</h4>
+                      <Link to="/services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        All Services
+                      </Link>
+                      <Link to="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        Micro SAAS Solutions
+                      </Link>
+                      <Link to="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        AI Services
+                      </Link>
+                      <Link to="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        IT Services
+                      </Link>
+                    </div>
+                    <div>
+                      <h4 className="px-4 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wide">Specialized</h4>
+                      <Link to="/quantum-computing" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        Quantum Computing
+                      </Link>
+                      <Link to="/autonomous-systems" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        Autonomous Systems
+                      </Link>
+                      <Link to="/blockchain-web3" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        Blockchain & Web3
+                      </Link>
+                      <Link to="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                        Cybersecurity
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="border-t mt-2 pt-2">
+                    <Link to="/services-advertising" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                      Advertising Services
+                    </Link>
                 </div>
               )}
             </div>
@@ -92,7 +113,7 @@ const Navigation: React.FC = () => {
                 About
               </Link>
               <div className="space-y-2">
-                <div className="text-gray-700 font-semibold">Services</div>
+                <div className="text-gray-700 font-semibold">Core Services</div>
                 <div className="ml-4 space-y-2">
                   <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     All Services
@@ -106,6 +127,30 @@ const Navigation: React.FC = () => {
                   <Link to="/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     IT Services
                   </Link>
+                </div>
+                <div className="text-gray-700 font-semibold mt-4">Specialized Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/quantum-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Cybersecurity
+                  </Link>
+                  <Link to="/business-intelligence" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    Business Intelligence
+                  </Link>
+                  <Link to="/iot-edge-computing" className="block text-gray-600 hover:text-blue-600 transition-colors">
+                    IoT & Edge Computing
+                  </Link>
+                </div>
+                <div className="text-gray-700 font-semibold mt-4">Marketing</div>
+                <div className="ml-4 space-y-2">
                   <Link to="/services-advertising" className="block text-gray-600 hover:text-blue-600 transition-colors">
                     Advertising Services
                   </Link>

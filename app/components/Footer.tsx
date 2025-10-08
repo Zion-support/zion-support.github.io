@@ -36,12 +36,22 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
+                  All Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/micro-saas" className="text-gray-300 hover:text-white transition-colors">
+                  Micro SAAS
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors">
+                  AI Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/it-services" className="text-gray-300 hover:text-white transition-colors">
+                  IT Services
                 </Link>
               </li>
               <li>
@@ -64,29 +74,54 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li>AI Solutions</li>
-              <li>Quantum Computing</li>
-              <li>Autonomous Systems</li>
-              <li>Business Intelligence</li>
-              <li>Cloud Migration</li>
+              <li><Link to="/micro-saas" className="hover:text-white transition-colors">Micro SAAS Solutions</Link></li>
+              <li><Link to="/ai-services" className="hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/quantum-computing" className="hover:text-white transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/autonomous-systems" className="hover:text-white transition-colors">Autonomous Systems</Link></li>
+              <li><Link to="/blockchain-web3" className="hover:text-white transition-colors">Blockchain & Web3</Link></li>
+              <li><Link to="/cybersecurity" className="hover:text-white transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/business-intelligence" className="hover:text-white transition-colors">Business Intelligence</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <p>Website: ziontechgroup.com</p>
+              <p className="flex items-center">
+                <span className="mr-2">📧</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">📞</span>
+                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">🌐</span>
+                <a href="https://ziontechgroup.com" className="hover:text-white transition-colors">
+                  ziontechgroup.com
+                </a>
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">📍</span>
+                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </p>
               <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   Twitter
+                </a>
+                <a href="https://github.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
+                  GitHub
                 </a>
               </div>
             </div>
