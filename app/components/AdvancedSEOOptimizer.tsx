@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useCallback, useRef } from 'react';
-
-import { Link } from 'react-router-dom';import { Helmet } from 'react-helmet-async';
-=======
-import React, { useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-4e61
 
 interface SEOData {
   title: string;
