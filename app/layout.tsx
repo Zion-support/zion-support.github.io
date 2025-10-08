@@ -1,4 +1,5 @@
 import './globals.css';
+import './futuristic.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';

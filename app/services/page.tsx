@@ -9,9 +9,27 @@ const ServicesPage: React.FC = () => {
       description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      features: ['50+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
       price: 'Starting at $79/month',
       popular: true
+    },
+    {
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics platform with predictive insights and automated reporting.',
+      icon: '📊',
+      link: '/ai-powered-analytics',
+      features: ['Real-time Analytics', 'Predictive Insights', 'Automated Reports', 'Custom Dashboards'],
+      price: 'Starting at $199/month',
+      popular: false
+    },
+    {
+      title: 'Automation Services',
+      description: 'Intelligent automation solutions for business processes and workflows.',
+      icon: '🔄',
+      link: '/automation-services',
+      features: ['Process Automation', 'Workflow Optimization', 'AI Decision Making', 'Exception Handling'],
+      price: 'Starting at $179/month',
+      popular: false
     },
     {
       title: 'AI Services',
