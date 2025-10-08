@@ -25,9 +25,9 @@ interface BannerRotationState {
 }
 
 // Helper functions defined inline
-const selectBannersForDisplay = (banners: BannerConfig[], maxBanners: number, strategy: RotationStrategy) => {
-  const enabled = banners.filter((b: BannerConfig) => b.enabled !== false);
-  const sorted = enabled.sort((a: BannerConfig, b: BannerConfig) => (b.priority || 0) - (a.priority || 0));
+const selectBannersForDisplay = (banners: unknown[], maxBanners: number, strategy: RotationStrategy) => {
+  const enabled = banners.filter((b: any) => b.enabled !== false);
+  const sorted = enabled.sort((a: any, b: any) => (b.priority || 0) - (a.priority || 0));
   return sorted.slice(0, maxBanners);
 };
 
@@ -68,7 +68,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
     maxBanners = 3,
     refreshInterval = 30000,
     enableTracking = true
-  } = _options;
+  } = options;
 
   const [state, setState] = useState<BannerRotationState>({
     currentBanners: [],
