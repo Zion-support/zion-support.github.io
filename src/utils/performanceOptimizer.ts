@@ -249,6 +249,14 @@ class PerformanceOptimizer {
 
   private constructor() {}
 
+  public init(): void {
+    // Initialize performance optimizations
+    this.lazyLoadImages();
+    this.optimizeScroll();
+    this.preloadCriticalResources();
+    this.addCriticalResourceHints();
+  }
+
   static getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
@@ -257,10 +265,10 @@ class PerformanceOptimizer {
   }
 
   public measurePerformance(name: string, fn: () => void): number {
-//     const start = performance.now();
+    const start = performance.now();
     fn();
-//     const end = performance.now();
-//     const duration = end - start;
+    const end = performance.now();
+    const duration = end - start;
     this.metrics.set(name, duration);
     return duration;
   }
