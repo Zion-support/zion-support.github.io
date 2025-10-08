@@ -29,7 +29,6 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor Core Web Vitals
     // Set up performance observer for more detailed monitoring
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
       try {
