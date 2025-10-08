@@ -30,8 +30,8 @@ export default function HomePage() {
               <Link to="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
               </Link>
-              <Link to="/case-studies" className="text-gray-900 hover:text-blue-600">
-                Case Studies
+              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
+                Contact
               </Link>
             </nav>
           </div>
@@ -52,7 +52,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
+                to="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
@@ -129,17 +129,17 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href="/case-studies"
+                to="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
-                View Success Stories
+                View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
