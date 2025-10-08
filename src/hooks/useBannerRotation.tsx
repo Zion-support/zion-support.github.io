@@ -3,7 +3,7 @@
  * Manages banner display tracking and rotation logic
  */
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import bannerConfigurations, { BannerConfig, RotationStrategy } from "../data/bannerConfigurations";
 
 interface UseBannerRotationOptions {
@@ -84,7 +84,7 @@ export const useBannerRotation = (options: UseBannerRotationOptions = {}) => {
   // Load initial banners
   useEffect(() => {
     try {
-      const configs: BannerConfig[] = [];
+      const configs = Array.isArray(bannerConfigurations) ? bannerConfigurations : [];
       const selected = strategy === 'balanced' 
         ? selectBalancedBanners(configs, maxBanners)
         : selectBannersForDisplay(configs, maxBanners, strategy);
