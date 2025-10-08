@@ -126,3 +126,7 @@ const EnterprisePage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
+export default EnterprisePage;
+=======
+>>>>>>> origin/main

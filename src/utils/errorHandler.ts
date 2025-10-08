@@ -4,47 +4,59 @@
  */
 
 export enum ErrorCategory {
-  NETWORK = 'NETWORK',
-  VALIDATION = 'VALIDATION',
-  API = 'API',
-  UI = 'UI',
-  RUNTIME = 'RUNTIME',
-  UNKNOWN = 'UNKNOWN',
+  NETWORK = 'network',
+  VALIDATION = 'validation',
+  API = 'api',
+  UI = 'ui',
+  RUNTIME = 'runtime',
+  UNKNOWN = 'unknown',
 }
 
 export enum ErrorSeverity {
-  LOW = 'LOW',
-  MEDIUM = 'MEDIUM',
-  HIGH = 'HIGH',
-  CRITICAL = 'CRITICAL',
+  LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
+  CRITICAL = 'critical',
 }
 
 export interface ErrorInfo {
   id: string;
-  error: Error;
+  message: string;
+  stack?: string;
   category: ErrorCategory;
   severity: ErrorSeverity;
-  timestamp: Date;
+  timestamp: number;
   context?: Record<string, unknown>;
 }
 
 class ErrorHandler {
+  private static instance: ErrorHandler;
   private errorQueue: ErrorInfo[] = [];
-  private readonly maxQueueSize = 100;
+  private readonly maxQueueSize: number = 100;
+
+  private constructor() {}
+
+  static getInstance(): ErrorHandler {
+    if (!ErrorHandler.instance) {
+      ErrorHandler.instance = new ErrorHandler();
+    }
+    return ErrorHandler.instance;
+  }
 
   /**
-   * Log and track error
+   * Handle an error with categorization and reporting
    */
-  logError(error: Error, context?: Record<string, unknown>): void {
+  handleError(error: Error, context?: Record<string, unknown>): void {
     const category = this.categorizeError(error);
     const severity = this.determineSeverity(error, category);
-    
+
     const errorData: ErrorInfo = {
       id: this.generateErrorId(),
-      error,
+      message: error.message,
+      stack: error.stack,
       category,
       severity,
-      timestamp: new Date(),
+      timestamp: Date.now(),
       context,
     };
 
@@ -53,13 +65,11 @@ class ErrorHandler {
       this.errorQueue.shift();
     }
 
-    // Send to error reporting service
     this.reportError(errorData);
+    
+    return errorData;
   }
 
-  /**
-   * Categorize error based on message and stack
-   */
   private categorizeError(error: Error): ErrorCategory {
     const message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
@@ -82,9 +92,6 @@ class ErrorHandler {
     return ErrorCategory.UNKNOWN;
   }
 
-  /**
-   * Determine error severity
-   */
   private determineSeverity(error: Error, category: ErrorCategory): ErrorSeverity {
     if (category === ErrorCategory.NETWORK) {
       return ErrorSeverity.MEDIUM;
@@ -101,34 +108,33 @@ class ErrorHandler {
     return ErrorSeverity.MEDIUM;
   }
 
-  /**
-   * Generate unique error ID
-   */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  /**
-   * Report error to external service
-   */
   private reportError(errorData: ErrorInfo): void {
-    // Implementation for reporting to external service
     console.error('Error reported:', errorData);
   }
 
-  /**
-   * Get all errors
-   */
   getErrors(): ErrorInfo[] {
     return [...this.errorQueue];
   }
 
-  /**
-   * Clear error queue
-   */
   clearErrors(): void {
     this.errorQueue = [];
   }
+
+  public getErrorStats(): { total: number; recent: number } {
+    const now = new Date();
+    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+    const recent = this.errorQueue.filter(
+      error => new Date(error.timestamp) > oneHourAgo
+    ).length;
+
+    return {
+      total: this.errorQueue.length,
+      recent,
+    };
+  }
 }
 
-export default ErrorHandler;
