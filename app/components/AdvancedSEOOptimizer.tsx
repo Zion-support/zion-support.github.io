@@ -23,7 +23,6 @@ interface SEOConfig {
   tags?: string[];
 }
 
-
 interface AdvancedSEOOptimizerProps {
   config: SEOConfig;
   enableStructuredData?: boolean;
@@ -178,11 +177,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      url: config.canonicalUrl,
       keywords: config.keywords,
       canonicalUrl: config.canonicalUrl,
     });
-      keywords: config.keywords,
 
     // Cleanup on unmount
     return () => {
