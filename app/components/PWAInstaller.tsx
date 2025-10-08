@@ -65,6 +65,7 @@ const PWAInstaller: React.FC = () => {
       setDeferredPrompt(null);
       setShowInstallButton(false);
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.error('Error installing PWA:', error);
     }
   };

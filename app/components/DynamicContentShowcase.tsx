@@ -100,7 +100,7 @@ const DynamicContentShowcase: React.FC = () => {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [blogPosts]);
 
   const formatNumber = (num: number): string => {
     if (num >= 1000) {

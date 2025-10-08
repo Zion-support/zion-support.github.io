@@ -29,12 +29,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && (window as unknown as { gtag?: (...args: any[]) => void }).gtag) {
+      (window as unknown as { gtag: (...args: any[]) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

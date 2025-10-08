@@ -60,9 +60,11 @@ const PerformanceOptimizer: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
+            // eslint-disable-next-line no-console
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
+            // eslint-disable-next-line no-console
             console.log('FID:', entry.processingStart - entry.startTime);
           }
         });
@@ -70,7 +72,8 @@ const PerformanceOptimizer: React.FC = () => {
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
+      } catch {
+        // eslint-disable-next-line no-console
         console.warn('Performance Observer not supported');
       }
     }
