@@ -230,29 +230,34 @@ class PerformanceOptimizer {
   startMark(markName: string): void {
     if (typeof window === 'undefined' || !performance.mark) return;
     try {
-      performance.mark(markName);
+      performance.mark(`${markName}-start`);
     } catch (error) {
-      console.warn('Failed to create performance mark:', error);
+      console.warn(`Failed to create performance mark: ${markName}`, error);
     }
   }
 
   endMark(markName: string): number | null {
-    if (typeof window === 'undefined' || !performance.measure) return null;
+    if (typeof window === 'undefined' || !performance.mark || !performance.measure) return null;
     try {
-      const measureName = `${markName}-measure`;
-      performance.measure(measureName, markName);
-      const measure = performance.getEntriesByName(measureName)[0];
-      const duration = measure ? measure.duration : null;
+      performance.mark(`${markName}-end`);
+      const measureName = `${markName}-duration`;
+      performance.measure(measureName, `${markName}-start`, `${markName}-end`);
       
-      // Clean up marks and measures
-      performance.clearMarks(markName);
-      performance.clearMeasures(measureName);
-      
-      return duration;
+      const measures = performance.getEntriesByName(measureName, 'measure');
+      if (measures.length > 0) {
+        const duration = measures[0].duration;
+        
+        // Clean up marks and measures
+        performance.clearMarks(`${markName}-start`);
+        performance.clearMarks(`${markName}-end`);
+        performance.clearMeasures(measureName);
+        
+        return duration;
+      }
     } catch (error) {
-      console.warn('Failed to measure performance:', error);
-      return null;
+      console.warn(`Failed to measure performance: ${markName}`, error);
     }
+    return null;
   }
 
   cleanup() {

@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet-async';
 interface SEOConfig {
   title: string;
   description: string;
+  keywords: string[];
   url: string;
   canonicalUrl: string;
-  keywords: string[];
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
@@ -178,7 +178,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     trackPageView({
       title: config.title,
       description: config.description,
-      url: config.canonicalUrl,
+      url: config.url,
       canonicalUrl: config.canonicalUrl,
       keywords: config.keywords,
     });

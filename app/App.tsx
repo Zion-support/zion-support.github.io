@@ -33,7 +33,7 @@ import './globals.css';
 const App: React.FC = () => {
   useEffect(() => {
     // Initialize global error handling
-    logger.info('App initialized', { component: 'App', action: 'mount' });
+    logger.info('App initialized', { component: 'App' });
 
     // Initialize performance monitoring
     lazyLoadImages();
@@ -52,7 +52,7 @@ const App: React.FC = () => {
       }
     }
     
-    logger.info('Performance monitoring initialized', { component: 'App', action: 'performance-init' });
+    logger.info('Performance monitoring initialized', { component: 'App' });
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
   }, []);
 
@@ -62,7 +62,7 @@ const App: React.FC = () => {
         enableErrorReporting={true}
         enableRetry={true}
         onError={(error, errorInfo) => {
-          logger.error('Application Error', new Error(error.message), { component: 'ErrorBoundary', errorInfo });
+          logger.error('Application Error', error, { component: 'ErrorBoundary', errorInfo });
         }}
       >
         <AccessibilityEnhancer>
@@ -118,7 +118,7 @@ const App: React.FC = () => {
                   enableRealTimeMonitoring={process.env.NODE_ENV === 'development'}
                   onMetricsUpdate={(metrics) => {
                     if (process.env.NODE_ENV === 'development') {
-                      logger.debug('Performance Metrics', { component: 'PerformanceMonitor', metrics: metrics as unknown as Record<string, unknown> });
+                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
                     }
                   }}
                 />
