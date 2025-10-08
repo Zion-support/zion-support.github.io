@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 </a>
                 <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
                   Twitter
-                </Link>
+                </a>
               </div>
             </div>
           </div>

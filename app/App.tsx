@@ -8,6 +8,11 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceDashboard from './components/PerformanceDashboard';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOEnhancer from './components/SEOEnhancer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -118,23 +123,24 @@ const App: React.FC = () => {
                   </main>
                   <Footer />
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-                
-                {/* Advanced Performance Monitor */}
-                <AdvancedPerformanceMonitor
-                  enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                  onMetricsUpdate={(metrics) => {
-                    if (process.env['NODE_ENV'] === 'development') {
-                      logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                    }
-                  }}
-                />
-              </div>
-            </Router>
-          </SEOEnhancer>
-        </AccessibilityEnhancer>
-      </AdvancedErrorBoundary>
+                  {/* Performance Dashboard */}
+                  <PerformanceDashboard />
+                  
+                  {/* Advanced Performance Monitor */}
+                  <AdvancedPerformanceMonitor
+                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
+                    onMetricsUpdate={(metrics) => {
+                      if (process.env['NODE_ENV'] === 'development') {
+                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
+                      }
+                    }}
+                  />
+                </div>
+              </Router>
+            </SEOEnhancer>
+          </AccessibilityEnhancer>
+        </PerformanceOptimizer>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 };
