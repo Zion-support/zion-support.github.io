@@ -90,6 +90,10 @@ const HomePage: React.FC = () => {
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
+            <br /><br />
+            <span className="text-cyan-400 font-semibold">20+ Micro SAAS Solutions</span> starting from $79/month • 
+            <span className="text-green-400 font-semibold"> Advanced AI Services</span> from $1,500/month • 
+            <span className="text-blue-400 font-semibold"> Enterprise IT Solutions</span> from $899/month
           </p>
           
           {/* Key Benefits */}
@@ -131,25 +135,67 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services
+        {/* Services Overview */}
+        <section className="mb-16" aria-labelledby="services-overview-heading">
+          <h2 id="services-overview-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Our Service Categories
           </h2>
           <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="cyber-card hologram-card text-center">
+              <div className="text-5xl mb-4">💻</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SAAS Solutions</h3>
+              <p className="text-gray-300 mb-4">20+ affordable AI-powered tools for modern businesses</p>
+              <div className="text-cyan-400 font-bold text-xl mb-4">Starting at $79/month</div>
+              <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                Explore Solutions →
+              </a>
+            </div>
+            
+            <div className="cyber-card hologram-card text-center">
+              <div className="text-5xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Advanced AI Services</h3>
+              <p className="text-gray-300 mb-4">Enterprise-grade AI solutions for complex business needs</p>
+              <div className="text-green-400 font-bold text-xl mb-4">Starting at $1,500/month</div>
+              <a href="/ai-services" className="text-green-400 hover:text-green-300 font-medium">
+                Explore AI Services →
+              </a>
+            </div>
+            
+            <div className="cyber-card hologram-card text-center">
+              <div className="text-5xl mb-4">⚙️</div>
+              <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+              <p className="text-gray-300 mb-4">Comprehensive IT solutions and enterprise infrastructure</p>
+              <div className="text-blue-400 font-bold text-xl mb-4">Starting at $899/month</div>
+              <a href="/it-services" className="text-blue-400 hover:text-blue-300 font-medium">
+                Explore IT Solutions →
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="mb-16" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Featured Services
+          </h2>
+          <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Our most popular and innovative solutions
+          </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">🤖</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
+                <div className="text-5xl mb-6 text-center">💻</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
+                  Affordable, powerful AI-driven tools for modern businesses. 20+ ready-to-use solutions starting from $79/month.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $1,500/month</div>
-                  <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">Starting at $79/month</div>
+                  <a href="/micro-saas" className="text-cyan-400 hover:text-cyan-300 font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -158,14 +204,14 @@ const HomePage: React.FC = () => {
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
-                <div className="text-5xl mb-6 text-center">📢</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Marketing</h3>
+                <div className="text-5xl mb-6 text-center">🤖</div>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Revolutionary AI-powered marketing automation, ad optimization, and content generation.
+                  Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium">
+                  <div className="text-2xl font-bold text-pink-400 mb-2">Starting at $1,500/month</div>
+                  <a href="/ai-services" className="text-pink-400 hover:text-pink-300 font-medium">
                     Learn More →
                   </a>
                 </div>
@@ -175,13 +221,13 @@ const HomePage: React.FC = () => {
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card">
                 <div className="text-5xl mb-6 text-center">⚙️</div>
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">AI Automation</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 text-center">IT Solutions</h3>
                 <p className="text-gray-300 mb-6 text-center leading-relaxed">
-                  Intelligent automation of business processes with decision-making capabilities and exception handling.
+                  Comprehensive IT infrastructure, cloud migration, cybersecurity, and enterprise solutions.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium">
+                  <div className="text-2xl font-bold text-blue-400 mb-2">Starting at $899/month</div>
+                  <a href="/it-services" className="text-blue-400 hover:text-blue-300 font-medium">
                     Learn More →
                   </a>
                 </div>
