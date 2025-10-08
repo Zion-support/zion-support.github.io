@@ -56,14 +56,14 @@ class SecurityEnhancer {
     if (!this.config.enableContentSecurityPolicy) return
 
     const csp = [
-      "default-src 'self'"
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net"
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
-      "font-src 'self' https://fonts.gstatic.com"
-      "img-src 'self' data: https:"
-      "connect-src 'self' https://api.zion.app"
-      "frame-ancestors 'none'"
-      "base-uri 'self'"
+      "default-src 'self'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+      "font-src 'self' https://fonts.gstatic.com",
+      "img-src 'self' data: https:",
+      "connect-src 'self' https://api.zion.app",
+      "frame-ancestors 'none'",
+      "base-uri 'self'",
       "form-action 'self'"
     ].join('; ')
 
@@ -115,12 +115,11 @@ class SecurityEnhancer {
     const originalConsole = { ...console }
     // Override console methods to detect debugging
     ['log', 'warn', 'error', 'info'].forEach(method => {
-      (console as Record<string, Function>)[method] = (...args: unknown[]) => {
       (console as { [key: string]: (...args: unknown[]) => void })[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++
-        originalConsole[method](...args)
+        originalConsole[method](...args);
       }
-    })
+    });
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
@@ -172,9 +171,9 @@ class SecurityEnhancer {
   private setupSecureHeaders(): void {
     // These would typically be set by the server, but we can add meta tags
     const headers = [
-      { name: 'X-Frame-Options', content: 'DENY' }
-      { name: 'X-Content-Type-Options', content: 'nosniff' }
-      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' }
+      { name: 'X-Frame-Options', content: 'DENY' },
+      { name: 'X-Content-Type-Options', content: 'nosniff' },
+      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
     ]
 

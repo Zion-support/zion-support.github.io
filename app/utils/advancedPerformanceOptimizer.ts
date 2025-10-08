@@ -114,9 +114,6 @@ export class PerformanceOptimizer {
    */
 
   memoize<T extends (...args: unknown[]) => unknown>(
-
-  memoize<T extends (...args: unknown[]) => unknown>(
-
     func: T,
   ): (...args: Parameters<T>) => ReturnType<T> {
     const cache = new Map<string, ReturnType<T>>()
@@ -140,7 +137,7 @@ export class PerformanceOptimizer {
     const summary: Record<string, { avg: number; count: number }> = {}
     this.metrics.forEach((values, name) => {
       summary[name] = {
-        avg: this.getAverageMetric(name)
+        avg: this.getAverageMetric(name),
         count: values.length
       }
     })
