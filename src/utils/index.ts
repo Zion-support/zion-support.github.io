@@ -5,27 +5,36 @@
 export * from './analytics';
 export * from './errorHandler';
 export * from './performanceOptimizer';
+export * from './security';
 export * from './cache';
 export * from './logger';
 export * from './api';
 export * from './hooks';
 
-// Export security and validation separately to avoid conflicts
-export { 
-  sanitizeInput, 
-  escapeHtml, 
-  validatePassword, 
-  generateSecureToken,
-  isValidEmail as isValidEmailFromSecurity,
-  isValidUrl as isValidUrlFromSecurity
-} from './security';
-
-export { 
-  validateForm, 
-  validateField,
-  isValidEmail,
-  isValidUrl,
-  isValidPhone 
+// Export validation utilities individually to avoid conflicts
+export {
+  isDefined,
+  isString,
+  isNumber,
+  isBoolean,
+  isObject,
+  isArray,
+  isFunction,
+  isEmpty,
+  isEmptyObject,
+  validateRequiredFields,
+  isError,
+  isValidLength,
+  isInRange,
+  safeParse,
+  assertNever,
+  safeArrayAccess,
+  safeGet,
+  isValidDate,
+  isValidJson,
+  isValidHexColor,
+  isValidUuid,
+  hasProperty,
 } from './validation';
 
 // Default exports
@@ -37,4 +46,3 @@ export { default as cacheUtils } from './cache';
 export { default as logger } from './logger';
 export { default as apiUtils } from './api';
 export { default as hooksUtils } from './hooks';
-export { ErrorHandler } from './errorHandler';
