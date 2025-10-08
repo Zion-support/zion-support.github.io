@@ -106,10 +106,6 @@ const EnterprisePage: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default EnterprisePage;
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7bf5
