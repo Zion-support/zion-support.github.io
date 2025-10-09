@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { BarChart3, TrendingUp, Users, Brain, Phone, Star, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
