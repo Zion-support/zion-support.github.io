@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/Navigation.tsx
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
@@ -262,7 +261,7 @@ const Navigation: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             <Link 
@@ -368,71 +367,30 @@ const Navigation: React.FC = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                )}
               </div>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+1 302 464 0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Email</span>
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium"
-            >
-              Get Started
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                {mainNavItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.path}
-                    onClick={closeAllMenus}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">{item.name}</span>
-                  </Link>
-                ))}
-              </div>
-
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+              <Link
+                href="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
+                Case Studies
+              </Link>
+              <Link
+                href="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
             </div>
           </div>
         )}
