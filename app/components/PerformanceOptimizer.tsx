@@ -107,11 +107,37 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS((metric) => {
+          // Store performance metrics for analysis
+          if (typeof window !== 'undefined') {
+            window.performanceMetrics = window.performanceMetrics || {};
+            window.performanceMetrics.CLS = metric;
+          }
+        });
+        getFID((metric) => {
+          if (typeof window !== 'undefined') {
+            window.performanceMetrics = window.performanceMetrics || {};
+            window.performanceMetrics.FID = metric;
+          }
+        });
+        getFCP((metric) => {
+          if (typeof window !== 'undefined') {
+            window.performanceMetrics = window.performanceMetrics || {};
+            window.performanceMetrics.FCP = metric;
+          }
+        });
+        getLCP((metric) => {
+          if (typeof window !== 'undefined') {
+            window.performanceMetrics = window.performanceMetrics || {};
+            window.performanceMetrics.LCP = metric;
+          }
+        });
+        getTTFB((metric) => {
+          if (typeof window !== 'undefined') {
+            window.performanceMetrics = window.performanceMetrics || {};
+            window.performanceMetrics.TTFB = metric;
+          }
+        });
       });
     }
   }, []);
@@ -120,11 +146,11 @@ const PerformanceOptimizer: React.FC = () => {
   const optimizeMemory = useCallback(() => {
     // Clear unused event listeners periodically
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if ('gc' in window) {
-          (window as any).gc();
+          (window as Window & { gc?: () => void }).gc?.();
         }
       }
     }
