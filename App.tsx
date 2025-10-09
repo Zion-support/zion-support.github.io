@@ -20,6 +20,14 @@ const ApiDocsPage = lazy(() => import('./app/api-docs/page'));
 const ConsultationPage = lazy(() => import('./app/consultation/page'));
 const CompliancePage = lazy(() => import('./app/compliance/page'));
 const GdprPage = lazy(() => import('./app/gdpr/page'));
+const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
+const ITConsultingPage = lazy(() => import('./app/it-consulting/page'));
+const ITInfrastructurePage = lazy(() => import('./app/it-infrastructure/page'));
+const CloudInfrastructurePage = lazy(() => import('./app/cloud-infrastructure/page'));
+const CloudMigrationPage = lazy(() => import('./app/cloud-migration/page'));
+const SecurityPage = lazy(() => import('./app/security/page'));
+const SupportPage = lazy(() => import('./app/support/page'));
 
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
@@ -103,6 +111,14 @@ const App: React.FC = () => {
     { path: '/consultation', component: ConsultationPage },
     { path: '/compliance', component: CompliancePage },
     { path: '/gdpr', component: GdprPage },
+    { path: '/ai-services', component: AIServicesPage },
+    { path: '/micro-saas', component: MicroSaasPage },
+    { path: '/it-consulting', component: ITConsultingPage },
+    { path: '/it-infrastructure', component: ITInfrastructurePage },
+    { path: '/cloud-infrastructure', component: CloudInfrastructurePage },
+    { path: '/cloud-migration', component: CloudMigrationPage },
+    { path: '/security', component: SecurityPage },
+    { path: '/support', component: SupportPage },
   ], []);
 
   return (
