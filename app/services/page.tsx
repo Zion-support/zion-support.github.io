@@ -76,9 +76,6 @@ const ServicesPage: React.FC = () => {
     address: 'Middletown, DE 19709'
   };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b8f2
   return (
     <>
       <Helmet>
