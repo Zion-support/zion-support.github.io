@@ -1,10 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
+=======
+import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -126,7 +130,11 @@ const AIMLPlatformPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 }
 
 export default AiMlPlatformPage;
 export default AIMLPlatformPage;
+=======
+export default AiMlPlatformPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 
 

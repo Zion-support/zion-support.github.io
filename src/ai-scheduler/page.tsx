@@ -1,10 +1,12 @@
+<<<<<<< HEAD
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 'use client';
 'use client';
-import React from 'react';
-
+=======
 'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
+import React from 'react';
 
 const AISchedulerPage: React.FC = () => {
   const _features = [

@@ -14,10 +14,13 @@ interface ServicePageProps {
   title: string;
   description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4c95
   icon: React.ComponentType<{ className?: string }>;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
   services: Array<{
     title: string;
     description: string;

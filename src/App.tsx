@@ -38,8 +38,6 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
-
 // Lazy load components for better performance
 const _HomePage = lazy(() => import('../app/page'));
 
@@ -63,6 +61,7 @@ const LoadingSpinner: React.FC = () => (
 // Specialized Solutions Pages
 
 // Company Pages
+<<<<<<< HEAD
 
 // Support Pages
 
@@ -79,6 +78,8 @@ import CaseStudiesPage from './case-studies/page';
 
 // Support Pages
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 // Additional Pages
 
 // AI Services
@@ -228,10 +229,13 @@ const App: React.FC = () => {
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
+<<<<<<< HEAD
       // Continue even if enhancers fail
       setIsInitialized(true);
 // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
     }
   };
 

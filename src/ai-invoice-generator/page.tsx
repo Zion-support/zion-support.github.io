@@ -1,12 +1,12 @@
+<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
-import React, { memo } from 'react';
-
-'use client';
 
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const _features = [

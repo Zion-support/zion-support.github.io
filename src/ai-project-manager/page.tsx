@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
@@ -9,6 +10,8 @@ import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
   const _features = [
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -131,7 +134,11 @@ const AIProjectManagerPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 }
 
 export default AiProjectManagerPage;
 export default AIProjectManagerPage;
+=======
+export default AiProjectManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61

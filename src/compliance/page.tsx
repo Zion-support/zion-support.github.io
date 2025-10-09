@@ -1,12 +1,12 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import React from 'react';
-
-'use client';
 
 const CompliancePage: React.FC = () => {
   const _certifications = [

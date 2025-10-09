@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
@@ -101,6 +102,8 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 
 const AiEmailMarketingPage: React.FC = () => {
@@ -140,7 +143,11 @@ const AIEmailMarketingPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 }
 
 export default AiEmailMarketingPage;
 export default AIEmailMarketingPage;
+=======
+export default AiEmailMarketingPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61

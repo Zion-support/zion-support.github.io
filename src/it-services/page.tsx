@@ -3,6 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Cloud } from 'lucide-react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD
@@ -74,6 +75,8 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 
 const ItServicesPage: React.FC = () => {
   return (
@@ -109,6 +112,5 @@ const ItServicesPage: React.FC = () => {
     </div>
   );
 };
-}
 
 export default ITServicesPage;

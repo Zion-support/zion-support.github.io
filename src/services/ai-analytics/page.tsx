@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';

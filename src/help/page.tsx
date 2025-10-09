@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

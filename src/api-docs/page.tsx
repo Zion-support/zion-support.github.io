@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {Star, Phone} from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
