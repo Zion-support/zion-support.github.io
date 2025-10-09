@@ -1,107 +1,140 @@
-
-
-
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Shield, Eye, AlertTriangle, Lock } from 'lucide-react';
 
-import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
-const AISecurityMonitorPage: React.FC = () => {
-  const features = [];
-  return (
-    {// TODO: Add content;}
-
-};
-  ico,
-  n: Shield,
-      titl,
-  e: 'Threat Detection',
-      descriptio,
-  n: 'AI-powered threat detection and monitoring',
-      benefit,
-  s: ['Real-time monitoring', 'Threat analysis', 'Incident response'];
+const AiSecurityMonitorPage: React.FC = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Security Monitoring',
+      description: 'Protect your systems with AI-powered security monitoring',
+      benefits: ['Advanced features', 'Real-time processing', 'Scalable solutions']
     },
-      ico,
-  n: Target,
-      titl,
-  e: 'Vulnerability Assessment',
-      descriptio,
-  n: 'Automated vulnerability scanning and assessment',
-      benefit,
-  s: ['Security scanning', 'Risk assessment', 'Compliance checking']
-      ico,
-  n: Settings,
-      titl,
-  e: 'Security Analytics',
-      descriptio,
-  n: 'Comprehensive security analytics and reporting',
-      benefit,
-  s: ['Security metrics', 'Threat intelligence', 'Performance reports']
+    {
+      icon: Eye,
+      title: 'Intelligent Analysis',
+      description: 'AI-powered analysis and insights',
+      benefits: ['Pattern recognition', 'Predictive modeling', 'Data visualization']
+    },
+    {
+      icon: AlertTriangle,
+      title: 'Automation',
+      description: 'Streamline your workflow with automation',
+      benefits: ['Process automation', 'Task scheduling', 'Workflow optimization']
+    },
+    {
+      icon: Lock,
+      title: 'Integration',
+      description: 'Seamless integration with existing systems',
+      benefits: ['API integration', 'Third-party tools', 'Custom connectors']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gray-50">
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-
-// AI Security Monitor;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
-// Real-time Security Monitoring;
-          </p>"
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
-            Protect your business with AI-powered security monitoring.
-
-            Detect threats, prevent attacks, and ensure compliance with intelligent security solutions.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-// >
-//               Get Started;
-          </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Shield className="w-5 h-5" />
-
-              +1 302 464 0950;
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-orange-600 to-purple-700 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              Ai Security Monitor
+            </h1>
+            <p className="text-xl mb-8 text-orange-100">
+              Protect your systems with AI-powered security monitoring
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/demo"
+                className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              >
+                Try Demo
+              </Link>
+              <Link
+                to="/consultation"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
-        </section>"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
-// Security Monitoring Features;
-          </h2>"
-          <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
-            {features.map((feature, index) => ()}"
-          <div key={index} className="cyber-card p-6,"
-  hover:scale-105 transition-all duration-300"></div>"
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
-                  <feature.icon className="w-8 h-8 text-white" /></feature>"
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
-                  {feature.title}
-                </h3>"
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
-                  {feature.description}"
-                <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-      </main>
-      <Footer /></Footer>
+        </div>
+      </section>
 
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need for security monitoring
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="w-8 h-8 text-orange-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {feature.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    {feature.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-900 text-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 text-gray-300">
+              Join thousands of users who are already benefiting from our AI solutions
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/demo"
+                className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
+              >
+                Start Now
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
 
-
 export default AiSecurityMonitorPage;
-
-
