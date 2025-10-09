@@ -43,23 +43,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
     { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-<<<<<<< HEAD
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
-=======
     { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
     { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
     { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
   ];
 
   const emergingTech = [
@@ -212,26 +199,6 @@ const Footer: React.FC = memo(() => {
 
           {/* Micro SAAS & Emerging Tech */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
-                <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-=======
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
@@ -313,7 +280,6 @@ const Footer: React.FC = memo(() => {
                 <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
                   {contactInfo.phone}
                 </a>
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
               </div>
               <div className="flex items-center text-sm text-gray-300">
                 <Mail className="w-4 h-4 mr-2" />
