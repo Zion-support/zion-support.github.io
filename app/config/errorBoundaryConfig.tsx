@@ -7,7 +7,6 @@
 
 import React from 'react';
 
-
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console

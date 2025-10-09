@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Eye, ShieldCheck, Zap } from 'lucide-react';;;;
 
 const AICybersecurityPage: React.FC = () => {
   const securityServices = [

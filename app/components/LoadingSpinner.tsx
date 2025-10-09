@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'indigo' | 'blue' | 'green' | 'purple';

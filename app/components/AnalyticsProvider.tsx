@@ -87,7 +87,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     trackPageView();
     trackInteractions();
 
-
     window.addEventListener('popstate', handleRouteChange);
 
     return () => {

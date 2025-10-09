@@ -28,8 +28,6 @@ const ContentShowcase = lazy(() =>
   }))
 );
 
-
-
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
