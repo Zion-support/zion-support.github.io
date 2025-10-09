@@ -578,3 +578,10 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+- Score: ${metrics.score}
+- Issues Fixed: ${metrics.issuesFixed}
+- Improvements Made: ${metrics.improvementsMade}
+- WCAG Compliance: ${metrics.wcagCompliance}%
+`;
+  }
+}
