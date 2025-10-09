@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Eye, MessageSquare } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -53,44 +53,95 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Chatbots', href: '/ai-chatbots', icon: Users, description: 'Intelligent Chatbots' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' }
   ];
   const itServices = [
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Cloud Migration Services' },
+    { name: 'Infrastructure as Code', href: '/infrastructure-as-code', icon: Settings, description: 'IaC Solutions' },
+    { name: 'Cloud Optimization', href: '/cloud-optimization', icon: Zap, description: 'Cost Optimization' },
+    { name: 'Disaster Recovery', href: '/disaster-recovery', icon: Shield, description: 'DR Solutions' },
+    { name: 'Cybersecurity Suite', href: '/cybersecurity-suite', icon: Lock, description: 'Security Solutions' },
+    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
+    { name: 'Compliance Management', href: '/compliance-management', icon: BarChart, description: 'Compliance Solutions' },
+    { name: 'Identity & Access Management', href: '/identity-access-management', icon: Lock, description: 'IAM Solutions' },
+    { name: 'DevOps & CI/CD', href: '/devops-cicd', icon: Settings, description: 'Development Operations' },
+    { name: 'Container Orchestration', href: '/container-orchestration', icon: Cloud, description: 'Kubernetes & Docker' },
+    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone, description: 'Mobile Solutions' },
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
+    { name: 'Database Management', href: '/database-management', icon: Database, description: 'Database Solutions' },
+    { name: 'Data Analytics Platform', href: '/data-analytics-platform', icon: BarChart, description: 'Analytics Solutions' },
+    { name: 'Data Integration', href: '/data-integration', icon: Zap, description: 'ETL/ELT Services' },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'BI Solutions' },
+    { name: 'Network Solutions', href: '/network-solutions', icon: Globe, description: 'Network Infrastructure' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
+    { name: 'IT Support & Maintenance', href: '/it-support', icon: Settings, description: 'IT Support' },
+    { name: 'Managed IT Services', href: '/managed-it-services', icon: Settings, description: '24/7 IT Management' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },
-    { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Customer Management' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing' },
-    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media' },
+    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Intelligent CRM' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: BarChart, description: 'Business Intelligence' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Users, description: 'Chatbot Builder' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Email Automation' },
+    { name: 'AI Mobile App Builder', href: '/ai-mobile-builder', icon: Smartphone, description: 'Mobile Builder' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'SEO Tools' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: TrendingUp, description: 'Invoice Automation' },
     { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
     { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
-    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Target, description: 'SEO Tools' },
     { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Lead Scoring AI', href: '/lead-scoring-ai', icon: Target, description: 'Lead Qualification' },
+    { name: 'Social Media AI', href: '/social-media-ai', icon: Globe, description: 'Social Media' },
+    { name: 'Video Marketing AI', href: '/video-marketing-ai', icon: Code, description: 'Video Creation' },
+    { name: 'Email Sequence AI', href: '/email-sequence-ai', icon: Mail, description: 'Email Sequences' },
+    { name: 'Event Marketing AI', href: '/event-marketing-ai', icon: Calendar, description: 'Event Management' },
+    { name: 'Code Assistant AI', href: '/code-assistant-ai', icon: Code, description: 'Development AI' },
+    { name: 'API Builder Pro', href: '/api-builder-pro', icon: Settings, description: 'API Development' },
+    { name: 'Bug Tracker AI', href: '/bug-tracker-ai', icon: Shield, description: 'Bug Management' },
+    { name: 'Doc Generator AI', href: '/doc-generator-ai', icon: FileText, description: 'Documentation' },
+    { name: 'Security Scanner AI', href: '/security-scanner-ai', icon: Lock, description: 'Security Scanning' },
+    { name: 'Performance Monitor AI', href: '/performance-monitor-ai', icon: Zap, description: 'Performance Monitoring' },
+    { name: 'Test Generator AI', href: '/test-generator-ai', icon: Code, description: 'Test Automation' },
+    { name: 'CI/CD Pipeline AI', href: '/cicd-pipeline-ai', icon: Settings, description: 'Pipeline Automation' },
+    { name: 'E-commerce AI', href: '/ecommerce-ai', icon: Globe, description: 'E-commerce Optimization' },
+    { name: 'Payment Processor AI', href: '/payment-processor-ai', icon: TrendingUp, description: 'Payment Processing' },
+    { name: 'Financial Analytics AI', href: '/financial-analytics-ai', icon: BarChart, description: 'Financial Insights' },
+    { name: 'Banking Integration AI', href: '/banking-integration-ai', icon: Shield, description: 'Banking Solutions' },
+    { name: 'Trading Bot AI', href: '/trading-bot-ai', icon: TrendingUp, description: 'Algorithmic Trading' },
+    { name: 'Portfolio Manager AI', href: '/portfolio-manager-ai', icon: BarChart, description: 'Portfolio Management' },
+    { name: 'Fraud Detection AI', href: '/fraud-detection-ai', icon: Lock, description: 'Fraud Prevention' },
+    { name: 'Compliance AI', href: '/compliance-ai', icon: Shield, description: 'Compliance Management' },
+    { name: 'Medical Imaging AI', href: '/medical-imaging-ai', icon: Shield, description: 'Medical AI' },
+    { name: 'Drug Discovery AI', href: '/drug-discovery-ai', icon: Code, description: 'Pharmaceutical AI' },
+    { name: 'Patient Management AI', href: '/patient-management-ai', icon: Users, description: 'Healthcare Management' },
+    { name: 'Mental Health AI', href: '/mental-health-ai', icon: Brain, description: 'Mental Health Support' },
+    { name: 'Pharmacy AI', href: '/pharmacy-ai', icon: Shield, description: 'Pharmacy Management' },
+    { name: 'Lab Management AI', href: '/lab-management-ai', icon: Settings, description: 'Laboratory AI' },
+    { name: 'Clinical Trial AI', href: '/clinical-trial-ai', icon: BarChart, description: 'Clinical Research' },
+    { name: 'Hospital Management AI', href: '/hospital-management-ai', icon: Shield, description: 'Hospital AI' },
+    { name: 'Learning Management AI', href: '/learning-management-ai', icon: Users, description: 'Educational AI' },
+    { name: 'AI Tutor', href: '/ai-tutor', icon: Brain, description: 'Intelligent Tutoring' },
+    { name: 'Assessment AI', href: '/assessment-ai', icon: BarChart, description: 'Assessment Tools' },
+    { name: 'Skill Assessment AI', href: '/skill-assessment-ai', icon: Target, description: 'Skill Evaluation' },
+    { name: 'Content Creation AI', href: '/content-creation-ai', icon: Code, description: 'Educational Content' },
+    { name: 'Collaboration AI', href: '/collaboration-ai', icon: Users, description: 'Team Collaboration' },
+    { name: 'Gamification AI', href: '/gamification-ai', icon: Sparkles, description: 'Learning Gamification' },
+    { name: 'Learning Analytics AI', href: '/learning-analytics-ai', icon: BarChart, description: 'Learning Insights' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
+    { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'ML Solutions' },
+    { name: 'Deep Learning', href: '/deep-learning', icon: Brain, description: 'Neural Networks' },
+    { name: 'Computer Vision', href: '/computer-vision', icon: Eye, description: 'Image Recognition' },
+    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare, description: 'Language AI' },
+    { name: 'Predictive Analytics', href: '/predictive-analytics', icon: BarChart, description: 'Forecasting AI' },
+    { name: 'Cognitive Computing', href: '/cognitive-computing', icon: Brain, description: 'Cognitive AI' }
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
