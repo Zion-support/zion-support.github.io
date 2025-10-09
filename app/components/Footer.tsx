@@ -240,12 +240,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <a 
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
               <li>
@@ -267,12 +267,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
-                  <Link 
+                  <a 
                     href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -286,12 +286,12 @@ const Footer: React.FC = memo(() => {
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
-                  <Link 
+                  <a 
                     href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
