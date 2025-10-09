@@ -1,11 +1,29 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap } from 'lucide-react';
 import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+const ITConsultingPage: React.FC = () => {
+  const consultingServices = [
+    {
+      icon: Brain,
+      title: 'Strategic IT Planning',
+      description: 'Comprehensive IT strategy development and digital transformation roadmaps',
+      features: ['Technology assessment', 'Digital transformation planning', 'IT governance', 'Risk analysis'],
+      benefits: ['Aligned technology strategy', 'Reduced IT costs', 'Improved efficiency', 'Future-proof solutions'],
+      price: '$2,500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with zero downtime',
+      features: ['Cloud architecture design', 'Data migration', 'Security implementation', 'Performance optimization'],
+      benefits: ['Scalable infrastructure', 'Cost reduction', 'Enhanced security', 'Improved performance'],
+      price: '$5,000'
+    }
+  ];
 
   return (
     <>

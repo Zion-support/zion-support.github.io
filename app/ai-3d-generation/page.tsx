@@ -166,10 +166,13 @@ const AI3DGenerationPage: React.FC = () => {
                 <Phone className="w-4 h-4" />
                 <span>Call (302) 464-0950</span>
               </a>
+              <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button-outline inline-flex items-center space-x-2"
+              >
                 <Mail className="w-4 h-4" />
                 <span>Get Quote</span>
+              </a>
             </div>
           </section>
 
