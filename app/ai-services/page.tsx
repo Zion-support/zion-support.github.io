@@ -1,562 +1,746 @@
 'use client';
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, CheckCircle, Zap, Brain, Shield, Clock, Users, TrendingUp, BarChart, Globe, Smartphone, Mail, FileText, Image, Video, Music, Code, Database, Cloud, Lock, Target, PieChart, Settings, Rocket, Award, DollarSign, Calendar, MessageSquare, Search, Filter, Download, Upload, Share, Eye, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalHigh, SignalLow, Wifi2, WifiOff2, Battery2, BatteryLow2, Signal2, SignalHigh2, SignalLow2 } from 'lucide-react';
+interface AIService {
+  id: string;
+  name: string;
+  description: string;
+  features: string[];
+  useCases: string[];
+  pricing: {
+    monthly: number;
+    yearly: number;
+    setup: number;
+    enterprise: string;
+  };
+  category: string;
+  icon: string;
+  demoUrl?: string;
+  apiDocumentation?: string;
+  status: 'active' | 'beta' | 'coming-soon';
+  technicalSpecs: {
+    accuracy: string;
+    processingTime: string;
+    languages: string[];
+    integrations: string[];
+  };
+}
 
 const AIServicesPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const aiServices = [
-    // AI Development Services
+  const aiServices: AIService[] = [
+    // Natural Language Processing
     {
-      id: 'ai-consulting',
-      name: 'AI Strategy Consulting',
-      description: 'Comprehensive AI strategy development, technology assessment, and implementation roadmap for enterprise organizations.',
-      category: 'consulting',
-      icon: <Brain className="w-8 h-8" />,
-      price: 5000,
-      period: 'project',
+      id: 'nlp-sentiment-analysis',
+      name: 'Advanced Sentiment Analysis Engine',
+      description: 'Real-time sentiment analysis with emotion detection, intent recognition, and multi-language support for customer feedback and social media monitoring.',
       features: [
-        'AI Readiness Assessment',
-        'Technology Roadmap',
-        'ROI Analysis',
-        'Implementation Planning',
-        'Team Training',
-        'Change Management',
-        'Risk Assessment',
-        'Compliance Review'
+        'Real-time Sentiment Analysis',
+        'Emotion Detection (7 emotions)',
+        'Intent Recognition',
+        'Multi-language Support (50+ languages)',
+        'Custom Model Training',
+        'Batch Processing',
+        'API Integration',
+        'Real-time Dashboards'
       ],
-      benefits: [
-        'Strategic AI Alignment',
-        'Risk Mitigation',
-        'Cost Optimization',
-        'Competitive Advantage'
+      useCases: [
+        'Customer Feedback Analysis',
+        'Social Media Monitoring',
+        'Brand Reputation Management',
+        'Market Research',
+        'Customer Support Optimization',
+        'Product Review Analysis'
       ],
-      popular: true,
-      rating: 4.9,
-      clients: '200+',
-      link: 'https://ziontechgroup.com/ai-consulting'
+      pricing: { monthly: 299, yearly: 2990, setup: 500, enterprise: 'Custom' },
+      category: 'nlp',
+      icon: '🧠',
+      demoUrl: 'https://demo.ziontechgroup.com/sentiment-analysis',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/sentiment',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '95.2%',
+        processingTime: '< 100ms',
+        languages: ['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese', 'Arabic'],
+        integrations: ['REST API', 'GraphQL', 'WebSocket', 'Webhook', 'SDK (Python, Node.js, Java)']
+      }
     },
     {
-      id: 'machine-learning-development',
-      name: 'Machine Learning Development',
-      description: 'Custom ML model development, training, and deployment for predictive analytics, recommendation systems, and automation.',
-      category: 'development',
-      icon: <Code className="w-8 h-8" />,
-      price: 15000,
-      period: 'project',
+      id: 'nlp-text-generation',
+      name: 'AI Text Generation Suite',
+      description: 'Advanced text generation with GPT-4 integration, custom model training, and content optimization for blogs, emails, and marketing materials.',
       features: [
-        'Custom Model Development',
-        'Data Preprocessing',
-        'Model Training & Validation',
-        'API Development',
-        'Cloud Deployment',
-        'Performance Monitoring',
-        'Model Optimization',
-        'Documentation'
+        'GPT-4 Integration',
+        'Custom Model Training',
+        'Content Optimization',
+        'SEO-friendly Generation',
+        'Brand Voice Training',
+        'Multi-format Support',
+        'Plagiarism Detection',
+        'Content Analytics'
       ],
-      benefits: [
-        'Custom Solutions',
-        'High Accuracy Models',
-        'Scalable Architecture',
-        'Production Ready'
+      useCases: [
+        'Content Marketing',
+        'Email Campaigns',
+        'Product Descriptions',
+        'Blog Writing',
+        'Social Media Posts',
+        'Technical Documentation'
       ],
-      popular: true,
-      rating: 4.8,
-      clients: '150+',
-      link: 'https://ziontechgroup.com/machine-learning-development'
+      pricing: { monthly: 399, yearly: 3990, setup: 1000, enterprise: 'Custom' },
+      category: 'nlp',
+      icon: '✍️',
+      demoUrl: 'https://demo.ziontechgroup.com/text-generation',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/text-generation',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '92.8%',
+        processingTime: '< 2s',
+        languages: ['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese'],
+        integrations: ['OpenAI API', 'REST API', 'WebSocket', 'SDK (Python, Node.js, Java)']
+      }
     },
     {
-      id: 'natural-language-processing',
-      name: 'Natural Language Processing',
-      description: 'Advanced NLP solutions including text analysis, sentiment analysis, chatbots, and language translation services.',
-      category: 'development',
-      icon: <MessageSquare className="w-8 h-8" />,
-      price: 12000,
-      period: 'project',
+      id: 'nlp-language-translation',
+      name: 'AI Language Translation Engine',
+      description: 'Real-time language translation with context awareness, industry-specific terminology, and cultural adaptation for global businesses.',
       features: [
-        'Text Analysis & Classification',
-        'Sentiment Analysis',
-        'Named Entity Recognition',
-        'Language Translation',
-        'Chatbot Development',
-        'Voice Processing',
-        'Document Processing',
-        'API Integration'
-      ],
-      benefits: [
-        'Multi-language Support',
-        'High Accuracy Processing',
-        'Real-time Analysis',
-        'Scalable Solutions'
-      ],
-      popular: false,
-      rating: 4.7,
-      clients: '100+',
-      link: 'https://ziontechgroup.com/natural-language-processing'
-    },
-    {
-      id: 'computer-vision',
-      name: 'Computer Vision Solutions',
-      description: 'Advanced computer vision applications including image recognition, object detection, and video analytics.',
-      category: 'development',
-      icon: <Eye className="w-8 h-8" />,
-      price: 18000,
-      period: 'project',
-      features: [
-        'Image Classification',
-        'Object Detection',
-        'Facial Recognition',
-        'Video Analytics',
-        'Medical Imaging',
-        'Quality Control',
-        'Real-time Processing',
-        'Edge Deployment'
-      ],
-      benefits: [
-        'High Precision Detection',
-        'Real-time Processing',
-        'Edge Computing Ready',
-        'Industry Specific Solutions'
-      ],
-      popular: false,
-      rating: 4.8,
-      clients: '80+',
-      link: 'https://ziontechgroup.com/computer-vision'
-    },
-
-    // AI Automation Services
-    {
-      id: 'process-automation',
-      name: 'AI Process Automation',
-      description: 'Intelligent automation of business processes using AI to reduce manual work and improve efficiency.',
-      category: 'automation',
-      icon: <Settings className="w-8 h-8" />,
-      price: 8000,
-      period: 'project',
-      features: [
-        'Process Analysis',
-        'Workflow Design',
-        'RPA Implementation',
-        'AI Integration',
-        'Exception Handling',
-        'Monitoring & Analytics',
-        'User Training',
-        'Maintenance Support'
-      ],
-      benefits: [
-        '80% Time Savings',
-        'Error Reduction',
-        'Cost Optimization',
-        'Scalable Automation'
-      ],
-      popular: true,
-      rating: 4.9,
-      clients: '300+',
-      link: 'https://ziontechgroup.com/process-automation'
-    },
-    {
-      id: 'intelligent-document-processing',
-      name: 'Intelligent Document Processing',
-      description: 'AI-powered document extraction, classification, and data processing for enterprise document management.',
-      category: 'automation',
-      icon: <FileText className="w-8 h-8" />,
-      price: 10000,
-      period: 'project',
-      features: [
-        'Document Classification',
-        'Data Extraction',
-        'OCR Enhancement',
-        'Form Processing',
-        'Compliance Checking',
-        'Workflow Integration',
+        'Real-time Translation',
+        'Context Awareness',
+        'Industry-specific Terminology',
+        'Cultural Adaptation',
+        '100+ Language Pairs',
+        'Batch Processing',
         'Quality Assurance',
-        'API Development'
+        'Custom Dictionaries'
       ],
-      benefits: [
-        '95% Accuracy',
-        'Automated Processing',
-        'Compliance Ready',
-        'Cost Reduction'
+      useCases: [
+        'Global Communication',
+        'E-commerce Localization',
+        'Document Translation',
+        'Customer Support',
+        'Content Localization',
+        'Legal Document Translation'
       ],
-      popular: false,
-      rating: 4.8,
-      clients: '120+',
-      link: 'https://ziontechgroup.com/intelligent-document-processing'
-    },
-    {
-      id: 'ai-chatbot-development',
-      name: 'AI Chatbot Development',
-      description: 'Intelligent conversational AI chatbots with natural language understanding and multi-channel deployment.',
-      category: 'automation',
-      icon: <MessageSquare className="w-8 h-8" />,
-      price: 6000,
-      period: 'project',
-      features: [
-        'Natural Language Understanding',
-        'Multi-channel Deployment',
-        'Integration APIs',
-        'Analytics Dashboard',
-        'Human Handoff',
-        'Custom Training',
-        'Voice Support',
-        '24/7 Availability'
-      ],
-      benefits: [
-        '24/7 Customer Support',
-        'Instant Responses',
-        'Cost Reduction',
-        'Improved Satisfaction'
-      ],
-      popular: true,
-      rating: 4.7,
-      clients: '250+',
-      link: 'https://ziontechgroup.com/ai-chatbot-development'
+      pricing: { monthly: 199, yearly: 1990, setup: 300, enterprise: 'Custom' },
+      category: 'nlp',
+      icon: '🌍',
+      demoUrl: 'https://demo.ziontechgroup.com/translation',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/translation',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '96.5%',
+        processingTime: '< 500ms',
+        languages: ['100+ languages supported'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Node.js, Java, C#)']
+      }
     },
 
-    // AI Analytics Services
+    // Computer Vision
     {
-      id: 'predictive-analytics',
-      name: 'Predictive Analytics',
-      description: 'Advanced predictive modeling and forecasting solutions to help businesses make data-driven decisions.',
-      category: 'analytics',
-      icon: <TrendingUp className="w-8 h-8" />,
-      price: 20000,
-      period: 'project',
+      id: 'cv-object-detection',
+      name: 'Advanced Object Detection System',
+      description: 'Real-time object detection and recognition with custom model training, multi-class classification, and video processing capabilities.',
+      features: [
+        'Real-time Object Detection',
+        'Custom Model Training',
+        'Multi-class Classification',
+        'Video Processing',
+        'Image Segmentation',
+        'Bounding Box Detection',
+        'Confidence Scoring',
+        'Batch Processing'
+      ],
+      useCases: [
+        'Security Surveillance',
+        'Retail Analytics',
+        'Quality Control',
+        'Autonomous Vehicles',
+        'Medical Imaging',
+        'Industrial Automation'
+      ],
+      pricing: { monthly: 499, yearly: 4990, setup: 1500, enterprise: 'Custom' },
+      category: 'computer-vision',
+      icon: '👁️',
+      demoUrl: 'https://demo.ziontechgroup.com/object-detection',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/object-detection',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '94.7%',
+        processingTime: '< 200ms',
+        languages: ['Python', 'JavaScript', 'C++'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Node.js, Java)']
+      }
+    },
+    {
+      id: 'cv-facial-recognition',
+      name: 'Facial Recognition & Analysis',
+      description: 'Advanced facial recognition with emotion detection, age estimation, and identity verification for security and analytics applications.',
+      features: [
+        'Facial Recognition',
+        'Emotion Detection',
+        'Age Estimation',
+        'Gender Classification',
+        'Identity Verification',
+        'Liveness Detection',
+        'Privacy Protection',
+        'Real-time Processing'
+      ],
+      useCases: [
+        'Access Control',
+        'Customer Analytics',
+        'Security Systems',
+        'Attendance Tracking',
+        'Marketing Personalization',
+        'Fraud Prevention'
+      ],
+      pricing: { monthly: 399, yearly: 3990, setup: 1000, enterprise: 'Custom' },
+      category: 'computer-vision',
+      icon: '👤',
+      demoUrl: 'https://demo.ziontechgroup.com/facial-recognition',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/facial-recognition',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '98.3%',
+        processingTime: '< 150ms',
+        languages: ['Python', 'JavaScript', 'C++'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Node.js, Java)']
+      }
+    },
+    {
+      id: 'cv-document-analysis',
+      name: 'AI Document Analysis Suite',
+      description: 'Intelligent document processing with OCR, form extraction, data validation, and automated classification for business documents.',
+      features: [
+        'OCR (Optical Character Recognition)',
+        'Form Extraction',
+        'Data Validation',
+        'Document Classification',
+        'Handwriting Recognition',
+        'Multi-format Support',
+        'Batch Processing',
+        'Quality Assurance'
+      ],
+      useCases: [
+        'Invoice Processing',
+        'Contract Analysis',
+        'Medical Records',
+        'Legal Documents',
+        'Insurance Claims',
+        'Financial Reports'
+      ],
+      pricing: { monthly: 299, yearly: 2990, setup: 500, enterprise: 'Custom' },
+      category: 'computer-vision',
+      icon: '📄',
+      demoUrl: 'https://demo.ziontechgroup.com/document-analysis',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/document-analysis',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '97.1%',
+        processingTime: '< 3s',
+        languages: ['English', 'Spanish', 'French', 'German', 'Chinese'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Node.js, Java)']
+      }
+    },
+
+    // Machine Learning
+    {
+      id: 'ml-predictive-analytics',
+      name: 'Predictive Analytics Platform',
+      description: 'Advanced machine learning platform for predictive modeling, forecasting, and data-driven decision making with automated model selection.',
       features: [
         'Predictive Modeling',
-        'Forecasting Algorithms',
-        'Risk Assessment',
-        'Trend Analysis',
+        'Automated Model Selection',
+        'Time Series Forecasting',
+        'Anomaly Detection',
+        'Feature Engineering',
+        'Model Validation',
         'Real-time Predictions',
-        'Dashboard Development',
-        'API Integration',
-        'Model Maintenance'
+        'A/B Testing'
       ],
-      benefits: [
-        'Data-Driven Decisions',
-        'Risk Mitigation',
-        'Revenue Optimization',
-        'Competitive Advantage'
+      useCases: [
+        'Sales Forecasting',
+        'Risk Assessment',
+        'Demand Planning',
+        'Customer Churn Prediction',
+        'Fraud Detection',
+        'Market Analysis'
       ],
-      popular: false,
-      rating: 4.9,
-      clients: '90+',
-      link: 'https://ziontechgroup.com/predictive-analytics'
+      pricing: { monthly: 599, yearly: 5990, setup: 2000, enterprise: 'Custom' },
+      category: 'machine-learning',
+      icon: '📊',
+      demoUrl: 'https://demo.ziontechgroup.com/predictive-analytics',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/predictive-analytics',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '89.4%',
+        processingTime: '< 5s',
+        languages: ['Python', 'R', 'SQL'],
+        integrations: ['REST API', 'GraphQL', 'SDK (Python, R, Java)']
+      }
     },
     {
-      id: 'ai-business-intelligence',
-      name: 'AI Business Intelligence',
-      description: 'Intelligent BI solutions with automated insights, natural language queries, and predictive analytics.',
-      category: 'analytics',
-      icon: <BarChart className="w-8 h-8" />,
-      price: 15000,
-      period: 'project',
+      id: 'ml-recommendation-engine',
+      name: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation system with collaborative filtering, content-based filtering, and hybrid approaches for personalized user experiences.',
       features: [
-        'Automated Insights',
-        'Natural Language Queries',
-        'Predictive Analytics',
-        'Real-time Dashboards',
-        'Data Visualization',
-        'Report Automation',
-        'Mobile Access',
-        'Integration Hub'
+        'Collaborative Filtering',
+        'Content-based Filtering',
+        'Hybrid Approaches',
+        'Real-time Recommendations',
+        'A/B Testing',
+        'Cold Start Handling',
+        'Scalable Architecture',
+        'Custom Algorithms'
       ],
-      benefits: [
-        'Automated Insights',
-        'Self-Service Analytics',
-        'Real-time Intelligence',
-        'Mobile Accessibility'
+      useCases: [
+        'E-commerce Recommendations',
+        'Content Personalization',
+        'Product Suggestions',
+        'Movie/Music Recommendations',
+        'News Personalization',
+        'Job Matching'
       ],
-      popular: true,
-      rating: 4.8,
-      clients: '180+',
-      link: 'https://ziontechgroup.com/ai-business-intelligence'
+      pricing: { monthly: 399, yearly: 3990, setup: 1000, enterprise: 'Custom' },
+      category: 'machine-learning',
+      icon: '🎯',
+      demoUrl: 'https://demo.ziontechgroup.com/recommendation-engine',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/recommendation-engine',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '91.7%',
+        processingTime: '< 100ms',
+        languages: ['Python', 'Java', 'Scala'],
+        integrations: ['REST API', 'GraphQL', 'SDK (Python, Java, Node.js)']
+      }
     },
     {
-      id: 'customer-analytics',
-      name: 'AI Customer Analytics',
-      description: 'Advanced customer behavior analysis, segmentation, and personalization using AI and machine learning.',
-      category: 'analytics',
-      icon: <Users className="w-8 h-8" />,
-      price: 12000,
-      period: 'project',
+      id: 'ml-anomaly-detection',
+      name: 'Anomaly Detection System',
+      description: 'Advanced anomaly detection with unsupervised learning, real-time monitoring, and automated alerting for security and quality control.',
       features: [
-        'Customer Segmentation',
-        'Behavior Analysis',
-        'Churn Prediction',
-        'Personalization Engine',
-        'Lifetime Value Analysis',
-        'Recommendation Systems',
-        'Sentiment Analysis',
-        'Real-time Insights'
+        'Unsupervised Learning',
+        'Real-time Monitoring',
+        'Automated Alerting',
+        'Multi-dimensional Analysis',
+        'Adaptive Thresholds',
+        'False Positive Reduction',
+        'Historical Analysis',
+        'Custom Models'
       ],
-      benefits: [
-        'Customer Retention',
-        'Personalized Experiences',
-        'Revenue Growth',
-        'Data-Driven Marketing'
+      useCases: [
+        'Fraud Detection',
+        'Network Security',
+        'Quality Control',
+        'Equipment Monitoring',
+        'Financial Anomalies',
+        'User Behavior Analysis'
       ],
-      popular: false,
-      rating: 4.7,
-      clients: '140+',
-      link: 'https://ziontechgroup.com/customer-analytics'
+      pricing: { monthly: 299, yearly: 2990, setup: 800, enterprise: 'Custom' },
+      category: 'machine-learning',
+      icon: '🚨',
+      demoUrl: 'https://demo.ziontechgroup.com/anomaly-detection',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/anomaly-detection',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '93.8%',
+        processingTime: '< 200ms',
+        languages: ['Python', 'Java', 'Scala'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Java, Node.js)']
+      }
     },
 
-    // AI Security Services
+    // Conversational AI
     {
-      id: 'ai-cybersecurity',
-      name: 'AI Cybersecurity Solutions',
-      description: 'Advanced AI-powered security solutions for threat detection, fraud prevention, and automated response.',
-      category: 'security',
-      icon: <Shield className="w-8 h-8" />,
-      price: 25000,
-      period: 'project',
+      id: 'conversational-chatbot',
+      name: 'Advanced Conversational AI',
+      description: 'Intelligent chatbot with natural language understanding, multi-turn conversations, and seamless human handoff for customer service automation.',
       features: [
-        'Threat Detection',
-        'Fraud Prevention',
-        'Anomaly Detection',
-        'Automated Response',
-        'Security Analytics',
-        'Compliance Monitoring',
-        'Incident Response',
-        'Risk Assessment'
+        'Natural Language Understanding',
+        'Multi-turn Conversations',
+        'Context Awareness',
+        'Human Handoff',
+        'Multi-channel Support',
+        'Sentiment Analysis',
+        'Custom Training',
+        'Analytics Dashboard'
       ],
-      benefits: [
-        'Proactive Security',
-        'Automated Protection',
-        'Reduced False Positives',
-        'Compliance Assurance'
+      useCases: [
+        'Customer Support',
+        'Sales Assistance',
+        'Lead Qualification',
+        'FAQ Automation',
+        'Appointment Scheduling',
+        'Order Processing'
       ],
-      popular: true,
-      rating: 4.9,
-      clients: '60+',
-      link: 'https://ziontechgroup.com/ai-cybersecurity'
+      pricing: { monthly: 199, yearly: 1990, setup: 500, enterprise: 'Custom' },
+      category: 'conversational-ai',
+      icon: '💬',
+      demoUrl: 'https://demo.ziontechgroup.com/chatbot',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/chatbot',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '94.2%',
+        processingTime: '< 500ms',
+        languages: ['50+ languages'],
+        integrations: ['REST API', 'WebSocket', 'SDK (Python, Node.js, Java)']
+      }
     },
     {
-      id: 'ai-compliance',
-      name: 'AI Compliance & Governance',
-      description: 'Comprehensive AI governance, compliance management, and ethical AI implementation services.',
-      category: 'security',
-      icon: <Lock className="w-8 h-8" />,
-      price: 15000,
-      period: 'project',
+      id: 'conversational-voice-ai',
+      name: 'Voice AI Assistant',
+      description: 'Advanced voice AI with speech recognition, text-to-speech, and natural language processing for voice-enabled applications.',
       features: [
-        'AI Governance Framework',
-        'Compliance Management',
-        'Ethical AI Guidelines',
-        'Risk Assessment',
-        'Audit Preparation',
-        'Policy Development',
-        'Training Programs',
-        'Monitoring Systems'
+        'Speech Recognition',
+        'Text-to-Speech',
+        'Natural Language Processing',
+        'Voice Cloning',
+        'Multi-language Support',
+        'Real-time Processing',
+        'Custom Voice Training',
+        'Noise Cancellation'
       ],
-      benefits: [
-        'Regulatory Compliance',
-        'Risk Mitigation',
-        'Ethical AI Practices',
-        'Audit Readiness'
+      useCases: [
+        'Voice Assistants',
+        'Call Center Automation',
+        'Interactive Voice Response',
+        'Accessibility Tools',
+        'Language Learning',
+        'Voice Commands'
       ],
-      popular: false,
-      rating: 4.8,
-      clients: '40+',
-      link: 'https://ziontechgroup.com/ai-compliance'
+      pricing: { monthly: 299, yearly: 2990, setup: 800, enterprise: 'Custom' },
+      category: 'conversational-ai',
+      icon: '🎤',
+      demoUrl: 'https://demo.ziontechgroup.com/voice-ai',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/voice-ai',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '96.8%',
+        processingTime: '< 1s',
+        languages: ['30+ languages'],
+        integrations: ['WebRTC', 'REST API', 'SDK (Python, Node.js, Java)']
+      }
+    },
+
+    // Data Processing
+    {
+      id: 'data-processing-etl',
+      name: 'AI-Powered ETL Pipeline',
+      description: 'Intelligent Extract, Transform, Load pipeline with data validation, cleansing, and automated schema detection for big data processing.',
+      features: [
+        'Automated Schema Detection',
+        'Data Validation & Cleansing',
+        'Real-time Processing',
+        'Error Handling',
+        'Data Quality Metrics',
+        'Scalable Architecture',
+        'Custom Transformations',
+        'Monitoring & Alerting'
+      ],
+      useCases: [
+        'Data Migration',
+        'Data Warehousing',
+        'Real-time Analytics',
+        'Data Integration',
+        'ETL Automation',
+        'Data Quality Management'
+      ],
+      pricing: { monthly: 399, yearly: 3990, setup: 1000, enterprise: 'Custom' },
+      category: 'data-processing',
+      icon: '🔄',
+      demoUrl: 'https://demo.ziontechgroup.com/etl-pipeline',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/etl-pipeline',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '99.1%',
+        processingTime: 'Variable',
+        languages: ['Python', 'Java', 'Scala', 'SQL'],
+        integrations: ['Apache Spark', 'Kafka', 'REST API', 'SDK (Python, Java)']
+      }
+    },
+    {
+      id: 'data-processing-streaming',
+      name: 'Real-time Data Streaming',
+      description: 'High-performance real-time data streaming with Apache Kafka integration, stream processing, and real-time analytics.',
+      features: [
+        'Real-time Streaming',
+        'Apache Kafka Integration',
+        'Stream Processing',
+        'Real-time Analytics',
+        'Fault Tolerance',
+        'Scalable Architecture',
+        'Custom Processors',
+        'Monitoring Dashboard'
+      ],
+      useCases: [
+        'Real-time Analytics',
+        'IoT Data Processing',
+        'Financial Trading',
+        'Social Media Monitoring',
+        'Log Analysis',
+        'Event Processing'
+      ],
+      pricing: { monthly: 499, yearly: 4990, setup: 1500, enterprise: 'Custom' },
+      category: 'data-processing',
+      icon: '⚡',
+      demoUrl: 'https://demo.ziontechgroup.com/data-streaming',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/data-streaming',
+      status: 'active',
+      technicalSpecs: {
+        accuracy: '99.8%',
+        processingTime: '< 10ms',
+        languages: ['Python', 'Java', 'Scala', 'Kotlin'],
+        integrations: ['Apache Kafka', 'Apache Flink', 'REST API', 'SDK (Python, Java)']
+      }
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All AI Services', count: aiServices.length },
-    { id: 'consulting', name: 'Consulting', count: aiServices.filter(s => s.category === 'consulting').length },
-    { id: 'development', name: 'Development', count: aiServices.filter(s => s.category === 'development').length },
-    { id: 'automation', name: 'Automation', count: aiServices.filter(s => s.category === 'automation').length },
-    { id: 'analytics', name: 'Analytics', count: aiServices.filter(s => s.category === 'analytics').length },
-    { id: 'security', name: 'Security', count: aiServices.filter(s => s.category === 'security').length }
+    { id: 'all', name: 'All AI Services', icon: '🤖' },
+    { id: 'nlp', name: 'Natural Language Processing', icon: '🧠' },
+    { id: 'computer-vision', name: 'Computer Vision', icon: '👁️' },
+    { id: 'machine-learning', name: 'Machine Learning', icon: '📊' },
+    { id: 'conversational-ai', name: 'Conversational AI', icon: '💬' },
+    { id: 'data-processing', name: 'Data Processing', icon: '🔄' }
   ];
 
-  const filteredServices = aiServices.filter(service => 
-    activeCategory === 'all' || service.category === activeCategory
-  );
+  const filteredServices = aiServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const handleContactClick = (service: AIService) => {
+    const message = `Hi! I'm interested in the ${service.name} AI service. Can you provide more information about implementation and custom pricing?`;
+    const whatsappUrl = `https://wa.me/13024640950?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center overflow-hidden cyber-grid-enhanced">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text neon-text">
-            AI Services
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
+            AI Services & Solutions
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-            Advanced Artificial Intelligence Solutions
+            Cutting-Edge Artificial Intelligence for Enterprise
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your business with cutting-edge AI technologies including machine learning, natural language processing, computer vision, and intelligent automation.
+            Transform your business with our comprehensive suite of AI services. From natural language processing to computer vision, 
+            we provide enterprise-grade AI solutions with proven accuracy and performance.
           </p>
-          
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? 'bg-cyan-500 text-white cyber-glow'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="relative mb-8">
+              <input
+                type="text"
+                placeholder="Search AI services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-6 py-4 bg-white/10 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
+              />
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-cyan-400">
+                🔍
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-400 text-slate-900 cyber-glow'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-cyan-400/30'
+                  }`}
+                >
+                  <span className="mr-2">{category.icon}</span>
+                  {category.name}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className={`quantum-card p-6 rounded-lg hover:shadow-2xl transition-all duration-300 ${
-                service.popular ? 'ring-2 ring-cyan-500' : ''
-              }`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
+        {/* Services Grid */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {filteredServices.map((service) => (
+            <div key={service.id} className="quantum-card p-8 energy-pulse hover:scale-105 transition-all duration-300">
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center">
+                  <div className="text-4xl mr-4 cyber-scan-line">{service.icon}</div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.name}</h3>
+                    <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                      service.status === 'active' ? 'bg-green-500/20 text-green-400' :
+                      service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-blue-500/20 text-blue-400'
+                    }`}>
+                      {service.status === 'active' ? '✅ Production Ready' : service.status === 'beta' ? '🧪 Beta Testing' : '🚀 Coming Soon'}
+                    </div>
                   </div>
-                )}
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-cyan-400">{service.icon}</div>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-300">{service.rating}</span>
-                    <span className="text-sm text-gray-400">({service.clients})</span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-
-                <div className="mb-4">
-                  <span className="text-3xl font-bold text-cyan-400">${service.price.toLocaleString()}</span>
-                  <span className="text-gray-400">/{service.period}</span>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-sm text-cyan-300">
-                        <Zap className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex space-x-3">
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 text-center"
-                  >
-                    Get Quote
-                  </a>
-                  <button className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                    <Eye className="w-5 h-5" />
-                  </button>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/10 to-blue-600/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose Our AI Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine cutting-edge AI technology with deep industry expertise to deliver solutions that drive real business value.
-            </p>
-          </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="cyber-card hologram-card p-6 text-center">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-bold text-white mb-3">Expert AI Team</h3>
-              <p className="text-gray-300">PhD-level AI researchers and engineers with 10+ years of experience in machine learning and AI development.</p>
-            </div>
-            <div className="cyber-card hologram-card p-6 text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-3">Rapid Deployment</h3>
-              <p className="text-gray-300">Get your AI solutions up and running in weeks, not months, with our proven development methodology.</p>
-            </div>
-            <div className="cyber-card hologram-card p-6 text-center">
-              <div className="text-4xl mb-4">🔒</div>
-              <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
-              <p className="text-gray-300">Bank-level security and compliance with SOC 2, GDPR, and industry-specific regulations.</p>
-            </div>
-            <div className="cyber-card hologram-card p-6 text-center">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-white mb-3">Proven Results</h3>
-              <p className="text-gray-300">Average 300% ROI and 80% efficiency improvements for our enterprise AI implementations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+              {/* Technical Specifications */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                <h4 className="text-white font-semibold mb-3">Technical Specifications:</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <span className="text-cyan-400">Accuracy:</span>
+                    <span className="text-white ml-2">{service.technicalSpecs.accuracy}</span>
+                  </div>
+                  <div>
+                    <span className="text-cyan-400">Processing Time:</span>
+                    <span className="text-white ml-2">{service.technicalSpecs.processingTime}</span>
+                  </div>
+                  <div className="col-span-2">
+                    <span className="text-cyan-400">Languages:</span>
+                    <span className="text-white ml-2">{service.technicalSpecs.languages.join(', ')}</span>
+                  </div>
+                </div>
+              </div>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              {/* Key Features */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <li key={index} className="text-sm text-gray-300 flex items-center">
+                      <span className="text-cyan-400 mr-2">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                  {service.features.length > 4 && (
+                    <li className="text-sm text-cyan-400">
+                      +{service.features.length - 4} more features
+                    </li>
+                  )}
+                </ul>
+              </div>
+
+              {/* Use Cases */}
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                    <span key={index} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-xs">
+                      {useCase}
+                    </span>
+                  ))}
+                  {service.useCases.length > 3 && (
+                    <span className="px-3 py-1 bg-gray-500/20 text-gray-400 rounded-full text-xs">
+                      +{service.useCases.length - 3} more
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Pricing */}
+              <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-1">
+                    ${service.pricing.monthly}
+                    <span className="text-lg text-gray-400">/month</span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    or ${service.pricing.yearly}/year (save ${(service.pricing.monthly * 12) - service.pricing.yearly})
+                  </div>
+                  {service.pricing.setup > 0 && (
+                    <div className="text-sm text-yellow-400 mt-1">
+                      +${service.pricing.setup} setup fee
+                    </div>
+                  )}
+                  <div className="text-sm text-purple-400 mt-1">
+                    Enterprise: {service.pricing.enterprise}
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="space-y-3">
+                <button
+                  onClick={() => handleContactClick(service)}
+                  className="w-full cyber-button text-center py-3"
+                >
+                  Get Started
+                </button>
+                
+                <div className="flex gap-2">
+                  {service.demoUrl && (
+                    <a
+                      href={service.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
+                    >
+                      Demo
+                    </a>
+                  )}
+                  
+                  {service.apiDocumentation && (
+                    <a
+                      href={service.apiDocumentation}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center py-2 px-4 text-cyan-400 hover:text-cyan-300 transition-all duration-300"
+                    >
+                      API Docs
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </section>
+
+        {/* Contact Section */}
+        <section className="text-center bg-white/5 rounded-2xl p-12 cyber-glow">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our AI experts today for a free consultation and custom solution recommendations.
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            Our AI experts are ready to help you implement the perfect solution for your business needs. 
+            From custom model training to enterprise integration, we provide end-to-end AI services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center"
+              className="cyber-button text-center py-3 px-8"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              +1 302 464 0950
+              📞 Call: (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 flex items-center justify-center"
+              className="cyber-button text-center py-3 px-8"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
-              <Mail className="w-5 h-5 mr-2" />
-              kleber@ziontechgroup.com
+              ✉️ Email Us
             </a>
           </div>
-          <div className="mt-8 text-sm text-gray-400">
+          <div className="mt-6 text-sm text-gray-400">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>🌐 https://ziontechgroup.com</p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

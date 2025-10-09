@@ -1,812 +1,597 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { ArrowRight, Star, CheckCircle, Zap, Brain, Shield, Clock, Users, TrendingUp, BarChart, Globe, Smartphone, Mail, FileText, Image, Video, Music, Code, Database, Cloud, Lock, Target, PieChart, Settings, Rocket, Award, DollarSign, Calendar, MessageSquare, Search, Filter, Download, Upload, Share, Eye, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalHigh, SignalLow, Wifi2, WifiOff2, Battery2, BatteryLow2, Signal2, SignalHigh2, SignalLow2 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+interface MicroSAASService {
+  id: string;
+  name: string;
+  description: string;
+  features: string[];
+  pricing: {
+    monthly: number;
+    yearly: number;
+    setup: number;
+  };
+  category: string;
+  icon: string;
+  demoUrl?: string;
+  apiDocumentation?: string;
+  status: 'active' | 'beta' | 'coming-soon';
+}
 
 const MicroSAASPage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const microSAASServices = [
-    // AI-Powered Tools
+  const microSAASServices: MicroSAASService[] = [
+    // AI-Powered Services
     {
-      id: 'ai-content-writer',
-      name: 'AI Content Writer Pro',
-      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, and marketing copy in 50+ languages.',
-      category: 'ai-tools',
-      icon: <FileText className="w-8 h-8" />,
-      price: 29,
-      period: 'month',
+      id: 'ai-content-generator',
+      name: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation for blogs, social media, emails, and marketing materials with 50+ templates.',
       features: [
-        '50+ Languages Support',
-        'SEO Optimized Content',
+        '50+ Content Templates',
+        'Multi-language Support',
+        'SEO Optimization',
         'Brand Voice Training',
         'Plagiarism Detection',
-        'Content Templates',
-        'Bulk Generation',
-        'API Access',
+        'Content Calendar Integration',
+        'Team Collaboration',
+        'Analytics Dashboard'
+      ],
+      pricing: { monthly: 199, yearly: 1990, setup: 0 },
+      category: 'ai-content',
+      icon: '✍️',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-content-generator',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/ai-content',
+      status: 'active'
+    },
+    {
+      id: 'ai-customer-support',
+      name: 'AI Customer Support Bot',
+      description: 'Intelligent customer support automation with natural language processing and 24/7 availability.',
+      features: [
+        'Natural Language Processing',
+        'Multi-channel Support',
+        'Sentiment Analysis',
+        'Escalation Management',
+        'Knowledge Base Integration',
+        'Custom Training',
+        'Analytics & Reporting',
+        'API Integration'
+      ],
+      pricing: { monthly: 299, yearly: 2990, setup: 500 },
+      category: 'ai-support',
+      icon: '🤖',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-support-bot',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/ai-support',
+      status: 'active'
+    },
+    {
+      id: 'ai-data-analytics',
+      name: 'AI Data Analytics Suite',
+      description: 'Comprehensive data analysis and visualization with predictive analytics and automated insights.',
+      features: [
+        'Predictive Analytics',
+        'Real-time Dashboards',
+        'Automated Insights',
+        'Data Visualization',
+        'Custom Reports',
+        'API Integration',
+        'Data Export',
         'Team Collaboration'
       ],
-      benefits: [
-        '10x Faster Content Creation',
-        '95% Time Savings',
-        'Professional Quality Output',
-        'Multi-language Support'
-      ],
-      popular: true,
-      rating: 4.9,
-      users: '50K+',
-      link: 'https://ziontechgroup.com/ai-content-writer'
+      pricing: { monthly: 399, yearly: 3990, setup: 1000 },
+      category: 'ai-analytics',
+      icon: '📊',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-analytics',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/ai-analytics',
+      status: 'active'
     },
     {
-      id: 'ai-image-generator',
-      name: 'AI Image Generator Studio',
-      description: 'Professional AI image generation tool with advanced editing capabilities, style transfer, and commercial licensing.',
-      category: 'ai-tools',
-      icon: <Image className="w-8 h-8" />,
-      price: 49,
-      period: 'month',
+      id: 'ai-email-marketing',
+      name: 'AI Email Marketing Automation',
+      description: 'Smart email marketing with AI-powered personalization, A/B testing, and advanced segmentation.',
       features: [
-        'High-Resolution Images',
-        'Style Transfer',
-        'Background Removal',
-        'Object Replacement',
-        'Commercial License',
-        'Batch Processing',
-        'API Integration',
-        'Custom Models'
+        'AI Personalization',
+        'A/B Testing',
+        'Advanced Segmentation',
+        'Behavioral Triggers',
+        'Template Library',
+        'Deliverability Optimization',
+        'Analytics Dashboard',
+        'CRM Integration'
       ],
-      benefits: [
-        'Unlimited Generations',
-        'Commercial Use Rights',
-        'Professional Quality',
-        'No Watermarks'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '25K+',
-      link: 'https://ziontechgroup.com/ai-image-generator'
+      pricing: { monthly: 149, yearly: 1490, setup: 0 },
+      category: 'ai-marketing',
+      icon: '📧',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-email',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/ai-email',
+      status: 'active'
     },
     {
-      id: 'ai-video-editor',
-      name: 'AI Video Editor Pro',
-      description: 'Intelligent video editing platform with automatic scene detection, voice synthesis, and smart transitions.',
-      category: 'ai-tools',
-      icon: <Video className="w-8 h-8" />,
-      price: 79,
-      period: 'month',
+      id: 'ai-social-media-manager',
+      name: 'AI Social Media Manager',
+      description: 'Automated social media management with content scheduling, engagement tracking, and performance analytics.',
       features: [
-        'Auto Scene Detection',
-        'Voice Synthesis',
-        'Smart Transitions',
-        'Background Music AI',
-        'Subtitle Generation',
-        'Color Correction',
-        '4K Export',
-        'Cloud Storage'
+        'Content Scheduling',
+        'Multi-platform Support',
+        'Engagement Tracking',
+        'Hashtag Optimization',
+        'Competitor Analysis',
+        'Influencer Discovery',
+        'Analytics Dashboard',
+        'Team Collaboration'
       ],
-      benefits: [
-        'Professional Video Quality',
-        'Automated Editing',
-        'Time-Saving Features',
-        'No Learning Curve'
-      ],
-      popular: false,
-      rating: 4.7,
-      users: '15K+',
-      link: 'https://ziontechgroup.com/ai-video-editor'
-    },
-    {
-      id: 'ai-music-composer',
-      name: 'AI Music Composer',
-      description: 'Create original music tracks, jingles, and sound effects using advanced AI algorithms and neural networks.',
-      category: 'ai-tools',
-      icon: <Music className="w-8 h-8" />,
-      price: 39,
-      period: 'month',
-      features: [
-        'Original Compositions',
-        'Multiple Genres',
-        'Custom Instruments',
-        'Lyrics Generation',
-        'Mixing & Mastering',
-        'Royalty-Free License',
-        'MIDI Export',
-        'Collaboration Tools'
-      ],
-      benefits: [
-        'Unlimited Compositions',
-        'Professional Quality',
-        'No Copyright Issues',
-        'Easy Customization'
-      ],
-      popular: false,
-      rating: 4.6,
-      users: '8K+',
-      link: 'https://ziontechgroup.com/ai-music-composer'
+      pricing: { monthly: 179, yearly: 1790, setup: 0 },
+      category: 'ai-marketing',
+      icon: '📱',
+      demoUrl: 'https://demo.ziontechgroup.com/ai-social',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/ai-social',
+      status: 'active'
     },
 
-    // Business Automation Tools
+    // Business Tools
     {
-      id: 'email-marketing-ai',
-      name: 'Email Marketing AI',
-      description: 'Intelligent email marketing platform with AI-powered subject line optimization, send time prediction, and personalization.',
-      category: 'business',
-      icon: <Mail className="w-8 h-8" />,
-      price: 99,
-      period: 'month',
+      id: 'invoice-generator',
+      name: 'Smart Invoice Generator',
+      description: 'Automated invoice generation with payment tracking, tax calculations, and client management.',
       features: [
-        'AI Subject Line Optimization',
-        'Send Time Prediction',
-        'Dynamic Content',
-        'A/B Testing AI',
-        'List Segmentation',
-        'Automation Workflows',
-        'Analytics Dashboard',
-        'Integrations'
+        'Automated Invoicing',
+        'Payment Tracking',
+        'Tax Calculations',
+        'Client Management',
+        'Recurring Billing',
+        'Payment Gateway Integration',
+        'Custom Templates',
+        'Multi-currency Support'
       ],
-      benefits: [
-        '40% Higher Open Rates',
-        'Automated Optimization',
-        'Personalized Content',
-        'Advanced Analytics'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '30K+',
-      link: 'https://ziontechgroup.com/email-marketing-ai'
+      pricing: { monthly: 79, yearly: 790, setup: 0 },
+      category: 'business-tools',
+      icon: '🧾',
+      demoUrl: 'https://demo.ziontechgroup.com/invoice-generator',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/invoice',
+      status: 'active'
     },
     {
-      id: 'social-media-scheduler',
-      name: 'Social Media AI Scheduler',
-      description: 'Smart social media management with AI-powered content suggestions, optimal posting times, and engagement optimization.',
-      category: 'business',
-      icon: <Share className="w-8 h-8" />,
-      price: 59,
-      period: 'month',
+      id: 'project-management',
+      name: 'AI Project Management Suite',
+      description: 'Intelligent project management with task automation, resource optimization, and predictive analytics.',
       features: [
-        'Multi-Platform Posting',
-        'AI Content Suggestions',
-        'Optimal Timing AI',
-        'Hashtag Optimization',
-        'Engagement Analytics',
-        'Content Calendar',
-        'Team Collaboration',
-        'Brand Monitoring'
-      ],
-      benefits: [
-        '3x More Engagement',
-        'Automated Posting',
-        'Content Optimization',
-        'Time Savings'
-      ],
-      popular: true,
-      rating: 4.7,
-      users: '40K+',
-      link: 'https://ziontechgroup.com/social-media-scheduler'
-    },
-    {
-      id: 'crm-ai-assistant',
-      name: 'CRM AI Assistant',
-      description: 'Intelligent CRM with AI-powered lead scoring, automated follow-ups, and predictive analytics for sales teams.',
-      category: 'business',
-      icon: <Users className="w-8 h-8" />,
-      price: 149,
-      period: 'month',
-      features: [
-        'AI Lead Scoring',
-        'Automated Follow-ups',
+        'Task Automation',
+        'Resource Optimization',
         'Predictive Analytics',
+        'Team Collaboration',
+        'Time Tracking',
+        'Budget Management',
+        'Risk Assessment',
+        'Reporting Dashboard'
+      ],
+      pricing: { monthly: 249, yearly: 2490, setup: 500 },
+      category: 'business-tools',
+      icon: '📋',
+      demoUrl: 'https://demo.ziontechgroup.com/project-management',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/project-management',
+      status: 'active'
+    },
+    {
+      id: 'crm-automation',
+      name: 'AI CRM Automation',
+      description: 'Customer relationship management with AI-powered lead scoring, automated follow-ups, and sales forecasting.',
+      features: [
+        'Lead Scoring',
+        'Automated Follow-ups',
         'Sales Forecasting',
-        'Pipeline Management',
+        'Contact Management',
+        'Pipeline Tracking',
         'Email Integration',
-        'Mobile App',
+        'Analytics Dashboard',
         'Custom Workflows'
       ],
-      benefits: [
-        '50% More Conversions',
-        'Automated Lead Management',
-        'Predictive Insights',
-        'Sales Optimization'
-      ],
-      popular: false,
-      rating: 4.9,
-      users: '20K+',
-      link: 'https://ziontechgroup.com/crm-ai-assistant'
-    },
-    {
-      id: 'inventory-optimizer',
-      name: 'AI Inventory Optimizer',
-      description: 'Smart inventory management with demand forecasting, automated reordering, and waste reduction algorithms.',
-      category: 'business',
-      icon: <BarChart className="w-8 h-8" />,
-      price: 199,
-      period: 'month',
-      features: [
-        'Demand Forecasting',
-        'Automated Reordering',
-        'Waste Reduction',
-        'Cost Optimization',
-        'Multi-location Support',
-        'Real-time Analytics',
-        'Supplier Integration',
-        'Mobile Dashboard'
-      ],
-      benefits: [
-        '30% Cost Reduction',
-        'Zero Stockouts',
-        'Automated Management',
-        'Real-time Insights'
-      ],
-      popular: false,
-      rating: 4.8,
-      users: '12K+',
-      link: 'https://ziontechgroup.com/inventory-optimizer'
+      pricing: { monthly: 199, yearly: 1990, setup: 300 },
+      category: 'business-tools',
+      icon: '👥',
+      demoUrl: 'https://demo.ziontechgroup.com/crm-automation',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/crm',
+      status: 'active'
     },
 
-    // Development Tools
+    // Developer Tools
     {
-      id: 'code-generator-ai',
-      name: 'AI Code Generator',
-      description: 'Advanced code generation tool that creates production-ready code from natural language descriptions.',
-      category: 'development',
-      icon: <Code className="w-8 h-8" />,
-      price: 79,
-      period: 'month',
+      id: 'api-testing-suite',
+      name: 'API Testing & Documentation Suite',
+      description: 'Comprehensive API testing, documentation, and monitoring with automated test generation.',
       features: [
-        'Natural Language to Code',
-        'Multiple Languages',
-        'Code Review AI',
-        'Bug Detection',
-        'Documentation Generation',
-        'Test Case Creation',
-        'API Integration',
-        'Version Control'
+        'Automated Testing',
+        'API Documentation',
+        'Performance Monitoring',
+        'Mock Server',
+        'Test Data Generation',
+        'CI/CD Integration',
+        'Team Collaboration',
+        'Analytics Dashboard'
       ],
-      benefits: [
-        '10x Faster Development',
-        'Error-Free Code',
-        'Auto Documentation',
-        'Multiple Languages'
-      ],
-      popular: true,
-      rating: 4.9,
-      users: '35K+',
-      link: 'https://ziontechgroup.com/code-generator-ai'
+      pricing: { monthly: 129, yearly: 1290, setup: 0 },
+      category: 'developer-tools',
+      icon: '🔧',
+      demoUrl: 'https://demo.ziontechgroup.com/api-testing',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/api-testing',
+      status: 'active'
     },
     {
-      id: 'api-documentation-generator',
-      name: 'API Documentation AI',
-      description: 'Automatically generate comprehensive API documentation with interactive examples and testing capabilities.',
-      category: 'development',
-      icon: <FileText className="w-8 h-8" />,
-      price: 49,
-      period: 'month',
+      id: 'code-review-ai',
+      name: 'AI Code Review Assistant',
+      description: 'Automated code review with security analysis, performance optimization, and best practice recommendations.',
       features: [
-        'Auto Documentation',
-        'Interactive Examples',
-        'Testing Interface',
-        'Multiple Formats',
-        'Version Management',
+        'Automated Code Review',
+        'Security Analysis',
+        'Performance Optimization',
+        'Best Practice Recommendations',
+        'Multi-language Support',
         'Team Collaboration',
-        'Custom Styling',
-        'Analytics'
+        'Custom Rules',
+        'Integration Support'
       ],
-      benefits: [
-        '100% Automated',
-        'Interactive Testing',
-        'Professional Quality',
-        'Time Savings'
-      ],
-      popular: false,
-      rating: 4.7,
-      users: '18K+',
-      link: 'https://ziontechgroup.com/api-documentation-ai'
+      pricing: { monthly: 159, yearly: 1590, setup: 0 },
+      category: 'developer-tools',
+      icon: '👨‍💻',
+      demoUrl: 'https://demo.ziontechgroup.com/code-review',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/code-review',
+      status: 'active'
     },
     {
       id: 'database-optimizer',
       name: 'AI Database Optimizer',
-      description: 'Intelligent database performance optimization with query analysis, index recommendations, and automated tuning.',
-      category: 'development',
-      icon: <Database className="w-8 h-8" />,
-      price: 199,
-      period: 'month',
+      description: 'Intelligent database performance optimization with query analysis and automated tuning recommendations.',
       features: [
-        'Query Optimization',
-        'Index Recommendations',
-        'Performance Monitoring',
+        'Query Analysis',
+        'Performance Optimization',
         'Automated Tuning',
-        'Security Analysis',
-        'Backup Optimization',
-        'Multi-Database Support',
-        'Real-time Alerts'
+        'Index Recommendations',
+        'Multi-database Support',
+        'Real-time Monitoring',
+        'Alert System',
+        'Custom Reports'
       ],
-      benefits: [
-        '50% Performance Boost',
-        'Automated Optimization',
-        'Proactive Monitoring',
-        'Cost Reduction'
-      ],
-      popular: false,
-      rating: 4.8,
-      users: '10K+',
-      link: 'https://ziontechgroup.com/database-optimizer'
+      pricing: { monthly: 199, yearly: 1990, setup: 500 },
+      category: 'developer-tools',
+      icon: '🗄️',
+      demoUrl: 'https://demo.ziontechgroup.com/database-optimizer',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/database-optimizer',
+      status: 'active'
     },
 
-    // Analytics & Insights
+    // E-commerce Solutions
     {
-      id: 'website-analytics-ai',
-      name: 'Website Analytics AI',
-      description: 'Advanced website analytics with AI-powered insights, user behavior prediction, and conversion optimization.',
-      category: 'analytics',
-      icon: <BarChart className="w-8 h-8" />,
-      price: 89,
-      period: 'month',
+      id: 'inventory-manager',
+      name: 'AI Inventory Manager',
+      description: 'Smart inventory management with demand forecasting, automated reordering, and supplier integration.',
       features: [
-        'AI-Powered Insights',
-        'User Behavior Analysis',
-        'Conversion Optimization',
-        'Heatmap Generation',
-        'A/B Testing AI',
-        'Real-time Monitoring',
-        'Custom Dashboards',
-        'Alert System'
-      ],
-      benefits: [
-        'Actionable Insights',
-        'Conversion Optimization',
-        'User Experience Improvement',
-        'Data-Driven Decisions'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '45K+',
-      link: 'https://ziontechgroup.com/website-analytics-ai'
-    },
-    {
-      id: 'competitor-analysis-ai',
-      name: 'Competitor Analysis AI',
-      description: 'Intelligent competitor monitoring with automated tracking, price analysis, and market intelligence.',
-      category: 'analytics',
-      icon: <Search className="w-8 h-8" />,
-      price: 129,
-      period: 'month',
-      features: [
-        'Automated Monitoring',
-        'Price Tracking',
-        'Content Analysis',
-        'Market Intelligence',
+        'Demand Forecasting',
+        'Automated Reordering',
+        'Supplier Integration',
+        'Multi-location Support',
+        'Barcode Scanning',
+        'Analytics Dashboard',
         'Alert System',
-        'Competitive Reports',
-        'Trend Analysis',
-        'Custom Dashboards'
+        'API Integration'
       ],
-      benefits: [
-        'Market Intelligence',
-        'Competitive Advantage',
-        'Automated Monitoring',
-        'Strategic Insights'
-      ],
-      popular: false,
-      rating: 4.7,
-      users: '15K+',
-      link: 'https://ziontechgroup.com/competitor-analysis-ai'
+      pricing: { monthly: 179, yearly: 1790, setup: 300 },
+      category: 'ecommerce',
+      icon: '📦',
+      demoUrl: 'https://demo.ziontechgroup.com/inventory-manager',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/inventory',
+      status: 'active'
     },
     {
-      id: 'customer-insights-ai',
-      name: 'Customer Insights AI',
-      description: 'Deep customer analytics with sentiment analysis, churn prediction, and personalized recommendations.',
-      category: 'analytics',
-      icon: <PieChart className="w-8 h-8" />,
-      price: 159,
-      period: 'month',
+      id: 'price-optimizer',
+      name: 'AI Price Optimization Engine',
+      description: 'Dynamic pricing optimization based on market conditions, competitor analysis, and demand patterns.',
       features: [
-        'Sentiment Analysis',
-        'Churn Prediction',
-        'Customer Segmentation',
-        'Personalization Engine',
-        'Lifetime Value Prediction',
-        'Behavioral Analysis',
-        'Recommendation Engine',
-        'Real-time Insights'
+        'Dynamic Pricing',
+        'Competitor Analysis',
+        'Demand Pattern Analysis',
+        'A/B Testing',
+        'Multi-channel Support',
+        'Real-time Updates',
+        'Analytics Dashboard',
+        'Custom Rules'
       ],
-      benefits: [
-        'Customer Retention',
-        'Personalized Experiences',
-        'Predictive Analytics',
-        'Revenue Optimization'
-      ],
-      popular: false,
-      rating: 4.9,
-      users: '22K+',
-      link: 'https://ziontechgroup.com/customer-insights-ai'
+      pricing: { monthly: 299, yearly: 2990, setup: 500 },
+      category: 'ecommerce',
+      icon: '💰',
+      demoUrl: 'https://demo.ziontechgroup.com/price-optimizer',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/price-optimizer',
+      status: 'active'
     },
 
     // Security & Compliance
     {
-      id: 'security-scanner-ai',
+      id: 'security-scanner',
       name: 'AI Security Scanner',
-      description: 'Comprehensive security scanning with vulnerability detection, threat analysis, and automated remediation.',
-      category: 'security',
-      icon: <Shield className="w-8 h-8" />,
-      price: 299,
-      period: 'month',
+      description: 'Comprehensive security scanning with vulnerability detection, compliance checking, and threat monitoring.',
       features: [
-        'Vulnerability Scanning',
-        'Threat Detection',
-        'Automated Remediation',
-        'Compliance Monitoring',
-        'Penetration Testing',
-        'Security Reports',
-        'Real-time Alerts',
-        'Team Collaboration'
-      ],
-      benefits: [
-        'Proactive Security',
-        'Automated Protection',
-        'Compliance Assurance',
-        'Risk Reduction'
-      ],
-      popular: true,
-      rating: 4.9,
-      users: '8K+',
-      link: 'https://ziontechgroup.com/security-scanner-ai'
-    },
-    {
-      id: 'gdpr-compliance-ai',
-      name: 'GDPR Compliance AI',
-      description: 'Automated GDPR compliance management with data mapping, consent tracking, and privacy impact assessments.',
-      category: 'security',
-      icon: <Lock className="w-8 h-8" />,
-      price: 199,
-      period: 'month',
-      features: [
-        'Data Mapping',
-        'Consent Management',
-        'Privacy Impact Assessment',
-        'Breach Detection',
-        'Compliance Reporting',
-        'Data Subject Rights',
-        'Audit Trails',
-        'Legal Updates'
-      ],
-      benefits: [
-        'Automated Compliance',
-        'Risk Mitigation',
-        'Legal Protection',
-        'Audit Readiness'
-      ],
-      popular: false,
-      rating: 4.8,
-      users: '5K+',
-      link: 'https://ziontechgroup.com/gdpr-compliance-ai'
-    },
-
-    // Productivity Tools
-    {
-      id: 'meeting-transcriber-ai',
-      name: 'AI Meeting Transcriber',
-      description: 'Intelligent meeting transcription with speaker identification, action item extraction, and smart summaries.',
-      category: 'productivity',
-      icon: <MessageSquare className="w-8 h-8" />,
-      price: 39,
-      period: 'month',
-      features: [
-        'Real-time Transcription',
-        'Speaker Identification',
-        'Action Item Extraction',
-        'Smart Summaries',
-        'Multi-language Support',
-        'Cloud Storage',
-        'Team Sharing',
-        'Search & Filter'
-      ],
-      benefits: [
-        '100% Accurate Transcription',
-        'Automated Summaries',
-        'Action Item Tracking',
-        'Time Savings'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '60K+',
-      link: 'https://ziontechgroup.com/meeting-transcriber-ai'
-    },
-    {
-      id: 'task-automation-ai',
-      name: 'AI Task Automator',
-      description: 'Intelligent task automation with workflow creation, smart scheduling, and productivity optimization.',
-      category: 'productivity',
-      icon: <Settings className="w-8 h-8" />,
-      price: 69,
-      period: 'month',
-      features: [
-        'Workflow Automation',
-        'Smart Scheduling',
-        'Task Prioritization',
-        'Team Collaboration',
-        'Progress Tracking',
-        'Integration Hub',
+        'Vulnerability Detection',
+        'Compliance Checking',
+        'Threat Monitoring',
+        'Automated Scanning',
         'Custom Rules',
-        'Analytics Dashboard'
+        'Real-time Alerts',
+        'Detailed Reports',
+        'API Integration'
       ],
-      benefits: [
-        '80% Time Savings',
-        'Automated Workflows',
-        'Smart Prioritization',
-        'Team Efficiency'
-      ],
-      popular: false,
-      rating: 4.7,
-      users: '25K+',
-      link: 'https://ziontechgroup.com/task-automation-ai'
+      pricing: { monthly: 199, yearly: 1990, setup: 300 },
+      category: 'security',
+      icon: '🔒',
+      demoUrl: 'https://demo.ziontechgroup.com/security-scanner',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/security-scanner',
+      status: 'active'
     },
     {
-      id: 'expense-tracker-ai',
-      name: 'AI Expense Tracker',
-      description: 'Smart expense management with receipt scanning, categorization, and automated reporting for businesses.',
-      category: 'productivity',
-      icon: <DollarSign className="w-8 h-8" />,
-      price: 49,
-      period: 'month',
+      id: 'compliance-manager',
+      name: 'AI Compliance Manager',
+      description: 'Automated compliance management with GDPR, HIPAA, SOX, and other regulatory framework support.',
       features: [
-        'Receipt Scanning',
-        'Auto Categorization',
-        'Expense Reports',
-        'Tax Preparation',
-        'Multi-currency Support',
-        'Team Management',
-        'Mobile App',
-        'Integration Hub'
+        'Multi-framework Support',
+        'Automated Compliance Checking',
+        'Document Management',
+        'Audit Trail',
+        'Risk Assessment',
+        'Custom Policies',
+        'Reporting Dashboard',
+        'Integration Support'
       ],
-      benefits: [
-        'Automated Tracking',
-        'Tax Compliance',
-        'Time Savings',
-        'Accurate Reporting'
-      ],
-      popular: false,
-      rating: 4.6,
-      users: '18K+',
-      link: 'https://ziontechgroup.com/expense-tracker-ai'
+      pricing: { monthly: 249, yearly: 2490, setup: 500 },
+      category: 'security',
+      icon: '📋',
+      demoUrl: 'https://demo.ziontechgroup.com/compliance-manager',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/compliance',
+      status: 'active'
     },
 
-    // E-commerce Tools
+    // Analytics & Reporting
     {
-      id: 'product-optimizer-ai',
-      name: 'AI Product Optimizer',
-      description: 'E-commerce product optimization with AI-powered pricing, SEO, and conversion rate optimization.',
-      category: 'ecommerce',
-      icon: <Target className="w-8 h-8" />,
-      price: 149,
-      period: 'month',
+      id: 'business-intelligence',
+      name: 'AI Business Intelligence Suite',
+      description: 'Advanced business intelligence with predictive analytics, automated reporting, and data visualization.',
       features: [
-        'Dynamic Pricing AI',
-        'SEO Optimization',
-        'Conversion Optimization',
-        'Inventory Management',
-        'Customer Insights',
-        'A/B Testing',
-        'Multi-platform Support',
-        'Analytics Dashboard'
+        'Predictive Analytics',
+        'Automated Reporting',
+        'Data Visualization',
+        'Custom Dashboards',
+        'Real-time Monitoring',
+        'Multi-source Integration',
+        'Team Collaboration',
+        'Mobile Access'
       ],
-      benefits: [
-        '30% Higher Conversions',
-        'Optimized Pricing',
-        'Better SEO Rankings',
-        'Increased Revenue'
-      ],
-      popular: true,
-      rating: 4.8,
-      users: '20K+',
-      link: 'https://ziontechgroup.com/product-optimizer-ai'
+      pricing: { monthly: 349, yearly: 3490, setup: 1000 },
+      category: 'analytics',
+      icon: '📈',
+      demoUrl: 'https://demo.ziontechgroup.com/business-intelligence',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/business-intelligence',
+      status: 'active'
     },
     {
-      id: 'customer-service-ai',
-      name: 'AI Customer Service',
-      description: 'Intelligent customer service automation with chatbots, ticket routing, and sentiment analysis.',
-      category: 'ecommerce',
-      icon: <MessageSquare className="w-8 h-8" />,
-      price: 99,
-      period: 'month',
+      id: 'website-analyzer',
+      name: 'AI Website Analyzer',
+      description: 'Comprehensive website analysis with performance optimization, SEO insights, and user behavior tracking.',
       features: [
-        'AI Chatbots',
-        'Ticket Routing',
-        'Sentiment Analysis',
-        'Multi-language Support',
-        'Knowledge Base',
-        'Live Chat Integration',
-        'Performance Analytics',
-        'Custom Training'
+        'Performance Analysis',
+        'SEO Insights',
+        'User Behavior Tracking',
+        'Competitor Analysis',
+        'Conversion Optimization',
+        'Real-time Monitoring',
+        'Custom Reports',
+        'API Integration'
       ],
-      benefits: [
-        '24/7 Support',
-        'Instant Responses',
-        'Cost Reduction',
-        'Customer Satisfaction'
-      ],
-      popular: true,
-      rating: 4.7,
-      users: '35K+',
-      link: 'https://ziontechgroup.com/customer-service-ai'
+      pricing: { monthly: 99, yearly: 990, setup: 0 },
+      category: 'analytics',
+      icon: '🌐',
+      demoUrl: 'https://demo.ziontechgroup.com/website-analyzer',
+      apiDocumentation: 'https://api.ziontechgroup.com/docs/website-analyzer',
+      status: 'active'
     }
   ];
 
   const categories = [
-    { id: 'all', name: 'All Services', count: microSAASServices.length },
-    { id: 'ai-tools', name: 'AI Tools', count: microSAASServices.filter(s => s.category === 'ai-tools').length },
-    { id: 'business', name: 'Business', count: microSAASServices.filter(s => s.category === 'business').length },
-    { id: 'development', name: 'Development', count: microSAASServices.filter(s => s.category === 'development').length },
-    { id: 'analytics', name: 'Analytics', count: microSAASServices.filter(s => s.category === 'analytics').length },
-    { id: 'security', name: 'Security', count: microSAASServices.filter(s => s.category === 'security').length },
-    { id: 'productivity', name: 'Productivity', count: microSAASServices.filter(s => s.category === 'productivity').length },
-    { id: 'ecommerce', name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'ecommerce').length }
+    { id: 'all', name: 'All Services', icon: '🌟' },
+    { id: 'ai-content', name: 'AI Content', icon: '✍️' },
+    { id: 'ai-support', name: 'AI Support', icon: '🤖' },
+    { id: 'ai-analytics', name: 'AI Analytics', icon: '📊' },
+    { id: 'ai-marketing', name: 'AI Marketing', icon: '📧' },
+    { id: 'business-tools', name: 'Business Tools', icon: '💼' },
+    { id: 'developer-tools', name: 'Developer Tools', icon: '🔧' },
+    { id: 'ecommerce', name: 'E-commerce', icon: '🛒' },
+    { id: 'security', name: 'Security', icon: '🔒' },
+    { id: 'analytics', name: 'Analytics', icon: '📈' }
   ];
 
   const filteredServices = microSAASServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
+  const handleContactClick = (service: MicroSAASService) => {
+    const message = `Hi! I'm interested in the ${service.name} service. Can you provide more information about pricing and implementation?`;
+    const whatsappUrl = `https://wa.me/13024640950?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20"></div>
-        <div className="relative max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-text">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Header Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 neon-text cyber-text">
             Micro SAAS Solutions
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-            Powerful AI-driven tools for modern businesses
+            Powerful AI-Driven Tools for Modern Businesses
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Choose from 20+ innovative micro SAAS applications designed to automate, optimize, and scale your business operations with cutting-edge AI technology.
+            Choose from 20+ ready-to-use micro SAAS applications. Each service is designed to solve specific business challenges with AI-powered automation and intelligence.
           </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="mb-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative mb-8">
               <input
                 type="text"
-                placeholder="Search micro SAAS tools..."
+                placeholder="Search micro SAAS services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-lg bg-gray-800/50 border border-cyan-500/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent backdrop-blur-sm"
+                className="w-full px-6 py-4 bg-white/10 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 backdrop-blur-sm"
               />
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-cyan-400">
+                🔍
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-400 text-slate-900 cyber-glow'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-cyan-400/30'
+                  }`}
+                >
+                  <span className="mr-2">{category.icon}</span>
+                  {category.name}
+                </button>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  activeCategory === category.id
-                    ? 'bg-cyan-500 text-white cyber-glow'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
-              >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div key={service.id} className={`quantum-card p-6 rounded-lg hover:shadow-2xl transition-all duration-300 ${
-                service.popular ? 'ring-2 ring-cyan-500' : ''
-              }`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-cyan-400">{service.icon}</div>
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-300">{service.rating}</span>
-                    <span className="text-sm text-gray-400">({service.users})</span>
-                  </div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-
-                <div className="mb-4">
-                  <span className="text-3xl font-bold text-cyan-400">${service.price}</span>
-                  <span className="text-gray-400">/{service.period}</span>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 4).map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-sm text-cyan-300">
-                        <Zap className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="flex space-x-3">
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 text-center"
-                  >
-                    Try Now
-                  </a>
-                  <button className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                    <Eye className="w-5 h-5" />
-                  </button>
+        {/* Services Grid */}
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredServices.map((service) => (
+            <div key={service.id} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+              <div className="text-center mb-6">
+                <div className="text-5xl mb-4 cyber-scan-line">{service.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.name}</h3>
+                <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${
+                  service.status === 'active' ? 'bg-green-500/20 text-green-400' :
+                  service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-400' :
+                  'bg-blue-500/20 text-blue-400'
+                }`}>
+                  {service.status === 'active' ? '✅ Active' : service.status === 'beta' ? '🧪 Beta' : '🚀 Coming Soon'}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+              <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+
+              <div className="mb-6">
+                <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <li key={index} className="text-sm text-gray-300 flex items-center">
+                      <span className="text-cyan-400 mr-2">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                  {service.features.length > 4 && (
+                    <li className="text-sm text-cyan-400">
+                      +{service.features.length - 4} more features
+                    </li>
+                  )}
+                </ul>
+              </div>
+
+              <div className="mb-6 p-4 bg-white/5 rounded-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-1">
+                    ${service.pricing.monthly}
+                    <span className="text-lg text-gray-400">/month</span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    or ${service.pricing.yearly}/year (save ${(service.pricing.monthly * 12) - service.pricing.yearly})
+                  </div>
+                  {service.pricing.setup > 0 && (
+                    <div className="text-sm text-yellow-400 mt-1">
+                      +${service.pricing.setup} setup fee
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <button
+                  onClick={() => handleContactClick(service)}
+                  className="w-full cyber-button text-center py-3"
+                >
+                  Get Started Now
+                </button>
+                
+                {service.demoUrl && (
+                  <a
+                    href={service.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
+                  >
+                    View Demo
+                  </a>
+                )}
+                
+                {service.apiDocumentation && (
+                  <a
+                    href={service.apiDocumentation}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center py-2 px-4 text-cyan-400 hover:text-cyan-300 transition-all duration-300"
+                  >
+                    API Documentation
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </section>
+
+        {/* Contact Section */}
+        <section className="text-center bg-white/5 rounded-2xl p-12 cyber-glow">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Need a Custom Solution?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get started with our micro SAAS solutions today and experience the power of AI-driven automation.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our team can create a custom micro SAAS solution tailored to your specific business needs. 
+            We specialize in AI-powered automation, data analytics, and business process optimization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center"
+              className="cyber-button text-center py-3 px-8"
             >
-              <Phone className="w-5 h-5 mr-2" />
-              +1 302 464 0950
+              📞 Call: (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200 flex items-center justify-center"
+              className="cyber-button text-center py-3 px-8"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
-              <Mail className="w-5 h-5 mr-2" />
-              kleber@ziontechgroup.com
+              ✉️ Email Us
             </a>
           </div>
-          <div className="mt-8 text-sm text-gray-400">
+          <div className="mt-6 text-sm text-gray-400">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>🌐 https://ziontechgroup.com</p>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
