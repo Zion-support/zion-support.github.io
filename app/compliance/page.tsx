@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+import Footer from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -10,15 +11,13 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center">
             <Link 
-              to="/privacy" 
+              href="/privacy" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -34,7 +33,8 @@ const CompliancePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Hero Section */}
+      <main>
+        {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -46,7 +46,7 @@ const CompliancePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Request Compliance Report
@@ -231,8 +231,23 @@ const CompliancePage: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+const CompliancePageNew: React.FC = () => {
+  const certifications = [
+    { name: 'SOC 2 Type II', status: 'Certified' },
+    { name: 'ISO 27001', status: 'Certified' },
+    { name: 'GDPR', status: 'Compliant' },
+    { name: 'HIPAA', status: 'Compliant' },
+    { name: 'PCI DSS', status: 'Compliant' }
+  ];
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
