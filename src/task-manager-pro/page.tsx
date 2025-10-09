@@ -1,9 +1,6 @@
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React from 'react';
-
-'use client';
-
+import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react'
 const TaskManagerProPage: React.FC = () => {
   const _features = [
     {
@@ -42,8 +39,7 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit: 'Data-driven improvements'
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Individual',
@@ -94,8 +90,7 @@ const TaskManagerProPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const integrations = [
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
@@ -105,8 +100,7 @@ const TaskManagerProPage: React.FC = () => {
     { name: 'Trello', icon: '📌', description: 'Visual boards' },
     { name: 'Notion', icon: '📝', description: 'Documentation' },
     { name: 'GitHub', icon: '💻', description: 'Development workflow' }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Rachel Green',
@@ -129,8 +123,7 @@ const TaskManagerProPage: React.FC = () => {
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -318,7 +311,6 @@ const TaskManagerProPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
-
-export default TaskManagerProPage;
+  )
+}
+export default TaskManagerProPage

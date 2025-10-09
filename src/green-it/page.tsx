@@ -1,13 +1,9 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
-
+import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
 const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions');
-
+  const [activeTab, setActiveTab] = useState('solutions')
   const _tabs = [
     {
       id: 'solutions',
@@ -30,8 +26,7 @@ const GreenITPage: React.FC = () => {
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10'
     }
-  ];
-
+  ]
   const greenSolutions = [
     {
       title: 'Energy-Efficient Data Centers',
@@ -117,8 +112,7 @@ const GreenITPage: React.FC = () => {
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: TrendingUp,
@@ -164,8 +158,7 @@ const GreenITPage: React.FC = () => {
         'Talent attraction and retention'
       ]
     }
-  ];
-
+  ]
   const certifications = [
     {
       name: 'ISO 14001:2015',
@@ -195,8 +188,7 @@ const GreenITPage: React.FC = () => {
       color: 'text-yellow-400',
       status: 'Certified'
     }
-  ];
-
+  ]
   const stats = [
     {
       icon: Leaf,
@@ -222,8 +214,7 @@ const GreenITPage: React.FC = () => {
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
     }
-  ];
-
+  ]
   const caseStudies = [
     {
       company: 'TechCorp Manufacturing',
@@ -253,8 +244,7 @@ const GreenITPage: React.FC = () => {
       icon: Building,
       color: 'text-green-400'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -500,7 +490,6 @@ const GreenITPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default GreenITPage;
+  )
+}
+export default GreenITPage

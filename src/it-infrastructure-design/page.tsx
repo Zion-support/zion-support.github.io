@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Settings, Target, BarChart, Shield, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Settings, Target, BarChart, Shield, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const ITInfrastructureDesignPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
       description: 'Security-first infrastructure design principles',
       benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const ITInfrastructureDesignPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default ITInfrastructureDesignPage;
+  )
+}
+export default ITInfrastructureDesignPage

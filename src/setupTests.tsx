@@ -1,25 +1,24 @@
-'use client';
 /**
  * Jest setup file for testing environment
  */
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom'
 // Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+global.TextEncoder = TextEncoder
+global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
-const originalConsoleError = console.error;
+const originalConsoleError = console.error
 // eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-const __originalConsoleError = console.error;
+const originalConsoleError = console.error
+const __originalConsoleError = console.error
 console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+  const message = args[0]?.toString?.() || args[0]?.message || ''
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
-    return;
+    return
   }
-  originalConsoleError(...args);
-};
+  originalConsoleError(...args)
+}
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -33,75 +32,75 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
   }))
-});
+})
 // Mock requestAnimationFrame
-global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
-global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0))
+global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
-};
+}
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
-});
+})
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
-};
+}
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
-});
+})
 // Mock fetch
-global.fetch = jest.fn();
+global.fetch = jest.fn()
 // Mock console methods for cleaner test output
 // eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
+const originalConsoleWarn = console.warn
 // eslint-disable-next-line no-console
-const originalConsoleInfo = console.info;
+const originalConsoleInfo = console.info
 // eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
+const originalConsoleWarn = console.warn
+const originalConsoleInfo = console.info
 console.warn = (...args) => {
-  const message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || ''
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
-    return;
+    return
   }
-  originalConsoleWarn(...args);
-};
+  originalConsoleWarn(...args)
+}
 // eslint-disable-next-line no-console
 console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || ''
   if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
+    return
   }
-  originalConsoleInfo(...args);
-};
+  originalConsoleInfo(...args)
+}
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
   takeRecords() {
-    return [];
+    return []
   }
-};
+}
 // Additional JSDOM navigation warning suppression
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const suppressNavigationWarnings = (...args: unknown[]) => {
   if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError(...args);
-};
+  originalConsoleError(...args)
+}
 // Mock window.location
-delete (window as unknown as Record<string, unknown>).location;
+delete (window as unknown as Record<string, unknown>).location
 (window as unknown as Record<string, unknown>).location = {
   href: 'http://localhost:3000',
   origin: 'http://localhost:3000',
@@ -115,4 +114,4 @@ delete (window as unknown as Record<string, unknown>).location;
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
-};
+}

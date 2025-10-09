@@ -1,9 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Star, Users, TrendingUp, Clock, Shield, Brain } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIMLPlatformPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +29,7 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Developer',
@@ -78,15 +76,13 @@ const AIMLPlatformPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  ];
-
+  ]
 const AiMlPlatformPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -98,9 +94,8 @@ const AiMlPlatformPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiMlPlatformPage;
+export default AiMlPlatformPage

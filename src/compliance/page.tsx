@@ -1,11 +1,8 @@
-import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
-
-'use client';
-
+import { Link } from 'react-router-dom'
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React from 'react'
 const CompliancePage: React.FC = () => {
   const _certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -14,8 +11,7 @@ const CompliancePage: React.FC = () => {
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
-  ];
-
+  ]
   const complianceAreas = [
     {
       icon: Shield,
@@ -41,8 +37,7 @@ const CompliancePage: React.FC = () => {
       description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
       features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
@@ -144,7 +139,6 @@ const CompliancePage: React.FC = () => {
         
         <Footer />
       </div>
-  );
-};
-
-export default CompliancePage;
+  )
+}
+export default CompliancePage

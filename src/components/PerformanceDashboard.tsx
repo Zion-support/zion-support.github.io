@@ -1,17 +1,16 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  fps: number
 }
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  fps: number
+  [key: string]: number
 }
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -19,53 +18,53 @@ const PerformanceDashboard: React.FC = () => {
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
-  });
-  const [isVisible, setIsVisible] = useState(false);
+  })
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const _updateMetrics = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
-      )[0] as PerformanceNavigationTiming;
+      )[0] as PerformanceNavigationTiming
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
+        : 0
       // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
+      const renderStart = performance.now()
+      const renderTime = performance.now() - renderStart
       // Measure memory usage
-      let __memoryUsage = 0;
+      let __memoryUsage = 0
       if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+        memoryUsage = memory?.usedJSHeapSize || 0
       }
       // Measure FPS (simplified)
-      let _fps = 0;
+      let _fps = 0
       if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
+        let _lastTime = performance.now()
+        let _frameCount = 0
         const measureFPS = (currentTime: number) => {
-          frameCount++;
+          frameCount++
           if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
+            frameCount = 0
+            lastTime = currentTime
           }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
+          requestAnimationFrame(measureFPS)
+        }
+        requestAnimationFrame(measureFPS)
       }
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
         fps
-      });
-    };
-    updateMetrics();
+      })
+    }
+    updateMetrics()
     // Update metrics every 5 seconds
-    const interval = setInterval(updateMetrics, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    const interval = setInterval(updateMetrics, 5000)
+    return () => clearInterval(interval)
+  }, [])
   if (!isVisible) {
     return (
       <button
@@ -74,7 +73,7 @@ const PerformanceDashboard: React.FC = () => {
       >
         Show Performance
       </button>
-    );
+    )
   }
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
@@ -117,6 +116,6 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default PerformanceDashboard;
+  )
+}
+export default PerformanceDashboard

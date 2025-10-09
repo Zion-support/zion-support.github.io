@@ -1,26 +1,25 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 const ScrollToTop: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const _toggleVisibility = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true);
+        setIsVisible(true)
       } else {
-        setIsVisible(false);
+        setIsVisible(false)
       }
-    };
-    window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
+    }
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, [])
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
-  };
+    })
+  }
   if (!isVisible) {
-    return null;
+    return null
   }
   return (
     <button
@@ -30,6 +29,6 @@ const ScrollToTop: React.FC = () => {
     >
       <ArrowUp className="w-5 h-5" />
     </button>
-  );
-};
-export default ScrollToTop;
+  )
+}
+export default ScrollToTop

@@ -1,39 +1,37 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
 
     // Report error to analytics
@@ -41,16 +39,16 @@ class ErrorBoundary extends Component<Props, State> {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: true
-      });
+      })
     }
 
     // Call custom error handler
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
 
     // Report error to error tracking service
-    this.reportError(error, errorInfo);
+    this.reportError(error, errorInfo)
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -66,31 +64,26 @@ class ErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId()
-    };
-
+    }
     // Send to error tracking service
-    this.sendToErrorService(errorReport);
-  };
-
+    this.sendToErrorService(errorReport)
+  }
   private getUserId = (): string | null => {
     // Get user ID from localStorage, session, or authentication context
-    return localStorage.getItem('userId');
-  };
-
+    return localStorage.getItem('userId')
+  }
   private getSessionId = (): string => {
     // Get or create session ID
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let _sessionId = sessionStorage.getItem('sessionId')
     if (!sessionId) {
-      sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
-      sessionStorage.setItem('sessionId', sessionId);
+      sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36)
+      sessionStorage.setItem('sessionId', sessionId)
     }
-    return sessionId;
-  };
-
+    return sessionId
+  }
   private sendToErrorService = (errorReport: any) => {
     // In a real application, you would send this to your error tracking service
-    console.log('Error report:', errorReport);
-    
+    console.log('Error report:', errorReport)
     // Example: Send to your API endpoint
     // fetch('/api/errors', {
     //   method: 'POST',
@@ -98,26 +91,22 @@ class ErrorBoundary extends Component<Props, State> {
     //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify(errorReport)
-    // }).catch(console.error);
-  };
-
+    // }).catch(console.error)
+  }
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
+  }
   private handleReload = () => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  }
   private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       // Default error UI
@@ -194,11 +183,11 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

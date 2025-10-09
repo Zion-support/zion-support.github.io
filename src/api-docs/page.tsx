@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import {Star, Phone} from 'lucide-react';
+import { Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';

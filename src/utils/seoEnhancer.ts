@@ -4,58 +4,56 @@
  */
 
 interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  robots?: string;
-  language?: string;
-  author?: string;
-  publisher?: string;
-  lastModified?: string;
-  alternateUrls?: { [key: string]: string };
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: any
+  robots?: string
+  language?: string
+  author?: string
+  publisher?: string
+  lastModified?: string
+  alternateUrls?: { [key: string]: string }
 }
 
 interface MetaTag {
-  name?: string;
-  property?: string;
-  content: string;
-  key?: string;
+  name?: string
+  property?: string
+  content: string
+  key?: string
 }
 
 class SEOEnhancer {
-  private config: SEOConfig;
-  private baseUrl: string;
-
+  private config: SEOConfig
+  private baseUrl: string
   constructor(config: SEOConfig) {
-    this.config = config;
-    this.baseUrl = 'https://ziontechgroup.com';
-    this.init();
+    this.config = config
+    this.baseUrl = 'https://ziontechgroup.com'
+    this.init()
   }
 
   private init(): void {
-    this.setTitle();
-    this.setMetaTags();
-    this.setOpenGraphTags();
-    this.setTwitterTags();
-    this.setStructuredData();
-    this.setCanonicalUrl();
-    this.setAlternateUrls();
-    this.setRobotsMeta();
-    this.optimizeImages();
-    this.setupBreadcrumbs();
+    this.setTitle()
+    this.setMetaTags()
+    this.setOpenGraphTags()
+    this.setTwitterTags()
+    this.setStructuredData()
+    this.setCanonicalUrl()
+    this.setAlternateUrls()
+    this.setRobotsMeta()
+    this.optimizeImages()
+    this.setupBreadcrumbs()
   }
 
   private setTitle(): void {
-    const _title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
-    document.title = title;
-    
+    const _title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions'
+    document.title = title
     // Update meta title
-    this.updateOrCreateMetaTag('name', 'title', title);
+    this.updateOrCreateMetaTag('name', 'title', title)
   }
 
   private setMetaTags(): void {
@@ -80,15 +78,14 @@ class SEOEnhancer {
       { name: 'msapplication-TileColor', content: '#4f46e5' },
       { name: 'theme-color', content: '#4f46e5' },
       { name: 'color-scheme', content: 'dark light' }
-    ];
-
+    ]
     if (this.config.lastModified) {
-      metaTags.push({ name: 'last-modified', content: this.config.lastModified });
+      metaTags.push({ name: 'last-modified', content: this.config.lastModified })
     }
 
     metaTags.forEach(tag => {
-      this.updateOrCreateMetaTag('name', tag.name!, tag.content);
-    });
+      this.updateOrCreateMetaTag('name', tag.name!, tag.content)
+    })
   }
 
   private setOpenGraphTags(): void {
@@ -103,11 +100,10 @@ class SEOEnhancer {
       { property: 'og:image:alt', content: this.config.title },
       { property: 'og:site_name', content: 'Zion Tech Group' },
       { property: 'og:locale', content: 'en_US' }
-    ];
-
+    ]
     ogTags.forEach(tag => {
-      this.updateOrCreateMetaTag('property', tag.property!, tag.content);
-    });
+      this.updateOrCreateMetaTag('property', tag.property!, tag.content)
+    })
   }
 
   private setTwitterTags(): void {
@@ -120,74 +116,70 @@ class SEOEnhancer {
       { name: 'twitter:image:alt', content: this.config.title },
       { name: 'twitter:site', content: '@ziontechgroup' },
       { name: 'twitter:creator', content: '@ziontechgroup' }
-    ];
-
+    ]
     twitterTags.forEach(tag => {
-      this.updateOrCreateMetaTag('name', tag.name!, tag.content);
-    });
+      this.updateOrCreateMetaTag('name', tag.name!, tag.content)
+    })
   }
 
   private setStructuredData(): void {
-    if (!this.config.structuredData) return;
-
+    if (!this.config.structuredData) return
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    const existingScript = document.querySelector('script[type="application/ld+json"]')
     if (existingScript) {
-      existingScript.remove();
+      existingScript.remove()
     }
 
     // Add new structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(this.config.structuredData);
-    document.head.appendChild(script);
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(this.config.structuredData)
+    document.head.appendChild(script)
   }
 
   private setCanonicalUrl(): void {
     // Remove existing canonical
-    const existingCanonical = document.querySelector('link[rel="canonical"]');
+    const existingCanonical = document.querySelector('link[rel="canonical"]')
     if (existingCanonical) {
-      existingCanonical.remove();
+      existingCanonical.remove()
     }
 
     // Add new canonical
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = this.config.canonicalUrl;
-    document.head.appendChild(canonical);
+    const canonical = document.createElement('link')
+    canonical.rel = 'canonical'
+    canonical.href = this.config.canonicalUrl
+    document.head.appendChild(canonical)
   }
 
   private setAlternateUrls(): void {
-    if (!this.config.alternateUrls) return;
-
+    if (!this.config.alternateUrls) return
     Object.entries(this.config.alternateUrls).forEach(([hreflang, url]) => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.hreflang = hreflang;
-      link.href = url;
-      document.head.appendChild(link);
-    });
+      const link = document.createElement('link')
+      link.rel = 'alternate'
+      link.hreflang = hreflang
+      link.href = url
+      document.head.appendChild(link)
+    })
   }
 
   private setRobotsMeta(): void {
-    this.updateOrCreateMetaTag('name', 'robots', this.config.robots || 'index, follow');
+    this.updateOrCreateMetaTag('name', 'robots', this.config.robots || 'index, follow')
   }
 
   private optimizeImages(): void {
     // Add loading="lazy" to images below the fold
-    const images = document.querySelectorAll('img:not([loading])');
+    const images = document.querySelectorAll('img:not([loading])')
     images.forEach((img, index) => {
       if (index > 2) { // Skip first 3 images (likely above the fold)
-        img.setAttribute('loading', 'lazy');
+        img.setAttribute('loading', 'lazy')
       }
-    });
-
+    })
     // Add alt attributes to images without them
     images.forEach(img => {
       if (!img.getAttribute('alt')) {
-        img.setAttribute('alt', this.config.title);
+        img.setAttribute('alt', this.config.title)
       }
-    });
+    })
   }
 
   private setupBreadcrumbs(): void {
@@ -202,26 +194,24 @@ class SEOEnhancer {
           item: this.baseUrl
         }
       ]
-    };
-
+    }
     // Add breadcrumb structured data
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbSchema);
-    document.head.appendChild(script);
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(breadcrumbSchema)
+    document.head.appendChild(script)
   }
 
   private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
-    const selector = `meta[${attribute}="${value}"]`;
-    let _meta = document.querySelector(selector) as HTMLMetaElement;
-
+    const selector = `meta[${attribute}="${value}"]`
+    let _meta = document.querySelector(selector) as HTMLMetaElement
     if (meta) {
-      meta.content = content;
+      meta.content = content
     } else {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, value);
-      meta.content = content;
-      document.head.appendChild(meta);
+      meta = document.createElement('meta')
+      meta.setAttribute(attribute, value)
+      meta.content = content
+      document.head.appendChild(meta)
     }
   }
 
@@ -232,21 +222,18 @@ class SEOEnhancer {
       { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
       { url: '/contact', priority: '0.8', changefreq: 'monthly' },
       { url: '/about', priority: '0.7', changefreq: 'monthly' }
-    ];
-
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
+    ]
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
     pages.forEach(page => {
-      sitemap += '  <url>\n';
-      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;
-      sitemap += `    <priority>${page.priority}</priority>\n`;
-      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-      sitemap += '  </url>\n';
-    });
-
-    sitemap += '</urlset>';
-    return sitemap;
+      sitemap += '  <url>\n'
+      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`
+      sitemap += `    <priority>${page.priority}</priority>\n`
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`
+      sitemap += '  </url>\n'
+    })
+    sitemap += '</urlset>'
+    return sitemap
   }
 
   public generateRobotsTxt(): string {
@@ -259,18 +246,16 @@ Sitemap: ${this.baseUrl}/sitemap.xml
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
+Disallow: /private/`
   }
 
   public optimizeForCoreWebVitals(): void {
     // Optimize LCP
-    this.optimizeLCP();
-    
+    this.optimizeLCP()
     // Optimize FID
-    this.optimizeFID();
-    
+    this.optimizeFID()
     // Optimize CLS
-    this.optimizeCLS();
+    this.optimizeCLS()
   }
 
   private optimizeLCP(): void {
@@ -279,37 +264,36 @@ Disallow: /private/`;
       '/assets/index.css',
       '/assets/vendor.js',
       '/assets/index.js'
-    ];
-
+    ]
     criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = resource.endsWith('.css') ? 'style' : 'script';
-      document.head.appendChild(link);
-    });
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.css') ? 'style' : 'script'
+      document.head.appendChild(link)
+    })
   }
 
   private optimizeFID(): void {
     // Defer non-critical JavaScript
-    const scripts = document.querySelectorAll('script[src]:not([defer]):not([async])');
+    const scripts = document.querySelectorAll('script[src]:not([defer]):not([async])')
     scripts.forEach(script => {
       if (!script.src.includes('critical')) {
-        script.defer = true;
+        script.defer = true
       }
-    });
+    })
   }
 
   private optimizeCLS(): void {
     // Add dimensions to images to prevent layout shift
-    const images = document.querySelectorAll('img:not([width]):not([height])');
+    const images = document.querySelectorAll('img:not([width]):not([height])')
     images.forEach(img => {
       img.addEventListener('load', () => {
-        img.style.width = img.naturalWidth + 'px';
-        img.style.height = img.naturalHeight + 'px';
-      });
-    });
+        img.style.width = img.naturalWidth + 'px'
+        img.style.height = img.naturalHeight + 'px'
+      })
+    })
   }
 }
 
-export default SEOEnhancer;
+export default SEOEnhancer

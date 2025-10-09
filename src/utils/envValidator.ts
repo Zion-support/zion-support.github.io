@@ -1,13 +1,12 @@
-'use client';
 /**
  * Environment Variables Validator
  * Ensures all required environment variables are present and valid
  */
 export interface EnvConfig {
-  NODE_ENV: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
+  NODE_ENV: 'development' | 'production' | 'test'
+  NEXT_PUBLIC_API_URL?: string
+  NEXT_PUBLIC_GA_ID?: string
+  NEXT_PUBLIC_SITE_URL?: string
 }
 class EnvValidator {
   private errors: string[] = []
@@ -26,7 +25,7 @@ class EnvValidator {
       isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings
-    };
+    }
   }
   /**
    * Get validated environment configuration
@@ -41,14 +40,14 @@ class EnvValidator {
     if (validation.warnings.length > 0) {
       console.warn(
         `Environment warnings:\n${validation.warnings.join('\n')}`
-      );
+      )
     }
     return {
       NODE_ENV: this.getNodeEnv(),
       NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
       NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
       NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']
-    };
+    }
   }
   private validateNodeEnv(): void {
     const nodeEnv = process.env['NODE_ENV']

@@ -1,19 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react'
 interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
+  sizes?: string
+  loading?: 'lazy' | 'eager'
+  onLoad?: () => void
+  onError?: () => void
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -31,56 +30,48 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   onLoad,
   onError,
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
+  const _imgRef = useRef<HTMLImageElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (priority || isInView) return;
-
+    if (priority || isInView) return
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
+            setIsInView(true)
+            observer.disconnect()
           }
-        });
+        })
       },
       {
         rootMargin: '50px',
         threshold: 0.1,
       }
-    );
-
+    )
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect();
-  }, [priority, isInView]);
-
+    return () => observer.disconnect()
+  }, [priority, isInView])
   // Generate optimized image URL
   const getOptimizedSrc = () => {
-    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
-    
+    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4='
     // In a real implementation, you would use an image optimization service
     // like Cloudinary, ImageKit, or Next.js Image Optimization
-    return src;
-  };
-
+    return src
+  }
   const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
+    setIsLoaded(true)
+    onLoad?.()
+  }
   const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+    setHasError(true)
+    onError?.()
+  }
   return (
     <div
       ref={imgRef}
@@ -131,7 +122,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         />
       )}
     </div>
-  );
-};
-
-export default OptimizedImage;
+  )
+}
+export default OptimizedImage

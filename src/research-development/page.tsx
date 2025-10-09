@@ -1,11 +1,8 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
+  const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
     {
       id: 'ai',
@@ -39,8 +36,7 @@ const ResearchDevelopmentPage: React.FC = () => {
       bgColor: 'bg-yellow-500/10',
       description: 'Researching next-generation technologies'
     }
-  ];
-
+  ]
   const researchProjects = {
     ai: [
       {
@@ -185,8 +181,7 @@ const ResearchDevelopmentPage: React.FC = () => {
         color: 'text-blue-400'
       }
     ]
-  };
-
+  }
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
@@ -220,8 +215,7 @@ const ResearchDevelopmentPage: React.FC = () => {
       impact: 'High',
       link: '#'
     }
-  ];
-
+  ]
   const achievements = [
     {
       icon: Award,
@@ -243,8 +237,7 @@ const ResearchDevelopmentPage: React.FC = () => {
       title: 'Global Collaborations',
       description: 'Partnerships with leading universities and research institutions'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -435,7 +428,6 @@ const ResearchDevelopmentPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default ResearchDevelopmentPage;
+  )
+}
+export default ResearchDevelopmentPage

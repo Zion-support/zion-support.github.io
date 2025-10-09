@@ -1,23 +1,22 @@
-import React from 'react';
-
+import React from 'react'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterSite?: string
+  structuredData?: any
+  noindex?: boolean
+  nofollow?: boolean
+  lang?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
@@ -39,10 +38,9 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   section,
   tags = [],
 }) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-
+  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -106,7 +104,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
-  );
-};
-
-export default EnhancedSEO;
+  )
+}
+export default EnhancedSEO

@@ -1,7 +1,6 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const DeveloperToolsPage: React.FC = () => {
   const _devTools = [
     {
@@ -52,8 +51,7 @@ const DeveloperToolsPage: React.FC = () => {
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price: 'Starting at $179/month'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -202,7 +200,6 @@ const DeveloperToolsPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default DeveloperToolsPage;
+  )
+}
+export default DeveloperToolsPage

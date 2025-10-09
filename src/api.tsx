@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const API: React.FC = () => {
   const _apiEndpoints = [
     {
@@ -29,7 +29,7 @@ const API: React.FC = () => {
       parameters: ['title', 'content', 'type'],
       response: 'Created content object'
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
@@ -171,6 +171,6 @@ const API: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default API;
+  )
+}
+export default API

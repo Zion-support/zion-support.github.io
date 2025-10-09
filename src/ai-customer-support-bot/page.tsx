@@ -1,9 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Star, Users, TrendingUp, Clock, MessageSquare, Bot } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AICustomerSupportBotPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +29,7 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -78,15 +76,13 @@ const AICustomerSupportBotPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
-  ];
-
+  ]
 const AiCustomerSupportBotPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -98,9 +94,8 @@ const AiCustomerSupportBotPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiCustomerSupportBotPage;
+export default AiCustomerSupportBotPage

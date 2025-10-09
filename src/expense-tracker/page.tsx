@@ -1,9 +1,6 @@
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React from 'react';
-
-'use client';
-
+import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react'
 const ExpenseTrackerPage: React.FC = () => {
   const _features = [
     {
@@ -42,8 +39,7 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit: '100% compliance guarantee'
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Personal',
@@ -94,8 +90,7 @@ const ExpenseTrackerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const integrations = [
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
@@ -105,8 +100,7 @@ const ExpenseTrackerPage: React.FC = () => {
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Michael Johnson',
@@ -129,8 +123,7 @@ const ExpenseTrackerPage: React.FC = () => {
       content: 'The compliance features ensure we never miss a tax deduction. Our accountant loves the detailed reports.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -318,7 +311,6 @@ const ExpenseTrackerPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
-
-export default ExpenseTrackerPage;
+  )
+}
+export default ExpenseTrackerPage

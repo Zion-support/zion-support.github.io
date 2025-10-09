@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Settings, Shield, BarChart, Zap, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Settings, Shield, BarChart, Zap, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const SystemAdministrationPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const SystemAdministrationPage: React.FC = () => {
       description: 'Automated system administration tasks',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const SystemAdministrationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default SystemAdministrationPage;
+  )
+}
+export default SystemAdministrationPage

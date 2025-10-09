@@ -1,14 +1,10 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
-
+import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
 const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeCategory, setActiveCategory] = useState('getting-started')
   const _categories = [
     {
       id: 'getting-started',
@@ -38,8 +34,7 @@ const HelpPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10'
     }
-  ];
-
+  ]
   const helpArticles = {
     'getting-started': [
       {
@@ -193,8 +188,7 @@ const HelpPage: React.FC = () => {
         color: 'text-purple-400'
       }
     ]
-  };
-
+  }
   const resources = [
     {
       title: 'Video Tutorials',
@@ -224,8 +218,7 @@ const HelpPage: React.FC = () => {
       color: 'text-green-400',
       count: '25+ downloads'
     }
-  ];
-
+  ]
   const supportChannels = [
     {
       title: 'Live Chat',
@@ -259,8 +252,7 @@ const HelpPage: React.FC = () => {
       availability: '24/7',
       responseTime: 'Community driven'
     }
-  ];
-
+  ]
   const faqs = [
     {
       question: 'How quickly can I get started with your AI services?',
@@ -282,17 +274,14 @@ const HelpPage: React.FC = () => {
       question: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
     }
-  ];
-
+  ]
   const getCurrentArticles = () => {
-    return helpArticles[activeCategory as keyof typeof helpArticles] || [];
-  };
-
+    return helpArticles[activeCategory as keyof typeof helpArticles] || []
+  }
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  )
   return (
     <>
       <Navigation />
@@ -479,7 +468,6 @@ const HelpPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default HelpPage;
+  )
+}
+export default HelpPage

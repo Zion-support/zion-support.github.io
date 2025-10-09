@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Target, BarChart, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Target, BarChart, Zap, Settings, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AILeadScoringPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AILeadScoringPage: React.FC = () => {
       description: 'Comprehensive lead performance analytics',
       benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AILeadScoringPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AILeadScoringPage;
+  )
+}
+export default AILeadScoringPage

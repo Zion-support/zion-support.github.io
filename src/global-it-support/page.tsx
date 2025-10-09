@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Globe, Headphones, Shield, Zap, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const GlobalITSupportPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const GlobalITSupportPage: React.FC = () => {
       description: 'Quick problem resolution and escalation',
       benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const GlobalITSupportPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default GlobalITSupportPage;
+  )
+}
+export default GlobalITSupportPage

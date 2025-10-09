@@ -1,8 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -55,16 +54,16 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       featured: true,
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
-  ];
+  ]
   const filteredContent = selectedCategory === 'all' 
     ? content 
-    : content.filter(item => item.category === selectedCategory);
+    : content.filter(item => item.category === selectedCategory)
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -211,6 +210,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default UltimateBusinessIntelligenceShowcase2025;
+  )
+}
+export default UltimateBusinessIntelligenceShowcase2025

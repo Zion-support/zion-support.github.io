@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Cpu, Zap, Globe, Shield, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Cpu, Zap, Globe, Shield, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIEdgeComputingPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIEdgeComputingPage: React.FC = () => {
       description: 'Enterprise-grade security for edge AI deployments',
       benefits: ['Data privacy', 'Secure communication', 'Access control']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIEdgeComputingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIEdgeComputingPage;
+  )
+}
+export default AIEdgeComputingPage

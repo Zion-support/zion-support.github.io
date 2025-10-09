@@ -1,28 +1,25 @@
-'use client';
-
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
 
-import React from 'react';
-
+import React from 'react'
 export interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  title?: string
+  description?: string
+  keywords?: string[]
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product' | 'profile'
+  author?: string
+  publishDate?: string
+  modifiedDate?: string
+  canonical?: string
+  noIndex?: boolean
+  structuredData?: Record<string, unknown>
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
+  locale?: string
+  alternateLocales?: { locale: string; url: string }[]
 }
 
 const _defaultSEO = {
@@ -41,8 +38,7 @@ const _defaultSEO = {
   type: 'website' as const,
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const,
-};
-
+}
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -69,12 +65,11 @@ export const SEO: React.FC<SEOProps> = ({
     type,
     twitterCard,
     locale,
-  };
-
+  }
   // Generate structured data
   const generateStructuredData = () => {
     if (structuredData) {
-      return structuredData;
+      return structuredData
     }
 
     const baseStructuredData: Record<string, unknown> = {
@@ -84,27 +79,24 @@ export const SEO: React.FC<SEOProps> = ({
       description: seo.description,
       url: seo.url,
       image: seo.image,
-    };
-
+    }
     if (author) {
       baseStructuredData.author = {
         '@type': 'Person',
         name: author,
-      };
+      }
     }
 
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate
     }
 
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate
     }
 
-    return baseStructuredData;
-  };
-
-  return null;
-};
-
-export default SEO;
+    return baseStructuredData
+  }
+  return null
+}
+export default SEO

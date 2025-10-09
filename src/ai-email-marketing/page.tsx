@@ -1,6 +1,5 @@
-import React from 'react';
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
-
+import React from 'react'
+import { Mail, Send, BarChart, Users, Target, TrendingUp } from 'lucide-react'
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
     {
@@ -33,16 +32,14 @@ const AIEmailMarketingPage: React.FC = () => {
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
     }
-  ];
-
+  ]
   const benefits = [
     'Increase open rates by 200%',
     'Boost click-through rates by 150%',
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
     'Save 15+ hours per week'
-  ];
-
+  ]
   const emailTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Regular updates and content' },
@@ -50,8 +47,7 @@ const AIEmailMarketingPage: React.FC = () => {
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -100,8 +96,7 @@ const AIEmailMarketingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
 const AiEmailMarketingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -113,9 +108,8 @@ const AiEmailMarketingPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiEmailMarketingPage;
+export default AiEmailMarketingPage

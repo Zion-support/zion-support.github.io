@@ -1,8 +1,6 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const RequestQuotePage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -15,11 +13,9 @@ const RequestQuotePage: React.FC = () => {
     budget: '',
     description: '',
     requirements: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const _serviceTypes = [
     'AI Services',
     'IT Infrastructure',
@@ -30,15 +26,13 @@ const RequestQuotePage: React.FC = () => {
     'Custom Development',
     'Consulting Services',
     'Other'
-  ];
-
+  ]
   const projectSizes = [
     'Small (1-10 employees)',
     'Medium (11-100 employees)',
     'Large (101-1000 employees)',
     'Enterprise (1000+ employees)'
-  ];
-
+  ]
   const timelines = [
     'ASAP',
     '1-3 months',
@@ -46,8 +40,7 @@ const RequestQuotePage: React.FC = () => {
     '6-12 months',
     '12+ months',
     'Flexible'
-  ];
-
+  ]
   const budgetRanges = [
     'Under $10,000',
     '$10,000 - $50,000',
@@ -55,27 +48,22 @@ const RequestQuotePage: React.FC = () => {
     '$100,000 - $500,000',
     '$500,000+',
     'To be discussed'
-  ];
-
+  ]
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const benefits = [
     {
       icon: Calculator,
@@ -97,8 +85,7 @@ const RequestQuotePage: React.FC = () => {
       title: 'Expert Consultation',
       description: 'Free consultation with our technology experts'
     }
-  ];
-
+  ]
   const whyChooseUs = [
     {
       icon: Users,
@@ -120,8 +107,7 @@ const RequestQuotePage: React.FC = () => {
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
     }
-  ];
-
+  ]
   if (isSubmitted) {
     return (
       <>
@@ -177,7 +163,7 @@ const RequestQuotePage: React.FC = () => {
         </div>
         <Footer />
       </>
-    );
+    )
   }
 
   return (
@@ -455,7 +441,6 @@ const RequestQuotePage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default RequestQuotePage;
+  )
+}
+export default RequestQuotePage

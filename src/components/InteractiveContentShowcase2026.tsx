@@ -1,7 +1,6 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 const InteractiveContentShowcase2026: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(0)
   const _tabs = [
     {
       title: "AI Innovation",
@@ -23,7 +22,7 @@ const InteractiveContentShowcase2026: React.FC = () => {
       content: "Live insights and predictive analytics for better decisions.",
       icon: "📊"
     }
-  ];
+  ]
   return (
     <section className='bg-gray-50 py-16 rounded-2xl'>
       <div className='container mx-auto px-4'>
@@ -67,6 +66,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default InteractiveContentShowcase2026;
+  )
+}
+export default InteractiveContentShowcase2026

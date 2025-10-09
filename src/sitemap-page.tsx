@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 const SitemapPage: React.FC = () => {
   const _pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -32,8 +32,7 @@ const SitemapPage: React.FC = () => {
     { url: '/guides', title: 'Technical Guides', priority: '0.6' },
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="container mx-auto px-4 py-8">
@@ -78,7 +77,6 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-  );
-};
-
-export default SitemapPage;
+  )
+}
+export default SitemapPage

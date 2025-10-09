@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  children: React.ReactNode;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  children: React.ReactNode
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -78,13 +78,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       },
       "geoRadius": "1000000"
     }
-  };
-
+  }
   return (
     <>
       {children}
     </>
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

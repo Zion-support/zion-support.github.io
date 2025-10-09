@@ -1,26 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
-
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import {Menu, X, Phone, MapPin, Home} from 'lucide-react'
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   useEffect(() => {
     const _handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const closeAllMenus = () => {
-    setIsOpen(false);
-    setServicesOpen(false);
-  };
-
+    setIsOpen(false)
+    setServicesOpen(false)
+  }
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -214,7 +209,6 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )
+}
+export default Navigation

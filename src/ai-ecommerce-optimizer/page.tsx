@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { ShoppingCart, Target, Zap, Settings, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIEcommerceOptimizerPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIEcommerceOptimizerPage: React.FC = () => {
       description: 'Comprehensive e-commerce analytics and insights',
       benefits: ['Sales analytics', 'Customer behavior', 'Performance metrics']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIEcommerceOptimizerPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIEcommerceOptimizerPage;
+  )
+}
+export default AIEcommerceOptimizerPage

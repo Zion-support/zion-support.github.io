@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Settings, Zap, Shield, BarChart, CheckCircle, Code } from 'lucide-react'
+import Footer from '../components/Footer'
 const DevOpsCICDPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const DevOpsCICDPage: React.FC = () => {
       description: 'Comprehensive monitoring and performance analytics',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const DevOpsCICDPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default DevOpsCICDPage;
+  )
+}
+export default DevOpsCICDPage

@@ -1,16 +1,15 @@
-'use client';
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 const InteractiveAIROICalculator: React.FC = () => {
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
+  const [currentCost, setCurrentCost] = useState(100000)
+  const [efficiencyGain, setEfficiencyGain] = useState(70)
+  const [timeframe, setTimeframe] = useState(12)
   const _calculateROI = () => {
-    const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = annualSavings * (timeframe / 12);
-    const _roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
-  };
-  const roi = calculateROI();
+    const _annualSavings = (currentCost * efficiencyGain) / 100
+    const _totalSavings = annualSavings * (timeframe / 12)
+    const _roi = ((totalSavings - currentCost) / currentCost) * 100
+    return Math.max(0, roi)
+  }
+  const roi = calculateROI()
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -80,6 +79,6 @@ const InteractiveAIROICalculator: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
-export default InteractiveAIROICalculator;
+  )
+}
+export default InteractiveAIROICalculator

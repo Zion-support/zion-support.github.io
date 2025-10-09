@@ -36,7 +36,7 @@ export default function NotFound() {
       href: '/contact',
       icon: '📞'
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -94,5 +94,5 @@ export default function NotFound() {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

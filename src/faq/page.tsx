@@ -1,22 +1,17 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
-
+import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
 const FAQPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [openItems, setOpenItems] = useState<number[]>([])
   const _toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
-  };
-
+    )
+  }
   const faqData = [
     {
       category: 'General Questions',
@@ -144,16 +139,14 @@ const FAQPage: React.FC = () => {
         }
       ]
     }
-  ];
-
+  ]
   const filteredData = faqData.map(category => ({
     ...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  })).filter(category => category.questions.length > 0);
-
+  })).filter(category => category.questions.length > 0)
   return (
     <>
       <Navigation />
@@ -190,9 +183,8 @@ const FAQPage: React.FC = () => {
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
-                    
+                    const globalIndex = categoryIndex * 100 + itemIndex
+                    const isOpen = openItems.includes(globalIndex)
                     return (
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
@@ -212,7 +204,7 @@ const FAQPage: React.FC = () => {
                           </div>
                         )}
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -255,7 +247,6 @@ const FAQPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default FAQPage;
+  )
+}
+export default FAQPage

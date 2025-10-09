@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { BarChart, Target, Zap, Settings, CheckCircle } from 'lucide-react'
 const AIAnalyticsPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Customizable metrics and KPIs',
       benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIAnalyticsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIAnalyticsPage;
+  )
+}
+export default AIAnalyticsPage

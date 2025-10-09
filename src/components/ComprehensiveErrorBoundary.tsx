@@ -1,33 +1,32 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import ModernLoadingSpinner from './ModernLoadingSpinner'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
-  showRetryButton?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableErrorReporting?: boolean
+  maxRetries?: number
+  showRetryButton?: boolean
 }
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
-  isRetrying: boolean;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
+  errorId?: string
+  retryCount: number
+  isRetrying: boolean
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
+  private maxRetries: number
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { 
       hasError: false, 
       retryCount: 0,
       isRetrying: false,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-    this.maxRetries = props.maxRetries || 3;
+    }
+    this.maxRetries = props.maxRetries || 3
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
@@ -36,18 +35,18 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
       isRetrying: false
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    });
+    })
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -61,7 +60,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       url: window.location.href,
       retryCount: this.state.retryCount
-    };
+    }
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -71,33 +70,33 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           error_id: this.state.errorId,
           retry_count: this.state.retryCount
         }
-      });
+      })
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       }
-  };
+  }
   private handleRetry = async () => {
     if (this.state.retryCount < this.maxRetries) {
-      this.setState({ isRetrying: true });
+      this.setState({ isRetrying: true })
       // Simulate retry delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1,
         isRetrying: false
-      }));
+      }))
     }
-  };
+  }
   private handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
       if (this.state.isRetrying) {
         return (
@@ -106,7 +105,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             text="Retrying..." 
             fullScreen={true}
           />
-        );
+        )
       }
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -167,9 +166,9 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default ComprehensiveErrorBoundary;
+export default ComprehensiveErrorBoundary

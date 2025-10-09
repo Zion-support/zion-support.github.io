@@ -1,10 +1,7 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
-
-'use client';
-
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React from 'react'
 const PartnersPage: React.FC = () => {
   const _partnerTypes = [
     {
@@ -52,8 +49,7 @@ const PartnersPage: React.FC = () => {
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
       ]
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: Globe,
@@ -75,8 +71,7 @@ const PartnersPage: React.FC = () => {
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
     }
-  ];
-
+  ]
   const partnershipTiers = [
     {
       name: 'Strategic Partners',
@@ -120,8 +115,7 @@ const PartnersPage: React.FC = () => {
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -246,7 +240,6 @@ const PartnersPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default PartnersPage;
+  )
+}
+export default PartnersPage

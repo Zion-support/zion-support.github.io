@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const UnifiedContentPromotion: React.FC = () => {
   const _features = [
     {
@@ -19,7 +19,7 @@ const UnifiedContentPromotion: React.FC = () => {
       link: "/contact",
       icon: "👨‍💼"
     }
-  ];
+  ]
   return (
     <div className="unified-content-promotion py-12">
       <div className="container mx-auto px-4">
@@ -46,6 +46,6 @@ const UnifiedContentPromotion: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default UnifiedContentPromotion;
+  )
+}
+export default UnifiedContentPromotion

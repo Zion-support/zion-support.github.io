@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { GraduationCap, BookOpen, Users, Award, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const ITTrainingPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const ITTrainingPage: React.FC = () => {
       description: 'Learn from industry experts and certified professionals',
       benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const ITTrainingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default ITTrainingPage;
+  )
+}
+export default ITTrainingPage

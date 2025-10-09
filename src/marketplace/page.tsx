@@ -1,14 +1,10 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
-
+import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
 const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-
+  const [activeCategory, setActiveCategory] = useState('products')
+  const [searchTerm, setSearchTerm] = useState('')
   const _categories = [
     {
       id: 'products',
@@ -34,8 +30,7 @@ const MarketplacePage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Hardware and infrastructure solutions'
     }
-  ];
-
+  ]
   const products = [
     {
       id: 1,
@@ -89,8 +84,7 @@ const MarketplacePage: React.FC = () => {
       vendor: 'QuantumSec',
       verified: true
     }
-  ];
-
+  ]
   const talent = [
     {
       id: 1,
@@ -131,8 +125,7 @@ const MarketplacePage: React.FC = () => {
       verified: true,
       available: false
     }
-  ];
-
+  ]
   const equipment = [
     {
       id: 1,
@@ -162,26 +155,23 @@ const MarketplacePage: React.FC = () => {
       verified: true,
       inStock: true
     }
-  ];
-
+  ]
   const getCurrentItems = () => {
     switch (activeCategory) {
       case 'products':
-        return products;
+        return products
       case 'talent':
-        return talent;
+        return talent
       case 'equipment':
-        return equipment;
+        return equipment
       default:
-        return [];
+        return []
     }
-  };
-
+  }
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+  )
   const stats = [
     {
       icon: ShoppingCart,
@@ -207,8 +197,7 @@ const MarketplacePage: React.FC = () => {
       label: 'Average Rating',
       color: 'text-yellow-400'
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: CheckCircle,
@@ -230,8 +219,7 @@ const MarketplacePage: React.FC = () => {
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -477,7 +465,6 @@ const MarketplacePage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default MarketplacePage;
+  )
+}
+export default MarketplacePage

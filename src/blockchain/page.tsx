@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 const BlockchainPage: React.FC = () => {
   const _blockchainServices = [
     {
@@ -134,10 +133,8 @@ const BlockchainPage: React.FC = () => {
       category: 'Web3 Apps',
       technologies: ['React', 'Next.js', 'Node.js', 'Web3.js', 'Ethers.js']
     }
-  ];
-
-  const categories = [...new Set(blockchainServices.map(service => service.category))];
-
+  ]
+  const categories = [...new Set(blockchainServices.map(service => service.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
@@ -358,7 +355,6 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
       </div>
-  );
-};
-
-export default BlockchainPage;
+  )
+}
+export default BlockchainPage

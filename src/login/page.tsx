@@ -1,37 +1,30 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
+    e.preventDefault()
+    setIsLoading(true)
     // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsLoading(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsLoading(false)
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   const features = [
     {
       icon: Shield,
@@ -48,8 +41,7 @@ const LoginPage: React.FC = () => {
       title: 'Mobile Ready',
       description: 'Access your account from any device, anywhere'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -230,7 +222,6 @@ const LoginPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default LoginPage;
+  )
+}
+export default LoginPage

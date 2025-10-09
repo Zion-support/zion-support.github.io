@@ -1,8 +1,7 @@
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React from 'react';
-
-'use client';
+import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react'
+// 'use client'; - This is a Next.js directive, not needed in React Router
 
 const AISchedulerPage: React.FC = () => {
   const _features = [
@@ -42,8 +41,7 @@ const AISchedulerPage: React.FC = () => {
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit: '100% secure scheduling'
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Personal',
@@ -94,8 +92,7 @@ const AISchedulerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const integrations = [
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
@@ -105,8 +102,7 @@ const AISchedulerPage: React.FC = () => {
     { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
     { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
     { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Jennifer Lee',
@@ -129,8 +125,7 @@ const AISchedulerPage: React.FC = () => {
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
       rating: 5
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -318,7 +313,6 @@ const AISchedulerPage: React.FC = () => {
         </section>
       </section>
     </div>
-  );
-};
-
-export default AISchedulerPage;
+  )
+}
+export default AISchedulerPage

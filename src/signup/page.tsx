@@ -1,10 +1,7 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
-
+import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -16,42 +13,36 @@ const SignupPage: React.FC = () => {
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
+  })
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
-
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match');
-      return;
+      alert('Passwords do not match')
+      return
     }
     
     if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions');
-      return;
+      alert('Please agree to the terms and conditions')
+      return
     }
     
-    setIsLoading(true);
-    
+    setIsLoading(true)
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsLoading(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsLoading(false)
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   const features = [
     {
       icon: Shield,
@@ -68,8 +59,7 @@ const SignupPage: React.FC = () => {
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
     }
-  ];
-
+  ]
   const benefits = [
     'Free 14-day trial',
     'No setup fees',
@@ -77,8 +67,7 @@ const SignupPage: React.FC = () => {
     'Custom integrations',
     'Scalable solutions',
     'Regular updates'
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -357,7 +346,6 @@ const SignupPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default SignupPage;
+  )
+}
+export default SignupPage

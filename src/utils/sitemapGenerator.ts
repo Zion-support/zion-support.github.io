@@ -1,37 +1,33 @@
 // Sitemap generator utility
 export interface SitemapUrl {
-  loc: string;
-  lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
+  loc: string
+  lastmod?: string
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number
 }
 
 export const _generateSitemap = (urls: SitemapUrl[]): string => {
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-
+  const baseUrl = 'https://ziontechgroup.com'
+  const currentDate = new Date().toISOString().split('T')[0]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
     return `  <url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
     <priority>${url.priority || 0.8}</priority>
-  </url>`;
+  </url>`
   })
   .join('\n')}
-</urlset>`;
-
-  return sitemap;
-};
-
+</urlset>`
+  return sitemap
+}
 // Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {
-  const currentDate = new Date().toISOString().split('T')[0];
-  
+  const currentDate = new Date().toISOString().split('T')[0]
   return [
     // Main pages
     { loc: '/', priority: 1.0, changefreq: 'daily' },
@@ -102,5 +98,5 @@ export const getAllPages = (): SitemapUrl[] => {
     { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
     { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
     { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
-  ];
-};
+  ]
+}

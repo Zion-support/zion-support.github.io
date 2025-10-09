@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import {CheckCircle, Star} from 'lucide-react'
+import Footer from '../components/Footer'
 const ProductivityPage: React.FC = () => {
   const _productivityTools = [
     {
@@ -116,10 +114,8 @@ const ProductivityPage: React.FC = () => {
       category: 'Habit Tracking',
       technologies: ['React Native', 'Python', 'MongoDB', 'AI/ML', 'Push Notifications']
     }
-  ];
-
-  const categories = [...new Set(productivityTools.map(tool => tool.category))];
-
+  ]
+  const categories = [...new Set(productivityTools.map(tool => tool.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -273,7 +269,6 @@ const ProductivityPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
-
-export default ProductivityPage;
+  )
+}
+export default ProductivityPage

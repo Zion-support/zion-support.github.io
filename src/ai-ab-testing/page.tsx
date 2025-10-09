@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react'
 const AIABTestingPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIABTestingPage: React.FC = () => {
       description: 'Comprehensive testing analytics and reporting',
       benefits: ['Test metrics', 'Performance reports', 'Insight generation']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIABTestingPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIABTestingPage;
+  )
+}
+export default AIABTestingPage

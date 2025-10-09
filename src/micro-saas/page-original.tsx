@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, TrendingUp, Brain, Phone, Mail, MapPin } from 'lucide-react'
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
     // AI-Powered Developer Tools
@@ -1663,8 +1663,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
-  
+  ]
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const realEstateSaaS = [
     {
@@ -3370,7 +3369,7 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
+  ]
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const categories = [
     { name: 'All', count: microSAASServices.length },
@@ -3395,7 +3394,7 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -3552,6 +3551,6 @@ const MicroSAASPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-export default MicroSAASPage;
+  )
+}
+export default MicroSAASPage

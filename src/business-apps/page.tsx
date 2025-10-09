@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import {CheckCircle, Star} from 'lucide-react'
+import Footer from '../components/Footer'
 const BusinessAppsPage: React.FC = () => {
   const _businessApps = [
     {
@@ -116,10 +114,8 @@ const BusinessAppsPage: React.FC = () => {
       category: 'E-commerce',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'AI/ML', 'Payment APIs']
     }
-  ];
-
-  const categories = [...new Set(businessApps.map(app => app.category))];
-
+  ]
+  const categories = [...new Set(businessApps.map(app => app.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -273,7 +269,6 @@ const BusinessAppsPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
-
-export default BusinessAppsPage;
+  )
+}
+export default BusinessAppsPage

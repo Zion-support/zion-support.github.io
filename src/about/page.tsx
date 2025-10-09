@@ -1,8 +1,7 @@
-import React from 'react';
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Brain, Shield, Target, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 const AboutPage: React.FC = () => {
   const _team = [
     {
@@ -23,8 +22,7 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
     },
-  ];
-
+  ]
   const values = [
     {
       icon: Brain,
@@ -46,15 +44,13 @@ const AboutPage: React.FC = () => {
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.',
     },
-  ];
-
+  ]
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' },
-  ];
-
+  ]
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
@@ -242,7 +238,6 @@ const AboutPage: React.FC = () => {
     </div>
     </div>
     </div>
-  );
-};
-
-export default AboutPage;
+  )
+}
+export default AboutPage

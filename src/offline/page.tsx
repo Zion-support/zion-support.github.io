@@ -1,22 +1,17 @@
-import React from 'react';
-import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-'use client';
-
+import React from 'react'
+import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react'
+import { Link } from 'react-router-dom'
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
 const OfflinePage: React.FC = () => {
   const _handleRetry = () => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  }
   const handleGoHome = () => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
@@ -66,7 +61,6 @@ const OfflinePage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default OfflinePage;
+  )
+}
+export default OfflinePage

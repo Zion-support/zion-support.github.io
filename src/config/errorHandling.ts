@@ -1,4 +1,3 @@
-'use client';
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings
@@ -21,13 +20,13 @@ export enum ErrorCategory {
   UNKNOWN = 'unknown'
 }
 export interface ErrorConfig {
-  enabled: boolean;
-  logToConsole: boolean;
-  sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  enabled: boolean
+  logToConsole: boolean
+  sendToServer: boolean
+  sampleRate: number
+  maxStackTraceLength: number
+  ignoreErrors: RegExp[]
+  severityThreshold: ErrorSeverity
 }
 export const _errorHandlingConfig: ErrorConfig = {
   enabled: true,
@@ -41,7 +40,7 @@ export const _errorHandlingConfig: ErrorConfig = {
     /Loading chunk \d+ failed/i,
   ],
   severityThreshold: ErrorSeverity.LOW
-};
+}
 export const _errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
@@ -62,7 +61,7 @@ export const _errorMessages = {
     unknown: 'An unexpected error occurred. Please try again.',
     retry: 'Please try again in a few moments.'
   }
-};
+}
 export class AppError extends Error {
   constructor(
     message: string,
@@ -70,9 +69,9 @@ export class AppError extends Error {
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record<string, unknown>
   ) {
-    super(message);
-    this.name = 'AppError';
-    Error.captureStackTrace(this, this.constructor);
+    super(message)
+    this.name = 'AppError'
+    Error.captureStackTrace(this, this.constructor)
   }
 }
-export default errorHandlingConfig;
+export default errorHandlingConfig

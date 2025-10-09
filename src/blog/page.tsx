@@ -1,30 +1,26 @@
-'use client';
-
-import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import ContentPreviewCard from '../components/ContentPreviewCard';
-
+import React, { useState, useEffect, useMemo } from 'react'
+import Link from 'next/link'
+import ContentPreviewCard from '../components/ContentPreviewCard'
 interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
+  id: string
+  title: string
+  description: string
+  category: string
+  readTime: string
+  date: string
+  path: string
+  image: string
+  featured: boolean
   stats?: {
-    views: number;
-    engagement: number;
-  };
+    views: number
+    engagement: number
+  }
 }
 
 export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
+  const [posts, setPosts] = useState<BlogPost[]>([])
+  const [loading, setLoading] = useState(true)
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
@@ -122,24 +118,19 @@ export default function BlogPage() {
       featured: false,
       stats: { views: 11200, engagement: 93 }
     }
-  ], []);
-
+  ], [])
   useEffect(() => {
     const _timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
+      setPosts(blogPosts)
+      setLoading(false)
+    }, 500)
+    return () => clearTimeout(timer)
+  }, [blogPosts])
+  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))]
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-
-  const featuredPosts = posts.filter(post => post.featured);
-
+    : posts.filter(post => post.category === selectedCategory)
+  const featuredPosts = posts.filter(post => post.featured)
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -160,7 +151,7 @@ export default function BlogPage() {
           </div>
         </div>
       </div>
-    );
+    )
   }
 
 const BlogPage: React.FC = () => {
@@ -174,7 +165,6 @@ const BlogPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }

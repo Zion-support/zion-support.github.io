@@ -1,7 +1,5 @@
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
-import React from 'react';
-
-
+import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react'
+import React from 'react'
 const IoTEdgePage: React.FC = () => {
   const _iotServices = [
     {
@@ -136,10 +134,8 @@ const IoTEdgePage: React.FC = () => {
       category: 'Data Management',
       technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
-  ];
-
-  const categories = [...new Set(iotServices.map(service => service.category))];
-
+  ]
+  const categories = [...new Set(iotServices.map(service => service.category))]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
@@ -360,7 +356,6 @@ const IoTEdgePage: React.FC = () => {
           </div>
         </section>
       </div>
-  );
-};
-
-export default IoTEdgePage;
+  )
+}
+export default IoTEdgePage

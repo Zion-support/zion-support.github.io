@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Target, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Target, Zap, Settings, BarChart, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const DigitalTransformationPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const DigitalTransformationPage: React.FC = () => {
       description: 'Data-driven insights and business intelligence',
       benefits: ['Data analytics', 'Business intelligence', 'Performance metrics']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const DigitalTransformationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default DigitalTransformationPage;
+  )
+}
+export default DigitalTransformationPage

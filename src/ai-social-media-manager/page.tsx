@@ -1,7 +1,5 @@
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
-import React from 'react';
-
-
+import { Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, MessageSquare } from 'lucide-react'
+import React from 'react'
 const AISocialMediaManagerPage: React.FC = () => {
   const _features = [
     {
@@ -34,16 +32,14 @@ const AISocialMediaManagerPage: React.FC = () => {
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
     }
-  ];
-
+  ]
   const benefits = [
     'Increase engagement by 300%',
     'Save 20+ hours per week',
     'Grow followers by 150%',
     'Boost brand awareness by 200%',
     'Improve content performance by 250%'
-  ];
-
+  ]
   const platforms = [
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
@@ -51,8 +47,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -98,8 +93,7 @@ const AISocialMediaManagerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -295,7 +289,6 @@ const AISocialMediaManagerPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AISocialMediaManagerPage;
+  )
+}
+export default AISocialMediaManagerPage

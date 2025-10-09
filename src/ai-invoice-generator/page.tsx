@@ -1,10 +1,9 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
-import React, { memo } from 'react';
-
-'use client';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon } from 'lucide-react'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
+import SEOOptimizer from '../../components/SEOOptimizer'
+import React, { memo } from 'react'
+// 'use client'; - This is a Next.js directive, not needed in React Router
 
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const _features = [
@@ -44,8 +43,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -99,8 +97,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       popular: false,
       color: 'green'
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -126,8 +123,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       rating: 5,
       avatar: '👩‍💻'
     }
-  ];
-
+  ]
   const useCases = [
     {
       title: 'Freelancers & Consultants',
@@ -153,8 +149,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -419,8 +414,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         <Footer />
       </div>
     </>
-  );
-});
-
-AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
-export default AIInvoiceGeneratorPage;
+  )
+})
+AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage'
+export default AIInvoiceGeneratorPage

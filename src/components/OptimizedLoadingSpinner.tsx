@@ -1,10 +1,8 @@
-'use client';
-import React, { memo } from 'react';
-
+import React, { memo } from 'react'
 interface OptimizedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  className?: string;
+  size?: 'sm' | 'md' | 'lg'
+  color?: 'primary' | 'secondary' | 'white'
+  className?: string
 }
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
@@ -13,14 +11,12 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg: 'w-12 h-12'
-    };
-
+    }
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white: 'text-white'
-    };
-
+    }
     return (
       <div
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
@@ -48,9 +44,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           />
         </svg>
       </div>
-    );
+    )
   }
-);
-
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;
+)
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
+export default OptimizedLoadingSpinner

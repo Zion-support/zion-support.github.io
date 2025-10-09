@@ -1,9 +1,8 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud } from 'lucide-react';
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Cloud } from 'lucide-react'
 const ITServicesPage: React.FC = () => {
   const _itServices = [
     {
@@ -72,8 +71,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
-
+  ]
 const ItServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -85,8 +83,8 @@ const ItServicesPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
+  )
+}
 }
 
-export default ItServicesPage;
+export default ItServicesPage

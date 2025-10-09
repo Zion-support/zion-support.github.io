@@ -1,9 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 const _UltimateBusinessIntelligence2025Banner = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -47,18 +46,18 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       },
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
-  ];
+  ]
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % content.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [content.length]);
+      setCurrentSlide((prev) => (prev + 1) % content.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [content.length])
   const handleClose = () => {
-    setIsVisible(false);
-  };
-  if (!isVisible) return null;
-  const currentContent = content[currentSlide];
+    setIsVisible(false)
+  }
+  if (!isVisible) return null
+  const currentContent = content[currentSlide]
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -201,6 +200,6 @@ const _UltimateBusinessIntelligence2025Banner = () => {
           ))}
         </div>
     </section>
-  );
-};
-export default UltimateBusinessIntelligence2025Banner;
+  )
+}
+export default UltimateBusinessIntelligence2025Banner

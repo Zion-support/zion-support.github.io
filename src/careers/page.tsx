@@ -1,7 +1,6 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CareersPage: React.FC = () => {
   const _openPositions = [
     {
@@ -40,8 +39,7 @@ const CareersPage: React.FC = () => {
       requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
       icon: Shield
     }
-  ];
-
+  ]
   const benefits = [
     'Competitive salary and equity',
     'Comprehensive health insurance',
@@ -51,8 +49,7 @@ const CareersPage: React.FC = () => {
     'Latest technology equipment',
     'Team building events',
     'Mentorship programs'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -63,7 +60,6 @@ const CareersPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
-export default CareersPage;
+  )
+}
+export default CareersPage

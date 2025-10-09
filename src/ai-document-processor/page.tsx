@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {FileText, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { FileText, Target, Zap, Settings, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIDocumentProcessorPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIDocumentProcessorPage: React.FC = () => {
       description: 'Comprehensive document analytics and insights',
       benefits: ['Processing metrics', 'Quality analysis', 'Performance tracking']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIDocumentProcessorPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIDocumentProcessorPage;
+  )
+}
+export default AIDocumentProcessorPage

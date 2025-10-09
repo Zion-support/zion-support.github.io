@@ -84,6 +84,6 @@ export const _performanceConfig = {
     sendToAnalytics: true,
     logThreshold: 'needsImprovement'
   }
-};
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
+}
+export type PerformanceConfig = typeof performanceConfig
+export default performanceConfig

@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Smartphone, Target, Zap, Settings, CheckCircle, Code } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIMobileBuilderPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIMobileBuilderPage: React.FC = () => {
       description: 'Comprehensive app performance and user analytics',
       benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIMobileBuilderPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIMobileBuilderPage;
+  )
+}
+export default AIMobileBuilderPage

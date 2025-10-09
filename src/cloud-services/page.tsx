@@ -1,6 +1,6 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CloudServicesPage: React.FC = () => {
   const _services = [
     {
@@ -27,7 +27,7 @@ const CloudServicesPage: React.FC = () => {
       description: 'Advanced analytics and monitoring for cloud resources',
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
-  ];
+  ]
   const benefits = [
     '99.9% Uptime Guarantee',
     '24/7 Expert Support',
@@ -35,7 +35,7 @@ const CloudServicesPage: React.FC = () => {
     'Scalable Infrastructure',
     'Enhanced Security',
     'Global CDN'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -125,6 +125,6 @@ const CloudServicesPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-};
-export default CloudServicesPage;
+  )
+}
+export default CloudServicesPage

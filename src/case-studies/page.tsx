@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 const CaseStudiesPage: React.FC = () => {
   const _caseStudies = [
     {
@@ -66,8 +65,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -78,7 +76,6 @@ const CaseStudiesPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
-export default CaseStudiesPage;
+  )
+}
+export default CaseStudiesPage

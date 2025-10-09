@@ -1,9 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Star, Users, TrendingUp, Clock, BarChart, Target } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIProjectManagerPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +29,7 @@ const AIProjectManagerPage: React.FC = () => {
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -78,15 +76,13 @@ const AIProjectManagerPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  ];
-
+  ]
 const AiProjectManagerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -98,9 +94,8 @@ const AiProjectManagerPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiProjectManagerPage;
+export default AiProjectManagerPage

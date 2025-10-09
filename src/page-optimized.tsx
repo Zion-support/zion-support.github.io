@@ -1,4 +1,3 @@
-'use client';
 import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';

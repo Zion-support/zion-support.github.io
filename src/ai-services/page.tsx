@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Brain, Zap, Shield, BarChart } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIServicesPage: React.FC = () => {
   const _services = [
     {
@@ -34,15 +33,13 @@ const AIServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month'
     }
-  ];
-
+  ]
   const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
-  ];
-
+  ]
 const AiServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -54,9 +51,8 @@ const AiServicesPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiServicesPage;
+export default AiServicesPage

@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Bot, Cpu, Settings, Shield, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIRoboticsPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIRoboticsPage: React.FC = () => {
       description: 'Built-in safety protocols and security measures',
       benefits: ['Collision avoidance', 'Emergency stops', 'Data protection']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIRoboticsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIRoboticsPage;
+  )
+}
+export default AIRoboticsPage

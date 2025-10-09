@@ -1,9 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Star, Users, TrendingUp, Clock, Shield, Zap, Settings } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAutomationPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +29,7 @@ const AIAutomationPage: React.FC = () => {
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -78,15 +76,13 @@ const AIAutomationPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const stats = [
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
-  ];
-
+  ]
 const AiAutomationPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -98,9 +94,8 @@ const AiAutomationPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
+  )
+}
 }
 
-export default AiAutomationPage;
+export default AiAutomationPage

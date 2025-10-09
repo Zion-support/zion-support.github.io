@@ -1,29 +1,28 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableReporting?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  showDetails?: boolean
+  enableReporting?: boolean
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string | null
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -31,27 +30,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
-    });
-
+    })
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
+      console.error('Error Boundary caught an error:', error, errorInfo)
     }
 
     // Report error to monitoring service
     if (this.props.enableReporting !== false) {
-      this.reportError(error, errorInfo);
+      this.reportError(error, errorInfo)
     }
 
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(error, errorInfo)
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -65,11 +63,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-    };
-
+    }
     // Send to error reporting service
-    this.sendErrorReport(errorReport);
-
+    this.sendErrorReport(errorReport)
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -78,54 +74,46 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         custom_map: {
           error_id: this.state.errorId,
         },
-      });
+      })
     }
-  };
-
+  }
   private sendErrorReport = (errorReport: any) => {
     // In a real application, you would send this to your error reporting service
     // For now, we'll just log it
-    console.log('Error Report:', errorReport);
-
+    console.log('Error Report:', errorReport)
     // Example: Send to Sentry, LogRocket, or custom endpoint
     // fetch('/api/errors', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorReport),
-    // }).catch(console.error);
-  };
-
+    // }).catch(console.error)
+  }
   private getUserId = (): string | null => {
     // Get user ID from your auth system
-    return localStorage.getItem('userId') || null;
-  };
-
+    return localStorage.getItem('userId') || null
+  }
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let _sessionId = sessionStorage.getItem('sessionId')
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionStorage.setItem('sessionId', sessionId)
     }
-    return sessionId;
-  };
-
+    return sessionId
+  }
   private handleRetry = () => {
     this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
-    });
-  };
-
+    })
+  }
   private handleReload = () => {
-    window.location.reload();
-  };
-
+    window.location.reload()
+  }
   private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
+    window.location.href = '/'
+  }
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -133,25 +121,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-    };
-
+    }
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
-        alert('Error details copied to clipboard');
+        alert('Error details copied to clipboard')
       })
       .catch(() => {
-        alert('Failed to copy error details');
-      });
-  };
-
+        alert('Failed to copy error details')
+      })
+  }
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
-      const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
+      const { retryCount, error, errorId } = this.state
+      const canRetry = retryCount < this.maxRetries
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center">
@@ -236,11 +222,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

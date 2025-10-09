@@ -1,7 +1,6 @@
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './globals.css';
-
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './globals.css'
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -11,15 +10,15 @@ if ('serviceWorker' in navigator) {
       })
       .catch(() => {
         // Service Worker registration failed - handled silently
-      });
-  });
+      })
+  })
 }
 
-const _root = document.getElementById('root');
+const _root = document.getElementById('root')
 if (root) {
   ReactDOM.createRoot(root).render(
     <React.StrictMode>
       <App />
     </React.StrictMode>
-  );
+  )
 }

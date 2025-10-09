@@ -1,4 +1,3 @@
-'use client';
 import React, { Suspense, memo } from 'react';
 
 // Loading skeleton component

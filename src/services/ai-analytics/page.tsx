@@ -1,10 +1,7 @@
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
-
-'use client';
-
+import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React from 'react'
 const AIAnalyticsPage: React.FC = () => {
   const _features = [
     {
@@ -51,8 +48,7 @@ const AIAnalyticsPage: React.FC = () => {
         'Automated responses'
       ]
     }
-  ];
-
+  ]
   const useCases = [
     {
       title: 'Sales Performance Analysis',
@@ -78,8 +74,7 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400'
     }
-  ];
-
+  ]
   const pricingTiers = [
     {
       name: 'Starter',
@@ -130,8 +125,7 @@ const AIAnalyticsPage: React.FC = () => {
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: Star,
@@ -153,8 +147,7 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -334,7 +327,6 @@ const AIAnalyticsPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default AIAnalyticsPage;
+  )
+}
+export default AIAnalyticsPage

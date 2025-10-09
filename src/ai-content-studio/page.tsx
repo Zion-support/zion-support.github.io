@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import {FileText, Target, Zap, Settings, CheckCircle} from 'lucide-react'
+import Footer from '../components/Footer'
 const AIContentStudioPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIContentStudioPage: React.FC = () => {
       description: 'Comprehensive content performance analytics',
       benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIContentStudioPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIContentStudioPage;
+  )
+}
+export default AIContentStudioPage

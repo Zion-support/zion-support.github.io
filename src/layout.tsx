@@ -1,12 +1,12 @@
-import './globals.css';
-import './styles/accessibility.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
-import Analytics from './components/Analytics';
+import './globals.css'
+import './styles/accessibility.css'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import ErrorBoundary from './components/ErrorBoundary'
+import Analytics from './components/Analytics'
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   const _structuredData = {
     '@context': 'https://schema.org',
@@ -113,7 +113,7 @@ export default function RootLayout({
         }
       ]
     }
-  };
+  }
   return (
     <html lang='en'>
       <head>
@@ -186,8 +186,7 @@ export default function RootLayout({
         </ErrorBoundary>
       </body>
     </html>
-  );
-
-export default RootLayout;
+  )
+export default RootLayout
 }
 }

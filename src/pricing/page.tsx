@@ -1,7 +1,6 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PricingPage: React.FC = () => {
   const _plans = [
     {
@@ -61,8 +60,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   const addOns = [
     {
       name: 'AI Security Suite',
@@ -82,8 +80,7 @@ const PricingPage: React.FC = () => {
       description: '24/7 priority support and faster response times',
       icon: Phone
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -94,7 +91,6 @@ const PricingPage: React.FC = () => {
         </a>
       </div>
     </div>
-  );
-};
-
-export default PricingPage;
+  )
+}
+export default PricingPage

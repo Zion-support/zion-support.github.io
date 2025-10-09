@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Brain, Code, FlaskConical, Target, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Brain, Code, FlaskConical, Target, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const AIResearchDevelopmentPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIResearchDevelopmentPage: React.FC = () => {
       description: 'Strategic consulting for AI adoption and implementation',
       benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const AIResearchDevelopmentPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIResearchDevelopmentPage;
+  )
+}
+export default AIResearchDevelopmentPage

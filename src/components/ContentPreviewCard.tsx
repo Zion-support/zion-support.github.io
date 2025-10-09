@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 interface ContentPreviewCardProps {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured?: boolean;
+  id: string
+  title: string
+  description: string
+  category: string
+  readTime: string
+  date: string
+  path: string
+  image: string
+  featured?: boolean
   stats?: {
-    views: number;
-    engagement: number;
-  };
-  excerpt?: string;
+    views: number
+    engagement: number
+  }
+  excerpt?: string
 }
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   // id,
@@ -30,10 +30,10 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
 }) => {
   const _formatNumber = (num: number): string => {
     if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
+      return (num / 1000).toFixed(1) + 'k'
     }
-    return num.toString();
-  };
+    return num.toString()
+  }
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
       'Success Story': 'from-green-500 to-emerald-600',
@@ -44,9 +44,9 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
       'Intelligence': 'from-indigo-500 to-purple-600',
       'Transformation': 'from-teal-500 to-blue-600',
       'default': 'from-gray-500 to-gray-600'
-    };
-    return colors[category] || colors.default;
-  };
+    }
+    return colors[category] || colors.default
+  }
   return (
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
       featured ? 'ring-2 ring-indigo-200' : ''
@@ -131,6 +131,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </div>
       </div>
     </article>
-  );
-};
-export default ContentPreviewCard;
+  )
+}
+export default ContentPreviewCard

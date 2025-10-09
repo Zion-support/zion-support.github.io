@@ -1,39 +1,38 @@
-import React, { useEffect, useState, lazy } from 'react';
-import {Routes, Route} from 'react-router-dom';
-import PerformanceEnhancer from './utils/performanceEnhancer';
-import SEOEnhancer from './utils/seoEnhancer';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
-import SecurityEnhancer from './utils/securityEnhancer';
-import UserExperienceEnhancer from './utils/userExperienceEnhancer';
-import ITServicesPage from './it-services/page';
-import ITInfrastructurePage from './it-infrastructure/page';
-import CybersecurityPage from './cybersecurity/page';
-import CloudMigrationPage from './cloud-migration/page';
-import DevOpsPage from './devops/page';
-import DatabasePage from './database/page';
-import NetworkingPage from './networking/page';
-import AICRMPage from './ai-crm/page';
-import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIEmailMarketingPage from './ai-email-marketing/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import AboutPage from './about/page';
-import ContactPage from './contact/page';
-import ServicesPage from './services/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AICodeGenerationPage from './ai-code-generation/page';
-import AISocialMediaManagerPage from './ai-social-media-manager/page';
-import AIMLPlatformPage from './ai-ml-platform/page';
-
-'use client';
+import React, { useEffect, useState, lazy } from 'react'
+import {Routes, Route} from 'react-router-dom'
+import PerformanceEnhancer from './utils/performanceEnhancer'
+import SEOEnhancer from './utils/seoEnhancer'
+import AccessibilityEnhancer from './utils/accessibilityEnhancer'
+import SecurityEnhancer from './utils/securityEnhancer'
+import UserExperienceEnhancer from './utils/userExperienceEnhancer'
+import ITServicesPage from './it-services/page'
+import ITInfrastructurePage from './it-infrastructure/page'
+import CybersecurityPage from './cybersecurity/page'
+import CloudMigrationPage from './cloud-migration/page'
+import DevOpsPage from './devops/page'
+import DatabasePage from './database/page'
+import NetworkingPage from './networking/page'
+import AICRMPage from './ai-crm/page'
+import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page'
+import AIChatbotBuilderPage from './ai-chatbot-builder/page'
+import AIEmailMarketingPage from './ai-email-marketing/page'
+import AIWritingAssistantPage from './ai-writing-assistant/page'
+import TeamPage from './team/page'
+import CareersPage from './careers/page'
+import NewsPage from './news/page'
+import AboutPage from './about/page'
+import ContactPage from './contact/page'
+import ServicesPage from './services/page'
+import BlogPage from './blog/page'
+import CaseStudiesPage from './case-studies/page'
+import AICustomerSupportBotPage from './ai-customer-support-bot/page'
+import AICodeGenerationPage from './ai-code-generation/page'
+import AISocialMediaManagerPage from './ai-social-media-manager/page'
+import AIMLPlatformPage from './ai-ml-platform/page'
+// 'use client'; - This is a Next.js directive, not needed in React Router
 
 // Lazy load components for better performance
-const _HomePage = lazy(() => import('../app/page'));
+// const _HomePage = lazy(() => import('../app/page')); // Commented out as it's not used
 
 // Import enhancement utilities
 
@@ -45,8 +44,7 @@ const LoadingSpinner: React.FC = () => (
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
   </div>
-);
-
+)
 // AI Services Pages
 
 // IT Services Pages
@@ -75,19 +73,17 @@ const LoadingSpinner: React.FC = () => (
 // AI Services Pages
 
 const App: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false)
   const [, setEnhancers] = useState<{
-    performance: unknown;
-    seo: unknown;
-    accessibility: unknown;
-    security: unknown;
-    ux: unknown;
-  } | null>(null);
-
+    performance: unknown
+    seo: unknown
+    accessibility: unknown
+    security: unknown
+    ux: unknown
+  } | null>(null)
   useEffect(() => {
-    initializeEnhancers();
-  }, []);
-
+    initializeEnhancers()
+  }, [])
   const initializeEnhancers = async () => {
     try {
       // Initialize performance enhancer
@@ -100,8 +96,7 @@ const App: React.FC = () => {
         enableResourceHints: true,
         enableCompression: true,
         enableCaching: true
-      });
-
+      })
       // Initialize SEO enhancer
       const seoEnhancer = new SEOEnhancer({
         title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -149,8 +144,7 @@ const App: React.FC = () => {
         language: 'en',
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
-      });
-
+      })
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
         enableKeyboardNavigation: true,
@@ -160,8 +154,7 @@ const App: React.FC = () => {
         enableReducedMotion: true,
         enableColorBlindSupport: true,
         enableVoiceControl: true
-      });
-
+      })
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
         enableCSP: true,
@@ -173,8 +166,7 @@ const App: React.FC = () => {
         enablePermissionsPolicy: true,
         enableCORS: true,
         enableSecureCookies: true
-      });
-
+      })
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
         enableSmoothScrolling: true,
@@ -187,35 +179,31 @@ const App: React.FC = () => {
         enablePushNotifications: false,
         enableDarkMode: true,
         enableAnimations: true
-      });
-
+      })
       setEnhancers({
         performance: performanceEnhancer,
         seo: seoEnhancer,
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
         ux: uxEnhancer
-      });
-
+      })
       // Optimize for Core Web Vitals
-      seoEnhancer.optimizeForCoreWebVitals();
-
+      seoEnhancer.optimizeForCoreWebVitals()
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
         // Reports generated silently in development
       }
 
-      setIsInitialized(true);
+      setIsInitialized(true)
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
       // Continue even if enhancers fail
-      setIsInitialized(true);
+      setIsInitialized(true)
     }
-  };
-
+  }
   if (!isInitialized) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner />
   }
 
   return (
@@ -296,9 +284,8 @@ const App: React.FC = () => {
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-  );
-};
-
+  )
+}
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -314,6 +301,5 @@ const NotFoundPage: React.FC = () => (
       </a>
     </div>
   </div>
-);
-
-export default App;
+)
+export default App

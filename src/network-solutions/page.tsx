@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Globe, Shield, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Globe, Shield, Zap, Settings, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const NetworkSolutionsPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const NetworkSolutionsPage: React.FC = () => {
       description: '24/7 network monitoring and management',
       benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const NetworkSolutionsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default NetworkSolutionsPage;
+  )
+}
+export default NetworkSolutionsPage

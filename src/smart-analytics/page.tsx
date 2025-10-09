@@ -1,8 +1,6 @@
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import React from 'react';
-
-
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Phone, Mail, MapPin, Users } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import React from 'react'
 const SmartAnalyticsPage: React.FC = () => {
   const _features = [
     {
@@ -41,8 +39,7 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -90,8 +87,7 @@ const SmartAnalyticsPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -237,7 +233,6 @@ const SmartAnalyticsPage: React.FC = () => {
         </section>
       </div>
     </div>
-  );
-};
-
-export default SmartAnalyticsPage;
+  )
+}
+export default SmartAnalyticsPage

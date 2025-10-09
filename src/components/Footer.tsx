@@ -1,11 +1,8 @@
-'use client';
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
-
+import React, { memo } from 'react'
+import { Link } from 'react-router-dom'
+import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react'
 const Footer: React.FC = memo(() => {
-  const _currentYear = new Date().getFullYear();
-  
+  const _currentYear = new Date().getFullYear()
   const aiServices = [
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
     { name: 'Natural Language Processing', url: '/ai-nlp', description: 'Advanced text analysis and understanding' },
@@ -15,8 +12,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Financial Services', url: '/ai-fintech', description: 'Fintech AI for fraud detection and trading' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions and threat detection' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI-powered content creation' }
-  ];
-
+  ]
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
@@ -26,8 +22,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network design and implementation' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT support and maintenance' }
-  ];
-
+  ]
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media management' },
@@ -37,8 +32,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
     { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
     { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' }
-  ];
-
+  ]
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
@@ -48,8 +42,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
-  ];
-
+  ]
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -57,8 +50,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'Contact', url: '/contact' }
-  ];
-
+  ]
   const supportLinks = [
     { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
@@ -67,8 +59,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Status Page', url: '/status' },
     { name: 'System Requirements', url: '/requirements' },
     { name: 'Troubleshooting', url: '/troubleshooting' }
-  ];
-
+  ]
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
@@ -76,8 +67,7 @@ const Footer: React.FC = memo(() => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
-  ];
-
+  ]
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
       {/* Background Effects */}
@@ -332,8 +322,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-export default Footer;
+  )
+})
+Footer.displayName = 'Footer'
+export default Footer

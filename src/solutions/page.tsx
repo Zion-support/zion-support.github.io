@@ -1,11 +1,8 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai');
-
+  const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
     {
       id: 'ai',
@@ -39,8 +36,7 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-yellow-500/10',
       description: 'Streamline operations with intelligent automation'
     }
-  ];
-
+  ]
   const solutions = {
     ai: [
       {
@@ -178,8 +174,7 @@ const SolutionsPage: React.FC = () => {
         color: 'text-green-400'
       }
     ]
-  };
-
+  }
   const benefits = [
     {
       icon: Star,
@@ -201,8 +196,7 @@ const SolutionsPage: React.FC = () => {
       title: 'Expert Team',
       description: 'Certified professionals with years of industry experience'
     }
-  ];
-
+  ]
   return (
     <>
       <Navigation />
@@ -344,7 +338,6 @@ const SolutionsPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default SolutionsPage;
+  )
+}
+export default SolutionsPage

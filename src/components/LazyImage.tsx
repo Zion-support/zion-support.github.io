@@ -1,16 +1,14 @@
-'use client';
-import React, { useState, useRef, useEffect } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react'
 interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
+  src: string
+  alt: string
+  className?: string
+  placeholder?: string
+  width?: number
+  height?: number
+  priority?: boolean
+  onLoad?: () => void
+  onError?: () => void
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
@@ -24,44 +22,38 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onLoad,
   onError,
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const _imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
+  const _imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
-    if (priority) return;
-
+    if (priority) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView(true)
+          observer.disconnect()
         }
       },
       {
         threshold: 0.1,
         rootMargin: '50px',
       }
-    );
-
+    )
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
     }
 
-    return () => observer.disconnect();
-  }, [priority]);
-
+    return () => observer.disconnect()
+  }, [priority])
   const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
+    setIsLoaded(true)
+    onLoad?.()
+  }
   const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
+    setHasError(true)
+    onError?.()
+  }
   return (
     <div
       ref={imgRef}
@@ -97,7 +89,6 @@ const LazyImage: React.FC<LazyImageProps> = ({
         </>
       )}
     </div>
-  );
-};
-
-export default LazyImage;
+  )
+}
+export default LazyImage

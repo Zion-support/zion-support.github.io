@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react'
 const AIComputerVisionPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const AIComputerVisionPage: React.FC = () => {
       description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection']
     }
-  ];
-
+  ]
   const applications = [
     {
       title: 'Retail & E-commerce',
@@ -57,8 +54,7 @@ const AIComputerVisionPage: React.FC = () => {
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
@@ -98,8 +94,7 @@ const AIComputerVisionPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -274,7 +269,6 @@ const AIComputerVisionPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIComputerVisionPage;
+  )
+}
+export default AIComputerVisionPage

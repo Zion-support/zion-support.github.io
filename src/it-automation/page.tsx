@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { Settings, Zap, Shield, BarChart, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const ITAutomationPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const ITAutomationPage: React.FC = () => {
       description: 'Automated monitoring and alerting systems',
       benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const ITAutomationPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default ITAutomationPage;
+  )
+}
+export default ITAutomationPage

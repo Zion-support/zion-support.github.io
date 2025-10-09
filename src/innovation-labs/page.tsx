@@ -1,9 +1,7 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import {FlaskConical, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-import Footer from '../components/Footer';
-
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import { FlaskConical, Target, Zap, Settings, CheckCircle } from 'lucide-react'
+import Footer from '../components/Footer'
 const InnovationLabsPage: React.FC = () => {
   const _features = [
     {
@@ -30,8 +28,7 @@ const InnovationLabsPage: React.FC = () => {
       description: 'Incubate and accelerate new technologies',
       benefits: ['Technology incubation', 'Startup support', 'Mentorship']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -99,7 +96,6 @@ const InnovationLabsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default InnovationLabsPage;
+  )
+}
+export default InnovationLabsPage
