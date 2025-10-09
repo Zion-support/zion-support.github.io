@@ -57,7 +57,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     setIsVisible(false);
   };
   if (!isVisible) return null;
-  const _currentContent = content[currentSlide];
+  const currentContent = content[currentSlide];
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -83,10 +83,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <span className='text-2xl'>⚡</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {currentContent.title}
+            {content[currentSlide].title}
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {currentContent.description}
+            {content[currentSlide].description}
           </p>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
