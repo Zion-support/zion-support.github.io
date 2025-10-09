@@ -96,10 +96,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Failed to report error:', reportingError);
     }
   };
+
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null;
   };
+
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
@@ -108,6 +110,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
+
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -115,9 +118,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleReload = () => {
     window.location.reload();
   };
+
   private handleGoHome = () => {
     window.location.href = '/';
   };
+
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -141,26 +146,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-<<<<<<< HEAD
-        console.warn('Failed to copy error details');
-      });
-  };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
         console.error('Failed to copy error details');
       });
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -168,29 +156,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
       const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
-      const canRetry = retryCount < this.maxRetries;
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
-      const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
