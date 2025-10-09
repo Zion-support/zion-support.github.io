@@ -112,7 +112,7 @@ const AIFraudDetectionPage: React.FC = () => {
         enableImageOptimization={true}
         enableLazyLoading={true}
         enableCodeSplitting={true}
-        enablePreloading={true}
+        enablePrefetching={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}

@@ -140,6 +140,7 @@ class HealthCheckService {
       const memory = (performance as any).memory;
       if (!memory) {
         return {
+          name: 'memory',
           status: 'pass',
           message: 'Memory API not available'
         };
@@ -178,24 +179,30 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
-      const report = performanceMonitor.getReport()
-      const { poor, needsImprovement, good } = report.summary
+      const coreWebVitals = performanceMonitor.getCoreWebVitals()
+      const metrics = performanceMonitor.getMetrics()
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
+      let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
+      
+      // Check if any critical metrics are missing or poor
+      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
+      const missingMetrics = criticalMetrics.filter(metric => !(metric in coreWebVitals))
+      
+      if (missingMetrics.length > 2) {
         status = 'warn'
+        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
       }
-      if (poor > 2) {
+      
+      if (missingMetrics.length > 3) {
         status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
+        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
       }
       return {
         name: 'performance',
         status,
         message,
         details: {
-          metrics: report.metrics,
-          summary: report.summary
+          coreWebVitals
         }
       }
     } catch (error) {
