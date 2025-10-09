@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { defineConfig } from 'vite'
-import compression from 'vite-plugin-compression'
 
 // https://vite.dev/config/
 export default defineConfig(({ command, mode }) => {
@@ -10,18 +9,6 @@ export default defineConfig(({ command, mode }) => {
   return {
     plugins: [
       react(),
-      compression({
-        algorithm: 'brotliCompress',
-        ext: '.br',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
-      compression({
-        algorithm: 'gzip',
-        ext: '.gz',
-        threshold: 10240,
-        deleteOriginFile: false,
-      }),
     ],
     resolve: {
       alias: {
@@ -60,6 +47,7 @@ export default defineConfig(({ command, mode }) => {
         input: {
           main: './index.html'
         },
+        external: ['fs', 'path', 'stream', 'zlib', 'util', 'crypto', 'os', 'url', 'querystring'],
         output: {
           manualChunks: {
             'react-vendor': ['react', 'react-dom'],
@@ -111,10 +99,13 @@ export default defineConfig(({ command, mode }) => {
     server: {
       port: 3000,
       host: true,
-      open: true,
+      open: false,
       hmr: {
         overlay: false,
       },
+      watch: {
+        ignored: ['**/node_modules/**', '**/dist/**', '**/build/**', '**/temp_backup/**', '**/pages_backup/**', '**/src.broken/**', '**/*.backup.*', '**/*.cleanup-backup.*']
+      }
     },
     preview: {
       port: 4173,
@@ -122,6 +113,10 @@ export default defineConfig(({ command, mode }) => {
     },
     css: {
       devSourcemap: true,
+    },
+    define: {
+      global: 'globalThis',
+      'process.env': 'process.env',
     },
   }
 })

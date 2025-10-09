@@ -8,8 +8,8 @@ import { SEO } from './components/SEO';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PromotionalBanner } from './components/PromotionalBanner';
-import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
+import PromotionalBanner from './components/PromotionalBanner';
+import NewContentPromotionalBanner from './components/NewContentPromotionalBanner';
 // Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
 
