@@ -227,12 +227,6 @@ const AISalesAutomationPage2: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-            </span><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {index === 1 && (
-                    <div className="text-center mb-4">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>

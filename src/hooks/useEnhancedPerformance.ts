@@ -16,8 +16,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     trackPerformance = true,
     trackAnalytics = true
   } = _options;
-  const _mountTimeRef = useRef<number>(0);
-  const _renderCountRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);
+  const renderCountRef = useRef<number>(0);
   useEffect(() => {
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
@@ -28,7 +28,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-        const _duration = performance.now() - mountTimeRef.current;
+        const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
@@ -79,11 +79,11 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   );
   const measureOperation = useCallback(
     (operationName: string) => {
-      const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
+      const markName = `${component}-${operationName}`;
+      const startTime = performance.now();
       return {
         end: () => {
-          const _duration = performance.now() - startTime;
+          const duration = performance.now() - startTime;
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,

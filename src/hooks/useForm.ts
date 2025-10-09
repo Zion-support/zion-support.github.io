@@ -46,9 +46,9 @@ export function useForm<T extends Record<string, unknown>>({
   const validateSingleField = useCallback(
     (field: keyof T): void => {
       if (!validationSchema[field]) return;
-      const _fieldValue = values[field];
-      const _rules = validationSchema[field];
-      const _result = validateField(fieldValue, rules);
+      const fieldValue = values[field];
+      const rules = validationSchema[field];
+      const result = validateField(fieldValue, rules);
       setErrors(prev => ({
         ...prev,
         [field]: result.errors
@@ -59,8 +59,8 @@ export function useForm<T extends Record<string, unknown>>({
   // Validate all fields
   const validateAllFields = useCallback((): boolean => {
     if (Object.keys(validationSchema).length === 0) return true;
-    const _validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const _formErrors = getFormErrors(validationResults);
+    const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
+    const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);
@@ -68,7 +68,7 @@ export function useForm<T extends Record<string, unknown>>({
   const handleChange = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const { name, value, type } = e.target;
-      const _fieldName = name as keyof T;
+      const fieldName = name as keyof T;
       // Handle checkbox inputs
       let fieldValue: unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {
@@ -88,7 +88,7 @@ export function useForm<T extends Record<string, unknown>>({
   // Handle input blur
   const handleBlur = useCallback(
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-      const _fieldName = e.target.name as keyof T;
+      const fieldName = e.target.name as keyof T;
       setTouched(prev => ({
         ...prev,
         [fieldName]: true
@@ -111,7 +111,7 @@ export function useForm<T extends Record<string, unknown>>({
       }, {} as Record<keyof T, boolean>);
       setTouched(allTouched);
       // Validate all fields
-      const _isValid = validateAllFields();
+      const isValid = validateAllFields();
       if (!isValid) {
         return;
       }

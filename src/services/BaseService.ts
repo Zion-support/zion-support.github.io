@@ -4,6 +4,15 @@
  * Provides common functionality for all service classes
  */
 import logger from '../utils/logger';
+import axios from 'axios';
+
+// Create axios instance with default config
+const apiClient = axios.create({
+  timeout: 30000,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;

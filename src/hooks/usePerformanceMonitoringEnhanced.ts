@@ -1,8 +1,8 @@
 'use client';
 export const usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: any) => {
-    const _body = JSON.stringify(metric);
-    const _url = '/api/analytics';
+    const body = JSON.stringify(metric);
+    const url = '/api/analytics';
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
     } else {

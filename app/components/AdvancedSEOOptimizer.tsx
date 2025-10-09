@@ -167,6 +167,42 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return metaTags;
   }, [seoData]);
 
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
+      return null;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: breadcrumb.name,
+        item: breadcrumb.url
+      }))
+    };
+  }, [seoData.breadcrumbs]);
+
+  const generateFAQStructuredData = useCallback(() => {
+    if (!seoData.faqs || seoData.faqs.length === 0) {
+      return null;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seoData.faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    };
+  }, [seoData.faqs]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
@@ -205,9 +241,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {

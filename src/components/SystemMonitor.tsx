@@ -5,10 +5,10 @@
  */
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -16,7 +16,7 @@ const _collectPerformanceMetrics = () => {
 };
 // Helper functions
 const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let _score = 100;
   // Deduct points for slow load times
@@ -92,13 +92,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const _performanceMetrics = performanceOptimizer.getMetrics();
-      const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
+      const errorStats = errorHandler.getErrorStatistics();
       // Get memory info
-      const _memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryInfo();
       // Get network info
-      const _networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
@@ -145,17 +145,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics periodically
   useEffect(() => {
     if (!isMonitoring) return;
-    const _interval = setInterval(updateMetrics, refreshInterval);
+    const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {
-      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const _percentage = (used / limit) * 100;
+      const percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
     }
     return { used: 0, total: 0, limit: 0, percentage: 0 };
@@ -163,8 +163,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {
-      const _nav = navigator as NavigatorWithConnection;
-      const _connection = nav.connection;
+      const nav = navigator as NavigatorWithConnection;
+      const connection = nav.connection;
       return {
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
@@ -191,8 +191,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json'
     });
-    const _url = URL.createObjectURL(blob);
-    const _a = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
