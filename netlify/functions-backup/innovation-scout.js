@@ -1,7 +1,7 @@
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async () => {
   const { execSync } = require('child_process');
-  const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
+  const _run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
   try {run('node scripts/ai-trends-radar.js || true');
     run('node automation/homepage-updater.cjs || true');
     run('git config user.name "zion-bot"');

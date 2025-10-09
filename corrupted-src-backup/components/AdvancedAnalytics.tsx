@@ -35,18 +35,15 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     // Initialize analytics tracking
     if (enableConversionTracking) {
       // Track conversion events
-      //       console.log('Conversion tracking enabled');
-    }
+      //       }
 
     if (enablePerformanceTracking) {
       // Track performance metrics
-      //       console.log('Performance tracking enabled');
-    }
+      //       }
 
     if (enableErrorTracking) {
       // Track errors
-      //       console.log('Error tracking enabled');
-    }
+      //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
   return (

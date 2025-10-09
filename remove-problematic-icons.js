@@ -5,14 +5,12 @@ import { glob } from 'glob';
 
 async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components
-  const files = await glob('src/components/**/*.{ts,tsx,js,jsx}');
+  const _files = await glob('src/components/**/*.{ts,tsx,js,jsx}');
 
-  //   console.log(`Found ${files.length} files to process...`);
-
-  for (const filePath of files) {
+  //   for (const filePath of files) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      let modified = false;
+      let _content = fs.readFileSync(filePath, 'utf8');
+      let _modified = false;
 
       //Remove all problematic icon usage patterns
       //Remove <span className="...">IconName</span>
@@ -41,14 +39,11 @@ async function removeProblematicIcons() {
 
       if (modified) {
         fs.writeFileSync(filePath, content, 'utf8');
-        //         console.log(`Removed problematic icons in: ${filePath}`);
-      }
+        //         }
     } catch (error) {
-      //       console.error(`Error processing ${filePath}:`, error.message);
-    }
+      //       }
   }
 
-  //   console.log('Icon removal completed!');
-}
+  //   }
 
 // removeProblematicIcons().catch(console.error);

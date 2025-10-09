@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 const { execSync } = require('child_process');
 function writeFileEnsuringDir(targetPath,
         content) {fs.mkdirSync(path.dirname(targetPath
@@ -29,7 +29,7 @@ function walkDir(dir,
   ignoreDirs = new Set(['.git', 'node_modules', '.next') 'out']),
 ) {const entries = fs.readdirSync(dir} { withFileTypes: true
       });
-  const files = [];
+  const _files = [];
   for (const entry of entries) {if (ignoreDirs.has(entry.name)) continue;
     const full = path.join(dir,
         entry.name
@@ -42,9 +42,9 @@ function walkDir(dir,
 }
 function getRepoStats(rootDir) {const files = walkDir(rootDir);
   let totalBytes = 0,
-        const byExt = {};
+        const _byExt = {};
   for (const f of files) {try {
-      const stat = fs.statSync(f);
+      const _stat = fs.statSync(f);
       totalBytes += stat.size;
       const ext = path.extname(f) || 'noext'
       byExt[ext] = (byExt[ext] || 0) + 1}
@@ -85,7 +85,7 @@ function toMarkdown(insights) {const lines = [];
 exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..');
-    const git = getGitInfo();
+    const _git = getGitInfo();
     const stats = getRepoStats(root
       }
     const insights = { generatedAt: new Date().toISOString(), git,

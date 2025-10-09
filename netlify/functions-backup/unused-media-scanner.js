@@ -1,6 +1,6 @@
 exports.handler = async function (event, context) {
   try {
-    console.log('unused-media-scanner function triggered');
+
     // Unused media scanning simulation
     const result = {
       statusCode: 200,
@@ -23,7 +23,7 @@ exports.handler = async function (event, context) {
     };
     return result;
   } catch (error) {
-    console.error('Error in unused-media-scanner:', error);
+
     return {
       statusCode: 500,
       headers: {

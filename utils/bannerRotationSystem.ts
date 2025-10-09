@@ -33,7 +33,7 @@ const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance
  * Get or create session ID
  */
 const getSessionId = (): string => {
-  let sessionId = sessionStorage.getItem(SESSION_KEY);
+  let _sessionId = sessionStorage.getItem(SESSION_KEY);
   if (!sessionId) {
     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     sessionStorage.setItem(SESSION_KEY, sessionId);
@@ -73,7 +73,7 @@ export const recordBannerImpression = (
   if (typeof window === 'undefined') return;
 
   try {
-    const impressions = getStoredImpressions();
+    const _impressions = getStoredImpressions();
     const newImpression: BannerImpression = {
       ...impression,
       timestamp: Date.now(),
@@ -86,15 +86,14 @@ export const recordBannerImpression = (
     //     const trimmedImpressions = impressions.slice(-1000);
     storeImpressions(trimmedImpressions);
   } catch (error) {
-    //     console.error('Failed to store banner impressions:', error);
-  }
+    //     }
 };
 
 /**
  * Get impression count for a banner
  */
 export const getBannerImpressionCount = (bannerId: string, hours: number = 24): number => {
-  const impressions = getStoredImpressions();
+  const _impressions = getStoredImpressions();
   //   const cutoff = Date.now() - (hours * 60 * 60 * 1000);
   return impressions.filter(imp => imp.bannerId === bannerId && imp.timestamp > cutoff).length;
 };
@@ -113,8 +112,8 @@ export const shouldShowBanner = (banner: BannerConfig): boolean => {
  * Calculate banner score for rotation
  */
 export const calculateBannerScore = (banner: BannerConfig): number => {
-  const impressions = getStoredImpressions();
-  const bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
+  const _impressions = getStoredImpressions();
+  const _bannerImpressions = impressions.filter(imp => imp.bannerId === banner.id);
 
   // Calculate engagement rate
   //   const clicks = bannerImpressions.filter(imp => imp.clicked).length;
@@ -141,7 +140,7 @@ export const selectBannersForRotation = (
   maxBanners: number = MAX_VISIBLE_BANNERS
 ): BannerConfig[] => {
   // Filter banners that should be shown
-  const eligibleBanners = allBanners.filter(shouldShowBanner);
+  const _eligibleBanners = allBanners.filter(shouldShowBanner);
 
   // Calculate scores for all eligible banners
   const scoredBanners = eligibleBanners.map(banner => ({
@@ -160,7 +159,7 @@ export const selectBannersForRotation = (
  * Get banner analytics
  */
 export const getBannerAnalytics = (bannerId?: string) => {
-  const impressions = getStoredImpressions();
+  const _impressions = getStoredImpressions();
   const bannerImpressions = bannerId
     ? impressions.filter(imp => imp.bannerId === bannerId)
     : impressions;
@@ -170,7 +169,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
   //   const engagementRate = totalImpressions > 0 ? clicks / totalImpressions : 0;
 
   // Calculate average time visible
-  const visibleImpressions = bannerImpressions.filter(imp => imp.timeVisible);
+  const _visibleImpressions = bannerImpressions.filter(imp => imp.timeVisible);
   const avgTimeVisible =
     visibleImpressions.length > 0
       ? visibleImpressions.reduce((sum, imp) => sum + (imp.timeVisible || 0), 0) /
@@ -178,7 +177,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
       : 0;
 
   // Calculate average scroll depth
-  const scrollImpressions = bannerImpressions.filter(imp => imp.scrollDepth);
+  const _scrollImpressions = bannerImpressions.filter(imp => imp.scrollDepth);
   const avgScrollDepth =
     scrollImpressions.length > 0
       ? scrollImpressions.reduce((sum, imp) => sum + (imp.scrollDepth || 0), 0) /
@@ -202,7 +201,7 @@ export const getBannerAnalytics = (bannerId?: string) => {
  */
 export const clearOldImpressions = (daysToKeep: number = 30): void => {
   //   const cutoff = Date.now() - (daysToKeep * 24 * 60 * 60 * 1000);
-  const impressions = getStoredImpressions();
+  const _impressions = getStoredImpressions();
   //   const filteredImpressions = impressions.filter(imp => imp.timestamp > cutoff);
   storeImpressions(filteredImpressions);
 };

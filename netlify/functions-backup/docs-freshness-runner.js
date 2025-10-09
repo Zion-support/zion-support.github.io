@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const _fs = require('fs');
+const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath,
         args = []) {const abs = path.resolve(__dirname, '..', '..') relPath
@@ -39,7 +39,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
     /\.(md|mdx|mdoc|txt)$/i.test(f
       }
   );
-  const now = Date.now();
+  const _now = Date.now();
   const items = files.map(f => {let stat,
         try {
       stat = fs.statSync(f
@@ -95,7 +95,7 @@ exports.handler = async function handler() {try {
     const { outPath,
         summary } = buildDocsFreshness(workspaceRoot);
     // Attempt to push any changes
-    const gitRes = runNode('automation/advanced-git-sync.cjs');
+    const _gitRes = runNode('automation/advanced-git-sync.cjs');
     return {statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ok: true,

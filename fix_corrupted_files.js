@@ -1,23 +1,18 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
-
 //Function to fix corrupted text by removing erroneous commas
 function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words
   //This looks for commas that are followed by a space and then a lowercase letter
   //or commas that are in the middle of identifiers
-  let fixed = text;
-
+  let _fixed = text;
   //Fix common patterns of corruption
   //Remove commas that are incorrectly placed in the middle of words
   fixed = fixed.replace(/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2');
-
   //Fix specific patterns that appear in the corrupted files
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
@@ -91,17 +86,14 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/it\s*\(/g, 'it(');
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from');
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import');
-
   //Fix object property syntax
   fixed = fixed.replace(
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
     "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
   );
-
   //Fix array syntax
   fixed = fixed.replace(/\[\s*\{/g, '[{');
   fixed = fixed.replace(/\}\s*\]/g, '}]');
-
   //Fix function calls
   fixed = fixed.replace(/calculateEngagementSco,\s*r,\s*e/g, 'calculateEngagementScore');
   fixed = fixed.replace(/calculateFreshnessSco,\s*r,\s*e/g, 'calculateFreshnessScore');
@@ -109,51 +101,39 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/selectBannersForDispl,\s*a,\s*y/g, 'selectBannersForDisplay');
   fixed = fixed.replace(/groupBannersByCatego,\s*r,\s*y/g, 'groupBannersByCategory');
   fixed = fixed.replace(/selectBalancedBanne,\s*r,\s*s/g, 'selectBalancedBanners');
-
   //Fix variable names
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners');
   fixed = fixed.replace(/BannerConf,\s*i,\s*g/g, 'BannerConfig');
-
   //Remove duplicate content (looks like there might be merge conflict markers)
   fixed = fixed.replace(/=======.*?=======/gs, '');
-
   //Clean up extra semicolons and commas
   fixed = fixed.replace(/;+/g, ';');
   fixed = fixed.replace(/,\s*,/g, ',');
   fixed = fixed.replace(/;\s*;/g, ';');
-
   return fixed;
 }
-
 //Function to process a file
 function processFile(filePath) {
   try {
     //     const content = fs.readFileSync(filePath, 'utf8');
     //     const fixedContent = fixCorruptedText(content);
-
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      //       console.log(`Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
-
 //Function to recursively find and process files
 function processDirectory(dirPath) {
-  let processedCount = 0;
-
+  let _processedCount = 0;
   try {
     //     const items = fs.readdirSync(dirPath);
-
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-
+      const _stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
@@ -171,13 +151,9 @@ function processDirectory(dirPath) {
       }
     }
   } catch (error) {
-    //     console.error(`Error processing directory ${dirPath}:`, error.message);
-  }
-
+    //     }
   return processedCount;
 }
-
 //Main execution
-// console.log('Starting to fix corrupted files...');
-// const processedCount = processDirectory('./src');
-// console.log(`Fixed ${processedCount} files.`);
+// // const processedCount = processDirectory('./src');
+// 

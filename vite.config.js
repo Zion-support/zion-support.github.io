@@ -18,13 +18,65 @@ export default defineConfig({
     target: 'es2015',
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048,
     reportCompressedSize: true,
     // Optimize build performance
     emptyOutDir: true,
     copyPublicDir: true,
+    // Enhanced performance optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error'],
+        passes: 5,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_arrows: true,
+        unsafe_methods: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        collapse_vars: true,
+        sequences: true,
+        dead_code: true,
+        conditionals: true,
+        comparisons: true,
+        evaluate: true,
+        booleans: true,
+        loops: true,
+        unused: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        if_return: true,
+        join_vars: true,
+        side_effects: true,
+        properties: true,
+        reduce_vars: true,
+        reduce_funcs: true,
+        keep_fargs: false,
+        keep_fnames: false,
+        keep_infinity: false,
+        toplevel: true,
+        warnings: false,
+        negate_iife: true,
+        typeofs: true,
+        global_defs: {
+          'process.env.NODE_ENV': '"production"'
+        }
+      },
+      mangle: {
+        safari10: true,
+        toplevel: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2015,
+      },
+    },
     // Reduce memory usage during build
     rollupOptions: {
       maxParallelFileOps: 2,
@@ -69,26 +121,6 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        //         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-      },
-      format: {
-        comments: false,
-        ecma: 2015,
-      },
-    },
   },
   server: {
     port: 3000,
@@ -99,6 +131,12 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+  },
+  css: {
+    devSourcemap: false,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
   },
 });

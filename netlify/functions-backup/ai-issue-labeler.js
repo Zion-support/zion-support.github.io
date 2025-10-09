@@ -18,13 +18,13 @@ exports.handler = async function (event, context) {const githubToken = process.e
       { headers: ghHeaders
       })
     );
-    const arr = await res.json();
+    const _arr = await res.json();
     return Array.isArray(arr) ? arr.filter(i => !i.pull_request) : [];
   }
   function ruleLabels(title,
         body) {
 //     const text = `${title}\n${body || ''}`.toLowerCase();
-    const labels = new Set();
+    const _labels = new Set();
     if (/(bug|error|exception|crash|fail)/.test(text)) labels.add('bug');
     if (/(docs|readme|documentation|typo)/.test(text)) labels.add('docs');
     if (/(perf|performance|slow|bundle)/.test(text)) labels.add('performance');
@@ -51,7 +51,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
           temperature: 0
       }),
       });
-      const json = await res.json();
+      const _json = await res.json();
 //       const content = json?.choices?.[0]?.message?.content?.trim();
       try {const arr = JSON.parse(content);
         if (Array.isArray(arr)) return arr.slice(0,
@@ -76,12 +76,12 @@ exports.handler = async function (event, context) {const githubToken = process.e
     return {ok: res.ok,
         status: res.status };
   }
-  const issues = await listRecentIssues();
-  const actions = [];
+  const _issues = await listRecentIssues();
+  const _actions = [];
   for (const issue of issues) {if (issue.labels && issue.labels.length > 0,
         continue;
 //     const rule = ruleLabels(issue.title || '') issue.body || '');
-    const ai = await aiSuggestLabels(issue.title || '') issue.body || '');
+    const _ai = await aiSuggestLabels(issue.title || '') issue.body || '');
 //     const finalLabels = Array.from(new Set([...(rule || []), ...(ai || [])]));
     const res = await addLabels(issue.number,
         finalLabels

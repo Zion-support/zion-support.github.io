@@ -116,7 +116,7 @@ const QuantumComputingPage: React.FC = () => {
     }
   ];
 
-  const categories = [...new Set(quantumServices.map(service => service.category))];
+  const _categories = [...new Set(quantumServices.map(service => service.category))];
 
   return (
     <>
@@ -128,8 +128,7 @@ const QuantumComputingPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">          <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -142,8 +141,7 @@ const QuantumComputingPage: React.FC = () => {
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   Explore Quantum Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  Schedule Consultation
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">                  Schedule Consultation
                 </button>
               </div>
             </div>
@@ -155,41 +153,38 @@ const QuantumComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Quantum Services?
+                Why Choose Our Quantum Computing Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Leading quantum computing expertise with proven results in cutting-edge applications
-              </p>
+                Leading quantum computing expertise with proven track record in enterprise applications              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Atom className="w-8 h-8 text-purple-600" />
+                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Atom className="w-8 h-8 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Experts</h3>
-                <p className="text-gray-600">PhD-level quantum physicists and computer scientists</p>
+                <p className="text-gray-600">PhD-level quantum physicists and algorithm specialists</p>
               </div>
               <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600" />
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-purple-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cutting-Edge Hardware</h3>
-                <p className="text-gray-600">Access to latest quantum computers and simulators</p>
-              </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
+                <p className="text-gray-600">Solve complex problems exponentially faster than classical computers</p>              </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
-                <p className="text-gray-600">Successful quantum implementations across industries</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Future-Proof Security</h3>
+                <p className="text-gray-600">Quantum-resistant cryptography and unbreakable encryption</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
+                  <Target className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Exponential Speedup</h3>
-                <p className="text-gray-600">Solve problems exponentially faster than classical computers</p>
-              </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+                <p className="text-gray-600">Successful quantum implementations across multiple industries</p>              </div>
             </div>
           </div>
         </section>
@@ -203,8 +198,7 @@ const QuantumComputingPage: React.FC = () => {
                   {category} Services
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} solutions powered by quantum computing
-                </p>
+                  Advanced {category.toLowerCase()} solutions powered by cutting-edge quantum technology                </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {quantumServices
@@ -217,8 +211,7 @@ const QuantumComputingPage: React.FC = () => {
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates
@@ -241,8 +234,7 @@ const QuantumComputingPage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">                              {tech}
                             </span>
                           ))}
                         </div>
@@ -260,8 +252,7 @@ const QuantumComputingPage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                        Get Quantum Consultation
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">                        Get Quantum Consultation
                       </button>
                     </div>
                   ))}
@@ -275,43 +266,42 @@ const QuantumComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Quantum Capabilities
+                Our Quantum Computing Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge quantum technologies and methodologies we use to solve complex problems
+                Cutting-edge quantum technologies and methodologies for solving complex business problems
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-                <Atom className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-100 rounded-lg">
+                <Atom className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Algorithms</h3>
                 <p className="text-gray-600">Custom quantum algorithms for optimization, search, and simulation</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
-                <Lock className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-100 rounded-lg">
+                <Lock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Cryptography</h3>
-                <p className="text-gray-600">Unbreakable encryption and secure communication protocols</p>
+                <p className="text-gray-600">Unbreakable encryption and quantum key distribution</p>
+              </div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg">
+                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Machine Learning</h3>
+                <p className="text-gray-600">Quantum-enhanced ML algorithms and neural networks</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Machine Learning</h3>
-                <p className="text-gray-600">Quantum-enhanced ML for pattern recognition and optimization</p>
+                <Target className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Optimization</h3>
+                <p className="text-gray-600">Solving complex optimization problems with quantum advantage</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Optimization</h3>
-                <p className="text-gray-600">Solve complex optimization problems with quantum annealing</p>
+                <Cpu className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Simulation</h3>
+                <p className="text-gray-600">Molecular and material simulation for research and development</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
                 <BarChart className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Simulation</h3>
-                <p className="text-gray-600">Simulate quantum systems for materials and drug discovery</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Hardware</h3>
-                <p className="text-gray-600">Access to leading quantum computers and simulators</p>
-              </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Quantum Analytics</h3>
+                <p className="text-gray-600">Advanced quantum data analysis and pattern recognition</p>              </div>
             </div>
           </div>
         </section>
@@ -322,25 +312,21 @@ const QuantumComputingPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Explore Quantum Computing?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Contact our quantum computing experts for a free consultation and custom quantum strategy
+            <p className="text-xl mb-8 text-purple-100">              Contact our quantum computing experts for a free consultation and custom quantum strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-              >
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"              >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"              >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="mt-8 text-sm text-purple-200">              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>

@@ -10,8 +10,8 @@ import { fileURLToPath } from 'url';
 // Function to fix common lint issues in a file
 function fixLintIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
     
     // Skip if not a source file
     if (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.js') && !filePath.endsWith('.jsx')) {
@@ -23,9 +23,7 @@ function fixLintIssues(filePath) {
       return false;
     }
     
-//     console.log(`Fixing lint issues in: ${filePath}`);
-    
-    // Fix 1: Remove unused React imports (keep if JSX is used)
+//     // Fix 1: Remove unused React imports (keep if JSX is used)
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {
       content = content.replace(/import React from 'react';\n?/g, '');
       modified = true;
@@ -38,26 +36,22 @@ function fixLintIssues(filePath) {
     }
     
     // Fix 3: Remove unused lucide-react imports
-    const lucideMatch = content.match(/import { ([^}]+) } from 'lucide-react';/);
     if (lucideMatch) {
-      const imports = lucideMatch[1].split(',').map(imp => imp.trim());
-      const usedImports = imports.filter(imp => content.includes(imp));
+      const _imports = lucideMatch[1].split(',').map(imp => imp.trim());
+      const _usedImports = imports.filter(imp => content.includes(imp));
       if (usedImports.length === 0) {
-        content = content.replace(/import { [^}]+ } from 'lucide-react';\n?/g, '');
         modified = true;
       } else if (usedImports.length < imports.length) {
-        const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-        content = content.replace(/import { [^}]+ } from 'lucide-react';/g, newImport);
         modified = true;
       }
     }
     
     // Fix 4: Remove unused variables (simple cases)
-    const lines = content.split('\n');
-    const fixedLines = [];
+    const _lines = content.split('\n');
+    const _fixedLines = [];
     
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
       
       // Skip lines that are just unused variable declarations
       if (line.match(/^\s*const\s+\w+\s*=\s*[^;]+;\s*$/) && 
@@ -122,7 +116,6 @@ function fixLintIssues(filePath) {
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {
         content = content.replace(new RegExp(`,\\s*${icon}`, 'g'), '');
         content = content.replace(new RegExp(`${icon},\\s*`, 'g'), '');
-        content = content.replace(new RegExp(`import { ${icon} } from 'lucide-react';\n?`, 'g'), '');
         modified = true;
       }
     }
@@ -141,22 +134,21 @@ function fixLintIssues(filePath) {
     
     return false;
   } catch (error) {
-//     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+//     return false;
   }
 }
 
 // Function to recursively fix lint issues
 function fixAllLintIssues(_dir) {
   try {
-    const files = fs.readdirSync(dir);
-    let fixedCount = 0;
+    const _files = fs.readdirSync(dir);
+    let _fixedCount = 0;
     
     for (const file of files) {
-      const filePath = path.join(dir, file);
+      const _filePath = path.join(dir, file);
       
       try {
-        const stat = fs.statSync(filePath);
+        const _stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
           // Skip certain directories
@@ -170,20 +162,17 @@ function fixAllLintIssues(_dir) {
           }
         }
       } catch (error) {
-//         console.log(`Skipping ${filePath}: ${error.message}`);
-        continue;
+//         continue;
       }
     }
     
     return fixedCount;
   } catch (error) {
-//     console.log(`Skipping directory ${dir}: ${error.message}`);
-    return 0;
+//     return 0;
   }
 }
 
 // Main execution
 // const workspaceDir = process.cwd();
-// console.log('Starting lint issue resolution...');
-// const fixedCount = fixAllLintIssues(workspaceDir);
-// console.log(`Fixed lint issues in ${fixedCount} files.`);
+// // const fixedCount = fixAllLintIssues(workspaceDir);
+// 

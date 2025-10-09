@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 
@@ -23,7 +23,7 @@ export default function BlogPage() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const blogPosts: BlogPost[] = [
+  const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
@@ -120,7 +120,7 @@ export default function BlogPage() {
       featured: false,
       stats: { views: 11200, engagement: 93 }
     }
-  ];
+  ], []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -129,7 +129,7 @@ export default function BlogPage() {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [blogPosts]);
 
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
@@ -137,7 +137,6 @@ export default function BlogPage() {
     : posts.filter(post => post.category === selectedCategory);
 
   const featuredPosts = posts.filter(post => post.featured);
-  const regularPosts = posts.filter(post => !post.featured);
 
   if (loading) {
     return (

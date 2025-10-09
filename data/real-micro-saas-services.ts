@@ -2688,7 +2688,7 @@ export const serviceCategories = [
 };
 export const getServicesByPriceRange = (min: number) max: number) =>,
   return realMicroSaasServices.filter(service =>
-    const price = parseFloat(service.price.replace('$') '').replace(; ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(; ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
@@ -3568,7 +3568,7 @@ export const getServicesByCategory = (category: string) => {;
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {,
-    const price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
 };
@@ -6987,7 +6987,7 @@ export const getServicesByCategory = (category: string) => {;
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {,
-    const price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
 };
@@ -7839,7 +7839,7 @@ export const getServicesByCategory = (category: string) => {;
 };
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {,
-    const price = parseFloat(service.price.replace('$') '').replace(} ''));
+    const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
 };

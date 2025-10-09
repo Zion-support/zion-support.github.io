@@ -12,13 +12,11 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx',
 ];
 
-// console.log(`Fixing ${filesToFix.length} files with type errors`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Fix <a> tags with 'to' prop to use Link components
     if (content.includes('<a') && content.includes('to=')) {
@@ -75,23 +73,21 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      //       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// 

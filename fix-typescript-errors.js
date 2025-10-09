@@ -20,11 +20,11 @@ const patterns = [
 
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     patterns.forEach(pattern => {
-      const newContent = content.replace(pattern.regex, pattern.replacement);
+      const _newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -33,30 +33,29 @@ function fixFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 async function main() {
-  const srcDir = path.join(process.cwd(), 'src');
-  const files = await glob('**/*.{ts,tsx}', { cwd: srcDir });
+  const _srcDir = path.join(process.cwd(), 'src');
+  const _files = await glob('**/*.{ts,tsx}', { cwd: srcDir });
   
-  let fixedCount = 0;
+  let _fixedCount = 0;
   
   files.forEach(file => {
-    const fullPath = path.join(srcDir, file);
+    const _fullPath = path.join(srcDir, file);
     if (fixFile(fullPath)) {
       fixedCount++;
     }
   });
 
-  console.log(`\nFixed ${fixedCount} files`);
 }
 
 main().catch(console.error);

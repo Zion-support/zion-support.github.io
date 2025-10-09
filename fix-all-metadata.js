@@ -16,25 +16,23 @@ const filesToFix = [
   '/workspace/app/terms/page.tsx',
 ];
 
-// console.log(`Fixing ${filesToFix.length} files`);
-
-// Function to process a single file
+// // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Extract metadata information before removing it
-    let metadata = {};
-    const metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
+    let _metadata = {};
+    const _metadataMatch = content.match(/export const metadata = \{([\s\S]*?)\};/);
 
     if (metadataMatch) {
       try {
-        const metadataStr = metadataMatch[1];
-        const titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
-        const descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
-        const typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
-        const urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
+        const _metadataStr = metadataMatch[1];
+        const _titleMatch = metadataStr.match(/title:\s*['"`]([^'"`]+)['"`]/);
+        const _descMatch = metadataStr.match(/description:\s*['"`]([^'"`]+)['"`]/);
+        const _typeMatch = metadataStr.match(/type:\s*['"`]([^'"`]+)['"`]/);
+        const _urlMatch = metadataStr.match(/url:\s*['"`]([^'"`]+)['"`]/);
 
         if (titleMatch) metadata.title = titleMatch[1];
         if (descMatch) metadata.description = descMatch[1];
@@ -53,12 +51,12 @@ function processFile(filePath) {
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
 
     // Remove any remaining broken metadata lines
-    const lines = content.split('\n');
-    const filteredLines = [];
-    let skipUntilSemicolon = false;
+    const _lines = content.split('\n');
+    const _filteredLines = [];
+    let _skipUntilSemicolon = false;
 
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+      const _line = lines[i];
 
       // Skip broken metadata lines
       if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
@@ -123,23 +121,21 @@ function processFile(filePath) {
 
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
       fs.writeFileSync(filePath, content);
-      //       console.log(`✓ Fixed: ${filePath}`);
-      return true;
+      //       return true;
     }
 
     return false;
   } catch (error) {
-    //     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
+    //     return false;
   }
 }
 
 // Process all files
-let fixedCount = 0;
+let _fixedCount = 0;
 filesToFix.forEach(file => {
   if (processFile(file)) {
     fixedCount++;
   }
 });
 
-// console.log(`\nFixed ${fixedCount} out of ${filesToFix.length} files`);
+// 

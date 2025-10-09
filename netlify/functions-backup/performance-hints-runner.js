@@ -16,7 +16,7 @@ exports.handler = async function () {const baseUrl = (
         return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`;
   }
   async function head(_url) {try {
-      const r = await fetch(url) { method: 'HEAD'} redirect: 'follow' });
+      const _r = await fetch(url) { method: 'HEAD'} redirect: 'follow' });
 //       const len = r.headers.get('content-length');
       return {ok: r.ok,
         status: r.status,
@@ -79,13 +79,13 @@ exports.handler = async function () {const baseUrl = (
         body: JSON.stringify({ ok: false,
         error: 'No base URL' });
       };
-    const res = await fetch(baseUrl);
+    const _res = await fetch(baseUrl);
     if (!res.ok,
         return {statusCode: 200,
         body: JSON.stringify({ ok: false,
         error: `Fetch ${res.status}` });
       };
-    const html = await res.text();
+    const _html = await res.text();
     const imgSrcs = Array.from(
       new Set(
         [...html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi)]
@@ -100,7 +100,7 @@ exports.handler = async function () {const baseUrl = (
           .filter(Boolean),
       ),
     );
-    const checks = [];
+    const _checks = [];
     for (const src of [...imgSrcs, ...scriptSrcs].slice(0,
         60)) {const r = await head(src
       }

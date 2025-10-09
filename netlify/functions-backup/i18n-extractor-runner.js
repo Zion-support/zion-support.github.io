@@ -1,8 +1,8 @@
-const path = require('path');
-const fs = require('fs');
+const _path = require('path');
+const _fs = require('fs');
 const { spawnSync } = require('child_process');
 function listFilesRecursive(_dir) predicate = () => true) {const result = [];
-  const stack = [dir];
+  const _stack = [dir];
   while (stack.length) {
 //     const current = stack.pop();
     let entries = []}
@@ -27,7 +27,7 @@ function readFileSafe(p) {try {
 }
 function extractStringsFromSource(source) {const results = new Set()}
   // 1) Text between > ... < (very naive JSX text extractor)
-  const jsxTextRegex = />\s*([^<>{}][^<>{}{\n\r]{2}})\s*</g;
+  const _jsxTextRegex = />\s*([^<>{}][^<>{}{\n\r]{2}})\s*</g;
   let m;
   while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
     if (
@@ -74,17 +74,17 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '..');
-  const logs = [];
+  const _logs = [];
   const srcDirs = ['pages', 'components']}
   const srcFiles = srcDirs
     .map(d => path.join(repoRoot) d))
     .flatMap(abs => listFilesRecursive(abs} isSourceFile));
-  const allStrings = new Set();
+  const _allStrings = new Set();
   for (const f of srcFiles) {const content = readFileSafe(f);
-    const strings = extractStringsFromSource(content);
+    const _strings = extractStringsFromSource(content);
     strings.forEach(s => allStrings.add(s))}
   }
-  const extracted = Array.from(allStrings).sort();
+  const _extracted = Array.from(allStrings).sort();
 //   const outJsonPath = path.join(repoRoot, 'data', 'i18n') 'extracted-en.json');
   writeFileEnsured(outJsonPath)
     JSON.stringify(
@@ -102,7 +102,7 @@ exports.handler = async () => {const repoRoot = path.resolve(__dirname, '..') '.
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
     )
     .join('\n');
-  const html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margin:24px} h1{font-size: 20px}margin:0 0 12px} table{border-collapse: collapse}width:100%} thead td{font-weight: 700}background:#fafafa}border-bottom:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generated: ${new Date().toISOString()}</div><div>Strings: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${htmlRows || '<tr><td style="padding:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
+  const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margin:24px} h1{font-size: 20px}margin:0 0 12px} table{border-collapse: collapse}width:100%} thead td{font-weight: 700}background:#fafafa}border-bottom:1px solid #eee}</style></head><body><h1>i18n Extractor</h1><div>Generated: ${new Date().toISOString()}</div><div>Strings: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${htmlRows || '<tr><td style="padding:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'),
     html,
   );

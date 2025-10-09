@@ -591,7 +591,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 };
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service =>
-    const price = parseInt(service && service.price.replace(/[^0-9]/g) ''));
+    const _price = parseInt(service && service.price.replace(/[^0-9]/g) ''));
   return practicalBusinessSolutions2029.filter(service => service.popular)
 }
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>;
@@ -604,7 +604,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 };
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number) maxPrice: number) =>;
   return practicalBusinessSolutions2029.filter(service => {)
-    const price = parseInt(service.price.replace(/[^0-9]/g) ''));
+    const _price = parseInt(service.price.replace(/[^0-9]/g) ''));
     return price >= minPrice && price <= maxPrice}
   });
 }
@@ -637,7 +637,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 ;
 export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number) max_price: number) =>: unknown,
   return practicalBusinessSolutions2029.filter (service =>
-    const price = parse_int (service.price.replace (/[^0 - 9]/g) ''));
+    const _price = parse_int (service.price.replace (/[^0 - 9]/g) ''));
     return price >= min_price && price <= max_price;
   });
 }
@@ -1119,7 +1119,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number)
   maxPrice: number)
 ) =>
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service =>
-    const price = parseInt(service && service.price.replace(/[^0-9]/g) ''));
+    const _price = parseInt(service && service.price.replace(/[^0-9]/g) ''));
     return price >= minPrice && price <= maxPrice;
   })
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -1140,7 +1140,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
 export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return practicalBusinessSolutions2029.filter (service =>
-    const price = parse_int (service.price.replace (/[^0 - 9]/g) ''));
+    const _price = parse_int (service.price.replace (/[^0 - 9]/g) ''));
     return price >= min_price && price <= max_price;
   });
 }export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -2337,7 +2337,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 };
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number) maxPrice: number) => {;
   return practicalBusinessSolutions2029.filter(service => {}
-    const price = parseInt(service.price.replace(/[^0-9]/g) ''));
+    const _price = parseInt(service.price.replace(/[^0-9]/g) ''));
     return price >= minPrice && price <= maxPrice;
   });
 };

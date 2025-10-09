@@ -26,7 +26,7 @@ class AdvancedCachingSystem {
   }
 
   set(key, value, ttl = this.defaultTTL) {
-    const now = Date.now();
+    const _now = Date.now();
     //     const expiry = now + ttl;
 
     // Check if we need to evict items
@@ -45,7 +45,7 @@ class AdvancedCachingSystem {
   }
 
   get(key) {
-    const now = Date.now();
+    const _now = Date.now();
     //     const expiry = this.ttlMap.get(key);
 
     // Check if expired
@@ -90,8 +90,8 @@ class AdvancedCachingSystem {
   }
 
   evictLeastUsed() {
-    let leastUsedKey = null;
-    let minCount = Infinity;
+    let _leastUsedKey = null;
+    let _minCount = Infinity;
 
     for (const [key, count] of this.accessCount.entries()) {
       if (count < minCount) {
@@ -106,8 +106,8 @@ class AdvancedCachingSystem {
   }
 
   cleanup() {
-    const now = Date.now();
-    const expiredKeys = [];
+    const _now = Date.now();
+    const _expiredKeys = [];
 
     for (const [key, expiry] of this.ttlMap.entries()) {
       if (now > expiry) {
@@ -127,39 +127,36 @@ class AdvancedCachingSystem {
       };
       localStorage.setItem(`cache_${key}`, JSON.stringify(item));
     } catch (error) {
-      //       console.warn('Failed to persist cache item:', error);
-    }
+      //       }
   }
 
   removeFromStorage(key) {
     try {
       localStorage.removeItem(`cache_${key}`);
     } catch (error) {
-      //       console.warn('Failed to remove cache item from storage:', error);
-    }
+      //       }
   }
 
   clearStorage() {
     try {
-      const keys = Object.keys(localStorage);
+      const _keys = Object.keys(localStorage);
       keys.forEach(key => {
         if (key.startsWith('cache_')) {
           localStorage.removeItem(key);
         }
       });
     } catch (error) {
-      //       console.warn('Failed to clear cache storage:', error);
-    }
+      //       }
   }
 
   loadFromStorage() {
     try {
-      const keys = Object.keys(localStorage);
-      const now = Date.now();
+      const _keys = Object.keys(localStorage);
+      const _now = Date.now();
 
       keys.forEach(key => {
         if (key.startsWith('cache_')) {
-          const item = JSON.parse(localStorage.getItem(key));
+          const _item = JSON.parse(localStorage.getItem(key));
           if (item && item.expiry > now) {
             //             const cacheKey = key.replace('cache_', '');
             this.cache.set(cacheKey, item.value);
@@ -171,15 +168,14 @@ class AdvancedCachingSystem {
         }
       });
     } catch (error) {
-      //       console.warn('Failed to load cache from storage:', error);
-    }
+      //       }
   }
 
   setupMemoryPressureHandling() {
     // Monitor memory usage
     if ('memory' in performance) {
       setInterval(() => {
-        const memInfo = performance.memory;
+        const _memInfo = performance.memory;
         //         const usedRatio = memInfo.usedJSHeapSize / memInfo.totalJSHeapSize;
 
         if (usedRatio > 0.8) {
@@ -248,8 +244,8 @@ class AdvancedCachingSystem {
 
   // Cache invalidation patterns
   invalidatePattern(pattern) {
-    const regex = new RegExp(pattern);
-    const keysToDelete = [];
+    const _regex = new RegExp(pattern);
+    const _keysToDelete = [];
 
     for (const key of this.cache.keys()) {
       if (regex.test(key)) {
@@ -280,7 +276,7 @@ class AdvancedCachingSystem {
 }
 
 // Initialize caching system
-const cacheSystem = new AdvancedCachingSystem();
+const _cacheSystem = new AdvancedCachingSystem();
 
 // Load existing cache from storage
 cacheSystem.loadFromStorage();

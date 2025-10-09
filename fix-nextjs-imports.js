@@ -71,8 +71,8 @@ const replacements = [
 // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Apply replacements
     replacements.forEach(({ from, to, context }) => {
@@ -104,10 +104,10 @@ function processFile(filePath) {
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
       .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {
         // Merge consecutive imports from same module
-        const lines = match.trim().split('\n');
-        const imports = {};
+        const _lines = match.trim().split('\n');
+        const _imports = {};
         lines.forEach(line => {
-          const match = line.match(/import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?/);
+          const _match = line.match(/import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?/);
           if (match) {
             const [, importsStr, module] = match;
             if (!imports[module]) imports[module] = [];
@@ -117,33 +117,31 @@ function processFile(filePath) {
 
         return (
           Object.entries(imports)
-            .map(([module, importList]) => `import { ${importList.join(', ')} } from '${module}';`)
             .join('\n') + '\n'
         );
       });
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+
       return true;
     }
 
     return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 // Main execution
 async function main() {
-  console.log('🔧 Starting Next.js to React Router conversion...\n');
 
   // Find all TypeScript/JavaScript files in app directory
-  const patterns = ['app/**/*.tsx', 'app/**/*.ts', 'app/**/*.jsx', 'app/**/*.js'];
+  const _patterns = ['app/**/*.tsx', 'app/**/*.ts', 'app/**/*.jsx', 'app/**/*.js'];
 
-  let totalFiles = 0;
-  let fixedFiles = 0;
+  let _totalFiles = 0;
+  let _fixedFiles = 0;
 
   for (const pattern of patterns) {
     const files = await glob(pattern, {
@@ -168,15 +166,13 @@ async function main() {
     });
   }
 
-  console.log(`\n📊 Summary:`);
-  console.log(`   Total files processed: ${totalFiles}`);
-  console.log(`   Files modified: ${fixedFiles}`);
-  console.log(`   Files unchanged: ${totalFiles - fixedFiles}`);
+
+
 
   if (fixedFiles > 0) {
-    console.log('\n✨ Next.js to React Router conversion completed!');
+
   } else {
-    console.log('\n✅ No files needed conversion.');
+
   }
 }
 

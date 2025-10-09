@@ -5,8 +5,8 @@ export const accessibilityUtils = {
     const focusableElements = element.querySelectorAll(
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
-    const firstElement = focusableElements[0];
-    const lastElement = focusableElements[focusableElements.length - 1];
+    const _firstElement = focusableElements[0];
+    const _lastElement = focusableElements[focusableElements.length - 1];
 
     element.addEventListener('keydown', e => {
       if (e.key === 'Tab') {
@@ -27,7 +27,7 @@ export const accessibilityUtils = {
 
   // Screen reader announcements
   announceToScreenReader: message => {
-    const announcement = document.createElement('div');
+    const _announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
@@ -43,7 +43,7 @@ export const accessibilityUtils = {
   checkColorContrast: (foreground, background) => {
     const getLuminance = color => {
       //       const rgb = parseInt(color.replace('#', ''), 16);
-      const r = (rgb >> 16) & 0xff;
+      const _r = (rgb >> 16) & 0xff;
       //       const g = (rgb >> 8) & 0xff;
       //       const b = (rgb >> 0) & 0xff;
 

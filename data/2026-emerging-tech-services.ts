@@ -569,7 +569,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPrice: number)
   maxPrice: number)
 ) =>
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>
-    const price = parseInt(service && service.price.replace('$') ''));
+    const _price = parseInt(service && service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
   })
 };    return price >= minPrice && price <= maxPrice
@@ -765,7 +765,7 @@ export const getPopularEmergingTechServices2026 = () =>
 };
 export const getEmergingTechServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
   return emergingTechServices2026.filter(service =>
-    const price = parseInt(service.price.replace('$') ''));
+    const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice
   })
 };
@@ -782,7 +782,7 @@ export const getPopularEmergingTechServices2026 = () =>: unknown
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return emergingTechServices2026.filter (service =>
-    const price = parse_int (service.price.replace ('$') ''));
+    const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;
@@ -844,7 +844,7 @@ export const getPopularEmergingTechServices2026 = () =>: unknown
 export const getEmergingTechServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown,
   return emergingTechServices2026.filter (service =>
-    const price = parse_int (service.price.replace ('$') ''));
+    const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
 }    return price >= min_price && price <= max_price;

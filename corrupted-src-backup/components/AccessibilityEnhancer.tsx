@@ -22,10 +22,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Check for user preferences
     if (enableHighContrast) {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const _mediaQuery = window.matchMedia('(prefers-contrast: high)');
       setIsHighContrast(mediaQuery.matches);
 
-      const handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+      const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
@@ -35,10 +35,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Check for reduced motion preference
     if (enableReducedMotion) {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const _mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       setIsReducedMotion(mediaQuery.matches);
 
-      const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+      const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
       mediaQuery.addEventListener('change', handleChange);
       return () => mediaQuery.removeEventListener('change', handleChange);
     }
@@ -51,7 +51,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const handleKeyDown = (e: KeyboardEvent) => {
         // Skip to main content
         if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-          const skipLink = document.querySelector('.skip-link') as HTMLElement;
+          const _skipLink = document.querySelector('.skip-link') as HTMLElement;
           if (skipLink) {
             skipLink.focus();
             e.preventDefault();
@@ -60,7 +60,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
         // Escape key handling
         if (e.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
+          const _activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
           }
@@ -70,11 +70,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Focus management
       const handleFocusIn = (e: FocusEvent) => {
         setFocusVisible(true);
-        const target = e.target as HTMLElement;
+        const _target = e.target as HTMLElement;
 
         // Announce focus changes to screen readers
         if (enableScreenReaderSupport && target.getAttribute('aria-label')) {
-          const announcement = target.getAttribute('aria-label');
+          const _announcement = target.getAttribute('aria-label');
           if (announcement) {
             announceToScreenReader(announcement);
           }
@@ -100,7 +100,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   useEffect(() => {
     // Apply accessibility styles
-    const root = document.documentElement;
+    const _root = document.documentElement;
 
     if (isHighContrast) {
       root.classList.add('high-contrast');
@@ -124,7 +124,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   // Announce to screen reader
   const announceToScreenReader = (message: string) => {
     if (enableScreenReaderSupport) {
-      const announcement = document.createElement('div');
+      const _announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
@@ -150,7 +150,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         className="skip-link"
         onClick={e => {
           e.preventDefault();
-          const main = document.querySelector('main') || document.querySelector('#main-content');
+          const _main = document.querySelector('main') || document.querySelector('#main-content');
           if (main) {
             (main as HTMLElement).focus();
             (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });

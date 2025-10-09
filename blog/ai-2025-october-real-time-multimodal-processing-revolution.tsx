@@ -170,7 +170,7 @@ class CrossModalAttention
     keys: Tensor[]
   ): Promise<Tensor[]>
     return Promise.all(keys.map(async k =>
-        const similarity = await this.dotProduct(queries) k);
+        const _similarity = await this.dotProduct(queries) k);
         return await this.softmax(
           similarity.divide(Math.sqrt(k.shape[-1]))
         );

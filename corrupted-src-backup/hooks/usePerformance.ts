@@ -32,8 +32,8 @@ export const usePerformance = (options: UsePerformanceOptions) => {
     slowRenderThreshold = 16, // 60fps threshold
   } = options;
 
-  const mountTimeRef = useRef<number>(0);
-  const renderStartTimeRef = useRef<number>(0);
+  const _mountTimeRef = useRef<number>(0);
+  const _renderStartTimeRef = useRef<number>(0);
 
   // Track component mount time
   useEffect(() => {
@@ -64,7 +64,7 @@ export const usePerformance = (options: UsePerformanceOptions) => {
 
       // Track memory usage if available
       if (trackMemoryUsage && 'memory' in performance) {
-        const memory = (performance as any).memory;
+        const _memory = (performance as any).memory;
         metrics.memoryUsage = memory.usedJSHeapSize;
       }
 
@@ -145,7 +145,7 @@ export const useResourcePerformance = () => {
     const observer = new PerformanceObserver(list => {
       list.getEntries().forEach(entry => {
         if (entry.entryType === 'resource') {
-          const resourceEntry = entry as PerformanceResourceTiming;
+          const _resourceEntry = entry as PerformanceResourceTiming;
           analytics.trackPerformance(
             `resource_${resourceEntry.name.split('.').pop()}`,
             resourceEntry.duration,

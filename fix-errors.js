@@ -1,39 +1,30 @@
-const fs = require('fs');
+const _fs = require('fs');
 // const path = require('path');
-
 // Fix setupTests.tsx - remove extra closing brace
 try {
 //   const setupTestsPath = './app/setupTests.tsx';
-  let content = fs.readFileSync(setupTestsPath, 'utf8');
+  let _content = fs.readFileSync(setupTestsPath, 'utf8');
   // Remove the extra }); at line 34
   content = content.replace(/  }\)\),\n}\);\n\n\/\/ Mock requestAnimationFrame/, '  })),\n});\n\n// Mock requestAnimationFrame');
   fs.writeFileSync(setupTestsPath, content);
-//   console.log('✓ Fixed app/setupTests.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing setupTests.tsx:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix enhancedErrorHandler.ts - fix optional chaining
 try {
 //   const errorHandlerPath = './app/utils/enhancedErrorHandler.ts';
-  let content = fs.readFileSync(errorHandlerPath, 'utf8');
+  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Fix the optional chaining syntax
   content = content.replace(/target\?\['src'\]/g, 'target?.src');
   fs.writeFileSync(errorHandlerPath, content);
-//   console.log('✓ Fixed app/utils/enhancedErrorHandler.ts');
-} catch (err) {
-//   console.log('✗ Error fixing enhancedErrorHandler.ts:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix ErrorBoundary.tsx - recreate with complete content
 try {
 //   const errorBoundaryPath = './app/components/ErrorBoundary.tsx';
 //   const errorBoundaryContent = `'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import Link from 'next/link';
 import { FileWarning } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -41,52 +32,40 @@ interface Props {
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-//       console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
+//       }
     if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
     }
-    
     this.setState({ errorInfo });
-    
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     if (this.props.enableErrorReporting) {
-//       console.error('Error caught by boundary:', error, errorInfo);
-    }
+//       }
   }
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -134,37 +113,28 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ErrorBoundary;
 `;
   fs.writeFileSync(errorBoundaryPath, errorBoundaryContent);
-//   console.log('✓ Fixed app/components/ErrorBoundary.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing ErrorBoundary.tsx:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix src/components/PerformanceMonitor.tsx
 try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
-  let content = fs.readFileSync(perfMonitorPath, 'utf8');
+  let _content = fs.readFileSync(perfMonitorPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>> .*$/gm, '');
+  content = content.replace(/^
   fs.writeFileSync(perfMonitorPath, content);
-//   console.log('✓ Fixed src/components/PerformanceMonitor.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing PerformanceMonitor.tsx:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix src/utils/analytics.ts
 try {
 //   const analyticsPath = './src/utils/analytics.ts';
-  let content = fs.readFileSync(analyticsPath, 'utf8');
+  let _content = fs.readFileSync(analyticsPath, 'utf8');
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -172,19 +142,15 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(analyticsPath, content);
-//   console.log('✓ Fixed src/utils/analytics.ts');
-} catch (err) {
-//   console.log('✗ Error fixing analytics.ts:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix src/utils/errorHandler.ts
 try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
-  let content = fs.readFileSync(errorHandlerPath, 'utf8');
+  let _content = fs.readFileSync(errorHandlerPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>> .*$/gm, '');
+  content = content.replace(/^
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -192,23 +158,16 @@ try {
     content += '\n*/\n';
   }
   fs.writeFileSync(errorHandlerPath, content);
-//   console.log('✓ Fixed src/utils/errorHandler.ts');
-} catch (err) {
-//   console.log('✗ Error fixing errorHandler.ts:', err.message);
-}
-
+//   } catch (err) {
+//   }
 // Fix App.tsx
 try {
 //   const appPath = './App.tsx';
-  let content = fs.readFileSync(appPath, 'utf8');
+  let _content = fs.readFileSync(appPath, 'utf8');
   // Remove merge conflict markers
   content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^=======.*$/gm, '');
-  content = content.replace(/^>>>>>>> .*$/gm, '');
+  content = content.replace(/^
   fs.writeFileSync(appPath, content);
-//   console.log('✓ Fixed App.tsx');
-} catch (err) {
-//   console.log('✗ Error fixing App.tsx:', err.message);
-}
-
-// console.log('\n✅ All fixes completed!');
+//   } catch (err) {
+//   }
+// 

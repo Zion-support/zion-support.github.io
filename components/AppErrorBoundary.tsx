@@ -73,9 +73,9 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
-      //       console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo);
     }
     // Here you could send error to monitoring service
   }
@@ -84,7 +84,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     this.setState({ hasError: false, error: undefined });
   };
 
-  override render() {
+  render() {
     if (this.state.hasError && this.state.error) {
       return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
     }

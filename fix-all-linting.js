@@ -81,16 +81,16 @@ const fixes = [
 ];
 
 function applyFixes() {
-  let totalFixed = 0;
+  let _totalFixed = 0;
 
   fixes.forEach(({ file, changes }) => {
     if (!fs.existsSync(file)) {
-      console.log(`File not found: ${file}`);
+
       return;
     }
 
-    let content = fs.readFileSync(file, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(file, 'utf8');
+    let _modified = false;
 
     changes.forEach(({ from, to }) => {
       if (content.includes(from)) {
@@ -102,21 +102,20 @@ function applyFixes() {
 
     if (modified) {
       fs.writeFileSync(file, content);
-      console.log(`Fixed: ${file}`);
+
     }
   });
 
-  console.log(`Total fixes applied: ${totalFixed}`);
 }
 
 // Apply fixes
 applyFixes();
 
 // Run linter to check results
-console.log('\nRunning linter to check results...');
+
 try {
   execSync('pnpm run lint:comprehensive', { stdio: 'inherit' });
-  console.log('\n✅ All linting issues fixed!');
+
 } catch (error) {
-  console.log('\n⚠️  Some linting issues remain. Continuing...');
+
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
 
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
@@ -144,9 +144,8 @@ const CybersecurityPage: React.FC = () => {
     <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, zero trust, compliance, and incident response services." />
-        <meta name="keywords" content="cybersecurity, threat detection, zero trust, penetration testing, SOC, compliance, data protection" />
-      </Helmet>
+        <meta name="description" content="Advanced cybersecurity services including threat detection, penetration testing, zero trust security, and comprehensive security solutions." />
+        <meta name="keywords" content="cybersecurity services, threat detection, penetration testing, zero trust, security consulting, SOC services" />      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
         {/* Hero Section */}
@@ -158,8 +157,7 @@ const CybersecurityPage: React.FC = () => {
                 Cybersecurity Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-red-100 max-w-3xl mx-auto">
-                Protect your business with advanced cybersecurity solutions and expert threat protection
-              </p>
+                Protect your business with advanced cybersecurity solutions and expert threat protection              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                   Get Security Assessment
@@ -180,8 +178,7 @@ const CybersecurityPage: React.FC = () => {
                 Why Choose Our Cybersecurity Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert cybersecurity solutions that protect your business from evolving threats
-              </p>
+                Expert security professionals delivering comprehensive protection against evolving cyber threats              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -196,8 +193,7 @@ const CybersecurityPage: React.FC = () => {
                   <Eye className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Monitoring</h3>
-                <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>
-              </div>
+                <p className="text-gray-600">Round-the-clock security monitoring and incident response</p>              </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-green-600" />
@@ -210,8 +206,7 @@ const CybersecurityPage: React.FC = () => {
                   <AlertTriangle className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
-                <p className="text-gray-600">Quick incident response and recovery to minimize business impact</p>
-              </div>
+                <p className="text-gray-600">Quick incident response and recovery to minimize business impact</p>              </div>
             </div>
           </div>
         </section>
@@ -222,14 +217,14 @@ const CybersecurityPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
+                  {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions for comprehensive security
+                  Specialized {category.toLowerCase()} services for comprehensive security protection
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {securityServices
+                {cyberServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -243,8 +238,7 @@ const CybersecurityPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
-                        </div>
+                          Save up to 50% vs market rates                        </div>
                       </div>
 
                       <div className="mb-4">
@@ -271,8 +265,7 @@ const CybersecurityPage: React.FC = () => {
                       </div>
 
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                        <ul className="space-y-1">
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>                        <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
@@ -292,20 +285,18 @@ const CybersecurityPage: React.FC = () => {
           </section>
         ))}
 
-        {/* Security Capabilities Showcase */}
-        <section className="py-16 bg-white">
+        {/* Cybersecurity Capabilities Showcase */}        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Security Capabilities
+                Our Cybersecurity Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive cybersecurity technologies and methodologies
+                Comprehensive security solutions covering all aspects of cyber protection
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-pink-100 rounded-lg">
-                <Shield className="w-12 h-12 text-red-600 mx-auto mb-4" />
+              <div className="text-center p-6 bg-gradient-to-br from-red-50 to-orange-100 rounded-lg">                <Shield className="w-12 h-12 text-red-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Threat Detection</h3>
                 <p className="text-gray-600">AI-powered threat detection and response systems</p>
               </div>
@@ -332,8 +323,7 @@ const CybersecurityPage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <AlertTriangle className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Incident Response</h3>
-                <p className="text-gray-600">Rapid incident response and digital forensics</p>
-              </div>
+                <p className="text-gray-600">Rapid incident response and digital forensics</p>              </div>
             </div>
           </div>
         </section>

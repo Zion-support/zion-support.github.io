@@ -1,7 +1,7 @@
 exports.config = { schedule: '*/15 * * * *' };
 exports.handler = async () => {
   const { execSync } = require('child_process');
-  const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
+  const _run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true });
   try {run('node automation/dead-code-scanner.cjs || true');
     run('node automation/external-link-check.cjs || true');
     run('node automation/image-optimizer.cjs || true');

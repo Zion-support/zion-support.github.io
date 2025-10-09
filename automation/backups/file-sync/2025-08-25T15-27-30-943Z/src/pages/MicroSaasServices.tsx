@@ -453,8 +453,8 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
       }
     }
   ];
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
-  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
+  const _categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'Blockchain', 'IoT', 'Immersive Tech', 'AI', 'Infrastructure'];
+  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
     <div className="text-left">
       {/* Animated Background */}
       <div className="text-left">

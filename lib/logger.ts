@@ -60,7 +60,7 @@ class Logger {
   }
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {
-    const timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
+    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';
     //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : '';
     //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim();

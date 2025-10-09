@@ -57,8 +57,7 @@ class AnalyticsService {
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
-        console.log('Analytics Event:', event)
-      }
+        }
     } catch (error) {
       console.error('Failed to track event:', error)
     }

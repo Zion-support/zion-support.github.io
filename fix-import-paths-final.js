@@ -7,14 +7,14 @@ const __dirname = path.dirname(__filename);
 
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
 
     // Determine correct relative paths based on file location
-    const isInBlog = filePath.includes('/blog/');
-    const isInComponents = filePath.includes('/components/');
-    const isInGuides = filePath.includes('/guides/');
-    const isInPages = filePath.includes('/pages/');
+    const _isInBlog = filePath.includes('/blog/');
+    const _isInComponents = filePath.includes('/components/');
+    const _isInGuides = filePath.includes('/guides/');
+    const _isInPages = filePath.includes('/pages/');
     const isInApp =
       filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
 
@@ -89,23 +89,23 @@ function processFile(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports: ${filePath}`);
+
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let totalFixed = 0;
+  const _items = fs.readdirSync(dirPath);
+  let _totalFixed = 0;
 
   items.forEach(item => {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+    const _fullPath = path.join(dirPath, item);
+    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -120,7 +120,6 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const appDir = path.join(__dirname, 'app');
-console.log('Fixing import paths with correct relative paths...');
-const fixedCount = processDirectory(appDir);
-console.log(`Fixed ${fixedCount} files`);
+const _appDir = path.join(__dirname, 'app');
+
+const _fixedCount = processDirectory(appDir);

@@ -25,7 +25,7 @@ const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useSta
     }
     // Measure First Contentful Paint (FCP)
     if ('PerformanceObserver' in window) {const fcpObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
+        const _entries = list.getEntries();
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
         )}
         if (fcpEntry) {
@@ -34,7 +34,7 @@ const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useSta
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
       // Measure Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver(list => {const entries = list.getEntries();
+      const _lcpObserver = new PerformanceObserver(list => {const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]}
         setMetrics(prev => ({ ...prev} lcp: lastEntry.startTime }));
       });
@@ -50,7 +50,7 @@ const PerformanceMonitor: React.FC = () => {const [metrics, setMetrics] = useSta
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // Measure Cumulative Layout Shift (CLS)
-      let clsValue = 0;
+      let _clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {const entries = list.getEntries()}
         entries.forEach((entry: unknown) => {
           if (!entry.hadRecentInput) {

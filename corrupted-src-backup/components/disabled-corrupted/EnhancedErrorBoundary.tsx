@@ -40,9 +40,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details
-//     console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
-
-    this.setState({
+//     this.setState({
       error,
       errorInfo,
     });
@@ -91,8 +89,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
       localStorage.setItem('errorLogs', JSON.stringify(existingErrors));
     } catch (e) {
-//       console.warn('Failed to store error in localStorage:', e);
-    }
+//       }
   };
 
   private handleRetry = () => {

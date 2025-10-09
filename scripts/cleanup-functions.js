@@ -134,7 +134,7 @@ const functionsToRemove = [
   'venture_',
 ];
 
-const functionsDir = path.join(process.cwd(), 'netlify', 'functions');
+const _functionsDir = path.join(process.cwd(), 'netlify', 'functions');
 
 function shouldRemoveFunction(filename) {
   // Keep essential functions
@@ -148,38 +148,35 @@ function shouldRemoveFunction(filename) {
 
 function cleanupFunctions() {
   if (!fs.existsSync(functionsDir)) {
-    console.log('Functions directory does not exist');
+
     return;
   }
 
-  const files = fs.readdirSync(functionsDir);
-  let removedCount = 0;
-  let keptCount = 0;
+  const _files = fs.readdirSync(functionsDir);
+  let _removedCount = 0;
+  let _keptCount = 0;
 
-  console.log('Starting function cleanup...');
-  console.log(`Found ${files.length} functions`);
 
   files.forEach(file => {
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
-        const filePath = path.join(functionsDir, file);
+        const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
-          console.log(`Removed: ${file}`);
+
           removedCount++;
         } catch (error) {
-          console.error(`Error removing ${file}:`, error.message);
+
         }
       } else {
-        console.log(`Kept: ${file}`);
+
         keptCount++;
       }
     }
   });
 
-  console.log(`\nCleanup complete:`);
-  console.log(`- Removed: ${removedCount} functions`);
-  console.log(`- Kept: ${keptCount} functions`);
+
+
 }
 
 // Run the cleanup
