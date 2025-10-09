@@ -1,5 +1,7 @@
 'use client';
 import React from 'react'
+
+// Use existing gtag types from global scope
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -19,6 +21,7 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
+  private config: { trackingId?: string } = {}
   /**
    * Initialize analytics service
    */
@@ -45,7 +48,7 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
-        gtag('event', event.action, {
+        window.gtag?.('event', event.action, {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -54,7 +57,8 @@ class AnalyticsService {
       }
       // Log in development
       if (process.env['NODE_ENV'] === 'development') {
-        }
+        console.log('Analytics event:', event);
+      }
     } catch (error) {
       // console.error('Failed to track event:', error)
     }
@@ -65,7 +69,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.gaId, {
+        window.gtag?.('config', this.config.trackingId || '', {
           page_path: path,
           page_title: title
         })
@@ -80,7 +84,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {
+        window.gtag?.('config', this.config.trackingId || '', {
           user_id: user.id,
           ...user.properties
         })
@@ -114,7 +118,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {
+        window.gtag?.('event', 'timing_complete', {
           name: variable,
           value: Math.round(value),
           event_category: category,
