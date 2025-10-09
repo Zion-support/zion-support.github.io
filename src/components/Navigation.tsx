@@ -207,8 +207,12 @@ const Navigation: React.FC = () => {
                       </h3>
                       <div className="space-y-2">
                         {itServices.slice(0, 6).map((service) => (
+<<<<<<< HEAD
                           <a
                             key={service.name}
+=======
+                          <a key={service.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-ed20
                             href={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                             onClick={closeAllMenus}
@@ -222,16 +226,24 @@ const Navigation: React.FC = () => {
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
+<<<<<<< HEAD
                       <a
                         href="/services"
+=======
+                      <a href="/services"
+>>>>>>> cursor/website-audit-and-update-with-deployment-ed20
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
                       </a>
+<<<<<<< HEAD
                       <a
                         href="/specialized-services"
+=======
+                      <a href="/specialized-services"
+>>>>>>> cursor/website-audit-and-update-with-deployment-ed20
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
                         onClick={closeAllMenus}
                       >
@@ -246,6 +258,7 @@ const Navigation: React.FC = () => {
 
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
@@ -259,6 +272,21 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
+=======
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
+            </a>
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+              Case Studies
+            </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
+            </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-ed20
             
             <div className="flex items-center space-x-4">
               <a
@@ -340,6 +368,7 @@ const Navigation: React.FC = () => {
 
               <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
+<<<<<<< HEAD
               </Link>
               <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
@@ -353,6 +382,21 @@ const Navigation: React.FC = () => {
               <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </Link>
+=======
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
+              </a>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Case Studies
+              </a>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
+              </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-ed20
               
               <div className="pt-4 border-t border-gray-700">
                 <a
