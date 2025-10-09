@@ -1,97 +1,3 @@
-<<<<<<< HEAD
-  const filteredServices = selectedCategory === 'all' 
-    ? services 
-    : services.filter(service => service.category === selectedCategory);
-
-  const formatPrice = (pricing: typeof services[0]['pricing']) => {
-    if (pricing.custom) {
-      return 'Custom Pricing';
-    }
-    
-    let price = pricing.starting;
-    if (billingPeriod === 'year' && pricing.period === 'month') {
-      price = price * 12 * 0.8; // 20% discount for annual billing
-    }
-    
-    const period = billingPeriod === 'year' && pricing.period === 'month' ? 'year' : pricing.period;
-    return `$${Math.round(price).toLocaleString()}/${period === 'month' ? 'mo' : period === 'year' ? 'yr' : 'one-time'}`;
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'ai': return Brain;
-      case 'micro-saas': return Zap;
-      case 'it': return Cloud;
-      case 'emerging-tech': return Rocket;
-      default: return Star;
-    }
-  };
-
-  return (
-  const plans = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
-        'Basic AI Automation',
-        'Email Support',
-        'Monthly Reports',
-        'Up to 5 Users',
-        'Standard Security',
-        'Basic Analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$7,999',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced needs',
-      features: [
-        'Advanced AI Solutions',
-        'Priority Support',
-        'Real-time Monitoring',
-        'Up to 25 Users',
-        'Enhanced Security',
-        'Advanced Analytics',
-        'Custom Integrations',
-        '24/7 Phone Support'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Custom AI Development',
-        'Dedicated Support Team',
-        'Real-time Dashboards',
-        'Unlimited Users',
-        'Enterprise Security',
-        'Custom Analytics',
-        'Full Integration Support',
-        '24/7 Dedicated Support',
-        'SLA Guarantee',
-        'Custom Training'
-      ],
-=======
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, ArrowRight, Phone, Mail, MapPin, Award, Globe, Brain, Cloud, Code, BarChart, Target, MessageSquare, Database, Settings, Network, RefreshCw } from 'lucide-react';
-
-export default function PricingPage() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('professional');
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Phone, ArrowRight, Mail, ExternalLink, Brain, Zap, Cloud, Rocket, Award } from 'lucide-react';
@@ -114,7 +20,6 @@ const PricingPage: React.FC = () => {
     { id: 'it', name: 'IT Services' },
     { id: 'emerging', name: 'Emerging Tech' }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
 
   const pricingPlans = [
     {
@@ -164,10 +69,6 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
   const filteredPlans = selectedCategory === 'all' 
     ? pricingPlans 
     : pricingPlans.filter(plan => plan.category === selectedCategory);
@@ -313,54 +214,8 @@ const PricingPage: React.FC = () => {
               <Mail className="h-5 w-5 mr-2" />
               Email Us
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
           </div>
 
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-=======
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Contact us today to discuss your specific needs and get a customized quote for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Email Us
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-=======
           <div className="text-sm text-gray-500">
             <p>All prices are in USD and exclude applicable taxes.</p>
             <p>Custom enterprise solutions available upon request.</p>
@@ -370,7 +225,6 @@ const PricingPage: React.FC = () => {
 
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
   );
 };
 

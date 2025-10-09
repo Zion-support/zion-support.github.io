@@ -1,64 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-
-const PrivacyPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Header />
-        
-        <main className="pt-24">
-          <section className="container mx-auto px-4 py-16">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
-              <div className="cyber-card p-8 space-y-6 text-gray-300">
-                <p className="text-sm text-gray-400">Last updated: January 1, 2024</p>
-                
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">1. Information We Collect</h2>
-                  <p>We collect information you provide directly to us, such as when you create an account, contact us, or use our services.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">2. How We Use Your Information</h2>
-                  <p>We use the information we collect to provide, maintain, and improve our services, communicate with you, and ensure security.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">3. Information Sharing</h2>
-                  <p>We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">4. Data Security</h2>
-                  <p>We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
-                </div>
-
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">5. Contact Us</h2>
-                  <p>If you have any questions about this Privacy Policy, please contact us at privacy@ziontechgroup.com</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default PrivacyPage;
-=======
 'use client';
 import React from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
@@ -287,4 +226,3 @@ export default function PrivacyPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7

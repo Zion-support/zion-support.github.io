@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -95,7 +93,6 @@ const AccessibilityEnhancer: React.FC = () => {
           activeElement.blur();
         }
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
     };
 
     addAriaLabels();
@@ -122,7 +119,4 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-<<<<<<< HEAD
-=======
 export default AccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-f2a7
