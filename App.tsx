@@ -74,7 +74,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
+  override componentDidCatch() {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
