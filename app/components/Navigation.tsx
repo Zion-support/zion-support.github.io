@@ -52,6 +52,10 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-50',
       hoverColor: 'hover:bg-purple-100',
       services: [
+        { name: 'AI Code Review Assistant', path: '/ai-code-review-assistant', description: 'Automated code analysis & quality improvement' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO analysis & optimization' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Real-time business intelligence & insights' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', description: 'Intelligent marketing campaign automation' },
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -67,13 +71,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
       ]
     },
     {
@@ -83,8 +81,8 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure solutions' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
@@ -108,13 +106,15 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+        { name: 'AI Code Review Assistant', path: '/ai-code-review-assistant', description: 'Automated code analysis & quality improvement' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO analysis & optimization' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Real-time business intelligence & insights' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', description: 'Intelligent marketing campaign automation' },
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
         { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
         { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
         { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
         { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
         { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
         { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
@@ -125,12 +125,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
-        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' }
       ]
     },
     {
