@@ -58,14 +58,6 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Navigation */}
-      <Navigation />
-=======
     <>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -77,7 +69,6 @@ const HomePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
         <Navigation />
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
       
       {/* Skip to main content for accessibility */}
       <a
@@ -215,7 +206,6 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-<<<<<<< HEAD
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -267,8 +257,6 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -374,23 +362,11 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Content Carousel */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading dynamic content..." />}>
           <DynamicContentShowcase />
         </Suspense>
@@ -459,22 +435,14 @@ const HomePage: React.FC = () => {
 
         {/* Newsletter Signup */}
         <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter signup..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentNewsletterSignup />
         </Suspense>
       </main>
-<<<<<<< HEAD
-
-      {/* Footer */}
-      <Footer />
-    </div>
-=======
       
         {/* Footer */}
         <Footer />
       </div>
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
   );
 };
 
