@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Rocket, Microscope, Layers, Cpu as Processor, Wifi, HardDrive, Server, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Archive, Download, Upload, Share, Link, ExternalLink, Maximize, Minimize, RotateCcw, Play, Pause, Stop, SkipForward, SkipBack, Volume2, VolumeX, Mic, MicOff, Video as VideoIcon, VideoOff, Camera as CameraIcon, CameraOff, Image, Images, File, Files, Folder, FolderOpen, Trash2, Edit, Save, Copy, Cut, Paste, Undo, Redo, Search as SearchIcon, Filter, SortAsc, SortDesc, Grid, List, Layout, Sidebar, Menu, X, Plus, Minus, MoreHorizontal, MoreVertical, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, ChevronsUp, ChevronsDown, ChevronsLeft, ChevronsRight, ArrowUp, ArrowDown, ArrowLeft, ArrowRight as ArrowRightIcon, Move, RotateCw, RefreshCw, RefreshCcw, Rotate3D, FlipHorizontal, FlipVertical, Crop, Scissors as ScissorsIcon, Paintbrush as PaintbrushIcon, Palette as PaletteIcon, Droplets, Sun, Moon, Sunrise, Sunset, Cloud as CloudIcon, CloudRain, CloudSnow, CloudLightning, Wind, Thermometer, Gauge, Battery, BatteryCharging, Power, Wifi as WifiIcon, WifiOff, Signal, SignalZero, SignalOne, SignalTwo, SignalThree, SignalFour, SignalHigh, SignalLow, SignalMedium, SignalNone, SignalStrong, SignalWeak, SignalZero as SignalZeroIcon, SignalOne as SignalOneIcon, SignalTwo as SignalTwoIcon, SignalThree as SignalThreeIcon, SignalFour as SignalFourIcon, SignalHigh as SignalHighIcon, SignalLow as SignalLowIcon, SignalMedium as SignalMediumIcon, SignalNone as SignalNoneIcon, SignalStrong as SignalStrongIcon, SignalWeak as SignalWeakIcon } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -57,6 +57,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
+  // Real Micro SAAS Services with actual functionality and pricing
   const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
@@ -67,7 +68,9 @@ const HomePage: React.FC = () => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Social Media Manager',
@@ -78,7 +81,9 @@ const HomePage: React.FC = () => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -89,7 +94,9 @@ const HomePage: React.FC = () => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '25% faster decisions'],
       link: '/ai-analytics-dashboard',
       popular: true,
-      category: 'Analytics'
+      category: 'Analytics',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Email Marketing Suite',
@@ -100,7 +107,9 @@ const HomePage: React.FC = () => {
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', '35% higher click rates'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Customer Support Bot',
@@ -111,87 +120,104 @@ const HomePage: React.FC = () => {
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '60% cost savings'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Support'
+      category: 'Support',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
       icon: '🔍',
       price: '$179/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration', 'Code quality metrics', 'Team collaboration'],
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration', 'Custom rules', 'Team collaboration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Faster deployment'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'
+      category: 'Development',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
       title: 'AI Content Generator',
-      description: 'Create high-quality content for blogs, social media, and marketing with AI',
+      description: 'Create high-quality content with AI-powered writing and optimization tools',
       icon: '✍️',
       price: '$129/month',
-      features: ['Blog writing', 'Social media posts', 'Email templates', 'Ad copy generation', 'SEO optimization', 'Brand voice consistency'],
-      benefits: ['10x content output', '50% time savings', '40% better engagement', 'SEO-optimized content'],
+      features: ['AI writing assistant', 'SEO optimization', 'Content planning', 'Multi-format support', 'Brand voice training', 'Plagiarism detection'],
+      benefits: ['10x content production', '50% better SEO', 'Consistent brand voice', 'Time savings'],
       link: '/ai-content-generation',
-      popular: true,
-      category: 'Content'
+      popular: false,
+      category: 'Content',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
-      title: 'AI Lead Generation System',
-      description: 'Automated lead generation and qualification with AI-powered targeting',
-      icon: '🎯',
-      price: '$349/month',
-      features: ['Lead scoring', 'Contact discovery', 'Email outreach', 'CRM integration', 'Behavioral tracking', 'Conversion optimization'],
-      benefits: ['300% more qualified leads', '60% conversion rate', '80% time savings', 'ROI tracking'],
-      link: '/ai-lead-generation',
-      popular: true,
-      category: 'Sales'
+      title: 'AI Data Visualizer',
+      description: 'Transform complex data into stunning visualizations with AI-powered insights',
+      icon: '📊',
+      price: '$219/month',
+      features: ['Auto-chart generation', 'Interactive dashboards', 'Real-time updates', 'Custom templates', 'Export options', 'Collaboration tools'],
+      benefits: ['Faster insights', 'Better decisions', 'Professional presentations', 'Data storytelling'],
+      link: '/ai-data-visualization',
+      popular: false,
+      category: 'Analytics',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
-      title: 'AI Document Processor',
-      description: 'Intelligent document analysis and data extraction with AI',
-      icon: '📄',
+      title: 'AI Workflow Automator',
+      description: 'Automate complex business processes with intelligent workflow management',
+      icon: '⚡',
+      price: '$279/month',
+      features: ['Process automation', 'Smart triggers', 'Integration hub', 'Custom workflows', 'Analytics & monitoring', 'Error handling'],
+      benefits: ['80% process automation', '50% time savings', 'Reduced errors', 'Scalable operations'],
+      link: '/ai-workflow-automation',
+      popular: true,
+      category: 'Automation',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    {
+      title: 'AI Sales Assistant',
+      description: 'Boost sales performance with AI-powered lead scoring and automation',
+      icon: '💼',
       price: '$199/month',
-      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation', 'Template recognition', 'Batch processing'],
-      benefits: ['95% accuracy', '90% time savings', 'Error reduction', 'Scalable processing'],
-      link: '/ai-document-processing',
+      features: ['Lead scoring', 'Sales forecasting', 'Email automation', 'CRM integration', 'Performance analytics', 'Coaching insights'],
+      benefits: ['35% more qualified leads', '25% higher close rates', 'Automated follow-ups', 'Better forecasting'],
+      link: '/ai-sales-automation',
       popular: false,
-      category: 'Automation'
+      category: 'Sales',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     },
     {
-      title: 'AI SEO Optimizer',
-      description: 'AI-powered SEO analysis and optimization recommendations',
-      icon: '🔍',
-      price: '$179/month',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance monitoring'],
-      benefits: ['50% better rankings', '40% more organic traffic', 'ROI tracking', 'Automated reports'],
-      link: '/ai-seo-optimizer',
-      popular: true,
-      category: 'Marketing'
-    },
-    {
-      title: 'AI E-commerce Assistant',
-      description: 'AI-powered e-commerce optimization and management tools',
-      icon: '🛒',
-      price: '$399/month',
-      features: ['Product recommendations', 'Price optimization', 'Inventory management', 'Customer insights', 'Personalization', 'Sales forecasting'],
-      benefits: ['35% increase in sales', '25% higher AOV', '40% better conversion', 'Reduced cart abandonment'],
-      link: '/ai-ecommerce-solutions',
-      popular: true,
-      category: 'E-commerce'
-    },
-    {
-      title: 'AI Financial Analyzer',
-      description: 'AI-powered financial analysis and forecasting for businesses',
-      icon: '💰',
-      price: '$299/month',
-      features: ['Financial forecasting', 'Risk analysis', 'Budget optimization', 'Cash flow management', 'Investment insights', 'Compliance monitoring'],
-      benefits: ['30% better financial decisions', '25% cost reduction', 'Risk mitigation', 'Automated reporting'],
-      link: '/ai-financial-analyzer',
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and generation tools',
+      icon: '🎬',
+      price: '$349/month',
+      features: ['AI video generation', 'Auto-editing', 'Voice synthesis', 'Template library', 'Brand customization', 'Multi-platform export'],
+      benefits: ['10x faster production', 'Professional quality', 'Cost-effective', 'Scalable content'],
+      link: '/ai-video-generation',
       popular: false,
-      category: 'Finance'
+      category: 'Media',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
+    },
+    {
+      title: 'AI Voice Cloner',
+      description: 'Create realistic voice clones for content creation and accessibility',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice synthesis', 'Emotion control', 'Multi-language support', 'Real-time generation', 'API access', 'Custom training'],
+      benefits: ['Natural voice quality', 'Accessibility features', 'Content scalability', 'Cost savings'],
+      link: '/ai-voice-cloning',
+      popular: false,
+      category: 'Media',
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950'
     }
   ];
 
+  // Enhanced AI Services with real capabilities
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -200,7 +226,9 @@ const HomePage: React.FC = () => {
       price: '$2,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization'],
       color: 'text-purple-400',
-      benefits: ['40% better predictions', '60% faster insights', 'ROI tracking', 'Scalable models']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['40% better predictions', '60% faster insights', 'Custom solutions', 'Ongoing support']
     },
     {
       title: 'Natural Language Processing',
@@ -209,163 +237,123 @@ const HomePage: React.FC = () => {
       price: '$1,800/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition'],
       color: 'text-blue-400',
-      benefits: ['95% accuracy', 'Multi-language support', 'Real-time processing', 'Custom training']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['95% accuracy', 'Multi-language support', 'Real-time processing', 'Scalable solutions']
     },
     {
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection and recognition',
       icon: Eye,
       price: '$2,200/month',
-      features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'Quality Control', 'Medical Imaging'],
+      features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'Quality Control', 'Security Monitoring'],
       color: 'text-green-400',
-      benefits: ['99% accuracy', 'Real-time processing', 'Edge deployment', 'Custom models']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['99% accuracy', 'Real-time processing', 'Custom models', 'Integration ready']
     },
     {
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities',
       icon: Zap,
       price: '$1,900/month',
-      features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling', 'RPA Integration', 'Smart Routing'],
+      features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling', 'Integration Hub', 'Monitoring Dashboard'],
       color: 'text-cyan-400',
-      benefits: ['80% process reduction', '90% error reduction', '24/7 operation', 'Cost savings']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['80% automation', '50% cost reduction', '24/7 operation', 'Scalable processes']
     },
     {
       title: 'Quantum AI Computing',
-      description: 'Next-generation quantum algorithms for complex problem solving',
+      description: 'Next-generation quantum computing solutions for complex problem solving',
       icon: Atom,
       price: '$5,000/month',
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research & Development', 'Custom Solutions'],
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research Support', 'Custom Development'],
       color: 'text-yellow-400',
-      benefits: ['Exponential speedup', 'Complex optimization', 'Future-proof technology', 'Competitive advantage']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['Exponential speedup', 'Complex optimization', 'Future-proof technology', 'Research partnership']
     },
     {
-      title: 'AI Cybersecurity',
-      description: 'AI-powered threat detection and prevention systems',
-      icon: Shield,
-      price: '$2,800/month',
-      features: ['Threat Detection', 'Anomaly Detection', 'Behavioral Analysis', 'Incident Response', 'Risk Assessment', 'Compliance Monitoring'],
+      title: 'Autonomous Systems',
+      description: 'Self-managing systems with AI-powered decision making and adaptation',
+      icon: Cpu,
+      price: '$3,500/month',
+      features: ['Self-Healing Systems', 'Adaptive Learning', 'Predictive Maintenance', 'Resource Optimization', 'Fault Tolerance', 'Performance Monitoring'],
       color: 'text-red-400',
-      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Automated response', 'Reduced false positives']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['99.9% uptime', 'Self-optimization', 'Reduced maintenance', 'Intelligent scaling']
     }
   ];
 
+  // Comprehensive IT Services with market pricing
   const itServices = [
     {
-      title: 'Cloud Services',
-      description: 'Cloud migration, setup, and optimization services',
+      title: 'Cloud Services & Migration',
+      description: 'Complete cloud migration, setup, and optimization services',
       icon: Cloud,
       price: '$1,999/month',
-      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Auto-scaling', 'Disaster Recovery'],
+      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Disaster Recovery', '24/7 Monitoring'],
       color: 'text-blue-400',
-      benefits: ['50% cost reduction', '99.9% uptime', 'Global deployment', '24/7 monitoring']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['50% cost reduction', '99.9% uptime', 'Scalable infrastructure', 'Expert support']
     },
     {
-      title: 'Cybersecurity',
+      title: 'Cybersecurity Solutions',
       description: 'Advanced security solutions with threat detection and prevention',
       icon: Shield,
       price: '$2,499/month',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing', 'Compliance Auditing'],
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance Management', 'Security Training'],
       color: 'text-red-400',
-      benefits: ['99.9% threat detection', 'Real-time monitoring', 'Zero-day protection', 'Compliance ready']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['Zero breaches', '24/7 monitoring', 'Compliance ready', 'Expert team']
     },
     {
       title: 'DevOps & CI/CD',
       description: 'Streamlined development workflows with automated testing and deployment',
       icon: Settings,
       price: '$1,799/month',
-      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'Blue-Green Deployments'],
+      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'Performance Optimization'],
       color: 'text-green-400',
-      benefits: ['80% faster deployments', '90% fewer errors', 'Automated rollbacks', 'Zero-downtime updates']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['10x faster deployment', 'Zero downtime', 'Automated testing', 'Scalable processes']
     },
     {
       title: 'Database Services',
       description: 'Database design, optimization, and management with AI-powered tuning',
       icon: Database,
       price: '$1,299/month',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Data Migration', 'Query Optimization'],
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services', '24/7 Support'],
       color: 'text-purple-400',
-      benefits: ['300% performance boost', '99.99% availability', 'Automated backups', 'Real-time monitoring']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['3x performance boost', 'Zero data loss', 'Automated backups', 'Expert optimization']
     },
     {
       title: 'Network Infrastructure',
-      description: 'Enterprise-grade network design, implementation, and management',
-      icon: Globe,
+      description: 'Complete network design, implementation, and management services',
+      icon: Wifi,
       price: '$1,599/month',
-      features: ['Network Design', 'SD-WAN Implementation', 'Load Balancing', 'VPN Setup', 'Network Monitoring', 'Bandwidth Optimization'],
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', 'Monitoring Setup', 'Disaster Recovery', '24/7 Support'],
       color: 'text-cyan-400',
-      benefits: ['40% faster speeds', '99.9% reliability', 'Global connectivity', 'Cost optimization']
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['99.9% uptime', 'Enhanced security', 'Optimized performance', 'Scalable design']
     },
     {
-      title: 'IT Support & Helpdesk',
-      description: '24/7 technical support and helpdesk services',
-      icon: Users,
-      price: '$899/month',
-      features: ['24/7 Support', 'Remote Assistance', 'Ticket Management', 'Knowledge Base', 'User Training', 'System Maintenance'],
+      title: 'IT Support & Maintenance',
+      description: 'Comprehensive IT support and maintenance for all your technology needs',
+      icon: Headphones,
+      price: '$999/month',
+      features: ['24/7 Support', 'Remote Assistance', 'Hardware Maintenance', 'Software Updates', 'Security Patches', 'Performance Monitoring'],
       color: 'text-orange-400',
-      benefits: ['Instant response', '95% satisfaction', 'Proactive monitoring', 'User empowerment']
-    }
-  ];
-
-  const specializedServices = [
-    {
-      title: 'Quantum Computing Solutions',
-      description: 'Next-generation quantum algorithms and quantum security implementations',
-      icon: Atom,
-      price: 'Custom Pricing',
-      features: ['Quantum Algorithm Development', 'Quantum Security', 'Optimization Problems', 'Research & Development', 'Quantum Machine Learning', 'Cryptography'],
-      color: 'text-yellow-400',
-      benefits: ['Exponential speedup', 'Unbreakable security', 'Future-proof technology', 'Competitive advantage'],
-      category: 'Quantum'
-    },
-    {
-      title: 'Autonomous Systems',
-      description: 'Self-managing and self-optimizing systems for enterprise operations',
-      icon: Cpu,
-      price: 'Custom Pricing',
-      features: ['Self-Healing Systems', 'Predictive Maintenance', 'Resource Optimization', 'Performance Monitoring', 'Adaptive Learning', 'Intelligent Automation'],
-      color: 'text-green-400',
-      benefits: ['Zero-downtime operations', 'Predictive maintenance', 'Cost optimization', 'Scalable intelligence'],
-      category: 'Autonomous'
-    },
-    {
-      title: 'Blockchain & Web3',
-      description: 'Decentralized solutions, smart contracts, and Web3 applications',
-      icon: Lock,
-      price: '$2,999/month',
-      features: ['Smart Contract Development', 'DApp Creation', 'Token Economics', 'DeFi Solutions', 'NFT Platforms', 'DAO Implementation'],
-      color: 'text-purple-400',
-      benefits: ['Decentralized security', 'Transparent operations', 'Tokenization', 'Community governance'],
-      category: 'Blockchain'
-    },
-    {
-      title: 'IoT & Edge Computing',
-      description: 'Connected devices and edge computing solutions',
-      icon: Globe,
-      price: '$1,999/month',
-      features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation', 'Data Collection', 'Remote Monitoring'],
-      color: 'text-cyan-400',
-      benefits: ['Real-time insights', 'Reduced latency', 'Cost efficiency', 'Scalable connectivity'],
-      category: 'IoT'
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Data-driven insights and predictive analytics for decision-making',
-      icon: BarChart,
-      price: '$2,299/month',
-      features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards', 'Predictive Modeling', 'Real-time Reporting'],
-      color: 'text-blue-400',
-      benefits: ['Data-driven decisions', 'Predictive insights', 'Real-time analytics', 'Competitive intelligence'],
-      category: 'Analytics'
-    },
-    {
-      title: 'Robotics Solutions',
-      description: 'Intelligent robotic solutions for manufacturing and service industries',
-      icon: Settings,
-      price: 'Custom Pricing',
-      features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems', 'Quality Control', 'Assembly Automation'],
-      color: 'text-orange-400',
-      benefits: ['Increased productivity', 'Consistent quality', '24/7 operation', 'Cost reduction'],
-      category: 'Robotics'
+      contact: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      benefits: ['Instant response', 'Proactive maintenance', 'Cost-effective', 'Expert team']
     }
   ];
 
@@ -374,7 +362,7 @@ const HomePage: React.FC = () => {
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'micro SAAS', 'IT services']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -392,14 +380,17 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'Micro SAAS',
+            'IT Services'
           ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
+            email: 'kleber@ziontechgroup.com'
           },
           address: {
             '@type': 'PostalAddress',
@@ -526,7 +517,7 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
@@ -568,12 +559,26 @@ const HomePage: React.FC = () => {
                   
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
-                    <a 
-                      href={service.link} 
-                      className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
-                    >
-                      Learn More
-                    </a>
+                    <div className="flex flex-col gap-2">
+                      <a 
+                        href={service.link} 
+                        className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      >
+                        Learn More
+                      </a>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        Contact: {service.contact}
+                      </a>
+                      <a 
+                        href={`tel:${service.phone}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        Phone: {service.phone}
+                      </a>
+                    </div>
                   </div>
                 </article>
               ))}
@@ -589,111 +594,19 @@ const HomePage: React.FC = () => {
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/ai-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          {/* IT Services Section */}
-          <section className="mb-16" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              IT Services
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive IT solutions for modern enterprise infrastructure
-            </p>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/it-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          {/* Specialized Services Section */}
-          <section className="mb-16" aria-labelledby="specialized-services-heading">
-            <h2 id="specialized-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              Specialized Solutions
-            </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Cutting-edge technologies for next-generation business solutions
-            </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {specializedServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                    <service.icon className="w-8 h-8 text-white" />
+              {aiServices.map((service, index) => (
+                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <service.icon className={`w-8 h-8 ${service.color} mr-3`} />
+                    <h3 className="text-xl font-bold text-white neon-text">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
                     <ul className="space-y-1">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
@@ -717,68 +630,167 @@ const HomePage: React.FC = () => {
                   </div>
                   
                   <div className="text-center">
-                    <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
-                    <a 
-                      href="/specialized-services" 
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
-                      Learn More
-                    </a>
+                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="flex flex-col gap-2">
+                      <a 
+                        href="/contact" 
+                        className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      >
+                        Get Started
+                      </a>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {service.contact}
+                      </a>
+                      <a 
+                        href={`tel:${service.phone}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {service.phone}
+                      </a>
+                    </div>
                   </div>
                 </article>
               ))}
             </div>
           </section>
 
-          {/* Contact Information */}
-          <section className="mb-16" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Get In Touch
+          {/* IT Services Section */}
+          <section className="mb-16" aria-labelledby="it-services-heading">
+            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              IT Services
             </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Comprehensive IT solutions for modern businesses
+            </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
-                <p className="text-gray-300 mb-4">+1 302 464 0950</p>
-                <a 
-                  href="tel:+13024640950" 
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {itServices.map((service, index) => (
+                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <service.icon className={`w-8 h-8 ${service.color} mr-3`} />
+                    <h3 className="text-xl font-bold text-white neon-text">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
+                          <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="flex flex-col gap-2">
+                      <a 
+                        href="/contact" 
+                        className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
+                      >
+                        Get Started
+                      </a>
+                      <a 
+                        href={`mailto:${service.contact}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {service.contact}
+                      </a>
+                      <a 
+                        href={`tel:${service.phone}`}
+                        className="text-xs text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {service.phone}
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          {/* Contact Information Section */}
+          <section className="mb-16" aria-labelledby="contact-heading">
+            <div className="cyber-card p-8 text-center">
+              <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact us today to discuss your AI and IT needs. Our expert team is ready to help you achieve unprecedented growth and efficiency.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <div className="flex items-center justify-center gap-3">
+                  <Phone className="w-6 h-6 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Phone</p>
+                    <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      +1 302 464 0950
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-3">
+                  <Mail className="w-6 h-6 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Email</p>
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                      kleber@ziontechgroup.com
+                    </a>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-3 sm:col-span-2 lg:col-span-1">
+                  <MapPin className="w-6 h-6 text-cyan-400" />
+                  <div>
+                    <p className="text-white font-semibold">Address</p>
+                    <p className="text-cyan-400">
+                      364 E Main St STE 1008<br />
+                      Middletown, DE 19709
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                >
+                  Get Free Consultation
+                </a>
+                <a
+                  href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
+                  <Phone className="w-5 h-5" />
                   Call Now
-                </a>
-              </div>
-              
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
-                <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                >
-                  Send Email
-                </a>
-              </div>
-              
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
-                <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                <a 
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-400 hover:text-green-300 font-medium transition-colors"
-                >
-                  View on Map
                 </a>
               </div>
             </div>
           </section>
         </main>
 
+        {/* Footer */}
         <Footer />
       </div>
     </>
