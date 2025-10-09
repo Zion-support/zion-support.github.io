@@ -74,22 +74,13 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-<<<<<<< HEAD
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-=======
-    "*.ts",
-    "*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "App.tsx",
     "api/**/*.js",
     "api/**/*.ts",
     "app/**/*.ts",
     "app/**/*.tsx",
-    "components/**/*",
-    "src/**/*",
->>>>>>> cursor/website-audit-and-update-with-deployment-1500
     ".next/types/**/*.ts"
   ],
   "exclude": [
