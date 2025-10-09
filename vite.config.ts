@@ -4,8 +4,8 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -39,16 +39,16 @@ export default defineConfig({
             return 'vendor';
           }
           // Page chunks - group similar pages
-          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision')) {
+          if (id.includes('/src/ai-') || id.includes('/src/machine-learning') || id.includes('/src/nlp') || id.includes('/src/computer-vision') || id.includes('/app/ai-')) {
             return 'pages-ai';
           }
-          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops')) {
+          if (id.includes('/src/it-') || id.includes('/src/cloud-') || id.includes('/src/cybersecurity') || id.includes('/src/devops') || id.includes('/app/it-') || id.includes('/app/cloud-')) {
             return 'pages-it';
           }
-          if (id.includes('/src/blog/')) {
+          if (id.includes('/src/blog/') || id.includes('/app/blog/')) {
             return 'pages-blog';
           }
-          if (id.includes('/src/')) {
+          if (id.includes('/src/') || id.includes('/app/')) {
             return 'pages-other';
           }
         },
