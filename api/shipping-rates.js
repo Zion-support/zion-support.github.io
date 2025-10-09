@@ -2,12 +2,7 @@ const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-=======
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   try {
@@ -15,12 +10,7 @@ async function handler(req, res) {
     const apiKey = process.env.EASYPOST_API_KEY;
 
     if (!apiKey) {
-<<<<<<< HEAD
-      res.status(500).json({ error: 'EasyPost API key not configured' });
-      return;
-=======
-      return res.status(500).json({ error: 'Shipping API key not configured' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+      return res.status(500).json({ error: 'EasyPost API key not configured' });
     }
 
     const response = await fetch('https://api.easypost.com/v2/shipments', {

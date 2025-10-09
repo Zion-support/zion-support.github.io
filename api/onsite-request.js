@@ -4,17 +4,6 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-
-  const { name, email, company, message } = req.body || {};
-
-  if (!name || !email) {
-    res.status(400).json({ error: 'Name and email are required' });
-    return;
-=======
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -31,7 +20,6 @@ async function handler(req, res) {
 
   if (!name || !email) {
     return res.status(400).json({ error: 'Name and email are required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');

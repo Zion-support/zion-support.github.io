@@ -610,8 +610,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
 /* Additional Futuristic Styles */
 /* Energy Pulse Animation */
 .energy-pulse {
@@ -1381,7 +1379,6 @@ body {
   }
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
 /* Screen Reader Only */
 .sr-only {
   position: absolute;
@@ -1406,9 +1403,6 @@ body {
   white-space: normal;
 }
 
-<<<<<<< HEAD
-/* Focus Styles */
-=======
 /* Enhanced Accessibility Styles */
 .high-contrast {
   --neon-cyan: #00ffff;
@@ -1473,14 +1467,6 @@ body {
   outline-offset: 2px;
 }
 
-<<<<<<< HEAD
-/* High Contrast Mode */
-.high-contrast {
-  --neon-cyan: #00ffff;
-  --neon-pink: #ff00ff;
-  --neon-green: #00ff00;
-}
-=======
 /* Performance Optimizations */
 .will-change-transform {
   will-change: transform;
@@ -1774,4 +1760,3 @@ input:focus, textarea:focus, select:focus {
     scroll-behavior: auto !important;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0133

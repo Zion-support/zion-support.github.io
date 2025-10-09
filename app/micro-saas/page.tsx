@@ -1,10 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Package, Mic, PenTool, Box, Shirt, Wifi, Link, Atom } from 'lucide-react';
-=======
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -25,39 +21,8 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Complete projects 30% faster', 'Reduce project risks', 'Better team coordination'],
       popular: false,
       rating: 4.6,
-<<<<<<< HEAD
       users: 4200,
       link: 'https://ziontechgroup.com/ai-project-manager'
-=======
-      reviews: 892,
-      features: ['Automatic receipt scanning', 'Smart categorization', 'Budget alerts', 'Expense analytics'],
-      icon: DollarSign,
-      popular: true
-    },
-    {
-      id: 'ai-scheduler',
-      name: 'AI Scheduler',
-      description: 'Intelligent scheduling assistant that optimizes your calendar',
-      category: 'productivity',
-      price: { starting: 24, period: 'month' },
-      rating: 4.7,
-      reviews: 654,
-      features: ['Smart meeting scheduling', 'Conflict resolution', 'Time optimization', 'Calendar integration'],
-      popular: true
-    },
-    {
-      id: 'ai-content-generator',
-      name: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      icon: FileText,
-      category: 'content',
-      pricing: { starting: 29, period: 'month' },
-      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization'],
-      benefits: ['Save 80% time on content creation', 'Consistent brand voice', 'SEO-optimized content'],
-      popular: true,
-      rating: 4.9,
-      users: 12500
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
     },
     {
       id: 'ai-chatbot-builder',
@@ -93,45 +58,12 @@ const MicroSAASPage: React.FC = () => {
       description: 'Transform complex data into beautiful, interactive visualizations with AI-powered insights.',
       icon: BarChart,
       category: 'analytics',
-<<<<<<< HEAD
       pricing: { starting: 69, period: 'month' },
       features: ['Auto chart generation', 'Interactive dashboards', 'Real-time updates', 'Custom themes', 'Export options', 'Collaboration tools'],
       benefits: ['Make data accessible', 'Faster decision making', 'Professional presentations'],
-=======
-      pricing: { starting: 39, period: 'month' },
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization'],
-      benefits: ['Make data-driven decisions', 'Identify trends early', 'Automated reporting'],
       popular: false,
       rating: 4.7,
       users: 5600
-    },
-    {
-      id: 'ai-email-marketing',
-      name: 'AI Email Marketing',
-      description: 'Automate email campaigns with AI-powered personalization and optimization.',
-      icon: Mail,
-      category: 'marketing',
-      pricing: { starting: 59, period: 'month' },
-      features: ['Smart segmentation', 'A/B testing', 'Send time optimization', 'Performance tracking'],
-      benefits: ['Increase open rates by 40%', 'Automated personalization', 'Better deliverability'],
-      popular: true,
-      rating: 4.8,
-      users: 10200
-    },
-    {
-      id: 'ai-project-manager',
-      name: 'AI Project Manager',
-      description: 'Intelligent project management with AI-powered task optimization and team coordination.',
-      icon: Calendar,
-      category: 'productivity',
-      pricing: { starting: 79, period: 'month' },
-      features: ['Smart task scheduling', 'Resource optimization', 'Risk prediction', 'Team collaboration'],
-      benefits: ['Complete projects 30% faster', 'Reduce project risks', 'Better team coordination'],
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
-      popular: false,
-      rating: 4.6,
-      users: 8900,
-      link: 'https://ziontechgroup.com/ai-data-visualization'
     },
     {
       id: 'ai-workflow-automation',

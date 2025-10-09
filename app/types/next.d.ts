@@ -14,10 +14,7 @@ export interface Metadata {
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
-<<<<<<< HEAD
     languages?: Record<string, string>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9def
   };
   openGraph?: {
     title?: string;
