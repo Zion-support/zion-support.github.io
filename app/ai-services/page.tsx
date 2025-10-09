@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useState } from 'react';
-import Link from 'next/link';
 import { ArrowRight, Star, CheckCircle, Zap, Brain, Shield, Clock, Users, TrendingUp, BarChart, Globe, Smartphone, Mail, FileText, Image, Video, Music, Code, Database, Cloud, Lock, Target, PieChart, Settings, Rocket, Award, DollarSign, Calendar, MessageSquare, Search, Filter, Download, Upload, Share, Eye, Edit, Trash, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, VolumeX, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalHigh, SignalLow, Wifi2, WifiOff2, Battery2, BatteryLow2, Signal2, SignalHigh2, SignalLow2 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {

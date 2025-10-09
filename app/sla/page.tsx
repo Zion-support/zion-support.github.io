@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const SLAPage: React.FC = () => {
@@ -14,9 +12,7 @@ const SLAPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/sla"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
+                <main className="container mx-auto px-4 py-16 pt-24">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center neon-text">
               Service Level Agreement (SLA)
@@ -136,8 +132,7 @@ const SLAPage: React.FC = () => {
           </div>
         </main>
         
-        <Footer />
-      </div>
+              </div>
     </>
   );
 };

@@ -1,10 +1,6 @@
 'use client';
-
 import React, { useState, useEffect, useCallback, lazy, memo, Suspense } from 'react';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 
@@ -71,9 +67,6 @@ export default function HomePage() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Navigation */}
-        <Navigation />
-        
         <main className="relative z-10">
         {/* Hero Section */}
         <section 
@@ -156,12 +149,6 @@ export default function HomePage() {
           <ContentNewsletterSignup />
         </Suspense>
         </main>
-
-        {/* Footer */}
-        <Footer />
-        
-        {/* Scroll to Top Button */}
-        <ScrollToTop />
       </div>
     </ErrorBoundary>
   );
