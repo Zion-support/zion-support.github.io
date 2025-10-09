@@ -256,9 +256,10 @@ const Navigation: React.FC = () => {
 
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'AWS, Azure, GCP Migration' },
+    { name: 'Cybersecurity Suite', href: '/cybersecurity-suite', icon: Shield, description: 'Advanced Security' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
@@ -266,7 +267,10 @@ const Navigation: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '100+ AI Tools' },
+    { name: 'AI Project Manager', href: '/ai-project-manager', icon: Target, description: 'AI Project Management' },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Users, description: 'Customer Analytics' },
+    { name: 'AI Financial Planner', href: '/ai-financial-planner', icon: TrendingUp, description: 'Financial Planning' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },

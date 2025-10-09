@@ -64,31 +64,9 @@ const Footer: React.FC = memo(() => {
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Database Services', url: '/database', description: 'Database management' },
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
-    { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
-=======
-    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
-    { name: 'Database Management', url: '/database-management', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'System Administration', url: '/system-administration', description: 'System management' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
-    { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
-=======
-    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Advanced security solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Advanced security solutions' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
     { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Enterprise networking' },
@@ -101,11 +79,13 @@ const Footer: React.FC = memo(() => {
     { name: 'Identity & Access Management', url: '/identity-access-management', description: 'Security & access control' },
     { name: 'Performance Optimization', url: '/performance-optimization', description: 'System tuning' },
     { name: 'Global IT Services', url: '/global-it-services', description: 'Worldwide IT support' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
   ];
 
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '100+ AI-powered tools' },
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'AI-powered project management' },
+    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Customer analytics & insights' },
+    { name: 'AI Financial Planner', url: '/ai-financial-planner', description: 'Financial planning & analysis' },
     { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent customer management' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Content creation suite' },
@@ -119,8 +99,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI E-commerce Assistant', url: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
     { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
     { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI-powered design tools' },
-    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
-    { name: 'AI Financial Planner', url: '/ai-financial-planner', description: 'Financial planning & analysis' }
+    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' }
   ];
 
   const emergingTech = [
