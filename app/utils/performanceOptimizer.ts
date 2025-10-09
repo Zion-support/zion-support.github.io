@@ -18,6 +18,7 @@ interface PerformanceMetrics {
   memoryUsage: number;
   bundleSize: number;
   cacheHitRate: number;
+  lazyLoading: boolean;
   firstContentfulPaint?: number;
   fcp?: number;
   lcp?: number;
@@ -45,6 +46,7 @@ class PerformanceOptimizer {
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
+    lazyLoading: false,
   };
 
   private config: OptimizationConfig = {
@@ -442,6 +444,7 @@ class PerformanceOptimizer {
       memoryUsage: this.metrics.memoryUsage,
       bundleSize: this.metrics.bundleSize,
       cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
       ttfb: navigation.responseStart - navigation.requestStart,
       fcp: this.metrics.fcp || 0,
       lcp: this.metrics.lcp || 0,

@@ -8,7 +8,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
+jest.mock('./app/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -18,18 +18,18 @@ jest.mock('./src/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./src/utils/analytics.ts', () => ({
+jest.mock('./app/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./src/utils/errorTracking.ts', () => ({
+jest.mock('./app/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
 
-jest.mock('./src/hooks/usePerformance.ts', () => ({
+jest.mock('./app/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
