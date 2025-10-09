@@ -15,7 +15,18 @@ const Footer: React.FC = () => {
     { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
     { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' },
+    { name: 'AI Inventory Manager Pro', url: '/ai-inventory-manager', description: 'AI inventory optimization' },
+    { name: 'AI HR Assistant Pro', url: '/ai-hr-assistant', description: 'AI HR management' },
+    { name: 'AI Financial Advisor Pro', url: '/ai-financial-advisor', description: 'AI financial planning' },
+    { name: 'AI Legal Assistant Pro', url: '/ai-legal-assistant', description: 'AI legal support' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI SEO optimization' },
+    { name: 'AI Translation Hub', url: '/ai-translation-hub', description: 'AI translation services' },
+    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'AI security monitoring' },
+    { name: 'AI Real Estate Analyzer', url: '/ai-real-estate-analyzer', description: 'AI real estate analysis' },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare-assistant', description: 'AI healthcare support' },
+    { name: 'AI Education Platform', url: '/ai-education-platform', description: 'AI learning platform' },
+    { name: 'AI Manufacturing Optimizer', url: '/ai-manufacturing-optimizer', description: 'AI manufacturing optimization' }
   ];
 
   const aiServices = [
@@ -30,7 +41,22 @@ const Footer: React.FC = () => {
     { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Smart mobile apps' },
     { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
-    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' },
+    { name: 'AI Real Estate Intelligence', url: '/ai-real-estate-intelligence', description: 'Real estate AI' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare-solutions', description: 'Medical AI' },
+    { name: 'AI Education Technology', url: '/ai-education-technology', description: 'EdTech AI' },
+    { name: 'AI Manufacturing Intelligence', url: '/ai-manufacturing-intelligence', description: 'Manufacturing AI' },
+    { name: 'AI Transportation & Logistics', url: '/ai-transportation-logistics', description: 'Logistics AI' },
+    { name: 'AI Insurance Technology', url: '/ai-insurance-technology', description: 'InsurTech AI' },
+    { name: 'AI Agriculture Technology', url: '/ai-agriculture-technology', description: 'AgTech AI' },
+    { name: 'AI Food Service Intelligence', url: '/ai-food-service-intelligence', description: 'FoodTech AI' },
+    { name: 'AI Event Management', url: '/ai-event-management', description: 'Event AI' },
+    { name: 'AI Travel Intelligence', url: '/ai-travel-intelligence', description: 'Travel AI' },
+    { name: 'AI Pet Care Technology', url: '/ai-pet-care-technology', description: 'PetTech AI' },
+    { name: 'AI Legal Technology', url: '/ai-legal-technology', description: 'LegalTech AI' },
+    { name: 'AI Financial Technology', url: '/ai-financial-technology', description: 'FinTech AI' },
+    { name: 'AI Marketing Intelligence', url: '/ai-marketing-intelligence', description: 'MarTech AI' },
+    { name: 'AI Human Resources Technology', url: '/ai-hr-technology', description: 'HRTech AI' }
   ];
 
   const itServices = [
@@ -45,7 +71,21 @@ const Footer: React.FC = () => {
     { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
     { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
-    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
+    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' },
+    { name: 'AI Infrastructure & MLOps', url: '/ai-infrastructure-mlops', description: 'AI infrastructure' },
+    { name: 'Enterprise Integration Services', url: '/enterprise-integration', description: 'System integration' },
+    { name: 'Disaster Recovery & Business Continuity', url: '/disaster-recovery', description: 'Business continuity' },
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle management' },
+    { name: 'IT Training & Certification', url: '/it-training-certification', description: 'IT training programs' },
+    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Performance optimization' },
+    { name: 'IT Security Consulting', url: '/it-security-consulting', description: 'Security consulting' },
+    { name: 'IT Project Management', url: '/it-project-management', description: 'Project delivery' },
+    { name: 'IT Vendor Management', url: '/it-vendor-management', description: 'Vendor relationships' },
+    { name: 'IT Change Management', url: '/it-change-management', description: 'Change processes' },
+    { name: 'IT Service Desk', url: '/it-service-desk', description: 'Help desk services' },
+    { name: 'IT Documentation Services', url: '/it-documentation', description: 'Technical documentation' },
+    { name: 'IT Quality Assurance', url: '/it-quality-assurance', description: 'QA & testing' },
+    { name: 'IT Innovation Lab', url: '/it-innovation-lab', description: 'Innovation & R&D' }
   ];
 
   const specializedServices = [
@@ -80,7 +120,9 @@ const Footer: React.FC = () => {
     { name: 'Blog', url: '/blog' },
     { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'Demo', url: '/demo' }
+    { name: 'Demo', url: '/demo' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Investors', url: '/investors' }
   ];
 
   const supportLinks = [
@@ -89,7 +131,11 @@ const Footer: React.FC = () => {
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Status Page', url: '/status' },
-    { name: 'System Health', url: '/system-status' }
+    { name: 'System Health', url: '/system-status' },
+    { name: 'Help Center', url: '/help' },
+    { name: 'Community', url: '/community' },
+    { name: 'Training', url: '/training' },
+    { name: 'FAQ', url: '/faq' }
   ];
 
   const legalLinks = [
@@ -98,15 +144,18 @@ const Footer: React.FC = () => {
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'Data Protection', url: '/data-protection' },
+    { name: 'Accessibility', url: '/accessibility' },
+    { name: 'Sitemap', url: '/sitemap' }
   ];
 
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -137,7 +186,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Micro SAAS Services */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
               Micro SAAS
@@ -162,7 +211,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* AI & IT Services */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
@@ -205,7 +254,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Additional AI Services */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
               AI Tools
@@ -226,7 +275,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company & Support */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
             <div className="grid grid-cols-2 gap-4">
               <div>

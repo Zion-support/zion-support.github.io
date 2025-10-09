@@ -97,7 +97,26 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera },
+    { name: 'AI Inventory Manager Pro', href: '/ai-inventory-manager', icon: Package },
+    { name: 'AI HR Assistant Pro', href: '/ai-hr-assistant', icon: Users },
+    { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Legal Assistant Pro', href: '/ai-legal-assistant', icon: Scale },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
+    { name: 'AI Translation Hub', href: '/ai-translation-hub', icon: Globe },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield },
+    { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: Home },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: GraduationCap },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Factory },
+    { name: 'AI Transportation Manager', href: '/ai-transportation-manager', icon: Truck },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Insurance Analyzer', href: '/ai-insurance-analyzer', icon: Shield },
+    { name: 'AI Agriculture Assistant', href: '/ai-agriculture-assistant', icon: Heart },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Home },
+    { name: 'AI Event Planner', href: '/ai-event-planner', icon: Calendar },
+    { name: 'AI Travel Assistant', href: '/ai-travel-assistant', icon: Plane },
+    { name: 'AI Pet Care Assistant', href: '/ai-pet-care-assistant', icon: Heart }
   ];
 
   const aiServices = [
@@ -123,7 +142,22 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
+    { name: 'AI Real Estate Intelligence', href: '/ai-real-estate-intelligence', icon: Home },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare-solutions', icon: Stethoscope },
+    { name: 'AI Education Technology', href: '/ai-education-technology', icon: GraduationCap },
+    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing-intelligence', icon: Factory },
+    { name: 'AI Transportation & Logistics', href: '/ai-transportation-logistics', icon: Truck },
+    { name: 'AI Insurance Technology', href: '/ai-insurance-technology', icon: Shield },
+    { name: 'AI Agriculture Technology', href: '/ai-agriculture-technology', icon: Heart },
+    { name: 'AI Food Service Intelligence', href: '/ai-food-service-intelligence', icon: Home },
+    { name: 'AI Event Management', href: '/ai-event-management', icon: Calendar },
+    { name: 'AI Travel Intelligence', href: '/ai-travel-intelligence', icon: Plane },
+    { name: 'AI Pet Care Technology', href: '/ai-pet-care-technology', icon: Heart },
+    { name: 'AI Legal Technology', href: '/ai-legal-technology', icon: FileText },
+    { name: 'AI Financial Technology', href: '/ai-financial-technology', icon: DollarSign },
+    { name: 'AI Marketing Intelligence', href: '/ai-marketing-intelligence', icon: Target },
+    { name: 'AI Human Resources Technology', href: '/ai-hr-technology', icon: Users }
   ];
 
   const itServices = [
@@ -148,7 +182,21 @@ const Navigation: React.FC = () => {
     { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart },
+    { name: 'AI Infrastructure & MLOps', href: '/ai-infrastructure-mlops', icon: Brain },
+    { name: 'Enterprise Integration Services', href: '/enterprise-integration', icon: Link },
+    { name: 'Disaster Recovery & Business Continuity', href: '/disaster-recovery', icon: HardDrive },
+    { name: 'IT Asset Management', href: '/it-asset-management', icon: BarChart },
+    { name: 'IT Training & Certification', href: '/it-training-certification', icon: GraduationCap },
+    { name: 'IT Performance Monitoring', href: '/it-performance-monitoring', icon: Activity },
+    { name: 'IT Security Consulting', href: '/it-security-consulting', icon: Shield },
+    { name: 'IT Project Management', href: '/it-project-management', icon: Target },
+    { name: 'IT Vendor Management', href: '/it-vendor-management', icon: Users },
+    { name: 'IT Change Management', href: '/it-change-management', icon: Settings },
+    { name: 'IT Service Desk', href: '/it-service-desk', icon: Phone },
+    { name: 'IT Documentation Services', href: '/it-documentation', icon: FileText },
+    { name: 'IT Quality Assurance', href: '/it-quality-assurance', icon: CheckCircle },
+    { name: 'IT Innovation Lab', href: '/it-innovation-lab', icon: Sparkles }
   ];
 
   const specializedServices = [
@@ -286,6 +334,9 @@ const Navigation: React.FC = () => {
             <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
             </a>
+            <a href="/demo" className="text-white hover:text-cyan-400 transition-colors">
+              Demo
+            </a>
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
@@ -379,6 +430,9 @@ const Navigation: React.FC = () => {
               </a>
               <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
+              </a>
+              <a href="/demo" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Demo
               </a>
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
