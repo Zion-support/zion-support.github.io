@@ -1,20 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AIProjectManagerPage: React.FC = () => {
-  const _features = [
-=======
 import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AiProjectManagerPage: React.FC = () => {
   const features = [
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
@@ -108,7 +98,5 @@ const AiProjectManagerPage: React.FC = () => {
     </div>
   );
 };
-
-}
 
 export default AiProjectManagerPage;

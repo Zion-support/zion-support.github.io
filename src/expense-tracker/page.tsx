@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 import React from 'react';
 
 'use client';

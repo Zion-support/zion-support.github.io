@@ -187,12 +187,5 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
-
-export default RootLayout;
 }
 }
-=======
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03

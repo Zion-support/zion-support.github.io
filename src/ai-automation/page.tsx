@@ -100,6 +100,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-}
-
 export default AiAutomationPage;
