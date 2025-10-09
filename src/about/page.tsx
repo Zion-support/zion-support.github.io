@@ -235,5 +235,6 @@ const AboutPage: React.FC = () => {
 
         <Footer />
       </div>
+    </div>
   );
 };

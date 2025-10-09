@@ -214,7 +214,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };
