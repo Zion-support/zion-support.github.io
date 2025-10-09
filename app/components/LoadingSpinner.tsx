@@ -1,64 +1,38 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
-  className?: string;
+  size?: 'sm' | 'md' | 'lg';
   text?: string;
-  fullScreen?: boolean;
+  className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'primary',
-  className = '',
-  text,
-  fullScreen = false,
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text, 
+  className = '' 
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
+    lg: 'w-12 h-12'
   };
 
-  const colorClasses = {
-    primary: 'border-blue-500',
-    secondary: 'border-purple-500',
-    white: 'border-white',
-    gray: 'border-gray-500',
+  const textSizeClasses = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
   };
 
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div
-        className={`animate-spin rounded-full border-2 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}
-        role="status"
-        aria-label="Loading"
-      />
+  return (
+    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
+      <div className={`${sizeClasses[size]} border-4 border-cyan-200 border-t-cyan-500 rounded-full animate-spin`}></div>
       {text && (
-        <p className={`mt-3 text-sm ${
-          color === 'white' ? 'text-white' : 
-          color === 'gray' ? 'text-gray-500' : 
-          'text-gray-600'
-        }`}>
+        <p className={`text-gray-300 ${textSizeClasses[size]} font-medium`}>
           {text}
         </p>
       )}
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-white rounded-lg p-8 shadow-xl">
-          {spinner}
-        </div>
-      </div>
-    );
-  }
-
-  return spinner;
 };
 
 export default LoadingSpinner;
