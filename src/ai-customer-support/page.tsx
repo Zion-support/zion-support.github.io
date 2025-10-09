@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -89,13 +90,13 @@ const AICustomerSupportPage: React.FC = () => {
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Get Started</span>
-              </a>
+              </Link>
               <a
-                href="/contact"
+                to="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -159,7 +160,7 @@ const AICustomerSupportPage: React.FC = () => {
                     className="cyber-button w-full text-center block"
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -181,7 +182,7 @@ const AICustomerSupportPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -189,7 +190,7 @@ const AICustomerSupportPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

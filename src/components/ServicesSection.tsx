@@ -34,7 +34,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
               <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -50,7 +50,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
               <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -66,7 +66,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
               <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -85,7 +85,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
               <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -101,7 +101,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
               <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -117,7 +117,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $2,999/month</div>
               <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>
@@ -133,7 +133,7 @@ const ServicesSection: React.FC = () => {
               <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $1,799/month</div>
               <a href="/autonomous-systems" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                 Learn More →
-              </a>
+              </Link>
             </div>
           </article>
         </Suspense>

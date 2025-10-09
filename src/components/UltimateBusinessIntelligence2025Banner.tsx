@@ -169,7 +169,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               >
                 <span className="text-xl">📞</span>
                 <span>Call +1 302 464 0950</span>
-              </a>
+              </Link>
             </div>
           </div>
           {/* Slide Indicators */}

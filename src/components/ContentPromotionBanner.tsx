@@ -7,7 +7,7 @@ const ContentPromotionBanner: React.FC = () => {
           🚀 <strong>New:</strong> AI-Powered Business Intelligence Dashboard - 
           <a href="/business-intelligence" className="underline hover:no-underline ml-1">
             Learn More →
-          </a>
+          </Link>
         </p>
       </div>
     </div>

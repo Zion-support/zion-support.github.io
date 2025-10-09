@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -79,17 +80,17 @@ const AIContentGenerationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="cyber-button"
             >
               Get Started
-            </a>
+            </Link>
             <a
               href="tel:+13024640950"
               className="cyber-button"
             >
               Call (302) 464-0950
-            </a>
+            </Link>
           </div>
         </section>
         {/* Services Section */}
@@ -113,11 +114,11 @@ const AIContentGenerationPage: React.FC = () => {
                 </ul>
                 <div className="text-cyan-400 font-bold mb-4">{service.price}</div>
                 <a
-                  href="/contact"
+                  to="/contact"
                   className="cyber-button w-full text-center block"
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -151,17 +152,17 @@ const AIContentGenerationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="cyber-button"
             >
               Start Free Trial
-            </a>
+            </Link>
             <a
               href="tel:+13024640950"
               className="cyber-button"
             >
               Call (302) 464-0950
-            </a>
+            </Link>
           </div>
         </section>
       </main>

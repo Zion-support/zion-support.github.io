@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Link as LinkIcon, Shield, Zap, Target, Star, Coins, Brain, BarChart, Cpu } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {
@@ -181,7 +182,7 @@ const BlockchainPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Link className="w-8 h-8 text-orange-600" />
+                  <LinkIcon className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified developers with deep expertise in multiple blockchain platforms</p>
@@ -293,7 +294,7 @@ const BlockchainPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-100 rounded-lg">
-                <Link className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <LinkIcon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Secure, audited smart contracts for all blockchain platforms</p>
               </div>
@@ -340,13 +341,13 @@ const BlockchainPage: React.FC = () => {
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
-              </a>
+              </Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
-              </a>
+              </Link>
             </div>
             <div className="mt-8 text-sm text-orange-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

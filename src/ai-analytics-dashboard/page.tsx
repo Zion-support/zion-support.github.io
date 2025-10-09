@@ -149,13 +149,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Start Free Trial
-                </a>
+                </Link>
                 <a
                   href="#demo"
                   className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Watch Demo
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -284,7 +284,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     }`}
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -337,14 +337,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Free Trial
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all"
               >
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
-              </a>
+              </Link>
             </div>
             <div className="mt-8 text-blue-100">
               <p>Contact: kleber@ziontechgroup.com | Address: 364 E Main St STE 1008, Middletown, DE 19709</p>

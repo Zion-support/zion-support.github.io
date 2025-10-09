@@ -1,7 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
+  const categories = ['Threat Detection', 'Identity Management', 'Network Security', 'Compliance'];
+
   const securityServices = [
     {
       title: 'Advanced Threat Detection',
@@ -218,7 +220,7 @@ const CybersecurityPage: React.FC = () => {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {cyberServices
+                {securityServices
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -330,13 +332,13 @@ const CybersecurityPage: React.FC = () => {
                 className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
-              </a>
+              </Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
               >
                 ✉️ kleber@ziontechgroup.com
-              </a>
+              </Link>
             </div>
             <div className="mt-8 text-sm text-red-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 import dynamic from 'next/dynamic';
@@ -50,17 +51,17 @@ export default function OptimizedHomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
                 >
                   Get Your Free AI Assessment
-                </a>
+                </Link>
                 <a
                   href="/case-studies"
                   className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
                 >
                   View Success Stories
-                </a>
+                </Link>
               </div>
             </div>
           </div>

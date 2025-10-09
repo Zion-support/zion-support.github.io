@@ -112,14 +112,14 @@ const ApiDocsPage: React.FC = () => {
                 >
                   <Key className="w-5 h-5" />
                   +1 302 464 0950
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <Code className="w-5 h-5" />
                   kleber@ziontechgroup.com
-                </a>
+                </Link>
               </div>
             </div>
           </section>

@@ -242,7 +242,7 @@ const Navigation: React.FC = () => {
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
-              </a>
+              </Link>
               <Link
                 to="/contact"
                 className="cyber-button px-4 py-2 text-sm"
@@ -340,7 +340,7 @@ const Navigation: React.FC = () => {
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
-                </a>
+                </Link>
                 <Link
                   to="/contact"
                   className="block cyber-button px-4 py-2 text-center"

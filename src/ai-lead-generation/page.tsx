@@ -152,7 +152,7 @@ const AILeadGenerationPage: React.FC = () => {
                 >
                   <PhoneIcon className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -160,7 +160,7 @@ const AILeadGenerationPage: React.FC = () => {
                 >
                   <MailIcon className="w-5 h-5" />
                   <span>Get Free Demo</span>
-                </a>
+                </Link>
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -258,7 +258,7 @@ const AILeadGenerationPage: React.FC = () => {
                     }`}
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -279,7 +279,7 @@ const AILeadGenerationPage: React.FC = () => {
                 >
                   <PhoneIcon className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -287,7 +287,7 @@ const AILeadGenerationPage: React.FC = () => {
                 >
                   <MailIcon className="w-5 h-5" />
                   <span>Schedule Demo</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

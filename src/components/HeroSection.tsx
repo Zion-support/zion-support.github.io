@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 
@@ -66,13 +67,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
             aria-label="Call us at (302) 464-0950"
           >
             📞 Call: (302) 464-0950
-          </a>
+          </Link>
           <a 
-            href="/contact"
+            to="/contact"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
           >
             Get Free Consultation
-          </a>
+          </Link>
         </div>
       </div>
     </section>

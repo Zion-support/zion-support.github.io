@@ -259,13 +259,13 @@ const DemoPage: React.FC = () => {
                         <Phone className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
                           (302) 464-0950
-                        </a>
+                        </Link>
                       </div>
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
                         <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
                           kleber@ziontechgroup.com
-                        </a>
+                        </Link>
                       </div>
                       <div className="flex items-center">
                         <Clock className="w-5 h-5 text-cyan-400 mr-3" />

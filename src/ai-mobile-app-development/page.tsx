@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, Smartphone, Database, Cloud } from 'lucide-react';
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -233,13 +234,13 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
-              </a>
+              </Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 ✉️ Get Free Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -309,11 +310,11 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                   ))}
                 </div>
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
                   Start Building
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -391,13 +392,13 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
             >
               📞 +1 302 464 0950
-            </a>
+            </Link>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               ✉️ kleber@ziontechgroup.com
-            </a>
+            </Link>
           </div>
           <div className="mt-8 text-sm text-indigo-200">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

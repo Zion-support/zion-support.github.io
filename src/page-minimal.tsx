@@ -27,7 +27,7 @@ export default function HomePage() {
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
               </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
+              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
               </Link>
             </nav>
@@ -59,7 +59,7 @@ export default function HomePage() {
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -122,7 +122,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
@@ -150,7 +150,7 @@ export default function HomePage() {
             <div className="flex justify-center space-x-6">
               <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
               <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
               <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">

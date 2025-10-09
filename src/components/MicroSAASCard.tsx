@@ -90,7 +90,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
           >
             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+          </Link>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
       </div>

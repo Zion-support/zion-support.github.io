@@ -5,6 +5,29 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
 const AIDataVisualizationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: BarChart,
+      title: 'Marketing Analytics',
+      description: 'Track campaign performance, customer engagement, and ROI across all channels.'
+    },
+    {
+      icon: PieChart,
+      title: 'Financial Reporting',
+      description: 'Create comprehensive financial dashboards with real-time revenue and expense tracking.'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Sales Performance',
+      description: 'Monitor sales metrics, pipeline health, and team performance with interactive charts.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Insights',
+      description: 'Analyze customer behavior, satisfaction scores, and retention patterns.'
+    }
+  ];
+
   const features = [
     {
       icon: BarChart,
@@ -90,7 +113,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -98,7 +121,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
-                </a>
+                </Link>
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -188,7 +211,7 @@ const AIDataVisualizationPage: React.FC = () => {
                     className="cyber-button w-full text-center block"
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -210,7 +233,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -218,7 +241,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

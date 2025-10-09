@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -56,13 +57,13 @@ const CloudServicesPage: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
               Get Started Today
-            </a>
+            </Link>
             <a
-              href="/contact"
+              to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
               Learn More
-            </a>
+            </Link>
           </div>
         </section>
         {/* Services Grid */}
@@ -114,13 +115,13 @@ const CloudServicesPage: React.FC = () => {
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
               Call (302) 464-0950
-            </a>
+            </Link>
             <a
-              href="/contact"
+              to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
               Get Free Consultation
-            </a>
+            </Link>
           </div>
         </section>
       </main>

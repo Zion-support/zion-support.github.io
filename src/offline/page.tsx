@@ -112,7 +112,7 @@ const OfflinePage: React.FC = () => {
               className='text-indigo-600 hover:text-indigo-700 font-medium'
             >
               Call +1 302 464 0950
-            </a>
+            </Link>
           </p>
         </div>
       </div>

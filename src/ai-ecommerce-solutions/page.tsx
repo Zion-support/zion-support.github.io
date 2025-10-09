@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Users, BarChart3, Zap, Shield } from 'lucide-react';
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -212,13 +213,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
                 📞 +1 302 464 0950
-              </a>
+              </Link>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 ✉️ Get E-commerce Audit
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -285,11 +286,11 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                   ))}
                 </div>
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
                 >
                   Boost Sales Now
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -367,13 +368,13 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
             >
               📞 +1 302 464 0950
-            </a>
+            </Link>
             <a 
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               ✉️ kleber@ziontechgroup.com
-            </a>
+            </Link>
           </div>
           <div className="mt-8 text-sm text-purple-200">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>

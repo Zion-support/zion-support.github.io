@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
@@ -148,12 +149,12 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 🔄 Reload Page
               </button>
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
               >
                 📞 Contact Support
-              </a>
+              </Link>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
               <details className="mt-6 text-left">

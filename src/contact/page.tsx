@@ -218,7 +218,7 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
                     <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       +1 (302) 464-0950
-                    </a>
+                    </Link>
                     <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
@@ -231,7 +231,7 @@ const ContactPage: React.FC = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
                     <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                       kleber@ziontechgroup.com
-                    </a>
+                    </Link>
                     <p className="text-sm text-gray-400 mt-1">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -291,7 +291,7 @@ const ContactPage: React.FC = () => {
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: (302) 464-0950
-              </a>
+              </Link>
             </div>
           </div>
         </div>

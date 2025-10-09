@@ -246,7 +246,7 @@ class AdvancedErrorBoundary extends Component<
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

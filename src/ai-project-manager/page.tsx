@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import { Phone, Mail, MapPin, CheckCircle, Star, Zap, BarChart, Users, Clock, Target, TrendingUp, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -67,18 +68,18 @@ const AIProjectManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Get Started Today
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
-              </a>
+              </Link>
             </div>
           </section>
 
@@ -141,7 +142,7 @@ const AIProjectManagerPage: React.FC = () => {
                     ))}
                   </ul>
                   <a
-                    href="/contact"
+                    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
@@ -149,7 +150,7 @@ const AIProjectManagerPage: React.FC = () => {
                     }`}
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -165,18 +166,18 @@ const AIProjectManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Contact Us
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
-              </a>
+              </Link>
             </div>
           </section>
         </main>

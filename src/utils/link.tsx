@@ -39,7 +39,7 @@ export const Link: React.FC<LinkProps> = ({
       {...props}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 export default Link;

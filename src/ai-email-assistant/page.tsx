@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -28,13 +29,13 @@ export default function AIEmailAssistantPage() {
               className="cyber-button w-full sm:w-auto text-center"
             >
               📞 Call: (302) 464-0950
-            </a>
+            </Link>
             <a 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Get Free Demo
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -116,9 +117,9 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Email templates</li>
                 <li>✓ Basic analytics</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <Link to="/contact" className="cyber-button w-full text-center">
                 Get Started
-              </a>
+              </Link>
             </div>
             
             <div className="cyber-card hologram-card p-8 text-center border-2 border-cyan-400">
@@ -133,9 +134,9 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Advanced analytics</li>
                 <li>✓ Team collaboration</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <Link to="/contact" className="cyber-button w-full text-center">
                 Get Started
-              </a>
+              </Link>
             </div>
             
             <div className="cyber-card hologram-card p-8 text-center">
@@ -149,9 +150,9 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Dedicated support</li>
                 <li>✓ Custom analytics</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <Link to="/contact" className="cyber-button w-full text-center">
                 Contact Sales
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -171,13 +172,13 @@ export default function AIEmailAssistantPage() {
               className="cyber-button w-full sm:w-auto text-center"
             >
               📞 Call: (302) 464-0950
-            </a>
+            </Link>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
             >
               📧 Email Us
-            </a>
+            </Link>
           </div>
         </section>
       </main>

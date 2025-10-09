@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 import React from 'react';
 import { Code, Brain, BarChart, MessageSquare, Palette, Search, Mail, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap } from 'lucide-react';
@@ -133,17 +134,17 @@ const MicroSAASPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
               Browse All Solutions
-            </a>
+            </Link>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               (302) 464-0950
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -169,11 +170,11 @@ const MicroSAASPage: React.FC = () => {
                       <div className="text-right">
                         <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
                         <a
-                          href="/contact"
+                          to="/contact"
                           className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
                         >
                           Learn More →
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   ))}
@@ -223,11 +224,11 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
               <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
@@ -251,11 +252,11 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
@@ -279,11 +280,11 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Contact Sales
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -297,17 +298,17 @@ const MicroSAASPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 Browse All Solutions
-              </a>
+              </Link>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 (302) 464-0950
-              </a>
+              </Link>
             </div>
             <div className="mt-8 text-sm text-gray-400">
               <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>

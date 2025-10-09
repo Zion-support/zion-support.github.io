@@ -173,7 +173,7 @@ const PricingPage: React.FC = () => {
                     }`}
                   >
                     {plan.popular ? 'Contact Sales' : plan.cta}
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -226,7 +226,7 @@ const PricingPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -234,7 +234,7 @@ const PricingPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Quote</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

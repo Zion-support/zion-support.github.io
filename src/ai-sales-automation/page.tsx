@@ -5,6 +5,29 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: Building,
+      title: 'Enterprise Sales',
+      description: 'Automate complex B2B sales processes with AI-powered lead scoring and pipeline management.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce Sales',
+      description: 'Boost online sales with personalized product recommendations and automated follow-ups.'
+    },
+    {
+      icon: Home,
+      title: 'Real Estate',
+      description: 'Streamline property sales with automated lead nurturing and client communication.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS Sales',
+      description: 'Optimize software sales with intelligent trial management and conversion tracking.'
+    }
+  ];
+
   const features = [
     {
       icon: Target,
@@ -90,7 +113,7 @@ const AISalesAutomationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -98,7 +121,7 @@ const AISalesAutomationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
-                </a>
+                </Link>
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -188,7 +211,7 @@ const AISalesAutomationPage: React.FC = () => {
                     className="cyber-button w-full text-center block"
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -210,7 +233,7 @@ const AISalesAutomationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -218,7 +241,7 @@ const AISalesAutomationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

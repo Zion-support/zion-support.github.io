@@ -5,6 +5,29 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
+  const useCases = [
+    {
+      icon: Zap,
+      title: 'Customer Onboarding',
+      description: 'Automate the entire customer onboarding process from registration to first purchase.'
+    },
+    {
+      icon: Clock,
+      title: 'Invoice Processing',
+      description: 'Automatically process invoices, validate data, and trigger payment workflows.'
+    },
+    {
+      icon: Shield,
+      title: 'Security Monitoring',
+      description: 'Monitor security events and automatically respond to threats in real-time.'
+    },
+    {
+      icon: Users,
+      title: 'Employee Management',
+      description: 'Streamline HR processes from recruitment to performance reviews.'
+    }
+  ];
+
   const features = [
     {
       icon: Workflow,
@@ -89,7 +112,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
@@ -97,7 +120,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
-                </a>
+                </Link>
               </div>
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
@@ -157,7 +180,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`cyber-card p-8 relative ${
@@ -187,7 +210,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                     className="cyber-button w-full text-center block"
                   >
                     Get Started
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -209,7 +232,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
-                </a>
+                </Link>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
@@ -217,7 +240,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

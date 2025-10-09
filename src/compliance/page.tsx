@@ -121,7 +121,7 @@ const CompliancePage: React.FC = () => {
               className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center"
             >
               Contact Compliance Team
-            </a>
+            </Link>
             <div className="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
             </div>
