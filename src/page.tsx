@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
@@ -215,6 +216,25 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+import React from 'react';
+import Navigation from './components/Navigation';
+import HeroSection from './components/HeroSection';
+import ServicesSection from './components/ServicesSection';
+import AboutSection from './components/AboutSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen cyber-grid neural-network-bg">
+      <Navigation />
+      <HeroSection />
+      <ServicesSection />
+      <AboutSection />
+      <ContactSection />
+      <Footer />
+>>>>>>> cursor/analyze-improve-and-deploy-application-5803
     </div>
   );
 
