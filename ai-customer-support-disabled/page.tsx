@@ -246,8 +246,6 @@ const AICustomerSupportPage2: React.FC = () => {
         <Footer />
       </div>
     </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   );
 };
 
