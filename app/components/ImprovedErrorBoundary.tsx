@@ -56,7 +56,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     if (process.env['NODE_ENV'] === 'development') {
     }
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
+    if (typeof window  as HTMLElement== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
@@ -70,7 +70,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
       const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
+        (key, index) => key  as HTMLElement== prevProps.resetKeys as HTMLElement[index]
       );
       if (resetKeysChanged && this.state.hasError) {
         this.resetErrorBoundary();
@@ -101,7 +101,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
         <div className="error-boundary-container" style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
+            <h1 style={styles.title}>Oops as HTMLElement Something went wrong</h1>
             <p style={styles.message}>
               We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>

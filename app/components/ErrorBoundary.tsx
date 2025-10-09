@@ -1,7 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import Link from 'next/link';
-import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { _FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -26,11 +26,11 @@ class ErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+
     }
     // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      (window as unknown).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {

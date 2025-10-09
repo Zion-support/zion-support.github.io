@@ -75,7 +75,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary Caught Error:', errorReport);
+
     }
   };
   private handleRetry = async () => {

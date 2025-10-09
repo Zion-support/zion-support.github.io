@@ -3,11 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
+import { Target, Users, BarChart, Zap, Phone, Mail, CheckCircle } from 'lucide-react';
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -56,10 +52,7 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },
@@ -145,25 +138,7 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-          {/* Use Cases Section */}
-          <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Industry
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">

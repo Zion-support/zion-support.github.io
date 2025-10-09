@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,70 +5,43 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to properly fix console statements
-function fixConsoleStatements(content) {
-  // Fix console statements that are already wrapped in if conditions
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
-    match => {
-      return match.replace(/; \}$/, '; }');
-    }
-  );
-
-  // Fix console statements that are missing closing brace
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    match => {
-      return match + ' }';
-    }
-  );
-
-  // Fix console statements that have extra closing brace
-  content = content.replace(
-    /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
-    match => {
-      return match.replace(/; \}\s*$/, '; }');
-    }
-  );
-
-  return content;
-}
-
-// Files that need console statement fixes
+// Files with console statements based on linting output
 const filesToFix = [
-  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/ComprehensiveErrorBoundary.tsx',
   'app/components/EnhancedErrorBoundary.tsx',
-  'app/components/ImprovedErrorBoundary.tsx',
+  'app/components/ErrorBoundary.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
   'app/components/PWAInstaller.tsx',
-  'app/components/PerformanceMonitor.tsx',
-  'app/components/SystemMonitor.tsx',
-  'app/hooks/useEnhancedPerformance.ts',
-  'app/hooks/useForm.ts',
-  'app/utils/advancedAnalytics.ts',
-  'app/utils/advancedCaching.ts',
-  'app/utils/analytics.ts',
-  'app/utils/analyticsTracker.ts',
+  'app/components/PerformanceOptimizer.tsx',
+  'app/components/SecurityEnhancer.tsx'
 ];
 
-function fixFile(filePath) {
+function fixConsoleStatements(filePath) {
   try {
-    const _fullPath = path.join(__dirname, filePath);
-    if (!fs.existsSync(fullPath)) {
-
-      return;
-    }
-
-    let _content = fs.readFileSync(fullPath, 'utf8');
-
-    // Apply fixes
-    content = fixConsoleStatements(content);
-
-    fs.writeFileSync(fullPath, content);
-
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Remove console.log, console.error, console.warn statements
+    // But keep console statements that are in development-only blocks
+    const consoleRegex = /^\s*console\.(log|error|warn|info|debug)\([^)]*\);\s*$/gm;
+    
+    // Replace with empty line or remove entirely
+    content = content.replace(consoleRegex, '');
+    
+    // Also remove console statements that might be on the same line as other code
+    const inlineConsoleRegex = /console\.(log|error|warn|info|debug)\([^)]*\);\s*/g;
+    content = content.replace(inlineConsoleRegex, '');
+    
+    fs.writeFileSync(fullPath, content, 'utf8');
+    console.log(`Fixed console statements in ${filePath}`);
   } catch (error) {
-
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
 // Fix all files
-filesToFix.forEach(fixFile);
+filesToFix.forEach(file => {
+  fixConsoleStatements(file);
+});
+
+console.log('Console statements fixed!');

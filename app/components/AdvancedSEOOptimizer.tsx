@@ -51,7 +51,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         addressCountry: 'US'
       },
       sameAs: [
-        'https://www.linkedin.com/company/zion-tech-group',
+        'https://www.linkedin.com/compunknown/zion-tech-group',
         'https://twitter.com/ziontechgroup',
         'https://github.com/Zion-Holdings',
       ],
@@ -132,7 +132,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       newCanonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
   }, [seoData]);
-  const _addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Record<string, unknown>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -140,20 +140,20 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     document.head.appendChild(script);
     _structuredDataRef.current = script;
   };
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+  const trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
+      (window as unknown).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: config.title,
         page_location: config.canonicalUrl
       });
     }
   };
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+  const trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && (window as unknown).gtag) {
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
+          (window as unknown).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)

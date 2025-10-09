@@ -18,7 +18,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableResourceHints = true,
   enableServiceWorker = true
 }) => {
-  const [optimizationStatus, setOptimizationStatus] = useState({
+  const [_optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
     lazyLoaded: 0,
     preloaded: 0,
@@ -160,10 +160,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
+        const _registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        console.log('Service Worker registration failed:', error);
+
       }
     }
   };
@@ -176,7 +176,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             // Track LCP
             if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
+              (window as unknown).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'

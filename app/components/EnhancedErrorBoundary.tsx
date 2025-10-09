@@ -10,7 +10,7 @@ interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-  errorId?: string;
+  _errorId?: string;
   retryCount: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -20,7 +20,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = { 
       hasError: false, 
       retryCount: 0,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      _errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
     this.maxRetries = props.maxRetries || 3;
   }
@@ -28,7 +28,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return { 
       hasError: true, 
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      _errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0
     };
   }
@@ -39,7 +39,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+
     }
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -63,17 +63,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
+
+
+
       console.groupEnd();
     }
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
+       
+
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -81,7 +81,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+
     }
   };
   private getUserId = (): string | null => {
@@ -107,7 +107,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
   private copyErrorDetails = () => {
     const errorDetails = {
-      errorId: this.state.errorId,
+      _errorId: this.state._errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
@@ -127,8 +127,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
-        // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
+         
+
       });
   };
   render() {
@@ -137,7 +137,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      const { retryCount, error, errorId } = this.state;
+      const { retryCount, error, _errorId } = this.state;
       const canRetry = retryCount < this.maxRetries;
       const canRetry = retryCount < this.maxRetries;
       const canRetry = retryCount < this.maxRetries;

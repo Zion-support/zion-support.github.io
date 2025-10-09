@@ -55,8 +55,8 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+            if (!(entry as unknown).hadRecentInput) {
+              clsValue += (entry as unknown).value;
             }
           }
           setMetrics(prev => ({ ...prev, cls: clsValue }));

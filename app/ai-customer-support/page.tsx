@@ -3,11 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
+import { MessageCircle, Shield, Clock, Users, CheckCircle, Phone, Mail } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -56,22 +52,14 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ];
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   return (
     <>
       <SEOOptimizer
@@ -124,39 +112,6 @@ const AICustomerSupportPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
-      
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
-              smart ticket routing, and predictive analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Get Started</span>
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
             </div>
           </section>
 

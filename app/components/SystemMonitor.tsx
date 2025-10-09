@@ -8,10 +8,10 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -19,9 +19,9 @@ const _collectPerformanceMetrics = () => {
 };
 // Helper functions
 const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let _score = 100;
+  let score = 100;
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;

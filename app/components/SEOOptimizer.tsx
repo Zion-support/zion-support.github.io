@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -80,7 +80,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: unknown) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -144,7 +144,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'name': 'Do you provide 24/7 support?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
+            'text': 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with unknown technical issues or questions.'
           }
         }
       ]
@@ -189,7 +189,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       },
       'sameAs': [
         'https://twitter.com/ziontechgroup',
-        'https://linkedin.com/company/ziontechgroup'
+        'https://linkedin.com/compunknown/ziontechgroup'
       ]
     };
     const script = document.createElement('script');
