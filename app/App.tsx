@@ -70,61 +70,17 @@ const App: React.FC = () => {
     // Initialize global error handling
     logger.info('initialized', { component: 'App' });
 
-    // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    performanceMonitor.init();
-    
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
-    
     // Initialize Web Vitals monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      
-      if (pageLoadMetrics) {
+      // Basic performance monitoring
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
         // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
+        console.log('Page load time:', navigation.loadEventEnd - navigation.loadEventStart);
       }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-      // Performance metrics logging removed for production
     }
     
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-      if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
-      }
-    }, 30000);
-    
-    logger.info('performance monitoring initialized', { component: 'App' });
-    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
+    logger.info('🚀 Zion Tech Group App initialized', { component: 'App' });
   }, []);
 
   return (
@@ -198,12 +154,9 @@ const App: React.FC = () => {
                   
                   {/* Advanced Performance Monitor */}
                   <AdvancedPerformanceMonitor
-                    enableRealTimeMonitoring={process.env['NODE_ENV'] === 'development'}
-                    onMetricsUpdate={(metrics) => {
-                      if (process.env['NODE_ENV'] === 'development') {
-                        logger.info('Performance Metrics', { component: 'PerformanceMonitor', metrics });
-                      }
-                    }}
+                    enableConsoleLogging={process.env['NODE_ENV'] === 'development'}
+                    enableReporting={true}
+                    showUI={process.env['NODE_ENV'] === 'development'}
                   />
                 </div>
               </Router>

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -50,86 +49,98 @@ const AIContentGenerationPage: React.FC = () => {
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Clock, Shield } from 'lucide-react';
-
-const AIContentGenerationPage: React.FC = () => {
-  const features = [
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality blog posts, articles, social media content, and marketing copy in seconds using advanced AI models.',
-      benefits: ['10x faster content creation', 'SEO-optimized content', 'Multiple content formats', 'Brand voice consistency']
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Multi-Language Support',
-      description: 'Create content in 50+ languages with native-level quality and cultural adaptation.',
-      benefits: ['Global reach', 'Cultural sensitivity', 'Local market adaptation', 'Translation accuracy']
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Real-Time Collaboration',
-      description: 'Work with your team in real-time, with version control and collaborative editing features.',
-      benefits: ['Team collaboration', 'Version control', 'Comment system', 'Approval workflows']
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance with GDPR, CCPA, and SOC 2.',
-      benefits: ['Data encryption', 'Compliance ready', 'Access controls', 'Audit trails']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses and content creators',
+      title: 'AI Email Marketing Automation',
+      description: 'Intelligent email marketing campaigns with personalized content, A/B testing, and automated segmentation.',
+      icon: '📧',
+      price: '$179/month',
       features: [
-        '10,000 words/month',
-        '5 content templates',
-        'Basic AI models',
-        'Email support',
-        'Standard quality'
+        'Personalized email content',
+        'A/B testing automation',
+        'Customer segmentation',
+        'Send time optimization',
+        'Subject line generation',
+        'Performance tracking'
       ],
-      popular: false
+      benefits: [
+        'Increase open rates by 250%',
+        'Boost click-through rates by 180%',
+        'Reduce unsubscribe rates by 60%',
+        'Save 30+ hours per week'
+      ],
+      marketPrice: '$400-800/month',
+      technologies: ['OpenAI GPT-4', 'Mailchimp API', 'SendGrid API', 'Custom ML Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      name: 'Professional',
-      price: '$99',
-      period: '/month',
-      description: 'Ideal for growing businesses and marketing teams',
+      title: 'AI Video Script Generator',
+      description: 'Create compelling video scripts for YouTube, TikTok, Instagram Reels, and other platforms with AI optimization.',
+      icon: '🎬',
+      price: '$129/month',
       features: [
-        '50,000 words/month',
-        '20 content templates',
-        'Advanced AI models',
-        'Priority support',
-        'High quality output',
-        'Team collaboration (5 users)',
-        'Brand voice training'
+        'Platform-specific optimization',
+        'Hook generation',
+        'Call-to-action optimization',
+        'Trending topic integration',
+        'Script timing optimization',
+        'Engagement prediction'
       ],
-      popular: true
+      benefits: [
+        'Increase video views by 400%',
+        'Improve engagement rates by 200%',
+        'Save 20+ hours per week',
+        'Boost subscriber growth'
+      ],
+      marketPrice: '$200-500/month',
+      technologies: ['OpenAI GPT-4', 'YouTube API', 'TikTok API', 'Trend Analysis AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
-      name: 'Enterprise',
-      price: '$299',
-      period: '/month',
-      description: 'For large organizations with advanced needs',
+      title: 'AI Product Description Generator',
+      description: 'Generate compelling product descriptions that convert visitors into customers with AI-powered optimization.',
+      icon: '🛍️',
+      price: '$99/month',
       features: [
-        'Unlimited words',
-        'All content templates',
-        'Premium AI models',
-        '24/7 phone support',
-        'Highest quality',
-        'Unlimited team members',
-        'Custom integrations',
-        'API access',
-        'White-label options'
+        'Conversion-optimized descriptions',
+        'SEO keyword integration',
+        'Feature highlighting',
+        'Emotional trigger optimization',
+        'A/B testing support',
+        'Bulk generation'
       ],
-      popular: false
+      benefits: [
+        'Increase conversion rates by 150%',
+        'Reduce bounce rates by 40%',
+        'Save 15+ hours per week',
+        'Improve product visibility'
+      ],
+      marketPrice: '$150-400/month',
+      technologies: ['OpenAI GPT-4', 'E-commerce APIs', 'Conversion AI', 'SEO Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Technical Documentation Generator',
+      description: 'Create comprehensive technical documentation, API docs, and user guides with AI assistance.',
+      icon: '📚',
+      price: '$159/month',
+      features: [
+        'Code documentation generation',
+        'API documentation automation',
+        'User guide creation',
+        'Technical writing optimization',
+        'Multi-format support',
+        'Version control integration'
+      ],
+      benefits: [
+        'Reduce documentation time by 70%',
+        'Improve developer experience',
+        'Ensure consistency across docs',
+        'Save 25+ hours per week'
+      ],
+      marketPrice: '$300-700/month',
+      technologies: ['OpenAI GPT-4', 'GitHub API', 'Confluence API', 'Markdown Processing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -154,12 +165,10 @@ const AIContentGenerationPage: React.FC = () => {
       company: 'GlobalBrand',
       content: 'The multi-language support is game-changing. We can now create localized content for all our markets without hiring translators.',
       rating: 5
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
     }
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation Services - Zion Tech Group</title>
@@ -198,170 +207,86 @@ const AIContentGenerationPage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Content Generation Services
+                Our AI Content Generation Services
               </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive content creation solutions powered by cutting-edge AI technology
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose from our comprehensive suite of AI-powered content generation tools designed to scale your content production
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {contentServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-purple-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-3xl font-bold text-purple-600">{service.price}</span>
+                        <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                      </div>
+                      <p className="text-sm text-green-600 font-semibold">Save up to 60% vs market price</p>
                     </div>
-                    <div className="text-sm text-green-600 font-semibold">
-                      Save up to 60% vs market rates
+
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
 
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                  </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
-              AI Content Generation
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Create high-quality content 10x faster with our advanced AI platform
-            </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-              Transform your content strategy with our AI-powered platform that generates blog posts, 
-              social media content, marketing copy, and more in seconds. Trusted by 10,000+ businesses worldwide.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center justify-center"
-              >
-                📞 Call Now: (302) 464-0950
-              </a>
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
-                Get Free Demo
-              </a>
-            </div>
+                    <div className="mb-4 p-3 bg-gray-50 rounded-lg">
+                      <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
+                    </div>
 
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10,000+</div>
-                <div className="text-gray-300">Active Users</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">500%</div>
-                <div className="text-gray-300">Faster Content</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">Technologies Used:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create, manage, and optimize your content at scale
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-start space-x-4">
-                  <div className="text-cyan-400 flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-<<<<<<< HEAD
-
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <a 
-                      href="tel:+13024640950"
-                      className="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
-                    >
-                      Call Now
-                    </a>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
-                    >
-                      Email Us
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a 
+                        href="tel:+13024640950"
+                        className="flex-1 bg-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                      >
+                        Call Now
+                      </a>
+                      <a 
+                        href="mailto:kleber@ziontechgroup.com"
+                        className="flex-1 border-2 border-purple-600 text-purple-600 text-center py-3 px-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+                      >
+                        Email Us
+                      </a>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -369,32 +294,59 @@ const AIContentGenerationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+        {/* Testimonials Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join hundreds of satisfied clients who have transformed their content strategy with our AI solutions
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg p-8">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.role}, {testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-700 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Scale Your Content Production?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Content Strategy?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Contact our AI content generation experts for a free consultation and custom content strategy
+            <p className="text-xl mb-8 text-purple-100 max-w-3xl mx-auto">
+              Get started with our AI content generation services and see the difference in your content quality and production speed
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
-                📞 +1 302 464 0950
+                📞 Call +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com
+                ✉️ Get Free Consultation
               </a>
-            </div>
-            <div className="text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="mt-2">🌐 https://ziontechgroup.com</p>
             </div>
           </div>
         </section>
@@ -404,133 +356,3 @@ const AIContentGenerationPage: React.FC = () => {
 };
 
 export default AIContentGenerationPage;
-=======
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your content needs. All plans include our core AI features.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  Get Started
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of satisfied customers who have transformed their content strategy
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Content Strategy?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start creating high-quality content 10x faster with our AI platform. 
-            Join thousands of businesses already using our solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-400">
-            <p>✓ Free 14-day trial • ✓ No credit card required • ✓ Cancel anytime</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AIContentGenerationPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197

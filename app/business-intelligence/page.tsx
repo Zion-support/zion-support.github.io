@@ -138,3 +138,156 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <>
+      <Helmet>
+        <title>Business Intelligence Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions with real-time analytics, predictive modeling, and AI-powered insights to drive data-driven decisions." />
+        <meta name="keywords" content="business intelligence, data analytics, predictive analytics, data visualization, BI consulting" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Business Intelligence Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Transform your data into actionable insights with our comprehensive business intelligence solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:+13024640950"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                >
+                  📞 +1 302 464 0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                >
+                  ✉️ Get Free Consultation
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Business Intelligence Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive BI solutions designed to help you make data-driven decisions and gain competitive advantage
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {biServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+                  <div className="p-8">
+                    <div className="text-4xl mb-4">{service.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                    <p className="text-gray-600 mb-6">{service.description}</p>
+                    
+                    <div className="mb-6">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                        <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                      </div>
+                      <p className="text-sm text-green-600 font-semibold">Save up to 50% vs market price</p>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-6">
+                      <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                      <ul className="space-y-2">
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.technologies.map((tech, techIndex) => (
+                          <span key={techIndex} className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <a 
+                        href="tel:+13024640950"
+                        className="flex-1 bg-blue-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                      >
+                        Call Now
+                      </a>
+                      <a 
+                        href="mailto:kleber@ziontechgroup.com"
+                        className="flex-1 border-2 border-blue-600 text-blue-600 text-center py-3 px-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                      >
+                        Email Us
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Data into Insights?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              Get started with our business intelligence services and unlock the power of your data
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center"
+              >
+                📞 Call +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                ✉️ Get Free Consultation
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default BusinessIntelligencePage;
