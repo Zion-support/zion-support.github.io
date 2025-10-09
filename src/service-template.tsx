@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star } from 'lucide-react';
-import {CheckCircle, Star, Phone} from 'lucide-react';
+import { Phone, CheckCircle } from 'lucide-react';
+import { CheckCircle, Star } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {
@@ -19,9 +19,8 @@ interface ServicePageProps {
           
           
           <{ className?: string }>;
-  services: Array<{,
-
-  features: string[];,
+  services: Array<{;
+    features: string[];,
     price: string;
   }>;
   benefits: string[];
@@ -46,11 +45,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
       <main className="pt-20">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            {title}
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">{title}
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            {description}
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -66,8 +63,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           
           
           
-          <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation
+          <Phone className="w-5 h-5 mr-2" />// Get Free Consultation
             
           
           
@@ -81,8 +77,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
+              <Phone className="w-4 h-4 mr-2" />// (302) 464-0950
             
           
           
@@ -109,8 +104,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                   {service.features.map((feature, featureIndex) => ()
                     
           <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-2" />{feature}
                     </li>
                   ))}
                 </ul>
@@ -118,8 +112,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                   className="cyber-button w-full text-center inline-block"
 Get Started
         {/* Benefits Section */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our {title}?
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => ()
@@ -132,8 +125,7 @@ Get Started
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
 Ready to Transform Your Business?
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can revolutionize your operations.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get a free consultation and discover how our solutions can revolutionize your operations.
       </main>
       <Footer />
   );

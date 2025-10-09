@@ -111,8 +111,7 @@ icon: BarChart,
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// AI Analytics Services
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// AI Analytics Services
             
           
           
@@ -123,8 +122,7 @@ icon: BarChart,
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Transform your data into actionable insights with our advanced AI-powered analytics platform.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Transform your data into actionable insights with our advanced AI-powered analytics platform.
 //               Make data-driven decisions that drive growth and optimize performance.
             
           
@@ -149,8 +147,7 @@ icon: BarChart,
                 <span className="font-medium">Predictive Intelligence</span>
           {/* Features */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Key Features
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Key Features
             
           
           
@@ -175,8 +172,7 @@ icon: BarChart,
                     {feature.benefits.map((benefit, benefitIndex) => ()
                       
           <li key={benefitIndex} className="text-sm text-gray-300 flex items-start">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                        {benefit}
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />{benefit}
                       </li>
                     ))}
                   </ul>
@@ -199,8 +195,7 @@ icon: BarChart,
                   {tier.popular && ()
                     
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-// Most Popular
+                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium"}>// Most Popular
                       
           
           
@@ -210,7 +205,8 @@ icon: BarChart,
           
           
           
-          </span>
+          
+        </span>
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
@@ -232,8 +228,7 @@ icon: BarChart,
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-//                   >
-//                     Get Started
+//                   >//                     Get Started
                   
           
           

@@ -68,7 +68,8 @@ const ModernLoadingSpinner: React.FC
         </div>
         {text && ()
           
-          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+          <p className="text-sm text-gray-300 animate-pulse"}>{text}
+        </p>
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>

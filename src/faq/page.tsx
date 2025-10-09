@@ -1,11 +1,11 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Phone, Mail } from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const FAQPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const FAQPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [searchTerm, setSearchTerm] = useState('');
@@ -112,8 +112,7 @@ const toggleItem = (index: number) => {
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Frequently Asked Questions
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Frequently Asked Questions
             
           
           
@@ -124,8 +123,7 @@ const toggleItem = (index: number) => {
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Find answers to common questions about our AI and IT services, pricing, and support.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Find answers to common questions about our AI and IT services, pricing, and support.
             
           
           
@@ -143,7 +141,7 @@ const toggleItem = (index: number) => {
 type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                onChange={(e) =}>setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // />
             
@@ -155,14 +153,14 @@ type="text"
           
           
           
-          </div>
+          
+        </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => ()
               
           <div key={categoryIndex} className="mb-12">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">{category.category}
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
@@ -199,13 +197,14 @@ type="text"
           <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : ()
                             
-          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                          )}
-                        </button>
+          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" /}>)}
+                        
+        </button>
                         {isOpen && ()
                           
           <div className="px-6 pb-4">
-                            <p className="text-gray-300 leading-relaxed">{item.answer}</p>
+                            <p className="text-gray-300 leading-relaxed"}>{item.answer}
+        </p>
                   })}
             ))}
 {/* Contact CTA */}
@@ -218,8 +217,7 @@ type="text"
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
-// Call (302) 464-0950
+                <Phone className="w-5 h-5 mr-2" />// Call (302) 464-0950
               
           
           

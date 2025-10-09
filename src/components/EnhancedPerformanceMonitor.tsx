@@ -3,7 +3,7 @@ interface PerformanceMetrics {
   // TODO: Add content
 };
   fcp: number | null;
-    lcp: number | null;
+    lcp: number | null;,
     fid: number | null;,
     cls: number | null;,
     ttfb: number | null;,
@@ -363,8 +363,8 @@ const reportMetrics = useCallback(() => {
       <div className="flex items-center justify-between mb-2">
         <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
         <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          onClick={() =}>setIsVisible(false)}
+          className="text-gray-400 hover: text-white"
 // >
 //
         
@@ -376,53 +376,67 @@ const reportMetrics = useCallback(() => {
           
           
           
-          </button>
+          
+        </button>
       </div>
       <div className="space-y-1">
         <div className="flex justify-between">
           <span>Performance Score:</span>
-          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
+          <span className={performanceScore }>80 ? 'text-green-400' : performanceScore }>
+          60 ? 'text-yellow-400' : 'text-red-400'}>
             {performanceScore}/100
-          </span>
+          
+        
+        </span>
         </div>
         {metrics.fcp !== null && ()
           
           <div className="flex justify-between">
-            <span>FCP:</span>
-            <span>{metrics.fcp.toFixed(0)}ms</span>
+            <span}>FCP:
+        </span>
+            <span}>{metrics.fcp.toFixed(0)}ms
+        </span>
           </div>
         )}
         {metrics.lcp !== null && ()
           
           <div className="flex justify-between">
-            <span>LCP:</span>
-            <span>{metrics.lcp.toFixed(0)}ms</span>
+            <span}>LCP:
+        </span>
+            <span}>{metrics.lcp.toFixed(0)}ms
+        </span>
           </div>
         )}
         {metrics.fid !== null && ()
           
           <div className="flex justify-between">
-            <span>FID:</span>
-            <span>{metrics.fid.toFixed(0)}ms</span>
+            <span}>FID:
+        </span>
+            <span}>{metrics.fid.toFixed(0)}ms
+        </span>
           </div>
         )}
         {metrics.cls !== null && ()
           
           <div className="flex justify-between">
-            <span>CLS:</span>
-            <span>{metrics.cls.toFixed(3)}</span>
+            <span}>CLS:
+        </span>
+            <span}>{metrics.cls.toFixed(3)}
+        </span>
           </div>
         )}
         {metrics.ttfb !== null && ()
           
           <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span>{metrics.ttfb.toFixed(0)}ms</span>
+            <span}>;
+    TTFB:
+        </span>
+            <span}>{metrics.ttfb.toFixed(0)}ms
+        </span>
           </div>
         )}
       </div>
-      <div className="mt-2 text-gray-400 text-xs">
-// Press Ctrl+Shift+P to toggle
+      <div className="mt-2 text-gray-400 text-xs">// Press Ctrl+Shift+P to toggle
       
           
           

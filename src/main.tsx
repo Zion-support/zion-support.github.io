@@ -15,8 +15,7 @@ if ('serviceWorker' in navigator) {
   });
 }
 const root = document.getElementById('root');
-if (root) {
-  ReactDOM.createRoot(root).render(
+if (root) {ReactDOM.createRoot(root).render(
     
           
           
@@ -27,7 +26,8 @@ if (root) {
           
           
           <React.StrictMode>
-      <App />
-    </React.StrictMode>
+      <App /}>
+           
+        </React.StrictMode>
   );
 }

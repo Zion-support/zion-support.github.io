@@ -1,10 +1,10 @@
 import React from 'react';
-import {  Cloud,  Shield,  Zap,  BarChart } from 'lucide-react';
+import { Cloud, Shield, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CloudServicesPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const CloudServicesPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const _services = [
@@ -70,8 +70,7 @@ const CloudServicesPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// Cloud Services
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">// Cloud Services
           
           
           
@@ -82,8 +81,7 @@ const CloudServicesPage: React.FC = () => {
           
           
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-// Transform your business with our comprehensive cloud solutions.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">// Transform your business with our comprehensive cloud solutions.
 //             From migration to optimization, we provide end-to-end cloud services.
           
           
@@ -99,8 +97,7 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
-//               Get Started Today
+// >//               Get Started Today
             
           
           
@@ -114,8 +111,7 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-// >
-//               Learn More
+// >//               Learn More
             
           
           
@@ -142,8 +138,7 @@ const CloudServicesPage: React.FC = () => {
                   {service.features.map((feature, featureIndex) => ()
                     
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />{feature}
                     </li>
                   ))}
                 </ul>
@@ -159,8 +154,7 @@ const CloudServicesPage: React.FC = () => {
               
           <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
+                  <CheckCircle className="w-8 h-8 text-white" /> </div>
                 <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
@@ -168,8 +162,7 @@ const CloudServicesPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-// Ready to Transform Your Infrastructure?
+          <h2 className="text-3xl font-bold text-white mb-4">// Ready to Transform Your Infrastructure?
           
           
           
@@ -180,8 +173,7 @@ const CloudServicesPage: React.FC = () => {
           
           
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-// Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">// Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           
           
           
@@ -196,8 +188,7 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-// >
-//               Call (302) 464-0950
+// >//               Call (302) 464-0950
             
           
           
@@ -211,8 +202,7 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-// >
-//               Get Free Consultation
+// >//               Get Free Consultation
             
           
           
@@ -226,8 +216,7 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+      <Footer /> </div>
   );
 };
 export default CloudServicesPage;

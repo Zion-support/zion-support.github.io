@@ -1,11 +1,11 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
+import React } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const GreenITPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const GreenITPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
@@ -182,8 +182,7 @@ const tabs = [
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Green IT Solutions
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Green IT Solutions
             
           
           
@@ -194,8 +193,7 @@ const tabs = [
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Transform your IT infrastructure into a sustainable, environmentally friendly system
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Transform your IT infrastructure into a sustainable, environmentally friendly system
               that reduces costs while protecting our planet.
             
           
@@ -260,8 +258,7 @@ const tabs = [
           {activeTab === 'solutions' && ()
             
           <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Our Green IT Solutions
+              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"}>// Our Green IT Solutions
               
           
           
@@ -271,7 +268,8 @@ const tabs = [
           
           
           
-          </h2>
+          
+        </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => ()
                   
@@ -288,8 +286,7 @@ const tabs = [
                         {solution.features.map((feature, featureIndex) => ()
                           
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                            {feature}
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />{feature}
                           </li>
                       </ul>
 <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
@@ -301,8 +298,7 @@ const tabs = [
                         href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
+                        <ArrowRight className="w-4 h-4 ml-1" /> </a>
           )}
           {activeTab === 'benefits' && (
 Benefits of Green IT

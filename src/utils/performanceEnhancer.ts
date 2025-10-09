@@ -8,8 +8,8 @@ interface PerformanceMetrics {
   fid: number;
   cls: number;
   fcp: number;
-  ttfb: number;
-  tbt: number;
+  ttfb: number;,
+    tbt: number;
 }
 
 interface OptimizationConfig {
@@ -19,8 +19,8 @@ interface OptimizationConfig {
   enablePrefetching: boolean;
   enableServiceWorker: boolean;
   enableResourceHints: boolean;
-  enableCompression: boolean;
-  enableCaching: boolean;
+  enableCompression: boolean;,
+    enableCaching: boolean;
 }
 
 class PerformanceEnhancer {

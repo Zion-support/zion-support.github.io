@@ -1,6 +1,5 @@
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
 
@@ -34,7 +33,8 @@ const App: React.FC = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-      </Routes>
+      
+        </Routes>
     </div>
   );
 };

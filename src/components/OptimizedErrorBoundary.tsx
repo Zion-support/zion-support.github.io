@@ -283,21 +283,10 @@ className='w-6 h-6 text-red-600'
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
-// />
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </svg>
+// /> </svg>
           </div>
         </div>
-        <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-// Something went wrong
+        <h1 className='text-xl font-semibold text-gray-900 mb-2'>// Something went wrong
         
           
           
@@ -308,14 +297,13 @@ className='w-6 h-6 text-red-600'
           
           
           </h1>
-        <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.
+        <p className='text-gray-600 mb-4'>We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
         {process.env['NODE_ENV'] === 'development' && error && ()
           
           <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
-// Error Details (Development)
+            <summary className='cursor-pointer text-sm text-gray-500 hover: text-gray-700'}>
+          // Error Details (Development)
             
           
           
@@ -325,11 +313,16 @@ className='w-6 h-6 text-red-600'
           
           
           
-          </summary>
+          
+        </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
-                <strong>Error:</strong> {error.message}
-              </div>
+                <strong}>;
+    Error:
+        </strong}>
+          {error.message}
+              
+        </div>
               <div className='mb-2'>
                 <strong>Stack:</strong>
                 <pre className='whitespace-pre-wrap'>{error.stack}</pre>
@@ -337,10 +330,11 @@ className='w-6 h-6 text-red-600'
               {errorInfo && ()
                 
           <div>
-                  <strong>Component Stack:</strong>
-                  <pre className='whitespace-pre-wrap'>
-                    {errorInfo.componentStack}
-                  </pre>
+                  <strong}>Component Stack:
+        </strong>
+                  <pre className='whitespace-pre-wrap'}>{errorInfo.componentStack}
+                  
+        </pre>
                 </div>
               )}
             </div>
@@ -350,8 +344,7 @@ className='w-6 h-6 text-red-600'
           <button
             onClick={onRetry}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-// >
-//             Try Again
+// >//             Try Again
           
           
           
@@ -363,7 +356,7 @@ className='w-6 h-6 text-red-600'
           
           </button>
           <button
-            onClick={() => window.location.reload()}
+            onClick={() =}>window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
 // >
 //             Reload Page
@@ -376,11 +369,13 @@ className='w-6 h-6 text-red-600'
           
           
           
-          </button>
+          
+        </button>
         </div>
         {errorId && ()
           
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
+          <p className='mt-4 text-xs text-gray-400'}>Error ID: {errorId}
+        </p>
         )}
       </div>
     </div>

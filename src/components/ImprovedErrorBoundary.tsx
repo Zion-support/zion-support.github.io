@@ -119,11 +119,11 @@ class ImprovedErrorBoundary extends Component
           
           <string, unknown>) => void } }).Sentry.captureException(error, {
   // TODO: Add content
-}
-        contexts: {
+};
+    contexts: {
   // TODO: Add content
-}
-          react: {
+};
+    react: {
   // TODO: Add content
 };
   componentStack: errorInfo.componentStack
@@ -196,8 +196,7 @@ class ImprovedErrorBoundary extends Component
           <div style={styles.content}>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+            <p style={styles.message}>We're sorry for the inconvenience. The application encountered an unexpected error.
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()
               
@@ -209,8 +208,7 @@ class ImprovedErrorBoundary extends Component
                   </p>
                   {this.state.error.stack && ()
                     
-          <pre style={styles.stack}>
-                      {this.state.error.stack}
+          <pre style={styles.stack}>{this.state.error.stack}
                     </pre>
                   )}
                   {this.state.errorInfo?.componentStack && ()
@@ -228,8 +226,7 @@ class ImprovedErrorBoundary extends Component
                 onClick={this.resetErrorBoundary}
                 style={styles.button}
                 aria-label="Try Again"
-// >
-//                 Try Again
+// >//                 Try Again
               
           
           
@@ -244,8 +241,7 @@ class ImprovedErrorBoundary extends Component
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
-// >
-//                 Reload Page
+// >//                 Reload Page
               
           
           
@@ -260,8 +256,7 @@ class ImprovedErrorBoundary extends Component
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
-// >
-//                 Go Home
+// >//                 Go Home
               
           
           
@@ -275,8 +270,7 @@ class ImprovedErrorBoundary extends Component
             </div>
             {this.state.errorCount > 1 && ()
               
-          <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
+          <p style={styles.errorCount}>This error has occurred {this.state.errorCount} times
               </p>
             )}
           </div>
@@ -288,8 +282,8 @@ class ImprovedErrorBoundary extends Component
 }
 const styles = {
   // TODO: Add content
-}
-  container: {
+};
+    container: {
   // TODO: Add content
 };
   minHeight: '100vh',

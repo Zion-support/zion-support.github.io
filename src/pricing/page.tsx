@@ -1,8 +1,8 @@
 import React from 'react';
-import {  Zap,  Brain,  Cloud } from 'lucide-react';
-const PricingPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+import { Zap, Brain } from 'lucide-react';
+const PricingPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const _plans = [
@@ -122,8 +122,7 @@ const PricingPage: React.FC = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Contact Us
         
           
           

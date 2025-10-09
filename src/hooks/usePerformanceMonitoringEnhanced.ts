@@ -1,6 +1,6 @@
 'use client';
 export const usePerformanceMonitoring = () => {
-import { useEffect, useCallback } from 'react';
+import { useEffect } from 'react';
 export const _usePerformanceMonitoring = () => {
   // TODO: Add content
 }

@@ -83,8 +83,8 @@ class EnhancedErrorBoundary extends Component
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
- errorId: this.state.errorId,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {;
+    errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -203,8 +203,7 @@ class EnhancedErrorBoundary extends Component
           <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center">
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-2">
-// Oops! Something went wrong
+              <h1 className="text-2xl font-bold text-white mb-2">// Oops! Something went wrong
               
           
           
@@ -215,8 +214,7 @@ class EnhancedErrorBoundary extends Component
           
           
           </h1>
-              <p className="text-gray-300 mb-4">
-// We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              <p className="text-gray-300 mb-4">// We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               
           
           
@@ -243,8 +241,7 @@ class EnhancedErrorBoundary extends Component
           
           
           
-          <RefreshCw className="w-4 h-4 mr-2" />
-// Try Again
+          <RefreshCw className="w-4 h-4 mr-2" />// Try Again
                 
           
           
@@ -268,8 +265,7 @@ class EnhancedErrorBoundary extends Component
           
           
           
-          <RefreshCw className="w-4 h-4 mr-2" />
-// Reload Page
+          <RefreshCw className="w-4 h-4 mr-2" />// Reload Page
                 
           
           
@@ -293,8 +289,7 @@ class EnhancedErrorBoundary extends Component
           
           
           
-          <Home className="w-4 h-4 mr-2" />
-// Go Home
+          <Home className="w-4 h-4 mr-2" />// Go Home
                 
           
           
@@ -310,10 +305,10 @@ class EnhancedErrorBoundary extends Component
                 
           <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
                   <p className="text-sm text-gray-400 mb-2">
-                    Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
+                    Error ID: <code className="text-cyan-400"}>{this.state.errorId}
+        </code>
                   </p>
-                  <p className="text-xs text-gray-500">
-// Please include this ID when contacting support.
+                  <p className="text-xs text-gray-500">// Please include this ID when contacting support.
                   
           
           
@@ -330,8 +325,7 @@ class EnhancedErrorBoundary extends Component
                 
           <details className="mt-6 text-left">
                   <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center">
-                    <Bug className="w-4 h-4 mr-2" />
-// Technical Details
+                    <Bug className="w-4 h-4 mr-2" /}>// Technical Details
                   
           
           
@@ -341,18 +335,18 @@ class EnhancedErrorBoundary extends Component
           
           
           
-          </summary>
+          
+        </summary>
                   <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
-                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
-                      {this.state.error.message}
+                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40"}>{this.state.error.message}
                       {'\n\n'}
                       {this.state.error.stack}
-                    </pre>
+                    
+        </pre>
                     <button
                       onClick={this.copyErrorDetails}
                       className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
-// >
-//                       Copy Error Details
+// >//                       Copy Error Details
                     
           
           
@@ -370,8 +364,7 @@ class EnhancedErrorBoundary extends Component
             <div className="mt-8 text-sm text-gray-500">
               <p>
                 If this problem persists, please contact our support team at{' '}
-                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-// support@ziontechgroup.com
+                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">// support@ziontechgroup.com
                 
           
           

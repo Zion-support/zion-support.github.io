@@ -54,8 +54,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
           id="hero-heading"
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
           data-text="Zion Tech Group"
-// >
-//           Zion Tech Group
+// >//           Zion Tech Group
         
           
           
@@ -66,8 +65,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
           
           
           </h1>
-        <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-// Advanced AI and IT Solutions
+        <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">// Advanced AI and IT Solutions
         
           
           
@@ -78,8 +76,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
           
           
           </p>
-        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-// Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">// Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
 //           Transform your business with our cutting-edge technology and achieve unprecedented growth.
         
           
@@ -136,8 +133,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
           <a
             href="/contact"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-// >
-//             Get Free Consultation
+// >//             Get Free Consultation
           
           
           

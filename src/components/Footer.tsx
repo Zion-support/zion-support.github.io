@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const aiServices = [
   // TODO: Add items
@@ -94,14 +94,11 @@ const Footer: React.FC = memo(() => {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
-<div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+<div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
               {/* Contact Info */}
-<div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464-0950
-                  </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
+<div className="space-y-3 mb-6"><div className="flex items-center space-x-3 text-gray-300"><Phone className="w-4 h-4 text-cyan-400" /><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 302 464-0950
+                  </a></div><div className="flex items-center space-x-3 text-gray-300"><Mail className="w-4 h-4 text-cyan-400" /><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><MapPin className="w-4 h-4 text-cyan-400" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></div></div>
               {/* Social Links */}
               <div className="flex space-x-4"><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
@@ -110,14 +107,12 @@ const Footer: React.FC = memo(() => {
                 {aiServices.slice(0, 8).map((service, index) => (
 <li key={index}><Link
                       to={service.url} className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
+                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />{service.name}
                     </Link><p className="text-xs text-gray-500 ml-5">{service.description}</p></li>
                 ))}
 <li><Link
                     to="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
-                    View All AI Services →
+                  >View All AI Services →
                   </Link></li></ul></div>
             {/* IT Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
@@ -126,43 +121,45 @@ to={service.url} className="text-gray-300 hover:text-blue-400 transition-colors 
                     to="/it-services" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All IT Services →
             {/* Micro SAAS Solutions */}
-            <div><h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS</h3><ul className="space-y-3">
-                {microSaasServices.slice(0, 8).map((service, index) => (
+            <div><h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS</h3><ul className="space-y-3">{microSaasServices.slice(0, 8).map((service, index) =}>
+          (
 to={service.url} className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
                     to="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
                     View All Micro SAAS →
-                  </Link></li></ul></div></div>
+                  
+        </Link></li></ul></div></div>
           {/* Additional Services Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Emerging Technologies */}
-            <div><h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">Emerging Tech</h3><ul className="space-y-3">
-                {emergingTech.slice(0, 6).map((service, index) => (
+            <div><h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">Emerging Tech</h3><ul className="space-y-3">{emergingTech.slice(0, 6).map((service, index) =}>
+          (
 to={service.url} className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
-              </ul></div>
+              
+        </ul></div>
             {/* Company Links */}
-            <div><h3 className="text-lg font-semibold mb-6 text-pink-400 neon-text">Company</h3><ul className="space-y-3">
-                {companyLinks.map((link, index) => (
+            <div><h3 className="text-lg font-semibold mb-6 text-pink-400 neon-text">Company</h3><ul className="space-y-3">{companyLinks.map((link, index) =}>
+          (
 to={link.url} className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
                       {link.name}
-                    </Link></li>
+                    
+        </Link></li>
             {/* Support Links */}
-            <div><h3 className="text-lg font-semibold mb-6 text-orange-400 neon-text">Support</h3><ul className="space-y-3">
-                {supportLinks.map((link, index) => (
+            <div><h3 className="text-lg font-semibold mb-6 text-orange-400 neon-text">Support</h3><ul className="space-y-3">{supportLinks.map((link, index) =}>
+          (
 to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
-              </ul></div></div>
+              
+        </ul></div></div>
           {/* Stats Section */}
           <div className="bg-slate-800/50 rounded-2xl p-8 mb-12 border border-cyan-400/20"><div className="grid grid-cols-1 md:grid-cols-4 gap-8"><div className="text-center"><div className="text-3xl font-bold text-cyan-400 mb-2">500+</div><div className="text-gray-300 text-sm">Projects Completed</div></div><div className="text-center"><div className="text-3xl font-bold text-green-400 mb-2">99.9%</div><div className="text-gray-300 text-sm">Uptime Guarantee</div></div><div className="text-center"><div className="text-3xl font-bold text-purple-400 mb-2">24/7</div><div className="text-gray-300 text-sm">Support Available</div></div><div className="text-center"><div className="text-3xl font-bold text-pink-400 mb-2">50+</div><div className="text-gray-300 text-sm">Countries Served</div></div></div></div></div>
         {/* Bottom Footer */}
-        <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
+        <div className="border-t border-gray-700 bg-slate-800/30"><div className="container mx-auto px-4 py-6"><div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"><div className="text-gray-400 text-sm">© {currentYear} Zion Tech Group. All rights reserved.
               </div><div className="flex flex-wrap justify-center md:justify-end space-x-6">
                 {legalLinks.map((link, index) => ()
                   
           <Link
                     key={index}
 to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-                  </Link>
-              </div></div></div></div></div></footer>
+                  </Link> </div></div></div></div></div></footer>
   );
 });
 Footer.displayName = 'Footer';

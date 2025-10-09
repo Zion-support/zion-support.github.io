@@ -6,7 +6,7 @@
 interface UserEvent {
   // TODO: Add content
 };
-  id: string;
+  id: string;,
     type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
     category: string;,
     action: string;
@@ -33,7 +33,7 @@ interface UserSession {
   id: string;
     startTime: string;
   endTime?: string;
-  duration?: number;
+  duration?: number;,
     pageViews: number;,
     events: UserEvent[];
   referrer?: string;,
@@ -48,7 +48,7 @@ interface AnalyticsConfig {
   // TODO: Add content
 };
   enableTracking: boolean;
-    enableHeatmaps: boolean;
+    enableHeatmaps: boolean;,
     enableSessionRecording: boolean;,
     enableA_BTesting: boolean;,
     enableConversionTracking: boolean;,

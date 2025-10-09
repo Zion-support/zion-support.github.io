@@ -109,7 +109,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
-        onClick={() => {
+        onClick={() =}>{
   // TODO: Add content
 }
           setIsVisible(false);
@@ -128,7 +128,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           
-          </button>
+          
+        </button>
     </div>
   );
 };

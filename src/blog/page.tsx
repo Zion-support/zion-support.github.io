@@ -8,7 +8,7 @@ interface BlogPost {
 };
   id: string;
     title: string;
-    description: string;
+    description: string;,
     category: string;,
     readTime: string;,
     date: string;,

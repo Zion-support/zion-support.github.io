@@ -108,8 +108,7 @@ const ResponsiveContainer: React.FC
           <div>Coming Soon</div>
   )
     
-          <div className={getResponsiveClasses()}>
-      {children}
+          <div className={getResponsiveClasses()}>{children}
     </div>
   );
 };

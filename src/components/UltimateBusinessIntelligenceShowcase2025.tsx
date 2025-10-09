@@ -52,17 +52,14 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
           
           
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-400 font-semibold text-sm">
-                  {item.featured ? 'FEATURED' : 'NEW'}
+                <span className="text-green-400 font-semibold text-sm">{item.featured ? 'FEATURED' : 'NEW'}
                 </span>
                 <span className="text-gray-400 text-sm">{item.type}</span>
               {/* Title */}
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {item.title}
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{item.title}
               </h3>
               {/* Description */}
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                {item.description}
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">{item.description}
               </p>
               {/* Metrics */}
                     {item.metrics.roi}
@@ -90,17 +87,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
-// />
-                
-          
-          
-          
-          
-          
-          
-          
-          
-          </svg>
+// /> </svg>
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>

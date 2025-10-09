@@ -205,8 +205,7 @@ class ComprehensiveErrorBoundary extends Component
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
             <div className="text-6xl mb-6"></div>
-            <h1 className="text-3xl font-bold text-white mb-4">
-// Oops! Something went wrong
+            <h1 className="text-3xl font-bold text-white mb-4">// Oops! Something went wrong
             
           
           
@@ -217,8 +216,7 @@ class ComprehensiveErrorBoundary extends Component
           
           
           </h1>
-            <p className="text-gray-300 mb-6">
-// We encountered an unexpected error. Our team has been notified and is working to fix it.
+            <p className="text-gray-300 mb-6">// We encountered an unexpected error. Our team has been notified and is working to fix it.
             
           
           
@@ -248,8 +246,7 @@ class ComprehensiveErrorBoundary extends Component
                   onClick={this.handleRetry}
                   className="cyber-button"
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
-// >
-                   Try Again ({this.maxRetries - this.state.retryCount} left)
+// >Try Again ({this.maxRetries - this.state.retryCount} left)
                 
           
           
@@ -265,8 +262,7 @@ class ComprehensiveErrorBoundary extends Component
                 onClick={this.handleReload}
                 className="cyber-button"
                 aria-label="Reload the entire page"
-// >
-//                  Reload Page
+// >//                  Reload Page
               
           
           
@@ -281,8 +277,7 @@ class ComprehensiveErrorBoundary extends Component
                 href="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
-// >
-//                  Contact Support
+// >//                  Contact Support
               
           
           
@@ -297,8 +292,7 @@ class ComprehensiveErrorBoundary extends Component
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()
               
           <details className="mt-6 text-left">
-                <summary className="text-white cursor-pointer hover:text-cyan-400">
-// Technical Details (Development)
+                <summary className="text-white cursor-pointer hover:text-cyan-400"}>// Technical Details (Development)
                 
           
           
@@ -308,10 +302,11 @@ class ComprehensiveErrorBoundary extends Component
           
           
           
-          </summary>
-                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
-                  {this.state.error.stack}
-                </pre>
+          
+        </summary>
+                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto"}>{this.state.error.stack}
+                
+        </pre>
               </details>
             )}
           </div>

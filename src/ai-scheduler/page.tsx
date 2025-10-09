@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
@@ -57,10 +56,8 @@ const AISchedulerPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <Calendar className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-// AI Scheduler
+            <Calendar className="w-10 h-10 text-white" /> </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">// AI Scheduler
           
           
           
@@ -71,8 +68,7 @@ const AISchedulerPage: React.FC = () => {
           
           
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-// Intelligent Meeting & Event Scheduling
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">// Intelligent Meeting & Event Scheduling
           
           
           
@@ -135,8 +131,7 @@ Start Free Trial
             <div className="text-gray-300 text-sm">Scheduling guaranteed</div>
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-// Smart Scheduling Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">// Smart Scheduling Features
           
           
           
@@ -200,8 +195,7 @@ Most Popular
                   {plan.features.map((feature, featureIndex) => ()
                     
           <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />{feature}
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${

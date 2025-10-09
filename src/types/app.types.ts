@@ -99,8 +99,8 @@ export interface LayoutShift extends PerformanceEntry {
  */
 export interface PerformanceWithMemory extends Performance {
   // TODO: Add content
-}
-  memory: {
+};
+    memory: {
   // TODO: Add content
 };
   usedJSHeapSize: number;,

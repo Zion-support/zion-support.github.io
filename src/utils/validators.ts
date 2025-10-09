@@ -303,8 +303,8 @@ export function validateForm()
  */
 export const validators = {
   // TODO: Add content
-}
-  required: (message = 'This field is required') => ({
+};
+    required: (message = 'This field is required') => ({
   // TODO: Add content
 };
   validate: isRequired,

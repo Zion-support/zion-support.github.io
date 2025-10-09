@@ -1,11 +1,11 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
+import React } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const SignupPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const SignupPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [formData, setFormData] = useState({
@@ -107,8 +107,7 @@ icon: Award,
             {/* Left Side - Signup Form */}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-// Create Your Account
+                <h1 className="text-3xl font-bold text-white mb-2 neon-text">// Create Your Account
                 
           
           
@@ -119,8 +118,7 @@ icon: Award,
           
           
           </h1>
-                <p className="text-gray-300">
-// Join thousands of businesses transforming with AI and IT solutions
+                <p className="text-gray-300">// Join thousands of businesses transforming with AI and IT solutions
                 
           
           
@@ -135,8 +133,7 @@ icon: Award,
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-// First Name
+                    <label className="block text-sm font-medium text-gray-300 mb-2">// First Name
                     
           
           
@@ -209,8 +206,9 @@ Password
           
           
           
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
+          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" /}>}
+                    
+        </button>
 Confirm Password
                       type={showConfirmPassword ? 'text' : 'password'}
                       name="confirmPassword"
@@ -226,8 +224,7 @@ Confirm Password
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
-                      <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-// Terms of Service
+                      <a href="/terms" className="text-cyan-400 hover:text-cyan-300">// Terms of Service
                       
           
           
@@ -239,8 +236,7 @@ Confirm Password
           
           </a>{' '}
                       and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-// Privacy Policy
+                      <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">// Privacy Policy
                       
           
           
@@ -261,8 +257,8 @@ name="subscribeNewsletter"
                   {isLoading ? ()
                     
           <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-Creating Account...
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div}>
+          Creating Account...
                   ) : ()
 // 'Create Account'
                   )}
@@ -275,7 +271,8 @@ Creating Account...
           
           
           
-          </form>
+          
+        </form>
               <div className="mt-8 text-center">
                   Already have an account?{' '}
                   <a
@@ -284,8 +281,7 @@ Creating Account...
 Sign in here
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-// Transform Your Business Today
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text">// Transform Your Business Today
                 
           
           
@@ -309,8 +305,7 @@ Join thousands of businesses already using our AI and IT solutions
                       <p className="text-gray-300">{feature.description}</p>
                 ))}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">
-                  What You Get:
+                <h3 className="text-lg font-semibold text-white mb-4">What You Get:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {benefits.map((benefit, index) => ()

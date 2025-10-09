@@ -10,8 +10,7 @@ const getAllPages = () => {
     { url: '/blog', priority: 0.8, changefreq: 'weekly' },
   ];
 };
-const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {
-  const baseUrl = 'https:// ziontechgroup.com';
+const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {const baseUrl = 'https:// ziontechgroup.com';
   const sitemap = `
           
           
@@ -33,7 +32,8 @@ ${pages.map(page => `
           
           
           <url>
-    <loc>${baseUrl}${page.url}</loc>
+    <loc}>${baseUrl}${page.url}
+        </loc>
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
   </url>`).join('\n')}

@@ -49,8 +49,7 @@ const EnhancedSEO: React.FC
 //   modifiedTime,
 //   section,
   tags = [],
-}) => {
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
+}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     
@@ -61,7 +60,8 @@ const EnhancedSEO: React.FC
           
           
           
-          <div>Coming Soon</div>
+          <div}>Coming Soon
+        </div>
   )
     
           <Helmet>
@@ -84,8 +84,8 @@ const EnhancedSEO: React.FC
       {/* Structured Data */}
       {structuredData && ()
         
-          <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          <script type="application/ld+json"}>{JSON.stringify(structuredData)}
+        
         </script>
       )}
       {/* Preconnect to external domains */}
@@ -145,16 +145,7 @@ const EnhancedSEO: React.FC
           
           
           
-          <link rel="dns-prefetch" href="// www.googletagmanager.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          </Helmet>
+          <link rel="dns-prefetch" href="// www.googletagmanager.com" /> </Helmet>
   );
 };
 export default EnhancedSEO;

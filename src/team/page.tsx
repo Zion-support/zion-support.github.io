@@ -1,6 +1,6 @@
 import React from 'react';
 const TeamPage: React.FC = () => {
-import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
+import { Linkedin, Mail, Phone, Award, Users, Brain, Code } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [
@@ -60,8 +60,7 @@ import Footer from '../components/Footer';
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Team</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced team solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Contact Us
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Contact Us
         
           
           

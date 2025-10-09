@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const SolutionsPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
@@ -280,8 +280,7 @@ const SolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Our Solutions
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Our Solutions
             
           
           
@@ -292,8 +291,7 @@ const SolutionsPage: React.FC = () => {
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Comprehensive technology solutions designed to transform your business operations
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Comprehensive technology solutions designed to transform your business operations
 //               and drive innovation across every aspect of your organization.
             
           
@@ -337,9 +335,10 @@ const SolutionsPage: React.FC = () => {
               ))}
             </div>
             <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                {solutionCategories.find(cat => cat.id === activeTab)?.description}
-              </p>
+              <p className="text-gray-300 max-w-2xl mx-auto">{solutionCategories.find(cat =}>
+          cat.id === activeTab)?.description}
+              
+        </p>
             </div>
           </div>
           {/* Solutions Grid */}
@@ -350,8 +349,7 @@ const SolutionsPage: React.FC = () => {
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                    </div>
+                      <solution.icon className={`w-6 h-6 ${solution.color}`} /> </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
@@ -363,15 +361,13 @@ const SolutionsPage: React.FC = () => {
                       {solution.features.map((feature, featureIndex) => ()
                         
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
-                      {solution.pricing}
+                    <div className={`text-lg font-bold ${solution.color}`}>{solution.pricing}
                     </div>
                     <a
                       href="/contact"
@@ -387,8 +383,7 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          <ArrowRight className="w-4 h-4 ml-1" />
-                    </a>
+          <ArrowRight className="w-4 h-4 ml-1" /> </a>
                   </div>
                 </div>
               ))}
@@ -396,8 +391,7 @@ const SolutionsPage: React.FC = () => {
           </div>
           {/* Benefits Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Why Choose Our Solutions?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Why Choose Our Solutions?
             
           
           
@@ -413,8 +407,7 @@ const SolutionsPage: React.FC = () => {
                 
           <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
+                    <benefit.icon className="w-8 h-8 text-cyan-400" /> </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
@@ -423,8 +416,7 @@ const SolutionsPage: React.FC = () => {
           </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-// Ready to Transform Your Business?
+            <h2 className="text-2xl font-bold text-white mb-4">// Ready to Transform Your Business?
             
           
           
@@ -435,8 +427,7 @@ const SolutionsPage: React.FC = () => {
           
           
           </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Get a free consultation and discover how our solutions can revolutionize your operations
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">// Get a free consultation and discover how our solutions can revolutionize your operations
 //               and drive unprecedented growth.
             
           
@@ -462,8 +453,7 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation
+          <Phone className="w-5 h-5 mr-2" />// Get Free Consultation
               
           
           
@@ -487,8 +477,7 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
+          <Phone className="w-4 h-4 mr-2" />// (302) 464-0950
               
           
           
@@ -512,8 +501,7 @@ const SolutionsPage: React.FC = () => {
           
           
           
-          <Mail className="w-4 h-4 mr-2" />
-// Email Us
+          <Mail className="w-4 h-4 mr-2" />// Email Us
               
           
           

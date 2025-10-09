@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
@@ -68,14 +67,12 @@ const features = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group</title>
-        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
-      </Helmet>
+        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." /> </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">// Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands
 //             natural language and escalates complex issues to human agents seamlessly.
           
           
@@ -107,8 +104,7 @@ const features = [
                 {feature.benefits.map((benefit, benefitIndex) => ()
                   
           <li key={benefitIndex} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    {benefit}
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />{benefit}
                   </li>
               </ul>
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
@@ -130,8 +126,7 @@ Most Popular
                     
           <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Get Started
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Get Started
                 
           
           

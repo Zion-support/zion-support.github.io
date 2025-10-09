@@ -60,7 +60,7 @@ export interface ErrorHandlerConfig {
 };
   enableLogging: boolean;
     enableReporting: boolean;
-    enableRetry: boolean;
+    enableRetry: boolean;,
     maxRetries: number;,
     retryDelay: number;,
     enableUserNotification: boolean;,
@@ -732,7 +732,7 @@ this.props.fallback || (
           
           
           <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
+              onClick={() =}>this.setState({ hasError: false, error: undefined })}
               style={{
   // TODO: Add content
 };
@@ -754,7 +754,8 @@ this.props.fallback || (
           
           
           
-          </button></div>
+          
+        </button></div>
         )
       );
     }

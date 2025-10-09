@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react';
+import { ArrowLeft, ArrowRight, Target, CheckCircle } from 'lucide-react';
 export default function ServicesAdvertisingPage() {
   // TODO: Add content
 }
@@ -21,8 +21,7 @@ export default function ServicesAdvertisingPage() {
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-// Back to Home
+            <ArrowLeft className="w-4 h-4 mr-2" />// Back to Home
           
           
           
@@ -43,8 +42,7 @@ export default function ServicesAdvertisingPage() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
               <Target className="w-4 h-4 mr-2" />
 AI-Powered Advertising Solutions
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-// AI Advertising Services
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">// AI Advertising Services
             
           
           
@@ -55,8 +53,7 @@ AI-Powered Advertising Solutions
           
           
           </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-// Revolutionize Your Marketing with 300% ROI Guaranteed
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">// Revolutionize Your Marketing with 300% ROI Guaranteed
             
           
           
@@ -95,8 +92,7 @@ AI-Powered Advertising Solutions
           
           
           
-          <ArrowRight className="w-4 h-4 ml-2" />
-href="#services"
+          <ArrowRight className="w-4 h-4 ml-2" />href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
                 View Our Services
       </section>
@@ -104,8 +100,7 @@ href="#services"
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-// Proven Advertising Results
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">// Proven Advertising Results
             
           
           
@@ -138,11 +133,11 @@ AI Advertising Solutions
               <p className="text-gray-600 mb-4">
 Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
               <ul className="text-sm text-gray-600 space-y-1">
-                <li> Behavioral analysis</li>
-                <li> Predictive modeling</li>
-                <li> Real-time optimization</li>
-                <li> Lookalike audience creation</li>
-                <li> Cross-platform targeting</li>
+                <li>Behavioral analysis</li>
+                <li>Predictive modeling</li>
+                <li>Real-time optimization</li>
+                <li>Lookalike audience creation</li>
+                <li>Cross-platform targeting</li>
               </ul>
               <div className="mt-4 text-sm text-green-600 font-semibold">
                 Market Price: $2,000-5,000/month | Our Price: $1,200/month
@@ -207,8 +202,7 @@ Transparent Pricing
                   <span>Basic reporting & analytics</span>
                   <span>Email support</span>
                   <span>2 platforms included</span>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
-// Get Started
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">// Get Started
               
           
           

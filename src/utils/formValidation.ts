@@ -28,8 +28,8 @@ export const _validationRules = {
 }
   /**
    * Validate required field
-   */
-  required: (message = 'This field is required'): ValidationRule
+   */;
+    required: (message = 'This field is required'): ValidationRule
           
           
           

@@ -122,14 +122,12 @@ const features = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Automation Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." />
-      </Helmet>
+        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." /> </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Automation Solutions</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-// Transform your business with intelligent automation that handles complex processes,
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">// Transform your business with intelligent automation that handles complex processes,
 //             optimizes workflows, and makes smart decisions 24/7.
           
           
@@ -163,8 +161,7 @@ const features = [
                 {feature.benefits.map((benefit, benefitIndex) => ()
                   
           <li key={benefitIndex} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                    {benefit}
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2" />{benefit}
                   </li>
                 ))}
               </ul>
@@ -179,8 +176,7 @@ const features = [
           <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && ()
                   
-          <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-// Most Popular
+          <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4"}>// Most Popular
                   
           
           
@@ -190,7 +186,8 @@ const features = [
           
           
           
-          </div>
+          
+        </div>
                 )}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-1">
@@ -201,13 +198,11 @@ const features = [
                   {plan.features.map((feature, featureIndex) => ()
                     
           <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                      {feature}
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />{feature}
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Get Started
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Get Started
                 
           
           
@@ -224,8 +219,7 @@ const features = [
         </div>
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-// Contact our experts to discuss your automation needs and get a custom solution.
+          <p className="text-xl text-gray-300 mb-8">// Contact our experts to discuss your automation needs and get a custom solution.
           
           
           
@@ -237,8 +231,7 @@ const features = [
           
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-// Schedule Consultation
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">// Schedule Consultation
             
           
           
@@ -249,8 +242,7 @@ const features = [
           
           
           </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-// View Case Studies
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">// View Case Studies
             
           
           
@@ -264,8 +256,7 @@ const features = [
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+      <Footer /> </div>
   );
 };
 export default AIAutomationPage;

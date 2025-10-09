@@ -67,8 +67,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
         key={index}
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
-// />
-    ))}
+// />))}
   
           
           
@@ -126,8 +125,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
           <div className="overflow-hidden"><div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
       {Array.from({ length: columns }).map((_, index) => ()
         
-          <Skeleton key={index} height="20px" />
-      ))}
+          <Skeleton key={index} height="20px" />))}
     </div>
     {Array.from({ length: rows }).map((_, rowIndex) => (
 <div
@@ -144,8 +142,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
           
           
           
-          <Skeleton key={colIndex} height="16px" />
-        ))}
+          <Skeleton key={colIndex} height="16px" />))}
       </div>
     ))}
   </div>

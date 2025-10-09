@@ -50,11 +50,11 @@ interface NavigatorWithConnection extends Navigator {
   webkitConnection?: NetworkConnection;
 interface SystemMetrics {
   // TODO: Add content
-}
-  performance: {
+};
+    performance: {
   // TODO: Add content
 };
-  score: number;
+  score: number;,
     loadTime: number;,
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
@@ -152,7 +152,7 @@ const updateMetrics = useCallback(() => {
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {,
+      const _newMetrics: SystemMetrics = {;
     score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
@@ -201,16 +201,14 @@ const updateMetrics = useCallback(() => {
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
+            <span className="text-sm text-gray-600">{isMonitoring ? 'Monitoring' : 'Stopped'}
             </span>
           {enableExport && ()
             
           <button
               onClick={handleExport}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-// >
-//               Export Data
+// >//               Export Data
             
           
           
@@ -224,8 +222,8 @@ const updateMetrics = useCallback(() => {
           )}
       {lastUpdate && ()
         
-          <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
+          <p className="text-sm text-gray-500 mb-4"}>Last updated: {lastUpdate.toLocaleTimeString()}
+        
         </p>
       {/* Performance Metrics */}
       <div className="mb-8">
@@ -307,8 +305,10 @@ className={`h-2 rounded-full ${
             ))}
       {/* Error Distribution */}
       {showDetails && (
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
-              <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4"}>Error Distribution
+        </h3>
+              <h4 className="text-sm font-medium text-gray-600 mb-2"}>By Type
+        </h4>
               <div className="space-y-1">
                 {Object.entries(metrics.errors.byType).map(([type, count]) => ()
                   

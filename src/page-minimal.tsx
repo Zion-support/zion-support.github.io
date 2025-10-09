@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star } from 'lucide-react';
+import { Phone, CheckCircle } from 'lucide-react';
 export const _metadata = {
   // TODO: Add content
 };
@@ -8,7 +8,7 @@ export const _metadata = {
 };
 import React from 'react';
 import Link from 'next/link';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import { Phone, CheckCircle, Star } from 'lucide-react';
 export default function HomePage() {
   // TODO: Add content
 }
@@ -30,8 +30,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
-// Zion Tech Group
+              <Link href="/" className="text-2xl font-bold text-gray-900">// Zion Tech Group
               
           
           
@@ -50,8 +49,7 @@ Home
                 Services
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
-                Contact
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600">Contact
             </nav>
       </header>
       <main>
@@ -71,8 +69,7 @@ Home
           
           <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-// Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">// Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
             
           
@@ -102,8 +99,7 @@ Home
           <Link className="w-5 h-5 ml-2" />
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-                <Phone className="w-5 h-5 mr-2" />
-// Call +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />// Call +1 302 464 0950
               
           
           
@@ -118,8 +114,7 @@ Home
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-// Why Choose Zion Tech Group?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">// Why Choose Zion Tech Group?
               
           
           
@@ -136,8 +131,7 @@ Home
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                   <CheckCircle className="w-6 h-6 text-blue-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-// Proven Results
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">// Proven Results
                 
           
           
@@ -168,8 +162,7 @@ Ready to Transform Your Business?
                 Get Started Today
                 href="/blog"
                 View Our Blog
-                <ArrowRight className="w-5 h-5 ml-2" />
-      </main>
+                <ArrowRight className="w-5 h-5 ml-2" /> </main>
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
           <div className="text-center">
@@ -182,8 +175,7 @@ Ready to Transform Your Business?
               <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
               <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">
-© 2026 Zion Tech Group. All rights reserved.
+              <p className="text-gray-400 text-sm">© 2026 Zion Tech Group. All rights reserved.
       </footer>
   );
 export default HomePage;

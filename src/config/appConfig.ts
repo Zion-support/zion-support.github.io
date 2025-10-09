@@ -4,8 +4,8 @@
  */
 export interface AppConfig {
   // TODO: Add content
-}
-  app: {
+};
+    app: {
   // TODO: Add content
 };
   name: string;,

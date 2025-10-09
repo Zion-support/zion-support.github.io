@@ -1,6 +1,6 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';
 'use client';
-import React, { memo } from 'react';
+import React } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
@@ -80,8 +80,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Generate Professional Invoices with{' '}
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-// AI Intelligence
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">// AI Intelligence
                 
           
           
@@ -93,8 +92,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           
           </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-// Transform your invoicing process with AI-powered automation. Create, send, and track invoices
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">// Transform your invoicing process with AI-powered automation. Create, send, and track invoices
                 effortlessly while gaining valuable insights into your business performance.
               
           
@@ -120,8 +118,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           
           
           
-          <Calculator className="w-5 h-5 mr-2" />
-// Start Free Trial
+          <Calculator className="w-5 h-5 mr-2" />// Start Free Trial
                 
           
           
@@ -150,8 +147,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           <section className="py-16 bg-slate-800/30">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-// Powerful AI Features
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">// Powerful AI Features
                 
           
           
@@ -177,8 +173,7 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
                       {feature.benefits.map((benefit, benefitIndex) => ()
                         
           <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{benefit}
                         </li>
                       ))}
                     </ul>
@@ -272,8 +267,7 @@ Most Popular
 <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
                   href="tel:+13024640950"
-                  <Phone className="w-4 h-4 mr-2" />
-                  (302) 464-0950
+                  <Phone className="w-4 h-4 mr-2" />(302) 464-0950
         </main>
         <Footer />
     </>

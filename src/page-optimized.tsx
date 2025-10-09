@@ -41,8 +41,7 @@ export default function OptimizedHomePage() {
           <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
-        <div />
-      </AccessibilityEnhancer>
+        <div /> </AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
@@ -62,8 +61,7 @@ export default function OptimizedHomePage() {
           
           
           
-          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-// That Delivers Results
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">// That Delivers Results
                 
           
           
@@ -75,8 +73,7 @@ export default function OptimizedHomePage() {
           
           </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-// Transform your enterprise with AI-powered solutions that deliver 300% ROI,
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">// Transform your enterprise with AI-powered solutions that deliver 300% ROI,
 //                 70% cost reduction, and 90% efficiency gains. Expert AI consulting,
 //                 autonomous systems, and digital transformation services.
               
@@ -93,8 +90,7 @@ export default function OptimizedHomePage() {
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-// >
-//                   Get Your Free AI Assessment
+// >//                   Get Your Free AI Assessment
                 
           
           

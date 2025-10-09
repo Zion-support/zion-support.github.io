@@ -36,8 +36,7 @@ export const _withLazyLoading =
           
           
           <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} />
-    </Suspense>
+      <Component {...props} /> </Suspense>
   );
 };
 // Lazy component wrapper with intersection observer;
@@ -130,8 +129,7 @@ const LazyComponent: React.FC
           <div ref={elementRef}>
       {isVisible ? ()
         
-          <Suspense fallback={fallback}>
-          {children}
+          <Suspense fallback={fallback}>{children}
         </Suspense>
       ) : ()
 // fallback,
@@ -197,8 +195,7 @@ export const createLazyComponent =
           
           
           <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
+      <LazyComponent {...props} /> </Suspense>
   );
 };
 // Critical resource preloader;

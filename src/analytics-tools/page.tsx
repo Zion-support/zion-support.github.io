@@ -67,13 +67,11 @@ const AnalyticsToolsPage: React.FC = () => {
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
-      </Helmet>
+        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" /> </Helmet>
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-// AI Analytics Tools
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">// AI Analytics Tools
           
           
           
@@ -84,8 +82,7 @@ const AnalyticsToolsPage: React.FC = () => {
           
           
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -113,8 +110,7 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-// Our Analytics Tools
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">// Our Analytics Tools
           
           
           
@@ -141,8 +137,7 @@ const AnalyticsToolsPage: React.FC = () => {
                     {tool.features.map((feature, featureIndex) => ()
                       
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />{feature}
                       </li>
                     ))}
                   </ul>
@@ -151,8 +146,7 @@ const AnalyticsToolsPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-// >
-//                     Get Started
+// >//                     Get Started
                   
           
           

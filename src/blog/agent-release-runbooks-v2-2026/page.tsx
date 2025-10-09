@@ -20,8 +20,7 @@ export default function Page() {
             <ListChecks />
             <span className='text-sm font-semibold'>Agent Ops  2026</span>
           </div>
-          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
-// Agent Release Runbooks v2 (2026)
+          <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>// Agent Release Runbooks v2 (2026)
           
           
           
@@ -85,8 +84,7 @@ export default function Page() {
             <div>
               <h3 className='text-2xl font-bold flex items-center gap-2'>
                 <FileWarning />Prevent Regressions</h3>
-              <p className='text-white/90'>
-// We implement v2 runbooks in 46 weeks with audits and training.
+              <p className='text-white/90'>// We implement v2 runbooks in 46 weeks with audits and training.
               
           
           
@@ -111,8 +109,7 @@ export default function Page() {
           
           
           
-          <RefreshCw />
-            </Link>
+          <RefreshCw /> </Link>
           </div>
         </div>
       </section>

@@ -5,8 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
   const _features = [
-    {,
- icon: Users,
+    {;
+    icon: Users,
       title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
       benefits: ['Improved efficiency', 'Better results', 'Cost savings'];
@@ -28,25 +28,20 @@ const Pagetsx: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
-      </Helmet>
+        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" /> </Helmet>
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              tsx
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">tsx
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced tsx solutions powered by AI and cutting-edge technology
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced tsx solutions powered by AI and cutting-edge technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-                Get Started
+              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Get Started
               </a>
-              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">
-                View Demo
+              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">View Demo
               </a>
             </div>
           </div>
@@ -64,8 +59,7 @@ const Pagetsx: React.FC = () => {
                   <ul className="text-sm text-gray-400 space-y-1">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />{benefit}
                       </li>
                     ))}
                   </ul>
@@ -79,14 +73,12 @@ const Pagetsx: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
             <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
-            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">Contact Us
             </a>
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
+      <Footer /> </div>
   );
 };
 export default Pagetsx;

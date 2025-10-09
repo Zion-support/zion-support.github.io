@@ -1,11 +1,11 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award,  ShoppingCart,  Users from 'lucide-react';
+import { ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award, Users from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
+import React } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const MarketplacePage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const MarketplacePage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [activeCategory, setActiveCategory] = useState('products');
@@ -73,8 +73,7 @@ const categories = [
           
           
           
-          <ShoppingCart className="w-5 h-5 mr-2" />
-// Start Shopping
+          <ShoppingCart className="w-5 h-5 mr-2" />// Start Shopping
               
           
           

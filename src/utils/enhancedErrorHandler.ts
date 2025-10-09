@@ -29,7 +29,7 @@ interface ErrorReport {
   // TODO: Add content
 };
   id: string;
-    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
+    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';,
     message: string;
   stack?: string;,
     context: ErrorContext;,
@@ -59,7 +59,7 @@ interface ErrorHandlerConfig {
   // TODO: Add content
 };
   enableConsoleLogging: boolean;
-    enableRemoteReporting: boolean;
+    enableRemoteReporting: boolean;,
     enableErrorRecovery: boolean;,
     enableErrorCategorization: boolean;,
     enableErrorAggregation: boolean;,

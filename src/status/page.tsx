@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {Star, Phone} from 'lucide-react';
+import { Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Status: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const Status: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   return (
@@ -16,8 +16,7 @@ const Status: React.FC = () => {
       <Navigation />
       <main className="pt-20">
         <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-// Status
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">// Status
           
           
           
@@ -28,8 +27,7 @@ const Status: React.FC = () => {
           
           
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-// System status and service availability
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">// System status and service availability
           
           
           
@@ -54,8 +52,7 @@ const Status: React.FC = () => {
           
           
           
-          <Phone className="w-5 h-5 mr-2" />
-// Get Free Consultation
+          <Phone className="w-5 h-5 mr-2" />// Get Free Consultation
             
           
           
@@ -69,8 +66,7 @@ const Status: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
+              <Phone className="w-4 h-4 mr-2" />// (302) 464-0950
             
           
           
@@ -85,8 +81,7 @@ const Status: React.FC = () => {
         </section>
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-// Ready to Get Started?
+            <h2 className="text-3xl font-bold text-white mb-4">// Ready to Get Started?
             
           
           
@@ -97,8 +92,7 @@ const Status: React.FC = () => {
           
           
           </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and discover how our solutions can help your business.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and discover how our solutions can help your business.
       </main>
       <Footer />
   );

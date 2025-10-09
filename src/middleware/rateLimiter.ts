@@ -132,14 +132,12 @@ export const rateLimiters = {
     max: 1000
 // API: 60 requests per minute,
 
-    api: new RateLimiter({,
-
+    api: new RateLimiter({;
     max: 60,
     message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes,
 
-    auth: new RateLimiter({,
-
+    auth: new RateLimiter({;
     max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
-const MicroSAASPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail } from 'lucide-react';
+const MicroSAASPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const _microSAASServices = [
@@ -3973,13 +3973,11 @@ const categories = [
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>
         <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
-        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
-      </Helmet>
+        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" /> </Helmet>
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-// Micro SAAS Solutions
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">// Micro SAAS Solutions
           
           
           
@@ -3990,8 +3988,7 @@ const categories = [
           
           
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -4034,8 +4031,7 @@ const categories = [
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-// Choose Your Perfect AI Tools
+          <h2 className="text-3xl font-bold text-white text-center mb-12">// Choose Your Perfect AI Tools
           
           
           
@@ -4060,8 +4056,7 @@ const categories = [
                     <span className="text-2xl font-bold text-green-600">{service.price}</span>
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">{service.category}
                   </div>
                 </div>
                 <div className="mb-6">
@@ -4070,15 +4065,14 @@ const categories = [
                     {service.features.slice(0, 4).map((feature, featureIndex) => ()
                       
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />{feature}
                       </li>
                     ))}
                     {service.features.length > 4 && ()
                       
-          <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
-                      </li>
+          <li className="text-sm text-gray-500"}>+{service.features.length - 4} more features
+                      
+        </li>
                     )}
                   </ul>
                 </div>
@@ -4088,8 +4082,7 @@ const categories = [
                     {service.benefits.map((benefit, benefitIndex) => ()
                       
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit}
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />{benefit}
                       </li>
                     ))}
                   </ul>
@@ -4099,8 +4092,7 @@ const categories = [
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => ()
                       
-          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
+          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">{tech}
                       </span>
                     ))}
                   </div>
@@ -4109,8 +4101,7 @@ const categories = [
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
-// >
-//                     Get Started Now
+// >//                     Get Started Now
                   
           
           
@@ -4121,8 +4112,7 @@ const categories = [
           
           
           </a>
-                  <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo}
+                  <p className="text-xs text-gray-500 mt-2">{service.contactInfo}
                   </p>
                 </div>
               </div>
@@ -4133,8 +4123,7 @@ const categories = [
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-// Ready to Transform Your Business?
+          <h2 className="text-3xl font-bold text-white mb-6">// Ready to Transform Your Business?
           
           
           
@@ -4145,8 +4134,7 @@ const categories = [
           
           
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-// Get started with our micro SAAS solutions today and see the difference AI can make.
+          <p className="text-xl text-purple-100 mb-8">// Get started with our micro SAAS solutions today and see the difference AI can make.
           
           
           
@@ -4161,8 +4149,7 @@ const categories = [
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-// >
-//               Call (302) 464-0950
+// >//               Call (302) 464-0950
             
           
           
@@ -4176,8 +4163,7 @@ const categories = [
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-// >
-//               Email Us
+// >//               Email Us
             
           
           

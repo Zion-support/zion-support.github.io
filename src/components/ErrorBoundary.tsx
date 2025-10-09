@@ -169,8 +169,7 @@ class ErrorBoundary extends Component
           <div className="max-w-2xl w-full">
             <div className="cyber-card p-8 text-center">
               <div className="text-6xl mb-6"></div>
-              <h1 className="text-3xl font-bold text-white mb-4 neon-text">
-// Oops! Something went wrong
+              <h1 className="text-3xl font-bold text-white mb-4 neon-text">// Oops! Something went wrong
               
           
           
@@ -181,8 +180,7 @@ class ErrorBoundary extends Component
           
           
           </h1>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-// We're sorry, but something unexpected happened. Our team has been notified
+              <p className="text-gray-300 mb-6 leading-relaxed">// We're sorry, but something unexpected happened. Our team has been notified
 //                 and is working to fix the issue.
               
           
@@ -197,8 +195,8 @@ class ErrorBoundary extends Component
               {process.env.NODE_ENV === 'development' && this.state.error && ()
                 
           <details className="mb-6 text-left">
-                  <summary className="text-cyan-400 cursor-pointer mb-2">
-// Error Details (Development Only)
+                  <summary className="text-cyan-400 cursor-pointer mb-2"}>
+          // Error Details (Development Only)
                   
           
           
@@ -208,11 +206,16 @@ class ErrorBoundary extends Component
           
           
           
-          </summary>
+          
+        </summary>
                   <div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
                     <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
+                      <strong}>
+          Error:
+        </strong}>
+          {this.state.error.message}
+                    
+        </div>
                     <div className="mb-2">
                       <strong>Stack:</strong>
                       <pre className="mt-1 whitespace-pre-wrap">{this.state.error.stack}</pre>
@@ -220,8 +223,10 @@ class ErrorBoundary extends Component
                     {this.state.errorInfo && ()
                       
           <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="mt-1 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                        <strong}>Component Stack:
+        </strong>
+                        <pre className="mt-1 whitespace-pre-wrap"}>{this.state.errorInfo.componentStack}
+        </pre>
                       </div>
                     )}
                   </div>
@@ -231,8 +236,7 @@ class ErrorBoundary extends Component
                 <button
                   onClick={this.handleRetry}
                   className="cyber-button px-6 py-3 text-lg font-semibold"
-// >
-//                   Try Again
+// >//                   Try Again
                 
           
           
@@ -246,8 +250,7 @@ class ErrorBoundary extends Component
                 <button
                   onClick={this.handleReload}
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-// >
-//                   Reload Page
+// >//                   Reload Page
                 
           
           
@@ -261,8 +264,7 @@ class ErrorBoundary extends Component
                 <button
                   onClick={this.handleGoHome}
                   className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-// >
-//                   Go Home
+// >//                   Go Home
                 
           
           
@@ -277,8 +279,7 @@ class ErrorBoundary extends Component
               <div className="mt-8 text-sm text-gray-400">
                 <p>If this problem persists, please contact our support team:</p>
                 <p className="mt-2">
-                   <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-// support@ziontechgroup.com
+                   <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">// support@ziontechgroup.com
                   
           
           
@@ -291,8 +292,7 @@ class ErrorBoundary extends Component
           </a>
                 </p>
                 <p>
-                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-// +1 (302) 464-0950
+                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">// +1 (302) 464-0950
                   
           
           

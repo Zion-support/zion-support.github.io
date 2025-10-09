@@ -367,8 +367,8 @@ export function validateForm<T extends Record<string, unknown>>()
  */
 export const ValidationRulesBuilder = {
   // TODO: Add content
-}
-  required: 
+};
+    required: 
           
           
           

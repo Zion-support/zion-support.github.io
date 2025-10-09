@@ -27,7 +27,7 @@ export enum ErrorCategory {
 export interface ErrorConfig {
   // TODO: Add content
 };
-  enabled: boolean;
+  enabled: boolean;,
     logToConsole: boolean;,
     sendToServer: boolean;,
     sampleRate: number;,
@@ -54,8 +54,8 @@ export const _errorHandlingConfig: ErrorConfig = {
 };
 export const _errorMessages = {
   // TODO: Add content
-}
-  network: {
+};
+    network: {
   // TODO: Add content
 };
   offline: 'You are currently offline. Please check your internet connection.',

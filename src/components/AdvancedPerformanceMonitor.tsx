@@ -363,11 +363,11 @@ const getPerformanceRecommendations = useCallback(() => {
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+          <div>;
+    TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           </div>
-          <div>
-            Memory:{' '}
+          <div>;
+    Memory:{' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
@@ -376,9 +376,10 @@ const getPerformanceRecommendations = useCallback(() => {
         {_recommendations.length > 0 && ()
           
           <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>;
+            <h4 className='font-semibold text-xs text-red-600'}>;
   Recommendations:
-            </h4>
+            
+        </h4>
             <ul className='text-xs text-red-600'>
 {recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>

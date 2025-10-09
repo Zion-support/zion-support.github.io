@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const ResearchDevelopmentPage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [activeTab, setActiveTab] = useState('ai');
@@ -335,8 +335,7 @@ const ResearchDevelopmentPage: React.FC = () => {
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Research & Development
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Research & Development
             
           
           
@@ -347,8 +346,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// Pushing the boundaries of technology through cutting-edge research and innovation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// Pushing the boundaries of technology through cutting-edge research and innovation.
 //               Our R&D team is dedicated to creating the next generation of AI and IT solutions.
             
           
@@ -392,15 +390,15 @@ const ResearchDevelopmentPage: React.FC = () => {
               ))}
             </div>
             <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                {researchAreas.find(area => area.id === activeTab)?.description}
-              </p>
+              <p className="text-gray-300 max-w-2xl mx-auto">{researchAreas.find(area =}>
+          area.id === activeTab)?.description}
+              
+        </p>
             </div>
           </div>
           {/* Research Projects */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Current Research Projects
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Current Research Projects
             
           
           
@@ -417,8 +415,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="flex items-start mb-4">
                     <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <project.icon className={`w-6 h-6 ${project.color}`} />
-                    </div>
+                      <project.icon className={`w-6 h-6 ${project.color}`} /> </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
                       <p className="text-gray-300 text-sm mb-4">{project.description}</p>
@@ -432,8 +429,7 @@ const ResearchDevelopmentPage: React.FC = () => {
 }
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
-                      }`}>
-                        {project.status}
+                      }`}>{project.status}
                       
           
           
@@ -476,8 +472,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
           {/* Publications */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Recent Publications
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Recent Publications
             
           
           
@@ -504,8 +499,7 @@ const ResearchDevelopmentPage: React.FC = () => {
   // TODO: Add content
 }
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>
-                          {pub.impact} Impact
+                        }`}>{pub.impact} Impact
                         
           
           
@@ -520,8 +514,7 @@ const ResearchDevelopmentPage: React.FC = () => {
                       <a
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
-// >
-//                         Read Paper
+// >//                         Read Paper
                       
           
           
@@ -540,8 +533,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
           {/* Achievements */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Research Achievements
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Research Achievements
             
           
           
@@ -557,8 +549,7 @@ const ResearchDevelopmentPage: React.FC = () => {
                 
           <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <achievement.icon className="w-8 h-8 text-cyan-400" />
-                  </div>
+                    <achievement.icon className="w-8 h-8 text-cyan-400" /> </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
                   <p className="text-gray-300 text-sm">{achievement.description}</p>
                 </div>
@@ -567,8 +558,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           </div>
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-// Collaborate With Our Research Team
+            <h2 className="text-2xl font-bold text-white mb-4">// Collaborate With Our Research Team
             
           
           
@@ -579,8 +569,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           
           </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-// Interested in collaborating on cutting-edge research? We welcome partnerships with
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">// Interested in collaborating on cutting-edge research? We welcome partnerships with
               universities, research institutions, and industry leaders.
             
           
@@ -606,8 +595,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           
           
-          <BookOpen className="w-5 h-5 mr-2" />
-// Start Collaboration
+          <BookOpen className="w-5 h-5 mr-2" />// Start Collaboration
               
           
           
@@ -631,8 +619,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           
           
-          <Phone className="w-4 h-4 mr-2" />
-// (302) 464-0950
+          <Phone className="w-4 h-4 mr-2" />// (302) 464-0950
               
           
           
@@ -656,8 +643,7 @@ const ResearchDevelopmentPage: React.FC = () => {
           
           
           
-          <Mail className="w-4 h-4 mr-2" />
-// Email Us
+          <Mail className="w-4 h-4 mr-2" />// Email Us
               
           
           

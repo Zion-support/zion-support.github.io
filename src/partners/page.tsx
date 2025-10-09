@@ -120,8 +120,7 @@ icon: Globe,
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Our Partners
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Our Partners
             
           
           
@@ -132,8 +131,7 @@ icon: Globe,
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-// We work with industry-leading technology partners to deliver comprehensive solutions
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">// We work with industry-leading technology partners to deliver comprehensive solutions
 //               that drive innovation and business success.
             
           
@@ -166,8 +164,7 @@ icon: Globe,
                       <p className="text-gray-300 text-sm">{partner.description}</p>
                   ))}
           {/* Partnership Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-// Why Partner With Us?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">// Why Partner With Us?
             
           
           
@@ -225,8 +222,7 @@ icon: Globe,
           
           
           
-          <Handshake className="w-5 h-5 mr-2" />
-// Become a Partner
+          <Handshake className="w-5 h-5 mr-2" />// Become a Partner
               
           
           

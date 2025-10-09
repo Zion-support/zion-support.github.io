@@ -64,8 +64,7 @@ const CompliancePage: React.FC = () => {
           
           
           
-          <ArrowLeft className="w-4 h-4 mr-2" />
-// Back to Privacy Policy
+          <ArrowLeft className="w-4 h-4 mr-2" />// Back to Privacy Policy
               
           
           
@@ -83,8 +82,7 @@ const CompliancePage: React.FC = () => {
           {/* Overview */}
           <section className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-// Our Commitment to Compliance
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">// Our Commitment to Compliance
               
           
           
@@ -95,8 +93,7 @@ const CompliancePage: React.FC = () => {
           
           
           </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-// At Zion Tech Group, we maintain the highest standards of compliance and security.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">// At Zion Tech Group, we maintain the highest standards of compliance and security.
                 Our certifications and adherence to industry standards ensure your data is protected
 //                 and our services meet the most stringent requirements.
               
@@ -136,8 +133,7 @@ Compliance Areas
                     {area.features.map((feature, featureIndex) => ()
                       
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />{feature}
                       </li>
                   </ul>
 {/* Contact Section */}

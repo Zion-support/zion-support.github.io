@@ -7,8 +7,8 @@ interface SecurityConfig {
   enableCSP: boolean;
   enableHTTPS: boolean;
   enableXSSProtection: boolean;
-  enableCSRFProtection: boolean;
-  enableContentSecurityPolicy: boolean;
+  enableCSRFProtection: boolean;,
+    enableContentSecurityPolicy: boolean;
 }
 
 class SecurityEnhancer {
@@ -16,7 +16,7 @@ class SecurityEnhancer {
 
   constructor(config?: SecurityConfig) {
     this.config = config || {
-      enableCSP: true,
+    enableCSP: true,
       enableHTTPS: true,
       enableXSSProtection: true,
       enableCSRFProtection: true,

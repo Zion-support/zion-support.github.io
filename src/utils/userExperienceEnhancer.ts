@@ -12,8 +12,8 @@ interface UXConfig {
   enableProgressiveWebApp: boolean;
   enableOfflineSupport: boolean;
   enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableDarkMode: boolean;,
+    enableAnimations: boolean;
 }
 
 interface UXMetrics {
@@ -21,8 +21,8 @@ interface UXMetrics {
   interactionTime: number;
   bounceRate: number;
   userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
+  accessibilityScore: number;,
+    performanceScore: number;
 }
 
 class UserExperienceEnhancer {
@@ -31,7 +31,7 @@ class UserExperienceEnhancer {
 
   constructor(config?: UXConfig) {
     this.config = config || {
-      enableSmoothScrolling: true,
+    enableSmoothScrolling: true,
       enableLoadingStates: true,
       enableErrorBoundaries: true,
       enableAnalytics: true,

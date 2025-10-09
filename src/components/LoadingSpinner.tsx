@@ -58,8 +58,8 @@ className={cn()
           
           
           
-          <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">
-          {text}
+          <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse"}>{text}
+        
         </p>
       )}
     </div>
@@ -79,8 +79,7 @@ className={cn()
           <div>Coming Soon</div>
   )
       
-          <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        {spinner}
+          <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">{spinner}
       </div>
     );
   }

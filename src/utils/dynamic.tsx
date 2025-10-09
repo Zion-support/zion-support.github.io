@@ -18,8 +18,8 @@ export function dynamic
   importFunc: () => Promise
           <{ default: T }>,
   _options: DynamicOptions = {}
-): ComponentType<unknown> {
-return (props: unknown) => (
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
+): ComponentType<unknown> {return (props: unknown) => (
+    <Suspense fallback={options.loading ? options.loading() : <div}>Loading...
+        </div>}><LazyComponent {...props} /></Suspense>
   );
 }

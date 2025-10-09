@@ -7,8 +7,8 @@ interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean;
-  enableFocusIndicators: boolean;
-  enableAriaLabels: boolean;
+  enableFocusIndicators: boolean;,
+    enableAriaLabels: boolean;
 }
 
 class AccessibilityEnhancer {
@@ -16,7 +16,7 @@ class AccessibilityEnhancer {
 
   constructor(config?: AccessibilityConfig) {
     this.config = config || {
-      enableKeyboardNavigation: true,
+    enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
       enableHighContrast: true,
       enableFocusIndicators: true,

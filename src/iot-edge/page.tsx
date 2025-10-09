@@ -1,5 +1,5 @@
 import React from 'react';
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
+import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
@@ -96,8 +96,7 @@ title: 'IoT Data Management',
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-// IoT & Edge Computing Services
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">// IoT & Edge Computing Services
               
           
           
@@ -108,8 +107,7 @@ title: 'IoT Data Management',
           
           
           </h1>
-              <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
+              <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">// Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               
           
           
@@ -121,8 +119,7 @@ title: 'IoT Data Management',
           
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
-// Explore IoT Solutions
+                <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">// Explore IoT Solutions
                 
           
           
@@ -133,16 +130,14 @@ title: 'IoT Data Management',
           
           
           </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-Schedule Demo
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">Schedule Demo
               </div>
         </section>
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-// Why Choose Our IoT & Edge Services?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">// Why Choose Our IoT & Edge Services?
               
           
           
@@ -198,8 +193,7 @@ Save up to 40% vs market rates
                           {service.features.map((feature, featureIndex) => ()
                             
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />{feature}
                             </li>
                           ))}
                         </ul>
@@ -207,8 +201,7 @@ Save up to 40% vs market rates
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => ()
                             
-          <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
-                              {tech}
+          <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">{tech}
                             </span>
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
@@ -256,8 +249,7 @@ Ready to Connect Your World?
               <a
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
-// >
-//                  +1 302 464 0950
+// >//                  +1 302 464 0950
               
           
           

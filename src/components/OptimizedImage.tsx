@@ -152,7 +152,8 @@ const getOptimizedSrc = () => {
       )}
       {/* Error state */}
       {hasError && (
-<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
+<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm"}>Failed to load image
+        </div></div>
       )}
       {/* Actual image */}
       {isInView && ()
@@ -175,8 +176,7 @@ onError={handleError} className={`transition-opacity duration-300 ${
             height: '100%',
             objectFit: 'cover',
           }}
-//         />
-      )}
+//         />)}
     
           
           

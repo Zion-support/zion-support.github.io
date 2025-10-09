@@ -47,8 +47,8 @@ className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow 
           
           
           
-          <div className="mb-4 text-indigo-600" aria-hidden="true">
-          {icon}
+          <div className="mb-4 text-indigo-600" aria-hidden="true"}>{icon}
+        
         </div>
       )}
       <h3 className="text-2xl font-semibold text-gray-900 mb-4">{title}</h3>

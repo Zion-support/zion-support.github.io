@@ -1,8 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
-  return (
-    <div>Coming Soon</div>
+const RequestQuotePage: React.FC = () => {return (
+    <div}>Coming Soon
+        </div>
   );
 };
   const [formData, setFormData] = useState({
@@ -177,10 +177,8 @@ const RequestQuotePage: React.FC = () => {
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-green-400" />
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
-// Quote Request Submitted!
+                <CheckCircle className="w-10 h-10 text-green-400" /> </div>
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text">// Quote Request Submitted!
               
           
           
@@ -191,8 +189,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Thank you for your interest in our services. We've received your quote request
+              <p className="text-xl text-gray-300 mb-8">Thank you for your interest in our services. We've received your quote request
 // and will get back to you within 24 hours with a detailed proposal.
               
           
@@ -235,8 +232,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           
-          <Phone className="w-5 h-5 mr-2" />
-// Contact Us
+          <Phone className="w-5 h-5 mr-2" />// Contact Us
                 
           
           
@@ -260,8 +256,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           
-          <ArrowRight className="w-4 h-4 mr-2" />
-// Back to Home
+          <ArrowRight className="w-4 h-4 mr-2" />// Back to Home
                 
           
           
@@ -290,8 +285,7 @@ const RequestQuotePage: React.FC = () => {
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-// Request a Quote
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">// Request a Quote
             
           
           
@@ -302,8 +296,7 @@ const RequestQuotePage: React.FC = () => {
           
           
           </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get a detailed, no-obligation quote for your AI and IT project.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Get a detailed, no-obligation quote for your AI and IT project.
 // Our experts will provide you with a comprehensive proposal within 24 hours.
             
           
@@ -325,8 +318,7 @@ const RequestQuotePage: React.FC = () => {
                   {/* Personal Information */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Full Name *
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Full Name *
                       
           
           
@@ -345,20 +337,9 @@ type="text"
 // required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
-//                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                       /> </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Email Address *
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Email Address *
                       
           
           
@@ -377,22 +358,11 @@ type="email"
 // required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
-//                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                       /> </div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Company Name
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Company Name
                       
           
           
@@ -410,20 +380,9 @@ type="text"
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your company name"
-// />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+// /> </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Phone Number
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Phone Number
                       
           
           
@@ -441,22 +400,11 @@ type="tel"
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
-// />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+// /> </div>
                   </div>
                   {/* Project Information */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-// Service Type *
+                    <label className="block text-sm font-medium text-gray-300 mb-2">// Service Type *
                     
           
           
@@ -492,8 +440,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Project Size
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Project Size
                       
           
           
@@ -527,8 +474,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline
+                      <label className="block text-sm font-medium text-gray-300 mb-2">// Timeline
                       
           
           
@@ -563,8 +509,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-// Budget Range
+                    <label className="block text-sm font-medium text-gray-300 mb-2">// Budget Range
                     
           
           
@@ -598,8 +543,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-// Project Description *
+                    <label className="block text-sm font-medium text-gray-300 mb-2">// Project Description *
                     
           
           
@@ -618,20 +562,9 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
-//                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                     /> </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-// Specific Requirements
+                    <label className="block text-sm font-medium text-gray-300 mb-2">// Specific Requirements
                     
           
           
@@ -649,17 +582,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       rows={3}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Any specific technical requirements, integrations, or constraints..."
-// />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+// /> </div>
                   <button;
 type="submit"
                     disabled={isSubmitting}
@@ -676,8 +599,8 @@ type="submit"
           
           
           <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-// Submitting...
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div}>
+          // Submitting...
                       
           
           
@@ -687,8 +610,9 @@ type="submit"
           
           
           
-          </div>
-                    ) : ()
+          
+        </div}>
+          ) : ()
 // 'Request Quote'
                     )}
                   
@@ -700,7 +624,8 @@ type="submit"
           
           
           
-          </button>
+          
+        </button>
                 </form>
               </div>
             </div>
@@ -714,8 +639,7 @@ type="submit"
                     
           <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <benefit.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
+                        <benefit.icon className="w-4 h-4 text-cyan-400" /> </div>
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
                         <p className="text-xs text-gray-300">{benefit.description}</p>
@@ -732,8 +656,7 @@ type="submit"
                     
           <div key={index} className="flex items-start">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <item.icon className="w-4 h-4 text-purple-400" />
-                      </div>
+                        <item.icon className="w-4 h-4 text-purple-400" /> </div>
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
                         <p className="text-xs text-gray-300">{item.description}</p>
@@ -745,8 +668,7 @@ type="submit"
               {/* Contact Info */}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
-                <p className="text-gray-300 text-sm mb-4">
-// For urgent inquiries or immediate assistance, contact us directly.
+                <p className="text-gray-300 text-sm mb-4">// For urgent inquiries or immediate assistance, contact us directly.
                 
           
           

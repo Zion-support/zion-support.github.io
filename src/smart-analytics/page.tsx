@@ -1,6 +1,5 @@
 import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -42,8 +41,7 @@ const SmartAnalyticsPage: React.FC = () => {
           
           
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-// Most Popular
+                    <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"}>// Most Popular
                     
           
           
@@ -53,7 +51,8 @@ const SmartAnalyticsPage: React.FC = () => {
           
           
           
-          </span>
+          
+        </span>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -64,8 +63,7 @@ const SmartAnalyticsPage: React.FC = () => {
                   {plan.features.map((feature, featureIndex) => ()
                     
           <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />{feature}
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
