@@ -9,6 +9,7 @@
  * @author Zion Tech Group
  * @version 1.0.0
  */
+
 /**
  * Log levels enum
  */
@@ -17,8 +18,9 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4}
+  FATAL = 4
 }
+
 /**
  * Log entry interface
  */
@@ -42,8 +44,9 @@ export interface LogEntry {
   /** Session ID if available */
   sessionId?: string
   /** Environment (development, production, etc.) */
-  environment?: string;}
+  environment?: string
 }
+
 /**
  * Logger configuration interface
  */
@@ -63,8 +66,9 @@ export interface LoggerConfig {
   /** Enable performance tracking */
   enablePerformance: boolean
   /** Environment name */
-  environment: string;}
+  environment: string
 }
+
 /**
  * Default logger configuration
  */
@@ -75,8 +79,9 @@ const defaultConfig: LoggerConfig = {
   enableStructured: true,
   maxLogs: 1000,
   enablePerformance: true,
-  environment: process.env['NODE_ENV'] || 'development'}
+  environment: process.env['NODE_ENV'] || 'development'
 }
+
 /**
  * Enhanced Logger class
  *
@@ -88,16 +93,18 @@ const defaultConfig: LoggerConfig = {
  * const logger = EnhancedLogger.getInstance()
  * logger.info('User logged in', undefined, { userId: '123' })
  * logger.error('API request failed', { error: err }, err)
- * ``
+ * ```
  */
 export class EnhancedLogger {
   private static instance: EnhancedLogger
   private config: LoggerConfig
   private logs: LogEntry[] = []
-  private performanceMarks: Map<string, number> = new Map();}
-  private constructor(config: Partial<LoggerConfig> = {}) {}
+  private performanceMarks: Map<string, number> = new Map()
+
+  private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = { ...defaultConfig, ...config }
   }
+
   /**
    * Get singleton instance of EnhancedLogger
    *
@@ -106,21 +113,23 @@ export class EnhancedLogger {
    */
   public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {
     if (!EnhancedLogger.instance) {
-      EnhancedLogger.instance = new EnhancedLogger(config);}
+      EnhancedLogger.instance = new EnhancedLogger(config)
     } else if (config) {
       // Config already set, instance exists
-      Object.assign(EnhancedLogger.instance.config, config);}
+      Object.assign(EnhancedLogger.instance.config, config)
     }
     return EnhancedLogger.instance
   }
+
   /**
    * Reset singleton instance (mainly for testing)
    *
    * @internal
    */
   public static resetInstance(): void {
-    EnhancedLogger.instance = undefined as unknown as EnhancedLogger;}
+    EnhancedLogger.instance = undefined as unknown as EnhancedLogger
   }
+
   /**
    * Log a debug message
    *
@@ -130,11 +139,12 @@ export class EnhancedLogger {
    * @example
    * ```typescript
    * logger.debug('Component rendered', { props: componentProps }, 'MyComponent')
-   * ``
+   * ```
    */
   public debug(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.DEBUG, message, data, source);}
+    this.log(LogLevel.DEBUG, message, data, source)
   }
+
   /**
    * Log an info message
    *
@@ -144,11 +154,12 @@ export class EnhancedLogger {
    * @example
    * ```typescript
    * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent')
-   * ``
+   * ```
    */
   public info(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.INFO, message, data, source);}
+    this.log(LogLevel.INFO, message, data, source)
   }
+
   /**
    * Log a warning message
    *
@@ -158,11 +169,12 @@ export class EnhancedLogger {
    * @example
    * ```typescript
    * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule')
-   * ``
+   * ```
    */
   public warn(message: string, data?: Record<string, unknown>, source?: string): void {
-    this.log(LogLevel.WARN, message, data, source);}
+    this.log(LogLevel.WARN, message, data, source)
   }
+
   /**
    * Log an error message
    *
@@ -173,28 +185,29 @@ export class EnhancedLogger {
    * @example
    * ```typescript
    * try {
-   *   // some code}
-   * } catch (err) {}
+   *   // some code
+   * } catch (err) {
    *   logger.error('Operation failed', { operation: 'fetchData' }, err, 'DataService')
    * }
-   * ``
+   * ```
    */
   public error(
     message: string,
     data?: Record<string, unknown>,
     error?: Error,
     source?: string
-  ): void {}
+  ): void {
     const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack}
+        stack: error.stack
       }
     }
     this.log(LogLevel.ERROR, message, logData, source, error?.stack)
   }
+
   /**
    * Log a fatal error message
    *
@@ -208,17 +221,18 @@ export class EnhancedLogger {
     data?: Record<string, unknown>,
     error?: Error,
     source?: string
-  ): void {}
+  ): void {
     const logData = { ...data }
     if (error) {
       logData.error = {
         name: error.name,
         message: error.message,
-        stack: error.stack}
+        stack: error.stack
       }
     }
     this.log(LogLevel.FATAL, message, logData, source, error?.stack)
   }
+
   /**
    * Start a performance measurement
    *
@@ -228,12 +242,13 @@ export class EnhancedLogger {
    * logger.startPerformance('api_call')
    * // ... perform operation
    * logger.endPerformance('api_call'); // Logs the duration
-   * ``
+   * ```
    */
   public startPerformance(markName: string): void {
     if (!this.config.enablePerformance) return
-    this.performanceMarks.set(markName, performance.now());}
+    this.performanceMarks.set(markName, performance.now())
   }
+
   /**
    * End a performance measurement and log the duration
    *
@@ -244,7 +259,7 @@ export class EnhancedLogger {
   public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {
     if (!this.config.enablePerformance) return undefined
     const startTime = this.performanceMarks.get(markName)
-    if (!startTime) {`}
+    if (!startTime) {
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger')
       return undefined
     }
@@ -252,7 +267,7 @@ export class EnhancedLogger {
     this.performanceMarks.delete(markName)
     this.info(
       `Performance: ${markName}`,
-      {`}
+      {
         duration: `${duration.toFixed(2)}ms`,
         ...data
       },
@@ -260,6 +275,7 @@ export class EnhancedLogger {
     )
     return duration
   }
+
   /**
    * Core logging method
    *
@@ -289,23 +305,24 @@ export class EnhancedLogger {
       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-      environment: this.config.environment}
+      environment: this.config.environment
     }
     // Store log entry
     this.logs.push(logEntry)
     // Maintain max logs limit
     if (this.logs.length > this.config.maxLogs) {
-      this.logs.shift();}
+      this.logs.shift()
     }
     // Console output
     if (this.config.enableConsole) {
-      this.logToConsole(logEntry);}
+      this.logToConsole(logEntry)
     }
     // Remote logging
     if (this.config.enableRemote && this.config.remoteEndpoint) {
-      this.logToRemote(logEntry);}
+      this.logToRemote(logEntry)
     }
   }
+
   /**
    * Check if running in development mode
    *
@@ -313,8 +330,9 @@ export class EnhancedLogger {
    * @returns true if in development mode
    */
   private isDevelopment(): boolean {
-    return this.config.environment === 'development' || process.env['NODE_ENV'] === 'development';}
+    return this.config.environment === 'development' || process.env['NODE_ENV'] === 'development'
   }
+
   /**
    * Output log to console
    *
@@ -323,35 +341,37 @@ export class EnhancedLogger {
    */
   private logToConsole(entry: LogEntry): void {
     const levelName = LogLevel[entry.level]
-    const timestamp = entry.timestamp.toISOString();`}
+    const timestamp = entry.timestamp.toISOString()
     const source = entry.source ? ` [${entry.source}]` : ''
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`
+    
     if (this.config.enableStructured) {
       const structuredLog = {
         timestamp: entry.timestamp,
         level: levelName,
         message: entry.message,
         source: entry.source,
-        data: entry.data}
+        data: entry.data
       }
       switch (entry.level) {
         case LogLevel.DEBUG:
           if (this.isDevelopment()) {
-            logger.debug(message, structuredLog);}
+            console.debug(message, structuredLog)
           }
           break
         case LogLevel.INFO:
-          if (this.isDevelopment()) {}
-            }
+          if (this.isDevelopment()) {
+            console.info(message, structuredLog)
+          }
           break
         case LogLevel.WARN:
-          logger.warn(message, structuredLog)
+          console.warn(message, structuredLog)
           break
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          logger.error(message, structuredLog)
-          if (entry.stack) {}
-            logger.info('Stack trace:', { stack: entry.stack }, 'Logger')
+          console.error(message, structuredLog)
+          if (entry.stack) {
+            console.info('Stack trace:', { stack: entry.stack }, 'Logger')
           }
           break
       }
@@ -360,23 +380,25 @@ export class EnhancedLogger {
       switch (entry.level) {
         case LogLevel.DEBUG:
           if (this.isDevelopment()) {
-            logger.debug(message, entry.data);}
+            console.debug(message, entry.data)
           }
           break
         case LogLevel.INFO:
-          if (this.isDevelopment()) {}
-            }
+          if (this.isDevelopment()) {
+            console.info(message, entry.data)
+          }
           break
         case LogLevel.WARN:
-          logger.warn(message, entry.data)
+          console.warn(message, entry.data)
           break
         case LogLevel.ERROR:
         case LogLevel.FATAL:
-          logger.error(message, entry.data)
+          console.error(message, entry.data)
           break
       }
     }
   }
+
   /**
    * Send log to remote endpoint
    *
@@ -389,29 +411,31 @@ export class EnhancedLogger {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'}
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           ...entry,
-          timestamp: entry.timestamp.toISOString()}
+          timestamp: entry.timestamp.toISOString()
         })
       })
     } catch (error) {
       // Fallback to console if remote logging fails
-      logger.error('Failed to send log to remote endpoint:', {
-        error: error instanceof Error ? error.message : String(error)}
+      console.error('Failed to send log to remote endpoint:', {
+        error: error instanceof Error ? error.message : String(error)
       })
     }
   }
+
   /**
    * Generate unique log ID
    *
    * @private
    * @returns Unique log identifier
    */
-  private generateLogId(): string {`}
+  private generateLogId(): string {
     return `log_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
+
   /**
    * Get user ID from session/storage
    *
@@ -421,11 +445,12 @@ export class EnhancedLogger {
   private getUserId(): string | undefined {
     if (typeof window === 'undefined') return undefined
     try {
-      return localStorage.getItem('userId') || undefined;}
+      return localStorage.getItem('userId') || undefined
     } catch {
-      return undefined;}
+      return undefined
     }
   }
+
   /**
    * Get or create session ID
    *
@@ -436,15 +461,16 @@ export class EnhancedLogger {
     if (typeof window === 'undefined') return undefined
     try {
       let sessionId = sessionStorage.getItem('sessionId')
-      if (!sessionId) {`}
+      if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
         sessionStorage.setItem('sessionId', sessionId)
       }
       return sessionId
     } catch {
-      return undefined;}
+      return undefined
     }
   }
+
   /**
    * Get all logs
    *
@@ -453,10 +479,11 @@ export class EnhancedLogger {
    */
   public getLogs(level?: LogLevel): LogEntry[] {
     if (level !== undefined) {
-      return this.logs.filter(log => log.level === level);}
+      return this.logs.filter(log => log.level === level)
     }
     return [...this.logs]
   }
+
   /**
    * Get logs by source
    *
@@ -464,8 +491,9 @@ export class EnhancedLogger {
    * @returns Array of log entries from the specified source
    */
   public getLogsBySource(source: string): LogEntry[] {
-    return this.logs.filter(log => log.source === source);}
+    return this.logs.filter(log => log.source === source)
   }
+
   /**
    * Get log statistics
    *
@@ -474,37 +502,40 @@ export class EnhancedLogger {
   public getStatistics(): {
     total: number
     byLevel: Record<string, number>
-    bySource: Record<string, number>;}
-  } {}
+    bySource: Record<string, number>
+  } {
     const byLevel: Record<string, number> = {}
     const bySource: Record<string, number> = {}
     this.logs.forEach(log => {
       const levelName = LogLevel[log.level]
       byLevel[levelName] = (byLevel[levelName] || 0) + 1
       if (log.source) {
-        bySource[log.source] = (bySource[log.source] || 0) + 1;}
+        bySource[log.source] = (bySource[log.source] || 0) + 1
       }
     })
     return {
       total: this.logs.length,
       byLevel,
-      bySource}
+      bySource
     }
   }
+
   /**
    * Clear all logs
    */
   public clearLogs(): void {
-    this.logs = [];}
+    this.logs = []
   }
+
   /**
    * Update logger configuration
    *
    * @param config - Partial configuration to merge
    */
-  public configure(config: Partial<LoggerConfig>): void {}
+  public configure(config: Partial<LoggerConfig>): void {
     this.config = { ...this.config, ...config }
   }
+
   /**
    * Export logs as JSON
    *
@@ -514,14 +545,16 @@ export class EnhancedLogger {
     return JSON.stringify(
       this.logs.map(log => ({
         ...log,
-        timestamp: log.timestamp.toISOString()}
+        timestamp: log.timestamp.toISOString()
       })),
       null,
       2
     )
   }
 }
+
 // Export singleton instance
 export const logger = EnhancedLogger.getInstance()
+
 // Export default
 export default EnhancedLogger
