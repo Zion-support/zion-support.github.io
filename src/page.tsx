@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
@@ -65,12 +66,18 @@ const HomePage: React.FC = () => {
   }, []);
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-307a
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap } from 'lucide-react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -217,6 +224,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Navigation from './components/Navigation';
@@ -236,9 +244,11 @@ export default function HomePage() {
       <ContactSection />
       <Footer />
 >>>>>>> cursor/analyze-improve-and-deploy-application-5803
+=======
+      <Footer />
+>>>>>>> cursor/website-audit-and-update-with-deployment-307a
     </div>
   );
-
 };
 
 export default HomePage;
