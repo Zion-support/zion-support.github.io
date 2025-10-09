@@ -2,24 +2,40 @@ import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
-const,
-  Navigation: React.FC = memo(() => {/* TODO: Fix JSX expression */}
+const Navigation: React.FC = memo(() => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+        setServicesOpen(false);
       }
     };
 
-    const handleScroll = () => {/* TODO: Fix JSX expression */}
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
-    return () => {/* TODO: Fix JSX expression */}
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const closeAllMenus = () => {/* TODO: Fix JSX expression */}
+  const closeAllMenus = () => {
+    setIsOpen(false);
+    setServicesOpen(false);
   };
 
-  const toggleMenu = () => {/* TODO: Fix JSX expression */}
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    if (isOpen) {
+      setServicesOpen(false);
     }
   };
 
