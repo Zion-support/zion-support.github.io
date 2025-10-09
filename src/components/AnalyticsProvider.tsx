@@ -1,18 +1,21 @@
 'use client';
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
+    const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+    
     const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
       // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
+      (window as any).dataLayer = (window as any).dataLayer || [];
       function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
+        (window as any).dataLayer.push(args);
       }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
@@ -39,7 +42,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         const target = e.target as HTMLElement;
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+          const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
               event_category: 'engagement',
@@ -62,17 +65,24 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       // Track phone number clicks
       document.addEventListener('click', (e) => {
         const target = e.target as HTMLElement;
-        if (target.href && target.href.startsWith('tel:')) {
+        const href = (target as HTMLAnchorElement).href || target.getAttribute('href') || '';
+        if (href && href.startsWith('tel:')) {
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
               event_category: 'engagement',
               event_label: 'phone_number',
-              value: target.href
+              value: href
             });
           }
         }
       });
     };
+    
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
     // Initialize analytics
     initAnalytics();
     trackPageView();
