@@ -510,6 +510,7 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
@@ -533,6 +534,26 @@ const Footer: React.FC = memo(() => {
               <div>
                 <div className="text-white font-medium">Middletown, DE</div>
                 <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+=======
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 text-cyan-400 mr-3" />
+                <span className="text-gray-300">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 text-cyan-400 mr-3" />
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start">
+                <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
+                <span className="text-gray-300">
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
+                </span>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-30aa
               </div>
             </div>
             <div className="flex items-center space-x-3">
