@@ -13,7 +13,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -36,7 +39,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
+    { name: 'Contact', url: '/contact' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Industries', url: '/industries' },
+    { name: 'Pricing', url: '/pricing' }
   ];
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
@@ -45,6 +51,15 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
+  ];
+
+  const resourceLinks = [
+    { name: 'Resources', url: '/resources' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'White Papers', url: '/resources#whitepapers' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Webinars', url: '/resources#webinars' },
+    { name: 'Tools', url: '/resources#tools' }
   ];
   const contactInfo = {
     phone: '+1 (302) 464-0950',
@@ -55,7 +70,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
@@ -93,6 +108,22 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
+            <ul className="space-y-2">
+              {resourceLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     href={link.url}
