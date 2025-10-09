@@ -1,8 +1,10 @@
-/**
+/**;
  * Google Analytics gtag types;
- */
-interface GtagEvent {
-  // TODO: Add content
+ */;
+interface GtagEvent {;
+    // TODO: Add content;
+  }
+  }
 }
   event_category?: string;
   event_label?: string;
@@ -10,12 +12,14 @@ interface GtagEvent {
   [key: string]: unknown;
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {
-  // TODO: Add content
+interface Window {;
+    // TODO: Add content;
+  }
+  }
 }
   gtag?: ();
-  command: GtagCommand,
-    targetId: string | Date,
+  command: GtagCommand,;
+    targetId: string | Date,;
 config?: GtagEvent;
   ) => void;
   dataLayer?: unknown[];

@@ -1,119 +1,134 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Common patterns to fix
-const fixes = [
-  // Fix missing commas in object arrays
-  {
-    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1$2: $3,\n$1$4:'
-  },
-  // Fix missing commas in arrays
-  {
-    pattern: /(\s*)(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1$2: $3,\n$1$4:'
-  },
-  // Fix incomplete function definitions
-  {
-    pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g,
-    replacement: 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};'
-  },
-  // Fix missing closing braces
-  {
-    pattern: /(\w+):\s*([^,}]+)\n\s*(\w+):/g,
-    replacement: '$1: $2,\n    $3:'
-  },
-  // Fix malformed JSX comments
-  {
-    pattern: /\/\/\s*([^<]+)</g,
-    replacement: '// $1\n          <'
-  },
-  // Fix missing semicolons
-  {
-    pattern: /(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm,
-    replacement: '$1 = [$2];'
-  },
-  // Fix incomplete object definitions
-  {
-    pattern: /{\s*\/\/\s*TODO:.*?\n\s*}/g,
-    replacement: '{\n  // TODO: Add content\n}'
-  }
-];
+// Function to fix duplicate imports
+function fixDuplicateImports(content) {
+  // Fix patterns like: Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users
+  const duplicateImportRegex = /([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*),\s*([A-Za-z][A-Za-z0-9]*)\s*,\s*\1,\s*\2,\s*\3,\s*\4/g;
+  content = content.replace(duplicateImportRegex, '$1, $2, $3, $4');
+  
+  // Fix patterns with more complex duplicates
+  const complexDuplicateRegex = /([A-Za-z][A-Za-z0-9]*\s+as\s+[A-Za-z][A-Za-z0-9]*,\s*)+([A-Za-z][A-Za-z0-9]*\s+as\s+[A-Za-z][A-Za-z0-9]*)\s*,\s*\1/g;
+  content = content.replace(complexDuplicateRegex, (match, p1, p2) => {
+    return p1 + p2;
+  });
+  
+  // Fix simple duplicates at the end
+  const simpleDuplicateRegex = /([A-Za-z][A-Za-z0-9]*),\s*\1\s*from/g;
+  content = content.replace(simpleDuplicateRegex, '$1 from');
+  
+  return content;
+}
 
+// Function to fix malformed object syntax
+function fixMalformedObjects(content) {
+  // Fix {, patterns
+  content = content.replace(/{\s*,/g, '{');
+  
+  // Fix missing closing braces in objects
+  content = content.replace(/({\s*[^}]*),\s*$/gm, '$1\n  }');
+  
+  return content;
+}
+
+// Function to fix duplicate function declarations
+function fixDuplicateFunctions(content) {
+  // Remove duplicate function declarations
+  const lines = content.split('\n');
+  const seenFunctions = new Set();
+  const fixedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const functionMatch = line.match(/const\s+([A-Za-z][A-Za-z0-9]*):\s*React\.FC/);
+    
+    if (functionMatch) {
+      const functionName = functionMatch[1];
+      if (seenFunctions.has(functionName)) {
+        // Skip duplicate function declarations
+        continue;
+      }
+      seenFunctions.add(functionName);
+    }
+    
+    fixedLines.push(line);
+  }
+  
+  return fixedLines.join('\n');
+}
+
+// Function to fix duplicate return statements
+function fixDuplicateReturns(content) {
+  // Find and fix duplicate return statements
+  const lines = content.split('\n');
+  let inFunction = false;
+  let returnCount = 0;
+  const fixedLines = [];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    
+    if (line.includes('const') && line.includes(': React.FC')) {
+      inFunction = true;
+      returnCount = 0;
+    }
+    
+    if (line.includes('};') && inFunction) {
+      inFunction = false;
+      returnCount = 0;
+    }
+    
+    if (line.trim().startsWith('return') && inFunction) {
+      returnCount++;
+      if (returnCount > 1) {
+        // Skip duplicate return statements
+        continue;
+      }
+    }
+    
+    fixedLines.push(line);
+  }
+  
+  return fixedLines.join('\n');
+}
+
+// Function to fix syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing semicolons
+  content = content.replace(/([^;}])\s*$/gm, '$1;');
+  
+  // Fix missing closing braces
+  content = content.replace(/({\s*[^}]*)\s*$/gm, '$1\n  }');
+  
+  // Fix malformed JSX
+  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1>');
+  
+  return content;
+}
+
+// Main function to fix a file
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
+    // Apply all fixes
+    content = fixDuplicateImports(content);
+    content = fixMalformedObjects(content);
+    content = fixDuplicateFunctions(content);
+    content = fixDuplicateReturns(content);
+    content = fixSyntaxErrors(content);
     
-    // Additional specific fixes
-    // Fix missing commas in object properties
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix missing closing braces for objects
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix incomplete function returns
-    content = content.replace(/return\s*\(\s*\/\/\s*TODO:.*?\n\s*\)/g, 'return (\n    <div>Coming Soon</div>\n  )');
-    
-    // Fix malformed JSX
-    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
-    
-    // Fix missing semicolons after variable declarations
-    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
-    
-    // Fix incomplete object definitions
-    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
-    
-    // Fix missing closing tags
-    content = content.replace(/<(\w+)>\s*\/\/\s*([^<]+)</g, '<$1>// $2\n          <');
-    
-    // Fix malformed array definitions
-    content = content.replace(/(\w+)\s*=\s*\[\s*\/\/\s*TODO:.*?\n\s*\]/g, '$1 = [\n  // TODO: Add items\n];');
-    
-    // Fix incomplete function parameters
-    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
-    
-    // Fix malformed JSX attributes
-    content = content.replace(/className="([^"]*)\s*\/\/\s*([^"]*)"/g, 'className="$1" // $2');
-    
-    // Fix missing closing parentheses
-    content = content.replace(/\(\s*\/\/\s*TODO:.*?\n\s*\)/g, '()');
-    
-    // Fix incomplete object properties
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix malformed JSX elements
-    content = content.replace(/<(\w+)\s*\/\/\s*([^>]+)>/g, '<$1>// $2');
-    
-    // Fix missing commas in arrays
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix incomplete function definitions
-    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{\s*\/\/\s*TODO:.*?\n\s*}/g, 'const $1: React.FC = () => {\n  return (\n    <div>Coming Soon</div>\n  );\n};');
-    
-    // Fix missing closing braces
-    content = content.replace(/(\w+):\s*([^,}]+)\n\s*(\w+):/g, '$1: $2,\n    $3:');
-    
-    // Fix malformed JSX comments
-    content = content.replace(/\/\/\s*([^<]+)</g, '// $1\n          <');
-    
-    // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*\[([^\]]+)\]\s*$/gm, '$1 = [$2];');
-    
-    // Fix incomplete object definitions
-    content = content.replace(/{\s*\/\/\s*TODO:.*?\n\s*}/g, '{\n  // TODO: Add content\n}');
-    
+    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -121,14 +136,16 @@ function fixFile(filePath) {
   }
 }
 
-// Find all TypeScript/JSX files
+// Get all TypeScript/TSX files in src directory
 const files = glob.sync('src/**/*.{ts,tsx}', { cwd: process.cwd() });
 
+console.log(`Found ${files.length} files to check...`);
+
 let fixedCount = 0;
-files.forEach(file => {
+for (const file of files) {
   if (fixFile(file)) {
     fixedCount++;
   }
-});
+}
 
 console.log(`Fixed ${fixedCount} files`);

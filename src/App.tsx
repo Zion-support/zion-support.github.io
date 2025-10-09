@@ -22,7 +22,7 @@ const App: React.FC = () => {
     const timer = setTimeout(() => {
       setIsInitialized(true);
     }, 1000);
-    
+
     return () => clearTimeout(timer);
   }, []);
 

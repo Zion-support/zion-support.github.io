@@ -17,16 +17,16 @@ const HomePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Our Services
-              </Link>
-              <Link
                 to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
+              </Link>
+              <Link
+                to="/about"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors"
+              >
+                Learn More
               </Link>
             </div>
           </div>
@@ -34,73 +34,50 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions to transform your business
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Advanced artificial intelligence solutions to automate and optimize your business processes.
-              </p>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 p-6 rounded-lg">
+              <Brain className="w-12 h-12 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">AI Solutions</h3>
+              <p className="text-gray-300">Cutting-edge artificial intelligence solutions for your business needs.</p>
             </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Cloud className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
-              <p className="text-gray-600">
-                Scalable cloud infrastructure and migration services for modern businesses.
-              </p>
+            <div className="bg-slate-800/50 p-6 rounded-lg">
+              <Shield className="w-12 h-12 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Cybersecurity</h3>
+              <p className="text-gray-300">Comprehensive security solutions to protect your digital assets.</p>
             </div>
-
-            <div className="bg-gray-50 p-8 rounded-lg">
-              <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Cybersecurity</h3>
-              <p className="text-gray-600">
-                Comprehensive security solutions to protect your digital assets and data.
-              </p>
+            <div className="bg-slate-800/50 p-6 rounded-lg">
+              <Cloud className="w-12 h-12 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Cloud Services</h3>
+              <p className="text-gray-300">Scalable cloud infrastructure and migration services.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Contact us today to discuss how our AI and IT solutions can help your business grow.
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Contact us today to discuss your AI and IT needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Contact Us
-            </Link>
             <a
               href="tel:+1234567890"
-              className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="flex items-center justify-center gap-2 bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors"
             >
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call Now
+              <Phone className="w-5 h-5" />
+              Call Us
+            </a>
+            <a
+              href="mailto:info@ziontech.com"
+              className="flex items-center justify-center gap-2 border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors"
+            >
+              <Mail className="w-5 h-5" />
+              Email Us
             </a>
           </div>
         </div>

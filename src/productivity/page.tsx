@@ -1,38 +1,36 @@
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, Star} from 'lucide-react';
-const ProductivityPage: React.FC = () => {
-      return (
+import { CheckCircle, Star } from 'lucide-react';
+const ProductivityPage: React.FC = () => {;
+    return (;
+  }
     <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
+  }
+  }
+        {;
+    /* Hero Section */;
+  }
         <section className="text-center mb-16">
 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Productivity Tools</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">AI-powered productivity tools to streamline your workflow, boost efficiency, and achieve more in less time</p>
-            <a
-              href="/contact"
+            <a;
+              href="/contact";
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >Get Productivity Suite</a>
-              href="/micro-saas"
+              href="/micro-saas";
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
             >View All Tools</a>
           </div>
         </section>
-        {/* Key Benefits */}
+        {;
+    /* Key Benefits */;
+  }
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-// Why Choose Our Productivity Tools?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+// Why Choose Our Productivity Tools?;
           </h2>
 <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
@@ -46,14 +44,23 @@ const ProductivityPage: React.FC = () => {
               <div className="text-4xl mb-4">🔗</div>
               <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>
               <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
-        {/* Tools by Category */}
-        {categories.map(category => ()
-          
+        {;
+    /* Tools by Category */;
+  }
+        {;
+    categories.map(category => ();
+  }
+  }
           <section key={category} className="mb-16">
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{productivityTools
-                .filter(tool => tool.category === category)
-                .map((tool, index) => (
+            <div>{;
+    productivityTools;
+                .filter(tool => tool.category === category);
+                .map((tool,;
+    index) => (;
+  }
+  }
+  }
 <div className="text-4xl mb-4 text-center">{tool.icon}</div>
                     <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>
                     <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>
@@ -62,35 +69,54 @@ const ProductivityPage: React.FC = () => {
                       <div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
-                        {tool.features.slice(0, 3).map((feature, featureIndex) => ()
-                          
+                        {;
+    tool.features.slice(0,;
+    3).map((feature,;
+    featureIndex) => ();
+  }
+  }
+  }
           <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-                            {feature}
+                            {;
+    feature;
+  }
                           </li>
                         ))}
-                        {tool.features.length > 3 && (
+                        {;
+    tool.features.length > 3 && (;
+  }
+  }
+  }
 <li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>
                         )}
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
-                        {tool.benefits.map((benefit, benefitIndex) => ()
-                          
+                        {;
+    tool.benefits.map((benefit,;
+    benefitIndex) => ();
+  }
+  }
+  }
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
-                            {benefit}
+                            {;
+    benefit;
+  }
 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
                       >Get This Tool</a>
-        {/* CTA Section */}
+        {;
+    /* CTA Section */;
+  }
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Ready to Boost Your Productivity?
+            Ready to Boost Your Productivity?;
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work</p>
             >Get Started Today</a>
-              href="tel:+13024640950"
+              href="tel:+13024640950";
             >Call (302) 464-0950</a>
       </main>
       <Footer />
 </div>);
 }
-export default ProductivityPage
+export default ProductivityPage;

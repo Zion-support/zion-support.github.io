@@ -1,18 +1,11 @@
-export default function Page() {
-  // TODO: Add content
+export default function Page() {;
+    // TODO: Add content;
+  }
+  }
 }
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
+  return (;
           <div>Coming Soon</div>
-  )
-    
+  );
           <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
       <header className='bg-gradient-to-br from-fuchsia-900 via-purple-900 to-slate-900 text-white py-20'>
         <div>
@@ -21,19 +14,10 @@ export default function Page() {
             <span className='text-sm font-semibold'>Agent Ops  2026</span>
           </div>
           <h1 className='text-5xl md:text-6xl font-extrabold leading-tight mb-4'>
-// Agent Release Runbooks v2 (2026)
-          
-          
-          
-          
-          
-          
-          
-          
-          
+// Agent Release Runbooks v2 (2026);
           </h1>
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
-            canaries, approvals and one‑click rollback.
+<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+            canaries, approvals and one‑click rollback.;
           </p>
           <div>
             <div>
@@ -51,8 +35,8 @@ export default function Page() {
         <div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three primitives: hard;
-            budgets, lightweight approvals and KPI-linked canaries that trigger
-            automatic rollback when thresholds are breached.
+            budgets, lightweight approvals and KPI-linked canaries that trigger;
+            automatic rollback when thresholds are breached.;
           </p>
           <h3>Runbook Outline</h3>
           <ol>
@@ -86,35 +70,18 @@ export default function Page() {
               <h3 className='text-2xl font-bold flex items-center gap-2'>
                 <FileWarning />Prevent Regressions</h3>
               <p className='text-white/90'>
-// We implement v2 runbooks in 46 weeks with audits and training.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+// We implement v2 runbooks in 46 weeks with audits and training.;
           </p>
             </div>
-            <Link
-              href='/contact'
-              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
+            <Link;
+              href='/contact';
+              className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2';
 // >
-//               Engage 
-          
-          
-          
-          
-          
-          
-          
-          
+//               Engage,;
           <RefreshCw />
             </Link>
           </div>
         </div>
       </section>
-    </main>)
+    </main>);
 }

@@ -1,18 +1,22 @@
-/**
- * Enhanced Logger Utility
- * Provides structured logging with different levels and contexts
- */
-export enum LogLevel {
-  // TODO: Add content
+/**;
+ * Enhanced Logger Utility;
+ * Provides structured logging with different levels and contexts;
+ */;
+export enum LogLevel {;
+    // TODO: Add content;
+  }
+  }
 }
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  FATAL = 4
+  DEBUG = 0,;
+  INFO = 1,;
+  WARN = 2,;
+  ERROR = 3,;
+  FATAL = 4;
 }
-export interface LogContext {
-  // TODO: Add content
+export interface LogContext {;
+    // TODO: Add content;
+  }
+  }
 }
   component?: string;
   action?: string;
@@ -21,8 +25,10 @@ export interface LogContext {
   requestId?: string;
   [key: string]: unknown;
 }
-export interface LogMetadata {
-  // TODO: Add content
+export interface LogMetadata {;
+    // TODO: Add content;
+  }
+  }
 }
   timestamp?: string;
   level?: LogLevel;
@@ -31,222 +37,186 @@ export interface LogMetadata {
   error?: Error;
   [key: string]: unknown;
 }
-class Logger {
-  // TODO: Add content
+class Logger {;
+    // TODO: Add content;
+  }
+  }
 }
   private logLevel: LogLevel;
   private isDevelopment: boolean;
-  constructor() {
-  // TODO: Add content
+  constructor() {;
+    // TODO: Add content;
+  }
+  }
 }
     this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO;
     this.isDevelopment = process.env.NODE_ENV === 'development';
   }
-  /**
-   * Set the minimum log level
-   */
-  setLogLevel(level: LogLevel): void {
-  // TODO: Add content
+  /**;
+   * Set the minimum log level;
+   */;
+  setLogLevel(level: LogLevel): void {;
+    // TODO: Add content;
+  }
+  }
 }
     this.logLevel = level;
   }
-  /**
-   * Get the current log level
-   */
-  getLogLevel(): LogLevel {
-  // TODO: Add content
+  /**;
+   * Get the current log level;
+   */;
+  getLogLevel(): LogLevel {;
+    // TODO: Add content;
+  }
+  }
 }
     return this.logLevel;
   }
-  /**
-   * Log a debug message
-   */
-  debug(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>): void {
-  // TODO: Add content
+  /**;
+   * Log a debug message;
+   */;
+  debug(message: string, context?: LogContext, metadata?: Record;
+          <string, unknown>): void {;
+    // TODO: Add content;
+  }
+  }
 }
     this.log(LogLevel.DEBUG, message, context, metadata);
   }
-  /**
-   * Log an info message
-   */
-  info(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>): void {
-  // TODO: Add content
+  /**;
+   * Log an info message;
+   */;
+  info(message: string, context?: LogContext, metadata?: Record;
+          <string, unknown>): void {;
+    // TODO: Add content;
+  }
+  }
 }
     this.log(LogLevel.INFO, message, context, metadata);
   }
-  /**
-   * Log a warning message
-   */
-  warn(message: string, context?: LogContext, metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>): void {
-  // TODO: Add content
+  /**;
+   * Log a warning message;
+   */;
+  warn(message: string, context?: LogContext, metadata?: Record;
+          <string, unknown>): void {;
+    // TODO: Add content;
+  }
+  }
 }
     this.log(LogLevel.WARN, message, context, metadata);
   }
-  /**
-   * Log an error message
-   */
-//   error()
-    message: string,
-    errorOrContextOrMetadata?: Error | string | Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
+  /**;
+   * Log an error message;
+   */;
+//   error();
+    message: string,;
+    errorOrContextOrMetadata?: Error | string | Record;
+          <string, unknown>,;
+    contextOrMetadata?: string | Record<string, unknown>,;
     metadata?: Record<string, unknown>
-  ): void {
-  // TODO: Add content
+  ): void {;
+    // TODO: Add content;
+  }
+  }
 }
     let error: Error | undefined;
     let context: LogContext | undefined;
-    let meta: Record
-          
-          
-          
-          
-          
-          
-          
-          
+    let meta: Record;
           <string, unknown> | undefined;
-    // Handle different parameter combinations
-    if (errorOrContextOrMetadata instanceof Error) {
-  // TODO: Add content
+    // Handle different parameter combinations,;
+    if (errorOrContextOrMetadata instanceof Error) {;
+    // TODO: Add content;
+  }
+  }
 }
       error = errorOrContextOrMetadata;
       context = contextOrMetadata as LogContext;
       meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {
-  // TODO: Add content
+    } else if (typeof errorOrContextOrMetadata === 'string') {;
+    // TODO: Add content;
+  }
+  }
 }
-      context = { component: errorOrContextOrMetadata };
-      meta = contextOrMetadata as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>;
-    } else if (typeof errorOrContextOrMetadata === 'object') {
-  // TODO: Add content
+      context = {;
+    component: errorOrContextOrMetadata;
+  }
+      meta = contextOrMetadata as Record;
+          <string, unknown>
+    } else if (typeof errorOrContextOrMetadata === 'object') {;
+    // TODO: Add content;
+  }
+  }
 }
       context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>;
+      meta = contextOrMetadata as Record;
+          <string, unknown>
     }
     this.log(LogLevel.ERROR, message, context, { ...meta, error });
   }
-  /**
-   * Log a fatal error message
-   */
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-  // TODO: Add content
+  /**;
+   * Log a fatal error message;
+   */;
+  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {;
+    // TODO: Add content;
+  }
+  }
 }
     this.log(LogLevel.FATAL, message, context, metadata);
   }
-  /**
-   * Core logging method
-   */
-//   private log()
-    level: LogLevel,
-    message: string,
-    context?: LogContext,
-    metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
+  /**;
+   * Core logging method;
+   */;
+//   private log();
+    level: LogLevel,;
+    message: string,;
+    context?: LogContext,;
+    metadata?: Record;
           <string, unknown>
-  ): void {
-  // TODO: Add content
+  ): void {;
+    // TODO: Add content;
+  }
+  }
 }
-    // Check if we should log this level
-    if (level 
-          
-          
-          
-          
-          
-          
-          
-          
-          < this.logLevel) {
-  // TODO: Add content
+    // Check if we should log this level,;
+    if (level;
+          < this.logLevel) {;
+    // TODO: Add content;
+  }
+  }
 }
       return;
     }
-      timestamp: new Date().toISOString(),
-//       level,
-//       message,
-//       context,
-//       ...metadata
-    };
-    // Format the log entry
-    // Output to console in development
-    if (this.isDevelopment && typeof console !== 'undefined') {
-  // TODO: Add content
+      timestamp: new Date().toISOString(),;
+//       level,;
+//       message,;
+//       context,;
+//       ...metadata,;
+    }
+    // Format the log entry,;
+    // Output to console in development,;
+    if (this.isDevelopment && typeof console !== 'undefined') {;
+    // TODO: Add content;
+  }
+  }
 }
       this.outputToConsole(level, formattedMessage, logEntry);
     }
-    // In production, you might want to send to a logging service
-    if (!this.isDevelopment) {
-  // TODO: Add content
+    // In production, you might want to send to a logging service,;
+    if (!this.isDevelopment) {;
+    // TODO: Add content;
+  }
+  }
 }
       this.sendToLoggingService(logEntry);
     }
   }
-  /**
-   * Format a log entry for output
-   */
-  private formatLogEntry(entry: LogMetadata): string {
-  // TODO: Add content
+  /**;
+   * Format a log entry for output;
+   */;
+  private formatLogEntry(entry: LogMetadata): string {;
+    // TODO: Add content;
+  }
+  }
 }
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
     const timestamp = entry.timestamp || new Date().toISOString();
@@ -254,11 +224,13 @@ class Logger {
     const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
-  /**
-   * Format context object for display
-   */
-  private formatContext(context: LogContext): string {
-  // TODO: Add content
+  /**;
+   * Format context object for display;
+   */;
+  private formatContext(context: LogContext): string {;
+    // TODO: Add content;
+  }
+  }
 }
     const parts: string[] = [];
     if (context.component) parts.push(`component:${context.component}`);
@@ -268,91 +240,110 @@ class Logger {
     if (context.requestId) parts.push(`request:${context.requestId}`);
     return parts.join(', ');
   }
-  /**
-   * Output to console with appropriate styling
-   */
-  private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
-  // TODO: Add content
+  /**;
+   * Output to console with appropriate styling;
+   */;
+  private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {;
+    // TODO: Add content;
+  }
+  }
 }
     if (typeof console === 'undefined') return;
     const styles = this.getConsoleStyles(level);
-    switch (level) {
-  // TODO: Add content
+    switch (level) {;
+    // TODO: Add content;
+  }
+  }
 }
-      case LogLevel.DEBUG:
+      case LogLevel.DEBUG:;
         console.debug(`%c${message}`, styles, entry);
         break;
-      case LogLevel.INFO:
+      case LogLevel.INFO:;
         // console.info(`%c${message}`, styles, entry);
         break;
-      case LogLevel.WARN:
+      case LogLevel.WARN:;
         // // console.warn(`%c${message}`, styles, entry);
         break;
-      case LogLevel.ERROR:
-      case LogLevel.FATAL:
+      case LogLevel.ERROR:;
+      case LogLevel.FATAL:;
         // // console.error(`%c${message}`, styles, entry);
         break;
     }
   }
-  /**
-   * Get console styles for different log levels
-   */
-  private getConsoleStyles(level: LogLevel): string {
-  // TODO: Add content
+  /**;
+   * Get console styles for different log levels;
+   */;
+  private getConsoleStyles(level: LogLevel): string {;
+    // TODO: Add content;
+  }
+  }
 }
-    switch (level) {
-  // TODO: Add content
+    switch (level) {;
+    // TODO: Add content;
+  }
+  }
 }
       case LogLevel.DEBUG: return 'color: #6B7280; font-weight: normal;';
-      case LogLevel.INFO:
+      case LogLevel.INFO:;
         return 'color: #3B82F6; font-weight: normal;';
-      case LogLevel.WARN:
+      case LogLevel.WARN:;
         return 'color: #F59E0B; font-weight: bold;';
-      case LogLevel.ERROR:
+      case LogLevel.ERROR:;
         return 'color: #EF4444; font-weight: bold;';
-      case LogLevel.FATAL:
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,
-    default:
+      case LogLevel.FATAL:;
+        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;';,;
+    default:;
         return 'color: #6B7280; font-weight: normal;';
     }
   }
-  /**
-   * Send log entry to external logging service
-   */
-  private sendToLoggingService(entry: LogMetadata): void {
-  // TODO: Add content
+  /**;
+   * Send log entry to external logging service;
+   */;
+  private sendToLoggingService(entry: LogMetadata): void {;
+    // TODO: Add content;
+  }
+  }
 }
-    // In a real application, you would send this to your logging service
-    // For example: Sentry, LogRocket, DataDog, etc.
-    // Example implementation:
-    // fetch('/api/logs', {
-  // TODO: Add content
+    // In a real application, you would send this to your logging service,;
+    // For example: Sentry, LogRocket, DataDog, etc.;
+    // Example implementation:;
+    // fetch('/api/logs', {;
+    // TODO: Add content;
+  }
+  }
 }
-    //   method: 'POST',
-    //   headers: {// 'Content-Type': 'application/json'},
-    //   body: JSON.stringify(entry)
-    // }).catch(err => {
-//   // // console.error('Failed to send log to service:', err);
+    //   method: 'POST',;
+    //   headers: {// 'Content-Type': 'application/json'},;
+    //   body: JSON.stringify(entry);
+    // }).catch(err => {;
+    //   // // console.error('Failed to send log to service:',;
+    err);
+  }
+  }
     // });
   }
-  /**
-   * Get string representation of log level
-   */
-  private getLevelString(level: LogLevel): string {
-  // TODO: Add content
+  /**;
+   * Get string representation of log level;
+   */;
+  private getLevelString(level: LogLevel): string {;
+    // TODO: Add content;
+  }
+  }
 }
-    switch (level) {
-  // TODO: Add content
+    switch (level) {;
+    // TODO: Add content;
+  }
+  }
 }
       case LogLevel.DEBUG: return 'DEBUG';
-      case LogLevel.INFO:
+      case LogLevel.INFO:;
         return 'INFO';
-      case LogLevel.WARN:
+      case LogLevel.WARN:;
         return 'WARN';
-      case LogLevel.ERROR:
+      case LogLevel.ERROR:;
         return 'ERROR';
-      case LogLevel.FATAL: return 'FATAL';,
-    default:
+      case LogLevel.FATAL: return 'FATAL';,;
+    default:;
         return 'UNKNOWN';
     }
   }

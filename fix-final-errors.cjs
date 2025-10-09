@@ -6,60 +6,56 @@ const glob = require('glob');
 
 // Function to fix specific syntax issues
 function fixSpecificIssues(content) {
-  // Fix missing closing braces in import statements
-  content = content.replace(/from 'lucide-react';\s*}/g, "from 'lucide-react';");
-  
-  // Fix semicolons in wrong places (after import statements)
-  content = content.replace(/import[^;]+;\s*;/g, (match) => match.replace(/;$/, ''));
+  // Fix semicolons in wrong places (after comments)
+  content = content.replace(/\/\/[^;]+;\s*$/gm, (match) => match.replace(/;$/, ''));
   
   // Fix semicolons in wrong places (after const declarations)
-  content = content.replace(/const[^;]+;\s*;/g, (match) => match.replace(/;$/, ''));
+  content = content.replace(/const\s+[^=]+=\s*[^;]+;\s*$/gm, (match) => match.replace(/;$/, ''));
   
   // Fix semicolons in wrong places (after return statements)
-  content = content.replace(/return\s*\([^)]+\);\s*;/g, (match) => match.replace(/;$/, ''));
+  content = content.replace(/return\s*\([^)]+\);\s*$/gm, (match) => match.replace(/;$/, ''));
   
   // Fix semicolons in wrong places (after JSX)
-  content = content.replace(/<[^>]+>;\s*;/g, (match) => match.replace(/;$/, ''));
+  content = content.replace(/<[^>]+>;\s*$/gm, (match) => match.replace(/;$/, ''));
+  
+  // Fix semicolons in wrong places (after object properties)
+  content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*'[^']*';\s*$/gm, (match) => match.replace(/;$/, ','));
+  
+  // Fix semicolons in wrong places (after array elements)
+  content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*'[^']*';\s*$/gm, (match) => match.replace(/;$/, ','));
+  
+  // Fix malformed object literals
+  content = content.replace(/{\s*;\s*$/gm, '{');
+  
+  // Fix malformed array literals
+  content = content.replace(/\[\s*;\s*$/gm, '[');
   
   // Fix missing closing braces in object literals
-  content = content.replace(/{\s*([^}]+)\s*$/gm, (match, p1) => {
+  content = content.replace(/{\s*([^}]+)\s*;\s*$/gm, (match, p1) => {
     if (p1.trim().endsWith(',')) {
       return `{\n    ${p1.trim().slice(0, -1)}\n  }`;
     }
     return `{\n    ${p1.trim()}\n  }`;
   });
   
-  // Fix duplicate return statements
-  const lines = content.split('\n');
-  let inFunction = false;
-  let returnCount = 0;
-  const fixedLines = [];
+  // Fix missing closing braces in array literals
+  content = content.replace(/\[\s*([^\]]+)\s*;\s*$/gm, (match, p1) => {
+    if (p1.trim().endsWith(',')) {
+      return `[\n    ${p1.trim().slice(0, -1)}\n  ]`;
+    }
+    return `[\n    ${p1.trim()}\n  ]`;
+  });
   
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.includes('const') && line.includes(': React.FC')) {
-      inFunction = true;
-      returnCount = 0;
-    }
-    
-    if (line.includes('};') && inFunction) {
-      inFunction = false;
-      returnCount = 0;
-    }
-    
-    if (line.trim().startsWith('return') && inFunction) {
-      returnCount++;
-      if (returnCount > 1) {
-        // Skip duplicate return statements
-        continue;
-      }
-    }
-    
-    fixedLines.push(line);
-  }
+  // Fix duplicate closing braces
+  content = content.replace(/\}\s*;\s*$/gm, '}');
   
-  return fixedLines.join('\n');
+  // Fix missing commas in object literals
+  content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*'[^']*'\s*$/gm, '$1: \'$2\',');
+  
+  // Fix missing commas in array literals
+  content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*)\s*$/gm, '$1,');
+  
+  return content;
 }
 
 // Function to fix import statements
@@ -76,10 +72,10 @@ function fixImportStatements(content) {
 // Function to fix JSX syntax
 function fixJSXSyntax(content) {
   // Fix semicolons in JSX
-  content = content.replace(/<([^>]+)>;\s*;/g, '<$1>');
+  content = content.replace(/<([^>]+)>;\s*$/gm, '<$1>');
   
   // Fix malformed JSX attributes
-  content = content.replace(/className="([^"]*)"\s*;\s*;/g, 'className="$1"');
+  content = content.replace(/className="([^"]*)"\s*;\s*$/gm, 'className="$1"');
   
   return content;
 }
