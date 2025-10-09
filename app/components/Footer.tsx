@@ -11,6 +11,9 @@ const Footer: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
+    { name: 'Enterprise', href: '/enterprise' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
