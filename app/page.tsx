@@ -16,6 +16,9 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import ServiceWorker from './components/ServiceWorker';
 import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -40,9 +43,11 @@ const preloadComponents = () => {
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
+    setIsHydrated(true);
     // Trigger visibility animation
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components
@@ -1084,47 +1089,17 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <ErrorBoundary>
-      <EnhancedSEOOptimizer
+    <EnhancedErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting']}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.jpg"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        }}
+        preloadResources={[
+          { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
+          { href: '/images/hero-bg.jpg', as: 'image' }
+        ]}
       />
       <EnhancedPerformanceOptimizer
         enableImageOptimization={true}
@@ -1136,6 +1111,12 @@ const HomePage: React.FC = () => {
         enableServiceWorker={true}
         enableWebVitals={true}
         enableCompression={true}
+        enablePrefetching={true}
+        enableCriticalResourcePreloading={true}
+      />
+      <PerformanceMonitor
+        enableReporting={true}
+        enableConsoleLogging={process.env.NODE_ENV === 'development'}
       />
       <EnhancedAccessibilityEnhancer
         enableKeyboardNavigation={true}
@@ -1595,7 +1576,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 
