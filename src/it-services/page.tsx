@@ -1,9 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {
@@ -74,6 +78,9 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+=======
+const ItServicesPage: React.FC = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
