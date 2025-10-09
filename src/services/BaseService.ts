@@ -87,7 +87,7 @@ export class BaseService {
         retries: this.options.retries
       });
       if (useCache) {
-        this.setInCache(cacheKey, response.data);
+        this.setInCache(_cacheKey, response.data);
       }
       return response.data;
     } catch (error) {

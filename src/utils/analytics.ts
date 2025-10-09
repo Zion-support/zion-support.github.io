@@ -1,5 +1,10 @@
 'use client';
 import React from 'react'
+
+// Declare gtag function
+declare global {
+  function gtag(...args: any[]): void;
+}
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
@@ -65,7 +70,7 @@ class AnalyticsService {
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.gaId, {
+        gtag('config', 'G-XXXXXXXXXX', {
           page_path: path,
           page_title: title
         })
@@ -80,7 +85,7 @@ class AnalyticsService {
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {
+        gtag('config', 'G-XXXXXXXXXX', {
           user_id: user.id,
           ...user.properties
         })
