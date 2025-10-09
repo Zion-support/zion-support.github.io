@@ -1,9 +1,8 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Clock, Shield, Award, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
 
   const aiServices = [
@@ -375,7 +374,6 @@ const Footer: React.FC = memo(() => {
           <p className="text-gray-400">
             © 2024 Zion Tech Group. All rights reserved.
           </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
         </div>
       </div>
     </footer>
@@ -383,9 +381,4 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
 export default Footer;
-=======
-
-export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
