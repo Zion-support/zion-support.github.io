@@ -350,7 +350,11 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:src/ai-fintech/page.tsx
       </main>
+=======
+      </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0c59:app/ai-fintech/page.tsx
       <Footer />
     </div>
   );
