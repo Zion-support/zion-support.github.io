@@ -15,12 +15,12 @@ export default defineConfig({
   root: '.',
   build: {
     outDir: 'dist',
-    target: 'es2015',
+    target: 'es2020',
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096,
     reportCompressedSize: true,
     // Optimize build performance
     emptyOutDir: true,
@@ -131,7 +131,8 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react', 'web-vitals'],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
     devSourcemap: false,
