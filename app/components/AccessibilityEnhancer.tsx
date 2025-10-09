@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-=======
 import React, { useEffect, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 }
 
 /**
@@ -25,6 +18,10 @@ interface AccessibilityEnhancerProps {
  */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
   enableSkipLinks = true,
   enableKeyboardNav = true,
   enableFocusIndicators = true,
