@@ -95,7 +95,201 @@ const Footer: React.FC = memo(() => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="space-y-6">
+=======
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Leading provider of enterprise AI solutions, quantum computing, and autonomous
+              systems.
+            </p>
+            <div className="text-gray-300">
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
+              <p>United States</p>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
+                  AI Advertising
+                </Link>
+              </li>
+              <li>
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                  Enterprise
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                  Team
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <div className="space-y-4">
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">Core Services</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/services" className="hover:text-white transition-colors">
+                      All Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-services" className="hover:text-white transition-colors">
+                      AI Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/it-services" className="hover:text-white transition-colors">
+                      IT Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/micro-saas" className="hover:text-white transition-colors">
+                      Micro SAAS
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">AI Solutions</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/ai-marketing" className="hover:text-white transition-colors">
+                      AI Marketing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-automation" className="hover:text-white transition-colors">
+                      AI Automation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-healthcare" className="hover:text-white transition-colors">
+                      AI Healthcare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-fintech" className="hover:text-white transition-colors">
+                      AI Fintech
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-data-analytics" className="hover:text-white transition-colors">
+                      AI Data Analytics
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ai-cybersecurity" className="hover:text-white transition-colors">
+                      AI Cybersecurity
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              
+              <div>
+                <h5 className="text-cyan-400 font-medium mb-2">Specialized</h5>
+                <ul className="space-y-1 text-gray-300">
+                  <li>
+                    <Link to="/quantum-computing" className="hover:text-white transition-colors">
+                      Quantum Computing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/autonomous-systems" className="hover:text-white transition-colors">
+                      Autonomous Systems
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blockchain-web3" className="hover:text-white transition-colors">
+                      Blockchain & Web3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/cybersecurity" className="hover:text-white transition-colors">
+                      Cybersecurity
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-300">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
+              <p>Website: ziontechgroup.com</p>
+              <div className="flex space-x-4 mt-4">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
+                  Twitter
+                </a>
+              </div>
+              
+              {/* Contact Info */}
+              <div className="space-y-3 mt-6">
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
+                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                    +1 302 464 0950
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
+                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
+                  <span className="text-gray-300">24/7 Support Available</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Resources */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
             <div>
               <a href="/" className="flex items-center space-x-2 group">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

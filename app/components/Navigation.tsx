@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
+=======
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
 
 const Navigation: React.FC = () => {
 =======
@@ -13,6 +19,7 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
@@ -348,6 +355,8 @@ const Navigation: React.FC = memo(() => {
     { name: 'Contact', path: '/contact', icon: '📞' }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
   ];
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -358,6 +367,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
           <Link href="/" className="flex items-center space-x-2 group">
 =======
@@ -371,10 +381,16 @@ const Navigation: React.FC = memo(() => {
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
 <<<<<<< HEAD
+=======
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
+            <span className="text-3xl mr-2">⚡</span>
+            Zion Tech Group
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
+<<<<<<< HEAD
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
@@ -382,6 +398,15 @@ const Navigation: React.FC = memo(() => {
               About
             </Link>
 
+=======
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              About
+            </Link>
+            
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
             {/* Services Dropdown */}
             <div className="relative">
 =======
@@ -401,9 +426,13 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
+<<<<<<< HEAD
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
+=======
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
               >
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
@@ -440,6 +469,7 @@ const Navigation: React.FC = memo(() => {
                   <div className="grid grid-cols-2 gap-4">
 =======
               {servicesOpen && (
+<<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
@@ -536,11 +566,70 @@ const Navigation: React.FC = memo(() => {
                       </a>
                     </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
+=======
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800 rounded-lg shadow-xl border border-cyan-500/20 py-4 z-50">
+                  <div className="grid grid-cols-3 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">Core Services</h3>
+                      <Link to="/services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        All Services
+                      </Link>
+                      <Link to="/micro-saas" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Micro SAAS Solutions
+                      </Link>
+                      <Link to="/ai-services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Services
+                      </Link>
+                      <Link to="/it-services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        IT Services
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">AI Solutions</h3>
+                      <Link to="/ai-marketing" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Marketing
+                      </Link>
+                      <Link to="/ai-automation" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Automation
+                      </Link>
+                      <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Healthcare
+                      </Link>
+                      <Link to="/ai-fintech" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Fintech
+                      </Link>
+                      <Link to="/ai-data-analytics" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Data Analytics
+                      </Link>
+                      <Link to="/ai-cybersecurity" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        AI Cybersecurity
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">Specialized</h3>
+                      <Link to="/quantum-computing" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Quantum Computing
+                      </Link>
+                      <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Autonomous Systems
+                      </Link>
+                      <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Blockchain & Web3
+                      </Link>
+                      <Link to="/cybersecurity" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Cybersecurity
+                      </Link>
+                      <Link to="/business-intelligence" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 rounded">
+                        Business Intelligence
+                      </Link>
+                    </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link 
 =======
@@ -552,8 +641,26 @@ const Navigation: React.FC = memo(() => {
             >
               Case Studies
 <<<<<<< HEAD
+=======
+            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Case Studies
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
             </Link>
+            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Team
+            </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </Link>
+            <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
+              Contact
+            </Link>
+          </div>
 
+<<<<<<< HEAD
             <Link
 =======
             </a>
@@ -854,6 +961,85 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
             </div>
           </div>
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-300 hover:text-cyan-400"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                About
+              </Link>
+              
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/ai-marketing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Marketing
+                  </Link>
+                  <Link to="/ai-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-healthcare" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Healthcare
+                  </Link>
+                  <Link to="/ai-fintech" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Fintech
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              
+              <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Case Studies
+              </Link>
+              <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Enterprise
+              </Link>
+              <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Team
+              </Link>
+              <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Blog
+              </Link>
+              <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium text-center">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-22b1
         )}
       </div>
     </nav>
