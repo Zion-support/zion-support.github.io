@@ -91,7 +91,7 @@ const AICustomerSupportPage: React.FC = () => {
                 <span>Get Started</span>
               </a>
               <a
-                href="/contact"
+                to="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Learn More

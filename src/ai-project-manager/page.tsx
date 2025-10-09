@@ -67,7 +67,7 @@ const AIProjectManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Get Started Today
@@ -141,7 +141,7 @@ const AIProjectManagerPage: React.FC = () => {
                     ))}
                   </ul>
                   <a
-                    href="/contact"
+                    to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
@@ -165,7 +165,7 @@ const AIProjectManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Contact Us

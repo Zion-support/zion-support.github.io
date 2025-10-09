@@ -68,7 +68,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
             📞 Call: (302) 464-0950
           </a>
           <a 
-            href="/contact"
+            to="/contact"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
           >
             Get Free Consultation

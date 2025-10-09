@@ -87,7 +87,7 @@ export default function NotFound() {
             Go Home
           </Link>
           <Link
-            href="/contact"
+            to="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
           >
             <Phone className="w-4 h-4 mr-2" />

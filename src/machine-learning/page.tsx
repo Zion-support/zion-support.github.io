@@ -76,7 +76,7 @@ const MachineLearningPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Get Started
@@ -147,7 +147,7 @@ const MachineLearningPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
               >
                 Contact Us

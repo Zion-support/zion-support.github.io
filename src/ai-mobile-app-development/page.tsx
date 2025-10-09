@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, Smartphone, Database, Cloud } from 'lucide-react';
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
@@ -309,7 +309,7 @@ const AIMobileAppDevelopmentPage: React.FC = () => {
                   ))}
                 </div>
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors inline-flex items-center justify-center"
                 >
                   Start Building

@@ -133,7 +133,7 @@ const MicroSAASPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
               Browse All Solutions
@@ -169,7 +169,7 @@ const MicroSAASPage: React.FC = () => {
                       <div className="text-right">
                         <div className={`font-bold ${category.color} text-sm`}>{service.price}</div>
                         <a
-                          href="/contact"
+                          to="/contact"
                           className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
                         >
                           Learn More →
@@ -223,7 +223,7 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
@@ -251,7 +251,7 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
@@ -279,7 +279,7 @@ const MicroSAASPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Contact Sales
@@ -297,7 +297,7 @@ const MicroSAASPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 Browse All Solutions

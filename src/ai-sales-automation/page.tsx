@@ -4,6 +4,24 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+
+const useCases = [
+  {
+    icon: TrendingUp,
+    title: 'Lead Generation',
+    description: 'Automatically identify and qualify leads using AI-powered analysis.'
+  },
+  {
+    icon: Brain,
+    title: 'Sales Forecasting',
+    description: 'Predict sales outcomes with machine learning algorithms.'
+  },
+  {
+    icon: Shield,
+    title: 'Customer Retention',
+    description: 'Identify at-risk customers and implement retention strategies.'
+  }
+];
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {

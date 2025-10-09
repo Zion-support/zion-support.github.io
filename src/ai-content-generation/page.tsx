@@ -79,7 +79,7 @@ const AIContentGenerationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="cyber-button"
             >
               Get Started
@@ -113,7 +113,7 @@ const AIContentGenerationPage: React.FC = () => {
                 </ul>
                 <div className="text-cyan-400 font-bold mb-4">{service.price}</div>
                 <a
-                  href="/contact"
+                  to="/contact"
                   className="cyber-button w-full text-center block"
                 >
                   Get Started
@@ -151,7 +151,7 @@ const AIContentGenerationPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="cyber-button"
             >
               Start Free Trial

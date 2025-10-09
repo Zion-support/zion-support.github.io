@@ -50,7 +50,7 @@ export default function OptimizedHomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
                 >
                   Get Your Free AI Assessment

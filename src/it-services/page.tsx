@@ -368,7 +368,7 @@ const ITServicesPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
             >
               Get Free IT Assessment
@@ -440,7 +440,7 @@ const ITServicesPage: React.FC = () => {
                 <div className="text-center">
                   <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
                   <a
-                    href="/contact"
+                    to="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
@@ -490,7 +490,7 @@ const ITServicesPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
@@ -518,7 +518,7 @@ const ITServicesPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Get Started
@@ -546,7 +546,7 @@ const ITServicesPage: React.FC = () => {
                 </li>
               </ul>
               <a
-                href="/contact"
+                to="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
               >
                 Contact Sales
@@ -564,7 +564,7 @@ const ITServicesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
               >
                 Get Free IT Assessment

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Users, BarChart3, Zap, Shield } from 'lucide-react';
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -285,7 +285,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                   ))}
                 </div>
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
                 >
                   Boost Sales Now

@@ -148,7 +148,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 🔄 Reload Page
               </button>
               <a
-                href="/contact"
+                to="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
               >

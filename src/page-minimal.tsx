@@ -21,13 +21,13 @@ export default function HomePage() {
               <Link href="/" className="text-gray-900 hover:text-blue-600">
                 Home
               </Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600">
+              <Link to="/services" className="text-gray-900 hover:text-blue-600">
                 Services
               </Link>
-              <Link href="/blog" className="text-gray-900 hover:text-blue-600">
+              <Link to="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
               </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
+              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
               </Link>
             </nav>
@@ -48,7 +48,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/services"
+                to="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
@@ -122,14 +122,14 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                href="/blog"
+                to="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Our Blog
@@ -148,9 +148,9 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
               <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">

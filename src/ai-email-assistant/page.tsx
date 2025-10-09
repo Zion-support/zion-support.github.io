@@ -30,7 +30,7 @@ export default function AIEmailAssistantPage() {
               📞 Call: (302) 464-0950
             </a>
             <a 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Get Free Demo
@@ -116,7 +116,7 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Email templates</li>
                 <li>✓ Basic analytics</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a to="/contact" className="cyber-button w-full text-center">
                 Get Started
               </a>
             </div>
@@ -133,7 +133,7 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Advanced analytics</li>
                 <li>✓ Team collaboration</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a to="/contact" className="cyber-button w-full text-center">
                 Get Started
               </a>
             </div>
@@ -149,7 +149,7 @@ export default function AIEmailAssistantPage() {
                 <li>✓ Dedicated support</li>
                 <li>✓ Custom analytics</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a to="/contact" className="cyber-button w-full text-center">
                 Contact Sales
               </a>
             </div>

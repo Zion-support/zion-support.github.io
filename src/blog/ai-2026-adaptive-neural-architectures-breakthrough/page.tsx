@@ -112,12 +112,12 @@ export default function AdaptiveNeuralArchitecturesPage() {
               </p>
               <div className="space-x-4">
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get Neural Assessment
                 </a>
                 <a 
-                  href="/services"
+                  to="/services"
                   className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
                 </a>

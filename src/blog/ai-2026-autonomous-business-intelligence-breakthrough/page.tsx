@@ -80,12 +80,12 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
               </p>
               <div className="space-x-4">
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get BI Assessment
                 </a>
                 <a 
-                  href="/services"
+                  to="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
                 </a>

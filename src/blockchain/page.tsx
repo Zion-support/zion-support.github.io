@@ -1,6 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Coins, Shield, Zap, Target, Star, Link, Brain, BarChart, Cpu } from 'lucide-react';
+
+const categories = [
+  {
+    icon: Coins,
+    title: 'DeFi Solutions',
+    description: 'Decentralized finance platforms and protocols'
+  },
+  {
+    icon: Shield,
+    title: 'Security Audits',
+    description: 'Smart contract security and vulnerability assessment'
+  },
+  {
+    icon: Zap,
+    title: 'NFT Marketplaces',
+    description: 'Non-fungible token platforms and trading systems'
+  },
+  {
+    icon: Target,
+    title: 'Web3 Integration',
+    description: 'Blockchain integration for existing applications'
+  }
+];
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {

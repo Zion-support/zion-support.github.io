@@ -4,6 +4,42 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+
+const useCases = [
+  {
+    icon: Zap,
+    title: 'Process Automation',
+    description: 'Automate repetitive tasks and streamline business processes.'
+  },
+  {
+    icon: Clock,
+    title: 'Time Management',
+    description: 'Optimize scheduling and resource allocation with AI.'
+  },
+  {
+    icon: Shield,
+    title: 'Compliance Monitoring',
+    description: 'Ensure regulatory compliance with automated monitoring.'
+  }
+];
+
+const pricing = [
+  {
+    name: 'Starter',
+    price: '$299/month',
+    features: ['Basic automation', '5 workflows', 'Email support']
+  },
+  {
+    name: 'Professional',
+    price: '$599/month',
+    features: ['Advanced automation', 'Unlimited workflows', 'Priority support']
+  },
+  {
+    name: 'Enterprise',
+    price: '$999/month',
+    features: ['Custom automation', 'Dedicated support', 'API access']
+  }
+];
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {

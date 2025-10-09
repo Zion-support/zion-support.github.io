@@ -500,7 +500,7 @@ const HomePage: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
-                  href="/contact"
+                  to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
