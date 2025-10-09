@@ -1,11 +1,13 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap } from 'lucide-react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -152,9 +154,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
-
 };
 
 export default HomePage;

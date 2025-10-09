@@ -1,13 +1,5 @@
-
-
-import React, { useEffect, useState, lazy } from 'react';
-
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PerformanceEnhancer from './utils/performanceEnhancer';
-import SEOEnhancer from './utils/seoEnhancer';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
-import SecurityEnhancer from './utils/securityEnhancer';
-import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
@@ -25,7 +17,6 @@ const LoadingSpinner: React.FC = () => (
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialized(true);
@@ -33,7 +24,6 @@ const App: React.FC = () => {
     
     return () => clearTimeout(timer);
   }, []);
-
 
   if (!isInitialized) {
     return <LoadingSpinner />;
@@ -51,6 +41,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-
