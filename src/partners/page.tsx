@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Building, Handshake, Award, Users, Globe, Star, CheckCircle, ArrowRight, Phone, Mail } from 'lucide-react';
+import { Handshake } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

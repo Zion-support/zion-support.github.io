@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Database, Shield, BarChart, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Settings } from 'lucide-react';
 
 const DatabaseManagementPage: React.FC = () => {
   const features = [

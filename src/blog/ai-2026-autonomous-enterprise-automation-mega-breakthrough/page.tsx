@@ -1,5 +1,4 @@
 import React from 'react';
-import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
@@ -80,4 +79,4 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
         </div>
       </div>
     </div>
-};
+;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Shield, Zap, Settings, BarChart, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Settings } from 'lucide-react';
 
 const ITDisasterRecoveryPage: React.FC = () => {
   const features = [

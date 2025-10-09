@@ -98,4 +98,5 @@ export default function March2025AutonomousEnterpriseOperationsRevolution() {
         </div>
       </div>
     </div>
-};
+  );
+;

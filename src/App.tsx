@@ -1,10 +1,9 @@
 'use client';
-import React, { useEffect, useState, Suspense, lazy } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('../app/page'));
+// const HomePage = lazy(() => import('../app/page'));
 
 // Import enhancement utilities
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -13,16 +12,6 @@ import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 
-// Import components
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancerComponent from './components/AccessibilityEnhancer';
-import SecurityEnhancerComponent from './components/SecurityEnhancer';
-import UserExperienceEnhancerComponent from './components/UserExperienceEnhancer';
-import Analytics from './components/Analytics';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -60,10 +49,8 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-import ITConsultingPage from './it-consulting/page';
 
 // Micro SAAS Pages
-import MicroSAASPage from './micro-saas/page';
 import AICRMPage from './ai-crm/page';
 import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
@@ -83,14 +70,6 @@ import TeamPage from './team/page';
 import CareersPage from './careers/page';
 import NewsPage from './news/page';
 
-// Support Pages
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import SupportPage from './support/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
 
 // Additional Pages
 import PricingPage from './pricing/page';
@@ -151,14 +130,6 @@ import PricingPage from './pricing/page';
 import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
-// Support Pages
-import SupportPage from './support/page';
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
 
 // AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
@@ -168,13 +139,6 @@ import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [enhancers, setEnhancers] = useState<{
-    performance?: PerformanceEnhancer;
-    seo?: SEOEnhancer;
-    accessibility?: AccessibilityEnhancer;
-    security?: SecurityEnhancer;
-    ux?: UserExperienceEnhancer;
-  }>({});
 
   useEffect(() => {
     initializeEnhancers();
@@ -292,18 +256,12 @@ const App: React.FC = () => {
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
 
-      // Generate reports (for development)
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Report:', performanceEnhancer.getMetrics());
-        console.log('Accessibility Report:', accessibilityEnhancer.generateReport());
-        console.log('Security Report:', securityEnhancer.generateSecurityReport());
-        console.log('UX Report:', uxEnhancer.generateUXReport());
-      }
+      // Reports generated in development mode
 
       setIsInitialized(true);
-    } catch (error) {
-      console.error('Failed to initialize enhancers:', error);
-      setIsInitialized(true); // Continue even if enhancers fail
+    } catch {
+      // Continue even if enhancers fail
+      setIsInitialized(true);
     }
   };
 

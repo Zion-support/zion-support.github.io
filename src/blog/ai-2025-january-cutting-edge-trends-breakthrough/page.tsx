@@ -131,4 +131,5 @@ export default function January2025CuttingEdgeTrendsBreakthrough() {
         </div>
       </div>
     </div>
-};
+  );
+;
