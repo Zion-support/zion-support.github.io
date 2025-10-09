@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import EnhancedSEO from './components/EnhancedSEO';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -116,6 +117,12 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions | 300% ROI Guaranteed"
+        description="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Leading provider of AI and IT solutions."
+        keywords="AI solutions, artificial intelligence, enterprise AI, machine learning, quantum computing, autonomous systems, digital transformation, IT services, automation, business intelligence, 300% ROI"
+        url="https://ziontechgroup.com"
+      />
       <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg">

@@ -1,6 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedPerformanceMonitor from './components/EnhancedPerformanceMonitor';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
+import ModernLoadingSpinner from './components/ModernLoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -56,18 +61,21 @@ const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
-  </div>
+  <ModernLoadingSpinner 
+    message="Loading Zion Tech Group..." 
+    showProgress={true}
+    progress={75}
+  />
 );
 
 const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+        <EnhancedErrorBoundary>
+          <div className="App">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -120,8 +128,12 @@ const App: React.FC = () => {
               <Route path="/status" element={<StatusPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
             </Routes>
-          </Suspense>
-        </div>
+            </Suspense>
+            <EnhancedAnalytics />
+            <EnhancedPerformanceMonitor showUI={process.env.NODE_ENV === 'development'} />
+            <EnhancedAccessibility />
+          </div>
+        </EnhancedErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>
   );
