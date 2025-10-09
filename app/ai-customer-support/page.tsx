@@ -59,6 +59,69 @@ const AICustomerSupportPage: React.FC = () => {
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ];
+
+  return (
+    <>
+      <SEOOptimizer
+        title="AI Customer Support Solutions - Zion Tech Group"
+        description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
+        keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
+        canonicalUrl="https://ziontechgroup.com/ai-customer-support"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        <Navigation />
+        
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Customer Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+              instant responses, and seamless omnichannel experiences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call (302) 464-0950</span>
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button flex items-center space-x-2"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                <Mail className="w-5 h-5" />
+                <span>Get Free Demo</span>
+              </a>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="mb-16">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Pricing Plans
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className="bg-slate-800 rounded-lg p-8 relative">
+                  {index === 1 && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
