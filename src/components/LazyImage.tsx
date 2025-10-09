@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useRef, useEffect } from 'react';
-import { cn } from '@/utils/cn';
+// import { cn } from '@/utils/cn';
 
 interface LazyImageProps {
   src: string;
@@ -66,7 +66,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   return (
     <div
       ref={imgRef}
-      className={cn('relative overflow-hidden', className)}
+      className={`relative overflow-hidden ${className || ''}`}
       style={{ width, height }}
     >
       {!isInView ? (
@@ -81,10 +81,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           <img
             src={hasError ? placeholder : src}
             alt={alt}
-            className={cn(
-              'w-full h-full object-cover transition-opacity duration-300',
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            )}
+            className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={handleLoad}
             onError={handleError}
             loading={priority ? 'eager' : 'lazy'}

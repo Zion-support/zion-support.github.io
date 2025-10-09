@@ -1,41 +1,23 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Heart, CreditCard, Music, GraduationCap } from 'lucide-react';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin, Home, Users, Settings, Brain, Cloud, Zap, Shield, Database, Code, Smartphone, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Award, Lock, Globe, Cpu, Target, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+  const toggleMenu = () => setIsOpen(!isOpen);
   const closeAllMenus = () => {
-    setServicesOpen(false);
     setIsOpen(false);
+    setActiveDropdown(null);
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      closeAllMenus();
-    }
-  };
-
-  const serviceCategories = [
+  const services = [
     {
-      title: 'Micro SAAS Solutions',
-      icon: Zap,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      hoverColor: 'hover:bg-cyan-500/20',
+      title: 'AI Services',
+      icon: Brain,
+      color: 'text-blue-400',
       services: [
         { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
         { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
@@ -60,37 +42,9 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-400',
-      services: [
-        { name: 'Machine Learning Solutions', path: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
-        { name: 'Natural Language Processing', path: '/ai-nlp', description: 'Advanced text analysis and understanding' },
-        { name: 'Computer Vision', path: '/ai-computer-vision', description: 'Image and video analysis solutions' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI for diagnosis and treatment' },
-        { name: 'AI Financial Services', path: '/ai-fintech', description: 'Fintech AI for fraud detection and trading' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions and threat detection' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data analysis with AI insights' },
-        { name: 'AI Voice & Speech', path: '/ai-voice-speech', description: 'Voice recognition and synthesis' },
-        { name: 'AI Robotics', path: '/ai-robotics', description: 'Intelligent robotics solutions' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI optimized for edge devices' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' }
-      ]
-    },
-    {
       title: 'IT Services',
       icon: Cloud,
-      color: 'text-blue-400',
+      color: 'text-green-400',
       services: [
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
@@ -107,9 +61,9 @@ const Navigation: React.FC = () => {
       ]
     },
     {
-      title: 'Micro SAAS',
+      title: 'Future Tech',
       icon: Zap,
-      color: 'text-cyan-400',
+      color: 'text-purple-400',
       services: [
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
@@ -136,25 +90,25 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
+      isOpen 
         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
-        : 'bg-transparent'
+        : 'bg-slate-900/90 backdrop-blur-md border-b border-cyan-400/10'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <div>
+            <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
@@ -164,53 +118,51 @@ const Navigation: React.FC = () => {
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white">
+              <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium">
                 <span>Services</span>
                 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
-              
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="p-6">
+
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="mb-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                    <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category, index) => (
+                    <div className="grid grid-cols-1 gap-4">
+                      {services.map((category, index) => (
                         <div key={index} className="space-y-2">
                           <div className="flex items-center space-x-2 mb-2">
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                             <span className="text-sm font-semibold text-white">{category.title}</span>
                           </div>
-                          <div className="space-y-2">
-                            {category.services.slice(0, 6).map((service, serviceIndex) => (
+                          <div className="space-y-1 ml-6">
+                            {category.services.slice(0, 3).map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                                className="block p-2 rounded hover:bg-cyan-500/10 transition-colors"
                                 onClick={closeAllMenus}
                               >
                                 <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500 group-hover:text-purple-500">
+                                <div className="text-xs text-gray-400">
                                   {service.description}
                                 </div>
                               </Link>
                             ))}
-                            {category.services.length > 6 && (
-                              <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </Link>
-                            )}
+                            <Link
+                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                              className="block p-2 rounded hover:bg-cyan-500/10 transition-colors text-cyan-400 text-sm font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All {category.title} →
+                            </Link>
                           </div>
                         </div>
                       ))}
                     </div>
-                    <div className="border-t border-gray-700 mt-6 pt-4 px-6">
+                    <div className="mt-4 pt-4 border-t border-cyan-400/20">
                       <Link
                         to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                        className="block w-full text-center py-2 px-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors font-medium"
                         onClick={closeAllMenus}
                       >
                         View All Services
@@ -228,18 +180,16 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-
-            <Link
+            <Link 
               to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
-
-            <Link
+            <Link 
               to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Contact
@@ -248,11 +198,11 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="cyber-button inline-flex items-center"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-medium transition-colors inline-flex items-center"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+              Get Quote
             </Link>
           </div>
 
@@ -260,7 +210,7 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors duration-300 p-2"
+              className="text-white hover:text-cyan-400 transition-colors p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -277,113 +227,113 @@ const Navigation: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
                 <Link
                   to="/"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">🏠</span>
                   <span className="font-medium">Home</span>
                 </Link>
                 <Link
                   to="/about"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">ℹ️</span>
                   <span className="font-medium">About</span>
                 </Link>
                 <Link
                   to="/services"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">🧠</span>
                   <span className="font-medium">Services</span>
                 </Link>
                 <Link
                   to="/case-studies"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">📊</span>
                   <span className="font-medium">Case Studies</span>
                 </Link>
                 <Link
                   to="/blog"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">📝</span>
                   <span className="font-medium">Blog</span>
                 </Link>
                 <Link
                   to="/contact"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors"
                   onClick={closeAllMenus}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                 >
                   <span className="text-lg">📞</span>
                   <span className="font-medium">Contact</span>
                 </Link>
               </div>
 
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
+              <div className="pt-4 border-t border-cyan-400/20 space-y-4">
+                <Link
+                  to="/services"
+                  className="block w-full text-center py-3 px-4 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors font-medium"
+                  onClick={closeAllMenus}
+                >
+                  View All Services
+                </Link>
+                <Link
+                  to="/blog"
+                  className="block w-full text-center py-3 px-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors font-medium"
+                  onClick={closeAllMenus}
+                >
+                  Read Our Blog
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block w-full text-center py-3 px-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-colors font-medium"
+                  onClick={closeAllMenus}
+                >
+                  Get Free Consultation
+                </Link>
+              </div>
 
               {/* Contact Info */}
-              <div className="space-y-4">
+              <div className="pt-4 border-t border-cyan-400/20">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                >
-                  <MapPin className="w-5 h-5" />
-                  <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
-                </a>
+                <div className="space-y-3">
+                  <a
+                    href="tel:+13024640950"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>+1 302 464 0950</span>
+                  </a>
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </a>
+                  <a
+                    href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <MapPin className="w-5 h-5" />
+                    <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         )}
-
       </div>
     </nav>
   );
 };
 
-Navigation.displayName = 'Navigation';
 export default Navigation;

@@ -1,6 +1,9 @@
 'use client';
 import React from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
@@ -64,155 +67,164 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
-    'AI-powered 3D model generation',
-    'Automatic texture synthesis',
-    'Real-time 3D rendering',
-    'Multiple format support',
-    'Custom model training',
-    'Batch processing',
-    'API integration',
-    'Cloud-based processing',
-    'High-resolution output',
-    'Animation support',
-    'Lighting optimization',
-    'Material generation',
-    'Shape optimization',
-    'Color palette generation',
-    'Marketing materials',
-    'Educational content'
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
-
-      plan: 'Starter',
-      price: '$199/month',
-      features: ['Up to 10 models/month', 'Basic textures', 'Standard quality', 'Email support'],
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small projects and individual creators',
+      features: [
+        '50 3D models per month',
+        'Basic texture generation',
+        'Standard quality output',
+        'Email support',
+        'Basic export formats'
+      ],
       popular: false
     },
     {
-      plan: 'Professional',
-      price: '$599/month',
-      features: ['Up to 50 models/month', 'Advanced textures', 'High quality', 'Animation support', 'API access'],
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
+      features: [
+        '200 3D models per month',
+        'Advanced texture generation',
+        'High quality output',
+        'Priority support',
+        'All export formats',
+        'Custom model training',
+        'API access'
+      ],
       popular: true
     },
     {
-      plan: 'Enterprise',
-      price: '$1,999/month',
-      features: ['Unlimited models', 'Premium textures', 'Custom training', 'Priority support', 'White-label'],
-
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large organizations with custom needs',
+      features: [
+        'Unlimited 3D models',
+        'Premium texture generation',
+        'Ultra high quality output',
+        'Dedicated support',
+        'Custom integrations',
+        'White-label solutions',
+        'On-premise deployment'
+      ],
       popular: false
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-
+    <>
+      <Helmet>
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation technology. Create photorealistic models, textures, and animations in minutes." />
+        <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, 3D assets, game development, architecture visualization" />
+      </Helmet>
+      
       <Navigation />
-
-      <main className="relative z-10">
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Cube className="w-4 h-4" />
-              <span>AI 3D Technology</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI 3D Generation
-              <span className="block bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Technology
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Call (302) 464-0950</span>
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="cyber-button-outline inline-flex items-center space-x-2"
-              >
-                <Mail className="w-4 h-4" />
-                <span>Get Quote</span>
-              </a>
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI-Powered 3D Generation
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Transform your ideas into stunning 3D models with our advanced AI technology. 
+                Create photorealistic models, textures, and animations in minutes, not months.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                  Start Creating
+                </button>
+                <button className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
+                  View Demo
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced 3D Generation Features
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Powerful 3D Generation Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI 3D generation technology offers cutting-edge capabilities for creating realistic, high-quality 3D assets.
+              <p className="text-xl text-gray-600">
+                Everything you need to create professional 3D content
               </p>
             </div>
-
-        {/* Benefits Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Why Choose Our 3D AI?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                  <p className="text-gray-300 text-sm">
-                    Transform your 3D workflow with cutting-edge AI that generates high-quality models and textures automatically.
-                  </p>
-
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-gray-900">{feature}</h3>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Use Cases
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Our AI 3D Generation?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how AI 3D generation can transform your creative workflow across various industries.
+              <p className="text-xl text-gray-600">
+                Experience the future of 3D content creation
               </p>
             </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* Applications Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Applications Across Industries
+              </h2>
+              <p className="text-xl text-gray-600">
+                Discover how AI 3D generation transforms various sectors
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-8">
-                  <div className="text-4xl mb-4 text-center">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4 text-center">{useCase.description}</p>
+              {applications.map((app, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                  <div className="text-4xl mb-4">{app.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{app.title}</h3>
+                  <p className="text-gray-600 mb-4">{app.description}</p>
                   <ul className="space-y-2">
-                    {useCase.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <ArrowRight className="w-3 h-3 text-purple-400 flex-shrink-0" />
-                        <span>{example}</span>
+                    {app.examples.map((example, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        {example}
                       </li>
                     ))}
                   </ul>
@@ -223,83 +235,76 @@ const AI3DGenerationPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Pricing Plans
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-300">per month</p>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Technologies Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Technologies Used
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Choose Your Plan
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our 3D generation solution is built with state-of-the-art AI technologies.
+              <p className="text-xl text-gray-600">
+                Flexible pricing for every need
               </p>
             </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {technologies.map((tech, index) => (
-                <div key={index} className="cyber-card p-4 text-center">
-                  <span className="text-gray-300 font-medium">{tech}</span>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white rounded-xl p-8 ${plan.popular ? 'ring-2 ring-blue-600 shadow-lg' : 'shadow-md'} hover:shadow-lg transition-shadow`}>
+                  {plan.popular && (
+                    <div className="bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-full text-center mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-600">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-600 mb-6">{plan.description}</p>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                        <span className="text-gray-600">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    plan.popular 
+                      ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                      : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
+                  }`}>
+                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Create Amazing 3D Content?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Contact us today to learn more about our AI 3D generation technology and how it can transform your creative workflow.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center space-x-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span>Call: (302) 464-0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Email Us</span>
-            </a>
-
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Create Amazing 3D Content?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join thousands of creators who are already using AI to revolutionize their 3D workflow.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <button className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
           </div>
         </section>
-      </main>
+      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 
 export default AI3DGenerationPage;
-

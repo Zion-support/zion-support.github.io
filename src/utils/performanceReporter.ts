@@ -4,7 +4,7 @@
  * Comprehensive performance monitoring and reporting
  */
 import React from 'react'
-import { logger } from './logger'
+import { logger } from './logger';
 export interface PerformanceMetric {
   name: string;
   value: number;
