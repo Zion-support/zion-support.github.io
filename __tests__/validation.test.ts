@@ -10,8 +10,13 @@ import {
   isValidPassword,
   sanitizeInput,
   isStrongPassword,
+<<<<<<< HEAD
   isValidCreditCard,
   sanitizeHtml,
+=======
+  sanitizeHtml,
+  isValidCreditCard,
+>>>>>>> cursor/fix-errors-and-merge-to-main-d397
   validateEmail,
   validateURL,
   validateLength,

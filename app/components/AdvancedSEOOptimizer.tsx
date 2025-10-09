@@ -204,8 +204,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData.faqs]);
 
   const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -229,8 +230,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-
-    return metaTags;
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
@@ -253,30 +252,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [structuredData]);
 
   useEffect(() => {
-    if (breadcrumbData) {
-      addStructuredData(breadcrumbData);
-    }
-  }, [breadcrumbData]);
-
-  useEffect(() => {
-    if (faqData) {
-      addStructuredData(faqData);
-    }
-  }, [faqData]);
-
-  useEffect(() => {
     // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+    if (typeof window !== 'undefined' && 
+        'performance' in window && 
+        typeof performance.getEntriesByType === 'function') {
+      try {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          // Track performance metrics
+          if (typeof (window as any).gtag === 'function') {
+            (window as any).gtag('event', 'page_load_performance', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            });
+          }
         }
+      } catch (error) {
+        // Silently handle performance API errors in test environment
+        console.warn('Performance tracking unavailable:', error);
       }
     }
   }, []);
@@ -295,12 +289,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
+      {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
+      {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
         <meta key={name} name={name} content={content} />
       ))}
 
