@@ -956,8 +956,6 @@ const HomePage: React.FC = () => {
               </Suspense>
             </div>
           </section>
-              </Suspense>
-            </div>
 
           {/* Micro SAAS Services Section */}
           <section className="mb-16" aria-labelledby="micro-saas-heading">
@@ -2024,7 +2022,7 @@ const HomePage: React.FC = () => {
                 </Suspense>
               ))}
             </div>
-          </div>
+          </section>
 
           {/* IT Services & Infrastructure */}
           <div className="mb-12">
@@ -2648,16 +2646,13 @@ const HomePage: React.FC = () => {
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
-
-
-
-
-
-
+        </Suspense>
       
       {/* Enhanced Components */}
       <EnhancedPerformanceMonitor />
       <EnhancedAccessibility />
     </EnhancedErrorBoundary>
+    </>
+  );
 
 

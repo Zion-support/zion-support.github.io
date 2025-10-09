@@ -1,4 +1,8 @@
 import React from 'react';
+import { Cloud, Shield, Server, Database, BarChart, Phone, ArrowRight, Users } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -28,71 +32,38 @@ const ITServicesPage: React.FC = () => {
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
       icon: Server,
-      features: ['Server management', 'Network setup', 'Security hardening', 'Backup solutions', 'Performance monitoring', 'Disaster recovery'],
-      price: 'Starting at $999/month',
+      features: ['Network setup', 'Server configuration', 'Backup solutions', 'Disaster recovery', 'Hardware maintenance', 'Performance monitoring'],
+      price: 'Starting at $3,000/month',
       category: 'Infrastructure',
-      benefits: ['High availability', 'Scalable solutions', 'Cost efficiency', 'Expert support'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      color: 'text-green-400'
-    },
-    {
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development workflows with automated testing, deployment, and monitoring solutions.',
-      icon: Settings,
-      features: ['CI/CD pipelines', 'Automated testing', 'Infrastructure as Code', 'Monitoring', 'Deployment automation', 'Performance optimization'],
-      price: 'Starting at $1,200/month',
-      category: 'Development',
-      benefits: ['Faster deployments', 'Reduced errors', 'Improved collaboration', 'Better quality'],
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Terraform'],
+      benefits: ['High availability', 'Reliable performance', 'Scalable solutions', 'Expert support'],
+      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'SAN', 'NAS'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'Database Management',
-      description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
+      description: 'Professional database administration, optimization, and migration services for all major database systems.',
       icon: Database,
-      features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
-      price: 'Starting at $800/month',
+      features: ['Database design', 'Performance tuning', 'Backup & recovery', 'Migration services', 'Security hardening', 'Monitoring'],
+      price: 'Starting at $1,200/month',
       category: 'Data',
       benefits: ['Optimized performance', 'Data security', 'Reduced downtime', 'Cost efficiency'],
-      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Oracle'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications with modern UI/UX and backend integration.',
-      icon: Smartphone,
-      features: ['Native iOS/Android', 'Cross-platform development', 'UI/UX design', 'Backend integration', 'App store deployment', 'Maintenance'],
-      price: 'Starting at $3,000/month',
-      category: 'Development',
-      benefits: ['Modern mobile experience', 'Cross-platform compatibility', 'Scalable architecture', 'User engagement'],
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Node.js', 'Firebase'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Network Security',
-      description: 'Comprehensive network security solutions including firewall management, VPN setup, and monitoring.',
-      icon: Lock,
-      features: ['Firewall management', 'VPN setup', 'Network monitoring', 'Intrusion detection', 'Access control', 'Security auditing'],
-      price: 'Starting at $1,000/month',
-      category: 'Security',
-      benefits: ['Secure network infrastructure', 'Threat prevention', 'Compliance', '24/7 monitoring'],
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'OpenVPN', 'WireGuard', 'SNMP'],
+      technologies: ['MySQL', 'PostgreSQL', 'SQL Server', 'Oracle', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'Business Intelligence',
-      description: 'Data analytics and business intelligence solutions to drive informed decision-making.',
+      description: 'Transform your data into actionable insights with advanced analytics and reporting solutions.',
       icon: BarChart,
-      features: ['Data visualization', 'Dashboard creation', 'Report automation', 'Predictive analytics', 'KPI tracking', 'Data integration'],
-      price: 'Starting at $1,800/month',
+      features: ['Data visualization', 'Custom dashboards', 'Report automation', 'Predictive analytics', 'Data integration', 'KPI tracking'],
+      price: 'Starting at $2,500/month',
       category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost savings'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'Python', 'R', 'SQL Server'],
+      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Real-time insights'],
+      technologies: ['Power BI', 'Tableau', 'QlikView', 'Python', 'R', 'SQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to align technology with business objectives and drive digital transformation.',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
       features: ['Technology assessment', 'Strategic planning', 'Digital transformation', 'Process optimization', 'Change management', 'Training'],
       price: 'Starting at $150/hour',
@@ -144,9 +115,9 @@ const ITServicesPage: React.FC = () => {
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="text-sm text-gray-300 space-y-1">
-                      {service.features.map((feature, idx) => (
+                      {service.features.slice(0, 3).map((feature, idx) => (
                         <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></span>
                           {feature}
                         </li>
                       ))}
@@ -154,24 +125,18 @@ const ITServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-cyan-400/20 text-cyan-300 text-xs rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                    <span className="inline-block bg-purple-600/30 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
+                      {service.category}
+                    </span>
                   </div>
                   
                   <div className="mb-4">
-                    <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-400">Category: {service.category}</div>
+                    <p className="text-lg font-bold text-cyan-400">{service.price}</p>
                   </div>
                   
                   <a
                     href="/contact"
-                    className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                   >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -179,8 +144,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
           {/* Contact Section */}
           <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -214,7 +178,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };
