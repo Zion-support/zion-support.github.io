@@ -20,3 +20,5 @@ if (root) {
     <React.StrictMode><App /></React.StrictMode>
   );
 }
+
+export default Main;

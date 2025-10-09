@@ -113,6 +113,6 @@ const EnterpriseTransformationPage: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default EnterpriseTransformationPage;

@@ -114,3 +114,5 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 export { GlobalErrorBoundary };
+
+export default GlobalErrorBoundary;

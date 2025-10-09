@@ -1,5 +1,7 @@
 'use client';
 import React, { useState, useCallback } from 'react';
+
+const Image: React.FC = () => {
 interface ImageProps {
   src: string;
   alt: string;
