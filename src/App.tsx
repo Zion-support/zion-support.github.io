@@ -50,10 +50,7 @@ import CloudMigrationPage from './cloud-migration/page';
 import DevOpsPage from './devops/page';
 import DatabasePage from './database/page';
 import NetworkingPage from './networking/page';
-import ITConsultingPage from './it-consulting/page';
-
 // Micro SAAS Pages
-import MicroSAASPage from './micro-saas/page';
 import AICRMPage from './ai-crm/page';
 import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
 import AIChatbotBuilderPage from './ai-chatbot-builder/page';
@@ -74,13 +71,6 @@ import CareersPage from './careers/page';
 import NewsPage from './news/page';
 
 // Support Pages
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import SupportPage from './support/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
 
 // Additional Pages
 import PricingPage from './pricing/page';
@@ -105,55 +95,10 @@ import AIDataVisualizationPage from './ai-data-visualization/page';
 import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
 
-// Micro SAAS Solutions
-import AIProjectManagerPage from './ai-project-manager/page';
-import AISocialMediaManagerPage from './ai-social-media-manager/page';
-import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
-import AIEmailMarketingPage from './ai-email-marketing/page';
+// Additional AI Services
 import AICustomerSupportBotPage from './ai-customer-support-bot/page';
 import AICodeGenerationPage from './ai-code-generation/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
-import AICRMPage from './ai-crm/page';
-
-// IT Services
-import ITServicesPage from './it-services/page';
-import ITInfrastructurePage from './it-infrastructure/page';
-import CybersecurityPage from './cybersecurity/page';
-import CloudMigrationPage from './cloud-migration/page';
-import DevOpsPage from './devops/page';
-import DatabasePage from './database/page';
-import NetworkingPage from './networking/page';
-
-// Specialized Solutions
-import QuantumComputingPage from './quantum-computing/page';
-import AutonomousSystemsPage from './autonomous-systems/page';
-import BlockchainWeb3Page from './blockchain-web3/page';
-import IoTEdgeComputingPage from './iot-edge-computing/page';
-import BusinessIntelligencePage from './business-intelligence/page';
-import RoboticsPage from './robotics/page';
-
-// Company Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import PricingPage from './pricing/page';
-import DemoPage from './demo/page';
-import ConsultationPage from './consultation/page';
-
-// Support Pages
-import SupportPage from './support/page';
-import DocsPage from './docs/page';
-import APIDocsPage from './api-docs/page';
-import StatusPage from './status/page';
-import PrivacyPage from './privacy/page';
-import TermsPage from './terms/page';
-import CookiesPage from './cookies/page';
-
-// AI Services Pages
-import AIProjectManagerPage from './ai-project-manager/page';
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AIAutomationPage from './ai-automation/page';
+import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
 const App: React.FC = () => {
@@ -285,7 +230,7 @@ const App: React.FC = () => {
       }
 
       setIsInitialized(true);
-    } catch (error) {
+    } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
     }
