@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 interface AdvancedSEOOptimizerProps {
   title?: string;
   description?: string;
@@ -45,99 +47,40 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   organizationData,
   websiteData
 }) => {
-  useEffect(() => {
-    // Update page title
-    document.title = title;
-    
-    // Update meta description
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords.join(', '));
-    updateMetaTag('author', author);
-    updateMetaTag('robots', noindex ? 'noindex' : robots);
-    
-    // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    updateMetaTag('og:locale', locale, 'property');
-    
-    if (publishedTime) {
-      updateMetaTag('og:published_time', publishedTime, 'property');
-    }
-    if (modifiedTime) {
-      updateMetaTag('og:modified_time', modifiedTime, 'property');
-    }
-    if (section) {
-      updateMetaTag('og:section', section, 'property');
-    }
-    if (tags.length > 0) {
-      updateMetaTag('og:tag', tags.join(', '), 'property');
-    }
-    
-    // Update Twitter tags
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
-    updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-    
-    // Update canonical URL
-    updateCanonicalUrl(canonicalUrl);
-    
-    // Add alternate language links
-    if (alternateLocales.length > 0) {
-      addAlternateLanguageLinks(alternateLocales);
-    }
-    
-    // Add breadcrumbs structured data
-    if (breadcrumbs.length > 0) {
-      addBreadcrumbStructuredData(breadcrumbs);
-    }
-    
-    // Add FAQ structured data
-    if (faqData.length > 0) {
-      addFAQStructuredData(faqData);
-    }
-    
-    // Add organization structured data
-    if (organizationData) {
-      addStructuredData(organizationData);
-    }
-    
-    // Add website structured data
-    if (websiteData) {
-      addStructuredData(websiteData);
-    }
-    
-    // Add custom structured data
-    if (structuredData) {
-      addStructuredData(structuredData);
-    }
-    
-    // Add additional SEO meta tags
-    
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
+  const addStructuredData = (data: any) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
   };
 
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
+  const addAdditionalSEOTags = () => {
+    // Add viewport meta tag if not present
+    if (!document.querySelector('meta[name="viewport"]')) {
+      const viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
+      document.head.appendChild(viewport);
     }
-    canonical.href = url;
+
+    // Add theme color
+    updateMetaTag('theme-color', '#4f46e5');
+    updateMetaTag('msapplication-TileColor', '#4f46e5');
+    
+    // Add mobile app meta tags
+    updateMetaTag('mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-capable', 'yes');
+    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
+    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
+    
+    // Add format detection
+    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
+    
+    // Add referrer policy
+    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
+    
+    // Add content security policy
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
   };
 
   const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {
@@ -180,42 +123,83 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     addStructuredData(faqStructuredData);
   };
 
-  const addStructuredData = (data: any) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  };
-
-  const addAdditionalSEOTags = () => {
-    // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {}
-
-      const viewport = document.createElement('meta');
-      viewport.name = 'viewport';
-      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
-      document.head.appendChild(viewport);
+  const updateMetaTag = (name: string, content: string, attribute = 'name') => {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`) as HTMLMetaElement;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
     }
-
-    // Add theme color
-    updateMetaTag('theme-color', '#4f46e5');
-    updateMetaTag('msapplication-TileColor', '#4f46e5');
-    
-    // Add mobile app meta tags
-    updateMetaTag('mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
-    
-    // Add format detection
-    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
-    
-    // Add referrer policy
-    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
-    
-    // Add content security policy
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+    meta.content = content;
   };
+
+  useEffect(() => {
+    // Update page title
+    document.title = title;
+    
+    // Update meta description
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', keywords.join(', '));
+    updateMetaTag('author', author);
+    updateMetaTag('robots', noindex ? 'noindex' : robots);
+    
+    // Update Open Graph tags
+    updateMetaTag('og:title', title, 'property');
+    updateMetaTag('og:description', description, 'property');
+    updateMetaTag('og:image', ogImage, 'property');
+    updateMetaTag('og:url', canonicalUrl, 'property');
+    updateMetaTag('og:type', 'website', 'property');
+    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
+    updateMetaTag('og:locale', locale, 'property');
+    
+    // Update Twitter Card tags
+    updateMetaTag('twitter:card', 'summary_large_image', 'name');
+    updateMetaTag('twitter:title', title, 'name');
+    updateMetaTag('twitter:description', description, 'name');
+    updateMetaTag('twitter:image', ogImage, 'name');
+    
+    // Update canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = canonicalUrl;
+    
+    // Add alternate language links
+    if (alternateLocales.length > 0) {
+      addAlternateLanguageLinks(alternateLocales);
+    }
+    
+    // Add breadcrumb structured data
+    if (breadcrumbs.length > 0) {
+      addBreadcrumbStructuredData(breadcrumbs);
+    }
+    
+    // Add FAQ structured data
+    if (faqData.length > 0) {
+      addFAQStructuredData(faqData);
+    }
+    
+    // Add organization structured data
+    if (organizationData) {
+      addStructuredData(organizationData);
+    }
+    
+    // Add website structured data
+    if (websiteData) {
+      addStructuredData(websiteData);
+    }
+    
+    // Add custom structured data
+    if (structuredData) {
+      addStructuredData(structuredData);
+    }
+    
+    // Add additional SEO meta tags
+    addAdditionalSEOTags();
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
 
   return null;
 };
