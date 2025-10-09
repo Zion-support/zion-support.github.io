@@ -17,13 +17,23 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Preload critical components with better timing
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+    // Use requestIdleCallback for better performance
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        import('./components/ContentPromotionBanner');
+        import('./components/ContentCarousel');
+        import('./components/DynamicContentShowcase');
+      });
+    } else {
+      setTimeout(() => {
+        import('./components/ContentPromotionBanner');
+        import('./components/ContentCarousel');
+        import('./components/DynamicContentShowcase');
+      }, 100);
+    }
   }
 };
 
@@ -61,9 +71,9 @@ const HomePage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        title="Zion Tech Group - Advanced AI and IT Solutions | Enterprise Technology Services"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. Get $50M+ annual savings with 95% process automation."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'business intelligence', 'cybersecurity', 'DevOps', 'micro SaaS', 'IT consulting']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -81,7 +91,10 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'Cybersecurity',
+            'DevOps',
+            'Micro SaaS Solutions'
           ],
           contactPoint: {
             '@type': 'ContactPoint',
@@ -97,7 +110,12 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
+          },
+          sameAs: [
+            'https://www.linkedin.com/company/zion-tech-group',
+            'https://twitter.com/ziontechgroup',
+            'https://github.com/ziontechgroup'
+          ]
         }}
       />
       <PerformanceOptimizer
@@ -134,7 +152,8 @@ const HomePage: React.FC = () => {
         {/* Skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50 transition-all duration-200 focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
+          aria-label="Skip to main content"
         >
           Skip to main content
         </a>
@@ -228,15 +247,19 @@ const HomePage: React.FC = () => {
             {/* Primary AI Services Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
               <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="quantum-card p-4 sm:p-6 energy-pulse">
-                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
+                <article className="quantum-card p-4 sm:p-6 energy-pulse group" role="article" aria-labelledby="ai-services-title">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line" aria-hidden="true">🤖</div>
+                  <h3 id="ai-services-title" className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
                   </p>
                   <div className="text-center">
-                    <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
-                    <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text" aria-label="Starting price">Starting at $1,500/month</div>
+                    <a 
+                      href="/ai-services" 
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                      aria-label="Learn more about AI Services"
+                    >
                       Learn More →
                     </a>
                   </div>
