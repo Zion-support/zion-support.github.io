@@ -2,174 +2,132 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { 
-  Zap, 
   Code, 
-  BarChart, 
-  Smartphone, 
-  ShoppingCart, 
-  Users, 
-  Mail, 
-  Calendar,
-  FileText,
-  Image,
-  Video,
-  Music,
-  Database,
-  Shield,
-  Cloud,
-  Settings,
-  TrendingUp,
-  Target,
-  Rocket,
-  CheckCircle,
+  Terminal, 
+  GitBranch, 
+  Database, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
   Star,
+  Rocket,
+  Target,
+  Settings,
+  Cloud,
+  Lock,
+  BarChart,
+  Users,
   ArrowRight
 } from 'lucide-react';
 
-const MicroSAASPage: React.FC = () => {
-  const microSAASServices = [
+const DeveloperToolsPage: React.FC = () => {
+  const tools = [
     {
-      name: 'AI Content Studio',
-      icon: FileText,
-      description: 'Revolutionary AI-powered content creation for blogs, social media, emails, and marketing materials.',
-      price: '$199/month',
-      features: ['AI Blog Writing', 'Social Media Posts', 'Email Campaigns', 'SEO Optimization', 'Content Calendar'],
-      color: 'text-pink-400',
-      bgColor: 'bg-pink-500/10'
-    },
-    {
-      name: 'Business Analytics',
-      icon: BarChart,
-      description: 'Advanced business intelligence and analytics dashboard with real-time insights and predictions.',
-      price: '$149/month',
-      features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization', 'KPI Tracking'],
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
-    },
-    {
-      name: 'Developer Tools',
+      name: 'AI Code Generator',
       icon: Code,
-      description: 'Complete development toolkit with AI-powered code generation, testing, and deployment automation.',
+      description: 'Generate high-quality code using AI with support for 50+ programming languages.',
       price: '$49/month',
-      features: ['AI Code Generation', 'Auto Testing', 'CI/CD Pipelines', 'Code Review', 'Documentation'],
+      features: ['50+ Languages', 'Code Review', 'Bug Detection', 'Documentation', 'Refactoring'],
       color: 'text-green-400',
       bgColor: 'bg-green-500/10'
     },
     {
-      name: 'Mobile Apps',
-      icon: Smartphone,
-      description: 'AI-powered mobile app development and management platform for iOS and Android applications.',
-      price: '$99/month',
-      features: ['Cross-platform Development', 'AI App Builder', 'Push Notifications', 'Analytics', 'App Store Management'],
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'
-    },
-    {
-      name: 'E-commerce Suite',
-      icon: ShoppingCart,
-      description: 'Complete e-commerce platform with AI-powered recommendations, inventory management, and analytics.',
-      price: '$89/month',
-      features: ['Online Store Builder', 'AI Recommendations', 'Inventory Management', 'Payment Processing', 'Order Tracking'],
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-    },
-    {
-      name: 'CRM & Sales',
-      icon: Users,
-      description: 'Customer relationship management with AI-powered lead scoring, automation, and sales forecasting.',
+      name: 'CI/CD Pipeline',
+      icon: GitBranch,
+      description: 'Automated continuous integration and deployment with intelligent testing and monitoring.',
       price: '$79/month',
-      features: ['Lead Management', 'Sales Pipeline', 'AI Lead Scoring', 'Email Automation', 'Sales Forecasting'],
+      features: ['Auto Testing', 'Deployment', 'Monitoring', 'Rollback', 'Notifications'],
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
     },
     {
-      name: 'Email Marketing',
-      icon: Mail,
-      description: 'Advanced email marketing platform with AI-powered personalization and automation.',
-      price: '$59/month',
-      features: ['Email Templates', 'AI Personalization', 'A/B Testing', 'Automation Workflows', 'Analytics'],
-      color: 'text-indigo-400',
-      bgColor: 'bg-indigo-500/10'
+      name: 'Database Manager',
+      icon: Database,
+      description: 'AI-powered database management with optimization, security, and performance monitoring.',
+      price: '$99/month',
+      features: ['Query Optimization', 'Security Monitoring', 'Backup Automation', 'Performance Analytics', 'Schema Design'],
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10'
     },
     {
-      name: 'Project Management',
-      icon: Calendar,
-      description: 'AI-powered project management with smart scheduling, resource allocation, and progress tracking.',
-      price: '$69/month',
-      features: ['Task Management', 'AI Scheduling', 'Team Collaboration', 'Progress Tracking', 'Resource Planning'],
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
-    },
-    {
-      name: 'Media Studio',
-      icon: Image,
-      description: 'AI-powered media creation and editing for images, videos, and audio content.',
+      name: 'API Gateway',
+      icon: Zap,
+      description: 'Intelligent API management with rate limiting, authentication, and analytics.',
       price: '$89/month',
-      features: ['AI Image Generation', 'Video Editing', 'Audio Processing', 'Media Library', 'Brand Kit'],
+      features: ['Rate Limiting', 'Authentication', 'Analytics', 'Documentation', 'Versioning'],
+      color: 'text-yellow-400',
+      bgColor: 'bg-yellow-500/10'
+    },
+    {
+      name: 'Security Scanner',
+      icon: Shield,
+      description: 'Automated security scanning and vulnerability detection for your codebase.',
+      price: '$69/month',
+      features: ['Vulnerability Detection', 'Dependency Scanning', 'Code Analysis', 'Compliance', 'Reports'],
       color: 'text-red-400',
       bgColor: 'bg-red-500/10'
     },
     {
-      name: 'Database Manager',
-      icon: Database,
-      description: 'AI-powered database management with automated optimization and security monitoring.',
-      price: '$99/month',
-      features: ['Database Design', 'Query Optimization', 'Security Monitoring', 'Backup Automation', 'Performance Analytics'],
-      color: 'text-emerald-400',
-      bgColor: 'bg-emerald-500/10'
+      name: 'Performance Monitor',
+      icon: BarChart,
+      description: 'Real-time application performance monitoring with AI-powered insights.',
+      price: '$59/month',
+      features: ['Real-time Monitoring', 'Performance Metrics', 'Alerting', 'Optimization Tips', 'Reports'],
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10'
     }
   ];
 
   const benefits = [
     {
       icon: Rocket,
-      title: 'Rapid Deployment',
-      description: 'Get up and running in minutes with our pre-built templates and AI-powered setup.'
+      title: 'Faster Development',
+      description: 'Accelerate your development process with AI-powered tools and automation.'
     },
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with SOC 2 compliance and 99.9% uptime guarantee.'
+      title: 'Enhanced Security',
+      description: 'Keep your code secure with automated scanning and vulnerability detection.'
     },
     {
       icon: Cloud,
-      title: 'Scalable Infrastructure',
-      description: 'Auto-scaling cloud infrastructure that grows with your business needs.'
+      title: 'Cloud-Native',
+      description: 'Built for modern cloud environments with auto-scaling and high availability.'
     },
     {
       icon: Settings,
       title: 'Easy Integration',
-      description: 'Seamlessly integrate with 1000+ popular business tools and APIs.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent recommendations and insights to optimize your business performance.'
+      description: 'Seamlessly integrate with your existing development workflow and tools.'
     },
     {
       icon: Target,
-      title: 'Custom Solutions',
-      description: 'Tailored solutions designed specifically for your industry and business requirements.'
+      title: 'Quality Assurance',
+      description: 'Ensure code quality with automated testing and code review processes.'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhance team productivity with collaborative tools and shared workspaces.'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO, TechStart Inc.',
-      content: 'Zion Tech Group\'s micro SAAS solutions transformed our operations. We saved 40 hours per week and increased productivity by 300%.',
+      name: 'David Kim',
+      role: 'Lead Developer, TechCorp',
+      content: 'The AI code generator has revolutionized our development process. We write 3x faster with better quality code.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CTO, Global Corp',
-      content: 'The AI-powered analytics dashboard gave us insights we never had before. Our decision-making process is now data-driven and efficient.',
+      name: 'Lisa Wang',
+      role: 'DevOps Engineer, CloudTech',
+      content: 'The CI/CD pipeline is incredibly robust. Deployments are now automated and error-free.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Marketing Director, E-commerce Plus',
-      content: 'The content generation tools are incredible. We produce 10x more content with half the effort. ROI is outstanding.',
+      name: 'Alex Rodriguez',
+      role: 'CTO, StartupXYZ',
+      content: 'The security scanner caught vulnerabilities we never knew existed. Essential for any development team.',
       rating: 5
     }
   ];
@@ -182,14 +140,14 @@ const MicroSAASPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text">
-            Micro SAAS Solutions
+            Developer Tools
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-            50+ AI-Powered Business Applications
+            AI-Powered Development Suite
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Powerful, affordable AI-driven tools for modern businesses. Everything you need to run a successful 
-            business in one comprehensive suite. From content creation to analytics, we've got you covered.
+            Complete development toolkit with AI-powered code generation, testing, and deployment automation. 
+            Everything you need to build, test, and deploy modern applications.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -209,34 +167,34 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Tools Grid */}
         <section className="mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Micro SAAS Suite
+            Our Developer Tools
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Choose from our comprehensive suite of AI-powered business applications
+            Choose from our comprehensive suite of AI-powered development tools
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {microSAASServices.map((service, index) => (
+            {tools.map((tool, index) => (
               <article key={index} className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">
-                  <service.icon className="w-12 h-12 mx-auto" />
+                  <tool.icon className="w-12 h-12 mx-auto" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">
-                  {service.name}
+                  {tool.name}
                 </h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  {service.description}
+                  {tool.description}
                 </p>
                 
                 <div className="mb-4">
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text text-center">
-                    {service.price}
+                    {tool.price}
                   </div>
                   <ul className="text-sm text-gray-400 space-y-1">
-                    {service.features.map((feature, featureIndex) => (
+                    {tool.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -248,7 +206,7 @@ const MicroSAASPage: React.FC = () => {
                 <div className="text-center">
                   <a 
                     href="/contact" 
-                    className={`${service.color} hover:opacity-80 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow`}
+                    className={`${tool.color} hover:opacity-80 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow`}
                   >
                     Learn More →
                   </a>
@@ -261,10 +219,10 @@ const MicroSAASPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Why Choose Our Micro SAAS Solutions?
+            Why Choose Our Developer Tools?
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Experience the power of AI-driven business applications
+            Experience the power of AI-driven development tools
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -287,10 +245,10 @@ const MicroSAASPage: React.FC = () => {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            What Our Clients Say
+            What Developers Say
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Join thousands of satisfied customers who have transformed their businesses
+            Join thousands of developers who have transformed their workflow
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -318,22 +276,22 @@ const MicroSAASPage: React.FC = () => {
         {/* Pricing Tiers */}
         <section className="mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Simple, Transparent Pricing
+            Developer-Friendly Pricing
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-            Choose the plan that fits your business needs
+            Choose the plan that fits your development needs
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="cyber-card p-6 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$79<span className="text-lg text-gray-400">/month</span></div>
+              <h3 className="text-xl font-bold text-white mb-4">Individual</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span></div>
               <ul className="text-sm text-gray-300 space-y-2 mb-6">
-                <li>✓ 5 Micro SAAS Apps</li>
-                <li>✓ Basic AI Features</li>
+                <li>✓ AI Code Generator</li>
+                <li>✓ Basic CI/CD</li>
+                <li>✓ Security Scanner</li>
                 <li>✓ Email Support</li>
-                <li>✓ 1GB Storage</li>
-                <li>✓ Basic Analytics</li>
+                <li>✓ 5 Projects</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
                 Get Started
@@ -342,14 +300,14 @@ const MicroSAASPage: React.FC = () => {
             
             <div className="cyber-card p-6 text-center border-2 border-cyan-400">
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>
-              <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$199<span className="text-lg text-gray-400">/month</span></div>
+              <h3 className="text-xl font-bold text-white mb-4">Team</h3>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span></div>
               <ul className="text-sm text-gray-300 space-y-2 mb-6">
-                <li>✓ 15 Micro SAAS Apps</li>
-                <li>✓ Advanced AI Features</li>
+                <li>✓ All Developer Tools</li>
+                <li>✓ Advanced CI/CD</li>
+                <li>✓ Team Collaboration</li>
                 <li>✓ Priority Support</li>
-                <li>✓ 10GB Storage</li>
-                <li>✓ Advanced Analytics</li>
+                <li>✓ 25 Projects</li>
                 <li>✓ API Access</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
@@ -359,15 +317,15 @@ const MicroSAASPage: React.FC = () => {
             
             <div className="cyber-card p-6 text-center">
               <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-3xl font-bold text-cyan-400 mb-4">$399<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-3xl font-bold text-cyan-400 mb-4">$199<span className="text-lg text-gray-400">/month</span></div>
               <ul className="text-sm text-gray-300 space-y-2 mb-6">
-                <li>✓ All Micro SAAS Apps</li>
-                <li>✓ Premium AI Features</li>
+                <li>✓ All Tools + Custom</li>
+                <li>✓ Enterprise CI/CD</li>
+                <li>✓ Advanced Security</li>
                 <li>✓ 24/7 Support</li>
-                <li>✓ Unlimited Storage</li>
-                <li>✓ Custom Analytics</li>
-                <li>✓ White-label Options</li>
+                <li>✓ Unlimited Projects</li>
                 <li>✓ Custom Integrations</li>
+                <li>✓ White-label Options</li>
               </ul>
               <a href="/contact" className="cyber-button w-full text-center">
                 Get Started
@@ -379,10 +337,10 @@ const MicroSAASPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
-            Ready to Transform Your Business?
+            Ready to Supercharge Your Development?
           </h2>
           <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have already transformed their operations with our micro SAAS solutions.
+            Join thousands of developers who have already transformed their workflow with our AI-powered tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -402,8 +360,8 @@ const MicroSAASPage: React.FC = () => {
           
           <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-400 space-y-1">
             <p>✓ Free initial consultation</p>
-            <p>✓ Custom solution design</p>
-            <p>✓ 24/7 support available</p>
+            <p>✓ Custom tool configuration</p>
+            <p>✓ 24/7 developer support</p>
           </div>
         </section>
       </main>
@@ -413,4 +371,4 @@ const MicroSAASPage: React.FC = () => {
   );
 };
 
-export default MicroSAASPage;
+export default DeveloperToolsPage;
