@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, Smartphone } from 'lucide-react';
 const AIMobileAppDevelopmentPage: React.FC = () => {
   const mobileServices = [
     {
