@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+=======
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, X, Menu, Cloud, Database, Smartphone, Lock } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +22,7 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
@@ -65,6 +70,15 @@ const Navigation: React.FC = () => {
       setIsITOpen(false);
     }
   };
+=======
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+    { name: 'IT Services', href: '/it-services', icon: Cpu },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: Phone },
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
 
   const microSAASServices = [
     // Productivity & Management
@@ -135,6 +149,7 @@ const Navigation: React.FC = () => {
     { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+<<<<<<< HEAD
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
@@ -143,6 +158,13 @@ const Navigation: React.FC = () => {
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+=======
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
+    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
+    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+>>>>>>> cursor/website-audit-and-update-with-deployment-11ea
   ];
 
   const itServices = [
