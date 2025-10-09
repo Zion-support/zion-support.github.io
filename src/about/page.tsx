@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-=======
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -88,10 +83,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -238,8 +229,11 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
 
       <Footer />
     </div>
   );
 };
+
+export default AboutPage;

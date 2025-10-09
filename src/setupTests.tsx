@@ -7,10 +7,7 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-<<<<<<< HEAD
-=======
 // eslint-disable-next-line no-console
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 console.error = (...args) => {
@@ -61,13 +58,9 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-<<<<<<< HEAD
-const originalConsoleWarn = console.warn;
-=======
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 // eslint-disable-next-line no-console
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
@@ -95,17 +88,10 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return [];
   }
 };
-<<<<<<< HEAD
-// Suppress JSDOM navigation warnings
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-=======
 // Additional JSDOM navigation warning suppression
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const suppressNavigationWarnings = (...args: unknown[]) => {
   if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError.apply(console, args);
