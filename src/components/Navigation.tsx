@@ -48,11 +48,6 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-<<<<<<< HEAD
-            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Services
-=======
-
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white">
@@ -65,40 +60,45 @@ const Navigation: React.FC = () => {
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                            <span className="text-sm font-semibold text-white">{category.title}</span>
-                          </div>
-                          <div className="space-y-2">
-                            {category.services.slice(0, 6).map((service, serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                                onClick={closeAllMenus}
-                              >
-                                <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                  {service.description}
-                                </div>
-                              </Link>
-                            ))}
-                            {category.services.length > 6 && (
-                              <Link
-                                to={`/services`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </Link>
-                            )}
-                          </div>
+                      {/* AI Services */}
+                      <div>
+                        <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">AI Services</h4>
+                        <div className="space-y-2">
+                          <Link to="/ai-analytics" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            AI Analytics
+                          </Link>
+                          <Link to="/ai-automation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            AI Automation
+                          </Link>
+                          <Link to="/ai-content-generation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            AI Content Generation
+                          </Link>
+                          <Link to="/ai-customer-support" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            AI Customer Support
+                          </Link>
                         </div>
-                      ))}
+                      </div>
+                      
+                      {/* IT Services */}
+                      <div>
+                        <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4>
+                        <div className="space-y-2">
+                          <Link to="/it-services" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            IT Services
+                          </Link>
+                          <Link to="/cloud-migration" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            Cloud Migration
+                          </Link>
+                          <Link to="/devops" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            DevOps
+                          </Link>
+                          <Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
+                            Cybersecurity
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                    <div className="border-t border-gray-700 mt-6 pt-4 px-6">
+                    <div className="border-t border-gray-700 mt-6 pt-4">
                       <Link
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Link 
@@ -118,7 +118,6 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               Case Studies
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
