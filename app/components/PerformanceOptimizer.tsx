@@ -8,7 +8,7 @@ interface PerformanceOptimizerProps {
   enablePrefetching?: boolean;
   enableCriticalCSS?: boolean;
   enableResourceHints?: boolean;
-}
+};
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -34,7 +34,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         // Add fetchpriority for above-the-fold images
         if (img.getBoundingClientRect().top < window.innerHeight) {
           img.setAttribute('fetchpriority', 'high');
-        }
+        },
       });
     }
 
@@ -56,7 +56,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'prefetch';
           link.href = href;
           document.head.appendChild(link);
-        }
+        },
       });
     }
 
@@ -75,7 +75,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'dns-prefetch';
           link.href = `//${domain}`;
           document.head.appendChild(link);
-        }
+        },
       });
     }
 
@@ -96,7 +96,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.href = font.href;
           link.as = font.as;
           document.head.appendChild(link);
-        }
+        },
       });
     }
 
@@ -110,12 +110,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-          }
+          },
         });
       });
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-    }
+    },
   }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
 
   return null;

@@ -47,7 +47,7 @@ const AIHealthcarePage: React.FC = () => {
       title: 'Drug Discovery',
       description: 'AI-accelerated drug discovery and development',
       icon: Stethoscope
-    }
+    },
   ];
 
   return (

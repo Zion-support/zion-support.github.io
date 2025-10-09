@@ -15,7 +15,8 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
     'Batch processing for multiple voices',
     'Privacy-compliant voice data handling',
     'Real-time voice conversion'
-  ]
+  ];
+
   const benefits = [
     'Create personalized voice assistants for your brand',
     'Improve accessibility with custom voice options',
@@ -25,7 +26,8 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
     'Scale voice content production instantly',
     'Maintain brand consistency across all touchpoints',
     'Enable voice personalization for users'
-  ]
+  ];
+
   const useCases = [
     {
       title: 'Customer Service',
@@ -55,9 +57,10 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
     {
       title: 'Marketing',
       description: 'Produce consistent brand voice across all marketing materials',
-      icon: '📢'}
-    }
-  ]
+      icon: '📢'},
+    },
+  ];
+
   const pricing = [
     {
       name: 'Starter',
@@ -70,7 +73,7 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
         'Email support',
         'API access'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -84,7 +87,7 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
         'Custom integrations',
         'Real-time processing'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -99,9 +102,10 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'Tacotron 2', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning',
     'Custom Neural Networks', 'Deep Learning', 'Signal Processing',
@@ -251,7 +255,7 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -309,5 +313,6 @@ const AIVoiceCloningPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AIVoiceCloningPage

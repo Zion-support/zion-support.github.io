@@ -74,7 +74,7 @@ const AIContentWriterPage: React.FC = () => {
       price: '$179/month',
       features: ['Keyword Research', 'On-Page SEO', 'Content Optimization', 'Ranking Tracking'],
       color: 'text-red-400'
-    }
+    },
   ];
 
   const contentTypes = [
@@ -107,7 +107,7 @@ const AIContentWriterPage: React.FC = () => {
       type: 'Technical Docs',
       description: 'API documentation, user guides, and manuals',
       count: 'Unlimited'
-    }
+    },
   ];
 
   return (

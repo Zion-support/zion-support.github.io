@@ -30,7 +30,7 @@ const Navigation: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
       closeAllMenus();
-    }
+    },
   };
 
   const toggleServices = () => {
@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
       setIsAIOpen(false);
       setIsITOpen(false);
       setIsSpecializedOpen(false);
-    }
+    },
   };
 
   const toggleAI = () => {
@@ -47,7 +47,7 @@ const Navigation: React.FC = () => {
     if (isAIOpen) {
       setIsITOpen(false);
       setIsSpecializedOpen(false);
-    }
+    },
   };
 
   const toggleIT = () => {
@@ -55,7 +55,7 @@ const Navigation: React.FC = () => {
     if (isITOpen) {
       setIsAIOpen(false);
       setIsSpecializedOpen(false);
-    }
+    },
   };
 
   const toggleSpecialized = () => {
@@ -63,7 +63,7 @@ const Navigation: React.FC = () => {
     if (isSpecializedOpen) {
       setIsAIOpen(false);
       setIsITOpen(false);
-    }
+    },
   };
 
   const microSAASServices = [
@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera },
   ];
 
   const aiServices = [
@@ -123,7 +123,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar },
   ];
 
   const itServices = [
@@ -148,7 +148,7 @@ const Navigation: React.FC = () => {
     { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart },
   ];
 
   const specializedServices = [
@@ -163,7 +163,7 @@ const Navigation: React.FC = () => {
     { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
     { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
+    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp },
   ];
 
   return (

@@ -74,7 +74,7 @@ const WebDevelopmentPage: React.FC = () => {
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
       color: 'text-gray-400'
-    }
+    },
   ];
 
   return (

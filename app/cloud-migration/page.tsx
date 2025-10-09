@@ -10,57 +10,56 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       icon: Cloud,
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
-      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']}
-    },
+      benefits: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']},
     {
       icon: Shield,
       title: 'Security-First Approach',
       description: 'Ensure your cloud infrastructure meets the highest security standards and compliance requirements.',
-      benefits: ['End-to-end encryption', 'Compliance management', 'Security monitoring', 'Access controls']}
-    },
+      benefits: ['End-to-end encryption', 'Compliance management', 'Security monitoring', 'Access controls']},
     {
       icon: Zap,
       title: 'Performance Optimization',
       description: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
-      benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']}
-    },
+      benefits: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']},
     {
       icon: Target,
       title: 'Multi-Cloud Strategy',
       description: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
-      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']}
-    }
-  ]
+      benefits: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
+    
+  ];
+
   const migrationSteps = [
     {
       step: '01',
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
       icon: Target,
-      duration: '1-2 weeks'}
+      duration: '1-2 weeks'},
     },
     {
       step: '02',
       title: 'Architecture Design',
       description: 'Design optimal cloud architecture tailored to your business needs.',
       icon: Server,
-      duration: '1-2 weeks'}
+      duration: '1-2 weeks'},
     },
     {
       step: '03',
       title: 'Migration Execution',
       description: 'Execute the migration with minimal downtime and maximum data integrity.',
       icon: Cloud,
-      duration: '2-4 weeks'}
+      duration: '2-4 weeks'},
     },
     {
       step: '04',
       title: 'Optimization & Support',
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
-      duration: 'Ongoing'}
-    }
-  ]
+      duration: 'Ongoing'},
+    },
+  ];
+
   const pricingPlans = [
     {
       name: 'Small Business',
@@ -75,7 +74,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         '30-day post-migration support',
         'Basic monitoring'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -92,7 +91,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         'Performance optimization',
         'Cost optimization'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -110,33 +109,34 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
         'Dedicated account manager',
         'Custom integrations'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const benefits = [
     {
       title: 'Cost Reduction',
       description: 'Reduce infrastructure costs by up to 40% with cloud optimization.',
       icon: TrendingUp,
-      percentage: '40%'}
+      percentage: '40%'},
     },
     {
       title: 'Improved Performance',
       description: 'Achieve 99.9% uptime with cloud infrastructure.',
       icon: Zap,
-      percentage: '99.9%'}
+      percentage: '99.9%'},
     },
     {
       title: 'Enhanced Security',
       description: 'Enterprise-grade security with automated updates and monitoring.',
       icon: Shield,
-      percentage: '100%'}
+      percentage: '100%'},
     },
     {
       title: 'Scalability',
       description: 'Scale resources up or down based on demand automatically.',
       icon: Target,
-      percentage: 'Unlimited'}
+      percentage: 'Unlimited'},
     }
   ]
   return (
@@ -307,7 +307,7 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                    : 'bg-slate-700 text-white hover:bg-slate-600'`},
                 }`} aria-label="
                   Get Started
                 " tabIndex="0">
@@ -344,5 +344,6 @@ const CloudMigrationPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
+};
+
 export default CloudMigrationPage

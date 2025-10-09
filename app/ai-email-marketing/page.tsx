@@ -16,35 +16,34 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Generation',
       description: 'Generate compelling email content with AI-powered writing assistance',
-      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']}
-    },
+      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Call-to-action suggestions']},
     {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'Automatically segment your audience based on behavior and preferences',
-      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']}
-    },
+      benefits: ['Behavioral targeting', 'Demographic segmentation', 'Engagement-based groups', 'Predictive segments']},
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Track performance with detailed analytics and AI-powered insights',
-      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']}
-    },
+      benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']},
     {
       icon: Send,
       title: 'Automated Campaigns',
       description: 'Set up sophisticated email sequences that work around the clock',
-      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']}
-    }
-  ]
+      benefits: ['Welcome series', 'Abandoned cart recovery', 'Re-engagement campaigns', 'Birthday/anniversary emails']
+    
+  ];
+
   const campaignTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers with engaging sequences' },
     { name: 'Product Launch', icon: '🚀', description: 'Build excitement and drive sales for new products' },
     { name: 'Abandoned Cart', icon: '🛒', description: 'Recover lost sales with targeted follow-ups' },
     { name: 'Re-engagement', icon: '💤', description: 'Win back inactive subscribers' },
     { name: 'Newsletter', icon: '📰', description: 'Keep subscribers engaged with regular updates' },
-    { name: 'Promotional', icon: '🎯', description: 'Drive sales with special offers and discounts' }
-  ]
+    { name: 'Promotional', icon: '🎯', description: 'Drive sales with special offers and discounts' },
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -57,7 +56,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -71,7 +70,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
         'A/B testing',
         'Priority support'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -86,27 +85,28 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
         'Dedicated support',
         'API access'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const testimonials = [
     {
       name: 'Jennifer Lee',
       role: 'Marketing Manager, E-commerceCo',
       content: 'AI Email Marketing increased our open rates by 65% and revenue by 40%. The AI content suggestions are spot-on as any',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Mark Thompson',
       role: 'CEO, SaaSStartup',
       content: 'The automated campaigns have been a game changer. We set it up once and it works 24/7 to nurture our leads.',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Sarah Davis',
       role: 'Director of Marketing, RetailBrand',
       content: 'The segmentation features are incredible. We can now send highly targeted emails that actually convert.',
-      rating: 5}
+      rating: 5},
     }
   ]
   return (
@@ -276,7 +276,7 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-green-400 text-slate-900 hover:bg-green-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`},
                     }`}
                   >
                     Get Started
@@ -354,5 +354,6 @@ const AIEmailMarketingPage: React.FC = React.memo((props) => {
       </div>
     </>
   )
-}
+};
+
 export default AIEmailMarketingPage

@@ -32,7 +32,7 @@ const preloadComponents = () => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
     }, 100);
-  }
+  },
 };
 
 // Loading skeleton component - now imported from LoadingSkeleton.tsx
@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
-    }
+    },
   }, []);
 
   const microSAASServices = [
@@ -544,11 +544,11 @@ const HomePage: React.FC = () => {
       link: '/ai-quantum-computing',
       popular: false,
       category: 'Quantum Computing'
-    }
+    },
   ];
       popular: true,
       category: 'E-commerce'
-    }
+    },
   ];
 
   const aiServices = [
@@ -794,7 +794,7 @@ const HomePage: React.FC = () => {
       features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
       color: 'text-yellow-500',
       category: 'Energy AI'
-    }
+    },
   ];
 
   const itServices = [
@@ -1040,7 +1040,7 @@ const HomePage: React.FC = () => {
       features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
       color: 'text-indigo-500',
       category: 'Compliance'
-    }
+    },
   ];
 
   return (
@@ -1083,7 +1083,7 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
+          },
         }}
       />
       <EnhancedPerformanceOptimizer

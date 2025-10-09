@@ -10,53 +10,51 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']}
+      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations'],
     },
     {
       icon: BarChart,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']}
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive'],
     },
     {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
-      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']}
-    },
+      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']},
     {
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
-      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']}
-    }
-  ]
+      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
+    
+  ];
+
   const analyticsTypes = [
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, pipeline health, and revenue trends.',
       icon: TrendingUp,
-      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']}
-    },
+      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']},
     {
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
       icon: Target,
-      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']}
-    },
+      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']},
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences.',
       icon: Users,
-      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']}
-    },
+      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']},
     {
       title: 'Financial Analytics',
       description: 'Monitor financial health and profitability.',
       icon: BarChart,
-      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']}
-    }
-  ]
+      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
+    
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -71,7 +69,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         '1,000 data points/month',
         'Basic integrations'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -88,7 +86,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'API access',
         'Custom metrics'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -105,9 +103,10 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
         'Advanced security',
         'Dedicated account manager'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const integrations = [
     { name: 'Google Analytics', icon: '📊' },
     { name: 'Salesforce', icon: '☁️' },
@@ -281,7 +280,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                    : 'bg-slate-700 text-white hover:bg-slate-600'`},
                 }`} aria-label="
                   Get Started
                 " tabIndex="0">
@@ -318,5 +317,6 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
+};
+
 export default AIAnalyticsPage

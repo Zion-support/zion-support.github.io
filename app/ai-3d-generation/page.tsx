@@ -15,7 +15,8 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
     'Custom style transfer and adaptation',
     'Physics simulation integration',
     'Export to all major 3D formats'
-  ]
+  ];
+
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -25,45 +26,44 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
-  ]
+  ];
+
   const applications = [
     {
       title: 'Game Development',
       description: 'Generate characters, environments, and props for games',
       icon: '🎮',
-      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models']}
+      examples: ['Character models', 'Environment assets', 'Weapon designs', 'Vehicle models'],
     },
     {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
-      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']}
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs'],
     },
     {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
-      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']}
-    },
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']},
     {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
-      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']}
-    },
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']},
     {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
-      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']}
-    },
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']},
     {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
-      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']}
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
-  ]
+  ];
+
   const pricing = [
     {
       name: 'Creator',
@@ -76,7 +76,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Email support',
         'Basic export formats'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Studio',
@@ -91,7 +91,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -107,15 +107,17 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'NeRF (Neural Radiance Fields)', '3D GANs', 'Point Cloud Processing',
     'Mesh Generation', 'Texture Synthesis', 'Blender API Integration',
     'Unity Integration', 'Unreal Engine Support', 'Custom 3D Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1,
@@ -139,7 +141,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
-      icon: '📤'}
+      icon: '📤'},
     }
   ]
   return (
@@ -322,7 +324,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -380,5 +382,6 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AI3DGenerationPage

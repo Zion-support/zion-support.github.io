@@ -113,14 +113,14 @@ const CaseStudiesPage: React.FC = () => {
       roi: '250%',
       icon: Brain,
       color: 'text-yellow-400'
-    }
+    },
   ];
 
   const stats = [
     { label: 'Projects Completed', value: '500+', icon: CheckCircle },
     { label: 'Average ROI', value: '350%', icon: TrendingUp },
     { label: 'Client Satisfaction', value: '98%', icon: Users },
-    { label: 'Cost Savings Delivered', value: '$50M+', icon: DollarSign }
+    { label: 'Cost Savings Delivered', value: '$50M+', icon: DollarSign },
   ];
 
   return (

@@ -38,7 +38,7 @@ const ComputerVisionPage: React.FC = () => {
       features: ['Motion Detection', 'Activity Recognition', 'Scene Analysis', 'Real-time Processing'],
       icon: Shield,
       color: 'text-cyan-400'
-    }
+    },
   ];
 
   const benefits = [

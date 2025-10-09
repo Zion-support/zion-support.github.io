@@ -8,7 +8,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
   enableSkipLinks?: boolean;
   enableARIALabels?: boolean;
-}
+};
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
@@ -27,7 +27,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
       skipLink.setAttribute('tabindex', '1');
       document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+    },
   }, [enableSkipLinks]);
 
   // Add keyboard navigation
@@ -44,7 +44,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur();
-        }
+        },
       }
       
       // Handle arrow keys for navigation
@@ -61,16 +61,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           event.preventDefault();
-        }
+        },
       }
-    }
+    },
   }, [enableKeyboardNavigation]);
 
   useEffect(() => {
     if (enableKeyboardNavigation) {
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
-    }
+    },
   }, [enableKeyboardNavigation, handleKeyDown]);
 
   // Add focus indicators
@@ -114,7 +114,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       `;
       document.head.appendChild(style);
-    }
+    },
   }, [enableFocusManagement]);
 
   // Add ARIA labels and roles
@@ -133,7 +133,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const icon = button.querySelector('svg');
         if (icon && !button.textContent?.trim()) {
           button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
+        },
       });
 
       // Add ARIA labels to images without alt text
@@ -148,9 +148,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-        }
+        },
       });
-    }
+    },
   }, [enableARIALabels]);
 
   // Add high contrast mode support
@@ -163,7 +163,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.body.classList.add('high-contrast');
         } else {
           document.body.classList.remove('high-contrast');
-        }
+        },
       };
 
       // Check initial state
@@ -177,7 +177,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => {
         mediaQuery.removeEventListener('change', handleContrastChange);
       };
-    }
+    },
   }, [enableHighContrast]);
 
   // Add reduced motion support
@@ -189,7 +189,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.body.classList.add('reduced-motion');
       } else {
         document.body.classList.remove('reduced-motion');
-      }
+      },
     };
 
     // Check initial state
@@ -214,7 +214,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.className = 'sr-only';
       announcement.id = 'announcements';
       document.body.appendChild(announcement);
-    }
+    },
   }, [enableScreenReaderSupport]);
 
   return null;

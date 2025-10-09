@@ -14,8 +14,9 @@ interface ImageProps {
   sizes?: string
   style?: React.CSSProperties
   onLoad?: () => void
-  onError?: () => void;}
-}
+  onError?: () => void;},
+};
+
 export const Image: React.FC<ImageProps> = ({
   src,
   alt,
@@ -31,17 +32,17 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props}
+  ...props},
 }) => {
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const handleLoad = useCallback(() => {
     setIsLoaded(true)
-    if (onLoad) onLoad();}
+    if (onLoad) onLoad();},
   }, [onLoad])
   const handleError = useCallback(() => {
     setHasError(true)
-    if (onError) onError();}
+    if (onError) onError();},
   }, [onError])
   const imageStyle: React.CSSProperties = {
     ...style,
@@ -51,7 +52,7 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover'}
+      objectFit: 'cover'},
     })
   }
   if (hasError) {
@@ -80,5 +81,6 @@ export const Image: React.FC<ImageProps> = ({
       {...props}
     />
   )
-}
+};
+
 export default Image

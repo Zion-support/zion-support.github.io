@@ -47,7 +47,7 @@ const AIWritingAssistantPage: React.FC = () => {
       title: 'Product Descriptions',
       description: 'Create compelling product descriptions that sell',
       icon: BarChart
-    }
+    },
   ];
 
   return (

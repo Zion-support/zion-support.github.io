@@ -79,5 +79,6 @@ const AiWorkflowAutomationPage: React.FC = React.memo((props) => {
       <Footer />
     </>
   )
-}
+};
+
 export default PageComponent

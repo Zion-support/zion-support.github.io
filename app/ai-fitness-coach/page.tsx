@@ -14,7 +14,8 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
     'Nutrition guidance',
     'Wearable integration',
     'Social challenges'
-  ]
+  ];
+
   const benefits = [
     'Improve workout effectiveness by 40%',
     'Prevent injuries with AI monitoring',
@@ -22,7 +23,8 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
     'Track progress automatically',
     'Motivate with AI coaching',
     'Integrate with fitness devices'
-  ]
+  ];
+
   const useCases = [
     'Home workouts',
     'Gym training',
@@ -32,25 +34,26 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
     'Muscle building',
     'Flexibility training',
     'Group fitness'
-  ]
+  ];
+
   const pricing = [
     {
       plan: 'Basic',
       price: '$9.99/month',
       features: ['Basic workouts', 'Form analysis', 'Progress tracking', 'Email support'],
-      popular: false}
+      popular: false},
     },
     {
       plan: 'Pro',
       price: '$19.99/month',
       features: ['Personalized plans', 'AI coaching', 'Wearable sync', 'Nutrition tips', 'Priority support'],
-      popular: true}
+      popular: true},
     },
     {
       plan: 'Elite',
       price: '$39.99/month',
       features: ['Custom training', '1-on-1 AI coach', 'Advanced analytics', 'Group challenges', 'Phone support'],
-      popular: false}
+      popular: false},
     }
   ]
   return (
@@ -177,7 +180,7 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
                 <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-green-600 text-white hover:bg-green-700' 
-                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'`}
+                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'`},
                 }`} aria-label="
                   Get Started
                 " tabIndex="0">
@@ -232,5 +235,6 @@ const AIFitnessCoachPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
+};
+
 export default AIFitnessCoachPage

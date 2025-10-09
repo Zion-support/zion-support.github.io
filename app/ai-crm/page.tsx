@@ -47,7 +47,7 @@ const AICRMPage: React.FC = () => {
       title: 'Email Automation',
       description: 'Smart email campaigns and follow-up sequences',
       icon: Mail
-    }
+    },
   ];
 
   return (

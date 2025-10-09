@@ -13,7 +13,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Solve complex problems exponentially faster', 'Break through classical computing limits', 'Enable new computational possibilities'],
       marketPrice: '$25,000-75,000/project',
       category: 'Algorithm Development',
-      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly']
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Q#', 'Quantum Assembly'],
     },
     {
       title: 'Quantum Cryptography Solutions',
@@ -24,7 +24,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Unbreakable security', 'Future-proof against quantum attacks', 'Ensure data protection for decades'],
       marketPrice: '$20,000-50,000/project',
       category: 'Quantum Security',
-      technologies: ['BB84 Protocol', 'E91 Protocol', 'NIST PQC Standards', 'Quantum Random Generators']
+      technologies: ['BB84 Protocol', 'E91 Protocol', 'NIST PQC Standards', 'Quantum Random Generators'],
     },
     {
       title: 'Quantum Machine Learning',
@@ -35,7 +35,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Exponential speedup for ML tasks', 'Handle exponentially large feature spaces', 'Discover new patterns in data'],
       marketPrice: '$30,000-80,000/project',
       category: 'Quantum ML',
-      technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit Machine Learning', 'Variational Quantum Eigensolver']
+      technologies: ['TensorFlow Quantum', 'PennyLane', 'Qiskit Machine Learning', 'Variational Quantum Eigensolver'],
     },
     {
       title: 'Quantum Optimization Services',
@@ -46,7 +46,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Find optimal solutions faster', 'Handle NP-hard problems', 'Reduce operational costs significantly'],
       marketPrice: '$15,000-40,000/project',
       category: 'Optimization',
-      technologies: ['D-Wave Systems', 'IBM Quantum', 'Rigetti Computing', 'Quantum Annealing']
+      technologies: ['D-Wave Systems', 'IBM Quantum', 'Rigetti Computing', 'Quantum Annealing'],
     },
     {
       title: 'Quantum Simulation Services',
@@ -57,7 +57,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Accelerate drug discovery', 'Design new materials', 'Reduce R&D costs and time'],
       marketPrice: '$35,000-100,000/project',
       category: 'Quantum Simulation',
-      technologies: ['VQE', 'QAOA', 'Quantum Chemistry Libraries', 'Molecular Quantum Gates']
+      technologies: ['VQE', 'QAOA', 'Quantum Chemistry Libraries', 'Molecular Quantum Gates'],
     },
     {
       title: 'Quantum Cloud Computing',
@@ -68,7 +68,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Access cutting-edge quantum hardware', 'No upfront infrastructure costs', 'Scale quantum resources as needed'],
       marketPrice: '$4,000-10,000/month',
       category: 'Quantum Cloud',
-      technologies: ['IBM Quantum Network', 'AWS Braket', 'Azure Quantum', 'Google Quantum AI']
+      technologies: ['IBM Quantum Network', 'AWS Braket', 'Azure Quantum', 'Google Quantum AI'],
     },
     {
       title: 'Quantum Error Correction',
@@ -79,7 +79,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Enable fault-tolerant quantum computing', 'Reduce quantum errors', 'Build reliable quantum systems'],
       marketPrice: '$40,000-120,000/project',
       category: 'Error Correction',
-      technologies: ['Surface Codes', 'Stabilizer Codes', 'Topological Codes', 'Quantum Error Mitigation']
+      technologies: ['Surface Codes', 'Stabilizer Codes', 'Topological Codes', 'Quantum Error Mitigation'],
     },
     {
       title: 'Quantum Communication Networks',
@@ -90,7 +90,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Enable quantum internet', 'Ultra-secure communication', 'Quantum distributed computing'],
       marketPrice: '$50,000-150,000/project',
       category: 'Quantum Networks',
-      technologies: ['Quantum Repeaters', 'Entanglement Swapping', 'Quantum Teleportation', 'Quantum Internet Protocols']
+      technologies: ['Quantum Repeaters', 'Entanglement Swapping', 'Quantum Teleportation', 'Quantum Internet Protocols'],
     },
     {
       title: 'Quantum Sensing Solutions',
@@ -101,7 +101,7 @@ const QuantumComputingPage: React.FC = () => {
       benefits: ['Ultra-precise measurements', 'Revolutionary sensing capabilities', 'Enable new applications'],
       marketPrice: '$25,000-60,000/project',
       category: 'Quantum Sensing',
-      technologies: ['NV Centers', 'Cold Atoms', 'Quantum Interferometry', 'Quantum Metrology']
+      technologies: ['NV Centers', 'Cold Atoms', 'Quantum Interferometry', 'Quantum Metrology'],
     },
     {
       title: 'Quantum Consulting & Strategy',
@@ -113,7 +113,7 @@ const QuantumComputingPage: React.FC = () => {
       marketPrice: '$800-1,500/hour',
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
-    }
+    
   ];
 
   const _categories = [...new Set(quantumServices.map(service => service.category))];

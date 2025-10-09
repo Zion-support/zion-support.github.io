@@ -13,7 +13,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce downtime by 90%', 'Lower maintenance costs by 60%', 'Improve system reliability'],
       marketPrice: '$5,000-12,000/month',
       category: 'Infrastructure Automation',
-      technologies: ['Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'AI/ML Models']
+      technologies: ['Kubernetes', 'Docker', 'Prometheus', 'Grafana', 'AI/ML Models'],
     },
     {
       title: 'Autonomous Business Process Automation',
@@ -24,7 +24,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce process time by 70%', 'Eliminate human errors', 'Improve compliance'],
       marketPrice: '$7,000-18,000/month',
       category: 'Process Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI', 'RPA Tools']
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Custom AI', 'RPA Tools'],
     },
     {
       title: 'Intelligent Monitoring & Alerting',
@@ -35,7 +35,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Prevent issues before they occur', 'Reduce false alerts by 80%', 'Improve system performance'],
       marketPrice: '$4,500-10,000/month',
       category: 'Monitoring',
-      technologies: ['ELK Stack', 'Splunk', 'Datadog', 'New Relic', 'Custom ML Models']
+      technologies: ['ELK Stack', 'Splunk', 'Datadog', 'New Relic', 'Custom ML Models'],
     },
     {
       title: 'Autonomous Data Management',
@@ -46,7 +46,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Improve data quality by 95%', 'Reduce data management costs', 'Ensure compliance'],
       marketPrice: '$5,000-12,000/month',
       category: 'Data Management',
-      technologies: ['Apache Airflow', 'dbt', 'Great Expectations', 'Apache Kafka', 'Data Catalogs']
+      technologies: ['Apache Airflow', 'dbt', 'Great Expectations', 'Apache Kafka', 'Data Catalogs'],
     },
     {
       title: 'Self-Optimizing Cloud Resources',
@@ -57,7 +57,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce cloud costs by 40%', 'Improve performance by 50%', 'Eliminate manual optimization'],
       marketPrice: '$4,000-8,000/month',
       category: 'Cloud Automation',
-      technologies: ['AWS Auto Scaling', 'Kubernetes HPA', 'Terraform', 'CloudFormation', 'Cost Optimization Tools']
+      technologies: ['AWS Auto Scaling', 'Kubernetes HPA', 'Terraform', 'CloudFormation', 'Cost Optimization Tools'],
     },
     {
       title: 'Autonomous Security Operations',
@@ -68,7 +68,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Detect threats 10x faster', 'Reduce response time by 90%', 'Prevent security breaches'],
       marketPrice: '$6,000-15,000/month',
       category: 'Security Automation',
-      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'AI/ML Security Tools']
+      technologies: ['SIEM', 'SOAR', 'EDR', 'XDR', 'AI/ML Security Tools'],
     },
     {
       title: 'Self-Learning Customer Service',
@@ -79,7 +79,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Improve customer satisfaction', 'Reduce response time by 80%', 'Lower support costs'],
       marketPrice: '$3,500-8,000/month',
       category: 'Customer Service',
-      technologies: ['NLP', 'Chatbots', 'Sentiment Analysis', 'Knowledge Graphs', 'Conversational AI']
+      technologies: ['NLP', 'Chatbots', 'Sentiment Analysis', 'Knowledge Graphs', 'Conversational AI'],
     },
     {
       title: 'Autonomous Supply Chain Management',
@@ -90,7 +90,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce inventory costs by 30%', 'Improve forecast accuracy', 'Minimize supply disruptions'],
       marketPrice: '$6,000-14,000/month',
       category: 'Supply Chain',
-      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Portals', 'Risk Analytics', 'IoT Sensors']
+      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Portals', 'Risk Analytics', 'IoT Sensors'],
     },
     {
       title: 'Self-Adapting Software Development',
@@ -101,7 +101,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Accelerate development by 60%', 'Reduce bugs by 70%', 'Improve code quality'],
       marketPrice: '$8,000-20,000/month',
       category: 'Development Automation',
-      technologies: ['GitHub Copilot', 'CodeT5', 'Automated Testing', 'CI/CD', 'Code Analysis Tools']
+      technologies: ['GitHub Copilot', 'CodeT5', 'Automated Testing', 'CI/CD', 'Code Analysis Tools'],
     },
     {
       title: 'Autonomous Financial Operations',
@@ -112,7 +112,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Reduce processing time by 85%', 'Improve accuracy to 99.9%', 'Ensure compliance'],
       marketPrice: '$7,000-16,000/month',
       category: 'Financial Automation',
-      technologies: ['Blockchain', 'Smart Contracts', 'Financial APIs', 'Compliance Tools', 'Risk Analytics']
+      technologies: ['Blockchain', 'Smart Contracts', 'Financial APIs', 'Compliance Tools', 'Risk Analytics'],
     },
     {
       title: 'Self-Optimizing Marketing Campaigns',
@@ -123,7 +123,7 @@ const AutonomousSystemsPage: React.FC = () => {
       benefits: ['Increase ROI by 45%', 'Reduce campaign management time', 'Improve conversion rates'],
       marketPrice: '$4,500-10,000/month',
       category: 'Marketing Automation',
-      technologies: ['Marketing AI', 'A/B Testing', 'Personalization', 'Analytics', 'Ad Platforms']
+      technologies: ['Marketing AI', 'A/B Testing', 'Personalization', 'Analytics', 'Ad Platforms'],
     },
     {
       title: 'Autonomous Quality Assurance',
@@ -135,7 +135,7 @@ const AutonomousSystemsPage: React.FC = () => {
       marketPrice: '$5,000-12,000/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Appium', 'TestNG', 'Performance Tools', 'Security Scanners']
-    }
+    
   ];
 
   const _categories = [...new Set(autonomousServices.map(service => service.category))];

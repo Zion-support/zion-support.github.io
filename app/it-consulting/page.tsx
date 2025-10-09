@@ -10,65 +10,62 @@ const ITConsultingPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'Strategic IT Planning',
       description: 'Comprehensive IT strategy development and digital transformation roadmaps',
-      features: ['Technology Assessment', 'Digital Roadmap', 'ROI Analysis', 'Risk Management']}
-    },
+      features: ['Technology Assessment', 'Digital Roadmap', 'ROI Analysis', 'Risk Management']},
     {
       icon: Cloud,
       title: 'Cloud Architecture',
       description: 'Design and implement scalable cloud solutions for modern businesses',
-      features: ['AWS/Azure/GCP', 'Migration Planning', 'Cost Optimization', 'Security Design']}
-    },
+      features: ['AWS/Azure/GCP', 'Migration Planning', 'Cost Optimization', 'Security Design']},
     {
       icon: Shield,
       title: 'Cybersecurity Strategy',
       description: 'Comprehensive security assessments and implementation strategies',
-      features: ['Security Audits', 'Compliance Planning', 'Incident Response', 'Training Programs']}
-    },
+      features: ['Security Audits', 'Compliance Planning', 'Incident Response', 'Training Programs']},
     {
       icon: Database,
       title: 'Data Management',
       description: 'Optimize data architecture and implement modern data solutions',
-      features: ['Data Strategy', 'Database Design', 'Analytics Setup', 'Governance Planning']}
-    },
+      features: ['Data Strategy', 'Database Design', 'Analytics Setup', 'Governance Planning']},
     {
       icon: Globe,
       title: 'Infrastructure Design',
       description: 'Design robust and scalable IT infrastructure solutions',
-      features: ['Network Design', 'Server Architecture', 'Disaster Recovery', 'Performance Tuning']}
-    },
+      features: ['Network Design', 'Server Architecture', 'Disaster Recovery', 'Performance Tuning']},
     {
       icon: Smartphone,
       title: 'Digital Transformation',
       description: 'Guide organizations through complete digital transformation',
-      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training Programs']}
-    }
-  ]
+      features: ['Process Automation', 'Legacy Modernization', 'Change Management', 'Training Programs']
+    
+  ];
+
   const processSteps = [
     {
       step: '01',
       title: 'Discovery & Assessment',
       description: 'Comprehensive analysis of current IT landscape, processes, and business requirements',
-      icon: Target}
+      icon: Target},
     },
     {
       step: '02',
       title: 'Strategy Development',
       description: 'Create tailored IT strategy aligned with business goals and industry best practices',
-      icon: BarChart}
+      icon: BarChart},
     },
     {
       step: '03',
       title: 'Implementation Planning',
       description: 'Detailed roadmap with timelines, resources, and milestones for successful execution',
-      icon: Calendar}
+      icon: Calendar},
     },
     {
       step: '04',
       title: 'Execution & Support',
       description: 'Ongoing support and guidance throughout the implementation process',
-      icon: CheckSquare}
-    }
-  ]
+      icon: CheckSquare},
+    },
+  ];
+
   const benefits = [
     { icon: TrendingUp, title: 'Cost Reduction', description: 'Optimize IT spending and reduce operational costs' },
     { icon: Zap, title: 'Efficiency Gains', description: 'Streamline processes and improve productivity' },
@@ -234,5 +231,6 @@ const ITConsultingPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
+};
+
 export default ITConsultingPage

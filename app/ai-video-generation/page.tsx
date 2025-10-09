@@ -15,7 +15,8 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
     'High-resolution output (4K, 8K)',
     'Batch processing for multiple videos',
     'Custom branding and watermarking'
-  ]
+  ];
+
   const benefits = [
     'Reduce video production costs by 85%',
     'Create professional videos without expertise',
@@ -25,7 +26,8 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
     'Create consistent brand content',
     'Reduce time-to-market for campaigns',
     'Enable non-designers to create videos'
-  ]
+  ];
+
   const videoTypes = [}
     { name: 'Marketing Videos', description: 'Promotional and advertising content', icon: '📢' },
     { name: 'Social Media', description: 'Short-form content for platforms', icon: '📱' },
@@ -34,46 +36,43 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
     { name: 'Training Videos', description: 'Educational and instructional content', icon: '📚' },
     { name: 'Event Coverage', description: 'Conference and event highlights', icon: '🎪' },
     { name: 'Testimonials', description: 'Customer success stories', icon: '💬' },
-    { name: 'Animations', description: '2D and 3D animated content', icon: '🎨' }
-  ]
+    { name: 'Animations', description: '2D and 3D animated content', icon: '🎨' },
+  ];
+
   const useCases = [
     {
       title: 'Content Marketing',
       description: 'Create engaging video content for marketing campaigns',
       icon: '📈',
-      examples: ['Product launches', 'Brand awareness', 'Social media ads', 'Email campaigns']}
-    },
+      examples: ['Product launches', 'Brand awareness', 'Social media ads', 'Email campaigns']},
     {
       title: 'E-Learning',
       description: 'Generate educational videos and training materials',
       icon: '🎓',
-      examples: ['Course content', 'Tutorial videos', 'Training modules', 'Knowledge sharing']}
-    },
+      examples: ['Course content', 'Tutorial videos', 'Training modules', 'Knowledge sharing']},
     {
       title: 'E-commerce',
       description: 'Create product videos and shopping experiences',
       icon: '🛒',
-      examples: ['Product showcases', 'Shopping demos', 'Unboxing videos', 'Comparison videos']}
-    },
+      examples: ['Product showcases', 'Shopping demos', 'Unboxing videos', 'Comparison videos']},
     {
       title: 'Real Estate',
       description: 'Generate property tours and virtual walkthroughs',
       icon: '🏠',
-      examples: ['Property tours', 'Virtual staging', 'Neighborhood guides', 'Investment presentations']}
-    },
+      examples: ['Property tours', 'Virtual staging', 'Neighborhood guides', 'Investment presentations']},
     {
       title: 'Healthcare',
       description: 'Create medical education and patient information videos',
       icon: '🏥',
-      examples: ['Medical procedures', 'Patient education', 'Training materials', 'Health awareness']}
-    },
+      examples: ['Medical procedures', 'Patient education', 'Training materials', 'Health awareness']},
     {
       title: 'Entertainment',
       description: 'Produce creative and entertainment content',
       icon: '🎬',
-      examples: ['Short films', 'Music videos', 'Comedy sketches', 'Creative projects']}
-    }
-  ]
+      examples: ['Short films', 'Music videos', 'Comedy sketches', 'Creative projects']
+    
+  ];
+
   const pricing = [
     {
       name: 'Creator',
@@ -87,7 +86,7 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
         'MP4 export',
         '5 minutes max length'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -103,7 +102,7 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
         'Custom branding',
         'Batch processing'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -119,14 +118,16 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'DALL-E Video', 'Runway ML', 'Stable Video Diffusion', 'OpenCV',
     'Neural Video Synthesis', 'Motion Transfer', 'Custom Video Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1,
@@ -150,7 +151,7 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Export & Share',
       description: 'Download in your preferred format and share',
-      icon: '📤'}
+      icon: '📤'},
     }
   ]
   return (
@@ -351,7 +352,7 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -409,5 +410,6 @@ const AIVideoGenerationPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AIVideoGenerationPage

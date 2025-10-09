@@ -16,27 +16,25 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with resource optimization and timeline prediction',
-      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']}
-    },
+      benefits: ['Reduce planning time by 60%', 'Improve accuracy by 85%', 'Optimize resource allocation']},
     {
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment, priority setting, and progress tracking',
-      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']}
-    },
+      benefits: ['Increase productivity by 40%', 'Reduce missed deadlines by 70%', 'Improve team coordination']},
     {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'AI-driven insights for project success prediction and risk management',
-      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']}
-    },
+      benefits: ['Identify risks 3x earlier', 'Improve success rate by 50%', 'Optimize budget allocation']},
     {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team communication and collaboration with AI assistance',
-      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']}
-    }
-  ]
+      benefits: ['Improve communication by 65%', 'Reduce conflicts by 45%', 'Boost team morale']
+    
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -49,7 +47,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Standard reporting',
         'Email support'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -63,7 +61,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Custom integrations',
         'Priority support'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -78,27 +76,28 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
         'Dedicated support',
         'On-premise deployment'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'Project Manager, TechCorp',
       content: 'AI Project Manager has revolutionized how we handle complex projects. The AI predictions are incredibly accurate.',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Michael Chen',
       role: 'CTO, StartupXYZ',
       content: 'We reduced project delays by 70% and improved team productivity significantly. Highly recommended as any',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Emily Rodriguez',
       role: 'Operations Director, GlobalCorp',
       content: 'The predictive analytics helped us identify potential issues before they became problems. Game changer as any',
-      rating: 5}
+      rating: 5},
     }
   ]
   return (
@@ -244,7 +243,7 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`},
                     }`}
                   >
                     Get Started
@@ -322,5 +321,6 @@ const AIProjectManagerPage: React.FC = React.memo((props) => {
       </div>
     </>
   )
-}
+};
+
 export default AIProjectManagerPage

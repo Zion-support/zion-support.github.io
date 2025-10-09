@@ -10,7 +10,7 @@ interface EnhancedAnalyticsProps {
   enableUserBehaviorTracking?: boolean;
   enableConversionTracking?: boolean;
   enableHeatmapTracking?: boolean;
-}
+};
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   enableGoogleAnalytics = true,
@@ -54,7 +54,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         'custom_parameter_1': 'service_category',
         'custom_parameter_2': 'service_type',
         'custom_parameter_3': 'user_type'
-      }
+      },
     });
 
   }, [enableGoogleAnalytics]);
@@ -142,7 +142,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             page_location: window.location.href,
             page_title: document.title
           });
-        }
+        },
       }
     };
 
@@ -162,7 +162,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           form_action: formAction,
           page_location: window.location.href
         });
-      }
+      },
     };
 
     // Track external link clicks
@@ -180,9 +180,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               transport_type: 'beacon',
               page_location: window.location.href
             });
-          }
+          },
         }
-      }
+      },
     };
 
     // Track scroll depth
@@ -203,9 +203,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               event_label: `${scrollPercent}%`,
               page_location: window.location.href
             });
-          }
+          },
         }
-      }
+      },
     };
 
     // Add event listeners
@@ -222,14 +222,14 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             event_category: 'Engagement',
             page_location: window.location.href
           });
-        }
+        },
       } else {
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'page_show', {
             event_category: 'Engagement',
             page_location: window.location.href
           });
-        }
+        },
       }
     };
 
@@ -263,7 +263,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             value: Math.round(lastEntry.startTime),
             custom_parameter_1: 'largest_contentful_paint'
           });
-        }
+        },
       }).observe({ entryTypes: ['largest-contentful-paint'] });
 
       // FID
@@ -279,7 +279,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               value: Math.round(fid),
               custom_parameter_1: 'first_input_delay'
             });
-          }
+          },
         });
       }).observe({ entryTypes: ['first-input'] });
 
@@ -290,7 +290,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         entries.forEach((entry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
-          }
+          },
         });
         
         if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -300,7 +300,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             value: Math.round(clsValue * 1000),
             custom_parameter_1: 'cumulative_layout_shift'
           });
-        }
+        },
       }).observe({ entryTypes: ['layout-shift'] });
     };
 
@@ -318,7 +318,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           value: Math.round(loadTime),
           custom_parameter_1: 'load_time'
         });
-      }
+      },
     });
 
   }, [enablePerformanceTracking]);
@@ -340,7 +340,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           value: timeOnPage,
           custom_parameter_1: 'seconds'
         });
-      }
+      },
     };
 
     // Track before page unload
@@ -360,7 +360,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
               value: mouseMovements,
               custom_parameter_1: 'movement_count'
             });
-          }
+          },
         }
       };
 
@@ -387,7 +387,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             value: 1,
             custom_parameter_1: 'lead_generation'
           });
-        }
+        },
       }
     };
 
@@ -402,7 +402,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             value: 1,
             custom_parameter_1: 'phone_lead'
           });
-        }
+        },
       }
     };
 
@@ -417,7 +417,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
             value: 1,
             custom_parameter_1: 'email_lead'
           });
-        }
+        },
       }
     };
 

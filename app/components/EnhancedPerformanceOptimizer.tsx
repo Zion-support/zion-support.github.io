@@ -11,7 +11,7 @@ interface EnhancedPerformanceOptimizerProps {
   enableServiceWorker?: boolean;
   enableWebVitals?: boolean;
   enableCompression?: boolean;
-}
+};
 
 const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -42,7 +42,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
             event_label: 'LCP',
             value: Math.round(lastEntry.startTime)
           });
-        }
+        },
       }).observe({ entryTypes: ['largest-contentful-paint'] });
     };
 
@@ -59,7 +59,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
               event_label: 'FID',
               value: Math.round(fid)
             });
-          }
+          },
         });
       }).observe({ entryTypes: ['first-input'] });
     };
@@ -71,7 +71,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
         entries.forEach((entry) => {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
-          }
+          },
         });
         console.log('CLS:', clsValue);
         
@@ -81,7 +81,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
             event_label: 'CLS',
             value: Math.round(clsValue * 1000)
           });
-        }
+        },
       }).observe({ entryTypes: ['layout-shift'] });
     };
 
@@ -147,7 +147,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
         link.href = href;
         link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
-      }
+      },
     });
   }, [enablePreloading]);
 
@@ -170,7 +170,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
         link.rel = 'dns-prefetch';
         link.href = `//${domain}`;
         document.head.appendChild(link);
-      }
+      },
     });
   }, [enableResourceHints]);
 
@@ -187,7 +187,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
       {
         href: '/css/critical.css',
         as: 'style'
-      }
+      },
     ];
 
     criticalResources.forEach((resource) => {
@@ -201,7 +201,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
           link.crossOrigin = resource.crossorigin;
         }
         document.head.appendChild(link);
-      }
+      },
     });
   }, [enableCriticalCSS]);
 
@@ -219,7 +219,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
             console.log('SW registration failed: ', registrationError);
           });
       });
-    }
+    },
   }, [enableServiceWorker]);
 
   // Compression optimization
@@ -245,7 +245,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
             observer.unobserve(img);
-          }
+          },
         }
       });
     });
@@ -274,7 +274,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
         }
         if (entry.entryType === 'paint') {
           console.log(`${entry.name}:`, entry.startTime);
-        }
+        },
       });
     });
 

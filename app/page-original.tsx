@@ -20,9 +20,9 @@ const preloadComponents = useCallback((...args) => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
+      import('./components/ContentCarousel');},
     }, 100)
-  }
+  },
 }
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -42,11 +42,11 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);}
+    return () => clearTimeout(timer);},
   }, [])
   // Analytics tracking for phone clicks - optimized
   
-    }
+    },
   }, [])
   return (
     <>
@@ -78,7 +78,7 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'}
+            availableLanguage: 'en'},
           },
           address: {
             '@type': 'PostalAddress',
@@ -86,7 +86,7 @@ const HomePage: React.FC = React.memo((props) => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'}
+            addressCountry: 'US'},
           }
         }}
       />
@@ -139,7 +139,7 @@ const HomePage: React.FC = React.memo((props) => {
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'`}
+              : 'opacity-0 translate-y-8'`},
           }`}
           aria-labelledby="hero-heading"
         >
@@ -1622,5 +1622,6 @@ const HomePage: React.FC = React.memo((props) => {
     </div>
     </>
   )
-}
+};
+
 export default HomePage

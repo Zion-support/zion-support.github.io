@@ -20,7 +20,7 @@ const microSaasServices = [
     { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
     { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
   ];
 
   const aiServices = [
@@ -35,7 +35,7 @@ const microSaasServices = [
     { name: 'AI Transportation & Logistics', url: '/ai-transportation', description: 'Fleet management' },
     { name: 'AI Education Platform', url: '/ai-education', description: 'Personalized learning' },
     { name: 'AI Energy Management', url: '/ai-energy', description: 'Energy optimization' },
-    { name: 'AI Insurance Analytics', url: '/ai-insurance', description: 'Risk assessment' }
+    { name: 'AI Insurance Analytics', url: '/ai-insurance', description: 'Risk assessment' },
   ];
 
   const itServices = [
@@ -50,7 +50,7 @@ const microSaasServices = [
     { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset tracking' },
     { name: 'Backup & Disaster Recovery', url: '/backup-recovery', description: 'Data protection' },
     { name: 'IT Training & Support', url: '/it-training', description: 'Technical training' },
-    { name: 'IT Performance Optimization', url: '/it-performance', description: 'System optimization' }
+    { name: 'IT Performance Optimization', url: '/it-performance', description: 'System optimization' },
   ];
 
   const specializedServices = [
@@ -65,7 +65,7 @@ const microSaasServices = [
     { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
     { name: 'AI Space Analytics', url: '/ai-space-analytics', description: 'Space industry AI' },
     { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum AI solutions' },
-    { name: 'AI Blockchain Analytics', url: '/ai-blockchain-analytics', description: 'Blockchain AI analysis' }
+    { name: 'AI Blockchain Analytics', url: '/ai-blockchain-analytics', description: 'Blockchain AI analysis' },
   ];
 
   const additionalServices = [
@@ -80,7 +80,7 @@ const microSaasServices = [
     { name: 'AI Retail Intelligence', url: '/ai-retail-intelligence', description: 'Retail optimization' },
     { name: 'AI Gaming Assistant', url: '/ai-gaming-assistant', description: 'Gaming AI' },
     { name: 'AI Event Management', url: '/ai-event-management', description: 'Event planning' },
-    { name: 'AI Travel Optimizer', url: '/ai-travel-optimizer', description: 'Travel planning' }
+    { name: 'AI Travel Optimizer', url: '/ai-travel-optimizer', description: 'Travel planning' },
   ];
 
   const companyLinks = [
@@ -95,7 +95,7 @@ const microSaasServices = [
     { name: 'Partners', url: '/partners' },
     { name: 'Investors', url: '/investors' },
     { name: 'Press Kit', url: '/press' },
-    { name: 'Awards', url: '/awards' }
+    { name: 'Awards', url: '/awards' },
   ];
 
   const supportLinks = [
@@ -110,7 +110,7 @@ const microSaasServices = [
     { name: 'Community Forum', url: '/forum' },
     { name: 'Developer Resources', url: '/developer-resources' },
     { name: 'Integration Guides', url: '/integration-guides' },
-    { name: 'Best Practices', url: '/best-practices' }
+    { name: 'Best Practices', url: '/best-practices' },
   ];
 
   const legalLinks = [
@@ -125,7 +125,7 @@ const microSaasServices = [
     { name: 'Licensing', url: '/licensing' },
     { name: 'Export Control', url: '/export-control' },
     { name: 'Accessibility', url: '/accessibility' },
-    { name: 'Code of Conduct', url: '/code-of-conduct' }
+    { name: 'Code of Conduct', url: '/code-of-conduct' },
   ];
 
 const Footer: React.FC = () => {

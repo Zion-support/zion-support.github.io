@@ -6,7 +6,7 @@ interface AnalyticsProps {
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
-}
+};
 
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
@@ -29,7 +29,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     
     if (enableUserBehaviorTracking) {
       initializeUserBehaviorTracking();
-    }
+    },
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
   const initializeGoogleAnalytics = () => {
@@ -67,9 +67,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
           } else if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
               trackEvent('web_vitals', 'CLS', (entry as any).value);
-            }
+            },
           }
-        }
+        },
       });
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
@@ -79,9 +79,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
-        }
+        },
       });
-    }
+    },
   };
 
   const initializeErrorTracking = () => {
@@ -112,7 +112,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           src: (event.target as any).src || (event.target as any).href,
           error: event.type
         });
-      }
+      },
     }, true);
   };
 
@@ -132,7 +132,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         maxScroll = scrollPercent;
         if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%
           trackEvent('engagement', 'scroll_depth', maxScroll);
-        }
+        },
       }
     });
 
@@ -159,7 +159,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           button_text: target.textContent?.trim(),
           button_class: target.className
         });
-      }
+      },
     });
 
     // Track form submissions
@@ -180,7 +180,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined
       });
-    }
+    },
   };
 
   return null;

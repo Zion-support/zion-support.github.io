@@ -79,5 +79,6 @@ const AiSalesAutomationPage: React.FC = React.memo((props) => {
       <Footer />
     </>
   )
-}
+};
+
 export default PageComponent

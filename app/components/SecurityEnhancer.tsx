@@ -7,7 +7,7 @@ interface SecurityEnhancerProps {
   enableXSSProtection?: boolean;
   enableClickjackingProtection?: boolean;
   enableContentTypeSniffingProtection?: boolean;
-}
+};
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   enableCSP = true,
@@ -67,7 +67,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   const enforceHTTPS = () => {
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
-    }
+    },
   };
 
   const addXSSProtection = () => {
@@ -95,7 +95,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     const headers = [
       { httpEquiv: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { httpEquiv: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
+      { httpEquiv: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' },
     ];
 
     headers.forEach(header => {
@@ -112,7 +112,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       // Only prevent on production
       if (process.env.NODE_ENV === 'production') {
         e.preventDefault();
-      }
+      },
     });
 
     // Prevent text selection (optional)
@@ -120,7 +120,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       // Only prevent on production
       if (process.env.NODE_ENV === 'production') {
         e.preventDefault();
-      }
+      },
     });
 
     // Prevent drag and drop
@@ -154,7 +154,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         // Ctrl+A
         if (e.ctrlKey && e.keyCode === 65) {
           e.preventDefault();
-        }
+        },
       }
     });
 
@@ -175,7 +175,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
           // Could implement additional security measures here
-        }
+        },
       }
     });
 
@@ -186,7 +186,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       if (keyCount > 100) { // More than 100 keystrokes in 5 minutes
         suspiciousActivity++;
         if (suspiciousActivity > 3) {
-          }
+          },
       }
     });
   };

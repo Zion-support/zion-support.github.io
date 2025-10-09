@@ -186,7 +186,7 @@ const ITServicesPage: React.FC = () => {
       color: 'text-indigo-500',
       category: 'Compliance',
       popular: false
-    }
+    },
   ];
 
   const categories = ['All', 'Cloud Computing', 'Security', 'Development', 'Data Management', 'Consulting', 'Networking', 'Mobile Development', 'Web Development', 'Data Analytics', 'Support', 'Blockchain', 'IoT', 'AI Infrastructure', 'Integration', 'Data Protection', 'Compliance'];
@@ -215,7 +215,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Bank-level security and compliance for all our solutions',
       icon: Shield,
       color: 'text-red-400'
-    }
+    },
   ];
 
   return (

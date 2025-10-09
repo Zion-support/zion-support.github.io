@@ -1,28 +1,27 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode;}
+  children: ReactNode;
+  fallback?: ReactNode;
 }
+
 interface State {
-  hasError: boolean
-  error?: Error;}
+  hasError: boolean;
+  error?: Error;
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);}
-    this.state = { hasError: false }
+    super(props);
+    this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error: Error): State {}
-    return { hasError: true, error }
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-
     // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Add error logging service here (e.g., Sentry, LogRocket)
-}
-    }
+    },
   }
   render() {
     if (this.state.hasError) {
@@ -34,13 +33,10 @@ class ErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <button}
-              onClick={() = aria-label=" window.location.reload()}
+            <button
+              onClick={() => window.location.reload()}
               className="cyber-button px-6 py-3"
-             tabIndex="0">
-              Refresh Page
-            "> window.location.reload()}
-              className="cyber-button px-6 py-3"
+              aria-label="Refresh page"
             >
               Refresh Page
             </button>
@@ -48,7 +44,8 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       )
     }
-    return this.props.children
-  }
-}
-export default ErrorBoundary
+    return this.props.children;
+  },
+};
+
+export default ErrorBoundary;

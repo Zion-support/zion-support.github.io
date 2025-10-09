@@ -74,7 +74,7 @@ const PricingPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/20',
       borderColor: 'border-purple-400/30'
-    }
+    },
   ];
 
   const aiServicePlans = [
@@ -134,7 +134,7 @@ const PricingPage: React.FC = () => {
       color: 'text-red-400',
       bgColor: 'bg-red-500/20',
       borderColor: 'border-red-400/30'
-    }
+    },
   ];
 
   const itServicePlans = [
@@ -194,7 +194,7 @@ const PricingPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/20',
       borderColor: 'border-purple-400/30'
-    }
+    },
   ];
 
   const formatPrice = (price: number) => {

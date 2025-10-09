@@ -38,7 +38,7 @@ const MachineLearningPage: React.FC = () => {
       features: ['Performance Tracking', 'Drift Detection', 'Model Retraining', 'Alert Systems'],
       icon: Target,
       color: 'text-cyan-400'
-    }
+    },
   ];
 
   const benefits = [

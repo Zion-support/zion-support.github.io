@@ -16,29 +16,29 @@ const AboutPage: React.FC = () => {
       role: 'CEO & Founder',
       bio: 'Visionary leader with 15+ years in AI and technology innovation, driving Zion Tech Group\'s mission to democratize AI solutions.',
       image: '/team/kleber-santos.jpg',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
+      expertise: ['AI Strategy', 'Leadership', 'Innovation'],
     },
     {
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'Leading AI researcher with PhD in Machine Learning, specializing in neural networks and deep learning applications.',
       image: '/team/sarah-chen.jpg',
-      expertise: ['Machine Learning', 'Neural Networks', 'Research']
+      expertise: ['Machine Learning', 'Neural Networks', 'Research'],
     },
     {
       name: 'Michael Rodriguez',
       role: 'CTO',
       bio: 'Technology architect with expertise in cloud infrastructure, DevOps, and scalable AI system design.',
       image: '/team/michael-rodriguez.jpg',
-      expertise: ['Cloud Architecture', 'DevOps', 'System Design']
+      expertise: ['Cloud Architecture', 'DevOps', 'System Design'],
     },
     {
       name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert with focus on predictive analytics, business intelligence, and data-driven decision making.',
       image: '/team/emily-watson.jpg',
-      expertise: ['Data Science', 'Analytics', 'Business Intelligence']
-    }
+      expertise: ['Data Science', 'Analytics', 'Business Intelligence'],
+    },
   ];
 
   const values = [
@@ -65,7 +65,7 @@ const AboutPage: React.FC = () => {
       description: 'We stay at the forefront of technology through continuous learning and adaptation.',
       icon: BookOpen,
       color: 'text-yellow-400'
-    }
+    },
   ];
 
   const achievements = [
@@ -74,7 +74,7 @@ const AboutPage: React.FC = () => {
     { metric: '$50M+', label: 'Annual Client Savings', icon: DollarSign },
     { metric: '500+', label: 'Successful Projects', icon: CheckCircle },
     { metric: '50+', label: 'Enterprise Clients', icon: Building },
-    { metric: '24/7', label: 'Support Availability', icon: Clock }
+    { metric: '24/7', label: 'Support Availability', icon: Clock },
   ];
 
   return (

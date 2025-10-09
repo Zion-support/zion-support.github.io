@@ -4,7 +4,7 @@ import { Download, X } from 'lucide-react';
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
+};
 
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
@@ -23,7 +23,7 @@ const PWAInstaller: React.FC = () => {
       if (window.navigator.standalone === true) {
         setIsInstalled(true);
         return;
-      }
+      },
     };
 
     checkIfInstalled();
@@ -74,7 +74,7 @@ const PWAInstaller: React.FC = () => {
       setShowInstallBanner(false);
     } catch (error) {
       console.error('Error during installation:', error);
-    }
+    },
   };
 
   const handleDismiss = () => {
@@ -94,7 +94,7 @@ const PWAInstaller: React.FC = () => {
     const timeSinceDismissed = Date.now() - parseInt(dismissedTime);
     if (timeSinceDismissed < 24 * 60 * 60 * 1000) { // 24 hours
       return null;
-    }
+    },
   }
 
   return (

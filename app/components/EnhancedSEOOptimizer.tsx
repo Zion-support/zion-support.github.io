@@ -12,7 +12,7 @@ interface EnhancedSEOOptimizerProps {
   noIndex?: boolean;
   locale?: string;
   alternateLanguages?: { href: string; hreflang: string }[];
-}
+};
 
 const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
   title,
@@ -173,7 +173,7 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
             "https://instagram.com/ziontechgroup",
             "https://github.com/ziontechgroup",
             "https://youtube.com/@ziontechgroup"
-          ]
+          ],
         })}
       </script>
     </Helmet>

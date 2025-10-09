@@ -11,17 +11,19 @@ const ContactPage: React.FC = React.memo((props) => {
     company: '',
     phone: '',
     service: '',
-    message: ''}
+    message: ''},
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const handleInputChange = useCallback((...args) => {}
+  const handleInputChange = useCallback((...args) => {};
+
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
-      [name]: value}
+      [name]: value},
     }))
-  }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -36,14 +38,15 @@ const ContactPage: React.FC = React.memo((props) => {
         company: '',
         phone: '',
         service: '',
-        message: ''}
+        message: ''},
       })
     } catch (error) {
-      setSubmitStatus('error');}
+      setSubmitStatus('error');},
     } finally {
-      setIsSubmitting(false);}
+      setIsSubmitting(false);},
     }
-  }
+  };
+
   const services = [
     'AI Project Manager',
     'AI Social Media Manager',
@@ -342,5 +345,6 @@ const ContactPage: React.FC = React.memo((props) => {
       <Footer />
     </div>
   )
-}
+};
+
 export default ContactPage

@@ -15,7 +15,8 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
     'MIDI export for professional editing',
     'Collaborative composition tools',
     'Copyright-free original compositions'
-  ]
+  ];
+
   const benefits = [
     'Create original music without musical training',
     'Reduce music production costs by 70%',
@@ -25,7 +26,8 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
     'Create personalized music experiences',
     'Scale music production instantly',
     'Enable non-musicians to create professional tracks'
-  ]
+  ];
+
   const genres = [}
     { name: 'Classical', description: 'Symphonic and orchestral compositions', icon: '🎼' },
     { name: 'Jazz', description: 'Improvisational and complex harmonies', icon: '🎷' },
@@ -34,46 +36,43 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
     { name: 'Hip-Hop', description: 'Beats, samples, and urban rhythms', icon: '🎤' },
     { name: 'Pop', description: 'Catchy melodies and mainstream appeal', icon: '⭐' },
     { name: 'Ambient', description: 'Atmospheric and meditative soundscapes', icon: '🌊' },
-    { name: 'Folk', description: 'Acoustic instruments and storytelling', icon: '🪕' }
-  ]
+    { name: 'Folk', description: 'Acoustic instruments and storytelling', icon: '🪕' },
+  ];
+
   const useCases = [
     {
       title: 'Content Creation',
       description: 'Generate background music for videos, podcasts, and presentations',
       icon: '🎬',
-      examples: ['YouTube videos', 'Podcast intros', 'Presentation music', 'Social media content']}
-    },
+      examples: ['YouTube videos', 'Podcast intros', 'Presentation music', 'Social media content']},
     {
       title: 'Game Development',
       description: 'Create dynamic soundtracks and ambient music for games',
       icon: '🎮',
-      examples: ['Game soundtracks', 'Menu music', 'Ambient sounds', 'Dynamic scoring']}
-    },
+      examples: ['Game soundtracks', 'Menu music', 'Ambient sounds', 'Dynamic scoring']},
     {
       title: 'Marketing & Advertising',
       description: 'Produce jingles, commercial music, and brand soundtracks',
       icon: '📢',
-      examples: ['Commercial jingles', 'Brand anthems', 'Product demos', 'Social media ads']}
-    },
+      examples: ['Commercial jingles', 'Brand anthems', 'Product demos', 'Social media ads']},
     {
       title: 'Education & Training',
       description: 'Create educational music and learning soundtracks',
       icon: '📚',
-      examples: ['Learning modules', 'Training videos', 'Educational content', 'Language learning']}
-    },
+      examples: ['Learning modules', 'Training videos', 'Educational content', 'Language learning']},
     {
       title: 'Therapy & Wellness',
       description: 'Generate therapeutic and relaxation music',
       icon: '🧘',
-      examples: ['Meditation music', 'Sleep sounds', 'Therapy sessions', 'Wellness apps']}
-    },
+      examples: ['Meditation music', 'Sleep sounds', 'Therapy sessions', 'Wellness apps']},
     {
       title: 'Live Performance',
       description: 'Create backing tracks and accompaniment for live shows',
       icon: '🎭',
-      examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']}
-    }
-  ]
+      examples: ['Backing tracks', 'Live accompaniment', 'Performance music', 'Karaoke tracks']
+    
+  ];
+
   const pricing = [
     {
       name: 'Creator',
@@ -87,7 +86,7 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
         'MIDI export',
         'MP3 downloads'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Producer',
@@ -103,7 +102,7 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
         'Lyrics generation',
         'Style transfer'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Studio',
@@ -119,14 +118,16 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
         'Commercial licensing',
         'SLA guarantee'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'MuseNet', 'Jukebox', 'Magenta', 'MIDI Processing',
     'Neural Audio Synthesis', 'Style Transfer', 'Custom Music Models',
     'Deep Learning', 'Generative AI', 'Audio Processing'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1,
@@ -150,7 +151,7 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
-      icon: '📤'}
+      icon: '📤'},
     }
   ]
   return (
@@ -351,7 +352,7 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -409,5 +410,6 @@ const AIMusicCompositionPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AIMusicCompositionPage

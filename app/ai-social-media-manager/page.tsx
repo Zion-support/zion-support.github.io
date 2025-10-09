@@ -16,35 +16,34 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI Content Creation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI',
-      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']}
-    },
+      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']},
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum reach and engagement',
-      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']}
-    },
+      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']},
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics with AI-powered performance predictions',
-      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']}
-    },
+      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']},
     {
       icon: Users,
       title: 'Audience Intelligence',
       description: 'AI-driven audience analysis and targeting recommendations',
-      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']}
-    }
-  ]
+      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']
+    
+  ];
+
   const platforms = [
     { name: 'Facebook', icon: '📘', features: ['Post scheduling', 'Story management', 'Ad integration'] },
     { name: 'Instagram', icon: '📷', features: ['Feed posts', 'Stories', 'Reels', 'IGTV'] },
     { name: 'Twitter', icon: '🐦', features: ['Tweet scheduling', 'Thread management', 'Trend monitoring'] },
     { name: 'LinkedIn', icon: '💼', features: ['Professional posts', 'Company updates', 'B2B content'] },
     { name: 'TikTok', icon: '🎵', features: ['Video scheduling', 'Trend analysis', 'Hashtag optimization'] },
-    { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization'] }
-  ]
+    { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization'] 
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -57,7 +56,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
         'Standard analytics',
         'Email support'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -71,7 +70,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
         'Team collaboration',
         'Priority support'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -86,27 +85,28 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
         'Dedicated support',
         'API access'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const testimonials = [
     {
       name: 'Jessica Martinez',
       role: 'Marketing Director, FashionBrand',
       content: 'AI Social Media Manager increased our engagement by 200% and saved us 20 hours per week as any',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'David Kim',
       role: 'CEO, TechStartup',
       content: 'The AI content suggestions are spot-on. Our social media presence has never been stronger.',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Lisa Thompson',
       role: 'Social Media Manager, Agency',
       content: 'Managing 20+ client accounts is now effortless with AI automation. Highly recommended as any',
-      rating: 5}
+      rating: 5},
     }
   ]
   return (
@@ -283,7 +283,7 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-pink-400 text-slate-900 hover:bg-pink-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`},
                     }`}
                   >
                     Get Started
@@ -361,5 +361,6 @@ const AISocialMediaManagerPage: React.FC = React.memo((props) => {
       </div>
     </>
   )
-}
+};
+
 export default AISocialMediaManagerPage

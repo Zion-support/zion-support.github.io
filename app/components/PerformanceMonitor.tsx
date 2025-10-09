@@ -8,7 +8,7 @@ interface PerformanceMetrics {
   lcp: number; // Largest Contentful Paint
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
-}
+};
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -25,7 +25,7 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') {
       return;
-    }
+    };
 
     const measurePerformance = () => {
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -58,7 +58,7 @@ const PerformanceMonitor: React.FC = () => {
         clsEntries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value;
-          }
+          },
         });
         cls = clsValue;
 
@@ -70,7 +70,7 @@ const PerformanceMonitor: React.FC = () => {
           fid,
           cls,
         }));
-      }
+      },
     };
 
     // FPS monitoring
@@ -126,9 +126,9 @@ const PerformanceMonitor: React.FC = () => {
                 ...prev,
                 cls: prev.cls + clsEntry.value,
               }));
-            }
+            },
           }
-        }
+        },
       });
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });

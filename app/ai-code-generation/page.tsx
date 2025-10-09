@@ -15,7 +15,8 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     'Refactoring suggestions and improvements',
     'API integration and endpoint generation',
     'Real-time code completion and suggestions'
-  ]
+  ];
+
   const benefits = [
     'Accelerate development by 300%',
     'Reduce coding errors by 80%',
@@ -25,8 +26,9 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     'Generate consistent, well-documented code',
     'Reduce development costs by 60%',
     'Enable rapid prototyping and MVP development'
-  ]
-  const languages = [}
+  ];
+
+  const languages = [
     { name: 'JavaScript', description: 'Web development and Node.js', icon: '🟨' },
     { name: 'Python', description: 'Data science and backend development', icon: '🐍' },
     { name: 'Java', description: 'Enterprise applications and Android', icon: '☕' },
@@ -34,46 +36,43 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     { name: 'Go', description: 'Cloud-native and microservices', icon: '🐹' },
     { name: 'Rust', description: 'Systems programming and performance', icon: '🦀' },
     { name: 'TypeScript', description: 'Type-safe JavaScript development', icon: '🔷' },
-    { name: 'Swift', description: 'iOS and macOS development', icon: '🍎' }
-  ]
+    { name: 'Swift', description: 'iOS and macOS development', icon: '🍎' },
+  ];
+
   const useCases = [
     {
       title: 'Web Development',
       description: 'Generate full-stack web applications and APIs',
       icon: '🌐',
-      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']}
-    },
+      examples: ['React components', 'Express APIs', 'Database schemas', 'Authentication systems']},
     {
       title: 'Mobile Development',
       description: 'Create mobile apps for iOS and Android',
       icon: '📱',
-      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']}
-    },
+      examples: ['React Native apps', 'Flutter widgets', 'Native iOS code', 'Android components']},
     {
       title: 'Data Science',
       description: 'Generate data analysis and ML pipelines',
       icon: '📊',
-      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']}
-    },
+      examples: ['Data processing scripts', 'ML models', 'Visualization code', 'ETL pipelines']},
     {
       title: 'DevOps & Automation',
       description: 'Create deployment and automation scripts',
       icon: '⚙️',
-      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']}
-    },
+      examples: ['Docker configurations', 'CI/CD pipelines', 'Infrastructure code', 'Monitoring scripts']},
     {
       title: 'API Development',
       description: 'Generate RESTful APIs and microservices',
       icon: '🔌',
-      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']}
-    },
+      examples: ['REST endpoints', 'GraphQL schemas', 'Database models', 'Authentication middleware']},
     {
       title: 'Testing & QA',
       description: 'Create comprehensive test suites and quality assurance',
       icon: '🧪',
-      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']}
-    }
-  ]
+      examples: ['Unit tests', 'Integration tests', 'E2E tests', 'Performance tests']
+    
+  ];
+
   const pricing = [
     {
       name: 'Developer',
@@ -87,7 +86,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'GitHub integration',
         'Basic documentation'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Team',
@@ -103,7 +102,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'Code review tools',
         'Custom templates'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -119,14 +118,16 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
         'SLA guarantee',
         'On-premise deployment'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'GitHub Copilot', 'CodeT5', 'CodeBERT', 'Custom Code Models',
     'IDE Integration', 'Deep Learning', 'Natural Language Processing',
     'Code Analysis', 'Static Analysis', 'Machine Learning'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1,
@@ -150,7 +151,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Deploy & Use',
       description: 'Integrate the code into your project',
-      icon: '🚀'}
+      icon: '🚀'},
     }
   ]
   return (
@@ -351,7 +352,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -409,5 +410,6 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AICodeGenerationPage

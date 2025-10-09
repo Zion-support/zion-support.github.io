@@ -9,6 +9,7 @@ const ContentCarousel: React.FC = React.memo((props) => {
         </div>
       </div>
     </div>
-  );}
-}
-export default ContentCarousel
+  );
+};
+
+export default ContentCarousel;

@@ -11,7 +11,7 @@ interface EnhancedAccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
   enableColorContrast?: boolean;
   enableFontScaling?: boolean;
-}
+};
 
 const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
@@ -35,7 +35,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
         if (skipLink) {
           skipLink.focus();
-        }
+        },
       }
 
       // Close modals with Escape
@@ -46,7 +46,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
             const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
             if (closeButton) {
               closeButton.click();
-            }
+            },
           }
         });
       }
@@ -65,9 +65,9 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
           } else {
             const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
             (items[prevIndex] as HTMLElement).focus();
-          }
+          },
         }
-      }
+      },
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -91,7 +91,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         liveRegion.textContent = message;
-      }
+      },
     };
 
     // Add to window for global access
@@ -101,12 +101,12 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
       main.setAttribute('role', 'main');
-    }
+    };
 
     const nav = document.querySelector('nav');
     if (nav && !nav.getAttribute('role')) {
       nav.setAttribute('role', 'navigation');
-    }
+    };
 
     const footer = document.querySelector('footer');
     if (footer && !footer.getAttribute('role')) {
@@ -118,7 +118,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     headings.forEach((heading, index) => {
       if (!heading.id) {
         heading.id = `heading-${index}`;
-      }
+      },
     });
 
   }, [enableScreenReader]);
@@ -135,7 +135,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         document.body.classList.add('high-contrast');
       } else {
         document.body.classList.remove('high-contrast');
-      }
+      },
     };
 
     prefersHighContrast.addEventListener('change', handleContrastChange);
@@ -185,14 +185,14 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
             if (document.activeElement === firstElement) {
               lastElement.focus();
               e.preventDefault();
-            }
+            },
           } else {
             if (document.activeElement === lastElement) {
               firstElement.focus();
               e.preventDefault();
-            }
+            },
           }
-        }
+        },
       };
 
       element.addEventListener('keydown', handleTabKey);
@@ -215,7 +215,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       const text = button.textContent?.trim();
       if (text && text.length > 0) {
         button.setAttribute('aria-label', text);
-      }
+      },
     });
 
     // Add ARIA labels to images
@@ -233,7 +233,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         if (!label.id) {
           label.id = `label-${input.id}`;
-        }
+        },
       }
     });
 
@@ -256,7 +256,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
         document.body.classList.add('reduce-motion');
       } else {
         document.body.classList.remove('reduce-motion');
-      }
+      },
     };
 
     prefersReducedMotion.addEventListener('change', handleMotionChange);
@@ -276,7 +276,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
     const skipLinks = [
       { href: '#main-content', text: 'Skip to main content' },
       { href: '#navigation', text: 'Skip to navigation' },
-      { href: '#footer', text: 'Skip to footer' }
+      { href: '#footer', text: 'Skip to footer' },
     ];
 
     const skipLinksContainer = document.createElement('div');
@@ -366,13 +366,13 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
       @media (prefers-font-size: large) {
         html {
           font-size: 18px;
-        }
+        },
       }
       
       @media (prefers-font-size: x-large) {
         html {
           font-size: 20px;
-        }
+        },
       }
       
       .font-scale-large {

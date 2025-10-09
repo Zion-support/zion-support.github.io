@@ -6,8 +6,9 @@ interface LinkProps {
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label'?: string;}
-}
+  'aria-label'?: string;},
+};
+
 export const Link: React.FC<LinkProps> = ({
   href,
   children,
@@ -16,16 +17,16 @@ export const Link: React.FC<LinkProps> = ({
   rel,
   onClick,
   'aria-label': ariaLabel,
-  ...props}
+  ...props},
 }) => {
   const handleClick = useCallback((...args) => {
     if (onClick) {
-      onClick();}
+      onClick();},
     }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault()
-      window.location.href = href;}
+      window.location.href = href;},
     }
   }
   return (
@@ -41,5 +42,6 @@ export const Link: React.FC<LinkProps> = ({
       {children}
     </a>
   )
-}
+};
+
 export default Link

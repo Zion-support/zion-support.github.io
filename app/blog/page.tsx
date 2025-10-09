@@ -153,7 +153,7 @@ const BlogPage: React.FC = () => {
       tags: ['Healthcare', 'AI Adoption', 'Medical AI'],
       image: '/blog/ai-healthcare-insights.jpg',
       featured: false
-    }
+    },
   ];
 
   const filteredPosts = blogPosts.filter(post => {

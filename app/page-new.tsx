@@ -20,9 +20,9 @@ const preloadComponents = useCallback((...args) => {
     // Preload critical components after initial render
     setTimeout(() => {
       import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel');}
+      import('./components/ContentCarousel');},
     }, 100)
-  }
+  },
 }
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
@@ -42,11 +42,11 @@ const HomePage: React.FC = React.memo((props) => {
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
-    return () => clearTimeout(timer);}
+    return () => clearTimeout(timer);},
   }, [])
   // Analytics tracking for phone clicks - optimized
   
-    }
+    },
   }, [])
   const microSAASServices = [
     {
@@ -57,7 +57,7 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
-      popular: true}
+      popular: true},
     },
     {
       title: 'AI Social Media Manager',
@@ -67,7 +67,7 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
-      popular: true}
+      popular: true},
     },
     {
       title: 'AI Analytics Dashboard',
@@ -77,7 +77,7 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics-dashboard',
-      popular: true}
+      popular: true},
     },
     {
       title: 'AI Email Marketing',
@@ -87,7 +87,7 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
       link: '/ai-email-marketing',
-      popular: true}
+      popular: true},
     },
     {
       title: 'AI Customer Support Bot',
@@ -97,7 +97,7 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
       link: '/ai-customer-support-bot',
-      popular: true}
+      popular: true},
     },
     {
       title: 'AI Code Review Assistant',
@@ -107,9 +107,10 @@ const HomePage: React.FC = React.memo((props) => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -142,8 +143,9 @@ const HomePage: React.FC = React.memo((props) => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-\w+-\d+'
-    }
-  ]
+    },
+  ];
+
   const itServices = [
     {
       title: 'Cloud Services',
@@ -208,7 +210,7 @@ const HomePage: React.FC = React.memo((props) => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'}
+            availableLanguage: 'en'},
           },
           address: {
             '@type': 'PostalAddress',
@@ -216,7 +218,7 @@ const HomePage: React.FC = React.memo((props) => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'}
+            addressCountry: 'US'},
           }
         }}
       />
@@ -265,7 +267,7 @@ const HomePage: React.FC = React.memo((props) => {
             className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'`}
+                : 'opacity-0 translate-y-8'`},
             }`}
             aria-labelledby="hero-heading"
           >
@@ -548,5 +550,6 @@ const HomePage: React.FC = React.memo((props) => {
       </div>
     </>
   )
-}
+};
+
 export default HomePage

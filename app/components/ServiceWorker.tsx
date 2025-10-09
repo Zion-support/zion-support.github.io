@@ -6,15 +6,16 @@ const ServiceWorker: React.FC = React.memo((props) => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const registerSW = async () => {
         try {
-          const registration = await navigator.serviceWorker.register('/sw.js')
-}
+          const registration = await navigator.serviceWorker.register('/sw.js');
         } catch (error) {
-}
-        }
+          console.error('Service Worker registration failed:', error);
+        },
       }
-      registerSW()
-    }
-  }, [])
-  return null
-}
-export default ServiceWorker
+      registerSW();
+    },
+  }, []);
+  
+  return null;
+};
+
+export default ServiceWorker;

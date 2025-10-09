@@ -74,7 +74,7 @@ const AIFraudDetectionPage: React.FC = () => {
       price: '$800/month',
       features: ['Real-time Dashboards', 'Custom Reports', 'Trend Analysis', 'Performance Metrics'],
       color: 'text-gray-400'
-    }
+    },
   ];
 
   const benefits = [
@@ -97,7 +97,7 @@ const AIFraudDetectionPage: React.FC = () => {
       title: 'Compliance Ready',
       description: 'Built-in compliance with industry regulations',
       icon: '✅'
-    }
+    },
   ];
 
   return (

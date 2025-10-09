@@ -15,7 +15,8 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
     'Sustainable fashion design suggestions',
     '3D garment visualization and modeling',
     'Automated pattern grading and sizing'
-  ]
+  ];
+
   const benefits = [
     'Reduce design time by 75%',
     'Lower production costs by 60%',
@@ -25,7 +26,8 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
     'Reduce waste through better sizing',
     'Enable personalized fashion design',
     'Accelerate time-to-market for collections'
-  ]
+  ];
+
   const designTypes = [}
     { name: 'Casual Wear', description: 'Everyday clothing and street fashion', icon: '👕' },
     { name: 'Formal Wear', description: 'Business attire and evening wear', icon: '👔' },
@@ -34,46 +36,43 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
     { name: 'Outerwear', description: 'Jackets, coats, and seasonal wear', icon: '🧥' },
     { name: 'Accessories', description: 'Bags, shoes, and fashion accessories', icon: '👜' },
     { name: 'Children\'s Wear', description: 'Clothing for kids and babies', icon: '👶' },
-    { name: 'Plus Size', description: 'Fashion for all body types', icon: '👗' }
-  ]
+    { name: 'Plus Size', description: 'Fashion for all body types', icon: '👗' },
+  ];
+
   const useCases = [
     {
       title: 'Fashion Brands',
       description: 'Create new collections and design variations',
       icon: '🏷️',
-      examples: ['Seasonal collections', 'Design variations', 'Trend analysis', 'Market research']}
-    },
+      examples: ['Seasonal collections', 'Design variations', 'Trend analysis', 'Market research']},
     {
       title: 'E-commerce',
       description: 'Generate product images and virtual try-ons',
       icon: '🛒',
-      examples: ['Product visualization', 'Virtual fitting rooms', 'Size recommendations', 'Style matching']}
-    },
+      examples: ['Product visualization', 'Virtual fitting rooms', 'Size recommendations', 'Style matching']},
     {
       title: 'Fashion Designers',
       description: 'Accelerate design process and creativity',
       icon: '👨‍🎨',
-      examples: ['Design inspiration', 'Pattern creation', 'Color matching', 'Fabric selection']}
-    },
+      examples: ['Design inspiration', 'Pattern creation', 'Color matching', 'Fabric selection']},
     {
       title: 'Retail Stores',
       description: 'Improve customer experience and sales',
       icon: '🏪',
-      examples: ['Virtual styling', 'Size optimization', 'Inventory management', 'Customer insights']}
-    },
+      examples: ['Virtual styling', 'Size optimization', 'Inventory management', 'Customer insights']},
     {
       title: 'Fashion Education',
       description: 'Teach design principles and techniques',
       icon: '🎓',
-      examples: ['Design courses', 'Pattern making', 'Color theory', 'Trend analysis']}
-    },
+      examples: ['Design courses', 'Pattern making', 'Color theory', 'Trend analysis']},
     {
       title: 'Sustainable Fashion',
       description: 'Create eco-friendly and ethical designs',
       icon: '🌱',
-      examples: ['Waste reduction', 'Sustainable materials', 'Circular fashion', 'Ethical production']}
-    }
-  ]
+      examples: ['Waste reduction', 'Sustainable materials', 'Circular fashion', 'Ethical production']
+    
+  ];
+
   const pricing = [
     {
       name: 'Designer',
@@ -87,7 +86,7 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
         'Basic templates',
         'PNG export'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Brand',
@@ -103,7 +102,7 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
         'Trend analysis',
         'Virtual try-on'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -119,14 +118,16 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const technologies = [
     'FashionGAN', 'Virtual Try-On', 'Trend Analysis', 'Computer Vision',
     '3D Modeling', 'Pattern Recognition', 'Color Theory', 'Fabric Simulation',
     'Deep Learning', 'Generative AI', 'Fashion AI'
-  ]
+  ];
+
   const workflow = [
     {
       step: 1,
@@ -150,7 +151,7 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
       step: 4,
       title: 'Finalize & Produce',
       description: 'Refine designs and prepare for production',
-      icon: '✂️'}
+      icon: '✂️'},
     }
   ]
   return (
@@ -351,7 +352,7 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`},
                   }`}
                 >
                   Get Started
@@ -409,5 +410,6 @@ const AIFashionDesignPage: React.FC = React.memo((props) => {
       </section>
     </div>
   )
-}
+};
+
 export default AIFashionDesignPage

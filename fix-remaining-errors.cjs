@@ -2,18 +2,31 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(filePath) {
+// Function to fix remaining syntax errors in TSX files
+function fixRemainingErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix extra closing braces after array elements
-    const arrayFixRegex = /(\]\s*)\}\s*(\},)/g;
+    // Fix extra closing braces after array elements (more comprehensive)
+    const arrayFixRegex = /(\]\s*)\}\s*(\n\s*[}\]])/g;
     if (arrayFixRegex.test(content)) {
       content = content.replace(arrayFixRegex, '$1$2');
+      modified = true;
+    }
+
+    // Fix extra closing braces before closing array brackets
+    const arrayBracketFixRegex = /(\]\s*)\}\s*(\n\s*\])/g;
+    if (arrayBracketFixRegex.test(content)) {
+      content = content.replace(arrayBracketFixRegex, '$1$2');
+      modified = true;
+    }
+
+    // Fix extra closing braces before closing object brackets
+    const objectBracketFixRegex = /(\]\s*)\}\s*(\n\s*\})/g;
+    if (objectBracketFixRegex.test(content)) {
+      content = content.replace(objectBracketFixRegex, '$1$2');
       modified = true;
     }
 
@@ -31,9 +44,16 @@ function fixSyntaxErrors(filePath) {
       modified = true;
     }
 
+    // Fix missing semicolons after variable declarations
+    const variableSemicolonRegex = /(\]\s*)\s*(\n\s*const)/g;
+    if (variableSemicolonRegex.test(content)) {
+      content = content.replace(variableSemicolonRegex, '$1;\n$2');
+      modified = true;
+    }
+
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax errors in: ${filePath}`);
+      console.log(`Fixed remaining errors in: ${filePath}`);
       return true;
     }
     return false;
@@ -63,16 +83,16 @@ function findTSXFiles(dir) {
 }
 
 // Main execution
-console.log('Fixing syntax errors in TSX files...');
+console.log('Fixing remaining syntax errors in TSX files...');
 
 const appDir = path.join(__dirname, 'app');
 const tsxFiles = findTSXFiles(appDir);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
-  if (fixSyntaxErrors(file)) {
+  if (fixRemainingErrors(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
+console.log(`Fixed remaining errors in ${fixedCount} files.`);

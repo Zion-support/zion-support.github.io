@@ -197,7 +197,7 @@ const SpecializedServicesPage: React.FC = () => {
       bgColor: 'bg-indigo-500/20',
       borderColor: 'border-indigo-400/30',
       category: 'Analytics'
-    }
+    },
   ];
 
   const businessApps = [
@@ -224,14 +224,14 @@ const SpecializedServicesPage: React.FC = () => {
       price: '$149/month',
       features: ['Real-time Dashboards', 'Predictive Analytics', 'Custom Reports', 'Data Visualization'],
       color: 'text-purple-400'
-    }
+    },
   ];
 
   const stats = [
     { label: 'Specialized Projects', value: '200+', icon: Star },
     { label: 'Success Rate', value: '98%', icon: CheckCircle },
     { label: 'Client Satisfaction', value: '99%', icon: Users },
-    { label: 'Average ROI', value: '400%', icon: DollarSign }
+    { label: 'Average ROI', value: '400%', icon: DollarSign },
   ];
 
   return (

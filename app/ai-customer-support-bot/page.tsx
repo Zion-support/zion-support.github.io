@@ -15,35 +15,34 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'Natural Language Processing',
       description: 'Understand customer queries in natural language with advanced NLP',
-      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']}
-    },
+      benefits: ['Context understanding', 'Intent recognition', 'Sentiment analysis', 'Multi-language support']},
     {
       icon: MessageSquare,
       title: '24/7 Availability',
       description: 'Provide instant support around the clock without human intervention',
-      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']}
-    },
+      benefits: ['Instant responses', 'No waiting time', 'Consistent service', 'Scalable support']},
     {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamlessly transfer complex queries to human agents when needed',
-      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']}
-    },
+      benefits: ['Smart escalation', 'Context preservation', 'Agent efficiency', 'Customer satisfaction']},
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Track performance and gain insights into customer behavior',
-      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']}
-    }
-  ]
+      benefits: ['Response analytics', 'Customer insights', 'Performance metrics', 'Improvement suggestions']
+    
+  ];
+
   const capabilities = [
     { name: 'FAQ Automation', icon: '❓', description: 'Answer common questions instantly' },
     { name: 'Order Tracking', icon: '📦', description: 'Provide real-time order status updates' },
     { name: 'Product Support', icon: '🔧', description: 'Help customers with product issues' },
     { name: 'Billing Inquiries', icon: '💳', description: 'Handle payment and billing questions' },
     { name: 'Appointment Booking', icon: '📅', description: 'Schedule appointments and meetings' },
-    { name: 'Complaint Resolution', icon: '😊', description: 'Resolve customer complaints effectively' }
-  ]
+    { name: 'Complaint Resolution', icon: '😊', description: 'Resolve customer complaints effectively' },
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -56,7 +55,7 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
         'Standard integrations',
         'Basic analytics'
       ],
-      popular: false}
+      popular: false},
     },
     {
       name: 'Professional',
@@ -70,7 +69,7 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
         'Detailed analytics',
         'Custom training'
       ],
-      popular: true}
+      popular: true},
     },
     {
       name: 'Enterprise',
@@ -85,27 +84,28 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
         'API access',
         'On-premise deployment'
       ],
-      popular: false}
-    }
-  ]
+      popular: false},
+    },
+  ];
+
   const testimonials = [
     {
       name: 'Amanda Rodriguez',
       role: 'Customer Service Manager, TechCorp',
       content: 'AI Customer Support Bot reduced our response time by 90% and increased customer satisfaction by 45%.',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Kevin Park',
       role: 'CEO, E-commerceStore',
       content: 'The bot handles 80% of our customer queries automatically. Our team can now focus on complex issues.',
-      rating: 5}
+      rating: 5},
     },
     {
       name: 'Lisa Chen',
       role: 'Operations Director, ServiceCo',
       content: 'Implementation was seamless and the results were immediate. Our customers love the instant responses.',
-      rating: 5}
+      rating: 5},
     }
   ]
   return (
@@ -275,7 +275,7 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-orange-400 text-slate-900 hover:bg-orange-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`},
                     }`}
                   >
                     Get Started
@@ -353,5 +353,6 @@ const AICustomerSupportBotPage: React.FC = React.memo((props) => {
       </div>
     </>
   )
-}
+};
+
 export default AICustomerSupportBotPage

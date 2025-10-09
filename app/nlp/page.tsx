@@ -38,7 +38,7 @@ const NLPPage: React.FC = () => {
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Knowledge Graphs'],
       icon: Search,
       color: 'text-cyan-400'
-    }
+    },
   ];
 
   const benefits = [

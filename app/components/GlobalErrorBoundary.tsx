@@ -45,7 +45,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
       // Here you would typically send the error to a logging service
       // like Sentry, LogRocket, or similar
       console.error('Production error:', error, errorInfo);
-    }
+    },
   }
 
   handleRetry = () => {
@@ -125,7 +125,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
     }
 
     return this.props.children;
-  }
-}
+  },
+};
 
 export { GlobalErrorBoundary };

@@ -13,7 +13,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Make faster decisions', 'Identify trends immediately', 'Improve operational efficiency'],
       marketPrice: '$4,500-12,000/month',
       category: 'Analytics',
-      technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom Dashboards']
+      technologies: ['Tableau', 'Power BI', 'Looker', 'Apache Superset', 'Custom Dashboards'],
     },
     {
       title: 'Predictive Analytics & Forecasting',
@@ -24,7 +24,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Improve planning accuracy by 50%', 'Reduce inventory costs', 'Optimize resource allocation'],
       marketPrice: '$6,000-18,000/month',
       category: 'Predictive Analytics',
-      technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB']
+      technologies: ['Prophet', 'ARIMA', 'LSTM', 'XGBoost', 'Time Series DB'],
     },
     {
       title: 'Data Warehouse Design & Implementation',
@@ -35,7 +35,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Centralize all business data', 'Improve data quality', 'Enable advanced analytics'],
       marketPrice: '$7,000-20,000/month',
       category: 'Data Engineering',
-      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Apache Airflow', 'dbt']
+      technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Apache Airflow', 'dbt'],
     },
     {
       title: 'AI-Powered Business Intelligence',
@@ -46,7 +46,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Discover hidden patterns', 'Reduce analysis time by 80%', 'Make data-driven decisions'],
       marketPrice: '$8,000-25,000/month',
       category: 'AI-Powered BI',
-      technologies: ['Machine Learning', 'NLP', 'Computer Vision', 'AutoML', 'Custom AI Models']
+      technologies: ['Machine Learning', 'NLP', 'Computer Vision', 'AutoML', 'Custom AI Models'],
     },
     {
       title: 'Customer Analytics & Segmentation',
@@ -57,7 +57,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Increase customer retention', 'Improve targeting', 'Boost revenue per customer'],
       marketPrice: '$4,000-12,000/month',
       category: 'Customer Analytics',
-      technologies: ['RFM Analysis', 'Clustering', 'Cohort Analysis', 'Survival Analysis', 'ML Models']
+      technologies: ['RFM Analysis', 'Clustering', 'Cohort Analysis', 'Survival Analysis', 'ML Models'],
     },
     {
       title: 'Financial Analytics & Reporting',
@@ -68,7 +68,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Improve financial visibility', 'Ensure compliance', 'Optimize financial performance'],
       marketPrice: '$5,500-15,000/month',
       category: 'Financial Analytics',
-      technologies: ['Financial Modeling', 'Budgeting Tools', 'Compliance Systems', 'Risk Analytics']
+      technologies: ['Financial Modeling', 'Budgeting Tools', 'Compliance Systems', 'Risk Analytics'],
     },
     {
       title: 'Supply Chain Analytics',
@@ -79,7 +79,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Reduce supply chain costs', 'Improve demand accuracy', 'Minimize disruptions'],
       marketPrice: '$6,500-18,000/month',
       category: 'Supply Chain Analytics',
-      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Analytics', 'Risk Management']
+      technologies: ['Demand Planning', 'Inventory Optimization', 'Supplier Analytics', 'Risk Management'],
     },
     {
       title: 'Marketing Analytics & Attribution',
@@ -90,7 +90,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Optimize marketing spend', 'Improve campaign performance', 'Increase ROI'],
       marketPrice: '$4,500-12,000/month',
       category: 'Marketing Analytics',
-      technologies: ['Attribution Modeling', 'Marketing Mix Modeling', 'Cohort Analysis', 'Funnel Analysis']
+      technologies: ['Attribution Modeling', 'Marketing Mix Modeling', 'Cohort Analysis', 'Funnel Analysis'],
     },
     {
       title: 'Operational Analytics',
@@ -101,7 +101,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Improve operational efficiency', 'Reduce costs', 'Enhance quality'],
       marketPrice: '$3,500-10,000/month',
       category: 'Operational Analytics',
-      technologies: ['Process Mining', 'KPI Dashboards', 'Quality Analytics', 'Efficiency Metrics']
+      technologies: ['Process Mining', 'KPI Dashboards', 'Quality Analytics', 'Efficiency Metrics'],
     },
     {
       title: 'Self-Service Analytics Platform',
@@ -112,7 +112,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Reduce IT dependency', 'Accelerate insights', 'Empower business users'],
       marketPrice: '$6,000-15,000/month',
       category: 'Self-Service BI',
-      technologies: ['Self-Service Tools', 'Data Catalogs', 'Governance Platforms', 'Training Systems']
+      technologies: ['Self-Service Tools', 'Data Catalogs', 'Governance Platforms', 'Training Systems'],
     },
     {
       title: 'Advanced Data Visualization',
@@ -123,7 +123,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Improve data comprehension', 'Enhance presentations', 'Engage stakeholders'],
       marketPrice: '$3,500-8,000/month',
       category: 'Data Visualization',
-      technologies: ['D3.js', 'Chart.js', 'Mapbox', 'Custom Graphics', 'Animation Tools']
+      technologies: ['D3.js', 'Chart.js', 'Mapbox', 'Custom Graphics', 'Animation Tools'],
     },
     {
       title: 'BI Strategy & Consulting',
@@ -135,7 +135,7 @@ const BusinessIntelligencePage: React.FC = () => {
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
-    }
+    
   ];
 
   const _categories = [...new Set(biServices.map(service => service.category))];

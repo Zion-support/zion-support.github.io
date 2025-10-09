@@ -9,6 +9,7 @@ const ContentNewsletterSignup: React.FC = React.memo((props) => {
         </div>
       </div>
     </div>
-  );}
-}
-export default ContentNewsletterSignup
+  );
+};
+
+export default ContentNewsletterSignup;

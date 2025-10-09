@@ -9,13 +9,14 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react'
 export interface PerformanceMetrics {
   renderTime: number
   memoryUsage: number
-  timestamp: string;}
-}
+  timestamp: string;},
+};
+
 export interface CoverageMetrics {
   statements: number
   branches: number
   functions: number
-  lines: number;}
+  lines: number;},
 }
 // Test configuration interface
 export interface TestConfig {
@@ -38,7 +39,7 @@ export interface TestConfig {
   coverage?: boolean
   outputDir?: string
   includePattern?: string[]
-  excludePattern?: string[];}
+  excludePattern?: string[];},
 }
 // Default test configuration
 export const defaultTestConfig: TestConfig = {
@@ -49,7 +50,7 @@ export const defaultTestConfig: TestConfig = {
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-  accessibilityThreshold: 90}
+  accessibilityThreshold: 90},
 }
 interface TestResult {
   name: string
@@ -57,21 +58,21 @@ interface TestResult {
   duration: number
   error?: Error
   assertions: AssertionResult[]
-  coverage?: CoverageResult;}
+  coverage?: CoverageResult;},
 }
 interface AssertionResult {
   name: string
   status: 'passed' | 'failed'
   expected?: unknown
   actual?: unknown
-  message?: string;}
+  message?: string;},
 }
 interface CoverageResult {
   statements: number
   branches: number
   functions: number
   lines: number
-  uncovered: string[];}
+  uncovered: string[];},
 }
 interface TestSuite {
   name: string
@@ -79,15 +80,16 @@ interface TestSuite {
   beforeAll: (() => void | Promise<void>)[]
   afterAll: (() => void | Promise<void>)[]
   beforeEach: (() => void | Promise<void>)[]
-  afterEach: (() => void | Promise<void>)[];}
+  afterEach: (() => void | Promise<void>)[];},
 }
 interface Test {
   name: string
   fn: () => void | Promise<void>
   timeout?: number
   skip?: boolean
-  only?: boolean;}
-}
+  only?: boolean;},
+};
+
 export class TestRunner {
   private static instance: TestRunner
   private config: TestConfig
@@ -98,7 +100,7 @@ export class TestRunner {
     name: string
     status: 'passed' | 'failed' | 'skipped'
     duration: number
-    error?: string;}
+    error?: string;},
   }> = []
   private isRunning: boolean = false
   private startTime: number = 0
@@ -121,12 +123,12 @@ export class TestRunner {
         '**/*.spec.tsx',
       ],
       excludePattern: ['**/node_modules/**', '**/dist/**'],
-      ...config}
+      ...config},
     }
   }
   static getInstance(config?: Partial<TestConfig>): TestRunner {
     if (!TestRunner.instance) {
-      TestRunner.instance = new TestRunner(config);}
+      TestRunner.instance = new TestRunner(config);},
     }
     return TestRunner.instance
   }
@@ -134,7 +136,8 @@ export class TestRunner {
   customRender(
     ui: ReactElement,
     options?: Omit<RenderOptions, 'wrapper'>
-  ): RenderResult {}
+  ): RenderResult {};
+
     const AllTheProviders = useCallback((...args) => {
       return (
         <BrowserRouter>}
@@ -154,15 +157,16 @@ export class TestRunner {
       beforeAll: [],
       afterAll: [],
       beforeEach: [],
-      afterEach: []}
-    }
+      afterEach: [],
+    };
+
     const previousSuite = this.currentSuite
     this.currentSuite = suite
     this.suites.push(suite)
     try {
-      fn();}
+      fn();},
     } finally {
-      this.currentSuite = previousSuite;}
+      this.currentSuite = previousSuite;},
     }
   }
   /**
@@ -174,12 +178,12 @@ export class TestRunner {
     timeout?: number
   ): void {
     if (!this.currentSuite) {
-      throw new Error('Test must be inside a describe block');}
+      throw new Error('Test must be inside a describe block');},
     }
     this.currentSuite.tests.push({
       name,
       fn,
-      timeout: timeout || this.config.timeout}
+      timeout: timeout || this.config.timeout},
     })
   }
   // Performance test
@@ -187,23 +191,26 @@ export class TestRunner {
     component: ReactElement,
     testName: string
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {
-      const startTime = performance.now();}
+      const startTime = performance.now();};
+
       const { unmount } = this.customRender(component)
       const renderTime = performance.now() - startTime
       // Measure memory usage if available
       let memoryUsage = 0
-      if ('memory' in performance) {}
+      if ('memory' in performance) {};
+
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
         if (memory) {
-          memoryUsage = memory.usedJSHeapSize;}
+          memoryUsage = memory.usedJSHeapSize;},
         }
       }
       unmount()
     const metrics = {
       renderTime,
       memoryUsage,
-      timestamp: new Date().toISOString()}
-    }
+      timestamp: new Date().toISOString()},
+    };
+
     const passed = renderTime < this.config.performanceThreshold
     this.testResults.push({}
       name: `Performance: ${testName}`,
@@ -211,19 +218,19 @@ export class TestRunner {
       duration: renderTime,
       error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms
     })
-    return { passed, metrics }
+    return { passed, metrics },
   }
   /**
    * Create a skipped test
    */
   public itSkip(name: string, fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('Test must be inside a describe block');}
+      throw new Error('Test must be inside a describe block');},
     }
     this.currentSuite.tests.push({
       name,
       fn,
-      skip: true}
+      skip: true},
     })
   }
   /**
@@ -231,12 +238,12 @@ export class TestRunner {
    */
   public itOnly(name: string, fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('Test must be inside a describe block');}
+      throw new Error('Test must be inside a describe block');},
     }
     this.currentSuite.tests.push({
       name,
       fn,
-      only: true}
+      only: true},
     })
   }
   /**
@@ -244,7 +251,7 @@ export class TestRunner {
    */
   public beforeAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('beforeAll must be inside a describe block');}
+      throw new Error('beforeAll must be inside a describe block');},
     }
     this.currentSuite.beforeAll.push(fn)
   }
@@ -253,7 +260,7 @@ export class TestRunner {
    */
   public afterAll(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('afterAll must be inside a describe block');}
+      throw new Error('afterAll must be inside a describe block');},
     }
     this.currentSuite.afterAll.push(fn)
   }
@@ -262,7 +269,7 @@ export class TestRunner {
    */
   public beforeEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('beforeEach must be inside a describe block');}
+      throw new Error('beforeEach must be inside a describe block');},
     }
     this.currentSuite.beforeEach.push(fn)
   }
@@ -271,7 +278,7 @@ export class TestRunner {
    */
   public afterEach(fn: () => void | Promise<void>): void {
     if (!this.currentSuite) {
-      throw new Error('afterEach must be inside a describe block');}
+      throw new Error('afterEach must be inside a describe block');},
     }
     this.currentSuite.afterEach.push(fn)
   }
@@ -280,7 +287,7 @@ export class TestRunner {
    */
   public async run(): Promise<TestResult[]> {
     if (this.isRunning) {
-      throw new Error('Test runner is already running');}
+      throw new Error('Test runner is already running');},
     }
     this.isRunning = true
     this.startTime = Date.now()
@@ -288,12 +295,12 @@ export class TestRunner {
     try {}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
       for (const suite of this.suites) {
-        await this.runSuite(suite);}
+        await this.runSuite(suite);},
       }
       this.generateReport()
       return this.results
     } finally {
-      this.isRunning = false;}
+      this.isRunning = false;},
     }
   }
   /**
@@ -303,7 +310,7 @@ export class TestRunner {
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     // Run beforeAll hooks
     for (const hook of suite.beforeAll) {
-      await this.runHook(hook, 'beforeAll');}
+      await this.runHook(hook, 'beforeAll');},
     }
     // Run tests
     for (const test of suite.tests) {
@@ -312,7 +319,7 @@ export class TestRunner {
           name: `${suite.name} - ${test.name}`,
           status: 'skipped',
           duration: 0,
-          assertions: []
+          assertions: [],
         })
         continue
       }
@@ -320,35 +327,36 @@ export class TestRunner {
     }
     // Run afterAll hooks
     for (const hook of suite.afterAll) {
-      await this.runHook(hook, 'afterAll');}
+      await this.runHook(hook, 'afterAll');},
     }
   }
   /**
    * Run a single test
    */
-  private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
+  private async runTest(suite: TestSuite, test: Test): Promise<void> {`};
+
     const testName = `${suite.name} - ${test.name}`
     const startTime = Date.now()
     const assertions: AssertionResult[] = []
     try {
       // Run beforeEach hooks
       for (const hook of suite.beforeEach) {
-        await this.runHook(hook, 'beforeEach');}
+        await this.runHook(hook, 'beforeEach');},
       }
       // Run the test
       await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000)
       // Run afterEach hooks
       for (const hook of suite.afterEach) {
-        await this.runHook(hook, 'afterEach');}
+        await this.runHook(hook, 'afterEach');},
       }
       this.results.push({
         name: testName,
         status: 'passed',
         duration: Date.now() - startTime,
-        assertions}
+        assertions},
       })
       if (this.config.verbose) {`}
-        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
+        if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } },
       }
     } catch (error) {
       this.results.push({
@@ -356,13 +364,13 @@ export class TestRunner {
         status: 'failed',
         duration: Date.now() - startTime,
         error: error as Error,
-        assertions}
+        assertions},
       })
       - startTime}ms)`)
       if (this.config.bail) {
-        throw error;}
+        throw error;},
       }
-    }
+    },
   }
   /**
    * Run a hook
@@ -372,9 +380,9 @@ export class TestRunner {
     hookName: string
   ): Promise<void> {
     try {
-      await hook();}
+      await hook();},
     } catch (error) {
-      throw error;}
+      throw error;},
     }
   }
   /**
@@ -391,11 +399,11 @@ export class TestRunner {
       Promise.resolve(fn())
         .then(() => {
           clearTimeout(timer)
-          resolve();}
+          resolve();},
         })
         .catch(error => {
           clearTimeout(timer)
-          reject(error);}
+          reject(error);},
         })
     })
   }
@@ -414,11 +422,11 @@ export class TestRunner {
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
     if (this.config.reporter === 'json') {
-      this.generateJsonReport();}
+      this.generateJsonReport();},
     } else if (this.config.reporter === 'html') {
-      this.generateHtmlReport();}
+      this.generateHtmlReport();},
     } else if (this.config.reporter === 'junit') {
-      this.generateJunitReport();}
+      this.generateJunitReport();},
     }
   }
   /**
@@ -431,12 +439,12 @@ export class TestRunner {
         passed: this.results.filter(r => r.status === 'passed').length,
         failed: this.results.filter(r => r.status === 'failed').length,
         skipped: this.results.filter(r => r.status === 'skipped').length,
-        duration: Date.now() - this.startTime}
+        duration: Date.now() - this.startTime},
       },
       results: this.results
     }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } },
   }
   /**
    * Generate HTML report
@@ -483,13 +491,14 @@ export class TestRunner {
 </body>
 </html>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } },
   }
   // Accessibility test
   async runAccessibilityTest(
     component: ReactElement,
     testName: string
-  ): Promise<{ passed: boolean; violations: string[] }> {}
+  ): Promise<{ passed: boolean; violations: string[] }> {};
+
     const { container } = this.customRender(component)
     // Basic accessibility checks
     const violations: string[] = []
@@ -498,7 +507,7 @@ export class TestRunner {
     images.forEach((img, index) => {
       if (!img.getAttribute('alt')) {`}
         violations.push(`Image ${index} missing alt text`)
-      }
+      },
     })
     // Check for missing labels on form inputs
     const inputs = container.querySelectorAll('input, select, textarea')
@@ -508,7 +517,7 @@ export class TestRunner {
       const ariaLabelledBy = input.getAttribute('aria-labelledby')
       if (!id && !ariaLabel && !ariaLabelledBy) {`}
         violations.push(`Input ${index} missing label`)
-      }
+      },
     })
     // Check for proper heading hierarchy
     const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6')
@@ -527,7 +536,7 @@ export class TestRunner {
       const ariaLabel = button.getAttribute('aria-label')
       if (!text && !ariaLabel) {`}
         violations.push(`Button ${index} missing accessible text`)
-      }
+      },
     })
     const passed = violations.length === 0
     this.testResults.push({`}
@@ -536,7 +545,7 @@ export class TestRunner {
       duration: 0,
       error: passed ? undefined : `Found ${violations.length} accessibility violations
     })
-    return { passed, violations }
+    return { passed, violations },
   }
   // Component test
   async runComponentTest(
@@ -552,7 +561,7 @@ export class TestRunner {
         status: 'passed',
         duration: 0
       })
-      return { passed: true }
+      return { passed: true },
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : String(error)
       this.testResults.push({`}
@@ -561,7 +570,7 @@ export class TestRunner {
         duration: 0,
         error: errorMessage
       })
-      return { passed: false, error: errorMessage }
+      return { passed: false, error: errorMessage },
     }
   }
   /**
@@ -584,7 +593,7 @@ export class TestRunner {
     </testsuite>
 </testsuites>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
+    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } },
   }
   // Integration test
   async runIntegrationTest(
@@ -600,7 +609,7 @@ export class TestRunner {
         status: 'passed',
         duration: 0
       })
-      return { passed: true }
+      return { passed: true },
     } catch (error) {
       const errorMessage = error instanceof Error ? error.message : 'Unknown error'
       this.testResults.push({`}
@@ -609,7 +618,7 @@ export class TestRunner {
         duration: 0,
         error: errorMessage
       })
-      return { passed: false, error: errorMessage }
+      return { passed: false, error: errorMessage },
     }
   }
   // Visual regression test
@@ -625,7 +634,7 @@ export class TestRunner {
       status: 'passed',
       duration: 0
     })
-    return { passed: true }
+    return { passed: true },
   }
   // Coverage test
   // Coverage test
@@ -636,8 +645,9 @@ export class TestRunner {
       statements: 85,
       branches: 80,
       functions: 90,
-      lines: 85}
-    }
+      lines: 85},
+    };
+
     const passed = coverage.statements >= this.config.coverageThreshold
     this.testResults.push({
       name: 'Coverage',
@@ -645,7 +655,7 @@ export class TestRunner {
       duration: 0,`}
       error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
     })
-    return { passed, coverage }
+    return { passed, coverage },
   }
   // Run all tests
   async runAllTests(
@@ -654,12 +664,13 @@ export class TestRunner {
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
       component: ReactElement
       assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}
+      userInteractions?: (result: RenderResult) => Promise<void>;},
     }>
   ): Promise<{
     passed: boolean;}
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>
-  }> {}
+  }> {};
+
     const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
     for (const test of tests) {
       let result
@@ -688,17 +699,19 @@ export class TestRunner {
           result = await this.runVisualRegressionTest(test.component, test.name)
           break
         default:}
-          result = { passed: false, error: 'Unknown test type' }
-      }
+          result = { passed: false, error: 'Unknown test type' },
+      };
+
     const results: any[] = []
       results.push({ ...result, name: test.name, type: test.type })
-    }
+    };
+
     const passed = results.every(result => result.passed)
-    return { passed, results }
+    return { passed, results },
   }
   // Get test results
   getTestResults() {
-    return [...this.testResults];}
+    return [...this.testResults];},
   }
   // Get test statistics
   getTestStatistics() {
@@ -711,12 +724,12 @@ export class TestRunner {
       passed,
       failed,
       skipped,
-      passRate: total > 0 ? (passed / total) * 100 : 0}
+      passRate: total > 0 ? (passed / total) * 100 : 0},
     }
   }
   // Clear test results
   clearTestResults() {
-    this.testResults = [];}
+    this.testResults = [];},
   }
   // Generate test report
   generateTestReport() {
@@ -726,9 +739,9 @@ export class TestRunner {
       summary: statistics,
       results,
       timestamp: new Date().toISOString(),
-      config: this.config}
+      config: this.config},
     }
-  }
+  },
 }
 // React hook for testing
 export const useTestRunner = useCallback((...args) => {
@@ -752,7 +765,7 @@ export const useTestRunner = useCallback((...args) => {
       case 'visual':
         return testRunner.runVisualRegressionTest(component, testName)
       default:}
-        return { passed: false, error: 'Unknown test type' }
+        return { passed: false, error: 'Unknown test type' },
     }
   }, [testRunner])
   return {
@@ -760,13 +773,14 @@ export const useTestRunner = useCallback((...args) => {
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
-    generateTestReport: () => testRunner.generateTestReport()}
+    generateTestReport: () => testRunner.generateTestReport()},
   }
 }
 // Test utilities
 export const testUtils = {
   // Create mock data
-  createMockData: (type: string, count: number = 10) => {}
+  createMockData: (type: string, count: number = 10) => {};
+
     const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
     for (let i = 0; i < count; i++) {
       mockData.push({
@@ -785,18 +799,19 @@ export const testUtils = {
       const element = document.querySelector(selector)
       if (element) {
         resolve(element)
-        return;}
-      }
+        return;},
+      };
+
       const observer = new MutationObserver(() => {
         const element = document.querySelector(selector)
         if (element) {
           observer.disconnect()
-          resolve(element);}
+          resolve(element);},
         }
       })
       observer.observe(document.body, {
         childList: true,
-        subtree: true}
+        subtree: true},
       })
       setTimeout(() => {
         observer.disconnect();`}
@@ -824,9 +839,10 @@ export const testUtils = {
         break
       default:
         throw new Error(`Unknown action: ${action}`)
-    }
+    },
   }
-}
+};
+
 export default TestRunner
 /**
  * Assertion utilities
@@ -838,7 +854,7 @@ export class Assert {
   public static assertTrue(value: unknown, message?: string): void {
     if (!value) {`}
       throw new Error(message || `Expected ${value} to be truthy`)
-    }
+    },
   }
   /**
    * Assert that a value is falsy
@@ -846,7 +862,7 @@ export class Assert {
   public static assertFalse(value: unknown, message?: string): void {
     if (value) {`}
       throw new Error(message || `Expected ${value} to be falsy`)
-    }
+    },
   }
   /**
    * Assert that two values are equal
@@ -858,7 +874,7 @@ export class Assert {
   ): void {
     if (actual !== expected) {`}
       throw new Error(message || `Expected ${actual} to equal ${expected}`)
-    }
+    },
   }
   /**
    * Assert that two values are not equal
@@ -870,7 +886,7 @@ export class Assert {
   ): void {
     if (actual === expected) {`}
       throw new Error(message || `Expected ${actual} to not equal ${expected}`)
-    }
+    },
   }
   /**
    * Assert that a value is null
@@ -878,7 +894,7 @@ export class Assert {
   public static assertNull(value: unknown, message?: string): void {
     if (value !== null) {`}
       throw new Error(message || `Expected ${value} to be null`)
-    }
+    },
   }
   /**
    * Assert that a value is not null
@@ -886,7 +902,7 @@ export class Assert {
   public static assertNotNull(value: unknown, message?: string): void {
     if (value === null) {`}
       throw new Error(message || `Expected ${value} to not be null`)
-    }
+    },
   }
   /**
    * Assert that a value is undefined
@@ -894,7 +910,7 @@ export class Assert {
   public static assertUndefined(value: unknown, message?: string): void {
     if (value !== undefined) {`}
       throw new Error(message || `Expected ${value} to be undefined`)
-    }
+    },
   }
   /**
    * Assert that a value is not undefined
@@ -902,7 +918,7 @@ export class Assert {
   public static assertNotUndefined(value: unknown, message?: string): void {
     if (value === undefined) {`}
       throw new Error(message || `Expected ${value} to not be undefined`)
-    }
+    },
   }
   /**
    * Assert that a value throws an error
@@ -913,7 +929,7 @@ export class Assert {
   ): void {
     try {
       fn()
-      throw new Error('Expected function to throw an error');}
+      throw new Error('Expected function to throw an error');},
     } catch (error) {
       if (expectedError) {
         const errorMessage = (error as Error).message
@@ -922,15 +938,15 @@ export class Assert {
             throw new Error(`}
               `Expected error message to contain "${expectedError}", but got "${errorMessage}"
             )
-          }
+          },
         } else {
           if (!expectedError.test(errorMessage)) {
             throw new Error(`}
               `Expected error message to match ${expectedError}, but got "${errorMessage}"
             )
-          }
+          },
         }
-      }
+      },
     }
   }
   /**
@@ -938,12 +954,12 @@ export class Assert {
    */
   public static assertDoesNotThrow(fn: () => void): void {
     try {
-      fn();}
+      fn();},
     } catch (error) {
       throw new Error(`}
         `Expected function not to throw, but it threw: ${(error as Error).message}
       )
-    }
+    },
   }
   /**
    * Assert that a value is an instance of a class
@@ -957,7 +973,7 @@ export class Assert {
       throw new Error(`}
         message || `Expected ${value} to be an instance of ${constructor.name}
       )
-    }
+    },
   }
   /**
    * Assert that a value is an array
@@ -965,7 +981,7 @@ export class Assert {
   public static assertArray(value: unknown, message?: string): void {
     if (!Array.isArray(value)) {`}
       throw new Error(message || `Expected ${value} to be an array`)
-    }
+    },
   }
   /**
    * Assert that a value is a string
@@ -973,7 +989,7 @@ export class Assert {
   public static assertString(value: unknown, message?: string): void {
     if (typeof value !== 'string') {`}
       throw new Error(message || `Expected ${value} to be a string`)
-    }
+    },
   }
   /**
    * Assert that a value is a number
@@ -981,7 +997,7 @@ export class Assert {
   public static assertNumber(value: unknown, message?: string): void {
     if (typeof value !== 'number') {`}
       throw new Error(message || `Expected ${value} to be a number`)
-    }
+    },
   }
   /**
    * Assert that a value is a boolean
@@ -989,7 +1005,7 @@ export class Assert {
   public static assertBoolean(value: unknown, message?: string): void {
     if (typeof value !== 'boolean') {`}
       throw new Error(message || `Expected ${value} to be a boolean`)
-    }
+    },
   }
   /**
    * Assert that a value is an object
@@ -997,7 +1013,7 @@ export class Assert {
   public static assertObject(value: unknown, message?: string): void {
     if (typeof value !== 'object' || value === null || Array.isArray(value)) {`}
       throw new Error(message || `Expected ${value} to be an object`)
-    }
+    },
   }
   /**
    * Assert that a value is a function
@@ -1005,7 +1021,7 @@ export class Assert {
   public static assertFunction(value: unknown, message?: string): void {
     if (typeof value !== 'function') {`}
       throw new Error(message || `Expected ${value} to be a function`)
-    }
+    },
   }
 }
 /**
@@ -1019,18 +1035,19 @@ class Mock {
   public static fn(
     implementation?: (...args: unknown[]) => unknown
   ): MockFunction {
-    const calls: unknown[][] = []
+    const calls: unknown[][] = [];
+
     const mockFn = useCallback((...args) => {
       calls.push(args)
       if (implementation) {
-        return implementation(...args);}
+        return implementation(...args);},
       }
       return undefined
     }
     (mockFn as MockFunction).mock = {
       calls,
       results: [],
-      instances: []}
+      instances: [],
     }
     return mockFn as MockFunction
   }
@@ -1043,10 +1060,10 @@ class Mock {
     return new Proxy({} as T, {
       get(target, prop) {
         if (prop in overrides) {
-          return overrides[prop as keyof T];}
+          return overrides[prop as keyof T];},
         }
         return Mock.fn()
-      }
+      },
     })
   }
   /**
@@ -1058,7 +1075,7 @@ class Mock {
   ): MockFunction {
     const mockFn = Mock.fn((...args) => {
       const instance = new constructor(...args) as InstanceType<T>
-      return Object.assign(instance as object, overrides);}
+      return Object.assign(instance as object, overrides);},
     })
     return mockFn
   }
@@ -1069,11 +1086,12 @@ class Mock {
     object: T,
     method: K
   ): MockFunction {
-    const original = object[method]
+    const original = object[method];
+
     const mockFn = Mock.fn()
     (object as Record<string, unknown>)[method as string] = mockFn;}
     (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {
-      (object as Record<string, unknown>)[method as string] = original;}
+      (object as Record<string, unknown>)[method as string] = original;},
     }
     return mockFn as MockFunction
   }
@@ -1081,19 +1099,19 @@ class Mock {
    * Clear all mocks
    */
   public static clearAllMocks(): void {
-    this.mocks.clear();}
+    this.mocks.clear();},
   }
   /**
    * Reset all mocks
    */
   public static resetAllMocks(): void {
-    this.mocks.clear();}
+    this.mocks.clear();},
   }
   /**
    * Restore all mocks
    */
   public static restoreAllMocks(): void {
-    this.mocks.clear();}
+    this.mocks.clear();},
   }
 }
 interface MockFunction {
@@ -1101,16 +1119,17 @@ interface MockFunction {
   mock: {
     calls: unknown[][]
     results: unknown[]
-    instances: unknown[];}
+    instances: unknown[];},
   }
 }
 // Export test runner and utilities
 export const testRunner = new TestRunner()
-export { Mock }
+export { Mock };
+
 export type {
   TestResult,
   TestSuite,
   Test,
   AssertionResult,
-  CoverageResult}
+  CoverageResult},
 }

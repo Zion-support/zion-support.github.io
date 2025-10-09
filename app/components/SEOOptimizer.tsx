@@ -8,7 +8,7 @@ interface SEOOptimizerProps {
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: any;
-}
+};
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -104,7 +104,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'name': 'Home',
           'item': 'https://ziontechgroup.com'
         }
-      ]
+      ],
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -129,7 +129,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
-          }
+          },
         },
         {
           '@type': 'Question',
@@ -137,7 +137,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
-          }
+          },
         },
         {
           '@type': 'Question',
@@ -145,9 +145,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           'acceptedAnswer': {
             '@type': 'Answer',
             'text': 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
-          }
+          },
         }
-      ]
+      ],
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -190,7 +190,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       'sameAs': [
         'https://twitter.com/ziontechgroup',
         'https://linkedin.com/company/ziontechgroup'
-      ]
+      ],
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';

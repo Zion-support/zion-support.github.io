@@ -106,7 +106,7 @@ const AIServicesPage: React.FC = () => {
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400'
-    }
+    },
   ];
 
   return (

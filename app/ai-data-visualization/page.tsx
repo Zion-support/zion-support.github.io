@@ -79,5 +79,6 @@ const AiDataVisualizationPage: React.FC = React.memo((props) => {
       <Footer />
     </>
   )
-}
+};
+
 export default PageComponent
