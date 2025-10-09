@@ -219,7 +219,7 @@ export const transformResponseMiddleware = (
   transformer: (data: unknown) => unknown | Promise<unknown>
 ): Middleware => {
   return async (context, next) => {
-    const _result = await next();
+    const result = await next();
     return await transformer(result);
   };
 };
@@ -227,7 +227,7 @@ export const transformResponseMiddleware = (
  * Create default middleware chain
  */
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
-  const _executor = new MiddlewareExecutor();
+  const executor = new MiddlewareExecutor();
   return executor
     .use(loggingMiddleware)
     .use(errorHandlingMiddleware)
