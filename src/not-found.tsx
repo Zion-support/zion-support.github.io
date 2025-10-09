@@ -14,22 +14,40 @@ export default function NotFound() {
       icon: '🤖'
     },
     {
+      title: 'Micro SAAS Solutions',
+      description: 'Affordable AI-powered tools for modern businesses',
+      href: '/micro-saas',
+      icon: '⚡'
+    },
+    {
+      title: 'AI Project Manager',
+      description: 'Intelligent project planning and management',
+      href: '/ai-project-manager',
+      icon: '📊'
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform data into actionable insights',
+      href: '/ai-analytics-dashboard',
+      icon: '📈'
+    },
+    {
       title: 'Blog & Insights',
       description: 'Read about latest AI trends and innovations',
       href: '/blog',
       icon: '📚'
     },
     {
-      title: 'About Us',
-      description: 'Learn about Zion Tech Group and our mission',
-      href: '/about',
-      icon: '🏢'
-    },
-    {
       title: 'Case Studies',
       description: 'See our success stories and client results',
       href: '/case-studies',
       icon: '📊'
+    },
+    {
+      title: 'About Us',
+      description: 'Learn about Zion Tech Group and our mission',
+      href: '/about',
+      icon: '🏢'
     },
     {
       title: 'Contact Us',
@@ -59,7 +77,7 @@ export default function NotFound() {
           </p>
         </div>
         {/* Popular Pages */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {popularPages.map((page, index) => (
             <a key={index}
               href={page.href}

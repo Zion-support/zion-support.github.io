@@ -4,10 +4,10 @@ const path = require('path');
 // Read the App.tsx file to extract all routes
 const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
 
-// Extract all page components from the routes
-const pageMatches = appContent.match(/element=\{<(\w+Page) />\}/g);
+// Extract all page components from the routes using a simpler regex
+const pageMatches = appContent.match(/element=\{<(\w+Page) \/>\}/g);
 const pageComponents = pageMatches.map(match => {
-  const componentMatch = match.match(/element=\{<(\w+Page) />\}/);
+  const componentMatch = match.match(/element=\{<(\w+Page) \/>\}/);
   return componentMatch ? componentMatch[1] : null;
 }).filter(Boolean);
 

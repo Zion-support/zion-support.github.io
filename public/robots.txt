@@ -9,15 +9,15 @@ Crawl-delay: 1
 
 # Disallow admin and private areas
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Disallow: /static/
 
 # Allow important pages
-Allow: /contact
-Allow: /about
-Allow: /services
-Allow: /ai-services
-Allow: /blog
+Allow: /services/
+Allow: /ai-*/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /about/
+Allow: /contact/
