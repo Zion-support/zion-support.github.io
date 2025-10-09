@@ -2,7 +2,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();

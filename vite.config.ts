@@ -16,6 +16,9 @@ export default defineConfig({
       '@types': resolve(__dirname, 'src/types'),
     },
   },
+  define: {
+    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
   build: {
     target: 'esnext',
     minify: 'terser',

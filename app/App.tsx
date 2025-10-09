@@ -65,6 +65,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import UserExperienceEnhancer from './components/UserExperienceEnhancer';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Styles
 import './globals.css';
@@ -90,6 +91,7 @@ const App: React.FC = () => {
         <AccessibilityEnhancer />
         <UserExperienceEnhancer />
         <SecurityEnhancer />
+        <PerformanceMonitor />
         
         {/* Main App Content */}
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
