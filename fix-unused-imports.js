@@ -4,100 +4,106 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Get all TypeScript/JavaScript files
-const files = execSync('find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js"', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file && !file.includes('node_modules'));
+// Get all TypeScript/JavaScript files in src directory
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  }
+  
+  return files;
+}
 
-console.log(`Found ${files.length} files to process...`);
-
-let fixedFiles = 0;
-
-files.forEach(filePath => {
+// Remove unused imports from a file
+function removeUnusedImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    let modified = false;
+    const newLines = [];
     
-    // Track which imports are actually used
-    const usedImports = new Set();
-    
-    // Find all import statements
-    const importLines = [];
-    lines.forEach((line, index) => {
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this is an import statement
       if (line.trim().startsWith('import ')) {
-        importLines.push({ line, index });
-      }
-    });
-    
-    // Find usage of imported items in the rest of the file
-    const fileContent = content;
-    importLines.forEach(({ line, index }) => {
-      // Extract imported items from the line
-      const importMatch = line.match(/import\s+.*?\s+from\s+['"](.*?)['"]/);
-      if (importMatch) {
-        const modulePath = importMatch[1];
-        const importContent = line.match(/import\s+{([^}]+)}/);
+        // Check if this is a multi-line import
+        let importLines = [line];
+        let j = i + 1;
+        while (j < lines.length && (lines[j].includes('{') || lines[j].includes('}') || lines[j].includes(','))) {
+          importLines.push(lines[j]);
+          j++;
+        }
         
-        if (importContent) {
-          // Named imports
-          const imports = importContent[1].split(',').map(imp => imp.trim());
-          imports.forEach(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            if (cleanImp && fileContent.includes(cleanImp)) {
-              usedImports.add(cleanImp);
-            }
-          });
-        } else {
-          // Default import
-          const defaultMatch = line.match(/import\s+(\w+)/);
-          if (defaultMatch) {
-            const defaultImport = defaultMatch[1];
-            if (fileContent.includes(defaultImport)) {
-              usedImports.add(defaultImport);
-            }
-          }
-        }
-      }
-    });
-    
-    // Remove unused imports
-    const newLines = lines.map(line => {
-      if (line.trim().startsWith('import ')) {
-        const importMatch = line.match(/import\s+{([^}]+)}/);
-        if (importMatch) {
-          const imports = importMatch[1].split(',').map(imp => imp.trim());
-          const usedImportsList = imports.filter(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-            return usedImports.has(cleanImp);
-          });
-          
-          if (usedImportsList.length === 0) {
-            // Remove the entire import line if no imports are used
-            modified = true;
-            return '';
-          } else if (usedImportsList.length < imports.length) {
-            // Rebuild the import line with only used imports
-            const moduleMatch = line.match(/from\s+['"](.*?)['"]/);
-            if (moduleMatch) {
-              modified = true;
-              return `import { ${usedImportsList.join(', ')} } from '${moduleMatch[1]}';`;
+        const fullImport = importLines.join(' ');
+        
+        // Skip if it's a default import or import from a file
+        if (fullImport.includes('from ') && fullImport.includes('{')) {
+          // Extract the imported items
+          const match = fullImport.match(/\{([^}]+)\}/);
+          if (match) {
+            const imports = match[1].split(',').map(imp => imp.trim());
+            
+            // Check which imports are actually used in the file
+            const usedImports = imports.filter(imp => {
+              const importName = imp.split(' as ')[0].trim();
+              // Check if the import is used anywhere in the file
+              const regex = new RegExp(`\\b${importName}\\b`, 'g');
+              return regex.test(content);
+            });
+            
+            if (usedImports.length === 0) {
+              // Remove the entire import line
+              i = j - 1; // Skip to the end of the import
+              continue;
+            } else if (usedImports.length < imports.length) {
+              // Replace with only used imports
+              const newImport = fullImport.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+              newLines.push(newImport);
+              i = j - 1; // Skip to the end of the import
+              continue;
             }
           }
         }
       }
-      return line;
-    }).filter(line => line !== '');
+      
+      newLines.push(line);
+    }
     
-    if (modified) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
+    // Write back if changed
+    const newContent = newLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed unused imports in: ${filePath}`);
-      fixedFiles++;
     }
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
-});
+}
 
-console.log(`\nFixed unused imports in ${fixedFiles} files.`);
+// Main execution
+console.log('Fixing unused imports...');
+
+const srcDir = path.join(process.cwd(), 'src');
+const files = getAllFiles(srcDir);
+
+let fixedCount = 0;
+for (const file of files) {
+  try {
+    removeUnusedImports(file);
+    fixedCount++;
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+  }
+}
+
+console.log(`Processed ${fixedCount} files`);
+console.log('Done!');
