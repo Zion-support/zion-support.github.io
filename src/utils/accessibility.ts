@@ -26,8 +26,16 @@ class AccessibilityService {
     foreground: string,
     background: string
   ): {
-    ratio: number;
-    passes: { normal: boolean; large: boolean };
+    rati,
+
+    o: number;
+    passe,
+
+    s: { norma,
+
+    l: boolean; larg,
+
+    e: boolean };
   } {
     const rgb2 = this.hexToRgb(background);
     const l1 = this.getLuminance(rgb1);
@@ -155,8 +163,12 @@ class AccessibilityService {
       if (rect.width < 44 || rect.height < 44) {
         warnings.push({
           type: 'small-touch-target',
+
           element: element.tagName.toLowerCase(),
-          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+
+          message: `Touch target too smal,
+
+          l: l}x${Math.round(rect.height)}px`,
           suggestion: 'Increase touch target size to at least 44x44px'
         });
       }

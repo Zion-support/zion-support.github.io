@@ -2,10 +2,18 @@
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
+  fi,
+
+  d: number | null;
+  cl,
+
+  s: number | null;
+  ttf,
+
+  b: number | null;
+  memor,
+
+  y: number | null;
 }
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;

@@ -214,7 +214,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     updateMetaTag('referrer', 'strict-origin-when-cross-origin');
     
     // Add content security policy
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: http,
+ s: blo,
+ b: ; font-src 'self' http,
+ s: //fonts.gstatic.com; connect-src 'self' http,
+ s: //www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
   };
 
   return null;

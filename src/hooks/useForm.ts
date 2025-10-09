@@ -27,13 +27,31 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   isValid: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (field: keyof T, value: T[keyof T]) => void;
-  setFieldError: (field: keyof T, errors: string[]) => void;
-  setFieldTouched: (field: keyof T, touched: boolean) => void;
-  resetForm: () => void;
-  validateField: (field: keyof T) => void;
-  validateAllFields: () => boolean;
+  handleSubmi,
+
+  t: (,
+
+  e: React.FormEvent<HTMLFormElement>) => void;
+  setFieldValu,
+
+  e: (fiel,
+
+  d: keyof T,
+
+  value: T[keyof T]) => void;
+  setFieldError: (field: keyof T,
+
+  errors: string[]) => void;
+  setFieldTouched: (fiel,
+
+  d: d, touched: boolean) => void;
+  resetFor,
+ m: () => void;
+  validateFiel,
+ d: (fiel,
+ d: keyof T) => void;
+  validateAllField,
+ s: () => boolean;
 export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {

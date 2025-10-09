@@ -34,10 +34,18 @@ export interface PerformanceReport {
  */
 export interface ResourceStats {
   total: number;
-  scripts: number;
-  styles: number;
-  images: number;
-  fonts: number;
+  script,
+
+  s: number;
+  style,
+
+  s: number;
+  image,
+
+  s: number;
+  font,
+
+  s: number;
 }
 
 /**
@@ -57,10 +65,18 @@ export interface MemoryStats {
 export interface PerformanceAlert {
   type: 'warning' | 'error' | 'info';
   message: string;
-  metric: keyof PerformanceMetrics;
-  value: number;
-  threshold: number;
-  timestamp: number;
+  metri,
+
+  c: keyof PerformanceMetrics;
+  valu,
+
+  e: number;
+  threshol,
+
+  d: number;
+  timestam,
+
+  p: number;
 }
 
 /**

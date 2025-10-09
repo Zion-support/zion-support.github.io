@@ -20,16 +20,23 @@ interface ErrorReport {
   message: string;
   stack?: string;
   context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category:
-    | 'syntax'
+  severit,
+
+  y: 'low' | 'medium' | 'high' | 'critical';
+  categor,
+
+  y: | 'syntax'
     | 'runtime'
     | 'network'
     | 'security'
     | 'performance'
     | 'unknown';
-  tags: string[];
-  metadata: Record<string, unknown>;
+  tag,
+
+  s: string[];
+  metadat,
+
+  a: Record<string, unknown>;
   resolved: boolean;
   resolvedAt?: string;
   resolvedBy?: string;
@@ -39,10 +46,18 @@ interface ErrorHandlerConfig {
   enableRemoteReporting: boolean;
   enableErrorRecovery: boolean;
   enableErrorCategorization: boolean;
-  enableErrorAggregation: boolean;
-  enablePerformanceImpact: boolean;
-  maxErrorsPerMinute: number;
-  errorRetentionDays: number;
+  enableErrorAggregatio,
+
+  n: boolean;
+  enablePerformanceImpac,
+
+  t: boolean;
+  maxErrorsPerMinut,
+
+  e: number;
+  errorRetentionDay,
+
+  s: number;
   remoteEndpoint?: string;
   apiKey?: string;
 }

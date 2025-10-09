@@ -18,17 +18,25 @@ const ExpenseTrackerPage: React.FC = () => {
       benefit: 'Reduce expenses by 25%'
       icon: Brain,
       title: 'AI Categorization',
+
       description: 'Automatically categorize expenses using machine learning that learns from your spending patterns and preferences.',
+
       benefit: '99% accurate categorization'
-      icon: Zap,
+      ico,
+
+      n: n,
       title: 'Automated Workflows',
       description: 'Set up automated expense approval workflows, reimbursement processes, and compliance checks.',
       benefit: 'Process expenses 5x faster'
       icon: Target,
       title: 'Budget Management',
+
       description: 'Create and track budgets with AI-powered alerts and recommendations for better financial control.',
+
       benefit: 'Stay within budget 90% of the time'
-      icon: Shield,
+      ico,
+
+      n: n,
       title: 'Compliance & Security',
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit: '100% compliance guarantee'
@@ -87,9 +95,13 @@ const ExpenseTrackerPage: React.FC = () => {
       name: 'Michael Johnson',
       company: 'Small Business Owner',
       role: 'CEO',
+
       content: 'Expense Tracker saved me 10 hours per month on bookkeeping. The AI categorization is incredibly accurate.',
+
       rating: 5
-      name: 'Sarah Williams',
+      nam,
+
+      e: e,
       company: 'Marketing Agency',
       role: 'Finance Manager',
       content: 'Our expense processing time dropped from 2 days to 2 hours. The automated workflows are game-changing.',
@@ -116,17 +128,21 @@ const ExpenseTrackerPage: React.FC = () => {
             Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
             over your business finances.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hove,
+ r: to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Cal,
+ l: (302) 464-0950
             </a>
             <Link 
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hove,
+ r: bg-white hove,
+ r: text-indigo-600 transition-all duration-300"
               Start Free Trial
             </Link>
 

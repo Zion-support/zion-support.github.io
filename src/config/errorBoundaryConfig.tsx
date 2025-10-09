@@ -15,7 +15,9 @@ export interface ErrorBoundaryConfig {
   /**
    * Whether to send errors to external service
    */
-  reportErrors: boolean;
+  reportError,
+
+  s: boolean;
   /**
    * Error reporting endpoint
    */
@@ -23,15 +25,21 @@ export interface ErrorBoundaryConfig {
   /**
    * Whether to show error overlay in development
    */
-  showErrorOverlay: boolean;
+  showErrorOverla,
+
+  y: boolean;
   /**
    * Maximum number of errors to store
    */
-  maxStoredErrors: number;
+  maxStoredError,
+
+  s: number;
   /**
    * Custom error messages by error type
    */
-  customMessages: Record<string, string>;
+  customMessage,
+
+  s: Record<string, string>;
   /**
    * Fallback UI components
    */
@@ -63,9 +71,13 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
+
     customMessages: DEFAULT_ERROR_MESSAGES,
+
     fallbackComponents: {
-      default: DefaultErrorFallback,
+      defaul,
+
+    t: t,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback
     }

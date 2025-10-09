@@ -168,10 +168,18 @@ class AdvancedCache<T = unknown> {
     size: number;
     maxSize: number;
     hitRate: number;
-    entries: Array<{
-      key: string;
-      hits: number;
-      age: number;
+    entrie,
+
+    s: Array<{
+      ke,
+
+    y: string;
+      hit,
+
+    s: number;
+      ag,
+
+    e: number;
     }>;
   } {
     const entries: Array<{ key: string; hits: number; age: number }> = [];

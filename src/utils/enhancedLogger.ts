@@ -57,13 +57,21 @@ export interface LoggerConfig {
   /** Remote logging endpoint */
   remoteEndpoint?: string;
   /** Enable structured logging */
-  enableStructured: boolean;
+  enableStructure,
+
+  d: boolean;
   /** Maximum number of logs to store in memory */
-  maxLogs: number;
+  maxLog,
+
+  s: number;
   /** Enable performance tracking */
-  enablePerformance: boolean;
+  enablePerformanc,
+
+  e: boolean;
   /** Environment name */
-  environment: string;
+  environmen,
+
+  t: string;
 }
 /**
  * Default logger configuration

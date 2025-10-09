@@ -5,20 +5,36 @@
 interface PerformanceMetrics {
   lcp: number;
   fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  tbt: number;
+  cl,
+
+  s: number;
+  fc,
+
+  p: number;
+  ttf,
+
+  b: number;
+  tb,
+
+  t: number;
 }
 interface OptimizationConfig {
   enableImageOptimization: boolean;
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
   enablePrefetching: boolean;
-  enableServiceWorker: boolean;
-  enableResourceHints: boolean;
-  enableCompression: boolean;
-  enableCaching: boolean;
+  enableServiceWorke,
+
+  r: boolean;
+  enableResourceHint,
+
+  s: boolean;
+  enableCompressio,
+
+  n: boolean;
+  enableCachin,
+
+  g: boolean;
 }
 class PerformanceEnhancer {
   private config: OptimizationConfig;

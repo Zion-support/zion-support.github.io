@@ -115,9 +115,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
         description: error.message,
+
         fatal: false,
+
         custom_map: {
-          context: context || 'unknown',
+          contex,
+
+        t: t,
         },
       });
     }

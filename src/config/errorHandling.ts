@@ -24,10 +24,18 @@ export interface ErrorConfig {
   enabled: boolean;
   logToConsole: boolean;
   sendToServer: boolean;
-  sampleRate: number;
-  maxStackTraceLength: number;
-  ignoreErrors: RegExp[];
-  severityThreshold: ErrorSeverity;
+  sampleRat,
+
+  e: number;
+  maxStackTraceLengt,
+
+  h: number;
+  ignoreError,
+
+  s: RegExp[];
+  severityThreshol,
+
+  d: ErrorSeverity;
 }
 export const _errorHandlingConfig: ErrorConfig = {
   enabled: true,

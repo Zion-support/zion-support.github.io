@@ -5,9 +5,15 @@
 
 interface SEOConfig {
   title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
+  descriptio,
+
+  n: string;
+  keyword,
+
+  s: string[];
+  canonicalUr,
+
+  l: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;

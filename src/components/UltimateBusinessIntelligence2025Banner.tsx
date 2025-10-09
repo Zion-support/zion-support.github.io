@@ -11,33 +11,49 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+
       type: 'Blog Post',
+
       metrics: {
-        efficiency: '300%',
+        efficienc,
+
+      y: y,
         accuracy: '99.7%',
         timeline: '6 months',
         adoption: '95%'
       },
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
       id: 'fortune-500-case-study',
+
       title: 'Fortune 500 Ultimate Business Intelligence Success',
-      description: 'Real-world case study: How a Fortune 500 company achieved 30,000% ROI through AI-powered business intelligence transformation.',
+
+      description: 'Real-world case stud,
+
+      y: y,000% ROI through AI-powered business intelligence transformation.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
         roi: '30,000%',
         savings: '$750M',
+
         efficiency: '400%',
+
         timeline: '18 months'
-      tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
+      tag,
+
+        s: s, 'Fortune 500', 'ROI', '2025']
       id: 'enterprise-automation-2025',
       title: 'Enterprise Automation Suite 2025',
       description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       url: '/services/automation',
       type: 'Service',
         automation: '95%',
+
         productivity: '300%',
+
         cost: '80% reduction'
-      tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
+      tag,
+
+        s: s, 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
   useEffect(() => {
@@ -124,7 +140,11 @@ const _UltimateBusinessIntelligence2025Banner = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 href={currentContent.url}
-                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
+                className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hove,
+ r: to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hove,
+ r: -translate-y-1 hove,
+ r: shadow-2xl hove,
+ r: shadow-cyan-500/25"
                 <span className="text-xl">📖</span>
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>

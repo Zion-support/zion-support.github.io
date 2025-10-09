@@ -7,13 +7,21 @@ interface UserEvent {
   id: string;
   type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';
   category: string;
-  action: string;
+  actio,
+
+  n: string;
   label?: string;
   value?: number;
-  timestamp: string;
-  sessionId: string;
+  timestam,
+
+  p: string;
+  sessionI,
+
+  d: string;
   userId?: string;
-  url: string;
+  ur,
+
+  l: string;
   metadata?: Record<string, unknown>;
 }
 interface UserSession {
@@ -24,10 +32,18 @@ interface UserSession {
   pageViews: number;
   events: UserEvent[];
   referrer?: string;
-  userAgent: string;
-  device: 'desktop' | 'mobile' | 'tablet';
-  browser: string;
-  os: string;
+  userAgen,
+
+  t: string;
+  devic,
+
+  e: 'desktop' | 'mobile' | 'tablet';
+  browse,
+
+  r: string;
+  o,
+
+  s: string;
   country?: string;
   city?: string;
 }
@@ -36,21 +52,33 @@ interface AnalyticsConfig {
   enableHeatmaps: boolean;
   enableSessionRecording: boolean;
   enableA_BTesting: boolean;
-  enableConversionTracking: boolean;
-  enablePerformanceTracking: boolean;
-  enableErrorTracking: boolean;
-  enableUserJourneyTracking: boolean;
+  enableConversionTrackin,
+
+  g: boolean;
+  enablePerformanceTrackin,
+
+  g: boolean;
+  enableErrorTrackin,
+
+  g: boolean;
+  enableUserJourneyTrackin,
+
+  g: boolean;
 }
 class AdvancedAnalytics {
   private static instance: AdvancedAnalytics;
-  private config: AnalyticsConfig;
-  private currentSession: UserSession;
-  private eventQueue: UserEvent[] = [];
+  private confi,
+ g: AnalyticsConfig;
+  private currentSessio,
+ n: UserSession;
+  private eventQueu,
+ e: UserEvent[] = [];
   private maxQueueSize = 1000;
   private isOnline = true;
   private constructor() {
     this.config = {
-      enableTracking: true,
+      enableTrackin,
+ g: true,
       enableHeatmaps: true,
       enableSessionRecording: false,
       enableA_BTesting: true,
@@ -122,9 +150,13 @@ class AdvancedAnalytics {
       timestamp: new Date().toISOString(),
       sessionId: this.currentSession.id,
       userId: this.getUserId(),
+
       url: url || window.location.href,
+
       metadata: {
-        referrer: document.referrer,
+        referre,
+
+      r: r,
         viewport: {
           width: window.innerWidth,
           height: window.innerHeight
@@ -149,9 +181,13 @@ class AdvancedAnalytics {
         timestamp: new Date().toISOString(),
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
+
         url: window.location.href,
+
         metadata: {
-          element: element.tagName,
+          elemen,
+
+        t: t,
           id: element.id,
           className: element.className,
           text: element.text?.substring(0, 100),
@@ -183,9 +219,13 @@ class AdvancedAnalytics {
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
+
           url: window.location.href,
+
           metadata: {
-            scrollY: window.scrollY,
+            scroll,
+
+          Y: Y,
             scrollPercentage: Math.round(
               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
             )
@@ -212,9 +252,13 @@ class AdvancedAnalytics {
         timestamp: new Date().toISOString(),
         sessionId: this.currentSession.id,
         userId: this.getUserId(),
+
         url: window.location.href,
+
         metadata: {
-          formId: form.id,
+          formI,
+
+        d: d,
           formClass: form.className,
           formAction: form.action,
           formMethod: form.method,
@@ -241,9 +285,13 @@ class AdvancedAnalytics {
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
+
           url: window.location.href,
+
           metadata: {
-            downloadUrl: link.href,
+            downloadUr,
+
+          l: l,
             downloadText: link.textContent?.substring(0, 100)
           }
         };
@@ -269,9 +317,13 @@ class AdvancedAnalytics {
               timestamp: new Date().toISOString(),
               sessionId: this.currentSession.id,
               userId: this.getUserId(),
+
               url: window.location.href,
+
               metadata: {
-                metric: entry.name,
+                metri,
+
+              c: c,
                 value: entry.startTime
               }
             };
@@ -293,9 +345,13 @@ class AdvancedAnalytics {
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
+
           url: window.location.href,
+
           metadata: {
-            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+            loadTim,
+
+          e: e,
             domContentLoaded:
               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart
@@ -379,10 +435,18 @@ class AdvancedAnalytics {
    */
   private getElementInfo(element: HTMLElement): {
     category: string;
-    label: string;
-    tagName: string;
-    id: string;
-    className: string;
+    labe,
+
+    l: string;
+    tagNam,
+
+    e: string;
+    i,
+
+    d: string;
+    classNam,
+
+    e: string;
     text?: string;
   } {
     const tagName = element.tagName.toLowerCase();

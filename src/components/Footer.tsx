@@ -90,7 +90,11 @@ const Footer: React.FC = memo(() => {
                   </a></div><div className="flex items-center space-x-3 text-gray-300"><MapPin className="w-4 h-4 text-cyan-400" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></div></div>
 
               {/* Social Links */}
-              <div className="flex space-x-4"><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
+              <div className="flex space-x-4"><a href="#" className="text-gray-400 hover: text-cyan-400 transition-colors"><Facebook className="w-5 h-5" /></a><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" /></a><a href="#" className="text-gray-400 hove,
+ r: text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" /></a><a href="#" className="text-gray-400 hove,
+ r: text-cyan-400 transition-colors"><Instagram className="w-5 h-5" /></a><a href="#" className="text-gray-400 hove,
+ r: text-cyan-400 transition-colors"><Youtube className="w-5 h-5" /></a><a href="#" className="text-gray-400 hove,
+ r: text-cyan-400 transition-colors"><Github className="w-5 h-5" /></a></div></div>
 
             {/* AI Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3><ul className="space-y-3">

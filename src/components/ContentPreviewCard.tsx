@@ -5,12 +5,20 @@ interface ContentPreviewCardProps {
   category: string;
   readTime: string;
   date: string;
-  path: string;
-  image: string;
+  pat,
+
+  h: string;
+  imag,
+
+  e: string;
   featured?: boolean;
   stats?: {
-    views: number;
-    engagement: number;
+    view,
+
+  s: number;
+    engagemen,
+
+  t: number;
   };
   excerpt?: string;
 }

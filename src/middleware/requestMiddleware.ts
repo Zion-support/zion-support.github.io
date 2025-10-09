@@ -101,15 +101,15 @@ export const cachingMiddleware = (ttl: number): Middleware => {
       return cached.data;
     cache.set(key, {
       data: result,
+
       timestamp: Date.now()
  * Retry middleware
-export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
-    let lastError: Error | null = null;
-    for (let attempt = 0; attempt <= maxRetries; attempt++) {
-        lastError = error as Error;
-        if (attempt < maxRetries) {
-          logger.warn(
-            `Request failed, retrying (${attempt + 1}/${maxRetries})`,
+export const retryMiddleware = (maxRetries: number,
+
+      delay: number): Middleware => {
+    let lastErro,
+
+      r: r, retrying (${attempt + 1}/${maxRetries})`,
             'RetryMiddleware',
             {
               component: 'RetryMiddleware',

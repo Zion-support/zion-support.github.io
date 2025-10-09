@@ -101,13 +101,17 @@ const Navigation: React.FC = () => {
 
               {/* Contact Info */}
               <div className="space-y-4"><h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3><a
-                  href="tel:+13024640950" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
+                  href="tel:+13024640950" className="flex items-center space-x-3 text-white hover: text-cyan-400 transition-colors"
                 ><Phone className="w-5 h-5" /><span>(302) 464-0950</span></a><a
-                  href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
+                  href="mailt,
+ o: kleber@ziontechgroup.com" className="flex items-center space-x-3 text-white hove,
+ r: text-cyan-400 transition-colors"
                 ><span>kleber@ziontechgroup.com</span></a><a
-                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                  href="http,
+ s: //maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
                   target="_blank"
-                  rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
+                  rel="noopener noreferrer" className="flex items-center space-x-3 text-white hove,
+ r: text-cyan-400 transition-colors"
                 ><MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
       </div></nav>
   );

@@ -10,8 +10,12 @@ import Footer from '../components/Footer';
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
+
       image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
+
+      linkedin: 'http,
+
+      s: s,
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
@@ -23,26 +27,42 @@ import Footer from '../components/Footer';
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
       name: 'Michael Rodriguez',
       role: 'CTO',
+
       bio: 'Technology architect with expertise in scalable systems and cloud infrastructure',
-      linkedin: 'https://linkedin.com/in/michael-rodriguez-cto',
+
+      linkedin: 'http,
+
+      s: s,
       email: 'michael@ziontechgroup.com',
       expertise: ['Cloud Architecture', 'DevOps', 'Security']
       name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
+
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
-      linkedin: 'https://linkedin.com/in/emily-watson-data',
+
+      linkedin: 'http,
+
+      s: s,
       email: 'emily@ziontechgroup.com',
       expertise: ['Data Science', 'Analytics', 'Statistics']
       name: 'James Kim',
       role: 'Lead AI Engineer',
+
       bio: 'Full-stack AI engineer with expertise in natural language processing and computer vision',
-      linkedin: 'https://linkedin.com/in/james-kim-ai',
+
+      linkedin: 'http,
+
+      s: s,
       email: 'james@ziontechgroup.com',
       expertise: ['NLP', 'Computer Vision', 'AI Engineering']
       name: 'Lisa Thompson',
       role: 'Head of Client Success',
+
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
-      linkedin: 'https://linkedin.com/in/lisa-thompson-success',
+
+      linkedin: 'http,
+
+      s: s,
       email: 'lisa@ziontechgroup.com',
       expertise: ['Client Relations', 'Project Management', 'Customer Success']
     }

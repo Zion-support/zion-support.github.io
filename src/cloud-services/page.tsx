@@ -49,16 +49,20 @@ const CloudServicesPage: React.FC = () => {
             Transform your business with our comprehensive cloud solutions. 
             From migration to optimization, we provide end-to-end cloud services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hove,
+ r: from-cyan-600 hove,
+ r: to-blue-700 transition-all"
             >
               Get Started Today
             </a>
             <a
               href="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-cyan-400 hove,
+ r: text-white transition-all"
             >
               Learn More
             </a>
@@ -107,16 +111,20 @@ const CloudServicesPage: React.FC = () => {
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
             Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hove,
+ r: from-cyan-600 hove,
+ r: to-blue-700 transition-all"
             >
               Call (302) 464-0950
             </a>
             <a
               href="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-cyan-400 hove,
+ r: text-white transition-all"
             >
               Get Free Consultation
             </a>

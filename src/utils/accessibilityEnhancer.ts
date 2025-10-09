@@ -7,19 +7,35 @@ interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReader: boolean;
   enableHighContrast: boolean;
-  enableFocusManagement: boolean;
-  enableReducedMotion: boolean;
-  enableColorBlindSupport: boolean;
-  enableVoiceControl: boolean;
+  enableFocusManagemen,
+
+  t: boolean;
+  enableReducedMotio,
+
+  n: boolean;
+  enableColorBlindSuppor,
+
+  t: boolean;
+  enableVoiceContro,
+
+  l: boolean;
 }
 
 interface A11yMetrics {
   focusableElements: number;
   headingStructure: boolean;
-  colorContrast: number;
-  altTextCoverage: number;
-  keyboardAccessibility: number;
-  screenReaderCompatibility: number;
+  colorContras,
+
+  t: number;
+  altTextCoverag,
+
+  e: number;
+  keyboardAccessibilit,
+
+  y: number;
+  screenReaderCompatibilit,
+
+  y: number;
 }
 
 class AccessibilityEnhancer {
@@ -321,10 +337,18 @@ class AccessibilityEnhancer {
         content: attr(data-pattern);
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: repeating-linear-gradient(
+        lef,
+
+        t: 0;
+        righ,
+
+        t: 0;
+        botto,
+
+        m: 0;
+        backgroun,
+
+        d: repeating-linear-gradient(
           45deg,
           transparent,
           transparent 2px,

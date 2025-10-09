@@ -9,10 +9,18 @@ interface SecurityConfig {
   enableXSSProtection: boolean;
   enableClickjackingProtection: boolean;
   enableContentTypeOptions: boolean;
-  enableReferrerPolicy: boolean;
-  enablePermissionsPolicy: boolean;
-  enableCORS: boolean;
-  enableSecureCookies: boolean;
+  enableReferrerPolic,
+
+  y: boolean;
+  enablePermissionsPolic,
+
+  y: boolean;
+  enableCOR,
+
+  S: boolean;
+  enableSecureCookie,
+
+  s: boolean;
 }
 
 interface SecurityHeaders {

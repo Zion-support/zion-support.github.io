@@ -49,6 +49,8 @@ const OfflinePage: React.FC = () => {
           <p className="flex items-center justify-center gap-2">
             <Wifi className="w-4 h-4" />
             Check your internet connection
+          </p>
+        </div>
 
         <div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>

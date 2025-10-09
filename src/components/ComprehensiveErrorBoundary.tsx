@@ -64,9 +64,13 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
+
         fatal: false,
+
         custom_map: {
-          error_id: this.state.errorId,
+          error_i,
+
+        d: d,
           retry_count: this.state.retryCount
         }
       });

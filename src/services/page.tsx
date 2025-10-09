@@ -78,14 +78,22 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
 
   const benefits = [
       icon: TrendingUp,
+
       title: 'Proven ROI',
+
       description: 'Average 300% return on investment for our clients'
-      icon: Users,
+      ico,
+
+      n: n,
       title: 'Expert Team',
+
       description: '50+ certified professionals with 10+ years experience'
       title: '24/7 Support',
+
       description: 'Round-the-clock support with guaranteed response times'
-      icon: Clock,
+      ico,
+
+      n: n,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
 

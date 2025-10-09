@@ -25,11 +25,19 @@ export enum ErrorSeverity {
 // Error interface
 export interface AppError {
   id: string;
-  type: ErrorType;
-  severity: ErrorSeverity;
-  message: string;
+  typ,
+
+  e: ErrorType;
+  severit,
+
+  y: ErrorSeverity;
+  messag,
+
+  e: string;
   stack?: string;
-  timestamp: Date;
+  timestam,
+
+  p: Date;
   userId?: string;
   sessionId?: string;
   url?: string;
@@ -46,11 +54,19 @@ export interface ErrorHandlerConfig {
   enableRetry: boolean;
   maxRetries: number;
   retryDelay: number;
-  enableUserNotification: boolean;
-  enableConsoleLogging: boolean;
-  enableNetworkLogging: boolean;
+  enableUserNotificatio,
+
+  n: boolean;
+  enableConsoleLoggin,
+
+  g: boolean;
+  enableNetworkLoggin,
+
+  g: boolean;
   reportEndpoint?: string;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
+  logLeve,
+
+  l: 'debug' | 'info' | 'warn' | 'error';
 }
 // Default configuration
 export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
@@ -68,8 +84,12 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
 export class ErrorHandler {
   private static instance: ErrorHandler;
   private config: ErrorHandlerConfig;
-  private errors: AppError[] = [];
-  private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
+  private error,
+ s: AppError[] = [];
+  private retryQueu,
+ e: Array<{ erro,
+ r: AppError; retryCoun,
+ t: number }> = [];
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
     this.config = { ...defaultErrorHandlerConfig, ...config };
   }
@@ -120,8 +140,12 @@ export class ErrorHandler {
       stack: error.stack,
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
+
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      context: { networkUrl: url, statusCode: status },
+
+      context: { networkUr,
+
+      l: l, statusCode: status },
       resolved: false,
       retryCount: 0
     };
@@ -284,10 +308,18 @@ export class ErrorHandler {
       <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
           background: none;
           border: none;
-          color: white;
-          font-size: 18px;
-          cursor: pointer;
-          margin-left: 10px;
+          colo,
+
+          r: white;
+          font-siz,
+
+          e: 18px;
+          curso,
+
+          r: pointer;
+          margin-lef,
+
+          t: 10px;
         ">×</button></div>
     `;
     document.body.appendChild(notification);

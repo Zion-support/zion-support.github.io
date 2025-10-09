@@ -4,10 +4,18 @@ interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
   cls: number | null;
-  ttfb: number | null;
-  fmp: number | null;
-  tbt: number | null;
-  si: number | null;
+  ttf,
+
+  b: number | null;
+  fm,
+
+  p: number | null;
+  tb,
+
+  t: number | null;
+  s,
+
+  i: number | null;
 }
 
 interface PerformanceMonitorProps {
@@ -227,9 +235,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       (window as any).gtag('event', 'performance_metrics', {
         event_category: 'performance',
         event_label: 'web_vitals',
+
         value: performanceScore,
+
         custom_map: {
-          fcp: metrics.fcp,
+          fc,
+
+        p: p,
           lcp: metrics.lcp,
           fid: metrics.fid,
           cls: metrics.cls,

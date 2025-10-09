@@ -83,21 +83,33 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       role: 'Freelance Designer',
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
+
       rating: 5,
+
       avatar: '👩‍🎨'
-      name: 'Michael Chen',
+      nam,
+
+      e: e,
       role: 'CEO',
       company: 'TechStart Inc.',
+
       content: 'The analytics insights helped us identify payment patterns and improve our cash flow by 40%. Game changer!',
+
       avatar: '👨‍💼'
-      name: 'Emily Rodriguez',
+      nam,
+
+      e: e,
       role: 'Accountant',
       company: 'Finance Pro',
+
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
+
       avatar: '👩‍💻'
 
   const useCases = [
-      title: 'Freelancers & Consultants',
+      titl,
+
+      e: e,
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
       benefits: ['Project-based invoicing', 'Time tracking integration', 'Client management', 'Expense tracking']
@@ -147,16 +159,20 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                 effortlessly while gaining valuable insights into your business performance.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12">
                 <a
                   href="#pricing"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hove,
+ r: from-purple-600 hove,
+ r: to-pink-600 transition-all duration-300 inline-flex items-center"
                 >
                   <Calculator className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </a>
                   href="#demo"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hove,
+ r: bg-purple-400 hove,
+ r: text-white transition-all duration-300 inline-flex items-center"
                   <Eye className="w-5 h-5 mr-2" />
                   Watch Demo
               

@@ -43,11 +43,13 @@ const CompliancePage: React.FC = () => {
         
         {/* Header */}
         <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+ g: px-8 py-6">
             <div className="flex items-center">
               <Link 
                 to="/privacy" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
+                className="inline-flex items-center text-blue-600 hove,
+ r: text-blue-800 transition-colors duration-200 mr-6"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Privacy Policy
@@ -56,7 +58,9 @@ const CompliancePage: React.FC = () => {
             </div>
         </section>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <main className="max-w-7xl mx-auto px-4 s,
+ m: px-6 l,
+ g: px-8 py-12">
           {/* Overview */}
           <section className="mb-16">
             <div className="text-center mb-12">

@@ -7,10 +7,18 @@ export interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  timestam,
+
+  p: string;
+  userAgen,
+
+  t: string;
+  ur,
+
+  l: string;
+  severit,
+
+  y: 'low' | 'medium' | 'high' | 'critical';
   context?: Record<string, unknown>;
 }
 export interface ErrorReporterConfig {
@@ -106,8 +114,12 @@ export class ErrorReporter {
   private getConsoleStyle(severity: ErrorReport['severity']): string {
     const styles = {
       low: 'color: #2196F3; font-weight: bold',
+
       medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
+
+      high: 'color: #F44336; font-weigh,
+
+      t: t,
       critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
     };
     return styles[severity];

@@ -10,15 +10,23 @@ const AISocialMediaManagerPage: React.FC = () => {
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
       icon: TrendingUp,
+
       title: 'Trend Analysis',
+
       description: 'Real-time trend monitoring and content suggestions based on viral topics'
-      icon: Users,
+      ico,
+
+      n: n,
       title: 'Audience Insights',
       description: 'Deep analytics on your audience behavior and engagement patterns'
       icon: Calendar,
+
       title: 'Smart Scheduling',
+
       description: 'AI-optimized posting times for maximum engagement across all platforms'
-      icon: BarChart,
+      ico,
+
+      n: n,
       title: 'Performance Analytics',
       description: 'Comprehensive reporting with actionable insights and ROI tracking'
       icon: MessageSquare,
@@ -91,12 +99,16 @@ const AISocialMediaManagerPage: React.FC = () => {
               Automate your social media presence with AI that creates, schedules, and optimizes 
               content across all platforms to maximize engagement and grow your audience.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hove,
+ r: from-pink-600 hove,
+ r: to-purple-700 transition-all duration-300 flex items-center">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
+              <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hove,
+ r: bg-pink-400 hove,
+ r: text-slate-900 transition-all duration-300">
                 Watch Demo
       </section>
 

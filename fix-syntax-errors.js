@@ -1,115 +1,74 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
-import { glob } from 'glob';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix syntax errors in a file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to fix common syntax errors in files
 function fixSyntaxErrors(filePath) {
   try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix double brace imports
-    content = content.replace(
-      /import\s*{\s*{\s*([^}]+)\s*}\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    );
-
-    // Fix malformed imports with extra braces
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-      (match, imports1, module1, imports2, module2) => {
-        if (module1 === module2) {
-        } else {
-        }
+    // Fix missing object structure patterns
+    const patterns = [
+      // Fix missing object braces
+      {
+        regex: /(\s+)([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)/g,
+        replacement: '$1$2: $3,\n$1$4: $5,\n$1$6: $7,\n$1$8: $8'
+      },
+      // Fix missing commas in object arrays
+      {
+        regex: /(\s+)([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)\s*([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+)/g,
+        replacement: '$1$2: $3,\n$1$4: $5,\n$1$6: $7,\n$1$8: $9,\n$1$10: $11'
       }
-    );
+    ];
 
-    // Fix empty imports
-    content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
-
-    // Fix malformed metadata exports
-    content = content.replace(/\/\/ Metadata moved to Helmet component\s*([^}]+)\s*};/g, '');
-
-    // Fix malformed function declarations
-    content = content.replace(
-      /export\s+default\s+function\s+([^(]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*([^<]+)\s*<\/Helmet>/g,
-      (match, funcName, helmetContent) => {
-        return `export default function ${funcName}() {\n  return (\n    <>\n      <Helmet>\n        ${helmetContent}\n      </Helmet>`;
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern.regex, pattern.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
-    );
-
-    // Fix missing semicolons and brackets
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-
-    // Clean up excessive whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    // Fix React import issues
-    content = content.replace(
-      /import\s*{\s*React\s*,\s*([^}]+)\s*}\s*from\s*['"]react['"];?/g,
-    );
-
-    // Fix Helmet import issues
-    content = content.replace(
-      /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g,
-      "import { Helmet } from 'react-helmet-async';"
-    );
-
-    // Fix Router import issues
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react-router-dom['"];?/g,
-    );
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-
-    return false;
-  }
-}
-
-// Main execution
-async function main() {
-
-
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      cwd: process.cwd(),
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.disabled/**',
-        '**/*backup*/**',
-        '**/*corrupted*/**',
-        '**/*temp*/**',
-        '**/*.broken/**',
-      ],
     });
 
-    for (const file of files) {
-      totalFiles++;
-      if (fixSyntaxErrors(file)) {
-        fixedFiles++;
-      }
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+}
+
+// Get all TypeScript/JSX files in src directory
+function getAllTsxFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
     }
   }
-
-
-
-
-  if (fixedFiles > 0) {
-
-  } else {
-
-  }
+  
+  return files;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-}
+// Process all files
+const srcDir = path.join(__dirname, 'src');
+const files = getAllTsxFiles(srcDir);
 
-export { fixSyntaxErrors };
+console.log(`Found ${files.length} TypeScript/JSX files to process`);
+
+files.forEach(file => {
+  fixSyntaxErrors(file);
+});
+
+console.log('Syntax error fixing completed');

@@ -294,9 +294,13 @@ const apiClient = new ApiClient({
   baseURL: process.env.NEXT_PUBLIC_API_URL || '',
   timeout: 30000,
   retries: 3,
+
   retryDelay: 1000,
+
   cacheOptions: {
-    ttl: 5 * 60 * 1000, // 5 minutes
+    tt,
+
+  l: l, // 5 minutes
   }
 });
 // Export both the class and default instance

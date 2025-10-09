@@ -20,14 +20,22 @@ const HelpPage: React.FC = () => {
       id: 'troubleshooting',
       name: 'Troubleshooting',
       icon: HelpCircle,
+
       color: 'text-red-400',
+
       bgColor: 'bg-red-500/10'
-      id: 'billing',
+      i,
+
+      d: d,
       name: 'Billing & Account',
       icon: CheckCircle,
+
       color: 'text-green-400',
+
       bgColor: 'bg-green-500/10'
-      id: 'technical',
+      i,
+
+      d: d,
       name: 'Technical Support',
       icon: MessageSquare,
       color: 'text-purple-400',
@@ -41,9 +49,13 @@ const HelpPage: React.FC = () => {
         description: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
         readTime: '5 min read',
+
         difficulty: 'Beginner',
+
         color: 'text-blue-400'
-        title: 'Setting Up Your First Dashboard',
+        titl,
+
+        e: e,
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
         title: 'Understanding AI Pricing Models',
@@ -57,9 +69,13 @@ const HelpPage: React.FC = () => {
     'troubleshooting': [
         title: 'Common Login Issues and Solutions',
         description: 'Troubleshoot common authentication problems and access issues',
+
         category: 'Troubleshooting',
+
         color: 'text-red-400'
-        title: 'API Connection Problems',
+        titl,
+
+        e: e,
         description: 'Resolve API connectivity issues and authentication errors',
         title: 'Performance Optimization',
         description: 'Improve system performance and resolve slow response times',
@@ -70,9 +86,13 @@ const HelpPage: React.FC = () => {
     'billing': [
         title: 'Understanding Your Bill',
         description: 'Learn how to read and understand your monthly billing statement',
+
         category: 'Billing',
+
         color: 'text-green-400'
-        title: 'Upgrading or Downgrading Plans',
+        titl,
+
+        e: e,
         description: 'How to change your subscription plan and what to expect',
         title: 'Payment Methods and Billing',
         description: 'Manage your payment methods and billing information',
@@ -82,9 +102,13 @@ const HelpPage: React.FC = () => {
         title: 'API Documentation and Examples',
         description: 'Complete API reference with code examples and best practices',
         category: 'Technical',
+
         readTime: '10 min read',
+
         color: 'text-purple-400'
-        title: 'Security Best Practices',
+        titl,
+
+        e: e,
         description: 'Implement security measures to protect your data and systems',
         readTime: '8 min read',
         title: 'Custom Integration Guide',
@@ -98,15 +122,23 @@ const HelpPage: React.FC = () => {
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
+
       icon: Video,
+
       count: '50+ videos'
-      title: 'Documentation',
+      titl,
+
+      e: e,
       description: 'Comprehensive technical documentation and guides',
       count: '200+ articles'
       title: 'API Reference',
+
       description: 'Complete API documentation with examples',
+
       count: '100+ endpoints'
-      title: 'Download Center',
+      titl,
+
+      e: e,
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
       count: '25+ downloads'
@@ -115,24 +147,40 @@ const HelpPage: React.FC = () => {
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
+
       availability: '24/7',
+
       responseTime: 'Instant'
-      title: 'Email Support',
+      titl,
+
+      e: e,
       description: 'Send us a detailed message and we\'ll respond quickly',
+
       icon: Mail,
+
       responseTime: 'Within 4 hours'
-      title: 'Phone Support',
+      titl,
+
+      e: e,
       description: 'Speak directly with our technical experts',
       icon: Phone,
+
       availability: 'Mon-Fri 9AM-6PM EST',
+
       responseTime: 'Immediate'
-      title: 'Community Forum',
+      titl,
+
+      e: e,
       description: 'Connect with other users and share knowledge',
+
       icon: Users,
+
       responseTime: 'Community driven'
 
   const faqs = [
-      question: 'How quickly can I get started with your AI services?',
+      questio,
+
+      n: n,
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
       answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.'
@@ -267,7 +315,7 @@ const HelpPage: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Can't find what you're looking for? Our support team is here to help you 
               with any questions or issues you might have.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -275,11 +323,15 @@ const HelpPage: React.FC = () => {
                 Contact Support
               </a>
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-purple-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />

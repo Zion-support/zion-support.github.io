@@ -13,7 +13,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
@@ -21,14 +21,22 @@ export default function HomePage() {
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-blue-600">
+              <Link href="/" className="text-gray-900 hove,
+ r: text-blue-600">
                 Home
-              <Link href="/services" className="text-gray-900 hover:text-blue-600">
+              </Link>
+              <Link href="/services" className="text-gray-900 hove,
+ r: text-blue-600">
                 Services
-              <Link href="/blog" className="text-gray-900 hover:text-blue-600">
+              </Link>
+              <Link href="/blog" className="text-gray-900 hove,
+ r: text-blue-600">
                 Blog
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
+              </Link>
+              <Link href="/contact" className="text-gray-900 hove,
+ r: text-blue-600">
                 Contact
+              </Link>
             </nav>
       </header>
       <main>
@@ -43,15 +51,19 @@ export default function HomePage() {
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hove,
+ r: bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
                 <Link className="w-5 h-5 ml-2" />
-              <a href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              <a href="te,
+ l: +13024640950"
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hove,
+ r: bg-white hove,
+ r: text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
               </a>

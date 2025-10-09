@@ -7,11 +7,19 @@ interface MicroSAASCardProps {
     icon: string;
     price: string;
     features: string[];
-    benefits: string[];
+    benefit,
+
+  s: string[];
     marketPrice?: string;
-    category: string;
-    technologies: string[];
-    contactInfo: string;
+    categor,
+
+  y: string;
+    technologie,
+
+  s: string[];
+    contactInf,
+
+  o: string;
     link?: string;
     popular?: boolean;
   };

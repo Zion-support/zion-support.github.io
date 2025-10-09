@@ -7,30 +7,62 @@ export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {
   environment: Environment;
   api: {
-    baseURL: string;
-    timeout: number;
-    retryAttempts: number;
-    enableCaching: boolean;
+    baseUR,
+
+  L: string;
+    timeou,
+
+  t: number;
+    retryAttempt,
+
+  s: number;
+    enableCachin,
+
+  g: boolean;
   };
   features: {
     enableAnalytics: boolean;
     enableErrorReporting: boolean;
-    enablePerformanceMonitoring: boolean;
-    enableAccessibility: boolean;
-    enableSEO: boolean;
-    enablePWA: boolean;
+    enablePerformanceMonitorin,
+
+  g: boolean;
+    enableAccessibilit,
+
+  y: boolean;
+    enableSE,
+
+  O: boolean;
+    enablePW,
+
+  A: boolean;
   };
   performance: {
-    enableCodeSplitting: boolean;
-    enableLazyLoading: boolean;
-    enableImageOptimization: boolean;
-    enableCaching: boolean;
+    enableCodeSplittin,
+
+  g: boolean;
+    enableLazyLoadin,
+
+  g: boolean;
+    enableImageOptimizatio,
+
+  n: boolean;
+    enableCachin,
+
+  g: boolean;
   };
   security: {
-    enableCSP: boolean;
-    enableCORS: boolean;
-    enableRateLimiting: boolean;
-    maxRequestsPerMinute: number;
+    enableCS,
+
+  P: boolean;
+    enableCOR,
+
+  S: boolean;
+    enableRateLimitin,
+
+  g: boolean;
+    maxRequestsPerMinut,
+
+  e: number;
   };
   ui: {
     theme: 'light' | 'dark' | 'auto';

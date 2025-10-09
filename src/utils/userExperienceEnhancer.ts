@@ -9,18 +9,34 @@ interface UXConfig {
   enableAnalytics: boolean;
   enableNotifications: boolean;
   enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
-  enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableOfflineSuppor,
+
+  t: boolean;
+  enablePushNotification,
+
+  s: boolean;
+  enableDarkMod,
+
+  e: boolean;
+  enableAnimation,
+
+  s: boolean;
 }
 interface UXMetrics {
   pageLoadTime: number;
   interactionTime: number;
-  bounceRate: number;
-  userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
+  bounceRat,
+
+  e: number;
+  userSatisfactio,
+
+  n: number;
+  accessibilityScor,
+
+  e: number;
+  performanceScor,
+
+  e: number;
 }
 class UserExperienceEnhancer {
   private config: UXConfig;

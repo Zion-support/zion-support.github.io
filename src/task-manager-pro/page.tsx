@@ -87,9 +87,13 @@ const TaskManagerProPage: React.FC = () => {
       name: 'Rachel Green',
       company: 'Marketing Agency',
       role: 'Project Manager',
+
       content: 'Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.',
+
       rating: 5
-      name: 'Tom Anderson',
+      nam,
+
+      e: e,
       company: 'Software Startup',
       role: 'CEO',
       content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
@@ -116,17 +120,21 @@ const TaskManagerProPage: React.FC = () => {
             Supercharge your productivity with our AI-powered task management platform. 
             Get intelligent prioritization, automated workflows, and team collaboration 
             tools that help you achieve more in less time.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hove,
+ r: to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Cal,
+ l: (302) 464-0950
             </a>
             <Link 
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hove,
+ r: bg-white hove,
+ r: text-indigo-600 transition-all duration-300"
               Start Free Trial
             </Link>
 

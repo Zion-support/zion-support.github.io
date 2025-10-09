@@ -5,11 +5,19 @@
  */
 export interface EnvConfig {
   nodeEnv: 'development' | 'production' | 'test';
-  apiUrl: string;
+  apiUr,
+
+  l: string;
   apiKey?: string;
-  enableAnalytics: boolean;
-  enableLogging: boolean;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
+  enableAnalytic,
+
+  s: boolean;
+  enableLoggin,
+
+  g: boolean;
+  logLeve,
+
+  l: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
 }

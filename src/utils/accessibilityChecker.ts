@@ -63,13 +63,21 @@ export interface A11yCheckResult {
   /** Whether the check passed */
   passed: boolean;
   /** Number of issues found */
-  issueCount: number;
+  issueCoun,
+
+  t: number;
   /** List of issues */
-  issues: A11yIssue[];
+  issue,
+
+  s: A11yIssue[];
   /** Timestamp of the check */
-  timestamp: Date;
+  timestam,
+
+  p: Date;
   /** Overall accessibility score (0-100) */
-  score: number;
+  scor,
+
+  e: number;
 }
 /**
  * Accessibility Checker class
@@ -443,8 +451,12 @@ export class AccessibilityChecker {
           type: 'invalid-aria-role',
           severity: A11ySeverity.MODERATE,
           wcagLevel: WCAGLevel.A,
+
           wcagCriterion: '4.1.2',
-          message: `Invalid ARIA role: "${role}"`,
+
+          message: `Invalid ARIA rol,
+
+          e: e}"`,
           element: el.tagName.toLowerCase(),
           fix: 'Use a valid ARIA role or remove the role attribute'
         });
@@ -458,8 +470,12 @@ export class AccessibilityChecker {
             type: 'aria-labelledby-missing',
             severity: A11ySeverity.SERIOUS,
             wcagLevel: WCAGLevel.A,
+
             wcagCriterion: '4.1.2',
-            message: `aria-labelledby references non-existent element: "${labelledBy}"`,
+
+            message: `aria-labelledby references non-existent elemen,
+
+            t: t}"`,
             element: el.tagName.toLowerCase(),
             fix: 'Ensure the referenced element exists'
           });

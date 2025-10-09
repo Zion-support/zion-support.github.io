@@ -12,9 +12,13 @@ const PartnersPage: React.FC = () => {
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
+
       bgColor: 'bg-blue-500/10',
+
       partners: [
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
+        { nam,
+
+      e: e, description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
         { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
@@ -49,15 +53,23 @@ const PartnersPage: React.FC = () => {
 
   const benefits = [
       icon: Globe,
+
       title: 'Global Reach',
+
       description: 'Access to worldwide markets and customers through our partner network'
-      icon: Users,
+      ico,
+
+      n: n,
       title: 'Expertise Sharing',
       description: 'Collaborative knowledge sharing and best practices across industries'
       icon: Star,
+
       title: 'Innovation',
+
       description: 'Joint innovation initiatives and cutting-edge technology development'
-      icon: CheckCircle,
+      ico,
+
+      n: n,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
 
@@ -166,7 +178,7 @@ const PartnersPage: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
               Let's build the future together.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -175,11 +187,15 @@ const PartnersPage: React.FC = () => {
                 Become a Partner
               </a>
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-purple-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />

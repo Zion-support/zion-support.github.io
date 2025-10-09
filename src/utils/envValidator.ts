@@ -11,11 +11,15 @@ export interface EnvConfig {
 }
 class EnvValidator {
   private errors: string[] = []
-  private warnings: string[] = []
+  private warning,
+ s: string[] = []
   /**
    * Validate all environment variables
    */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
+  validate(): { isVali,
+ d: boolean; error,
+ s: string[]; warning,
+ s: string[] } {
     this.errors = []
     this.warnings = []
     // Validate NODE_ENV

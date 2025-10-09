@@ -45,18 +45,34 @@ interface SystemMetrics {
     firstContentfulPaint: number;
     largestContentfulPaint: number;
     firstInputDelay: number;
-    cumulativeLayoutShift: number;
-  errors: {
-    total: number;
-    byType: Record<string, number>;
+    cumulativeLayoutShif,
+
+  t: number;
+  error,
+
+  s: {
+    tota,
+
+  l: number;
+    byTyp,
+
+  e: Record<string, number>;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
     recent: Array<{
       id: string;
-      message: string;
-      type: string;
-      severity: string;
-      timestamp: string;
+      messag,
+
+    e: string;
+      typ,
+
+    e: string;
+      severit,
+
+    y: string;
+      timestam,
+
+    p: string;
     }>;
   memory: {
     used: number;
@@ -64,15 +80,23 @@ interface SystemMetrics {
     percentage: number;
   network: {
     effectiveType: string;
-    downlink: number;
-    rtt: number;
-    saveData: boolean;
+    downlin,
+
+  k: number;
+    rt,
+
+  t: number;
+    saveDat,
+
+  a: boolean;
 interface SystemMonitorProps {
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
+const SystemMonito,
+
+  r: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
@@ -104,9 +128,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
+
           bySeverity: errorStats.errorsBySeverity,
+
           recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
+            i,
+
+          d: d,
             message: error.message,
             type: error.type,
             severity: error.severity,
@@ -153,9 +181,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const connection = nav.connection;
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
+
         rtt: connection?.rtt || 0,
+
         saveData: connection?.saveData || false
-      effectiveType: 'unknown',
+      effectiveTyp,
+
+        e: e,
       downlink: 0,
       rtt: 0,
       saveData: false

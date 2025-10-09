@@ -45,14 +45,18 @@ export default function ServicesAdvertisingPage() {
       </section>
       {/* Key Metrics */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,
+ g: px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl m,
+ d: text-4xl font-bold text-gray-900 mb-4">
               Proven Advertising Results
             </h2>
             <p className="text-xl text-gray-600">
               Our AI-powered advertising delivers measurable business impact
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 m,
+ d: grid-cols-2 l,
+ g: grid-cols-4 gap-8">
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
               <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
@@ -170,15 +174,19 @@ export default function ServicesAdvertisingPage() {
                 Contact Sales
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+          <h2 className="text-3xl m,
+ d: text-4xl font-bold mb-4">
             Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100">
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+              className="bg-white text-blue-600 hove,
+ r: bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               Get Free Assessment
               href="/case-studies"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              className="border-2 border-white text-white hove,
+ r: bg-white hove,
+ r: text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               View Success Stories
   );
 };

@@ -2,10 +2,18 @@
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  firstContentfulPain,
+
+  t: number;
+  largestContentfulPain,
+
+  t: number;
+  cumulativeLayoutShif,
+
+  t: number;
+  firstInputDela,
+
+  y: number;
 }
 export const _usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);

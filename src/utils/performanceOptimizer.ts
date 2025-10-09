@@ -11,10 +11,18 @@
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
-  memoryUsage: number;
-  bundleSize: number;
-  cacheHitRate: number;
-  lazyLoading: boolean;
+  memoryUsag,
+
+  e: number;
+  bundleSiz,
+
+  e: number;
+  cacheHitRat,
+
+  e: number;
+  lazyLoadin,
+
+  g: boolean;
   firstContentfulPaint?: number;
   fcp?: number;
   lcp?: number;
@@ -26,10 +34,18 @@ interface PerformanceMetrics {
 }
 interface OptimizationConfig {
   enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enableImageOptimization: boolean;
-  enableCaching: boolean;
-  enableCompression: boolean;
+  enableCodeSplittin,
+
+  g: boolean;
+  enableImageOptimizatio,
+
+  n: boolean;
+  enableCachin,
+
+  g: boolean;
+  enableCompressio,
+
+  n: boolean;
 }
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {

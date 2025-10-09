@@ -216,8 +216,12 @@ class HealthCheckService {
     if (missingAPIs.length > 0) {
       return {
         name: 'browser-apis',
+
         status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
+
+        message: `Missing browser API,
+
+        s: s, ')}`,
         details: { missingAPIs }
       }
     }

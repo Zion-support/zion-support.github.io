@@ -27,17 +27,21 @@ ${pages.map(page => `  <url>
 const Sitemap: React.FC = () => {
   const _sitemap = generateSitemap(getAllPages());
   <url>
-    <loc>https://ziontechgroup.com/</loc>
+    <loc>http,
+ s: //ziontechgroup.com/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
-    <loc>https://ziontechgroup.com/about</loc>
+    <loc>http,
+ s: //ziontechgroup.com/about</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
-    <loc>https://ziontechgroup.com/services</loc>
+    <loc>http,
+ s: //ziontechgroup.com/services</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
-    <loc>https://ziontechgroup.com/contact</loc>
+    <loc>http,
+ s: //ziontechgroup.com/contact</loc>
     <priority>0.7</priority>
   
   return (

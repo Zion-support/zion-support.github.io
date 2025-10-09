@@ -22,11 +22,19 @@ export interface ServiceOptions {
 }
 export interface CacheEntry<T> {
   data: T;
-  timestamp: number;
+  timestam,
+
+  p: number;
 export class BaseService {
-  protected baseUrl: string;
-  protected options: ServiceOptions;
-  private cache: Map<string, CacheEntry<unknown>> = new Map();
+  protected baseUr,
+
+  l: string;
+  protected option,
+
+  s: ServiceOptions;
+  private cach,
+
+  e: Map<string, CacheEntry<unknown>> = new Map();
   constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {

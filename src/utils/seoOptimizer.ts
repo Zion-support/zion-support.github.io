@@ -5,10 +5,18 @@
  */
 interface SEOConfig {
   siteName: string;
-  siteUrl: string;
-  defaultTitle: string;
-  defaultDescription: string;
-  defaultImage: string;
+  siteUr,
+
+  l: string;
+  defaultTitl,
+
+  e: string;
+  defaultDescriptio,
+
+  n: string;
+  defaultImag,
+
+  e: string;
   twitterHandle?: string;
   facebookAppId?: string;
   googleAnalyticsId?: string;
@@ -271,10 +279,18 @@ Allow: /
 Sitemap: ${this.config.siteUrl}/sitemap.xml
 # Disallow admin and private areas
 Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /static/`;
+Disallo,
+
+w: /private/
+Disallo,
+
+w: /api/
+Disallo,
+
+w: /_next/
+Disallo,
+
+w: /static/`;
   }
   /**
    * Check for SEO issues
@@ -328,8 +344,12 @@ const defaultConfig: SEOConfig = {
   siteName: 'Zion Tech Group',
   siteUrl: 'https://zion.app',
   defaultTitle: 'Advanced AI and IT Solutions',
+
   defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.',
-  defaultImage: 'https://zion.app/og-image.jpg',
+
+  defaultImage: 'http,
+
+  s: s,
   twitterHandle: 'ZionTechGroup',
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID,
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID

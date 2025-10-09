@@ -22,9 +22,13 @@ const MarketplacePage: React.FC = () => {
       name: 'Talent',
       icon: Users,
       color: 'text-green-400',
+
       bgColor: 'bg-green-500/10',
+
       description: 'Expert professionals and consultants'
-      id: 'equipment',
+      i,
+
+      d: d,
       name: 'Equipment',
       icon: Wrench,
       color: 'text-purple-400',
@@ -83,9 +87,13 @@ const MarketplacePage: React.FC = () => {
       projects: 45,
       rate: '$150/hour',
       image: '👩‍💼',
+
       verified: true,
+
       available: true
-      name: 'Michael Rodriguez',
+      nam,
+
+      e: e,
       title: 'Cloud Architecture Expert',
       expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
       experience: '12 years',
@@ -98,11 +106,15 @@ const MarketplacePage: React.FC = () => {
       experience: '10 years',
       projects: 89,
       rate: '$180/hour',
+
       image: '👩‍🔬',
+
       available: false
 
   const equipment = [
-      name: 'AI Workstation Pro',
+      nam,
+
+      e: e,
       description: 'High-performance workstation optimized for AI development and training',
       category: 'Hardware',
       price: '$4,999',
@@ -139,27 +151,43 @@ const MarketplacePage: React.FC = () => {
 
   const stats = [
       value: '500+',
+
       label: 'Products Available',
+
       color: 'text-blue-400'
-      value: '200+',
+      valu,
+
+      e: e,
       label: 'Expert Professionals',
       color: 'text-green-400'
       value: '100+',
+
       label: 'Equipment Solutions',
+
       color: 'text-purple-400'
-      icon: Star,
+      ico,
+
+      n: n,
       value: '4.8',
+
       label: 'Average Rating',
+
       color: 'text-yellow-400'
 
   const benefits = [
-      icon: CheckCircle,
+      ico,
+
+      n: n,
       title: 'Verified Vendors',
       description: 'All vendors are thoroughly vetted and verified'
       icon: Shield,
+
       title: 'Secure Transactions',
+
       description: 'Bank-level security for all marketplace transactions'
-      icon: Clock,
+      ico,
+
+      n: n,
       title: '24/7 Support',
       description: 'Round-the-clock support for all marketplace activities'
       icon: Award,
@@ -202,9 +230,13 @@ const MarketplacePage: React.FC = () => {
                   placeholder="Search marketplace..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focu,
+ s: border-cyan-400 focu,
+ s: ring-2 focu,
+ s: ring-cyan-400/20"
                 />
-              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
+              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hove,
+ r: bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
                 Filters
               </button>
@@ -307,7 +339,7 @@ const MarketplacePage: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Browse our marketplace to discover the tools, talent, and equipment you need 
               to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -315,11 +347,15 @@ const MarketplacePage: React.FC = () => {
                 Start Shopping
               </a>
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-purple-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />

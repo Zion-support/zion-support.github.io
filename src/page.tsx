@@ -363,10 +363,13 @@ const HomePage: React.FC = () => {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
+
             areaServed: 'US',
+
             availableLanguage: 'en'
-          address: {
-            '@type': 'PostalAddress',
+          addres,
+
+            s: s,
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
@@ -420,44 +423,60 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-advanced neon-pulse glitch"
+                className="text-5xl md: text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-advanced neon-pulse glitch"
                 data-text="Zion Tech Group"
                 Zion Tech Group
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
+              <p className="text-sm s,
+ m: text-base m,
+ d: text-lg l,
+ g: text-xl text-gray-300 max-w-4xl mx-auto mb-6 s,
+ m: mb-8 leading-relaxed px-4">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
+              <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">AI-Powered Solutions</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                  <div className="text-2xl s,
+ m: text-3xl mb-3 neon-pulse">🚀</div>
+                  <h3 className="font-bold text-white mb-3 text-sm s,
+ m: text-base l,
+ g: text-lg neon-text">AI-Powered Solutions</h3>
+                  <p className="text-xs s,
+ m: text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
+                  <div className="text-2xl sm: text-3xl mb-3 neon-pulse">🔒</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Global Reach</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+                  <p className="text-xs s,
+ m: text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col s,
+ m: flex-row gap-4 justify-center items-center">
                 <Link
                   to="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyber-button px-8 py-4 text-lg font-semibold hove,
+ r: scale-105 transition-all duration-300"
                   Get Started Today
                 </Link>
-                  href="tel:+13024640950"
+                  href="te,
+ l: +13024640950"
                   onClick={handlePhoneClick}
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto"
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="text-sm sm:text-base">+1 302 464 0950</span>
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 sm: px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full s,
+ m: w-auto"
+                  <Phone className="w-4 h-4 s,
+ m: w-5 s,
+ m: h-5" />
+                  <span className="text-sm s,
+ m: text-base">+1 302 464 0950</span>
           </section>
 
           {/* Micro SAAS Services Section */}
@@ -573,7 +592,7 @@ const HomePage: React.FC = () => {
 
           {/* Specialized Solutions Section */}
           <section className="mb-16" aria-labelledby="specialized-heading">
-            <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            <h2 id="specialized-heading" className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text">
               Specialized Solutions
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
               Cutting-edge technologies for next-generation business solutions
@@ -597,14 +616,18 @@ const HomePage: React.FC = () => {
                   <Settings className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Autonomous Systems</h3>
                   Self-managing and self-optimizing systems for enterprise operations
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Feature,
+ s: </h4>
                       Self-Healing Systems
                       Predictive Maintenance
                       Resource Optimization
                       Performance Monitoring
                   <div className="text-lg font-bold mb-2 neon-text text-cyan-400">Custom Pricing</div>
                     href="/autonomous-systems" 
-                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-cyan-400 border border-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hove,
+ r: scale-105 text-cyan-400 border border-cyan-400 hove,
+ r: bg-cyan-400 hove,
+ r: text-slate-900"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <Globe className="w-8 h-8 text-white" />
@@ -643,22 +666,26 @@ const HomePage: React.FC = () => {
                       Executive Dashboards
                   <div className="text-lg font-bold mb-2 neon-text text-indigo-400">$1,799/month</div>
                     href="/business-intelligence" 
-                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-indigo-400 border border-indigo-400 hover:bg-indigo-400 hover:text-slate-900"
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover: scale-105 text-indigo-400 border border-indigo-400 hover:bg-indigo-400 hover:text-slate-900"
 
                 <div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-slate-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                 <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Robotics Solutions</h3>
                   Intelligent robotic solutions for manufacturing and service industries
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Feature,
+ s: </h4>
                       Robotic Process Automation
                       Computer Vision Integration
                       Human-Robot Collaboration
                       Maintenance Systems
                   <div className="text-lg font-bold mb-2 neon-text text-gray-400">Custom Pricing</div>
                     href="/robotics" 
-                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 text-gray-400 border border-gray-400 hover:bg-gray-400 hover:text-slate-900"
+                    className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hove,
+ r: scale-105 text-gray-400 border border-gray-400 hove,
+ r: bg-gray-400 hove,
+ r: text-slate-900"
 
           {/* Contact Information */}
-          <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="contact-heading">
+          <section className="mb-12 sm: mb-16 lg:mb-20" aria-labelledby="contact-heading">
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Get In Touch
               Ready to transform your business? Contact us for a free consultation and discover how our solutions can drive your success.
@@ -671,15 +698,19 @@ const HomePage: React.FC = () => {
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
                   Call Now
               
-              <div className="holographic-card-advanced p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="holographic-card-advanced p-6 text-center hove,
+ r: scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
+                  href="mailt,
+ o: kleber@ziontechgroup.com" 
+                  className="text-pink-400 hove,
+ r: text-pink-300 font-medium transition-colors"
                   Send Email
               
-              <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-entanglement p-6 text-center hove,
+ r: scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>

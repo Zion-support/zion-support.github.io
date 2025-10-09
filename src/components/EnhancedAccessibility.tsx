@@ -3,10 +3,18 @@ interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-  screenReader: boolean;
-  focusVisible: boolean;
-  zoomLevel: number;
-  colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+  screenReade,
+
+  r: boolean;
+  focusVisibl,
+
+  e: boolean;
+  zoomLeve,
+
+  l: number;
+  colorBlin,
+
+  d: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 interface AccessibilityProps {

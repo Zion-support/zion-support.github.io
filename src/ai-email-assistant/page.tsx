@@ -19,16 +19,20 @@ export default function AIEmailAssistantPage() {
             priority sorting, and automated follow-ups. Save hours every day with smart email automation.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950"
-              className="cyber-button w-full sm:w-auto text-center"
+              className="cyber-button w-full s,
+ m: w-auto text-center"
             >
-              📞 Call: (302) 464-0950
+              📞 Cal,
+ l: (302) 464-0950
             </a>
             <a 
               href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-white hove,
+ r: text-indigo-600 transition-all duration-300"
             >
               Get Free Demo
             </a>
@@ -162,16 +166,20 @@ export default function AIEmailAssistantPage() {
             Contact us today to schedule a free demo and see how our AI Email Assistant 
             can revolutionize your business communication.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
             >
-              📞 Call: (302) 464-0950
+              📞 Cal,
+ l: (302) 464-0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              href="mailt,
+ o: kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-cyan-400 hove,
+ r: text-black transition-all duration-300"
             >
               📧 Email Us
             </a>

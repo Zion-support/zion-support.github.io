@@ -13,11 +13,19 @@ interface BlogPost {
   readTime: string;
   date: string;
   path: string;
-  image: string;
-  featured: boolean;
+  imag,
+
+  e: string;
+  feature,
+
+  d: boolean;
   stats?: {
-    views: number;
-    engagement: number;
+    view,
+
+  s: number;
+    engagemen,
+
+  t: number;
   };
 }
 
@@ -36,9 +44,14 @@ export default function BlogPage() {
       date: '2025-01-28',
       path: '/blog/ai-enterprise-transformation-2025',
       image: '💰',
+
       featured: true,
-      stats: { views: 18750, engagement: 97 }
+
+      stats: { view,
+
+      s: s, engagement: 97 }
     },
+    {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
       description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
@@ -46,8 +59,12 @@ export default function BlogPage() {
       readTime: '15 min read',
       date: '2025-01-15',
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
+
       image: '🚀',
-      stats: { views: 12500, engagement: 94 }
+
+      stats: { view,
+
+      s: s, engagement: 94 }
       id: 'ai-2026-autonomous-enterprise-architecture',
       title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
       description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
@@ -55,8 +72,12 @@ export default function BlogPage() {
       readTime: '12 min read',
       date: '2026-01-15',
       path: '/blog/ai-2026-autonomous-enterprise-architecture',
+
       image: '🏗️',
-      stats: { views: 8900, engagement: 91 }
+
+      stats: { view,
+
+      s: s, engagement: 91 }
       id: 'ai-2026-autonomous-agent-factories',
       title: 'AI 2026: Autonomous Agent Factories Revolution',
       description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
@@ -65,8 +86,12 @@ export default function BlogPage() {
       date: '2026-02-01',
       path: '/blog/ai-2026-autonomous-agent-factories',
       image: '🤖',
+
       featured: false,
-      stats: { views: 7200, engagement: 88 }
+
+      stats: { view,
+
+      s: s, engagement: 88 }
       id: 'ai-2026-consensus-intelligence-breakthrough',
       title: 'AI 2026: Consensus Intelligence Breakthrough',
       description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
@@ -74,8 +99,12 @@ export default function BlogPage() {
       readTime: '14 min read',
       date: '2026-02-15',
       path: '/blog/ai-2026-consensus-intelligence-breakthrough',
+
       image: '🧠',
-      stats: { views: 6500, engagement: 85 }
+
+      stats: { view,
+
+      s: s, engagement: 85 }
       id: 'ai-cost-optimization-breakthrough-2026',
       title: 'AI Cost Optimization Breakthrough 2026',
       description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
@@ -83,8 +112,12 @@ export default function BlogPage() {
       readTime: '20 min read',
       date: '2026-03-01',
       path: '/blog/ai-cost-optimization-breakthrough-2026',
+
       image: '💡',
-      stats: { views: 9800, engagement: 92 }
+
+      stats: { view,
+
+      s: s, engagement: 92 }
       id: 'ai-2026-hyperconscious-computing-revolution',
       title: 'AI 2026: Hyperconscious Computing Revolution',
       description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
@@ -92,8 +125,12 @@ export default function BlogPage() {
       readTime: '16 min read',
       date: '2026-03-15',
       path: '/blog/ai-2026-hyperconscious-computing-revolution',
+
       image: '⚡',
-      stats: { views: 5800, engagement: 87 }
+
+      stats: { view,
+
+      s: s, engagement: 87 }
       id: 'ai-enterprise-transformation-ultimate-guide-2025',
       title: 'AI Enterprise Transformation: Ultimate Guide 2025',
       description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
@@ -101,8 +138,12 @@ export default function BlogPage() {
       readTime: '45 min read',
       date: '2025-02-10',
       path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
+
       image: '📚',
-      stats: { views: 11200, engagement: 93 }
+
+      stats: { view,
+
+      s: s, engagement: 93 }
   ], []);
 
   useEffect(() => {

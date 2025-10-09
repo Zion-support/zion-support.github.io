@@ -13,21 +13,37 @@ const SmartAnalyticsPage: React.FC = () => {
     },
       icon: Brain,
       title: 'AI-Powered Insights',
+
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
+
       benefit: 'Discover hidden opportunities'
-      icon: Target,
+      ico,
+
+      n: n,
       title: 'Custom Metrics',
+
       description: 'Track exactly what matters to your business with customizable KPIs and automated reporting.',
+
       benefit: 'Focus on what drives growth'
-      icon: Zap,
+      ico,
+
+      n: n,
       title: 'Automated Alerts',
+
       description: 'Get instant notifications when important metrics change or when action is needed.',
+
       benefit: 'Never miss critical changes'
-      icon: Users,
+      ico,
+
+      n: n,
       title: 'Team Collaboration',
+
       description: 'Share insights and reports with your team with role-based access and collaborative features.',
+
       benefit: 'Align your entire organization'
-      icon: Shield,
+      ico,
+
+      n: n,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
@@ -75,7 +91,7 @@ const SmartAnalyticsPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Smart Analytics
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
@@ -83,14 +99,18 @@ const SmartAnalyticsPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+13024640950"
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
+              href="te,
+ l: +13024640950"
+              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-cyan-700 transition-colors"
             >
-              📞 Call: (302) 464-0950
+              📞 Cal,
+ l: (302) 464-0950
             </a>
             <Link
               to="/contact"
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-purple-700 transition-colors"
               Get Free Consultation
             </Link>
           </div>
@@ -159,13 +179,17 @@ const SmartAnalyticsPage: React.FC = () => {
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
-            <div className="grid md:grid-cols-3 gap-6 text-gray-300">
+            <div className="grid md: grid-cols-3 gap-6 text-gray-300">
               <div className="flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="tel:+13024640950" className="hover:text-white transition-colors">
+                <a href="te,
+ l: +13024640950" className="hove,
+ r: text-white transition-colors">
                   +1 (302) 464-0950
                 <Mail className="w-5 h-5 mr-2 text-cyan-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <a href="mailt,
+ o: kleber@ziontechgroup.com" className="hove,
+ r: text-white transition-colors">
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>

@@ -32,10 +32,18 @@ export interface ErrorMetadata {
 export interface TrackedError {
   id: string;
   message: string;
-  metadata: ErrorMetadata;
-  occurrences: number;
-  firstSeen: number;
-  lastSeen: number;
+  metadat,
+
+  a: ErrorMetadata;
+  occurrence,
+
+  s: number;
+  firstSee,
+
+  n: number;
+  lastSee,
+
+  n: number;
 }
 class ErrorTrackingService {
   private static instance: ErrorTrackingService;
@@ -60,9 +68,13 @@ class ErrorTrackingService {
     window.addEventListener('error', event => {
       this.trackError(event.error || new Error(event.message), {
         category: ErrorCategory.Runtime,
+
         severity: ErrorSeverity.High,
+
         context: {
-          filename: event.filename,
+          filenam,
+
+        e: e,
           lineno: event.lineno,
           colno: event.colno
         }
@@ -72,8 +84,12 @@ class ErrorTrackingService {
     window.addEventListener('unhandledrejection', event => {
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
         category: ErrorCategory.Runtime,
+
         severity: ErrorSeverity.Critical,
-        context: { reason: event.reason }
+
+        context: { reaso,
+
+        n: n}
       });
     });
   }

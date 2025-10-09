@@ -17,11 +17,19 @@ export interface ErrorReport {
   message: string;
   stack?: string;
   component?: string;
-  timestamp: number;
-  userAgent: string;
-  url: string;
+  timestam,
+
+  p: number;
+  userAgen,
+
+  t: string;
+  ur,
+
+  l: string;
 class MonitoringService {
-  private metrics: PerformanceMetrics = {}
+  private metric,
+
+  s: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null;
   constructor() {
@@ -75,9 +83,13 @@ class MonitoringService {
             if (entry.duration > 1000) {
               console.warn('Slow resource detected:', {
                 name: entry.name,
+
                 duration: entry.duration,
+
                 type: entry.initiatorType;
-        resourceObserver.observe({ entryTypes: ['resource'] });
+        resourceObserver.observe({ entryType,
+
+                s: s});
       } catch (_error) {
         console.error('Error monitoring resources:', _error);
   private setupErrorHandling(): void {

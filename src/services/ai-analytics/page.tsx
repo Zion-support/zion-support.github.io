@@ -49,17 +49,25 @@ const AIAnalyticsPage: React.FC = () => {
       color: 'text-green-400'
       title: 'Customer Behavior Insights',
       description: 'Understand customer preferences and behavior patterns for better targeting',
+
       icon: Users,
+
       color: 'text-blue-400'
-      title: 'Financial Forecasting',
+      titl,
+
+      e: e,
       description: 'Predict revenue, expenses, and cash flow with high accuracy',
       color: 'text-purple-400'
       title: 'Operational Efficiency',
+
       description: 'Optimize business processes and identify areas for improvement',
+
       color: 'text-yellow-400'
 
   const pricingTiers = [
-      name: 'Starter',
+      nam,
+
+      e: e,
       price: '$1,500',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI analytics',
@@ -82,9 +90,13 @@ const AIAnalyticsPage: React.FC = () => {
         'Custom integrations',
         'API access'
       color: 'text-purple-400',
+
       bgColor: 'bg-purple-500/10',
+
       popular: true
-      name: 'Enterprise',
+      nam,
+
+      e: e,
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations with extensive requirements',
@@ -100,9 +112,13 @@ const AIAnalyticsPage: React.FC = () => {
 
   const benefits = [
       icon: Star,
+
       title: '95% Accuracy',
+
       description: 'Industry-leading accuracy in predictions and insights'
-      title: 'Real-time Processing',
+      titl,
+
+      e: e,
       description: 'Instant analysis of data as it comes in'
       title: 'Actionable Insights',
       description: 'Clear, actionable recommendations for business improvement'
@@ -217,15 +233,19 @@ const AIAnalyticsPage: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey with AI analytics today. Get a free consultation and discover 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Consultation
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-purple-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />

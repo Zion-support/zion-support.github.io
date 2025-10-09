@@ -19,11 +19,15 @@ const SitemapPage: React.FC = () => {
             <h2 className="text-xl font-bold text-white mb-4">AI Services</h2>
               <li><a href="/ai-services" className="text-cyan-400 hover:text-cyan-300">AI Solutions</a></li>
               <li><a href="/machine-learning" className="text-cyan-400 hover:text-cyan-300">Machine Learning</a></li>
-              <li><a href="/automation" className="text-cyan-400 hover:text-cyan-300">Automation</a></li>
+              <li><a href="/automation" className="text-cyan-400 hove,
+ r: text-cyan-300">Automation</a></li>
             <h2 className="text-xl font-bold text-white mb-4">IT Services</h2>
-              <li><a href="/it-services" className="text-cyan-400 hover:text-cyan-300">IT Solutions</a></li>
-              <li><a href="/cloud-services" className="text-cyan-400 hover:text-cyan-300">Cloud Services</a></li>
-              <li><a href="/cybersecurity" className="text-cyan-400 hover:text-cyan-300">Cybersecurity</a></li>
+              <li><a href="/it-services" className="text-cyan-400 hove,
+ r: text-cyan-300">IT Solutions</a></li>
+              <li><a href="/cloud-services" className="text-cyan-400 hove,
+ r: text-cyan-300">Cloud Services</a></li>
+              <li><a href="/cybersecurity" className="text-cyan-400 hove,
+ r: text-cyan-300">Cybersecurity</a></li>
   );
 };
 

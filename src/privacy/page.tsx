@@ -17,7 +17,18 @@ const PrivacyPage: React.FC = () => {
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Contact information (name, email, phone number)</li><li>Business information (company name, industry, size)</li><li>Service usage data and preferences</li><li>Communication records and support requests</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Eye className="w-6 h-6 mr-3 text-cyan-400" />
                 How We Use Your Information
                 We use the information we collect to provide, maintain, and improve our services:
-              </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Deliver and maintain our AI services</li><li>Process transactions and send related information</li><li>Send technical notices and support messages</li><li>Respond to your comments and questions</li><li>Improve our services and develop new features</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Lock className="w-6 h-6 mr-3 text-cyan-400" />
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>Deliver and maintain our AI services</li>
+                <li>Process transactions and send related information</li>
+                <li>Send technical notices and support messages</li>
+                <li>Respond to your comments and questions</li>
+                <li>Improve our services and develop new features</li>
+              </ul>
+            </section>
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Lock className="w-6 h-6 mr-3 text-cyan-400" />
                 Data Security
                 We implement appropriate security measures to protect your personal information against 
                 unauthorized access, alteration, disclosure, or destruction.
@@ -30,13 +41,16 @@ const PrivacyPage: React.FC = () => {
                 You have the right to:
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Access your personal information</li><li>Correct inaccurate or incomplete data</li><li>Request deletion of your data</li><li>Object to processing of your data</li><li>Data portability</li><li>Withdraw consent at any time</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4">
                 Contact Us
-                If you have any questions about this Privacy Policy, please contact us:
-              </p><div className="flex flex-col sm:flex-row gap-4"><a
-                  href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                If you have any questions about this Privacy Policy, please contact us: </p><div className="flex flex-col sm:flex-row gap-4"><a
+                  href="te,
+ l: +13024640950" className="flex items-center text-cyan-400 hove,
+ r: text-cyan-300 transition-colors"
                 ><Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
                 </a><a
-                  href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  href="mailt,
+ o: kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hove,
+ r: text-cyan-300 transition-colors"
                 ><Mail className="w-5 h-5 mr-2" />
                   kleber@ziontechgroup.com
                 </a></div></section></div></div></main><Footer /></div>

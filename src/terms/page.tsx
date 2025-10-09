@@ -32,13 +32,16 @@ const TermsPage: React.FC = () => {
                 damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
                 to use our services, even if we have been notified orally or in writing of the possibility of such damage.
                 Contact Information
-                If you have any questions about these Terms of Service, please contact us:
-              </p><div className="flex flex-col sm:flex-row gap-4"><a
-                  href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                If you have any questions about these Terms of Service, please contact us: </p><div className="flex flex-col sm:flex-row gap-4"><a
+                  href="te,
+ l: +13024640950" className="flex items-center text-cyan-400 hove,
+ r: text-cyan-300 transition-colors"
                 ><Phone className="w-5 h-5 mr-2" />
                   (302) 464-0950
                 </a><a
-                  href="mailto:kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  href="mailt,
+ o: kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hove,
+ r: text-cyan-300 transition-colors"
                 ><Mail className="w-5 h-5 mr-2" />
                   kleber@ziontechgroup.com
                 </a></div></section></div></div></main><Footer /></div>

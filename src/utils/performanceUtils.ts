@@ -256,10 +256,14 @@ export function getMemoryUsage(): {
  */
 export class FPSMonitor {
   private _frames: number = 0;
-  private lastTime: number = performance.now();
-  private fps: number = 0;
-  private rafId: number = 0;
-  start(callback?: (fps: number) => void): void {
+  private lastTim,
+ e: number = performance.now();
+  private fp,
+ s: number = 0;
+  private rafI,
+ d: number = 0;
+  start(callback?: (fp,
+ s: number) => void): void {
     const loop = () => {
       const now = performance.now();
       this.frames++;

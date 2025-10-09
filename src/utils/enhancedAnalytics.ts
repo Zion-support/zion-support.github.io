@@ -60,9 +60,13 @@ class EnhancedAnalytics {
     // Track initialization
     this.trackEvent({
       category: 'System',
+
       action: 'Analytics Initialized',
+
       metadata: {
-        timestamp: new Date().toISOString(),
+        timestam,
+
+      p: p,
         userAgent: navigator.userAgent
       }
     });
@@ -117,9 +121,13 @@ class EnhancedAnalytics {
     this.trackEvent({
       category: 'Navigation',
       action: 'Page View',
+
       label: pagePath,
+
       metadata: {
-        pageTitle: pageTitle || document.title,
+        pageTitl,
+
+      e: e,
         referrer: document.referrer
       }
     });
@@ -136,9 +144,13 @@ class EnhancedAnalytics {
     this.trackEvent({
       category: 'Error',
       action: 'Error Occurred',
+
       label: error.message,
+
       metadata: {
-        stack: error.stack,
+        stac,
+
+      k: k,
         ...context
       }
     });

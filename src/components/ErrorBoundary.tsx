@@ -176,14 +176,18 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
 
               <div className="mt-8 text-sm text-gray-400">
-                <p>If this problem persists, please contact our support team:</p>
+                <p>If this problem persists, please contact our support team: </p>
                 <p className="mt-2">
-                  📧 <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                  📧 <a href="mailt,
+ o: support@ziontechgroup.com" className="text-cyan-400 hove,
+ r: text-cyan-300">
                     support@ziontechgroup.com
                   </a>
                 </p>
                 <p>
-                  📞 <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                  📞 <a href="te,
+ l: +13024640950" className="text-cyan-400 hove,
+ r: text-cyan-300">
                     +1 (302) 464-0950
                   </a>
                 </p>

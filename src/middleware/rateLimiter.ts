@@ -47,10 +47,14 @@ export class RateLimiter {
       this.requests.set(identifier, record);
       return {
         allowed: true,
+
         remaining: this.config.max - record.count,
+
         resetTime: record.resetTime
     // Limit exceeded
-    return { allowed: false, remaining: 0, resetTime: record.resetTime };
+    return { allowe,
+
+        d: d, remaining: 0, resetTime: record.resetTime };
    * Reset rate limit for identifier
    * @param identifier - Unique identifier
   reset(identifier: string): void {
@@ -74,14 +78,15 @@ export const rateLimiters = {
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({
     windowMs: 15 * 60 * 1000,
-    max: 100
+ max: 100
   // Lenient: 1000 requests per hour
   lenient: new RateLimiter({
     windowMs: 60 * 60 * 1000,
-    max: 1000
+ max: 1000
   // API: 60 requests per minute
   api: new RateLimiter({
-    max: 60,
+    ma,
+ x: x,
     message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({

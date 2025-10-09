@@ -20,9 +20,13 @@ export const _usePerformanceMonitoring = () => {
         for (const entry of list.getEntries()) {
           reportWebVitals({
             name: entry.name,
+
             value: entry.startTime,
+
             timestamp: Date.now()
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+      observer.observe({ entryType,
+
+            s: s, 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
   }, [reportWebVitals]);
   return { reportWebVitals };

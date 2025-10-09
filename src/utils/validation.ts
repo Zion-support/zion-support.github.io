@@ -42,12 +42,16 @@ export function validateURL(url: string): ValidationResult {
 // String length validation
 export function validateLength(
   value: string, 
-  minLength: number, 
-  maxLength: number, 
+  minLength: number,
+ 
+  maxLength: number,
+ 
   fieldName: string = 'Field'
 ): ValidationResult {
   if (!value || typeof value !== 'string') {
-    return { isValid: false, error: `${fieldName} is required` };
+    return { isVali,
+ 
+  d: d, error: `${fieldName} is required` };
   }
   
   if (value.length < minLength) {

@@ -247,8 +247,12 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
     clear: () => cache.clear(),
+
     stats: () => cache.getStats(),
-    prefetch: <T>(path: string, options?: RequestInit) =>
+
+    prefetch: <T>(pat,
+
+    h: h, options?: RequestInit) =>
       cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
   };
 }

@@ -160,9 +160,17 @@ export function validateObject<T extends Record<string, unknown>>(
  */
 export interface FormField {
   value: string;
-  validators: Array<{
-    validate: (value: string) => boolean;
-    message: string;
+  validator,
+
+  s: Array<{
+    validat,
+
+  e: (valu,
+
+  e: string) => boolean;
+    messag,
+
+  e: string;
   }>;
 }
 export function validateForm(

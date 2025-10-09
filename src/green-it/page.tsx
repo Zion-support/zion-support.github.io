@@ -19,9 +19,13 @@ const GreenITPage: React.FC = () => {
       id: 'benefits',
       name: 'Benefits',
       icon: Target,
+
       color: 'text-blue-400',
+
       bgColor: 'bg-blue-500/10'
-      id: 'certifications',
+      i,
+
+      d: d,
       name: 'Certifications',
       icon: Award,
       color: 'text-yellow-400',
@@ -121,9 +125,13 @@ const GreenITPage: React.FC = () => {
 
   const certifications = [
       name: 'ISO 14001:2015',
+
       description: 'Environmental Management Systems',
+
       status: 'Certified'
-      name: 'LEED Platinum',
+      nam,
+
+      e: e,
       description: 'Leadership in Energy and Environmental Design',
       name: 'Carbon Trust Standard',
       description: 'Carbon Footprint Management',
@@ -132,15 +140,23 @@ const GreenITPage: React.FC = () => {
 
   const stats = [
       value: '60%',
+
       label: 'Carbon Footprint Reduction',
+
       color: 'text-green-400'
-      value: '40%',
+      valu,
+
+      e: e,
       label: 'Energy Cost Savings',
       color: 'text-yellow-400'
       value: '50%',
+
       label: 'Waste Reduction',
+
       color: 'text-blue-400'
-      value: '100%',
+      valu,
+
+      e: e,
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
 
@@ -310,15 +326,19 @@ const GreenITPage: React.FC = () => {
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey towards sustainable IT operations. Get a free environmental 
               assessment and discover how much you can save while protecting the planet.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Assessment
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hove,
+ r: bg-green-400 hove,
+ r: text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />

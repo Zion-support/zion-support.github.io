@@ -46,15 +46,23 @@ const AnalyticsToolsPage: React.FC = () => {
   ];
   const benefits = [
       icon: TrendingUp,
+
       title: 'Data-Driven Decisions',
+
       description: 'Make informed decisions with comprehensive analytics and AI insights'
-      icon: Target,
+      ico,
+
+      n: n,
       title: 'Predictive Insights',
       description: 'Anticipate trends and opportunities with AI-powered predictions'
       icon: BarChart,
+
       title: 'Real-Time Monitoring',
+
       description: 'Track performance in real-time with live dashboards and alerts'
-      icon: Brain,
+      ico,
+
+      n: n,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
@@ -140,16 +148,20 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hove,
+ r: bg-gray-100 transition-colors"
               Call (302) 464-0950
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              href="mailt,
+ o: kleber@ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hove,
+ r: bg-white hove,
+ r: text-purple-600 transition-colors"
               Email Us
   );
 };

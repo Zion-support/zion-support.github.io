@@ -8,9 +8,13 @@ const CaseStudiesPage: React.FC = () => {
       company: 'TechRetail Inc.',
       industry: 'E-commerce',
       challenge: 'Low conversion rates and high customer acquisition costs',
+
       solution: 'AI-powered personalization and dynamic pricing optimization',
+
       results: {
-        roi: '340%',
+        ro,
+
+      i: i,
         conversion: '+85%',
         costReduction: '-65%',
         revenue: '+$2.3M'
@@ -24,9 +28,13 @@ const CaseStudiesPage: React.FC = () => {
       company: 'FinTech Solutions',
       industry: 'Financial Services',
       challenge: 'Manual processes causing delays and errors in loan processing',
+
       solution: 'AI-powered document processing and risk assessment automation',
+
       results: {
-        roi: '280%',
+        ro,
+
+      i: i,
         processingTime: '-80%',
         accuracy: '+95%',
         costSavings: '$1.8M'
@@ -40,9 +48,13 @@ const CaseStudiesPage: React.FC = () => {
       company: 'MedTech Innovations',
       industry: 'Healthcare',
       challenge: 'Fragmented patient data and inefficient treatment planning',
+
       solution: 'AI-powered data integration and predictive analytics for treatment optimization',
+
       results: {
-        roi: '420%',
+        ro,
+
+      i: i,
         patientOutcomes: '+70%',
         efficiency: '+90%',
         costSavings: '$3.2M'
@@ -56,9 +68,13 @@ const CaseStudiesPage: React.FC = () => {
       company: 'AutoParts Manufacturing',
       industry: 'Manufacturing',
       challenge: 'Production inefficiencies and quality control issues',
+
       solution: 'AI-powered predictive maintenance and quality control automation',
+
       results: {
-        roi: '310%',
+        ro,
+
+      i: i,
         efficiency: '+75%',
         defects: '-90%',
         downtime: '-85%'

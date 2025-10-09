@@ -5,10 +5,18 @@
  */
 export interface PerformanceMetric {
   name: string;
-  value: number;
-  unit: string;
-  timestamp: Date;
-  category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
+  valu,
+
+  e: number;
+  uni,
+
+  t: string;
+  timestam,
+
+  p: Date;
+  categor,
+
+  y: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
   metadata?: Record<string, unknown>;
 }
 export interface WebVitalsMetrics {
@@ -23,10 +31,18 @@ export interface PerformanceReport {
   metrics: PerformanceMetric[];
   webVitals: WebVitalsMetrics;
   summary: {
-    avgLoadTime: number;
-    totalMetrics: number;
-    performanceScore: number;
-    recommendations: string[];
+    avgLoadTim,
+
+  e: number;
+    totalMetric,
+
+  s: number;
+    performanceScor,
+
+  e: number;
+    recommendation,
+
+  s: string[];
   };
   timestamp: Date;
 }
@@ -62,9 +78,13 @@ export class PerformanceMetrics {
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms',
                 timestamp: new Date(),
+
                 category: 'load',
+
                 metadata: {
-                  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domContentLoade,
+
+                d: d,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
                 }
               });
@@ -150,9 +170,13 @@ export class PerformanceMetrics {
       value: pageLoadTime,
       unit: 'ms',
       timestamp: new Date(),
+
       category: 'load',
+
       metadata: {
-        dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        dnsLooku,
+
+      p: p,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
         domParsing: perfData.domComplete - perfData.domLoading
@@ -187,9 +211,13 @@ export class PerformanceMetrics {
       value: memory.usedJSHeapSize,
       unit: 'bytes',
       timestamp: new Date(),
+
       category: 'memory',
+
       metadata: {
-        total: memory.totalJSHeapSize,
+        tota,
+
+      l: l,
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       }

@@ -32,15 +32,19 @@ export default function OptimizedHomePage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 l,
+ g: px-8 py-24">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl m,
+ d: text-6xl l,
+ g: text-7xl font-bold mb-6 leading-tight">
                 AI Enterprise Transformation
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   That Delivers Results
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
+              <p className="text-xl m,
+ d: text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
                 Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
                 70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
                 autonomous systems, and digital transformation services.

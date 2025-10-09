@@ -20,6 +20,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+    {
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
@@ -28,6 +29,9 @@ const ITServicesPage: React.FC = () => {
       category: 'Security',
       benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
       icon: Server,
@@ -35,6 +39,9 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,200/month',
       benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
       technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
       title: 'Database Management',
       description: 'Expert database administration, optimization, and migration services for all major database platforms.',
       icon: Database,
@@ -43,6 +50,9 @@ const ITServicesPage: React.FC = () => {
       category: 'Data Management',
       benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
       technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
       title: 'Business Intelligence',
       description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
       icon: BarChart,
@@ -51,6 +61,9 @@ const ITServicesPage: React.FC = () => {
       category: 'Analytics',
       benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
       technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
       title: 'IT Consulting',
       description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
@@ -58,7 +71,8 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $150/hour',
       category: 'Consulting',
       benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
+      technologies: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Project Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -83,9 +97,13 @@ const ITServicesPage: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
+            </button>
           </div>
+        </div>
+      </div>
       
       <Footer />
+    </div>
   );
 };
 

@@ -22,10 +22,18 @@ export interface AppConfig {
     imageLazyLoadThreshold: number;
     componentLazyLoadThreshold: number;
     cacheMaxAge: number;
-  security: {
-    enableCSP: boolean;
-    enableHSTS: boolean;
-    enableXSSProtection: boolean;
+  securit,
+
+  y: {
+    enableCS,
+
+  P: boolean;
+    enableHST,
+
+  S: boolean;
+    enableXSSProtectio,
+
+  n: boolean;
 }
     name: 'Zion Tech Group',
     version: '1.0.0',
@@ -33,13 +41,21 @@ export interface AppConfig {
       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
+
     timeout: 30000,
+
     retryAttempts: 3
-    analytics: process.env['NODE_ENV'] === 'production',
+    analytic,
+
+    s: s,
     monitoring: true,
+
     errorTracking: true,
+
     performanceOptimization: true
-    enableLazyLoading: true,
+    enableLazyLoadin,
+
+    g: g,
     imageLazyLoadThreshold: 0.5,
     componentLazyLoadThreshold: 0.25,
     cacheMaxAge: 3600000, // 1 hour in milliseconds

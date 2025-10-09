@@ -8,8 +8,12 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
+
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+
+    logo: 'http,
+
+    s: s,
     description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -58,18 +62,25 @@ export default function RootLayout({
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: '39.8283',
-        longitude: '-75.5795'
+
+      latitude: '39.8283',
+
+      longitude: '-75.5795'
       geoRadius: '1000000'
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
+    hasOfferCatalo,
+
+      g: g,
       name: 'AI Technology Services',
       itemListElement: [
           itemOffered: {
             '@type': 'Service',
-            name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-            name: 'Digital Automation',
+
+      name: 'AI Enterprise Transformation',
+
+      description: 'Comprehensive AI implementation strategies for enterprise organizations'
+            nam,
+
+      e: e,
             description: 'Process automation and workflow optimization services'
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'

@@ -19,10 +19,18 @@ class ErrorHandler {
 export interface APIConfig {
   baseURL: string;
   timeout: number;
-  retryAttempts: number;
-  retryDelay: number;
-  enableCaching: boolean;
-  cacheTimeout: number;
+  retryAttempt,
+
+  s: number;
+  retryDela,
+
+  y: number;
+  enableCachin,
+
+  g: boolean;
+  cacheTimeou,
+
+  t: number;
   headers?: Record<string, string>;
   interceptors?: {
     request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>;
@@ -42,10 +50,18 @@ export interface RequestConfig {
 }
 export interface APIResponse<T = unknown> {
   data: T;
-  status: number;
-  statusText: string;
-  headers: Headers;
-  config: RequestConfig;
+  statu,
+
+  s: number;
+  statusTex,
+
+  t: string;
+  header,
+
+  s: Headers;
+  confi,
+
+  g: RequestConfig;
 }
 export interface CacheEntry {
   data: unknown;

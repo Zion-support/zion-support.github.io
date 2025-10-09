@@ -1,10 +1,18 @@
 'use client';
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  firstContentfulPain,
+
+  t: number;
+  largestContentfulPain,
+
+  t: number;
+  cumulativeLayoutShif,
+
+  t: number;
+  firstInputDela,
+
+  y: number;
 }
 export const _usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {

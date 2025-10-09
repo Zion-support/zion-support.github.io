@@ -24,10 +24,18 @@ export interface CacheEntry<T> {
 }
 export interface CacheStats {
   hits: number;
-  misses: number;
-  hitRate: number;
-  count: number;
-  entries: number;
+  misse,
+
+  s: number;
+  hitRat,
+
+  e: number;
+  coun,
+
+  t: number;
+  entrie,
+
+  s: number;
 }
 export class CacheManager {
   private memoryCache: Map<string, CacheEntry<unknown>> = new Map();

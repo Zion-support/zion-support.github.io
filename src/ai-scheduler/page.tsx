@@ -14,21 +14,37 @@ const AISchedulerPage: React.FC = () => {
     },
       icon: Users,
       title: 'Team Coordination',
+
       description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
+
       benefit: 'Eliminate scheduling conflicts'
-      icon: Brain,
+      ico,
+
+      n: n,
       title: 'Predictive Planning',
+
       description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
+
       benefit: '95% accuracy in predictions'
-      icon: Zap,
+      ico,
+
+      n: n,
       title: 'Automated Reminders',
+
       description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
+
       benefit: 'Reduce no-shows by 60%'
-      icon: Target,
+      ico,
+
+      n: n,
       title: 'Meeting Optimization',
+
       description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
+
       benefit: 'Improve meeting ROI by 40%'
-      icon: Shield,
+      ico,
+
+      n: n,
       title: 'Privacy & Security',
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit: '100% secure scheduling'
@@ -87,9 +103,13 @@ const AISchedulerPage: React.FC = () => {
       name: 'Jennifer Lee',
       company: 'TechStart',
       role: 'Operations Manager',
+
       content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
+
       rating: 5
-      name: 'Robert Martinez',
+      nam,
+
+      e: e,
       company: 'Consulting Group',
       role: 'Senior Partner',
       content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
@@ -116,17 +136,21 @@ const AISchedulerPage: React.FC = () => {
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hove,
+ r: to-purple-600 transition-all duration-300 flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
+              Cal,
+ l: (302) 464-0950
             </a>
             <Link 
               href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hove,
+ r: bg-white hove,
+ r: text-indigo-600 transition-all duration-300"
               Start Free Trial
             </Link>
 

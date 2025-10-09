@@ -13,10 +13,18 @@ export interface ErrorContext {
 export interface TrackedError {
   message: string;
   stack?: string;
-  context: ErrorContext;
-  timestamp: string;
-  userAgent: string;
-  url: string;
+  contex,
+
+  t: ErrorContext;
+  timestam,
+
+  p: string;
+  userAgen,
+
+  t: string;
+  ur,
+
+  l: string;
 }
 class EnhancedErrorTracker {
   private errors: TrackedError[] = [];

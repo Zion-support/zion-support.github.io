@@ -180,16 +180,20 @@ const DeveloperToolsPage: React.FC = () => {
             <p className="text-xl text-purple-100 mb-8">
               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hove,
+ r: bg-gray-100 transition-colors"
               >
                 Call (302) 464-0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+                href="mailt,
+ o: kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hove,
+ r: bg-white hove,
+ r: text-purple-600 transition-colors"
               >
                 Email Us
               </a>

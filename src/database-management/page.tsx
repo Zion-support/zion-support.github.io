@@ -43,7 +43,7 @@ const DatabaseManagementPage: React.FC = () => {
             Optimize your database performance and security with our comprehensive database management services. 
             From design to deployment, we ensure your data infrastructure is robust and efficient.
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -51,18 +51,22 @@ const DatabaseManagementPage: React.FC = () => {
               Get Started
             </a>
               href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hove,
+ r: text-slate-900 transition-all duration-300"
               <Database className="w-5 h-5" />
               +1 302 464 0950
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <h2 className="text-3xl m,
+ d: text-4xl font-bold text-white mb-12 text-center neon-text">
             Database Services
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 m,
+ d: grid-cols-2 l,
+ g: grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
