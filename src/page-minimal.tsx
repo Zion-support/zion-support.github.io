@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-// page-minimal file
-// This file is under development
-
-export default function page_minimal() {
-  return null;
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
 
 export default function HomePage() {
   return (
@@ -177,5 +165,4 @@ export default function HomePage() {
       </footer>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
 }

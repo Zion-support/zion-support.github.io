@@ -4,23 +4,6 @@ interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
-<<<<<<< HEAD
-
-export default function ErrorBoundary({ 
-  className = '', 
-  children 
-}: ErrorBoundaryProps) {
-  return (
-    <div className={`errorboundary ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            Error Boundary
-          </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
-=======
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -238,7 +221,6 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
         </div>
       )}
     </div>

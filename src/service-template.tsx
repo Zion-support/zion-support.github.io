@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-// service-template file
-// This file is under development
-
-export default function service_template() {
-  return null;
-}
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -129,4 +121,3 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
 };
 
 export default ServicePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc

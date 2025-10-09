@@ -20,9 +20,6 @@ export default function OptimizedErrorBoundary({
             Component content will be added here.
           </p>
         </div>
-<<<<<<< HEAD
-      )}
-=======
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
 //           Something Went Wrong
         </h1>
@@ -77,7 +74,6 @@ export default function OptimizedErrorBoundary({
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
         )}
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
     </div>
   );
 }

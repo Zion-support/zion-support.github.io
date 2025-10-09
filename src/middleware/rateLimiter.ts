@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-// rateLimiter file
-// This file is under development
-
-export default function rateLimiter() {
-  return null;
-=======
 'use client';
 /**
  * Rate Limiting Middleware
@@ -189,5 +182,4 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     // Request allowed - headers can be added to response later
     return null;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
 }

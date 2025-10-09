@@ -4,23 +4,6 @@ interface EnhancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
-<<<<<<< HEAD
-
-export default function EnhancedErrorBoundary({ 
-  className = '', 
-  children 
-}: EnhancedErrorBoundaryProps) {
-  return (
-    <div className={`enhancederrorboundary ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
-            Enhanced Error Boundary
-          </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
-=======
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -270,7 +253,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </p>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
         </div>
       )}
     </div>
