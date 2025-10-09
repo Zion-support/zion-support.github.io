@@ -146,7 +146,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
+          <Link href="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -158,10 +158,10 @@ const Navigation: React.FC = memo(() => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
 
@@ -231,7 +231,7 @@ const Navigation: React.FC = memo(() => {
             </div>
 
             <Link 
-              to="/case-studies" 
+              href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
@@ -239,7 +239,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              to="/blog"
+              href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -247,7 +247,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              to="/contact"
+              href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -256,7 +256,7 @@ const Navigation: React.FC = memo(() => {
 
             {/* CTA Button */}
             <Link
-              to="/contact"
+              href="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
@@ -325,7 +325,7 @@ const Navigation: React.FC = memo(() => {
                             </Link>
                           ))}
                           <Link
-                            to="/services"
+                            href="/services"
                             className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
                           >
                             View All →
@@ -336,10 +336,9 @@ const Navigation: React.FC = memo(() => {
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
 
               <Link
-                to="/case-studies"
+                href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >

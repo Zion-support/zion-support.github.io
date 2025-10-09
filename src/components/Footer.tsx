@@ -47,8 +47,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4059
-
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
@@ -192,7 +190,6 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/ai-services"
                   className="text-purple-400 hover:text-purple-300 transition-colors duration-200 text-sm font-medium"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4059
                 >
                   View All AI Services →
                 </Link>
@@ -355,7 +352,6 @@ const Footer: React.FC = memo(() => {
             <div className="text-sm text-gray-400">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-<<<<<<< HEAD
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
               <div className="flex space-x-6">
                 <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
