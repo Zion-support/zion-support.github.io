@@ -1,73 +1,28 @@
-<<<<<<< HEAD
-import React from 'react';
+import React, { useState } from 'react';
+import { Mail, Send } from 'lucide-react';
+
 const ContentNewsletterSignup: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle newsletter signup logic here
+    setIsSubscribed(true);
+    setEmail('');
+  };
+
   return (
     <section className="py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-white mb-4">
-          Stay Updated
+          Stay Updated with Our Latest Solutions
         </h2>
         <p className="text-gray-300 mb-8">
-          Get the latest news and insights about AI and technology.
+          Get exclusive insights, updates, and early access to new AI and IT solutions.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-          />
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-            Subscribe
-          </button>
-=======
-'use client';
-
-import React, { useState } from 'react';
-import { Mail, ArrowRight } from 'lucide-react';
-
-const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    setEmail('');
-    
-    // Reset after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
-  };
-
-  if (isSubmitted) {
-    return (
-      <section className="mb-16" aria-labelledby="newsletter-heading">
-        <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
-          <div className="text-4xl mb-4">✅</div>
-          <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
-        </div>
-      </section>
-    );
-  }
-
-  return (
-    <section className="mb-16" aria-labelledby="newsletter-heading">
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">
-            Stay Updated with AI Innovation
-          </h2>
-          <p className="text-purple-100 mb-6">
-            Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
-          </p>
-          
+        
+        {!isSubscribed ? (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <div className="flex-1 relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -75,40 +30,29 @@ const ContentNewsletterSignup: React.FC = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="w-full pl-10 pr-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                placeholder="Enter your email"
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
                 required
-                aria-label="Email address"
               />
             </div>
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+              className="cyber-button inline-flex items-center justify-center px-6 py-3"
             >
-              {isSubmitting ? (
-                <div className="w-5 h-5 border-2 border-purple-600 border-t-transparent rounded-full animate-spin"></div>
-              ) : (
-                <>
-                  Subscribe
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </>
-              )}
+              <Send className="w-4 h-4 mr-2" />
+              Subscribe
             </button>
           </form>
-          
-          <p className="text-xs text-purple-200 mt-4">
-            We respect your privacy. Unsubscribe at any time.
-          </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
-        </div>
+        ) : (
+          <div className="bg-green-800/20 border border-green-500 rounded-lg p-6 max-w-md mx-auto">
+            <p className="text-green-400 font-medium">
+              Thank you for subscribing! You'll receive our latest updates soon.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
-export default ContentNewsletterSignup;
-=======
 
 export default ContentNewsletterSignup;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
