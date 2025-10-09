@@ -27,6 +27,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   stats,
   excerpt
 }) => {
+  const formatNumber = (num: number): string => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }
@@ -129,6 +130,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         </div>
       </div>
     </article>
-  );
+    );
 };
+
 export default ContentPreviewCard;

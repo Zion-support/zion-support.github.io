@@ -180,7 +180,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       rtt: 0,
       saveData: false
     };
-  };
   // Export data
   const handleExport = () => {
     if (!metrics) return;
