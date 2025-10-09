@@ -279,8 +279,9 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
@@ -294,6 +295,21 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
+=======
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
+            </a>
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+              Case Studies
+            </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
+            </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-06fc
             
             <div className="flex items-center space-x-4">
               <a
@@ -389,8 +405,13 @@ const Navigation: React.FC = () => {
                 Enterprise
               </a>
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+<<<<<<< HEAD
                 Contact
               </a>
+=======
+                  Contact
+                </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-06fc
               
               <div className="pt-4 border-t border-gray-700">
                 <a
