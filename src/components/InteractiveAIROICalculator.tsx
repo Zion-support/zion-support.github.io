@@ -6,9 +6,9 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [timeframe, setTimeframe] = useState(12);
   const calculateROI = () => {
     const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = annualSavings * (timeframe / 12);
-    const _roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
+    const _totalSavings = _annualSavings * (timeframe / 12);
+    const _roi = ((_totalSavings - currentCost) / currentCost) * 100;
+    return Math.max(0, _roi);
   };
   const _roi = calculateROI();
   return (
@@ -69,7 +69,7 @@ const InteractiveAIROICalculator: React.FC = () => {
               </h3>
               <div className='text-center'>
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
-                  {roi.toFixed(0)}%
+                  {_roi.toFixed(0)}%
                 </div>
                 <p className='text-gray-600 text-sm'>
                   Expected return on investment over {timeframe} months
