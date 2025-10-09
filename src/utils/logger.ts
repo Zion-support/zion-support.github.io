@@ -107,17 +107,23 @@ class Logger {
     if (level < this.logLevel) {
       return;
     }
+    
+    const logEntry: LogMetadata = {
       timestamp: new Date().toISOString(),
       level,
       message,
       context,
       ...metadata
     };
+    
     // Format the log entry
+    const formattedMessage = this.formatLogEntry(logEntry);
+    
     // Output to console in development
     if (this.isDevelopment && typeof console !== 'undefined') {
       this.outputToConsole(level, formattedMessage, logEntry);
     }
+    
     // In production, you might want to send to a logging service
     if (!this.isDevelopment) {
       this.sendToLoggingService(logEntry);
@@ -130,7 +136,7 @@ class Logger {
     const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
     const timestamp = entry.timestamp || new Date().toISOString();
     const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';
+    const metadataStr = entry.error ? ` ${JSON.stringify(entry.error)}` : '';
     return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
   /**
@@ -156,14 +162,14 @@ class Logger {
         console.debug(`%c${message}`, styles, entry);
         break;
       case LogLevel.INFO:
-        // console.info(`%c${message}`, styles, entry);
+        console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WARN:
-        // // console.warn(`%c${message}`, styles, entry);
+        console.warn(`%c${message}`, styles, entry);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        // // console.error(`%c${message}`, styles, entry);
+        console.error(`%c${message}`, styles, entry);
         break;
     }
   }
@@ -195,10 +201,10 @@ class Logger {
     // Example implementation:
     // fetch('/api/logs', {
     //   method: 'POST',
-    //   headers: {// 'Content-Type': 'application/json'},
+    //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(entry)
     // }).catch(err => {
-    //   // // console.error('Failed to send log to service:', err);
+    //   console.error('Failed to send log to service:', err);
     // });
   }
   /**
