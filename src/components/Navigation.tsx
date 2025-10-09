@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
@@ -130,6 +130,15 @@ const Navigation: React.FC = () => {
                                 </div>
                               </Link>
                             ))}
+                            {category.services.length > 6 && (
+                              <Link
+                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                                onClick={closeAllMenus}
+                              >
+                                View All →
+                              </Link>
+                            )}
                           </div>
                         </div>
                       ))}
@@ -254,6 +263,30 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
+              <Link
+                to="/case-studies"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+
+              <Link
+                to="/contact"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -314,5 +347,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-Navigation.displayName = 'Navigation';
 export default Navigation;

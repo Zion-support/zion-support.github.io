@@ -160,6 +160,12 @@ import PrivacyPage from './privacy/page';
 import TermsPage from './terms/page';
 import CookiesPage from './cookies/page';
 
+// AI Services Pages
+import AIProjectManagerPage from './ai-project-manager/page';
+import AICustomerSupportBotPage from './ai-customer-support-bot/page';
+import AIAutomationPage from './ai-automation/page';
+import AIMLPlatformPage from './ai-ml-platform/page';
+
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [enhancers, setEnhancers] = useState<{
@@ -374,16 +380,12 @@ const App: React.FC = () => {
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         
-        {/* Support Pages */}
-        <Route path="/support" element={<SupportPage />} />
-        <Route path="/docs" element={<DocsPage />} />
-        <Route path="/api-docs" element={<APIDocsPage />} />
-        <Route path="/status" element={<StatusPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        <Route path="/cookies" element={<CookiesPage />} />
+        {/* AI Services Routes */}
+        <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
+        <Route path="/ai-automation" element={<AIAutomationPage />} />
+        <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
         
-        {/* Catch-all route */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
