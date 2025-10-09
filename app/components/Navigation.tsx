@@ -106,7 +106,7 @@ const Navigation: React.FC = memo(() => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-scan-line ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
@@ -115,39 +115,42 @@ const Navigation: React.FC = memo(() => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">Z</span>
+            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
+              <span className="text-white font-bold text-lg cyber-text">Z</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
-              <p className="text-xs text-cyan-400">AI & IT Solutions</p>
+              <p className="text-xs text-cyan-400 neon-glow">AI & IT Solutions</p>
             </div>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               About
             </Link>
-            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Services
             </Link>
-            <Link to="/ai-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/ai-services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               AI Services
             </Link>
-            <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Micro SAAS
             </Link>
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
+              IT Services
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Pricing
             </Link>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Blog
             </Link>
 
@@ -242,7 +245,7 @@ const Navigation: React.FC = memo(() => {
             {/* CTA Button */}
             <Link 
               to="/contact" 
-              className="cyber-button inline-flex items-center"
+              className="cyber-button inline-flex items-center px-4 py-2 rounded-lg font-semibold"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />
