@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,23 +15,34 @@
   --primary-orange: #f59e0b;
   --primary-red: #ef4444;
   --primary-yellow: #eab308;
+  --primary-electric: #00ff88;
+  --primary-neon: #ff0080;
+  --primary-gold: #ffd700;
   
   --bg-dark: #0a0a0a;
   --bg-darker: #050505;
   --bg-slate: #0f172a;
   --bg-purple: #581c87;
+  --bg-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 25%, #16213e 50%, #0f3460 75%, #0a0a0a 100%);
   
   --text-primary: #ffffff;
   --text-secondary: #e2e8f0;
   --text-muted: #94a3b8;
+  --text-neon: #00ffff;
+  --text-glow: #ffffff;
   
   --border-cyan: rgba(0, 255, 255, 0.3);
   --border-purple: rgba(139, 92, 246, 0.3);
   --border-pink: rgba(236, 72, 153, 0.3);
+  --border-electric: rgba(0, 255, 136, 0.3);
+  --border-neon: rgba(255, 0, 128, 0.3);
   
   --shadow-neon: 0 0 20px rgba(0, 255, 255, 0.5);
   --shadow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
   --shadow-pink: 0 0 20px rgba(236, 72, 153, 0.5);
+  --shadow-electric: 0 0 20px rgba(0, 255, 136, 0.5);
+  --shadow-glow: 0 0 30px rgba(255, 255, 255, 0.1);
+  --shadow-cyber: 0 0 40px rgba(0, 255, 255, 0.3), 0 0 80px rgba(0, 255, 255, 0.1);
 }
 
 /* Base Styles */
@@ -44,10 +55,106 @@ html {
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif;
-  background: var(--bg-dark);
+  font-family: 'Space Grotesk', 'Rajdhani', sans-serif;
+  background: var(--bg-gradient);
   color: var(--text-primary);
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Futuristic Animations */
+@keyframes neonPulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px var(--primary-cyan), 0 0 10px var(--primary-cyan), 0 0 15px var(--primary-cyan);
+    box-shadow: 0 0 5px var(--primary-cyan), 0 0 10px var(--primary-cyan), 0 0 15px var(--primary-cyan);
+  }
+  50% { 
+    text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+    box-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+  }
+}
+
+@keyframes electricPulse {
+  0%, 100% { 
+    text-shadow: 0 0 5px var(--primary-electric), 0 0 10px var(--primary-electric), 0 0 15px var(--primary-electric);
+    box-shadow: 0 0 5px var(--primary-electric), 0 0 10px var(--primary-electric), 0 0 15px var(--primary-electric);
+  }
+  50% { 
+    text-shadow: 0 0 10px var(--primary-electric), 0 0 20px var(--primary-electric), 0 0 30px var(--primary-electric);
+    box-shadow: 0 0 10px var(--primary-electric), 0 0 20px var(--primary-electric), 0 0 30px var(--primary-electric);
+  }
+}
+
+@keyframes cyberGlow {
+  0%, 100% { 
+    filter: brightness(1) drop-shadow(0 0 10px var(--primary-cyan));
+  }
+  50% { 
+    filter: brightness(1.2) drop-shadow(0 0 20px var(--primary-cyan)) drop-shadow(0 0 30px var(--primary-purple));
+  }
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100vh); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes hologramFlicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+@keyframes dataStream {
+  0% { transform: translateX(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes neuralPulse {
+  0%, 100% { 
+    background: radial-gradient(circle, var(--primary-cyan) 0%, transparent 70%);
+    transform: scale(1);
+  }
+  50% { 
+    background: radial-gradient(circle, var(--primary-purple) 0%, transparent 70%);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes cyberScan {
+  0% { 
+    background: linear-gradient(90deg, transparent 0%, var(--primary-cyan) 50%, transparent 100%);
+    transform: translateX(-100%);
+  }
+  100% { 
+    background: linear-gradient(90deg, transparent 0%, var(--primary-cyan) 50%, transparent 100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes quantumFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(0deg); }
+  75% { transform: translateY(-15px) rotate(-1deg); }
+}
+
+@keyframes energyWave {
+  0% { 
+    background: radial-gradient(circle at 0% 50%, var(--primary-cyan) 0%, transparent 50%);
+    transform: scale(0.8);
+  }
+  50% { 
+    background: radial-gradient(circle at 50% 50%, var(--primary-purple) 0%, transparent 50%);
+    transform: scale(1.2);
+  }
+  100% { 
+    background: radial-gradient(circle at 100% 50%, var(--primary-pink) 0%, transparent 50%);
+    transform: scale(0.8);
+  }
 }
 
 /* Cyber Grid Background */
@@ -57,6 +164,217 @@ body {
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   position: relative;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: energyWave 8s ease-in-out infinite;
+}
+
+/* Neural Network Background */
+.neural-network-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 30%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 30%);
+  animation: neuralPulse 6s ease-in-out infinite;
+}
+
+/* Futuristic Utility Classes */
+.neon-text {
+  color: var(--primary-cyan);
+  text-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-cyan), 0 0 30px var(--primary-cyan);
+  animation: neonPulse 2s ease-in-out infinite;
+}
+
+.electric-text {
+  color: var(--primary-electric);
+  text-shadow: 0 0 10px var(--primary-electric), 0 0 20px var(--primary-electric), 0 0 30px var(--primary-electric);
+  animation: electricPulse 2s ease-in-out infinite;
+}
+
+.cyber-glow {
+  filter: drop-shadow(0 0 10px var(--primary-cyan)) drop-shadow(0 0 20px var(--primary-purple));
+  animation: cyberGlow 3s ease-in-out infinite;
+}
+
+.hologram-effect {
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(0, 255, 255, 0.1) 75%, 
+    rgba(139, 92, 246, 0.1) 100%);
+  background-size: 200% 200%;
+  animation: hologramFlicker 4s ease-in-out infinite;
+}
+
+.quantum-float {
+  animation: quantumFloat 6s ease-in-out infinite;
+}
+
+.cyber-scan {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--primary-cyan) 50%, transparent 100%);
+  animation: cyberScan 3s linear infinite;
+}
+
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 0%, 
+    rgba(0, 255, 255, 0.1) 25%, 
+    transparent 50%, 
+    rgba(139, 92, 246, 0.1) 75%, 
+    transparent 100%);
+  animation: dataStream 4s linear infinite;
+}
+
+/* Futuristic Buttons */
+.btn-cyber {
+  background: linear-gradient(45deg, var(--primary-cyan), var(--primary-purple));
+  border: 2px solid var(--primary-cyan);
+  color: var(--text-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cyber:hover {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 20px var(--primary-cyan), 0 0 40px var(--primary-purple);
+  transform: translateY(-2px);
+}
+
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-cyber:hover::before {
+  left: 100%;
+}
+
+/* Futuristic Cards */
+.card-cyber {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-cyan);
+  border-radius: 12px;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-cyber:hover {
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 20px var(--primary-cyan), 0 0 40px var(--primary-purple);
+  transform: translateY(-5px);
+}
+
+.card-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-cyan), var(--primary-purple), var(--primary-pink));
+  animation: dataStream 3s linear infinite;
+}
+
+/* Futuristic Inputs */
+.input-cyber {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-cyan);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-family: 'JetBrains Mono', monospace;
+  transition: all 0.3s ease;
+}
+
+.input-cyber:focus {
+  outline: none;
+  border-color: var(--primary-cyan);
+  box-shadow: 0 0 10px var(--primary-cyan), 0 0 20px var(--primary-purple);
+}
+
+.input-cyber::placeholder {
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
+  
+  .neon-text, .electric-text {
+    animation-duration: 3s;
+  }
+  
+  .btn-cyber {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .card-cyber {
+    padding: 16px;
+  }
 }
 
 .cyber-grid::before {
@@ -439,7 +757,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
 @media (max-width: 480px) {
   .cyber-grid {
     background-size: 20px 20px;
@@ -537,7 +854,6 @@ body {
     background: #fff !important;
   }
 }
-=======
 /* Particle System */
 .particle-system {
   position: relative;
@@ -872,4 +1188,3 @@ body {
     animation: none;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268

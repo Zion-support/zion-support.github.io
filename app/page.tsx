@@ -54,7 +54,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-    <>
+    <div className="min-h-screen cyber-grid neural-network-bg">
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -1822,7 +1822,6 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-    </>
   );
 };
 export default HomePage;
