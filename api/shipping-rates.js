@@ -1,41 +1,55 @@
 const { withSentry } = require('./withSentry.cjs');
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
-  try {/* TODO: Fix JSX expression */}
+  try {
     const { fromAddress, toAddress, parcel } = req.body || {};
     const apiKey = process.env.EASYPOST_API_KEY;
 
-    if (!apiKey) {/* TODO: Fix JSX expression */}
-  r: 'EasyPost API key not configured' });
+    if (!apiKey) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'EasyPost API key not configured' }));
       return;
     }
 
-    const response = await fetch('http,
-  s://api.easypost.com/v2/shipments', {/* TODO: Fix JSX expression */}
-  n: `Bearer ${apiKey}`,
+    const response = await fetch('https://api.easypost.com/v2/shipments', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
       },
-      bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-        },)
+      body: JSON.stringify({
+        shipment: {
+          from_address: fromAddress,
+          to_address: toAddress,
+          parcel: parcel
+        }
       }),
     });
 
     const data = await response.json();
 
-    if (!response.ok) {/* TODO: Fix JSX expression */}
-  r: data.error || 'Failed to fetch rates' });
+    if (!response.ok) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: data.error || 'Failed to fetch rates' }));
       return;
     }
 
     res.statusCode = 200;
-    res.json({/* TODO: Fix JSX expression */})
-  s: data.rates });
-  } catch (err) {/* TODO: Fix JSX expression */}
-  r: err.message });
+    res.json({ success: true, rates: data.rates });
+  } catch (err) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: err.message }));
   }
 }
 
 module.exports = withSentry(handler);
-`

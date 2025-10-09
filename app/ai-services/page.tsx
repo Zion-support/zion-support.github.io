@@ -267,8 +267,6 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-
 const AIServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -1491,6 +1489,5 @@ export default function AIServicesPage() {
     </div>
   );
 }
-=======
+
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21

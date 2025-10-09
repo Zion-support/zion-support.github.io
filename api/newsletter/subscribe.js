@@ -1,29 +1,43 @@
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
-  try {/* TODO: Fix JSX expression */}
+
+  try {
     const { email } = req.body || {};
 
-    if (!email) {/* TODO: Fix JSX expression */}
-  r: 'Email is required' });
+    if (!email) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
 
-    if (!isValidEmail(email)) {/* TODO: Fix JSX expression */}
-  r: 'Invalid email format' });
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
-    // Save subscription logic here;
-    const subscription = {/* TODO: Fix JSX expression */}
+
+    // Save subscription logic here
+    const subscription = {
+      email,
+      subscribedAt: new Date().toISOString()
     };
 
     res.statusCode = 200;
-    res.json({/* TODO: Fix JSX expression */})
-    });
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Failed to subscribe to newsletter' });
+    res.json({ success: true, subscription });
+  } catch {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
   }
 }
 

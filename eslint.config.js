@@ -6,6 +6,39 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  // Global ignores
+  {
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
+      'components.disabled_full/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-pages/**',
+      'backup-problematic/**',
+      'backup-problematic-files/**',
+      'clean-build/**',
+      'cache/**',
+      'ci-cd-reports/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'node_modules/**',
+      'dist/**',
+      '.next/**',
+      'out/**',
+      '*.min.js',
+      '*.min.css',
+      'chunk-*.js'
+    ]
+  },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],

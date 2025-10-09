@@ -1,181 +1,163 @@
 'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {/* TODO: Fix JSX expression */}
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
 }
 
-interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface AdvancedSEOOptimizerProps {
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  children?: React.ReactNode;
 }
 
-const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  children
+}) => {
+  const seoData: SEOData = useMemo(() => ({
+    title,
+    description,
+    keywords,
+    canonicalUrl: canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+    ogTitle: ogTitle || title,
+    ogDescription: ogDescription || description,
+    ogImage,
+    twitterCard,
+    twitterTitle: twitterTitle || title,
+    twitterDescription: twitterDescription || description,
+    twitterImage: twitterImage || ogImage
+  }), [title, description, keywords, canonicalUrl, ogTitle, ogDescription, ogImage, twitterCard, twitterTitle, twitterDescription, twitterImage]);
 
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
-      },
-      addres,
-  s: {/* TODO: Fix JSX expression */}
-      },
-      ...seoData.structuredData,
+  const generateStructuredData = useCallback(() => {
+    const baseStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
+      }
     };
-
-    if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
-    }
-
-    if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.section) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
 
     return baseStructuredData;
-  }, [seoData, enableStructuredData]);
+  }, []);
 
-  // Generate Open Graph data;
-  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
-
-    return {/* TODO: Fix JSX expression */}
+  const generateOpenGraphData = useCallback(() => {
+    return {
+      'og:title': seoData.ogTitle,
+      'og:description': seoData.ogDescription,
+      'og:image': seoData.ogImage,
+      'og:url': seoData.canonicalUrl,
+      'og:type': 'website'
     };
-  }, [seoData, enableOpenGraph]);
+  }, [seoData]);
 
-  // Generate Twitter Card data;
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
-
-    const faqData = {/* TODO: Fix JSX expression */}
-          },
-        },
-        {/* TODO: Fix JSX expression */}
-          },
-        },
-        {/* TODO: Fix JSX expression */}
-          },
-        },
-      ],
+  const generateTwitterCardData = useCallback(() => {
+    return {
+      'twitter:card': seoData.twitterCard,
+      'twitter:title': seoData.twitterTitle,
+      'twitter:description': seoData.twitterDescription,
+      'twitter:image': seoData.twitterImage
     };
-  }, [seoData, enableTwitterCards]);
+  }, [seoData]);
 
-  // Generate meta tags;
-  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
-  t: seoData.description },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.keywords.join(', ') },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.author || 'Zion Tech Group' },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.robots || 'index, follow' },
-      {/* TODO: Fix JSX expression */}
-  t: 'width=device-width, initial-scale=1.0' },
-      {/* TODO: Fix JSX expression */}
-  t: '#3B82F6' },
-      {/* TODO: Fix JSX expression */}
-  t: '#3B82F6' },
-      {/* TODO: Fix JSX expression */}
-  t: '/browserconfig.xml' },
+  const generateMetaTags = useCallback(() => {
+    const metaTags = [
+      { name: 'description', content: seoData.description },
+      { name: 'keywords', content: seoData.keywords.join(', ') },
+      { name: 'robots', content: 'index, follow' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ];
+
     return metaTags;
   }, [seoData]);
 
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
+  useEffect(() => {
+    // Update document title
+    document.title = seoData.title;
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
-      }
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
       metaDescription.setAttribute('content', seoData.description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = seoData.description;
+      document.head.appendChild(meta);
+    }
 
-      // Update canonical URL;
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {/* TODO: Fix JSX expression */}
-      }
+    // Update canonical URL
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) {
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
+    } else {
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = seoData.canonicalUrl;
+      document.head.appendChild(link);
     }
   }, [seoData]);
 
-  const addStructuredData = (dat,)
-  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
-    }
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
-  };
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [structuredData]);
-
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-          });
-        }
-      }
-    }
-  }, []);
-
-  return (<Helmet></Helmet>
-      {/* Basic Meta Tags */}
+  return (
+    <Helmet>
       <title>{seoData.title}</title>
-      {/* TODO: Fix JSX expression */}
-        <meta key={index} name={tag.name} content={tag.content} /></meta>)
-      ))}
-
-      {/* Canonical URL */}
-      {/* TODO: Fix JSX expression */}"
-        <link rel="canonical" href={seoData.canonicalUrl} /></link>
-      )}
-
-      {/* Open Graph Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={property} property={property} content={content} /></meta>
-      ))}
-
-      {/* Twitter Card Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={name} name={name} content={content} /></meta>
-      ))}
-
-      {/* Additional SEO Tags */}"
-      <meta name="format-detection" content="telephone=no" /></meta>"
-      <meta name="mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
-      {/* Favicon and Icons */}"
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
-      <link rel="manifest" href="/site.webmanifest" /></link>
-      {/* Preconnect to external domains */}"
-      <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
-      <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-      <link rel="preconnect" href="http,"
-  s://www.google-analytics.com" /></link>"
-      <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
-      {/* DNS Prefetch */}"
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
+      <meta name="description" content={seoData.description} />
+      <meta name="keywords" content={seoData.keywords.join(', ')} />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={seoData.canonicalUrl} />
+      
+      {/* Open Graph tags */}
+      <meta property="og:title" content={seoData.ogTitle} />
+      <meta property="og:description" content={seoData.ogDescription} />
+      <meta property="og:image" content={seoData.ogImage} />
+      <meta property="og:url" content={seoData.canonicalUrl} />
+      <meta property="og:type" content="website" />
+      
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content={seoData.twitterCard} />
+      <meta name="twitter:title" content={seoData.twitterTitle} />
+      <meta name="twitter:description" content={seoData.twitterDescription} />
+      <meta name="twitter:image" content={seoData.twitterImage} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
     </Helmet>
   );
 };
 
 export default AdvancedSEOOptimizer;
-"

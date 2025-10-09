@@ -1,5 +1,5 @@
-#!/usr/bin/env node;
-// Sitemap URLs from the website;
+#!/usr/bin/env node
+// Sitemap URLs from the website
 const sitemapUrls = [
   // Main Pages;
   '/',
@@ -193,22 +193,25 @@ console.log('\n=== EXTRA PAGES (in codebase but not in sitemap) ===');
 extraPages.forEach(page => console.log(page));
 
 console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap,)`
-  URLs: ${sitemapUrls.length}`);`
-console.log(`Total existing,)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing,)`
-  pages: ${missingPages.length}`);`
-console.log(`Extra,)`
-  pages: ${extraPages.length}`);
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
+console.log(`Total existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Extra pages: ${extraPages.length}`);
 
-// Categorize missing pages;
-const missingByCategory = {/* TODO: Fix JSX expression */}
+// Categorize missing pages
+const missingByCategory = {
+  main: missingPages.filter(page => !page.includes('/')),
+  services: missingPages.filter(page => page.startsWith('/services')),
+  blog: missingPages.filter(page => page.startsWith('/blog')),
+  other: missingPages.filter(page => 
+    !page.startsWith('/services') && 
+    !page.startsWith('/blog') && 
+    page.includes('/')
+  )
 };
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
+Object.entries(missingByCategory).forEach(([category, pages]) => {
+    console.log(`\n${category}:`);
     pages.forEach(page => console.log(`  ${page}`));
-  }
-});`
+});

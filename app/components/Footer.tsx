@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
-<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
 
   const aiServices = [

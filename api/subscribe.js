@@ -2,18 +2,28 @@ const { isValidEmail } = require('./emailUtils.cjs');
 const fs = require('fs');
 const path = require('path');
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
-  if (!email) {/* TODO: Fix JSX expression */}
-  r: 'Email is required' });
+  if (!email) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
 
-  try {/* TODO: Fix JSX expression */}
-  r: 'Invalid email' });
+  try {
+    if (!isValidEmail(email)) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Invalid email' }));
       return;
     }
 
@@ -21,19 +31,27 @@ async function handler(req, res) {/* TODO: Fix JSX expression */}
 
     let existing = [];
 
-    try {/* TODO: Fix JSX expression */}
-    } catch {/* TODO: Fix JSX expression */}
+    try {
+      const data = fs.readFileSync(file, 'utf8');
+      existing = JSON.parse(data);
+    } catch {
+      // File doesn't exist or is invalid, start with empty array
     }
 
-    existing.push({/* TODO: Fix JSX expression */})
+    existing.push({
+      email,
+      name,
+      source,
+      subscribedAt: new Date().toISOString()
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.json({/* TODO: Fix JSX expression */})
-  s: true });
-  } catch (err) {/* TODO: Fix JSX expression */}
-  r: err.message || 'Subscription failed' });
+    res.json({ success: true });
+  } catch (err) {
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: err.message || 'Subscription failed' }));
   }
 }
 
