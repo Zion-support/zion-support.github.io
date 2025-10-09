@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
+
+
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
@@ -66,22 +65,12 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
-=======
-import { CheckCircle, Star, Phone, Mail, Cube, Zap, Shield, Clock, Palette, Camera, Layers } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AI3DGenerationPage: React.FC = () => {
-  const features = [
-    'AI-powered 3D model creation',
-    'Texture synthesis and mapping',
-    'Animation generation',
-    'LOD optimization',
-    'VR/AR integration',
-    'Real-time rendering',
-    'Custom model training',
-    'Batch processing'
   ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main>
 
   const benefits = [
     'Accelerate 3D content creation by 80%',

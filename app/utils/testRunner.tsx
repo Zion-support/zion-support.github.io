@@ -4,7 +4,7 @@
  * Provides advanced testing capabilities, mocking, and test automation
  */
 import React, { ReactElement, useCallback } from 'react';
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
+
 // Test result types
 export interface PerformanceMetrics {
   renderTime: number;

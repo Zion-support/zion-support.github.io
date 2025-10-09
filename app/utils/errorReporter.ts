@@ -3,7 +3,7 @@
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
-import { logger } from './logger';
+
 export interface ErrorReport {
   message: string;
   stack?: string;

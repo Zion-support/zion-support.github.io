@@ -1,7 +1,7 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 // import Link from 'next/link';
-import { logger } from '../utils/logger';
+
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;

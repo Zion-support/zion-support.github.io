@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Home, Phone } from 'lucide-react';
+
 export default function NotFound() {
   const popularPages = [
     {

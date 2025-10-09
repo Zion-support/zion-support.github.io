@@ -1,6 +1,6 @@
 'use client';
 // Performance optimization utilities
-import { useEffect, useCallback, useMemo, useState } from 'react';
+
 // Debounce utility for performance
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,

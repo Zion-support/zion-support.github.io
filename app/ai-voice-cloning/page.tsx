@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
 const AIVoiceCloningPage: React.FC = () => {
@@ -60,17 +59,12 @@ const AIVoiceCloningPage: React.FC = () => {
       description: 'Produce consistent brand voice across all marketing materials',
       icon: '📢'
     }
-=======
-import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+  ];
 
-const AIVoiceCloningPage: React.FC = () => {
-  const features = [
-    'High-quality voice synthesis',
-    'Emotion control and modulation',
-    'Multi-language support',
-    'Real-time voice conversion',
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main>
     'Custom voice training',
     'API integration',
     'Privacy protection',

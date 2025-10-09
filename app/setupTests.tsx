@@ -5,7 +5,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
-import { TextEncoder, TextDecoder } from 'util';
+
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings

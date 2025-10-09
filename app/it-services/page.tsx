@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, Cloud, Shield, Database, Settings, HardDrive, Lock, FileText, Activity, ArrowRight, Code, Cog, Globe, Users, Target, Award, Rocket, Mail, Phone } from 'lucide-react';
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

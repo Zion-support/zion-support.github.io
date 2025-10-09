@@ -3,8 +3,8 @@
  * Cache Manager
  * Provides in-memory and localStorage caching with TTL support
  */
-import { logger } from './logger';
-import { performanceMonitoring } from './performanceMonitoring';
+
+
 export enum CacheStorage {
   Memory = 'memory',
   LocalStorage = 'localStorage',
