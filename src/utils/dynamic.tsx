@@ -9,9 +9,9 @@ export function dynamic<T extends ComponentType<unknown>>(
   options: DynamicOptions = {}
 ): ComponentType<unknown> {
   const LazyComponent = lazy(importFunc);
-  return (props: unknown) => (
+  return (props: any) => (
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
-      <LazyComponent {...props} />
+      <LazyComponent {...(props as any)} />
     </Suspense>
   );
 }

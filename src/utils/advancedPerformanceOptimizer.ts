@@ -111,7 +111,7 @@ export class PerformanceOptimizer {
       if (cache.has(key)) {
         return cache.get(key)!
       }
-      const result = func(...args)
+      const result = func(...args) as ReturnType<T>
       cache.set(key, result)
       return result
     }

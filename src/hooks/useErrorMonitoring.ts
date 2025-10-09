@@ -1,11 +1,15 @@
 'use client';
 import { useEffect, useCallback } from 'react';
+<<<<<<< HEAD
 // Simple analytics hook for error monitoring
 const useAnalytics = () => ({
   trackError: (error: Error, context?: string) => {
     console.error('Error tracked:', error.message, context);
   }
 });
+=======
+import { useAnalytics } from '../components/AnalyticsProvider';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6fc5
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
 declare global {
@@ -14,13 +18,16 @@ declare global {
   }
 }
 export const useErrorMonitoring = () => {
-  // const { trackError } = useAnalytics();
+  const { trackEvent } = useAnalytics();
   const reportError = useCallback(
     (error: Error, context?: string) => {
-      console.error('Error reported:', error, context);
-      // trackError(error, context);
+      trackEvent('error', {
+        error_message: error.message,
+        error_stack: error.stack,
+        context: context || 'unknown'
+      });
     },
-    []
+    [trackEvent]
   );
   useEffect(() => {
     // Global error handler

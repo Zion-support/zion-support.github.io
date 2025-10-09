@@ -131,14 +131,16 @@ class SEOOptimizer {
    */
   private getRobotsContent(): string {
     if (!this.currentPageData) return 'index, follow';
-    const directives = [];
-    if (!this.currentPageData.noindex) {
+    const directives: string[] = [];
+    if (this.currentPageData.noindex) {
       directives.push('noindex');
-    }
-    if (!this.currentPageData.nofollow) {
-      directives.push('follow');
     } else {
+      directives.push('index');
+    }
+    if (this.currentPageData.nofollow) {
       directives.push('nofollow');
+    } else {
+      directives.push('follow');
     }
     return directives.join(', ');
   }
@@ -260,7 +262,7 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
+        priority: 1.0
       }
     ];
   }

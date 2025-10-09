@@ -1,17 +1,17 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page.tsx'));
+const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const ServicesPage = lazy(() => import('./services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
-const NotFoundPage = lazy(() => import('./not-found.tsx'));
+const NotFoundPage = lazy(() => import('./not-found'));
 
 // AI Services Pages
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
@@ -32,7 +32,7 @@ const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
 const AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
-const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIServicesPage = lazy(() => import('../app/ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
@@ -58,16 +58,28 @@ const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
 
+// New Pages
+const WebDevelopmentPage = lazy(() => import('../app/web-development/page'));
+const AIFraudDetectionPage = lazy(() => import('../app/ai-fraud-detection/page'));
+const AIContentWriterPage = lazy(() => import('../app/ai-content-writer/page'));
+
+// Missing Pages
+const AICodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
+const AIBusinessIntelligencePage = lazy(() => import('./ai-business-intelligence/page'));
+const ITConsultingPage = lazy(() => import('./it-consulting/page'));
+const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
+const TeamPage = lazy(() => import('./team/page'));
+const CareersPage = lazy(() => import('./careers/page'));
+
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
-const APIDocsPage = lazy(() => import('./api-docs/page'));
+// const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainPage = lazy(() => import('./blockchain/page'));
 const BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
 const BusinessAppsPage = lazy(() => import('./business-apps/page'));
 const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
-const CareersPage = lazy(() => import('./careers/page'));
 const CloudServicesPage = lazy(() => import('./cloud-services/page'));
 const CompliancePage = lazy(() => import('./compliance/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
@@ -103,7 +115,6 @@ const StatusPage = lazy(() => import('./status/page'));
 const SupportPage = lazy(() => import('./support/page'));
 const SystemStatusPage = lazy(() => import('./system-status/page'));
 const TaskManagerProPage = lazy(() => import('./task-manager-pro/page'));
-const TeamPage = lazy(() => import('./team/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 
 // Blog Pages
@@ -207,16 +218,28 @@ const App: React.FC = () => {
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
             
+            {/* New Pages */}
+            <Route path="/web-development" element={<WebDevelopmentPage />} />
+            <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+            <Route path="/ai-content-writer" element={<AIContentWriterPage />} />
+            
+            {/* Missing Pages */}
+            <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
+            <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+            <Route path="/it-consulting" element={<ITConsultingPage />} />
+            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+            <Route path="/team" element={<TeamPage />} />
+            <Route path="/careers" element={<CareersPage />} />
+            
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
-            <Route path="/api-docs" element={<APIDocsPage />} />
+            <Route path="/api-docs" element={<DocsPage />} />
             <Route path="/api" element={<APIPage />} />
             <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
             <Route path="/blockchain" element={<BlockchainPage />} />
             <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
             <Route path="/business-apps" element={<BusinessAppsPage />} />
             <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-            <Route path="/careers" element={<CareersPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
             <Route path="/compliance" element={<CompliancePage />} />
             <Route path="/consultation" element={<ConsultationPage />} />
@@ -252,7 +275,6 @@ const App: React.FC = () => {
             <Route path="/support" element={<SupportPage />} />
             <Route path="/system-status" element={<SystemStatusPage />} />
             <Route path="/task-manager-pro" element={<TaskManagerProPage />} />
-            <Route path="/team" element={<TeamPage />} />
             <Route path="/terms" element={<TermsPage />} />
             
             {/* Blog Pages */}

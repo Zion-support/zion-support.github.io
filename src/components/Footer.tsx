@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const microSaasServices = [
+import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';
+
+const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
@@ -101,6 +100,7 @@ const Footer: React.FC = () => {
     { name: 'Compliance', url: '/compliance' }
   ];
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
@@ -228,11 +228,11 @@ const Footer: React.FC = () => {
           {/* Company & Support */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-4">
               <div>
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">
-                  {companyLinks.slice(0, 4).map((link) => (
+                  {companyLinks.map((link) => (
                     <li key={link.name}>
                       <a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -246,7 +246,21 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-medium mb-2">Support</h4>
                 <ul className="space-y-1">
-                  {supportLinks.slice(0, 4).map((link) => (
+                  {supportLinks.map((link) => (
+                    <li key={link.name}>
+                      <a href={link.url}
+                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-white font-medium mb-2">Legal</h4>
+                <ul className="space-y-1">
+                  {legalLinks.map((link) => (
                     <li key={link.name}>
                       <a href={link.url}
                         className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -268,14 +282,15 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              {legalLinks.map((link) => (
-                <a key={link.name}
-                  href={link.url}
-                  className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  {link.name}
-                </a>
-              ))}
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Terms of Service
+              </a>
+              <a href="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>

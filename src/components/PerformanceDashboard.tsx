@@ -1,18 +1,13 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
 }
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-  [key: string]: number;
-}
+
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -21,6 +16,7 @@ const PerformanceDashboard: React.FC = () => {
     fps: 0
   });
   const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -29,6 +25,7 @@ const PerformanceDashboard: React.FC = () => {
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
+      
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
@@ -38,6 +35,7 @@ const PerformanceDashboard: React.FC = () => {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
+      
       // Measure FPS (simplified)
       let fps = 0;
       if ('requestAnimationFrame' in window) {
@@ -54,6 +52,7 @@ const PerformanceDashboard: React.FC = () => {
         };
         requestAnimationFrame(measureFPS);
       }
+      
       setMetrics({
         loadTime,
         renderTime,
@@ -61,6 +60,7 @@ const PerformanceDashboard: React.FC = () => {
         fps
       });
     };
+    
     updateMetrics();
     // Update metrics every 5 seconds
     const interval = setInterval(updateMetrics, 5000);

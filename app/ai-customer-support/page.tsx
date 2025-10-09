@@ -1,66 +1,62 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
 import { CheckCircle, Phone, Mail } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
+const AICustomerSupportPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: MessageCircle,
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
-      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
+      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']}
     },
     {
       icon: Users,
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
-      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
+      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']}
     },
     {
       icon: Clock,
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
-      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
+      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']}
     },
     {
       icon: Shield,
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
-      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
+      benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']}
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Starter',
       price: '$149/month',
       description: 'Perfect for small businesses',
-      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']
+      features: ['Up to 1,000 conversations/month', 'Basic AI chatbot', 'Email support', 'Standard integrations']}
     },
     {
       name: 'Professional',
       price: '$299/month',
       description: 'Ideal for growing companies',
-      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']
+      features: ['Up to 10,000 conversations/month', 'Advanced AI with learning', 'Phone & email support', 'Advanced integrations', 'Analytics dashboard']}
     },
     {
       name: 'Enterprise',
       price: '$599/month',
       description: 'For large organizations',
-      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
+      features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']}
     }
-  ];
-
+  ]
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '100+', label: 'Languages Supported' }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -77,11 +73,11 @@ const AICustomerSupportPage: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
             <div className="relative z-10 py-16 px-4">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"><span className="sr-only">Screen reader: </span>
                   AI Customer Support
                 </span>
                 <br />
-                <span className="text-2xl sm:text-3xl md:text-4xl text-gray-300">
+                <span className="text-2xl sm:text-3xl md:text-4xl text-gray-300"><span className="sr-only">Screen reader: </span>
                   Revolutionize Your Customer Service
                 </span>
               </h1>
@@ -93,7 +89,9 @@ const AICustomerSupportPage: React.FC = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com?subject=AI Customer Support Inquiry"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 shadow-lg"
-                >
+                 aria-label="
+                  Get Started Today
+                ">
                   Get Started Today
                 </a>
                 <a
@@ -134,9 +132,9 @@ const AICustomerSupportPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
@@ -157,15 +155,15 @@ const AICustomerSupportPage: React.FC = () => {
                 <div key={index} className={`bg-slate-800/50 rounded-xl p-8 border ${index === 1 ? 'border-cyan-500' : 'border-slate-700'} relative`}>
                   {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                         Most Popular
                       </span>
-                    </div>
+                    </div>}
                   )}
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="text-4xl font-bold text-cyan-400 mb-6">{plan.price}</div>
-                  <ul className="space-y-3 mb-8">
+                  <ul className="space-y-3 mb-8" role="list">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -207,7 +205,7 @@ const AICustomerSupportPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-              <div className="mt-6 text-sm text-gray-400">
+              <div className="mt-6 text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
                 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
             </div>
@@ -216,7 +214,6 @@ const AICustomerSupportPage: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
-
-export default AICustomerSupportPage;
+  )
+}
+export default AICustomerSupportPage

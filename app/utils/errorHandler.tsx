@@ -342,7 +342,7 @@ export class ErrorHandler {
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            `);
+            console.log('Retrying network request...');
           }
         }
         // Add your retry logic here

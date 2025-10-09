@@ -55,6 +55,8 @@ export interface A11yIssue {
   fix?: string;
   /** Code example for the fix */
   codeExample?: string;
+  /** Suggestion for improvement */
+  suggestion?: string;
 }
 /**
  * Accessibility check result
@@ -559,5 +561,6 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;
   }
 }

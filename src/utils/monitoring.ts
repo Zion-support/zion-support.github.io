@@ -5,6 +5,7 @@
  */
 import React from 'react'
 import { performanceConfig } from '../../performance.config'
+
 export interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -13,6 +14,7 @@ export interface PerformanceMetrics {
   ttfb?: number;
   inp?: number;
 }
+
 export interface ErrorReport {
   message: string;
   stack?: string;
@@ -21,15 +23,18 @@ export interface ErrorReport {
   userAgent: string;
   url: string;
 }
+
 class MonitoringService {
   private metrics: PerformanceMetrics = {}
   private errors: ErrorReport[] = []
   private observer: PerformanceObserver | null = null
+
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeMonitoring()
     }
   }
+
   private initializeMonitoring(): void {
     // Monitor Web Vitals
     this.monitorWebVitals()
@@ -40,6 +45,7 @@ class MonitoringService {
     // Global Error Handler
     this.setupErrorHandling()
   }
+
   private monitorWebVitals(): void {
     if ('PerformanceObserver' in window) {
       try {
@@ -51,6 +57,7 @@ class MonitoringService {
           this.reportMetric('lcp', this.metrics.lcp)
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+
         // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -60,19 +67,21 @@ class MonitoringService {
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
+
         // Cumulative Layout Shift
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
             if (!(entry as any).hadRecentInput) {
-              clsValue += entry.value;
+              clsValue += (entry as any).value || 0;
               this.metrics.cls = clsValue;
               this.reportMetric('cls', clsValue);
             }
           })
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
+
         // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
@@ -87,6 +96,7 @@ class MonitoringService {
       }
     }
   }
+
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
@@ -104,17 +114,19 @@ class MonitoringService {
       }
     }
   }
+
   private monitorResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       try {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          entries.forEach((entry: PerformanceResourceTiming) => {
-            if (entry.duration > 1000) {
+          entries.forEach((entry: PerformanceEntry) => {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) {
               // console.warn('Slow resource detected:', {
-              //   name: entry.name,
-              //   duration: entry.duration,
-              //   type: entry.initiatorType
+              //   name: resourceEntry.name,
+              //   duration: resourceEntry.duration,
+              //   type: resourceEntry.initiatorType
               // })
             }
           });
@@ -125,6 +137,7 @@ class MonitoringService {
       }
     }
   }
+
   private setupErrorHandling(): void {
     // Global error handler
     window.addEventListener('error', (event) => {
@@ -136,6 +149,7 @@ class MonitoringService {
         url: window.location.href
       })
     })
+
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
@@ -146,6 +160,7 @@ class MonitoringService {
       })
     })
   }
+
   private reportMetric(name: string, value: number): void {
     // Sample rate
     if (Math.random() > performanceConfig.monitoring.sampleRate) {
@@ -161,13 +176,14 @@ class MonitoringService {
       // })
     }
     // Send to analytics (if configured)
-    if (typeof gtag === 'function') {
-      gtag('event', name, {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
     }
   }
+
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors
@@ -177,15 +193,19 @@ class MonitoringService {
     // console.error('[Error]', error)
     // Send to error tracking service (if configured)
   }
+
   public getMetrics(): PerformanceMetrics {
     return { ...this.metrics }
   }
+
   public getErrors(): ErrorReport[] {
     return [...this.errors]
   }
+
   public clearErrors(): void {
     this.errors = []
   }
+
   public measureMemory(): void {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
@@ -198,6 +218,7 @@ class MonitoringService {
       }
     }
   }
+
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -215,6 +236,7 @@ class MonitoringService {
     }
   }
 }
+
 // Singleton instance
 const monitoring = new MonitoringService()
 export default monitoring

@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { lazy } from 'react';
+import { Helmet } from 'react-helmet-async'
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 
-const AI3DGenerationPage: React.FC = () => {
+const AI3DGenerationPage: React.FC = React.memo((props) => {
   const features = [
     'Generate high-quality 3D models from text descriptions',
     'Create photorealistic textures and materials',
@@ -15,8 +15,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Custom style transfer and adaptation',
     'Physics simulation integration',
     'Export to all major 3D formats'
-  ];
-
+  ]
   const benefits = [
     'Reduce 3D content creation time by 90%',
     'Lower production costs by 80%',
@@ -26,8 +25,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
-  ];
-
+  ]
   const applications = [
     {
       title: 'Game Development',
@@ -39,34 +37,33 @@ const AI3DGenerationPage: React.FC = () => {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: '🏗️',
-      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']
+      examples: ['Building models', 'Interior designs', 'Furniture layouts', 'Landscape designs']}
     },
     {
       title: 'E-commerce',
       description: 'Generate product visualizations and AR experiences',
       icon: '🛒',
-      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']
+      examples: ['Product models', 'AR try-ons', 'Virtual showrooms', 'Packaging designs']}
     },
     {
       title: 'Education & Training',
       description: 'Create interactive 3D learning materials',
       icon: '📚',
-      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']
+      examples: ['Anatomical models', 'Historical reconstructions', 'Scientific visualizations', 'Training simulations']}
     },
     {
       title: 'Entertainment & Media',
       description: 'Produce 3D content for films and animations',
       icon: '🎬',
-      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']
+      examples: ['Character designs', 'Set pieces', 'Props and objects', 'Special effects']}
     },
     {
       title: 'Manufacturing',
       description: 'Design and prototype products in 3D',
       icon: '🏭',
-      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
+      examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']}
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: 'Creator',
@@ -79,7 +76,7 @@ const AI3DGenerationPage: React.FC = () => {
         'Email support',
         'Basic export formats'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Studio',
@@ -94,7 +91,7 @@ const AI3DGenerationPage: React.FC = () => {
         'Animation support',
         'Batch processing'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -110,17 +107,15 @@ const AI3DGenerationPage: React.FC = () => {
         'White-label solution',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   const technologies = [
     'NeRF (Neural Radiance Fields)', '3D GANs', 'Point Cloud Processing',
     'Mesh Generation', 'Texture Synthesis', 'Blender API Integration',
     'Unity Integration', 'Unreal Engine Support', 'Custom 3D Models',
     'Deep Learning', 'Computer Vision', 'Generative AI'
-  ];
-
+  ]
   const workflow = [
     {
       step: 1,
@@ -144,14 +139,13 @@ const AI3DGenerationPage: React.FC = () => {
       step: 4,
       title: 'Export & Use',
       description: 'Download in your preferred format and integrate',
-      icon: '📤'
+      icon: '📤'}
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI 3D Model Generation - Zion Tech Group</title>
+        <title>AI 3D Model Generation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Generate high-quality 3D models using AI. Create characters, environments, and objects from text descriptions. Starting at $199/month." />
         <meta name="keywords" content="3D generation, AI 3D, 3D models, game assets, 3D design, virtual reality, augmented reality" />
       </Helmet>
@@ -196,15 +190,15 @@ const AI3DGenerationPage: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
+                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
+                <span className="text-white font-medium"><span className="sr-only">Screen reader: </span>Middletown, DE</span>
               </div>
             </div>
           </div>
@@ -222,7 +216,7 @@ const AI3DGenerationPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{feature}</span>
                 </div>
               ))}
             </div>
@@ -232,7 +226,7 @@ const AI3DGenerationPage: React.FC = () => {
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <TrendingUp className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -251,7 +245,7 @@ const AI3DGenerationPage: React.FC = () => {
             {workflow.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">{step.icon}</span>
+                  <span className="text-2xl"><span className="sr-only">Screen reader: </span>{step.icon}</span>
                 </div>
                 <div className="bg-purple-100 text-purple-800 text-sm font-medium px-3 py-1 rounded-full inline-block mb-3">
                   Step {step.step}
@@ -278,9 +272,9 @@ const AI3DGenerationPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{app.description}</p>
                 <div className="space-y-2">
                   <h4 className="text-sm font-semibold text-cyan-400">Examples:</h4>
-                  <ul className="space-y-1">
+                  <ul className="space-y-1" role="list">
                     {app.examples.map((example, exampleIndex) => (
-                      <li key={exampleIndex} className="text-sm text-gray-400 flex items-center">
+                      <li key={exampleIndex} className="text-sm text-gray-400 flex items-center" style={{ color: "#9CA3AF" }}>
                         <ArrowRight className="w-3 h-3 mr-2" />
                         {example}
                       </li>
@@ -304,10 +298,10 @@ const AI3DGenerationPage: React.FC = () => {
               <div key={index} className={`bg-white rounded-xl shadow-lg p-8 relative ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>
+                  </div>}
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
@@ -315,7 +309,7 @@ const AI3DGenerationPage: React.FC = () => {
                   <div className="text-4xl font-bold text-purple-600 mb-2">{plan.price}</div>
                   <p className="text-gray-500">per month</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8" role="list">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-600">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
@@ -328,7 +322,7 @@ const AI3DGenerationPage: React.FC = () => {
                   className={`w-full py-3 px-4 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`}
                   }`}
                 >
                   Get Started
@@ -347,7 +341,7 @@ const AI3DGenerationPage: React.FC = () => {
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             {technologies.map((tech, index) => (
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm">
+              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm"><span className="sr-only">Screen reader: </span>
                 {tech}
               </span>
             ))}
@@ -368,20 +362,23 @@ const AI3DGenerationPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+             aria-label="
+              Call (302) 464-0950
+            ">
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
+             aria-label="
+              Email Us
+            ">
               Email Us
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-};
-
-export default AI3DGenerationPage;
+  )
+}
+export default AI3DGenerationPage

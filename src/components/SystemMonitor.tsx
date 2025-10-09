@@ -16,6 +16,7 @@ const collectPerformanceMetrics = () => {
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
   };
 };
+
 // Helper functions
 const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();

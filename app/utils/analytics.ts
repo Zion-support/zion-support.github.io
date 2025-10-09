@@ -1,19 +1,19 @@
-'use client';
+'use client'
 import React from 'react'
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
  */
 export interface AnalyticsEvent {
-  action: string;
-  category: string;
-  label?: string;
-  value?: number;
-  metadata?: Record<string, unknown>;
+  action: string
+  category: string
+  label?: string
+  value?: number
+  metadata?: Record<string, unknown>;}
 }
 export interface AnalyticsUser {
-  id?: string;
-  properties?: Record<string, unknown>;
+  id?: string
+  properties?: Record<string, unknown>;}
 }
 class AnalyticsService {
   private isInitialized = false
@@ -29,8 +29,8 @@ class AnalyticsService {
       if (typeof window === 'undefined') return
       // Process queued events
       this.processQueue()
-      this.isInitialized = true
-    } catch (error) {
+      this.isInitialized = true}
+    } catch (error) {}
       }
   }
   /**
@@ -40,7 +40,7 @@ class AnalyticsService {
     try {
       if (!this.isInitialized) {
         this.queueEvent(event)
-        return
+        return}
       }
       // Send to Google Analytics if available
       if (this.hasGtag()) {
@@ -48,13 +48,13 @@ class AnalyticsService {
           event_category: event.category,
           event_label: event.label,
           value: event.value,
-          ...event.metadata
+          ...event.metadata}
         })
       }
       // Log in development
-      if (process.env['NODE_ENV'] === 'development') {
+      if (process.env['NODE_ENV'] === 'development') {}
         }
-    } catch (error) {
+    } catch (error) {}
       }
   }
   /**
@@ -65,10 +65,10 @@ class AnalyticsService {
       if (this.hasGtag()) {
         gtag('config', this.config.gaId, {
           page_path: path,
-          page_title: title
+          page_title: title}
         })
       }
-    } catch (error) {
+    } catch (error) {}
       }
   }
   /**
@@ -79,10 +79,10 @@ class AnalyticsService {
       if (this.hasGtag() && user.id) {
         gtag('config', this.config.gaId, {
           user_id: user.id,
-          ...user.properties
+          ...user.properties}
         })
       }
-    } catch (error) {
+    } catch (error) {}
       }
   }
   /**
@@ -95,7 +95,7 @@ class AnalyticsService {
       label: error.message,
       metadata: {
         stack: error.stack,
-        ...metadata
+        ...metadata}
       }
     })
   }
@@ -114,10 +114,10 @@ class AnalyticsService {
           name: variable,
           value: Math.round(value),
           event_category: category,
-          event_label: label
-        });
+          event_label: label}
+        })
       }
-    } catch (error) {
+    } catch (error) {}
       }
   }
   /**
@@ -130,9 +130,9 @@ class AnalyticsService {
         category: 'web_vitals',
         label: metric,
         value: Math.round(value),
-        metadata
+        metadata}
       })
-    } catch (error) {
+    } catch (error) {}
       }
   }
   /**
@@ -142,21 +142,21 @@ class AnalyticsService {
     return (
       typeof window !== 'undefined' &&
       typeof window.gtag === 'function'
-    )
+    )}
   }
   /**
    * Get Google Analytics ID
    */
   private getGtagId(): string {
     // Return the tracking ID from environment or config
-    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'
+    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'}
   }
   /**
    * Queue event for later processing
    */
   private queueEvent(event: AnalyticsEvent): void {
     if (this.queue.length < this.maxQueueSize) {
-      this.queue.push(event)
+      this.queue.push(event)}
     }
   }
   /**
@@ -166,7 +166,7 @@ class AnalyticsService {
     while (this.queue.length > 0) {
       const event = this.queue.shift()
       if (event) {
-        this.trackEvent(event)
+        this.trackEvent(event)}
       }
     }
   }
@@ -190,6 +190,6 @@ export const trackTiming = (
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
 // Initialize on import
 if (typeof window !== 'undefined') {
-  analytics.initialize()
+  analytics.initialize()}
 }
 export default analytics
