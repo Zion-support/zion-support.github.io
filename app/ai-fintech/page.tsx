@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
@@ -138,13 +137,7 @@ const AIFintechPage: React.FC = () => {
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>AI Fintech Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered fintech solutions including algorithmic trading, fraud detection, credit scoring, and financial planning platforms." />
-        <meta name="keywords" content="AI fintech, financial AI, algorithmic trading, fraud detection, credit scoring, fintech automation" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -354,7 +347,6 @@ const AIFintechPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
   );
 };
 export default AIFintechPage;

@@ -1,16 +1,10 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ITServicesPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="relative z-10">
           <section className="py-20 px-4 text-center">
@@ -26,7 +20,6 @@ const ITServicesPage: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </>
   );
 };
 export default ITServicesPage;

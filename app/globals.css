@@ -279,11 +279,122 @@ a {
     background-size: 15px 15px;
   }
   
+  .cyber-grid-enhanced {
+    background-size: 15px 15px, 15px 15px, 30px 30px, 30px 30px;
+  }
+  
   .neon-text {
     text-shadow: 
       0 0 3px #00ffff,
       0 0 6px #00ffff,
       0 0 9px #00ffff;
+  }
+  
+  .holographic-text {
+    font-size: 2.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 2.5rem;
+  }
+  
+  .quantum-card,
+  .cyber-card,
+  .hologram-card {
+    padding: 1rem;
+  }
+  
+  .energy-pulse {
+    animation-duration: 3s;
+  }
+}
+
+@media (max-width: 640px) {
+  .holographic-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 2rem;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 4px #00ffff,
+      0 0 6px #00ffff;
+  }
+  
+  .quantum-card,
+  .cyber-card,
+  .hologram-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .futuristic-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .holographic-text {
+    font-size: 1.75rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.75rem;
+  }
+  
+  .quantum-card,
+  .cyber-card,
+  .hologram-card {
+    padding: 0.5rem;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .futuristic-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1920px) {
+  .cyber-grid-enhanced {
+    background-size: 30px 30px, 30px 30px, 60px 60px, 60px 60px;
+  }
+  
+  .holographic-text {
+    font-size: 5rem;
+  }
+  
+  .cyber-text {
+    font-size: 5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 2560px) {
+  .cyber-grid-enhanced {
+    background-size: 40px 40px, 40px 40px, 80px 80px, 80px 80px;
+  }
+  
+  .holographic-text {
+    font-size: 6rem;
+  }
+  
+  .cyber-text {
+    font-size: 6rem;
   }
 }
 
@@ -421,6 +532,262 @@ a {
 
 .cyber-button:hover::before {
   left: 100%;
+}
+
+/* Advanced Futuristic Effects */
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff00ff;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #00ffff;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(-2px, -2px); }
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff, #ff00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 4s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 255, 0, 0.1), transparent);
+  animation: matrix-fall 3s linear infinite;
+}
+
+@keyframes matrix-fall {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+  text-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  animation: neon-flicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Cyber Grid Enhanced */
+.cyber-grid-enhanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
+  animation: grid-pulse 4s ease-in-out infinite;
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Quantum Entanglement Effect */
+.quantum-entanglement {
+  position: relative;
+}
+
+.quantum-entanglement::before,
+.quantum-entanglement::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 2px;
+  background: #00ffff;
+  border-radius: 50%;
+  animation: quantum-oscillate 2s ease-in-out infinite;
+}
+
+.quantum-entanglement::after {
+  animation-delay: 1s;
+  background: #ff00ff;
+}
+
+@keyframes quantum-oscillate {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0.3;
+  }
+}
+
+/* Neural Network Animation */
+.neural-network {
+  position: relative;
+}
+
+.neural-network::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255, 255, 0, 0.1) 0%, transparent 50%);
+  animation: neural-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neural-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Cyber Scan Enhanced */
+.cyber-scan-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
+  animation: cyber-scan-enhanced 3s linear infinite;
+}
+
+@keyframes cyber-scan-enhanced {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Energy Field Effect */
+.energy-field {
+  position: relative;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  animation: energy-pulse-field 2s ease-in-out infinite;
+}
+
+@keyframes energy-pulse-field {
+  0%, 100% { 
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  }
+  50% { 
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+  }
+}
+
+/* Futuristic Button Enhanced */
+.futuristic-button {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  border: 2px solid #00ffff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: futuristic-glow 3s ease-in-out infinite;
+}
+
+.futuristic-button:hover {
+  background: linear-gradient(45deg, #ff00ff, #ffff00, #00ffff, #ff00ff);
+  box-shadow: 
+    0 0 30px rgba(0, 255, 255, 0.8),
+    inset 0 0 30px rgba(0, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+@keyframes futuristic-glow {
+  0%, 100% { 
+    background-position: 0% 50%;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  50% { 
+    background-position: 100% 50%;
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+  }
 }
 
 /* Reduced Motion */

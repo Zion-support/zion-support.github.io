@@ -5,6 +5,9 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRigh
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -96,16 +99,16 @@ const Navigation: React.FC = () => {
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center energy-pulse">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
@@ -127,7 +130,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500/50 py-6 z-50 cyber-glow">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
