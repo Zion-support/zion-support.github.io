@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:src/it-services/page.tsx
+<<<<<<< HEAD:src/it-services/page.tsx
   const itServices = [
     // Infrastructure & Cloud Services
     {
@@ -240,6 +241,8 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
   const services = [
     {
       icon: Cloud,
@@ -359,6 +362,7 @@ const ITServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
 <<<<<<< HEAD:src/it-services/page.tsx
+<<<<<<< HEAD:src/it-services/page.tsx
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -409,6 +413,54 @@ const ITServicesPage: React.FC = () => {
 <<<<<<< HEAD:app/it-services/page.tsx
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/it-services/page.tsx
+=======
+      
+      <main className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              IT Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive IT solutions including infrastructure, cybersecurity, 
+              database management, and DevOps services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button inline-flex items-center space-x-2"
+              >
+                <Cloud className="w-4 h-4" />
+                <span>Get Started</span>
+              </a>
+              <a
+                href="/contact"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
+          </section>
+
+          {/* Services Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Our IT Services
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                  <service.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
                         {feature}
                       </li>
                     ))}
@@ -458,6 +510,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:src/it-services/page.tsx
+<<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:app/it-services/page.tsx
               </div>
             ))}
@@ -482,6 +535,8 @@ const ITServicesPage: React.FC = () => {
         </section>
 <<<<<<< HEAD:src/it-services/page.tsx
 <<<<<<< HEAD:app/it-services/page.tsx
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/it-services/page.tsx
               ))}
             </div>
           </div>

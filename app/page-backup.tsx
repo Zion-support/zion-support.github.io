@@ -158,10 +158,15 @@ const HomePage: React.FC = () => {
             <h1 
               id="hero-heading" 
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
 =======
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
               data-text="Zion Tech Group"
             >
               Zion Tech Group
@@ -462,11 +467,14 @@ const HomePage: React.FC = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                     Intelligent lead scoring and qualification with AI-powered predictive analytics and automated follow-ups.
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                     Intelligent lead scoring and qualification with AI-powered predictive analytics and automated nurturing.
                   </p>
                   <div className="text-center">
@@ -482,6 +490,7 @@ const HomePage: React.FC = () => {
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Automated social media posting, engagement, and analytics with AI content optimization and scheduling.
@@ -490,6 +499,8 @@ const HomePage: React.FC = () => {
                     <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$159/month</div>
                     <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Sales Forecasting</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Advanced sales forecasting with AI predictions, trend analysis, and revenue optimization recommendations.
@@ -507,6 +518,7 @@ const HomePage: React.FC = () => {
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div>
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
                     Complete e-commerce automation with AI product recommendations, pricing optimization, and inventory management.
@@ -516,6 +528,31 @@ const HomePage: React.FC = () => {
                     <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Optimizer</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Optimize e-commerce performance with AI-powered product recommendations, pricing, and conversion optimization.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$249/month</div>
+                    <a href="/ai-ecommerce-optimizer" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
+                      Learn More →
+                    </a>
+                  </div>
+                </article>
+              </Suspense>
+              <Suspense fallback={<ServiceCardSkeleton />}>
+                <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Assistant</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    AI-powered design tool for logos, graphics, and visual content with automated brand consistency.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">$129/month</div>
+                    <a href="/ai-design-assistant" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                       Learn More →
                     </a>
                   </div>
@@ -527,12 +564,20 @@ const HomePage: React.FC = () => {
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                     Intelligent document processing, OCR, data extraction, and automated workflow management with AI.
                   </p>
                   <div className="text-center">
                     <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$119/month</div>
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                    Intelligent document processing, OCR, data extraction, and automated form filling with AI accuracy.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$179/month</div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                     <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">
                       Learn More →
                     </a>
@@ -541,6 +586,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
@@ -567,6 +613,17 @@ const HomePage: React.FC = () => {
                     <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Real-time security monitoring with AI threat detection, automated response, and compliance reporting.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-slate-400 mb-2">$299/month</div>
+                    <a href="/ai-security-monitor" className="text-slate-400 hover:text-slate-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                       Learn More →
                     </a>
                   </div>
@@ -575,6 +632,7 @@ const HomePage: React.FC = () => {
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -585,6 +643,16 @@ const HomePage: React.FC = () => {
                     <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Performance Tracker</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Comprehensive performance tracking with AI insights, KPI monitoring, and automated optimization recommendations.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$159/month</div>
+                    <a href="/ai-performance-tracker" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                       Learn More →
                     </a>
                   </div>
@@ -592,6 +660,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>
@@ -603,6 +672,17 @@ const HomePage: React.FC = () => {
                     <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎵</div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Voice Assistant</h3>
+                  <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                    Custom voice assistants for business operations with natural language processing and task automation.
+                  </p>
+                  <div className="text-center">
+                    <div className="text-lg sm:text-2xl font-bold text-fuchsia-400 mb-2">$199/month</div>
+                    <a href="/ai-voice-assistant" className="text-fuchsia-400 hover:text-fuchsia-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                       Learn More →
                     </a>
                   </div>
@@ -610,6 +690,7 @@ const HomePage: React.FC = () => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>
@@ -683,6 +764,8 @@ const HomePage: React.FC = () => {
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI App Builder</h3>
                   <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -951,6 +1034,7 @@ const HomePage: React.FC = () => {
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">System Integration</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                   Seamless integration of disparate systems, APIs, and third-party applications with real-time data sync.
                 </p>
@@ -1284,6 +1368,13 @@ const HomePage: React.FC = () => {
 export default HomePage;
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  Complete system administration services including server management, user access, and system optimization.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$899/month</div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                   <a href="/system-administration" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -1294,9 +1385,14 @@ export default HomePage;
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                   Custom IT infrastructure design, architecture planning, and technology stack optimization.
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  Custom IT infrastructure design and implementation for scalable, secure, and efficient systems.
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>
@@ -1308,6 +1404,7 @@ export default HomePage;
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Performance Optimization</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
                   Application and system performance optimization with AI-powered monitoring and tuning.
@@ -1317,12 +1414,23 @@ export default HomePage;
                   <a href="/performance-optimization" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Performance Monitoring</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Real-time IT performance monitoring with AI-powered insights and proactive issue resolution.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$699/month</div>
+                  <a href="/it-performance-monitoring" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                     Learn More →
                   </a>
                 </div>
               </article>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
+<<<<<<< HEAD:app/page-backup.tsx
 <<<<<<< HEAD:app/page-backup.tsx
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Backup & Recovery</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -1359,6 +1467,16 @@ export default HomePage;
                   <a href="/enterprise-solutions" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Disaster Recovery</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Comprehensive disaster recovery planning and implementation with automated backup and recovery solutions.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">$1,199/month</div>
+                  <a href="/it-disaster-recovery" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                     Learn More →
                   </a>
                 </div>
@@ -1368,9 +1486,14 @@ export default HomePage;
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Training & Certification</h3>
                 <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
 <<<<<<< HEAD:app/page-backup.tsx
+<<<<<<< HEAD:app/page-backup.tsx
                   Comprehensive IT training programs, certification courses, and skill development workshops.
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-10f7:app/page.tsx
+=======
+                  Professional IT training programs and certification courses for your team's skill development.
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2">$299/month</div>
@@ -1379,6 +1502,36 @@ export default HomePage;
                   </a>
                 </div>
               </article>
+<<<<<<< HEAD:app/page-backup.tsx
+=======
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Automation</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  Intelligent IT automation solutions to streamline operations and reduce manual tasks by 80%.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$799/month</div>
+                  <a href="/it-automation" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌍</div>
+                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Global IT Support</h3>
+                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
+                  24/7 global IT support with multi-language capabilities and local expertise worldwide.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$1,299/month</div>
+                  <a href="/global-it-support" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+>>>>>>> cursor/analyze-improve-and-deploy-application-83ee:app/page.tsx
             </div>
           </div>
           {/* Advanced AI Services Grid */}
