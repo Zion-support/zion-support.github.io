@@ -403,8 +403,4 @@ const PricingPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PricingPage;
-=======
-export default PricingPage;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c

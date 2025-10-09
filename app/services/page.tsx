@@ -102,11 +102,7 @@ const ServicesPage: React.FC = () => {
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
-    address: 'Middletown, DE 19709'
-=======
     address: '364 E Main St STE 1008, Middletown DE 19709'
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c
   };
 
   return (
@@ -337,8 +333,5 @@ const ServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ServicesPage;
-=======
-export default ServicesPage;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c
+
