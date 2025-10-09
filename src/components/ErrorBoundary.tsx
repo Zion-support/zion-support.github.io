@@ -81,7 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
                 Try Again
               </button>
               <Link
-                href="/"
+                to="/"
                 className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />

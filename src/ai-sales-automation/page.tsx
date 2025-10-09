@@ -32,6 +32,29 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      icon: Building,
+      title: 'Real Estate',
+      description: 'Automate lead nurturing, property recommendations, and client follow-ups for real estate agents.'
+    },
+    {
+      icon: ShoppingCart,
+      title: 'E-commerce',
+      description: 'Boost online sales with personalized product recommendations and abandoned cart recovery.'
+    },
+    {
+      icon: Cloud,
+      title: 'SaaS',
+      description: 'Optimize trial-to-paid conversions with intelligent onboarding and usage-based follow-ups.'
+    },
+    {
+      icon: Home,
+      title: 'Home Services',
+      description: 'Streamline appointment scheduling, service reminders, and customer retention campaigns.'
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',

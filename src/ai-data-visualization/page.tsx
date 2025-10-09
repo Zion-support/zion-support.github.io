@@ -32,6 +32,29 @@ const AIDataVisualizationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      icon: BarChart,
+      title: 'Marketing Analytics',
+      description: 'Track campaign performance, customer acquisition costs, and ROI across all marketing channels.'
+    },
+    {
+      icon: Database,
+      title: 'Sales Intelligence',
+      description: 'Monitor sales pipelines, forecast revenue, and identify opportunities for growth.'
+    },
+    {
+      icon: Brain,
+      title: 'Operations Optimization',
+      description: 'Analyze operational efficiency, identify bottlenecks, and optimize resource allocation.'
+    },
+    {
+      icon: Shield,
+      title: 'Financial Reporting',
+      description: 'Create comprehensive financial dashboards with real-time P&L and cash flow analysis.'
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',
