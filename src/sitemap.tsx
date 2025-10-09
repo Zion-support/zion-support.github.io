@@ -2,9 +2,7 @@ import React from 'react';
 import { generateSitemap, getAllPages } from './sitemap-utils';
 
 const Sitemap: React.FC = () => {
-<<<<<<< HEAD
   const _sitemap = generateSitemap(getAllPages());
-=======
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -28,7 +26,6 @@ const Sitemap: React.FC = () => {
     <changefreq>monthly</changefreq>
   </url>
 </urlset>`;
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
   
   return (
     <div>

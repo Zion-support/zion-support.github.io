@@ -1,15 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-=======
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
-=======
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -83,10 +77,7 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 }
 
 export default AiServicesPage;
-=======
 export default AIServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf

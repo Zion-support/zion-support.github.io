@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
@@ -103,18 +101,14 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
-=======
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
 
 const AiEmailMarketingPage: React.FC = () => {
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIEmailMarketingPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -146,10 +140,7 @@ const AIEmailMarketingPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 }
 
 export default AiEmailMarketingPage;
-=======
 export default AIEmailMarketingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf

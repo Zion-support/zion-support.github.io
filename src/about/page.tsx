@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
@@ -25,7 +23,6 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
     },
-=======
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
@@ -36,12 +33,10 @@ const AboutPage: React.FC = () => {
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
   ];
 
   const values = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -68,7 +63,6 @@ const AboutPage: React.FC = () => {
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' },
-=======
       icon: Target,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
@@ -106,7 +100,6 @@ const AboutPage: React.FC = () => {
       role: 'Lead Developer',
       bio: 'Full-stack developer passionate about creating scalable solutions.'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
   ];
 
   return (
@@ -118,7 +111,6 @@ const AboutPage: React.FC = () => {
           </h1>
           <p className='text-xl text-gray-600'>
             Leading the future of AI and IT solutions
-=======
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
@@ -131,7 +123,6 @@ const AboutPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
           </p>
         </div>
         
@@ -157,7 +148,6 @@ const AboutPage: React.FC = () => {
             <p className="text-gray-300">Enterprise-grade security</p>
           </div>
         </div>
-<<<<<<< HEAD
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -306,7 +296,6 @@ const AboutPage: React.FC = () => {
         </section>
 
       <Footer />
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">About</h1>
@@ -317,13 +306,9 @@ const AboutPage: React.FC = () => {
       </div>
     </div>
     </div>
-=======
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3a03
-=======
       </div>
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-55cf
     </div>
   );
 };
