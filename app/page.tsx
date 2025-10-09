@@ -58,8 +58,6 @@ const HomePage: React.FC = () => {
     }
   }, []);
 
-<<<<<<< HEAD
-=======
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -192,7 +190,6 @@ const HomePage: React.FC = () => {
       color: 'text-purple-400'
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
   return (
     <>
       <SEOOptimizer
@@ -292,11 +289,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-<<<<<<< HEAD
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
-=======
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -333,7 +326,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -351,22 +343,6 @@ const HomePage: React.FC = () => {
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Started Today
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  onClick={handlePhoneClick}
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
                 </a>
               </div>
             </div>
