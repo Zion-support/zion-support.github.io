@@ -153,7 +153,7 @@ const AICustomerSupportPage: React.FC = () => {
           </section>
         </main>
         <Footer />
-      </div>
+        </div>
     </>
   );
 };

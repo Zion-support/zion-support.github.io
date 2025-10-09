@@ -1,4 +1,5 @@
 import './globals.css';
+import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
@@ -186,4 +187,3 @@ export default function RootLayout({
       </body>
     </html>
   );
-}

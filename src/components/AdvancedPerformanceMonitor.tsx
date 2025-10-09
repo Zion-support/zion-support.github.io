@@ -42,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         }
     }
     // Measure First Input Delay (FID)
@@ -67,7 +67,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         }
     }
     // Measure Cumulative Layout Shift (CLS)
@@ -93,7 +93,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
         }
     }
     // Measure Time to First Byte (TTFB)
@@ -114,7 +114,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
       }
     // Cleanup observers
     return () => {
@@ -122,7 +122,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
+           
           }
       });
     };
@@ -135,7 +135,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
     if (slowResources.length > 0) {
       // eslint-disable-next-line no-console
-      => ({
+      console.log('Slow resources:', slowResources.map(r => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize

@@ -80,5 +80,4 @@ export default function AI2026HyperconsciousComputingRevolution() {
         </div>
       </div>
     </div>
-  );
-}
+};

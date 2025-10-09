@@ -95,5 +95,4 @@ export default function ConsensusIntelligencePage() {
         </div>
       </div>
     </div>
-  );
-}
+};

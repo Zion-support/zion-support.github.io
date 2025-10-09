@@ -1,12 +1,6 @@
-'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD:app/components/ErrorBoundary.tsx
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-=======
-import { Link } from 'react-router-dom';
-import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-572b:src/components/ErrorBoundary.tsx
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -34,7 +28,12 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to monitoring service
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
         description: error.message,
@@ -107,10 +106,10 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              
               <button
                 onClick={this.handleGoHome}
-                className="flex-1 bg-slate-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-slate-600 transition-colors duration-300 flex items-center justify-center"
+                onClick={() => window.location.href = '/'}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home

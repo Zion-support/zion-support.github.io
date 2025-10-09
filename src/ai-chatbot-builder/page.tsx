@@ -246,7 +246,7 @@ export default function AIChatbotBuilderPage() {
         </section>
       </main>
       
-      <Footer />
-    </div>
+        <Footer />
+      </div>
   );
-}
+};

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -8,6 +7,7 @@ interface SEOEnhancerProps {
   url?: string;
   children: React.ReactNode;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
@@ -79,42 +79,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "geoRadius": "1000000"
     }
   };
+
   return (
     <>
-      <Helmet>
-        {/* Primary meta tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={url} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={image} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={url} />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={image} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        {/* Canonical URL */}
-        <link rel="canonical" href={url} />
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
       {children}
     </>
   );
 };
+
 export default SEOEnhancer;

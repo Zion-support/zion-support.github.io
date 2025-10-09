@@ -1,6 +1,6 @@
 'use client';
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
@@ -9,12 +9,14 @@ const Footer: React.FC = memo(() => {
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'AI-powered analytics', icon: '📈', popular: true },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
-    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+    { name: 'AI Video Generator', url: '/ai-video-generation', description: 'AI-powered video creation', icon: '🎬', popular: true },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI-driven SEO', icon: '🎯', popular: false },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing', icon: '📄', popular: false },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation', icon: '⚡', popular: true }
   ];
 
   const aiServices = [
@@ -25,27 +27,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
-    { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
-    { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
-    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
     { name: 'Database Management', url: '/database-management', description: 'Database management' },
@@ -159,9 +145,9 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS Solutions</h3>
             <ul className="space-y-3">
-              {aiServices.slice(0, 8).map((service, index) => (
+              {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.url}
@@ -175,8 +161,35 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  to="/ai-services"
+                  href="/services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Solutions →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* AI Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">AI Services</h3>
+            <ul className="space-y-3">
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  href="/ai-services"
+                  className="text-purple-400 hover:text-purple-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
                 </Link>
@@ -186,13 +199,13 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    href={service.url}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
@@ -202,8 +215,8 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  href="/it-services"
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
                 </Link>
@@ -218,7 +231,7 @@ const Footer: React.FC = memo(() => {
               {emergingTech.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -229,7 +242,7 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-                  to="/quantum-computing"
+                  href="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Technologies →
@@ -339,29 +352,31 @@ const Footer: React.FC = memo(() => {
             <div className="text-sm text-gray-400">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>Enterprise Security</span>
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6">
+              <div className="flex space-x-6">
+                <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+                  Cookie Policy
+                </Link>
               </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4 text-blue-400" />
-                <span>Global Reach</span>
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Shield className="w-4 h-4 text-green-400" />
+                  <span>Enterprise Security</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Award className="w-4 h-4 text-yellow-400" />
+                  <span>ISO 27001 Certified</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Globe className="w-4 h-4 text-blue-400" />
+                  <span>Global Reach</span>
+                </div>
               </div>
             </div>
           </div>

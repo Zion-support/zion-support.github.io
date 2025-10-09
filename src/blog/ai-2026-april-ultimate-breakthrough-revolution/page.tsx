@@ -109,5 +109,4 @@ export default function April2026UltimateBreakthroughRevolution() {
         </div>
       </div>
     </div>
-  );
-}
+};

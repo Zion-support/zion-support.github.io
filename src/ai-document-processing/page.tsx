@@ -293,8 +293,9 @@ const AIDocumentProcessingPage: React.FC = () => {
           </section>
         </main>
         <Footer />
-      </div>
+        </div>
     </>
   );
 };
+
 export default AIDocumentProcessingPage;

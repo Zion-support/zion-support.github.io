@@ -1,447 +1,349 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, RefreshCw, Database, Smartphone, Calendar, FileText, PieChart, Settings, Bell, Search, Filter, Download, Upload, Share2, Link2, Plus, Minus, Edit, Trash2, Save, Send, Archive, Tag, User, Building, CreditCard, ShoppingCart, Package, Truck, Headphones, HelpCircle, BookOpen, Lightbulb, Rocket, Crown, Gem, Heart, ThumbsUp, MessageCircle, Video, Camera, Mic, HeadphonesIcon, Wifi, Bluetooth, Battery, Wrench, Hammer, Screwdriver, Paintbrush, Palette, Scissors, Ruler, Calculator, Calendar as CalendarIcon, Clock as ClockIcon, Map, Navigation, Compass, Flag, Home, Building2, Factory, Store, Bank, Hospital, School, University, Church, Mosque, Temple, Library, Museum, Theater, Stadium, Airport, Train, Bus, Car, Bike, Plane, Ship, Rocket as RocketIcon, Satellite, Telescope, Microscope, Flask, Beaker, TestTube, Atom, DNA, Virus, Bacteria, Cell, Organ, Heart as HeartIcon, Brain as BrainIcon, Eye as EyeIcon, Ear, Nose, Mouth, Hand, Finger, Foot, Leg, Arm, Chest, Back, Stomach, Liver, Kidney, Lung, Stomach as StomachIcon, Intestine, Bone, Muscle, Skin, Hair, Nail, Tooth, Tongue, Lip, Cheek, Chin, Forehead, Temple, Jaw, Neck, Shoulder, Elbow, Wrist, Hip, Knee, Ankle, Heel, Toe, Thumb, Index, Middle, Ring, Pinky, Palm, Knuckle, Joint, Tendon, Ligament, Nerve, Vein, Artery, Capillary, Blood, Plasma, Platelet, WhiteBloodCell, RedBloodCell, Hemoglobin, Oxygen, CarbonDioxide, Nitrogen, Hydrogen, Helium, Lithium, Beryllium, Boron, Carbon, Nitrogen as NitrogenIcon, Oxygen as OxygenIcon, Fluorine, Neon, Sodium, Magnesium, Aluminum, Silicon, Phosphorus, Sulfur, Chlorine, Argon, Potassium, Calcium, Scandium, Titanium, Vanadium, Chromium, Manganese, Iron, Cobalt, Nickel, Copper, Zinc, Gallium, Germanium, Arsenic, Selenium, Bromine, Krypton, Rubidium, Strontium, Yttrium, Zirconium, Niobium, Molybdenum, Technetium, Ruthenium, Rhodium, Palladium, Silver, Cadmium, Indium, Tin, Antimony, Tellurium, Iodine, Xenon, Cesium, Barium, Lanthanum, Cerium, Praseodymium, Neodymium, Promethium, Samarium, Europium, Gadolinium, Terbium, Dysprosium, Holmium, Erbium, Thulium, Ytterbium, Lutetium, Hafnium, Tantalum, Tungsten, Rhenium, Osmium, Iridium, Platinum, Gold, Mercury, Thallium, Lead, Bismuth, Polonium, Astatine, Radon, Francium, Radium, Actinium, Thorium, Protactinium, Uranium, Neptunium, Plutonium, Americium, Curium, Berkelium, Californium, Einsteinium, Fermium, Mendelevium, Nobelium, Lawrencium, Rutherfordium, Dubnium, Seaborgium, Bohrium, Hassium, Meitnerium, Darmstadtium, Roentgenium, Copernicium, Nihonium, Flerovium, Moscovium, Livermorium, Tennessine, Oganesson, Server } from 'lucide-react';
+
 const ITInfrastructurePage: React.FC = () => {
-  const itServices = [
+  const services = [
     {
-      title: 'Cloud Infrastructure Management',
-      description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
-      icon: '☁️',
-      price: '$2,999/month',
-      features: [
-        'Multi-cloud architecture design',
-        'Infrastructure as Code (IaC)',
-        'Auto-scaling and load balancing',
-        'Cost optimization',
-        'Security hardening',
-        '24/7 monitoring and support'
-      ],
-      benefits: [
-        'Reduce infrastructure costs by 40%',
-        'Improve system reliability by 99.9%',
-        'Scale automatically with demand',
-        'Ensure enterprise-grade security'
-      ],
-      marketPrice: '$5000-10000/month',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Server,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud Platform for maximum performance and reliability.',
+      features: ['Auto-scaling', 'Load balancing', 'Disaster recovery', 'Cost optimization'],
+      benefits: ['99.9% uptime', 'Reduced costs', 'Global reach', 'Easy scaling']
     },
     {
-      title: 'DevOps & CI/CD Pipeline',
-      description: 'Complete DevOps transformation with automated deployment pipelines, testing, and continuous integration.',
-      icon: '🔄',
-      price: '$1,999/month',
-      features: [
-        'CI/CD pipeline setup',
-        'Automated testing integration',
-        'Container orchestration',
-        'Infrastructure monitoring',
-        'Security scanning',
-        'Deployment automation'
-      ],
-      benefits: [
-        'Deploy 10x faster',
-        'Reduce deployment errors by 90%',
-        'Improve team productivity',
-        'Ensure consistent deployments'
-      ],
-      marketPrice: '$3000-6000/month',
-      technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Docker', 'Kubernetes', 'Ansible'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Database,
+      title: 'Database Management',
+      description: 'Expert database design, optimization, and management for SQL and NoSQL databases.',
+      features: ['Performance tuning', 'Backup strategies', 'Security hardening', 'Migration services'],
+      benefits: ['Improved performance', 'Data security', 'Reduced downtime', 'Better scalability']
     },
     {
-      title: 'Database Administration & Optimization',
-      description: 'Expert database management, optimization, and migration services for MySQL, PostgreSQL, MongoDB, and more.',
-      icon: '🗄️',
-      price: '$1,499/month',
-      features: [
-        'Database design and optimization',
-        'Performance tuning',
-        'Backup and recovery',
-        'Security hardening',
-        'Migration services',
-        'Monitoring and alerting'
-      ],
-      benefits: [
-        'Improve query performance by 300%',
-        'Ensure data security and compliance',
-        'Reduce downtime to near zero',
-        'Optimize storage costs'
-      ],
-      marketPrice: '$2500-5000/month',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'AWS RDS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Shield,
+      title: 'Network Security',
+      description: 'Comprehensive network security solutions including firewalls, VPNs, and intrusion detection.',
+      features: ['Firewall configuration', 'VPN setup', 'Intrusion detection', 'Security monitoring'],
+      benefits: ['Enhanced security', 'Compliance', 'Threat prevention', '24/7 monitoring']
     },
     {
-      title: 'Network Security & Firewall Management',
-      description: 'Advanced network security solutions with firewall configuration, intrusion detection, and threat monitoring.',
-      icon: '🛡️',
-      price: '$2,499/month',
-      features: [
-        'Firewall configuration and management',
-        'Intrusion detection systems',
-        'VPN setup and management',
-        'Network monitoring',
-        'Security policy implementation',
-        'Threat response and mitigation'
-      ],
-      benefits: [
-        'Prevent 99% of security breaches',
-        'Ensure compliance with regulations',
-        'Reduce security incidents by 95%',
-        'Protect sensitive data'
-      ],
-      marketPrice: '$4000-8000/month',
-      technologies: ['Cisco', 'Fortinet', 'Palo Alto', 'pfSense', 'Snort', 'Wireshark'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Wifi,
+      title: 'Network Design',
+      description: 'Custom network architecture design and implementation for optimal performance and security.',
+      features: ['Network planning', 'Cable management', 'Wireless setup', 'Performance optimization'],
+      benefits: ['Faster speeds', 'Better coverage', 'Reduced latency', 'Future-proof design']
     },
     {
-      title: 'Server Management & Maintenance',
-      description: 'Comprehensive server administration including Windows, Linux, and virtualized environments.',
-      icon: '🖥️',
-      price: '$1,799/month',
-      features: [
-        'Server setup and configuration',
-        'OS updates and patching',
-        'Performance monitoring',
-        'Backup and disaster recovery',
-        'User management',
-        'Security hardening'
-      ],
-      benefits: [
-        'Ensure 99.9% uptime',
-        'Reduce maintenance costs by 50%',
-        'Improve system performance',
-        'Prevent security vulnerabilities'
-      ],
-      marketPrice: '$3000-6000/month',
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Ansible', 'Puppet'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: RefreshCw,
+      title: 'Backup & Recovery',
+      description: 'Automated backup solutions and disaster recovery planning to protect your critical data.',
+      features: ['Automated backups', 'Disaster recovery', 'Data encryption', 'Testing & validation'],
+      benefits: ['Data protection', 'Quick recovery', 'Compliance', 'Peace of mind']
     },
     {
-      title: 'IT Support & Help Desk',
-      description: '24/7 IT support services with remote assistance, ticketing system, and proactive monitoring.',
-      icon: '🎧',
-      price: '$1,299/month',
-      features: [
-        '24/7 technical support',
-        'Remote desktop assistance',
-        'Ticketing and issue tracking',
-        'Proactive system monitoring',
-        'User training and documentation',
-        'Hardware and software support'
-      ],
-      benefits: [
-        'Reduce IT downtime by 80%',
-        'Improve user satisfaction',
-        'Resolve issues faster',
-        'Prevent problems proactively'
-      ],
-      marketPrice: '$2000-4000/month',
-      technologies: ['ServiceNow', 'Jira', 'TeamViewer', 'SCCM', 'Active Directory', 'Office 365'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Data Backup & Disaster Recovery',
-      description: 'Comprehensive backup solutions and disaster recovery planning to protect your critical data.',
-      icon: '💾',
-      price: '$999/month',
-      features: [
-        'Automated backup systems',
-        'Disaster recovery planning',
-        'Data encryption',
-        'Offsite storage',
-        'Recovery testing',
-        'Compliance monitoring'
-      ],
-      benefits: [
-        'Protect against data loss',
-        'Ensure business continuity',
-        'Meet compliance requirements',
-        'Reduce recovery time to minutes'
-      ],
-      marketPrice: '$1500-3000/month',
-      technologies: ['Veeam', 'Acronis', 'AWS Backup', 'Azure Backup', 'Commvault', 'Rubrik'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Email & Communication Systems',
-      description: 'Enterprise email solutions with Microsoft 365, Google Workspace, and custom email server management.',
-      icon: '📧',
-      price: '$799/month',
-      features: [
-        'Email server setup and management',
-        'Microsoft 365 administration',
-        'Google Workspace management',
-        'Email security and filtering',
-        'Mobile device management',
-        'User provisioning and deprovisioning'
-      ],
-      benefits: [
-        'Improve email security',
-        'Reduce spam and phishing',
-        'Ensure email compliance',
-        'Enhance productivity'
-      ],
-      marketPrice: '$1200-2500/month',
-      technologies: ['Microsoft 365', 'Google Workspace', 'Exchange Server', 'Postfix', 'SpamAssassin', 'MDM'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      icon: Settings,
+      title: 'System Administration',
+      description: '24/7 system administration and monitoring to ensure optimal performance and uptime.',
+      features: ['Server management', 'Performance monitoring', 'Patch management', 'User support'],
+      benefits: ['Reduced downtime', 'Better performance', 'Security updates', 'Expert support']
     }
   ];
-  const infrastructureStats = [
-    { metric: '99.9%', description: 'Uptime Guarantee' },
-    { metric: '500+', description: 'Servers Managed' },
-    { metric: '50+', description: 'Enterprise Clients' },
-    { metric: '24/7', description: 'Support Available' },
-    { metric: '< 1hr', description: 'Response Time' },
-    { metric: '100%', description: 'Security Compliance' }
+
+  const pricingPlans = [
+    {
+      name: 'Basic Support',
+      price: '$2,500',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 10 servers',
+        'Basic monitoring',
+        'Email support',
+        'Monthly reports',
+        'Backup services',
+        'Security updates'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$5,000',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Up to 50 servers',
+        'Advanced monitoring',
+        '24/7 phone support',
+        'Weekly reports',
+        'Disaster recovery',
+        'Performance optimization',
+        'Security hardening',
+        'Cloud migration'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$10,000',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited servers',
+        'Full monitoring suite',
+        'Dedicated support team',
+        'Daily reports',
+        'Custom solutions',
+        'Advanced security',
+        'White-label options',
+        'On-site support'
+      ],
+      popular: false
+    }
   ];
+
+  const testimonials = [
+    {
+      name: 'Robert Johnson',
+      company: 'TechCorp Industries',
+      role: 'CTO',
+      content: 'Zion Tech Group transformed our IT infrastructure. We now have 99.9% uptime and our systems are more secure and efficient than ever.',
+      rating: 5
+    },
+    {
+      name: 'Maria Garcia',
+      company: 'DataFlow Systems',
+      role: 'IT Director',
+      content: 'The cloud migration was seamless. We reduced our infrastructure costs by 40% while improving performance and scalability.',
+      rating: 5
+    },
+    {
+      name: 'John Smith',
+      company: 'InnovateTech',
+      role: 'CEO',
+      content: 'Their 24/7 support is outstanding. Any issues are resolved quickly, and their proactive monitoring prevents problems before they occur.',
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
         <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
+        <meta name="description" content="Comprehensive IT infrastructure services including cloud solutions, network design, database management, and 24/7 support. Ensure your business runs smoothly with enterprise-grade infrastructure." />
+        <meta name="keywords" content="IT infrastructure, cloud services, network design, database management, system administration, backup recovery, network security" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-infrastructure" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="pt-24 pb-16 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 IT Infrastructure Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-                Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee and 24/7 expert support
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+                Enterprise-Grade Infrastructure Solutions for Modern Businesses
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
+              <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
+                Comprehensive IT infrastructure services including cloud solutions, network design, 
+                database management, and 24/7 support. Ensure your business runs smoothly with 
+                enterprise-grade infrastructure that scales with your growth.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a
                   href="tel:+13024640950"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                  className="cyber-button inline-flex items-center"
                 >
-                  📞 +1 302 464 0950
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: (302) 464-0950
                 </a>
                 <a 
                   href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  ✉️ Get Free Infrastructure Audit
+                  <Mail className="w-5 h-5 inline mr-2" />
+                  Get Free Assessment
                 </a>
               </div>
-            </div>
-          </div>
-        </section>
-        {/* Infrastructure Statistics */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Track Record
-              </h2>
-              <p className="text-xl text-gray-600">
-                Proven results from our IT infrastructure services
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-              {infrastructureStats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.metric}</div>
-                  <div className="text-lg font-semibold text-gray-900 mb-1">{stat.description}</div>
+
+              {/* Key Stats */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div className="cyber-card p-6 text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+                  <div className="text-gray-300">Uptime Guarantee</div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IT Infrastructure Services?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Enterprise-grade solutions with unmatched reliability and support
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-blue-600" />
+                <div className="cyber-card p-6 text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                  <div className="text-gray-300">Support Available</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security with advanced threat protection and compliance monitoring</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-green-600" />
+                <div className="cyber-card p-6 text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
+                  <div className="text-gray-300">Projects Completed</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">99.9% Uptime</h3>
-                <p className="text-gray-600">Guaranteed uptime with redundant systems and proactive monitoring</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-purple-600" />
+                <div className="cyber-card p-6 text-center">
+                  <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
+                  <div className="text-gray-300">Years Experience</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock expert support with rapid response times</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart className="w-8 h-8 text-orange-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cost Optimization</h3>
-                <p className="text-gray-600">Reduce IT costs by up to 40% while improving performance and reliability</p>
               </div>
             </div>
           </div>
         </section>
-        {/* Services Grid */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                IT Infrastructure Services
-              </h2>
-              <p className="text-xl text-gray-600">
-                Comprehensive infrastructure solutions for modern businesses
-              </p>
-            </div>
+
+        {/* Services Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
+              Our Infrastructure Services
+            </h2>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
-                  <div className="text-4xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                    </div>
-                    <div className="text-sm text-green-600 font-semibold">
-                      Save up to 50% vs market rates
-                    </div>
+              {services.map((service, index) => (
+                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                  <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, techIndex) => (
-                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                    <ul className="space-y-1">
+                  
+                  <div>
+                    <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <Star className="w-4 h-4 text-yellow-400 mr-2" />
                           {benefit}
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a 
-                      href="tel:+13024640950"
-                      className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-                    >
-                      Call Now
-                    </a>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 border border-blue-600 text-blue-600 py-2 px-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
-                    >
-                      Email Us
-                    </a>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Process Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Infrastructure Implementation Process
-              </h2>
-              <p className="text-xl text-gray-600">
-                How we design, implement, and manage your IT infrastructure
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Assessment & Planning</h3>
-                <p className="text-gray-600">We analyze your current infrastructure and design an optimal solution</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
-                <p className="text-gray-600">We implement the infrastructure with minimal downtime and disruption</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Testing & Optimization</h3>
-                <p className="text-gray-600">We thoroughly test and optimize the system for peak performance</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Monitoring & Support</h3>
-                <p className="text-gray-600">We provide ongoing monitoring and 24/7 support for your infrastructure</p>
-              </div>
+
+        {/* Pricing Section */}
+        <section className="py-16 px-4 bg-slate-800/50">
+          <div className="container mx-auto max-w-7xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
+              Infrastructure Support Plans
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a
+                    href="tel:+13024640950"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    }`}
+                  >
+                    Get Started
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-        {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Optimize Your IT Infrastructure?
+
+        {/* Testimonials Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto max-w-7xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
+              Client Success Stories
             </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Contact our IT infrastructure experts for a free assessment and custom solution design
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="cyber-card p-8">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-cyan-400">{testimonial.role}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+          <div className="container mx-auto max-w-4xl text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Upgrade Your Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our experts design and implement a robust IT infrastructure that scales with your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+                className="cyber-button inline-flex items-center"
               >
-                📞 +1 302 464 0950
+                <Phone className="w-5 h-5 mr-2" />
+                Call: (302) 464-0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                ✉️ kleber@ziontechgroup.com
+                <Mail className="w-5 h-5 inline mr-2" />
+                Get Free Consultation
               </a>
-            </div>
-            <div className="text-sm text-blue-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p className="mt-2">🌐 https://ziontechgroup.com</p>
             </div>
           </div>
         </section>
-      </div>
+        </div>
     </>
   );
 };
+
 export default ITInfrastructurePage;

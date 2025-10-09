@@ -108,5 +108,4 @@ export default function AutonomousBusinessProcessesBlog() {
         </div>
       </div>
     </div>
-  );
-}
+};
