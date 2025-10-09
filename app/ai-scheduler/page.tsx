@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Calendar, Clock, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Smartphone, Mail, Bell, Shield } from 'lucide-react';
+import { Calendar, Clock, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Smartphone, Mail, Bell, Shield, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const AIScheduler: React.FC = () => {

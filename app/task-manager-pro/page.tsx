@@ -1,323 +1,328 @@
 'use client';
-import React from 'react';
-import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Shield, Clock } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckSquare, Calendar, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Clock, Target, BarChart3, Bell, Filter, Plus } from 'lucide-react';
 import Link from 'next/link';
 
-const TaskManagerProPage: React.FC = () => {
+const TaskManagerPro: React.FC = () => {
+  const [newTask, setNewTask] = useState('');
+  const [isAdding, setIsAdding] = useState(false);
+
+  const handleAddTask = async () => {
+    setIsAdding(true);
+    // Simulate adding task
+    setTimeout(() => {
+      setIsAdding(false);
+      setNewTask('');
+      alert('Task added successfully!');
+    }, 1000);
+  };
+
   const features = [
     {
       icon: CheckSquare,
-      title: 'AI Task Prioritization',
-      description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
-      benefit: 'Increase productivity by 40%'
+      title: "Smart Task Management",
+      description: "AI-powered task prioritization and intelligent scheduling"
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefit: 'Improve team efficiency by 60%'
+      title: "Team Collaboration",
+      description: "Real-time collaboration with team members and stakeholders"
     },
     {
-      icon: Brain,
-      title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that considers your work patterns, energy levels, and optimal focus times.',
-      benefit: 'Complete tasks 30% faster'
+      icon: Calendar,
+      title: "Calendar Integration",
+      description: "Seamless integration with Google Calendar, Outlook, and more"
     },
     {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description: 'Create custom automation rules that trigger actions based on task completion, deadlines, and team updates.',
-      benefit: 'Reduce manual work by 70%'
+      icon: BarChart3,
+      title: "Progress Analytics",
+      description: "Detailed analytics and reporting on team productivity"
     },
     {
-      icon: Target,
-      title: 'Goal Tracking',
-      description: 'Set and track SMART goals with AI insights on progress, roadblocks, and optimization opportunities.',
-      benefit: 'Achieve 85% of your goals'
+      icon: Bell,
+      title: "Smart Notifications",
+      description: "Intelligent reminders and deadline alerts"
     },
     {
-      icon: BarChart,
-      title: 'Performance Analytics',
-      description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
-      benefit: 'Data-driven improvements'
+      icon: Filter,
+      title: "Advanced Filtering",
+      description: "Powerful filtering and search capabilities"
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Individual',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for personal use',
+      name: "Personal",
+      price: 15,
+      period: "month",
+      description: "Perfect for individuals",
       features: [
-        'Unlimited personal tasks',
-        'Basic AI prioritization',
-        'Mobile app access',
-        'Basic reporting',
-        'Email support',
-        '1 year data retention'
+        "Unlimited tasks",
+        "Basic project management",
+        "Mobile app",
+        "Email support",
+        "1 user account",
+        "Basic integrations"
       ],
       popular: false
     },
     {
-      name: 'Team',
-      price: '$49',
-      period: '/month',
-      description: 'Ideal for small teams',
+      name: "Team",
+      price: 39,
+      period: "month",
+      description: "Ideal for small teams",
       features: [
-        'Up to 10 team members',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom workflows',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        '2 years data retention'
+        "Everything in Personal",
+        "Team collaboration",
+        "Advanced analytics",
+        "Priority support",
+        "5 user accounts",
+        "Advanced integrations",
+        "Custom fields",
+        "Time tracking"
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$149',
-      period: '/month',
-      description: 'For large organizations',
+      name: "Enterprise",
+      price: 99,
+      period: "month",
+      description: "For large organizations",
       features: [
-        'Unlimited team members',
-        'Premium AI features',
-        'Custom integrations',
-        'Dedicated support',
-        'White-label options',
-        'Advanced security',
-        'Unlimited data retention',
-        'Custom compliance'
+        "Everything in Team",
+        "Unlimited users",
+        "Advanced security",
+        "24/7 phone support",
+        "Custom integrations",
+        "White-label solution",
+        "Dedicated account manager",
+        "API access"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
-    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
-    { name: 'Jira', icon: '🎯', description: 'Project management' },
-    { name: 'Asana', icon: '📋', description: 'Task management' },
-    { name: 'Trello', icon: '📌', description: 'Visual boards' },
-    { name: 'Notion', icon: '📝', description: 'Documentation' },
-    { name: 'GitHub', icon: '💻', description: 'Development workflow' }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Rachel Green',
-      company: 'Marketing Agency',
-      role: 'Project Manager',
-      content: 'Task Manager Pro transformed our team productivity. We complete projects 40% faster with better quality.',
-      rating: 5
-    },
-    {
-      name: 'Tom Anderson',
-      company: 'Software Startup',
-      role: 'CEO',
-      content: 'The AI prioritization is incredible. It knows exactly what to focus on and when. Our team loves it.',
-      rating: 5
-    },
-    {
-      name: 'Lisa Park',
-      company: 'Consulting Firm',
-      role: 'Operations Director',
-      content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
-      rating: 5
-    }
+  const sampleTasks = [
+    { id: 1, title: 'Complete project proposal', priority: 'high', status: 'in-progress', dueDate: 'Today' },
+    { id: 2, title: 'Review team performance', priority: 'medium', status: 'pending', dueDate: 'Tomorrow' },
+    { id: 3, title: 'Update documentation', priority: 'low', status: 'completed', dueDate: 'Yesterday' },
+    { id: 4, title: 'Client meeting preparation', priority: 'high', status: 'pending', dueDate: 'This week' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <CheckSquare className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Task Manager Pro
-          </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            AI-Powered Productivity Platform
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Supercharge your productivity with our AI-powered task management platform. 
-            Get intelligent prioritization, automated workflows, and team collaboration 
-            tools that help you achieve more in less time.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Free Trial
-            </Link>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20"></div>
+        <div className="relative container mx-auto px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
+              <CheckSquare className="w-4 h-4 mr-2" />
+              AI-Powered Task Management
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Task Manager Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Boost your productivity with our intelligent task management platform. 
+              AI-powered prioritization, team collaboration, and advanced analytics to help you achieve more.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="#demo" className="cyber-button inline-flex items-center px-8 py-4 text-lg">
+                <CheckSquare className="w-5 h-5 mr-2" />
+                Try Task Manager
+              </Link>
+              <Link href="#pricing" className="cyber-button-secondary inline-flex items-center px-8 py-4 text-lg">
+                <Target className="w-5 h-5 mr-2" />
+                View Pricing
+              </Link>
+            </div>
           </div>
         </div>
+      </div>
 
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">40%</div>
-            <div className="text-white font-semibold mb-2">More Productive</div>
-            <div className="text-gray-300 text-sm">With AI prioritization</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-purple-400 mb-2">60%</div>
-            <div className="text-white font-semibold mb-2">Team Efficiency</div>
-            <div className="text-gray-300 text-sm">Better collaboration tools</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-green-400 mb-2">70%</div>
-            <div className="text-white font-semibold mb-2">Less Manual Work</div>
-            <div className="text-gray-300 text-sm">With automation</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-orange-400 mb-2">85%</div>
-            <div className="text-white font-semibold mb-2">Goal Achievement</div>
-            <div className="text-gray-300 text-sm">With smart tracking</div>
-          </div>
-        </div>
-
-        {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Task Management Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Integrations Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Works with Your Tools
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-4xl mb-3">{integration.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
-                <p className="text-gray-300 text-sm">{integration.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
-                {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-6">{plan.description}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-300">{plan.period}</span>
+      {/* Demo Section */}
+      <div id="demo" className="container mx-auto px-4 py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Manage Your Tasks</h2>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Add Task Form */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20">
+              <h3 className="text-xl font-semibold mb-6 text-indigo-400">Add New Task</h3>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Task Title</label>
+                  <input
+                    type="text"
+                    value={newTask}
+                    onChange={(e) => setNewTask(e.target.value)}
+                    className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:border-indigo-400 focus:outline-none"
+                    placeholder="Enter task title..."
+                  />
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
-                  Get Started
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Priority</label>
+                    <select className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:border-indigo-400 focus:outline-none">
+                      <option value="low">Low</option>
+                      <option value="medium">Medium</option>
+                      <option value="high">High</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2">Due Date</label>
+                    <input
+                      type="date"
+                      className="w-full bg-gray-700 border border-gray-600 rounded-lg p-3 text-white focus:border-indigo-400 focus:outline-none"
+                    />
+                  </div>
+                </div>
+                <button 
+                  onClick={handleAddTask}
+                  disabled={isAdding || !newTask}
+                  className="w-full cyber-button"
+                >
+                  {isAdding ? 'Adding...' : 'Add Task'}
                 </button>
               </div>
-            ))}
-          </div>
-        </section>
+            </div>
 
-        {/* Testimonials */}
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Users Say
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
+            {/* Task List */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20">
+              <h3 className="text-xl font-semibold mb-6 text-indigo-400">Your Tasks</h3>
+              <div className="space-y-4">
+                {sampleTasks.map((task) => (
+                  <div key={task.id} className="flex items-center justify-between p-4 bg-gray-700/50 rounded-lg">
+                    <div className="flex items-center space-x-3">
+                      <input
+                        type="checkbox"
+                        checked={task.status === 'completed'}
+                        className="w-4 h-4 text-indigo-600 bg-gray-700 border-gray-600 rounded focus:ring-indigo-500"
+                      />
+                      <div>
+                        <div className="font-medium text-white">{task.title}</div>
+                        <div className="text-sm text-gray-400">Due: {task.dueDate}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        task.priority === 'high' ? 'bg-red-500/20 text-red-400' :
+                        task.priority === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
+                        'bg-green-500/20 text-green-400'
+                      }`}>
+                        {task.priority}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Progress Summary */}
+              <div className="mt-6 p-4 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg border border-indigo-500/20">
+                <h4 className="font-semibold text-white mb-2">Today's Progress</h4>
+                <div className="flex justify-between text-sm mb-2">
+                  <span className="text-gray-300">Completed:</span>
+                  <span className="text-indigo-400 font-bold">1/4 tasks</span>
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-2 rounded-full" style={{width: '25%'}}></div>
                 </div>
               </div>
-            ))}
+            </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Supercharge Your Productivity?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using Task Manager Pro to achieve more, 
-            work smarter, and reach their goals faster.
+      {/* Features Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 text-white">Powerful Task Management</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Everything you need to organize, prioritize, and complete your tasks efficiently
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
-              <Phone className="w-5 h-5 mr-2" />
-              Call: (302) 464-0950
-            </a>
-            <Link 
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-indigo-500/20 hover:border-indigo-400/40 transition-all group">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <feature.icon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Pricing Section */}
+      <div id="pricing" className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 text-white">Simple, Transparent Pricing</h2>
+          <p className="text-xl text-gray-300">Choose the plan that fits your productivity needs</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingPlans.map((plan, index) => (
+            <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border ${
+              plan.popular 
+                ? 'border-indigo-400 shadow-2xl shadow-indigo-500/20' 
+                : 'border-gray-600'
+            }`}>
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              <div className="text-center mb-8">
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <p className="text-gray-400 mb-4">{plan.description}</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-5xl font-bold text-white">${plan.price}</span>
+                  <span className="text-gray-400 ml-2">/{plan.period}</span>
+                </div>
+              </div>
+              <ul className="space-y-4 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all ${
+                plan.popular
+                  ? 'cyber-button'
+                  : 'bg-gray-700 text-white hover:bg-gray-600 border border-gray-600'
+              }`}>
+                Get Started
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-2xl p-12 text-center border border-indigo-500/20">
+          <h2 className="text-4xl font-bold mb-4 text-white">Ready to Boost Your Productivity?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of professionals who trust our task manager to organize their work
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg">
+              <CheckSquare className="w-5 h-5 mr-2" />
               Start Free Trial
             </Link>
+            <a href="tel:+13024640950" className="cyber-button-secondary inline-flex items-center px-8 py-4 text-lg">
+              <Phone className="w-5 h-5 mr-2" />
+              Call (302) 464-0950
+            </a>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default TaskManagerProPage;
+export default TaskManagerPro;

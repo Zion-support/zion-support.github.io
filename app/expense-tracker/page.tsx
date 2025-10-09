@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { DollarSign, TrendingUp, PieChart, Receipt, Target, Zap, CheckCircle, Star, ArrowRight, Brain, Shield, Smartphone, CreditCard, BarChart3 } from 'lucide-react';
+import { DollarSign, TrendingUp, PieChart, Receipt, Target, Zap, CheckCircle, Star, ArrowRight, Brain, Shield, Smartphone, CreditCard, BarChart3, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const ExpenseTracker: React.FC = () => {

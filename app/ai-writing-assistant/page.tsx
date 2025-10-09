@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { PenTool, Sparkles, Zap, CheckCircle, Star, ArrowRight, Brain, FileText, Wand2, Target, Clock, Users } from 'lucide-react';
+import { PenTool, Sparkles, Zap, CheckCircle, Star, ArrowRight, Brain, FileText, Wand2, Target, Clock, Users, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const AIWritingAssistant: React.FC = () => {

@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { BarChart3, TrendingUp, PieChart, Activity, Target, Zap, CheckCircle, Star, ArrowRight, Brain, Database, Users, Clock, Shield } from 'lucide-react';
+import { BarChart3, TrendingUp, PieChart, Activity, Target, Zap, CheckCircle, Star, ArrowRight, Brain, Database, Users, Clock, Shield, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 const SmartAnalytics: React.FC = () => {
