@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';;
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
@@ -232,7 +232,7 @@ const App: React.FC = () => {
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
-            <Route path="/api-docs" element={<APIDocsPage />} />
+            <Route path="/api-docs" element={<DocsPage />} />
             <Route path="/api" element={<APIPage />} />
             <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
             <Route path="/blockchain" element={<BlockchainPage />} />
