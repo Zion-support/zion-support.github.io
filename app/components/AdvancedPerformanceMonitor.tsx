@@ -68,7 +68,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: fidEntry.processingStart - fidEntry.startTime,
+                fid: _fidEntry.processingStart - _fidEntry.startTime,
               }));
             }
           });
@@ -77,7 +77,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(fidObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('FID observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('FID observer not supported:', error);
       }
     }
 
@@ -94,9 +94,9 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               'value' in entry
             ) {
               const _clsEntry = entry as LayoutShift;
-              if (!clsEntry.hadRecentInput) {
-                clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+              if (!_clsEntry.hadRecentInput) {
+                _clsValue += _clsEntry.value;
+                setMetrics(prev => ({ ...prev, cls: _clsValue }));
               }
             }
           });
@@ -105,7 +105,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         observers.push(clsObserver);
       } catch (error) {
         // eslint-disable-next-line no-console
-        console.warn('CLS observer not supported:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        console.warn('CLS observer not supported:', error);
       }
     }
 
@@ -139,8 +139,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
-          console.warn('Error disconnecting observer:', error);origin/cursor/fix-errors-and-merge-to-main-6395
+        // eslint-disable-next-line no-console
+        console.warn('Error disconnecting observer:', error);
         }
       });
     };
@@ -150,7 +150,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     const _resources = performance.getEntriesByType('resource');
-    const slowResources = resources.filter(
+    const slowResources = _resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
 
@@ -219,7 +219,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }, 5000);
 
     return () => {
-      if (cleanup) cleanup();
+      if (_cleanup) _cleanup();
       clearInterval(interval);
     };
   }, [
@@ -293,13 +293,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               : 'N/A'}
           </div>
         </div>
-        {recommendations.length > 0 && (
+        {_recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
-              {recommendations.map((rec, index) => (
+              {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
