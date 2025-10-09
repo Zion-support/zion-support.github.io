@@ -59,6 +59,19 @@ const _BlogPage = lazy(() => import('./blog-index'));
 const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap/page'));
 
+// Missing Pages
+const _CareersPage = lazy(() => import('./careers/page'));
+const _NewsPage = lazy(() => import('./news/page'));
+const _SupportPage = lazy(() => import('./support/page'));
+const _DocsPage = lazy(() => import('./docs/page'));
+const _APIDocsPage = lazy(() => import('./api-docs/page'));
+const _StatusPage = lazy(() => import('./status/page'));
+const _SystemStatusPage = lazy(() => import('./system-status/page'));
+const _CookiesPage = lazy(() => import('./cookies/page'));
+const _GDPRPage = lazy(() => import('./gdpr/page'));
+const _SecurityPage = lazy(() => import('./security/page'));
+const _CompliancePage = lazy(() => import('./compliance/page'));
+
 // Utils
 import { logger } from './utils/logger';
 
@@ -101,12 +114,9 @@ const App: React.FC = () => {
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
       // const performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if (process.env.NODE_ENV === 'development') {
         // eslint-disable-next-line no-console
         console.log('Performance Score:', performanceMonitor.getScore());
@@ -188,6 +198,19 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<_BlogPage />} />
                         <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
+                        
+                        {/* Missing Pages Routes */}
+                        <Route path="/careers" element={<_CareersPage />} />
+                        <Route path="/news" element={<_NewsPage />} />
+                        <Route path="/support" element={<_SupportPage />} />
+                        <Route path="/docs" element={<_DocsPage />} />
+                        <Route path="/api-docs" element={<_APIDocsPage />} />
+                        <Route path="/status" element={<_StatusPage />} />
+                        <Route path="/system-status" element={<_SystemStatusPage />} />
+                        <Route path="/cookies" element={<_CookiesPage />} />
+                        <Route path="/gdpr" element={<_GDPRPage />} />
+                        <Route path="/security" element={<_SecurityPage />} />
+                        <Route path="/compliance" element={<_CompliancePage />} />
                       </Routes>
                     </Suspense>
                   </main>
