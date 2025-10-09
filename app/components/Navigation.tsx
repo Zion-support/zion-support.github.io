@@ -52,14 +52,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
-        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'AI-powered invoice creation', icon: '📊', popular: true },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification', icon: '🎯', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart expense management', icon: '💳', popular: true },
+        { name: 'AI Task Manager', path: '/ai-task-manager', description: 'Intelligent task management', icon: '✅', popular: true },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'AI-powered business intelligence', icon: '📈', popular: true },
         { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
-        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
-        { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
-        { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false }
       ]
     },
     {
@@ -102,54 +102,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       hoverColor: 'hover:bg-blue-500/20',
       services: [
-<<<<<<< HEAD
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-administration', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
-=======
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and optimization', icon: Cloud },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions', icon: Shield },
-        { name: 'DevOps & CI/CD', path: '/devops', description: 'Streamlined development workflows', icon: Settings },
-        { name: 'Database Services', path: '/database', description: 'Database design and optimization', icon: Database },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise IT infrastructure', icon: Cpu },
-        { name: 'Network Services', path: '/networking', description: 'Network design and management', icon: Globe },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights', icon: BarChart },
-        { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance solutions', icon: CheckSquare }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
-=======
-        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
-        { name: 'Database Management', path: '/database-management', description: 'Database optimization' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking' },
-        { name: 'Mobile App Development', path: '/mobile-app-development', description: 'Native & cross-platform' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support-maintenance', description: '24/7 technical support' },
-        { name: 'System Integration', path: '/system-integration', description: 'API & system integration' },
-        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale solutions' },
-        { name: 'Identity & Access Management', path: '/identity-access-management', description: 'Security & access control' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
-        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
-        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
-        { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
-        { name: 'Security', path: '/security', description: 'Security solutions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
+        { name: 'Cloud Migration Services', path: '/cloud-migration-services', description: 'Expert AWS, Azure, GCP migration', icon: '☁️', popular: true },
+        { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', description: 'Enterprise-grade security', icon: '🔒', popular: true },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations', icon: '⚙️', popular: true },
+        { name: 'Database Management', path: '/database-management', description: 'Database optimization', icon: '🗄️', popular: true },
+        { name: 'IT Infrastructure', path: '/it-infrastructure-solutions', description: 'Enterprise infrastructure', icon: '🖥️', popular: false },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning', icon: '💼', popular: false },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking', icon: '🌐', popular: false },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false }
       ]
     },
     {

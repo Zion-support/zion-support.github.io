@@ -56,7 +56,6 @@ const AiCustomerSupportBotPage = lazy(() => import('./ai-customer-support-bot/pa
 const AiCodeGenerationPage = lazy(() => import('./ai-code-generation/page'));
 
 // IT Services Pages
-const ItServicesPage = lazy(() => import('./it-services/page'));
 const ItInfrastructurePage = lazy(() => import('./it-infrastructure/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const CloudMigrationPage = lazy(() => import('./cloud-migration/page'));
@@ -160,7 +159,6 @@ const App: React.FC = () => {
           <Route path="/ai-code-generation" element={<AiCodeGenerationPage />} />
           
           {/* IT Services */}
-          <Route path="/it-services" element={<ItServicesPage />} />
           <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
           <Route path="/cybersecurity" element={<CybersecurityPage />} />
           <Route path="/cloud-migration" element={<CloudMigrationPage />} />
