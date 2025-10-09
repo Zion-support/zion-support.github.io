@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Services', href: '/it-services' },
+    { name: 'Services', href: '/services' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -34,6 +34,7 @@ const Footer: React.FC = () => {
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
+    { name: 'AI Content Writer', href: '/ai-content-writer' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
   ];
 

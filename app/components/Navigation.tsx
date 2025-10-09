@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, X, Menu, Cloud, Database, Smartphone, Lock } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +17,9 @@ const Navigation: React.FC = () => {
 
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'Services', href: '/services', icon: Settings },
     { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Cpu },
+    { name: 'Services', href: '/services', icon: Settings },
     { name: 'Contact', href: '/contact', icon: Phone },
   ];
 
@@ -44,8 +44,9 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
   ];
 

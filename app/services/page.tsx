@@ -163,7 +163,7 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
+      icon: Box,
       price: '$249/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       benefits: ['Professional 3D content', 'Time savings', 'Creative freedom'],
@@ -288,7 +288,7 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
+      icon: Box,
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',

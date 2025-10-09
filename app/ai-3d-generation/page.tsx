@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Box } from 'lucide-react';
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
@@ -160,7 +160,7 @@ const AI3DGenerationPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Cube className="w-4 h-4 mr-2" />
+            <Box className="w-4 h-4 mr-2" />
             Revolutionary 3D Technology
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
