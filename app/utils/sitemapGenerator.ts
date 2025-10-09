@@ -1,112 +1,201 @@
-export interface SitemapEntry {
-  url: string;
+export interface SitemapUrl {
+  loc: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString().split('T')[0];
-  return [
-    {
-      url: `${baseUrl}/`,
-      lastmod: currentDate,
-      changefreq: 'daily',
-      priority: 1.0
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/ai-services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/it-services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/quantum-computing`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/autonomous-systems`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/micro-saas`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/enterprise`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/team`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      url: `${baseUrl}/case-studies`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastmod: currentDate,
-      changefreq: 'daily',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
-    }
-  ];
-};
-export const generateRobotsTxt = (): string => {
+
+export interface SitemapConfig {
+  baseUrl: string;
+  urls: SitemapUrl[];
+}
+
+export function generateSitemap(config: SitemapConfig): string {
+  const { baseUrl, urls } = config;
+  
+  const sitemapUrls = urls.map(url => {
+    const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
+    const changefreq = url.changefreq || 'monthly';
+    const priority = url.priority || 0.5;
+    
+    return `  <url>
+    <loc>${baseUrl}${url.loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  }).join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls}
+</urlset>`;
+}
+
+export function generateRobotsTxt(baseUrl: string): string {
   return `User-agent: *
 Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
+
+Sitemap: ${baseUrl}/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/`;
-};
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /ai-services
+Allow: /it-services
+Allow: /contact
+Allow: /about`;
+}
+
+export const defaultSitemapUrls: SitemapUrl[] = [
+  {
+    loc: '/',
+    priority: 1.0,
+    changefreq: 'daily'
+  },
+  {
+    loc: '/ai-services',
+    priority: 0.9,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/it-services',
+    priority: 0.9,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/contact',
+    priority: 0.8,
+    changefreq: 'monthly'
+  },
+  {
+    loc: '/about',
+    priority: 0.7,
+    changefreq: 'monthly'
+  },
+  // AI Services
+  {
+    loc: '/ai-project-manager',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-social-media-manager',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-analytics',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-email-marketing',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-customer-support-bot',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-code-generation',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-video-generation',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-voice-cloning',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-workflow-automation',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-fashion-design',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-music-composition',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-fitness-coach',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-sales-automation',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-data-visualization',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-3d-generation',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-customer-support',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-content-writer',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-inventory-manager',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-hr-assistant',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-financial-advisor',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/ai-legal-assistant',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  // IT Services
+  {
+    loc: '/cloud-migration',
+    priority: 0.8,
+    changefreq: 'weekly'
+  },
+  {
+    loc: '/it-consulting',
+    priority: 0.8,
+    changefreq: 'weekly'
+  }
+];

@@ -8,6 +8,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import ErrorBoundary from './components/ErrorBoundary';
+import PWAProvider from './components/PWAProvider';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -472,8 +474,9 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <PWAProvider>
+      <ErrorBoundary>
+        <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -877,7 +880,8 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+      </ErrorBoundary>
+    </PWAProvider>
   );
 };
 
