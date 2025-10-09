@@ -1,10 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { FileWarning } from 'lucide-react';
-=======
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
+import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -99,20 +95,13 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-<<<<<<< HEAD
               <Link
                 href="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
-=======
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
+                className="flex items-center px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </button>
+              </Link>
             </div>
 
             <div className="mt-6 text-sm text-gray-400">
