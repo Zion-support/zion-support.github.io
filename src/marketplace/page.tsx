@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

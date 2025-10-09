@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -88,12 +87,10 @@ const AIAutomationPage: React.FC = () => {
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
 
-=======
 import {Star, Users, TrendingUp, Clock} from 'lucide-react';
 const AIAutomationPage: React.FC = () => {
   
     const AiAutomationPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -191,17 +188,11 @@ const AIAutomationPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 
 export default AiAutomationPage;
 export default AIAutomationPage;
-=======
 export default AiAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 }
 export default AiAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

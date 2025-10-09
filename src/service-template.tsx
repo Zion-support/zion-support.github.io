@@ -1,25 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {CheckCircle, Star, Phone} from 'lucide-react';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-=======
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
   icon: React.ComponentType<{ className?: string }>;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
   services: Array<{
     title: string;
     description: string;

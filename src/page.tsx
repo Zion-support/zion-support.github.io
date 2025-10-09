@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-=======
 import {Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Heart, GraduationCap, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -19,9 +13,7 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-<<<<<<< HEAD
 
-=======
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -30,7 +22,6 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -1167,10 +1158,7 @@ const HomePage: React.FC = () => {
     </>
   );
 };
-<<<<<<< HEAD
 
 export default HomePage;
 export default HomePage;
-=======
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

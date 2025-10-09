@@ -1,13 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 import {Settings, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
 const ITAutomationPage: React.FC = () => {
   

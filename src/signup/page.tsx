@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';

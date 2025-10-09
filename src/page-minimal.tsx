@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -7,16 +6,11 @@ export const _metadata = {
 };
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 
-=======
 import {Phone, CheckCircle, Star} from 'lucide-react';
 export 
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">

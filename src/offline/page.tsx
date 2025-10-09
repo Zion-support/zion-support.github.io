@@ -1,19 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 
-=======
 import {WifiOff, RefreshCw, Home, Wifi} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
@@ -70,9 +61,6 @@ const OfflinePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default OfflinePage;
 import { Link } from 'react-router-dom';
-=======
 export default OfflinePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

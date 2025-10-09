@@ -1,13 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {TestTube, Target} from 'lucide-react';
 
 
-=======
 import {TestTube, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const AIABTestingPage: React.FC = () => {
   
   return (

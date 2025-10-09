@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
-=======
 import {CheckCircle, Phone, Mail, MapPin} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 const SmartAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
   const _features = [
     {
       icon: BarChart,
@@ -99,10 +92,8 @@ const SmartAnalyticsPage: React.FC = () => {
   ];
 
   return (
-=======
   
     return (
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}

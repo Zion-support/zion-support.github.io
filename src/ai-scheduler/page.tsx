@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 'use client';
 'use client';
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 
 const AISchedulerPage: React.FC = () => {
@@ -102,13 +98,11 @@ const AISchedulerPage: React.FC = () => {
   ];
 
   const integrations = [
-=======
 import {Calendar, Users, CheckCircle} from 'lucide-react';
 import React from 'react';
 const AISchedulerPage: React.FC = () => {
   
     const integrations = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
     { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
     { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },

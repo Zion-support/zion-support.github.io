@@ -1,13 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {Target} from 'lucide-react';
 
 
-=======
 import {BarChart, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const AIAnalyticsPage: React.FC = () => {
   
   return (

@@ -9,25 +9,19 @@ import '@testing-library/jest-dom';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-<<<<<<< HEAD
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
-<<<<<<< HEAD
 const __originalConsoleError = console.error;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 const originalConsoleError = console.error;
-=======
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -76,7 +70,6 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-<<<<<<< HEAD
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 // eslint-disable-next-line no-console
@@ -84,18 +77,13 @@ const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-<<<<<<< HEAD
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -120,23 +108,17 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return [];
   }
 };
-<<<<<<< HEAD
 // Additional JSDOM navigation warning suppression
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const suppressNavigationWarnings = (...args: unknown[]) => {
   if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-<<<<<<< HEAD
 // Suppress JSDOM navigation warnings
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError(...args);

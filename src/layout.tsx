@@ -9,7 +9,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-<<<<<<< HEAD
   const _structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
@@ -116,9 +115,7 @@ export default function RootLayout({
 //       ]
     }
   };
-=======
   
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
     <html lang='en'>
       <head>
@@ -192,18 +189,12 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
 
 export default RootLayout;
-<<<<<<< HEAD
 }
 }
 }
 }
 }
-=======
 }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

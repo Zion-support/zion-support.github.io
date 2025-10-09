@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Sitemap page placeholder
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import React from 'react';
 
 const SitemapPage: React.FC = () => {
@@ -43,5 +39,3 @@ const SitemapPage: React.FC = () => {
 };
 
 export default SitemapPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61

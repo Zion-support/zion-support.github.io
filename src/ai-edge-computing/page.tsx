@@ -1,13 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Cpu, Zap, Globe, Shield, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 import {Cpu, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
 const AIEdgeComputingPage: React.FC = () => {
   

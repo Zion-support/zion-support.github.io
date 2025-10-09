@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
-=======
 import {CheckSquare, Users, CheckCircle, Star, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
 'use client';
 'use client';
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 const TaskManagerProPage: React.FC = () => {
-<<<<<<< HEAD
   const _features = [
     {
       icon: CheckSquare,
@@ -105,10 +98,8 @@ const TaskManagerProPage: React.FC = () => {
   ];
 
   const integrations = [
-=======
   
     const integrations = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     { name: 'Slack', icon: '💬', description: 'Team communication' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
     { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },

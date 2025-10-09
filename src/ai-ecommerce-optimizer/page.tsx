@@ -1,13 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {ShoppingCart, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 import {ShoppingCart, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
 const AIEcommerceOptimizerPage: React.FC = () => {
   

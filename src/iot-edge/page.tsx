@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 const IoTEdgePage: React.FC = () => {
   

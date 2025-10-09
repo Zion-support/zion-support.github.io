@@ -1,16 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -97,12 +90,10 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
 
-=======
 import {Star, Users, TrendingUp, Clock, Bot} from 'lucide-react';
 const AICustomerSupportBotPage: React.FC = () => {
   
     const AiCustomerSupportBotPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -200,17 +191,11 @@ const AICustomerSupportBotPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 
 export default AiCustomerSupportBotPage;
 export default AICustomerSupportBotPage;
-=======
 export default AiCustomerSupportBotPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 }
 export default AiCustomerSupportBotPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

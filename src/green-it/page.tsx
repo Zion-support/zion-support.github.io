@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
-=======
 import {Leaf, Recycle, Zap, Globe, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React, { useState } from 'react';
@@ -100,7 +94,6 @@ const GreenITPage: React.FC = () => {
       pricing: 'Starting at $600/month'
     }
   ];
-<<<<<<< HEAD
 
   const benefits = [
     {
@@ -150,9 +143,7 @@ const GreenITPage: React.FC = () => {
   ];
 
   const certifications = [
-=======
     const certifications = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     {
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',

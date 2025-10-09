@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
@@ -10,7 +7,6 @@ import React, { useState } from 'react';
 const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-<<<<<<< HEAD
 
   const _toggleItem = (index: number) => {
     setOpenItems(prev => 
@@ -18,9 +14,7 @@ const FAQPage: React.FC = () => {
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
-=======
   
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   };
   const faqData = [
     {

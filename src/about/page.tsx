@@ -1,15 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Brain, Shield, Target, Users } from 'lucide-react';
-=======
 import {Brain, Shield, Target, Users} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 const AboutPage: React.FC = () => {
-<<<<<<< HEAD
   const _team = [
     {
       name: 'Kleber Santos',
@@ -29,8 +23,6 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
     },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
@@ -43,12 +35,9 @@ const AboutPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction' }
   ];
 
-=======
   
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   const values = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
@@ -74,8 +63,6 @@ const AboutPage: React.FC = () => {
     { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
       icon: Target,
       title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
@@ -125,10 +112,8 @@ const AboutPage: React.FC = () => {
 //             Leading the future of AI and IT solutions
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-=======
 
 import {Target, Brain, Shield} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
@@ -304,7 +289,6 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       <Footer />
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">About</h1>
@@ -319,10 +303,8 @@ const AboutPage: React.FC = () => {
       </div>
       <Footer />
     </div>
-=======
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
   );
 };
 export default AboutPage;

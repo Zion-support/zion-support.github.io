@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 import {Share2, CheckCircle, ArrowRight} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import React from 'react';
 const AISocialMediaManagerPage: React.FC = () => {
-<<<<<<< HEAD
   const _features = [
     {
       icon: Share2,
@@ -51,10 +44,8 @@ const AISocialMediaManagerPage: React.FC = () => {
   ];
 
   const platforms = [
-=======
   
     const platforms = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
     { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
     { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
@@ -62,7 +53,6 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
   ];
-<<<<<<< HEAD
 
   const pricing = [
     {
@@ -112,9 +102,7 @@ const AISocialMediaManagerPage: React.FC = () => {
   ];
 
   return (
-=======
     return (
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">

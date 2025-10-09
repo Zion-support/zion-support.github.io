@@ -1,13 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Mic, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 import {Mic, CheckCircle} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Footer from '../components/Footer';
 const AIVoiceAssistantPage: React.FC = () => {
   

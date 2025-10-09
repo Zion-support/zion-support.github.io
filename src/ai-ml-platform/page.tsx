@@ -1,15 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-=======
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -96,17 +91,13 @@ const AIMLPlatformPage: React.FC = () => {
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
 
-=======
 import {Star, Users, TrendingUp, Clock} from 'lucide-react';
 const AIMLPlatformPage: React.FC = () => {
   
     const AiMlPlatformPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
-=======
 const AIMLPlatformPage: React.FC = () => {
         return (
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI ML Platform | Zion Tech Group</title>
@@ -136,17 +127,11 @@ const AIMLPlatformPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 }
 
 export default AiMlPlatformPage;
 export default AIMLPlatformPage;
-=======
 export default AiMlPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
-=======
 }
 export default AiMlPlatformPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb

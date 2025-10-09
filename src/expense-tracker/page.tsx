@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
-=======
 import {Receipt, CheckCircle, Star, Phone} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import { Link } from 'react-router-dom';
 'use client';
 'use client';
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 import React from 'react';
 const ExpenseTrackerPage: React.FC = () => {
-<<<<<<< HEAD
   const _features = [
     {
       icon: Receipt,
@@ -105,10 +98,8 @@ const ExpenseTrackerPage: React.FC = () => {
   ];
 
   const integrations = [
-=======
   
     const integrations = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     { name: 'QuickBooks', icon: '📊', description: 'Accounting software' },
     { name: 'Xero', icon: '💰', description: 'Cloud accounting' },
     { name: 'Sage', icon: '📈', description: 'Business management' },

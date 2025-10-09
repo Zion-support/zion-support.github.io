@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -105,7 +101,6 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   ];
 
   const testimonials = [
-=======
 import {Eye, CheckCircle, Settings, ShoppingCart, Building, Briefcase, Calculator, Receipt} from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
@@ -114,7 +109,6 @@ import React, { memo } from 'react';
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   
     const testimonials = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     {
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
@@ -173,12 +167,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
-<<<<<<< HEAD
 //       />
       
-=======
       />
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         <main className="pt-24">

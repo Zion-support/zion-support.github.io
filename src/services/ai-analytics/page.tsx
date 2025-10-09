@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 const AIAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
   const _features = [
     {
       icon: Brain,
@@ -56,9 +52,7 @@ const AIAnalyticsPage: React.FC = () => {
     }
   ];
 
-=======
   
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   const useCases = [
     {
       title: 'Sales Performance Analysis',

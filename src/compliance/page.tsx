@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const CompliancePage: React.FC = () => {
   
   const complianceAreas = [

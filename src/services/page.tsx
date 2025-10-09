@@ -1,20 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
-=======
 import SEOOptimizer from '../components/SEOOptimizer';
 import {Shield, Clock, Users, TrendingUp, MessageSquare, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const ServicesPage: React.FC = () => {
   
   const itServices = [

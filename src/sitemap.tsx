@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Sitemap: React.FC = () => {
-<<<<<<< HEAD
   const _sitemap = generateSitemap(getAllPages());
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -26,9 +25,7 @@ const Sitemap: React.FC = () => {
     <changefreq>monthly</changefreq>
   </url>
 </urlset>`;
-=======
   
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   
   return (
     <div>

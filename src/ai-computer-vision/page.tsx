@@ -1,13 +1,10 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {Target, Shield} from 'lucide-react';
 
 
-=======
 import {Eye, Camera, Shield, CheckCircle, ArrowRight, Settings} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 const AIComputerVisionPage: React.FC = () => {
   
   const applications = [
@@ -36,7 +33,6 @@ const AIComputerVisionPage: React.FC = () => {
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
     }
   ];
-<<<<<<< HEAD
 
   const pricing = [
     {
@@ -80,9 +76,7 @@ const AIComputerVisionPage: React.FC = () => {
   ];
 
   return (
-=======
     return (
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

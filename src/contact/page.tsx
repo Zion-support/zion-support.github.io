@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
 import {Users, Award, TrendingUp, Shield} from 'lucide-react';
 import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -73,13 +66,8 @@ const ContactPage: React.FC = () => {
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
-<<<<<<< HEAD
 
-=======
 import React from 'react';const ContactPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-4c95
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

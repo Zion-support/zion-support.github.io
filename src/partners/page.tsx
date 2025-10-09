@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1c61
 'use client';
 import React from 'react';
-=======
 import {Handshake, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 const PartnersPage: React.FC = () => {
-<<<<<<< HEAD
   const _partnerTypes = [
     {
       title: 'Technology Partners',
@@ -85,10 +78,8 @@ const PartnersPage: React.FC = () => {
   ];
 
   const partnershipTiers = [
-=======
   
     const partnershipTiers = [
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fb
     {
       name: 'Strategic Partners',
       level: 'Platinum',
