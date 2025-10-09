@@ -43,7 +43,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -51,24 +50,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Call custom error handler if provided
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
     // Enhanced error reporting
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-<<<<<<< HEAD
     // Enhanced error reporting logic
     const errorReport = {
       message: error.message,
@@ -104,12 +96,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Failed to report error:', reportingError);
     }
   };
-
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null;
   };
-
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
@@ -118,7 +108,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -126,11 +115,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -154,9 +141,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        console.error('Failed to copy error details');
+        console.warn('Failed to copy error details');
       });
   };
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -164,7 +152,29 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      const _canRetry = retryCount < this.maxRetries;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
       const canRetry = retryCount < this.maxRetries;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ea96
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-012c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
+=======
+      const canRetry = retryCount < this.maxRetries;
+>>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+=======
+      const canRetry = retryCount < this.maxRetries;
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2152
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -216,38 +226,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
-=======
-    // Error reporting logic would go here
-    console.error('Error reported:', error, errorInfo);
-  };
-
-  private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    }
-  };
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {this.state.errorId}</p>
-          {this.state.retryCount < this.maxRetries && (
-            <button onClick={this.handleRetry}>
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
         </div>
       );
     }
