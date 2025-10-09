@@ -4,7 +4,7 @@
 
 import {
   validateEmail,
-  validatePhone,
+  validatePhoneNumber as validatePhone,
   validateURL,
   validateLength,
   validateRequired,
@@ -17,7 +17,7 @@ import {
   validateJSON,
   validateComposite,
   validateAsync,
-} from '../src/utils/validation';
+} from '../app/utils/dataValidator';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {

@@ -90,7 +90,9 @@
     "audit:all-comprehensive": "pnpm run type-check && pnpm run lint && pnpm run test && pnpm run build",
     "check:performance": "pnpm run build && du -sh dist",
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096 --no-warnings\" vite build --mode production --minify terser",
-    "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild"
+    "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
+    "optimize": "node scripts/performance-optimizer.cjs",
+    "build:optimized": "npm run build && npm run optimize"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

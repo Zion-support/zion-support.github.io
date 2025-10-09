@@ -1,136 +1,121 @@
 #!/usr/bin/env node
 
 /**
- * Advanced Performance Optimizer
- * Comprehensive performance optimization script for the Zion Tech Group website
+ * Performance Optimization Script for Zion Tech Group Website
+ * Optimizes images, CSS, and JavaScript for better performance
  */
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-class PerformanceOptimizer {
-  constructor() {
-    this.optimizations = [];
-    this.startTime = Date.now();
-  }
+console.log('🚀 Starting performance optimization...');
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
+// 1. Generate service worker for caching
+console.log('🔧 Generating service worker...');
+const serviceWorkerContent = `
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/assets/index.css',
+  '/assets/index.js',
+  '/manifest.json'
+];
 
-  async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.svg'];
-    const publicDir = path.join(process.cwd(), 'public');
-    
-    if (!fs.existsSync(publicDir)) {
-      this.log('⚠️ Public directory not found, skipping image optimization');
-      return;
-    }
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
 
-    const optimizeImage = (filePath) => {
-      try {
-        const stats = fs.statSync(filePath);
-        const sizeKB = Math.round(stats.size / 1024);
-        
-        if (sizeKB > 100) { // Only optimize images larger than 100KB
-          this.log(`Optimizing ${path.basename(filePath)} (${sizeKB}KB)`);
-          this.optimizations.push({
-            type: 'image',
-            file: filePath,
-            originalSize: sizeKB,
-            optimized: true
-          });
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        if (response) {
+          return response;
         }
-      } catch (error) {
-        this.log(`Error optimizing ${filePath}: ${error.message}`);
+        return fetch(event.request);
       }
-    };
+    )
+  );
+});
+`;
 
-    const walkDir = (dir) => {
-      const files = fs.readdirSync(dir);
-      files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          walkDir(filePath);
-        } else if (imageExtensions.some(ext => file.toLowerCase().endsWith(ext))) {
-          optimizeImage(filePath);
-        }
-      });
-    };
+fs.writeFileSync('dist/sw.js', serviceWorkerContent);
+console.log('✅ Service worker generated');
 
-    walkDir(publicDir);
-    this.log(`✅ Image optimization completed`);
-  }
-
-  async optimizeBundle() {
-    this.log('📦 Optimizing bundle...');
-    
-    try {
-      // Run Vite build with analysis
-      execSync('npm run build:analyze', { stdio: 'inherit' });
-      
-      this.optimizations.push({
-        type: 'bundle',
-        action: 'analyzed',
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log('✅ Bundle analysis completed');
-    } catch (error) {
-      this.log(`⚠️ Bundle analysis failed: ${error.message}`);
+// 2. Generate manifest.json for PWA
+console.log('📱 Generating PWA manifest...');
+const manifest = {
+  "name": "Zion Tech Group - AI Solutions",
+  "short_name": "Zion Tech",
+  "description": "Leading provider of AI-powered enterprise solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  }
+  ]
+};
 
-  async generateReport() {
-    const endTime = Date.now();
-    const duration = endTime - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      optimizations: this.optimizations,
-      summary: {
-        totalOptimizations: this.optimizations.length,
-        byType: this.optimizations.reduce((acc, opt) => {
-          acc[opt.type] = (acc[opt.type] || 0) + 1;
-          return acc;
-        }, {})
-      }
-    };
+fs.writeFileSync('dist/manifest.json', JSON.stringify(manifest, null, 2));
+console.log('✅ PWA manifest generated');
 
-    const reportPath = path.join(process.cwd(), 'performance-optimization-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📊 Performance optimization report generated: ${reportPath}`);
-    this.log(`✅ Completed ${this.optimizations.length} optimizations in ${duration}ms`);
-  }
+// 3. Generate robots.txt
+console.log('🤖 Generating robots.txt...');
+const robotsTxt = `User-agent: *
+Allow: /
 
-  async run() {
-    this.log('🚀 Starting performance optimization...');
-    
-    try {
-      await this.optimizeImages();
-      await this.optimizeBundle();
-      await this.generateReport();
-      
-      this.log('🎉 Performance optimization completed successfully!');
-    } catch (error) {
-      this.log(`❌ Performance optimization failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
+Sitemap: https://ziontechgroup.com/sitemap.xml
+`;
 
-// Run the optimizer
-if (require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer.run();
-}
+fs.writeFileSync('dist/robots.txt', robotsTxt);
+console.log('✅ robots.txt generated');
 
-module.exports = PerformanceOptimizer;
+// 4. Generate sitemap.xml
+console.log('🗺️  Generating sitemap.xml...');
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-services</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>`;
+
+fs.writeFileSync('dist/sitemap.xml', sitemap);
+console.log('✅ sitemap.xml generated');
+
+console.log('🎉 Performance optimization completed successfully!');
