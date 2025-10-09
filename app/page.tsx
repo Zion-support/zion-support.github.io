@@ -16,21 +16,22 @@ const ContentStatistics = lazy(() => import('../src/components/ContentStatistics
 const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
 
 
-// Preload critical components with better timing;
-const preloadComponents = () => {/* TODO: Fix JSX expression */}
-      });
-    } else {/* TODO: Fix JSX expression */}
-      }, 100);
-    }
+// Preload critical components with better timing
+const preloadComponents = () => {
+  if (typeof window !== 'undefined') {
+    setTimeout(() => {
+      // Preload components here
+    }, 100);
   }
 };
-// Loading skeleton component;
-const,
-  ServiceCardSkeleton: React.FC = memo(() => (<div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>"
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>"
+
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>)
+  </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
@@ -141,7 +142,10 @@ const HomePage: React.FC = () => {
 
         {/* Enhanced Services Section */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <EnhancedServicesShowcase />
+          <div className="cyber-card p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Our Services</h2>
+            <p className="text-gray-300">Comprehensive AI and IT solutions for your business</p>
+          </div>
         </Suspense>
 
         {/* Statistics Section */}
@@ -172,4 +176,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-"
