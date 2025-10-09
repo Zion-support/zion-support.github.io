@@ -14,6 +14,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
@@ -61,6 +62,8 @@ import { ChevronDown, Phone, Mail, Menu, X, Brain, Code } from 'lucide-react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-2152
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 import { 
   ChevronDown, 
   Phone, 
@@ -85,6 +88,7 @@ import {
   Lock,
   TrendingUp
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Star, TrendingUp, Settings, Globe, Target } from 'lucide-react';
@@ -98,12 +102,15 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +135,9 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
+=======
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -147,8 +157,11 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -159,6 +172,7 @@ const Navigation: React.FC = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -180,8 +194,9 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
     setIsOpen(false);
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
   };
 
 <<<<<<< HEAD
@@ -193,6 +208,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-50',
       hoverColor: 'hover:bg-purple-100',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services' },
         { name: 'AI Marketing', path: '/ai-marketing' },
@@ -223,6 +239,8 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -231,6 +249,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' }
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
@@ -247,6 +266,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
       ]
     },
     {
@@ -256,6 +277,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'IT Infrastructure', path: '/it-infrastructure' },
         { name: 'IT Services', path: '/it-services' },
@@ -278,12 +300,15 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'DevOps', path: '/ai-workflow-automation', description: 'DevOps automation' },
         { name: 'Database Services', path: '/ai-data-analytics', description: 'Database management' }
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
@@ -305,6 +330,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-aba4
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
       ]
     },
     {
@@ -365,6 +392,7 @@ const Navigation: React.FC = () => {
 =======
 =======
   ];
+<<<<<<< HEAD
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
   const aiServices = [
@@ -561,6 +589,8 @@ const Navigation: React.FC = () => {
   };
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -577,6 +607,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -614,6 +645,11 @@ const Navigation: React.FC = () => {
             </div>
             <span className={`transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
+=======
+            <span className={`text-xl font-bold transition-colors ${
+              isScrolled ? 'text-gray-900' : 'text-white'
+            }`}>
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
               Zion Tech Group
             </span>
           </Link>
@@ -1044,6 +1080,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="/contact"
               className="cyber-button inline-flex items-center"
 =======
@@ -1066,9 +1103,10 @@ const Navigation: React.FC = () => {
               to="/contact"
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
               to="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all flex items-center space-x-2"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
               onClick={closeAllMenus}
             >
 =======

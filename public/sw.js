@@ -3,6 +3,7 @@ const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
+<<<<<<< HEAD
   '/manifest.json',
   '/favicon.ico',
   '/apple-touch-icon.png',
@@ -12,12 +13,20 @@ const urlsToCache = [
 ];
 
 // Install event - cache resources
+=======
+  '/favicon.ico',
+  '/manifest.json'
+];
+
+// Install event
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
+<<<<<<< HEAD
       })
       .catch((error) => {
         console.error('Cache installation failed:', error);
@@ -57,11 +66,32 @@ self.addEventListener('fetch', (event) => {
         if (event.request.destination === 'document') {
           return caches.match('/offline.html');
         }
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
       })
   );
 });
 
+<<<<<<< HEAD
 // Activate event - clean up old caches
+=======
+// Fetch event
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+// Activate event
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -75,6 +105,7 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+<<<<<<< HEAD
 });
 
 // Background sync for offline form submissions
@@ -131,4 +162,6 @@ self.addEventListener('notificationclick', (event) => {
       clients.openWindow('/')
     );
   }
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-187f
 });
