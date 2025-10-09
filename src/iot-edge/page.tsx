@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 
 const IoTEdgePage: React.FC = () => {
   const iotServices = [

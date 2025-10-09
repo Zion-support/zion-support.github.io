@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
-=======
 import { Users } from 'lucide-react';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 const AboutPage: React.FC = () => {
   const team = [
     {

@@ -21,7 +21,7 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
-export default function OptimizedHomePage() {
+function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />

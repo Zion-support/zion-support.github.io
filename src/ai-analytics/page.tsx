@@ -2,12 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { BarChart, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [

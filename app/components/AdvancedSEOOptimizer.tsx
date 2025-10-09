@@ -22,6 +22,8 @@ interface SEOData {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -167,9 +169,50 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return metaTags;
   }, [seoData]);
 
+  // Generate breadcrumb structured data
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!seoData.breadcrumbs || seoData.breadcrumbs.length === 0) {
+      return null;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: seoData.breadcrumbs.map((crumb, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: crumb.name,
+        item: crumb.url,
+      })),
+    };
+  }, [seoData.breadcrumbs]);
+
+  // Generate FAQ structured data
+  const generateFAQStructuredData = useCallback(() => {
+    if (!seoData.faqs || seoData.faqs.length === 0) {
+      return null;
+    }
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seoData.faqs.map(faq => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    };
+  }, [seoData.faqs]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -205,9 +248,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
@@ -258,12 +302,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
+      {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
+      {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
         <meta key={name} name={name} content={content} />
       ))}
 

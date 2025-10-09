@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AICustomerSupportPage() {
+function AICustomerSupportPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -12,10 +12,6 @@ export default function AICustomerSupportPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
 export default AICustomerSupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9296

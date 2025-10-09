@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AIWritingAssistantPage() {
+function AIWritingAssistantPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -12,10 +12,6 @@ export default function AIWritingAssistantPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
 
 export default AIWritingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9296

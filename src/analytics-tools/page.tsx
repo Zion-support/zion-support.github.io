@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9296
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
