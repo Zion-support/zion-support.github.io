@@ -11,7 +11,7 @@ function AIContentGenerationPage() {
       icon: '✍️',
       price: '$199/month',
       features: ['SEO-optimized content', 'Brand voice consistency', 'Research integration', 'Multi-format output'],
-      popular: true;
+      popular: true
     },
     {
       title: 'Social Media Content Suite',

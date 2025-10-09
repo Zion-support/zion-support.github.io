@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react';
 
 // Focus management utility;
 const focusElement = (element: HTMLElement | null) => {

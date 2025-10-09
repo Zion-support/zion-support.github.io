@@ -1,7 +1,7 @@
-'use client',
-import React from 'react',
-import Navigation from '../components/Navigation',
-import Footer from '../components/Footer',
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 // Focus management utility"
 const focusElement = (element: HTMLElement | null) => {

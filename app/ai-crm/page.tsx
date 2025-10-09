@@ -1,7 +1,7 @@
-'use client',
-import React from 'react',
-import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react',
-import Link from 'next/link',
+'use client';
+import React from 'react';
+import { Brain, Users, BarChart, Zap, Shield, Clock, Target, TrendingUp, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
 function AICRMPage() {
   const features = [
     {
