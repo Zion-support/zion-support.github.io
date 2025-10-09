@@ -1,37 +1,16 @@
 import React from 'react';
-'use client';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, Eye, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import ContentPreviewCard from '../components/ContentPreviewCard';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-}
-
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-
-  const blogPosts: BlogPost[] = useMemo(() => [
+const BlogPage: React.FC = () => {
+  const blogPosts = [
     {
       id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
+      title: 'AI Enterprise Transformation 2025: The Complete Guide',
+      description: 'Comprehensive guide to AI transformation in enterprise environments, covering strategy, implementation, and ROI optimization.',
+      category: 'AI Strategy',
       readTime: '50 min read',
       date: '2025-01-28',
       path: '/blog/ai-enterprise-transformation-2025',
@@ -39,6 +18,7 @@ export default function BlogPage() {
       featured: true,
       stats: { views: 18750, engagement: 97 }
     },
+    {
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
       description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
@@ -48,6 +28,8 @@ export default function BlogPage() {
       path: '/blog/ai-2025-2026-mega-trends-breakthrough',
       image: '🚀',
       stats: { views: 12500, engagement: 94 }
+    },
+    {
       id: 'ai-2026-autonomous-enterprise-architecture',
       title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
       description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
@@ -57,93 +39,149 @@ export default function BlogPage() {
       path: '/blog/ai-2026-autonomous-enterprise-architecture',
       image: '🏗️',
       stats: { views: 8900, engagement: 91 }
+    },
+    {
       id: 'ai-2026-autonomous-agent-factories',
       title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
+      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems and intelligent automation.',
+      category: 'Automation',
       readTime: '18 min read',
-      date: '2026-02-01',
+      date: '2026-01-10',
       path: '/blog/ai-2026-autonomous-agent-factories',
       image: '🤖',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      image: '🧠',
-      stats: { views: 6500, engagement: 85 }
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
-      category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
-      path: '/blog/ai-cost-optimization-breakthrough-2026',
-      image: '💡',
-      stats: { views: 9800, engagement: 92 }
-      id: 'ai-2026-hyperconscious-computing-revolution',
-      title: 'AI 2026: Hyperconscious Computing Revolution',
-      description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
-      category: 'Computing',
-      readTime: '16 min read',
-      date: '2026-03-15',
-      path: '/blog/ai-2026-hyperconscious-computing-revolution',
-      image: '⚡',
-      stats: { views: 5800, engagement: 87 }
-      id: 'ai-enterprise-transformation-ultimate-guide-2025',
-      title: 'AI Enterprise Transformation: Ultimate Guide 2025',
-      description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
-      category: 'Transformation',
-      readTime: '45 min read',
-      date: '2025-02-10',
-      path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
-      image: '📚',
-      stats: { views: 11200, engagement: 93 }
-  ], []);
+      stats: { views: 15600, engagement: 96 }
+    }
+  ];
 
-  useEffect(() => {
-    const _timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
+  const categories = ['All', 'AI Strategy', 'Mega Trends', 'Architecture', 'Automation', 'Technology'];
 
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AI & Technology Blog
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Stay updated with the latest insights, trends, and breakthroughs in AI and enterprise technology.
+          </p>
+        </div>
 
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
+        {/* Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className="px-6 py-2 bg-white/10 backdrop-blur-lg rounded-full text-white hover:bg-cyan-500 transition-colors"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-  const featuredPosts = posts.filter(post => post.featured);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+        {/* Featured Post */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8">
+            {blogPosts.filter(post => post.featured).map((post) => (
+              <div key={post.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <div className="text-6xl mb-4">{post.image}</div>
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      {post.category}
+                    </span>
+                    <span className="text-gray-300">{post.readTime}</span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-4">{post.title}</h3>
+                  <p className="text-gray-300 mb-6">{post.description}</p>
+                  <div className="flex items-center gap-6 text-gray-300">
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Eye className="h-4 w-4" />
+                      {post.stats.views.toLocaleString()} views
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <TrendingUp className="h-4 w-4" />
+                      {post.stats.engagement}% engagement
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <Link
+                    to={post.path}
+                    className="bg-cyan-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-600 transition-colors"
+                  >
+                    Read Article
+                  </Link>
+                </div>
+              </div>
             ))}
-    );
+          </div>
+        </div>
 
-const BlogPage: React.FC = () => {
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced blog solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
+        {/* Blog Posts Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.filter(post => !post.featured).map((post) => (
+            <div key={post.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-colors">
+              <div className="text-4xl mb-4">{post.image}</div>
+              <div className="flex items-center gap-4 mb-4">
+                <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  {post.category}
+                </span>
+                <span className="text-gray-300 text-sm">{post.readTime}</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{post.title}</h3>
+              <p className="text-gray-300 mb-4">{post.description}</p>
+              <div className="flex items-center justify-between text-gray-300 text-sm">
+                <div className="flex items-center gap-2">
+                  <Calendar className="h-4 w-4" />
+                  {post.date}
+                </div>
+                <div className="flex items-center gap-2">
+                  <Eye className="h-4 w-4" />
+                  {post.stats.views.toLocaleString()}
+                </div>
+              </div>
+              <Link
+                to={post.path}
+                className="inline-block mt-4 text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Read More →
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="mt-16 bg-white/10 backdrop-blur-lg rounded-xl p-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get the latest AI insights and technology trends delivered to your inbox.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+            />
+            <button className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default BlogPage;

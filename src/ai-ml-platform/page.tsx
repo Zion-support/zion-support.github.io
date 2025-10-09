@@ -14,14 +14,19 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
+    {
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
+    },
+    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for your machine learning infrastructure',
       benefits: ['Data encryption', 'Access controls', 'Audit trails']
+    },
+    {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
@@ -30,6 +35,7 @@ const AIMLPlatformPage: React.FC = () => {
   ];
 
   const pricingPlans = [
+    {
       name: 'Developer',
       price: '$999',
       period: '/month',
