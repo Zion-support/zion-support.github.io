@@ -22,7 +22,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Intelligent project management' },
+    { name: 'AI Inventory Management', url: '/ai-inventory-management', description: 'Smart inventory optimization' },
+    { name: 'AI HR Management', url: '/ai-hr-management', description: 'Intelligent HR solutions' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Advanced predictive modeling' }
   ];
 
   const itServices = [
@@ -34,7 +38,8 @@ const Footer: React.FC = memo(() => {
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
+    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Expert cloud migration services' }
   ];
 
   const microSaasServices = [

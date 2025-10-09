@@ -68,6 +68,9 @@ const Navigation: React.FC = () => {
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'Intelligent project management' },
+        { name: 'AI Inventory Management', path: '/ai-inventory-management', description: 'Smart inventory optimization' },
+        { name: 'AI HR Management', path: '/ai-hr-management', description: 'Intelligent HR solutions' },
         { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
@@ -97,7 +100,8 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Expert cloud migration services' }
       ]
     },
     {
@@ -247,6 +251,14 @@ const Navigation: React.FC = () => {
             </Link>
 
             <Link
+              href="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+
+            <Link
               href="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
@@ -345,6 +357,14 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+
+              <Link
+                href="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               <Link
