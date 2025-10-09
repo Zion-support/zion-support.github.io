@@ -1,81 +1,81 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Phone, Mail, MapPin, Play, Mic, Volume2, Download, Upload, Settings, Brain, Sparkles } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Phone, Mail, MapPin, Music, Headphones, Download, Upload, Settings, Brain, Sparkles, Play, Pause, Volume2 } from 'lucide-react';
 
-const AIVoiceCloningPage: React.FC = () => {
+const AIMusicCompositionPage: React.FC = () => {
   const features = [
     {
-      icon: Mic,
-      title: 'High-Quality Voice Synthesis',
-      description: 'Create natural-sounding voice clones with 99.9% accuracy using advanced neural networks',
-      benefits: ['Professional voice quality', 'Emotion control', 'Multiple language support', 'Real-time synthesis']
+      icon: Music,
+      title: 'AI Music Generation',
+      description: 'Create original music compositions in any genre, style, or mood using advanced AI algorithms',
+      benefits: ['Multiple genres', 'Style transfer', 'Mood-based generation', 'Original compositions']
     },
     {
-      icon: Settings,
-      title: 'Custom Voice Training',
-      description: 'Train custom voice models from just 10 minutes of audio samples',
-      benefits: ['Quick setup', 'Personalized voices', 'Brand consistency', 'Scalable training']
-    },
-    {
-      icon: Play,
-      title: 'Real-Time Voice Conversion',
-      description: 'Convert any text to speech using your cloned voice in real-time',
-      benefits: ['Instant conversion', 'Natural intonation', 'Punctuation handling', 'Speed control']
+      icon: Headphones,
+      title: 'Intelligent Arrangement',
+      description: 'AI-powered music arrangement with automatic instrumentation and structure optimization',
+      benefits: ['Auto instrumentation', 'Structure optimization', 'Harmony generation', 'Rhythm patterns']
     },
     {
       icon: Volume2,
-      title: 'Multi-Format Export',
-      description: 'Export audio in various formats including MP3, WAV, and streaming formats',
-      benefits: ['Multiple formats', 'High quality', 'Compression options', 'Batch processing']
+      title: 'Mastering & Mixing',
+      description: 'Professional-grade audio mastering and mixing with AI-powered optimization',
+      benefits: ['Auto mastering', 'EQ optimization', 'Dynamic range', 'Professional quality']
+    },
+    {
+      icon: Settings,
+      title: 'Custom Training',
+      description: 'Train custom AI models on your specific musical style or brand sound',
+      benefits: ['Brand consistency', 'Style learning', 'Custom models', 'Personalized output']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for individuals and small projects',
+      name: 'Composer',
+      price: '$149/month',
+      description: 'Perfect for individual musicians and content creators',
       features: [
-        'Up to 5 voice clones',
-        '10,000 characters/month',
+        'Up to 50 tracks/month',
         'Standard quality (44.1kHz)',
-        'Basic emotion control',
+        'Basic genres',
+        'MP3 export',
         'Email support',
         'API access'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for businesses and content creators',
+      name: 'Studio',
+      price: '$399/month',
+      description: 'Ideal for music studios and production companies',
       features: [
-        'Up to 25 voice clones',
-        '100,000 characters/month',
+        'Up to 500 tracks/month',
         'High quality (48kHz)',
-        'Advanced emotion control',
-        'Real-time synthesis',
+        'All genres & styles',
+        'Multiple export formats',
         'Priority support',
-        'Custom integrations',
-        'Analytics dashboard'
+        'Custom training',
+        'Collaboration tools',
+        'Advanced mixing'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999/month',
-      description: 'For large organizations and agencies',
+      price: '$1,299/month',
+      description: 'For record labels and large production houses',
       features: [
-        'Unlimited voice clones',
-        'Unlimited characters',
+        'Unlimited tracks',
         'Studio quality (96kHz)',
-        'Full emotion control',
-        'Real-time synthesis',
+        'Custom genres',
+        'All export formats',
         '24/7 dedicated support',
-        'Custom model training',
         'White-label solution',
-        'SLA guarantee'
+        'Custom AI training',
+        'SLA guarantee',
+        'On-premise deployment'
       ],
       popular: false
     }
@@ -84,47 +84,85 @@ const AIVoiceCloningPage: React.FC = () => {
   const useCases = [
     {
       title: 'Content Creation',
-      description: 'Create audiobooks, podcasts, and video content with consistent voice branding',
+      description: 'Generate background music for videos, podcasts, and social media content',
       icon: '🎬',
-      examples: ['Audiobook narration', 'Podcast intros', 'Video voiceovers', 'E-learning content']
+      examples: ['YouTube videos', 'Podcast intros', 'Social media posts', 'Marketing content']
     },
     {
-      title: 'Customer Service',
-      description: 'Deploy personalized voice assistants for customer support and IVR systems',
-      icon: '🎧',
-      examples: ['IVR systems', 'Voice assistants', 'Customer greetings', 'Automated responses']
-    },
-    {
-      title: 'Accessibility',
-      description: 'Help people with speech impairments communicate using their own voice',
-      icon: '♿',
-      examples: ['Speech assistance', 'Communication aids', 'Personalized voices', 'Accessibility tools']
-    },
-    {
-      title: 'Entertainment',
-      description: 'Create unique voice experiences for games, apps, and interactive media',
+      title: 'Game Development',
+      description: 'Create dynamic soundtracks and ambient music for games',
       icon: '🎮',
-      examples: ['Game characters', 'Interactive stories', 'Voice acting', 'Character voices']
+      examples: ['Game soundtracks', 'Ambient music', 'Dynamic scoring', 'Character themes']
+    },
+    {
+      title: 'Commercial Use',
+      description: 'Generate royalty-free music for commercials, presentations, and corporate content',
+      icon: '📺',
+      examples: ['TV commercials', 'Corporate videos', 'Presentations', 'Training materials']
+    },
+    {
+      title: 'Education',
+      description: 'Create educational music content and learning materials',
+      icon: '🎓',
+      examples: ['Music education', 'Learning apps', 'Tutorial content', 'Practice tracks']
     }
   ];
 
+  const genres = [
+    { name: 'Classical', description: 'Symphonic and orchestral compositions' },
+    { name: 'Jazz', description: 'Swing, bebop, and modern jazz styles' },
+    { name: 'Rock', description: 'Alternative, indie, and classic rock' },
+    { name: 'Electronic', description: 'EDM, ambient, and electronic music' },
+    { name: 'Hip-Hop', description: 'Rap beats and urban music' },
+    { name: 'Pop', description: 'Contemporary pop and mainstream music' },
+    { name: 'Country', description: 'Traditional and modern country music' },
+    { name: 'Blues', description: 'Traditional and electric blues' }
+  ];
+
   const technicalSpecs = [
-    { spec: 'Voice Quality', value: 'Studio-grade (up to 96kHz)' },
-    { spec: 'Training Time', value: '10-30 minutes per voice' },
-    { spec: 'Synthesis Speed', value: 'Real-time (faster than speech)' },
-    { spec: 'Languages Supported', value: '50+ languages' },
-    { spec: 'Emotion Control', value: '8+ emotional states' },
-    { spec: 'API Response Time', value: '< 200ms' },
+    { spec: 'Audio Quality', value: 'Up to 96kHz/32-bit' },
+    { spec: 'Generation Speed', value: '30-60 seconds per track' },
+    { spec: 'Track Length', value: 'Up to 10 minutes' },
+    { spec: 'Genres Supported', value: '50+ genres' },
+    { spec: 'Instruments', value: '100+ virtual instruments' },
+    { spec: 'API Response Time', value: '< 2 minutes' },
     { spec: 'Uptime SLA', value: '99.9%' },
-    { spec: 'Data Security', value: 'Enterprise-grade encryption' }
+    { spec: 'Royalty Status', value: '100% royalty-free' }
+  ];
+
+  const benefits = [
+    {
+      icon: Clock,
+      title: 'Time Saving',
+      description: 'Generate complete musical compositions in minutes instead of hours',
+      value: '90% faster'
+    },
+    {
+      icon: DollarSign,
+      title: 'Cost Effective',
+      description: 'Eliminate expensive studio time and session musicians',
+      value: '80% cheaper'
+    },
+    {
+      icon: Star,
+      title: 'Professional Quality',
+      description: 'Studio-grade audio quality with professional mastering',
+      value: '99% quality'
+    },
+    {
+      icon: Zap,
+      title: 'Unlimited Creativity',
+      description: 'Explore new musical styles and combinations effortlessly',
+      value: '∞ possibilities'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Cloning & Synthesis - Zion Tech Group</title>
-        <meta name="description" content="Professional AI voice cloning and synthesis services. Create natural-sounding voice clones with 99.9% accuracy. Starting at $99/month." />
-        <meta name="keywords" content="ai voice cloning, voice synthesis, text to speech, voice ai, voice generation, speech synthesis" />
+        <title>AI Music Composition & Generation - Zion Tech Group</title>
+        <meta name="description" content="Create original music with AI. Generate compositions in any genre, style, or mood. Perfect for content creators, game developers, and musicians. Starting at $149/month." />
+        <meta name="keywords" content="ai music generation, music composition, ai music, music ai, background music, royalty free music, music production" />
       </Helmet>
 
       {/* Hero Section */}
@@ -132,32 +170,32 @@ const AIVoiceCloningPage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4 mr-2" />
-            Advanced AI Voice Technology
+            Revolutionary Music AI Technology
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Voice Cloning & Synthesis
+            AI Music Composition
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create natural-sounding voice clones with 99.9% accuracy. Perfect for content creation, customer service, accessibility, and entertainment applications.
+            Create original music compositions in any genre, style, or mood using advanced AI. Perfect for content creators, game developers, and musicians.
           </p>
           
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Genres</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">10min</div>
-              <div className="text-gray-300">Training Time</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">30-60s</div>
+              <div className="text-gray-300">Generation Time</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">100+</div>
+              <div className="text-gray-300">Instruments</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div>
-              <div className="text-gray-300">Synthesis</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">100%</div>
+              <div className="text-gray-300">Royalty-Free</div>
             </div>
           </div>
 
@@ -185,7 +223,7 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Powerful Voice Cloning Features
+            Advanced Music AI Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -201,6 +239,42 @@ const AIVoiceCloningPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Why Choose AI Music Generation?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 mb-4">{benefit.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{benefit.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Genres Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Supported Music Genres
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {genres.map((genre, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-lg font-bold text-white mb-2">{genre.name}</h3>
+                <p className="text-sm text-gray-300">{genre.description}</p>
               </div>
             ))}
           </div>
@@ -234,7 +308,7 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Flexible Pricing Plans
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -261,7 +335,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Voice Cloning Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Music AI Plan`}
                   className={`w-full py-3 px-6 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
@@ -297,10 +371,10 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Clone Your Voice?
+            Start Creating Music with AI
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Start creating professional voice content with our AI voice cloning technology. Get started today!
+            Transform your musical ideas into professional compositions with our advanced AI technology. Get started today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -322,4 +396,4 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-export default AIVoiceCloningPage;
+export default AIMusicCompositionPage;

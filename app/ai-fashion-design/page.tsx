@@ -1,81 +1,80 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Phone, Mail, MapPin, Play, Mic, Volume2, Download, Upload, Settings, Brain, Sparkles } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Phone, Mail, MapPin, Shirt, Download, Upload, Settings, Brain, Sparkles, Play, Pause, Volume2, FileText, Terminal } from 'lucide-react';
 
-const AIVoiceCloningPage: React.FC = () => {
+const AIFashionDesignPage: React.FC = () => {
   const features = [
     {
-      icon: Mic,
-      title: 'High-Quality Voice Synthesis',
-      description: 'Create natural-sounding voice clones with 99.9% accuracy using advanced neural networks',
-      benefits: ['Professional voice quality', 'Emotion control', 'Multiple language support', 'Real-time synthesis']
+      icon: Shirt,
+      title: 'AI Fashion Design',
+      description: 'Generate unique fashion designs, patterns, and styles using advanced AI algorithms',
+      benefits: ['Design generation', 'Pattern creation', 'Style transfer', 'Trend analysis']
+    },
+    {
+      icon: Brain,
+      title: 'Trend Prediction',
+      description: 'Predict upcoming fashion trends and analyze market preferences',
+      benefits: ['Trend forecasting', 'Market analysis', 'Style prediction', 'Color trends']
     },
     {
       icon: Settings,
-      title: 'Custom Voice Training',
-      description: 'Train custom voice models from just 10 minutes of audio samples',
-      benefits: ['Quick setup', 'Personalized voices', 'Brand consistency', 'Scalable training']
+      title: 'Virtual Try-On',
+      description: 'AI-powered virtual try-on technology for online shopping experiences',
+      benefits: ['Virtual fitting', 'Size optimization', 'Style matching', 'AR integration']
     },
     {
-      icon: Play,
-      title: 'Real-Time Voice Conversion',
-      description: 'Convert any text to speech using your cloned voice in real-time',
-      benefits: ['Instant conversion', 'Natural intonation', 'Punctuation handling', 'Speed control']
-    },
-    {
-      icon: Volume2,
-      title: 'Multi-Format Export',
-      description: 'Export audio in various formats including MP3, WAV, and streaming formats',
-      benefits: ['Multiple formats', 'High quality', 'Compression options', 'Batch processing']
+      icon: Terminal,
+      title: 'Color Matching',
+      description: 'Intelligent color coordination and palette generation for fashion designs',
+      benefits: ['Color harmony', 'Palette generation', 'Seasonal colors', 'Brand consistency']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99/month',
-      description: 'Perfect for individuals and small projects',
+      name: 'Designer',
+      price: '$299/month',
+      description: 'Perfect for individual fashion designers and small brands',
       features: [
-        'Up to 5 voice clones',
-        '10,000 characters/month',
-        'Standard quality (44.1kHz)',
-        'Basic emotion control',
+        'Up to 100 designs/month',
+        'Basic trend analysis',
+        '2D design tools',
         'Email support',
-        'API access'
+        'API access',
+        'Export formats'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$299/month',
-      description: 'Ideal for businesses and content creators',
+      name: 'Brand',
+      price: '$799/month',
+      description: 'Ideal for fashion brands and design studios',
       features: [
-        'Up to 25 voice clones',
-        '100,000 characters/month',
-        'High quality (48kHz)',
-        'Advanced emotion control',
-        'Real-time synthesis',
+        'Up to 1,000 designs/month',
+        'Advanced trend analysis',
+        '3D design tools',
         'Priority support',
-        'Custom integrations',
+        'Custom training',
+        'Team collaboration',
+        'Virtual try-on',
         'Analytics dashboard'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999/month',
-      description: 'For large organizations and agencies',
+      price: '$2,499/month',
+      description: 'For large fashion companies and retailers',
       features: [
-        'Unlimited voice clones',
-        'Unlimited characters',
-        'Studio quality (96kHz)',
-        'Full emotion control',
-        'Real-time synthesis',
+        'Unlimited designs',
+        'Premium trend analysis',
+        'Full 3D suite',
         '24/7 dedicated support',
-        'Custom model training',
         'White-label solution',
-        'SLA guarantee'
+        'Custom AI training',
+        'SLA guarantee',
+        'On-premise deployment'
       ],
       popular: false
     }
@@ -83,48 +82,86 @@ const AIVoiceCloningPage: React.FC = () => {
 
   const useCases = [
     {
-      title: 'Content Creation',
-      description: 'Create audiobooks, podcasts, and video content with consistent voice branding',
-      icon: '🎬',
-      examples: ['Audiobook narration', 'Podcast intros', 'Video voiceovers', 'E-learning content']
+      title: 'Fashion Design',
+      description: 'Create unique clothing designs and collections with AI assistance',
+      icon: '👗',
+      examples: ['Dress designs', 'Shirt patterns', 'Accessory designs', 'Collection planning']
     },
     {
-      title: 'Customer Service',
-      description: 'Deploy personalized voice assistants for customer support and IVR systems',
-      icon: '🎧',
-      examples: ['IVR systems', 'Voice assistants', 'Customer greetings', 'Automated responses']
+      title: 'E-commerce',
+      description: 'Enhance online shopping with virtual try-on and style recommendations',
+      icon: '🛍️',
+      examples: ['Virtual fitting', 'Style matching', 'Size recommendations', 'Personalized shopping']
     },
     {
-      title: 'Accessibility',
-      description: 'Help people with speech impairments communicate using their own voice',
-      icon: '♿',
-      examples: ['Speech assistance', 'Communication aids', 'Personalized voices', 'Accessibility tools']
+      title: 'Retail',
+      description: 'Optimize inventory and merchandising with trend analysis',
+      icon: '🏪',
+      examples: ['Inventory planning', 'Merchandising', 'Trend analysis', 'Customer insights']
     },
     {
-      title: 'Entertainment',
-      description: 'Create unique voice experiences for games, apps, and interactive media',
-      icon: '🎮',
-      examples: ['Game characters', 'Interactive stories', 'Voice acting', 'Character voices']
+      title: 'Marketing',
+      description: 'Create compelling fashion marketing content and campaigns',
+      icon: '📱',
+      examples: ['Social media content', 'Ad campaigns', 'Influencer partnerships', 'Brand promotion']
     }
   ];
 
+  const fashionCategories = [
+    { name: 'Women\'s Fashion', description: 'Dresses, tops, bottoms, and accessories' },
+    { name: 'Men\'s Fashion', description: 'Shirts, pants, suits, and casual wear' },
+    { name: 'Children\'s Wear', description: 'Kids clothing and accessories' },
+    { name: 'Activewear', description: 'Sports and fitness clothing' },
+    { name: 'Formal Wear', description: 'Evening wear and special occasion outfits' },
+    { name: 'Casual Wear', description: 'Everyday comfortable clothing' },
+    { name: 'Accessories', description: 'Bags, shoes, jewelry, and other accessories' },
+    { name: 'Seasonal', description: 'Seasonal collections and weather-appropriate wear' }
+  ];
+
   const technicalSpecs = [
-    { spec: 'Voice Quality', value: 'Studio-grade (up to 96kHz)' },
-    { spec: 'Training Time', value: '10-30 minutes per voice' },
-    { spec: 'Synthesis Speed', value: 'Real-time (faster than speech)' },
-    { spec: 'Languages Supported', value: '50+ languages' },
-    { spec: 'Emotion Control', value: '8+ emotional states' },
-    { spec: 'API Response Time', value: '< 200ms' },
+    { spec: 'Design Quality', value: 'High-resolution' },
+    { spec: 'Generation Speed', value: 'Real-time' },
+    { spec: 'Trend Accuracy', value: '95%+' },
+    { spec: 'Categories', value: '50+ fashion categories' },
+    { spec: 'Color Options', value: 'Unlimited color palettes' },
+    { spec: 'API Response Time', value: '< 3 seconds' },
     { spec: 'Uptime SLA', value: '99.9%' },
-    { spec: 'Data Security', value: 'Enterprise-grade encryption' }
+    { spec: 'Design Storage', value: 'Unlimited' }
+  ];
+
+  const benefits = [
+    {
+      icon: Clock,
+      title: 'Faster Design',
+      description: 'Create fashion designs 10x faster than traditional methods',
+      value: '10x faster'
+    },
+    {
+      icon: DollarSign,
+      title: 'Cost Effective',
+      description: 'Reduce design and prototyping costs significantly',
+      value: '70% cheaper'
+    },
+    {
+      icon: Star,
+      title: 'Trend Accuracy',
+      description: 'Predict fashion trends with 95% accuracy',
+      value: '95% accuracy'
+    },
+    {
+      icon: Zap,
+      title: 'Unlimited Creativity',
+      description: 'Explore endless design possibilities and combinations',
+      value: '∞ designs'
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Cloning & Synthesis - Zion Tech Group</title>
-        <meta name="description" content="Professional AI voice cloning and synthesis services. Create natural-sounding voice clones with 99.9% accuracy. Starting at $99/month." />
-        <meta name="keywords" content="ai voice cloning, voice synthesis, text to speech, voice ai, voice generation, speech synthesis" />
+        <title>AI Fashion Design & Trend Analysis - Zion Tech Group</title>
+        <meta name="description" content="Create fashion designs with AI. Generate unique styles, predict trends, and enable virtual try-on. Perfect for designers, brands, and retailers. Starting at $299/month." />
+        <meta name="keywords" content="ai fashion design, fashion ai, trend prediction, virtual try-on, fashion technology, design automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -132,32 +169,32 @@ const AIVoiceCloningPage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
             <Sparkles className="w-4 h-4 mr-2" />
-            Advanced AI Voice Technology
+            Revolutionary Fashion AI Technology
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Voice Cloning & Synthesis
+            AI Fashion Design
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create natural-sounding voice clones with 99.9% accuracy. Perfect for content creation, customer service, accessibility, and entertainment applications.
+            Create unique fashion designs, predict trends, and enable virtual try-on experiences. Perfect for designers, brands, and retailers.
           </p>
           
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Accuracy</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+              <div className="text-gray-300">Faster Design</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">10min</div>
-              <div className="text-gray-300">Training Time</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+              <div className="text-gray-300">Trend Accuracy</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
+              <div className="text-gray-300">Categories</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">Real-time</div>
-              <div className="text-gray-300">Synthesis</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
+              <div className="text-gray-300">Designs</div>
             </div>
           </div>
 
@@ -185,7 +222,7 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Powerful Voice Cloning Features
+            Advanced Fashion AI Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -201,6 +238,42 @@ const AIVoiceCloningPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Why Choose AI Fashion Design?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 mb-4">{benefit.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{benefit.value}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fashion Categories Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Fashion Categories We Support
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {fashionCategories.map((category, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center hover:bg-white/20 transition-all duration-300">
+                <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
+                <p className="text-sm text-gray-300">{category.description}</p>
               </div>
             ))}
           </div>
@@ -234,7 +307,7 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Simple, Transparent Pricing
+            Flexible Pricing Plans
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -261,7 +334,7 @@ const AIVoiceCloningPage: React.FC = () => {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Voice Cloning Plan`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Fashion AI Plan`}
                   className={`w-full py-3 px-6 rounded-lg font-medium text-center transition-all ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
@@ -297,10 +370,10 @@ const AIVoiceCloningPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Clone Your Voice?
+            Start Designing Fashion with AI
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Start creating professional voice content with our AI voice cloning technology. Get started today!
+            Transform your fashion ideas into stunning designs with our advanced AI technology. Get started today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -322,4 +395,4 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-export default AIVoiceCloningPage;
+export default AIFashionDesignPage;
