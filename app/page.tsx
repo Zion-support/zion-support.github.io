@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import SEOOptimizer from './components/SEOOptimizer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -55,9 +58,54 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Navigation */}
-      <Navigation />
+    <>
+      <SEOOptimizer
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation',
+          'enterprise AI', 'machine learning', 'automation', 'cloud services', 'business intelligence',
+          'AI marketing', 'AI healthcare', 'AI fintech', 'micro SAAS', 'IT infrastructure'
+        ]}
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: [
+            'AI Solutions', 'Quantum Computing', 'Autonomous Systems', 'Digital Transformation',
+            'Cloud Services', 'Automation', 'Business Intelligence', 'AI Marketing',
+            'AI Healthcare', 'AI Fintech', 'Micro SAAS', 'IT Infrastructure'
+          ],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en',
+          },
+          sameAs: [
+            'https://twitter.com/ziontechgroup',
+            'https://linkedin.com/company/ziontechgroup',
+          ],
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US',
+          }
+        }}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        {/* Navigation */}
+        <Navigation />
       
       {/* Skip to main content for accessibility */}
       <a
@@ -366,9 +414,10 @@ const HomePage: React.FC = () => {
         </Suspense>
       </main>
 
-      {/* Footer */}
-      <Footer />
-    </div>
+        {/* Footer */}
+        <Footer />
+      </div>
+    </>
   );
 };
 
