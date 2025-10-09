@@ -561,10 +561,6 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
-<<<<<<< HEAD
-    return `Found ${this.issues.length} accessibility issues. Please review and fix them.`;
-=======
-<<<<<<< HEAD
     
     let report = `Accessibility Issues Found (${this.issues.length}):\n\n`;
     this.issues.forEach((issue, index) => {
@@ -579,9 +575,5 @@ export class AccessibilityChecker {
     });
     
     return report;
-=======
-    return this.issues.map(issue => `- ${issue}`).join('\n');
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
->>>>>>> origin/main
   }
 }
