@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Home, Info, MessageCircle, BookOpen } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -94,7 +94,7 @@ const Navigation: React.FC = () => {
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20 cyber-card-enhanced' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -103,12 +103,13 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text-enhanced">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Home
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+              <Home className="w-4 h-4" />
+              <span>Home</span>
             </Link>
             {/* AI Services Dropdown */}
             <div className="relative group">
@@ -238,14 +239,17 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+              <Info className="w-4 h-4" />
+              <span>About</span>
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+              <MessageCircle className="w-4 h-4" />
+              <span>Contact</span>
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center space-x-1">
+              <BookOpen className="w-4 h-4" />
+              <span>Blog</span>
             </Link>
           </div>
           {/* Contact Info */}
