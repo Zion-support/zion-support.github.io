@@ -145,8 +145,8 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-nav ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -155,7 +155,7 @@ const Navigation: React.FC = () => {
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-glow-advanced cyber-text-advanced">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -257,7 +257,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="cyber-button inline-flex items-center"
+              className="cyber-button-advanced inline-flex items-center hover-cyber-glow"
               onClick={closeAllMenus}
             >
               <Phone className="w-4 h-4 mr-2" />

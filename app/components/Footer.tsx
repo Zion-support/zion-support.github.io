@@ -6,7 +6,6 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -23,20 +22,9 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
     { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-=======
-    { name: 'AI Services', url: '/ai-services', description: 'Core AI Solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-Powered Marketing' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process Automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI Solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Content Creation' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Data Intelligence' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'Security AI' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   ];
 
   const itServices = [
-<<<<<<< HEAD
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -140,39 +128,26 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
-              AI Services
-            </h3>
-            <ul className="space-y-2">
-              {aiServices.slice(0, 8).map((service, index) => (
-=======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center cyber-pulse">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white neon-glow-advanced cyber-text-advanced">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed hologram-flicker">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
             </p>
             
             {/* Achievements */}
             <div className="space-y-3 mb-6">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
+                <div key={index} className="flex items-center space-x-2 hover-cyber-glow">
                   <achievement.icon className="w-4 h-4 text-cyan-400" />
                   <span className="text-sm text-gray-300">{achievement.text}</span>
                 </div>
@@ -187,7 +162,7 @@ const Footer: React.FC = memo(() => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group hover-cyber-glow"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
@@ -198,10 +173,9 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-glow-advanced cyber-text-advanced">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.map((service, index) => (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                 <li key={index}>
                   <a 
                     href={service.url}
