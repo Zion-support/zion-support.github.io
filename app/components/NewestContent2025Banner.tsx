@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const NewestContent2025Banner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -8,7 +7,6 @@ const NewestContent2025Banner: React.FC = () => {
         <div className="absolute w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse top-10 left-10"></div>
         <div className="absolute w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse bottom-10 right-10 animation-delay-2000"></div>
       </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-500/30">
@@ -16,20 +14,17 @@ const NewestContent2025Banner: React.FC = () => {
               🎯 Latest 2025 AI Innovations
             </span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Breakthrough AI Solutions
             <span className="block mt-2 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Transforming Business in 2025
             </span>
           </h2>
-
           <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
             Discover the latest innovations in AI, quantum computing, and autonomous systems 
             that are reshaping the future of enterprise technology.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="text-cyan-400 text-4xl mb-4">🤖</div>
@@ -47,7 +42,6 @@ const NewestContent2025Banner: React.FC = () => {
               Learn More →
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="text-purple-400 text-4xl mb-4">⚡</div>
             <h3 className="text-xl font-semibold text-white mb-3">
@@ -64,7 +58,6 @@ const NewestContent2025Banner: React.FC = () => {
               Explore →
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="text-blue-400 text-4xl mb-4">🔒</div>
             <h3 className="text-xl font-semibold text-white mb-3">
@@ -82,7 +75,6 @@ const NewestContent2025Banner: React.FC = () => {
             </Link>
           </div>
         </div>
-
         <div className="mt-16 pt-12 border-t border-white/20">
           <h3 className="text-3xl font-bold text-white mb-6 text-center">
             Ready to Transform Your Business?
@@ -106,7 +98,6 @@ const NewestContent2025Banner: React.FC = () => {
             </Link>
           </div>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
@@ -127,5 +118,4 @@ const NewestContent2025Banner: React.FC = () => {
     </section>
   );
 };
-
 export default NewestContent2025Banner;

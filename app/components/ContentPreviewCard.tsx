@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import Link from 'next/link';
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -17,7 +16,6 @@ interface ContentPreviewCardProps {
   };
   excerpt?: string;
 }
-
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   // id,
   title,
@@ -37,7 +35,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     }
     return num.toString();
   };
-
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
       'Success Story': 'from-green-500 to-emerald-600',
@@ -51,7 +48,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     };
     return colors[category] || colors.default;
   };
-
   return (
     <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
       featured ? 'ring-2 ring-indigo-200' : ''
@@ -62,7 +58,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <div className="text-6xl mb-2">{image}</div>
           <div className="text-sm font-medium opacity-90">{category}</div>
         </div>
-        
         {/* Featured Badge */}
         {featured && (
           <div className="absolute top-4 left-4">
@@ -71,7 +66,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             </span>
           </div>
         )}
-
         {/* Stats Overlay */}
         {stats && (
           <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2">
@@ -83,7 +77,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             </div>
           </div>
         )}
-
         {/* Read Time Badge */}
         <div className="absolute bottom-4 left-4">
           <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -91,7 +84,6 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           </span>
         </div>
       </div>
-
       {/* Content */}
       <div className="p-6">
         <div className="mb-3">
@@ -99,15 +91,12 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             {category}
           </span>
         </div>
-
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           {title}
         </h3>
-
         <p className="text-gray-600 mb-4 line-clamp-3">
           {excerpt || description}
         </p>
-
         {/* Stats Row */}
         {stats && (
           <div className="flex items-center justify-between mb-4 text-sm">
@@ -128,12 +117,11 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             </div>
           </div>
         )}
-
         {/* Date and CTA */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
           <Link
-            to={path}
+            href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
             Read Article
@@ -146,5 +134,4 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
     </article>
   );
 };
-
 export default ContentPreviewCard;

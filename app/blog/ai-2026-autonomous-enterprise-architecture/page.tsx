@@ -1,8 +1,6 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 // Metadata removed for Vite compatibility
-
 export default function AI2026AutonomousEnterpriseArchitecture() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -19,7 +17,6 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               Revolutionary autonomous enterprise architecture transforming business operations
             </p>
           </div>
-
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏗️ Architecture Revolution</h2>
             <p className="text-gray-700 mb-6">
@@ -41,12 +38,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                 <div className="text-gray-700">Decisions</div>
               </div>
             </div>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🔬 Technical Innovation</h2>
             <p className="text-gray-700 mb-6">
               Our autonomous enterprise architecture leverages breakthrough technologies:
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Self-Healing Systems</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Autonomous system monitoring and maintenance</li>
@@ -54,7 +49,6 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               <li>• Automated recovery and optimization</li>
               <li>• Real-time performance tuning</li>
             </ul>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Predictive Infrastructure</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• AI-powered capacity planning</li>
@@ -62,12 +56,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               <li>• Predictive maintenance scheduling</li>
               <li>• Intelligent load balancing</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2>
             <p className="text-gray-700 mb-6">
               Autonomous enterprise architecture delivers measurable value across all business functions:
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Business Impact</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li>• <strong>99.9% uptime</strong> through self-healing systems</li>
@@ -75,13 +67,11 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               <li>• <strong>Real-time optimization</strong> of all systems</li>
               <li>• <strong>Automated scaling</strong> based on demand</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Architecture Revolution</h2>
             <p className="text-gray-700 mb-6">
               Ready to achieve autonomous enterprise architecture? Our revolutionary system 
               can transform your infrastructure and deliver unprecedented reliability.
             </p>
-
             <div className="bg-purple-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Architecture Transformation</h3>
               <p className="text-gray-700 mb-4">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, ShoppingCart, CreditCard, Package, BarChart3 } from 'lucide-react';
-
+import { CheckCircle } from 'lucide-react';
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
     {
@@ -161,7 +160,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       useCases: ['E-commerce', 'Retail', 'Marketplace', 'Subscription Business']
     }
   ];
-
   const ecommerceFeatures = [
     {
       title: 'AI Personalization',
@@ -184,14 +182,12 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-red-600" />
     }
   ];
-
   const industryStats = [
     { metric: '45%', description: 'Average Conversion Increase' },
     { metric: '60%', description: 'Cart Abandonment Reduction' },
     { metric: '35%', description: 'Average Order Value Boost' },
     { metric: '95%', description: 'Fraud Detection Accuracy' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
@@ -199,7 +195,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
         <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -228,7 +223,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Industry Stats */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -240,7 +234,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Our AI e-commerce solutions deliver measurable improvements
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {industryStats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -251,7 +244,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,25 +255,21 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Comprehensive AI-powered tools for every aspect of e-commerce
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ecommerceServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                
                 <div className="mb-4">
                   <span className="text-2xl font-bold text-purple-600">{service.price}</span>
                   <span className="text-sm text-gray-500 ml-2">Market: {service.marketPrice}</span>
                 </div>
-                
                 <div className="mb-4">
                   <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-2 py-1 rounded">
                     {service.category}
                   </span>
                 </div>
-                
                 <ul className="space-y-2 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
@@ -290,14 +278,12 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <div className="space-y-2 mb-6">
                   <h4 className="font-semibold text-gray-900">Key Benefits:</h4>
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                     <p key={benefitIndex} className="text-sm text-green-600">✓ {benefit}</p>
                   ))}
                 </div>
-                
                 <a 
                   href="/contact"
                   className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors inline-flex items-center justify-center"
@@ -309,7 +295,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -321,7 +306,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Advanced AI technology designed specifically for e-commerce success
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {ecommerceFeatures.map((feature, index) => (
               <div key={index} className="text-center">
@@ -335,7 +319,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,7 +330,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               Real results from our e-commerce clients
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
@@ -355,14 +337,12 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               <div className="font-semibold text-gray-900">Sarah Johnson</div>
               <div className="text-sm text-gray-500">CEO, Fashion Forward</div>
             </div>
-            
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"The AI inventory management system reduced our stockouts by 80% and saved us $500K annually. Highly recommended!"</p>
               <div className="font-semibold text-gray-900">Michael Chen</div>
               <div className="text-sm text-gray-500">Operations Director, TechGear</div>
             </div>
-            
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-600 mb-4 italic">"Their AI customer service automation reduced our support costs by 70% while improving customer satisfaction. Amazing results!"</p>
@@ -372,7 +352,6 @@ const AIEcommerceSolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -404,5 +383,4 @@ const AIEcommerceSolutionsPage: React.FC = () => {
     </div>
   );
 };
-
 export default AIEcommerceSolutionsPage;

@@ -7,24 +7,24 @@ export const performanceConfig = {
   metrics: {
     lcp: {
       good: 2500,
-      needsImprovement: 4000,
+      needsImprovement: 4000
     },
     fid: {
       good: 100,
-      needsImprovement: 300,
+      needsImprovement: 300
     },
     cls: {
       good: 0.1,
-      needsImprovement: 0.25,
+      needsImprovement: 0.25
     },
     fcp: {
       good: 1800,
-      needsImprovement: 3000,
+      needsImprovement: 3000
     },
     ttfb: {
       good: 800,
-      needsImprovement: 1800,
-    },
+      needsImprovement: 1800
+    }
   },
   // Cache strategies
   cache: {
@@ -39,7 +39,7 @@ export const performanceConfig = {
     api: {
       maxAge: 300, // 5 minutes
       staleWhileRevalidate: 30, // 30 seconds
-    },
+    }
   },
   // Resource hints
   preload: [
@@ -55,7 +55,7 @@ export const performanceConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/avif', 'image/webp'],
     minimumCacheTTL: 60,
-    dangerouslyAllowSVG: false,
+    dangerouslyAllowSVG: false
   },
   // Bundle optimization
   bundle: {
@@ -66,15 +66,15 @@ export const performanceConfig = {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
-          reuseExistingChunk: true,
+          reuseExistingChunk: true
         },
         default: {
           minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
+          reuseExistingChunk: true
+        }
+      }
+    }
   },
   // Performance monitoring
   monitoring: {
@@ -82,10 +82,8 @@ export const performanceConfig = {
     sampleRate: 1.0, // 100% in production
     reportInterval: 30000, // 30 seconds
     sendToAnalytics: true,
-    logThreshold: 'needsImprovement',
-  },
+    logThreshold: 'needsImprovement'
+  }
 };
-
 export type PerformanceConfig = typeof performanceConfig;
-
 export default performanceConfig;

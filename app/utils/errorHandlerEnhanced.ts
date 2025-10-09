@@ -1,3 +1,4 @@
+'use client';
 // Enhanced Error Handler
 export class AppError extends Error {
   statusCode: number;
@@ -14,14 +15,12 @@ export class AppError extends Error {
 export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message)
-
   console.error({
     message: appError.message,
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
   });
-
   return {
     message: appError.isOperational ? appError.message : 'An unexpected error occurred',
     statusCode: appError.statusCode || 500

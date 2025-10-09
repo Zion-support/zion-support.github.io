@@ -1,8 +1,6 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 // Metadata removed for Vite compatibility
-
 export default function ConsensusIntelligencePage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -19,7 +17,6 @@ export default function ConsensusIntelligencePage() {
               Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols
             </p>
           </div>
-
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🧠 Consensus Intelligence Overview</h2>
             <p className="text-gray-700 mb-6">
@@ -42,12 +39,10 @@ export default function ConsensusIntelligencePage() {
                 <div className="text-gray-700">Protocols</div>
               </div>
             </div>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🔬 Technical Innovation</h2>
             <p className="text-gray-700 mb-6">
               Our consensus intelligence system leverages breakthrough technologies:
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Quantum-Accelerated Protocols</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Quantum computing integration for consensus algorithms</li>
@@ -55,7 +50,6 @@ export default function ConsensusIntelligencePage() {
               <li>• Advanced cryptographic consensus mechanisms</li>
               <li>• Real-time consensus validation and verification</li>
             </ul>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Unanimous Decision Making</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• AI agents reaching unanimous consensus</li>
@@ -63,12 +57,10 @@ export default function ConsensusIntelligencePage() {
               <li>• Intelligent decision weighting and prioritization</li>
               <li>• Real-time consensus monitoring and optimization</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact</h2>
             <p className="text-gray-700 mb-6">
               Consensus intelligence delivers measurable value across all business functions:
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Business Impact</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li>• <strong>100% consensus</strong> in complex decision-making</li>
@@ -76,13 +68,11 @@ export default function ConsensusIntelligencePage() {
               <li>• <strong>Zero conflicts</strong> in strategic decisions</li>
               <li>• <strong>Real-time consensus</strong> across all stakeholders</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Consensus Revolution</h2>
             <p className="text-gray-700 mb-6">
               Ready to achieve unanimous decision-making? Our consensus intelligence system 
               can transform your decision-making processes and deliver unprecedented consensus.
             </p>
-
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Consensus Transformation</h3>
               <p className="text-gray-700 mb-4">

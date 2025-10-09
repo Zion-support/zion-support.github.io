@@ -3,19 +3,34 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
+  maxRetries?: number;
 }
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId?: string;
+  retryCount: number;
 }
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private maxRetries: number;
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      retryCount: 0,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
+    this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { 
+      hasError: true, 
+      error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCount: 0
+    };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -34,61 +49,39 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.group('🚨 Error Boundary Caught Error');
-      // eslint-disable-next-line no-console
-      console.error('Error:', error);
-      // eslint-disable-next-line no-console
-      console.error('Error Info:', errorInfo);
-      // eslint-disable-next-line no-console
-      console.error('Component Stack:', errorInfo.componentStack);
-      // eslint-disable-next-line no-console
-      console.groupEnd();
-    }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Enhanced error reporting logic
     const errorReport = {
-      errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.state.retryCount,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
+      url: window.location.href
     };
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as unknown as { gtag: unknown }).gtag) {
-      (window as unknown as { gtag: (command: string, event: string, data: Record<string, unknown>) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          retry_count: this.state.retryCount,
-        }
-      });
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.group('🚨 Error Boundary Caught Error');
+      console.error('Error:', error);
+      console.error('Error Info:', errorInfo);
+      console.error('Component Stack:', errorInfo.componentStack);
+      console.groupEnd();
     }
-  };
-  private sendErrorReport = async (errorReport: Record<string, unknown>) => {
+    // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-      origin/cursor/fix-errors-and-merge-to-main-6395      // Example: Send to error reporting service
+
+      // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
       //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      // eslint-disable-next-line no-console
-      console.warn('Failed to send error report:', reportingError);
+      console.error('Failed to report error:', reportingError);
     }
   };
   private getUserId = (): string | null => {
@@ -96,7 +89,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return localStorage.getItem('userId') || null;
   };
   private getSessionId = (): string => {
-    let _sessionId = sessionStorage.getItem('sessionId');
+    let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
@@ -104,17 +97,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return sessionId;
   };
   private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    } else {
-      // Max retries reached, reload the page
-      window.location.reload();
-    }
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
   private handleReload = () => {
     window.location.reload();
@@ -129,14 +112,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href,
+      url: window.location.href
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
-        const _button = document.getElementById('copy-error-details');
+        const button = document.getElementById('copy-error-details');
         if (button) {
-          const _originalText = button.textContent;
+          const originalText = button.textContent;
           button.textContent = 'Copied!';
           setTimeout(() => {
             button.textContent = originalText;
@@ -145,26 +128,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       })
       .catch(() => {
         // eslint-disable-next-line no-console
-        });
-  };
-<<<<<<< HEAD
-  // In production, you might want to send this to an error reporting service
-  if (process.env.NODE_ENV === 'production') {
-    // Example: send to error reporting service
-    // errorReportingService.captureException(error, { extra: errorInfo });
-  }
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0
+      });
+  };
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-=======
+      const canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
+      const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
@@ -176,38 +152,50 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-4">
+              {canRetry && (
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                >
+                  Try Again ({this.maxRetries - retryCount} attempts left)
+                </button>
+              )}
               <button
-                onClick={() => window.location.reload()}
+                onClick={this.handleReload}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
-                Refresh Page
+                Try Again
               </button>
               <button
-                onClick={() => window.history.back()}
+                onClick={this.handleGoHome}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
               >
-                Go Back
+                Go Home
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {this.state.error.toString()}
+                  {error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
+                <button
+                  id="copy-error-details"
+                  onClick={this.copyErrorDetails}
+                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
+                >
+                  Copy Error Details
+                </button>
               </details>
             )}
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-deb0

@@ -1,19 +1,15 @@
+'use client';
 /**
  * Jest setup file for testing environment
  */
-
 import React from 'react';
 import '@testing-library/jest-dom';
-
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-
 // Suppress jsdom navigation warnings
- 
 const _originalConsoleError = console.error;
- 
 console.error = (...args) => {
   const _message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -22,7 +18,6 @@ console.error = (...args) => {
   }
   originalConsoleError(...args);
 };
-
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -34,43 +29,37 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+    dispatchEvent: jest.fn()
+  }))
 });
-
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
-
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn(),
+  clear: jest.fn()
 };
 Object.defineProperty(window, 'localStorage', {
-  value: localStorageMock,
+  value: localStorageMock
 });
-
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
-  clear: jest.fn(),
+  clear: jest.fn()
 };
 Object.defineProperty(window, 'sessionStorage', {
-  value: sessionStorageMock,
+  value: sessionStorageMock
 });
-
 // Mock fetch
 global.fetch = jest.fn();
-
 // Mock console methods for cleaner test output
 const _originalConsoleWarn = console.warn;
 const _originalConsoleInfo = console.info;
-
 console.warn = (...args) => {
   const _message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -78,7 +67,6 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
-
 console.info = (...args) => {
   const _message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
@@ -86,11 +74,9 @@ console.info = (...args) => {
   }
   originalConsoleInfo(...args);
 };
-
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
-  
   constructor(public callback: PerformanceObserverCallback) {}
   observe() {}
   disconnect() {}
@@ -98,16 +84,13 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return [];
   }
 };
-
 // Suppress JSDOM navigation warnings
-
 console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError.apply(console, args);
 };
-
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {
@@ -122,5 +105,5 @@ delete (window as unknown as Record<string, unknown>).location;
   hash: '',
   reload: jest.fn(),
   assign: jest.fn(),
-  replace: jest.fn(),
+  replace: jest.fn()
 };

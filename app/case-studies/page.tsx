@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -70,25 +69,22 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
   ];
-
   return (
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </Link>
           </div>
         </header>
-
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +102,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -122,19 +117,15 @@ const CaseStudiesPage: React.FC = () => {
                         <p className="text-gray-500 text-sm">{study.industry}</p>
                       </div>
                     </div>
-
                     <p className="text-gray-600 mb-6">{study.description}</p>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
                       <p className="text-gray-600 text-sm">{study.challenge}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                       <p className="text-gray-600 text-sm">{study.solution}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
                       <div className="grid grid-cols-2 gap-4">
@@ -152,10 +143,9 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Link 
-                        to="/contact"
+                        href="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Learn More
@@ -171,7 +161,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,7 +192,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -215,14 +203,14 @@ const CaseStudiesPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Your Project
                 <TrendingUp className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                to="/services"
+                href="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 View Our Services
@@ -234,5 +222,4 @@ const CaseStudiesPage: React.FC = () => {
     </>
   );
 };
-
 export default CaseStudiesPage;
