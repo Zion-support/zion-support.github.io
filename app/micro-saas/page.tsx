@@ -462,7 +462,6 @@ const MicroSAASPage: React.FC = () => {
       name: 'Smart Invoice AI',
       description: 'Automate invoice creation and management with AI-powered data extraction and processing.',
       icon: FileText,
-<<<<<<< HEAD
       category: 'automation',
       pricing: { starting: 49, period: 'month' },
       features: ['Auto data extraction', 'Smart categorization', 'Payment tracking', 'Tax calculations', 'Multi-currency', 'Recurring billing'],
@@ -471,20 +470,6 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.8,
       users: 8900,
       link: 'https://ziontechgroup.com/ai-invoice-generator'
-    },
-    {
-      id: 'ai-content-optimizer',
-      name: 'Content Optimizer Pro',
-      description: 'Optimize your content for SEO, readability, and engagement with advanced AI analysis.',
-      icon: Target,
-      category: 'content',
-      pricing: { starting: 29, period: 'month' },
-      features: ['SEO optimization', 'Readability analysis', 'Engagement scoring', 'A/B testing', 'Keyword research', 'Content suggestions'],
-      benefits: ['Increase traffic by 40%', 'Better user engagement', 'Higher conversion rates'],
-      popular: false,
-      rating: 4.7,
-      users: 5600,
-      link: 'https://ziontechgroup.com/content-optimizer'
     },
     {
       id: 'ai-analytics-dashboard',

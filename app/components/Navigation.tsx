@@ -404,17 +404,16 @@ const Navigation: React.FC = memo(() => {
               Get Quote
             </Link>
           </div>
-        </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
@@ -520,6 +519,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </div>
         )}
+      </div>
       </nav>
     );
   });
