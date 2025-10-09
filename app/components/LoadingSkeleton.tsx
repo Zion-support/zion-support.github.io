@@ -1,55 +1,98 @@
-'use client';
 import React from 'react';
-
-interface LoadingSkeletonProps {
+interface SkeletonProps {
   className?: string;
-  lines?: number;
-  height?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean;
+  animated?: boolean;
 }
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
-  className = '', 
-  lines = 1, 
-  height = 'h-4' 
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
+  width,
+  height,
+  rounded = false,
+  animated = true
 }) => {
+  const baseClasses = 'bg-gray-200';
+  const roundedClasses = rounded ? 'rounded' : '';
+  const animatedClasses = animated ? 'animate-pulse' : '';
   return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`bg-gray-200 rounded mb-2 ${height} ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-        />
-      ))}
+    <div
+      className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
+      style={{ width, height }}
+      role="status"
+      aria-label="Loading content"
+    >
+      <span className="sr-only">Loading...</span>
     </div>
   );
 };
-
-export const ServiceCardSkeleton: React.FC = () => (
-  <div className="cyber-card p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-    <div className="mt-4">
-      <div className="h-3 bg-gray-200 rounded mb-1"></div>
-      <div className="h-3 bg-gray-200 rounded mb-1"></div>
-      <div className="h-3 bg-gray-200 rounded w-2/3"></div>
-    </div>
+// Predefined skeleton components for common use cases
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-white rounded-lg shadow-lg p-6">
+    <Skeleton height="24px" width="75%" className="mb-4" />
+    <Skeleton height="16px" width="100%" className="mb-2" />
+    <Skeleton height="16px" width="90%" className="mb-4" />
+    <Skeleton height="40px" width="120px" rounded />
   </div>
 );
-
-export const HeroSkeleton: React.FC = () => (
-  <div className="text-center mb-16 animate-pulse">
-    <div className="h-16 bg-gray-200 rounded mb-6 mx-auto w-3/4"></div>
-    <div className="h-6 bg-gray-200 rounded mb-8 mx-auto w-1/2"></div>
-    <div className="h-4 bg-gray-200 rounded mb-4 mx-auto w-2/3"></div>
-    <div className="h-4 bg-gray-200 rounded mb-8 mx-auto w-1/2"></div>
-    <div className="flex justify-center gap-4">
-      <div className="h-12 bg-gray-200 rounded w-32"></div>
-      <div className="h-12 bg-gray-200 rounded w-32"></div>
-    </div>
+export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
+  <div className="space-y-2">
+    {Array.from({ length: lines }).map((_, index) => (
+      <Skeleton
+        key={index}
+        height="16px"
+        width={index === lines - 1 ? '75%' : '100%'}
+      />
+    ))}
   </div>
 );
-
-export default LoadingSkeleton;
+export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
+  aspectRatio = '16/9' 
+}) => (
+  <div 
+    className="bg-gray-200 rounded-lg animate-pulse"
+    style={{ aspectRatio }}
+    role="status"
+    aria-label="Loading image"
+  >
+    <span className="sr-only">Loading image...</span>
+  </div>
+);
+export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
+  <div className="space-y-3">
+    {Array.from({ length: items }).map((_, index) => (
+      <div key={index} className="flex items-center space-x-3">
+        <Skeleton height="40px" width="40px" rounded />
+        <div className="flex-1 space-y-2">
+          <Skeleton height="16px" width="80%" />
+          <Skeleton height="14px" width="60%" />
+        </div>
+      </div>
+    ))}
+  </div>
+);
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+  rows = 5, 
+  columns = 4 
+}) => (
+  <div className="overflow-hidden">
+    <div className="grid gap-4 mb-4" style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>
+      {Array.from({ length: columns }).map((_, index) => (
+        <Skeleton key={index} height="20px" />
+      ))}
+    </div>
+    {Array.from({ length: rows }).map((_, rowIndex) => (
+      <div 
+        key={rowIndex} 
+        className="grid gap-4 mb-2" 
+        style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
+      >
+        {Array.from({ length: columns }).map((_, colIndex) => (
+          <Skeleton key={colIndex} height="16px" />
+        ))}
+      </div>
+    ))}
+  </div>
+);
+export default Skeleton;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check, DollarSign, Mic, HardDrive, FileCheck, Link, Box } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, Check, DollarSign, Mic, HardDrive, FileCheck, Link, Cube } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,7 +82,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, price: '$179/mo', popular: false },
     { name: 'AI Sales Automation Hub', href: '/ai-sales-automation', icon: Target, price: '$399/mo', popular: true },
     { name: 'AI Data Visualization Pro', href: '/ai-data-visualization', icon: PieChart, price: '$279/mo', popular: false },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Box, price: '$499/mo', popular: false },
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Cube, price: '$499/mo', popular: false },
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, price: '$149/mo', popular: true },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, price: '$199/mo', popular: true },
     { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart, price: '$349/mo', popular: true },
@@ -96,7 +96,7 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye, price: '$1,800/mo' },
     { name: 'AI Automation Suite', href: '/ai-automation', icon: Zap, price: '$1,400/mo' },
     { name: 'AI Data Intelligence', href: '/ai-data-analytics', icon: BarChart, price: '$1,100/mo' },
-    { name: 'AI 3D & AR Solutions', href: '/ai-3d-generation', icon: Box, price: '$1,600/mo' },
+    { name: 'AI 3D & AR Solutions', href: '/ai-3d-generation', icon: Cube, price: '$1,600/mo' },
     { name: 'AI Voice & Audio', href: '/ai-voice-cloning', icon: Mic, price: '$1,300/mo' },
     { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope, price: '$2,000/mo' },
     { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard, price: '$1,700/mo' },
