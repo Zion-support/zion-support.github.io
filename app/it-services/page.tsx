@@ -733,7 +733,7 @@ const ITServicesPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [searchTerm, selectedCategory, sortBy, itServices]);
 
   const totalValue = itServices.reduce((total, service) => {
     return total + service.pricing.yearly;
