@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { BarChart, TrendingUp, Target, Zap, Brain, Shield, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Users, Database } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -157,12 +156,11 @@ const SmartAnalyticsPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <Link 
-              href="/contact"
+            <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Get Free Demo
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -307,12 +305,11 @@ const SmartAnalyticsPage: React.FC = () => {
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
-            <Link 
-              href="/contact"
+            <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
-            </Link>
+            </a>
           </div>
         </section>
       </section>

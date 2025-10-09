@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {
@@ -36,12 +35,11 @@ const UnifiedContentPromotion: React.FC = () => {
               <div className="text-5xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
               <p className="text-gray-600 mb-4">{feature.description}</p>
-              <Link
-                href={feature.link}
+              <a href={feature.link}
                 className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
               >
                 Learn More →
-              </Link>
+              </a>
             </div>
           ))}
         </div>

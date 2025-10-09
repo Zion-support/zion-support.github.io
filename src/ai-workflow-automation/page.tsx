@@ -58,6 +58,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
     { number: '99.9%', label: 'Reliability' }
   ];
 
+  const useCases = [
+    {
+      title: 'HR Onboarding',
+      description: 'Automate employee onboarding processes from application to first day.',
+      icon: Users
+    },
+    {
+      title: 'Invoice Processing',
+      description: 'Automatically process invoices, validate data, and route for approval.',
+      icon: Database
+    },
+    {
+      title: 'Customer Support',
+      description: 'Route tickets, escalate issues, and provide automated responses.',
+      icon: Globe
+    },
+    {
+      title: 'Data Migration',
+      description: 'Safely migrate data between systems with automated validation.',
+      icon: Settings
+    }
+  ];
+
+  const pricing = pricingPlans;
+
   return (
     <>
       <SEOOptimizer
