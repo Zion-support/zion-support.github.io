@@ -851,6 +851,43 @@ body {
 
 @media (max-width: 480px) {
   .cyber-grid {
+<<<<<<< HEAD
+=======
+    background-size: 10px 10px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 4px #00ffff,
+      0 0 6px #00ffff;
+  }
+  
+  .cyber-text-3d {
+    transform: perspective(300px) rotateX(5deg);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .cyber-text-3d {
+    transform: none;
+  }
+  
+  .quantum-field {
+    animation: none;
+  }
+  
+  .cyber-grid {
+>>>>>>> cursor/website-audit-and-update-with-deployment-33eb
     background-size: 15px 15px;
   }
   
@@ -991,6 +1028,7 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
+<<<<<<< HEAD
 
 /* Performance optimizations */
 * {
@@ -1067,3 +1105,5 @@ img {
     text-shadow: none;
   }
 }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-33eb
