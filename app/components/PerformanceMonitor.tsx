@@ -1,188 +1,121 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
+'use client';
+import React, { useEffect, useState, useCallback } from 'react';
+import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  loadTime: number;
+  memoryUsage: number;
+  connectionSpeed: string;
+  renderTime: number;
 }
-=======
-import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  });
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    // Monitor Core Web Vitals
-<<<<<<< HEAD
-    const measureLCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-=======
-    getCLS((metric) => {
-      console.log('CLS:', metric);
-      // Send to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'CLS',
-          value: Math.round(metric.value * 1000),
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
-        });
-        observer.observe({ entryTypes: ['largest-contentful-paint'] });
-        return observer;
-      }
-<<<<<<< HEAD
-      return null;
-    };
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
 
-    const measureFID = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-          });
-        });
-        observer.observe({ entryTypes: ['first-input'] });
-        return observer;
-      }
-      return null;
-    };
+    // Measure page load time
+    const loadTime = performance.now();
 
-    const measureCLS = () => {
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['layout-shift'] });
-        return observer;
-      }
-      return null;
-    };
+    // Get memory usage (if available)
+    const memoryUsage = (performance as any).memory 
+      ? Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024)
+      : 0;
 
-    const measureFCP = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['paint'] });
-        return observer;
-      }
-      return null;
-    };
+    // Estimate connection speed
+    const connection = (navigator as any).connection;
+    const connectionSpeed = connection 
+      ? `${connection.downlink}Mbps`
+      : 'Unknown';
 
-    const measureTTFB = () => {
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: any) => {
-            if (entry.entryType === 'navigation') {
-              setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['navigation'] });
-        return observer;
-      }
-      return null;
-    };
+    // Measure render time
+    const renderTime = performance.now() - loadTime;
 
-    // Start monitoring
-    const observers = [
-      measureLCP(),
-      measureFID(),
-      measureCLS(),
-      measureFCP(),
-      measureTTFB()
-    ].filter(Boolean);
-
-    // Log metrics in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Performance metrics:', metrics);
-    }
-=======
-    });
-
-    getFID((metric) => {
-      console.log('FID:', metric);
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'FID',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    getFCP((metric) => {
-      console.log('FCP:', metric);
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'FCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    getLCP((metric) => {
-      console.log('LCP:', metric);
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'LCP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
-
-    getTTFB((metric) => {
-      console.log('TTFB:', metric);
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'TTFB',
-          value: Math.round(metric.value),
-        });
-      }
+    setMetrics({
+      loadTime: Math.round(loadTime),
+      memoryUsage,
+      connectionSpeed,
+      renderTime: Math.round(renderTime)
     });
   }, []);
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
-    // Cleanup
-    return () => {
-      observers.forEach(observer => observer?.disconnect());
+  useEffect(() => {
+    // Measure performance after component mount
+    const timer = setTimeout(measurePerformance, 1000);
+    return () => clearTimeout(timer);
+  }, [measurePerformance]);
+
+  // Show/hide performance monitor with keyboard shortcut
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
     };
-  }, [metrics]);
 
-  // This component doesn't render anything visible
-  return null;
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  if (!isVisible || !metrics) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 min-w-[200px]">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold flex items-center">
+          <Activity className="w-4 h-4 mr-1" />
+          Performance
+        </h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white text-xs"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center">
+            <Clock className="w-3 h-3 mr-1" />
+            Load Time:
+          </span>
+          <span className="text-green-400">{metrics.loadTime}ms</span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="flex items-center">
+            <Zap className="w-3 h-3 mr-1" />
+            Render Time:
+          </span>
+          <span className="text-blue-400">{metrics.renderTime}ms</span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="flex items-center">
+            <Database className="w-3 h-3 mr-1" />
+            Memory:
+          </span>
+          <span className="text-yellow-400">{metrics.memoryUsage}MB</span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="flex items-center">
+            <Activity className="w-3 h-3 mr-1" />
+            Connection:
+          </span>
+          <span className="text-purple-400">{metrics.connectionSpeed}</span>
+        </div>
+      </div>
+      
+      <div className="mt-2 text-xs text-gray-400">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;

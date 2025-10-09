@@ -992,25 +992,18 @@ body {
 .font-large {
   font-size: 1.125rem;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
 .focus-visible *:focus {
   outline: 3px solid #00ffff;
   outline-offset: 2px;
 }
 
-<<<<<<< HEAD
 /* High Contrast Mode */
 .high-contrast {
   --neon-cyan: #00ffff;
   --neon-pink: #ff00ff;
   --neon-green: #00ff00;
 }
-=======
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
+
 /* Performance Optimizations */
 .will-change-transform {
   will-change: transform;

@@ -408,8 +408,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3845
 export default Footer;
