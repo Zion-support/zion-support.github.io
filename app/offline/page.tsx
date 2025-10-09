@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
@@ -5,11 +7,6 @@ import Link from 'next/link';
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
-
-export const metadata = {
-  title: 'Offline - Zion Tech Group',
-  description: 'You are currently offline. Please check your internet connection.',
-};
 
 const OfflinePage: React.FC = () => {
   return (

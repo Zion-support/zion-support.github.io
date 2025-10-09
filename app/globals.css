@@ -18,36 +18,157 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      135deg,
+      #0f0f23 0%,
+      #1a1a2e 25%,
+      #16213e 50%,
+      #0f0f23 75%,
+      #1a1a2e 100%
+    );
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Futuristic Background Animation */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
+  animation: backgroundShift 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  transition: all 0.3s ease;
 }
 
 /* Custom CSS Variables */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 15, 15, 35;
+  --background-end-rgb: 26, 26, 46;
+  --neon-blue: #00d4ff;
+  --neon-purple: #8b5cf6;
+  --neon-pink: #ff6b9d;
+  --neon-cyan: #00f5ff;
+  --neon-green: #00ff88;
+  --quantum-glow: 0 0 20px rgba(0, 212, 255, 0.5);
+  --cyber-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Futuristic Components */
+.cyber-card {
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cyber-card:hover {
+  border-color: var(--neon-blue);
+  box-shadow: var(--quantum-glow), 0 8px 32px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.quantum-card {
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.9) 0%, rgba(26, 26, 46, 0.9) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  box-shadow: var(--cyber-shadow);
+  transition: all 0.4s ease;
+}
+
+.quantum-card:hover {
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.6), 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.hologram-card {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+  animation: hologramScan 3s linear infinite;
+  z-index: 1;
+}
+
+@keyframes hologramScan {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.cyber-glow {
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+  animation: cyberPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes cyberPulse {
+  0% { text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan); }
+  100% { text-shadow: 0 0 15px var(--neon-cyan), 0 0 25px var(--neon-cyan), 0 0 35px var(--neon-cyan); }
+}
+
+.neon-text {
+  color: var(--neon-blue);
+  text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue);
+}
+
+.neon-border {
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+.quantum-gradient {
+  background: linear-gradient(135deg, var(--neon-blue) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cyber-card, .quantum-card, .hologram-card {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .cyber-glow {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body::before {
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.2) 0%, transparent 50%);
   }
 }
 
