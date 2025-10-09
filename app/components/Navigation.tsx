@@ -67,7 +67,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
+        { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
+        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
+        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
+        { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
       ]
     },
     {
