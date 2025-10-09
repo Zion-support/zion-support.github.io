@@ -1,4 +1,6 @@
 'use client';
+'use client';
+'use client';
 
 import React from 'react';
 import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';

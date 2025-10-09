@@ -1,3 +1,6 @@
+'use client';
+'use client';
+'use client';
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 

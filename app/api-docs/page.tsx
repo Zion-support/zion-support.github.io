@@ -1,28 +1,8 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -202,6 +182,7 @@ console.log(result.predictions);`,
         </div>
       </section>
 
+      <main>
       {/* Quick Start */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,10 +300,10 @@ console.log(result.predictions);`,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
+      <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="cyber-card hologram-card p-6">
@@ -368,161 +349,8 @@ console.log(result.predictions);`,
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-        </div>
-      </section>
-
-      {/* SDK Examples */}
-      <section id="examples" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              SDK Examples
-            </h2>
-            <p className="text-xl text-gray-600">
-              Code examples for different programming languages
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {sdkExamples.map((example, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900">{example.language}</h3>
-                  <p className="text-sm text-gray-600">{example.description}</p>
-                </div>
-                <div className="p-6">
-                  <div className="bg-gray-900 rounded-lg p-4 relative">
-                    <button
-                      onClick={() => copyToClipboard(example.code, `sdk-${index}`)}
-                      className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                    >
-                      {copiedCode === `sdk-${index}` ? (
-                        <Check className="w-4 h-4" />
-                      ) : (
-                        <Copy className="w-4 h-4" />
-                      )}
-                    </button>
-                    <pre className="text-green-400 text-sm overflow-x-auto">
-                      <code>{example.code}</code>
-                    </pre>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Authentication */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Authentication
-            </h2>
-            <p className="text-xl text-gray-600">
-              Secure your API calls with proper authentication
-            </p>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">API Key Authentication</h3>
-            <p className="text-gray-600 mb-6">
-              All API requests require authentication using an API key. Include your API key in the Authorization header:
-            </p>
-            <div className="bg-gray-900 rounded-lg p-4">
-              <pre className="text-green-400 text-sm">
-                <code>Authorization: Bearer YOUR_API_KEY</code>
-              </pre>
-            </div>
-            <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <p className="text-yellow-800 text-sm">
-                <strong>Important:</strong> Keep your API key secure and never expose it in client-side code. 
-                Use environment variables or secure key management systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Rate Limits */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Rate Limits
-            </h2>
-            <p className="text-xl text-gray-600">
-              API usage limits and pricing tiers
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Free Tier</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 1,000 requests/month</li>
-                <li>• Basic AI models</li>
-                <li>• Community support</li>
-                <li>• Standard response time</li>
-              </ul>
-            </div>
-            <div className="bg-white border border-blue-200 rounded-lg shadow-lg p-6 ring-2 ring-blue-500">
-              <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                Most Popular
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Pro Tier</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• 50,000 requests/month</li>
-                <li>• All AI models</li>
-                <li>• Priority support</li>
-                <li>• Fast response time</li>
-              </ul>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Unlimited requests</li>
-                <li>• Custom models</li>
-                <li>• 24/7 support</li>
-                <li>• SLA guarantee</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get your API key and start building with our AI platform today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Get API Key
-            </Link>
-            <Link 
-              to="/docs"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              View Full Docs
-            </Link>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
 
 export default ApiDocsPage;
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19

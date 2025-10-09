@@ -1,4 +1,7 @@
 'use client';
+'use client';
+'use client';
+'use client';
 
 import React from 'react';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
