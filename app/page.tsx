@@ -69,6 +69,215 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
+      title: 'AI Quantum Analytics Engine',
+      description: 'Revolutionary quantum-powered analytics for complex data processing and predictive modeling',
+      icon: '⚛️',
+      price: '$299/month',
+      features: ['Quantum computing algorithms', 'Advanced pattern recognition', 'Real-time data processing', 'Predictive modeling', 'Quantum machine learning', 'Exponential speed gains'],
+      benefits: ['1000x faster processing', '99.9% accuracy', 'Quantum advantage', 'Future-proof technology'],
+      link: '/ai-quantum-analytics',
+      popular: true,
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'AI Autonomous Business Intelligence',
+      description: 'Self-evolving business intelligence system that learns and adapts to optimize operations automatically',
+      icon: '🧠',
+      price: '$199/month',
+      features: ['Autonomous decision making', 'Self-learning algorithms', 'Real-time optimization', 'Predictive insights', 'Automated reporting', 'Continuous improvement'],
+      benefits: ['95% automation', '60% efficiency boost', 'Zero human intervention', 'Exponential growth'],
+      link: '/ai-autonomous-bi',
+      popular: true,
+      category: 'Business Intelligence'
+    },
+    {
+      title: 'AI Neural Network Optimizer',
+      description: 'Advanced neural network optimization for maximum performance and efficiency in AI applications',
+      icon: '🔗',
+      price: '$149/month',
+      features: ['Neural architecture search', 'Hyperparameter optimization', 'Model compression', 'Performance tuning', 'Automated training', 'Edge deployment'],
+      benefits: ['50% faster training', '90% model efficiency', 'Reduced computational costs', 'Better accuracy'],
+      link: '/ai-neural-optimizer',
+      popular: false,
+      category: 'AI Development'
+    },
+    {
+      title: 'AI Blockchain Integration Suite',
+      description: 'Seamless integration of AI with blockchain technology for secure, decentralized applications',
+      icon: '⛓️',
+      price: '$249/month',
+      features: ['Smart contract AI', 'Decentralized ML', 'Blockchain analytics', 'Token economics', 'DeFi integration', 'NFT intelligence'],
+      benefits: ['Enhanced security', 'Decentralized AI', 'Transparent operations', 'Future-ready architecture'],
+      link: '/ai-blockchain-suite',
+      popular: true,
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Metaverse Development Platform',
+      description: 'Complete platform for building AI-powered metaverse experiences and virtual worlds',
+      icon: '🌐',
+      price: '$399/month',
+      features: ['3D world generation', 'AI NPCs', 'Virtual economy', 'Real-time interactions', 'VR/AR support', 'Social features'],
+      benefits: ['Immersive experiences', 'AI-driven content', 'Scalable virtual worlds', 'Next-gen technology'],
+      link: '/ai-metaverse-platform',
+      popular: true,
+      category: 'Metaverse'
+    },
+    {
+      title: 'AI Edge Computing Manager',
+      description: 'Intelligent edge computing solution for real-time AI processing at the network edge',
+      icon: '📡',
+      price: '$179/month',
+      features: ['Edge AI deployment', 'Real-time processing', 'Bandwidth optimization', 'Offline capabilities', 'Device management', 'Latency reduction'],
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Offline functionality', 'Better user experience'],
+      link: '/ai-edge-computing',
+      popular: false,
+      category: 'Edge Computing'
+    },
+    {
+      title: 'AI Quantum Security Vault',
+      description: 'Quantum-resistant security solution using AI for advanced threat detection and prevention',
+      icon: '🔐',
+      price: '$349/month',
+      features: ['Quantum encryption', 'AI threat detection', 'Zero-trust architecture', 'Advanced monitoring', 'Compliance automation', 'Incident response'],
+      benefits: ['Future-proof security', '99.99% threat detection', 'Quantum-safe encryption', 'Automated compliance'],
+      link: '/ai-quantum-security',
+      popular: true,
+      category: 'Cybersecurity'
+    },
+    {
+      title: 'AI Sustainable Technology Optimizer',
+      description: 'AI-powered solution for optimizing energy consumption and reducing carbon footprint',
+      icon: '🌱',
+      price: '$129/month',
+      features: ['Energy optimization', 'Carbon tracking', 'Sustainability metrics', 'Green AI algorithms', 'Resource efficiency', 'Environmental reporting'],
+      benefits: ['50% energy reduction', 'Carbon neutral operations', 'Cost savings', 'Environmental compliance'],
+      link: '/ai-sustainability-optimizer',
+      popular: false,
+      category: 'Sustainability'
+    },
+    {
+      title: 'AI Digital Twin Creator',
+      description: 'Create and manage digital twins of physical assets with AI-powered simulation and monitoring',
+      icon: '👥',
+      price: '$279/month',
+      features: ['3D asset modeling', 'Real-time simulation', 'Predictive maintenance', 'Performance monitoring', 'Virtual testing', 'IoT integration'],
+      benefits: ['Reduced downtime', 'Predictive insights', 'Cost optimization', 'Risk mitigation'],
+      link: '/ai-digital-twin',
+      popular: true,
+      category: 'Digital Twins'
+    },
+    {
+      title: 'AI Conversational Commerce Platform',
+      description: 'Advanced AI platform for creating intelligent shopping experiences and automated sales',
+      icon: '🛍️',
+      price: '$199/month',
+      features: ['AI shopping assistants', 'Personalized recommendations', 'Voice commerce', 'Visual search', 'Automated sales', 'Customer insights'],
+      benefits: ['40% conversion increase', '24/7 sales support', 'Personalized experience', 'Higher customer satisfaction'],
+      link: '/ai-conversational-commerce',
+      popular: true,
+      category: 'E-commerce'
+    },
+    {
+      title: 'AI Predictive Maintenance Suite',
+      description: 'Intelligent maintenance system that predicts equipment failures and optimizes maintenance schedules',
+      icon: '🔧',
+      price: '$169/month',
+      features: ['Failure prediction', 'Maintenance scheduling', 'Asset monitoring', 'Cost optimization', 'Downtime reduction', 'Performance analytics'],
+      benefits: ['70% fewer breakdowns', '30% maintenance cost reduction', 'Increased uptime', 'Extended asset life'],
+      link: '/ai-predictive-maintenance',
+      popular: false,
+      category: 'Maintenance'
+    },
+    {
+      title: 'AI Content Intelligence Hub',
+      description: 'Comprehensive AI platform for content creation, optimization, and performance analysis',
+      icon: '📝',
+      price: '$89/month',
+      features: ['Multi-format content', 'SEO optimization', 'Performance analytics', 'Brand consistency', 'A/B testing', 'Content strategy'],
+      benefits: ['10x content output', 'Better engagement', 'SEO optimization', 'Brand alignment'],
+      link: '/ai-content-intelligence',
+      popular: true,
+      category: 'Content Marketing'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'End-to-end supply chain optimization using AI for demand forecasting and logistics management',
+      icon: '🚚',
+      price: '$229/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Risk assessment', 'Cost optimization'],
+      benefits: ['25% cost reduction', '99% delivery accuracy', 'Reduced waste', 'Better supplier relationships'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Healthcare Diagnostics Assistant',
+      description: 'AI-powered medical diagnostics and health monitoring system for healthcare professionals',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Medical image analysis', 'Symptom assessment', 'Treatment recommendations', 'Patient monitoring', 'Drug interaction checks', 'Clinical decision support'],
+      benefits: ['Faster diagnosis', 'Reduced errors', 'Better patient outcomes', 'Cost-effective healthcare'],
+      link: '/ai-healthcare-diagnostics',
+      popular: true,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Financial Risk Manager',
+      description: 'Advanced AI system for financial risk assessment, fraud detection, and investment optimization',
+      icon: '💰',
+      price: '$299/month',
+      features: ['Risk assessment', 'Fraud detection', 'Portfolio optimization', 'Market analysis', 'Compliance monitoring', 'Real-time alerts'],
+      benefits: ['Reduced financial risk', 'Better investment returns', 'Fraud prevention', 'Regulatory compliance'],
+      link: '/ai-financial-risk-manager',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Smart City Platform',
+      description: 'Comprehensive AI platform for smart city management, traffic optimization, and urban planning',
+      icon: '🏙️',
+      price: '$499/month',
+      features: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Urban planning', 'Citizen services'],
+      benefits: ['Improved city efficiency', 'Better citizen experience', 'Reduced costs', 'Sustainable development'],
+      link: '/ai-smart-city-platform',
+      popular: false,
+      category: 'Smart Cities'
+    },
+    {
+      title: 'AI Agricultural Intelligence',
+      description: 'AI-powered agricultural solution for crop monitoring, yield optimization, and farm management',
+      icon: '🌾',
+      price: '$179/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Pest detection', 'Soil analysis', 'Weather forecasting', 'Resource optimization'],
+      benefits: ['Increased crop yield', 'Reduced resource waste', 'Better crop quality', 'Sustainable farming'],
+      link: '/ai-agricultural-intelligence',
+      popular: false,
+      category: 'Agriculture'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Advanced AI system for legal document analysis, contract review, and compliance monitoring',
+      icon: '⚖️',
+      price: '$249/month',
+      features: ['Contract analysis', 'Legal research', 'Compliance checking', 'Risk assessment', 'Document generation', 'Case law analysis'],
+      benefits: ['Faster document review', 'Reduced legal costs', 'Better risk management', 'Improved compliance'],
+      link: '/ai-legal-analyzer',
+      popular: true,
+      category: 'Legal Tech'
+    },
+    {
+      title: 'AI Real Estate Intelligence',
+      description: 'AI-powered real estate platform for property valuation, market analysis, and investment insights',
+      icon: '🏠',
+      price: '$159/month',
+      features: ['Property valuation', 'Market analysis', 'Investment insights', 'Property management', 'Tenant screening', 'Maintenance prediction'],
+      benefits: ['Accurate valuations', 'Better investment decisions', 'Reduced vacancy rates', 'Optimized property management'],
+      link: '/ai-real-estate-intelligence',
+      popular: false,
+      category: 'Real Estate'
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
       icon: '📱',
@@ -336,6 +545,96 @@ const HomePage: React.FC = () => {
 
   const aiServices = [
     {
+      title: 'Quantum Machine Learning Platform',
+      description: 'Revolutionary quantum-enhanced machine learning for solving complex optimization problems',
+      icon: Brain,
+      price: '$2,999/month',
+      features: ['Quantum ML Algorithms', 'Quantum Neural Networks', 'Quantum Optimization', 'Hybrid Classical-Quantum Models', 'Quantum Data Processing', 'Exponential Speedup'],
+      color: 'text-purple-400',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'Autonomous AI Agent Framework',
+      description: 'Self-evolving AI agents that learn, adapt, and make decisions independently',
+      icon: Bot,
+      price: '$1,999/month',
+      features: ['Self-Learning Agents', 'Autonomous Decision Making', 'Multi-Agent Systems', 'Continuous Learning', 'Goal-Oriented Behavior', 'Human-AI Collaboration'],
+      color: 'text-cyan-400',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'Neural Architecture Search Engine',
+      description: 'AI-powered system that automatically designs optimal neural network architectures',
+      icon: Cpu,
+      price: '$1,799/month',
+      features: ['Automated Architecture Design', 'Performance Optimization', 'Hardware-Aware Design', 'Multi-Objective Optimization', 'Transfer Learning', 'Edge Deployment'],
+      color: 'text-green-400',
+      category: 'AI Development'
+    },
+    {
+      title: 'Federated Learning Platform',
+      description: 'Privacy-preserving machine learning that trains models across distributed data sources',
+      icon: Shield,
+      price: '$1,499/month',
+      features: ['Privacy-Preserving Training', 'Distributed Learning', 'Differential Privacy', 'Secure Aggregation', 'Cross-Silo Collaboration', 'Regulatory Compliance'],
+      color: 'text-blue-400',
+      category: 'Privacy AI'
+    },
+    {
+      title: 'Explainable AI Framework',
+      description: 'Transparent AI systems that provide clear explanations for their decisions and predictions',
+      icon: Eye,
+      price: '$1,299/month',
+      features: ['Model Interpretability', 'Decision Explanations', 'Bias Detection', 'Fairness Metrics', 'Audit Trails', 'Regulatory Compliance'],
+      color: 'text-yellow-400',
+      category: 'Explainable AI'
+    },
+    {
+      title: 'Edge AI Optimization Suite',
+      description: 'Optimize AI models for deployment on edge devices with minimal resource requirements',
+      icon: Smartphone,
+      price: '$1,199/month',
+      features: ['Model Compression', 'Quantization', 'Pruning', 'Hardware Optimization', 'Real-time Inference', 'Battery Optimization'],
+      color: 'text-orange-400',
+      category: 'Edge AI'
+    },
+    {
+      title: 'Multi-Modal AI Platform',
+      description: 'Unified AI platform that processes text, images, audio, and video simultaneously',
+      icon: FileText,
+      price: '$1,699/month',
+      features: ['Cross-Modal Learning', 'Unified Representations', 'Multi-Sensory Processing', 'Fusion Techniques', 'Cross-Modal Generation', 'Real-time Processing'],
+      color: 'text-pink-400',
+      category: 'Multi-Modal AI'
+    },
+    {
+      title: 'Reinforcement Learning Engine',
+      description: 'Advanced RL algorithms for autonomous decision-making and optimization',
+      icon: Target,
+      price: '$1,399/month',
+      features: ['Deep RL Algorithms', 'Multi-Agent RL', 'Continuous Control', 'Safe RL', 'Transfer Learning', 'Real-world Deployment'],
+      color: 'text-red-400',
+      category: 'Reinforcement Learning'
+    },
+    {
+      title: 'Generative AI Studio',
+      description: 'Comprehensive platform for creating and deploying generative AI models',
+      icon: Palette,
+      price: '$1,599/month',
+      features: ['Text Generation', 'Image Generation', 'Audio Synthesis', 'Video Creation', '3D Model Generation', 'Style Transfer'],
+      color: 'text-indigo-400',
+      category: 'Generative AI'
+    },
+    {
+      title: 'AI Ethics & Governance Suite',
+      description: 'Comprehensive framework for ensuring ethical AI development and deployment',
+      icon: Lock,
+      price: '$1,899/month',
+      features: ['Bias Detection', 'Fairness Auditing', 'Ethical Guidelines', 'Compliance Monitoring', 'Risk Assessment', 'Governance Framework'],
+      color: 'text-gray-400',
+      category: 'AI Ethics'
+    },
+    {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation',
       icon: Brain,
@@ -482,6 +781,69 @@ const HomePage: React.FC = () => {
   ];
 
   const itServices = [
+    {
+      title: 'Quantum Cloud Infrastructure',
+      description: 'Next-generation quantum cloud computing platform for exponential processing power',
+      icon: Cloud,
+      price: '$4,999/month',
+      features: ['Quantum Computing Access', 'Hybrid Classical-Quantum', 'Quantum Security', 'Scalable Quantum Resources', 'Quantum Machine Learning', 'Future-Proof Architecture'],
+      color: 'text-blue-400',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Autonomous IT Operations',
+      description: 'Self-healing IT infrastructure that automatically detects and resolves issues',
+      icon: Settings,
+      price: '$2,499/month',
+      features: ['Self-Healing Systems', 'Predictive Maintenance', 'Automated Incident Response', 'Intelligent Monitoring', 'Zero-Touch Operations', 'Continuous Optimization'],
+      color: 'text-green-400',
+      category: 'Autonomous IT'
+    },
+    {
+      title: 'Edge Computing Network',
+      description: 'Distributed edge computing infrastructure for ultra-low latency applications',
+      icon: Cpu,
+      price: '$1,999/month',
+      features: ['Global Edge Nodes', 'Ultra-Low Latency', 'Edge AI Processing', 'Content Delivery', 'IoT Integration', 'Real-time Analytics'],
+      color: 'text-purple-400',
+      category: 'Edge Computing'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security framework for modern enterprise environments',
+      icon: Shield,
+      price: '$1,799/month',
+      features: ['Identity Verification', 'Micro-Segmentation', 'Continuous Monitoring', 'Threat Detection', 'Access Control', 'Compliance Automation'],
+      color: 'text-red-400',
+      category: 'Cybersecurity'
+    },
+    {
+      title: 'AI-Powered DevOps Platform',
+      description: 'Intelligent DevOps platform with AI-driven automation and optimization',
+      icon: Code,
+      price: '$1,599/month',
+      features: ['AI Code Review', 'Automated Testing', 'Intelligent Deployment', 'Performance Optimization', 'Predictive Scaling', 'Self-Healing Pipelines'],
+      color: 'text-cyan-400',
+      category: 'DevOps'
+    },
+    {
+      title: 'Blockchain Infrastructure Suite',
+      description: 'Complete blockchain infrastructure for enterprise applications and DeFi solutions',
+      icon: Lock,
+      price: '$2,299/month',
+      features: ['Private Blockchain Networks', 'Smart Contract Development', 'DeFi Integration', 'NFT Marketplace', 'Cross-Chain Interoperability', 'Regulatory Compliance'],
+      color: 'text-yellow-400',
+      category: 'Blockchain'
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptographic solutions for future-proof security',
+      icon: Database,
+      price: '$1,899/month',
+      features: ['Quantum-Resistant Algorithms', 'Hybrid Cryptography', 'Migration Services', 'Compliance Support', 'Performance Optimization', 'Future-Proof Security'],
+      color: 'text-indigo-400',
+      category: 'Cryptography'
+    },
     {
       title: 'Cloud Migration & Management',
       description: 'Comprehensive cloud migration, setup, optimization, and management services',
@@ -736,7 +1098,7 @@ const HomePage: React.FC = () => {
       <Analytics />
       <ServiceWorker />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain-enhanced particle-field quantum-field floating-particles">
         {/* Navigation */}
         <Navigation />
         
@@ -767,12 +1129,12 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch holographic-text cyber-glitch"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect holographic-text" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
@@ -782,9 +1144,9 @@ const HomePage: React.FC = () => {
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto mb-12">
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text holographic-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">

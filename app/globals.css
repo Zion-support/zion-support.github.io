@@ -689,22 +689,297 @@ body {
   }
 }
 
+/* Quantum Card Effects */
+.quantum-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #8b5cf6, #ec4899, #06b6d4, #10b981, #f59e0b);
+  border-radius: 22px;
+  z-index: -1;
+  animation: quantum-border 3s linear infinite;
+}
+
+.quantum-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(236, 72, 153, 0.2),
+    inset 0 0 40px rgba(6, 182, 212, 0.1);
+}
+
+@keyframes quantum-border {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Energy Pulse Effect */
+.energy-pulse {
+  animation: energy-pulse 2s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.3),
+      inset 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(0, 255, 255, 0.6),
+      inset 0 0 40px rgba(0, 255, 255, 0.2);
+  }
+}
+
+/* Holographic Text Effect */
+.holographic-text {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 3s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Neural Network Animation */
+.neural-network {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-network::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.3) 0%, transparent 50%);
+  animation: neural-pulse 4s ease-in-out infinite;
+}
+
+/* Cyber Scan Lines */
+.cyber-scan-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-lines::before,
+.cyber-scan-lines::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scan-line-move 2s linear infinite;
+}
+
+.cyber-scan-lines::before {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.cyber-scan-lines::after {
+  top: 80%;
+  animation-delay: 1s;
+}
+
+@keyframes scan-line-move {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Floating Particles */
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-particles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 20px 30px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 40px 70px, rgba(0, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 0, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(0, 255, 0, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 150px 100px;
+  animation: particle-float 15s linear infinite;
+}
+
+/* Matrix Digital Rain */
+.matrix-rain-enhanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain-enhanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 255, 0, 0.1) 1px,
+      rgba(0, 255, 0, 0.1) 2px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 255, 0, 0.05) 1px,
+      rgba(0, 255, 0, 0.05) 2px
+    );
+  animation: matrix-fall 4s linear infinite;
+}
+
+/* Cyber Glitch Effect */
+.cyber-glitch {
+  position: relative;
+  animation: glitch-skew 1s infinite linear alternate-reverse;
+}
+
+.cyber-glitch::before,
+.cyber-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.cyber-glitch::before {
+  animation: glitch-anim 3s infinite linear alternate-reverse;
+  color: var(--neon-pink);
+  z-index: -1;
+}
+
+.cyber-glitch::after {
+  animation: glitch-anim2 2s infinite linear alternate-reverse;
+  color: var(--neon-cyan);
+  z-index: -2;
+}
+
+/* Holographic Card */
+.holographic-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(139, 92, 246, 0.3) 0%, 
+    rgba(236, 72, 153, 0.3) 25%, 
+    rgba(6, 182, 212, 0.3) 50%, 
+    rgba(16, 185, 129, 0.3) 75%, 
+    rgba(139, 92, 246, 0.3) 100%);
+  border-radius: 16px;
+  z-index: -1;
+  animation: holographic-border 4s linear infinite;
+}
+
+.holographic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(139, 92, 246, 0.2),
+    0 0 60px rgba(236, 72, 153, 0.1);
+}
+
+@keyframes holographic-border {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Quantum Field Effect */
+.quantum-field {
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-field::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 80%, rgba(236, 72, 153, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+  animation: quantum-field-pulse 6s ease-in-out infinite;
+}
+
+@keyframes quantum-field-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
 /* Print Styles */
 @media print {
   .cyber-grid,
   .neural-network-bg,
   .matrix-rain,
-  .particle-field {
+  .particle-field,
+  .quantum-field,
+  .neural-network {
     background: none !important;
   }
   
   .neon-text,
-  .cyber-text-3d {
+  .cyber-text-3d,
+  .holographic-text {
     color: black !important;
     text-shadow: none !important;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card,
+  .holographic-card {
     border: 1px solid black !important;
     background: white !important;
   }
