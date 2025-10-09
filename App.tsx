@@ -35,8 +35,8 @@ const ItSupportPage = lazy(() => import('./app/it-support/page'));
 // Specialized Solutions
 const QuantumComputingPage = lazy(() => import('./app/quantum-computing/page'));
 const AutonomousSystemsPage = lazy(() => import('./app/autonomous-systems/page'));
-const BlockchainWeb3Page = lazy(() => import('./app/blockchain-web3/page'));
-const BusinessIntelligencePage = lazy(() => import('./app/business-intelligence/page'));
+const BlockchainPage = lazy(() => import('./app/blockchain/page'));
+const AiBusinessIntelligencePage = lazy(() => import('./app/ai-business-intelligence/page'));
 const IotEdgeComputingPage = lazy(() => import('./app/iot-edge-computing/page'));
 const RoboticsPage = lazy(() => import('./app/robotics/page'));
 const ArVrSolutionsPage = lazy(() => import('./app/ar-vr-solutions/page'));
@@ -107,8 +107,8 @@ const App: React.FC = () => {
             {/* Specialized Solutions */}
             <Route path="/quantum-computing" element={<QuantumComputingPage />} />
             <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-            <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-            <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+            <Route path="/blockchain" element={<BlockchainPage />} />
+            <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
             <Route path="/iot-edge-computing" element={<IotEdgeComputingPage />} />
             <Route path="/robotics" element={<RoboticsPage />} />
             <Route path="/ar-vr-solutions" element={<ArVrSolutionsPage />} />
