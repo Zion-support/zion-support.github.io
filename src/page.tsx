@@ -7,15 +7,12 @@ import {
   Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
   Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
   Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
+  Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
   Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
   ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
   Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
-  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, 
-  Switch, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, 
-  Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, 
-  Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, 
-  Alerting, Logging, Analytics, Reporting, Dashboard
+  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Router, 
+  Truck, CheckCircle as CheckCircleIcon, Truck as TruckIcon
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';

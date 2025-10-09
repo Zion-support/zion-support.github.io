@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -16,7 +16,8 @@ const ITServicesPage: React.FC = () => {
       category: 'Infrastructure',
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      color: 'text-blue-400'
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -28,7 +29,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     // Cybersecurity Services
     {
       title: 'Advanced Threat Protection',
@@ -40,7 +42,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
@@ -51,7 +54,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Security Compliance & Audit',
       description: 'Comprehensive security compliance services for SOC 2, ISO 27001, HIPAA, and other regulatory requirements.',
@@ -62,7 +66,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Achieve compliance', 'Reduce audit time', 'Minimize risks', 'Build trust'],
       technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Security Operations Center (SOC)',
       description: '24/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
@@ -73,7 +78,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Continuous protection', 'Rapid response', 'Expert analysis', 'Proactive defense'],
       technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     // Database & Data Management
     {
       title: 'Database Administration & Optimization',
@@ -85,7 +91,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved performance', 'Reduced downtime', 'Cost optimization', 'Data protection'],
       technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Data Backup & Disaster Recovery',
       description: 'Comprehensive backup and disaster recovery solutions with automated testing and rapid recovery capabilities.',
@@ -96,7 +103,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Minimize data loss', 'Rapid recovery', 'Business continuity', 'Compliance support'],
       technologies: ['Veeam', 'Commvault', 'Rubrik', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Data Migration Services',
       description: 'Seamless data migration with zero downtime, data validation, and comprehensive testing for all platforms.',
@@ -107,7 +115,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Risk-free migration', 'Minimal downtime', 'Data integrity', 'Cost savings'],
       technologies: ['AWS DMS', 'Azure Data Factory', 'Google Cloud Data Transfer', 'Custom Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     // DevOps & Development
     {
       title: 'DevOps & CI/CD Implementation',
@@ -119,7 +128,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Faster deployments', 'Improved quality', 'Reduced errors', 'Better collaboration'],
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'Microservices Architecture',
       description: 'Modern microservices architecture design and implementation with containerization and service mesh.',
@@ -130,7 +140,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved scalability', 'Better maintainability', 'Faster development', 'Technology flexibility'],
       technologies: ['Kubernetes', 'Istio', 'Docker', 'API Gateway', 'Service Mesh', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'API Development & Management',
       description: 'Comprehensive API development with design, implementation, security, and lifecycle management.',
@@ -141,7 +152,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Better integration', 'Improved security', 'Enhanced performance', 'Developer experience'],
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     // IT Support & Management
     {
       title: 'Managed IT Services',
@@ -153,7 +165,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance'],
       technologies: ['RMM Tools', 'PSA Software', 'Remote Access', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'IT Strategy & Consulting',
       description: 'Strategic IT planning and consulting to align technology with business objectives and drive digital transformation.',
@@ -164,7 +177,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Strategic alignment', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
       technologies: ['Strategy Frameworks', 'Assessment Tools', 'Planning Software'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'IT Asset Management',
       description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance reporting.',
@@ -175,7 +189,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Compliance assurance', 'Better planning', 'Reduced risks'],
       technologies: ['Asset Management Tools', 'License Management', 'CMDB', 'Reporting Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     // Specialized Services
     {
       title: 'Microsoft 365 Migration & Management',
@@ -187,7 +202,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved collaboration', 'Enhanced security', 'Cost savings', 'Better productivity'],
       technologies: ['Microsoft 365', 'Azure AD', 'PowerShell', 'Migration Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'VoIP & Unified Communications',
       description: 'Modern communication solutions with VoIP, video conferencing, and unified communications platforms.',
@@ -198,7 +214,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Improved collaboration', 'Better mobility', 'Enhanced features'],
       technologies: ['Cisco', 'Microsoft Teams', 'Zoom', '8x8', 'RingCentral', 'Avaya'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'IT Training & Certification',
       description: 'Comprehensive IT training programs for staff development and certification preparation.',
@@ -209,7 +226,8 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved skills', 'Better productivity', 'Reduced support needs', 'Career development'],
       technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+    ,
+      color: 'text-blue-400'},
     {
       title: 'IT Project Management',
       description: 'Expert IT project management with planning, execution, and delivery of complex technology initiatives.',
