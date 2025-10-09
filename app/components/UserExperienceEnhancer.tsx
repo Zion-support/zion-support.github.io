@@ -77,7 +77,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   useEffect(() => {
     if (enableErrorBoundaries) {
       const handleError = (event: ErrorEvent) => {
-        console.error('Global error caught:', event.error);
+        // console.error('Global error caught:', event.error);
         
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -89,7 +89,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       };
 
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        console.error('Unhandled promise rejection:', event.reason);
+        // console.error('Unhandled promise rejection:', event.reason);
         
         if (typeof window !== 'undefined' && 'gtag' in window) {
           (window as any).gtag('event', 'exception', {

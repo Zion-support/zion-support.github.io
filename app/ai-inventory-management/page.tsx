@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AIInventoryManagementPage() {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>AI Inventory Management Solutions - Zion Tech Group</title>
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." />
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" />
@@ -208,6 +207,6 @@ export default function AIInventoryManagementPage() {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

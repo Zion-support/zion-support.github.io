@@ -106,7 +106,7 @@ export const createMockPerformance = (): Performance => {
         toJSON: () => ({})
       } as PerformanceEntry);
     },
-    measure: (name: string, _startMark?: string, _endMark?: string) => {
+    measure: (name: string, startMark?: string, endMark?: string) => {
       entries.push({
         name,
         entryType: 'measure',

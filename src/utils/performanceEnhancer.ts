@@ -49,7 +49,7 @@ class PerformanceEnhancer {
       // Monitor Core Web Vitals
       this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (error) {
-      console.warn('Performance monitoring setup failed:', error);
+      // console.warn('Performance monitoring setup failed:', error);
     }
   }
   private analyzePerformanceEntry(entry: PerformanceEntry): void {
@@ -158,10 +158,10 @@ class PerformanceEnhancer {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            // console.log('SW registered: ', registration);
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+            // console.log('SW registration failed: ', registrationError);
           });
       });
     }
@@ -229,9 +229,9 @@ class PerformanceEnhancer {
     try {
       const module = await import(`../components/${componentName}.tsx`);
       // Component loaded successfully
-      console.log(`${componentName} loaded dynamically`);
+      // console.log(`${componentName} loaded dynamically`);
     } catch (error) {
-      console.warn(`Failed to load ${componentName}:`, error);
+      // console.warn(`Failed to load ${componentName}:`, error);
     }
   }
   public cleanup(): void {

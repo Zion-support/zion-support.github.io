@@ -13,7 +13,7 @@ class ErrorHandler {
     return ErrorHandler.instance;
   }
   handleNetworkError(error: Error, url: string, config?: unknown): void {
-    // console.error('Network error:', { error: error.message, url, config });
+    // // console.error('Network error:', { error: error.message, url, config });
   }
 }
 export interface APIConfig {

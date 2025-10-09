@@ -3,8 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructurePage() {
   return (
-    <>
-      <Helmet>
+    <div><Helmet>
         <title>Cloud Infrastructure Solutions - Zion Tech Group</title>
         <meta name="description" content="Scalable cloud infrastructure solutions with 99.9% uptime, automated scaling, and enterprise security. Starting at $199/month." />
         <meta name="keywords" content="cloud infrastructure, cloud migration, AWS, Azure, Google Cloud, cloud hosting, cloud security" />
@@ -220,6 +219,6 @@ export default function CloudInfrastructurePage() {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 }

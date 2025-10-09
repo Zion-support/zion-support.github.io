@@ -156,14 +156,14 @@ class Logger {
         console.debug(`%c${message}`, styles, entry);
         break;
       case LogLevel.INFO:
-        console.info(`%c${message}`, styles, entry);
+        // console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WARN:
-        // console.warn(`%c${message}`, styles, entry);
+        // // console.warn(`%c${message}`, styles, entry);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        // console.error(`%c${message}`, styles, entry);
+        // // console.error(`%c${message}`, styles, entry);
         break;
     }
   }
@@ -195,10 +195,10 @@ class Logger {
     // Example implementation:
     // fetch('/api/logs', {
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(entry)
     // }).catch(err => {
-    //   // console.error('Failed to send log to service:', err);
+    //   // // console.error('Failed to send log to service:', err);
     // });
   }
   /**

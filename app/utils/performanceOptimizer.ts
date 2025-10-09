@@ -195,7 +195,7 @@ class PerformanceOptimizer {
   }
   private observeMemory() {
     if (typeof window !== 'undefined' && 'memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory
       if (memory) {
         this.metrics.memoryUsage = memory.usedJSHeapSize
       }

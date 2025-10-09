@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to monitoring service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     // You can also log to external services here
     if (typeof window !== 'undefined' && 'gtag' in window) {

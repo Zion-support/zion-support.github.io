@@ -193,7 +193,7 @@ class Logger {
     // Example implementation:
     // fetch('/api/logs', {
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   headers: {// 'Content-Type': 'application/json'},
     //   body: JSON.stringify(entry)
     // }).catch(err => {
     //   // });

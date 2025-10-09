@@ -8,7 +8,7 @@ interface SEOProps {
   ogType?: string;
   twitterCard?: string;
   twitterSite?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   noindex?: boolean;
   nofollow?: boolean;
   lang?: string;

@@ -11,7 +11,7 @@ interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: unknown;
   robots?: string;
   language?: string;
   author?: string;
