@@ -138,3 +138,121 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <>
+      <Helmet>
+        <title>Business Intelligence Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions including real-time analytics, predictive modeling, data warehousing, and AI-powered insights for data-driven decision making." />
+        <meta name="keywords" content="business intelligence, analytics, data visualization, predictive analytics, data warehouse, BI consulting" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Business Intelligence Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our comprehensive business intelligence solutions. 
+              From real-time analytics to AI-powered predictions, we help you make data-driven decisions.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="bg-blue-600/20 border border-blue-500/30 rounded-lg px-6 py-3">
+                <span className="text-blue-400 font-semibold">Real-Time Analytics</span>
+              </div>
+              <div className="bg-purple-600/20 border border-purple-500/30 rounded-lg px-6 py-3">
+                <span className="text-purple-400 font-semibold">Predictive Modeling</span>
+              </div>
+              <div className="bg-green-600/20 border border-green-500/30 rounded-lg px-6 py-3">
+                <span className="text-green-400 font-semibold">Data Warehousing</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {biServices.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-400">{service.price}</span>
+                    <span className="text-sm text-gray-400 ml-2">({service.marketPrice} market rate)</span>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-4">
+                    <span className="inline-block bg-blue-600/20 text-blue-400 text-xs px-2 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+
+                  <div className="text-xs text-gray-400">
+                    <strong>Technologies:</strong> {service.technologies.join(', ')}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Transform Your Data into Insights?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let our BI experts help you build a comprehensive data strategy that drives real business value.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/ai-services"
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-200"
+              >
+                Explore AI Services
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default BusinessIntelligencePage;
