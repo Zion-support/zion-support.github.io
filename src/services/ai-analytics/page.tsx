@@ -1,5 +1,6 @@
 
-import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award from 'lucide-react';}
+import { BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star, Users, Award,  Brain,  BarChart,  Target,  Zap,  TrendingUp,  Star,  Award } from 'lucide-react';
+
 'use client';
 
 import React from 'react';
@@ -7,10 +8,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  AIAnalyticsPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+const AIAnalyticsPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: Brain,
@@ -62,31 +64,29 @@ ico,
     }
   ];
   const useCases = [
-      titl,
-  e: 'Sales Performance Analysis',
-      descriptio,
-  n: 'Track sales metrics, identify top performers, and optimize sales strategies',
-      ico,
-  n: TrendingUp,
-      colo,
-  r: 'text-green-400',
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
+      title: 'Sales Performance Analysis',
+      description: 'Track sales metrics, identify top performers, and optimize sales strategies',
+      icon: TrendingUp,
+      color: 'text-green-400',
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16 pt-24">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
 // AI Analytics Services;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
-          </p>"
-            <div className="flex flex-wrap justify-center gap-4"></div>"
-              <div className="flex items-center text-cyan-400"></div>"
-                <Brain className="w-5 h-5 mr-2" /></Brain>"
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center text-cyan-400">
+                <Brain className="w-5 h-5 mr-2" />
+
                 <span className="font-medium">AI-Powered Insights</span>
               </div>"
               <div className="flex items-center text-purple-400"></div>"
@@ -153,11 +153,11 @@ ico,
                     {tier.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>
                         {feature}
-                  <a></a>"
-                    href="/contact"`
-                    className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TOD,
-  O: Add content;
+
+                  <a
+                    href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
+  // TODO: Add content;
+
 }
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
@@ -182,27 +182,17 @@ ico,
               Ready to Transform Your Data?"
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Start your journey with AI analytics today. Get a free consultation and discover;
-              how our platform can revolutionize your business intelligence."
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center items-center"></div>"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300,"
-  hover:scale-105"
-Get Free Consultation;"
-                href="te,"
-  l:+13024640950""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Phone className="w-4 h-4 mr-2" /></Phone>
-                (302) 464-0950;"
-                href="mailt,"
-  o:kleber@ziontechgroup.com""
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-purple-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" /></Mail>
+
+              how our platform can revolutionize your business intelligence.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Phone className="w-4 h-4 mr-2" />
+                (302) 464-0950;
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="w-4 h-4 mr-2" />
                 Email Us;
-      <Footer /></Footer>
+      <Footer />
 
     </div>
   );
@@ -210,5 +200,6 @@ Get Free Consultation;"
 
 
 export default AIAnalyticsPage;"`
+
 
 

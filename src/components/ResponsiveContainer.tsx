@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface ResponsiveContainerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface ResponsiveContainerProps {// TODO: Add content;}
+
 };
   childre,
   n: React.ReactNode;
@@ -87,7 +87,10 @@ const,
     const responsiveClasses = breakpoints[screenSize] || '';
     return `${baseClasses} ${responsiveClasses}`.trim();
   };
-  return (<div className="responsivecontainer"></div>
+
+  return (
+    <div className="responsivecontainer">
+
       {/* Component content */}
     </div>)
   );
@@ -157,6 +160,7 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
   t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
   };
 };
-export default ResponsiveContainer;"`
+
+export default ResponsiveContainer;
 
 

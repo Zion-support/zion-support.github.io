@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface SEOProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface SEOProps {// TODO: Add content;}
+
 }
   title?: string;
   description?: string;
@@ -22,47 +22,52 @@ interface SEOProps {/* TODO: Fix JSX expression */}
   section?: string;
   tags?: string[];
 }
-const,
-  EnhancedSEO: React.FC;
-          <SEOProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const EnhancedSEO: React.FC;
+          <SEOProps> = ({// TODO: Add content;}
 }
 
-const,
-  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+const EnhancedSEO: React.FC<SEOProps> = ({
+
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
+//   canonicalUrl,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterSite = '@ziontechgroup',
+//   structuredData,
+  noindex = false,
+  nofollow = false,
+  lang = 'en',
+  author = 'Zion Tech Group',
+//   publishedTime,
+//   modifiedTime,
+//   section,
+  tags = [],
 }) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  return (// Update meta description;)
+  return (
+    
+    // Update meta description
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
     
-          <Helmet></Helmet>
-      {/* Basic Meta Tags */}"
-      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} /></link>
-      {/* Open Graph Meta Tags */}"
-      <meta property="o,"
-  g:title" content={fullTitle} /><meta property="o,"
-  g:description" content={fullDescription} /><meta property="o,"
-  g:type" content={ogType} /><meta property="o,"
-  g:url" content={canonicalUrl} /><meta property="o,"
-  g:image" content={ogImage} /><meta property="o,
-  g:imag,"
-  e:width" content="1200" /><meta property="o,
-  g:imag,"
-  e:height" content="630" /><meta property="o,"
-  g:site_name" content="Zion Tech Group" /><meta property="o,"
-  g:locale" content="en_US" /></meta>
-      {/* Twitter Card Meta Tags */}"
-      <meta name="twitte,"
-  r:card" content={twitterCard} /><meta name="twitte,"
-  r:site" content={twitterSite} /><meta name="twitte,"
-  r:title" content={fullTitle} /><meta name="twitte,"
-  r:description" content={fullDescription} /><meta name="twitte,"
-  r:image" content={ogImage} /></meta>
-      {/* Additional Meta Tags */}"
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+
+          <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} /><meta property="og:description" content={fullDescription} /><meta property="og:type" content={ogType} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} /><meta name="twitter:site" content={twitterSite} /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={fullDescription} /><meta name="twitter:image" content={ogImage} />
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+
       {/* Article Meta Tags */}
       {/* TODO: Fix JSX expression */}"
   e:published_time" content={publishedTime} />}
@@ -107,5 +112,6 @@ const,
 };
 
 export default EnhancedSEO;"`
+
 
 

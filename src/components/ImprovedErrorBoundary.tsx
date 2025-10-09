@@ -32,13 +32,15 @@ class ImprovedErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  constructor(prop,)
-  s: Props) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  constructor(props: Props) {// TODO: Add content;}
 }
 
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {// TODO: Add content;}
+
 };
   hasErro,
   r: false,
@@ -267,8 +269,9 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-const styles = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const styles = {// TODO: Add content;}
+
 }
   containe,
   r: {/* TODO: Fix JSX expression */}
@@ -465,6 +468,6 @@ const styles = {/* TODO: Fix JSX expression */}
   r: '#999'
   }
 };
-"
+
 
 

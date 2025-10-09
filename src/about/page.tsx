@@ -4,13 +4,24 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const,
-  AboutPage: React.FC = () => {/* TODO: Fix JSX expression */}
-  o: 'Visionary leader with 15+ years in AI and technology innovation.'},
-    {/* TODO: Fix JSX expression */}
-  o: 'Technical expert specializing in machine learning and cloud architecture.'},
-    {/* TODO: Fix JSX expression */}
-  o: 'AI researcher and developer with expertise in deep learning and NLP.'}
+const AboutPage: React.FC = () => {
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      image: '/images/team/kleber.jpg',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      image: '/images/team/sarah.jpg',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'},
+    {
+      name: 'Michael Chen',
+      role: 'Lead AI Engineer',
+      image: '/images/team/michael.jpg',
+      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}
+
   ];
 
   const stats = [
@@ -25,33 +36,28 @@ const,
   ];
 
   const values = [
-    {/* TODO: Fix JSX expression */}
-  n: Brain,}
-      titl,
-  e: 'Innovation',
-      descriptio,
-  n: 'We constantly push the boundaries of what\'s possible with AI and technology.',
+
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
     },
-    {/* TODO: Fix JSX expression */}
-  n: Shield,}
-      titl,
-  e: 'Security',
-      descriptio,
-  n: 'Your data and systems are protected with enterprise-grade security measures.',
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Your data and systems are protected with enterprise-grade security measures.',
     },
-    {/* TODO: Fix JSX expression */}
-  n: Target,}
-      titl,
-  e: 'Results',
-      descriptio,
-  n: 'We focus on delivering measurable business outcomes and ROI.',
+    {
+      icon: Target,
+      title: 'Results',
+      description: 'We focus on delivering measurable business outcomes and ROI.',
     },
-    {/* TODO: Fix JSX expression */}
-  n: Users,}
-      titl,
-  e: 'Partnership',
-      descriptio,
-  n: 'We work closely with our clients as strategic technology partners.'}
+    {
+      icon: Users,
+      title: 'Partnership',
+      description: 'We work closely with our clients as strategic technology partners.'
+    }
+
   ];
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -68,17 +74,15 @@ const,
         </div>
       </section>
 
-        {/* Stats Section */}"
-        <section className="py-16 bg-white"></section>"
-          <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8"></div>"
-            <div className="grid grid-cols-2,"
-  md:grid-cols-4 gap-8"></div>)
-              {stats.map((stat, index) => (}"
-                <div key={index} className="text-center"></div>"
-                  <div className="text-3xl,"
-  md:text-4xl font-bold text-blue-600 mb-2"></div>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (}
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+
                     {stat.number}
                   </div>"
                   <div className="text-gray-600 font-medium"></div>
@@ -110,10 +114,10 @@ const,
                   We believe that every business deserves access to cutting-edge technology that can;
                   transform their operations, improve efficiency, and drive growth.
                 </p>
-                <Link></Link>"
-                  to="/contact""
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg,"
-  hover:bg-blue-700 transition-colors"
+
+                <Link
+                  to="/contact" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+
                 >
                   Get in Touch;
                 </Link>
@@ -131,14 +135,13 @@ const,
         </div>
       </section>
 
-        {/* Values Section */}"
-        <section className="py-20 bg-white"></section>"
-          <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8"></div>"
-            <div className="text-center mb-16"></div>"
-              <h2 className="text-3xl,"
-  md:text-4xl font-bold text-gray-900 mb-4"></h2>
+
+        {/* Values Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+
                 Our Values;
               </h2>"
               <p className="text-xl text-gray-600"></p>
@@ -159,9 +162,11 @@ const,
                   <p className="text-gray-600"></p>
                     {value.description}
                   </p>
-                </div>"
-                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>"
-                <p className="text-cyan-400 mb-3">{member.role}</p>"
+
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 mb-3">{member.role}</p>
+
                 <p className="text-gray-300">{member.bio}</p>
               </div>)
             ))}
@@ -169,14 +174,13 @@ const,
         </div>
       </section>
 
-        {/* Team Section */}"
-        <section className="py-20 bg-gray-50"></section>"
-          <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8"></div>"
-            <div className="text-center mb-16"></div>"
-              <h2 className="text-3xl,"
-  md:text-4xl font-bold text-gray-900 mb-4"></h2>
+
+        {/* Team Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+
                 Meet Our Team;
               </h2>"
               <p className="text-xl text-gray-600"></p>
@@ -210,32 +214,27 @@ const,
         </div>
       </section>
 
-        {/* CTA Section */}"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"></section>"
-          <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8 text-center"></div>"
-            <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-4"></h2>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+
               Ready to Work With Us?
             </h2>"
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"></p>
               Let's discuss how we can help transform your business with our AI-powered solutions.
-            </p>"
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-              <Link></Link>"
-                to="/contact""
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold,"
-  hover:bg-gray-100 transition-all duration-300"
+
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
                 Start a Project;
               </Link>
-              <Link></Link>"
-                to="/careers""
-                className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white,
-  hover:bg-white,"
-  hover:text-blue-600 transition-all duration-300"
+              <Link
+                to="/careers" className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300"
+
               >
                 Join Our Team;
               </Link>
@@ -243,7 +242,8 @@ const,
           </div>
         </section>
       </div>
-      <Footer /></Footer>
+
+      <Footer />
 
     </div>
   );
@@ -251,5 +251,6 @@ const,
 
 
 export default AboutPage;"
+
 
 

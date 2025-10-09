@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite;
 // Metadata removed for Vite compatibility;
@@ -39,10 +40,13 @@ export default function AI2026EnterpriseBreakthrough() {/* TODO: Fix JSX express
   hover:-translate-y-1,"
   hover:shadow-2xl"></button>
               Get Started Today;
-            </button></div></div></div></div>)
+
+            </button></div></div></div></div>
+
   );
 };
 
 export default PagePage;"
+
 
 

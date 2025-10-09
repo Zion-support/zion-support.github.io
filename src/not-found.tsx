@@ -1,4 +1,5 @@
 
+
 export default function NotFound() {return (}
     <div></div>
       <div></div>
@@ -53,23 +54,20 @@ export default function NotFound() {return (}
         
         {/* Action Buttons */}
 
-        <div></div>
-          <Link></Link>"
-            href="/""
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg,"
-  hover:bg-blue-700 transition-colors duration-300"
->"
+        <div>
+          <Link
+            href="/" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+>
             <Home className="w-4 h-4 mr-2" />Go Home</Link>
-          <Link></Link>"
-            href="/contact""
-            className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg,"
-  hover:bg-gray-300 transition-colors duration-300"
-          >"
+          <Link
+            href="/contact" className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
+          >
+
             <Phone className="w-4 h-4 mr-2" />Contact Support</Link>
         </div>
       </div>
     </div>)
 }
-"
+
 
 

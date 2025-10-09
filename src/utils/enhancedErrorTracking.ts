@@ -4,8 +4,9 @@
  * Enhanced Error Tracking Utility;
  * Provides comprehensive error tracking with detailed context;
  */
-export interface ErrorContext {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface ErrorContext {// TODO: Add content;}
+
 }
   component?: string;
   action?: string;
@@ -17,8 +18,9 @@ export interface ErrorContext {/* TODO: Fix JSX expression */}
 export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  messag,
-  e: string;
+
+  message: string;
+
   stack?: string;,
     contex,
   t: ErrorContext;,
@@ -29,8 +31,9 @@ export interface TrackedError {/* TODO: Fix JSX expression */}
     ur,
   l: string;
 }
-class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+class EnhancedErrorTracker {// TODO: Add content;}
+
 }
   private,
   errors: TrackedError[] = [];
@@ -72,20 +75,19 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  componen,
-  t: 'Global',
-          actio,
-  n: 'Unhandled Promise Rejection'
+
+  component: 'Global',
+          action: 'Unhandled Promise Rejection'
+
         }
   )
       }
   )
     }
   }
-  public trackError(erro,
-  r: Error, _contex,)
-  t: ErrorContext = {}): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public trackError(error: Error, _context: ErrorContext = {}): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     const,
@@ -104,12 +106,11 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
         sessionI,
   d: this.sessionId;
       },
-      timestam,
-  p: new Date().toISOString(),
-      userAgen,
-  t: navigator.userAgent,
-      ur,
-  l: window.location.href;
+
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href;
+
     };
     this.errors.push(trackedError);
     // Keep only the most recent errors;
@@ -199,8 +200,9 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  tota,
-  l: this.errors.length,
+
+  total: this.errors.length,
+
 //       byComponent,
       recen,
   t: this.errors.slice(-10)
@@ -210,5 +212,6 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker;`
+
 
 

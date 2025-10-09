@@ -1,4 +1,5 @@
 
+
 'use client';
 interface HeroSectionProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -10,14 +11,26 @@ interface HeroSectionProps {/* TODO: Fix JSX expression */}
     onPhoneClic,
   k: () => void;
 }
-const,
-  HeroSection: React.FC;
-          <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const HeroSection: React.FC;
+          <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {// TODO: Add content;}
 }
 
-const,
-  HeroSection: React.FC<HeroSectionProps> = () => {/* TODO: Fix JSX expression */}
+const HeroSection: React.FC<HeroSectionProps> = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <section
+
 className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
   // TOD,
   O: Add content;
@@ -145,5 +158,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
 };
 
 export default HeroSection;"`
+
 
 

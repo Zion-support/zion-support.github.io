@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
-const,
-  IoTEdgePage: React.FC = () => {const iotServices = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+const IoTEdgePage: React.FC = () => {
+  const iotServices = [];
+  return (
+    {// TODO: Add content;}
+
 };
   titl,
   e: 'IoT Device Management Platform',
@@ -307,25 +308,21 @@ Save up to 40% vs market rates;"
 Ready to Connect Your World?"
             <p className="text-xl mb-8 text-cyan-100"></p>
               Contact our IoT experts for a free consultation and custom connected solution strategy;
-              <a></a>"
-                href="te,"
-  l:+13024640950""
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-cyan-50 transition-colors inline-flex items-center"
+
+              <a
+                href="tel:+13024640950" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950;
-          </a>"
-href="mailt,"
-  o:kleber@ziontechgroup.com""
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-cyan-600 transition-colors"
-                ✉️ kleber@ziontechgroup.com;"
-            <div className="mt-8 text-sm text-cyan-200"></div>
+          </a>
+href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                ✉️ kleber@ziontechgroup.com;
+            <div className="mt-8 text-sm text-cyan-200">
+
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );
 };
 
 export default PagePage;"
+
 
 

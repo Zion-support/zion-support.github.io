@@ -3,8 +3,9 @@
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
  */
-export const _performanceConfig = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const _performanceConfig = {// TODO: Add content;}
+
 }
   // Core Web Vitals thresholds,
   metric,
@@ -15,41 +16,27 @@ export const _performanceConfig = {/* TODO: Fix JSX expression */}
 // needsImprovemen,
   t: 4000;
     },
-    fi,
-  d: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    fid: {// TODO: Add content;}
 };
-  goo,
-  d: 100,
-      needsImprovemen,
-  t: 300;
+  good: 100,
+      needsImprovement: 300;
     },
-    cl,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    cls: {// TODO: Add content;}
 };
-  goo,
-  d: 0.1,
-      needsImprovemen,
-  t: 0.25;
+  good: 0.1,
+      needsImprovement: 0.25;
     },
-    fc,
-  p: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    fcp: {// TODO: Add content;}
 };
-  goo,
-  d: 1800,
-      needsImprovemen,
-  t: 3000;
+  good: 1800,
+      needsImprovement: 3000;
     },
-    ttf,
-  b: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    ttfb: {// TODO: Add content;}
 };
-  goo,
-  d: 800,
-      needsImprovemen,
-  t: 1800;
+  good: 800,
+      needsImprovement: 1800;
+
     }
   },
   // Cache strategies,
@@ -61,14 +48,12 @@ export const _performanceConfig = {/* TODO: Fix JSX expression */}
 // staleWhileRevalidat,
   e: 86400, // 1 day;
     },
-    dynami,
-  c: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    dynamic: {// TODO: Add content;}
 };
-  maxAg,
-  e: 3600, // 1 hour,
-  staleWhileRevalidat,
-  e: 60, // 1 minute;
+  maxAge: 3600, // 1 hour,
+  staleWhileRevalidate: 60, // 1 minute;
+
     },
     ap,
   i: {/* TODO: Fix JSX expression */}
@@ -124,16 +109,13 @@ export const _performanceConfig = {/* TODO: Fix JSX expression */}
 // reuseExistingChun,
   k: true;
         },
-        defaul,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+        default: {// TODO: Add content;}
 };
-  minChunk,
-  s: 2,
-          priorit,
-  y: -20,
-          reuseExistingChun,
-  k: true;
+  minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true;
+
         }
       }
     }
@@ -154,5 +136,6 @@ export const _performanceConfig = {/* TODO: Fix JSX expression */}
 }
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
+
 
 

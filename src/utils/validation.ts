@@ -2,8 +2,9 @@
 /**
  * Comprehensive validation utilities;
  */
-export interface ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface ValidationResult {// TODO: Add content;}
+
 };
   isVali,
   d: boolean;
@@ -30,8 +31,9 @@ export function validateEmail(emai,)
   if (!emailRegex.test(email)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Invalid email format' };
+
+    return { isValid: false, error: 'Invalid email format' };
+
   }
     return {/* TODO: Fix JSX expression */}
   r: 'Invalid email format' }
@@ -59,22 +61,20 @@ export function validateURL(ur,)
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Invalid URL format' };
+
+    return { isValid: false, error: 'Invalid URL format' };
+
   }
 }
 // String length validation;
 export function validateLength()
-  valu,
-  e: string,
-  minLengt,
-  h: number,
-  maxLengt,
-  h: number,
-  fieldNam,
-  e: string = 'Field'
-): ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  value: string,
+  minLength: number,
+  maxLength: number,
+  fieldName: string = 'Field'
+): ValidationResult {// TODO: Add content;}
+
 }
   if (!value || typeof value !== 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -92,8 +92,9 @@ export function validateLength()
   if (value.length > maxLength) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be no more than ${maxLength} characters long` };
+
+    return { isValid: false, error: `${fieldName} must be no more than ${maxLength} characters long` };
+
   }
     return {/* TODO: Fix JSX expression */}`
   r: `${fieldName} must be no more than ${maxLength} characters long` }
@@ -122,8 +123,9 @@ export function validatePassword(passwor,)
   if (password.length > 128) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Password must be no more than 128 characters long' };
+
+    return { isValid: false, error: 'Password must be no more than 128 characters long' };
+
   }
     return {/* TODO: Fix JSX expression */}
   r: 'Password must be no more than 128 characters long' }
@@ -162,8 +164,9 @@ export function validatePassword(passwor,)
   if (!hasSpecialChar) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one special character' };
+
+    return { isValid: false, error: 'Password must contain at least one special character' };
+
   }
     return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one special character' }
@@ -221,8 +224,9 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Date must be in YYYY-MM-DD format' };
+
+    return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
+
   }
     return {/* TODO: Fix JSX expression */}
   r: 'Date must be in YYYY-MM-DD format' }
@@ -231,9 +235,9 @@ const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
   d: true }
 }
 // Credit card validation (Luhn algorithm)
-export function validateCreditCard(cardNumbe,)
-  r: string): ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateCreditCard(cardNumber: string): ValidationResult {// TODO: Add content;}
+
 }
   if (!cardNumber || typeof cardNumber !== 'string') {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -270,11 +274,11 @@ let sum = 0;
     sum += digit;
     isEven = !isEven;
   }
-  if (sum % 10 !== 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  if (sum % 10 !== 0) {// TODO: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Invalid credit card number' };
+    return { isValid: false, error: 'Invalid credit card number' };
+
   }
     return {/* TODO: Fix JSX expression */}
   r: 'Invalid credit card number' }
@@ -302,20 +306,19 @@ export function validateJSON(jsonStrin,)
   } catch {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Invalid JSON format' };
+
+    return { isValid: false, error: 'Invalid JSON format' };
+
   }
 }
 // Composite validation;
 export function validateComposite()
-  valu,
-  e: string,
-  validator,
-  s: Array;
-          <(valu,)
-  e: string) => ValidationResult>
-): ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  value: string,
+  validators: Array;
+          <(value: string) => ValidationResult>
+): ValidationResult {// TODO: Add content;}
+
 }
   for (const validator of validators) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -336,10 +339,10 @@ export async function validateAsync()
   r: (valu,)
   e: string) => Promise;
           <ValidationResult>,
-  valu,
-  e: string,
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  value: string,
+): Promise<ValidationResult> {// TODO: Add content;}
+
 }
   try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -348,8 +351,9 @@ export async function validateAsync()
   } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return {/* TODO: Fix JSX expression */}
-  r: 'Validation failed' };
+
+    return { isValid: false, error: 'Validation failed' };
+
   }
 }
 // Legacy function names for backward compatibility;
@@ -375,5 +379,6 @@ export const isValidCreditCard = (car,)
   d: string) => validateCreditCard(card).isValid;
 export const isValidJSON = (jso,)
   n: string) => validateJSON(json).isValid;"`
+
 
 

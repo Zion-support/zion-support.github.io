@@ -2,20 +2,9 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  childre,
-  n: ReactNode;
 
-  fallback?: ReactNode;
-  onError?: (erro,
-  r: Error, errorInf,)
-  o: ErrorInfo) => void;
-}
+interface Props {// TODO: Add content;}
 
-interface State {/* TODO: Fix JSX expression */}
-  O: Add content;}
 };
   hasErro,
   r: boolean;
@@ -26,17 +15,17 @@ class ErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  constructor(prop,)
-  s: Props) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  constructor(props: Props) {// TODO: Add content;}
+
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/* TODO: Fix JSX expression */}
   o: null };
   }
-  static getDerivedStateFromError(erro,)
-  r: Error): State {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  static getDerivedStateFromError(error: Error): State {// TODO: Add content;}
+
 }
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -306,5 +295,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/
 }
 
 export default ErrorBoundary;"
+
 
 

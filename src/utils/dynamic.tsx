@@ -1,4 +1,5 @@
 
+
 'use client';
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -19,5 +20,6 @@ export function dynamic;
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} /></Suspense>
   )
 }
+
 
 

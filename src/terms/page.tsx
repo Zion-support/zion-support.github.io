@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  TermsPage: React.FC = () => {return (}
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text"></h1>
-            Terms of Service;"
-          </h1><p className="text-xl text-gray-300 mb-8"></p>
-            Last,
-  updated: January 2025;"
-          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><FileText className="w-6 h-6 mr-3 text-cyan-400" /></FileText>
-                Acceptance of Terms;"
-              </h2><p className="text-gray-300"></p>
+const TermsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Terms of Service;
+          </h1><p className="text-xl text-gray-300 mb-8">
+            Last updated: January 2025;
+          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><FileText className="w-6 h-6 mr-3 text-cyan-400" />
+                Acceptance of Terms;
+              </h2><p className="text-gray-300">
+
                 By accessing and using our services, you accept and agree to be bound by the terms and;
                 provision of this agreement. If you do not agree to abide by the above, please do not use this service."
               </p></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Scale className="w-6 h-6 mr-3 text-cyan-400" /></Scale>
@@ -55,6 +54,6 @@ const,
   );
 };
 export default TermsPage;
-"
+
 
 

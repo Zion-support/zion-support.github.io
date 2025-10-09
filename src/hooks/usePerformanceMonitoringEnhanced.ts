@@ -2,8 +2,9 @@
 'use client'
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';
-export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const _usePerformanceMonitoring = () => {// TODO: Add content;}
+
 }
   const reportWebVitals = useCallback((metri,)
   c: any) => {/* TODO: Fix JSX expression */}
@@ -42,18 +43,17 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
           reportWebVitals({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  nam,
-  e: entry.name,
-            valu,
-  e: entry.startTime,
-            timestam,)
-  p: Date.now()
-      observer.observe({/* TODO: Fix JSX expression */}
-  s: ['navigation', 'paint', 'largest-contentful-paint'] })
+
+  name: entry.name,
+            value: entry.startTime,
+            timestamp: Date.now()
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
+
   )
       return () => observer.disconnect()
   }, [reportWebVitals])
   return { reportWebVitals }
 }
+
 
 

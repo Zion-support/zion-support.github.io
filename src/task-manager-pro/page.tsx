@@ -1,11 +1,12 @@
 import React from 'react';
 
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, BarChart from 'lucide-react';}
+import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const,
-  TaskManagerProPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+const TaskManagerProPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: CheckSquare,
@@ -16,20 +17,32 @@ const,
       benefi,
   t: 'Increase productivity by 40%'
     },
-      ico,
-  n: Users,
-      titl,
-  e: 'Team Collaboration',
-      descriptio,
-  n: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
-      benefi,
-  t: 'Improve team efficiency by 60%',
+
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
+      benefit: 'Improve team efficiency by 60%',
+
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  PagePage: React.FC = () => {/* TODO: Fix JSX expression */}
+
+const PagePage: React.FC = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
@@ -47,15 +60,12 @@ const,
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
             Get intelligent prioritization, automated workflows, and team collaboration;
-            tools that help you achieve more in less time."
-          <div className="flex flex-col,"
-  sm: flex-row gap-4 justify-center items-center"></div>
-            <a></a>"
-              href="te,"
-  l:+13024640950""
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-500,"
-  hover:to-purple-600 transition-all duration-300 flex items-center"
+
+            tools that help you achieve more in less time.
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+
 // >
               
           
@@ -70,11 +80,10 @@ Supercharge your productivity with our AI-powered task management platform.
  Cal,
   l: (302) 464-0950;
             </a>
-            <Link></Link>"
-              href="/contact""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"
+
+            <Link
+              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+
 Start Free Trial;
             </Link>
         {/* Key Benefits */}"
@@ -186,5 +195,6 @@ Most Popular;
 };
 
 export default PagePage;"`
+
 
 

@@ -1,6 +1,6 @@
 
-interface ServiceCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface ServiceCardProps {// TODO: Add content;}
+
 };
   titl,
   e: string;,
@@ -12,15 +12,27 @@ interface ServiceCardProps {/* TODO: Fix JSX expression */}
 /**
  * Reusable ServiceCard component with accessibility features;
  */
-const,
-  ServiceCard: React.FC;
-          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const ServiceCard: React.FC;
+          <ServiceCardProps> = ({ title, description, icon, className = '' }) => {// TODO: Add content;}
 }
 
-const,
-  ServiceCard: React.FC<ServiceCardProps> = () => {/* TODO: Fix JSX expression */}
-  hover:shadow-xl transition-shadow duration-300 ${className}`}
+const ServiceCard: React.FC<ServiceCardProps> = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <article
+className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
+
       role="article"
 // >
       {icon && ()}"
@@ -35,5 +47,6 @@ const,
 };
 
 export default ServiceCard;"`
+
 
 

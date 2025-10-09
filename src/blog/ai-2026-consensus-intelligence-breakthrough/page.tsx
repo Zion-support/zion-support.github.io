@@ -1,4 +1,5 @@
 
+
 // Metadata removed for Vite compatibility;
 export default function ConsensusIntelligencePage() {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -35,10 +36,13 @@ export default function ConsensusIntelligencePage() {/* TODO: Fix JSX expression
                   href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,"
   hover:bg-blue-50 transition-colors">
                   Explore AI Services;
-                </a></div></div></div></div></div></div>)
+
+                </a></div></div></div></div></div></div>
+
   );
 };
 
 export default PagePage;"
+
 
 

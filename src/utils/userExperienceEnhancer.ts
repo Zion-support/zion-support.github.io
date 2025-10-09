@@ -2,87 +2,52 @@
 // This file contains utility functions and configurations
 
 
-interface UXConfig {/* TODO: Fix JSX expression */}
-  g: boolean;}
-  enableLoadingState,
-  s: boolean;
-  enableErrorBoundarie,
-  s: boolean;
-  enableAnalytic,
-  s: boolean;
-  enableNotification,
-  s: boolean;
-  enableProgressiveWebAp,
-  p: boolean;
-  enableOfflineSuppor,
-  t: boolean;
-  enablePushNotification,
-  s: boolean;
-  enableDarkMod,
-  e: boolean;
-  enableAnimation,
-  s: boolean;
+interface UXConfig {enableSmoothScrolling: boolean;}
+  enableLoadingStates: boolean;
+  enableErrorBoundaries: boolean;
+  enableAnalytics: boolean;
+  enableNotifications: boolean;
+  enableProgressiveWebApp: boolean;
+  enableOfflineSupport: boolean;
+  enablePushNotifications: boolean;
+  enableDarkMode: boolean;
+  enableAnimations: boolean;
 }
 
-interface UXMetrics {/* TODO: Fix JSX expression */}
-  e: number;}
-  interactionTim,
-  e: number;
-  bounceRat,
-  e: number;
-  userSatisfactio,
-  n: number;
-  accessibilityScor,
-  e: number;
-  performanceScor,
-  e: number;
+interface UXMetrics {pageLoadTime: number;}
+  interactionTime: number;
+  bounceRate: number;
+  userSatisfaction: number;
+  accessibilityScore: number;
+  performanceScore: number;
 }
 
-class UserExperienceEnhancer {/* TODO: Fix JSX expression */}
-  config: UXConfig;}
-  private,
-  metrics: UXMetrics;
+class UserExperienceEnhancer {private config: UXConfig;}
+  private metrics: UXMetrics;
 
   constructor(config?: UXConfig) {this.config = config || {}
-      enableSmoothScrollin,
-  g: true,
-      enableLoadingState,
-  s: true,
-      enableErrorBoundarie,
-  s: true,
-      enableAnalytic,
-  s: true,
-      enableNotification,
-  s: false,
-      enableProgressiveWebAp,
-  p: false,
-      enableOfflineSuppor,
-  t: false,
-      enablePushNotification,
-  s: false,
-      enableDarkMod,
-  e: false,
-      enableAnimation,
-  s: true,
+      enableSmoothScrolling: true,
+      enableLoadingStates: true,
+      enableErrorBoundaries: true,
+      enableAnalytics: true,
+      enableNotifications: false,
+      enableProgressiveWebApp: false,
+      enableOfflineSupport: false,
+      enablePushNotifications: false,
+      enableDarkMode: false,
+      enableAnimations: true,
     };
     
-    this.metrics = {/* TODO: Fix JSX expression */}
-  e: 0,}
-      interactionTim,
-  e: 0,
-      bounceRat,
-  e: 0,
-      userSatisfactio,
-  n: 0,
-      accessibilityScor,
-  e: 0,
-      performanceScor,
-  e: 0,
+    this.metrics = {pageLoadTime: 0,}
+      interactionTime: 0,
+      bounceRate: 0,
+      userSatisfaction: 0,
+      accessibilityScore: 0,
+      performanceScore: 0,
+
     }
     this.init()
 
-  }
-};
 
 
   private init(): void {// Initialize UX enhancements;}
@@ -109,5 +74,6 @@ class UserExperienceEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default UserExperienceEnhancer;
+
 
 

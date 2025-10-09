@@ -1,4 +1,5 @@
 
+
 'use client';
 /**
  * System Monitor Component;
@@ -337,6 +338,7 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}"
           <div key={category} className="flex justify-between text-sm"></div>"
                     <span className="capitalize">{category}</span>
-export default SystemMonitor;"`
+
+export default SystemMonitor;
 
 

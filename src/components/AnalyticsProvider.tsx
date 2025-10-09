@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface AnalyticsContextType {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface AnalyticsContextType {// TODO: Add content;}
+
 };
   trackEven,
   t: (eventNam,
@@ -193,14 +193,18 @@ trackEvent,
     setUserId,
     setUserProperties,
   };
-  return (<div className="analyticsprovider"></div>
+
+  return (
+    <div className="analyticsprovider">
+
       {/* Component content */}
     </div>
 )
   );
 };
-export const useAnalytics = (): AnalyticsContextType => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const useAnalytics = (): AnalyticsContextType => {// TODO: Add content;}
+
 }
   const context = useContext(AnalyticsContext);
   if (context === undefined) {/* TODO: Fix JSX expression */}
@@ -210,6 +214,7 @@ export const useAnalytics = (): AnalyticsContextType => {/* TODO: Fix JSX expres
   }
   return context;
 };
-export default AnalyticsProvider;"`
+
+export default AnalyticsProvider;
 
 

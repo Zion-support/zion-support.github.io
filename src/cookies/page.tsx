@@ -3,17 +3,16 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  CookiesPage: React.FC = () => {return (}
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text"></h1>
-            Cookie Policy;"
-          </h1><p className="text-xl text-gray-300 mb-8"></p>
-            Last,
-  updated: January 2025;"
-          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Cookie className="w-6 h-6 mr-3 text-cyan-400" /></Cookie>
-                What Are Cookies?"
-              </h2><p className="text-gray-300"></p>
+const CookiesPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Cookie Policy;
+          </h1><p className="text-xl text-gray-300 mb-8">
+            Last updated: January 2025;
+          </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Cookie className="w-6 h-6 mr-3 text-cyan-400" />
+                What Are Cookies?
+              </h2><p className="text-gray-300">
+
                 Cookies are small text files that are placed on your computer or mobile device when you visit our website.
                 They help us provide you with a better experience by remembering your preferences and enabling certain functionality."
               </p></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Settings className="w-6 h-6 mr-3 text-cyan-400" /></Settings>
@@ -59,6 +58,6 @@ const,
   );
 };
 export default CookiesPage;
-"
+
 
 

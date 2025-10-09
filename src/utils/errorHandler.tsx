@@ -31,17 +31,14 @@ export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 export interface AppError {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  i,
-  d: string;,
-    typ,
-  e: ErrorType;,
-    severit,
-  y: ErrorSeverity;,
-    messag,
-  e: string;
+
+  id: string;,
+    type: ErrorType;,
+    severity: ErrorSeverity;,
+    message: string
   stack?: string;,
-    timestam,
-  p: Date;
+    timestamp: Date;
+
   userId?: string;
   sessionId?: string;
   url?: string;
@@ -56,22 +53,16 @@ export interface AppError {/* TODO: Fix JSX expression */}
 export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  enableLoggin,
-  g: boolean;
-    enableReportin,
-  g: boolean;
-    enableRetr,
-  y: boolean;
-    maxRetrie,
-  s: number;,
-    retryDela,
-  y: number;,
-    enableUserNotificatio,
-  n: boolean;,
-    enableConsoleLoggin,
-  g: boolean;,
-    enableNetworkLoggin,
-  g: boolean;
+
+  enableLogging: boolean;
+    enableReporting: boolean;
+    enableRetry: boolean;
+    maxRetries: number;,
+    retryDelay: number;,
+    enableUserNotification: boolean;,
+    enableConsoleLogging: boolean;,
+    enableNetworkLogging: boolean
+
   reportEndpoint?: string;,
     logLeve,
   l: 'debug' | 'info' | 'warn' | 'error'
@@ -81,24 +72,17 @@ export const,
   _defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  enableLoggin,
-  g: true,
-  enableReportin,
-  g: true,
-  enableRetr,
-  y: true,
-  maxRetrie,
-  s: 3,
-  retryDela,
-  y: 1000,
-  enableUserNotificatio,
-  n: true,
-  enableConsoleLoggin,
-  g: true,
-  enableNetworkLoggin,
-  g: true,
-  logLeve,
-  l: 'error'
+
+  enableLogging: true,
+  enableReporting: true,
+  enableRetry: true,
+  maxRetries: 3,
+  retryDelay: 1000,
+  enableUserNotification: true,
+  enableConsoleLogging: true,
+  enableNetworkLogging: true,
+  logLevel: 'error'
+
 };
 // Error Handler class;
 export class ErrorHandler {/* TODO: Fix JSX expression */}
@@ -141,29 +125,20 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   appError: AppError = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  i,
-  d: this.generateErrorId(),
-      typ,
-  e: this.determineErrorType(error),
-      severit,
-  y: this.determineErrorSeverity(error),
-      messag,
-  e: error.message,
-      stac,
-  k: error.stack,
-      timestam,
-  p: new Date(),
-      ur,
-  l: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgen,
-  t: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      componentStac,
-  k: errorInfo?.componentStack ?? undefined,
+
+  id: this.generateErrorId(),
+      type: this.determineErrorType(error),
+      severity: this.determineErrorSeverity(error),
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      componentStack: errorInfo?.componentStack ?? undefined,
 //       context,
-      resolve,
-  d: false,
-      retryCoun,
-  t: 0;
+      resolved: false,
+      retryCount: 0;
+
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
@@ -198,29 +173,19 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   appError: AppError = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  i,
-  d: this.generateErrorId(),
-      typ,
-  e: ErrorType.NETWORK,
-      severit,
-  y: this.determineNetworkErrorSeverity(status),
-      messag,
-  e: error.message,
-      stac,
-  k: error.stack,
-      timestam,
-  p: new Date(),
-      ur,
-  l: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgen,
-  t: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      contex,
-  t: {/* TODO: Fix JSX expression */}
-  e: status },
-      resolve,
-  d: false,
-      retryCoun,
-  t: 0;
+
+  id: this.generateErrorId(),
+      type: ErrorType.NETWORK,
+      severity: this.determineNetworkErrorSeverity(status),
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      context: { networkUrl: url, statusCode: status },
+      resolved: false,
+      retryCount: 0;
+
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
@@ -245,24 +210,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   appError: AppError = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  i,
-  d: this.generateErrorId(),
-      typ,
-  e: ErrorType.VALIDATION,
-      severit,
-  y: ErrorSeverity.LOW,
-      messag,
-  e: `Validation error in ${field}: ${message}`,
-      timestam,
-  p: new Date(),
-      ur,
-  l: typeof window !== 'undefined' ? window.location.href : undefined,
-      contex,
-  t: { field, value },
-      resolve,
-  d: false,
-      retryCoun,
-  t: 0;
+
+  id: this.generateErrorId(),
+      type: ErrorType.VALIDATION,
+      severity: ErrorSeverity.LOW,
+      message: `Validation error in ${field}: ${message}`,
+      timestamp: new Date(),
+      url: typeof window !== 'undefined' ? window.location.href : undefined,
+      context: { field, value },
+      resolved: false,
+      retryCount: 0;
+
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
@@ -367,20 +325,20 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       switch (error.severity) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        case ErrorSeverity.CRITICA,
-  L:
-        case ErrorSeverity.HIG,
-  H:
+
+        case ErrorSeverity.CRITICAL:
+        case ErrorSeverity.HIGH:
+
           // // console.error(logMessage, error)
           break;
         case ErrorSeverity.MEDIU,
   M:
           // // console.warn(logMessage, error)
-          break;
-        case ErrorSeverity.LO,
-  W:
-          if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+          break
+        case ErrorSeverity.LOW:
+          if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+
 }
             if (import.meta.env.DEV) {// console.info(logMessage, error);}
             }
@@ -388,8 +346,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           break;
       }
     }
-    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    if (this.config.enableNetworkLogging) {// TODO: Add content;}
+
 }
       this.logToNetwork(error);
     }
@@ -461,7 +420,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }
     if (typeof window === 'undefined') return;
     const notification = document.createElement('div');
-    notification.className = 'error-notification';`
+
+    notification.className = 'error-notification';
+
     notification.style.cssText = `
       positio,
   n: fixed;,
@@ -496,25 +457,16 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           
           
           
-          <div style="displa,
-  y: flex; justify-conten,
-  t: space-between; align-item,"
-  s: center;"><div><strong>${error.severity} Error</strong><p style="margi,
-  n: 5px 0 0 0; font-siz,"
-  e: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
-          backgroun,
-  d: none;,
-    borde,
-  r: none;,
-    colo,
-  r: white;
-          font-siz,
-  e: 18px;,
-    curso,
-  r: pointer;
-          margin-lef,
-  t: 10px;"
-">×</button></div>`
+
+          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
+          background: none;,
+    border: none;,
+    color: white
+          font-size: 18px;,
+    cursor: pointer
+          margin-left: 10px
+">×</button></div>
+
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
@@ -540,10 +492,10 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     switch (severity) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      case ErrorSeverity.CRITICA,
-  L: return '#dc3545';
-      case ErrorSeverity.HIG,
-  H:
+
+      case ErrorSeverity.CRITICAL: return '#dc3545';
+      case ErrorSeverity.HIGH:
+
         return '#fd7e14'
       case ErrorSeverity.MEDIU,
   M:
@@ -560,7 +512,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: AppError): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return (<div>Coming Soon</div>)
+
+    return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+
   )
       error.type === ErrorType.NETWORK &&
 // error.retryCount! 
@@ -605,14 +568,17 @@ private async retryError(retryIte,
         if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          if (import.meta.env.DEV) {/* TODO: Fix JSX expression */}`
+
+          if (import.meta.env.DEV) {
+
 // // console.log(`Retrying network request (attempt ${retryItem.retryCount})`)
           }
         }
         // Add your retry logic here;
       }
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    } catch {// TODO: Add content;}
+
 }
       if (retryItem.retryCount;)
           < this.config.maxRetries) {/* TODO: Fix JSX expression */}
@@ -693,14 +659,17 @@ private async retryError(retryIte,
           <ErrorType, number></ErrorType>
     )
     const bySeverity = this.errors.reduce()
-      (acc, error) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+      (acc, error) => {// TODO: Add content;}
+
 }
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
       },
       {} as Record;
-          <ErrorSeverity, number></ErrorSeverity>
+
+          <ErrorSeverity, number>
+
     );
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
@@ -717,11 +686,11 @@ private async retryError(retryIte,
   /**
    * Initialize error handler;
    */
-  init(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  init(): void {// TODO: Add content;}
 }
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    if (typeof window !== 'undefined') {// TODO: Add content;}
+
 }
       // Set up global error handler;
       window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
@@ -775,18 +744,21 @@ export class ErrorBoundary extends React.Component;
     this.errorHandler.handleError(error, errorInfo, {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  componen,
-  t: 'ErrorBoundary'
-    })
+
+  component: 'ErrorBoundary'
+    }
   )
   }
-  render() {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  render() {// TODO: Add content;}
+
 }
     if (this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      return (this.props.fallback || (
+
+      return (
+this.props.fallback || (
+
           
           
           
@@ -796,26 +768,22 @@ export class ErrorBoundary extends React.Component;
           
           
           
-          <div style={/* TODO: Fix JSX expression */}
-  n: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button></button>
-              onClick={/* TODO: Fix JSX expression */})
-  r: undefined })}
+
+          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
+              onClick={() => this.setState({ hasError: false, error: undefined })}
+
               style={{}
   // TOD,
   O: Add content;
 };
-  paddin,
-  g: '10px 20px',
-                backgroundColo,
-  r: '#007bff',
-                colo,
-  r: 'white',
-                borde,
-  r: 'none',
-                borderRadiu,
-  s: '4px',
-                curso,
-  r: 'pointer'
+
+  padding: '10px 20px',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer'
+
               }}
 >
               Try again;
@@ -842,20 +810,18 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
 //     [errorHandler]
   )
   const handleNetworkError = useCallback()
-    (erro,
-  r: Error, ur,)
-  l: string, status?: number) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    (error: Error, url: string, status?: number) => {// TODO: Add content;}
+
 }
       return errorHandler.handleNetworkError(error, url, status);
     },
 //     [errorHandler]
   )
   const handleValidationError = useCallback()
-    (fiel,
-  d: string, messag,)
-  e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    (field: string, message: string, value?: unknown) => {// TODO: Add content;}
+
 }
       return errorHandler.handleValidationError(field, message, value);
     },
@@ -876,5 +842,6 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
   }
 }
 export default ErrorHandler;"`
+
 
 

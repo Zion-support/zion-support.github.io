@@ -2,36 +2,24 @@
 // This file contains utility functions and configurations
 
 
-interface SecurityConfig {/* TODO: Fix JSX expression */}
-  P: boolean;}
-  enableHTTP,
-  S: boolean;
-  enableXSSProtectio,
-  n: boolean;
-  enableCSRFProtectio,
-  n: boolean;
-  enableContentSecurityPolic,
-  y: boolean;
+interface SecurityConfig {enableCSP: boolean;}
+  enableHTTPS: boolean;
+  enableXSSProtection: boolean;
+  enableCSRFProtection: boolean;
+  enableContentSecurityPolicy: boolean;
 }
 
-class SecurityEnhancer {/* TODO: Fix JSX expression */}
-  config: SecurityConfig;}
+class SecurityEnhancer {private config: SecurityConfig;}
   constructor(config?: SecurityConfig) {this.config = config || {}
-      enableCS,
-  P: true,
-      enableHTTP,
-  S: true,
-      enableXSSProtectio,
-  n: true,
-      enableCSRFProtectio,
-  n: true,
-      enableContentSecurityPolic,
-  y: true,
+      enableCSP: true,
+      enableHTTPS: true,
+      enableXSSProtection: true,
+      enableCSRFProtection: true,
+      enableContentSecurityPolicy: true,
+
     }
     this.init()
 
-  }
-};
 
 
   private init(): void {// Initialize security enhancements;}
@@ -52,5 +40,6 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default SecurityEnhancer;"
+
 
 

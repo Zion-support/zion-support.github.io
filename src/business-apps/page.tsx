@@ -4,26 +4,26 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { CheckCircle, Star } from 'lucide-react';
-const,
-  BusinessAppsPage: React.FC = () => {return (}
-    <div></div>
-      <Navigation /></Navigation>
-      <main className="container mx-auto px-4 py-16 pt-24"></main>"
-        <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-            Page;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
-          </p>"
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
+const BusinessAppsPage: React.FC = () => {
+  return (
+    <div>
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
         </section>
-        {/* Key Benefits */}"
-        <section className="mb-16"></section>"
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text"></h2>
+        {/* Key Benefits */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
+
 // Why Choose Our Business Apps?
           
           
@@ -98,6 +98,6 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
 </div>);
 }
 export default BusinessAppsPage;
-"
+
 
 

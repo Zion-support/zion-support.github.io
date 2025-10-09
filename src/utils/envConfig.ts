@@ -4,13 +4,12 @@
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */
-export interface EnvConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface EnvConfig {// TODO: Add content;}
 };
-  nodeEn,
-  v: 'development' | 'production' | 'test';,
-    apiUr,
-  l: string;
+  nodeEnv: 'development' | 'production' | 'test';,
+    apiUrl: string
+
   apiKey?: string;,
     enableAnalytic,
   s: boolean;,
@@ -21,8 +20,9 @@ export interface EnvConfig {/* TODO: Fix JSX expression */}
   sentryDsn?: string;
   gaTrackingId?: string;
 }
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+class EnvironmentConfig {// TODO: Add content;}
+
 }
   private,
   config: EnvConfig;
@@ -53,10 +53,10 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       logLeve,
   l: (process.env.NEXT_PUBLIC_LOG_LEVEL ||)
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
-      sentryDs,
-  n: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingI,
-  d: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
+
+      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
+      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID;
+
     };
   }
   /**
@@ -81,33 +81,36 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Check if running in production;
    */
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public isProduction(): boolean {// TODO: Add content;}
+
 }
     return this.config.nodeEnv === 'production';
   }
   /**
    * Check if running in development;
    */
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public isDevelopment(): boolean {// TODO: Add content;}
+
 }
     return this.config.nodeEnv === 'development';
   }
   /**
    * Check if running in test mode;
    */
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public isTest(): boolean {// TODO: Add content;}
+
 }
     return this.config.nodeEnv === 'test';
   }
   /**
    * Validate required environment variables;
    */
-  public validate(requiredVar,)
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public validate(requiredVars: (keyof EnvConfig)[]): {// TODO: Add content;}
+
 };
   vali,
   d: boolean;,
@@ -163,8 +166,9 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**
    * Log configuration in development mode;
    */
-  public logConfig(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public logConfig(): void {// TODO: Add content;}
+
 }
     if (this.isDevelopment()) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -173,15 +177,18 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       console.table({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  Environmen,
-  t: this.config.nodeEnv,
+
+  Environment: this.config.nodeEnv,
+
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,
         'Logging Enabled': this.config.enableLogging,
         'Log Level': this.config.logLevel,
         'API Key Set': !!this.config.apiKey,
         'Sentry DSN Set': !!this.config.sentryDsn,
-        'GA Tracking ID Set': !!this.config.gaTrackingId;)
+
+        'GA Tracking ID Set': !!this.config.gaTrackingId;
+
       });
       console.groupEnd();
     }
@@ -195,5 +202,6 @@ export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()`
+
 
 

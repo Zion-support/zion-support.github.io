@@ -1,21 +1,17 @@
 
-interface LinkProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface LinkProps {// TODO: Add content;}
 };
-  hre,
-  f: string;,
-    childre,
-  n: React.ReactNode;
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;
+  href: string;,
+    children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string
 }
-export const,
-  Link: React.FC;
-          <LinkProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+export const Link: React.FC;
+          <LinkProps> = ({// TODO: Add content;}
+
 }
 //   href,
 //   children,
@@ -61,5 +57,6 @@ export const,
   )
 }
 export default Link;
+
 
 

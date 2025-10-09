@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 'use client';
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
@@ -72,35 +73,20 @@ export default function BlogPage() {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   t: 97 }
     },
-      i,
-  d: 'ai-2025-2026-mega-trends-breakthrough',
-      titl,
-  e: 'AI 2025-2026 Mega Trends,
-  Breakthrough: Revolutionary Enterprise Transformation',
-      descriptio,
-  n: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      categor,
-  y: 'Mega Trends',
-      readTim,
-  e: '15 min read',
-      dat,
-  e: '2025-01-15',
-      pat,
-  h: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      i,
-  d: 'ai-2026-consensus-intelligence-breakthrough',
-      titl,
-  e: 'AI,
-  2026: Consensus Intelligence Breakthrough',
-      descriptio,
-  n: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      categor,
-  y: 'Intelligence',
-      readTim,
-  e: '14 min read',
-      dat,
-  e: '2026-02-15',
-      pat,
-  h: '/blog/ai-2026-consensus-intelligence-breakthrough',
+
+      id: 'ai-2025-2026-mega-trends-breakthrough',
+      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
+      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
+      category: 'Mega Trends',
+      readTime: '15 min read',
+      date: '2025-01-15',
+      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
+      id: 'ai-2026-consensus-intelligence-breakthrough',
+      title: 'AI 2026: Consensus Intelligence Breakthrough',
+      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
+      category: 'Intelligence',
+      readTime: '14 min read',
+      date: '2026-02-15',
+      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
 
 

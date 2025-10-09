@@ -2,37 +2,41 @@
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const _debounce = {};
-          <T extends (...arg,)
-  s: any[]) => any>(),
-    fun,
-  c: T,
-  wai,
-  t: number,
-): ((...arg,
-  s: Parameters;)
-          <T>) => void) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export const _debounce = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  wait: number,
+): ((...args: Parameters;
+          <T>) => void) => {// TODO: Add content;}
 }
-  let,
-  timeout: NodeJS.Timeout;
-  return (...arg,
-  s: Parameters;)
-          <T>) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters;
+          <T>) => {// TODO: Add content;}
 }
-// Throttle utility for performance;
-export const throttle = {};
-          <T extends (...arg,)
-  s: any[]) => any>(),
-    fun,
-  c: T,
-  limi,
-  t: number,
-): ((...arg,
-  s: Parameters;)
-          <T>) => void) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+// Throttle utility for performance
+export const throttle = 
+          
+          
+          
+          
+          
+          
+          
+          
+          <T extends (...args: any[]) => any>(),
+    func: T,
+  limit: number,
+): ((...args: Parameters;
+          <T>) => void) => {// TODO: Add content;}
+
 }
   let,
   inThrottle: boolean;
@@ -52,13 +56,11 @@ export const throttle = {};
 }
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = ()
-  callbac,
-  k: (entrie,)
-  s: IntersectionObserverEntry[]) => void,
-  _option,
-  s: IntersectionObserverInit = {}
-) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  callback: (entries: IntersectionObserverEntry[]) => void,
+  _options: IntersectionObserverInit = {}
+) => {// TODO: Add content;}
+
 }
   const observer = useMemo()
     () =>
@@ -76,9 +78,9 @@ export const useIntersectionObserver = ()
 //     [callback, options]
   )
   const observe = useCallback()
-    (elemen,)
-  t: Element | null) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    (element: Element | null) => {// TODO: Add content;}
+
 }
       if (observer && element) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -362,5 +364,6 @@ export default {/* TODO: Fix JSX expression */}
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring;
 };
+
 
 

@@ -2,36 +2,24 @@
 // This file contains utility functions and configurations
 
 
-interface AccessibilityConfig {/* TODO: Fix JSX expression */}
-  n: boolean;}
-  enableScreenReaderSuppor,
-  t: boolean;
-  enableHighContras,
-  t: boolean;
-  enableFocusIndicator,
-  s: boolean;
-  enableAriaLabel,
-  s: boolean;
+interface AccessibilityConfig {enableKeyboardNavigation: boolean;}
+  enableScreenReaderSupport: boolean;
+  enableHighContrast: boolean;
+  enableFocusIndicators: boolean;
+  enableAriaLabels: boolean;
 }
 
-class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
-  config: AccessibilityConfig;}
+class AccessibilityEnhancer {private config: AccessibilityConfig;}
   constructor(config?: AccessibilityConfig) {this.config = config || {}
-      enableKeyboardNavigatio,
-  n: true,
-      enableScreenReaderSuppor,
-  t: true,
-      enableHighContras,
-  t: true,
-      enableFocusIndicator,
-  s: true,
-      enableAriaLabel,
-  s: true,
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: true,
+      enableHighContrast: true,
+      enableFocusIndicators: true,
+      enableAriaLabels: true,
+
     }
     this.init()
 
-  }
-};
 
 
   private init(): void {// Initialize accessibility enhancements;}
@@ -54,11 +42,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       // Add focus indicators;
       const style = document.createElement('style');
       style.textContent = `
-        *:focus {/* TODO: Fix JSX expression */}
-  e: 2px solid #0066cc;}
-          outline-offse,
-  t: 2px;
-        }`
+
+        *:focus {outline: 2px solid #0066cc;}
+          outline-offset: 2px;
+        }
+
       `
       document.head.appendChild(style)
     }
@@ -69,5 +57,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default AccessibilityEnhancer;`
+
 
 

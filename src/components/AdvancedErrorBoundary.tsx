@@ -1,8 +1,9 @@
 
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface ErrorBoundaryState {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+interface ErrorBoundaryState {// TODO: Add content;}
+
 };
   hasErro,
   r: boolean;,
@@ -16,12 +17,12 @@ interface ErrorBoundaryState {/* TODO: Fix JSX expression */}
 interface ErrorBoundaryProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  childre,
-  n: ReactNode;
+
+  children: ReactNode;
   fallback?: ReactNode;
 }
-interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface ErrorReport {// TODO: Add content;}
+
 };
   errorI,
   d: string | null;
@@ -381,5 +382,6 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
 }
 
 export default AdvancedErrorBoundary;`
+
 
 

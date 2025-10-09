@@ -3,8 +3,9 @@
  * Application Configuration;
  * Centralized configuration management for the Zion Tech Group application;
  */
-export interface AppConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface AppConfig {// TODO: Add content;}
+
 }
   ap,
   p: {/* TODO: Fix JSX expression */}
@@ -31,36 +32,23 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  analytic,
-  s: boolean;,
-    monitorin,
-  g: boolean;,
-    errorTrackin,
-  g: boolean;,
-    performanceOptimizatio,
-  n: boolean;,
-    performanc,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  analytics: boolean;,
+    monitoring: boolean;,
+    errorTracking: boolean;,
+    performanceOptimization: boolean;,
+    performance: {// TODO: Add content;}
 };
-  enableLazyLoadin,
-  g: boolean;,
-    imageLazyLoadThreshol,
-  d: number;,
-    componentLazyLoadThreshol,
-  d: number;,
-    cacheMaxAg,
-  e: number;,
-    securit,
-  y: {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  enableLazyLoading: boolean;,
+    imageLazyLoadThreshold: number;,
+    componentLazyLoadThreshold: number;,
+    cacheMaxAge: number;,
+    security: {// TODO: Add content;}
 };
-  enableCS,
-  P: boolean;,
-    enableHST,
-  S: boolean;,
-    enableXSSProtectio,
-  n: boolean;
+  enableCSP: boolean;,
+    enableHSTS: boolean;,
+    enableXSSProtection: boolean
+
 }
     nam,
   e: 'Zion Tech Group',
@@ -127,6 +115,6 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';
 export default config;
-"`
+
 
 

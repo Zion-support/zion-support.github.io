@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface PerformanceMetrics {// TODO: Add content;}
+
 };
   fc,
   p: number | null;
@@ -21,16 +21,17 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     s,
   i: number | null;
 }
-interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+interface PerformanceMonitorProps {// TODO: Add content;}
+
 }
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-const,
-  EnhancedPerformanceMonitor: React.FC;
-          <PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const EnhancedPerformanceMonitor: React.FC;
+          <PerformanceMonitorProps> = ({// TODO: Add content;}
+
 }
 //   onMetricsUpdate,
   enableReporting = true,
@@ -42,16 +43,13 @@ const,
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  fc,
-  p: null,
-    lc,
-  p: null,
-    fi,
-  d: null,
-    cl,
-  s: null,
-    ttf,
-  b: null,)
+
+  fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+
   });
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement;
@@ -331,15 +329,13 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   p: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  fc,
-  p: metrics.fcp,
-          lc,
-  p: metrics.lcp,
-          fi,
-  d: metrics.fid,
-          cl,
-  s: metrics.cls,
-        },)
+
+  fcp: metrics.fcp,
+          lcp: metrics.lcp,
+          fid: metrics.fid,
+          cls: metrics.cls,
+        },
+
       });
     });
 
@@ -464,5 +460,6 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 };
 
 export default EnhancedPerformanceMonitor;"
+
 
 

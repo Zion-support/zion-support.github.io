@@ -1,4 +1,5 @@
 
+
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -16,16 +17,17 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     memor,
   y: number | null;
 }
-interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+interface PerformanceMonitorProps {// TODO: Add content;}
+
 }
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-const,
-  AdvancedPerformanceMonitor: React.FC;
-          <PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const AdvancedPerformanceMonitor: React.FC;
+          <PerformanceMonitorProps> = ({// TODO: Add content;}
+
 }
 //   onMetricsUpdate,
   enableRealTimeMonitoring = true;)
@@ -36,18 +38,14 @@ const,
           <PerformanceMetrics>({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  fc,
-  p: null,
-    lc,
-  p: null,
-    fi,
-  d: null,
-    cl,
-  s: null,
-    ttf,
-  b: null,
-    memor,
-  y: null;)
+
+  fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    memory: null;
+
   });
     if (typeof window === 'undefined' || !('performance' in window)) return;
     if (typeof PerformanceObserver === 'undefined') return;
@@ -415,5 +413,6 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
 };
 
 export default AdvancedPerformanceMonitor;`
+
 
 

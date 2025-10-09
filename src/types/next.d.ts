@@ -1,4 +1,5 @@
 
+
 // Type definitions for Next.js compatibility in Vite;
 export interface Metadata {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -95,6 +96,7 @@ export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   lastModified?: Date | string;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
+
 }
 
 

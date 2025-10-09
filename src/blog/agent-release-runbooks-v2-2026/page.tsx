@@ -1,17 +1,18 @@
 
-export default function Page() {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export default function Page() {// TODO: Add content;}
 }
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <main className="container mx-auto px-4 py-16 pt-24"></main>"
-        <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-            Page;
+  return (
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+
           </h1>
-<p className='text-lg,
-  md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI;
+
             canaries, approvals and one‑click rollback.
           </p>
           <div></div>
@@ -82,14 +83,16 @@ export default function Page() {/* TODO: Fix JSX expression */}
               href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
 // >
-//               Engage;
-          <RefreshCw /></RefreshCw>
+
+// Engage
+          <RefreshCw />
+
             </Link>
           </div>
         </div>
       </section>)
     </main>)
 }
-"
+
 
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface Props {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface Props {// TODO: Add content;}
+
 };
   childre,
   n: ReactNode;
@@ -31,13 +31,15 @@ class EnhancedErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  constructor(prop,)
-  s: Props) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  constructor(props: Props) {// TODO: Add content;}
 }
 
-class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {// TODO: Add content;}
+
 };
   hasErro,
   r: false,
@@ -378,5 +380,6 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
 
 export default EnhancedErrorBoundary;"`
+
 
 

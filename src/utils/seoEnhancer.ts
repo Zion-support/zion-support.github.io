@@ -2,14 +2,11 @@
 // This file contains utility functions and configurations
 
 
-interface SEOConfig {/* TODO: Fix JSX expression */}
-  e: string;}
-  descriptio,
-  n: string;
-  keyword,
-  s: string[];
-  canonicalUr,
-  l: string;
+interface SEOConfig {title: string;}
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -54,5 +51,6 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default SEOEnhancer;"
+
 
 

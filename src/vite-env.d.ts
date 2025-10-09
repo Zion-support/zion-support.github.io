@@ -1,17 +1,26 @@
 
-/// <reference types="vite/client" />
+// / 
+          
+          
+          
+          
+          
+          
+          
+          
+          <reference types="vite/client" />
+interface ImportMetaEnv {// TODO: Add content;}
+}
 
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly VITE_APP_DESCRIPTION: string;
-  readonly VITE_APP_URL: string;
-  readonly VITE_APP_API_URL: string;
   readonly DEV: boolean;
   readonly PROD: boolean;
   readonly MODE: string;
 }
 
-interface ImportMeta {
+interface ImportMeta {// TODO: Add content;}
+}
+
   readonly env: ImportMetaEnv;
 
 }
+

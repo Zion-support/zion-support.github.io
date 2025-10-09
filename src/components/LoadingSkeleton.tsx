@@ -1,7 +1,7 @@
 import React from 'react';
 
-interface SkeletonProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface SkeletonProps {// TODO: Add content;}
+
 }
   className?: string;
   width?: string | number;
@@ -21,11 +21,17 @@ const,
   animated = true;)
 }) => {const roundedClasses = rounded ? 'rounded' : '';}
   const animatedClasses = animated ? 'animate-pulse' : '';
-  return (<div className="loadingskeleton"></div>
+
+  return (
+    <div className="loadingskeleton">
+
       {/* Component content */}
     </div>)
   );
 };
+
+
+          
 
           
           
@@ -122,6 +128,6 @@ export const,
   </div>
 );
 export default Skeleton;
-"`
+
 
 

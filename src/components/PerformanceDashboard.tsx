@@ -1,4 +1,5 @@
 
+
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -15,16 +16,13 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    fp,
-  s: number;
-  [ke,
-  y: string]: number;
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    fps: number;
+  [key: string]: number;
+
 }
 
 const,
@@ -52,5 +50,6 @@ const,
 };
 
 export default PerformanceDashboard;
+
 
 

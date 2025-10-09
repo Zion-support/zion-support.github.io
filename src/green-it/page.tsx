@@ -1,12 +1,15 @@
 
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react';}
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building } from 'lucide-react';
+
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const,
-  GreenITPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+
+const GreenITPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const [activeTab, setActiveTab] = useState('solutions');
@@ -363,12 +366,12 @@ const tabs = [
                     <div className="flex items-center justify-between"></div>`
                       <div className={`text-lg font-bold ${solution.color}`}></div>
                         {solution.pricing}
-                      <a></a>"
-                        href="/contact""
-                        className="inline-flex items-center text-cyan-400,"
-  hover:text-cyan-300 font-medium text-sm transition-colors"
-Learn More;"
-                        <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
+
+                      <a
+                        href="/contact" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+Learn More;
+                        <ArrowRight className="w-4 h-4 ml-1" />
+
                       </a>
           )}
           {activeTab === 'benefits' && (}
@@ -432,27 +435,17 @@ Benefits of Green IT;"
           
           
           
-          "
-          <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center items-center"></div>"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300,"
-  hover:scale-105"
-Get Free Assessment;"
-                href="te,"
-  l:+13024640950""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Phone className="w-4 h-4 mr-2" /></Phone>
-                (302) 464-0950;"
-                href="mailt,"
-  o:kleber@ziontechgroup.com""
-                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-green-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" /></Mail>
+
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment;
+                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Phone className="w-4 h-4 mr-2" />
+                (302) 464-0950;
+                href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="w-4 h-4 mr-2" />
                 Email Us;
-      <Footer /></Footer>
+      <Footer />
 
     </div>
   );
@@ -460,5 +453,6 @@ Get Free Assessment;"
 
 
 export default PagePage;"`
+
 
 

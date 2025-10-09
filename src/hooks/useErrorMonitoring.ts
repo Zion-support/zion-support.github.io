@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook;
@@ -90,6 +91,6 @@ const handleUnhandledRejection = (even,)
   };
 };
 export default useErrorMonitoring;
-`
+
 
 

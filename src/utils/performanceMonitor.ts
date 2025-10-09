@@ -4,8 +4,9 @@
  * Advanced Performance Monitoring Utility;
  * Tracks Core Web Vitals and custom metrics;
  */
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+interface PerformanceMetrics {// TODO: Add content;}
+
 }
   fcp?: number; // First Contentful Paint;
   lcp?: number; // Largest Contentful Paint;
@@ -42,8 +43,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   /**
    * Initialize performance observers;
    */
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private initializeObservers(): void {// TODO: Add content;}
+
 }
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -114,8 +116,9 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         }
   )
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    } catch (error) {// TODO: Add content;}
+
 }
       logger.error('Failed to initialize performance observers', error as Error);
     }
@@ -326,18 +329,18 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       (window as any).gtag('event', 'performance_metric', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  metric_nam,
-  e: name,
-        metric_valu,)
-  e: Math.round(value),
-        event_categor,
-  y: 'performance'
+
+  metric_name: name,
+        metric_value: Math.round(value),
+        event_category: 'performance'
+
       }
   )
     }
   }
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getMetrics(): PerformanceMetrics {// TODO: Add content;}
+
 }
     return { ...this.metrics };
   }
@@ -386,35 +389,28 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
-  generateReport(): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  generateReport(): string {// TODO: Add content;}
 }
     const score = this.getScore();
-    const metrics = this.getMetrics();`
+    const metrics = this.getMetrics();
     return `
-Performance,
-  Report:
-Scor,
-  e: ${score}
-Load,
-  Time: ${metrics.loadTime}ms;
-Render,
-  Time: ${metrics.renderTime}ms;
-Memory,
-  Usage: ${metrics.memoryUsage}MB;
-Bundle,
-  Size: ${metrics.bundleSize}KB;
-Cache Hit,
-  Rate: ${metrics.cacheHitRate}%
-Lazy,
-  Loading: ${metrics.lazyLoading ? 'Enabled' : 'Disabled'}
-First Contentful,
-  Paint: ${metrics.firstContentfulPaint || 'N/A'}ms;`
+Performance Report:
+Score: ${score}
+Load Time: ${metrics.loadTime}ms;
+Render Time: ${metrics.renderTime}ms;
+Memory Usage: ${metrics.memoryUsage}MB;
+Bundle Size: ${metrics.bundleSize}KB;
+Cache Hit Rate: ${metrics.cacheHitRate}%
+Lazy Loading: ${metrics.lazyLoading ? 'Enabled' : 'Disabled'}
+First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms;
+
 `;
   }
 }
 // Export singleton instance;
 export const performanceMonitor = new PerformanceMonitor()
 export default performanceMonitor;`
+
 
 

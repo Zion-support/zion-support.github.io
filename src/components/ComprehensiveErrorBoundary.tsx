@@ -33,15 +33,16 @@ class ComprehensiveErrorBoundary extends Component;
           <Props, State> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  private,
-  maxRetries: number;
-  constructor(prop,)
-  s: Props) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private maxRetries: number;
+  constructor(props: Props) {// TODO: Add content;}
 }
 
-class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {// TODO: Add content;}
+
 };
   hasErro,
   r: false,
@@ -302,5 +303,6 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
 
 export default ComprehensiveErrorBoundary;"`
+
 
 

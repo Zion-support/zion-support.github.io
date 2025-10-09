@@ -1,9 +1,10 @@
 
 'use client';
 import React, { useState } from 'react';
-const,
-  RequestQuotePage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const RequestQuotePage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
@@ -244,13 +245,12 @@ const,
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
                 </div>
-              </div>"
-              <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-                <a></a>"
-                  href="/contact""
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300,"
-  hover:scale-105"
+
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+
 // >
                   
           
@@ -264,11 +264,10 @@ const,
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Contact Us;
           </a>
-                <a></a>"
-                  href="/""
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+
+                <a
+                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+
 // >
                   
           
@@ -302,24 +301,23 @@ const,
             <h1 className="text-4xl,"
   md:text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Request a Quote;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
+
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
           </p>
-          </div>"
-          <div className="grid grid-cols-1,"
-  lg:grid-cols-3 gap-12"></div>
-            {/* Quote Form */}"
-            <div className="l,"
-  g:col-span-2"></div>"
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50"></div>"
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>"
-                <form onSubmit={handleSubmit} className="space-y-6"></form>
-                  {/* Personal Information */}"
-                  <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-6"></div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Quote Form */}
+            <div className="lg:col-span-2">
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
+                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Personal Information */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+
 // Full Name *
                       
           
@@ -331,18 +329,14 @@ const,
           
           
           </label>
-                      <input></input>"
-type="text""
-                        name="name"
+
+                      <input
+type="text" name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-// required;"
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                        placeholder="Enter your full name"
+// required
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
+
 //                       />
                     
           
@@ -367,18 +361,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                      <input></input>"
-type="email""
-                        name="email"
+
+                      <input
+type="email" name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-// required;"
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                        placeholder="Enter your email"
+// required
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
+
 //                       />
                     
           
@@ -397,17 +387,13 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Company Name;
           </label>
-                      <input></input>"
-type="text""
-                        name="company"
+
+                      <input
+type="text" name="company"
                         value={formData.company}
-                        onChange={handleInputChange}"
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                        placeholder="Enter your company name"
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
+
 // />
                     
           
@@ -423,17 +409,13 @@ type="text""
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Phone Number;
           </label>
-                      <input></input>"
-type="tel""
-                        name="phone"
+
+                      <input
+type="tel" name="phone"
                         value={formData.phone}
-                        onChange={handleInputChange}"
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                        placeholder="Enter your phone number"
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
+
 // />
                     
           
@@ -460,16 +442,13 @@ type="tel""
           
           
           </label>
-                    <select></select>"
-                      name="serviceType"
-                      value={formData.serviceType}
+
+                    <select
+                      name="serviceType" value={formData.serviceType}
                       onChange={handleInputChange}
-// required;"
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20"
+// required
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+
 //                     >
                       
           
@@ -492,15 +471,12 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Project Size;
           </label>
-                      <select></select>"
-                        name="projectSize"
-                        value={formData.projectSize}
-                        onChange={handleInputChange}"
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20"
+
+                      <select
+                        name="projectSize" value={formData.projectSize}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+
 // >
                         
           
@@ -517,19 +493,16 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         ))}
                       </select>
                     </div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Timeline;
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2">
+// Timeline
           </label>
-                      <select></select>"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}"
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20"
+                      <select
+                        name="timeline" value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+
 // >
                         
           
@@ -551,15 +524,12 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Budget Range;
           </label>
-                    <select></select>"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}"
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20"
+
+                    <select
+                      name="budget" value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+
 // >
                       
           
@@ -589,18 +559,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                    <textarea></textarea>"
-                      name="description"
-                      value={formData.description}
+
+                    <textarea
+                      name="description" value={formData.description}
                       onChange={handleInputChange}
-// required;
-                      rows={4}"
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                      placeholder="Describe your project requirements and goals..."
+// required
+                      rows={4}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
+
 //                     />
                   
           
@@ -616,17 +582,13 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Specific Requirements;
           </label>
-                    <textarea></textarea>"
-                      name="requirements"
-                      value={formData.requirements}
+
+                    <textarea
+                      name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
-                      rows={3}"
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
+                      rows={3}
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
+
 // />
                   
           
@@ -638,13 +600,11 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </div>
-                  <button></button>"
-type="submit"
-                    disabled={isSubmitting}"
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300,
-  hover:scale-105,
-  disabled:opacity-50,"
-  disabled:cursor-not-allowed"
+
+                  <button
+type="submit" disabled={isSubmitting}
+                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+
 // >
                     {isSubmitting ? ()}"
           <div className="flex items-center justify-center"></div>"
@@ -738,5 +698,6 @@ type="submit"
 
 
 export default PagePage;"
+
 
 

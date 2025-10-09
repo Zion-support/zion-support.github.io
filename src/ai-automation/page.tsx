@@ -1,13 +1,16 @@
 import React from 'react';
 
+
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';}
+import { Shield, Settings, Zap,  Shield,  Clock,  Users,  TrendingUp,  Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const,
-  AIAutomationPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const AIAutomationPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: Settings,
@@ -151,25 +154,25 @@ const,
     {/* TODO: Fix JSX expression */}
   l: 'Client Rating' }
   ];
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <main className="container mx-auto px-4 py-16 pt-24"></main>"
-        <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-            Page;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
           </p>
-        </div>"
-        <div className="grid,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8 mb-16"></div>)
-          {stats.map((stat, index) => ()}"
-          <div key={index} className="text-center"></div>"
-              <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" /></stat>"
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>"
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {stats.map((stat, index) => ()}
+          <div key={index} className="text-center">
+              <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+
               <div className="text-gray-300">{stat.label}</div>
             </div>
           ))}
@@ -252,7 +255,8 @@ const,
           </div>
         </div>
       </div>
-      <Footer /></Footer>
+
+      <Footer />
 
     </div>
   );
@@ -260,5 +264,6 @@ const,
 
 
 export default PagePage;"`
+
 
 

@@ -1,4 +1,5 @@
 
+
 'use client';
 /**
  * SEO Component;
@@ -147,5 +148,6 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 };
 
 export default SEO;`
+
 
 

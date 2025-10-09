@@ -1,8 +1,9 @@
 import React from 'react';
 
-const,
-  CaseStudiesPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const CaseStudiesPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const _caseStudies = [
@@ -155,11 +156,13 @@ const,
           </a>
       </div>
 
+
     </div>
   );
 };
 
 
 export default PagePage;"
+
 
 

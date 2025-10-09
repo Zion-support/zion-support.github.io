@@ -1,4 +1,5 @@
 
+
 // Metadata removed for Vite compatibility;
 export default function BlogPost() {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -62,5 +63,6 @@ export default function BlogPost() {/* TODO: Fix JSX expression */}
 };
 
 export default PagePage;"`
+
 
 

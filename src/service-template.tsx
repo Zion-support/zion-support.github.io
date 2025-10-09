@@ -29,22 +29,23 @@ const,
   ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <main className="container mx-auto px-4 py-16 pt-24"></main>"
-        <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-            Service Template;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Blog Post;
-          </p>"
-          <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-            <Link></Link>"
-              to="/contact""
-              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Service Template
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Blog Post
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+
 // >
               
           
@@ -58,13 +59,11 @@ const,
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Get Free Consultation;
           </Link>
-            <a></a>"
-              href="te,"
-  l:+13024640950""
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
-  hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-              <Phone className="w-4 h-4 mr-2" /></Phone>)
+
+            <a
+              href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <Phone className="w-4 h-4 mr-2" />
+
 // (302) 464-0950;
           </a>
           </div>
@@ -88,12 +87,13 @@ const,
                       {feature}
                     </li>
                   ))}
-                </ul>"
-                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>"
-                  className="cyber-button w-full text-center inline-block"
-Get Started;
-        {/* Benefits Section */}"
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
+
+                </ul>
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  className="cyber-button w-full text-center inline-block" Get Started;
+        {/* Benefits Section */}
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+
             Why Choose Our {title}?
           </h2>"
           <div className="grid grid-cols-1,
@@ -111,6 +111,7 @@ Ready to Transform Your Business?"
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free consultation and discover how our solutions can revolutionize your operations.
 
+
       </main>
       <Footer /></Footer>
     </div>
@@ -119,5 +120,6 @@ Ready to Transform Your Business?"
 
 
 export default ServiceTemplatePage;"
+
 
 

@@ -1,13 +1,14 @@
 
+
 'use client';
 interface BeforeInstallPromptEvent extends Event {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   prompt(): Promise;
           <void>;
-  userChoic,
-  e: Promise<{/* TODO: Fix JSX expression */}
-  e: 'accepted' | 'dismissed' }>;
+
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+
 }
 
 const,
@@ -17,3 +18,4 @@ const,
     </div>
   );
 }
+

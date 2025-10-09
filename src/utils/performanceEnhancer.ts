@@ -2,45 +2,29 @@
 // This file contains utility functions and configurations
 
 
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  p: number;}
-  fi,
-  d: number;
-  cl,
-  s: number;
-  fc,
-  p: number;
-  ttf,
-  b: number;
-  tb,
-  t: number;
+interface PerformanceMetrics {lcp: number;}
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
+  tbt: number;
 }
 
-interface OptimizationConfig {/* TODO: Fix JSX expression */}
-  n: boolean;}
-  enableLazyLoadin,
-  g: boolean;
-  enableCodeSplittin,
-  g: boolean;
-  enablePrefetchin,
-  g: boolean;
-  enableServiceWorke,
-  r: boolean;
-  enableResourceHint,
-  s: boolean;
-  enableCompressio,
-  n: boolean;
-  enableCachin,
-  g: boolean;
+interface OptimizationConfig {enableImageOptimization: boolean;}
+  enableLazyLoading: boolean;
+  enableCodeSplitting: boolean;
+  enablePrefetching: boolean;
+  enableServiceWorker: boolean;
+  enableResourceHints: boolean;
+  enableCompression: boolean;
+  enableCaching: boolean;
 }
 
-class PerformanceEnhancer {/* TODO: Fix JSX expression */}
-  config: OptimizationConfig;}
-  private,
-  metrics: PerformanceMetrics | null = null;
+class PerformanceEnhancer {private config: OptimizationConfig;}
+  private metrics: PerformanceMetrics | null = null;
 
-  constructor(confi,)
-  g: OptimizationConfig) {this.config = config;}
+  constructor(config: OptimizationConfig) {this.config = config;}
+
     this.init();
   }
 
@@ -57,10 +41,10 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
           });
         });
         
-        observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure', 'navigation'] });
-      } catch (error) {/* TODO: Fix JSX expression */}
-  supported:', error);}
+
+        observer.observe({ entryTypes: ['measure', 'navigation'] });
+      } catch (error) {console.warn('PerformanceObserver not supported:', error);}
+
       }
     }
   }
@@ -73,5 +57,6 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 }
 
 export default PerformanceEnhancer;
+
 
 

@@ -1,9 +1,10 @@
 
 'use client';
 import React, { useState } from 'react';
-const,
-  LoginPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const LoginPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
@@ -99,21 +100,17 @@ const,
                 <div></div>"
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Email Address;
-          </label>"
-                  <div className="relative"></div>"
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Mail>
-                    <input></input>"
-type="email""
-                      name="email"
+
+          </label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+type="email" name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-// required;"
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                      placeholder="Enter your email"
+// required
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
+
 //                     />
                   
           
@@ -126,24 +123,20 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
           
           </div>
                 </div>
-                <div></div>"
-                  <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Password;
-          </label>"
-                  <div className="relative"></div>"
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Lock>
-                    <input></input>
-type={showPassword ? 'text' : 'password'}"
-                      name="password"
-                      value={formData.password}
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">
+// Password
+          </label>
+                  <div className="relative">
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                    <input
+type={showPassword ? 'text' : 'password'}
+                      name="password" value={formData.password}
                       onChange={handleInputChange}
-// required;"
-className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,"
-  focus:ring-cyan-400/20""
-                      placeholder="Enter your password"
+// required
+className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
+
 //                     />
                     
           
@@ -154,22 +147,23 @@ className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-l
           
           
           
-          <button></button>"
-type="button"
-                      onClick={() => setShowPassword(!showPassword)}"
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400,"
-  hover:text-white transition-colors"
+
+          <button
+type="button" onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+
 // >
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
-                </div>"
-                <div className="flex items-center justify-between"></div>"
-                  <label className="flex items-center"></label>
-                    <input></input>"
-type="checkbox""
-                      name="rememberMe"
+
+                </div>
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center">
+                    <input
+type="checkbox" name="rememberMe"
+
                       checked={formData.rememberMe}
                       onChange={handleInputChange}"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
@@ -187,10 +181,10 @@ type="checkbox""
           "
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
-                  <a></a>"
-                    href="/forgot-password""
-                    className="text-sm text-cyan-400,"
-  hover:text-cyan-300 transition-colors"
+
+                  <a
+                    href="/forgot-password" className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+
 // >
 //                     Forgot password?
                   
@@ -204,13 +198,11 @@ type="checkbox""
           
           </a>
                 </div>
-                <button></button>"
-type="submit"
-                  disabled={isLoading}"
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300,
-  hover:scale-105,
-  disabled:opacity-50,"
-  disabled:cursor-not-allowed"
+
+                <button
+type="submit" disabled={isLoading}
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+
 // >
                   {isLoading ? ()}"
           <div className="flex items-center justify-center"></div>"
@@ -243,10 +235,10 @@ type="submit"
               <div className="mt-8 text-center"></div>"
                 <p className="text-gray-300"></p>
                   Don't have an account?{' '}
-                  <a></a>"
-                    href="/signup""
-                    className="text-cyan-400,"
-  hover:text-cyan-300 font-medium transition-colors"
+
+                  <a
+                    href="/signup" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+
 // >
 //                     Sign up here;
           </a>
@@ -265,14 +257,15 @@ type="submit"
                       <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/></path>"
                       <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></path>
                     </svg>
-// Google;
-          </button>"
-                  <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
-  hover:bg-slate-600 transition-colors"></button>"
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"></svg>"
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></path>
+
+// Google
+          </button>
+                  <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+
                     </svg>
-// Facebook;
+// Facebook
           </button>
                 </div>
               </div>
@@ -336,10 +329,10 @@ type="submit"
           
           
           </p>
-                <a></a>"
-                  href="/signup""
-                  className="inline-flex items-center text-cyan-400,"
-  hover:text-cyan-300 font-medium transition-colors"
+
+                <a
+                  href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+
 // >
 //                   Create your account;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
@@ -349,7 +342,8 @@ type="submit"
           </div>
         </div>
       </div>
-      <Footer /></Footer>
+
+      <Footer />
 
     </div>
   );
@@ -357,5 +351,6 @@ type="submit"
 
 
 export default PagePage;"
+
 
 

@@ -1,17 +1,13 @@
 import React from 'react';
 
 
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface PerformanceMetrics {// TODO: Add content;}
 };
-  cl,
-  s: number | null;,
-    fc,
-  p: number | null;,
-    lc,
-  p: number | null;,
-    ttf,
-  b: number | null;
+  cls: number | null;,
+    fcp: number | null;,
+    lcp: number | null;,
+    ttfb: number | null;
+
 }
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
@@ -42,5 +38,6 @@ const,
 };
 
 export default PerformanceMonitor;
+
 
 

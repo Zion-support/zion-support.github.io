@@ -1,10 +1,11 @@
 import React from 'react';
 
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';}
-const,
-  AISocialMediaManagerPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+import { Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare } from 'lucide-react';
+const AISocialMediaManagerPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: Share2,
@@ -13,18 +14,44 @@ const,
       descriptio,
   n: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
-ico,
-  n: TrendingUp,
-      titl,
-  e: 'Trend Analysis',
-      descriptio,
-  n: 'Real-time trend monitoring and content suggestions based on viral topics',
+
+icon: TrendingUp,
+      title: 'Trend Analysis',
+      description: 'Real-time trend monitoring and content suggestions based on viral topics',
+
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  PagePage: React.FC = () => {/* TODO: Fix JSX expression */}
+
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This page is under development. Please check back soon for updates.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
+
+      icon: BarChart,
+      title: 'Performance Analytics',
+      description: 'Comprehensive reporting with actionable insights and ROI tracking',
+
+      icon: MessageSquare,
+      title: 'Auto-Responses',
+      description: 'Intelligent chatbot responses and comment management'
+
     }
   ];
   const benefits = [
@@ -104,5 +131,6 @@ Ready to Get Started?"
 };
 
 export default PagePage;"
+
 
 

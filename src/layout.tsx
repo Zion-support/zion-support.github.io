@@ -10,18 +10,33 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en">
-      <head>
-        <Analytics />
-      </head>
-      <body>
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+
+  const address = {
+    '@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
+    addressLocality: 'Middletown',
+    addressRegion: 'DE',
+    postalCode: '19709',
+    addressCountry: 'US',
+    offers: [
+  // TODO: Add items,
+]
+      {// TODO: Add content;}
 }
+        '@type': 'Offer',
+        category: 'AI Solutions',
+        description: 'Enterprise AI solutions, digital transformation, and cloud services',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {// TODO: Add content;}
+}
+          '@type': 'PriceSpecification',
+          billingIncrement: 'P1M'
+        };
+  itemOffered: {// TODO: Add content;}
+}
+            '@type': 'Service',
+            name: 'AI Enterprise Transformation',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations'
 
 

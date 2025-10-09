@@ -27,21 +27,16 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   )
   }
 }
-export interface APIConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface APIConfig {// TODO: Add content;}
 };
-  baseUR,
-  L: string;,
-    timeou,
-  t: number;,
-    retryAttempt,
-  s: number;,
-    retryDela,
-  y: number;,
-    enableCachin,
-  g: boolean;,
-    cacheTimeou,
-  t: number;
+  baseURL: string;,
+    timeout: number;,
+    retryAttempts: number;,
+    retryDelay: number;,
+    enableCaching: boolean;,
+    cacheTimeout: number;
+
   headers?: Record;
           <string, string>;
   interceptors?: {/* TODO: Fix JSX expression */}
@@ -74,30 +69,26 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
 export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  dat,
-  a: T;,
-    statu,
-  s: number;,
-    statusTex,
-  t: string;,
-    header,
-  s: Headers;,
-    confi,
-  g: RequestConfig;
+
+  data: T;,
+    status: number;,
+    statusText: string;,
+    headers: Headers;,
+    config: RequestConfig
 }
-export interface CacheEntry {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export interface CacheEntry {// TODO: Add content;}
 };
-  dat,
-  a: unknown,
+  data: unknown,
+
 
   timestam,
   p: number;,
     expiresA,
   t: number;
 }
-export class APIInterceptor {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export class APIInterceptor {// TODO: Add content;}
+
 }
   private static,
   instance: APIInterceptor;
@@ -117,28 +108,21 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
     this.config = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  baseUR,
-  L: config.baseURL || '',
-      timeou,
-  t: config.timeout || 30000,
-      retryAttempt,
-  s: config.retryAttempts || 3,
-      retryDela,
-  y: config.retryDelay || 1000,
-      enableCachin,
-  g: config.enableCaching ?? true,
-      cacheTimeou,
-  t: config.cacheTimeout || 300000, // 5 minutes,
-  header,
-  s: config.headers || {},
-      interceptor,
-  s: config.interceptors || {}
+
+  baseURL: config.baseURL || '',
+      timeout: config.timeout || 30000,
+      retryAttempts: config.retryAttempts || 3,
+      retryDelay: config.retryDelay || 1000,
+      enableCaching: config.enableCaching ?? true,
+      cacheTimeout: config.cacheTimeout || 300000, // 5 minutes,
+  headers: config.headers || {},
+      interceptors: config.interceptors || {}
     }
     this.errorHandler = ErrorHandler.getInstance()
   }
-  static getInstance(config?: Partial;)
-          <APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  static getInstance(config?: Partial;
+          <APIConfig>): APIInterceptor {// TODO: Add content;}
+
 }
     if (!APIInterceptor.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -235,14 +219,12 @@ const data = await this.parseResponse;
   O: Add content;}
 }
 //         data,
-        statu,
-  s: finalResponse.status,
-        statusTex,
-  t: finalResponse.statusText,
-        header,
-  s: finalResponse.headers,
-        confi,
-  g: finalConfig;
+
+        status: finalResponse.status,
+        statusText: finalResponse.statusText,
+        headers: finalResponse.headers,
+        config: finalConfig;
+
       };
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -282,12 +264,12 @@ const data = await this.parseResponse;
     confi,
   g: Partial;
           <RequestConfig> = {}
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({/* TODO: Fix JSX expression */})
-  d: 'GET' });
+          <T>({ ...config, url, method: 'GET' });
+
   }
   /**
    * POST request;
@@ -299,12 +281,12 @@ const data = await this.parseResponse;
     confi,
   g: Partial;
           <RequestConfig> = {}
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({/* TODO: Fix JSX expression */})
-  d: 'POST', body });
+          <T>({ ...config, url, method: 'POST', body });
+
   }
   /**
    * PUT request;
@@ -316,12 +298,12 @@ const data = await this.parseResponse;
     confi,
   g: Partial;
           <RequestConfig> = {}
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({/* TODO: Fix JSX expression */})
-  d: 'PUT', body });
+          <T>({ ...config, url, method: 'PUT', body });
+
   }
   /**
    * DELETE request;
@@ -332,12 +314,12 @@ const data = await this.parseResponse;
     confi,
   g: Partial;
           <RequestConfig> = {}
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({/* TODO: Fix JSX expression */})
-  d: 'DELETE' });
+          <T>({ ...config, url, method: 'DELETE' });
+
   }
   /**
    * PATCH request;
@@ -349,19 +331,19 @@ const data = await this.parseResponse;
     confi,
   g: Partial;
           <RequestConfig> = {}
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  ): Promise<APIResponse<T>> {// TODO: Add content;}
 }
     return this.request;
-          <T>({/* TODO: Fix JSX expression */})
-  d: 'PATCH', body });
+          <T>({ ...config, url, method: 'PATCH', body });
+
   }
   /**
    * Prepare request configuration;
    */
-  private prepareRequest(confi,)
-  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private prepareRequest(config: RequestConfig): RequestConfig {// TODO: Add content;}
+
 }
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -374,21 +356,20 @@ const data = await this.parseResponse;
 //         ...this.config.headers,
 //         ...config.headers;
       },
-      timeou,
-  t: config.timeout || this.config.timeout,
-      retryAttempt,
-  s: config.retryAttempts ?? this.config.retryAttempts,
-      cach,
-  e: config.cache ?? this.config.enableCaching;
+
+      timeout: config.timeout || this.config.timeout,
+      retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
+      cache: config.cache ?? this.config.enableCaching;
+
     };
   }
   /**
    * Build full URL with query parameters;
    */
-  private buildURL(confi,)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
+
+  private buildURL(config: RequestConfig): string {// TODO: Add content;}
+}
+
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
     if (config.params) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -406,9 +387,9 @@ const data = await this.parseResponse;
   /**
    * Build request headers;
    */
-  private buildHeaders(confi,)
-  g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private buildHeaders(config: RequestConfig): Headers {// TODO: Add content;}
+
 }
     const headers = new Headers();
     // Add default headers;
@@ -424,9 +405,9 @@ const data = await this.parseResponse;
   /**
    * Create abort signal for timeout;
    */
-  private createAbortSignal(timeou,)
-  t: number): AbortSignal {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private createAbortSignal(timeout: number): AbortSignal {// TODO: Add content;}
+
 }
     const controller = new AbortController();
     setTimeout(() => controller.abort(), timeout);
@@ -456,9 +437,9 @@ const data = await this.parseResponse;
   /**
    * Get cache key for request;
    */
-  private getCacheKey(confi,)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private getCacheKey(config: RequestConfig): string {// TODO: Add content;}
+
 }
     const url = this.buildURL(config);`
     return `${config.method}:${url}`;
@@ -466,9 +447,9 @@ const data = await this.parseResponse;
   /**
    * Get response from cache;
    */
-  private getFromCache(ke,)
-  y: string): APIResponse | null {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private getFromCache(key: string): APIResponse | null {// TODO: Add content;}
+
 }
     const entry = this.cache.get(key);
     if (!entry) return null;
@@ -483,10 +464,9 @@ const data = await this.parseResponse;
   /**
    * Set response in cache;
    */
-  private setInCache(ke,
-  y: string, respons,)
-  e: APIResponse): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private setInCache(key: string, response: APIResponse): void {// TODO: Add content;}
+
 }
     this.cache.set(key, {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -502,16 +482,18 @@ const data = await this.parseResponse;
   /**
    * Clear cache;
    */
-  clearCache(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  clearCache(): void {// TODO: Add content;}
+
 }
     this.cache.clear();
   }
   /**
    * Clear expired cache entries;
    */
-  clearExpiredCache(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  clearExpiredCache(): void {// TODO: Add content;}
+
 }
     const now = Date.now();
     for (const [key, entry] of this.cache.entries()) {/* TODO: Fix JSX expression */}
@@ -527,8 +509,9 @@ const data = await this.parseResponse;
   /**
    * Get cache statistics;
    */
-  getCacheStats() {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getCacheStats() {// TODO: Add content;}
+
 }
     const entries = Array.from(this.cache.values());
     const now = Date.now();
@@ -538,8 +521,9 @@ const data = await this.parseResponse;
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  tota,
-  l: entries.length,
+
+  total: entries.length,
+
 //       valid,
 //       expired,
       siz,
@@ -549,34 +533,35 @@ const data = await this.parseResponse;
   /**
    * Delay helper for retry logic;
    */
-  private delay(m,)
-  s: number): Promise;
-          <void> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private delay(ms: number): Promise;
+          <void> {// TODO: Add content;}
+
 }
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   /**
    * Update configuration;
    */
-  updateConfig(confi,
-  g: Partial;)
-          <APIConfig>): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  updateConfig(config: Partial;
+          <APIConfig>): void {// TODO: Add content;}
+
 }
     this.config = { ...this.config, ...config };
   }
   /**
    * Get current configuration;
    */
-  getConfig(): APIConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getConfig(): APIConfig {// TODO: Add content;}
+
 }
     return { ...this.config };
   }
 }
 // Export singleton instance;
 export const apiInterceptor = APIInterceptor.getInstance();
-`
+
 
 

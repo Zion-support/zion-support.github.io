@@ -1,15 +1,15 @@
 
 'use client';
-interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface PerformanceOptimizerProps {// TODO: Add content;}
+
 }
 
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-const,
-  PerformanceOptimizer: React.FC;
-          <PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const PerformanceOptimizer: React.FC;
+          <PerformanceOptimizerProps> = ({// TODO: Add content;}
+
 }
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -277,5 +277,6 @@ if ('IntersectionObserver' in window) {}
 };
 
 export default PerformanceOptimizer;"
+
 
 

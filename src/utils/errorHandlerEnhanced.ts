@@ -1,4 +1,5 @@
 
+
 'use client';
 // Enhanced Error Handler;
 export class AppError extends Error {/* TODO: Fix JSX expression */}
@@ -21,20 +22,16 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 //     Error.captureStackTrace(this, this.constructor)
   }
 }
-export const _errorHandler = (erro,)
-  r: AppError | Error) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;}
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)
-// console.error({/* TODO: Fix JSX expression */}
-  e: appError.message,}
-    stac,
-  k: isDevelopment ? appError.stack : undefined,
-    timestam,)
-  p: new Date().toISOString(),
-    statusCod,
-  e: appError.statusCode || 500;
+// console.error({message: appError.message,}
+    stack: isDevelopment ? appError.stack : undefined,
+    timestamp: new Date().toISOString(),
+    statusCode: appError.statusCode || 500;
+
   });
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -67,5 +64,6 @@ export const asyncHandler = (f,
   }
   )
 }
+
 
 

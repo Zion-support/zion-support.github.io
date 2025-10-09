@@ -1,4 +1,5 @@
 
+
 'use client';
 import React, { useEffect } from 'react';
 const,
@@ -162,6 +163,7 @@ declare global {/* TODO: Fix JSX expression */}
   s: any[]) => void;
   }
 }
-export default Analytics;"`
+
+export default Analytics;
 
 

@@ -1,13 +1,16 @@
 
+
 'use client';
 import React, { useState } from 'react';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield from 'lucide-react';}
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-const,
-  ContactPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+
+const ContactPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
@@ -95,6 +98,6 @@ const,
       </div>
   );
 export default ContactPage;
-"
+
 
 

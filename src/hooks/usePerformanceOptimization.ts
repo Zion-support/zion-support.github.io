@@ -1,21 +1,18 @@
 
+
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  loadTim,
-  e: number;,
-    firstContentfulPain,
-  t: number;,
-    largestContentfulPain,
-  t: number;,
-    cumulativeLayoutShif,
-  t: number;,
-    firstInputDela,
-  y: number;
+
+  loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    cumulativeLayoutShift: number;,
+    firstInputDelay: number
 }
-export const _usePerformanceOptimization = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export const _usePerformanceOptimization = () => {// TODO: Add content;}
+
 }
   const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -42,12 +39,11 @@ export const _usePerformanceOptimization = () => {/* TODO: Fix JSX expression */
   t:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
 //           ?.startTime || 0,
-      largestContentfulPain,
-  t: 0,
-      cumulativeLayoutShif,
-  t: 0,
-      firstInputDela,
-  y: 0;
+
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0,
+      firstInputDelay: 0;
+
     };
     // Measure LCP;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
@@ -160,5 +156,6 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
   return {measurePerformance,}
     optimizeImages,
     preloadCriticalResources;
+
 
 

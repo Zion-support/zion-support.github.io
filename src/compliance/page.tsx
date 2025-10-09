@@ -1,23 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';}
+import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const,
-  CompliancePage: React.FC = () => {const certifications = [}
-    {/* TODO: Fix JSX expression */}
-  s: 'Certified' },
-    {/* TODO: Fix JSX expression */}
-  s: 'Certified' },
-    {/* TODO: Fix JSX expression */}
-  s: 'Certified' },
-    {/* TODO: Fix JSX expression */}
-  s: 'Certified' },
-    {/* TODO: Fix JSX expression */}
-  s: 'Certified' },
-    {/* TODO: Fix JSX expression */}
-  s: 'Implemented' }
+const CompliancePage: React.FC = () => {
+  const certifications = [];
+  return (
+    { name: 'SOC 2 Type II', status: 'Certified' },
+    { name: 'ISO 27001', status: 'Certified' },
+    { name: 'GDPR Compliant', status: 'Certified' },
+    { name: 'HIPAA Compliant', status: 'Certified' },
+    { name: 'PCI DSS Level 1', status: 'Certified' },
+    { name: 'NIST Framework', status: 'Implemented' }
+
   ];
   const complianceAreas = [
   // TOD,
@@ -55,18 +51,16 @@ const,
   return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation /></Navigation>
-        {/* Header */}"
-        <section className="bg-white shadow-sm border-b"></section>"
-          <div className="max-w-7xl mx-auto px-4,
-  sm:px-6,"
-  lg:px-8 py-6"></div>"
-            <div className="flex items-center"></div>
-              <Link></Link>"
-                to="/privacy""
-                className="inline-flex items-center text-blue-600,"
-  hover:text-blue-800 transition-colors duration-200 mr-6"
+
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <Navigation />
+        {/* Header */}
+        <section className="bg-white shadow-sm border-b">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex items-center">
+              <Link
+                to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
+
 // >
                 
           
@@ -144,20 +138,22 @@ Compliance Areas;"
             <p className="text-gray-600 mb-6"></p>
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
-            <a></a>"
-              href="mailt,"
-  o:compliance@ziontechgroup.com""
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg,"
-  hover:bg-blue-700 transition-colors duration-200"
+
+            <a
+              href="mailto:compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
+
               Contact Compliance Team;
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
-        <Footer /></Footer>
+
+        <Footer />
+
   );
 };
 
 export default PagePage;"
+
 
 

@@ -49,17 +49,14 @@ const logger = {/* TODO: Fix JSX expression */}
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  nam,
-  e: string;,
-    valu,
-  e: number;,
-    ratin,
-  g: 'good' | 'needs-improvement' | 'poor';,
-    timestam,
-  p: number;
+
+  name: string;,
+    value: number;,
+    rating: 'good' | 'needs-improvement' | 'poor';,
+    timestamp: number
 }
-export interface WebVitals {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export interface WebVitals {// TODO: Add content;}
+
 }
   FCP?: PerformanceMetric; // First Contentful Paint;
   LCP?: PerformanceMetric; // Largest Contentful Paint;
@@ -71,17 +68,14 @@ export interface WebVitals {/* TODO: Fix JSX expression */}
 export interface CustomMetric {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  nam,
-  e: string;,
-    valu,
-  e: number;,
-    uni,
-  t: 'ms' | 'bytes' | 'count' | 'percentage';,
-    timestam,
-  p: number;
+
+  name: string;,
+    value: number;,
+    unit: 'ms' | 'bytes' | 'count' | 'percentage';,
+    timestamp: number
 }
-class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class PerformanceMonitoringService {// TODO: Add content;}
+
 }
   private static,
   instance: PerformanceMonitoringService;
@@ -110,8 +104,9 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**
    * Initialize performance observers;
    */
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private initializeObservers(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -209,10 +204,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Record a Web Vital metric;
    */
-  private recordWebVital(nam,
-  e: keyof WebVitals, valu,)
-  e: number): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private recordWebVital(name: keyof WebVitals, value: number): void {// TODO: Add content;}
+
 }
     const rating = this.getRating(name, value);
     const,
@@ -222,8 +216,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 //       name,
 //       value,
 //       rating,
-      timestam,
-  p: Date.now()
+
+      timestamp: Date.now()
+
     };
     this.webVitals[name] = metric;`
     logger.info(`Web,)`
@@ -234,10 +229,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Get rating for a Web Vital metric;
    */
-  private getRating(nam,
-  e: keyof WebVitals, valu,)
-  e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {// TODO: Add content;}
+
 }
     const,
   thresholds: Record;
@@ -245,24 +239,14 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  FC,
-  P: {/* TODO: Fix JSX expression */}
-  r: 3000 },
-      LC,
-  P: {/* TODO: Fix JSX expression */}
-  r: 4000 },
-      FI,
-  D: {/* TODO: Fix JSX expression */}
-  r: 300 },
-      CL,
-  S: {/* TODO: Fix JSX expression */}
-  r: 0.25 },
-      TTF,
-  B: {/* TODO: Fix JSX expression */}
-  r: 1800 },
-      IN,
-  P: {/* TODO: Fix JSX expression */}
-  r: 500 }
+
+  FCP: { good: 1800, poor: 3000 },
+      LCP: { good: 2500, poor: 4000 },
+      FID: { good: 100, poor: 300 },
+      CLS: { good: 0.1, poor: 0.25 },
+      TTFB: { good: 800, poor: 1800 },
+      INP: { good: 200, poor: 500 }
+
     };
     const threshold = thresholds[name];
     if (!threshold) return 'good';
@@ -274,11 +258,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Record a custom metric;
    */
-  recordCustomMetric(nam,
-  e: string, valu,
-  e: number, uni,)
-  t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {// TODO: Add content;}
+
 }
     const,
   metric: CustomMetric = {/* TODO: Fix JSX expression */}
@@ -287,8 +269,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 //       name,
 //       value,
 //       unit,
-      timestam,
-  p: Date.now()
+
+      timestamp: Date.now()
+
     };
     this.customMetrics.push(metric);
     // Maintain max metrics limit;
@@ -296,18 +279,19 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   O: Add content;}
 }
       this.customMetrics.shift();
-    }`
-    console.debug(`Custom,`
-  Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
+
+    }
+    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
+
   )
   }
   /**
    * Send metric to analytics service;
    */
-  private async sendToAnalytics(metri,)
-  c: PerformanceMetric): Promise;
-          <void> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private async sendToAnalytics(metric: PerformanceMetric): Promise;
+          <void> {// TODO: Add content;}
+
 }
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -318,17 +302,15 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         await fetch('/api/analytics/performance', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  metho,
-  d: 'POST',
-          header,
-  s: { 'Content-Type': 'application/json' },
-          bod,)
-  y: JSON.stringify(metric)
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(metric)
         }
   )
       }
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+    } catch (error) {// TODO: Add content;}
+
 }
       logger.error('Failed to send metric to analytics', error as Error);
     }
@@ -336,24 +318,27 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Get all Web Vitals;
    */
-  getWebVitals(): WebVitals {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getWebVitals(): WebVitals {// TODO: Add content;}
+
 }
     return { ...this.webVitals };
   }
   /**
    * Get custom metrics;
    */
-  getCustomMetrics(): CustomMetric[] {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getCustomMetrics(): CustomMetric[] {// TODO: Add content;}
+
 }
     return [...this.customMetrics];
   }
   /**
    * Get performance score (0-100)
    */
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getPerformanceScore(): number {// TODO: Add content;}
+
 }
     const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0;
@@ -366,8 +351,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
-        defaul,
-  t: return 0;
+
+        default: return 0;
+
       }
     }
   )
@@ -376,8 +362,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Get performance summary;
    */
-  getSummary(): {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getSummary(): {// TODO: Add content;}
+
 };
   scor,
   e: number;,
@@ -463,9 +450,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Mark a custom performance mark;
    */
-  mark(nam,)
-  e: string): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  mark(name: string): void {// TODO: Add content;}
+
 }
     if (typeof performance !== 'undefined' && 'mark' in performance) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -476,11 +463,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Measure between two marks;
    */
-  measure(nam,
-  e: string, startMar,
-  k: string, endMar,)
-  k: string): number | null {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  measure(name: string, startMark: string, endMark: string): number | null {// TODO: Add content;}
+
 }
     if (typeof performance !== 'undefined' && 'measure' in performance) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -507,8 +492,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Clear all metrics;
    */
-  clearMetrics(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  clearMetrics(): void {// TODO: Add content;}
+
 }
     this.webVitals = {};
     this.customMetrics = [];
@@ -516,8 +502,9 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   /**
    * Disconnect all observers;
    */
-  disconnect(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  disconnect(): void {// TODO: Add content;}
+
 }
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -525,5 +512,6 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 }
 export const performanceMonitoring = PerformanceMonitoringService.getInstance()
 export default PerformanceMonitoringService;`
+
 
 

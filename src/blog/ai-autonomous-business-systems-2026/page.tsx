@@ -1,4 +1,5 @@
 
+
 'use client';
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
@@ -87,15 +88,11 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
               operations and deliver breakthrough efficiency gains."
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Automation Transformation</h3>"
               <p className="text-gray-700 mb-4">Join leading enterprises achieving 95% automation with AI autonomous business systems</p>
-                <a></a>"
-                  href="/contact""
-                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg,"
-  hover:bg-purple-700 transition-colors">Get Automation Assessment</a>"
-                  href="/services""
-                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600,"
-  hover:bg-purple-50 transition-colors">Explore AI Services</a>
+
+                <a
+                  href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment</a>
+                  href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services</a>
     </div>)
 }
-"`
 
 

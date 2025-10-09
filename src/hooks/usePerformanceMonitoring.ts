@@ -1,4 +1,5 @@
 
+
 'use client';
 // PerformanceMetrics interface removed as it's not used in this hook;
 export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
@@ -176,16 +177,14 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
         const metrics = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  domContentLoade,
-  d:
+
+  domContentLoaded:
 //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
-          loadComplet,
-  e: navigation.loadEventEnd - navigation.loadEventStart,
-          domInteractiv,
-  e: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTim,
-  e: navigation.loadEventEnd - navigation.fetchStart;
+          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+          domInteractive: navigation.domInteractive - navigation.fetchStart,
+          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart;
+
         };
         Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -204,5 +203,6 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   };
 };
 export default usePerformanceMonitoring;
+
 
 

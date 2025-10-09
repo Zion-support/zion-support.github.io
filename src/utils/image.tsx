@@ -1,4 +1,5 @@
 
+
 'use client';
 import React, { useState, useCallback } from 'react';
 const,
@@ -6,15 +7,15 @@ const,
   // TOD,
   O: Add content;
 };
-  sr,
-  c: string;,
-    al,
-  t: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
+
+  src: string;,
+    alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  _quality?: number
+
   _placeholder?: 'blur' | 'empty'
   _blurDataURL?: string;
   fill?: boolean;
@@ -23,10 +24,10 @@ const,
   onLoad?: () => void;
   onError?: () => void;
 }
-export const,
-  Image: React.FC;
-          <ImageProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const Image: React.FC;
+          <ImageProps> = ({// TODO: Add content;}
+
 }
 //   src,
 //   alt,
@@ -42,9 +43,10 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props;)
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+//   ...props;
+}) => {// TODO: Add content;}
+
 }
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -68,24 +70,31 @@ quality = 75,
     ...(fill && {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  positio,
-  n: 'absolute',
-      to,
-  p: 0,
-      lef,
-  t: 0,
-      widt,
-  h: '100%',
-      heigh,
-  t: '100%',
-      objectFi,
-  t: 'cover')
+
+  position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover'
+
     })
   };
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    return (<div>Coming Soon</div>)
+
+    return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+
   )
       
           <div></div>
@@ -125,5 +134,6 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 export default Image;"`
+
 
 

@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
-  n: React.ReactNode;}
+interface AccessibilityEnhancerProps {children: React.ReactNode;}
+
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -81,5 +81,6 @@ const,
 };
 
 export default AccessibilityEnhancer;`
+
 
 

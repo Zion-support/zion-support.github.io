@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-interface OptimizedImageProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface OptimizedImageProps {// TODO: Add content;}
+
 };
   sr,
   c: string;,
@@ -164,5 +164,6 @@ onError={handleError} className={`transition-opacity duration-300 ${}
 };
 
 export default OptimizedImage;"`
+
 
 

@@ -1,4 +1,5 @@
 
+
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
@@ -245,5 +246,6 @@ to={link.url} className="text-gray-400,"
 };
 
 export default Footer;"
+
 
 

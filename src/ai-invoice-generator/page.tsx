@@ -1,5 +1,6 @@
 
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react';}
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building } from 'lucide-react';
+
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
@@ -72,12 +73,12 @@ const,
   )
     
           <>
-      <SEOOptimizer></SEOOptimizer>
-        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group""
-        description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
-        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}"
-        canonicalUrl="http,"
-  s:// ziontechgroup.com/ai-invoice-generator"
+
+      <SEOOptimizer
+        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group" description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
+        keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
+        canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
+
 //       />
       
           
@@ -117,14 +118,12 @@ const,
           
           
           
-          </p>"
-              <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center mb-12"></div>
-                <a></a>"
-                  href="#pricing""
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-purple-600,"
-  hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+
+          </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                  href="#pricing" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+
 // >
                   
           
@@ -137,12 +136,11 @@ const,
           "
           <Calculator className="w-5 h-5 mr-2" /></Calculator>
 // Start Free Trial;
-          </a>"
-                  href="#demo""
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-purple-400,"
-  hover:text-white transition-all duration-300 inline-flex items-center""
-<Eye className="w-5 h-5 mr-2" /></Eye>
+
+          </a>
+                  href="#demo" className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+<Eye className="w-5 h-5 mr-2" />
+
                   Watch Demo;
               {/* Key Stats */}"
               <div className="grid grid-cols-1,"
@@ -280,5 +278,6 @@ Most Popular;
 };
 
 export default PagePage;"`
+
 
 

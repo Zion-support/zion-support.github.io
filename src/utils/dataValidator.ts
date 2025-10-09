@@ -4,28 +4,22 @@
  * Data Validation Utility;
  * Provides comprehensive data validation with type safety;
  */
-export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface ValidationRule<T = unknown> {// TODO: Add content;}
 };
-  validat,
-  e: (valu,)
-  e: T) => boolean;,
-    messag,
-  e: string;
+  validate: (value: T) => boolean;,
+    message: string
 }
-export interface FieldRule {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export interface FieldRule {// TODO: Add content;}
 };
-  typ,
-  e: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
-    messag,
-  e: string;
-  min?: number;
-  max?: number;
-  minLength?: number;
-  maxLength?: number;
-  custom?: (valu,)
-  e: unknown) => boolean;
+  type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';,
+    message: string
+  min?: number
+  max?: number
+  minLength?: number
+  maxLength?: number
+  custom?: (value: unknown) => boolean
+
 }
 export type ValidationRules = Record;
           <string, FieldRule[]>;
@@ -58,15 +52,16 @@ export class ValidationError extends Error {/* TODO: Fix JSX expression */}
 /**
  * Validate email address;
  */
-export function validateEmail(emai,)
-  l: string): boolean {return emailRegex.test(email);}
+
+export function validateEmail(email: string): boolean {return emailRegex.test(email);}
+
 }
 /**
  * Validate URL;
  */
-export function validateURL(ur,)
-  l: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateURL(url: string): boolean {// TODO: Add content;}
+
 }
   try {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -84,9 +79,9 @@ export function validateURL(ur,)
 /**
  * Validate phone number (US format)
  */
-export function validatePhoneNumber(phon,)
-  e: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validatePhoneNumber(phone: string): boolean {// TODO: Add content;}
+
 }
   const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
   return phoneRegex.test(phone);
@@ -94,10 +89,9 @@ export function validatePhoneNumber(phon,)
 /**
  * Validate string length;
  */
-export function validateStringLength(valu,
-  e: string, mi,)
-  n: number, max?: number): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateStringLength(value: string, min: number, max?: number): boolean {// TODO: Add content;}
+
 }
   if (max !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -110,11 +104,9 @@ export function validateStringLength(valu,
 /**
  * Validate number range;
  */
-export function validateNumberRange(valu,
-  e: number, mi,
-  n: number, ma,)
-  x: number): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateNumberRange(value: number, min: number, max: number): boolean {// TODO: Add content;}
+
 }
   return value >= min && value;
           <= max;
@@ -122,9 +114,9 @@ export function validateNumberRange(valu,
 /**
  * Validate credit card number (basic Luhn algorithm)
  */
-export function validateCreditCard(cardNumbe,)
-  r: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateCreditCard(cardNumber: string): boolean {// TODO: Add content;}
+
 }
   const cleaned = cardNumber.replace(/\s/g, '');
   if (!/^\d+$/.test(cleaned)) return false;
@@ -158,9 +150,9 @@ export function validateCreditCard(cardNumbe,)
 /**
  * Validate date;
  */
-export function validateDate(valu,)
-  e: unknown): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateDate(value: unknown): boolean {// TODO: Add content;}
+
 }
   if (value instanceof Date) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -181,9 +173,9 @@ export function validateDate(valu,)
 /**
  * Validate date range;
  */
-export function validateDateRange(dat,)
-  e: Date, min?: Date, max?: Date): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function validateDateRange(date: Date, min?: Date, max?: Date): boolean {// TODO: Add content;}
+
 }
   if (!validateDate(date)) return false;
   const time = date.getTime();
@@ -195,9 +187,9 @@ export function validateDateRange(dat,)
 /**
  * Sanitize HTML to prevent XSS;
  */
-export function sanitizeHTML(htm,)
-  l: string): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export function sanitizeHTML(html: string): string {// TODO: Add content;}
+
 }
   // Remove script tags;
 let clean = html.replace(/
@@ -208,8 +200,10 @@ let clean = html.replace(/
           
           
           
-          )
+
+          
           <script[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+
   // Remove event handlers;
   clean = clean.replace(/on\w+="[^"]*"/gi, '');
   clean = clean.replace(/on\w+='[^']*'/gi, '');
@@ -220,15 +214,11 @@ let clean = html.replace(/
  */
 export function createCustomValidator;
           <T>()
-  validato,
-  r: (valu,)
-  e: T) => boolean,
-  messag,
-  e: string,
-): (valu,)
-  e: T) => {/* TODO: Fix JSX expression */}
-  s: string[] } {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  validator: (value: T) => boolean,
+  message: string,
+): (value: T) => { isValid: boolean; errors: string[] } {// TODO: Add content;}
+
 }
   return (valu,)
   e: T) => {/* TODO: Fix JSX expression */}
@@ -247,10 +237,9 @@ export function createCustomValidator;
 /**
  * Validate a single field against a rule;
  */
-function validateFieldRule(valu,
-  e: unknown, rul,)
-  e: FieldRule): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+function validateFieldRule(value: unknown, rule: FieldRule): boolean {// TODO: Add content;}
+
 }
   switch (rule.type) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -285,12 +274,11 @@ function validateFieldRule(valu,
  * Validate form data;
  */
 export function validateForm<T extends Record<string, unknown>>()
-  dat,
-  a: T,
-  rule,
-  s: ValidationRules,
-): ValidationResult {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  data: T,
+  rules: ValidationRules,
+): ValidationResult {// TODO: Add content;}
+
 }
   const,
   errors: Record;
@@ -337,8 +325,9 @@ export function validateForm<T extends Record<string, unknown>>()
   )
     }
   }
-  return {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  return {// TODO: Add content;}
+
 };
   isVali,
   d: Object.keys(errors).length === 0,
@@ -348,11 +337,11 @@ export function validateForm<T extends Record<string, unknown>>()
 /**
  * Validation rules builder;
  */
-export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const ValidationRulesBuilder = {// TODO: Add content;}
 }
-  require,
-  d: 
+  required: 
+
           
           
           
@@ -361,8 +350,9 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
           
           
           
-          <T>(): ValidationRule<T> => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+          <T>(): ValidationRule<T> => ({// TODO: Add content;}
+
 };
   validat,
   e: (valu,)
@@ -430,23 +420,16 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
   e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  validat,
-  e: (valu,)
-  e: string) => pattern.test(value),
+
+  validate: (value: string) => pattern.test(value),
 //     message;
   }),
-  rang,
-  e: (mi,
-  n: number, ma,)
-  x: number): ValidationRule;
-          <number> => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  range: (min: number, max: number): ValidationRule;
+          <number> => ({// TODO: Add content;}
 };
-  validat,
-  e: (valu,)
-  e: number) => validateNumberRange(value, min, max),
-    messag,`
-  e: `Must be between ${min} and ${max}`
+  validate: (value: number) => validateNumberRange(value, min, max),
+    message: `Must be between ${min} and ${max}`
+
   }),
   custo,
   m: 
@@ -458,11 +441,9 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
           
           
           
-          <T>(validato,
-  r: (valu,)
-  e: T) => boolean, messag,
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+          <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({// TODO: Add content;}
+
 };
   validat,
   e: validator,
@@ -470,8 +451,9 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */}
   })
 };
 // Legacy class-based API for backward compatibility;
-class DataValidator {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+class DataValidator {// TODO: Add content;}
+
 }
 // Legacy class-based API for backward compatibility;
 class DataValidator {/* TODO: Fix JSX expression */}
@@ -479,8 +461,9 @@ class DataValidator {/* TODO: Fix JSX expression */}
   private static,
   instance: DataValidator;
   private constructor() {}
-  static getInstance(): DataValidator {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  static getInstance(): DataValidator {// TODO: Add content;}
+
 }
     if (!DataValidator.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -532,5 +515,6 @@ class DataValidator {/* TODO: Fix JSX expression */}
   rules = ValidationRulesBuilder;
 }
 export const dataValidator = DataValidator.getInstance()"`
+
 
 

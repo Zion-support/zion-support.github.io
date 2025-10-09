@@ -1,23 +1,19 @@
 
+
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  loadTim,
-  e: number;,
-    domContentLoade,
-  d: number;,
-    firstContentfulPain,
-  t: number;,
-    largestContentfulPain,
-  t: number;,
-    cumulativeLayoutShif,
-  t: number;,
-    firstInputDela,
-  y: number;
+
+  loadTime: number;,
+    domContentLoaded: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    cumulativeLayoutShift: number;,
+    firstInputDelay: number
 }
-export const _usePerformance = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export const _usePerformance = () => {// TODO: Add content;}
+
 }
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
@@ -38,8 +34,9 @@ export const _usePerformance = () => {/* TODO: Fix JSX expression */}
       const largestContentfulPaint =
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-      if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+      if ('PerformanceObserver' in window) {// TODO: Add content;}
+
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -54,8 +51,9 @@ export const _usePerformance = () => {/* TODO: Fix JSX expression */}
 ) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-              cumulativeLayoutShift += (entry as unknown as {/* TODO: Fix JSX expression */})
-  e: number }).value;
+
+              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+
             }
           }
         }
@@ -65,8 +63,9 @@ export const _usePerformance = () => {/* TODO: Fix JSX expression */}
   )
       }
       // Measure FID (First Input Delay)
-      if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+      if ('PerformanceObserver' in window) {// TODO: Add content;}
+
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -77,6 +76,10 @@ export const _usePerformance = () => {/* TODO: Fix JSX expression */}
             if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
+
+            if (entry.entryType === 'first-input') {// TODO: Add content;}
+}
+
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime;
@@ -137,5 +140,6 @@ export const _usePerformance = () => {/* TODO: Fix JSX expression */}
   }, []);
   return { metrics, isMonitoring };
 };
+
 
 

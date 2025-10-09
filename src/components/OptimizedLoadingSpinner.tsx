@@ -1,4 +1,5 @@
 
+
 'use client';
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -97,6 +98,7 @@ className="opacity-75""
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;"`
+
+export default OptimizedLoadingSpinner;
 
 

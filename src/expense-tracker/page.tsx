@@ -1,11 +1,12 @@
 import React from 'react';
 
-import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Shield from 'lucide-react';}
+import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const,
-  ExpenseTrackerPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+const ExpenseTrackerPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: Receipt,
@@ -16,20 +17,32 @@ const,
       benefi,
   t: 'Save 8+ hours per month'
     },
-      ico,
-  n: TrendingUp,
-      titl,
-  e: 'Real-time Analytics',
-      descriptio,
-  n: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
-      benefi,
-  t: 'Reduce expenses by 25%',
+
+      icon: TrendingUp,
+      title: 'Real-time Analytics',
+      description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
+      benefit: 'Reduce expenses by 25%',
+
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  PagePage: React.FC = () => {/* TODO: Fix JSX expression */}
+
+const PagePage: React.FC = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
@@ -47,15 +60,12 @@ const,
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Transform your expense management with AI-powered receipt scanning, automated categorization,
             and intelligent financial insights. Save time, reduce errors, and gain complete control;
-            over your business finances."
-          <div className="flex flex-col,"
-  sm: flex-row gap-4 justify-center items-center"></div>
-            <a></a>"
-              href="te,"
-  l:+13024640950""
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold,
-  hover:from-cyan-500,"
-  hover:to-purple-600 transition-all duration-300 flex items-center"
+
+            over your business finances.
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+
 // >
               
           
@@ -70,11 +80,10 @@ Transform your expense management with AI-powered receipt scanning, automated ca
  Cal,
   l: (302) 464-0950;
             </a>
-            <Link></Link>"
-              href="/contact""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold,
-  hover:bg-white,"
-  hover:text-indigo-600 transition-all duration-300"
+
+            <Link
+              href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+
 Start Free Trial;
             </Link>
         {/* Key Benefits */}"
@@ -186,5 +195,6 @@ Most Popular;
 };
 
 export default PagePage;"`
+
 
 

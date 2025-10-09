@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Zap, Brain, Cloud } from 'lucide-react';
-const,
-  PricingPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const PricingPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const _plans = [
@@ -164,11 +165,13 @@ const,
           </a>
       </div>
 
+
     </div>
   );
 };
 
 
 export default PagePage;"
+
 
 

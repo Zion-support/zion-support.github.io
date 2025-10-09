@@ -3,8 +3,9 @@
  * Security Headers Configuration;
  * Comprehensive security headers for production applications;
  */
-export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface SecurityHeadersConfig {// TODO: Add content;}
+
 }
   contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
@@ -76,11 +77,11 @@ export const,
  */
 export function getSecurityHeaders()
   customConfig?: Partial;
-          <SecurityHeadersConfig></SecurityHeadersConfig>
-): Record<string, string> {/* TODO: Fix JSX expression */}
-  headers: Record<string, string> = {}
-  // TOD,
-  O: Add content;
+
+          <SecurityHeadersConfig>
+): Record<string, string> {const headers: Record<string, string> = {}
+  // TODO: Add content;
+
 }
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
@@ -124,10 +125,10 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial;
-          <SecurityHeadersConfig></SecurityHeadersConfig>
-): Array<{/* TODO: Fix JSX expression */}
-  e: string }> {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+          <SecurityHeadersConfig>
+): Array<{ key: string; value: string }> {// TODO: Add content;}
+
 }
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
@@ -138,5 +139,6 @@ export function getNextSecurityHeaders()
   }));
 }
 export default defaultSecurityHeaders;"
+
 
 

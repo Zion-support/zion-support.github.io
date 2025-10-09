@@ -4,8 +4,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import SEOOptimizer from '../components/SEOOptimizer';
-const,
-  ServicesPage: React.FC = () => {import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';}
+const ServicesPage: React.FC = () => {import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock } from 'lucide-react';
+
   const _aiServices = [
   // TOD,
   O: Add items;
@@ -144,5 +144,6 @@ const,
 };
 
 export default PagePage;"
+
 
 

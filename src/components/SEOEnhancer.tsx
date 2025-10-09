@@ -1,16 +1,16 @@
 
-interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface SEOEnhancerProps {// TODO: Add content;}
+
 }
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
 }
-const,
-  SEOEnhancer: React.FC;
-          <SEOEnhancerProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const SEOEnhancer: React.FC;
+          <SEOEnhancerProps> = ({// TODO: Add content;}
+
 }
   title = "Zion Tech Group - Advanced AI and IT Solutions","
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.","
@@ -127,5 +127,6 @@ const,
 };
 
 export default SEOEnhancer;"
+
 
 

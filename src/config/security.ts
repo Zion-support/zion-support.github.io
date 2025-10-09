@@ -3,8 +3,9 @@
  * Security Configuration;
  * Defines security headers and policies for the application;
  */
-export const _securityHeaders = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const _securityHeaders = {// TODO: Add content;}
+
 }
   // Content Security Policy,
   contentSecurityPolic,
@@ -69,18 +70,13 @@ export const rateLimitConfig = {/* TODO: Fix JSX expression */}
 export const corsConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  origi,
-  n: process.env.ALLOWED_ORIGINS?.split(',') || ['htt,
-  p://localhos,
-  t:3000'],
-  method,
-  s: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeader,
-  s: ['Content-Type', 'Authorization'],
-  credential,
-  s: true,
-  maxAg,
-  e: 86400, // 24 hours;
+
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+  maxAge: 86400, // 24 hours;
+
  * Session configuration;
 export const sessionConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -107,16 +103,13 @@ maxAg,
 export const validationPatterns = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  emai,
-  l: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
-  phon,
-  e: /^\+?[1-9]\d{1,14}$/,
-  ur,
-  l: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
-  alphanumeri,
-  c: /^[a-zA-Z0-9]+$/,
-  noSpecialChar,
-  s: /^[a-zA-Z0-9\s]+$/
+
+  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/,
+  phone: /^\+?[1-9]\d{1,14}$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  alphanumeric: /^[a-zA-Z0-9]+$/,
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/
+
  * Sanitize user input;
 export function sanitizeInput(inpu,)
   t: string): string {/* TODO: Fix JSX expression */}
@@ -134,9 +127,9 @@ export function sanitizeInput(inpu,)
           )
           <>]/g, '') // Remove;
           < and >
-    .replace(/javascrip,)
-  t:/gi, '') // Remove,
-  javascript: protocol;
+
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;
+
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
  * Validate email address;
@@ -182,5 +175,6 @@ export default {securityHeaders,}
   validateEmail,
   validateUrl,
   generateSecureToken;"
+
 
 

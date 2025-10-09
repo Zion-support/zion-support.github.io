@@ -4,8 +4,9 @@
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */
-export interface UseEnhancedPerformanceOptions {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface UseEnhancedPerformanceOptions {// TODO: Add content;}
+
 }
   component?: string;
   trackErrors?: boolean;
@@ -101,8 +102,11 @@ export function useEnhancedPerformance(__option,)
   d: () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          const duration = performance.now() - startTime;`
-analytics.trackPerformance(`${component}-${operationName}`,
+
+          const duration = performance.now() - startTime;
+analytics.trackPerformance(
+              `${component}-${operationName}`,
+
 //               duration,
               duration > 1000 ? 'slow' : 'fast'
           return duration;
@@ -110,5 +114,6 @@ analytics.trackPerformance(`${component}-${operationName}`,
     trackError,
     trackUserAction,
     measureOperation;)`
+
 
 

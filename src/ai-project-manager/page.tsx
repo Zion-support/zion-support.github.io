@@ -1,19 +1,22 @@
 import React from 'react';
 
+
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone, Star from 'lucide-react';}
+import { CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone, Star } from 'lucide-react';
 import { BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const,
-  AIProjectManagerPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+
+const AIProjectManagerPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
   );
 };
   const _features = [
-const,
-  AiProjectManagerPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const AiProjectManagerPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const features = [
@@ -83,29 +86,25 @@ const,
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
-  l: 'Active Teams' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Productivity Increase' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Time Saved' },
-    {/* TODO: Fix JSX expression */}
-  l: 'User Rating' }
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <main className="container mx-auto px-4 py-16 pt-24"></main>"
-        <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
-            Page;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
-          </p>"
-          <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></button>
+
+    { icon: Users, value: '500+', label: 'Active Teams' },
+    { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
+    { icon: Clock, value: '70%', label: 'Time Saved' },
+    { icon: Star, value: '4.9/5', label: 'User Rating' }
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+
 // Contact Us;
           </button>"
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
@@ -113,11 +112,14 @@ const,
   hover:text-slate-900 transition-colors"></button>
 Learn More;
           </div>
-      <Footer /></Footer>
-    </div>)
+
+      <Footer />
+    </div>
+
   );
 };
 
 export default PagePage;"
+
 
 

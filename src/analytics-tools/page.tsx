@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';}
-const,
-  AnalyticsToolsPage: React.FC = () => {const analyticsTools = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+import { CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain } from 'lucide-react';
+const AnalyticsToolsPage: React.FC = () => {
+  const analyticsTools = [];
+  return (
+    {// TODO: Add content;}
+
 };
   titl,
   e: 'AI Business Intelligence',
@@ -20,24 +21,39 @@ const,
       categor,
   y: 'Business Intelligence'
     },
-      titl,
-  e: 'AI Web Analytics',
-      pric,
-  e: '$299/month',
-      descriptio,
-  n: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
-      feature,
-  s: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
-      ico,
-  n: '',
-      categor,
-  y: 'Web Analytics',
+
+      title: 'AI Web Analytics',
+      price: '$299/month',
+      description: 'Comprehensive web analytics with AI-powered insights and user behavior analysis.',
+      features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
+      icon: '',
+      category: 'Web Analytics',
+
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const,
-  PagePage: React.FC = () => {/* TODO: Fix JSX expression */}
+
+const PagePage: React.FC = () => {
+  return (
+    
+          
+          
+          
+          
+          
+          
+          
+          <div>Coming Soon</div>
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Analytics Tools - Zion Tech Group</title>
+        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
+        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
@@ -45,15 +61,16 @@ const,
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
 // AI Analytics Tools;
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
+
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
           </p>
-          {/* Stats */}"
-          <div className="grid grid-cols-2,"
-  md:grid-cols-4 gap-6 mb-12"></div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>"
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
+
               <div className="text-gray-300">Analytics Tools</div>
             </div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>"
@@ -128,30 +145,24 @@ Why Choose Our Analytics Tools?"
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /></benefit>"
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-      {/* CTA Section */}"
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
-        <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-6"></h2>
-Ready to Unlock Your Data?"
-          <p className="text-xl text-purple-100 mb-8"></p>
-            Get started with our AI analytics tools today and transform your data into actionable insights."
-          <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-              href="te,"
-  l:+13024640950""
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium,"
-  hover:bg-gray-100 transition-colors"
-Call (302) 464-0950;"
-              href="mailt,"
-  o:kleber@ziontechgroup.com""
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium,
-  hover:bg-white,"
-  hover:text-purple-600 transition-colors"
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+Ready to Unlock Your Data?
+          <p className="text-xl text-purple-100 mb-8">
+            Get started with our AI analytics tools today and transform your data into actionable insights.
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+Call (302) 464-0950;
+              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+
               Email Us;
   );
 };
 
 export default PagePage;"`
+
 
 

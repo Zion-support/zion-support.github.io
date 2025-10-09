@@ -1,4 +1,5 @@
 
+
 'use client';
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -15,14 +16,20 @@ interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
   ogImage?: string;
   twitterCard?: string;
 }
-const,
-  SEOOptimizer: React.FC;
-          <SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const SEOOptimizer: React.FC;
+          <SEOOptimizerProps> = memo(({// TODO: Add content;}
 }
 
-const,
-  SEOOptimizer: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+const SEOOptimizer: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
+  canonicalUrl = 'https://ziontechgroup.com',
+//   structuredData,
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  twitterCard = 'summary_large_image',
+
 }) => {useEffect(() => {}
   // TOD,
   O: Add content;
@@ -143,5 +150,6 @@ const updateMetaName = (nam,
 };
 
 export default SEOOptimizer;"`
+
 
 

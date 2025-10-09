@@ -1,8 +1,9 @@
 import React from 'react';
 
-const,
-  CareersPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const CareersPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const _openPositions = [
@@ -108,11 +109,13 @@ const,
           </a>
       </div>
 
+
     </div>
   );
 };
 
 
 export default PagePage;"
+
 
 

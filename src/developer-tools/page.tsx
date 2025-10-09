@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const,
-  DeveloperToolsPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
+const DeveloperToolsPage: React.FC = () => {
+  return (
+    <div>Coming Soon</div>
+
   );
 };
   const _devTools = [
@@ -260,23 +261,17 @@ const,
           
           
           
-          </p>"
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-              <a></a>"
-                href="te,"
-  l:+13024640950""
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium,"
-  hover:bg-gray-100 transition-colors"
+
+          </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
 //                 Call (302) 464-0950;
           </a>
-              <a></a>"
-                href="mailt,"
-  o:kleber@ziontechgroup.com""
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium,
-  hover:bg-white,"
-  hover:text-purple-600 transition-colors"
+              <a
+                href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+
 // >
 //                 Email Us;
           </a>
@@ -292,5 +287,6 @@ const,
 
 
 export default PagePage;"`
+
 
 

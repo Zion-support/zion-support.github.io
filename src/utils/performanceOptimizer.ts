@@ -13,84 +13,62 @@
   e: string, dat,
   a: Record;)
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
-  erro,
-  r: (messag,
-  e: string, erro,)
-  r: Error) => console.error('[ERROR]', message, error)
+
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface PerformanceMetrics {// TODO: Add content;}
 };
-  loadTim,
-  e: number;,
-    renderTim,
-  e: number;,
-    memoryUsag,
-  e: number;,
-    bundleSiz,
-  e: number;,
-    cacheHitRat,
-  e: number;,
-    lazyLoadin,
-  g: boolean;
-  firstContentfulPaint?: number;
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fmp?: number;
-  ttfb?: number;
-  memory?: number;
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
 }
-interface OptimizationConfig {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface OptimizationConfig {// TODO: Add content;}
 };
-  enableLazyLoadin,
-  g: boolean;,
-    enableCodeSplittin,
-  g: boolean;,
-    enableImageOptimizatio,
-  n: boolean;,
-    enableCachin,
-  g: boolean;,
-    enableCompressio,
-  n: boolean;
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
 }
 interface PerformanceConfig extends OptimizationConfig {}
-class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class PerformanceOptimizer {// TODO: Add content;}
+
 }
   private,
   _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  loadTim,
-  e: 0,
-    renderTim,
-  e: 0,
-    memoryUsag,
-  e: 0,
-    bundleSiz,
-  e: 0,
-    cacheHitRat,
-  e: 0,
-    lazyLoadin,
-  g: false;
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+    lazyLoading: false;
+
   };
   private,
   config: OptimizationConfig = {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  enableLazyLoadin,
-  g: true,
-    enableCodeSplittin,
-  g: true,
-    enableImageOptimizatio,
-  n: true,
-    enableCachin,
-  g: true,
-    enableCompressio,
-  n: true;
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+    enableCompression: true;
+
   };
   private,
   observers: PerformanceObserver[] = [];
@@ -106,8 +84,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Initialize performance monitoring;
    */
-  private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private initializePerformanceMonitoring(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     // Monitor page load performance;
@@ -123,16 +102,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Public init method for external initialization;
    */
-  public init(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public init(): void {// TODO: Add content;}
+
 }
     this.initializePerformanceMonitoring();
   }
   /**
    * Measure page load time;
    */
-  private measureLoadTime(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private measureLoadTime(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined' || !window.performance) return;
     if (typeof window.performance.getEntriesByType !== 'function') return;
@@ -153,8 +134,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Measure render time using PerformanceObserver;
    */
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private measureRenderTime(): void {// TODO: Add content;}
+
 }
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
@@ -288,8 +270,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   s: ['paint'] })
   )
 //       this.observers.push(observer)
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    } catch {// TODO: Add content;}
+
 }
       // Ignore if not supported;
     }
@@ -323,8 +306,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   s: ['navigation'] })
   )
 //       this.observers.push(observer)
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+    } catch {// TODO: Add content;}
+
 }
       // Ignore if not supported;
     }
@@ -347,8 +331,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Measure memory usage;
    */
-  private measureMemoryUsage(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private measureMemoryUsage(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
     const memory = (window.performance as Performance & {/* TODO: Fix JSX expression */}
@@ -374,8 +359,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Optimize images for better performance;
    */
-  public optimizeImages(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public optimizeImages(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     if (!this.config.enableImageOptimization) return;
@@ -412,21 +398,24 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Check if browser supports WebP;
    */
-  private supportsWebP(): boolean {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private supportsWebP(): boolean {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return false;
     const canvas = document.createElement('canvas');
     canvas.width = 1;
     canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('dat,)
-  a:image/webp') === 0;
+
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+
   }
   /**
    * Setup lazy loading for better performance;
    */
-  public setupLazyLoading(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public setupLazyLoading(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     if (!this.config.enableLazyLoading) return;
@@ -475,8 +464,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Enable code splitting for better performance;
    */
-  enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  enableCodeSplitting(): void {// TODO: Add content;}
+
 }
     if (!this.config.enableCodeSplitting) return;
     // This would typically be handled by the bundler (Vite/Webpack)
@@ -486,8 +476,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Enable caching strategies;
    */
-  enableCaching(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  enableCaching(): void {// TODO: Add content;}
+
 }
     if (!this.config.enableCaching) return;
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -508,16 +499,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Get current performance metrics;
    */
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getMetrics(): PerformanceMetrics {// TODO: Add content;}
+
 }
     return { ...this.metrics };
   }
   /**
    * Get performance score (0-100)
    */
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  getPerformanceScore(): number {// TODO: Add content;}
+
 }
     let score = 100;
     // Deduct points for slow load times;
@@ -534,18 +527,19 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Generate performance report;
    */
-  generateReport(): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  generateReport(): string {// TODO: Add content;}
 }
-    const score = this.getPerformanceScore();`
-    return `Performance,`
-  Score: ${score}`;
+    const score = this.getPerformanceScore();
+    return `Performance Score: ${score}`;
+
   }
   /**
    * Lazy load images for better performance;
    */
-  lazyLoadImages(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  lazyLoadImages(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img[data-src]');
@@ -573,8 +567,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Add critical resource hints;
    */
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  addCriticalResourceHints(): void {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined') return;
     const criticalResources = [
@@ -602,8 +597,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Measure page load metrics;
    */
-  measurePageLoad(): PerformanceMetrics | null {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  measurePageLoad(): PerformanceMetrics | null {// TODO: Add content;}
+
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -611,38 +607,28 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  loadTim,
-  e: this.metrics.loadTime,
-      renderTim,
-  e: this.metrics.renderTime,
-      memoryUsag,
-  e: this.metrics.memoryUsage,
-      bundleSiz,
-  e: this.metrics.bundleSize,
-      cacheHitRat,
-  e: this.metrics.cacheHitRate,
-      lazyLoadin,
-  g: this.metrics.lazyLoading,
-      ttf,
-  b: navigation.responseStart - navigation.requestStart,
-      fc,
-  p: this.metrics.fcp || 0,
-      lc,
-  p: this.metrics.lcp || 0,
-      fi,
-  d: this.metrics.fid || 0,
-      cl,
-  s: this.metrics.cls || 0,
-      fm,
-  p: this.metrics.fmp || 0;
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+      fmp: this.metrics.fmp || 0;
+
     };
   }
   /**
    * Report web vitals;
    */
-  reportWebVitals(metric,)
-  s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  reportWebVitals(metrics: PerformanceMetrics): void {// TODO: Add content;}
+
 }
     logger.performance('Web Vitals reported', metrics as unknown as Record;)
           <string, unknown>, 'PerformanceOptimizer');
@@ -660,12 +646,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  metric_nam,
-  e: key,
-            metric_valu,
-  e: value,
-            metric_ratin,
-  g: value;
+
+  metric_name: key,
+            metric_value: value,
+            metric_rating: value;
+
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           })
   )
@@ -677,8 +662,9 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Cleanup observers and resources;
    */
-  public cleanup(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  public cleanup(): void {// TODO: Add content;}
+
 }
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
@@ -687,27 +673,23 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Generate comprehensive performance report;
    */
-  generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  generateComprehensiveReport(): string {// TODO: Add content;}
+
 }
     const score = this.getPerformanceScore();
     const metrics = this.getMetrics();`
     return `
 // Performance Report - Zion Tech Group Website;
-Performance,
-  Score: ${score}/100;
-Load,
-  Time: ${metrics.loadTime.toFixed(2)}ms;
-Render,
-  Time: ${metrics.renderTime.toFixed(2)}ms;
-Memory,
-  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-Bundle,
-  Size: ${metrics.bundleSize}KB;
-Cache Hit,
-  Rate: ${metrics.cacheHitRate}%;
-  Recommendation,
-  s:
+
+Performance Score: ${score}/100;
+Load Time: ${metrics.loadTime.toFixed(2)}ms;
+Render Time: ${metrics.renderTime.toFixed(2)}ms;
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
+Bundle Size: ${metrics.bundleSize}KB;
+Cache Hit Rate: ${metrics.cacheHitRate}%;
+  Recommendations:
+
 ${score;}
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
@@ -717,8 +699,9 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   /**
    * Optimize the entire application;
    */
-  optimize(): void {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  optimize(): void {// TODO: Add content;}
+
 }
     this.optimizeImages();
     this.enableCodeSplitting();
@@ -733,5 +716,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer()
 export default PerformanceOptimizer;"`
+
 
 

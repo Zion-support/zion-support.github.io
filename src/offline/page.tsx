@@ -4,6 +4,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
+
 'use client';
 /**
  * Offline Page;
@@ -67,5 +68,6 @@ onClick={handleGoHome}"
 };
 
 export default PagePage;"
+
 
 

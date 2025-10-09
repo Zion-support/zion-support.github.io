@@ -1,14 +1,8 @@
 
 'use client';
-interface Props {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  childre,
-  n: ReactNode;
-  fallback?: ReactNode;
-}
-interface State {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+interface Props {// TODO: Add content;}
+
 };
   hasErro,
   r: boolean;
@@ -27,9 +21,9 @@ class GlobalErrorBoundary extends Component;
     this.state = {/* TODO: Fix JSX expression */}
   o: null };
   }
-  static getDerivedStateFromError(erro,)
-  r: Error): State {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  static getDerivedStateFromError(error: Error): State {// TODO: Add content;}
+
 }
     return {/* TODO: Fix JSX expression */}
   r: true, error };
@@ -180,5 +174,6 @@ class GlobalErrorBoundary extends Component;
 }
 
 export default GlobalErrorBoundary;"
+
 
 

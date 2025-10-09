@@ -1,6 +1,6 @@
 
-interface ContentPreviewCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+interface ContentPreviewCardProps {// TODO: Add content;}
+
 };
   i,
   d: string;
@@ -177,5 +177,6 @@ const,
 };
 
 export default ContentPreviewCard;"`
+
 
 

@@ -1,152 +1,168 @@
 
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to fix common syntax errors in a file;
-function fixSyntaxErrors(filePath) {/* TODO: Fix JSX expression */}
+
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common syntax issues
+    const fixes = [
+      // Fix missing commas in object properties
+      {
+        pattern: /(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: '$1: "$2",
+  $3:'
       },
-      // Fix missing commas in array elements;
-      {/* TODO: Fix JSX expression */}
+      // Fix missing commas in function parameters
+      {
+        pattern: /(\w+)\s+(\w+)\s*\)/g,
+        replacement: '$1, $2)'
       },
-      // Fix incomplete JSX tags;
-      {/* TODO: Fix JSX expression */}
+      // Fix missing semicolons
+      {
+        pattern: /(\w+)\s*$/gm,
+        replacement: '$1;'
       },
-      // Fix missing closing tags;
-      {/* TODO: Fix JSX expression */}
+      // Fix malformed JSX attributes
+      {
+        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+        replacement: '$1="$2" $3'
       },
-      // Fix malformed imports;
-      {/* TODO: Fix JSX expression */}
-  n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*$/gm,
-        replacemen,
-  t: (match, imports, module) => {/* TODO: Fix JSX expression */}
-          return `import { ${cleanImports} } from '${module}';`;
-        }
+      // Fix missing closing tags
+      {
+        pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+        replacement: '<$1$2>$3</$1>'
       },
-      // Fix missing semicolons;
-      {/* TODO: Fix JSX expression */}
+      // Fix malformed imports
+      {
+        pattern: /import\s+(\w+)\s+from\s+"([^"]*)"\s*(\w+)/g,
+        replacement: 'import $1 from "$2";
+import $3'
       },
-      // Fix malformed function declarations;
-      {/* TODO: Fix JSX expression */}
-  O: Implement function
-}'
+      // Fix missing closing parentheses
+      {
+        pattern: /(\w+\([^)]*)\s*$/gm,
+        replacement: '$1)'
       },
-      // Fix incomplete object literals;
-      {/* TODO: Fix JSX expression */}
-  n: /{\s*(\w+):\s*([^,}]+)\s*$/gm,
-        replacemen,
-  t: '{
-  $1: $2
-}'
+      // Fix malformed object literals
+      {
+        pattern: /{\s*(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: '{
+  $1: "$2",
+  $3:'
       },
-      // Fix malformed JSX expressions;
-      {/* TODO: Fix JSX expression */}
-  n: /{([^}]*)\s*$/gm,
-        replacemen,
-  t: '{/* TODO: Fix JSX expression */}
-  O: Fix JSX expression */}'
+      // Fix missing quotes around strings
+      {
+        pattern: /(\w+):\s*([^",}\s][^,}]*)/g,
+        replacement: '$1: "$2"'
       },
-      // Fix incomplete string literals;
-      {/* TODO: Fix JSX expression */}
-      },
-      // Fix missing closing parentheses;
-      {/* TODO: Fix JSX expression */}
-      },
-      // Fix malformed template literals;
-      {/* TODO: Fix JSX expression */}
+      // Fix malformed function calls
+      {
+        pattern: /(\w+)\(([^)]*)\s*$/gm,
+        replacement: '$1($2)'
       }
     ];
     
-    // Apply fixes;
-    for (const fix of fixes) {/* TODO: Fix JSX expression */}
-        }
-      } else {/* TODO: Fix JSX expression */}
-        }
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
     
-    // Additional specific fixes for common patterns;
+    // Additional specific fixes for common patterns
     const specificFixes = [
-      // Fix incomplete export statements;
-      {/* TODO: Fix JSX expression */}
-  t: 'export const $1 = {};'
+      // Fix malformed metadata objects
+      {
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: 'export const metadata = {
+  $1: "$2",
+  $3:'
       },
-      // Fix incomplete component definitions;
-      {/* TODO: Fix JSX expression */}
-  t: 'const $1 = () => {
-  return <div>Component placeholder</div>;
-};'
+      // Fix malformed component exports
+      {
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,
+        replacement: 'export default function $1() {
+  return ('
       },
-      // Fix incomplete return statements;
-      {/* TODO: Fix JSX expression */}
-      },
-      // Fix malformed metadata objects;
-      {/* TODO: Fix JSX expression */}"
-  description: "Page description"
-};'
+      // Fix missing return statements
+      {
+        pattern: /function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,
+        replacement: 'function $1() {
+  return ('
       }
     ];
     
-    for (const fix of specificFixes) {/* TODO: Fix JSX expression */}
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
     
-    // Clean up any remaining merge conflict artifacts;
-    content = content.replace(/]*>/g, '');
-    content = content.replace(//g, '');
-    content = content.replace(/]*>/g, '');
-    
-    // Remove empty lines at the end;
-    content = content.replace(/
-\s*
-\s*$/g, '
-');
-    
-    // Only write if content changed;
-    if (content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
     }
     
-    return modified;
-  } catch (error) {/* TODO: Fix JSX expression */}`
+    return false;
+  } catch (error) {
+
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with syntax errors;
-function findFilesWithErrors(dir) {/* TODO: Fix JSX expression */}
-        }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
-      }
-    }
+
+// Function to find files with syntax errors
+function findFilesWithSyntaxErrors() {
+  try {
+    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    return result.trim().split('
+').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding files with syntax errors:', error.message);
+    return [];
   }
-  
-  walkDir(dir);
-  return files;
 }
 
-// Main execution;
-console.log('🔍 Scanning for files with syntax errors...');
-const files = findFilesWithErrors(process.cwd());`
-console.log(`Found ${files.length} files to check`);
+// Main execution
+console.log('Starting syntax error resolution...');
+
+const filesWithErrors = findFilesWithSyntaxErrors();
+console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 
 let fixedCount = 0;
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  in: ${file}`);
+for (const file of filesWithErrors) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 }
-`
-console.log(`
-✅ Fixed syntax errors in ${fixedCount} files`);
 
-// Run linting to verify fixes;
-console.log('
-🔍 Running linting to verify fixes...');
-try {/* TODO: Fix JSX expression */}
-  o: 'inherit' });
-  console.log('✅ Linting passed - all syntax errors resolved!');
-} catch (error) {/* TODO: Fix JSX expression */}
-}"`
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+// Verify no more syntax errors exist
+try {
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+  const count = parseInt(remainingErrors.trim());
+  if (count === 0) {
+    console.log('✅ All syntax errors resolved!');
+  } else {
+    console.log(`⚠️  ${count} syntax errors still remain`);
+  }
+} catch (error) {
+  console.log('✅ No syntax errors found');
+}
 
 

@@ -4,42 +4,29 @@
  * Accessibility Utilities;
  * WCAG 2.1 Level AA compliance helpers;
  */
-export interface A11yReport {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export interface A11yReport {// TODO: Add content;}
 };
-  error,
-  s: A11yError[];,
-    warning,
-  s: A11yWarning[];,
-    scor,
-  e: number;
+  errors: A11yError[];,
+    warnings: A11yWarning[];,
+    score: number
 }
-export interface A11yError {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export interface A11yError {// TODO: Add content;}
 };
-  typ,
-  e: string;,
-    elemen,
-  t: string;,
-    messag,
-  e: string;,
-    wca,
-  g: string;
+  type: string;,
+    element: string;,
+    message: string;,
+    wcag: string
 }
-export interface A11yWarning {/* TODO: Fix JSX expression */}
-  O: Add content;}
+export interface A11yWarning {// TODO: Add content;}
 };
-  typ,
-  e: string;,
-    elemen,
-  t: string;,
-    messag,
-  e: string;,
-    suggestio,
-  n: string;
+  type: string;,
+    element: string;,
+    message: string;,
+    suggestion: string
 }
-class AccessibilityService {/* TODO: Fix JSX expression */}
-  O: Add content;}
+class AccessibilityService {// TODO: Add content;}
+
 }
   // Check color contrast ratio;
 //   public checkColorContrast();
@@ -68,16 +55,14 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  norma,
-  l: ratio >= 4.5, // WCAG AA for normal text,
-  larg,
-  e: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold)
+
+  normal: ratio >= 4.5, // WCAG AA for normal text,
+  large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold)
       }
     }
   }
-  private hexToRgb(he,)
-  x: string): { r: number; g: number; b: number } {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  private hexToRgb(hex: string): { r: number; g: number; b: number } {// TODO: Add content;}
+
 }
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result;
@@ -90,9 +75,9 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         }
       : { r: 0, g: 0, b: 0 }
   }
-  private getLuminance(rg,)
-  b: { r: number; g: number; b: number }): number {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  private getLuminance(rgb: { r: number; g: number; b: number }): number {// TODO: Add content;}
+
 }
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -121,14 +106,12 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         errors.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'missing-alt',
-          elemen,
-  t: img['src'] || 'unknown',
-          messag,
-  e: 'Image missing alt attribute',
-          wca,)
-  g: '1.1.1 (Level A)'
+
+  type: 'missing-alt',
+          element: img['src'] || 'unknown',
+          message: 'Image missing alt attribute',
+          wcag: '1.1.1 (Level A)'
+
         });
       } else if (img.alt === '') {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -136,15 +119,13 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         warnings.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'empty-alt',
-          elemen,
-  t: img['src'] || 'unknown',
-          messag,
-  e: 'Image has empty alt text',
-          suggestio,
-  n: 'Provide descriptive alt text or use alt="" for decorative images'
-        })
+
+  type: 'empty-alt',
+          element: img['src'] || 'unknown',
+          message: 'Image has empty alt text',
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+        }
+
   )
       }
     });
@@ -162,14 +143,12 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         errors.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'missing-label',
-          elemen,)
-  t: input.tagName.toLowerCase(),
-          messag,
-  e: 'Form element missing label',
-          wca,
-  g: '1.3.1 (Level A), 3.3.2 (Level A)'
+
+  type: 'missing-label',
+          element: input.tagName.toLowerCase(),
+          message: 'Form element missing label',
+          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+
         }
   )
       }
@@ -186,14 +165,12 @@ class AccessibilityService {/* TODO: Fix JSX expression */}
         warnings.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'heading-hierarchy',
-          elemen,)
-  t: heading.tagName.toLowerCase(),
-          messag,`
-  e: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestio,
-  n: 'Maintain proper heading hierarchy'
+
+  type: 'heading-hierarchy',
+          element: heading.tagName.toLowerCase(),
+          message: `Heading level skipped from h${prevLevel} to h${level}`,
+          suggestion: 'Maintain proper heading hierarchy'
+
         }
   )
       }
@@ -207,15 +184,13 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
       warnings.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'missing-skip-link',
-        elemen,
-  t: 'body',
-        messag,
-  e: 'No skip navigation link found',
-        suggestio,
-  n: 'Add a skip link to main content for keyboard users'
-      })
+
+  type: 'missing-skip-link',
+        element: 'body',
+        message: 'No skip navigation link found',
+        suggestion: 'Add a skip link to main content for keyboard users'
+      }
+
   )
     }
     // Check for language attribute;
@@ -226,14 +201,12 @@ const html = document.documentElement;
       errors.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'missing-lang',
-        elemen,
-  t: 'html',
-        messag,
-  e: 'Missing lang attribute on html element',
-        wca,)
-  g: '3.1.1 (Level A)'
+
+  type: 'missing-lang',
+        element: 'html',
+        message: 'Missing lang attribute on html element',
+        wcag: '3.1.1 (Level A)'
+
       }
   )
     }
@@ -249,14 +222,12 @@ const html = document.documentElement;
         errors.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'empty-link',
-          elemen,
-  t: link.href || 'unknown',
-          messag,
-  e: 'Link has no accessible text',
-          wca,)
-  g: '2.4.4 (Level A)'
+
+  type: 'empty-link',
+          element: link.href || 'unknown',
+          message: 'Link has no accessible text',
+          wcag: '2.4.4 (Level A)'
+
         });
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -264,15 +235,13 @@ const html = document.documentElement;
         warnings.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'generic-link-text',
-          elemen,
-  t: text,
-          messag,
-  e: 'Link text is not descriptive',
-          suggestio,
-  n: 'Use more descriptive link text that makes sense out of context'
-        })
+
+  type: 'generic-link-text',
+          element: text,
+          message: 'Link text is not descriptive',
+          suggestion: 'Use more descriptive link text that makes sense out of context'
+        }
+
   )
       }
     });
@@ -288,15 +257,12 @@ const html = document.documentElement;
         warnings.push({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-  typ,
-  e: 'small-touch-target',
-          elemen,)
-  t: element.tagName.toLowerCase(),
-          messag,`
-  e: `Touch target too,`
-  small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestio,
-  n: 'Increase touch target size to at least 44x44px'
+
+  type: 'small-touch-target',
+          element: element.tagName.toLowerCase(),
+          message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
+          suggestion: 'Increase touch target size to at least 44x44px'
+
         }
   )
       }
@@ -463,5 +429,6 @@ const html = document.documentElement;
 // Singleton instance;
 const a11y = new AccessibilityService()
 export default a11y;"`
+
 
 

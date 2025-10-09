@@ -3,8 +3,9 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */
-export const _preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const _preloadCriticalResources = () => {// TODO: Add content;}
+
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
@@ -19,9 +20,10 @@ const fontPreloads = [
   s://fonts.googleapis.com/css2?family=JetBrains+Mon,
   o:wght@400;500;600&display=swap'
   ];
-  fontPreloads.forEach(href => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+
+  fontPreloads.forEach(href => {// TODO: Add content;}
+}
+
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style'
@@ -32,16 +34,18 @@ const fontPreloads = [
   )
   // Preload critical images;
 const criticalImages = [
-  // TOD,
-  O: Add items;
+
+  // TODO: Add items;
+
 ];;
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ];
-  criticalImages.forEach(src => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+
+  criticalImages.forEach(src => {// TODO: Add content;}
+}
+
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
@@ -50,9 +54,9 @@ const criticalImages = [
   }
   )
 }
-export const preloadRoute = (rout,)
-  e: string) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const preloadRoute = (route: string) => {// TODO: Add content;}
+
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
@@ -64,12 +68,12 @@ const routeResources = {/* TODO: Fix JSX expression */}
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
   const resources = routeResources[route as keyof typeof routeResources]
-  if (resources) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+  if (resources) {// TODO: Add content;}
 }
-    resources.forEach(resource => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-})
+    resources.forEach(resource => {// TODO: Add content;}
+}
+
       const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
@@ -78,8 +82,9 @@ const routeResources = {/* TODO: Fix JSX expression */}
   )
   }
 }
-export const optimizeImages = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const optimizeImages = () => {// TODO: Add content;}
+
 }
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
@@ -119,8 +124,9 @@ const images = document.querySelectorAll('img[data-lazy]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
+
 }
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
@@ -134,14 +140,17 @@ const scripts = document.querySelectorAll('script[data-defer]')
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
+
+    document.addEventListener('DOMContentLoaded', () => {
+
 }
   )
   } else {/* TODO: Fix JSX expression */}
   }
 }
-const loadAnalytics = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const loadAnalytics = () => {// TODO: Add content;}
+
 }
   // Load Google Analytics after page load;
 const gaScript = document.createElement('script')
@@ -150,5 +159,6 @@ const gaScript = document.createElement('script')
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
 //   document.head.appendChild(gaScript)
 }"
+
 
 

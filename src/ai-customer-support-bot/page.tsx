@@ -1,14 +1,17 @@
 import React from 'react';
 
+
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react';}
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star } from 'lucide-react';
 import { Bot } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const,
-  AICustomerSupportBotPage: React.FC = () => {const features = [}
-    {/* TODO: Fix JSX expression */}
-  O: Add content;}
+
+const AICustomerSupportBotPage: React.FC = () => {
+  const features = [];
+  return (
+    {// TODO: Add content;}
+
 };
   ico,
   n: Bot,
@@ -70,20 +73,19 @@ const,
   // TOD,
   O: Add items;
 ];;
-    {/* TODO: Fix JSX expression */}
-  l: 'Happy Customers' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Response Time Reduction' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Satisfaction Increase' },
-    {/* TODO: Fix JSX expression */}
-  l: 'Customer Rating' }
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Navigation /></Navigation>"
-      <div className="container mx-auto px-4 py-16"></div>"
-        <div className="text-center mb-16"></div>"
-          <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+
+    { icon: Users, value: '1,000+', label: 'Happy Customers' },
+    { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
+    { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
+    { icon: Star, value: '4.8/5', label: 'Customer Rating' }
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+
 // Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands;
 //             natural language and escalates complex issues to human agents seamlessly.
           
@@ -154,7 +156,8 @@ Most Popular;
   hover:bg-cyan-400,"
   hover:text-slate-900 transition-colors"></button>
               View Case Studies;
-      <Footer /></Footer>
+
+      <Footer />
 
     </div>
   );
@@ -162,5 +165,6 @@ Most Popular;
 
 
 export default PagePage;"`
+
 
 
