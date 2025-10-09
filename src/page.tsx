@@ -1,5 +1,7 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Link } from 'react-router-dom';
+import { Phone, CheckCircle, TrendingUp, Brain, MessageSquare, Eye, Zap, Heart, CreditCard, Shield, FileText, BarChart, Music, Settings, Smartphone, Cloud, Database, Cpu, Globe, Target, Users, GraduationCap, Lock, Mail, MapPin, Sparkles } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -44,11 +46,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-      (window as Record<string, unknown>).gtag('event', 'phone_click', {
-=======
       (window as { gtag: (command: string, action: string, parameters: Record<string, string>) => void }).gtag('event', 'phone_click', {
->>>>>>> cursor/fix-errors-and-merge-to-main-fb42
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
@@ -1154,7 +1152,7 @@ const HomePage: React.FC = () => {
               </div>
               
               <div className="quantum-entanglement p-6 text-center hover:scale-105 transition-all duration-300">
-                <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                 <a 
