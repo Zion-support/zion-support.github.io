@@ -159,7 +159,7 @@ class EnhancedAnalytics {
       action: conversionType,
       value,
       metadata: {
-        conversionId: `conv-${Date.now()}`
+        conversionId: `conv-${Date.now()}`,
       }
     });
   }

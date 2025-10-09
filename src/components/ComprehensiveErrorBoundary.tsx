@@ -24,7 +24,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       hasError: false, 
       retryCount: 0,
       isRetrying: false,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
     this.maxRetries = props.maxRetries || 3;
   }

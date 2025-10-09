@@ -46,17 +46,18 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
-      color: 'text-green-400'
+      color: 'text-green-400',
       title: 'Customer Behavior Insights',
       description: 'Understand customer preferences and behavior patterns for better targeting',
       icon: Users,
-      color: 'text-blue-400'
+      color: 'text-blue-400',
       title: 'Financial Forecasting',
       description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
       title: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-      color: 'text-yellow-400'
+      {
+        color: 'text-yellow-400',
 
   const pricingTiers = [
       name: 'Starter',
@@ -71,7 +72,7 @@ const AIAnalyticsPage: React.FC = () => {
         'Standard integrations'
       ],
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      bgColor: 'bg-blue-500/10',
       name: 'Professional',
       price: '$3,500',
       description: 'Ideal for growing businesses with complex analytics needs',
@@ -96,19 +97,21 @@ const AIAnalyticsPage: React.FC = () => {
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
+      {
+        bgColor: 'bg-cyan-500/10',
 
   const benefits = [
       icon: Star,
       title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights'
+      description: 'Industry-leading accuracy in predictions and insights',
       title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in'
+      description: 'Instant analysis of data as it comes in',
       title: 'Actionable Insights',
-      description: 'Clear, actionable recommendations for business improvement'
+      description: 'Clear, actionable recommendations for business improvement',
       icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
+      {
+        description: '300% average ROI for our analytics clients',
 
   return (
     <>

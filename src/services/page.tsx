@@ -79,15 +79,16 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
   const benefits = [
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our clients'
+      description: 'Average 300% return on investment for our clients',
       icon: Users,
       title: 'Expert Team',
-      description: '50+ certified professionals with 10+ years experience'
+      description: '50+ certified professionals with 10+ years experience',
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
+      description: 'Round-the-clock support with guaranteed response times',
       icon: Clock,
       title: 'Fast Delivery',
-      description: 'Quick implementation with minimal downtime'
+      {
+        description: 'Quick implementation with minimal downtime',
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },

@@ -16,7 +16,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
         efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
-        adoption: '95%'
+        adoption: '95%',
       },
       tags: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']
       id: 'fortune-500-case-study',
@@ -27,7 +27,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
         roi: '30,000%',
         savings: '$750M',
         efficiency: '400%',
-        timeline: '18 months'
+        timeline: '18 months',
       tags: ['Case Study', 'Fortune 500', 'ROI', '2025']
       id: 'enterprise-automation-2025',
       title: 'Enterprise Automation Suite 2025',
@@ -36,7 +36,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       type: 'Service',
         automation: '95%',
         productivity: '300%',
-        cost: '80% reduction'
+        cost: '80% reduction',
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];

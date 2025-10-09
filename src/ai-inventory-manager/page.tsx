@@ -9,20 +9,28 @@ const AIInventoryManagerPage: React.FC = () => {
     {
       icon: Package,
       title: 'Inventory Tracking',
-      description: 'AI-powered inventory tracking and management',
+      {
+
+        description: 'AI-powered inventory tracking and management',
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']
     },
       icon: Target,
       title: 'Demand Forecasting',
-      description: 'Intelligent demand prediction and planning',
+      {
+
+        description: 'Intelligent demand prediction and planning',
       benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
       icon: Zap,
       title: 'Automated Reordering',
-      description: 'Smart reorder points and automated purchasing',
+      {
+
+        description: 'Smart reorder points and automated purchasing',
       benefits: ['Auto reordering', 'Supplier management', 'Cost optimization']
       icon: Settings,
       title: 'Inventory Analytics',
-      description: 'Comprehensive inventory analytics and insights',
+      {
+
+        description: 'Comprehensive inventory analytics and insights',
       benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
     }
   ];

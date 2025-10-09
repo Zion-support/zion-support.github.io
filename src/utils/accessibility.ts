@@ -69,7 +69,7 @@ class AccessibilityService {
           type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
+          wcag: '1.1.1 (Level A)',
         });
       } else if (img.alt === '') {
         warnings.push({
@@ -91,7 +91,7 @@ class AccessibilityService {
           type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+          wcag: '1.3.1 (Level A), 3.3.2 (Level A)',
         });
       }
     });
@@ -104,7 +104,7 @@ class AccessibilityService {
           type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestion: 'Maintain proper heading hierarchy'
+          suggestion: 'Maintain proper heading hierarchy',
         });
       }
       prevLevel = level;
@@ -116,7 +116,7 @@ class AccessibilityService {
         type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
+        suggestion: 'Add a skip link to main content for keyboard users',
       });
     }
     // Check for language attribute
@@ -126,7 +126,7 @@ class AccessibilityService {
         type: 'missing-lang',
         element: 'html',
         message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'
+        wcag: '3.1.1 (Level A)',
       });
     }
     // Check for sufficient link text
@@ -138,14 +138,14 @@ class AccessibilityService {
           type: 'empty-link',
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'
+          wcag: '2.4.4 (Level A)',
         });
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
         warnings.push({
           type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
+          suggestion: 'Use more descriptive link text that makes sense out of context',
         });
       }
     });
@@ -157,7 +157,7 @@ class AccessibilityService {
           type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestion: 'Increase touch target size to at least 44x44px'
+          suggestion: 'Increase touch target size to at least 44x44px',
         });
       }
     });

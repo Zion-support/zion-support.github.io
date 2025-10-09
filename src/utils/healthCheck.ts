@@ -130,7 +130,7 @@ class HealthCheckService {
       return {
         name: 'memory',
         status: 'pass',
-        message: 'Memory API not available'
+        message: 'Memory API not available',
       };
     }
     try {
@@ -159,7 +159,7 @@ class HealthCheckService {
       return {
         name: 'memory',
         status: 'warn',
-        message: 'Could not check memory usage'
+        message: 'Could not check memory usage',
       };
     }
   }
@@ -192,7 +192,7 @@ class HealthCheckService {
       return {
         name: 'performance',
         status: 'warn',
-        message: 'Could not check performance'
+        message: 'Could not check performance',
       }
     }
   }
@@ -224,7 +224,7 @@ class HealthCheckService {
     return {
       name: 'browser-apis',
       status: 'pass',
-      message: 'All required browser APIs available'
+      message: 'All required browser APIs available',
     }
   }
   /**
@@ -242,7 +242,7 @@ class HealthCheckService {
         return {
           name: 'storage',
           status: 'fail',
-          message: 'LocalStorage not working correctly'
+          message: 'LocalStorage not working correctly',
         }
       }
       // Check available space (approximate)
@@ -254,19 +254,19 @@ class HealthCheckService {
         return {
           name: 'storage',
           status: 'warn',
-          message: 'LocalStorage space limited'
+          message: 'LocalStorage space limited',
         }
       }
       return {
         name: 'storage',
         status: 'pass',
-        message: 'Storage working correctly'
+        message: 'Storage working correctly',
       };
     } catch {
       return {
         name: 'storage',
         status: 'fail',
-        message: 'LocalStorage not available'
+        message: 'LocalStorage not available',
       }
     }
   }

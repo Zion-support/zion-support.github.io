@@ -115,7 +115,7 @@ export const _validationRules = {
    */
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+    message: `Must match ${fieldName}`,
   }),
   /**
    * Validate file size

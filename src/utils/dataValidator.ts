@@ -217,23 +217,23 @@ export const ValidationRulesBuilder = {
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
     },
-    message: 'This field is required'
+    message: 'This field is required',
   }),
   email: (): ValidationRule<string> => ({
     validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address'
+    message: 'Please enter a valid email address',
   }),
   url: (): ValidationRule<string> => ({
     validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL'
+    message: 'Please enter a valid URL',
   }),
   minLength: (min: number): ValidationRule<string> => ({
     validate: (value: string) => value.length >= min,
-    message: `Must be at least ${min} characters long`
+    message: `Must be at least ${min} characters long`,
   }),
   maxLength: (max: number): ValidationRule<string> => ({
     validate: (value: string) => value.length <= max,
-    message: `Must be no more than ${max} characters long`
+    message: `Must be no more than ${max} characters long`,
   }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
     validate: (value: string) => pattern.test(value),
@@ -241,7 +241,7 @@ export const ValidationRulesBuilder = {
   }),
   range: (min: number, max: number): ValidationRule<number> => ({
     validate: (value: number) => validateNumberRange(value, min, max),
-    message: `Must be between ${min} and ${max}`
+    message: `Must be between ${min} and ${max}`,
   }),
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,

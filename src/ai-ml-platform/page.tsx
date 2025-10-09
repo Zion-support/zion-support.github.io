@@ -11,29 +11,41 @@ const AIMLPlatformPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Complete ML Platform',
-      description: 'End-to-end machine learning platform with model development, training, and deployment',
+      {
+
+        description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
       icon: TrendingUp,
       title: 'Advanced Analytics',
-      description: 'Comprehensive analytics and monitoring for machine learning models',
+      {
+
+        description: 'Comprehensive analytics and monitoring for machine learning models',
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for your machine learning infrastructure',
+      {
+
+        description: 'Bank-level security and compliance for your machine learning infrastructure',
       benefits: ['Data encryption', 'Access controls', 'Audit trails']
       icon: Users,
       title: 'Team Collaboration',
-      description: 'Collaborative tools for data scientists and ML engineers',
+      {
+
+        description: 'Collaborative tools for data scientists and ML engineers',
       benefits: ['Shared workspaces', 'Version control', 'Knowledge sharing']
     }
   ];
 
   const pricingPlans = [
       name: 'Developer',
-      price: '$999',
+      {
+
+        price: '$999',
       period: '/month',
-      description: 'Perfect for individual developers',
+      {
+
+        description: 'Perfect for individual developers',
       features: [
         'Up to 5 models',
         'Basic ML tools',
@@ -43,7 +55,9 @@ const AIMLPlatformPage: React.FC = () => {
       ],
       popular: false
       name: 'Team',
-      price: '$2,499',
+      {
+
+        price: '$2,499',
       description: 'Ideal for development teams',
         'Up to 25 models',
         'Advanced ML tools',
@@ -53,7 +67,9 @@ const AIMLPlatformPage: React.FC = () => {
         'Team collaboration'
       popular: true
       name: 'Enterprise',
-      price: '$4,999',
+      {
+
+        price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
         'Premium ML features',

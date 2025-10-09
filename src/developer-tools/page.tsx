@@ -8,7 +8,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: Code,
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
-      price: 'Starting at $99/month'
+      price: 'Starting at $99/month',
     },
     {
       title: 'API Testing Suite',
@@ -16,7 +16,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: Zap,
       features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
       benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
-      price: 'Starting at $149/month'
+      price: 'Starting at $149/month',
     },
     {
       title: 'Database Management Tool',
@@ -24,7 +24,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: BarChart,
       features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
       benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
-      price: 'Starting at $199/month'
+      price: 'Starting at $199/month',
     },
     {
       title: 'DevOps Automation',
@@ -32,7 +32,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: Target,
       features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
       benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
-      price: 'Starting at $299/month'
+      price: 'Starting at $299/month',
     },
     {
       title: 'Code Review Assistant',
@@ -40,7 +40,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: Users,
       features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
       benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
-      price: 'Starting at $79/month'
+      price: 'Starting at $79/month',
     },
     {
       title: 'Performance Profiler',
@@ -48,7 +48,7 @@ const DeveloperToolsPage: React.FC = () => {
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
-      price: 'Starting at $179/month'
+      price: 'Starting at $179/month',
     }
   ];
 

@@ -12,7 +12,7 @@ const RequestQuotePage: React.FC = () => {
     timeline: '',
     budget: '',
     description: '',
-    requirements: ''
+    requirements: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -78,22 +78,22 @@ const RequestQuotePage: React.FC = () => {
     {
       icon: Calculator,
       title: 'Free Quote',
-      description: 'Get a detailed, no-obligation quote within 24 hours'
+      description: 'Get a detailed, no-obligation quote within 24 hours',
     },
     {
       icon: Clock,
       title: 'Quick Response',
-      description: 'We respond to all quote requests within 4 hours'
+      description: 'We respond to all quote requests within 4 hours',
     },
     {
       icon: CheckCircle,
       title: 'Transparent Pricing',
-      description: 'Clear, detailed pricing with no hidden fees'
+      description: 'Clear, detailed pricing with no hidden fees',
     },
     {
       icon: Star,
       title: 'Expert Consultation',
-      description: 'Free consultation with our technology experts'
+      description: 'Free consultation with our technology experts',
     }
   ];
 
@@ -101,22 +101,22 @@ const RequestQuotePage: React.FC = () => {
     {
       icon: Users,
       title: '50+ Successful Projects',
-      description: 'Proven track record of delivering results'
+      description: 'Proven track record of delivering results',
     },
     {
       icon: Award,
       title: '300% Average ROI',
-      description: 'Our clients see significant returns on investment'
+      description: 'Our clients see significant returns on investment',
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all our clients'
+      description: 'Round-the-clock support for all our clients',
     },
     {
       icon: Star,
       title: '99.9% Uptime',
-      description: 'Reliable, high-performance solutions'
+      description: 'Reliable, high-performance solutions',
     }
   ];
 

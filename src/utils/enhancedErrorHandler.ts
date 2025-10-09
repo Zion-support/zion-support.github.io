@@ -181,7 +181,7 @@ class EnhancedErrorHandler {
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category: 'performance'
+                category: 'performance',
               });
             }
           });
@@ -499,7 +499,7 @@ class EnhancedErrorHandler {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${this.config.apiKey}`
+          Authorization: `Bearer ${this.config.apiKey}`,
         },
         body: JSON.stringify(errorReport)
       });

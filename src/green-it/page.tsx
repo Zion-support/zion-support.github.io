@@ -14,18 +14,18 @@ const GreenITPage: React.FC = () => {
       name: 'Green Solutions',
       icon: Leaf,
       color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      bgColor: 'bg-green-500/10',
     },
       id: 'benefits',
       name: 'Benefits',
       icon: Target,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      bgColor: 'bg-blue-500/10',
       id: 'certifications',
       name: 'Certifications',
       icon: Award,
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
+      bgColor: 'bg-yellow-500/10',
     }
   ];
 
@@ -40,7 +40,7 @@ const GreenITPage: React.FC = () => {
         'Smart power management'
       ],
       impact: 'Reduce energy consumption by up to 40%',
-      pricing: 'Starting at $2,500/month'
+      pricing: 'Starting at $2,500/month',
       title: 'Cloud Carbon Footprint Reduction',
       description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
       icon: Cloud,
@@ -49,7 +49,7 @@ const GreenITPage: React.FC = () => {
         'Resource optimization',
         'Renewable energy sourcing'
       impact: 'Reduce carbon footprint by up to 60%',
-      pricing: 'Starting at $1,800/month'
+      pricing: 'Starting at $1,800/month',
       title: 'Sustainable IT Asset Management',
       description: 'Implement circular economy principles for IT equipment lifecycle management',
       icon: Recycle,
@@ -58,7 +58,7 @@ const GreenITPage: React.FC = () => {
         'Asset tracking and optimization',
         'Circular economy implementation'
       impact: 'Extend equipment lifecycle by 50%',
-      pricing: 'Starting at $1,200/month'
+      pricing: 'Starting at $1,200/month',
       title: 'Green Software Development',
       description: 'Develop energy-efficient software applications and optimize existing systems',
       icon: Code,
@@ -68,7 +68,7 @@ const GreenITPage: React.FC = () => {
         'Resource usage monitoring',
         'Sustainable architecture design'
       impact: 'Reduce software energy consumption by 30%',
-      pricing: 'Starting at $1,500/month'
+      pricing: 'Starting at $1,500/month',
       title: 'Remote Work Infrastructure',
       description: 'Enable sustainable remote work with optimized digital infrastructure',
       icon: Users,
@@ -78,7 +78,7 @@ const GreenITPage: React.FC = () => {
         'Energy-efficient hardware',
         'Digital workspace management'
       impact: 'Reduce commuting emissions by 80%',
-      pricing: 'Starting at $800/month'
+      pricing: 'Starting at $800/month',
       title: 'Environmental Monitoring',
       description: 'Real-time monitoring and reporting of environmental impact metrics',
       icon: Globe,
@@ -88,7 +88,8 @@ const GreenITPage: React.FC = () => {
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
+      {
+        pricing: 'Starting at $600/month',
 
   const benefits = [
       icon: TrendingUp,
@@ -122,7 +123,7 @@ const GreenITPage: React.FC = () => {
   const certifications = [
       name: 'ISO 14001:2015',
       description: 'Environmental Management Systems',
-      status: 'Certified'
+      status: 'Certified',
       name: 'LEED Platinum',
       description: 'Leadership in Energy and Environmental Design',
       name: 'Carbon Trust Standard',
@@ -133,16 +134,17 @@ const GreenITPage: React.FC = () => {
   const stats = [
       value: '60%',
       label: 'Carbon Footprint Reduction',
-      color: 'text-green-400'
+      color: 'text-green-400',
       value: '40%',
       label: 'Energy Cost Savings',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
       value: '50%',
       label: 'Waste Reduction',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
       value: '100%',
       label: 'Renewable Energy Options',
-      color: 'text-purple-400'
+      {
+        color: 'text-purple-400',
 
   const caseStudies = [
       company: 'TechCorp Manufacturing',

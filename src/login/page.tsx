@@ -34,17 +34,17 @@ const LoginPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Secure Access',
-      description: 'Bank-level security with multi-factor authentication'
+      description: 'Bank-level security with multi-factor authentication',
     },
     {
       icon: CheckCircle,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all your needs'
+      description: 'Round-the-clock support for all your needs',
     },
     {
       icon: Phone,
       title: 'Mobile Ready',
-      description: 'Access your account from any device, anywhere'
+      description: 'Access your account from any device, anywhere',
     }
   ];
 

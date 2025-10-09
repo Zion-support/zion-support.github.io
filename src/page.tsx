@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as { gtag: (command: string, action: string, parameters: Record<string, string>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
-        event_label: 'main_phone_number'
+        event_label: 'main_phone_number',
       });
 
   const microSAASServices = [
@@ -62,7 +62,7 @@ const HomePage: React.FC = () => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '50% faster project completion'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity',
     },
       title: 'AI Social Media Manager',
       description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Multi-platform management', 'Trend analysis'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '60% better content performance'],
       link: '/ai-social-media-manager',
-      category: 'Marketing'
+      category: 'Marketing',
       title: 'AI Analytics Dashboard',
       description: 'Unlock the power of your data with our intelligent analytics platform that uses machine learning to identify patterns, predict trends, and provide actionable insights that drive business growth and competitive advantage.',
       icon: '📈',
@@ -79,7 +79,7 @@ const HomePage: React.FC = () => {
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reporting'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '90% faster decision making'],
       link: '/ai-analytics-dashboard',
-      category: 'Analytics'
+      category: 'Analytics',
       title: 'AI Email Marketing',
       description: 'Revolutionize your email marketing strategy with our AI-powered platform that creates personalized, high-converting email campaigns, optimizes send times, and delivers exceptional ROI through intelligent automation and segmentation.',
       icon: '📧',
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Integration APIs'],
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', '60% cost savings'],
       link: '/ai-customer-support-bot',
-      category: 'Support'
+      category: 'Support',
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization',
       icon: '🔍',
@@ -202,7 +202,7 @@ const HomePage: React.FC = () => {
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'AutoML', 'MLOps'],
       benefits: ['40% better predictions', '60% faster model deployment', 'Reduced manual work', 'Higher accuracy'],
       color: 'text-purple-400',
-      category: 'Core AI'
+      category: 'Core AI',
       title: 'Natural Language Processing',
       description: 'Advanced NLP solutions for text analysis, language understanding, and conversational AI',
       icon: MessageSquare,
@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Document Processing', 'Voice Recognition'],
       benefits: ['90% accuracy in text analysis', 'Multi-language support', 'Real-time processing', 'Cost effective'],
       color: 'text-blue-400',
-      category: 'Language AI'
+      category: 'Language AI',
       title: 'Computer Vision',
       description: 'Image and video analysis solutions for object detection, recognition, and visual intelligence',
       icon: Eye,
@@ -218,60 +218,61 @@ const HomePage: React.FC = () => {
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'OCR', 'Medical Imaging'],
       benefits: ['95% accuracy in detection', 'Real-time processing', 'Multi-format support', 'Industry specific'],
       color: 'text-green-400',
-      category: 'Visual AI'
+      category: 'Visual AI',
       title: 'AI Automation',
       description: 'Intelligent process automation with decision-making capabilities and workflow optimization',
       icon: Zap,
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
       title: 'AI Healthcare Solutions',
       description: 'Medical AI for diagnosis, treatment planning, and patient care optimization',
       icon: Heart,
       price: '$2,500/month',
       features: ['Medical Imaging AI', 'Diagnostic Assistance', 'Treatment Planning', 'Patient Monitoring'],
-      color: 'text-red-400'
+      color: 'text-red-400',
       title: 'AI Financial Services',
       description: 'Fintech AI solutions for fraud detection, risk assessment, and trading',
       icon: CreditCard,
       price: '$2,200/month',
       features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring'],
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
       title: 'AI Cybersecurity',
       description: 'Advanced AI security solutions for threat detection and prevention',
       icon: Shield,
       features: ['Threat Detection', 'Anomaly Detection', 'Security Analytics', 'Incident Response'],
-      color: 'text-orange-400'
+      color: 'text-orange-400',
       title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, blogs, and social media',
       icon: FileText,
       price: '$1,100/month',
       features: ['Content Writing', 'SEO Optimization', 'Social Media Posts', 'Video Scripts'],
-      color: 'text-pink-400'
+      color: 'text-pink-400',
       title: 'AI Data Analytics',
       description: 'Advanced data analysis with AI insights and predictive modeling',
       icon: BarChart,
       price: '$1,600/month',
       features: ['Data Mining', 'Predictive Modeling', 'Business Intelligence', 'Real-time Analytics'],
-      color: 'text-indigo-400'
+      color: 'text-indigo-400',
       title: 'AI Voice & Speech',
       description: 'Voice recognition, synthesis, and conversational AI solutions',
       icon: Music,
       price: '$1,300/month',
       features: ['Speech Recognition', 'Voice Synthesis', 'Conversational AI', 'Multi-language Support'],
-      color: 'text-teal-400'
+      color: 'text-teal-400',
       title: 'AI Robotics',
       description: 'Intelligent robotics solutions for manufacturing and automation',
       icon: Settings,
       price: '$3,000/month',
       features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'],
-      color: 'text-gray-400'
+      color: 'text-gray-400',
       title: 'AI Edge Computing',
       description: 'AI solutions optimized for edge devices and IoT applications',
       icon: Smartphone,
       price: '$1,700/month',
       features: ['Edge AI Models', 'IoT Integration', 'Real-time Processing', 'Offline Capabilities'],
-      color: 'text-emerald-400'
+      {
+        color: 'text-emerald-400',
 
   const itServices = [
       title: 'Cloud Migration & Services',
@@ -280,26 +281,26 @@ const HomePage: React.FC = () => {
       price: '$1,299/month',
       features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Auto-scaling', 'Disaster Recovery'],
       benefits: ['50% cost reduction', '99.9% uptime', 'Faster deployment', 'Scalable infrastructure'],
-      category: 'Cloud'
+      category: 'Cloud',
       title: 'Cybersecurity Suite',
       description: 'Advanced security solutions with threat detection, prevention, and incident response',
       price: '$1,599/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing', 'Compliance'],
       benefits: ['99.9% threat detection', 'Real-time protection', 'Reduced security risks', 'Compliance ready'],
       color: 'text-red-400',
-      category: 'Security'
+      category: 'Security',
       title: 'DevOps & CI/CD',
       description: 'Streamlined development workflows with automated testing, deployment, and monitoring',
       price: '$1,199/month',
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'GitOps'],
       benefits: ['80% faster deployment', 'Reduced errors', 'Better collaboration', 'Automated processes'],
-      category: 'DevOps'
+      category: 'DevOps',
       title: 'Database Management',
       description: 'Database design, optimization, and management with AI-powered tuning and monitoring',
       icon: Database,
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
-      color: 'text-purple-400'
+      color: 'text-purple-400',
       title: 'IT Infrastructure',
       description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee',
       icon: Cpu,
@@ -364,14 +365,14 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: 'US',
         }}
       />
       <PerformanceOptimizer

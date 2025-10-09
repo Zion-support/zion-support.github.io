@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -161,7 +160,7 @@ const App: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
           },
           address: {
             '@type': 'PostalAddress',
@@ -169,12 +168,13 @@ const App: React.FC = () => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: 'US',
           }
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',
-        publisher: 'Zion Tech Group'
+        {
+          publisher: 'Zion Tech Group',
 
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
@@ -323,5 +323,8 @@ const NotFoundPage: React.FC = () => (
       >
         Go Home
       </a>
+    </div>
+  </div>
+);
 
 export default App;

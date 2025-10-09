@@ -188,7 +188,7 @@ export class AccessibilityChecker {
           message: `Heading level skipped from h${previousLevel} to h${level}`,
           element: heading.tagName.toLowerCase(),
           fix: 'Maintain sequential heading hierarchy',
-          codeExample: `Use h${previousLevel + 1} instead of h${level}`
+          codeExample: `Use h${previousLevel + 1} instead of h${level}`,
         });
       }
       // Check for empty headings
@@ -200,7 +200,7 @@ export class AccessibilityChecker {
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
           element: heading.tagName.toLowerCase(),
-          fix: 'Add descriptive text to the heading'
+          fix: 'Add descriptive text to the heading',
         });
       }
       previousLevel = level;
@@ -215,7 +215,7 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.6',
         message: `Found ${h1Count} h1 elements (should have only one)`,
         element: 'h1',
-        fix: 'Use only one h1 per page for the main heading'
+        fix: 'Use only one h1 per page for the main heading',
       });
     }
   }
@@ -357,7 +357,7 @@ export class AccessibilityChecker {
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
           element: el.tagName.toLowerCase(),
-          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
+          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)',
         });
       }
     });
@@ -401,7 +401,7 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick}>Click me</button>',
         });
       }
     });
@@ -446,7 +446,7 @@ export class AccessibilityChecker {
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
           element: el.tagName.toLowerCase(),
-          fix: 'Use a valid ARIA role or remove the role attribute'
+          fix: 'Use a valid ARIA role or remove the role attribute',
         });
       }
       // Check aria-labelledby references
@@ -461,7 +461,7 @@ export class AccessibilityChecker {
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
             element: el.tagName.toLowerCase(),
-            fix: 'Ensure the referenced element exists'
+            fix: 'Ensure the referenced element exists',
           });
         }
       }
@@ -484,7 +484,7 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
         fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
+        codeExample: '<main><!-- Main content --></main>',
       });
     }
   }

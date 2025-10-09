@@ -9,20 +9,28 @@ const AIVoiceAssistantPage: React.FC = () => {
     {
       icon: Mic,
       title: 'Voice Recognition',
-      description: 'Advanced voice recognition and processing',
+      {
+
+        description: 'Advanced voice recognition and processing',
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
     },
       icon: Target,
       title: 'Natural Language Processing',
-      description: 'Intelligent conversation and understanding',
+      {
+
+        description: 'Intelligent conversation and understanding',
       benefits: ['Context understanding', 'Intent recognition', 'Response generation']
       icon: Zap,
       title: 'Automated Tasks',
-      description: 'Voice-controlled task automation',
+      {
+
+        description: 'Voice-controlled task automation',
       benefits: ['Task automation', 'Workflow control', 'Smart scheduling']
       icon: Settings,
       title: 'Custom Integration',
-      description: 'Custom voice assistant integration',
+      {
+
+        description: 'Custom voice assistant integration',
       benefits: ['API integration', 'Custom commands', 'Third-party apps']
     }
   ];

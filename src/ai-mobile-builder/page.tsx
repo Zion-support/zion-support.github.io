@@ -9,20 +9,28 @@ const AIMobileBuilderPage: React.FC = () => {
     {
       icon: Smartphone,
       title: 'AI-Assisted Development',
-      description: 'Intelligent mobile app development with AI assistance',
+      {
+
+        description: 'Intelligent mobile app development with AI assistance',
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
       icon: Target,
       title: 'Cross-Platform Support',
-      description: 'Build for iOS and Android with a single codebase',
+      {
+
+        description: 'Build for iOS and Android with a single codebase',
       benefits: ['iOS development', 'Android development', 'Unified codebase']
       icon: Zap,
       title: 'Rapid Prototyping',
-      description: 'Fast prototyping and MVP development',
+      {
+
+        description: 'Fast prototyping and MVP development',
       benefits: ['Quick iteration', 'MVP development', 'Testing']
       icon: Settings,
       title: 'App Analytics',
-      description: 'Comprehensive app performance and user analytics',
+      {
+
+        description: 'Comprehensive app performance and user analytics',
       benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
     }
   ];

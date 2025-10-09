@@ -9,20 +9,28 @@ const AILeadScoringPage: React.FC = () => {
     {
       icon: Target,
       title: 'Intelligent Scoring',
-      description: 'AI-powered lead scoring and qualification',
+      {
+
+        description: 'AI-powered lead scoring and qualification',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking']
     },
       icon: BarChart,
       title: 'Predictive Analytics',
-      description: 'Predict lead conversion probability',
+      {
+
+        description: 'Predict lead conversion probability',
       benefits: ['Conversion prediction', 'Risk assessment', 'Opportunity scoring']
       icon: Zap,
       title: 'Automated Workflows',
-      description: 'Automated lead nurturing and follow-up',
+      {
+
+        description: 'Automated lead nurturing and follow-up',
       benefits: ['Auto-nurturing', 'Follow-up sequences', 'Lead routing']
       icon: Settings,
       title: 'Performance Analytics',
-      description: 'Comprehensive lead performance analytics',
+      {
+
+        description: 'Comprehensive lead performance analytics',
       benefits: ['Conversion metrics', 'ROI tracking', 'Performance reports']
     }
   ];

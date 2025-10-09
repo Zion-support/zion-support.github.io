@@ -62,7 +62,7 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error'
+  logLevel: 'error',
 };
 // Error Handler class
 export class ErrorHandler {
@@ -445,7 +445,7 @@ export class ErrorBoundary extends React.Component<
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
-      component: 'ErrorBoundary'
+      component: 'ErrorBoundary',
     });
   }
   render() {
@@ -460,7 +460,7 @@ export class ErrorBoundary extends React.Component<
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
             >
               Try again

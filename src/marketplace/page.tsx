@@ -16,20 +16,20 @@ const MarketplacePage: React.FC = () => {
       icon: ShoppingCart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description: 'AI-powered software products and solutions'
+      description: 'AI-powered software products and solutions',
     },
       id: 'talent',
       name: 'Talent',
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
+      description: 'Expert professionals and consultants',
       id: 'equipment',
       name: 'Equipment',
       icon: Wrench,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description: 'Hardware and infrastructure solutions'
+      description: 'Hardware and infrastructure solutions',
     }
   ];
 
@@ -140,31 +140,33 @@ const MarketplacePage: React.FC = () => {
   const stats = [
       value: '500+',
       label: 'Products Available',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
       value: '200+',
       label: 'Expert Professionals',
-      color: 'text-green-400'
+      color: 'text-green-400',
       value: '100+',
       label: 'Equipment Solutions',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
       icon: Star,
       value: '4.8',
       label: 'Average Rating',
-      color: 'text-yellow-400'
+      {
+        color: 'text-yellow-400',
 
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
-      description: 'All vendors are thoroughly vetted and verified'
+      description: 'All vendors are thoroughly vetted and verified',
       icon: Shield,
       title: 'Secure Transactions',
-      description: 'Bank-level security for all marketplace transactions'
+      description: 'Bank-level security for all marketplace transactions',
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all marketplace activities'
+      description: 'Round-the-clock support for all marketplace activities',
       icon: Award,
       title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      {
+        description: '100% satisfaction guarantee on all purchases',
 
   return (
     <>

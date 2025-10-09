@@ -100,7 +100,7 @@ class MonitoringService {
     if (typeof gtag === 'function') {
       gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+        event_category: 'Web Vitals',
   public logError(error: ErrorReport): void {
     this.errors.push(error)
     // Keep only last 50 errors;
@@ -121,7 +121,7 @@ class MonitoringService {
         console.log('[Memory]', {
           used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
           total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
+          limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`,
   public measureNavigationTiming(): void {
     if ('performance' in window && 'getEntriesByType' in performance) {
 // Singleton instance;

@@ -15,23 +15,23 @@ const HelpPage: React.FC = () => {
       name: 'Getting Started',
       icon: BookOpen,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      bgColor: 'bg-blue-500/10',
     },
       id: 'troubleshooting',
       name: 'Troubleshooting',
       icon: HelpCircle,
       color: 'text-red-400',
-      bgColor: 'bg-red-500/10'
+      bgColor: 'bg-red-500/10',
       id: 'billing',
       name: 'Billing & Account',
       icon: CheckCircle,
       color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      bgColor: 'bg-green-500/10',
       id: 'technical',
       name: 'Technical Support',
       icon: MessageSquare,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10'
+      bgColor: 'bg-purple-500/10',
     }
   ];
 
@@ -42,7 +42,7 @@ const HelpPage: React.FC = () => {
         category: 'Getting Started',
         readTime: '5 min read',
         difficulty: 'Beginner',
-        color: 'text-blue-400'
+        color: 'text-blue-400',
         title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
@@ -58,7 +58,7 @@ const HelpPage: React.FC = () => {
         title: 'Common Login Issues and Solutions',
         description: 'Troubleshoot common authentication problems and access issues',
         category: 'Troubleshooting',
-        color: 'text-red-400'
+        color: 'text-red-400',
         title: 'API Connection Problems',
         description: 'Resolve API connectivity issues and authentication errors',
         title: 'Performance Optimization',
@@ -71,7 +71,7 @@ const HelpPage: React.FC = () => {
         title: 'Understanding Your Bill',
         description: 'Learn how to read and understand your monthly billing statement',
         category: 'Billing',
-        color: 'text-green-400'
+        color: 'text-green-400',
         title: 'Upgrading or Downgrading Plans',
         description: 'How to change your subscription plan and what to expect',
         title: 'Payment Methods and Billing',
@@ -83,7 +83,7 @@ const HelpPage: React.FC = () => {
         description: 'Complete API reference with code examples and best practices',
         category: 'Technical',
         readTime: '10 min read',
-        color: 'text-purple-400'
+        color: 'text-purple-400',
         title: 'Security Best Practices',
         description: 'Implement security measures to protect your data and systems',
         readTime: '8 min read',
@@ -99,49 +99,52 @@ const HelpPage: React.FC = () => {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
       icon: Video,
-      count: '50+ videos'
+      count: '50+ videos',
       title: 'Documentation',
       description: 'Comprehensive technical documentation and guides',
-      count: '200+ articles'
+      count: '200+ articles',
       title: 'API Reference',
       description: 'Complete API documentation with examples',
-      count: '100+ endpoints'
+      count: '100+ endpoints',
       title: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-      count: '25+ downloads'
+      {
+        count: '25+ downloads',
 
   const supportChannels = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       color: 'text-cyan-400',
       availability: '24/7',
-      responseTime: 'Instant'
+      responseTime: 'Instant',
       title: 'Email Support',
       description: 'Send us a detailed message and we\'ll respond quickly',
       icon: Mail,
-      responseTime: 'Within 4 hours'
+      responseTime: 'Within 4 hours',
       title: 'Phone Support',
       description: 'Speak directly with our technical experts',
       icon: Phone,
       availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Immediate'
+      responseTime: 'Immediate',
       title: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      responseTime: 'Community driven'
+      {
+        responseTime: 'Community driven',
 
   const faqs = [
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.'
+      answer: 'Yes, we provide comprehensive training programs including online courses, live workshops, and one-on-one sessions to help your team master our platform.',
       question: 'What kind of support do you provide?',
-      answer: 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.'
+      answer: 'We offer 24/7 support through multiple channels including live chat, email, phone, and our community forum. Our response times vary by channel but we aim to respond within 4 hours for most inquiries.',
       question: 'Can I integrate your services with my existing systems?',
-      answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.'
+      answer: 'Absolutely! We provide extensive APIs, webhooks, and integration tools to seamlessly connect with your existing business systems and workflows.',
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
+      {
+        answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.',
 
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || [];

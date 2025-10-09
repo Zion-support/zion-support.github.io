@@ -73,7 +73,7 @@ export interface AppConfig {
   ui: {
     theme: 'auto',
     language: 'en',
-    timezone: 'UTC'
+    timezone: 'UTC',
   },
   logging: {
     level: 'info',
@@ -341,7 +341,7 @@ export class ConfigManager {
       ui: {
         theme: 'light',
         language: 'en',
-        timezone: 'UTC'
+        timezone: 'UTC',
       },
       logging: {
         level: 'info',

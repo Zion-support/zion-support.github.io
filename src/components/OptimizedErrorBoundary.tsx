@@ -23,14 +23,14 @@ class OptimizedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      errorId: '',
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -106,7 +106,7 @@ class OptimizedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: ''
+        errorId: '',
       });
     }, 100);
   };

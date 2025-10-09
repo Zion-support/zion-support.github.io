@@ -50,16 +50,17 @@ const PartnersPage: React.FC = () => {
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network'
+      description: 'Access to worldwide markets and customers through our partner network',
       icon: Users,
       title: 'Expertise Sharing',
-      description: 'Collaborative knowledge sharing and best practices across industries'
+      description: 'Collaborative knowledge sharing and best practices across industries',
       icon: Star,
       title: 'Innovation',
-      description: 'Joint innovation initiatives and cutting-edge technology development'
+      description: 'Joint innovation initiatives and cutting-edge technology development',
       icon: CheckCircle,
       title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
+      {
+        description: 'Rigorous partner certification and quality standards',
 
   const partnershipTiers = [
       name: 'Strategic Partners',
@@ -73,7 +74,7 @@ const PartnersPage: React.FC = () => {
         'Custom pricing and terms'
       ],
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
+      bgColor: 'bg-yellow-500/10',
       name: 'Solution Partners',
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
@@ -83,7 +84,7 @@ const PartnersPage: React.FC = () => {
         'Training and certification',
         'Preferred pricing'
       color: 'text-gray-400',
-      bgColor: 'bg-gray-500/10'
+      bgColor: 'bg-gray-500/10',
       name: 'Channel Partners',
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
@@ -93,7 +94,8 @@ const PartnersPage: React.FC = () => {
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
+      {
+        bgColor: 'bg-orange-500/10',
 
   return (
     <>

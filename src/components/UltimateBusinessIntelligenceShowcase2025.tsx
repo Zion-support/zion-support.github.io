@@ -16,7 +16,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
-        timeline: '12 months'
+        timeline: '12 months',
       },
       readingTime: '35 min read',
       featured: true,
@@ -29,7 +29,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       category: 'case-study',
         savings: '$750B',
         company: '$15.2B',
-        timeline: '18 months'
+        timeline: '18 months',
       readingTime: '25 min read',
       tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
       id: 'business-intelligence-implementation-guide',
@@ -40,7 +40,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       category: 'resource',
         success: '99.8%',
         timeline: '18 months',
-        adoption: '100%'
+        adoption: '100%',
       readingTime: '45 min read',
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }

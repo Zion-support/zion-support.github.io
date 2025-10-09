@@ -9,37 +9,53 @@ const AISchedulerPage: React.FC = () => {
     {
       icon: Calendar,
       title: 'Smart Scheduling',
-      description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
-      benefit: 'Save 5+ hours per week'
+      {
+
+        description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
+      benefit: 'Save 5+ hours per week',
     },
       icon: Users,
       title: 'Team Coordination',
-      description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
-      benefit: 'Eliminate scheduling conflicts'
+      {
+
+        description: 'Coordinate complex team schedules with intelligent conflict resolution and resource optimization.',
+      benefit: 'Eliminate scheduling conflicts',
       icon: Brain,
       title: 'Predictive Planning',
-      description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
-      benefit: '95% accuracy in predictions'
+      {
+
+        description: 'AI learns from your scheduling patterns to suggest optimal meeting times and prevent double-bookings.',
+      benefit: '95% accuracy in predictions',
       icon: Zap,
       title: 'Automated Reminders',
-      description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
-      benefit: 'Reduce no-shows by 60%'
+      {
+
+        description: 'Smart reminder system that adapts to each participant\'s preferences and communication style.',
+      benefit: 'Reduce no-shows by 60%',
       icon: Target,
       title: 'Meeting Optimization',
-      description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
-      benefit: 'Improve meeting ROI by 40%'
+      {
+
+        description: 'Analyze meeting effectiveness and suggest improvements for better productivity and outcomes.',
+      benefit: 'Improve meeting ROI by 40%',
       icon: Shield,
       title: 'Privacy & Security',
-      description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
-      benefit: '100% secure scheduling'
+      {
+
+        description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
+      benefit: '100% secure scheduling',
     }
   ];
 
   const pricingPlans = [
       name: 'Personal',
-      price: '$19',
+      {
+
+        price: '$19',
       period: '/month',
-      description: 'Perfect for individuals',
+      {
+
+        description: 'Perfect for individuals',
       features: [
         'Unlimited personal meetings',
         'Basic AI scheduling',
@@ -50,7 +66,9 @@ const AISchedulerPage: React.FC = () => {
       ],
       popular: false
       name: 'Team',
-      price: '$49',
+      {
+
+        price: '$49',
       description: 'Ideal for small teams',
         'Up to 10 team members',
         'Advanced AI scheduling',
@@ -62,7 +80,9 @@ const AISchedulerPage: React.FC = () => {
         'Custom branding'
       popular: true
       name: 'Enterprise',
-      price: '$149',
+      {
+
+        price: '$149',
       description: 'For large organizations',
         'Unlimited team members',
         'Premium AI features',
@@ -85,18 +105,30 @@ const AISchedulerPage: React.FC = () => {
 
   const testimonials = [
       name: 'Jennifer Lee',
-      company: 'TechStart',
+      {
+
+        company: 'TechStart',
       role: 'Operations Manager',
-      content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
+      {
+
+        content: 'AI Scheduler eliminated all our scheduling headaches. We save 6 hours per week and never have conflicts anymore.',
       rating: 5
       name: 'Robert Martinez',
-      company: 'Consulting Group',
+      {
+
+        company: 'Consulting Group',
       role: 'Senior Partner',
-      content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
+      {
+
+        content: 'The AI predictions are incredibly accurate. It knows our team\'s patterns better than we do.',
       name: 'Amanda Chen',
-      company: 'Digital Agency',
+      {
+
+        company: 'Digital Agency',
       role: 'Project Manager',
-      content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
+      {
+
+        content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

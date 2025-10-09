@@ -33,7 +33,7 @@ export async function registerServiceWorker(
       }
     });
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/'
+      scope: '/',
     });
     // Handle updates
     registration.addEventListener('updatefound', () => {

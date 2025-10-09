@@ -9,25 +9,33 @@ const AIAutomationPage: React.FC = () => {
     {
       icon: Settings,
       title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
+      {
+
+        description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
       icon: Zap,
       title: 'Workflow Optimization',
-      description: 'AI-powered workflow analysis and optimization for maximum productivity',
+      {
+
+        description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
       icon: Shield,
       title: 'Decision Trees',
-      description: 'Advanced decision-making algorithms for complex business scenarios',
+      {
+
+        description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
       icon: Clock,
       title: 'Exception Handling',
-      description: 'Intelligent handling of exceptions and edge cases in automated processes',
+      {
+
+        description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
@@ -35,9 +43,13 @@ const AIAutomationPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$1,400',
+      {
+
+        price: '$1,400',
       period: '/month',
-      description: 'Perfect for small businesses',
+      {
+
+        description: 'Perfect for small businesses',
       features: [
         'Up to 10 automated processes',
         'Basic AI decision making',
@@ -49,9 +61,13 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$2,800',
+      {
+
+        price: '$2,800',
       period: '/month',
-      description: 'Ideal for growing companies',
+      {
+
+        description: 'Ideal for growing companies',
       features: [
         'Up to 50 automated processes',
         'Advanced AI decision making',
@@ -64,9 +80,13 @@ const AIAutomationPage: React.FC = () => {
     },
     {
       name: 'Enterprise',
-      price: '$5,600',
+      {
+
+        price: '$5,600',
       period: '/month',
-      description: 'For large organizations',
+      {
+
+        description: 'For large organizations',
       features: [
         'Unlimited processes',
         'Premium AI features',

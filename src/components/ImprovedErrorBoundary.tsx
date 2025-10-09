@@ -179,19 +179,19 @@ const styles = {
   },
   icon: {
     fontSize: '48px',
-    marginBottom: '20px'
+    marginBottom: '20px',
   },
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: '16px'
+    marginBottom: '16px',
   },
   message: {
     fontSize: '16px',
     color: '#666',
     marginBottom: '32px',
-    lineHeight: '1.6'
+    lineHeight: '1.6',
   },
   details: {
     textAlign: 'left' as const,
@@ -199,7 +199,7 @@ const styles = {
     backgroundColor: '#f9f9f9',
     padding: '16px',
     borderRadius: '4px',
-    border: '1px solid #e0e0e0'
+    border: '1px solid #e0e0e0',
   },
   summary: {
     cursor: 'pointer',
@@ -208,11 +208,11 @@ const styles = {
     userSelect: 'none' as const
   },
   errorDetails: {
-    fontSize: '14px'
+    fontSize: '14px',
   },
   errorMessage: {
     marginBottom: '12px',
-    color: '#d32f2f'
+    color: '#d32f2f',
   },
   stack: {
     backgroundColor: '#f5f5f5',
@@ -239,14 +239,14 @@ const styles = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    transition: 'background-color 0.2s'
+    transition: 'background-color 0.2s',
   },
   secondaryButton: {
-    backgroundColor: '#6c757d'
+    backgroundColor: '#6c757d',
   },
   errorCount: {
     marginTop: '24px',
     fontSize: '14px',
-    color: '#999'
+    color: '#999',
   }
 };

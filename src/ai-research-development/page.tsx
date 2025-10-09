@@ -9,20 +9,28 @@ const AIResearchDevelopmentPage: React.FC = () => {
     {
       icon: Brain,
       title: 'Custom AI Research',
-      description: 'Tailored AI research solutions for your specific needs',
+      {
+
+        description: 'Tailored AI research solutions for your specific needs',
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
     },
       icon: Code,
       title: 'Prototype Development',
-      description: 'Rapid prototyping and development of AI solutions',
+      {
+
+        description: 'Rapid prototyping and development of AI solutions',
       benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
       icon: FlaskConical,
       title: 'Experimental Platforms',
-      description: 'Advanced experimental environments for AI testing',
+      {
+
+        description: 'Advanced experimental environments for AI testing',
       benefits: ['Sandbox environments', 'A/B testing', 'Performance analysis']
       icon: Target,
       title: 'Innovation Consulting',
-      description: 'Strategic consulting for AI adoption and implementation',
+      {
+
+        description: 'Strategic consulting for AI adoption and implementation',
       benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
     }
   ];

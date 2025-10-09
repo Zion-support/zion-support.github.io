@@ -67,7 +67,7 @@ class UserExperienceEnhancer {
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
+            block: 'start',
           });
         }
       });
@@ -351,7 +351,7 @@ class UserExperienceEnhancer {
       new Notification(title, {
         body: body,
         icon: icon || '/favicon.ico',
-        badge: '/favicon.ico'
+        badge: '/favicon.ico',
       });
     }
   }

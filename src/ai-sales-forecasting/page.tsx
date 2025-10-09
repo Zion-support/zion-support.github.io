@@ -9,20 +9,28 @@ const AISalesForecastingPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Forecasting',
-      description: 'AI-powered sales forecasting and prediction',
+      {
+
+        description: 'AI-powered sales forecasting and prediction',
       benefits: ['Revenue prediction', 'Trend analysis', 'Seasonal forecasting']
     },
       icon: Target,
       title: 'Goal Setting',
-      description: 'Intelligent goal setting and tracking',
+      {
+
+        description: 'Intelligent goal setting and tracking',
       benefits: ['Smart goals', 'Progress tracking', 'Performance metrics']
       icon: Zap,
       title: 'Real-time Insights',
-      description: 'Real-time sales insights and recommendations',
+      {
+
+        description: 'Real-time sales insights and recommendations',
       benefits: ['Live dashboards', 'Instant alerts', 'Action recommendations']
       icon: Settings,
       title: 'Scenario Planning',
-      description: 'What-if analysis and scenario planning',
+      {
+
+        description: 'What-if analysis and scenario planning',
       benefits: ['Scenario modeling', 'Risk assessment', 'Strategy optimization']
     }
   ];

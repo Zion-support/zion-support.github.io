@@ -10,29 +10,41 @@ const AICustomerSupportBotPage: React.FC = () => {
     {
       icon: Bot,
       title: '24/7 AI Support',
-      description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+      {
+
+        description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
-      description: 'Advanced NLP for understanding and responding to customer queries naturally',
+      {
+
+        description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
       icon: Users,
       title: 'Human Handoff',
-      description: 'Seamless escalation to human agents when complex issues arise',
+      {
+
+        description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
       icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Comprehensive analytics to track performance and improve customer experience',
+      {
+
+        description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
   ];
 
   const pricingPlans = [
       name: 'Starter',
-      price: '$149',
+      {
+
+        price: '$149',
       period: '/month',
-      description: 'Perfect for small businesses',
+      {
+
+        description: 'Perfect for small businesses',
       features: [
         'Up to 1,000 conversations/month',
         'Basic AI responses',
@@ -42,7 +54,9 @@ const AICustomerSupportBotPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
-      price: '$299',
+      {
+
+        price: '$299',
       description: 'Ideal for growing companies',
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
@@ -52,7 +66,9 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Multi-language support'
       popular: true
       name: 'Enterprise',
-      price: '$599',
+      {
+
+        price: '$599',
       description: 'For large organizations',
         'Unlimited conversations',
         'Premium AI features',

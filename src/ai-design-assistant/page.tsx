@@ -9,20 +9,28 @@ const AIDesignAssistantPage: React.FC = () => {
     {
       icon: Palette,
       title: 'AI Design Generation',
-      description: 'AI-powered design creation and optimization',
+      {
+
+        description: 'AI-powered design creation and optimization',
       benefits: ['Auto design', 'Style optimization', 'Brand consistency']
     },
       icon: Target,
       title: 'Design Recommendations',
-      description: 'Intelligent design suggestions and improvements',
+      {
+
+        description: 'Intelligent design suggestions and improvements',
       benefits: ['Layout optimization', 'Color suggestions', 'Typography advice']
       icon: Zap,
       title: 'Automated Workflows',
-      description: 'Streamlined design workflows and automation',
+      {
+
+        description: 'Streamlined design workflows and automation',
       benefits: ['Template generation', 'Batch processing', 'Asset management']
       icon: Settings,
       title: 'Design Analytics',
-      description: 'Comprehensive design performance analytics',
+      {
+
+        description: 'Comprehensive design performance analytics',
       benefits: ['Performance metrics', 'User feedback', 'A/B testing']
     }
   ];

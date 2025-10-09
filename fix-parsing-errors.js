@@ -1,7 +1,32 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const { glob } = require('glob');
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Common patterns to fix
+const fixes = [
+  // Fix missing commas in object literals
+  {
+    pattern: /(\s+)(\w+):\s*['"`][^'"`]*['"`],?\s*\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$3:'
+  },
+  // Fix missing commas in arrays
+  {
+    pattern: /(\s+)(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$3:'
+  },
+  // Fix missing closing braces in objects
+  {
+    pattern: /(\s+)(\w+):\s*['"`][^'"`]*['"`]\s*\n\s*(\w+):/g,
+    replacement: '$1$2: $3,\n$1$3:'
+  },
+  // Fix JSX closing tag issues
+  {
+    pattern: /<(\w+)([^>]*)>\s*([^<]*)\s*<\/?(\w+)([^>]*)>/g,
+    replacement: '<$1$2>$3</$1>'
+  }
+];
 
 function fixFile(filePath) {
   try {
@@ -16,36 +41,19 @@ function fixFile(filePath) {
       let line = lines[i];
       const nextLine = lines[i + 1];
       
-      // Fix missing commas between object properties
+      // Check if current line ends with a property and next line starts with a property
       if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
           nextLine && nextLine.match(/^\s+\w+:/)) {
+        // Add comma if missing
         if (!line.trim().endsWith(',')) {
           line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
           modified = true;
         }
       }
       
-      // Fix missing commas before closing braces
+      // Fix missing closing braces
       if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
           nextLine && nextLine.match(/^\s*[}\]]/)) {
-        if (!line.trim().endsWith(',')) {
-          line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
-          modified = true;
-        }
-      }
-      
-      // Fix missing commas in array elements
-      if (line.match(/\s*['"`][^'"`]*['"`]\s*$/) && 
-          nextLine && nextLine.match(/^\s*['"`]/)) {
-        if (!line.trim().endsWith(',')) {
-          line = line.replace(/(\s*)(['"`][^'"`]*['"`])\s*$/, '$1$2,');
-          modified = true;
-        }
-      }
-      
-      // Fix missing closing braces in objects
-      if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
-          nextLine && nextLine.match(/^\s*[a-zA-Z]/)) {
         if (!line.trim().endsWith(',')) {
           line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
           modified = true;
@@ -68,20 +76,16 @@ function fixFile(filePath) {
   }
 }
 
-async function main() {
-  // Find all TypeScript/JSX files
-  const files = await glob('src/**/*.{ts,tsx}', { cwd: process.cwd() });
+// Find all TypeScript/JSX files
+const files = await glob('src/**/*.{ts,tsx}', { cwd: process.cwd() });
 
-  console.log(`Found ${files.length} TypeScript/JSX files`);
+console.log(`Found ${files.length} TypeScript/JSX files`);
 
-  let fixedCount = 0;
-  files.forEach(file => {
-    if (fixFile(file)) {
-      fixedCount++;
-    }
-  });
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixFile(file)) {
+    fixedCount++;
+  }
+});
 
-  console.log(`Fixed ${fixedCount} files`);
-}
-
-main().catch(console.error);
+console.log(`Fixed ${fixedCount} files`);

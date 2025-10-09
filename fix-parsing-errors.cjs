@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 const { glob } = require('glob');
 
 function fixFile(filePath) {
@@ -16,36 +17,19 @@ function fixFile(filePath) {
       let line = lines[i];
       const nextLine = lines[i + 1];
       
-      // Fix missing commas between object properties
+      // Check if current line ends with a property and next line starts with a property
       if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
           nextLine && nextLine.match(/^\s+\w+:/)) {
+        // Add comma if missing
         if (!line.trim().endsWith(',')) {
           line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
           modified = true;
         }
       }
       
-      // Fix missing commas before closing braces
+      // Fix missing closing braces
       if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
           nextLine && nextLine.match(/^\s*[}\]]/)) {
-        if (!line.trim().endsWith(',')) {
-          line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
-          modified = true;
-        }
-      }
-      
-      // Fix missing commas in array elements
-      if (line.match(/\s*['"`][^'"`]*['"`]\s*$/) && 
-          nextLine && nextLine.match(/^\s*['"`]/)) {
-        if (!line.trim().endsWith(',')) {
-          line = line.replace(/(\s*)(['"`][^'"`]*['"`])\s*$/, '$1$2,');
-          modified = true;
-        }
-      }
-      
-      // Fix missing closing braces in objects
-      if (line.match(/\s+\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
-          nextLine && nextLine.match(/^\s*[a-zA-Z]/)) {
         if (!line.trim().endsWith(',')) {
           line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
           modified = true;

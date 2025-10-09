@@ -10,26 +10,34 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
+      {
+
+        description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price: 'Starting at $2,500/month'
+      price: 'Starting at $2,500/month',
     },
       title: 'Machine Learning Solutions',
-      description: 'Custom machine learning models and algorithms for your business needs',
+      {
+
+        description: 'Custom machine learning models and algorithms for your business needs',
       icon: Zap,
       features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price: 'Starting at $1,500/month'
-      title: 'AI Security & Compliance',
+      price: 'Starting at $1,500/month',
+      {
+
+        title: 'AI Security & Compliance',
       description: 'Enterprise-grade AI security and compliance solutions',
       icon: Shield,
       features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price: 'Starting at $1,200/month'
-      title: 'AI Analytics & Insights',
+      price: 'Starting at $1,200/month',
+      {
+
+        title: 'AI Analytics & Insights',
       description: 'Advanced analytics and business intelligence powered by AI',
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
-      price: 'Starting at $800/month'
+      price: 'Starting at $800/month',
     }
   ];
 

@@ -154,7 +154,7 @@ class AnalyticsTracker {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
           value: value,
-          currency: 'USD'
+          currency: 'USD',
         });
       }
       if (process.env.NODE_ENV === 'development') {

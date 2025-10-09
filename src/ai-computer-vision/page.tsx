@@ -9,45 +9,63 @@ const AIComputerVisionPage: React.FC = () => {
     {
       icon: Eye,
       title: 'Object Detection',
-      description: 'Advanced object detection and recognition with high accuracy',
+      {
+
+        description: 'Advanced object detection and recognition with high accuracy',
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
       icon: Camera,
       title: 'Image Classification',
-      description: 'Automated image categorization and content analysis',
+      {
+
+        description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
       icon: Video,
       title: 'Video Analysis',
-      description: 'Real-time video processing and analysis capabilities',
+      {
+
+        description: 'Real-time video processing and analysis capabilities',
       benefits: ['Live streaming', 'Motion detection', 'Activity recognition']
       icon: Target,
       title: 'Facial Recognition',
-      description: 'Secure and accurate facial recognition technology',
+      {
+
+        description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
 
   const applications = [
       title: 'Retail & E-commerce',
-      description: 'Automated inventory management, customer behavior analysis, and checkout optimization',
+      {
+
+        description: 'Automated inventory management, customer behavior analysis, and checkout optimization',
       icon: ShoppingCart,
       useCases: ['Smart checkout', 'Inventory tracking', 'Customer analytics']
       title: 'Security & Surveillance',
-      description: 'Intelligent security monitoring and threat detection systems',
+      {
+
+        description: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
       useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
       title: 'Healthcare',
-      description: 'Medical image analysis and diagnostic assistance',
+      {
+
+        description: 'Medical image analysis and diagnostic assistance',
       icon: Stethoscope,
       useCases: ['X-ray analysis', 'MRI interpretation', 'Symptom detection']
       title: 'Manufacturing',
-      description: 'Quality control and automated inspection systems',
+      {
+
+        description: 'Quality control and automated inspection systems',
       icon: Settings,
       useCases: ['Defect detection', 'Quality assurance', 'Process monitoring']
 
   const pricing = [
       name: 'Starter',
-      price: '$499/month',
+      {
+
+        price: '$499/month',
       description: 'Perfect for small projects',
       features: [
         'Up to 1,000 images/month',
@@ -57,7 +75,9 @@ const AIComputerVisionPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
-      price: '$1,999/month',
+      {
+
+        price: '$1,999/month',
       description: 'Ideal for growing businesses',
         'Up to 10,000 images/month',
         'Advanced models',
@@ -66,7 +86,9 @@ const AIComputerVisionPage: React.FC = () => {
         'API access'
       popular: true
       name: 'Enterprise',
-      price: 'Custom',
+      {
+
+        price: 'Custom',
       description: 'For large organizations',
         'Unlimited images',
         'Custom models',

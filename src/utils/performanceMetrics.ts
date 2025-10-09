@@ -83,7 +83,7 @@ export class PerformanceMetrics {
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-                category: 'load'
+                category: 'load',
               });
             }
           }
@@ -101,7 +101,7 @@ export class PerformanceMetrics {
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-              category: 'load'
+              category: 'load',
             });
           }
         });
@@ -119,7 +119,7 @@ export class PerformanceMetrics {
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-            category: 'runtime'
+            category: 'runtime',
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -207,7 +207,7 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
+      category: 'runtime',
     });
     return result;
   }
@@ -223,7 +223,7 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
+      category: 'runtime',
     });
     return result;
   }

@@ -61,7 +61,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'GET'
+      method: 'GET',
     });
   }
   /**
@@ -104,7 +104,7 @@ class ApiClient {
     return this.request<T>({
       ...config,
       url,
-      method: 'DELETE'
+      method: 'DELETE',
     });
   }
   /**

@@ -53,14 +53,14 @@ const SignupPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance'
+      description: 'Bank-level security with advanced encryption and compliance',
     },
       icon: Award,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
+      description: '300% average ROI and 95% process automation for our clients',
       icon: Globe,
       title: 'Global Support',
-      description: '24/7 support and services across multiple time zones'
+      description: '24/7 support and services across multiple time zones',
   ];
 
   const benefits = [

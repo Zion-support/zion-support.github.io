@@ -7,23 +7,35 @@ const AISocialMediaManagerPage: React.FC = () => {
     {
       icon: Share2,
       title: 'AI Content Creation',
-      description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
+      {
+
+        description: 'Automatically generate engaging posts, captions, and hashtags for all platforms',
     },
       icon: TrendingUp,
       title: 'Trend Analysis',
-      description: 'Real-time trend monitoring and content suggestions based on viral topics'
+      {
+
+        description: 'Real-time trend monitoring and content suggestions based on viral topics',
       icon: Users,
       title: 'Audience Insights',
-      description: 'Deep analytics on your audience behavior and engagement patterns'
+      {
+
+        description: 'Deep analytics on your audience behavior and engagement patterns',
       icon: Calendar,
       title: 'Smart Scheduling',
-      description: 'AI-optimized posting times for maximum engagement across all platforms'
+      {
+
+        description: 'AI-optimized posting times for maximum engagement across all platforms',
       icon: BarChart,
       title: 'Performance Analytics',
-      description: 'Comprehensive reporting with actionable insights and ROI tracking'
+      {
+
+        description: 'Comprehensive reporting with actionable insights and ROI tracking',
       icon: MessageSquare,
       title: 'Auto-Responses',
-      description: 'Intelligent chatbot responses and comment management'
+      {
+
+        description: 'Intelligent chatbot responses and comment management',
     }
   ];
 
@@ -44,9 +56,13 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const pricing = [
       name: 'Starter',
-      price: '$29',
+      {
+
+        price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      {
+
+        description: 'Perfect for small businesses',
       features: [
         '3 social media accounts',
         '50 posts per month',
@@ -56,7 +72,9 @@ const AISocialMediaManagerPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
-      price: '$79',
+      {
+
+        price: '$79',
       description: 'Ideal for growing brands',
         '10 social media accounts',
         'Unlimited posts',
@@ -66,7 +84,9 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Team collaboration'
       popular: true
       name: 'Enterprise',
-      price: '$199',
+      {
+
+        price: '$199',
       description: 'For large organizations',
         'Unlimited accounts',
         'Full AI suite',

@@ -9,23 +9,35 @@ const AIEmailMarketingPage: React.FC = () => {
     {
       icon: Mail,
       title: 'AI Content Generation',
-      description: 'Automatically create compelling email content that resonates with your audience'
+      {
+
+        description: 'Automatically create compelling email content that resonates with your audience',
     },
       icon: Target,
       title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns'
+      {
+
+        description: 'AI-powered audience segmentation for highly targeted campaigns',
       icon: Send,
       title: 'Optimal Send Times',
-      description: 'AI determines the best time to send emails for maximum engagement'
+      {
+
+        description: 'AI determines the best time to send emails for maximum engagement',
       icon: BarChart,
       title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize for better results'
+      {
+
+        description: 'Forecast campaign performance and optimize for better results',
       icon: Users,
       title: 'Behavioral Triggers',
-      description: 'Automated email sequences based on user behavior and actions'
+      {
+
+        description: 'Automated email sequences based on user behavior and actions',
       icon: TrendingUp,
       title: 'A/B Testing',
-      description: 'Intelligent A/B testing with AI-powered optimization'
+      {
+
+        description: 'Intelligent A/B testing with AI-powered optimization',
     }
   ];
 
@@ -46,9 +58,13 @@ const AIEmailMarketingPage: React.FC = () => {
 
   const pricing = [
       name: 'Starter',
-      price: '$29',
+      {
+
+        price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      {
+
+        description: 'Perfect for small businesses',
       features: [
         '1,000 subscribers',
         '10,000 emails/month',
@@ -59,7 +75,9 @@ const AIEmailMarketingPage: React.FC = () => {
       ],
       popular: false
       name: 'Professional',
-      price: '$79',
+      {
+
+        price: '$79',
       description: 'Ideal for growing businesses',
         '10,000 subscribers',
         '100,000 emails/month',
@@ -70,7 +88,9 @@ const AIEmailMarketingPage: React.FC = () => {
         'A/B testing'
       popular: true
       name: 'Enterprise',
-      price: '$199',
+      {
+
+        price: '$199',
       description: 'For large organizations',
         'Unlimited subscribers',
         'Unlimited emails',

@@ -69,7 +69,7 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.'
+    message: 'Too many requests. Please try again in a minute.',
   }),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({
@@ -82,7 +82,8 @@ export const rateLimiters = {
   // API: 60 requests per minute
   api: new RateLimiter({
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
+    {
+      message: 'API rate limit exceeded. Please try again later.',
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     max: 5,

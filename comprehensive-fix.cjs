@@ -52,6 +52,22 @@ function fixFile(filePath) {
         }
       }
       
+      // Fix missing opening braces in objects
+      if (line.match(/^\s*\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
+          !line.includes('{')) {
+        line = line.replace(/^(\s*)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1{\n$1  $2,');
+        modified = true;
+      }
+      
+      // Fix missing closing braces in arrays
+      if (line.match(/^\s*\w+:\s*['"`][^'"`]*['"`]\s*$/) && 
+          nextLine && nextLine.match(/^\s*[}\]]/)) {
+        if (!line.trim().endsWith(',')) {
+          line = line.replace(/(\s+)(\w+:\s*['"`][^'"`]*['"`])\s*$/, '$1$2,');
+          modified = true;
+        }
+      }
+      
       fixedLines.push(line);
     }
     
