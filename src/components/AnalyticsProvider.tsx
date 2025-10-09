@@ -1,5 +1,12 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, createContext, useContext } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPerformance: (metricName: string, value: number) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -91,18 +98,39 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
-  return <>{children}</>;
-};
 
-// Export useAnalytics hook for other components
-export const useAnalytics = () => {
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', eventName, parameters);
     }
   };
   
-  return { trackEvent };
+  const trackPerformance = (metricName: string, value: number) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'performance_metric', {
+        metric_name: metricName,
+        metric_value: value,
+        event_category: 'performance'
+      });
+    }
+  };
+
+  const value = { trackEvent, trackPerformance };
+
+  return (
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+// Export useAnalytics hook for other components
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (context === undefined) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
 };
 
 export default AnalyticsProvider;
