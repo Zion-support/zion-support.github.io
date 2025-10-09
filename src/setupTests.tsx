@@ -6,12 +6,12 @@ import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+const originalConsoleError = console.error;
 console.error = (...args) => {
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
+  const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;
@@ -58,17 +58,17 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-const _originalConsoleWarn = console.warn;
-const _originalConsoleInfo = console.info;
+const originalConsoleWarn = console.warn;
+const originalConsoleInfo = console.info;
 console.warn = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
 console.info = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+  const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
@@ -89,7 +89,7 @@ console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError.apply(console, args);
+  originalConsoleError(...args);
 };
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
