@@ -1,6 +1,5 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -119,271 +118,122 @@ const Navigation: React.FC = memo(() => {
               Home
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-=======
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = memo(() => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  return (
-    <nav className="bg-slate-900/50 backdrop-blur-lg border-b border-white/10 fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white">
-            Zion Tech Group
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
               About
             </Link>
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Services
-            </Link>
-            <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              AI Services
-            </Link>
-            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Micro SAAS
-            </Link>
-            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-<<<<<<< HEAD
-
+            
             {/* Services Dropdown */}
             <div className="relative group">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
-              >
-                <Brain className="w-4 h-4" />
+              <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium">
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className="w-4 h-4" />
               </button>
               
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl z-50">
-                  <div className="p-6">
-                    <div className="grid grid-cols-2 gap-6">
-                      {serviceCategories.map((category, index) => (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 mb-2">
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                            <span className="text-sm font-semibold text-white">{category.title}</span>
-                          </div>
-                          <div className="space-y-2">
-                            {category.services.map((service, serviceIndex) => (
-                              <Link
-                                key={serviceIndex}
-                                to={service.path}
-                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                                onClick={closeAllMenus}
-                              >
-                                <div className="font-medium">{service.name}</div>
-                                <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                  {service.description}
-                                </div>
-                              </Link>
-                            ))}
-                            {category.services.length > 0 && (
-                              <Link
-                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                                onClick={closeAllMenus}
-                              >
-                                View All →
-                              </Link>
-                            )}
-                          </div>
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="p-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index}>
+                        <div className="flex items-center space-x-2 mb-3">
+                          <category.icon className={`w-5 h-5 ${category.color}`} />
+                          <h3 className="text-white font-semibold">{category.title}</h3>
                         </div>
-                      ))}
-                    </div>
-                    <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                      <Link
-                        to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                        onClick={closeAllMenus}
-                      >
-                        View All Services
-                      </Link>
-                    </div>
+                        <div className="space-y-2">
+                          {category.services.map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-              onClick={closeAllMenus}
-            >
-              Case Studies
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Pricing
             </Link>
-
-            <Link 
-              to="/blog" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Blog
             </Link>
-
-            <Link 
-              to="/contact" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
+          </div>
 
-            {/* CTA Button */}
-            <Link 
-              to="/contact" 
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+              Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
-              Contact
-            </Link>
-            <div className="flex items-center space-x-4 ml-4">
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
-            </button>
-          </div>
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile menu */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               <Link
                 to="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
-=======
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-900/95 backdrop-blur-lg">
-              <Link
-                to="/about"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
                 About
               </Link>
-              <Link
-                to="/services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Services
-              </Link>
-              <Link
-                to="/ai-services"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                AI Services
-              </Link>
-              <Link
-                to="/micro-saas"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Micro SAAS
-              </Link>
-              <Link
-                to="/pricing"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Pricing
-              </Link>
-<<<<<<< HEAD
-
+              
               {/* Mobile Services */}
               <div>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                  className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
                 >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                 </button>
+                
                 {servicesOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
+                  <div className="mt-2 ml-4 space-y-2">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index}>
+                        <div className="flex items-center space-x-2 mb-2">
+                          <category.icon className={`w-4 h-4 ${category.color}`} />
+                          <h4 className="text-cyan-400 font-semibold text-sm">{category.title}</h4>
+                        </div>
+                        <div className="ml-6 space-y-1">
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm"
+                              onClick={closeAllMenus}
                             >
                               {service.name}
                             </Link>
                           ))}
-                          <Link
-                            to="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          >
-                            View All →
-                          </Link>
                         </div>
                       </div>
                     ))}
@@ -392,54 +242,36 @@ const Navigation: React.FC = memo(() => {
               </div>
 
               <Link
-                to="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                to="/pricing"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
-                Case Studies
+                Pricing
               </Link>
-
               <Link
                 to="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
                 Blog
               </Link>
-
               <Link
                 to="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-
-              <a
-                href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
-                onClick={closeAllMenus}
-              >
-                <Phone className="w-4 h-4 inline mr-2" />
-                (302) 464-0950
-              </a>
-=======
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
-              <div className="flex items-center space-x-4 px-3 py-2">
-                <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Phone className="w-5 h-5" />
-                </a>
-                <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                  <Mail className="w-5 h-5" />
-                </a>
+              
+              <div className="pt-4 border-t border-cyan-400/20">
+                <Link
+                  to="/contact"
+                  className="block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  onClick={closeAllMenus}
+                >
+                  Get Started
+                </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
             </div>
           </div>
         )}
@@ -449,9 +281,5 @@ const Navigation: React.FC = memo(() => {
 });
 
 Navigation.displayName = 'Navigation';
-<<<<<<< HEAD
-export default Navigation;
-=======
 
 export default Navigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21

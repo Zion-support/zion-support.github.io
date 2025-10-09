@@ -1,15 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
-<<<<<<< HEAD
-const,
-  MicroSAASPage: React.FC = () => {return (}
-    <div>Coming Soon</div>)
-=======
 const MicroSAASPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0b42
   );
 };
   const _microSAASServices = [
@@ -6918,17 +6912,6 @@ const categories = [
   sm:text-5xl,"
   md:text-6xl font-bold text-white mb-6"></h1>
 // Micro SAAS Solutions;
-<<<<<<< HEAD
-          </h1>"
-          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-            Coming Soon;
-          </p>
-          {/* Stats */}"
-          <div className="grid grid-cols-2,"
-  md:grid-cols-4 gap-6 mb-12"></div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>"
-=======
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
@@ -6937,7 +6920,6 @@ const categories = [
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0b42
               <div className="text-gray-300">Applications</div>
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
@@ -7088,25 +7070,6 @@ const categories = [
           
           
           
-<<<<<<< HEAD
-          </p>"
-          <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
-            <a></a>"
-              href="te,"
-  l:+13024640950""
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium,"
-  hover:bg-gray-100 transition-colors"
-// >
-//               Call (302) 464-0950;
-          </a>
-            <a></a>"
-              href="mailt,"
-  o:kleber@ziontechgroup.com""
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium,
-  hover:bg-white,"
-  hover:text-purple-600 transition-colors"
-=======
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -7116,7 +7079,6 @@ const categories = [
           </a>
             <a
               href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0b42
 // >
 //               Email Us;
           </a>

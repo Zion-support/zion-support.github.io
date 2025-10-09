@@ -20,4 +20,3 @@ export default async function handler(req, res) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message || 'Quote submission failed' });
   }
-}

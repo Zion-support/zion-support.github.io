@@ -17,4 +17,3 @@ export default function handler(req, res) {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
   r: 'Failed to process error report' });
   }
-}
