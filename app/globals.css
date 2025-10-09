@@ -31,12 +31,18 @@ body {
   --neon-green: #10b981;
   --neon-orange: #f59e0b;
   --neon-blue: #3b82f6;
+  --neon-yellow: #fbbf24;
+  --neon-red: #ef4444;
   --dark-bg: #0f0f23;
   --dark-surface: #1a1a2e;
   --dark-elevated: #16213e;
   --text-primary: #ffffff;
   --text-secondary: #a1a1aa;
   --text-muted: #71717a;
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-quaternary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 /* Futuristic Animations */
@@ -95,6 +101,113 @@ body {
   }
 }
 
+@keyframes cyber-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3), 0 0 60px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.5), 0 0 90px rgba(0, 255, 255, 0.2);
+  }
+}
+
+@keyframes hologram-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes energy-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes cyber-rotation {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes quantum-flicker {
+  0%, 100% {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    opacity: 0.6;
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    opacity: 0.8;
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes neural-network {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
 /* Futuristic Components */
 .neon-text {
   color: var(--neon-cyan);
@@ -125,6 +238,36 @@ body {
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+.cyber-grid-advanced {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+  animation: neural-network 20s linear infinite;
+}
+
+.quantum-background {
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+    rgba(0, 255, 255, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: energy-flow 8s ease-in-out infinite;
+}
+
+.neural-network-bg {
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background-size: 300px 300px, 200px 200px, 400px 400px;
+  animation: neural-network 15s linear infinite;
 }
 
 .data-stream {
@@ -203,6 +346,88 @@ body {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+}
+
+.cyber-card-advanced {
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 46, 0.95) 50%, rgba(22, 33, 62, 0.95) 100%);
+  border: 1px solid rgba(0, 255, 255, 0.4);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(20px);
+}
+
+.cyber-card-advanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.3), 0 0 100px rgba(139, 92, 246, 0.2);
+  animation: cyber-pulse 2s ease-in-out infinite;
+}
+
+.cyber-card-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-green));
+  animation: energy-flow 3s linear infinite;
+}
+
+.cyber-card-advanced::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  animation: hologram-scan 4s ease-in-out infinite;
+}
+
+.quantum-card {
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+    rgba(0, 255, 255, 0.1) 100%);
+  background-size: 400% 400%;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  animation: energy-flow 8s ease-in-out infinite;
+}
+
+.quantum-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 30px 60px rgba(0, 255, 255, 0.4), 0 0 120px rgba(139, 92, 246, 0.3);
+  animation: quantum-flicker 1s ease-in-out infinite;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1), 
+    rgba(139, 92, 246, 0.1), 
+    rgba(236, 72, 153, 0.1), 
+    rgba(16, 185, 129, 0.1));
+  border-radius: 20px;
+  padding: 2px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: cyber-rotation 10s linear infinite;
 }
 
 /* Responsive Design */

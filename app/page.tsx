@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg">
       {/* Navigation */}
       <Navigation />
       
@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -150,7 +150,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Marketing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -166,7 +166,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚙️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Automation</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -185,7 +185,7 @@ const HomePage: React.FC = () => {
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -201,7 +201,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -217,7 +217,7 @@ const HomePage: React.FC = () => {
             </Suspense>
 
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6">
+              <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
@@ -235,7 +235,7 @@ const HomePage: React.FC = () => {
 
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <article className="cyber-card hologram-card p-4 sm:p-6">
+            <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -250,7 +250,7 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
+            <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -265,7 +265,7 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
+            <article className="cyber-card-advanced hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
@@ -313,25 +313,25 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-8 sm:mb-12">
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-advanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-300 text-xs sm:text-base">Enterprise Clients</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-advanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
                 <div className="text-gray-300 text-xs sm:text-base">Cost Savings Delivered</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-advanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
                 <div className="text-gray-300 text-xs sm:text-base">Uptime Guarantee</div>
               </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
+              <div className="text-center cyber-card-advanced p-4 sm:p-6">
                 <div className="text-2xl sm:text-4xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-gray-300 text-xs sm:text-base">Support Available</div>
               </div>
             </div>
 
-            <div className="cyber-card hologram-card p-6 sm:p-8">
+            <div className="cyber-card-advanced hologram-card p-6 sm:p-8">
               <div className="text-center mb-6 sm:mb-8">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
               </div>
@@ -368,7 +368,7 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card" aria-labelledby="cta-heading">
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card-advanced" aria-labelledby="cta-heading">
           <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
             Ready to Transform Your Business?
           </h2>
