@@ -12,7 +12,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' },
+    { name: 'AI CRM Solutions', url: '/ai-crm-solutions', description: 'Intelligent customer relationships' },
+    { name: 'AI Supply Chain', url: '/ai-supply-chain', description: 'AI-powered supply chain management' },
+    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'AI-powered human resources' }
   ];
 
   const itServices = [
@@ -20,10 +23,10 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
+    { name: 'AI DevOps Automation', url: '/ai-devops-automation', description: 'AI-powered DevOps' },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
     { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' }
   ];
 
   const specializedServices = [
@@ -124,7 +127,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-purple-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -150,7 +153,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-blue-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -176,7 +179,7 @@ const Footer: React.FC = memo(() => {
               {specializedServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-white transition-colors group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-orange-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -199,7 +202,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}

@@ -200,6 +200,48 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Project Management',
+      description: 'Revolutionary AI-powered project management with intelligent task prioritization and risk prediction.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['AI Task Prioritization', 'Risk Prediction', 'Smart Collaboration', 'Predictive Analytics'],
+      price: 'Starting at $99/month',
+      popular: true
+    },
+    {
+      title: 'AI CRM Solutions',
+      description: 'Intelligent customer relationship management with AI-powered lead scoring and automated communication.',
+      icon: '👥',
+      link: '/ai-crm-solutions',
+      features: ['AI Lead Scoring', 'Automated Communication', 'Predictive Analytics', 'Smart Segmentation'],
+      price: 'Starting at $199/month',
+      popular: true
+    },
+    {
+      title: 'AI Supply Chain Management',
+      description: 'Revolutionary AI-powered supply chain optimization with demand forecasting and intelligent logistics.',
+      icon: '🚚',
+      link: '/ai-supply-chain',
+      features: ['Demand Forecasting', 'Route Optimization', 'Risk Management', 'Smart Inventory'],
+      price: 'Starting at $299/month'
+    },
+    {
+      title: 'AI HR Solutions',
+      description: 'Transform human resources with AI-powered candidate screening and intelligent performance management.',
+      icon: '👨‍💼',
+      link: '/ai-hr-solutions',
+      features: ['AI Candidate Screening', 'Smart Onboarding', 'Performance Analytics', 'Talent Development'],
+      price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI DevOps Automation',
+      description: 'Revolutionary AI-powered DevOps with intelligent CI/CD pipelines and automated infrastructure management.',
+      icon: '⚙️',
+      link: '/ai-devops-automation',
+      features: ['AI Code Analysis', 'Intelligent CI/CD', 'Predictive Monitoring', 'Automated Testing'],
+      price: 'Starting at $399/month'
     }
   ];
 

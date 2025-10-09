@@ -1,30 +1,35 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 
-const Marketing-toolsPage: React.FC = () => {
+const MarketingToolsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Marketing-tools</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under construction. Please check back soon for updates.
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Helmet>
+        <title>Marketing Tools - Zion Tech Group</title>
+        <meta name="description" content="Professional marketing tools and solutions from Zion Tech Group to boost your business growth." />
+        <link rel="canonical" href="https://ziontechgroup.com/marketing-tools" />
+      </Helmet>
+
+      <div className="max-w-4xl mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Marketing Tools</h1>
+        <div className="prose prose-lg max-w-none">
+          <p className="text-gray-600 mb-6">
+            Professional marketing tools and solutions to accelerate your business growth and reach your target audience effectively.
           </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      
-      <Footer />
+          
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Marketing Tools</h2>
+          <p className="text-gray-600 mb-6">
+            We provide a comprehensive suite of marketing tools including AI-powered content generation, social media management, and analytics platforms.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Us</h2>
+          <p className="text-gray-600 mb-6">
+            For more information about our marketing tools, contact us at kleber@ziontechgroup.com or +1 302 464 0950.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Marketing-toolsPage;
+export default MarketingToolsPage;

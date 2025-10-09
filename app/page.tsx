@@ -68,14 +68,16 @@ export default function HomePage() {
   }
 
   return (
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       <main className="relative z-10">
         {/* Hero Section */}
         <section 
           className="relative py-20 px-4 text-center overflow-hidden"
           aria-labelledby="hero-heading"
         >
-            >
+          <div className="max-w-7xl mx-auto">
+            <h1 id="hero-heading" className="text-4xl md:text-6xl font-bold text-white mb-6 cyber-glow">
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow" role="doc-subtitle">
@@ -128,12 +130,11 @@ export default function HomePage() {
         </Suspense>
       </main>
 
-        {/* Footer */}
-        <Footer />
-        
-        {/* Scroll to Top Button */}
-        <ScrollToTop />
-      </div>
-    </ErrorBoundary>
+      {/* Footer */}
+      <Footer />
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
+    </div>
   );
 }
