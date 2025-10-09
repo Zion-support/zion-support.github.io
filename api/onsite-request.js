@@ -4,34 +4,13 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { name, email, company, message } = req.body || {};
 
   if (!name || !email) {
-    res.status(400).json({ error: 'Name and email are required' });
-    return;
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const {
-    name,
-    email,
-    company,
-    phone,
-    message,
-    serviceType,
-    budget,
-    timeline
-  } = req.body || {};
-
-  if (!name || !email) {
     return res.status(400).json({ error: 'Name and email are required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
@@ -46,7 +25,6 @@ async function handler(req, res) {
   try {
     const data = fs.readFileSync(file, 'utf8');
     existing = JSON.parse(data);
-<<<<<<< HEAD
   } catch (err) {
     // File doesn't exist or is invalid, start with empty array
     console.log('No existing data found, starting fresh:', err.message);
