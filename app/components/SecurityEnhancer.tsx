@@ -1,112 +1,176 @@
 'use client';
+import React, { useEffect, useState, useCallback } from 'react';
 
-
-interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
+interface SecurityEnhancerProps {
+  enableCSP?: boolean;
+  enableHTTPSRedirect?: boolean;
+  enableXSSProtection?: boolean;
+  enableClickjackingProtection?: boolean;
+  enableContentTypeSniffingProtection?: boolean;
 }
 
-const,
-  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+interface SecurityMetrics {
+  cspViolations: number;
+  xssAttempts: number;
+  csrfAttempts: number;
+  suspiciousActivity: number;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
+  enableCSP = true,
+  enableHTTPSRedirect = true,
+  enableXSSProtection = true,
+  enableClickjackingProtection = true,
+  enableContentTypeSniffingProtection = true
+}) => {
+  const [metrics, setMetrics] = useState<SecurityMetrics>({
+    cspViolations: 0,
+    xssAttempts: 0,
+    csrfAttempts: 0,
+    suspiciousActivity: 0
+  });
+  const [isSecure, setIsSecure] = useState(true);
+  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (enableCSP) {
+      addContentSecurityPolicy();
     }
     
-    if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
+    if (enableHTTPSRedirect) {
+      enforceHTTPS();
     }
     
-    if (enableXSSProtection) {/* TODO: Fix JSX expression */}
+    if (enableXSSProtection) {
+      addXSSProtection();
     }
     
-    if (enableClickjackingProtection) {/* TODO: Fix JSX expression */}
+    if (enableClickjackingProtection) {
+      addClickjackingProtection();
     }
     
-    if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
+    if (enableContentTypeSniffingProtection) {
+      addContentTypeSniffingProtection();
     }
     
-    // Add security headers;
+    // Add security headers
     addSecurityHeaders();
     
-    // Add security event listeners;
+    // Add security event listeners
     addSecurityEventListeners();
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 
-  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
+  const addContentSecurityPolicy = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'Content-Security-Policy';
+    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';";
+    document.head.appendChild(meta);
   };
 
-  const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
+  const enforceHTTPS = () => {
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
   };
 
-  const addXSSProtection = () => {/* TODO: Fix JSX expression */}
+  const addXSSProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-XSS-Protection';
+    meta.content = '1; mode=block';
+    document.head.appendChild(meta);
   };
 
-  const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
+  const addClickjackingProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Frame-Options';
+    meta.content = 'DENY';
+    document.head.appendChild(meta);
   };
 
-  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
+  const addContentTypeSniffingProtection = () => {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
   };
 
-  const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
-  t: 'strict-origin-when-cross-origin' },
-      {/* TODO: Fix JSX expression */}
-  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      {/* TODO: Fix JSX expression */}
-  t: 'max-age=63072000; includeSubDomains; preload' }
+  const addSecurityHeaders = () => {
+    const headers = [
+      { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
+      { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
+      { name: 'Strict-Transport-Security', content: 'max-age=63072000; includeSubDomains; preload' }
     ];
 
-    headers.forEach(header => {/* TODO: Fix JSX expression */})
+    headers.forEach(header => {
+      const meta = document.createElement('meta');
+      meta.httpEquiv = header.name;
+      meta.content = header.content;
+      document.head.appendChild(meta);
     });
   };
 
-  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
-      }
+  const addSecurityEventListeners = () => {
+    // Prevent right-click context menu
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
     });
 
     // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
-      }
+    document.addEventListener('selectstart', (e) => {
+      e.preventDefault();
     });
 
-    // Prevent drag and drop;
-    document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
+    // Prevent drag and drop
+    document.addEventListener('dragover', (e) => {
+      e.preventDefault();
     });
 
-    document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
+    document.addEventListener('drop', (e) => {
+      e.preventDefault();
     });
 
     // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+Shift+I;
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+U;
-        if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+S;
-        if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+A;
-        if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
-        }
+    document.addEventListener('keydown', (e) => {
+      // F12
+      if (e.keyCode === 123) {
+        e.preventDefault();
+      }
+      // Ctrl+Shift+I
+      if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+        e.preventDefault();
+      }
+      // Ctrl+U
+      if (e.ctrlKey && e.keyCode === 85) {
+        e.preventDefault();
+      }
+      // Ctrl+S
+      if (e.ctrlKey && e.keyCode === 83) {
+        e.preventDefault();
+      }
+      // Ctrl+A
+      if (e.ctrlKey && e.keyCode === 65) {
+        e.preventDefault();
       }
     });
 
-    // Monitor for suspicious activity;
+    // Monitor for suspicious activity
     let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
+    const resetSuspiciousActivity = () => {
+      suspiciousActivity = 0;
     };
 
-    // Reset suspicious activity counter every 5 minutes;
+    // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
 
     // Track rapid clicks (potential bot activity)
     let clickCount = 0;
-    document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
-
-        }
-      });
-    };
-
-    checkForXSS();
+    document.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount > 10) {
+        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
+        clickCount = 0;
+      }
+    });
 
     // Monitor form submissions for CSRF
     const forms = document.querySelectorAll('form');
@@ -117,38 +181,21 @@ const,
         
         if (!token) {
           setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
+          console.warn('Potential CSRF attempt detected', { form: form.id });
         }
       });
     });
 
-
-    // Track rapid keyboard input;
+    // Track rapid keyboard input
     let keyCount = 0;
-    document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
-
-          }
-        });
-      });
-    };
-
-    checkSuspiciousCode();
-
-    // Monitor for unusual network requests
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0] as string;
-      
-      if (typeof url === 'string' && !validateURL(url)) {
+    document.addEventListener('keydown', () => {
+      keyCount++;
+      if (keyCount > 100) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
-        throw new Error('Suspicious network request blocked');
+        keyCount = 0;
       }
-      
-      return originalFetch.apply(window, args);
-    };
-
-  }, [validateURL]);
+    });
+  };
 
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
@@ -179,7 +226,7 @@ const,
     setSecurityWarnings(warnings);
     
     if (warnings.length > 0) {
-      logger.warn('Security warnings detected', { warnings });
+      console.warn('Security warnings detected', { warnings });
     }
   }, []);
 
@@ -192,7 +239,7 @@ const,
       .filter((timestamp: number) => timestamp > windowStart);
     
     if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
+      console.warn('Rate limit exceeded', { key, limit, windowMs });
       return false;
     }
     
@@ -203,8 +250,6 @@ const,
 
   // Initialize security monitoring
   useEffect(() => {
-    monitorCSP();
-    monitorSuspiciousActivity();
     validateSecurityHeaders();
 
     // Set up periodic security checks
@@ -213,11 +258,11 @@ const,
     }, 30000); // Check every 30 seconds
 
     return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
+  }, [validateSecurityHeaders]);
 
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
+    console.log('Security event', { event, data });
     
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
@@ -238,15 +283,12 @@ const,
   useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).securityUtils = {
-        sanitizeInput,
-        validateURL,
-        rateLimit,
         metrics,
         isSecure,
         warnings: securityWarnings,
       };
     }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  }, [metrics, isSecure, securityWarnings]);
 
   return (
     <>

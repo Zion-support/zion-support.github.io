@@ -1,47 +1,131 @@
 'use client';
+import React, { memo, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface SEOOptimizerProps {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  noIndex?: boolean;
+  structuredData?: any;
+  page?: string;
+  seoData?: any;
 }
 
-const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
+  title,
+  description,
+  keywords,
+  canonicalUrl,
+  ogImage = '/og-image.png',
+  ogType = 'website',
+  noIndex = false,
+  structuredData,
+  page = 'home',
+  seoData = {}
+}) => {
+  const defaultSEOData = {
+    title: 'Zion Tech Group - AI & IT Solutions',
+    description: 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
+    keywords: ['AI', 'artificial intelligence', 'enterprise solutions', 'digital transformation', 'IT services'],
+    canonical: 'https://ziontechgroup.com',
+    ogImage: '/og-image.png',
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
+      },
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup'
+      ],
+      offers: {
+        '@type': 'Offer',
+        description: 'AI and IT Solutions'
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Update meta tags
+    updateMetaTag('title', title);
+    updateMetaTag('description', description);
+    updateMetaTag('keywords', keywords.join(', '));
+    
+    // Update canonical URL
+    if (canonicalUrl) {
+      updateCanonicalUrl(canonicalUrl);
     }
     
-    // Add breadcrumb structured data;
+    // Add structured data
+    if (structuredData) {
+      addStructuredData(structuredData);
+    }
+    
+    // Add breadcrumb structured data
     addBreadcrumbStructuredData();
     
-    // Add FAQ structured data;
+    // Add FAQ structured data
     addFAQStructuredData();
     
-    // Add organization structured data;
+    // Add organization structured data
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-  const updateMetaTag = (nam,
-  e: string, conten,
-  t: string, attribut,)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {/* TODO: Fix JSX expression */}
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(attribute, name);
+      document.head.appendChild(meta);
     }
     meta.setAttribute('content', content);
   };
 
-  const updateCanonicalUrl = (ur,)
-  l: string) => {/* TODO: Fix JSX expression */}
+  const updateCanonicalUrl = (url: string) => {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (dat,)
-  a: any) => {/* TODO: Fix JSX expression */}
-    }
+  const addStructuredData = (data: any) => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   };
 
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addBreadcrumbStructuredData = () => {
+    const breadcrumbData = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ziontechgroup.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: page.charAt(0).toUpperCase() + page.slice(1),
+          item: `https://ziontechgroup.com/${page}`
         }
       ]
     };
@@ -49,20 +133,41 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
     script.id = 'breadcrumb-structured-data';
-    // Remove existing breadcrumb data;
+    // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {
+      existing.remove();
     }
     document.head.appendChild(script);
   };
 
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addFAQStructuredData = () => {
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What AI services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We offer comprehensive AI solutions including machine learning, natural language processing, computer vision, and autonomous systems.'
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {
+          '@type': 'Question',
+          name: 'How can AI improve my business ROI?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Our AI solutions typically deliver 300% ROI through automation, improved efficiency, and data-driven insights.'
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {
+          '@type': 'Question',
+          name: 'Do you provide cybersecurity services?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, we offer comprehensive cybersecurity solutions including threat detection, incident response, and security audits.'
           }
         }
       ]
@@ -71,40 +176,48 @@ const,
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
     script.id = 'faq-structured-data';
-    // Remove existing FAQ data;
+    // Remove existing FAQ data
     const existing = document.getElementById('faq-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    if (existing) {
+      existing.remove();
     }
     document.head.appendChild(script);
   };
 
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
-      },
-      'address': {/* TODO: Fix JSX expression */}
+  const addOrganizationStructuredData = () => {
+    const organizationData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': 'Zion Tech Group',
+      'description': 'Leading provider of AI-powered enterprise solutions and digital transformation services',
+      'url': 'https://ziontechgroup.com',
+      'logo': 'https://ziontechgroup.com/logo.png',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressCountry': 'US'
       },
       'sameAs': [
-        'http,
-  s://twitter.com/ziontechgroup',
-        'http,
-  s://linkedin.com/company/ziontechgroup'
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
       ]
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
     script.id = 'organization-structured-data';
-    // Remove existing organization data;
+    // Remove existing organization data
     const existing = document.getElementById('organization-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
-
+    if (existing) {
+      existing.remove();
     }
+    document.head.appendChild(script);
   };
 
   const mergedSEOData = { ...defaultSEOData, ...seoData };
 
   useEffect(() => {
     // Log SEO optimization
-    logger.info('SEO optimization applied', { 
+    console.log('SEO optimization applied', { 
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
@@ -233,10 +346,7 @@ const,
       </script>
     </Helmet>
   );
-};
-
+});
 
 SEOOptimizer.displayName = 'SEOOptimizer';
-export default SEOOptimizer;"`
-
-
+export default SEOOptimizer;
