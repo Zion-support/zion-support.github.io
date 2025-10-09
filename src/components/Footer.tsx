@@ -62,30 +62,23 @@ const Footer: React.FC = () => {
   ];
 
   const companyLinks = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'News', href: '/news' }
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'News', url: '/news' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Contact', url: '/contact' }
   ];
 
   const supportLinks = [
-    { name: 'Contact Us', href: '/contact' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Documentation', href: '/api-docs' },
-    { name: 'Status Page', href: '/status' },
-    { name: 'System Status', href: '/status' }
-  ];
-
-  const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'Compliance', href: '/compliance' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' }
+    { name: 'Help Center', url: '/help' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Support Center', url: '/support' },
+    { name: 'System Status', url: '/status' },
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' }
   ];
 
   const socialLinks = [
@@ -310,6 +303,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
+              <li><Link to="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Solutions</Link></li>
+              <li><Link to="/marketplace" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Marketplace</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
               <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>

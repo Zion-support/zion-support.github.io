@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect, memo } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -167,6 +167,12 @@ const Navigation: React.FC = memo(() => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
+            <Link to="/solutions" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Solutions
+            </Link>
+            <Link to="/marketplace" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Marketplace
+            </Link>
 
             {/* Services Dropdown */}
             <div className="relative group">
@@ -281,22 +287,75 @@ const Navigation: React.FC = memo(() => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-6">
-              {/* Main Navigation */}
-              <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3>
-                {mainNavItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.path}
-                    onClick={closeAllMenus}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">{item.name}</span>
-                  </Link>
-                ))}
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+              <Link
+                to="/"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              <Link
+                to="/solutions"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Solutions
+              </Link>
+              <Link
+                to="/marketplace"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Marketplace
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Brain className="w-4 h-4" />
+                    <span>Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {serviceCategories.map((category, categoryIndex) => (
+                      <div key={categoryIndex}>
+                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
+                            >
+                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                            </Link>
+                          ))}
+                          <Link
+                            to="/services"
+                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                          >
+                            View All →
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Services for Mobile */}

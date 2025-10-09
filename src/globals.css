@@ -681,7 +681,7 @@ body {
 
 @media (max-width: 480px) {
   .cyber-grid {
-    background-size: 15px 15px;
+    background-size: 10px 10px;
   }
   
   .neon-text {
@@ -714,6 +714,10 @@ body {
   
   .quantum-field {
     animation: none;
+  }
+  
+  .cyber-grid {
+    background-size: 15px 15px;
   }
   
   .neon-text {
@@ -861,7 +865,12 @@ body {
     background: rgba(255, 255, 255, 0.8);
     border-color: rgba(0, 0, 0, 0.1);
   }
-  }
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
 
 img {
   max-width: 100%;
@@ -932,4 +941,4 @@ img {
     color: #000;
     text-shadow: none;
   }
-  }
+}
