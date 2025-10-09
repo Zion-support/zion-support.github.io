@@ -1,20 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
-import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,15 +18,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-=======
   const closeAllMenus = () => {
     setServicesOpen(false);
     setIsOpen(false);
@@ -105,13 +88,11 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -153,7 +134,7 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link 
-            to="/" 
+            href="/" 
             className="flex items-center space-x-2 text-2xl font-bold"
             onClick={closeAllMenus}
           >
@@ -167,10 +148,10 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              
+            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              
               About
             </Link>
             
@@ -203,7 +184,7 @@ const Navigation: React.FC = () => {
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
+                              href={service.path}
                               className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -217,7 +198,7 @@ const Navigation: React.FC = () => {
                   
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
                     <Link
-                      to="/services"
+                      href="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
@@ -229,7 +210,7 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link 
-              to="/case-studies" 
+              href="/case-studies" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -239,7 +220,7 @@ const Navigation: React.FC = () => {
             </Link>
 
             <Link 
-              to="/blog" 
+              href="/blog" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -249,7 +230,7 @@ const Navigation: React.FC = () => {
             </Link>
 
             <Link 
-              to="/contact" 
+              href="/contact" 
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -260,7 +241,7 @@ const Navigation: React.FC = () => {
 
             {/* CTA Button */}
             <Link
-              to="/contact"
+              href="/contact"
               className="cyber-button inline-flex items-center"
             >
               Get Started
@@ -281,7 +262,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -303,9 +283,7 @@ const Navigation: React.FC = () => {
               <Link 
                 href="/about" 
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-=======
-        {/* Mobile menu */}
+                onClick={closeAllMenus}
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg mt-2">

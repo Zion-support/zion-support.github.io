@@ -35,8 +35,6 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -208,14 +206,8 @@ const BusinessIntelligencePage: React.FC = () => {
           ))}
         </section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b31
     </div>
   );
 };
 
 export default BusinessIntelligencePage;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b31

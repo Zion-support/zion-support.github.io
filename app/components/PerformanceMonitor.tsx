@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -21,8 +18,6 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
@@ -119,4 +114,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
