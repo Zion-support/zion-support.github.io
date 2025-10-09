@@ -872,4 +872,455 @@ body {
     animation: none;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 3px #00ffff,
+      0 0 6px #00ffff,
+      0 0 9px #00ffff;
+  }
+  
+  .cyber-text-3d {
+    transform: perspective(500px) rotateX(10deg);
+  }
+  
+  .quantum-field {
+    animation-duration: 3s;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-responsive {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 10px 10px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 4px #00ffff,
+      0 0 6px #00ffff;
+  }
+  
+  .cyber-text-3d {
+    transform: perspective(300px) rotateX(5deg);
+  }
+  
+  .text-responsive {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+  
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Mobile-first responsive utilities */
+.mobile-hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-hidden {
+    display: block;
+  }
+}
+
+.desktop-hidden {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .desktop-hidden {
+    display: none;
+  }
+}
+
+/* Responsive text sizes */
+.text-xs-responsive {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .text-xs-responsive {
+    font-size: 0.875rem;
+  }
+}
+
+.text-sm-responsive {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 640px) {
+  .text-sm-responsive {
+    font-size: 1rem;
+  }
+}
+
+.text-base-responsive {
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .text-base-responsive {
+    font-size: 1.125rem;
+  }
+}
+
+.text-lg-responsive {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 640px) {
+  .text-lg-responsive {
+    font-size: 1.25rem;
+  }
+}
+
+.text-xl-responsive {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-xl-responsive {
+    font-size: 1.5rem;
+  }
+}
+
+.text-2xl-responsive {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .text-2xl-responsive {
+    font-size: 1.875rem;
+  }
+}
+
+.text-3xl-responsive {
+  font-size: 1.875rem;
+}
+
+@media (min-width: 640px) {
+  .text-3xl-responsive {
+    font-size: 2.25rem;
+  }
+}
+
+.text-4xl-responsive {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 640px) {
+  .text-4xl-responsive {
+    font-size: 3rem;
+  }
+}
+
+/* Responsive spacing */
+.p-responsive {
+  padding: 1rem;
+}
+
+@media (min-width: 640px) {
+  .p-responsive {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-responsive {
+    padding: 2rem;
+  }
+}
+
+.m-responsive {
+  margin: 1rem;
+}
+
+@media (min-width: 640px) {
+  .m-responsive {
+    margin: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .m-responsive {
+    margin: 2rem;
+  }
+}
+
+/* Responsive grid gaps */
+.gap-responsive {
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gap-responsive {
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gap-responsive {
+    gap: 2rem;
+  }
+}
+
+/* Responsive card layouts */
+.card-responsive {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .card-responsive {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-responsive {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Responsive navigation */
+.nav-responsive {
+  padding: 0.5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .nav-responsive {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-responsive {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Responsive hero sections */
+.hero-responsive {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .hero-responsive {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-responsive {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Responsive service cards */
+.service-card-responsive {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .service-card-responsive {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-card-responsive {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Responsive button groups */
+.button-group-responsive {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .button-group-responsive {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* Responsive form layouts */
+.form-responsive {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-responsive {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive image containers */
+.image-responsive {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 640px) {
+  .image-responsive {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-responsive {
+    max-width: 33.333%;
+  }
+}
+
+/* Responsive table layouts */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: 600px;
+}
+
+/* Responsive modal and overlay */
+.modal-responsive {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@media (min-width: 640px) {
+  .modal-responsive {
+    padding: 1.5rem;
+    margin: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-responsive {
+    padding: 2rem;
+    margin: 3rem;
+  }
+}
+
+/* Responsive sidebar */
+.sidebar-responsive {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: 50;
+}
+
+@media (min-width: 1024px) {
+  .sidebar-responsive {
+    position: static;
+    left: 0;
+    width: auto;
+    height: auto;
+  }
+}
+
+.sidebar-responsive.open {
+  left: 0;
+}
+
+/* Responsive footer */
+.footer-responsive {
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .footer-responsive {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-responsive {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Responsive typography scaling */
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
+  }
+}
