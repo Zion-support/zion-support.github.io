@@ -97,7 +97,7 @@ class PerformanceMonitoringService {
       navObserver.observe({ type: 'navigation', buffered: true });
       this.observers.push(navObserver);
     } catch (error) {
-      logger.error('Failed to initialize performance observers', error as Error);
+      logger.error('Failed to initialize performance observers', error as Error, { component: 'PerformanceMonitoring' });
     }
   }
   /**
@@ -112,7 +112,7 @@ class PerformanceMonitoringService {
       timestamp: Date.now()
     };
     this.webVitals[name] = metric;
-    logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
+    logger.info(`Web Vital: ${name}`, { component: 'PerformanceMonitoring', value, rating });
     // Send to analytics
     this.sendToAnalytics(metric);
   }
@@ -149,7 +149,7 @@ class PerformanceMonitoringService {
     if (this.customMetrics.length > this.maxMetrics) {
       this.customMetrics.shift();
     }
-    logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit });
+    logger.debug(`Custom Metric: ${name}`, { component: 'PerformanceMonitoring', value, unit });
   }
   /**
    * Send metric to analytics service
@@ -164,7 +164,7 @@ class PerformanceMonitoringService {
         });
       }
     } catch (error) {
-      logger.error('Failed to send metric to analytics', error as Error);
+      logger.error('Failed to send metric to analytics', error as Error, { component: 'PerformanceMonitoring' });
     }
   }
   /**
@@ -270,7 +270,7 @@ class PerformanceMonitoringService {
           return measure.duration;
         }
       } catch (error) {
-        logger.error('Failed to measure performance', error as Error);
+        logger.error('Failed to measure performance', error as Error, { component: 'PerformanceMonitoring' });
       }
     }
     return null;
