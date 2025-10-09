@@ -184,7 +184,7 @@ export const optimizeScrollPerformance = () => {
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('[Web Vitals] LCP:', entry.startTime);
+
         }
       }
     });
@@ -200,7 +200,7 @@ export const optimizeScrollPerformance = () => {
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('[Web Vitals] FID:', fid);
+
         }
       }
     });
@@ -261,6 +261,6 @@ export const initializePerformanceEnhancements = () => {
   // Collect performance metrics
   const metrics = collectPerformanceMetrics();
   if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {
-    console.log('Performance metrics:', metrics);
+
   }
 };

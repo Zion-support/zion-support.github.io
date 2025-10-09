@@ -163,7 +163,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        console.log('Service Worker registration failed:', error);
+        // Service Worker registration failed
       }
     }
   };

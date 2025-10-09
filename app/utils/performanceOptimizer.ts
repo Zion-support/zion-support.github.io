@@ -85,9 +85,7 @@ class PerformanceOptimizer {
       if (navigation) {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
-    } catch (error) {
-      }
-  }
+    } catch () {}}
   /**
    * Measure render time using PerformanceObserver
    */

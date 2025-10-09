@@ -155,13 +155,13 @@ class Logger {
     const styles = this.getConsoleStyles(level);
     switch (level) {
       case LogLevel.DEBUG:
-        console.debug(`%c${message}`, styles, entry);
+
         break;
       case LogLevel.INFO:
-        console.info(`%c${message}`, styles, entry);
+
         break;
       case LogLevel.WARN:
-        console.warn(`%c${message}`, styles, entry);
+
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:

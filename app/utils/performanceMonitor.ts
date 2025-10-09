@@ -87,10 +87,7 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
-  }
+    } catch () {}}
   private observeLCP(): void {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -101,10 +98,7 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
-  }
+    } catch () {}}
   private observeFID(): void {
     try {
       const observer = new PerformanceObserver((list) => {
@@ -115,10 +109,7 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
-  }
+    } catch () {}}
   private observeCLS(): void {
     try {
       let clsValue = 0;
@@ -133,10 +124,7 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe CLS:', error);
-    }
-  }
+    } catch () {}}
   private setupCustomMetrics(): void {
     // Time to First Byte
     if (performance.timing) {
@@ -166,10 +154,7 @@ class PerformanceMonitor {
       });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
-    } catch (error) {
-      console.warn('Failed to observe resources:', error);
-    }
-  }
+    } catch () {}}
   private analyzeResource(entry: PerformanceResourceTiming): void {
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;

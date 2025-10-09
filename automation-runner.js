@@ -281,8 +281,7 @@ class PerformanceMonitor {
       if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir);
         this.metrics.bundleSize = stats.size}
       }
-//     } catch(error) {}
-  }
+//     } catch () {}}
   async measureMemoryUsage() {const usage = process.memoryUsage();
     this.metrics.memoryUsage = usage.heapUsed /1024 / 1024} //MB
   }
