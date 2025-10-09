@@ -38,13 +38,21 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Contact', url: '/contact' }
   ];
+  const solutionsLinks = [
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Industries', url: '/industries' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'Resources', url: '/resources' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'API Documentation', url: '/api-docs' }
+  ];
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' }
   ];
   const contactInfo = {
     phone: '+1 (302) 464-0950',
@@ -55,7 +63,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
@@ -83,6 +91,22 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Solutions */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Solutions</h3>
+            <ul className="space-y-2">
+              {solutionsLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {link.name}
                   </Link>
                 </li>
               ))}
