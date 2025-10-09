@@ -14,25 +14,33 @@ const Header: React.FC = () => {
 
   const navigation = {
     'Services': [
-      { name: 'AI Services', href: '/ai-services', icon: Brain },
-      { name: 'IT Services', href: '/it-services', icon: Code },
-      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
-      { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { name: 'All Services', href: '/services', icon: Briefcase }
+      { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence Solutions' },
+      { name: 'IT Services', href: '/it-services', icon: Code, description: 'Information Technology Services' },
+      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Cloud Migration & Setup' },
+      { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
+      { name: 'All Services', href: '/services', icon: Briefcase, description: 'View All Services' }
     ],
-    'Solutions': [
-      { name: 'AI Marketing', href: '/ai-marketing', icon: Brain },
-      { name: 'AI Automation', href: '/ai-automation', icon: Brain },
-      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Brain },
-      { name: 'AI Fintech', href: '/ai-fintech', icon: Brain },
-      { name: 'Quantum Computing', href: '/quantum-computing', icon: Brain }
+    'AI Solutions': [
+      { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
+      { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
+      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Stethoscope, description: 'Medical AI Solutions' },
+      { name: 'AI Fintech', href: '/ai-fintech', icon: CreditCard, description: 'Financial AI' },
+      { name: 'AI Content Generation', href: '/ai-content-generation', icon: FileText, description: 'Content Creation' },
+      { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Insights' }
+    ],
+    'Emerging Tech': [
+      { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom, description: 'Next-Gen Computing' },
+      { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Bot, description: 'Self-Managing Systems' },
+      { name: 'Blockchain', href: '/blockchain', icon: Link, description: 'Decentralized Solutions' },
+      { name: 'IoT Edge Computing', href: '/iot-edge-computing', icon: Smartphone, description: 'Connected Devices' },
+      { name: 'Robotics', href: '/robotics', icon: Bot, description: 'Intelligent Robots' }
     ],
     'Company': [
-      { name: 'About Us', href: '/about', icon: Users },
-      { name: 'Our Team', href: '/team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Briefcase },
-      { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
-      { name: 'Contact', href: '/contact', icon: MessageSquare }
+      { name: 'About Us', href: '/about', icon: Users, description: 'Our Story & Mission' },
+      { name: 'Our Team', href: '/team', icon: Users, description: 'Meet Our Experts' },
+      { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join Our Team' },
+      { name: 'Case Studies', href: '/case-studies', icon: BookOpen, description: 'Success Stories' },
+      { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get In Touch' }
     ]
   };
 
@@ -70,17 +78,20 @@ const Header: React.FC = () => {
                 </button>
                 
                 {activeDropdown === category && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
                     {items.map((item, index) => (
                       <Link
                         key={index}
                         to={item.href}
-                        className={`flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors ${
+                        className={`flex items-start space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors ${
                           isActive(item.href) ? 'text-cyan-400 bg-slate-700/30' : 'text-gray-300'
                         }`}
                       >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
+                        <item.icon className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium">{item.name}</div>
+                          <div className="text-xs text-gray-400 mt-1">{item.description}</div>
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -137,13 +148,16 @@ const Header: React.FC = () => {
                       <Link
                         key={index}
                         to={item.href}
-                        className={`flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors ${
+                        className={`flex items-start space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors ${
                           isActive(item.href) ? 'text-cyan-400 bg-slate-700/30' : 'text-gray-300'
                         }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
+                        <item.icon className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                        <div>
+                          <div className="font-medium">{item.name}</div>
+                          <div className="text-xs text-gray-400 mt-1">{item.description}</div>
+                        </div>
                       </Link>
                     ))}
                   </div>

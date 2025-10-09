@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const PrivacyPage: React.FC = () => {
@@ -12,7 +12,7 @@ const PrivacyPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Header />
         
         <main className="pt-24">
           <section className="container mx-auto px-4 py-16">
