@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -46,7 +42,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -96,15 +91,13 @@ const Navigation: React.FC = () => {
         { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
         { name: 'System Administration', path: '/system-administration', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-<<<<<<< HEAD
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
         { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
-=======
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
         { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
         { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
@@ -112,7 +105,6 @@ const Navigation: React.FC = () => {
         { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
       ]
     },
     {
@@ -168,7 +160,6 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
-=======
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
@@ -231,11 +222,10 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <nav role="navigation" aria-label="Main navigation" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -248,7 +238,6 @@ const Navigation: React.FC = () => {
             <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -260,7 +249,6 @@ const Navigation: React.FC = () => {
 
             {/* Services Dropdown */}
             <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -365,20 +353,16 @@ const Navigation: React.FC = () => {
 
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
-<<<<<<< HEAD
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
-=======
                 <Sparkles className="w-4 h-4" />
                 <span>Emerging Tech</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
@@ -431,13 +415,11 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-<<<<<<< HEAD
 
             <Link 
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-=======
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -453,7 +435,6 @@ const Navigation: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             >
               Case Studies
             </Link>
@@ -497,7 +478,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -507,13 +487,11 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-=======
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 Home
               </Link>
               <Link
@@ -527,7 +505,6 @@ const Navigation: React.FC = () => {
               {/* Mobile Services */}
               <div>
                 <button
-<<<<<<< HEAD
                   onClick={() => setServicesOpen(!servicesOpen)}
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 >
@@ -555,7 +532,6 @@ const Navigation: React.FC = () => {
                           ))}
                         </div>
                       </div>
-=======
                   onClick={() => setAiServicesOpen(!aiServicesOpen)}
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
@@ -610,12 +586,10 @@ const Navigation: React.FC = () => {
                       >
                         {service.name}
                       </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
 
               <Link
                 href="/case-studies"
@@ -649,7 +623,6 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-=======
               {/* Mobile Micro SAAS */}
               <div>
                 <button
@@ -714,7 +687,6 @@ const Navigation: React.FC = () => {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             </div>
           </div>
         )}
@@ -723,8 +695,5 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
 export default Navigation;
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2

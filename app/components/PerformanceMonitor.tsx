@@ -1,96 +1,40 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  });
+import { useEffect } from 'react';
+
+export default function PerformanceMonitor() {
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-    const measurePerformance = () => {
-      // Measure First Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // LCP (Largest Contentful Paint)
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        console.log('LCP:', lastEntry.startTime);
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // FID (First Input Delay)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          console.log('FID:', entry.processingStart - entry.startTime);
         });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-      // Measure Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-      // Measure First Input Delay
-      if ('PerformanceObserver' in window) {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-            }
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      }
-      // Measure Cumulative Layout Shift
-      if ('PerformanceObserver' in window) {
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // CLS (Cumulative Layout Shift)
+      const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
+        list.getEntries().forEach((entry) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
           }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
         });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      }
-      // Measure Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        }));
-      }
-    };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+        console.log('CLS:', clsValue);
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
     }
   }, []);
-  return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: N/A</div>
-      </div>
-    </div>
-  );
-};
-export default PerformanceMonitor;
+
+  return null;
+}

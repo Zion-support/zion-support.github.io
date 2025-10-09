@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Shield, FileText, Award } from 'lucide-react';
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
