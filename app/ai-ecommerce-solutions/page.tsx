@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Zap, BarChart3, Users, Shield } from 'lucide-react';;
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [

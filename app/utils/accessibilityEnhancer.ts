@@ -679,3 +679,13 @@ class AccessibilityEnhancer {
     
     return `
 Accessibility Report:
+- Total Elements Checked: ${metrics.totalElements}
+- Issues Found: ${metrics.issuesFound}
+- WCAG Level A Issues: ${metrics.wcagLevelA}
+- WCAG Level AA Issues: ${metrics.wcagLevelAA}
+- WCAG Level AAA Issues: ${metrics.wcagLevelAAA}
+- Overall Score: ${metrics.overallScore}%
+- Last Checked: ${new Date().toISOString()}
+`;
+  }
+}

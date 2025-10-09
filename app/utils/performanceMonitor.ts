@@ -275,3 +275,14 @@ class PerformanceMonitor {
     
     return `
 Performance Report:
+- Overall Score: ${score}%
+- LCP: ${metrics.lcp}ms
+- FID: ${metrics.fid}ms
+- CLS: ${metrics.cls}
+- FCP: ${metrics.fcp}ms
+- TTFB: ${metrics.ttfb}ms
+- Memory Usage: ${metrics.memoryUsage}MB
+- Timestamp: ${new Date().toISOString()}
+`;
+  }
+}

@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 
+
 interface AnalyticsProps {
   trackingId?: string;
 }
@@ -19,7 +20,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       // Initialize gtag
       window.dataLayer = window.dataLayer || [];
       function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+        window.dataLayer?.push(args);
       }
       window.gtag = gtag;
       gtag('js', new Date());
@@ -126,11 +127,4 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 };
 
 // Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}
-
 export default Analytics;
