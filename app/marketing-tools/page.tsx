@@ -1,224 +1,136 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const MarketingToolsPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Marketing-tools</h1>
-=======
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 const MarketingToolsPage: React.FC = () => {
-  const marketingTools = [
+  const tools = [
     {
       title: 'AI Content Generator',
-      price: '$199/month',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
-      icon: '✍️',
-      category: 'Content Creation'
+      description: 'Create engaging content for blogs, social media, and marketing campaigns with AI-powered writing assistance.',
+      icon: Brain,
+      features: ['Blog posts', 'Social media content', 'Email campaigns', 'Ad copy'],
+      price: '$99/month'
     },
     {
-      title: 'AI SEO Optimizer',
-      price: '$299/month',
-      description: 'Advanced SEO analysis and optimization recommendations powered by machine learning.',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Performance insights'],
-      icon: '🔍',
-      category: 'SEO'
+      title: 'SEO Optimizer Pro',
+      description: 'Optimize your website and content for search engines with intelligent keyword research and content suggestions.',
+      icon: Target,
+      features: ['Keyword research', 'Content optimization', 'Rank tracking', 'Competitor analysis'],
+      price: '$149/month'
     },
     {
-      title: 'AI Social Media Manager',
-      price: '$249/month',
-      description: 'Automated social media management with intelligent posting and engagement optimization.',
-      features: ['Content scheduling', 'Hashtag optimization', 'Engagement tracking', 'Trend analysis', 'Multi-platform posting', 'Performance analytics'],
-      icon: '📱',
-      category: 'Social Media'
+      title: 'Social Media Manager',
+      description: 'Schedule, publish, and analyze social media content across all major platforms with AI-powered insights.',
+      icon: MessageSquare,
+      features: ['Multi-platform posting', 'Content scheduling', 'Analytics dashboard', 'Engagement tracking'],
+      price: '$199/month'
     },
     {
-      title: 'AI Email Marketing',
-      price: '$179/month',
-      description: 'Intelligent email marketing campaigns with personalization and automation capabilities.',
-      features: ['Email templates', 'Personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard', 'List management'],
-      icon: '📧',
-      category: 'Email Marketing'
+      title: 'Email Marketing Suite',
+      description: 'Design, send, and track email campaigns with advanced automation and personalization features.',
+      icon: Mail,
+      features: ['Drag-and-drop editor', 'Automation workflows', 'A/B testing', 'Advanced analytics'],
+      price: '$79/month'
     },
     {
-      title: 'AI Ad Campaign Manager',
-      price: '$399/month',
-      description: 'Automated ad campaign creation and optimization across multiple platforms.',
-      features: ['Campaign creation', 'Bid optimization', 'Audience targeting', 'Performance tracking', 'Budget management', 'ROI analysis'],
-      icon: '📊',
-      category: 'Advertising'
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive marketing analytics with real-time data visualization and performance insights.',
+      icon: BarChart,
+      features: ['Real-time data', 'Custom reports', 'ROI tracking', 'Performance insights'],
+      price: '$129/month'
     },
     {
-      title: 'AI Analytics Dashboard',
-      price: '$299/month',
-      description: 'Comprehensive marketing analytics with AI-powered insights and predictions.',
-      features: ['Real-time analytics', 'Predictive insights', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
-      icon: '📈',
-      category: 'Analytics'
+      title: 'Lead Generation Tool',
+      description: 'Identify and capture high-quality leads with AI-powered prospecting and contact management.',
+      icon: Users,
+      features: ['Lead scoring', 'Contact management', 'Email sequences', 'CRM integration'],
+      price: '$179/month'
     }
   ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Increase ROI',
-      description: 'Average 250% increase in marketing ROI with AI-powered optimization'
-    },
-    {
-      icon: Clock,
-      title: 'Save Time',
-      description: 'Reduce marketing tasks by 80% with intelligent automation'
-    },
-    {
-      icon: Target,
-      title: 'Better Targeting',
-      description: 'Reach the right audience with AI-powered targeting and personalization'
-    },
-    {
-      icon: BarChart,
-      title: 'Data-Driven',
-      description: 'Make informed decisions with comprehensive analytics and insights'
-    }
+  const stats = [
+    { number: '500+', label: 'Marketing Tools' },
+    { number: '95%', label: 'Time Savings' },
+    { number: '300%', label: 'ROI Increase' },
+    { number: '24/7', label: 'Automation' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-        <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
-      </Helmet>
-
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Marketing Tools
           </h1>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.
           </p>
-<<<<<<< HEAD
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-=======
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Marketing Tools</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
-              <div className="text-gray-300">Average ROI</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
-              <div className="text-gray-300">Time Saved</div>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-                <span className="text-white font-medium">Middletown, DE</span>
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Get Free Demo
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Marketing Tools Grid */}
+      {/* Stats */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Marketing Tools
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {marketingTools.map((tool, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{tool.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{tool.description}</p>
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block mb-4">
-                    {tool.category}
-                  </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                  {stat.number}
                 </div>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
-                  >
-                    Get Started
-                  </a>
-                </div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Tools Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Marketing Tools?
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+            Our Marketing Tools
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tools.map((tool, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition-colors">
+                <tool.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{tool.title}</h3>
+                <p className="text-gray-300 mb-4">{tool.description}</p>
+                <ul className="space-y-2 mb-4">
+                  {tool.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-cyan-400">
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
+                <a
+                  href="/contact"
+                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
+                >
+                  Get Started
+                </a>
               </div>
             ))}
           </div>
@@ -226,33 +138,36 @@ const MarketingToolsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI marketing tools today and see the difference intelligent automation can make.
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of marketers already using our AI-powered tools to increase efficiency and drive better results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
             >
+              <Phone className="w-5 h-5 mr-2" />
               Call (302) 464-0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              href="/contact"
+              className="border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"
             >
-              Email Us
+              <Mail className="w-5 h-5 mr-2" />
+              Get Free Consultation
             </a>
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 export default MarketingToolsPage;
