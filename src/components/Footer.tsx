@@ -1,6 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD:src/components/Footer.tsx
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -95,7 +94,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-<<<<<<< HEAD:app/components/Footer.tsx
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
@@ -103,7 +101,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
->>>>>>> origin/main:app/components/Footer.tsx
   ];
 
   const companyLinks = [
@@ -191,7 +188,6 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-<<<<<<< HEAD:app/components/Footer.tsx
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -239,54 +235,33 @@ const Footer: React.FC = memo(() => {
                   View All IT Services →
                 </Link>
               ))}
-              <Link
-                href="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
-              >
-                View All Solutions
-                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
+              <li>
+                <Link 
+                  href="/it-services"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All IT Services →
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          {/* AI & IT Services */}
+          {/* Company Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI & IT Services
-            </h4>
-            <div className="space-y-4">
-              <div>
-                <h5 className="text-sm font-semibold text-purple-400 mb-2">AI Services</h5>
-                <div className="space-y-2">
-                  {aiServices.slice(0, 4).map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.url}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                    >
-                      <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
-                <div className="space-y-2">
-                  {itServices.slice(0, 4).map((service, index) => (
-                    <Link
-                      key={index}
-                      href={service.url}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
-                    >
-                      <service.icon className="w-3 h-3" />
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Company</h3>
+            <ul className="space-y-3">
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    href={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -400,6 +375,7 @@ const Footer: React.FC = memo(() => {
               <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
+            </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -413,7 +389,6 @@ const Footer: React.FC = memo(() => {
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
             </div>
           </div>
         </div>
