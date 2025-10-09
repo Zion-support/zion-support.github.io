@@ -1,16 +1,20 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+=======
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Zap } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 
 const Navigation: React.FC = memo(() => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsMenuOpen(false);
         setServicesOpen(false);
       }
     };
@@ -28,6 +32,7 @@ const Navigation: React.FC = memo(() => {
     };
   }, []);
 
+<<<<<<< HEAD
   const navigation = {
     'Services': [
       { name: 'AI Services', href: '/ai-services', icon: Brain },
@@ -58,19 +63,101 @@ const Navigation: React.FC = memo(() => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+=======
+  const closeAllMenus = () => {
+    setIsMenuOpen(false);
+    setServicesOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    if (isMenuOpen) {
+      setServicesOpen(false);
+    }
+  };
+
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: Brain,
+      color: 'text-purple-400',
+      services: [
+        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
+        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
+        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
+        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'AI-powered project management' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      icon: Cloud,
+      color: 'text-blue-400',
+      services: [
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+        { name: 'IT Support', path: '/it-support', description: 'Comprehensive IT support' },
+        { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
+        { name: 'Database Management', path: '/database-management', description: 'Database management' },
+        { name: 'Managed IT', path: '/managed-it', description: '24/7 IT management' }
+      ]
+    },
+    {
+      title: 'Emerging Tech',
+      icon: Zap,
+      color: 'text-cyan-400',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
+        { name: 'Blockchain', path: '/blockchain', description: 'Decentralized solutions' },
+        { name: 'IoT Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      icon: Code,
+      color: 'text-green-400',
+      services: [
+        { name: 'Micro SaaS Solutions', path: '/micro-saas', description: 'Custom SaaS applications' }
+      ]
+    }
+  ];
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
+        : 'bg-slate-900/50 backdrop-blur-lg border-b border-white/10'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
+<<<<<<< HEAD
             <div>
               <h1 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                 Zion Tech Group
               </h1>
+=======
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
               <p className="text-xs text-cyan-400">AI & IT Solutions</p>
             </div>
           </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
@@ -81,6 +168,29 @@ const Navigation: React.FC = memo(() => {
               About
             </Link>
             
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Services
+            </Link>
+            <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              AI Services
+            </Link>
+            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Micro SAAS
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Pricing
+            </Link>
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             {/* Services Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium">
@@ -126,17 +236,26 @@ const Navigation: React.FC = memo(() => {
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+=======
+            {/* CTA Button */}
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-flex items-center"
+              onClick={closeAllMenus}
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
           <button
             onClick={toggleMenu}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
@@ -149,6 +268,22 @@ const Navigation: React.FC = memo(() => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
+=======
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             <div className="px-4 py-6 space-y-4">
               <Link
                 to="/"
@@ -164,7 +299,39 @@ const Navigation: React.FC = memo(() => {
               >
                 About
               </Link>
+<<<<<<< HEAD
               
+=======
+              <Link
+                to="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link
+                to="/ai-services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link
+                to="/micro-saas"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
               {/* Mobile Services */}
               <div>
                 <button
@@ -271,6 +438,7 @@ const Navigation: React.FC = memo(() => {
                 <Phone className="w-4 h-4" />
                 <span>(302) 464-0950</span>
               </a>
+<<<<<<< HEAD
               <a
                 href="mailto:info@ziontechgroup.com"
                 className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -347,6 +515,8 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-6747
                 </Link>
               </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             </div>
           </div>
         )}
@@ -357,4 +527,8 @@ const Navigation: React.FC = memo(() => {
 
 Navigation.displayName = 'Navigation';
 
+<<<<<<< HEAD
 export default Navigation;
+=======
+export default Navigation;
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8

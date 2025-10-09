@@ -50,10 +50,18 @@ class ErrorBoundary extends React.Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+<<<<<<< HEAD
+=======
+    this.setState({ error, errorInfo });
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     // Log error to monitoring service in production
     // In production, this should be sent to an error tracking service
     if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
       // Error logging would be handled by error tracking service in production
+=======
+      console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
     }
   }
 
@@ -70,7 +78,11 @@ class ErrorBoundary extends React.Component<
               onClick={() => window.location.reload()}
               className="bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
             >
+<<<<<<< HEAD
               Refresh Page
+=======
+              Reload Page
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
             </button>
           </div>
         </div>
@@ -93,6 +105,7 @@ const LoadingSpinner = memo(() => (
 
 // Main App Component
 const App: React.FC = () => {
+<<<<<<< HEAD
   const routes = useMemo(() => [
     { path: '/', component: HomePage },
     { path: '/about', component: AboutPage },
@@ -120,6 +133,9 @@ const App: React.FC = () => {
     { path: '/security', component: SecurityPage },
     { path: '/support', component: SupportPage },
   ], []);
+=======
+  const helmetContext = useMemo(() => ({}), []);
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 
   return (
     <ErrorBoundary>

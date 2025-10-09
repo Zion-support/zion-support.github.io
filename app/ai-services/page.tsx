@@ -101,6 +101,7 @@ const AIServicesPage: React.FC = () => {
                   <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
                     <service.icon className="w-12 h-12" />
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
@@ -390,11 +391,55 @@ const AIServicesPage: React.FC = () => {
         </main>
 
         <Footer />
+=======
+                );
+              })}
+            </div>
+            
+            {filteredServices.length === 0 && (
+              <div className="text-center py-12">
+                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
+                <p className="text-gray-400">Try adjusting your search or filter criteria</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our AI experts help you implement the perfect solution for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call (302) 464-0950
+              </a>
+              <a
+                href="mailto:support@ziontechgroup.com"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Mail className="w-5 h-5" />
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default AIServicesPage;
 =======
                 </div>
@@ -483,3 +528,6 @@ export default AIServicesPage;
 
 export default AIServicesPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-6747
+=======
+export default AIServicesPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
