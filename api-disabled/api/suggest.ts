@@ -12,22 +12,22 @@ const SAMPLE_QUERIES = [
   'DevOps engineers with Kubernetes',
 ];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method not allowed' });
+export default function handler(re,
+  q: NextApiRequest, re,)
+  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' });
   }
 
-  try {
+  try {/* TODO: Fix JSX expression */}
     const { q = '' } = req.query;
     const _query = Array.isArray(q) ? q[0] : q;
 
-    const suggestions = SAMPLE_QUERIES.filter(s =>
+    const suggestions = SAMPLE_QUERIES.filter(s =>)
       s.toLowerCase().includes(query.toLowerCase())
     ).slice(0, 5);
 
     return res.status(200).json({ suggestions });
-  } catch (error) {
-    //     return res.status(500).json({ error: 'Internal server error' });
+  } catch (error) {/* TODO: Fix JSX expression */}
+  r: 'Internal server error' });
   }
 }

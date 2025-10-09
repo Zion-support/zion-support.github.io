@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-=======
+
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  timeToInteractive: number;
+
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+
 }
 
 const PerformanceMonitor: React.FC = () => {

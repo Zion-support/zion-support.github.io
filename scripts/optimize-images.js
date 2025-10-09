@@ -3,47 +3,36 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-class ImageOptimizer {
-  constructor() {
-    this.inputDir = 'src/assets/images';
-    this.outputDir = 'public/images/optimized';
-    this.sizes = [320, 640, 768, 1024, 1200, 1920];
+class ImageOptimizer {/* TODO: Fix JSX expression */}
   }
 
-  async optimizeImages() {
-    if (!fs.existsSync(this.inputDir)) {
-//       return;
+  async optimizeImages() {/* TODO: Fix JSX expression */}
     }
 
-    if (!fs.existsSync(this.outputDir)) {
-      fs.mkdirSync(this.outputDir, { recursive: true });
+    if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
+  e: true });
     }
 
     const _files = fs.readdirSync(this.inputDir);
-    const imageFiles = files.filter(file => 
+    const imageFiles = files.filter(file => )
       /.(jpg|jpeg|png|webp)$/i.test(file)
     );
 
-    for (const file of imageFiles) {
-      await this.optimizeImage(file);
+    for (const file of imageFiles) {/* TODO: Fix JSX expression */}
     }
 
 //     }
 
-  async optimizeImage(filename) {
-//     const inputPath = path.join(this.inputDir, filename);
-//     const baseName = path.parse(filename).name;
-
-    for (const size of this.sizes) {
+  async optimizeImage(filename) {/* TODO: Fix JSX expression */}
 //       const outputPath = path.join(this.outputDir, `${baseName}-${size}.webp`);
       
-      try {
-        await sharp(inputPath)
-          .resize(size, null, { withoutEnlargement: true })
-          .webp({ quality: 80 })
+      try {/* TODO: Fix JSX expression */}
+  t: true })
+          .webp({/* TODO: Fix JSX expression */})
+  y: 80 })
           .toFile(outputPath);
         
-//         } catch (error) {
+//         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
     }
   }
@@ -51,3 +40,4 @@ class ImageOptimizer {
 
 const _optimizer = new ImageOptimizer();
 optimizer.optimizeImages();
+`

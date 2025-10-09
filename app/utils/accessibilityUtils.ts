@@ -1,49 +1,28 @@
-<<<<<<< HEAD
-=======
+
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {
+// Accessibility utilities for improving user experience and compliance;
+export const generateId = (prefi,)
+  x: string = 'id'): string => {/* TODO: Fix JSX expression */}
+
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
-export const createAriaLabel = (text: string, context?: string): string => {
+export const createAriaLabel = (tex,)
+  t: string, context?: string): string => {/* TODO: Fix JSX expression */}`
   return context ? `${text}, ${context}` : text;
 };
 
-export const announceToScreenReader = (message: string): void => {
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-  
-  document.body.appendChild(announcement);
-  
-  // Remove after announcement
-  setTimeout(() => {
-    document.body.removeChild(announcement);
+export const announceToScreenReader = (messag,)
+  e: string): void => {/* TODO: Fix JSX expression */}
   }, 1000);
 };
 
-export const trapFocus = (element: HTMLElement): (() => void) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
-  const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
+export const trapFocus = (elemen,)
+  t: HTMLElement): (() => void) => {/* TODO: Fix JSX expression */}
         }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
+      } else {/* TODO: Fix JSX expression */}
         }
       }
     }
@@ -52,27 +31,27 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   element.addEventListener('keydown', handleTabKey);
   firstElement?.focus();
   
-  return () => {
-    element.removeEventListener('keydown', handleTabKey);
+  return () => {/* TODO: Fix JSX expression */}
   };
 };
 
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
-  const skipLink = document.createElement('a');
+export const createSkipLink = (targetI,
+  d: string, tex,)
+  t: string = 'Skip to main content'): HTMLElement => {/* TODO: Fix JSX expression */}`
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+  skipLink.className = 'sr-only,
+  focus:not-sr-only,
+  focus:absolute,
+  focus:top-4,
+  focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
   
   return skipLink;
 };
 
-export const validateColorContrast = (foreground: string, background: string): boolean => {
-  // Simple contrast ratio calculation
-  const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+export const validateColorContrast = (foregroun,
+  d: string, backgroun,)
+  d: string): boolean => {/* TODO: Fix JSX expression */}
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   };
@@ -82,152 +61,75 @@ export const validateColorContrast = (foreground: string, background: string): b
   
   const contrast = (Math.max(fgLuminance, bgLuminance) + 0.05) / (Math.min(fgLuminance, bgLuminance) + 0.05);
   
-  return contrast >= 4.5; // WCAG AA standard
+  return contrast >= 4.5; // WCAG AA standard;
 };
 
-export const createHighContrastMode = (): void => {
-  const style = document.createElement('style');
-  style.id = 'high-contrast-mode';
-  style.textContent = `
-    .high-contrast {
-      filter: contrast(150%) brightness(120%);
+export const createHighContrastMode = (): void => {/* TODO: Fix JSX expression */}
     }
-    .high-contrast * {
-      border-color: currentColor !important;
-    }
+    .high-contrast * {/* TODO: Fix JSX expression */}
+    }`
   `;
   document.head.appendChild(style);
 };
 
-export const enableHighContrastMode = (): void => {
-  document.body.classList.add('high-contrast');
-  createHighContrastMode();
+export const enableHighContrastMode = (): void => {/* TODO: Fix JSX expression */}
 };
 
-export const disableHighContrastMode = (): void => {
-  document.body.classList.remove('high-contrast');
-  const style = document.getElementById('high-contrast-mode');
-  if (style) {
-    style.remove();
+export const disableHighContrastMode = (): void => {/* TODO: Fix JSX expression */}
   }
 };
 
-export const createFocusIndicator = (): void => {
-  const style = document.createElement('style');
-  style.id = 'focus-indicator';
-  style.textContent = `
-    *:focus {
-      outline: 2px solid #3b82f6 !important;
-      outline-offset: 2px !important;
+export const createFocusIndicator = (): void => {/* TODO: Fix JSX expression */}
     }
-    *:focus:not(:focus-visible) {
-      outline: none !important;
+    *:focu,
+  s:not(:focus-visible) {/* TODO: Fix JSX expression */}
     }
-    *:focus-visible {
-      outline: 2px solid #3b82f6 !important;
-      outline-offset: 2px !important;
-    }
+    *:focus-visible {/* TODO: Fix JSX expression */}
+    }`
   `;
   document.head.appendChild(style);
 };
 
-export const createReducedMotionMode = (): void => {
-  const style = document.createElement('style');
-  style.id = 'reduced-motion-mode';
-  style.textContent = `
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
+export const createReducedMotionMode = (): void => {/* TODO: Fix JSX expression */}
       }
-    }
+    }`
   `;
   document.head.appendChild(style);
 };
 
-export const setupKeyboardNavigation = (): void => {
-  // Add keyboard navigation support
-  document.addEventListener('keydown', (e) => {
-    // Escape key to close modals/dropdowns
-    if (e.key === 'Escape') {
-      const activeElement = document.activeElement as HTMLElement;
-      if (activeElement && activeElement.blur) {
-        activeElement.blur();
+export const setupKeyboardNavigation = (): void => {/* TODO: Fix JSX expression */}
       }
     }
     
-    // Enter key to activate buttons
-    if (e.key === 'Enter' && e.target instanceof HTMLElement) {
-      if (e.target.getAttribute('role') === 'button' || e.target.tagName === 'BUTTON') {
-        e.target.click();
+    // Enter key to activate buttons;
+    if (e.key === 'Enter' && e.target instanceof HTMLElement) {/* TODO: Fix JSX expression */}
       }
     }
   });
 };
 
-export const createScreenReaderOnly = (): void => {
-  const style = document.createElement('style');
-  style.id = 'screen-reader-only';
-  style.textContent = `
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+export const createScreenReaderOnly = (): void => {/* TODO: Fix JSX expression */}
     }
-    .sr-only:focus {
-      position: static;
-      width: auto;
-      height: auto;
-      padding: inherit;
-      margin: inherit;
-      overflow: visible;
-      clip: auto;
-      white-space: normal;
-    }
+    .sr-onl,
+  y:focus {/* TODO: Fix JSX expression */}
+    }`
   `;
   document.head.appendChild(style);
 };
 
-export const setupAccessibility = (): void => {
-  createFocusIndicator();
-  createReducedMotionMode();
-  createScreenReaderOnly();
-  setupKeyboardNavigation();
+export const setupAccessibility = (): void => {/* TODO: Fix JSX expression */}
 };
 
-export const createARIALiveRegion = (): HTMLElement => {
-  const liveRegion = document.createElement('div');
-  liveRegion.setAttribute('aria-live', 'polite');
-  liveRegion.setAttribute('aria-atomic', 'true');
-  liveRegion.className = 'sr-only';
-  liveRegion.id = 'aria-live-region';
-  document.body.appendChild(liveRegion);
-  return liveRegion;
+export const createARIALiveRegion = (): HTMLElement => {/* TODO: Fix JSX expression */}
 };
 
-export const updateLiveRegion = (message: string): void => {
-  let liveRegion = document.getElementById('aria-live-region');
-  if (!liveRegion) {
-    liveRegion = createARIALiveRegion();
+export const updateLiveRegion = (messag,)
+  e: string): void => {/* TODO: Fix JSX expression */}
   }
   liveRegion.textContent = message;
 };
 
-export const createLandmarkNavigation = (): void => {
-  const landmarks = document.querySelectorAll('main, nav, aside, header, footer, section[aria-labelledby]');
-  
-  landmarks.forEach((landmark, index) => {
-    const role = landmark.getAttribute('role') || landmark.tagName.toLowerCase();
+export const createLandmarkNavigation = (): void => {/* TODO: Fix JSX expression */}`
     const label = landmark.getAttribute('aria-label') || landmark.getAttribute('aria-labelledby') || `${role} ${index + 1}`;
     
     landmark.setAttribute('tabindex', '-1');
@@ -235,21 +137,13 @@ export const createLandmarkNavigation = (): void => {
   });
 };
 
-export const setupLandmarkNavigation = (): void => {
-  createLandmarkNavigation();
-  
-  // Update landmarks when content changes
-  const observer = new MutationObserver(() => {
-    createLandmarkNavigation();
+export const setupLandmarkNavigation = (): void => {/* TODO: Fix JSX expression */}
   });
   
-  observer.observe(document.body, {
-    childList: true,
-    subtree: true
+  observer.observe(document.body, {/* TODO: Fix JSX expression */})
   });
-};
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
+
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring
@@ -580,3 +474,5 @@ class AccessibilityEnhancer {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+};`
+

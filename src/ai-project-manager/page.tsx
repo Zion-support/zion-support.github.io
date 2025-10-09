@@ -1,27 +1,123 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+import { Helmet } from 'react-helmet-async';
+import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone, Star from 'lucide-react';}
+import { BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+const,
+  AIProjectManagerPage: React.FC = () => {return (}
+    <div>Coming Soon</div>)
+  );
+};
+  const _features = [
+const,
+  AiProjectManagerPage: React.FC = () => {return (}
+    <div>Coming Soon</div>)
+  );
+};
+  const features = [
+  // TOD,
+  O: Add items;
+];;
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  ico,
+  n: BarChart,
+      titl,
+  e: 'AI-Powered Planning',
+      descriptio,
+  n: 'Intelligent project planning with predictive analytics and resource optimization',
+      benefit,
+  s: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+    },
+      ico,
+  n: Target,
+      titl,
+  e: 'Smart Task Management',
+      descriptio,
+  n: 'Automated task assignment and priority management based on AI insights',
+      benefit,
+  s: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+      ico,
+  n: Users,
+      titl,
+  e: 'Team Collaboration',
+      descriptio,
+  n: 'Enhanced team collaboration with AI-powered communication and coordination',
+      benefit,
+  s: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
+    }
+  ];
+  const pricingPlans = [
+      nam,
+  e: 'Professional',
+      pric,
+  e: '$199',
+      descriptio,
+  n: 'Ideal for growing businesses',
+        'Up to 25 projects',
+        'Advanced AI planning',
+        'Full team collaboration',
+        'Priority support',
+        'Advanced analytics',
+        'Custom integrations'
+      popula,
+  r: true,
 
-const AiProjectManagerPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Ai Project Manager</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ai project manager solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
+      nam,
+  e: 'Enterprise',
+      pric,
+  e: '$399',
+      descriptio,
+  n: 'For large organizations',
+'Unlimited projects',
+        'Premium AI features',
+        'Enterprise collaboration',
+        '24/7 support',
+        'Custom analytics',
+        'White-label options',
+        'API access'
+  const stats = [
+  // TOD,
+  O: Add items;
+];;
+    {/* TODO: Fix JSX expression */}
+  l: 'Active Teams' },
+    {/* TODO: Fix JSX expression */}
+  l: 'Productivity Increase' },
+    {/* TODO: Fix JSX expression */}
+  l: 'Time Saved' },
+    {/* TODO: Fix JSX expression */}
+  l: 'User Rating' }
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigation>"
+      <main className="container mx-auto px-4 py-16 pt-24"></main>"
+        <section className="text-center mb-16"></section>"
+          <h1 className="text-5xl,"
+  md:text-6xl font-bold text-white mb-6"></h1>
+            Page;
+          </h1>"
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
+            Coming Soon;
+          </p>"
+          <div className="flex flex-col,"
+  sm:flex-row gap-4 justify-center"></div>"
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg,"
+  hover:bg-cyan-600 transition-colors"></button>
+// Contact Us;
+          </button>"
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
+  hover:bg-cyan-400,"
+  hover:text-slate-900 transition-colors"></button>
+Learn More;
+          </div>
+      <Footer /></Footer>
+    </div>)
   );
 };
 
-export default AiProjectManagerPage;
+export default PagePage;"
+
+

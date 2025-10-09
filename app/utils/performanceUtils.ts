@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 // Performance utilities for optimizing React components and application performance
 
 export const debounce = <T extends (...args: any[]) => any>(
@@ -10,29 +9,32 @@ export const debounce = <T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
+// Performance utilities for optimizing React components and application performance;
+export const debounce = <T extends (...arg,)
+  s: any[]) => any>(fun,
+  c: T,
+  wai,
+  t: number;)
+): ((...arg,)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+
   };
 };
 
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+export const throttle = <T extends (...arg,)
+  s: any[]) => any>(fun,
+  c: T,
+  limi,
+  t: number;)
+): ((...arg,)
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
     }
   };
 };
 
-export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {
-  const cache = new Map();
-  return ((...args: Parameters<T>) => {
-    const key = JSON.stringify(args);
-    if (cache.has(key)) {
-      return cache.get(key);
+export const memoize = <T extends (...arg,)
+  s: any[]) => any>(f,)
+  n: T): T => {/* TODO: Fix JSX expression */}
     }
     const result = fn(...args);
     cache.set(key, result);
@@ -40,145 +42,102 @@ export const memoize = <T extends (...args: any[]) => any>(fn: T): T => {
   }) as T;
 }
 /**
- * Lazy load a component with dynamic import
+ * Lazy load a component with dynamic import;
  */
-export function lazyLoad<T extends React.ComponentType<unknown>>(
-  importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-): React.LazyExoticComponent<T> {
-  const LazyComponent = React.lazy(importFunc);
-  if (fallback) {
-    return LazyComponent;
+export function lazyLoad<T extends React.ComponentType<unknown>>(importFun,)
+  c: () => Promise<{/* TODO: Fix JSX expression */}
+  t: T }>,
+  fallback?: React.ReactNode;
+): React.LazyExoticComponent<T> {/* TODO: Fix JSX expression */}
   }
   return LazyComponent;
 }
 /**
- * Measure function execution time
+ * Measure function execution time;
  */
-export async function measureTime<T>(
-  name: string,
-  func: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> {
-  const start = performance.now();
-  const result = await func();
-  const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') {
-    console.log(`${name} took ${duration}ms`);
-  }
+
+export async function measureTime<T>(nam,
+  e: string,
+  fun,)
+  c: () => T | Promise<T></T>
+): Promise<{/* TODO: Fix JSX expression */}
+  n: number }> {/* TODO: Fix JSX expression */}
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { }ms`); } }
+
   return { result, duration };
 }
 /**
- * Batch async operations
+ * Batch async operations;
  */
-export async function batchAsync<T, R>(
-  items: T[],
-  operation: (item: T) => Promise<R>,
-  batchSize = 10
-): Promise<R[]> {
-  const results: R[] = [];
-  for (let i = 0; i < items.length; i += batchSize) {
-    const batch = items.slice(i, i + batchSize);
-    const batchResults = await Promise.all(batch.map(operation));
-    results.push(...batchResults);
+export async function batchAsync<T, R>(item,
+  s: T[],
+  operatio,
+  n: (ite,)
+  m: T) => Promise<R>,
+  batchSize = 10;
+): Promise<R[]> {/* TODO: Fix JSX expression */}
   }
   return results;
 }
 /**
- * Create a request animation frame loop
+ * Create a request animation frame loop;
  */
-export function rafLoop(callback: (time: number) => boolean | void): () => void {
-  let rafId: number;
-  let running = true;
-  function loop(time: number) {
-    if (!running) return;
-    const shouldContinue = callback(time);
-    if (shouldContinue !== false) {
-      rafId = requestAnimationFrame(loop);
+export function rafLoop(callbac,
+  k: (tim,)
+  e: number) => boolean | void): () => void {/* TODO: Fix JSX expression */}
     }
   }
   rafId = requestAnimationFrame(loop);
-  return () => {
-    running = false;
-    if (rafId) {
-      cancelAnimationFrame(rafId);
+  return () => {/* TODO: Fix JSX expression */}
     }
   };
 }
 /**
- * Idle callback wrapper
+ * Idle callback wrapper;
  */
-export function runWhenIdle(
-  callback: () => void,
-  options?: IdleRequestOptions
-): number {
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-    return window.requestIdleCallback(callback, options);
+export function runWhenIdle(callbac,)
+  k: () => void,
+  options?: IdleRequestOptions;
+): number {/* TODO: Fix JSX expression */}
   }
-  // Fallback for browsers that don't support requestIdleCallback
-  if (typeof window !== 'undefined') {
-    return (window as Window).setTimeout(callback, 1) as unknown as number;
+  // Fallback for browsers that don't support requestIdleCallback;
+  if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   }
   return 0;
 }
 /**
- * Cancel idle callback
+ * Cancel idle callback;
  */
-export function cancelIdle(id: number): void {
-  if (typeof window !== 'undefined') {
-    if ('cancelIdleCallback' in window) {
-      window.cancelIdleCallback(id);
-    } else {
-      (window as Window).clearTimeout(id);
+export function cancelIdle(i,)
+  d: number): void {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
     }
   }
 }
 /**
- * Virtual scroll helper
+ * Virtual scroll helper;
  */
-export class VirtualScroller<T> {
-  private itemHeight: number;
-  private containerHeight: number;
-  private items: T[];
-  constructor(items: T[], itemHeight: number, containerHeight: number) {
-    this.items = items;
-    this.itemHeight = itemHeight;
-    this.containerHeight = containerHeight;
+export class VirtualScroller<T> {/* TODO: Fix JSX expression */}
   }
-  getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
-    const start = Math.floor(scrollTop / this.itemHeight);
-    const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
-    const offsetY = start * this.itemHeight;
-    return {
-      start: Math.max(0, start),
-      end: Math.min(this.items.length, end),
-      offsetY
+  getVisibleRange(scrollTo,)
+  p: number): {/* TODO: Fix JSX expression */}
+  Y: number } {/* TODO: Fix JSX expression */}
     };
   }
-  getVisibleItems(scrollTop: number): T[] {
+  getVisibleItems(scrollTo,)
+  p: number): T[] {/* TODO: Fix JSX expression */}
     const { start, end } = this.getVisibleRange(scrollTop);
     return this.items.slice(start, end);
   }
-  getTotalHeight(): number {
-    return this.items.length * this.itemHeight;
+  getTotalHeight(): number {/* TODO: Fix JSX expression */}
   }
 }
 /**
- * Image lazy loading helper
+ * Image lazy loading helper;
  */
-export function setupLazyImages(
-  selector = 'img[data-src]',
-  options?: IntersectionObserverInit
-): () => void {
-  const images = document.querySelectorAll<HTMLImageElement>(selector);
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset['src'];
-        if (src) {
-          img['src'] = src;
-          img.removeAttribute('data-src');
-          observer.unobserve(img);
+export function setupLazyImages(selector = 'img[data-src]',
+  options?: IntersectionObserverInit;)
+): () => void {/* TODO: Fix JSX expression */}
         }
       }
     });
@@ -187,134 +146,89 @@ export function setupLazyImages(
   return () => observer.disconnect();
 }
 /**
- * Preload critical resources
+ * Preload critical resources;
  */
-export function preloadResources(resources: Array<{ url: string; as: string }>): void {
-  resources.forEach(({ url, as }) => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = url;
-    link.as = as;
-    document.head.appendChild(link);
+export function preloadResources(resource,
+  s: Array<{/* TODO: Fix JSX expression */})
+  s: string }>): void {/* TODO: Fix JSX expression */}
+  resources.forEach(({ url, as }) => {/* TODO: Fix JSX expression */}
 };
 
-export const isInViewport = (element: Element): boolean => {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
+export const isInViewport = (elemen,)
+  t: Element): boolean => {/* TODO: Fix JSX expression */}
 };
 
-export const preloadImage = (src: string): Promise<void> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => resolve();
-    img.onerror = reject;
-    img.src = src;
+export const preloadImage = (sr,)
+  c: string): Promise<void> => {/* TODO: Fix JSX expression */}
   });
 };
 
-export const preloadImages = async (srcs: string[]): Promise<void> => {
-  await Promise.all(srcs.map(preloadImage));
+export const preloadImages = async (src,)
+  s: string[]): Promise<void> => {/* TODO: Fix JSX expression */}
 };
 
-export const getImageDimensions = (src: string): Promise<{ width: number; height: number }> => {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.onload = () => {
-      resolve({ width: img.naturalWidth, height: img.naturalHeight });
+export const getImageDimensions = (sr,)
+  c: string): Promise<{/* TODO: Fix JSX expression */}
+  t: number }> => {/* TODO: Fix JSX expression */}
+  t: img.naturalHeight });
     };
     img.onerror = reject;
     img.src = src;
   });
 };
 
-export const createIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  options?: IntersectionObserverInit
-): IntersectionObserver => {
-  return new IntersectionObserver(callback, {
-    rootMargin: '50px',
-    threshold: 0.1,
-    ...options
+export const createIntersectionObserver = (callbac,
+  k: (entrie,)
+  s: IntersectionObserverEntry[]) => void,
+  options?: IntersectionObserverInit;
+): IntersectionObserver => {/* TODO: Fix JSX expression */}
   });
 };
 
-export const measurePerformance = (name: string, fn: () => void): void => {
-  if (process.env.NODE_ENV === 'development') {
-    const start = performance.now();
-    fn();
-    const end = performance.now();
+export const measurePerformance = (nam,
+  e: string, f,)
+  n: () => void): void => {/* TODO: Fix JSX expression */}`
     // console.log(`${name} took ${end - start} milliseconds`);
-  } else {
-    fn();
+  } else {/* TODO: Fix JSX expression */}
   }
 };
 
-export const getDeviceInfo = () => {
-  const userAgent = navigator.userAgent;
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-  const isTablet = /iPad|Android(?=.*Mobile)/i.test(userAgent);
-  const isDesktop = !isMobile && !isTablet;
-  
-  return {
-    isMobile,
-    isTablet,
-    isDesktop,
-    userAgent
+export const getDeviceInfo = () => {/* TODO: Fix JSX expression */}
   };
 };
 
-export const optimizeForDevice = () => {
-  const deviceInfo = getDeviceInfo();
-  
-  if (deviceInfo.isMobile) {
-    // Reduce animations and effects for mobile
-    document.documentElement.style.setProperty('--animation-duration', '0.2s');
-    document.documentElement.style.setProperty('--transition-duration', '0.15s');
+export const optimizeForDevice = () => {/* TODO: Fix JSX expression */}
   }
   
   return deviceInfo;
 };
 
-export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {
-  if ('PerformanceObserver' in window) {
-    const observer = new PerformanceObserver(callback);
-    observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+export const createPerformanceObserver = (callbac,
+  k: (entrie,)
+  s: PerformanceEntry[]) => void) => {/* TODO: Fix JSX expression */}
+  s: ['measure', 'navigation', 'paint'] });
     return observer;
   }
   return null;
 };
 
-export const measureWebVitals = () => {
-  const vitals: Record<string, number> = {};
+export const measureWebVitals = () => {/* TODO: Fix JSX expression */}
+  vitals: Record<string, number> = {};
   
-  const observer = createPerformanceObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.entryType === 'paint') {
-        if (entry.name === 'first-contentful-paint') {
-          vitals.fcp = entry.startTime;
+  const observer = createPerformanceObserver((entries) => {/* TODO: Fix JSX expression */}
         }
-      } else if (entry.entryType === 'largest-contentful-paint') {
-        vitals.lcp = entry.startTime;
+      } else if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
       }
     });
   });
   
-  return {
-    vitals,
-    observer
+  return {/* TODO: Fix JSX expression */}
   };
 };
 
-export const optimizeBundleSize = () => {
-  // Dynamic imports for heavy components
-  const loadHeavyComponent = (componentName: string) => {
-    return import(`../components/${componentName}`).catch(() => {
-      // console.warn(`Failed to load component: ${componentName}`);
+export const optimizeBundleSize = () => {/* TODO: Fix JSX expression */}`
+    return import(`../components/${componentName}`).catch(() => {/* TODO: Fix JSX expression */}`
+  component: ${componentName}`);
       return null;
     });
   };
@@ -322,37 +236,25 @@ export const optimizeBundleSize = () => {
   return { loadHeavyComponent };
 };
 
-export const createLazyComponent = <T extends React.ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = React.lazy(importFunc);
-  
-  return (props: React.ComponentProps<T>) => (
+export const createLazyComponent = <T extends React.ComponentType<any>>(importFun,)
+  c: () => Promise<{/* TODO: Fix JSX expression */}
+  t: T }>,
+  fallback?: React.ReactNode;
+) => {/* TODO: Fix JSX expression */}
     <React.Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...props} />
+      <LazyComponent {...props} /></LazyComponent>
     </React.Suspense>
   );
 };
 
-// Memory management utilities
-export const cleanupMemory = () => {
-  if ('memory' in performance) {
-    const memory = (performance as any).memory;
-    // console.log('Memory usage:', {
-      used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-      total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-      limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+// Memory management utilities;
+export const cleanupMemory = () => {/* TODO: Fix JSX expression */}
     });
   }
 };
 
-export const scheduleCleanup = () => {
-  // Schedule cleanup every 5 minutes
-  setInterval(cleanupMemory, 5 * 60 * 1000);
-};
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
+
 /**
  * Performance Utilities
  * Provides performance monitoring, optimization, and metrics collection
@@ -664,3 +566,6 @@ export function collectPerformanceMetrics(): PerformanceMetrics | null {
 // Export instances
 export const performanceOptimizer = new PerformanceOptimizer();
 export const performanceMonitor = new PerformanceMonitor();
+export const scheduleCleanup = () => {/* TODO: Fix JSX expression */}
+};`
+

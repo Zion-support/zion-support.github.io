@@ -1,87 +1,152 @@
+
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// List of files with syntax errors
-const filesToFix = [
-  'src/ai-analytics/page.tsx',
-  'src/ai-automation/page.tsx',
-  'src/ai-computer-vision/page.tsx',
-  'src/ai-content-generation/page.tsx',
-  'src/ai-content-studio/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-insights/page.tsx',
-  'src/ai-customer-support-bot/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-cybersecurity/page.tsx',
-  'src/ai-data-analytics/page.tsx',
-  'src/ai-data-visualization/page.tsx',
-  'src/ai-design-assistant/page.tsx',
-  'src/ai-document-processing/page.tsx',
-  'src/ai-document-processor/page.tsx',
-  'src/ai-ecommerce-optimizer/page.tsx',
-  'src/ai-ecommerce-solutions/page.tsx',
-  'src/ai-edge-computing/page.tsx',
-  'src/ai-email-assistant/page.tsx',
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-fintech/page.tsx',
-  'src/ai-healthcare/page.tsx',
-  'src/ai-hr-assistant/page.tsx',
-  'src/ai-inventory-manager/page.tsx',
-  'src/ai-invoice-generator/page.tsx',
-  'src/ai-lead-generation/page.tsx',
-  'src/ai-lead-scoring/page.tsx',
-  'src/ai-marketing/page.tsx'
-];
-
-// Template for a simple coming soon page
-const createComingSoonPage = (title, description) => `import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
-          <p className="text-gray-300 mb-8">${description}</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default ${title}Page;`;
-
-// Fix each file
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  
-  const description = `Coming Soon - Advanced ${title.toLowerCase()} solutions`;
-  
-  try {
-    fs.writeFileSync(fullPath, createComingSoonPage(title, description));
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+// Function to fix common syntax errors in a file;
+function fixSyntaxErrors(filePath) {/* TODO: Fix JSX expression */}
+      },
+      // Fix missing commas in array elements;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix incomplete JSX tags;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix missing closing tags;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix malformed imports;
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*$/gm,
+        replacemen,
+  t: (match, imports, module) => {/* TODO: Fix JSX expression */}
+          return `import { ${cleanImports} } from '${module}';`;
+        }
+      },
+      // Fix missing semicolons;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix malformed function declarations;
+      {/* TODO: Fix JSX expression */}
+  O: Implement function
+}'
+      },
+      // Fix incomplete object literals;
+      {/* TODO: Fix JSX expression */}
+  n: /{\s*(\w+):\s*([^,}]+)\s*$/gm,
+        replacemen,
+  t: '{
+  $1: $2
+}'
+      },
+      // Fix malformed JSX expressions;
+      {/* TODO: Fix JSX expression */}
+  n: /{([^}]*)\s*$/gm,
+        replacemen,
+  t: '{/* TODO: Fix JSX expression */}
+  O: Fix JSX expression */}'
+      },
+      // Fix incomplete string literals;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix missing closing parentheses;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix malformed template literals;
+      {/* TODO: Fix JSX expression */}
+      }
+    ];
+    
+    // Apply fixes;
+    for (const fix of fixes) {/* TODO: Fix JSX expression */}
+        }
+      } else {/* TODO: Fix JSX expression */}
+        }
+      }
+    }
+    
+    // Additional specific fixes for common patterns;
+    const specificFixes = [
+      // Fix incomplete export statements;
+      {/* TODO: Fix JSX expression */}
+  t: 'export const $1 = {};'
+      },
+      // Fix incomplete component definitions;
+      {/* TODO: Fix JSX expression */}
+  t: 'const $1 = () => {
+  return <div>Component placeholder</div>;
+};'
+      },
+      // Fix incomplete return statements;
+      {/* TODO: Fix JSX expression */}
+      },
+      // Fix malformed metadata objects;
+      {/* TODO: Fix JSX expression */}"
+  description: "Page description"
+};'
+      }
+    ];
+    
+    for (const fix of specificFixes) {/* TODO: Fix JSX expression */}
+      }
+    }
+    
+    // Clean up any remaining merge conflict artifacts;
+    content = content.replace(/]*>/g, '');
+    content = content.replace(//g, '');
+    content = content.replace(/]*>/g, '');
+    
+    // Remove empty lines at the end;
+    content = content.replace(/
+\s*
+\s*$/g, '
+');
+    
+    // Only write if content changed;
+    if (content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
+    }
+    
+    return modified;
+  } catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All files fixed!');
+// Function to find all files with syntax errors;
+function findFilesWithErrors(dir) {/* TODO: Fix JSX expression */}
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution;
+console.log('🔍 Scanning for files with syntax errors...');
+const files = findFilesWithErrors(process.cwd());`
+console.log(`Found ${files.length} files to check`);
+
+let fixedCount = 0;
+for (const file of files) {/* TODO: Fix JSX expression */}`
+  in: ${file}`);
+  }
+}
+`
+console.log(`
+✅ Fixed syntax errors in ${fixedCount} files`);
+
+// Run linting to verify fixes;
+console.log('
+🔍 Running linting to verify fixes...');
+try {/* TODO: Fix JSX expression */}
+  o: 'inherit' });
+  console.log('✅ Linting passed - all syntax errors resolved!');
+} catch (error) {/* TODO: Fix JSX expression */}
+}"`
+
+

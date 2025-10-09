@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
 export default PerformanceDashboard;

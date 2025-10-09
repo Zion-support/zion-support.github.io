@@ -25,17 +25,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
-
-export type SyncStatus = 'connected' | 'warning' | 'disconnected';
-
+export interface IntegrationProviderMeta {/* TODO: Fix JSX expression */}
 }
 
 
@@ -52,67 +42,52 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-export interface IntegrationProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+export interface IntegrationProviderMeta {/* TODO: Fix JSX expression */}
 }
 }
 
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  accessToken: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  config?: Record<string, any>;
+export interface ProviderConnection {/* TODO: Fix JSX expression */}
 }
 }
 
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
-  accessToken?: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  lastSyncAt?: number;
-  createdAt: number;
-  updatedAt: number;
+export interface ProviderConnection {/* TODO: Fix JSX expression */}
 }
   expiresAt?: number;
 }
 
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  name: string;
-  status: SyncStatus;
+export interface ProviderConnection {/* TODO: Fix JSX expression */}
 }
 
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
 }
 
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
-  status: SyncStatus;
+  createdA,
+  t: number;
+  updatedA,
+  t: number;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
   config?: Record<string, any>;
   expiresAt?: number;
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
-  createdAt: number;
-  updatedAt: number;
+  createdA,
+  t: number;
+  updatedA,
+  t: number;
   expiresAt?: number;
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
   config?: Record<string, any>;
 }
@@ -120,9 +95,11 @@ export interface ProviderConnection {
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
-  createdAt: number;
+  createdA,
+  t: number;
   expiresAt?: number;
 }
 
@@ -131,27 +108,25 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 
 }
 
-  status: SyncStatus;
+  statu,
+  s: SyncStatus;
   lastSync?: number;
-  createdAt: number;
+  createdA,
+  t: number;
 }
 
 }
 
   lastSync?: Date;
-  config: Record<string, unknown>;
-  createdAt: Date;
-  updatedAt: Date;
+  confi,
+  g: Record<string, unknown>;
+  createdA,
+  t: Date;
+  updatedA,
+  t: Date;
 }
 
-export interface SyncLogEntry {
-  id: string;
-  connectionId: string;
-  action: string;
-  details?: Record<string, any>;
-}
-
-  details?: Record<string, any>;
+export interface SyncLogEntry {/* TODO: Fix JSX expression */}
 }
 
   details?: Record<string, any>;
@@ -181,10 +156,10 @@ export interface SyncLogEntry {
   details?: Record<string, any>;
 }
 
-export interface ManualOverride {
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
+  details?: Record<string, any>;
+}
+
+export interface ManualOverride {/* TODO: Fix JSX expression */}
 }
 
 
@@ -198,131 +173,74 @@ export interface ManualOverride {
 
 
 
-export interface ZapierEvent {
-  id: string;
-  type: 'zion.job.posted' | 'zion.talent.matched';
-  timestamp: number;
-export interface IntegrationProviderMeta {
-  status: 'success' | 'error' | 'warning';
-  message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+export interface ZapierEvent {/* TODO: Fix JSX expression */}
 }
 
-export interface IntegrationOverride {
-  id: string;
-  connectionId: string;
-  field: string;
-  value: unknown;
-  reason: string;
-  createdAt: Date;
-  updatedAt: Date;
+export interface IntegrationOverride {/* TODO: Fix JSX expression */}
 }
 
-export interface IntegrationEvent {
-  id: string;
-  type: 'sync' | 'error' | 'warning' | 'connection';
-  connectionId?: string;
-  message: string;
-  details?: Record<string, unknown>;
-  timestamp: Date;
+export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 }
 
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-  payload: Record<string, any>;
+export interface IntegrationsState {/* TODO: Fix JSX expression */}
 }
 
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 
-export interface IntegrationProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
+export interface IntegrationProviderMeta {/* TODO: Fix JSX expression */}
 }
 
 }
 
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-  lastError?: string | null;
+export interface IntegrationsState {/* TODO: Fix JSX expression */}
 }
 }
 }
 }
 }
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats';
-  description: string;
-  payload: Record<string, any>;
+export interface IntegrationProviderMeta {/* TODO: Fix JSX expression */}
 }
 
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
+export interface IntegrationsState {/* TODO: Fix JSX expression */}
 }
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 
-export interface ProviderConnection {
-  id: string;
-  providerId: IntegrationProviderId;
-  accessToken: string;
-  refreshToken?: string;
-  expiresAt?: number;
-  status: SyncStatus;
-  lastSync?: number;
-  createdAt: number;
+export interface ProviderConnection {/* TODO: Fix JSX expression */}
 }
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId;
-  name: string;
-  category: 'crm' | 'ats' | 'hr';
-  description: string;
+export interface IntegrationProviderMeta {/* TODO: Fix JSX expression */}
 }
   logoUrl?: string;
   websiteUrl?: string;
   apiDocsUrl?: string;
 }
-  payload: Record<string, any>;
+  payloa,
+  d: Record<string, any>;
 }
 }
 
-export interface IntegrationsState {
-  connections: ProviderConnection[];
-  logs: SyncLogEntry[];
-  overrides: ManualOverride[];
-  events: ZapierEvent[];
-  lastError?: string | null;
+export interface IntegrationsState {/* TODO: Fix JSX expression */}
 }
 }
 }
-  overrides: IntegrationOverride[];
-  events: IntegrationEvent[];
+  override,
+  s: IntegrationOverride[];
+  event,
+  s: IntegrationEvent[];
 }

@@ -1,6 +1,7 @@
-// setupTests file
-// This file is under development
 
-export default function setupTests() {
-  return null;
+import React from 'react';
+
+export default function Component() {
+  return <div>Component placeholder</div>;
+
 }

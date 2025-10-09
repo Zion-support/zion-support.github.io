@@ -1,2 +1,2 @@
-exports.handler = async function () {} try { return {
+exports.handler = async function () {} try {/* TODO: Fix JSX expression */}
 }}

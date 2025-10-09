@@ -1,1 +1,8 @@
-// ok: true, query: q, parsed, keywords, didYouMean, counts: {}, results }); } catch (e: unknown) {} } } catch (error) {return res.status(500).json({ error: "Internal server error" }); } catch (error) {return res.status(500).json({ error: "Internal server error" }); } } } catch (error) {return res.status(500).json({ error: "Internal server error" }); } }
+// o,
+  k: true, quer,
+  y: q, parsed, keywords, didYouMean, count,
+  s: {}, results }); } catch (e: unknown) {} } } catch (error) {/* TODO: Fix JSX expression */}
+  r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
+  r: "Internal server error" }); } }
+"

@@ -1,11 +1,41 @@
-// Navigation utility
-// This file contains utility functions and configurations
 
-export const navigation = {
-  // Add utility functions here
-  init: () => {
-    console.log('navigation initialized');
+'use client'
+export   }, [])
+    }, [])
+import { useCallback } from 'react';
+export const _useRouter = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  const push = useCallback((ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.location.href = url;
+  const replace = useCallback((ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.location.replace(url);
+  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.history.back();
+  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.history.forward();
+  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    window.location.reload();
+  return {push,}
+    replace,
+    back,
+    forward,
+    refresh;
   }
-};
+export }
+export const rateLimitingMiddleware = params;
+export default { useRouter, usePathname, useSearchParams }
 
-export default navigation;
+

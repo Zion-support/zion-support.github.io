@@ -1,93 +1,125 @@
 'use client';
 
-import React, { useEffect, useCallback } from 'react';
-import { logger } from '../utils/logger';
 
-interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
+interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 }
 
-export const PerformanceOptimizer: React.FC = () => {
-  const collectWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
+const,
+  PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  });
 
-    // Collect Core Web Vitals
-    const vitals: PerformanceMetrics = {
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      fcp: 0,
-      ttfb: 0,
-    };
+  useEffect(() => {/* TODO: Fix JSX expression */}
+    }
+    if (enableLazyLoading) {/* TODO: Fix JSX expression */}
+    }
+    if (enablePreloading) {/* TODO: Fix JSX expression */}
+    }
+    if (enableCodeSplitting) {/* TODO: Fix JSX expression */}
+    }
+    if (enableResourceHints) {/* TODO: Fix JSX expression */}
+    }
+    if (enableServiceWorker) {/* TODO: Fix JSX expression */}
+    }
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-    // LCP - Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      vitals.lcp = lastEntry.startTime;
-      logger.info('LCP measured', { lcp: vitals.lcp });
+  const optimizeImages = () => {/* TODO: Fix JSX expression */}
+      }
+      
+      // Add decoding="async" for better performance;
+      img.setAttribute('decoding', 'async');
+      "
+      // Add fetchpriority="high" for above-the-fold images;
+      if (img.getBoundingClientRect().top <= window.innerHeight) {/* TODO: Fix JSX expression */}
+      }
+      
+      // Add proper alt text if missing;
+      if (!img.getAttribute('alt')) {/* TODO: Fix JSX expression */}
+      }
     });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    
+    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
+  d: optimized }));
+  };
 
-    // FID - First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        vitals.fid = entry.processingStart - entry.startTime;
-        logger.info('FID measured', { fid: vitals.fid });
+  const setupLazyLoading = () => {/* TODO: Fix JSX expression */}
+            }
+          }
+        });
+      }, {/* TODO: Fix JSX expression */}
       });
+      
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach((img) => observer.observe(img));
+      
+      setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
+  d: lazyImages.length }));
+    }
+  };
+
+  const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+      },
+      {/* TODO: Fix JSX expression */}
+      }
+    ];
+
+    criticalResources.forEach((resource) => {/* TODO: Fix JSX expression */}
+      }
+      document.head.appendChild(link);
+
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-          vitals.cls = clsValue;
-          logger.info('CLS measured', { cls: vitals.cls });
+
+    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
+  d: criticalResources.length }));
+  };
+
+  const setupCodeSplitting = () => {/* TODO: Fix JSX expression */}
+  t: true }));
+  };
+
+  const addResourceHints = () => {/* TODO: Fix JSX expression */}
+  s://fonts.googleapis.com' },
+      {/* TODO: Fix JSX expression */}
+  s://fonts.gstatic.com' },
+      {/* TODO: Fix JSX expression */}
+  s://www.googletagmanager.com' },
+      {/* TODO: Fix JSX expression */}
+  s://www.google-analytics.com' },
+      {/* TODO: Fix JSX expression */}
+  s://fonts.googleapis.com' },
+      {/* TODO: Fix JSX expression */}
+  n: 'anonymous' }
+    ];
+
+    hints.forEach((hint) => {/* TODO: Fix JSX expression */}
+      }
+      document.head.appendChild(link);
+    });
+
+    setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
+  s: hints.length }));
+  };
+
+  const registerServiceWorker = async () => {/* TODO: Fix JSX expression */}
+  r: true }));
+        } catch (error) {/* TODO: Fix JSX expression */}
+        }
+    }
+  };
+
+  // Performance monitoring;
+  useEffect(() => {/* TODO: Fix JSX expression */}
+              });
+            }
+          }
         }
       });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+      
+      observer.observe({/* TODO: Fix JSX expression */})
+  s: ['largest-contentful-paint'] });
 
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        vitals.fcp = entry.startTime;
-        logger.info('FCP measured', { fcp: vitals.fcp });
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
-
-    // TTFB - Time to First Byte
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      logger.info('TTFB measured', { ttfb: vitals.ttfb });
-    }
-
-    // Send metrics to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(vitals.lcp),
-        custom_map: {
-          lcp: vitals.lcp,
-          fid: vitals.fid,
-          cls: vitals.cls,
-          fcp: vitals.fcp,
-          ttfb: vitals.ttfb,
-        },
-      });
     }
   }, []);
 
@@ -165,4 +197,4 @@ export const PerformanceOptimizer: React.FC = () => {
   return null;
 };
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer;"

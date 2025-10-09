@@ -1,52 +1,42 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Pattern to match commented-out variable declarations
+// Pattern to match commented-out variable declarations;
 const patterns = [
-  // Match commented-out const/let/var declarations
-  { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
-  // Match commented-out variable assignments
-  { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
-  // Match commented-out variable references
-  { regex: /\/\/\s*(\w+)\s*[;,)]/g, replacement: '$1' },
-  // Match commented-out object property assignments
-  { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
-  // Match commented-out function calls
-  { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' },
+  // Match commented-out const/let/var declarations;
+  {/* TODO: Fix JSX expression */}
+  t: '$1 $2 =' },
+  // Match commented-out variable assignments;
+  {/* TODO: Fix JSX expression */}
+  t: '$1 =' },
+  // Match commented-out variable references;
+  {/* TODO: Fix JSX expression */}
+  t: '$1' },
+  // Match commented-out object property assignments;
+  {/* TODO: Fix JSX expression */}
+  t: '$1: $2' },
+  // Match commented-out function calls;
+  {/* TODO: Fix JSX expression */}
+  t: '$1(' },
 ];
-
-function fixFile(filePath) {
-  try {
-
-    patterns.forEach(pattern => {
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+)
+function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
     });
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+    if (modified) {/* TODO: Fix JSX expression */}
     }
     return false;
-  } catch (error) {
-
-    return false;
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
-async function main() {
-  
-  
-  files.forEach(file => {
-    if (fixFile(fullPath)) {
-      fixedCount++;
-    }
+async function main() {/* TODO: Fix JSX expression */}
+}
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+    })
   });
 
 }

@@ -7,11 +7,11 @@ import './globals.css';
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
-      .then(() => {
-        // Service Worker registered successfully
+      .then((registration) => {
+        console.log('SW registered: ', registration);
       })
-      .catch(() => {
-        // Service Worker registration failed - handled silently
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
       });
   });
 }

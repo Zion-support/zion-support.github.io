@@ -1,27 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const SitemapPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Sitemap</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced sitemap solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
+const,
+  SitemapPage: React.FC = () => {return (}
+    <div>Coming Soon</div>)
+  )
+    
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+      <div className="container mx-auto px-4 py-16"></div>"
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">Sitemap</h1>"
+        <div className="grid grid-cols-1,
+  md:grid-cols-2,"
+  lg:grid-cols-3 gap-6"></div>"
+          <div className="cyber-card p-6"></div>"
+            <h2 className="text-xl font-bold text-white mb-4">Main Pages</h2>"
+            <ul className="space-y-2"></ul>"
+              <li><a href="/" className="text-cyan-400,"
+  hover:text-cyan-300">Home</a></li>"
+              <li><a href="/services" className="text-cyan-400,"
+  hover:text-cyan-300">Services</a></li>"
+              <li><a href="/contact" className="text-cyan-400,"
+  hover:text-cyan-300">Contact</a></li>"
+              <li><a href="/about" className="text-cyan-400,"
+  hover:text-cyan-300">About</a></li>
+            </ul>
+          </div>"
+            <h2 className="text-xl font-bold text-white mb-4">AI Services</h2>"
+              <li><a href="/ai-services" className="text-cyan-400,"
+  hover:text-cyan-300">AI Solutions</a></li>"
+              <li><a href="/machine-learning" className="text-cyan-400,"
+  hover:text-cyan-300">Machine Learning</a></li>"
+              <li><a href="/automation" className="text-cyan-400,"
+  hover:text-cyan-300">Automation</a></li>"
+            <h2 className="text-xl font-bold text-white mb-4">IT Services</h2>"
+              <li><a href="/it-services" className="text-cyan-400,"
+  hover:text-cyan-300">IT Solutions</a></li>"
+              <li><a href="/cloud-services" className="text-cyan-400,"
+  hover:text-cyan-300">Cloud Services</a></li>"
+              <li><a href="/cybersecurity" className="text-cyan-400,"
+  hover:text-cyan-300">Cybersecurity</a></li>
   );
 };
-
 export default SitemapPage;
+"
+
+

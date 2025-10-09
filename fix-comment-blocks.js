@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -7,15 +6,10 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix malformed comment blocks
-function fixCommentBlocks(content) {
-  // Fix malformed console.log comments
-  content = content.replace(
+// Function to fix malformed comment blocks;
+function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {
-      const fixedBody = body.split('\n').map(line => {
-        if (line.trim() && !line.trim().startsWith('//')) {
-          return '// ' + line.trim();
+    (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line;
       }).join('\n');
@@ -23,13 +17,10 @@ function fixCommentBlocks(content) {
     }
   );
 
-  // Fix malformed comment blocks that are missing proper commenting
-  content = content.replace(
+  // Fix malformed comment blocks that are missing proper commenting;
+  content = content.replace()
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
-    (match, body) => {
-      const fixedBody = body.split('\n').map(line => {
-        if (line.trim() && !line.trim().startsWith('//')) {
-          return '// ' + line.trim();
+    (match, body) => {/* TODO: Fix JSX expression */}
         }
         return line;
       }).join('\n');
@@ -37,17 +28,13 @@ function fixCommentBlocks(content) {
     }
   );
 
-  // Fix specific patterns we've seen
-  content = content.replace(
+  // Fix specific patterns we've seen;
+  content = content.replace()
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {
-      const lines = body.split('\n');
-      const fixedLines = lines.map(line => {
-        if (line.trim() && !line.trim().startsWith('//')) {
-          return '// ' + line.trim();
+    (match, method, body) => {/* TODO: Fix JSX expression */}
         }
         return line;
-      });
+      });`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`;
     }
   );
@@ -55,49 +42,21 @@ function fixCommentBlocks(content) {
   return content;
 }
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Apply fixes
-    const originalContent = content;
-    
-    content = fixCommentBlocks(content);
-
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true;
+// Function to process a single file;
+function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     return modified;
-  } catch (error) {
+  } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles(dir) {
-  const files = [];
-  
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          walkDir(fullPath);
+// Function to find all TypeScript/JavaScript files;
+function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
         }
-      } else if (stat.isFile()) {
-        // Check for TypeScript/JavaScript files
-        if (/\.(ts|tsx|js|jsx)$/.test(item)) {
-          files.push(fullPath);
+      } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
         }
       }
     }
@@ -107,22 +66,20 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting comment block fixes...');
 
 const srcDir = path.join(__dirname, 'src');
 const appDir = path.join(__dirname, 'app');
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
-
+`
 console.log(`Found ${files.length} files to process`);
 
 let processedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
-    processedCount++;
-    console.log(`Fixed: ${file}`);
+for (const file of files) {/* TODO: Fix JSX expression */}`
+  d: ${file}`);
   }
 }
-
+`
 console.log(`Processed ${processedCount} files`);
-console.log('Comment block fixes completed!');
+console.log('Comment block fixes completed!');`
