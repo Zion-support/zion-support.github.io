@@ -1424,8 +1424,254 @@ const MicroSAASPage: React.FC = () => {
       benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
       marketPrice: '$250-500/month',
       category: 'SEO Reporting',
-      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
->>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-ab91
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Real Estate & Property Management
+    {
+      title: 'AI Property Valuation Engine',
+      description: 'Automated property valuation with market analysis, comparable sales, and investment potential assessment.',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Automated valuations', 'Market analysis', 'Comparable sales', 'Investment analysis', 'Trend forecasting', 'ROI calculations'],
+      benefits: ['Accurate valuations', 'Save time on appraisals', 'Better investment decisions', 'Market insights'],
+      marketPrice: '$300-600/month',
+      category: 'Real Estate',
+      technologies: ['Machine Learning', 'Python', 'Real Estate APIs', 'React', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Tenant Screening Platform',
+      description: 'Intelligent tenant screening with credit analysis, background checks, and risk assessment.',
+      icon: '🔍',
+      price: '$149/month',
+      features: ['Credit analysis', 'Background checks', 'Risk scoring', 'Document verification', 'Rent payment prediction', 'Fraud detection'],
+      benefits: ['Reduce bad tenants by 70%', 'Faster screening process', 'Lower vacancy rates', 'Better tenant quality'],
+      marketPrice: '$200-400/month',
+      category: 'Real Estate',
+      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Property Management Suite',
+      description: 'Comprehensive property management with maintenance scheduling, rent collection, and tenant communication.',
+      icon: '🏢',
+      price: '$299/month',
+      features: ['Maintenance scheduling', 'Rent collection', 'Tenant communication', 'Financial reporting', 'Lease management', 'Maintenance tracking'],
+      benefits: ['Streamline operations', 'Reduce maintenance costs', 'Improve tenant satisfaction', 'Better financial control'],
+      marketPrice: '$400-800/month',
+      category: 'Real Estate',
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Payment APIs', 'SMS/Email APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Agriculture & Food Tech
+    {
+      title: 'AI Crop Monitoring System',
+      description: 'Smart agriculture with crop health monitoring, yield prediction, and pest detection using computer vision.',
+      icon: '🌾',
+      price: '$399/month',
+      features: ['Crop health monitoring', 'Yield prediction', 'Pest detection', 'Weather integration', 'Irrigation optimization', 'Growth tracking'],
+      benefits: ['Increase yields by 25%', 'Reduce pesticide use', 'Optimize water usage', 'Early problem detection'],
+      marketPrice: '$600-1200/month',
+      category: 'Agriculture',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Food Safety Inspector',
+      description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
+      icon: '🍎',
+      price: '$249/month',
+      features: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality scoring', 'Traceability', 'Alert system'],
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve quality'],
+      marketPrice: '$400-800/month',
+      category: 'Food Safety',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Energy & Sustainability
+    {
+      title: 'AI Energy Optimization Platform',
+      description: 'Smart energy management with consumption analysis, cost optimization, and renewable energy integration.',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy consumption analysis', 'Cost optimization', 'Renewable integration', 'Demand forecasting', 'Carbon tracking', 'Efficiency recommendations'],
+      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve efficiency'],
+      marketPrice: '$300-600/month',
+      category: 'Energy',
+      technologies: ['IoT Sensors', 'Machine Learning', 'Energy APIs', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Carbon Footprint Tracker',
+      description: 'Comprehensive carbon footprint monitoring and reduction recommendations for businesses and individuals.',
+      icon: '🌱',
+      price: '$99/month',
+      features: ['Carbon tracking', 'Reduction recommendations', 'Sustainability scoring', 'Goal setting', 'Progress monitoring', 'Reporting'],
+      benefits: ['Track environmental impact', 'Meet sustainability goals', 'Reduce carbon footprint', 'Improve ESG ratings'],
+      marketPrice: '$150-300/month',
+      category: 'Sustainability',
+      technologies: ['Machine Learning', 'Carbon APIs', 'React', 'Node.js', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Transportation & Logistics
+    {
+      title: 'AI Fleet Management System',
+      description: 'Intelligent fleet management with route optimization, fuel efficiency, and predictive maintenance.',
+      icon: '🚛',
+      price: '$399/month',
+      features: ['Route optimization', 'Fuel efficiency tracking', 'Predictive maintenance', 'Driver behavior analysis', 'Cost optimization', 'Real-time tracking'],
+      benefits: ['Reduce fuel costs by 20%', 'Improve delivery times', 'Lower maintenance costs', 'Better driver safety'],
+      marketPrice: '$600-1200/month',
+      category: 'Logistics',
+      technologies: ['GPS APIs', 'Machine Learning', 'IoT Sensors', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'End-to-end supply chain optimization with demand forecasting, inventory management, and risk assessment.',
+      icon: '📦',
+      price: '$499/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Risk assessment', 'Supplier management', 'Cost analysis', 'Performance tracking'],
+      benefits: ['Reduce costs by 25%', 'Improve efficiency', 'Minimize risks', 'Better supplier relationships'],
+      marketPrice: '$800-1500/month',
+      category: 'Supply Chain',
+      technologies: ['Machine Learning', 'Supply Chain APIs', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Entertainment & Media
+    {
+      title: 'AI Content Moderation Platform',
+      description: 'Automated content moderation with image, video, and text analysis for social media and platforms.',
+      icon: '🎬',
+      price: '$199/month',
+      features: ['Image moderation', 'Video analysis', 'Text filtering', 'Real-time scanning', 'Custom rules', 'Reporting dashboard'],
+      benefits: ['Reduce moderation costs by 80%', 'Improve response time', 'Consistent enforcement', 'Scale content review'],
+      marketPrice: '$300-600/month',
+      category: 'Content Moderation',
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Video Production Assistant',
+      description: 'Automated video editing with AI-powered cuts, transitions, and content optimization.',
+      icon: '🎥',
+      price: '$299/month',
+      features: ['Auto video editing', 'Smart cuts', 'Transition optimization', 'Audio enhancement', 'Color correction', 'Export optimization'],
+      benefits: ['Reduce editing time by 70%', 'Professional quality', 'Consistent output', 'Cost savings'],
+      marketPrice: '$500-1000/month',
+      category: 'Video Production',
+      technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Gaming & Entertainment
+    {
+      title: 'AI Game Development Suite',
+      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
+      icon: '🎮',
+      price: '$399/month',
+      features: ['Procedural generation', 'NPC behavior AI', 'Testing automation', 'Level design', 'Balancing tools', 'Performance optimization'],
+      benefits: ['Faster development', 'Better gameplay', 'Reduced testing time', 'Innovative features'],
+      marketPrice: '$600-1200/month',
+      category: 'Game Development',
+      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'C#', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Player Analytics Platform',
+      description: 'Comprehensive player behavior analysis with engagement tracking, monetization optimization, and retention insights.',
+      icon: '📊',
+      price: '$249/month',
+      features: ['Player behavior analysis', 'Engagement tracking', 'Monetization optimization', 'Retention analysis', 'A/B testing', 'Predictive modeling'],
+      benefits: ['Increase player retention', 'Optimize monetization', 'Improve engagement', 'Data-driven decisions'],
+      marketPrice: '$400-800/month',
+      category: 'Game Analytics',
+      technologies: ['Analytics APIs', 'Machine Learning', 'React', 'Python', 'MongoDB'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Research & Development
+    {
+      title: 'AI Research Assistant Pro',
+      description: 'Intelligent research platform with paper analysis, hypothesis generation, and experimental design.',
+      icon: '🔬',
+      price: '$299/month',
+      features: ['Paper analysis', 'Hypothesis generation', 'Experimental design', 'Literature review', 'Data analysis', 'Report generation'],
+      benefits: ['Accelerate research', 'Better insights', 'Reduce manual work', 'Improve quality'],
+      marketPrice: '$500-1000/month',
+      category: 'Research',
+      technologies: ['NLP', 'Machine Learning', 'Research APIs', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Patent Analysis Tool',
+      description: 'Automated patent analysis with prior art search, novelty assessment, and infringement detection.',
+      icon: '📋',
+      price: '$399/month',
+      features: ['Prior art search', 'Novelty assessment', 'Infringement detection', 'Patent classification', 'Trend analysis', 'Competitive intelligence'],
+      benefits: ['Faster patent research', 'Better novelty assessment', 'Reduce legal risks', 'Competitive advantage'],
+      marketPrice: '$600-1200/month',
+      category: 'Intellectual Property',
+      technologies: ['NLP', 'Patent APIs', 'Machine Learning', 'React', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Personal Productivity
+    {
+      title: 'AI Personal Assistant Pro',
+      description: 'Comprehensive personal AI assistant with scheduling, email management, and task automation.',
+      icon: '🤖',
+      price: '$79/month',
+      features: ['Smart scheduling', 'Email management', 'Task automation', 'Voice commands', 'Calendar integration', 'Reminder system'],
+      benefits: ['Increase productivity', 'Save time', 'Better organization', 'Seamless integration'],
+      marketPrice: '$120-250/month',
+      category: 'Productivity',
+      technologies: ['NLP', 'Voice Recognition', 'Calendar APIs', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Meeting Transcriber',
+      description: 'Real-time meeting transcription with speaker identification, action items extraction, and summary generation.',
+      icon: '🎤',
+      price: '$149/month',
+      features: ['Real-time transcription', 'Speaker identification', 'Action items extraction', 'Summary generation', 'Search functionality', 'Export options'],
+      benefits: ['Never miss important details', 'Save time on notes', 'Better follow-up', 'Improved productivity'],
+      marketPrice: '$200-400/month',
+      category: 'Productivity',
+      technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+
+    // AI Security & Privacy
+    {
+      title: 'AI Threat Detection System',
+      description: 'Advanced threat detection with behavioral analysis, anomaly detection, and automated response.',
+      icon: '🛡️',
+      price: '$399/month',
+      features: ['Behavioral analysis', 'Anomaly detection', 'Automated response', 'Threat intelligence', 'Incident management', 'Compliance reporting'],
+      benefits: ['Detect threats early', 'Reduce response time', 'Improve security posture', 'Automated protection'],
+      marketPrice: '$600-1200/month',
+      category: 'Cybersecurity',
+      technologies: ['Machine Learning', 'Security APIs', 'React', 'Python', 'PostgreSQL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Privacy Compliance Manager',
+      description: 'Automated privacy compliance with GDPR, CCPA, and other regulations with data mapping and consent management.',
+      icon: '🔒',
+      price: '$299/month',
+      features: ['GDPR compliance', 'CCPA compliance', 'Data mapping', 'Consent management', 'Privacy impact assessment', 'Audit trails'],
+      benefits: ['Ensure compliance', 'Reduce legal risks', 'Automate processes', 'Better data governance'],
+      marketPrice: '$400-800/month',
+      category: 'Privacy',
+      technologies: ['NLP', 'Compliance APIs', 'Machine Learning', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -1441,7 +1687,22 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
     { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
     { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length }
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
+    { name: 'Agriculture', count: microSAASServices.filter(s => s.category === 'Agriculture').length },
+    { name: 'Food Safety', count: microSAASServices.filter(s => s.category === 'Food Safety').length },
+    { name: 'Energy', count: microSAASServices.filter(s => s.category === 'Energy').length },
+    { name: 'Sustainability', count: microSAASServices.filter(s => s.category === 'Sustainability').length },
+    { name: 'Logistics', count: microSAASServices.filter(s => s.category === 'Logistics').length },
+    { name: 'Supply Chain', count: microSAASServices.filter(s => s.category === 'Supply Chain').length },
+    { name: 'Content Moderation', count: microSAASServices.filter(s => s.category === 'Content Moderation').length },
+    { name: 'Video Production', count: microSAASServices.filter(s => s.category === 'Video Production').length },
+    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length },
+    { name: 'Game Analytics', count: microSAASServices.filter(s => s.category === 'Game Analytics').length },
+    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
+    { name: 'Intellectual Property', count: microSAASServices.filter(s => s.category === 'Intellectual Property').length },
+    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
+    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
+    { name: 'Privacy', count: microSAASServices.filter(s => s.category === 'Privacy').length }
   ];
 
   return (
