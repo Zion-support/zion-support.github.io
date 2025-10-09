@@ -6,8 +6,8 @@ import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder;
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 const originalConsoleError = console.error;
 console.error = (...args) => {

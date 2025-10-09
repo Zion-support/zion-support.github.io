@@ -36,9 +36,8 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
 }
-export function useForm<T extends Record<string, unknown>>({
-  initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
-}: UseFormConfig<T>): UseFormReturn<T> {
+export function useForm<T extends Record<string, unknown>>(config: UseFormConfig<T>): UseFormReturn<T> {
+  const { initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true } = config;
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
   const [touched, setTouched] = useState<Record<keyof T, boolean>>({} as Record<keyof T, boolean>);
@@ -46,9 +45,10 @@ export function useForm<T extends Record<string, unknown>>({
   // Validate a single field
   const validateSingleField = useCallback(
     (field: keyof T): void => {
-      if (!validationSchema[field]) return;
+      const fieldRules = validationSchema[field];
+      if (!fieldRules) return;
       const fieldValue = values[field];
-      const rules = validationSchema[field];
+      const rules = fieldRules as ValidationRule<T[keyof T]>[];
       const result = validateField(fieldValue, rules);
       setErrors(prev => ({
         ...prev,
@@ -124,7 +124,7 @@ export function useForm<T extends Record<string, unknown>>({
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields]
+    [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically
   const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
