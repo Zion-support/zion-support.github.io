@@ -24,6 +24,11 @@ const Footer: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant' },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer' },
   ];
 
   const aiServices = [
@@ -35,6 +40,13 @@ const Footer: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Blockchain Integration', href: '/ai-blockchain-integration' },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions' },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions' },
+    { name: 'AI Space Technology', href: '/ai-space-technology' },
   ];
 
   const itServices = [
@@ -46,6 +58,17 @@ const Footer: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development' },
     { name: 'Web Development', href: '/web-development' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Quantum Computing Services', href: '/quantum-computing-services' },
+    { name: '5G Network Solutions', href: '/5g-network-solutions' },
+    { name: 'AR/VR Development', href: '/ar-vr-development' },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Data Engineering', href: '/data-engineering' },
+    { name: 'API Development', href: '/api-development' },
+    { name: 'Cloud Security', href: '/cloud-security' },
+    { name: 'Serverless Architecture', href: '/serverless-architecture' },
+    { name: 'Microservices Architecture', href: '/microservices-architecture' },
+    { name: 'Edge Computing', href: '/edge-computing' },
   ];
 
   const socialLinks = [

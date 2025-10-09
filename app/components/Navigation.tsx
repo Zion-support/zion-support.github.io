@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Truck, Stethoscope, ShoppingCart, Factory, Car, Gamepad2, Globe, Plane, Cpu, Lock, Smartphone, Settings, Database, Code, Shield, Cloud, Brain, Zap, BarChart, MessageSquare, PieChart, Bot, Mic, Video, TrendingUp, FileText, DollarSign, Eye, Cube, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +36,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
     { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Real Estate Analyzer', href: '/ai-real-estate-analyzer', icon: Home },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Healthcare Assistant', href: '/ai-healthcare-assistant', icon: Stethoscope },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart },
+    { name: 'AI Manufacturing Optimizer', href: '/ai-manufacturing-optimizer', icon: Factory },
   ];
 
   const aiServices = [
@@ -47,6 +52,13 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Smartphone },
+    { name: 'AI Blockchain Integration', href: '/ai-blockchain-integration', icon: Lock },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse-solutions', icon: Gamepad2 },
+    { name: 'AI Climate Solutions', href: '/ai-climate-solutions', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space-technology', icon: Plane },
   ];
 
   const itServices = [
@@ -58,6 +70,17 @@ const Navigation: React.FC = () => {
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Quantum Computing Services', href: '/quantum-computing-services', icon: Cpu },
+    { name: '5G Network Solutions', href: '/5g-network-solutions', icon: Globe },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Gamepad2 },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
+    { name: 'Data Engineering', href: '/data-engineering', icon: Database },
+    { name: 'API Development', href: '/api-development', icon: Code },
+    { name: 'Cloud Security', href: '/cloud-security', icon: Shield },
+    { name: 'Serverless Architecture', href: '/serverless-architecture', icon: Cloud },
+    { name: 'Microservices Architecture', href: '/microservices-architecture', icon: Settings },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Smartphone },
   ];
 
   return (
