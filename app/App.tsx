@@ -58,9 +58,13 @@ const IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const BlogPage = lazy(() => import('./blog-index'));
 const GuidesPage = lazy(() => import('./guides/page'));
 const SitemapPage = lazy(() => import('./sitemap/page'));
+
+// Support & Documentation Pages
 const DocsPage = lazy(() => import('./docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const SupportPage = lazy(() => import('./support/page'));
+const StatusPage = lazy(() => import('./status/page'));
+const CookiesPage = lazy(() => import('./cookies/page'));
 
 // Utils
 import { logger } from './utils/logger';
@@ -139,9 +143,13 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/guides" element={<GuidesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* Support & Documentation Routes */}
                         <Route path="/docs" element={<DocsPage />} />
                         <Route path="/api" element={<APIPage />} />
                         <Route path="/support" element={<SupportPage />} />
+                        <Route path="/status" element={<StatusPage />} />
+                        <Route path="/cookies" element={<CookiesPage />} />
                       </Routes>
                     </Suspense>
                   </main>
