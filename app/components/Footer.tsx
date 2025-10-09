@@ -7,97 +7,74 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
-  ];
-
-  const itServices = [
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-=======
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
-<<<<<<< HEAD
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-=======
-    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
     { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
     { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
+    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
+    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Database Services', url: '/database', description: 'Database management' },
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
-    { name: 'Networking', url: '/networking', description: 'Network infrastructure' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'Managed IT Services', url: '/managed-it', description: '24/7 IT management' }
-=======
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
     { name: 'Database Management', url: '/database-management', description: 'Database management' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'System Administration', url: '/system-administration', description: 'System management' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
     { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
+    { name: 'IT Infrastructure Design', url: '/it-infrastructure-design', description: 'Custom infrastructure' },
+    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Real-time monitoring' },
+    { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
+    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
   ];
 
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI writing tool' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Business analytics' },
-    { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
-    { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
-    { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
-    { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
-    { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
-    { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
-    { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent CRM with AI insights' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
+    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
+    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
+    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+    { name: 'AI Design Assistant', url: '/ai-design-assistant', description: 'AI-powered design tool' },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
+    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
+    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management' },
+    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
+    { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
   ];
 
   const emergingTech = [
@@ -106,8 +83,13 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
+    { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
+    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
+    { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
+    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
+    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
 
   const companyLinks = [
@@ -152,8 +134,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
-=======
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
@@ -202,7 +182,6 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -227,12 +206,9 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -254,8 +230,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
-=======
 
           {/* Micro SAAS & Emerging Tech */}
           <div>
@@ -276,7 +250,6 @@ const Footer: React.FC = memo(() => {
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
