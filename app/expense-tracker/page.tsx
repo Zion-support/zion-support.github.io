@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart, Users } from 'lucide-react';
+import { TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, BarChart, Users } from 'lucide-react';
 import Link from 'next/link';
 
 const ExpenseTrackerPage: React.FC = () => {

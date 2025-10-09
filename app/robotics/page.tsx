@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Cpu, Brain, Target, BarChart, Settings } from 'lucide-react';
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
     {

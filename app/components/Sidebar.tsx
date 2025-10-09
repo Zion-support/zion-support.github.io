@@ -1,24 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  ChevronDown, 
-  ChevronRight, 
-  Brain, 
-  Cloud, 
-  Code, 
-  Zap, 
-  Shield, 
-  BarChart, 
-  Users, 
-  Settings, 
-  Home,
-  FileText,
-  Phone,
-  Mail,
-  X,
-  Menu
-} from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, Users, Settings, Home, FileText, Phone, Mail } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;

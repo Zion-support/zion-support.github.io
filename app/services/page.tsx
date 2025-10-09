@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import { Brain, Cloud, Code, Zap, ArrowRight, CheckCircle, Star, Phone, Mail, MapPin } from 'lucide-react';
-
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {

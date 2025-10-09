@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Smartphone, Code, Zap, ArrowRight, CheckCircle, Star, Users, TrendingUp, Brain, Palette, Layers, Database } from 'lucide-react';
+import { Smartphone, Zap, ArrowRight, CheckCircle, Star, Users, TrendingUp, Brain, Palette, Database } from 'lucide-react';
 
 const AIMobileBuilderPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');

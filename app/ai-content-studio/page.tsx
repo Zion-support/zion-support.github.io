@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Palette, Image, FileText, Video, Music, Zap, ArrowRight, CheckCircle, Star, Users, TrendingUp, Brain } from 'lucide-react';
+import { Palette, FileText, Video, Zap, ArrowRight, CheckCircle, Star, Users, TrendingUp, Brain } from 'lucide-react';
 
 const AIContentStudioPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
