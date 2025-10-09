@@ -179,8 +179,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
           {/* Contact Section */}
           <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -214,7 +213,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };

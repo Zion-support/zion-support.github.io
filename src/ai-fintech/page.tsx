@@ -64,7 +64,7 @@ const AiFintech: React.FC = () => {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -220,6 +220,7 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
             </div>
+              )}
 
             <Link 
               to="/case-studies" 
