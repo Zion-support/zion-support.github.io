@@ -32,75 +32,56 @@ class GlobalErrorBoundary extends Component<Props, State> {
       console.error('Error caught by boundary:', error, errorInfo);
     }
 
-    // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          stack: error.stack
-        }
-      });
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // You can integrate with error reporting services like Sentry here
+      console.error('Production error:', error);
     }
   }
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-      // Default fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-              </div>
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-            <div className="mt-2">
-              <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-            </div>
-            <div className="mt-4 flex space-x-3">
+            <h1 className="text-xl font-semibold text-gray-900 text-center mb-2">
+              Oops! Something went wrong
+            </h1>
+            <p className="text-gray-600 text-center mb-6">
+              We apologize for the inconvenience. Our team has been notified and is working to fix this issue.
+            </p>
+            <div className="space-y-3">
               <button
                 onClick={() => window.location.reload()}
-                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors"
               >
-                Refresh Page
+                Reload Page
               </button>
               <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                onClick={() => window.location.href = '/'}
+                className="w-full bg-gray-200 text-gray-800 py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
               >
-                Try Again
+                Go Home
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+              <details className="mt-4 p-4 bg-gray-100 rounded-md">
+                <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded-md">
-                  <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-                    {this.state.error.stack}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-gray-600 whitespace-pre-wrap mt-2">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
-                </div>
+                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
               </details>
             )}
           </div>
@@ -113,3 +94,4 @@ class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export { GlobalErrorBoundary };
+export default GlobalErrorBoundary;

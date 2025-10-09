@@ -1,6 +1,9 @@
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import SEOOptimizer from './components/SEOOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -43,6 +46,10 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+      {/* SEO and Performance Optimizations */}
+      <SEOOptimizer />
+      <PerformanceOptimizer />
+      
       {/* Navigation */}
       <Navigation />
       
@@ -55,7 +62,7 @@ const HomePage: React.FC = () => {
       </a>
 
       {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+      <Suspense fallback={<div className="h-16 flex items-center justify-center"><LoadingSpinner size="sm" color="white" /></div>}>
         <ContentPromotionBanner />
       </Suspense>
 
@@ -231,25 +238,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
           </div>
 
           {/* Additional Services Grid */}
@@ -310,17 +298,17 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-64 flex items-center justify-center"><LoadingSpinner size="md" color="white" text="Loading content..." /></div>}>
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-64 flex items-center justify-center"><LoadingSpinner size="md" color="white" text="Loading showcase..." /></div>}>
           <DynamicContentShowcase />
         </Suspense>
 
         {/* Content Statistics */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-64 flex items-center justify-center"><LoadingSpinner size="md" color="white" text="Loading statistics..." /></div>}>
           <ContentStatistics />
         </Suspense>
 
@@ -382,7 +370,7 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-32 flex items-center justify-center"><LoadingSpinner size="sm" color="white" text="Loading newsletter..." /></div>}>
           <ContentNewsletterSignup />
         </Suspense>
 

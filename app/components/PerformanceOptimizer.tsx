@@ -4,79 +4,61 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
+      const criticalImages = [
+        '/og-image.jpg',
+        '/logo.png',
+        '/favicon.ico'
       ];
 
-      criticalResources.forEach(resource => {
+      criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+        }
       });
-
-      images.forEach(img => imageObserver.observe(img));
     };
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        script.parentNode?.replaceChild(newScript, script);
+    // Preconnect to external domains
+    const preconnectExternal = () => {
+      const domains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
+      ];
+
+      domains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        document.head.appendChild(link);
       });
     };
 
     // Initialize optimizations
     preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalJS();
+    preconnectExternal();
+    
+    // Delay image optimization to avoid blocking initial render
+    setTimeout(optimizeImages, 100);
 
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported');
-      }
-    }
-
+    // Cleanup function
     return () => {
-      // Cleanup if needed
+      // Remove any event listeners if needed
     };
   }, []);
 
