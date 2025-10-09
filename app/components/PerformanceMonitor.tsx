@@ -1,96 +1,62 @@
 'use client';
-import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
+import { useEffect } from 'react';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
+
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  });
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-    const measurePerformance = () => {
-      // Measure First Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
+    // Monitor Core Web Vitals
+    const sendToAnalytics = (metric: any) => {
+      // Send to Google Analytics if available
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
         });
-        observer.observe({ entryTypes: ['paint'] });
       }
-      // Measure Largest Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-      // Measure First Input Delay
-      if ('PerformanceObserver' in window) {
-        const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-            }
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      }
-      // Measure Cumulative Layout Shift
-      if ('PerformanceObserver' in window) {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      }
-      // Measure Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        }));
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', metric);
       }
     };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
+
+    // Measure Core Web Vitals
+    onCLS(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+
+    // Monitor page load performance
+    if (typeof window !== 'undefined') {
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+          
+          // Send performance metrics
+          if ('gtag' in window) {
+            (window as any).gtag('event', 'page_load_time', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(loadTime),
+            });
+            
+            (window as any).gtag('event', 'dom_content_loaded', {
+              event_category: 'Performance',
+              event_label: 'DOM Content Loaded',
+              value: Math.round(domContentLoaded),
+            });
+          }
+        }
+      });
     }
   }, []);
-  return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: N/A</div>
-      </div>
-    </div>
-  );
+
+  return null;
 };
+
 export default PerformanceMonitor;
