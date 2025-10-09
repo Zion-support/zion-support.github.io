@@ -2,8 +2,6 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-d15a
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -241,3 +239,33 @@ const ServicessPage: React.FC = () => {
 };
 
 export default PageComponent;
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const ServicesPage: React.FC = () => {
+  return (
+    <>
+      <Navigation />
+      <main className="pt-16">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="container mx-auto px-4 py-16 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+              Our Services
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              Comprehensive AI and IT solutions
+            </p>
+            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              We offer a wide range of AI and IT services to help your business grow and succeed in the digital age.
+            </p>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default ServicesPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783

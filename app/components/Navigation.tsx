@@ -37,7 +37,6 @@ const Navigation: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -85,7 +84,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
       services: [
-<<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -138,18 +136,6 @@ const Navigation: React.FC = () => {
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
 =======
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support', icon: '💻', popular: true },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup', icon: '☁️', popular: true },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions', icon: '🔒', popular: true },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation', icon: '⚙️', popular: true },
-        { name: 'Database Management', path: '/database-management', description: 'Database management', icon: '🗄️', popular: true },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure', icon: '🌐', popular: false },
-        { name: 'System Administration', path: '/system-administration', description: 'System management', icon: '⚙️', popular: false },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning', icon: '💡', popular: false },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management', icon: '🛠️', popular: false },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development', icon: '🎓', popular: false }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
-=======
         { name: 'IT Services', path: '/it-services' },
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
@@ -166,7 +152,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-<<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
         { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
@@ -226,11 +211,6 @@ const Navigation: React.FC = () => {
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
-=======
-    { name: 'Case Studies', path: '/case-studies', icon: '📊' },
-    { name: 'Blog', path: '/blog', icon: '📝' },
-    { name: 'Contact', path: '/contact', icon: '📞' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
   ];
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
@@ -448,13 +428,49 @@ const Navigation: React.FC = () => {
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </Link>
+=======
+'use client';
+import React, { useState } from 'react';
+import { Menu, X, Brain } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="flex items-center space-x-2 group">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <a href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Home
+            </a>
+            <a href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </a>
+            <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Contact
+            </a>
+            <a href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Blog
+            </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
           </div>
 
           {/* Mobile Menu Button */}
-<<<<<<< HEAD
           <div className="lg:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
               aria-label="Toggle menu"
             >
@@ -463,6 +479,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -502,10 +519,6 @@ const Navigation: React.FC = () => {
                         <div className="ml-4 space-y-1">
                           {category.services.slice(0, 3).map((service, serviceIndex) => (
                             <Link
-=======
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <a
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
                               key={serviceIndex}
                               href={service.path}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
@@ -525,7 +538,6 @@ const Navigation: React.FC = () => {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -548,20 +560,6 @@ const Navigation: React.FC = () => {
               className="cyber-button px-4 py-2 text-sm font-medium"
             >
               Get Started
-=======
-
-            {/* CTA Button */}
-            <a
-              href="tel:+13024640950"
-              className={`inline-flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                isScrolled 
-                  ? 'bg-blue-600 text-white hover:bg-blue-700' 
-                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm'
-              }`}
-            >
-              <Phone className="w-4 h-4" />
-              <span>(302) 464-0950</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
             </a>
           </div>
 
@@ -603,9 +601,6 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
             <div className="px-4 py-6 space-y-4">
@@ -673,6 +668,16 @@ const Navigation: React.FC = () => {
                 className="block text-lg font-medium text-gray-900 hover:text-blue-600 transition-colors"
                 onClick={closeAllMenus}
               >
+=======
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+            <div className="pt-4 space-y-4">
+              <a href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                Home
+              </a>
+              <a href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
                 About
               </Link>
               
@@ -700,7 +705,9 @@ const Navigation: React.FC = () => {
                 <Phone className="w-5 h-5" />
                 <span>(302) 464-0950</span>
               </a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
+=======
+              </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
             </div>
           </div>
         )}
@@ -713,15 +720,14 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default Navigation;
-=======
-});
 
 Navigation.displayName = 'Navigation';
 export default Navigation;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
 =======
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
