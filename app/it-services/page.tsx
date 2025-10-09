@@ -235,6 +235,205 @@ const ITServicesPage: React.FC = () => {
       benefits: ['On-time delivery', 'Cost control', 'Quality assurance', 'Risk mitigation'],
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // Advanced IT Services
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with AI-driven monitoring, predictive maintenance, and automated incident response.',
+      icon: <Brain className="w-8 h-8" />,
+      features: ['AI monitoring', 'Predictive maintenance', 'Automated incident response', 'Anomaly detection', 'Performance optimization', 'Self-healing systems'],
+      price: 'Starting at $3,500/month',
+      category: 'AI Operations',
+      benefits: ['Reduce downtime by 70%', 'Predict issues before they occur', 'Automate routine tasks', 'Improve system reliability'],
+      technologies: ['Machine Learning', 'AIOps Platforms', 'Monitoring Tools', 'Automation Scripts'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Least privilege access', 'Threat detection', 'Compliance automation'],
+      price: 'Starting at $4,000/month',
+      category: 'Advanced Security',
+      benefits: ['Eliminate security perimeters', 'Reduce attack surface', 'Improve compliance', 'Enhanced threat protection'],
+      technologies: ['Okta', 'Palo Alto', 'Cisco', 'Microsoft', 'Zscaler', 'Cloudflare'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud operations with multi-cloud orchestration, cost optimization, and unified management.',
+      icon: <Cloud className="w-8 h-8" />,
+      features: ['Multi-cloud orchestration', 'Cost optimization', 'Unified management', 'Workload portability', 'Security compliance', 'Performance monitoring'],
+      price: 'Starting at $2,800/month',
+      category: 'Cloud Management',
+      benefits: ['Optimize cloud costs', 'Improve flexibility', 'Enhance security', 'Simplify management'],
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Cloud Management Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing solutions with low-latency processing, IoT integration, and real-time analytics.',
+      icon: <Cpu className="w-8 h-8" />,
+      features: ['Edge deployment', 'IoT integration', 'Real-time processing', 'Low-latency networks', 'Data synchronization', 'Remote management'],
+      price: 'Starting at $3,200/month',
+      category: 'Edge Computing',
+      benefits: ['Reduce latency', 'Lower bandwidth costs', 'Enable real-time processing', 'Improve user experience'],
+      technologies: ['Kubernetes', 'Docker', 'Edge Hardware', 'IoT Platforms', '5G Networks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Blockchain Infrastructure',
+      description: 'Enterprise blockchain solutions with smart contracts, decentralized applications, and secure transaction processing.',
+      icon: <Link className="w-8 h-8" />,
+      features: ['Blockchain deployment', 'Smart contracts', 'DApp development', 'Consensus mechanisms', 'Security auditing', 'Integration services'],
+      price: 'Starting at $4,500/month',
+      category: 'Blockchain',
+      benefits: ['Enhanced security', 'Transparent transactions', 'Reduced intermediaries', 'Improved trust'],
+      technologies: ['Ethereum', 'Hyperledger', 'Corda', 'Solidity', 'Web3', 'IPFS'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Quantum Computing Integration',
+      description: 'Quantum computing solutions for complex optimization problems, cryptography, and advanced simulations.',
+      icon: <Atom className="w-8 h-8" />,
+      features: ['Quantum algorithm development', 'Hybrid classical-quantum systems', 'Quantum cryptography', 'Optimization problems', 'Simulation services', 'Research support'],
+      price: 'Starting at $8,000/month',
+      category: 'Quantum Computing',
+      benefits: ['Solve complex problems', 'Future-proof technology', 'Enhanced security', 'Competitive advantage'],
+      technologies: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Qiskit', 'Cirq'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IoT & Smart Infrastructure',
+      description: 'Comprehensive IoT solutions with device management, data analytics, and smart infrastructure automation.',
+      icon: <Wifi className="w-8 h-8" />,
+      features: ['Device management', 'Data analytics', 'Smart automation', 'Sensor networks', 'Real-time monitoring', 'Predictive maintenance'],
+      price: 'Starting at $2,200/month',
+      category: 'IoT',
+      benefits: ['Operational efficiency', 'Cost reduction', 'Improved safety', 'Data-driven insights'],
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'LoRaWAN', 'Edge Computing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'High-Performance Computing',
+      description: 'Advanced HPC solutions with parallel processing, GPU acceleration, and scientific computing capabilities.',
+      icon: <Zap className="w-8 h-8" />,
+      features: ['Parallel processing', 'GPU acceleration', 'Scientific computing', 'Big data processing', 'Simulation services', 'Performance optimization'],
+      price: 'Starting at $5,000/month',
+      category: 'HPC',
+      benefits: ['Faster processing', 'Complex simulations', 'Scientific research', 'Competitive advantage'],
+      technologies: ['NVIDIA CUDA', 'OpenMP', 'MPI', 'Slurm', 'Docker', 'Kubernetes'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Comprehensive digital transformation strategy and implementation for modernizing business processes and technology.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: ['Digital strategy', 'Process modernization', 'Technology adoption', 'Change management', 'ROI optimization', 'Innovation labs'],
+      price: 'Starting at $3,500/month',
+      category: 'Digital Transformation',
+      benefits: ['Modernize operations', 'Improve efficiency', 'Enhance customer experience', 'Drive innovation'],
+      technologies: ['Cloud Platforms', 'AI/ML', 'Automation Tools', 'Analytics Platforms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'Comprehensive compliance management with automated monitoring, reporting, and regulatory adherence.',
+      icon: <FileCheck className="w-8 h-8" />,
+      features: ['Compliance monitoring', 'Automated reporting', 'Risk assessment', 'Policy management', 'Audit preparation', 'Regulatory updates'],
+      price: 'Starting at $2,000/month',
+      category: 'Compliance',
+      benefits: ['Ensure compliance', 'Reduce audit risks', 'Automate reporting', 'Stay updated'],
+      technologies: ['GRC Platforms', 'Compliance Tools', 'Reporting Software', 'Policy Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Service Management (ITSM)',
+      description: 'Complete ITSM implementation with service desk, incident management, and ITIL best practices.',
+      icon: <Settings className="w-8 h-8" />,
+      features: ['Service desk', 'Incident management', 'Change management', 'Problem management', 'Service catalog', 'SLA monitoring'],
+      price: 'Starting at $1,800/month',
+      category: 'ITSM',
+      benefits: ['Improve service quality', 'Reduce costs', 'Better user experience', 'Process standardization'],
+      technologies: ['ServiceNow', 'Jira Service Management', 'BMC Remedy', 'Cherwell'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Data Center Modernization',
+      description: 'Complete data center transformation with virtualization, automation, and energy efficiency optimization.',
+      icon: <Server className="w-8 h-8" />,
+      features: ['Virtualization', 'Automation', 'Energy optimization', 'Capacity planning', 'Disaster recovery', 'Security hardening'],
+      price: 'Starting at $4,500/month',
+      category: 'Data Center',
+      benefits: ['Reduce costs', 'Improve efficiency', 'Enhance security', 'Better scalability'],
+      technologies: ['VMware', 'Hyper-V', 'Kubernetes', 'Docker', 'Automation Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Network Security & Monitoring',
+      description: 'Advanced network security with threat detection, traffic analysis, and automated response systems.',
+      icon: <Shield className="w-8 h-8" />,
+      features: ['Threat detection', 'Traffic analysis', 'Automated response', 'Network segmentation', 'Vulnerability scanning', 'Compliance monitoring'],
+      price: 'Starting at $2,500/month',
+      category: 'Network Security',
+      benefits: ['Prevent attacks', 'Improve visibility', 'Automate responses', 'Ensure compliance'],
+      technologies: ['Cisco', 'Palo Alto', 'Fortinet', 'Splunk', 'Wireshark', 'Nmap'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Mobile Device Management (MDM)',
+      description: 'Comprehensive mobile device management with security, app management, and remote control capabilities.',
+      icon: <Smartphone className="w-8 h-8" />,
+      features: ['Device enrollment', 'Security policies', 'App management', 'Remote control', 'Compliance monitoring', 'Data protection'],
+      price: 'Starting at $1,200/month',
+      category: 'Mobile Management',
+      benefits: ['Secure mobile access', 'Centralized management', 'Compliance assurance', 'Cost optimization'],
+      technologies: ['Microsoft Intune', 'VMware Workspace ONE', 'MobileIron', 'Citrix'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Cost Optimization',
+      description: 'Comprehensive IT cost analysis and optimization with vendor management and budget optimization.',
+      icon: <DollarSign className="w-8 h-8" />,
+      features: ['Cost analysis', 'Vendor optimization', 'Budget planning', 'License optimization', 'Resource right-sizing', 'ROI analysis'],
+      price: 'Starting at $1,500/month',
+      category: 'Cost Optimization',
+      benefits: ['Reduce IT costs', 'Optimize spending', 'Improve ROI', 'Better planning'],
+      technologies: ['Cost Management Tools', 'Analytics Platforms', 'Vendor Management Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Disaster Recovery Planning',
+      description: 'Comprehensive disaster recovery planning with testing, validation, and rapid recovery capabilities.',
+      icon: <AlertTriangle className="w-8 h-8" />,
+      features: ['Recovery planning', 'Testing & validation', 'RTO/RPO optimization', 'Backup strategies', 'Failover systems', 'Recovery automation'],
+      price: 'Starting at $2,800/month',
+      category: 'Disaster Recovery',
+      benefits: ['Minimize downtime', 'Protect data', 'Ensure continuity', 'Reduce risks'],
+      technologies: ['Veeam', 'Commvault', 'Zerto', 'AWS Disaster Recovery', 'Azure Site Recovery'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Performance Monitoring',
+      description: 'Advanced IT performance monitoring with real-time analytics, alerting, and optimization recommendations.',
+      icon: <BarChart className="w-8 h-8" />,
+      features: ['Real-time monitoring', 'Performance analytics', 'Alerting systems', 'Capacity planning', 'Optimization recommendations', 'Reporting'],
+      price: 'Starting at $1,600/month',
+      category: 'Performance Monitoring',
+      benefits: ['Improve performance', 'Prevent issues', 'Optimize resources', 'Better visibility'],
+      technologies: ['Datadog', 'New Relic', 'AppDynamics', 'Splunk', 'Grafana', 'Prometheus'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'IT Custom Development',
+      description: 'Bespoke IT solutions tailored to your specific business needs with custom software and integrations.',
+      icon: <Code className="w-8 h-8" />,
+      features: ['Custom software', 'API development', 'Integration services', 'Legacy modernization', 'Performance optimization', 'Ongoing support'],
+      price: 'Custom Pricing',
+      category: 'Custom Development',
+      benefits: ['Perfect fit for your needs', 'Competitive advantage', 'Scalable solutions', 'Dedicated support'],
+      technologies: ['Any Technology Stack', 'Custom Development', 'Cloud Platforms', 'Integration Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
   const categories = [

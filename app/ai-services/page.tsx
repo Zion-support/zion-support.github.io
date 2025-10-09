@@ -147,6 +147,463 @@ const AIServicesPage: React.FC = () => {
       technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+    // Advanced AI Services
+    {
+      title: 'AI Quantum Machine Learning',
+      description: 'Next-generation quantum machine learning algorithms for solving complex optimization problems and advanced pattern recognition.',
+      icon: '⚛️',
+      price: '$4,999/month',
+      features: [
+        'Quantum Algorithm Development',
+        'Hybrid Classical-Quantum Models',
+        'Quantum Optimization',
+        'Quantum Neural Networks',
+        'Quantum Error Correction',
+        'Quantum Simulation'
+      ],
+      benefits: [
+        'Solve exponentially complex problems',
+        'Achieve quantum advantage',
+        'Future-proof your AI strategy',
+        'Access cutting-edge technology'
+      ],
+      marketPrice: '$8,000-15,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'TensorFlow Quantum', 'PyTorch', 'Quantum Hardware'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Edge Computing Platform',
+      description: 'Intelligent edge computing solutions with real-time AI processing, low-latency inference, and distributed intelligence.',
+      icon: '🔗',
+      price: '$2,999/month',
+      features: [
+        'Edge AI Model Deployment',
+        'Real-time Inference',
+        'Distributed Learning',
+        'Edge-to-Cloud Sync',
+        'Resource Optimization',
+        'Offline Capability'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Lower bandwidth costs by 70%',
+        'Enable offline AI processing',
+        'Scale to millions of devices'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Edge AI',
+      technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Intel NCS', 'Edge TPU'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Multimodal Learning',
+      description: 'Advanced AI systems that process and understand multiple data types including text, images, audio, and video simultaneously.',
+      icon: '🎭',
+      price: '$3,499/month',
+      features: [
+        'Cross-Modal Understanding',
+        'Multimodal Fusion',
+        'Audio-Visual Analysis',
+        'Text-Image Generation',
+        'Multimodal Search',
+        'Contextual Learning'
+      ],
+      benefits: [
+        'Understand complex interactions',
+        'Improve accuracy by 40%',
+        'Enable richer user experiences',
+        'Process diverse data types'
+      ],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Multimodal AI',
+      technologies: ['CLIP', 'DALL-E', 'GPT-4V', 'Whisper', 'OpenAI', 'Hugging Face'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Federated Learning Platform',
+      description: 'Privacy-preserving machine learning that trains models across decentralized data without sharing raw data.',
+      icon: '🔐',
+      price: '$2,799/month',
+      features: [
+        'Federated Training',
+        'Privacy Preservation',
+        'Differential Privacy',
+        'Secure Aggregation',
+        'Model Synchronization',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Maintain data privacy',
+        'Comply with regulations',
+        'Scale across organizations',
+        'Reduce data transfer costs'
+      ],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Privacy AI',
+      technologies: ['PySyft', 'TensorFlow Federated', 'Flower', 'Homomorphic Encryption', 'Secure Multi-party Computation'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Reinforcement Learning',
+      description: 'Advanced reinforcement learning systems for autonomous decision-making, game playing, and optimization problems.',
+      icon: '🎮',
+      price: '$2,299/month',
+      features: [
+        'Deep Q-Networks (DQN)',
+        'Policy Gradient Methods',
+        'Actor-Critic Algorithms',
+        'Multi-Agent Systems',
+        'Continuous Control',
+        'Reward Engineering'
+      ],
+      benefits: [
+        'Learn optimal strategies',
+        'Adapt to changing environments',
+        'Solve complex optimization problems',
+        'Enable autonomous systems'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Reinforcement Learning',
+      technologies: ['OpenAI Gym', 'Stable Baselines', 'Ray RLlib', 'TensorFlow Agents', 'PyTorch', 'MuZero'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Generative Models',
+      description: 'Advanced generative AI for creating realistic content including images, text, audio, and video generation.',
+      icon: '🎨',
+      price: '$1,999/month',
+      features: [
+        'Text Generation (GPT-style)',
+        'Image Generation (DALL-E style)',
+        'Audio Synthesis',
+        'Video Generation',
+        'Style Transfer',
+        'Content Personalization'
+      ],
+      benefits: [
+        'Create unlimited content',
+        'Reduce creative costs by 80%',
+        'Personalize user experiences',
+        'Accelerate content production'
+      ],
+      marketPrice: '$3,500-7,000/month',
+      category: 'Generative AI',
+      technologies: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Midjourney', 'RunwayML', 'ElevenLabs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Explainable AI (XAI)',
+      description: 'Transparent and interpretable AI systems that provide clear explanations for AI decisions and predictions.',
+      icon: '🔍',
+      price: '$1,799/month',
+      features: [
+        'Model Interpretability',
+        'Feature Importance Analysis',
+        'Decision Explanations',
+        'Bias Detection',
+        'Fairness Auditing',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Build trust in AI systems',
+        'Meet regulatory requirements',
+        'Identify and fix biases',
+        'Improve model performance'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Explainable AI',
+      technologies: ['LIME', 'SHAP', 'Captum', 'What-If Tool', 'Fairlearn', 'IBM AIF360'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Transfer Learning Platform',
+      description: 'Efficient AI model adaptation using pre-trained models for faster deployment and reduced data requirements.',
+      icon: '🔄',
+      price: '$1,399/month',
+      features: [
+        'Pre-trained Model Library',
+        'Fine-tuning Services',
+        'Domain Adaptation',
+        'Few-shot Learning',
+        'Model Compression',
+        'Rapid Deployment'
+      ],
+      benefits: [
+        'Reduce training time by 90%',
+        'Lower data requirements',
+        'Faster time to market',
+        'Cost-effective AI adoption'
+      ],
+      marketPrice: '$2,500-5,000/month',
+      category: 'Transfer Learning',
+      technologies: ['Hugging Face', 'TensorFlow Hub', 'PyTorch Hub', 'ONNX', 'Model Zoo', 'AutoML'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI AutoML Platform',
+      description: 'Automated machine learning that automatically builds, trains, and optimizes AI models without extensive technical expertise.',
+      icon: '🤖',
+      price: '$1,599/month',
+      features: [
+        'Automated Model Selection',
+        'Hyperparameter Optimization',
+        'Feature Engineering',
+        'Model Validation',
+        'Performance Monitoring',
+        'One-click Deployment'
+      ],
+      benefits: [
+        'Democratize AI development',
+        'Reduce development time by 80%',
+        'Optimize model performance',
+        'Enable non-technical users'
+      ],
+      marketPrice: '$2,800-5,500/month',
+      category: 'AutoML',
+      technologies: ['Google AutoML', 'H2O.ai', 'DataRobot', 'Auto-sklearn', 'TPOT', 'AutoKeras'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI MLOps Platform',
+      description: 'Complete machine learning operations platform for model deployment, monitoring, and lifecycle management.',
+      icon: '⚙️',
+      price: '$2,199/month',
+      features: [
+        'Model Versioning',
+        'Continuous Integration/Deployment',
+        'Model Monitoring',
+        'A/B Testing',
+        'Performance Tracking',
+        'Automated Retraining'
+      ],
+      benefits: [
+        'Streamline ML operations',
+        'Ensure model reliability',
+        'Reduce deployment risks',
+        'Scale AI initiatives'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'MLOps',
+      technologies: ['MLflow', 'Kubeflow', 'DVC', 'Weights & Biases', 'Neptune', 'Docker'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Computer Vision for Healthcare',
+      description: 'Specialized computer vision solutions for medical imaging, diagnosis assistance, and treatment planning.',
+      icon: '🏥',
+      price: '$3,999/month',
+      features: [
+        'Medical Image Analysis',
+        'Disease Detection',
+        'Treatment Planning',
+        'Drug Discovery',
+        'Clinical Decision Support',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Improve diagnostic accuracy',
+        'Reduce misdiagnosis by 60%',
+        'Accelerate drug development',
+        'Save lives through early detection'
+      ],
+      marketPrice: '$7,000-15,000/month',
+      category: 'Healthcare AI',
+      technologies: ['MONAI', 'ITK', '3D Slicer', 'DICOM', 'Medical Imaging APIs', 'FDA Compliance'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Financial Trading System',
+      description: 'Advanced AI-powered trading algorithms for automated trading, risk management, and market analysis.',
+      icon: '💰',
+      price: '$4,499/month',
+      features: [
+        'Algorithmic Trading',
+        'Risk Management',
+        'Market Analysis',
+        'Portfolio Optimization',
+        'Sentiment Analysis',
+        'High-Frequency Trading'
+      ],
+      benefits: [
+        'Increase trading profits by 40%',
+        'Reduce risk exposure',
+        '24/7 market monitoring',
+        'Data-driven decisions'
+      ],
+      marketPrice: '$8,000-20,000/month',
+      category: 'FinTech AI',
+      technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TA-Lib', 'Financial APIs', 'Real-time Data'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Autonomous Vehicle Systems',
+      description: 'AI solutions for autonomous vehicles including perception, planning, and control systems.',
+      icon: '🚗',
+      price: '$5,999/month',
+      features: [
+        'Object Detection & Tracking',
+        'Path Planning',
+        'Decision Making',
+        'Sensor Fusion',
+        'Safety Systems',
+        'Real-time Processing'
+      ],
+      benefits: [
+        'Enable autonomous driving',
+        'Improve road safety',
+        'Reduce accidents by 90%',
+        'Optimize traffic flow'
+      ],
+      marketPrice: '$10,000-25,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['ROS', 'Apollo', 'CARLA', 'OpenCV', 'Lidar Processing', 'Sensor Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Climate & Environmental Monitoring',
+      description: 'AI-powered environmental monitoring and climate change analysis using satellite data and IoT sensors.',
+      icon: '🌍',
+      price: '$2,499/month',
+      features: [
+        'Satellite Image Analysis',
+        'Climate Modeling',
+        'Environmental Monitoring',
+        'Carbon Footprint Tracking',
+        'Disaster Prediction',
+        'Sustainability Analytics'
+      ],
+      benefits: [
+        'Monitor environmental changes',
+        'Predict natural disasters',
+        'Optimize resource usage',
+        'Support sustainability goals'
+      ],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Environmental AI',
+      technologies: ['Google Earth Engine', 'Sentinel Hub', 'Climate APIs', 'IoT Sensors', 'Satellite Data'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Cybersecurity Intelligence',
+      description: 'Advanced AI-powered cybersecurity solutions for threat detection, incident response, and security automation.',
+      icon: '🛡️',
+      price: '$3,299/month',
+      features: [
+        'Threat Detection',
+        'Anomaly Detection',
+        'Incident Response',
+        'Security Automation',
+        'Vulnerability Assessment',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Prevent 99% of cyber attacks',
+        'Reduce response time by 85%',
+        'Automate security operations',
+        'Ensure compliance'
+      ],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Cybersecurity AI',
+      technologies: ['Splunk', 'Elastic Security', 'CrowdStrike', 'SentinelOne', 'Threat Intelligence APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Space & Satellite Analytics',
+      description: 'AI solutions for space industry including satellite data analysis, space debris tracking, and mission planning.',
+      icon: '🛰️',
+      price: '$4,999/month',
+      features: [
+        'Satellite Data Processing',
+        'Space Debris Tracking',
+        'Mission Planning',
+        'Orbital Mechanics',
+        'Space Weather Prediction',
+        'Earth Observation'
+      ],
+      benefits: [
+        'Optimize space operations',
+        'Improve satellite efficiency',
+        'Predict space weather',
+        'Support space missions'
+      ],
+      marketPrice: '$8,000-20,000/month',
+      category: 'Space AI',
+      technologies: ['NASA APIs', 'ESA Data', 'Space-Track', 'Orbital Mechanics', 'Satellite Imagery'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Metaverse & Virtual Worlds',
+      description: 'AI solutions for metaverse development including virtual world creation, avatar generation, and immersive experiences.',
+      icon: '🌐',
+      price: '$3,799/month',
+      features: [
+        'Virtual World Generation',
+        'Avatar Creation',
+        'NPC Behavior',
+        'Virtual Economy',
+        'Immersive Experiences',
+        'Cross-Platform Integration'
+      ],
+      benefits: [
+        'Create immersive virtual worlds',
+        'Generate realistic avatars',
+        'Enable virtual economies',
+        'Build engaging experiences'
+      ],
+      marketPrice: '$7,000-15,000/month',
+      category: 'Metaverse AI',
+      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'VR/AR SDKs', 'Blockchain', 'NFT APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Brain-Computer Interface',
+      description: 'Advanced AI systems for brain-computer interfaces enabling direct neural control and communication.',
+      icon: '🧠',
+      price: '$6,999/month',
+      features: [
+        'Neural Signal Processing',
+        'Brain Pattern Recognition',
+        'Motor Control',
+        'Cognitive Enhancement',
+        'Medical Applications',
+        'Research Support'
+      ],
+      benefits: [
+        'Enable neural control',
+        'Assist disabled individuals',
+        'Enhance cognitive abilities',
+        'Advance medical research'
+      ],
+      marketPrice: '$12,000-30,000/month',
+      category: 'BCI AI',
+      technologies: ['OpenBCI', 'Neural Signal Processing', 'EEG Analysis', 'Machine Learning', 'Medical Devices'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Custom Development',
+      description: 'Bespoke AI solutions tailored to your specific business needs with custom algorithms and integrations.',
+      icon: '⚡',
+      price: 'Custom Pricing',
+      features: [
+        'Custom Algorithm Development',
+        'Domain-Specific Solutions',
+        'Integration Services',
+        'Performance Optimization',
+        'Scalable Architecture',
+        'Ongoing Support'
+      ],
+      benefits: [
+        'Perfect fit for your needs',
+        'Competitive advantage',
+        'Scalable solutions',
+        'Dedicated support'
+      ],
+      marketPrice: 'Varies by complexity',
+      category: 'Custom AI',
+      technologies: ['Any AI Technology', 'Custom Development', 'Cloud Platforms', 'Edge Computing'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
     {
       title: 'AI Chatbot & Virtual Assistant',
       description: 'Intelligent conversational AI for customer service, sales support, and internal operations.',
