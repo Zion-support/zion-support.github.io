@@ -3,7 +3,6 @@
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
-import { CacheManager } from '../utils/enhanced-cache';
 interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;

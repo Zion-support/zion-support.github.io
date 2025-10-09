@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;

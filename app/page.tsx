@@ -2647,19 +2647,14 @@ const HomePage: React.FC = () => {
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
-
-
-
-
-
-
-      
       </main>
-
-      <Footer />
       </div>
+
+      {/* Enhanced Components */}
+      <EnhancedPerformanceMonitor />
+      <EnhancedAccessibility />
     </>
   );
 };
 
-
+export default HomePage;

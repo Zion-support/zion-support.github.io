@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Settings, Zap, Shield, BarChart, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
 const DevOpsCICDPage: React.FC = () => {
   const features = [

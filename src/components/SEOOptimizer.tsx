@@ -16,16 +16,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
+  structuredData,
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   twitterCard = 'summary_large_image',
-  structuredData,
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
   useEffect(() => {
     // Update document title
     document.title = fullTitle;
-
+    
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -49,73 +49,65 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
 
     // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.setAttribute('href', canonicalUrl);
     } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = canonicalUrl;
+      document.head.appendChild(canonical);
     }
 
     // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', fullTitle);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = fullTitle;
-      document.head.appendChild(meta);
-    }
+    const updateMetaProperty = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
 
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
+    updateMetaProperty('og:title', fullTitle);
+    updateMetaProperty('og:description', description);
+    updateMetaProperty('og:url', canonicalUrl);
+    updateMetaProperty('og:image', ogImage);
+    updateMetaProperty('og:type', 'website');
 
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', canonicalUrl);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:url');
-      meta.content = canonicalUrl;
-      document.head.appendChild(meta);
-    }
+    // Update Twitter Card tags
+    const updateMetaName = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (meta) {
+        meta.setAttribute('content', content);
+      } else {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
 
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
+    updateMetaName('twitter:card', twitterCard);
+    updateMetaName('twitter:title', fullTitle);
+    updateMetaName('twitter:description', description);
+    updateMetaName('twitter:image', ogImage);
 
     // Add structured data
     if (structuredData) {
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) {
-        existingScript.textContent = JSON.stringify(structuredData);
-      } else {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
-        document.head.appendChild(script);
-      }
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, fullTitle]);
+  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
 
   return null;
 });
 
 SEOOptimizer.displayName = 'SEOOptimizer';
+
 export default SEOOptimizer;
