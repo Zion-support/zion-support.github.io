@@ -578,9 +578,11 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
-Score: ${metrics.score}/100
-Issues Found: ${metrics.issues.length}
-Recommendations: ${metrics.recommendations.length}
+Score: ${metrics.overallScore}/100
+Issues Found: ${metrics.imagesWithoutAlt + metrics.linksWithoutText + metrics.headingsWithoutContent + metrics.colorContrastIssues}
+Focusable Elements: ${metrics.focusableElements}
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
+Screen Reader Score: ${metrics.screenReaderScore}/100
 `;
   }
 }
