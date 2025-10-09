@@ -2,12 +2,12 @@
 import { useEffect, useCallback } from 'react';
 export const usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: any) => {
-    const _body = JSON.stringify(metric);
-    const _url = '/api/analytics';
+    const body = JSON.stringify(metric);
+    const url = '/api/analytics';
     if (navigator.sendBeacon) {
-      navigator.sendBeacon(url, body);
+      navigator.sendBeacon(_url, _body);
     } else {
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
+      fetch(_url, { body: _body, method: 'POST', keepalive: true }).catch(console.error);
     }
   }, []);
   useEffect(() => {
