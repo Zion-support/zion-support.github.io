@@ -56,6 +56,18 @@ const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
 
+// New AI Services Pages
+const AIBusinessIntelligencePage = lazy(() => import('./ai-business-intelligence/page'));
+const AISupplyChainPage = lazy(() => import('./ai-supply-chain/page'));
+const AIQualityAssurancePage = lazy(() => import('./ai-quality-assurance/page'));
+
+// New IT Services Pages
+const EnterpriseSecurityPage = lazy(() => import('./enterprise-security/page'));
+const DataCenterPage = lazy(() => import('./data-center/page'));
+
+// Specialized Services
+const SpecializedServicesPage = lazy(() => import('./specialized-services/page'));
+
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
 const APIDocsPage = lazy(() => import('./api-docs/page'));
@@ -218,6 +230,18 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
+            
+            {/* New AI Services Pages */}
+            <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+            <Route path="/ai-supply-chain" element={<AISupplyChainPage />} />
+            <Route path="/ai-quality-assurance" element={<AIQualityAssurancePage />} />
+            
+            {/* New IT Services Pages */}
+            <Route path="/enterprise-security" element={<EnterpriseSecurityPage />} />
+            <Route path="/data-center" element={<DataCenterPage />} />
+            
+            {/* Specialized Services */}
+            <Route path="/specialized-services" element={<SpecializedServicesPage />} />
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
