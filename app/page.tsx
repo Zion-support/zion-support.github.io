@@ -55,9 +55,166 @@ const HomePage: React.FC = () => {
         event_label: 'main_phone_number'
       });
     }
+  }, []);
+
+  const microSAASServices = [
+    {
+      title: 'AI Project Manager',
+      description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
+      icon: '📊',
+      price: '$99/month',
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
+      link: '/ai-project-manager',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automate your social media with AI-powered content creation and smart scheduling',
+      icon: '📱',
+      price: '$79/month',
+      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
+      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
+      link: '/ai-social-media-manager',
+      popular: true
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
+      icon: '📈',
+      price: '$149/month',
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
+      link: '/ai-analytics-dashboard',
+      popular: true
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Transform your email marketing with AI-powered content generation and automation',
+      icon: '📧',
+      price: '$99/month',
+      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
+      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
+      link: '/ai-email-marketing',
+      popular: true
+    },
+    {
+      title: 'AI Customer Support Bot',
+      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot',
+      icon: '🤖',
+      price: '$149/month',
+      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights'],
+      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
+      link: '/ai-customer-support-bot',
+      popular: true
+    },
+    {
+      title: 'AI Code Review Assistant',
+      description: 'Advanced automated code analysis with AI-powered bug detection and optimization',
+      icon: '🔍',
+      price: '$89/month',
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
+      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
+      link: '/ai-code-generation',
+      popular: false
+    }
   ];
 
 
+  const itServices = [
+    {
+      title: 'Cloud Services',
+      description: 'Cloud migration, setup, and optimization services',
+      icon: Cloud,
+      price: '$1,299/month',
+      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
+      color: 'text-blue-400'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions with threat detection and prevention',
+      icon: Shield,
+      price: '$1,599/month',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'DevOps & CI/CD',
+      description: 'Streamlined development workflows with automated testing and deployment',
+      icon: Settings,
+      price: '$1,199/month',
+      features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'],
+      color: 'text-green-400'
+    },
+    {
+      title: 'Database Services',
+      description: 'Database design, optimization, and management with AI-powered tuning',
+      icon: Database,
+      price: '$899/month',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
+      color: 'text-purple-400'
+    }
+  ];
+  return (
+    <>
+      <SEOOptimizer
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: [
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+          }
+        }}
+      />
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enableCodeSplitting={true}
+        enablePrefetching={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <SecurityEnhancer
+        enableCSP={true}
+        enableHSTS={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      />
       <UserExperienceEnhancer
         enableSmoothScrolling={true}
         enableLoadingStates={true}
@@ -102,34 +259,91 @@ const HomePage: React.FC = () => {
         >
           Skip to main content
         </a>
-      {/* Content Promotion Banner */}
-      <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
-        <ContentPromotionBanner />
-      </Suspense>
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-        {/* Hero Section */}
-        <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-            isLoaded && isVisible 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'
-          }`}
-          aria-labelledby="hero-heading"
-        >
-          <div className="max-w-6xl mx-auto">
-            <h1 
-              id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch holographic-shimmer cyber-pulse"
-              data-text="Zion Tech Group"
-            >
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
-              Advanced AI and IT Solutions
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-              Transform your business with our cutting-edge technology and achieve unprecedented growth.
+
+        {/* Content Promotion Banner */}
+        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+          <ContentPromotionBanner />
+        </Suspense>
+
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+          {/* Hero Section */}
+          <section
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+              isLoaded && isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+            aria-labelledby="hero-heading"
+          >
+            <div className="max-w-6xl mx-auto">
+              <h1 
+                id="hero-heading" 
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                data-text="Zion Tech Group"
+              >
+                Zion Tech Group
+              </h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
+                Advanced AI and IT Solutions
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+                Transform your business with our cutting-edge technology and achieve unprecedented growth.
+              </p>
+              
+              {/* Key Benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                </div>
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                </div>
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+                </div>
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                  <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+                </div>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/contact"
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                  onClick={handlePhoneClick}
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get Free Consultation
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                  onClick={handlePhoneClick}
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  (302) 464-0950
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* AI Services Section */}
+          <section className="mb-16" aria-labelledby="ai-services-heading">
+            <h2 id="ai-services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              AI Services & Solutions
+            </h2>
+            <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+              Comprehensive AI solutions designed to transform your business operations and drive innovation
             </p>
             
             {/* Key Benefits */}
