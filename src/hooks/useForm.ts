@@ -118,7 +118,7 @@ export function useForm<T extends Record<string, unknown>>({
       }
       setIsSubmitting(true);
       try {
-        await onSubmit(values);
+        await config.onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);

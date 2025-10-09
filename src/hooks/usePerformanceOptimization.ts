@@ -29,15 +29,15 @@ export const usePerformanceOptimization = () => {
     };
     // Measure LCP
     const lcpObserver = new PerformanceObserver(list => {
-      const _entries = list.getEntries();
-      const _lastEntry = entries[entries.length - 1];
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
       if (lastEntry) {
         metrics.largestContentfulPaint = lastEntry.startTime;
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let _clsValue = 0;
+    let clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -71,11 +71,11 @@ export const usePerformanceOptimization = () => {
     return metrics;
   }, []);
   const optimizeImages = useCallback(() => {
-    const _images = document.querySelectorAll('img[data-src]');
+    const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const _img = entry.target as HTMLImageElement;
+          const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.classList.remove('lazy');
           imageObserver.unobserve(img);

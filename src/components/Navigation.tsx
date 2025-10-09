@@ -75,7 +75,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
+    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator },
     { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3 },
