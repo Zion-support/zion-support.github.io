@@ -3,6 +3,24 @@
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
  */
+
+// Simple logger for performance monitoring
+const logger = {
+  debug: (message: string, context: string, data?: any) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.debug(`[${context}] ${message}`, data);
+    }
+  },
+  info: (message: string, context: string, data?: any) => {
+    console.info(`[${context}] ${message}`, data);
+  },
+  warn: (message: string, context: string, data?: any) => {
+    console.warn(`[${context}] ${message}`, data);
+  },
+  error: (message: string, context: string, data?: any) => {
+    console.error(`[${context}] ${message}`, data);
+  }
+};
 export interface PerformanceMetric {
   name: string;
   value: number;

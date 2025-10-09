@@ -16,7 +16,7 @@ export const usePerformance = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
-      const _paintEntries = performance.getEntriesByType('paint');
+      const paintEntries = performance.getEntriesByType('paint');
       const firstContentfulPaint =
         paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const largestContentfulPaint =
