@@ -122,7 +122,7 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
         enableContentTypeSniffingProtection={true}
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain cyber-matrix quantum-field">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch-text futuristic-glow"
               data-text="Zion Tech Group"
             >
               Zion Tech Group
@@ -216,7 +216,7 @@ const HomePage: React.FC = () => {
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+              <article className="quantum-card p-4 sm:p-6 energy-pulse cyber-hover neural-network-effect">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">

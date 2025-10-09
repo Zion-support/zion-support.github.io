@@ -72,7 +72,9 @@ const Navigation: React.FC = () => {
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' }
       ]
     },
     {
@@ -118,7 +120,12 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
         { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
         { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced analytics' },
+        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Voice AI tools' },
+        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Smart recommendations' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security tools' }
       ]
     },
     {
@@ -146,16 +153,16 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center futuristic-glow energy-pulse">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-text holographic-text">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -180,7 +187,7 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500 py-6 z-50 futuristic-glow neural-pattern">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">

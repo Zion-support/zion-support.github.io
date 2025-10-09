@@ -21,7 +21,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
+    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalized recommendations' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI-powered design tools' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
   ];
 
   const itServices = [
@@ -51,7 +56,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
     { name: 'Code Assistant', url: '/code-assistant', description: 'Development AI' },
     { name: 'API Builder', url: '/api-builder', description: 'API development' },
-    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' }
+    { name: 'Bug Tracker Pro', url: '/bug-tracker-pro', description: 'Bug management' },
+    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'AI design tools' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Advanced analytics' },
+    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Voice AI tools' },
+    { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Smart recommendations' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security tools' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -120,7 +130,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 text-white neural-pattern cyber-matrix">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
@@ -287,7 +297,7 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
+        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card futuristic-glow quantum-field">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="flex items-center space-x-3">
