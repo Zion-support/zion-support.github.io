@@ -477,14 +477,6 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
   } catch (error) {
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' };
   }
-<<<<<<< HEAD
-}
-=======
-  if (!isValidUrl(url)) {/* TODO: Fix JSX expression */}
-  r: 'Invalid URL format' };
-  }
-  return {/* TODO: Fix JSX expression */}
-  d: true };
 }
 
 /**
@@ -626,16 +618,19 @@ export function validateComposite(valu,
 }
 
 /**
- * Async validation;
+ * Async validation with proper error handling
  */
-export async function validateAsync(validato,
-  r: (va,)
-  l: unknown) => Promise<ValidationResult>,
-  valu,
-  e: unknown;
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
-  r: error instanceof Error ? error.message : 'Validation failed' };
+export async function validateAsync(
+  validator: (value: string) => Promise<ValidationResult>,
+  value: string
+): Promise<ValidationResult> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return { 
+      isValid: false, 
+      errors: ['Validation failed'], 
+      error: error instanceof Error ? error.message : 'Validation failed' 
+    };
   }
-}"`
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+}
