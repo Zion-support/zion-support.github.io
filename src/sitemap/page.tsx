@@ -13,6 +13,7 @@ const SitemapPage: React.FC = () => {
               <li><a href="/about" className="text-gray-300 hover:text-cyan-400">About</a></li>
               <li><a href="/services" className="text-gray-300 hover:text-cyan-400">Services</a></li>
               <li><a href="/contact" className="text-gray-300 hover:text-cyan-400">Contact</a></li>
+              <li><a href="/pricing" className="text-gray-300 hover:text-cyan-400">Pricing</a></li>
             </ul>
           </div>
           <div className="cyber-card p-6">
@@ -31,6 +32,14 @@ const SitemapPage: React.FC = () => {
               <li><a href="/cloud-services" className="text-gray-300 hover:text-cyan-400">Cloud Services</a></li>
               <li><a href="/cybersecurity" className="text-gray-300 hover:text-cyan-400">Cybersecurity</a></li>
               <li><a href="/devops" className="text-gray-300 hover:text-cyan-400">DevOps</a></li>
+            </ul>
+          </div>
+          <div className="cyber-card p-6">
+            <h2 className="text-xl font-bold text-cyan-400 mb-4">Resources</h2>
+            <ul className="space-y-2">
+              <li><a href="/blog" className="text-gray-300 hover:text-cyan-400">Blog</a></li>
+              <li><a href="/case-studies" className="text-gray-300 hover:text-cyan-400">Case Studies</a></li>
+              <li><a href="/docs" className="text-gray-300 hover:text-cyan-400">Documentation</a></li>
             </ul>
           </div>
         </div>
