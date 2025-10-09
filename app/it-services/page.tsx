@@ -46,12 +46,8 @@ const ITServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-<<<<<<< HEAD
-  const itServices = [
-=======
   const itServices = useMemo(() => [
     // Core IT Services
->>>>>>> cursor/fix-errors-and-merge-to-main-9def
     {
       id: 'managed-it-services',
       name: 'Managed IT Services',

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare, Target, Zap, Stethoscope, CreditCard, FileText, BarChart, Atom, Bot, Link as LinkIcon, Smartphone, Settings, Eye, Activity } from 'lucide-react';
+import { ARIA_LABELS, FOCUS_MANAGEMENT, KEYBOARD_NAVIGATION } from '../utils/accessibilityUtils';
 
 const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -141,9 +142,11 @@ const Header: React.FC = () => {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md p-1"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
+            aria-label={mobileMenuOpen ? ARIA_LABELS.CLOSE_MENU : ARIA_LABELS.OPEN_MENU}
+            aria-expanded={mobileMenuOpen}
+            aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -151,7 +154,12 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/10 py-4">
+          <div 
+            id="mobile-menu"
+            className="lg:hidden border-t border-white/10 py-4"
+            role="navigation"
+            aria-label={ARIA_LABELS.MOBILE_MENU}
+          >
             <div className="space-y-4">
               {Object.entries(navigation).map(([category, items]) => (
                 <div key={category}>

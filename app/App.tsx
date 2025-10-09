@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -63,11 +64,12 @@ const LoadingSpinner = () => (
 
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <div className="App">
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -119,11 +121,12 @@ const App: React.FC = () => {
               <Route path="/support" element={<SupportPage />} />
               <Route path="/status" element={<StatusPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </BrowserRouter>
-    </HelmetProvider>
+              </Routes>
+            </Suspense>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 };
 

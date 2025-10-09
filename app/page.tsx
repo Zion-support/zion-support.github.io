@@ -3,6 +3,9 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import OptimizedImage from './components/OptimizedImage';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -116,6 +119,27 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead
+        title="Zion Tech Group - Advanced AI & IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          'AI solutions',
+          'IT services',
+          'artificial intelligence',
+          'cloud computing',
+          'cybersecurity',
+          'quantum computing',
+          'autonomous systems',
+          'digital transformation',
+          'enterprise software',
+          'machine learning',
+          'data analytics',
+          'business automation'
+        ]}
+        canonical="/"
+        ogType="website"
+      />
+      <PerformanceMonitor />
       <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden cyber-grid neural-network-bg">
