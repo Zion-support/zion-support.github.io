@@ -1,10 +1,11 @@
 'use client';
 import React, { lazy } from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp } from 'lucide-react';
+import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Music, Video, Heart, Briefcase, Wrench, Navigation as NavIcon, PieChart, Users, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, CheckCircle, TrendingUp, Mic, Cube, Headphones, Package, DollarSign, Scale } from 'lucide-react';
 
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
-const ServicesPage: React.FC = React.memo((props) => {
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
+
+const ServicesPage: React.FC = () => {
   const microSAASServices = [
     {
       title: 'AI Project Manager',
@@ -15,7 +16,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'}
+      category: 'Productivity'
     },
     {
       title: 'AI Social Media Manager',
@@ -26,7 +27,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'}
+      category: 'Marketing'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -37,7 +38,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
       link: '/ai-analytics',
       popular: true,
-      category: 'Analytics'}
+      category: 'Analytics'
     },
     {
       title: 'AI Email Marketing',
@@ -48,7 +49,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'}
+      category: 'Marketing'
     },
     {
       title: 'AI Customer Support Bot',
@@ -59,7 +60,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Customer Service'}
+      category: 'Customer Service'
     },
     {
       title: 'AI Code Review Assistant',
@@ -70,7 +71,7 @@ const ServicesPage: React.FC = React.memo((props) => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'}
+      category: 'Development'
     },
     {
       title: 'AI Video Generator',
