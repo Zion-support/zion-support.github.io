@@ -1,28 +1,8 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -176,6 +156,7 @@ console.log(result.predictions);`,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <main>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,12 +300,13 @@ console.log(result.predictions);`,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </section>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
               <p className="text-gray-300 mb-4">
@@ -341,6 +323,7 @@ console.log(result.predictions);`,
                 API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
               </p>
             </div>
+          </div>
           </div>
         </section>
 
@@ -365,16 +348,9 @@ console.log(result.predictions);`,
           </div>
 
         </section>
-      </main>
-      
-      <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-        </div>
-      </section>
 
-      {/* SDK Examples */}
-      <section id="examples" className="py-16 bg-white">
+        {/* SDK Examples */}
+        <section id="examples" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -516,13 +492,11 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
+      </main>
+      
+      <Footer />
     </div>
   );
 };
 
 export default ApiDocsPage;
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19

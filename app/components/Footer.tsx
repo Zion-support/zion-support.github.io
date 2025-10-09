@@ -35,13 +35,24 @@ const Footer: React.FC = memo(() => {
     { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
   ];
 
+  const additionalServices = [
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered support' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Sales optimization' },
+    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Lead generation' },
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Data insights' },
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document automation' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' }
+  ];
+
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' }
+    { name: 'News', url: '/news' },
+    { name: 'Enterprise', url: '/enterprise' },
+    { name: 'Partnerships', url: '/partnerships' }
   ];
 
   const supportLinks = [
@@ -213,6 +224,24 @@ const Footer: React.FC = memo(() => {
                     >
                       <Zap className="w-3 h-3 group-hover:scale-110 transition-transform" />
                       <span>{tech.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Additional AI Services */}
+            <div className="mt-8">
+              <h4 className="text-md font-semibold mb-4 text-gray-200">More AI Services</h4>
+              <ul className="space-y-2">
+                {additionalServices.slice(0, 4).map((service, index) => (
+                  <li key={index}>
+                    <Link
+                      href={service.url}
+                      className="flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group"
+                    >
+                      <Brain className="w-3 h-3 group-hover:scale-110 transition-transform" />
+                      <span>{service.name}</span>
                     </Link>
                   </li>
                 ))}

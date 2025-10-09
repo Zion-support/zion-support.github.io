@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
 
@@ -182,11 +183,17 @@ const Navigation: React.FC = () => {
             <a href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </a>
-            <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Contact
+            <a href="/team" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Team
+            </a>
+            <a href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Case Studies
             </a>
             <a href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
+            </a>
+            <a href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Contact
             </a>
           </div>
 
@@ -312,11 +319,17 @@ const Navigation: React.FC = () => {
               <a href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                 About
               </a>
-              <a href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-                Contact
+              <a href="/team" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                Team
+              </a>
+              <a href="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                Case Studies
               </a>
               <a href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
                 Blog
+              </a>
+              <a href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                Contact
               </a>
 
               {/* Mobile Contact Info */}
