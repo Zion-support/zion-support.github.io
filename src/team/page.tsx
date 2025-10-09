@@ -1,9 +1,9 @@
 import React from 'react';
-
-const TeamPage: React.FC = () => {
 import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+const TeamPage: React.FC = () => {
 
   const _teamMembers = [
     {
@@ -15,12 +15,15 @@ import Footer from '../components/Footer';
       email: 'kleber@ziontechgroup.com',
       expertise: ['AI Strategy', 'Leadership', 'Innovation']
     },
+    {
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
       expertise: ['Machine Learning', 'Deep Learning', 'Research']
+    },
+    {
       name: 'Michael Rodriguez',
       role: 'CTO',
       bio: 'Technology architect with expertise in scalable systems and cloud infrastructure',

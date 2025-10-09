@@ -1,7 +1,4 @@
 import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
-
-const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
 const AIEmailMarketingPage: React.FC = () => {
@@ -11,18 +8,27 @@ const AIEmailMarketingPage: React.FC = () => {
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
     },
+    {
       icon: Target,
       title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation for highly targeted campaigns'
+    },
+    {
       icon: Send,
       title: 'Optimal Send Times',
       description: 'AI determines the best time to send emails for maximum engagement'
+    },
+    {
       icon: BarChart,
       title: 'Predictive Analytics',
       description: 'Forecast campaign performance and optimize for better results'
+    },
+    {
       icon: Users,
       title: 'Behavioral Triggers',
       description: 'Automated email sequences based on user behavior and actions'
+    },
+    {
       icon: TrendingUp,
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
@@ -35,6 +41,7 @@ const AIEmailMarketingPage: React.FC = () => {
     'Reduce unsubscribe rates by 60%',
     'Improve conversion rates by 180%',
     'Save 15+ hours per week'
+  ];
 
   const emailTypes = [
     { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers' },
@@ -43,8 +50,10 @@ const AIEmailMarketingPage: React.FC = () => {
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
+  ];
 
   const pricing = [
+    {
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -58,9 +67,12 @@ const AIEmailMarketingPage: React.FC = () => {
         'Email support'
       ],
       popular: false
+    },
+    {
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
+      features: [
         '10,000 subscribers',
         '100,000 emails/month',
         'Advanced AI features',
