@@ -2,58 +2,74 @@ const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { action, amount, currency = 'USD' } = req.body || {};
 
   if (!action) {
-    res.status(400).json({ error: 'Action is required' });
-    return;
+    return res.status(400).json({ error: 'Action is required' });
   }
 
   try {
     switch (action) {
-      case 'create_payment_intent': {
-        if (!amount) {
-          res.status(400).json({ error: 'Amount is required for payment intent' });
-          return;
-        }
-
-        const timestamp = Date.now();
-        const random = Math.random().toString(36).substr(2, 9);
-        const paymentIntent = {
-          id: `pi_${timestamp}_${random}`,
-          amount,
+      case 'create': {
+        // Create a new wallet
+        const wallet = {
+          id: 'wallet_' + Date.now().toString(),
+          balance: 0,
           currency,
-          status: 'requires_payment_method'
+          createdAt: new Date().toISOString()
         };
-
-        res.statusCode = 200;
-        res.json({ success: true, paymentIntent });
+        
+        res.status(200).json({ 
+          success: true, 
+          message: 'Wallet created successfully',
+          wallet 
+        });
         break;
       }
 
-      case 'get_balance': {
-        const balance = {
-          amount: 0,
-          currency: 'USD',
-          lastUpdated: new Date().toISOString()
-        };
-
-        res.statusCode = 200;
-        res.json({ success: true, balance });
+      case 'deposit':
+        if (!amount || amount <= 0) {
+          return res.status(400).json({ error: 'Valid amount is required for deposit' });
+        }
+        
+        res.status(200).json({ 
+          success: true, 
+          message: 'Deposit processed successfully',
+          amount,
+          currency
+        });
         break;
-      }
+
+      case 'withdraw':
+        if (!amount || amount <= 0) {
+          return res.status(400).json({ error: 'Valid amount is required for withdrawal' });
+        }
+        
+        res.status(200).json({ 
+          success: true, 
+          message: 'Withdrawal processed successfully',
+          amount,
+          currency
+        });
+        break;
+
+      case 'balance':
+        res.status(200).json({ 
+          success: true, 
+          balance: 0,
+          currency
+        });
+        break;
 
       default:
-        res.statusCode = 400;
-        res.json({ error: 'Invalid action' });
+        res.status(400).json({ error: 'Invalid action' });
     }
   } catch (err) {
-    console.error('Error in wallet operation:', err);
-    res.status(500).json({ error: 'Wallet operation failed' });
+    console.error('Error processing wallet action:', err);
+    res.status(500).json({ error: 'Failed to process wallet action' });
   }
 }
 

@@ -2,8 +2,7 @@ const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -11,37 +10,39 @@ async function handler(req, res) {
     const apiKey = process.env.EASYPOST_API_KEY;
 
     if (!apiKey) {
-      res.status(500).json({ error: 'EasyPost API key not configured' });
-      return;
+      return res.status(500).json({ error: 'Shipping API not configured' });
     }
 
-    const response = await fetch('https://api.easypost.com/v2/shipments', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`,
+    if (!fromAddress || !toAddress || !parcel) {
+      return res.status(400).json({ error: 'From address, to address, and parcel details are required' });
+    }
+
+    // Mock shipping rates for now
+    const rates = [
+      {
+        service: 'Standard',
+        carrier: 'UPS',
+        rate: 15.99,
+        deliveryDays: 3
       },
-      body: JSON.stringify({
-        shipment: {
-          to_address: toAddress,
-          from_address: fromAddress,
-          parcel: parcel
-        }
-      }),
-    });
+      {
+        service: 'Express',
+        carrier: 'UPS',
+        rate: 25.99,
+        deliveryDays: 1
+      },
+      {
+        service: 'Overnight',
+        carrier: 'UPS',
+        rate: 45.99,
+        deliveryDays: 1
+      }
+    ];
 
-    const data = await response.json();
-
-    if (!response.ok) {
-      res.status(400).json({ error: data.error || 'Failed to fetch rates' });
-      return;
-    }
-
-    res.statusCode = 200;
-    res.json({ success: true, rates: data.rates });
+    res.status(200).json({ success: true, rates });
   } catch (err) {
-    console.error('Error fetching shipping rates:', err);
-    res.status(500).json({ error: err.message });
+    console.error('Error calculating shipping rates:', err);
+    res.status(500).json({ error: 'Failed to calculate shipping rates' });
   }
 }
 

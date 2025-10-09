@@ -4,49 +4,65 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
   if (!email) {
-    res.status(400).json({ error: 'Email is required' });
-    return;
+    return res.status(400).json({ error: 'Email is required' });
+  }
+
+  if (!isValidEmail(email)) {
+    return res.status(400).json({ error: 'Invalid email format' });
   }
 
   try {
-    if (!isValidEmail(email)) {
-      res.status(400).json({ error: 'Invalid email' });
-      return;
-    }
-
-    const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');
-
-    let existing = [];
-
-    try {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-    } catch (err) {
-      // File doesn't exist or is invalid, start with empty array
-      console.log('No existing subscriptions found, starting fresh:', err.message);
-    }
-
-    existing.push({
+    const subscription = {
       email,
-      name,
+      name: name || '',
       source,
-      subscribedAt: new Date().toISOString()
-    });
+      subscribedAt: new Date().toISOString(),
+      status: 'active'
+    };
 
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
-    res.json({ success: true });
+    // Save to file (in production, use a database)
+    const file = path.join(process.cwd(), 'data', 'subscriptions.json');
+    const dir = path.dirname(file);
+
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+
+    let subscriptions = [];
+    try {
+      if (fs.existsSync(file)) {
+        const data = fs.readFileSync(file, 'utf8');
+        subscriptions = JSON.parse(data);
+      }
+    } catch (err) {
+      console.error('Error reading subscriptions file:', err);
+    }
+
+    // Check if email already exists
+    const existingIndex = subscriptions.findIndex(sub => sub.email === email);
+    if (existingIndex >= 0) {
+      subscriptions[existingIndex] = subscription;
+    } else {
+      subscriptions.push(subscription);
+    }
+
+    fs.writeFileSync(file, JSON.stringify(subscriptions, null, 2));
+
+    res.status(200).json({ 
+      success: true, 
+      message: 'Successfully subscribed to newsletter',
+      subscription 
+    });
   } catch (err) {
-    console.error('Error subscribing:', err);
-    res.status(500).json({ error: err.message || 'Subscription failed' });
+    console.error('Error subscribing to newsletter:', err);
+    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
 }
 
-module.exports = { handler };
+module.exports = handler;

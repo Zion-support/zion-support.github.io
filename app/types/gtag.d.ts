@@ -1,8 +1,15 @@
 /**
- * Google Analytics gtag types;
+ * Google Analytics gtag types
  */
-interface GtagEvent {/* TODO: Fix JSX expression */}
+interface GtagEvent {
+  event_category?: string;
+  event_label?: string;
+  value?: number;
+  [key: string]: unknown;
 }
+
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {/* TODO: Fix JSX expression */}
+
+interface Window {
+  gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
 }

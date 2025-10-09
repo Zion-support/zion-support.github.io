@@ -130,13 +130,6 @@ export function isStrongPassword(password: string): boolean {
 /**
  * Validate password with detailed result
  */
-export function isValidPassword(password: string): boolean {
-  return isStrongPassword(password);
-}
-
-/**
- * Validate password with detailed result
- */
 export function validatePassword(password: string): ValidationResult {
   if (!password || typeof password !== 'string') {
     return { isValid: false, errors: ['Password is required'], error: 'Password is required' };
@@ -367,25 +360,6 @@ export function sanitizeHtml(input: string): string {
 }
 
 /**
- * Validate string length with detailed result
- */
-export function validateLength(value: string, minLength: number, maxLength: number, fieldName: string = 'Field'): ValidationResult {
-  if (!value || typeof value !== 'string') {
-    return { isValid: false, errors: [`${fieldName} is required`], error: `${fieldName} is required` };
-  }
-  
-  if (value.length < minLength) {
-    return { isValid: false, errors: [`${fieldName} must be at least ${minLength} characters`], error: `${fieldName} must be at least ${minLength} characters` };
-  }
-  
-  if (value.length > maxLength) {
-    return { isValid: false, errors: [`${fieldName} must be no more than ${maxLength} characters`], error: `${fieldName} must be no more than ${maxLength} characters` };
-  }
-  
-  return { isValid: true, errors: [] };
-}
-
-/**
  * Sanitize HTML input (alias for sanitizeHtml)
  */
 export function sanitizeHTML(input: string): string {
@@ -397,75 +371,6 @@ export function sanitizeHTML(input: string): string {
  */
 export function sanitizeInput(input: string): string {
   return sanitizeString(input);
-}
-
-/**
- * Validate date with detailed result
- */
-export function validateDate(date: string): ValidationResult {
-  if (!date || typeof date !== 'string') {
-    return { isValid: false, errors: ['Date is required'], error: 'Date is required' };
-  }
-  
-  if (!isValidDate(date)) {
-    return { isValid: false, errors: ['Invalid date format'], error: 'Invalid date format' };
-  }
-  
-  return { isValid: true, errors: [] };
-}
-
-/**
- * Validate credit card with detailed result
- */
-export function validateCreditCard(cardNumber: string): ValidationResult {
-  if (!cardNumber || typeof cardNumber !== 'string') {
-    return { isValid: false, errors: ['Card number is required'], error: 'Card number is required' };
-  }
-  
-  if (!isValidCreditCard(cardNumber)) {
-    return { isValid: false, errors: ['Invalid card number'], error: 'Invalid card number' };
-  }
-  
-  return { isValid: true, errors: [] };
-}
-
-/**
- * Validate JSON with detailed result
- */
-export function validateJSON(jsonString: string): ValidationResult {
-  if (!jsonString || typeof jsonString !== 'string') {
-    return { isValid: false, errors: ['JSON string is required'], error: 'JSON string is required' };
-  }
-  
-  try {
-    JSON.parse(jsonString);
-    return { isValid: true, errors: [] };
-  } catch {
-    return { isValid: false, errors: ['Invalid JSON format'], error: 'Invalid JSON format' };
-  }
-}
-
-/**
- * Validate composite with multiple validators
- */
-export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
-  for (const validator of validators) {
-    const result = validator(value);
-    if (!result.isValid) {
-      return result;
-    }
-  }
-  return { isValid: true, errors: [] };
-}
-
-/**
- * Validate required field with detailed result
- */
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-  if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {
-    return { isValid: false, errors: [`${fieldName} is required`], error: `${fieldName} is required` };
-  }
-  return { isValid: true, errors: [] };
 }
 
 /**

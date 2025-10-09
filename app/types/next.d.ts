@@ -1,31 +1,76 @@
-// Type definitions for Next.js compatibility in Vite;
-export interface Metadata {/* TODO: Fix JSX expression */}
-  e: string; url?: string }> | string[];
+// Type definitions for Next.js compatibility in Vite
+export interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  authors?: Array<{ name: string; url?: string }> | string[];
   creator?: string;
   publisher?: string;
-  formatDetection?: {/* TODO: Fix JSX expression */}
+  formatDetection?: {
+    email?: boolean;
+    address?: boolean;
+    telephone?: boolean;
   };
   metadataBase?: URL;
-  alternates?: {/* TODO: Fix JSX expression */}
+  alternates?: {
+    canonical?: string;
+    languages?: Record<string, string>;
   };
-  openGraph?: {/* TODO: Fix JSX expression */}
+  openGraph?: {
+    title?: string;
+    description?: string;
+    url?: string;
+    siteName?: string;
+    images?: Array<{
+      url: string;
+      width?: number;
+      height?: number;
+      alt?: string;
     }>;
     locale?: string;
     type?: string;
-    authors?: Array<{/* TODO: Fix JSX expression */}
-  e: string; url?: string }> | string[];
+    authors?: Array<{ name: string; url?: string }> | string[];
     publishedTime?: string;
   };
-  twitter?: {/* TODO: Fix JSX expression */}
+  twitter?: {
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+    site?: string;
+    creator?: string;
+    title?: string;
+    description?: string;
+    images?: string[];
   };
-  robots?: {/* TODO: Fix JSX expression */}
+  robots?: {
+    index?: boolean;
+    follow?: boolean;
+    googleBot?: {
+      index?: boolean;
+      follow?: boolean;
+      'max-video-preview'?: number;
+      'max-image-preview'?: 'none' | 'standard' | 'large';
+      'max-snippet'?: number;
     };
   };
-  verification?: {/* TODO: Fix JSX expression */}
+  verification?: {
+    google?: string;
+    yandex?: string;
+    yahoo?: string;
+    other?: Record<string, string>;
   };
 }
-export interface MetadataRoute {/* TODO: Fix JSX expression */}
+
+export interface MetadataRoute {
+  url: string;
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
 }
+
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
-export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
+
+export interface MetadataRouteSitemap extends MetadataRoute {
+  url: string;
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
 }

@@ -1,4 +1,22 @@
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+}
+
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  });
+
   useEffect(() => {
     // Monitor performance metrics
     const monitorPerformance = () => {
@@ -14,12 +32,12 @@ const PerformanceMonitor: React.FC = () => {
       });
       // Monitor memory usage if available
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
         // console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
+        //   used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+        //   total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+        //   limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+        // });
       }
     };
     monitorPerformance();
@@ -38,6 +56,8 @@ const PerformanceMonitor: React.FC = () => {
       };
     }
   }, []);
+
   return null;
 };
+
 export default PerformanceMonitor;
