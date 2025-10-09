@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, CreditCard, Target, Eye, Smartphone, Cloud, Shield, Database, Globe, Wrench, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +33,10 @@ const Navigation: React.FC = () => {
     { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: CreditCard },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Target },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: MessageSquare },
   ];
 
   const aiServices = [
@@ -41,9 +45,9 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Target },
+    { name: 'AI Quantum Computing', href: '/ai-quantum', icon: Cpu },
+    { name: 'AI Edge Computing', href: '/ai-edge', icon: Smartphone },
   ];
 
   const itServices = [
@@ -52,6 +56,9 @@ const Navigation: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
+    { name: 'Network Infrastructure', href: '/network', icon: Globe },
+    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
+    { name: 'IT Support', href: '/it-support', icon: Wrench },
   ];
 
   return (
@@ -94,14 +101,14 @@ const Navigation: React.FC = () => {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+              <div className="absolute top-full left-0 mt-2 w-[500px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-4">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-3 gap-4">
                     {/* Micro SAAS Services */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
+                      <h3 className="text-cyan-400 font-semibold mb-3 text-sm">Micro SAAS Solutions</h3>
                       <div className="grid grid-cols-1 gap-1">
-                        {microSAASServices.slice(0, 4).map((service) => (
+                        {microSAASServices.slice(0, 6).map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -116,9 +123,9 @@ const Navigation: React.FC = () => {
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
+                      <h3 className="text-purple-400 font-semibold mb-3 text-sm">AI Services</h3>
                       <div className="grid grid-cols-1 gap-1">
-                        {aiServices.slice(0, 4).map((service) => (
+                        {aiServices.map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
@@ -133,7 +140,7 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
+                      <h3 className="text-green-400 font-semibold mb-3 text-sm">IT Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {itServices.map((service) => (
                           <a
@@ -203,7 +210,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
-                  {microSAASServices.slice(0, 6).map((service) => (
+                  {microSAASServices.slice(0, 8).map((service) => (
                     <a
                       key={service.name}
                       href={service.href}
@@ -220,7 +227,7 @@ const Navigation: React.FC = () => {
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
                 <div className="grid grid-cols-1 gap-2">
-                  {aiServices.slice(0, 4).map((service) => (
+                  {aiServices.map((service) => (
                     <a
                       key={service.name}
                       href={service.href}

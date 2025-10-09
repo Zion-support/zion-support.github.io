@@ -20,6 +20,10 @@ const Footer: React.FC = () => {
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
+    { name: 'AI Video Generator', href: '/ai-video-generation' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation' },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
   ];
 
   const aiServices = [
@@ -28,7 +32,9 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', href: '/ai-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum' },
+    { name: 'AI Edge Computing', href: '/ai-edge' },
   ];
 
   const itServices = [
@@ -37,6 +43,9 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
+    { name: 'Network Infrastructure', href: '/network' },
+    { name: 'Cloud Services', href: '/cloud-services' },
+    { name: 'IT Support', href: '/it-support' },
   ];
 
   const socialLinks = [
@@ -51,7 +60,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -129,41 +138,38 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* AI & IT Services */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-purple-400 mb-4">AI & IT Services</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <h3 className="text-lg font-semibold text-purple-400 mb-4">AI Services</h3>
+            <ul className="space-y-2">
+              {aiServices.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-green-400 mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

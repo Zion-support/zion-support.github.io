@@ -137,6 +137,50 @@ const ServicesPage: React.FC = () => {
       link: '/ai-fitness-coach',
       popular: false,
       category: 'Health & Fitness'
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Boost sales with AI-powered lead generation and conversion optimization',
+      icon: CreditCard,
+      price: '$199/month',
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration'],
+      benefits: ['35% more leads', '50% faster conversions', '25% revenue increase'],
+      link: '/ai-sales-automation',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: Target,
+      price: '$249/month',
+      features: ['3D model generation', 'Texture creation', 'Animation', 'VR/AR support'],
+      benefits: ['90% faster 3D creation', 'Professional quality', 'Multiple formats'],
+      link: '/ai-3d-generation',
+      popular: false,
+      category: '3D & Graphics'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into interactive visualizations',
+      icon: BarChart,
+      price: '$139/month',
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling'],
+      benefits: ['60% faster insights', 'Better decision making', 'Stunning visuals'],
+      link: '/ai-data-visualization',
+      popular: true,
+      category: 'Data Science'
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Advanced customer support with AI-powered ticket management',
+      icon: MessageSquare,
+      price: '$169/month',
+      features: ['Ticket routing', 'Sentiment analysis', 'Auto-responses', 'Performance metrics'],
+      benefits: ['70% faster resolution', 'Higher satisfaction', '24/7 availability'],
+      link: '/ai-customer-support',
+      popular: true,
+      category: 'Customer Service'
     }
   ];
 
@@ -189,11 +233,29 @@ const ServicesPage: React.FC = () => {
     {
       title: 'AI 3D Generation',
       description: 'Create 3D models and environments with AI technology',
-      icon: Cube,
+      icon: Target,
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
       color: 'text-pink-400',
       category: '3D & Graphics'
+    },
+    {
+      title: 'AI Quantum Computing',
+      description: 'Quantum algorithms and quantum machine learning solutions',
+      icon: Cpu,
+      price: '$2,500/month',
+      features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Cryptography'],
+      color: 'text-indigo-400',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'Deploy AI models on edge devices for real-time processing',
+      icon: Smartphone,
+      price: '$1,300/month',
+      features: ['Edge Deployment', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+      color: 'text-yellow-400',
+      category: 'Edge Computing'
     }
   ];
 
@@ -251,10 +313,28 @@ const ServicesPage: React.FC = () => {
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
       color: 'text-indigo-400',
       category: 'Infrastructure'
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud migration, setup, and optimization services',
+      icon: Cloud,
+      price: '$1,299/month',
+      features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'],
+      color: 'text-cyan-400',
+      category: 'Cloud Computing'
+    },
+    {
+      title: 'IT Support & Maintenance',
+      description: 'Comprehensive IT support and maintenance services',
+      icon: Wrench,
+      price: '$799/month',
+      features: ['24/7 Support', 'Proactive Monitoring', 'Hardware Maintenance', 'Software Updates'],
+      color: 'text-orange-400',
+      category: 'Support'
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness'];
+  const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness', 'Sales', '3D & Graphics', 'Data Science', 'AI Development', 'Quantum Computing', 'Edge Computing', 'Cloud Computing', 'Security', 'Data Management', 'Consulting', 'Infrastructure', 'Support'];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
@@ -280,7 +360,7 @@ const ServicesPage: React.FC = () => {
             Powerful, affordable AI-powered tools designed for modern businesses
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
             {microSAASServices.map((service, index) => (
               <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
@@ -346,7 +426,7 @@ const ServicesPage: React.FC = () => {
             Advanced artificial intelligence solutions for enterprise applications
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {aiServices.map((service, index) => (
               <a
                 key={index}
@@ -385,7 +465,7 @@ const ServicesPage: React.FC = () => {
             Comprehensive IT solutions for modern enterprises
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
             {itServices.map((service, index) => (
               <a
                 key={index}

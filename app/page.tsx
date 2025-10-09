@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
       price: '$149/month',
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
-      link: '/ai-analytics-dashboard',
+      link: '/ai-analytics',
       popular: true
     },
     {
@@ -120,6 +120,106 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
       popular: false
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and content generation',
+      icon: '🎥',
+      price: '$199/month',
+      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support'],
+      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports'],
+      link: '/ai-video-generation',
+      popular: true
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for content creation and accessibility',
+      icon: '🎤',
+      price: '$129/month',
+      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration'],
+      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing'],
+      link: '/ai-voice-cloning',
+      popular: false
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow management',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard'],
+      benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring'],
+      link: '/ai-workflow-automation',
+      popular: true
+    },
+    {
+      title: 'AI Fashion Design',
+      description: 'Create stunning fashion designs with AI-powered design tools',
+      icon: '👗',
+      price: '$159/month',
+      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation'],
+      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity'],
+      link: '/ai-fashion-design',
+      popular: false
+    },
+    {
+      title: 'AI Music Composition',
+      description: 'Compose original music with AI-powered composition tools',
+      icon: '🎵',
+      price: '$119/month',
+      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music'],
+      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues'],
+      link: '/ai-music-composition',
+      popular: false
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness coaching with AI-powered workout plans',
+      icon: '💪',
+      price: '$89/month',
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling'],
+      link: '/ai-fitness-coach',
+      popular: false
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Boost sales with AI-powered lead generation and conversion optimization',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration'],
+      benefits: ['35% more leads', '50% faster conversions', '25% revenue increase'],
+      link: '/ai-sales-automation',
+      popular: true
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: '🎨',
+      price: '$249/month',
+      features: ['3D model generation', 'Texture creation', 'Animation', 'VR/AR support'],
+      benefits: ['90% faster 3D creation', 'Professional quality', 'Multiple formats'],
+      link: '/ai-3d-generation',
+      popular: false
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into interactive visualizations',
+      icon: '📊',
+      price: '$139/month',
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling'],
+      benefits: ['60% faster insights', 'Better decision making', 'Stunning visuals'],
+      link: '/ai-data-visualization',
+      popular: true
+    },
+    {
+      title: 'AI Customer Support',
+      description: 'Advanced customer support with AI-powered ticket management',
+      icon: '🎧',
+      price: '$169/month',
+      features: ['Ticket routing', 'Sentiment analysis', 'Auto-responses', 'Performance metrics'],
+      benefits: ['70% faster resolution', 'Higher satisfaction', '24/7 availability'],
+      link: '/ai-customer-support',
+      popular: true
     }
   ];
 
@@ -155,6 +255,38 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into interactive visualizations',
+      icon: BarChart,
+      price: '$1,100/month',
+      features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: Target,
+      price: '$1,600/month',
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'AI Quantum Computing',
+      description: 'Quantum algorithms and quantum machine learning solutions',
+      icon: Cpu,
+      price: '$2,500/month',
+      features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Cryptography'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'Deploy AI models on edge devices for real-time processing',
+      icon: Smartphone,
+      price: '$1,300/month',
+      features: ['Edge Deployment', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+      color: 'text-yellow-400'
     }
   ];
 
@@ -190,6 +322,38 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting for digital transformation and optimization',
+      icon: Briefcase,
+      price: '$1,000/month',
+      features: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Process Optimization'],
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'Network Infrastructure',
+      description: 'Design and implement robust network infrastructure solutions',
+      icon: Globe,
+      price: '$1,400/month',
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless cloud migration with zero downtime and data integrity',
+      icon: Cloud,
+      price: '$1,299/month',
+      features: ['Zero Downtime Migration', 'Data Integrity', 'Cost Optimization', 'Security Compliance'],
+      color: 'text-cyan-400'
+    },
+    {
+      title: 'IT Support & Maintenance',
+      description: 'Comprehensive IT support and maintenance services',
+      icon: Wrench,
+      price: '$799/month',
+      features: ['24/7 Support', 'Proactive Monitoring', 'Hardware Maintenance', 'Software Updates'],
+      color: 'text-orange-400'
     }
   ];
 
@@ -350,7 +514,7 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
@@ -413,7 +577,7 @@ const HomePage: React.FC = () => {
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -459,7 +623,7 @@ const HomePage: React.FC = () => {
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
