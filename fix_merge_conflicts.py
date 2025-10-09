@@ -1,44 +1,35 @@
 #!/usr/bin/env python3
-"""
-Script to automatically resolve merge conflicts in the repository
-"""
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a file by keeping the second version (after =======)"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
-            
-        print(f"Fixing merge conflicts in: {file_path}")
         
-        # Remove merge conflict markers and keep the second version (after =======)
-        # This is a simple heuristic - in practice you might want more sophisticated logic
-        lines = content.split('\n')
-        new_lines = []
-        skip_until_next_marker = False
+        # Pattern 1: Keep everything after ======= and before >>>>>>>
+        pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
+        content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until_next_marker = True
-                continue
-            elif line.strip() == '=======':
-                skip_until_next_marker = False
-                continue
-            elif line.strip().startswith('>>>>>>>'):
-                continue
-            elif not skip_until_next_marker:
-                new_lines.append(line)
+        # Pattern 2: Remove any remaining <<<<<<< HEAD lines
+        content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
         
-        # Write the cleaned content back
+        # Pattern 3: Remove any remaining ======= lines
+        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
+        
+        # Pattern 4: Remove any remaining >>>>>>> lines
+        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
+        
+        # Clean up any double newlines
+        content = re.sub(r'\n\n\n+', '\n\n', content)
+        
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
+            f.write(content)
         
         return True
     except Exception as e:
@@ -46,36 +37,27 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    """Main function to fix all merge conflicts"""
-    # Find all files with merge conflicts
+    # Find all TypeScript and JavaScript files
     patterns = [
-        '**/*.ts',
-        '**/*.tsx', 
-        '**/*.js',
-        '**/*.jsx',
-        '**/*.json',
-        '**/*.md'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
-    files_with_conflicts = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_with_conflicts.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_merge_conflicts(file_path):
+                    files_fixed += 1
+                    print(f"Fixed merge conflicts in: {file_path}")
     
-    # Filter out node_modules and other directories we don't want to modify
-    files_to_process = []
-    for file_path in files_with_conflicts:
-        if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', 'coverage']):
-            continue
-        files_to_process.append(file_path)
-    
-    print(f"Found {len(files_to_process)} files to check for merge conflicts")
-    
-    fixed_count = 0
-    for file_path in files_to_process:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'home_visionary_expander'}
       });
     };
-//   } catch (error) {console.error('❌ home_visionary_expander function failed: ') error
+//   } catch (error) {// console.error('❌ home_visionary_expander function failed: ') error
       }
     return {
       statusCode: 500,

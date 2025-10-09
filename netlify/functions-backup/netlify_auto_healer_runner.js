@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'netlify_auto_healer_runner'}
       });
     };
-//   } catch (error) {console.error('❌ netlify_auto_healer_runner function failed: ') error
+//   } catch (error) {// console.error('❌ netlify_auto_healer_runner function failed: ') error
       }
     return {
       statusCode: 500,

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'anchor_links_auto_fixer'}
       });
     };
-//   } catch (error) {console.error('❌ anchor_links_auto_fixer function failed: ') error
+//   } catch (error) {// console.error('❌ anchor_links_auto_fixer function failed: ') error
       }
     return {
       statusCode: 500,

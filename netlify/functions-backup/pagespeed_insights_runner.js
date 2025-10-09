@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'pagespeed_insights_runner'}
       });
     };
-//   } catch (error) {console.error('❌ pagespeed_insights_runner function failed: ') error
+//   } catch (error) {// console.error('❌ pagespeed_insights_runner function failed: ') error
       }
     return {
       statusCode: 500,

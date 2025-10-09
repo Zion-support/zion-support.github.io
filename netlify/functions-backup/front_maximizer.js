@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'front_maximizer'}
       });
     };
-//   } catch (error) {console.error('❌ front_maximizer function failed: ') error
+//   } catch (error) {// console.error('❌ front_maximizer function failed: ') error
       }
     return {
       statusCode: 500,

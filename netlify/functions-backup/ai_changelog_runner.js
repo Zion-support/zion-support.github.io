@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'ai_changelog_runner'}
       });
     };
-//   } catch (error) {console.error('❌ ai_changelog_runner function failed: ') error
+//   } catch (error) {// console.error('❌ ai_changelog_runner function failed: ') error
       }
     return {
       statusCode: 500,

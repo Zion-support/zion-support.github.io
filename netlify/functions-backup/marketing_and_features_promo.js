@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'marketing_and_features_promo'}
       });
     };
-//   } catch (error) {console.error('❌ marketing_and_features_promo function failed: ') error
+//   } catch (error) {// console.error('❌ marketing_and_features_promo function failed: ') error
       }
     return {
       statusCode: 500,

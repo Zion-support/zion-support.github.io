@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'hyper_front_index_accelerator'}
       });
     };
-//   } catch (error) {console.error('❌ hyper_front_index_accelerator function failed: ') error
+//   } catch (error) {// console.error('❌ hyper_front_index_accelerator function failed: ') error
       }
     return {
       statusCode: 500,

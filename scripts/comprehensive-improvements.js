@@ -272,7 +272,7 @@ export const measurePerformance = (name: string, fn: () => void) => {
 //     const start = performance.now();
     fn();
 //     const end = performance.now();
-//     console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
+//     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
   } else {
     fn();
   }

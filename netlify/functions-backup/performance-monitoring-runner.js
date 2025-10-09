@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {try {
       }),
     };
 //     return result;
-//   } catch (error) {console.error('❌ performance-monitoring-runner failed: ') error
+//   } catch (error) {// console.error('❌ performance-monitoring-runner failed: ') error
       }
     return {
       statusCode: 500,

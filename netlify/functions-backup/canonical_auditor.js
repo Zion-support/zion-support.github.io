@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'canonical_auditor'}
       });
     };
-//   } catch (error) {console.error('❌ canonical_auditor function failed: ') error
+//   } catch (error) {// console.error('❌ canonical_auditor function failed: ') error
       }
     return {
       statusCode: 500,

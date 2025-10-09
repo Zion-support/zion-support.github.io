@@ -1,5 +1,5 @@
 exports.handler = async function (event, context) {try {
-//     console.log('headers-enforcer function triggered')}
+//     // console.log('headers-enforcer function triggered')}
     // Headers enforcement simulation
     const result = {
       statusCode: 200,
@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {try {
       }),
     };
     return result;
-//   } catch (error) {console.error('Error in headers-enforcer: ') error
+//   } catch (error) {// console.error('Error in headers-enforcer: ') error
       }
     return {
       statusCode: 500,
@@ -35,5 +35,5 @@ exports.handler = async function (event, context) {try {
   }
 };
         timestamp: new Date().toISOString(),' function: 'headers-enforcer',' source: event.source || 'unknown', enforcement: {' status: 'active', headersEnforced: 0,
-        lastEnforcement: new Date().toISOString() } }) }; return result; } catch (error) {' console.error('Error in headers-enforcer: ') error
+        lastEnforcement: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in headers-enforcer: ') error
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'headers-enforcer' }) }; } };'

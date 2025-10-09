@@ -21,8 +21,8 @@ describe('EnhancedLogger', () => {
 
   describe('Singleton Pattern', () => {
     it('should return the same instance', () => {
-      const _instance1 = EnhancedLogger.getInstance();
-      const _instance2 = EnhancedLogger.getInstance();
+      const instance1 = EnhancedLogger.getInstance();
+      const instance2 = EnhancedLogger.getInstance();
       expect(instance1).toBe(instance2);
     });
   });
@@ -30,7 +30,7 @@ describe('EnhancedLogger', () => {
   describe('Log Levels', () => {
     it('should log debug messages', () => {
       logger.debug('Debug message', { test: true }, 'TestSource');
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.DEBUG);
@@ -41,7 +41,7 @@ describe('EnhancedLogger', () => {
 
     it('should log info messages', () => {
       logger.info('Info message', { info: 'data' });
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.INFO);
@@ -50,7 +50,7 @@ describe('EnhancedLogger', () => {
 
     it('should log warning messages', () => {
       logger.warn('Warning message', { warning: true });
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.WARN);
@@ -58,9 +58,9 @@ describe('EnhancedLogger', () => {
     });
 
     it('should log error messages with stack trace', () => {
-      const _error = new Error('Test error');
+      const error = new Error('Test error');
       logger.error('Error occurred', { code: 500 }, error, 'ErrorSource');
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.ERROR);
@@ -71,9 +71,9 @@ describe('EnhancedLogger', () => {
     });
 
     it('should log fatal messages', () => {
-      const _error = new Error('Fatal error');
+      const error = new Error('Fatal error');
       logger.fatal('Fatal error occurred', { critical: true }, error);
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.FATAL);
@@ -90,7 +90,7 @@ describe('EnhancedLogger', () => {
     });
 
     it('should filter logs by level', () => {
-      const _errorLogs = logger.getLogs(LogLevel.ERROR);
+      const errorLogs = logger.getLogs(LogLevel.ERROR);
       expect(errorLogs).toHaveLength(1);
       expect(errorLogs[0].message).toBe('Error log');
     });
@@ -100,7 +100,7 @@ describe('EnhancedLogger', () => {
       logger.info('Source test 2', {}, 'TestSource2');
       logger.info('Source test 3', {}, 'TestSource1');
 
-      const _sourceLogs = logger.getLogsBySource('TestSource1');
+      const sourceLogs = logger.getLogsBySource('TestSource1');
       expect(sourceLogs).toHaveLength(2);
       expect(sourceLogs.every(log => log.source === 'TestSource1')).toBe(true);
     });
@@ -114,7 +114,7 @@ describe('EnhancedLogger', () => {
       logger.warn('Should appear');
       logger.error('Should appear');
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs).toHaveLength(2);
       expect(logs[0].level).toBe(LogLevel.WARN);
       expect(logs[1].level).toBe(LogLevel.ERROR);
@@ -126,12 +126,12 @@ describe('EnhancedLogger', () => {
       logger.startPerformance('test_operation');
 
       // Simulate some work
-      const _start = Date.now();
+      const start = Date.now();
       while (Date.now() - start < 10) {
         // Wait for at least 10ms
       }
 
-      const _duration = logger.endPerformance('test_operation');
+      const duration = logger.endPerformance('test_operation');
 
       expect(duration).toBeDefined();
       expect(duration!).toBeGreaterThan(0);
@@ -143,8 +143,8 @@ describe('EnhancedLogger', () => {
       logger.startPerformance('test_op');
       logger.endPerformance('test_op', { operation: 'test' });
 
-      const _logs = logger.getLogs();
-      const _perfLog = logs.find(log => log.message.includes('Performance:'));
+      const logs = logger.getLogs();
+      const perfLog = logs.find(log => log.message.includes('Performance:'));
 
       expect(perfLog).toBeDefined();
       expect(perfLog?.data?.duration).toBeDefined();
@@ -152,11 +152,11 @@ describe('EnhancedLogger', () => {
     });
 
     it('should handle missing performance marks', () => {
-      const _duration = logger.endPerformance('nonexistent_mark');
+      const duration = logger.endPerformance('nonexistent_mark');
       expect(duration).toBeUndefined();
 
       // Should log a warning
-      const _logs = logger.getLogs(LogLevel.WARN);
+      const logs = logger.getLogs(LogLevel.WARN);
       expect(logs.length).toBeGreaterThan(0);
       expect(logs[0].message).toContain('Performance mark');
     });
@@ -170,7 +170,7 @@ describe('EnhancedLogger', () => {
         logger.info(`Log ${i}`);
       }
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs).toHaveLength(5);
       expect(logs[0].message).toBe('Log 5');
       expect(logs[4].message).toBe('Log 9');
@@ -192,9 +192,9 @@ describe('EnhancedLogger', () => {
       logger.info('Log 2');
       logger.info('Log 3');
 
-      const _logs = logger.getLogs();
-      const _ids = logs.map(log => log.id);
-      const _uniqueIds = new Set(ids);
+      const logs = logger.getLogs();
+      const ids = logs.map(log => log.id);
+      const uniqueIds = new Set(ids);
 
       expect(uniqueIds.size).toBe(ids.length);
     });
@@ -210,7 +210,7 @@ describe('EnhancedLogger', () => {
     });
 
     it('should provide accurate statistics', () => {
-      const _stats = logger.getStatistics();
+      const stats = logger.getStatistics();
 
       expect(stats.total).toBe(5);
       expect(stats.byLevel['DEBUG']).toBe(2);
@@ -220,7 +220,7 @@ describe('EnhancedLogger', () => {
     });
 
     it('should track logs by source', () => {
-      const _stats = logger.getStatistics();
+      const stats = logger.getStatistics();
 
       expect(stats.bySource['Source1']).toBe(2);
       expect(stats.bySource['Source2']).toBe(2);
@@ -233,8 +233,8 @@ describe('EnhancedLogger', () => {
       logger.info('Test log 1', { data: 'value1' });
       logger.warn('Test log 2', { data: 'value2' });
 
-      const _exported = logger.exportLogs();
-      const _parsed = JSON.parse(exported);
+      const exported = logger.exportLogs();
+      const parsed = JSON.parse(exported);
 
       expect(Array.isArray(parsed)).toBe(true);
       expect(parsed).toHaveLength(2);
@@ -245,8 +245,8 @@ describe('EnhancedLogger', () => {
     it('should format timestamps in ISO format', () => {
       logger.info('Test log');
 
-      const _exported = logger.exportLogs();
-      const _parsed = JSON.parse(exported);
+      const exported = logger.exportLogs();
+      const parsed = JSON.parse(exported);
 
       expect(parsed[0].timestamp).toMatch(/^\d{4}-\d{2}-\d{2}T/);
     });
@@ -264,7 +264,7 @@ describe('EnhancedLogger', () => {
       logger.info('Should not appear');
       logger.error('Should appear');
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs).toHaveLength(1);
       expect(logs[0].level).toBe(LogLevel.ERROR);
     });
@@ -272,11 +272,11 @@ describe('EnhancedLogger', () => {
 
   describe('Timestamp and Metadata', () => {
     it('should include timestamp in log entries', () => {
-      const _before = new Date();
+      const before = new Date();
       logger.info('Test log');
-      const _after = new Date();
+      const after = new Date();
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].timestamp).toBeInstanceOf(Date);
       expect(logs[0].timestamp.getTime()).toBeGreaterThanOrEqual(before.getTime());
       expect(logs[0].timestamp.getTime()).toBeLessThanOrEqual(after.getTime());
@@ -284,7 +284,7 @@ describe('EnhancedLogger', () => {
 
     it('should include environment in log entries', () => {
       logger.info('Test log');
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
 
       expect(logs[0].environment).toBeDefined();
     });
@@ -292,26 +292,26 @@ describe('EnhancedLogger', () => {
 
   describe('Error Handling', () => {
     it('should handle error objects correctly', () => {
-      const _error = new Error('Test error message');
+      const error = new Error('Test error message');
       error.stack = 'Error: Test error message\n    at Test.spec';
 
       logger.error('Operation failed', { context: 'test' }, error);
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].data?.error).toBeDefined();
-      const _errorData = logs[0].data?.error as any;
+      const errorData = logs[0].data?.error as any;
       expect(errorData.name).toBe('Error');
       expect(errorData.message).toBe('Test error message');
       expect(errorData.stack).toContain('Test error message');
     });
 
     it('should handle errors without stack traces', () => {
-      const _error = new Error('Simple error');
+      const error = new Error('Simple error');
       delete error.stack;
 
       logger.error('Error occurred', {}, error);
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].data?.error).toBeDefined();
     });
   });
@@ -330,21 +330,21 @@ describe('EnhancedLogger', () => {
 
       logger.info('Complex data', complexData);
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].data).toEqual(complexData);
     });
 
     it('should handle undefined data gracefully', () => {
       logger.info('No data');
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].data).toBeUndefined();
     });
 
     it('should handle empty data objects', () => {
       logger.info('Empty data', {});
 
-      const _logs = logger.getLogs();
+      const logs = logger.getLogs();
       expect(logs[0].data).toEqual({});
     });
   });
