@@ -79,6 +79,8 @@
     "App.tsx",
     "api/**/*.js",
     "api/**/*.ts",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "components/**/*",
     "src/**/*",
     ".next/types/**/*.ts"
@@ -163,7 +165,6 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",
