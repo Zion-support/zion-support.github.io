@@ -2,9 +2,11 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
+  '/css/critical.css',
+  '/manifest.json',
+  '/assets/index-CZCxnxi7.css',
+  '/assets/index-D5QfCfme.js',
+  '/assets/vendor-DDcd4RNL.js'
 ];
 
 // Install event

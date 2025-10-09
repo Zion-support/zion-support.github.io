@@ -20,6 +20,27 @@ export default defineConfig({
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
+      plugins: [
+        {
+          name: 'add-preload-attributes',
+          generateBundle(options, bundle) {
+            // This plugin will add as="script" to modulepreload links
+            for (const fileName in bundle) {
+              const chunk = bundle[fileName];
+              if (chunk.type === 'asset' && fileName.endsWith('.html')) {
+                let source = chunk.source;
+                if (typeof source === 'string') {
+                  source = source.replace(
+                    /<link rel="modulepreload"([^>]*)>/g,
+                    '<link rel="modulepreload"$1 as="script">'
+                  );
+                  chunk.source = source;
+                }
+              }
+            }
+          }
+        }
+      ],
       output: {
         manualChunks: (id) => {
           // Vendor chunks
