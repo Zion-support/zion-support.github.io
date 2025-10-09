@@ -1,6 +1,39 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Heart, Stethoscope, Brain, Shield, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Zap, Target, Globe, Award, Users, Cpu, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Eye, AlertTriangle, Lock } from 'lucide-react';
 
-export default AIHealthcarePage;
+const AiHealthcarePage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AiHealthcare - Zion Tech Group | Ai Healthcare Solutions</title>
+        <meta name="description" content="Ai Healthcare Solutions" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        <div className="container mx-auto px-4 py-16 pt-24">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center neon-text cyber-text">
+              AiHealthcare
+            </h1>
+            
+            <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Ai Healthcare Solutions
+            </p>
+
+            <div className="cyber-card p-8 text-center">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Coming Soon</h2>
+              <p className="text-gray-300 mb-6">
+                We're developing comprehensive aihealthcare solutions. Contact us to learn more about our upcoming services.
+              </p>
+              <a href="/contact" className="cyber-button">
+                Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AiHealthcarePage;
