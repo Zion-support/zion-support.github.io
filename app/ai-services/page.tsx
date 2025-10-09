@@ -1,16 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Mail, Calendar, FileText, Image, Video, Music, Globe, Smartphone, Laptop, Database, Lock, Settings, TrendingUp, Target, Rocket, Award, Clock, DollarSign, Server, Network, HardDrive, Cpu, Monitor, Wifi, Smartphone as Phone, Headphones, Printer, Camera, Wrench, Cog, Activity, Globe as Web, Mail as Email, MessageCircle, Mic, Phone as PhoneIcon, Eye, Bot, Cpu as AI, Sparkles, Target as Focus, Layers, Workflow } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
-<<<<<<< HEAD
       title: 'AI Consulting & Strategy',
       description: 'Comprehensive AI strategy development, implementation planning, and digital transformation consulting for enterprise organizations.',
       icon: '🧠',
@@ -1041,13 +1035,11 @@ const AIServicesPage: React.FC = () => {
             <div className="cyber-card hologram-card p-4 text-center">
               <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-gray-300 text-sm">AI Monitoring</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -1138,7 +1130,6 @@ const AIServicesPage: React.FC = () => {
                 <category.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-white font-semibold mb-2">{category.name}</h3>
                 <p className="text-gray-400 text-sm">{category.count} services</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
               </div>
             ))}
           </div>
@@ -1356,7 +1347,6 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1468
     </div>
   );
 };
