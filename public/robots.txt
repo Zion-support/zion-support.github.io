@@ -11,6 +11,7 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /private/
 Disallow: /internal/
 
@@ -33,3 +34,6 @@ Allow: /static/
 Allow: /assets/
 Allow: /*.css
 Allow: /*.js
+=======
+Disallow: /private/
+>>>>>>> origin/main

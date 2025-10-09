@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
+=======
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+>>>>>>> origin/main
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
   '/static/css/main.css',
+<<<<<<< HEAD
 <<<<<<< HEAD
   '/manifest.json',
   '/favicon.ico',
@@ -20,12 +25,22 @@ const urlsToCache = [
 
 // Install event
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+  '/manifest.json',
+  '/favicon.ico',
+  '/logo192.png',
+  '/logo512.png'
+];
+
+// Install event - cache resources
+>>>>>>> origin/main
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
+<<<<<<< HEAD
 <<<<<<< HEAD
       })
       .catch((error) => {
@@ -92,6 +107,28 @@ self.addEventListener('fetch', (event) => {
 
 // Activate event
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
+=======
+      })
+  );
+});
+
+// Fetch event - serve from cache when offline
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+
+// Activate event - clean up old caches
+>>>>>>> origin/main
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -106,9 +143,15 @@ self.addEventListener('activate', (event) => {
     })
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 });
 
 // Background sync for offline form submissions
+=======
+});
+
+// Background sync for analytics and offline form submissions
+>>>>>>> origin/main
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
     event.waitUntil(doBackgroundSync());
@@ -116,6 +159,7 @@ self.addEventListener('sync', (event) => {
 });
 
 async function doBackgroundSync() {
+<<<<<<< HEAD
   // Handle offline form submissions or other background tasks
   console.log('Background sync triggered');
 }
@@ -165,3 +209,8 @@ self.addEventListener('notificationclick', (event) => {
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-187f
 });
+=======
+  // Sync analytics data and handle offline form submissions when back online
+  console.log('Background sync triggered');
+}
+>>>>>>> origin/main

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'dead_code_report'}
       });
     };
-//   } catch (error) {console.error('❌ dead_code_report function failed: ') error
+//   } catch (error) {// console.error('❌ dead_code_report function failed: ') error
       }
     return {
       statusCode: 500,

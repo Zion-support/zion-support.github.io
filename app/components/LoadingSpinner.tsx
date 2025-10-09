@@ -23,42 +23,37 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   };
 
   const colorClasses = {
-    primary: 'border-blue-500',
-    secondary: 'border-purple-500',
-    white: 'border-white',
-    gray: 'border-gray-500',
+    primary: 'text-indigo-600',
+    secondary: 'text-purple-600',
+    white: 'text-white',
+    gray: 'text-gray-600',
   };
 
   const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div
-        className={`animate-spin rounded-full border-2 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}
-        role="status"
-        aria-label="Loading"
-      />
-      {text && (
-        <p className={`mt-3 text-sm ${
-          color === 'white' ? 'text-white' : 
-          color === 'gray' ? 'text-gray-500' : 
-          'text-gray-600'
-        }`}>
-          {text}
-        </p>
-      )}
+    <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]} ${className}`}>
+      <span className="sr-only">Loading...</span>
     </div>
   );
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-white rounded-lg p-8 shadow-xl">
+      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+        <div className="text-center">
           {spinner}
+          {text && <p className="mt-4 text-gray-600">{text}</p>}
         </div>
       </div>
     );
   }
 
-  return spinner;
+  return (
+    <div className="flex items-center justify-center">
+      <div className="text-center">
+        {spinner}
+        {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
+      </div>
+    </div>
+  );
 };
 
 export default LoadingSpinner;

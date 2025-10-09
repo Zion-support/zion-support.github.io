@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'ultrafast_front_orchestrator'}
       });
     };
-//   } catch (error) {console.error('❌ ultrafast_front_orchestrator function failed: ') error
+//   } catch (error) {// console.error('❌ ultrafast_front_orchestrator function failed: ') error
       }
     return {
       statusCode: 500,
