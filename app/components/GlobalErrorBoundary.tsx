@@ -2,7 +2,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -18,10 +17,14 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+    // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log the error to an error reporting service
+    console.error('Error caught by boundary:', error, errorInfo);
+    
     this.setState({
       error,
       errorInfo,
@@ -38,6 +41,10 @@ class GlobalErrorBoundary extends Component<Props, State> {
     console.error('Error caught by boundary:', error, errorInfo);
   }
 
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -49,15 +56,11 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-              </div>
-            </div>
-            <div className="mt-2">
-              <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+              <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+                Oops! Something went wrong
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                We're sorry, but something unexpected happened. Please try again.
               </p>
             </div>
             <div className="mt-4">
@@ -67,7 +70,15 @@ class GlobalErrorBoundary extends Component<Props, State> {
               >
                 Reload Page
               </button>
+              
+              <button
+                onClick={() => window.location.reload()}
+                className="group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Reload Page
+              </button>
             </div>
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-400 hover:text-white">

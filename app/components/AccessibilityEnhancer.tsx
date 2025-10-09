@@ -87,7 +87,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         } else {
           document.body.classList.remove('high-contrast');
         }
-      };
+        
+        .skip-link:focus {
+          top: 6px !important;
+        }
+      `;
+      document.head.appendChild(style);
 
       updateHighContrast();
       prefersHighContrast.addEventListener('change', updateHighContrast);

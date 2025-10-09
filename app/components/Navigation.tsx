@@ -23,7 +23,6 @@ const Navigation: React.FC = () => {
     };
 
     window.addEventListener('resize', handleResize);
-=======
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 
@@ -63,7 +62,6 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
-<<<<<<< HEAD
       title: 'Micro SAAS Solutions',
       icon: Zap,
       color: 'text-cyan-400',
@@ -87,6 +85,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       hoverColor: 'hover:bg-purple-500/20',
       services: [
+<<<<<<< HEAD
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -139,26 +138,6 @@ const Navigation: React.FC = () => {
         { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
         { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
 =======
-        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
-        { name: 'Database Management', path: '/database-management', description: 'Database optimization' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking' },
-        { name: 'Mobile App Development', path: '/mobile-app-development', description: 'Native & cross-platform' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support-maintenance', description: '24/7 technical support' },
-        { name: 'System Integration', path: '/system-integration', description: 'API & system integration' },
-        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale solutions' },
-        { name: 'Identity & Access Management', path: '/identity-access-management', description: 'Security & access control' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
-        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
-        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
-        { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
-        { name: 'Security', path: '/security', description: 'Security solutions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
-=======
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support', icon: '💻', popular: true },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup', icon: '☁️', popular: true },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions', icon: '🔒', popular: true },
@@ -170,6 +149,14 @@ const Navigation: React.FC = () => {
         { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management', icon: '🛠️', popular: false },
         { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development', icon: '🎓', popular: false }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
+=======
+        { name: 'IT Services', path: '/it-services' },
+        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Network Services', path: '/networking' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
       ]
     },
     {
@@ -179,7 +166,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
@@ -230,6 +216,7 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 
   const mainNavItems = [
     { name: 'Home', path: '/', icon: '🏠' },
@@ -240,13 +227,13 @@ const Navigation: React.FC = () => {
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
 =======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
-=======
     { name: 'Case Studies', path: '/case-studies', icon: '📊' },
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
   ];
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -335,49 +322,6 @@ const Navigation: React.FC = () => {
                       View All Services
                     </Link>
                   </div>
-=======
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    if (isOpen) {
-      setServicesOpen(false);
-      setAiServicesOpen(false);
-    }
-  };
-
-  const closeAllMenus = () => {
-    setIsOpen(false);
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-  };
-
-  const toggleServices = () => {
-    setServicesOpen(!servicesOpen);
-    setAiServicesOpen(false);
-  };
-
-  const toggleAiServices = () => {
-    setAiServicesOpen(!aiServicesOpen);
-    setServicesOpen(false);
-  };
-
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
-            </div>
-            <span className={`text-xl font-bold transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
             <Link 
               to="/" 
               className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
@@ -455,31 +399,21 @@ const Navigation: React.FC = () => {
                       <div className="text-sm text-gray-500">Security & Compliance</div>
                     </div>
                   </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
                 </div>
               )}
             </div>
 
-<<<<<<< HEAD
             <Link 
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
-=======
-            <Link 
-              to="/about" 
-              className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
-<<<<<<< HEAD
 
             <Link
               href="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-=======
-            
             <Link 
               to="/contact" 
               className={`font-medium transition-colors ${isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-cyan-400'}`}
@@ -496,7 +430,6 @@ const Navigation: React.FC = () => {
             >
               Blog
             </Link>
-<<<<<<< HEAD
 
             <Link
               href="/contact"
@@ -518,6 +451,7 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
+<<<<<<< HEAD
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
@@ -592,9 +526,6 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -664,7 +595,6 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -674,8 +604,6 @@ const Navigation: React.FC = () => {
                 (302) 464-0950
               </a>
 <<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
@@ -786,9 +714,6 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
 export default Navigation;
 =======
-export default Navigation;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
-=======
 });
 
 Navigation.displayName = 'Navigation';
@@ -797,3 +722,6 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd65
+=======
+export default Navigation;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
