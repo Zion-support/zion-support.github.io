@@ -359,12 +359,12 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <a href="/services"
+                    <Link to="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
                       onClick={closeAllMenus}
                     >
                       View All Services →
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
@@ -396,12 +396,12 @@ const Navigation: React.FC = () => {
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
-                <a href="/contact"
+                <Link to="/contact"
                   className="block cyber-button px-4 py-2 text-center"
                   onClick={closeAllMenus}
                 >
                   Get Started
-                </a>
+                </Link>
               </div>
             </div>
           </div>
