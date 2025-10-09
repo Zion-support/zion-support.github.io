@@ -59,34 +59,33 @@ const AboutPage: React.FC = () => {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='text-center mb-12'>
-            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-              About Zion Tech Group
-            </h1>
-            <p className='text-xl text-gray-600'>
-              Leading the future of AI and IT solutions
+      <div className='max-w-7xl mx-auto'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+            About Zion Tech Group
+          </h1>
+          <p className='text-xl text-gray-600'>
+            Leading the future of AI and IT solutions
+          </p>
+        </div>
+        <div className='prose prose-lg max-w-none'>
+          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
+            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
+              Our Mission
+            </h2>
+            <p className='text-gray-600 mb-4'>
+              At Zion Tech Group, we are dedicated to transforming
+              businesses through cutting-edge AI and IT solutions. Our
+              mission is to empower organizations with the technology they
+              need to thrive in the digital age.
+            </p>
+            <p className='text-gray-600'>
+              We combine deep technical expertise with innovative thinking
+              to deliver solutions that drive real business value.
             </p>
           </div>
-          <div className='prose prose-lg max-w-none'>
-            <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                Our Mission
-              </h2>
-              <p className='text-gray-600 mb-4'>
-                At Zion Tech Group, we are dedicated to transforming
-                businesses through cutting-edge AI and IT solutions. Our
-                mission is to empower organizations with the technology they
-                need to thrive in the digital age.
-              </p>
-              <p className='text-gray-600'>
-                We combine deep technical expertise with innovative thinking
-                to deliver solutions that drive real business value.
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
+        </div>
 
         {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -236,5 +235,8 @@ const AboutPage: React.FC = () => {
 
         <Footer />
       </div>
+    </div>
   );
 };
+
+export default AboutPage;
