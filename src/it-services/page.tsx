@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket, Lock } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Globe, Users, Server, ArrowRight, CheckCircle, Star, Award, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -254,20 +254,21 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { name: 'All', count: itServices.length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-    { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
-    { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
-    { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
-    { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
-    { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
-  ];
+  // Categories data for potential future use
+  // const categories = [
+  //   { name: 'All', count: itServices.length },
+  //   { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
+  //   { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
+  //   { name: 'Data', count: itServices.filter(s => s.category === 'Data').length },
+  //   { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
+  //   { name: 'Support', count: itServices.filter(s => s.category === 'Support').length },
+  //   { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
+  //   { name: 'Management', count: itServices.filter(s => s.category === 'Management').length },
+  //   { name: 'Cloud Services', count: itServices.filter(s => s.category === 'Cloud Services').length },
+  //   { name: 'Communications', count: itServices.filter(s => s.category === 'Communications').length },
+  //   { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
+  //   { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
+  // ];
 
   const additionalServices = [
     {
@@ -308,28 +309,29 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: Star,
-      title: 'Proven Expertise',
-      description: '10+ years of experience with 100+ successful projects'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring'
-    },
-    {
-      icon: ShieldCheck,
-      title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all solutions'
-    },
-    {
-      icon: Award,
-      title: 'Certified Professionals',
-      description: 'Microsoft, AWS, and Google certified engineers'
-    }
-  ];
+  // Benefits data for potential future use
+  // const benefits = [
+  //   {
+  //     icon: Star,
+  //     title: 'Proven Expertise',
+  //     description: '10+ years of experience with 100+ successful projects'
+  //   },
+  //   {
+  //     icon: Clock,
+  //     title: '24/7 Support',
+  //     description: 'Round-the-clock technical support and monitoring'
+  //   },
+  //   {
+  //     icon: ShieldCheck,
+  //     title: 'Enterprise Security',
+  //     description: 'Bank-level security and compliance for all solutions'
+  //   },
+  //   {
+  //     icon: Award,
+  //     title: 'Certified Professionals',
+  //     description: 'Microsoft, AWS, and Google certified engineers'
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -371,7 +373,7 @@ const ITServicesPage: React.FC = () => {
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
                   {React.isValidElement(service.icon) ? service.icon : 
-                   typeof service.icon === 'function' ? React.createElement(service.icon as any, { className: "w-8 h-8" }) : 
+                   typeof service.icon === 'function' ? React.createElement(service.icon as React.ComponentType<{ className?: string }>, { className: "w-8 h-8" }) : 
                    <div className="w-8 h-8 bg-cyan-400 rounded" />}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>

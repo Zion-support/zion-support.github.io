@@ -13,10 +13,10 @@ if (typeof window !== 'undefined') {
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
+      .then(() => {
         // Service Worker registered successfully
       })
-      .catch((registrationError) => {
+      .catch(() => {
         // Service Worker registration failed - handled silently
       });
   });

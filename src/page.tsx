@@ -1,13 +1,12 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, 
-  MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
-  Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
-  Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
-  Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
+  Phone, Mail, MapPin, Zap, Shield, Brain, Cpu, BarChart, 
+  MessageSquare, Eye, CheckCircle, 
+  Database, Cloud, Code, Smartphone, Settings, 
+  ShoppingCart, CreditCard, 
+  Stethoscope, Briefcase, Wrench, 
+  Atom, Zap as Lightning, 
   Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
   ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
   Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
@@ -27,18 +26,18 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+// const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+// const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+// const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+// const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+// const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
+      // import('./components/ContentPromotionBanner');
+      // import('./components/ContentCarousel');
     }, 100);
   }
 };
@@ -54,11 +53,9 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     
@@ -71,7 +68,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
