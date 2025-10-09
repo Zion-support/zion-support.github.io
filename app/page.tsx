@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -8,6 +8,11 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceEnhancer from './components/PerformanceEnhancer';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -36,6 +41,14 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+
+// Enhanced loading component
+const EnhancedLoadingSpinner: React.FC = memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
+  </div>
+));
+EnhancedLoadingSpinner.displayName = 'EnhancedLoadingSpinner';
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -472,12 +485,13 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
-      <SEOOptimizer
+    <ErrorBoundary>
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com"
+        ogImage="/images/og-image.jpg"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
@@ -519,11 +533,25 @@ const HomePage: React.FC = () => {
         enableCodeSplitting={true}
         enablePrefetching={true}
       />
+      <PerformanceEnhancer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePrefetching={true}
+        enableResourceHints={true}
+      />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+      />
+      <EnhancedAccessibility
+        enableKeyboardNavigation={true}
+        enableScreenReader={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+        enableSkipLinks={true}
+        enableAriaLabels={true}
       />
       <SecurityEnhancer
         enableCSP={true}
@@ -546,7 +574,7 @@ const HomePage: React.FC = () => {
         </a>
 
         {/* Content Promotion Banner */}
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading content..." />}>
           <ContentPromotionBanner />
         </Suspense>
 
@@ -877,7 +905,7 @@ const HomePage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 
