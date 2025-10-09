@@ -69,15 +69,389 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
-      icon: '📱',
-      price: '$79/month',
-      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Hashtag optimization', 'Competitor analysis'],
-      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
-      link: '/ai-social-media-manager',
+      title: 'AI Real Estate Analyzer',
+      description: 'Advanced property analysis with AI-powered market insights, investment predictions, and ROI calculations',
+      icon: '🏠',
+      price: '$149/month',
+      features: ['Market trend analysis', 'Property valuation', 'Investment scoring', 'Rental income prediction', 'Neighborhood insights', 'Risk assessment'],
+      benefits: ['25% better investment decisions', '40% time savings', '90% accuracy in valuations', 'Higher ROI'],
+      link: '/ai-real-estate-analyzer',
       popular: true,
-      category: 'Marketing'
+      category: 'Real Estate'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning',
+      icon: '🚚',
+      price: '$199/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Supplier management', 'Route optimization', 'Risk monitoring', 'Cost analysis'],
+      benefits: ['30% inventory reduction', '25% cost savings', '99% on-time delivery', 'Reduced waste'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Automated legal document review with contract analysis, compliance checking, and risk identification',
+      icon: '⚖️',
+      price: '$299/month',
+      features: ['Contract analysis', 'Compliance checking', 'Risk identification', 'Document summarization', 'Legal research', 'Due diligence'],
+      benefits: ['80% faster reviews', '95% accuracy', 'Cost savings', 'Reduced legal risks'],
+      link: '/ai-legal-analyzer',
+      popular: false,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical AI for patient monitoring, diagnosis support, and treatment recommendations',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Patient monitoring', 'Diagnosis support', 'Treatment recommendations', 'Medical imaging analysis', 'Drug interaction checking', 'Health trend analysis'],
+      benefits: ['Improved patient outcomes', 'Faster diagnosis', 'Reduced errors', 'Better care quality'],
+      link: '/ai-healthcare-assistant',
+      popular: true,
+      category: 'Healthcare'
+    },
+    {
+      title: 'AI Trading Bot Pro',
+      description: 'Automated trading with AI-powered market analysis, strategy optimization, and risk management',
+      icon: '📈',
+      price: '$249/month',
+      features: ['Market analysis', 'Strategy optimization', 'Risk management', 'Portfolio tracking', 'Real-time alerts', 'Backtesting'],
+      benefits: ['Higher returns', 'Reduced risk', '24/7 trading', 'Emotion-free decisions'],
+      link: '/ai-trading-bot',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Restaurant Manager',
+      description: 'Complete restaurant management with AI-powered inventory, staff scheduling, and customer analytics',
+      icon: '🍽️',
+      price: '$179/month',
+      features: ['Inventory management', 'Staff scheduling', 'Customer analytics', 'Menu optimization', 'Waste reduction', 'Revenue forecasting'],
+      benefits: ['20% cost reduction', '30% efficiency increase', 'Better customer satisfaction', 'Higher profits'],
+      link: '/ai-restaurant-manager',
+      popular: false,
+      category: 'Hospitality'
+    },
+    {
+      title: 'AI Fleet Management',
+      description: 'Intelligent fleet tracking with route optimization, maintenance scheduling, and fuel efficiency',
+      icon: '🚛',
+      price: '$159/month',
+      features: ['Route optimization', 'Maintenance scheduling', 'Fuel efficiency tracking', 'Driver behavior analysis', 'Real-time monitoring', 'Cost optimization'],
+      benefits: ['15% fuel savings', '20% maintenance reduction', 'Better safety', 'Improved efficiency'],
+      link: '/ai-fleet-management',
+      popular: false,
+      category: 'Logistics'
+    },
+    {
+      title: 'AI Energy Optimizer',
+      description: 'Smart energy management with consumption analysis, cost optimization, and sustainability tracking',
+      icon: '⚡',
+      price: '$129/month',
+      features: ['Energy consumption analysis', 'Cost optimization', 'Sustainability tracking', 'Predictive maintenance', 'Smart scheduling', 'Carbon footprint monitoring'],
+      benefits: ['25% energy savings', 'Reduced carbon footprint', 'Lower costs', 'Better sustainability'],
+      link: '/ai-energy-optimizer',
+      popular: false,
+      category: 'Energy'
+    },
+    {
+      title: 'AI Event Planner',
+      description: 'Intelligent event management with venue optimization, attendee insights, and logistics planning',
+      icon: '🎉',
+      price: '$199/month',
+      features: ['Venue optimization', 'Attendee insights', 'Logistics planning', 'Budget management', 'Vendor coordination', 'Success metrics'],
+      benefits: ['30% cost reduction', 'Better attendee experience', 'Streamlined planning', 'Higher success rates'],
+      link: '/ai-event-planner',
+      popular: false,
+      category: 'Events'
+    },
+    {
+      title: 'AI Learning Management',
+      description: 'Personalized learning platform with AI-powered content curation, progress tracking, and skill assessment',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning paths', 'Content curation', 'Progress tracking', 'Skill assessment', 'Adaptive testing', 'Performance analytics'],
+      benefits: ['40% faster learning', 'Better retention', 'Personalized experience', 'Improved outcomes'],
+      link: '/ai-learning-management',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Insurance Analyzer',
+      description: 'Intelligent insurance assessment with risk evaluation, claim processing, and fraud detection',
+      icon: '🛡️',
+      price: '$219/month',
+      features: ['Risk evaluation', 'Claim processing', 'Fraud detection', 'Policy optimization', 'Customer profiling', 'Automated underwriting'],
+      benefits: ['50% faster processing', '90% fraud detection', 'Better risk assessment', 'Reduced costs'],
+      link: '/ai-insurance-analyzer',
+      popular: false,
+      category: 'Insurance'
+    },
+    {
+      title: 'AI Manufacturing Optimizer',
+      description: 'Smart manufacturing with production optimization, quality control, and predictive maintenance',
+      icon: '🏭',
+      price: '$299/month',
+      features: ['Production optimization', 'Quality control', 'Predictive maintenance', 'Supply chain integration', 'Performance monitoring', 'Waste reduction'],
+      benefits: ['25% productivity increase', '30% quality improvement', 'Reduced downtime', 'Lower costs'],
+      link: '/ai-manufacturing-optimizer',
+      popular: true,
+      category: 'Manufacturing'
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with personalized recommendations, cost optimization, and itinerary management',
+      icon: '✈️',
+      price: '$99/month',
+      features: ['Personalized recommendations', 'Cost optimization', 'Itinerary management', 'Real-time updates', 'Weather integration', 'Local insights'],
+      benefits: ['30% cost savings', 'Better experiences', 'Time savings', 'Personalized trips'],
+      link: '/ai-travel-planner',
+      popular: false,
+      category: 'Travel'
+    },
+    {
+      title: 'AI Pet Care Assistant',
+      description: 'Comprehensive pet care with health monitoring, nutrition planning, and behavior analysis',
+      icon: '🐕',
+      price: '$79/month',
+      features: ['Health monitoring', 'Nutrition planning', 'Behavior analysis', 'Vet reminders', 'Exercise tracking', 'Medical records'],
+      benefits: ['Better pet health', 'Preventive care', 'Cost savings', 'Peace of mind'],
+      link: '/ai-pet-care',
+      popular: false,
+      category: 'Pet Care'
+    },
+    {
+      title: 'AI Home Security',
+      description: 'Smart home security with AI-powered monitoring, threat detection, and automated responses',
+      icon: '🏠',
+      price: '$129/month',
+      features: ['AI monitoring', 'Threat detection', 'Automated responses', 'Mobile alerts', 'Video analysis', 'Integration hub'],
+      benefits: ['Enhanced security', 'Peace of mind', 'Automated protection', 'Real-time alerts'],
+      link: '/ai-home-security',
+      popular: true,
+      category: 'Security'
+    },
+    {
+      title: 'AI Personal Stylist',
+      description: 'AI-powered personal styling with outfit recommendations, trend analysis, and wardrobe optimization',
+      icon: '👗',
+      price: '$89/month',
+      features: ['Outfit recommendations', 'Trend analysis', 'Wardrobe optimization', 'Color matching', 'Style preferences', 'Shopping suggestions'],
+      benefits: ['Better style', 'Confidence boost', 'Time savings', 'Cost optimization'],
+      link: '/ai-personal-stylist',
+      popular: false,
+      category: 'Fashion'
+    },
+    {
+      title: 'AI Language Tutor',
+      description: 'Personalized language learning with AI-powered conversation practice, grammar correction, and progress tracking',
+      icon: '🗣️',
+      price: '$119/month',
+      features: ['Conversation practice', 'Grammar correction', 'Progress tracking', 'Pronunciation analysis', 'Cultural insights', 'Adaptive learning'],
+      benefits: ['Faster fluency', 'Better pronunciation', 'Personalized learning', 'Cultural understanding'],
+      link: '/ai-language-tutor',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Investment Advisor',
+      description: 'Personalized investment advice with portfolio optimization, risk assessment, and market analysis',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Market analysis', 'Goal tracking', 'Tax optimization', 'Rebalancing'],
+      benefits: ['Better returns', 'Risk management', 'Tax savings', 'Goal achievement'],
+      link: '/ai-investment-advisor',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Wedding Planner',
+      description: 'Complete wedding planning with vendor matching, budget optimization, and timeline management',
+      icon: '💒',
+      price: '$249/month',
+      features: ['Vendor matching', 'Budget optimization', 'Timeline management', 'Guest management', 'Checklist automation', 'Vendor coordination'],
+      benefits: ['Stress-free planning', 'Cost savings', 'Perfect execution', 'Time savings'],
+      link: '/ai-wedding-planner',
+      popular: false,
+      category: 'Events'
+    },
+    {
+      title: 'AI Garden Assistant',
+      description: 'Smart gardening with plant care recommendations, pest detection, and growth optimization',
+      icon: '🌱',
+      price: '$69/month',
+      features: ['Plant care recommendations', 'Pest detection', 'Growth optimization', 'Weather integration', 'Harvest planning', 'Garden design'],
+      benefits: ['Healthier plants', 'Better yields', 'Pest prevention', 'Gardening success'],
+      link: '/ai-garden-assistant',
+      popular: false,
+      category: 'Gardening'
+    },
+    {
+      title: 'AI Sleep Optimizer',
+      description: 'Personalized sleep improvement with sleep analysis, environment optimization, and habit tracking',
+      icon: '😴',
+      price: '$89/month',
+      features: ['Sleep analysis', 'Environment optimization', 'Habit tracking', 'Sleep coaching', 'Progress monitoring', 'Health integration'],
+      benefits: ['Better sleep quality', 'Increased energy', 'Improved health', 'Better mood'],
+      link: '/ai-sleep-optimizer',
+      popular: true,
+      category: 'Health'
+    },
+    {
+      title: 'AI Tax Assistant',
+      description: 'Automated tax preparation with deduction optimization, compliance checking, and filing assistance',
+      icon: '📊',
+      price: '$149/month',
+      features: ['Tax preparation', 'Deduction optimization', 'Compliance checking', 'Filing assistance', 'Audit protection', 'Year-round planning'],
+      benefits: ['Maximum deductions', 'Compliance assurance', 'Time savings', 'Audit protection'],
+      link: '/ai-tax-assistant',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Home Automation',
+      description: 'Intelligent home control with energy optimization, security integration, and lifestyle automation',
+      icon: '🏡',
+      price: '$179/month',
+      features: ['Energy optimization', 'Security integration', 'Lifestyle automation', 'Voice control', 'Scheduling', 'Device management'],
+      benefits: ['Energy savings', 'Convenience', 'Security', 'Comfort'],
+      link: '/ai-home-automation',
+      popular: true,
+      category: 'Smart Home'
+    },
+    {
+      title: 'AI Personal Trainer',
+      description: 'AI-powered fitness coaching with personalized workouts, nutrition guidance, and progress tracking',
+      icon: '💪',
+      price: '$99/month',
+      features: ['Personalized workouts', 'Nutrition guidance', 'Progress tracking', 'Form analysis', 'Goal setting', 'Motivation coaching'],
+      benefits: ['Better results', 'Consistent progress', 'Personalized approach', 'Motivation'],
+      link: '/ai-personal-trainer',
+      popular: true,
+      category: 'Fitness'
+    },
+    {
+      title: 'AI Mental Health Coach',
+      description: 'AI-powered mental wellness with mood tracking, stress management, and personalized therapy',
+      icon: '🧠',
+      price: '$129/month',
+      features: ['Mood tracking', 'Stress management', 'Personalized therapy', 'Meditation guidance', 'Progress monitoring', 'Crisis support'],
+      benefits: ['Better mental health', 'Stress reduction', 'Emotional wellness', 'Support system'],
+      link: '/ai-mental-health-coach',
+      popular: true,
+      category: 'Mental Health'
+    },
+    {
+      title: 'AI Dating Assistant',
+      description: 'AI-powered dating optimization with profile enhancement, match analysis, and conversation coaching',
+      icon: '💕',
+      price: '$79/month',
+      features: ['Profile enhancement', 'Match analysis', 'Conversation coaching', 'Date planning', 'Compatibility scoring', 'Success tracking'],
+      benefits: ['Better matches', 'Improved conversations', 'Higher success rates', 'Confidence boost'],
+      link: '/ai-dating-assistant',
+      popular: false,
+      category: 'Dating'
+    },
+    {
+      title: 'AI Productivity Suite',
+      description: 'Comprehensive productivity tools with task automation, time tracking, and focus optimization',
+      icon: '⚡',
+      price: '$119/month',
+      features: ['Task automation', 'Time tracking', 'Focus optimization', 'Habit building', 'Goal setting', 'Performance analytics'],
+      benefits: ['Higher productivity', 'Better focus', 'Goal achievement', 'Time management'],
+      link: '/ai-productivity-suite',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Weather Predictor',
+      description: 'Advanced weather forecasting with hyperlocal predictions, agricultural insights, and climate analysis',
+      icon: '🌤️',
+      price: '$89/month',
+      features: ['Hyperlocal predictions', 'Agricultural insights', 'Climate analysis', 'Severe weather alerts', 'Historical data', 'API integration'],
+      benefits: ['Accurate forecasts', 'Better planning', 'Risk mitigation', 'Data insights'],
+      link: '/ai-weather-predictor',
+      popular: false,
+      category: 'Weather'
+    },
+    {
+      title: 'AI Cryptocurrency Tracker',
+      description: 'Advanced crypto portfolio management with market analysis, trading signals, and risk assessment',
+      icon: '₿',
+      price: '$159/month',
+      features: ['Portfolio tracking', 'Market analysis', 'Trading signals', 'Risk assessment', 'DeFi integration', 'Tax reporting'],
+      benefits: ['Better returns', 'Risk management', 'Market insights', 'Automated tracking'],
+      link: '/ai-crypto-tracker',
+      popular: true,
+      category: 'Cryptocurrency'
+    },
+    {
+      title: 'AI Job Match Pro',
+      description: 'Intelligent job matching with resume optimization, interview preparation, and career guidance',
+      icon: '💼',
+      price: '$129/month',
+      features: ['Resume optimization', 'Job matching', 'Interview preparation', 'Career guidance', 'Skill assessment', 'Salary negotiation'],
+      benefits: ['Better job matches', 'Higher success rates', 'Career advancement', 'Salary optimization'],
+      link: '/ai-job-match',
+      popular: true,
+      category: 'Career'
+    },
+    {
+      title: 'AI Personal Chef',
+      description: 'AI-powered meal planning with nutrition optimization, recipe generation, and grocery management',
+      icon: '👨‍🍳',
+      price: '$99/month',
+      features: ['Meal planning', 'Nutrition optimization', 'Recipe generation', 'Grocery management', 'Diet tracking', 'Cooking guidance'],
+      benefits: ['Better nutrition', 'Time savings', 'Cost optimization', 'Healthier eating'],
+      link: '/ai-personal-chef',
+      popular: false,
+      category: 'Food & Nutrition'
+    },
+    {
+      title: 'AI Study Buddy',
+      description: 'Personalized study assistance with content summarization, quiz generation, and learning optimization',
+      icon: '📚',
+      price: '$79/month',
+      features: ['Content summarization', 'Quiz generation', 'Learning optimization', 'Progress tracking', 'Note organization', 'Exam preparation'],
+      benefits: ['Better grades', 'Faster learning', 'Improved retention', 'Study efficiency'],
+      link: '/ai-study-buddy',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Personal Shopper',
+      description: 'AI-powered shopping assistance with product recommendations, price comparison, and deal alerts',
+      icon: '🛍️',
+      price: '$69/month',
+      features: ['Product recommendations', 'Price comparison', 'Deal alerts', 'Wishlist management', 'Budget tracking', 'Quality analysis'],
+      benefits: ['Better purchases', 'Cost savings', 'Time efficiency', 'Quality assurance'],
+      link: '/ai-personal-shopper',
+      popular: false,
+      category: 'Shopping'
+    },
+    {
+      title: 'AI Time Tracker Pro',
+      description: 'Advanced time management with activity analysis, productivity insights, and automated reporting',
+      icon: '⏰',
+      price: '$89/month',
+      features: ['Activity analysis', 'Productivity insights', 'Automated reporting', 'Goal tracking', 'Distraction blocking', 'Team analytics'],
+      benefits: ['Better time management', 'Increased productivity', 'Insightful analytics', 'Goal achievement'],
+      link: '/ai-time-tracker',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Personal Assistant',
+      description: 'Comprehensive AI assistant with task management, scheduling, communication, and decision support',
+      icon: '🤖',
+      price: '$149/month',
+      features: ['Task management', 'Scheduling', 'Communication', 'Decision support', 'Information retrieval', 'Automation'],
+      benefits: ['Increased efficiency', 'Better organization', 'Time savings', 'Improved decision making'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity'
     },
     {
       title: 'AI Analytics Dashboard',
@@ -100,6 +474,17 @@ const HomePage: React.FC = () => {
       link: '/ai-email-marketing',
       popular: true,
       category: 'Marketing'
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling',
+      icon: '📈',
+      price: '$149/month',
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reports'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', 'Faster decision making'],
+      link: '/ai-analytics',
+      popular: true,
+      category: 'Analytics'
     },
     {
       title: 'AI Customer Support Bot',
@@ -343,6 +728,141 @@ const HomePage: React.FC = () => {
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization'],
       color: 'text-purple-400',
       category: 'AI Development'
+    },
+    {
+      title: 'Quantum AI Computing',
+      description: 'Revolutionary quantum-enhanced AI for complex optimization problems and advanced simulations',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum ML Algorithms', 'Optimization Problems', 'Cryptography', 'Financial Modeling', 'Drug Discovery', 'Climate Simulation'],
+      color: 'text-cyan-400',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'Autonomous Systems AI',
+      description: 'Self-driving vehicles, drones, and robots with advanced perception and decision-making capabilities',
+      icon: Car,
+      price: '$3,500/month',
+      features: ['Computer Vision', 'Path Planning', 'Obstacle Avoidance', 'Real-time Processing', 'Sensor Fusion', 'Safety Systems'],
+      color: 'text-blue-500',
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'AI Drug Discovery',
+      description: 'Accelerated pharmaceutical research with AI-powered molecular design and drug development',
+      icon: Stethoscope,
+      price: '$4,200/month',
+      features: ['Molecular Design', 'Drug Interaction Analysis', 'Clinical Trial Optimization', 'Side Effect Prediction', 'Biomarker Discovery', 'Personalized Medicine'],
+      color: 'text-green-500',
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'AI Climate Solutions',
+      description: 'Environmental AI for climate modeling, carbon tracking, and sustainable technology optimization',
+      icon: Globe,
+      price: '$2,800/month',
+      features: ['Climate Modeling', 'Carbon Footprint Analysis', 'Renewable Energy Optimization', 'Weather Prediction', 'Environmental Monitoring', 'Sustainability Planning'],
+      color: 'text-emerald-400',
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI Space Technology',
+      description: 'Space exploration AI for satellite management, space debris tracking, and mission planning',
+      icon: Plane,
+      price: '$4,500/month',
+      features: ['Satellite Operations', 'Space Debris Tracking', 'Mission Planning', 'Orbital Mechanics', 'Communication Systems', 'Space Weather Prediction'],
+      color: 'text-indigo-500',
+      category: 'Space AI'
+    },
+    {
+      title: 'AI Brain-Computer Interface',
+      description: 'Neural interface technology for medical applications, assistive devices, and cognitive enhancement',
+      icon: Brain,
+      price: '$6,000/month',
+      features: ['Neural Signal Processing', 'Motor Control', 'Cognitive Enhancement', 'Medical Diagnostics', 'Assistive Technology', 'Research Tools'],
+      color: 'text-pink-500',
+      category: 'Neuro AI'
+    },
+    {
+      title: 'AI Metaverse Solutions',
+      description: 'Virtual and augmented reality AI for immersive experiences, virtual worlds, and digital twins',
+      icon: Cube,
+      price: '$2,200/month',
+      features: ['Virtual World Creation', 'Avatar AI', 'Real-time Rendering', 'Spatial Computing', 'Digital Twins', 'Immersive Experiences'],
+      color: 'text-purple-500',
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'Distributed AI processing for IoT devices, mobile applications, and real-time decision making',
+      icon: Cpu,
+      price: '$1,800/month',
+      features: ['Edge Model Deployment', 'Real-time Processing', 'IoT Integration', 'Bandwidth Optimization', 'Privacy Protection', 'Offline Capability'],
+      color: 'text-orange-500',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Decentralized AI for smart contracts, DeFi protocols, and blockchain-based applications',
+      icon: Lock,
+      price: '$2,500/month',
+      features: ['Smart Contract AI', 'DeFi Optimization', 'NFT Intelligence', 'Consensus Algorithms', 'Privacy Coins', 'Cross-chain Solutions'],
+      color: 'text-yellow-500',
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Robotics Platform',
+      description: 'Advanced robotics AI for industrial automation, service robots, and human-robot collaboration',
+      icon: Settings,
+      price: '$3,200/month',
+      features: ['Motion Planning', 'Object Recognition', 'Human-Robot Interaction', 'Task Learning', 'Safety Systems', 'Multi-robot Coordination'],
+      color: 'text-red-500',
+      category: 'Robotics AI'
+    },
+    {
+      title: 'AI Cybersecurity Suite',
+      description: 'Advanced threat detection and response with AI-powered security monitoring and incident management',
+      icon: Shield,
+      price: '$2,100/month',
+      features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Assessment', 'Security Orchestration', 'Compliance Monitoring'],
+      color: 'text-red-400',
+      category: 'Security AI'
+    },
+    {
+      title: 'AI Financial Trading',
+      description: 'High-frequency trading AI with market analysis, risk management, and algorithmic trading strategies',
+      icon: DollarSign,
+      price: '$4,000/month',
+      features: ['Algorithmic Trading', 'Market Analysis', 'Risk Management', 'Portfolio Optimization', 'High-frequency Trading', 'Regulatory Compliance'],
+      color: 'text-green-400',
+      category: 'FinTech AI'
+    },
+    {
+      title: 'AI Content Moderation',
+      description: 'Automated content filtering and moderation for social media, forums, and user-generated content',
+      icon: Eye,
+      price: '$1,600/month',
+      features: ['Content Classification', 'Hate Speech Detection', 'Image Moderation', 'Video Analysis', 'Real-time Filtering', 'Policy Enforcement'],
+      color: 'text-blue-400',
+      category: 'Content AI'
+    },
+    {
+      title: 'AI Supply Chain Intelligence',
+      description: 'End-to-end supply chain optimization with demand forecasting, logistics planning, and risk management',
+      icon: Truck,
+      price: '$2,300/month',
+      features: ['Demand Forecasting', 'Logistics Optimization', 'Risk Assessment', 'Supplier Management', 'Quality Control', 'Sustainability Tracking'],
+      color: 'text-teal-400',
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI Energy Management',
+      description: 'Smart energy optimization, renewable energy integration, and sustainability solutions',
+      icon: Zap,
+      price: '$1,500/month',
+      features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
+      color: 'text-yellow-500',
+      category: 'Energy AI'
     },
     {
       title: 'Natural Language Processing',
