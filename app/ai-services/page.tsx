@@ -301,7 +301,8 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Create personalized voice assistants', 'Improve accessibility', 'Enhance user experience'],
       marketPrice: '$4,000-12,000/month',
       category: 'Voice AI',
-      technologies: ['Tacotron', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning', 'Custom Neural Networks']
+      technologies: ['Tacotron', 'WaveNet', 'MelGAN', 'Real-time Voice Cloning', 'Custom Neural Networks'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
       title: 'AI-Powered 3D Model Generation',
@@ -622,6 +623,247 @@ const AIServicesPage: React.FC = () => {
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    // ADDITIONAL INNOVATIVE AI SERVICES
+    {
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research.',
+      icon: '💊',
+      price: 'Starting at $15,000/month',
+      features: ['Molecular design', 'Drug-target interaction', 'Toxicity prediction', 'Clinical trial optimization', 'Patent analysis'],
+      benefits: ['Reduce drug discovery time by 70%', 'Lower R&D costs by 50%', 'Improve success rates', 'Accelerate time to market'],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Pharma AI',
+      technologies: ['Deep Learning', 'Molecular Dynamics', 'Quantum Computing', 'Bioinformatics', 'Custom Drug Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Space Exploration',
+      description: 'Advanced AI systems for space mission planning, satellite management, and space data analysis.',
+      icon: '🚀',
+      price: 'Starting at $12,000/month',
+      features: ['Mission planning', 'Satellite optimization', 'Space debris tracking', 'Planetary analysis', 'Astronaut health monitoring'],
+      benefits: ['Optimize space missions', 'Reduce mission costs', 'Improve safety', 'Enable autonomous operations'],
+      marketPrice: '$20,000-80,000/month',
+      category: 'Space AI',
+      technologies: ['Space Data Analysis', 'Orbital Mechanics', 'Satellite AI', 'Space Weather Prediction', 'Autonomous Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Climate Change Solutions',
+      description: 'Intelligent climate modeling and environmental impact prediction with actionable recommendations.',
+      icon: '🌍',
+      price: 'Starting at $8,500/month',
+      features: ['Climate modeling', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental monitoring', 'Sustainability planning'],
+      benefits: ['Accelerate climate action', 'Optimize resource usage', 'Reduce environmental impact', 'Enable sustainable growth'],
+      marketPrice: '$15,000-60,000/month',
+      category: 'Climate AI',
+      technologies: ['Climate Models', 'Satellite Data', 'IoT Sensors', 'Machine Learning', 'Environmental APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Quantum Computing',
+      description: 'Advanced quantum computing solutions with AI optimization for complex problem solving.',
+      icon: '⚛️',
+      price: 'Starting at $20,000/month',
+      features: ['Quantum algorithm optimization', 'Quantum machine learning', 'Quantum simulation', 'Error correction', 'Quantum cryptography'],
+      benefits: ['Solve complex problems', 'Exponential speedup', 'Breakthrough discoveries', 'Future-proof technology'],
+      marketPrice: '$50,000-200,000/month',
+      category: 'Quantum AI',
+      technologies: ['Quantum Computing', 'Quantum ML', 'Quantum Algorithms', 'Quantum Simulation', 'Quantum Hardware'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicles',
+      description: 'Complete autonomous vehicle systems with AI-driven navigation, safety, and fleet management.',
+      icon: '🚗',
+      price: 'Starting at $25,000/month',
+      features: ['Autonomous navigation', 'Object detection', 'Path planning', 'Fleet management', 'Safety monitoring'],
+      benefits: ['Improve road safety', 'Reduce traffic congestion', 'Lower transportation costs', 'Enable mobility for all'],
+      marketPrice: '$40,000-150,000/month',
+      category: 'Autonomous AI',
+      technologies: ['Computer Vision', 'LIDAR', 'Radar', 'GPS', 'Machine Learning', 'Sensor Fusion'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Brain-Computer Interface',
+      description: 'Revolutionary brain-computer interface technology for medical and assistive applications.',
+      icon: '🧠',
+      price: 'Starting at $18,000/month',
+      features: ['Neural signal processing', 'Thought-to-text conversion', 'Motor control', 'Cognitive enhancement', 'Medical diagnosis'],
+      benefits: ['Restore mobility', 'Enhance communication', 'Improve quality of life', 'Enable new capabilities'],
+      marketPrice: '$30,000-120,000/month',
+      category: 'BCI AI',
+      technologies: ['Neural Networks', 'Signal Processing', 'Machine Learning', 'Medical Devices', 'Neuroscience'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Synthetic Biology',
+      description: 'Intelligent synthetic biology platform for designing and engineering biological systems.',
+      icon: '🧬',
+      price: 'Starting at $12,000/month',
+      features: ['DNA sequence design', 'Protein engineering', 'Metabolic pathway optimization', 'Biological circuit design', 'Synthetic organism creation'],
+      benefits: ['Accelerate bioengineering', 'Create new materials', 'Develop sustainable solutions', 'Enable personalized medicine'],
+      marketPrice: '$20,000-80,000/month',
+      category: 'Bio AI',
+      technologies: ['Bioinformatics', 'Machine Learning', 'Molecular Biology', 'Synthetic Biology', 'Genetic Engineering'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Augmented Reality',
+      description: 'Advanced AR solutions with intelligent object recognition and immersive experiences.',
+      icon: '🥽',
+      price: 'Starting at $6,500/month',
+      features: ['Object recognition', 'Spatial mapping', 'Gesture control', 'Real-time rendering', 'Multi-user collaboration'],
+      benefits: ['Enhance user experience', 'Improve productivity', 'Enable remote collaboration', 'Create immersive training'],
+      marketPrice: '$12,000-50,000/month',
+      category: 'AR AI',
+      technologies: ['Computer Vision', 'AR SDKs', '3D Rendering', 'Machine Learning', 'Mobile Development'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Virtual Reality',
+      description: 'Intelligent VR experiences with AI-driven content generation and user interaction.',
+      icon: '🥽',
+      price: 'Starting at $7,500/month',
+      features: ['AI content generation', 'Natural interaction', 'Emotional recognition', 'Adaptive environments', 'Social VR'],
+      benefits: ['Create immersive experiences', 'Improve user engagement', 'Enable virtual training', 'Foster social connections'],
+      marketPrice: '$15,000-60,000/month',
+      category: 'VR AI',
+      technologies: ['VR SDKs', 'Computer Vision', 'Natural Language Processing', '3D Graphics', 'Machine Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Metaverse Platform',
+      description: 'Complete metaverse solution with AI-driven avatars, environments, and social interactions.',
+      icon: '🌐',
+      price: 'Starting at $15,000/month',
+      features: ['AI avatars', 'Virtual world generation', 'Social AI', 'Economic systems', 'Cross-platform integration'],
+      benefits: ['Create virtual worlds', 'Enable digital economies', 'Foster social connections', 'Provide new experiences'],
+      marketPrice: '$25,000-100,000/month',
+      category: 'Metaverse AI',
+      technologies: ['Blockchain', 'VR/AR', 'AI Avatars', 'Virtual Worlds', 'Social AI', 'Digital Assets'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Digital Twin Technology',
+      description: 'Intelligent digital twins for real-time monitoring, simulation, and optimization of physical assets.',
+      icon: '🔄',
+      price: 'Starting at $9,500/month',
+      features: ['Real-time synchronization', 'Predictive maintenance', 'Performance optimization', 'What-if analysis', 'Remote monitoring'],
+      benefits: ['Improve asset performance', 'Reduce maintenance costs', 'Enable predictive insights', 'Optimize operations'],
+      marketPrice: '$18,000-75,000/month',
+      category: 'Digital Twin AI',
+      technologies: ['IoT Integration', 'Real-time Data', 'Simulation', 'Machine Learning', '3D Modeling'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Edge Intelligence',
+      description: 'Intelligent edge computing solutions with AI processing at the network edge.',
+      icon: '⚡',
+      price: 'Starting at $4,500/month',
+      features: ['Edge AI processing', 'Real-time inference', 'Bandwidth optimization', 'Privacy preservation', 'Autonomous operation'],
+      benefits: ['Reduce latency', 'Improve privacy', 'Enable offline operation', 'Optimize bandwidth'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'Edge AI',
+      technologies: ['Edge Computing', 'AI Chips', 'Optimized Models', 'Real-time Processing', 'IoT Integration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Swarm Intelligence',
+      description: 'Coordinated AI systems for managing multiple autonomous agents and swarm robotics.',
+      icon: '🐝',
+      price: 'Starting at $11,000/month',
+      features: ['Multi-agent coordination', 'Swarm optimization', 'Distributed decision making', 'Emergent behavior', 'Scalable systems'],
+      benefits: ['Enable complex coordination', 'Improve system resilience', 'Optimize resource usage', 'Handle large-scale operations'],
+      marketPrice: '$20,000-80,000/month',
+      category: 'Swarm AI',
+      technologies: ['Multi-agent Systems', 'Distributed AI', 'Swarm Algorithms', 'Robotics', 'Coordination Protocols'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Neuromorphic Computing',
+      description: 'Brain-inspired computing systems that mimic neural networks for ultra-efficient processing.',
+      icon: '🧠',
+      price: 'Starting at $16,000/month',
+      features: ['Neuromorphic chips', 'Spiking neural networks', 'Ultra-low power', 'Real-time learning', 'Pattern recognition'],
+      benefits: ['Extreme efficiency', 'Real-time learning', 'Low power consumption', 'Natural processing'],
+      marketPrice: '$30,000-120,000/month',
+      category: 'Neuromorphic AI',
+      technologies: ['Neuromorphic Hardware', 'Spiking Networks', 'Memristors', 'Brain-inspired Computing', 'Low-power AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Explainable AI',
+      description: 'Transparent AI systems that provide clear explanations for their decisions and recommendations.',
+      icon: '🔍',
+      price: 'Starting at $5,500/month',
+      features: ['Decision explanation', 'Model interpretability', 'Bias detection', 'Trust scoring', 'Human-AI collaboration'],
+      benefits: ['Build trust in AI', 'Ensure fairness', 'Enable debugging', 'Improve adoption'],
+      marketPrice: '$10,000-40,000/month',
+      category: 'Explainable AI',
+      technologies: ['Interpretable ML', 'Explainability Methods', 'Bias Detection', 'Trust Metrics', 'Human-AI Interaction'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Federated Learning',
+      description: 'Privacy-preserving AI training across distributed data sources without data sharing.',
+      icon: '🔒',
+      price: 'Starting at $7,000/month',
+      features: ['Distributed training', 'Privacy preservation', 'Data federation', 'Model aggregation', 'Secure computation'],
+      benefits: ['Protect data privacy', 'Enable collaboration', 'Comply with regulations', 'Scale AI training'],
+      marketPrice: '$12,000-50,000/month',
+      category: 'Federated AI',
+      technologies: ['Federated Learning', 'Privacy-preserving ML', 'Secure Aggregation', 'Distributed Systems', 'Cryptography'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Transfer Learning',
+      description: 'Efficient AI model adaptation and knowledge transfer across different domains and tasks.',
+      icon: '🔄',
+      price: 'Starting at $4,000/month',
+      features: ['Model adaptation', 'Knowledge transfer', 'Few-shot learning', 'Domain adaptation', 'Pre-trained models'],
+      benefits: ['Reduce training time', 'Lower data requirements', 'Improve performance', 'Enable rapid deployment'],
+      marketPrice: '$8,000-30,000/month',
+      category: 'Transfer AI',
+      technologies: ['Transfer Learning', 'Pre-trained Models', 'Domain Adaptation', 'Few-shot Learning', 'Meta Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Reinforcement Learning',
+      description: 'Advanced reinforcement learning systems for autonomous decision-making and optimization.',
+      icon: '🎯',
+      price: 'Starting at $8,500/month',
+      features: ['Autonomous learning', 'Reward optimization', 'Policy learning', 'Multi-agent RL', 'Safe exploration'],
+      benefits: ['Enable autonomous systems', 'Optimize complex processes', 'Learn from experience', 'Adapt to changes'],
+      marketPrice: '$15,000-60,000/month',
+      category: 'RL AI',
+      technologies: ['Reinforcement Learning', 'Deep RL', 'Multi-agent Systems', 'Policy Gradients', 'Q-Learning'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Generative Adversarial Networks',
+      description: 'Advanced GAN technology for creating realistic synthetic data and content generation.',
+      icon: '🎨',
+      price: 'Starting at $6,500/month',
+      features: ['Synthetic data generation', 'Image synthesis', 'Data augmentation', 'Style transfer', 'Anomaly detection'],
+      benefits: ['Generate realistic data', 'Improve model training', 'Protect privacy', 'Enable creative applications'],
+      marketPrice: '$12,000-45,000/month',
+      category: 'GAN AI',
+      technologies: ['Generative Adversarial Networks', 'Deep Learning', 'Computer Vision', 'Synthetic Data', 'Creative AI'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered Transformer Models',
+      description: 'State-of-the-art transformer architectures for natural language processing and beyond.',
+      icon: '🤖',
+      price: 'Starting at $9,000/month',
+      features: ['Large language models', 'Attention mechanisms', 'Multi-modal processing', 'Fine-tuning', 'Deployment optimization'],
+      benefits: ['Achieve SOTA performance', 'Handle complex tasks', 'Enable new applications', 'Improve efficiency'],
+      marketPrice: '$18,000-70,000/month',
+      category: 'Transformer AI',
+      technologies: ['Transformers', 'BERT', 'GPT', 'Attention Mechanisms', 'Large Language Models'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
   // const categories = [
@@ -658,7 +900,7 @@ const AIServicesPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">AI Services</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
