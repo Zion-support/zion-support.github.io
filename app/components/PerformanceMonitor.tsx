@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
