@@ -5,19 +5,6 @@
  */
 import { ErrorHandler } from './errorHandler';
 import { performanceMetrics } from './performanceMetrics';
-// ErrorHandler class definition
-class ErrorHandler {
-  private static instance: ErrorHandler;
-  static getInstance(): ErrorHandler {
-    if (!ErrorHandler.instance) {
-      ErrorHandler.instance = new ErrorHandler();
-    }
-    return ErrorHandler.instance;
-  }
-  handleNetworkError(error: Error, url: string, config?: unknown): void {
-    console.error('Network error:', { error: error.message, url, config });
-  }
-}
 export interface APIConfig {
   baseURL: string;
   timeout: number;

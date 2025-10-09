@@ -178,7 +178,7 @@ export default function RootLayout({
       </head>
       <body className='antialiased'>
         <ErrorBoundary>
-          <PerformanceMonitor />
+          {/* <PerformanceMonitor /> */}
           {children}
         </ErrorBoundary>
       </body>

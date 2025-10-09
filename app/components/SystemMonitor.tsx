@@ -6,7 +6,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
 const _collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
@@ -97,7 +96,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     try {
       const _performanceMetrics = performanceOptimizer.getMetrics();
       const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
+      const _errorStats = errorHandler.instance.getErrorStatistics();
       // Get memory info
       const _memoryInfo = getMemoryInfo();
       // Get network info
@@ -188,7 +187,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
-      errorData: errorHandler.exportErrorData(),
+      errorData: errorHandler.instance.exportErrorData(),
       timestamp: new Date().toISOString(),
     };
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {

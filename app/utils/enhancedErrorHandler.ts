@@ -628,8 +628,20 @@ class EnhancedErrorHandler {
     return errorReport.id;
   }
 }
-// Export singleton instance
-export const errorHandler = new EnhancedErrorHandler();
+// Export singleton instance - lazy initialization
+let _errorHandler: EnhancedErrorHandler | null = null;
+export const errorHandler = {
+  get instance() {
+    // Skip initialization during build
+    if (typeof window === 'undefined' && process.env.NODE_ENV === 'production') {
+      return {} as EnhancedErrorHandler;
+    }
+    if (!_errorHandler) {
+      _errorHandler = new EnhancedErrorHandler();
+    }
+    return _errorHandler;
+  }
+};
 // Export class for custom instances
 export {
   EnhancedErrorHandler,
