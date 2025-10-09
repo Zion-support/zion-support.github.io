@@ -25,11 +25,7 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-<<<<<<< HEAD
-  public config: { gaId: string } = { gaId: '' }
-=======
   public config: Record<string, any> = {}
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
   /**
    * Initialize analytics service
    */

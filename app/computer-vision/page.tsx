@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Eye, Camera, Search, Shield, CheckCircle, TrendingUp, Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
+import { Eye, Camera, Search, Shield, CheckCircle, Phone } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
