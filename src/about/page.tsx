@@ -85,11 +85,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5cff
 
         {/* Stats Section */}
         <section className="py-16 bg-white">

@@ -120,7 +120,39 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    const faqData = {
+    return {
+      'twitter:card': 'summary_large_image',
+      'twitter:site': '@ziontechgroup',
+      'twitter:creator': '@ziontechgroup',
+      'twitter:title': seoData.title,
+      'twitter:description': seoData.description,
+      'twitter:image': seoData.image || '/images/og-image.jpg',
+    };
+  }, [seoData, enableTwitterCards]);
+
+  // Generate breadcrumb structured data
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: seoData.canonicalUrl || 'https://ziontechgroup.com'
+        }
+      ]
+    };
+  }, [seoData, enableStructuredData]);
+
+  // Generate FAQ structured data
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -129,28 +161,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes Zion Tech Group different?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.'
+          }
+        }
+      ]
     };
-  }, [seoData, enableTwitterCards]);
+  }, [enableStructuredData]);
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
@@ -165,9 +181,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
 
+    return metaTags;
+  }, [seoData]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
+  const metaTags = generateMetaTags();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
