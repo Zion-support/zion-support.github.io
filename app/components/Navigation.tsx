@@ -124,11 +124,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
-=======
-          {/* Desktop Menu */}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-462c
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Home
