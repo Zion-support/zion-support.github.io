@@ -1,4 +1,5 @@
 import './globals.css';
+import ComprehensiveErrorBoundary from './components/ComprehensiveErrorBoundary';
 
 export default function RootLayout({
   children,
@@ -181,7 +182,13 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        {children}
+        <ComprehensiveErrorBoundary
+          enableErrorReporting={true}
+          maxRetries={3}
+          showRetryButton={true}
+        >
+          {children}
+        </ComprehensiveErrorBoundary>
       </body>
     </html>
   );

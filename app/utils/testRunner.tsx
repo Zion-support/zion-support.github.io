@@ -8,7 +8,6 @@
 import React, { ReactElement, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 
-
 // Test result types
 export interface PerformanceMetrics {
   renderTime: number;
@@ -417,7 +416,6 @@ export class TestRunner {
         assertions,
       });
 
-       
       console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
        
       console.error(error);
@@ -477,7 +475,6 @@ export class TestRunner {
     const failed = this.results.filter(r => r.status === 'failed').length;
     const skipped = this.results.filter(r => r.status === 'skipped').length;
 
-     
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📊 Test Results:'); } }
      
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Total: ${this.results.length}`); } }
@@ -514,7 +511,6 @@ export class TestRunner {
       results: this.results,
     };
 
-     
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 JSON Report:'); } }
      
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(JSON.stringify(report, null, 2)); } }
@@ -564,8 +560,7 @@ export class TestRunner {
     </div>
 </body>
 </html>`;
-    
-     
+
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 HTML Report generated'); } }
      
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(html); } }
@@ -686,7 +681,6 @@ export class TestRunner {
     </testsuite>
 </testsuites>`;
 
-     
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 JUnit Report:'); } }
      
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(xml); } }

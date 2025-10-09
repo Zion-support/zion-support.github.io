@@ -1,89 +1,58 @@
+'use client';
 import React from 'react';
-
 
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton';
+  color?: 'primary' | 'secondary' | 'accent';
   text?: string;
-  className?: string;
+  fullScreen?: boolean;
 }
 
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
-  variant = 'spinner',
+  color = 'primary',
   text = 'Loading...',
-  className = '',
+  fullScreen = false,
 }) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16',
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
   };
 
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
+  const colorClasses = {
+    primary: 'text-cyan-400',
+    secondary: 'text-purple-400',
+    accent: 'text-pink-400',
   };
 
-  const renderSpinner = () => {
-    switch (variant) {
-      case 'dots':
-        return (
-          <div className='flex space-x-1'>
-            <div className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'></div>
-            <div
-              className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'
-              style={{ animationDelay: '0.1s' }}
-            ></div>
-            <div
-              className='w-2 h-2 bg-blue-600 rounded-full animate-bounce'
-              style={{ animationDelay: '0.2s' }}
-            ></div>
-          </div>
-        );
+  const spinnerClasses = `
+    ${sizeClasses[size]}
+    ${colorClasses[color]}
+    animate-spin
+    border-2
+    border-current
+    border-t-transparent
+    rounded-full
+  `;
 
-      case 'pulse':
-        return (
-          <div
-            className={`${sizeClasses[size]} bg-blue-600 rounded-full animate-pulse`}
-          ></div>
-        );
-
-      case 'skeleton':
-        return (
-          <div className='animate-pulse'>
-            <div className='h-4 bg-gray-200 rounded w-3/4 mb-2'></div>
-            <div className='h-4 bg-gray-200 rounded w-1/2 mb-2'></div>
-            <div className='h-4 bg-gray-200 rounded w-5/6'></div>
-          </div>
-        );
-
-      case 'spinner':
-      default:
-        return (
-          <div className={`${sizeClasses[size]} relative`}>
-            <div className='absolute inset-0 border-4 border-gray-200 rounded-full'></div>
-            <div className='absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin'></div>
-          </div>
-        );
-    }
-  };
+  const containerClasses = fullScreen
+    ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
+    : 'flex items-center justify-center p-4';
 
   return (
-    <div
-      className={`flex flex-col items-center justify-center p-4 ${className}`}
-    >
-      {renderSpinner()}
-      {text && (
-        <p
-          className={`mt-3 text-gray-600 ${textSizeClasses[size]} font-medium`}
-        >
-          {text}
-        </p>
-      )}
+    <div className={containerClasses} role="status" aria-label="Loading">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <div className={spinnerClasses}></div>
+          <div className="absolute inset-0 rounded-full border-2 border-current border-opacity-20"></div>
+        </div>
+        {text && (
+          <p className="text-sm text-gray-300 animate-pulse">{text}</p>
+        )}
+      </div>
+      <span className="sr-only">Loading content, please wait...</span>
     </div>
   );
 };

@@ -1,94 +1,185 @@
-import React, { useEffect, useCallback } from 'react';
+'use client';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableSkipLinks?: boolean;
-  enableKeyboardNav?: boolean;
-  enableFocusIndicators?: boolean;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
 }
 
-/**
- * Accessibility Enhancer Component
- * Provides comprehensive accessibility improvements
- */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableSkipLinks = true,
-  enableKeyboardNav = true,
-  enableFocusIndicators = true,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
 }) => {
-  // Add skip links
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [focusVisible, setFocusVisible] = useState(false);
+
   useEffect(() => {
-    if (enableSkipLinks) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
+    if (enableKeyboardNavigation) {
+      setupKeyboardNavigation();
     }
-  }, [enableSkipLinks]);
-
-  // Add focus indicators
-  useEffect(() => {
-    if (enableFocusIndicators) {
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
-        
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        
-        .focus\\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
+    if (enableScreenReaderSupport) {
+      setupScreenReaderSupport();
     }
-  }, [enableFocusIndicators]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    if (enableKeyboardNav) {
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      };
-
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation');
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
-
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
+    if (enableHighContrast) {
+      setupHighContrastMode();
     }
-  }, [enableKeyboardNav]);
+    if (enableFocusManagement) {
+      setupFocusManagement();
+    }
 
-  return <>{children}</>;
+    return () => {
+      // Cleanup event listeners
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+    };
+  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
+
+  const setupKeyboardNavigation = () => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && document.activeElement === document.body) {
+        const skipLink = document.querySelector('a[href="#main-content"]');
+        if (skipLink) {
+          (skipLink as HTMLElement).focus();
+        }
+      }
+
+      // Close dropdowns on Escape
+      if (e.key === 'Escape') {
+        const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+        openDropdowns.forEach(dropdown => {
+          dropdown.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      // Handle arrow key navigation for menus
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        const activeElement = document.activeElement;
+        if (activeElement?.getAttribute('role') === 'menuitem') {
+          e.preventDefault();
+          const menuItems = Array.from(document.querySelectorAll('[role="menuitem"]'));
+          const currentIndex = menuItems.indexOf(activeElement);
+          const nextIndex = e.key === 'ArrowDown' 
+            ? Math.min(currentIndex + 1, menuItems.length - 1)
+            : Math.max(currentIndex - 1, 0);
+          (menuItems[nextIndex] as HTMLElement).focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+  };
+
+  const setupScreenReaderSupport = () => {
+    // Add ARIA labels to interactive elements
+    const buttons = document.querySelectorAll('button:not([aria-label])');
+    buttons.forEach(button => {
+      if (!button.textContent?.trim()) {
+        button.setAttribute('aria-label', 'Button');
+      }
+    });
+
+    // Add ARIA labels to links
+    const links = document.querySelectorAll('a:not([aria-label])');
+    links.forEach(link => {
+      if (!link.textContent?.trim()) {
+        link.setAttribute('aria-label', 'Link');
+      }
+    });
+
+    // Add role attributes to custom components
+    const cards = document.querySelectorAll('.cyber-card, .hologram-card, .quantum-card');
+    cards.forEach(card => {
+      if (!card.getAttribute('role')) {
+        card.setAttribute('role', 'article');
+      }
+    });
+
+    // Add live regions for dynamic content
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'sr-only';
+    liveRegion.id = 'live-region';
+    document.body.appendChild(liveRegion);
+  };
+
+  const setupHighContrastMode = () => {
+    // Check for system high contrast preference
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+      setIsHighContrast(true);
+      document.body.classList.add('high-contrast');
+    }
+
+    // Listen for changes in contrast preference
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+      if (e.matches) {
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleContrastChange);
+  };
+
+  const setupFocusManagement = () => {
+    const handleFocusIn = (e: FocusEvent) => {
+      setFocusVisible(true);
+      const target = e.target as HTMLElement;
+      
+      // Add focus indicator
+      target.classList.add('focus-visible');
+      
+      // Announce focus changes to screen readers
+      if (target.getAttribute('aria-label') || target.textContent) {
+        announceToScreenReader(`Focused on ${target.getAttribute('aria-label') || target.textContent}`);
+      }
+    };
+
+    const handleFocusOut = (e: FocusEvent) => {
+      const target = e.target as HTMLElement;
+      target.classList.remove('focus-visible');
+    };
+
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+  };
+
+  const announceToScreenReader = (message: string) => {
+    const liveRegion = document.getElementById('live-region');
+    if (liveRegion) {
+      liveRegion.textContent = message;
+    }
+  };
+
+  const toggleHighContrast = useCallback(() => {
+    setIsHighContrast(!isHighContrast);
+    if (!isHighContrast) {
+      document.body.classList.add('high-contrast');
+    } else {
+      document.body.classList.remove('high-contrast');
+    }
+  }, [isHighContrast]);
+
+  return (
+    <div className="accessibility-enhancer">
+      <button
+        onClick={toggleHighContrast}
+        className="accessibility-toggle"
+        aria-label={`Toggle high contrast mode. Currently ${isHighContrast ? 'on' : 'off'}`}
+      >
+        {isHighContrast ? '🌙' : '☀️'} High Contrast
+      </button>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
