@@ -1,11 +1,9 @@
 'use client';
-
 import React from 'react'
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website
  * Provides comprehensive error tracking, reporting, and recovery
  */
-
 interface ErrorContext {
   userId?: string;
   sessionId: string;
@@ -46,7 +44,6 @@ class EnhancedErrorMonitoring {
   private sessionId: string;
   private userId?: string;
   private isOnline = true;
-
   private constructor() {
     this.sessionId = this.generateSessionId()
     this.initializeMonitoring()
@@ -63,7 +60,6 @@ class EnhancedErrorMonitoring {
    */
   private initializeMonitoring(): void {
     if (typeof window === 'undefined') return
-
     // JavaScript errors
     window.addEventListener('error', (event) => {
       this.handleError(event.error || new Error(event.message), {
@@ -73,7 +69,6 @@ class EnhancedErrorMonitoring {
         category: 'javascript'
       });
     })
-
     // Unhandled promise rejections
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -81,7 +76,6 @@ class EnhancedErrorMonitoring {
         category: 'promise'
       });
     })
-
     // Resource loading errors
     window.addEventListener('error', (event) => {
       if (event.target !== window) {
@@ -90,10 +84,8 @@ class EnhancedErrorMonitoring {
         })
       }
     }, true)
-
     // Network errors
     this.setupNetworkErrorMonitoring()
-
     // Performance monitoring
     this.setupPerformanceErrorMonitoring()
   }
@@ -102,11 +94,9 @@ class EnhancedErrorMonitoring {
    */
   private setupNetworkErrorMonitoring(): void {
     const originalFetch = window.fetch
-
     window.fetch = async (...args) => {
       try {
         const response = await originalFetch.apply(window, args)
-        
         if (!response.ok) {
           this.handleError(new Error(`HTTP ${response.status}: ${response.statusText}`), {
             url: args[0] as string,
@@ -142,7 +132,6 @@ class EnhancedErrorMonitoring {
           }
         }
       }).observe({ entryTypes: ['longtask'] })
-
       // Monitor memory leaks
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -163,12 +152,10 @@ class EnhancedErrorMonitoring {
    */
   private setupNetworkMonitoring(): void {
     if (typeof window === 'undefined') return
-
     window.addEventListener('online', () => {
       this.isOnline = true
       this.flushErrorQueue()
     })
-
     window.addEventListener('offline', () => {
       this.isOnline = false
     })
@@ -267,10 +254,8 @@ class EnhancedErrorMonitoring {
    */
   private async flushErrorQueue(): Promise<void> {
     if (!this.isOnline) return
-
     const errorsToSend = [...this.errorQueue]
     this.errorQueue = []
-
     for (const error of errorsToSend) {
       await this.sendErrorReport(error)
     }
@@ -305,17 +290,14 @@ class EnhancedErrorMonitoring {
     const recent = this.errorQueue
       .filter(error => Date.now() - new Date(error.lastSeen).getTime() < 24 * 60 * 60 * 1000) // Last 24 hours
       .sort((a, b) => new Date(b.lastSeen).getTime() - new Date(a.lastSeen).getTime())
-
     const bySeverity = this.errorQueue.reduce((acc, error) => {
       acc[error.severity] = (acc[error.severity] || 0) + 1
       return acc
     }, {} as Record<string, number>)
-
     const byCategory = this.errorQueue.reduce((acc, error) => {
       acc[error.category] = (acc[error.category] || 0) + 1
       return acc
     }, {} as Record<string, number>)
-
     return {
       total: this.errorQueue.length,
       bySeverity,
@@ -343,10 +325,8 @@ class EnhancedErrorMonitoring {
    */
   getErrorReport(): string {
     const stats = this.getErrorStats()
-    
     return `
 # Error Monitoring Report
-
 ## Summary
 - Total Errors: ${stats.total}
 - Recent Errors (24h): ${stats.recent.length}

@@ -1,12 +1,9 @@
 'use client';
-
 /**
  * Enhanced Error Reporting Utility
  * Provides comprehensive error tracking, logging, and reporting capabilities
  */
-
 import { logger } from './logger';
-
 export interface ErrorReport {
   message: string;
   stack?: string;
@@ -17,7 +14,6 @@ export interface ErrorReport {
   severity: 'low' | 'medium' | 'high' | 'critical';
   context?: Record<string, unknown>;
 }
-
 export interface ErrorReporterConfig {
   enableConsoleLogging: boolean;
   enableRemoteLogging: boolean;
@@ -25,14 +21,12 @@ export interface ErrorReporterConfig {
   maxErrorsInMemory: number;
   captureContext: boolean;
 }
-
 const defaultConfig: ErrorReporterConfig = {
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
   maxErrorsInMemory: 50,
   captureContext: true,
 };
-
 /**
  * ErrorReporter class for comprehensive error handling
  */
@@ -41,11 +35,9 @@ export class ErrorReporter {
   private config: ErrorReporterConfig;
   private errorQueue: ErrorReport[] = [];
   private errorCount: Map<string, number> = new Map();
-
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
     this.config = { ...defaultConfig, ...config };
   }
-
   /**
    * Get singleton instance
    */
@@ -55,7 +47,6 @@ export class ErrorReporter {
     }
     return ErrorReporter.instance;
   }
-
   /**
    * Report an error with full context
    */
@@ -73,28 +64,23 @@ export class ErrorReporter {
       severity,
       context: this.config.captureContext ? context : undefined,
     };
-
     // Track error frequency
     const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-
     // Add to queue (with size limit)
     this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {
       this.errorQueue.shift();
     }
-
     // Console logging
     if (this.config.enableConsoleLogging) {
       this.logToConsole(errorReport);
     }
-
     // Remote logging
     if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
       this.sendToRemote(errorReport);
     }
   }
-
   /**
    * Log error to console with formatting
    */
@@ -117,7 +103,6 @@ export class ErrorReporter {
     }
     console.groupEnd();
   }
-
   /**
    * Get console styling based on severity
    */
@@ -130,13 +115,11 @@ export class ErrorReporter {
     };
     return styles[severity];
   }
-
   /**
    * Send error to remote logging service
    */
   private async sendToRemote(report: ErrorReport): Promise<void> {
     if (!this.config.remoteEndpoint) return;
-
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
@@ -152,14 +135,12 @@ export class ErrorReporter {
       }
     }
   }
-
   /**
    * Get all errors in queue
    */
   getErrorQueue(): ErrorReport[] {
     return [...this.errorQueue];
   }
-
   /**
    * Get error statistics
    */
@@ -174,7 +155,6 @@ export class ErrorReporter {
       errorsByType: Object.fromEntries(this.errorCount),
     };
   }
-
   /**
    * Clear error queue
    */
@@ -182,7 +162,6 @@ export class ErrorReporter {
     this.errorQueue = [];
     this.errorCount.clear();
   }
-
   /**
    * Export errors as JSON
    */
@@ -198,7 +177,6 @@ export class ErrorReporter {
     );
   }
 }
-
 /**
  * Convenience function to report errors
  */
@@ -209,7 +187,6 @@ export const reportError = (
 ): void => {
   ErrorReporter.getInstance().reportError(error, severity, context);
 };
-
 /**
  * React error boundary helper
  */
@@ -224,5 +201,4 @@ export const captureComponentError = (
     componentStack: errorInfo.componentStack,
   });
 };
-
 export default ErrorReporter;

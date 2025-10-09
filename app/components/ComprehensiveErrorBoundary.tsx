@@ -1,7 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -10,7 +9,6 @@ interface Props {
   maxRetries?: number;
   showRetryButton?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
@@ -19,10 +17,8 @@ interface State {
   retryCount: number;
   isRetrying: boolean;
 }
-
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
-
   constructor(props: Props) {
     super(props);
     this.state = { 
@@ -33,7 +29,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     };
     this.maxRetries = props.maxRetries || 3;
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
       hasError: true, 
@@ -43,22 +38,18 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       isRetrying: false
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting
     const errorReport = {
@@ -71,7 +62,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       url: window.location.href,
       retryCount: this.state.retryCount
     };
-
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -83,20 +73,16 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
         }
       });
     }
-
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary Caught Error:', errorReport);
     }
   };
-
   private handleRetry = async () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState({ isRetrying: true });
-      
       // Simulate retry delay
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
       this.setState(prevState => ({
         hasError: false,
         error: undefined,
@@ -106,17 +92,14 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       }));
     }
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       if (this.state.isRetrying) {
         return (
           <ModernLoadingSpinner 
@@ -126,7 +109,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           />
         );
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
@@ -137,7 +119,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             <p className="text-gray-300 mb-6">
               We encountered an unexpected error. Our team has been notified and is working to fix it.
             </p>
-            
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
               <h3 className="text-white font-semibold mb-2">Error Details:</h3>
               <p className="text-sm text-gray-300 mb-2">
@@ -150,7 +131,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 <strong>Retry Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
               </p>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {this.state.retryCount < this.maxRetries && (
                 <button
@@ -161,7 +141,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   🔄 Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )}
-              
               <button
                 onClick={this.handleReload}
                 className="cyber-button"
@@ -169,7 +148,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
               >
                 🔄 Reload Page
               </button>
-              
               <a
                 href="/contact"
                 className="cyber-button"
@@ -178,7 +156,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 📞 Contact Support
               </a>
             </div>
-
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
               <details className="mt-6 text-left">
                 <summary className="text-white cursor-pointer hover:text-cyan-400">
@@ -193,9 +170,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
 export default ComprehensiveErrorBoundary;

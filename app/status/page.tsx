@@ -1,225 +1,21 @@
-
-'use client';
-
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertCircle, Clock, RefreshCw } from 'lucide-react';
-
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const StatusPage: React.FC = () => {
-  const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const services = [
-    {
-      name: 'AI Services API',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '120ms',
-      lastIncident: '2024-09-15',
-      description: 'Core AI prediction and model training services'
-    },
-    {
-      name: 'Data Processing API',
-      status: 'operational',
-      uptime: '99.8%',
-      responseTime: '95ms',
-      lastIncident: '2024-09-10',
-      description: 'Data transformation and analytics services'
-    },
-    {
-      name: 'Authentication Service',
-      status: 'operational',
-      uptime: '99.95%',
-      responseTime: '45ms',
-      lastIncident: '2024-08-20',
-      description: 'User authentication and authorization'
-    },
-    {
-      name: 'Web Dashboard',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '200ms',
-      lastIncident: '2024-09-05',
-      description: 'Main web application and user interface'
-    },
-    {
-      name: 'File Storage',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '80ms',
-      lastIncident: '2024-08-15',
-      description: 'File upload and storage services'
-    },
-    {
-      name: 'Notification Service',
-      status: 'degraded',
-      uptime: '98.5%',
-      responseTime: '300ms',
-      lastIncident: '2024-10-08',
-      description: 'Email and push notification delivery'
-    }
-  ];
-
-  const incidents = [
-    {
-      id: 1,
-      title: 'Notification Service Degraded Performance',
-      status: 'investigating',
-      severity: 'medium',
-      startTime: '2024-10-08T14:30:00Z',
-      description: 'We are experiencing slower than usual notification delivery times. Our team is investigating the issue.',
-      updates: [
-        {
-          time: '2024-10-08T15:00:00Z',
-          message: 'We have identified the issue and are working on a fix.'
-        },
-        {
-          time: '2024-10-08T14:30:00Z',
-          message: 'We are investigating reports of delayed notifications.'
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: 'API Rate Limiting Issue Resolved',
-      status: 'resolved',
-      severity: 'low',
-      startTime: '2024-09-15T10:00:00Z',
-      endTime: '2024-09-15T11:30:00Z',
-      description: 'Some users experienced incorrect rate limiting on API requests. This has been resolved.',
-      updates: [
-        {
-          time: '2024-09-15T11:30:00Z',
-          message: 'The issue has been resolved. All API rate limiting is working correctly.'
-        },
-        {
-          time: '2024-09-15T10:30:00Z',
-          message: 'We have identified the root cause and are implementing a fix.'
-        },
-        {
-          time: '2024-09-15T10:00:00Z',
-          message: 'We are investigating reports of incorrect API rate limiting.'
-        }
-      ]
-    }
-  ];
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'degraded':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      case 'maintenance':
-        return <Clock className="w-5 h-5 text-blue-500" />;
-      default:
-        return <AlertCircle className="w-5 h-5 text-gray-500" />;
-    }
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return 'text-green-600 bg-green-100';
-      case 'degraded':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'outage':
-        return 'text-red-600 bg-red-100';
-      case 'maintenance':
-        return 'text-blue-600 bg-blue-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
-    }
-  };
-
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'critical':
-        return 'text-red-600 bg-red-100';
-      case 'high':
-        return 'text-orange-600 bg-orange-100';
-      case 'medium':
-        return 'text-yellow-600 bg-yellow-100';
-      case 'low':
-        return 'text-blue-600 bg-blue-100';
-      default:
-        return 'text-gray-600 bg-gray-100';
-    }
-  };
-
-  const formatTime = (timeString: string) => {
-    return new Date(timeString).toLocaleString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      timeZoneName: 'short'
-    });
-  };
-
-  const refreshStatus = async () => {
-    setIsRefreshing(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
-    setIsRefreshing(false);
-  };
-
-  const overallStatus = services.every(service => service.status === 'operational') 
-    ? 'operational' 
-    : services.some(service => service.status === 'outage') 
-    ? 'outage' 
-    : 'degraded';
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">System Status</h1>
-              <p className="text-gray-600 mt-1">
-                Real-time status of all Zion Tech Group services
-              </p>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="text-sm text-gray-500">
-                Last updated: {lastUpdated.toLocaleTimeString()}
-              </div>
-              <button
-                onClick={refreshStatus}
-                disabled={isRefreshing}
-                className="flex items-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 transition-colors"
-              >
-                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-                <span>Refresh</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Overall Status */}
-      <section className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
-              {getStatusIcon(overallStatus)}
-              <span className={`ml-2 px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(overallStatus)}`}>
-                {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
-              </span>
-            </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              All Systems Operational
-            </h2>
-            <p className="text-gray-600">
-              All services are running normally with no known issues.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              System Status
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Real-time status of our services
             </p>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -341,3 +137,12 @@ const StatusPage: React.FC = () => {
 };
 
 export default StatusPage;
+=======
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+export default StatusPage;
+>>>>>>> origin/main

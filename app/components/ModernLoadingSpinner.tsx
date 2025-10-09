@@ -1,13 +1,11 @@
 'use client';
 import React from 'react';
-
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
   fullScreen?: boolean;
 }
-
 const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
@@ -20,13 +18,11 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     lg: 'w-12 h-12',
     xl: 'w-16 h-16',
   };
-
   const colorClasses = {
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent: 'text-pink-400',
   };
-
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -36,11 +32,9 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     border-t-transparent
     rounded-full
   `;
-
   const containerClasses = fullScreen
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
-
   return (
     <div className={containerClasses} role="status" aria-label="Loading">
       <div className="flex flex-col items-center space-y-4">
@@ -56,5 +50,4 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
     </div>
   );
 };
-
 export default ModernLoadingSpinner;

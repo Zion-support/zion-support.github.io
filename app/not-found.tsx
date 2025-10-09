@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Home, Phone } from 'lucide-react';
-
 export default function NotFound() {
   const popularPages = [
     {
@@ -40,7 +39,6 @@ export default function NotFound() {
       icon: '📞'
     },
   ];
-
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -51,7 +49,6 @@ export default function NotFound() {
           </h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
-
         {/* Error Message */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -62,7 +59,6 @@ export default function NotFound() {
             Don't worry, let's get you back on track!
           </p>
         </div>
-
         {/* Popular Pages */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
           {popularPages.map((page, index) => (
@@ -81,7 +77,6 @@ export default function NotFound() {
             </Link>
           ))}
         </div>
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

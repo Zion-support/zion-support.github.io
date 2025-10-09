@@ -373,6 +373,56 @@ a {
   }
 }
 
+/* Cyber Button */
+.cyber-button {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: 1px solid #00ffff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-button:hover {
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: cyber-glow 3s ease-in-out infinite;
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.5),
+     inset 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,

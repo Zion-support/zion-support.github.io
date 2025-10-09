@@ -1,7 +1,5 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode, memo } from 'react';
-
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
@@ -9,20 +7,17 @@ interface OptimizedErrorBoundaryProps {
   resetOnPropsChange?: boolean;
   resetKeys?: Array<string | number>;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
 }
-
 class OptimizedErrorBoundary extends Component<
   OptimizedErrorBoundaryProps,
   State
 > {
   private resetTimeoutId: number | null = null;
-
   constructor(props: OptimizedErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -32,7 +27,6 @@ class OptimizedErrorBoundary extends Component<
       errorId: '',
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -40,45 +34,36 @@ class OptimizedErrorBoundary extends Component<
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
     });
-
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-
     }
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
       this.reportError(error, errorInfo);
     }
   }
-
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
     const { resetKeys, resetOnPropsChange } = this.props;
     const { hasError } = this.state;
-
     if (hasError && prevProps.resetKeys !== resetKeys) {
       if (resetKeys && prevProps.resetKeys) {
         const hasResetKeyChanged = resetKeys.some(
           (key, index) => key !== prevProps.resetKeys?.[index]
         );
-
         if (hasResetKeyChanged) {
           this.resetErrorBoundary();
         }
       }
     }
-
     if (
       hasError &&
       resetOnPropsChange &&
@@ -87,13 +72,11 @@ class OptimizedErrorBoundary extends Component<
       this.resetErrorBoundary();
     }
   }
-
   componentWillUnmount() {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId);
     }
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -116,12 +99,10 @@ class OptimizedErrorBoundary extends Component<
       });
     }
   };
-
   private resetErrorBoundary = () => {
     if (this.resetTimeoutId) {
       clearTimeout(this.resetTimeoutId);
     }
-
     this.resetTimeoutId = window.setTimeout(() => {
       this.setState({
         hasError: false,
@@ -131,17 +112,14 @@ class OptimizedErrorBoundary extends Component<
       });
     }, 100);
   };
-
   private handleRetry = () => {
     this.resetErrorBoundary();
   };
-
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <ErrorFallback
           error={this.state.error}
@@ -151,18 +129,15 @@ class OptimizedErrorBoundary extends Component<
         />
       );
     }
-
     return this.props.children;
   }
 }
-
 interface ErrorFallbackProps {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
   onRetry: () => void;
 }
-
 const ErrorFallback = memo<ErrorFallbackProps>(
   ({ error, errorInfo, errorId, onRetry }) => (
     <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
@@ -184,15 +159,12 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             </svg>
           </div>
         </div>
-
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
           Something went wrong
         </h1>
-
         <p className='text-gray-600 mb-4'>
           We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
-
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
@@ -217,7 +189,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             </div>
           </details>
         )}
-
         <div className='flex flex-col sm:flex-row gap-2 justify-center'>
           <button
             onClick={onRetry}
@@ -225,7 +196,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           >
             Try Again
           </button>
-
           <button
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
@@ -233,7 +203,6 @@ const ErrorFallback = memo<ErrorFallbackProps>(
             Reload Page
           </button>
         </div>
-
         {errorId && (
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
         )}
@@ -241,7 +210,5 @@ const ErrorFallback = memo<ErrorFallbackProps>(
     </div>
   )
 );
-
 ErrorFallback.displayName = 'ErrorFallback';
-
 export default OptimizedErrorBoundary;

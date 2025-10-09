@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const API: React.FC = () => {
   const apiEndpoints = [
     {
@@ -32,7 +31,6 @@ const API: React.FC = () => {
       response: 'Created content object',
     },
   ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
@@ -65,7 +63,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
@@ -101,7 +98,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div id="endpoints" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
@@ -148,7 +144,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -179,5 +174,4 @@ const API: React.FC = () => {
     </div>
   );
 };
-
 export default API;

@@ -1,19 +1,15 @@
 'use client';
-
 import { useEffect, useCallback } from 'react';
-
 export const usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: any) => {
     const _body = JSON.stringify(metric);
     const _url = '/api/analytics';
-
     if (navigator.sendBeacon) {
       navigator.sendBeacon(url, body);
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
     }
   }, []);
-
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
@@ -26,12 +22,9 @@ export const usePerformanceMonitoring = () => {
           });
         }
       });
-
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
-
       return () => observer.disconnect();
     }
   }, [reportWebVitals]);
-
   return { reportWebVitals };
 };

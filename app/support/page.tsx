@@ -1,174 +1,21 @@
-
-'use client';
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, HelpCircle, FileText, Video, BookOpen } from 'lucide-react';
-
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const faqCategories = [
-    {
-      title: 'Getting Started',
-      icon: '🚀',
-      questions: [
-        {
-          question: 'How do I get started with your AI services?',
-          answer: 'Getting started is easy! Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.'
-        },
-        {
-          question: 'What is the typical implementation timeline?',
-          answer: 'Implementation timelines vary based on complexity, but most projects are completed within 4-12 weeks. We provide detailed project timelines during consultation.'
-        },
-        {
-          question: 'Do you offer training for our team?',
-          answer: 'Yes! We provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions we implement.'
-        }
-      ]
-    },
-    {
-      title: 'Technical Support',
-      icon: '🔧',
-      questions: [
-        {
-          question: 'What technical requirements do I need?',
-          answer: 'Our solutions are designed to work with your existing infrastructure. We\'ll provide specific requirements during the consultation phase.'
-        },
-        {
-          question: 'Do you provide 24/7 technical support?',
-          answer: 'Yes, we offer 24/7 technical support for all our enterprise clients. Our support team is always available to help resolve any issues.'
-        },
-        {
-          question: 'How do I report a technical issue?',
-          answer: 'You can report issues through our support portal, email, or phone. We also have a dedicated support ticket system for tracking.'
-        }
-      ]
-    },
-    {
-      title: 'Billing & Pricing',
-      icon: '💳',
-      questions: [
-        {
-          question: 'What are your pricing models?',
-          answer: 'We offer flexible pricing including monthly subscriptions, project-based pricing, and custom enterprise agreements. Contact us for detailed pricing information.'
-        },
-        {
-          question: 'Do you offer free trials?',
-          answer: 'Yes, we offer free trials for most of our services. This allows you to test our solutions before making a commitment.'
-        },
-        {
-          question: 'Can I change my plan anytime?',
-          answer: 'Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.'
-        }
-      ]
-    }
-  ];
-
-  const supportChannels = [
-    {
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
-      icon: MessageCircle,
-      availability: '24/7',
-      responseTime: '< 2 minutes',
-      action: 'Start Chat'
-    },
-    {
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      icon: Phone,
-      availability: '24/7',
-      responseTime: 'Immediate',
-      action: 'Call Now'
-    },
-    {
-      title: 'Email Support',
-      description: 'Send us detailed questions and get comprehensive answers',
-      icon: Mail,
-      availability: '24/7',
-      responseTime: '< 4 hours',
-      action: 'Send Email'
-    },
-    {
-      title: 'Support Portal',
-      description: 'Access tickets, documentation, and self-service tools',
-      icon: FileText,
-      availability: '24/7',
-      responseTime: 'Self-service',
-      action: 'Access Portal'
-    }
-  ];
-
-  const resources = [
-    {
-      title: 'Documentation',
-      description: 'Comprehensive guides and API documentation',
-      icon: BookOpen,
-      link: '/docs'
-    },
-    {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all features',
-      icon: Video,
-      link: '/tutorials'
-    },
-    {
-      title: 'Knowledge Base',
-      description: 'Searchable database of articles and solutions',
-      icon: HelpCircle,
-      link: '/knowledge-base'
-    },
-    {
-      title: 'System Status',
-      description: 'Real-time status of all our services',
-      icon: CheckCircle,
-      link: '/status'
-    }
-  ];
-
   return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Support Center
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Support
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              We're here to help you succeed with our AI solutions
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for help articles, guides, and solutions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Support Channels */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Help Now
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose the support channel that works best for you
+            <p className="text-xl text-gray-300 mb-8">
+              Get help and support for our services
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {supportChannels.map((channel, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -297,3 +144,12 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+=======
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+export default SupportPage;
+>>>>>>> origin/main

@@ -2,7 +2,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';
-
 const DevOpsPage: React.FC = () => {
   const services = [
     {
@@ -30,11 +29,9 @@ const DevOpsPage: React.FC = () => {
       features: ['SAST/DAST', 'Dependency Scanning', 'Secrets Management', 'Compliance']
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
@@ -43,7 +40,6 @@ const DevOpsPage: React.FC = () => {
             From CI/CD to infrastructure automation, we help you deliver faster and more reliably.
           </p>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our DevOps Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -65,10 +61,8 @@ const DevOpsPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default DevOpsPage;

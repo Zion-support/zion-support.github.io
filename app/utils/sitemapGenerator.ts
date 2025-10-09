@@ -4,11 +4,9 @@ export interface SitemapEntry {
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-
 export const generateSitemap = (): SitemapEntry[] => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
-
   return [
     {
       url: `${baseUrl}/`,
@@ -102,13 +100,10 @@ export const generateSitemap = (): SitemapEntry[] => {
     }
   ];
 };
-
 export const generateRobotsTxt = (): string => {
   return `User-agent: *
 Allow: /
-
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/

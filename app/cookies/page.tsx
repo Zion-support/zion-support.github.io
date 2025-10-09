@@ -1,130 +1,21 @@
 import React from 'react';
-
-import Link from 'next/link';
-import { ArrowLeft, Shield, Settings, BarChart, User } from 'lucide-react';
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const CookiesPage: React.FC = () => {
-  const cookieCategories = [
-    {
-      title: 'Essential Cookies',
-      icon: Shield,
-      description: 'These cookies are necessary for the website to function and cannot be switched off.',
-      necessary: true,
-      cookies: [
-        {
-          name: 'session_id',
-          purpose: 'Maintains your session state across page requests',
-          duration: 'Session',
-          type: 'First-party'
-        },
-        {
-          name: 'csrf_token',
-          purpose: 'Protects against cross-site request forgery attacks',
-          duration: 'Session',
-          type: 'First-party'
-        },
-        {
-          name: 'user_preferences',
-          purpose: 'Stores your basic preferences and settings',
-          duration: '1 year',
-          type: 'First-party'
-        }
-      ]
-    },
-    {
-      title: 'Analytics Cookies',
-      icon: BarChart,
-      description: 'These cookies help us understand how visitors interact with our website.',
-      necessary: false,
-      cookies: [
-        {
-          name: '_ga',
-          purpose: 'Google Analytics - distinguishes unique users',
-          duration: '2 years',
-          type: 'Third-party'
-        },
-        {
-          name: '_gid',
-          purpose: 'Google Analytics - distinguishes unique users',
-          duration: '24 hours',
-          type: 'Third-party'
-        },
-        {
-          name: '_gat',
-          purpose: 'Google Analytics - throttles request rate',
-          duration: '1 minute',
-          type: 'Third-party'
-        }
-      ]
-    },
-    {
-      title: 'Functional Cookies',
-      icon: Settings,
-      description: 'These cookies enable enhanced functionality and personalization.',
-      necessary: false,
-      cookies: [
-        {
-          name: 'language_preference',
-          purpose: 'Remembers your language preference',
-          duration: '1 year',
-          type: 'First-party'
-        },
-        {
-          name: 'theme_preference',
-          purpose: 'Stores your dark/light mode preference',
-          duration: '1 year',
-          type: 'First-party'
-        },
-        {
-          name: 'notification_settings',
-          purpose: 'Remembers your notification preferences',
-          duration: '6 months',
-          type: 'First-party'
-        }
-      ]
-    },
-    {
-      title: 'Marketing Cookies',
-      icon: User,
-      description: 'These cookies are used to deliver relevant advertisements.',
-      necessary: false,
-      cookies: [
-        {
-          name: '_fbp',
-          purpose: 'Facebook Pixel - tracks conversions and retargeting',
-          duration: '3 months',
-          type: 'Third-party'
-        },
-        {
-          name: 'ads_preferences',
-          purpose: 'Stores your advertising preferences',
-          duration: '1 year',
-          type: 'First-party'
-        }
-      ]
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Cookie Policy</h1>
-              <p className="text-gray-600 mt-1">
-                Last updated: October 8, 2024
-              </p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Cookie Policy
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Learn about how we use cookies to enhance your experience
+            </p>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -237,8 +128,12 @@ const CookiesPage: React.FC = () => {
         </div>
       </section>
 
+=======
+        </section>
+      </main>
+      <Footer />
+>>>>>>> origin/main
     </div>
   );
 };
-
 export default CookiesPage;

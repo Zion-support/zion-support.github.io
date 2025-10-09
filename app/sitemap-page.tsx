@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/main
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -34,7 +38,6 @@ const SitemapPage: React.FC = () => {
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
   ];
-
   return (
     <>
       
@@ -46,7 +49,6 @@ const SitemapPage: React.FC = () => {
               Complete directory of all pages on our website
             </p>
           </header>
-
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8">
               <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
@@ -54,7 +56,7 @@ const SitemapPage: React.FC = () => {
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
                     <Link
-                      to={page.url}
+                      href={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
                       {page.title}
@@ -68,10 +70,9 @@ const SitemapPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-              
               <div className="mt-8 text-center">
                 <Link
-                  to="/"
+                  href="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
                   Back to Home
@@ -84,5 +85,4 @@ const SitemapPage: React.FC = () => {
     </>
   );
 };
-
 export default SitemapPage;

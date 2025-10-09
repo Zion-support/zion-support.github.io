@@ -1,4 +1,3 @@
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -7,7 +6,6 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -32,5 +30,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     />
   );
 };
-
 export default OptimizedImage;

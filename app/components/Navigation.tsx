@@ -1,41 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap,
-  ArrowRight,
-  Sparkles,
-  Cpu,
-  Target,
-  Globe,
-  Database,
-  Smartphone,
-  Lock,
-  TrendingUp,
-  Star,
-  Settings
-} from 'lucide-react';
-
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -43,7 +13,6 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -51,14 +20,12 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   };
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
       closeAllMenus();
     }
   };
-
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -76,9 +43,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud AI solutions' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' }
       ]
     },
     {
@@ -88,13 +57,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
-        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' }
+        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
+        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
+        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' }
       ]
     },
     {
@@ -104,11 +78,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
+        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
+        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
+        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
+        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
+        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
+        { name: 'Productivity Tools', path: '/productivity-tools', description: 'Time management & efficiency' },
+        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
+        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
+        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
+        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
       ]
     },
     {
@@ -123,69 +104,70 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Robotic solutions' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
+        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
+        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
   ];
-
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2" 
-            onClick={closeAllMenus}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className={`text-xl font-bold transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Zion Tech Group
-            </span>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className={`font-medium transition-colors hover:text-cyan-400 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={closeAllMenus}
-            >
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-8">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            
-            <Link 
-              to="/about" 
-              className={`font-medium transition-colors hover:text-cyan-400 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={closeAllMenus}
-            >
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
+<<<<<<< HEAD
+=======
 
+            <Link 
+              href="/solutions" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Solutions
+            </Link>
+
+            <Link 
+              href="/industries" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Industries
+            </Link>
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
@@ -193,14 +175,14 @@ const Navigation: React.FC = () => {
                           <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
                             <category.icon className={`w-4 h-4 ${category.color}`} />
                           </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
-                          {category.services.map((service, serviceIndex) => (
+                          {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors group"
+                              href={service.path}
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
                               <div className="font-medium">{service.name}</div>
@@ -209,14 +191,22 @@ const Navigation: React.FC = () => {
                               </div>
                             </Link>
                           ))}
+                          {category.services.length > 5 && (
+                            <Link
+                              href={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All →
+                            </Link>
+                          )}
                         </div>
                       </div>
                     ))}
                   </div>
-                  
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
                     <Link
-                      to="/services"
+                      href="/services"
                       className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
@@ -226,140 +216,199 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-
             <Link 
-              to="/case-studies" 
-              className={`font-medium transition-colors hover:text-cyan-400 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/case-studies" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
+<<<<<<< HEAD
+            <Link 
+              href="/blog" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+=======
 
+            <Link 
+              href="/resources" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Resources
+            </Link>
+            
             <Link
-              to="/blog"
-              className={`font-medium transition-colors hover:text-cyan-400 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/blog"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Blog
             </Link>
+<<<<<<< HEAD
+            <Link 
+              href="/contact" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+=======
 
             <Link
-              to="/contact"
-              className={`font-medium transition-colors hover:text-cyan-400 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+            
+            <Link
+              href="/contact"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Contact
             </Link>
-          </div>
-
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-cyan-300">
-              <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
-            </div>
+            {/* CTA Button */}
             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              href="/contact"
+              className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
               Get Started
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg text-white hover:text-cyan-400 hover:bg-white/10 transition-colors"
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation */}
+        {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            <div className="space-y-4">
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
-                to="/"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium py-2"
+                href="/"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
-              
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
-                About
-              </Link>
-              
-              {/* Mobile Services */}
-              <div className="space-y-2">
-                <div className="text-cyan-300 font-semibold text-lg">Services</div>
-                <div className="ml-4 space-y-2">
-                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    All Services
-                  </Link>
-                  <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    Micro SAAS Solutions
-                  </Link>
-                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    AI Services
-                  </Link>
-                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    IT Services
-                  </Link>
-                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    Quantum Computing
-                  </Link>
-                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    Autonomous Systems
-                  </Link>
-                  <Link to="/blockchain-web3" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    Blockchain & Web3
-                  </Link>
-                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors">
-                    Cybersecurity
-                  </Link>
-                </div>
-              </div>
-              
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
-                Blog
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium py-2">
-                Contact
-              </Link>
-              
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-gray-700">
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
-                  <MapPin className="w-4 h-4" />
-                  <span>Middletown, DE</span>
-                </div>
-              </div>
-              
-              {/* Mobile CTA */}
               <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 mt-4"
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
-                Get Started
+                About
               </Link>
+<<<<<<< HEAD
+=======
+
+              <Link 
+                href="/solutions" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Solutions
+              </Link>
+
+              <Link 
+                href="/industries" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Industries
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    {serviceCategories.map((category, categoryIndex) => (
+                      <div key={categoryIndex} className="space-y-1">
+                        <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 4).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              href={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+              <Link
+                href="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+<<<<<<< HEAD
+=======
+
+              <Link
+                href="/resources"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Resources
+              </Link>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+              <Link
+                href="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+<<<<<<< HEAD
+=======
+
+              <Link
+                href="/pricing"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+                onClick={closeAllMenus}
+              >
+                <Phone className="w-4 h-4 inline mr-2" />
+                (302) 464-0950
+              </a>
             </div>
           </div>
         )}
@@ -367,5 +416,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 export default Navigation;

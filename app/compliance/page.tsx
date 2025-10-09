@@ -1,131 +1,17 @@
-'use client';
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
-
 const CompliancePage: React.FC = () => {
-  const complianceFrameworks = [
-    {
-      name: 'SOC 2 Type II',
-      description: 'Security, availability, and confidentiality controls',
-      status: 'Certified',
-      validUntil: '2025-12-31',
-      icon: Shield,
-      details: [
-        'Annual third-party audits',
-        'Comprehensive control testing',
-        'Management assertion reports',
-        'Continuous monitoring'
-      ]
-    },
-    {
-      name: 'ISO 27001',
-      description: 'Information security management system',
-      status: 'Certified',
-      validUntil: '2025-08-15',
-      icon: Lock,
-      details: [
-        'Information security policies',
-        'Risk management framework',
-        'Security awareness training',
-        'Regular internal audits'
-      ]
-    },
-    {
-      name: 'GDPR',
-      description: 'EU General Data Protection Regulation',
-      status: 'Compliant',
-      validUntil: 'Ongoing',
-      icon: Users,
-      details: [
-        'Data protection by design',
-        'Privacy impact assessments',
-        'Data subject rights management',
-        'Breach notification procedures'
-      ]
-    },
-    {
-      name: 'CCPA',
-      description: 'California Consumer Privacy Act',
-      status: 'Compliant',
-      validUntil: 'Ongoing',
-      icon: FileText,
-      details: [
-        'Consumer rights management',
-        'Data collection transparency',
-        'Opt-out mechanisms',
-        'Privacy policy compliance'
-      ]
-    }
+  const certifications = [
+    { name: 'SOC 2 Type II', status: 'Certified' },
+    { name: 'ISO 27001', status: 'Certified' },
+    { name: 'GDPR', status: 'Compliant' },
+    { name: 'HIPAA', status: 'Compliant' },
+    { name: 'PCI DSS', status: 'Compliant' }
   ];
-
-  const complianceAreas = [
-    {
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures and privacy controls',
-      frameworks: ['GDPR', 'CCPA', 'ISO 27001'],
-      icon: Shield
-    },
-    {
-      title: 'Security Controls',
-      description: 'Robust security controls and monitoring systems',
-      frameworks: ['SOC 2', 'ISO 27001'],
-      icon: Lock
-    },
-    {
-      title: 'Access Management',
-      description: 'Strict access controls and user management',
-      frameworks: ['SOC 2', 'ISO 27001'],
-      icon: Users
-    },
-    {
-      title: 'Incident Response',
-      description: 'Comprehensive incident response and breach notification',
-      frameworks: ['GDPR', 'SOC 2'],
-      icon: FileText
-    }
-  ];
-
-  const auditSchedule = [
-    {
-      quarter: 'Q1 2024',
-      audits: [
-        'SOC 2 Type II Annual Audit',
-        'ISO 27001 Internal Audit',
-        'GDPR Compliance Review'
-      ],
-      status: 'Completed'
-    },
-    {
-      quarter: 'Q2 2024',
-      audits: [
-        'Penetration Testing',
-        'Vulnerability Assessment',
-        'Security Control Testing'
-      ],
-      status: 'Completed'
-    },
-    {
-      quarter: 'Q3 2024',
-      audits: [
-        'CCPA Compliance Review',
-        'Data Protection Impact Assessment',
-        'Access Control Audit'
-      ],
-      status: 'Completed'
-    },
-    {
-      quarter: 'Q4 2024',
-      audits: [
-        'SOC 2 Type II Interim Review',
-        'ISO 27001 Management Review',
-        'Annual Security Assessment'
-      ],
-      status: 'In Progress'
-    }
-  ];
-
   return (
+<<<<<<< HEAD
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -339,27 +225,77 @@ const CompliancePage: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Compliance & Certifications</h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We maintain the highest standards of security and compliance to protect your data and ensure regulatory adherence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="mailto:compliance@ziontechgroup.com"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              compliance@ziontechgroup.com
-            </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Call: (302) 464-0950
-            </a>
+        </section>
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Certifications</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 text-center">
+                <Award className="w-12 h-12 text-cyan-400 mb-4 mx-auto" />
+                <h3 className="text-xl font-semibold text-white mb-2">{cert.name}</h3>
+                <div className="flex items-center justify-center text-green-400">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  {cert.status}
+                </div>
+              </div>
+            ))}
           </div>
+        </section>
+        {/* Security Features */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <Shield className="w-12 h-12 text-cyan-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Data Encryption</h3>
+              <p className="text-gray-300">All data is encrypted in transit and at rest using industry-standard encryption protocols.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <CheckCircle className="w-12 h-12 text-green-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Regular Audits</h3>
+              <p className="text-gray-300">We conduct regular security audits and penetration testing to ensure our systems remain secure.</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+              <Award className="w-12 h-12 text-purple-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Compliance Monitoring</h3>
+              <p className="text-gray-300">Continuous monitoring and reporting to ensure ongoing compliance with all relevant regulations.</p>
+            </div>
+          </div>
+        </section>
+        {/* Contact Section */}
+        <section className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Questions About Our Compliance?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Our compliance team is available to answer any questions about our security measures and certifications.
+          </p>
+          <a
+            href="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+          >
+            Contact Compliance Team
+          </a>
           <div className="mt-8 text-sm text-blue-200">
             <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
           </div>
+<<<<<<< HEAD
         </div>
       </section></div>
+=======
+        </section>
+      </main>
+      <Footer />
+    </div>
+>>>>>>> origin/main
   );
 };
-
 export default CompliancePage;

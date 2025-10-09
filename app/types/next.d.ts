@@ -1,5 +1,4 @@
 // Type definitions for Next.js compatibility in Vite
-
 export interface Metadata {
   title?: string;
   description?: string;
@@ -55,15 +54,12 @@ export interface Metadata {
     google?: string;
   };
 }
-
 export interface MetadataRoute {
   sitemap?: string;
   robots?: string;
   manifest?: string;
 }
-
 export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
-
 export interface MetadataRouteSitemap {
   url: string;
   lastModified?: Date | string;

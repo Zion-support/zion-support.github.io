@@ -1,17 +1,14 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
-
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
-
 const PWAInstaller: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
-
   useEffect(() => {
     // Check if app is already installed
     const checkInstalled = () => {
@@ -19,63 +16,51 @@ const PWAInstaller: React.FC = () => {
         setIsInstalled(true);
       }
     };
-
     checkInstalled();
-
     // Listen for beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
-
     // Listen for appinstalled event
     const handleAppInstalled = () => {
       setIsInstalled(true);
       setShowInstallPrompt(false);
       setDeferredPrompt(null);
     };
-
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     window.addEventListener('appinstalled', handleAppInstalled);
-
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
       window.removeEventListener('appinstalled', handleAppInstalled);
     };
   }, []);
-
   const handleInstallClick = async () => {
     if (!deferredPrompt) return;
-
     try {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      
       if (outcome === 'accepted') {
         console.log('PWA installation accepted');
       } else {
         console.log('PWA installation dismissed');
       }
-      
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
     } catch (error) {
       console.error('Error installing PWA:', error);
     }
   };
-
   const handleDismiss = () => {
     setShowInstallPrompt(false);
     // Don't show again for this session
     sessionStorage.setItem('pwa-install-dismissed', 'true');
   };
-
   // Don't show if already installed or dismissed this session
   if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
     return null;
   }
-
   return (
     <div className="fixed bottom-4 right-4 z-50 max-w-sm">
       <div className="bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
@@ -97,7 +82,6 @@ const PWAInstaller: React.FC = () => {
             <X className="w-4 h-4" />
           </button>
         </div>
-        
         <div className="space-y-2">
           <button
             onClick={handleInstallClick}
@@ -105,7 +89,6 @@ const PWAInstaller: React.FC = () => {
           >
             Install Now
           </button>
-          
           <button
             onClick={handleDismiss}
             className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
@@ -113,7 +96,6 @@ const PWAInstaller: React.FC = () => {
             Not Now
           </button>
         </div>
-        
         <div className="mt-3 text-xs text-gray-400">
           <p>• Faster loading</p>
           <p>• Offline access</p>
@@ -123,5 +105,4 @@ const PWAInstaller: React.FC = () => {
     </div>
   );
 };
-
 export default PWAInstaller;

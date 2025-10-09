@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -69,11 +68,17 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
   ];
-
   return (
     <>
+<<<<<<< HEAD
       
       
+=======
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
+      </Helmet>
+>>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
@@ -84,7 +89,6 @@ const CaseStudiesPage: React.FC = () => {
             </Link>
           </div>
         </header>
-
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -102,7 +106,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Case Studies Grid */}
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -118,19 +121,15 @@ const CaseStudiesPage: React.FC = () => {
                         <p className="text-gray-500 text-sm">{study.industry}</p>
                       </div>
                     </div>
-
                     <p className="text-gray-600 mb-6">{study.description}</p>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
                       <p className="text-gray-600 text-sm">{study.challenge}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-2">Solution:</h4>
                       <p className="text-gray-600 text-sm">{study.solution}</p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="font-semibold text-gray-900 mb-4">Results:</h4>
                       <div className="grid grid-cols-2 gap-4">
@@ -148,7 +147,6 @@ const CaseStudiesPage: React.FC = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="flex items-center justify-between">
                       <Link 
                         href="/contact"
@@ -167,7 +165,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,7 +196,6 @@ const CaseStudiesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -230,5 +226,4 @@ const CaseStudiesPage: React.FC = () => {
     </>
   );
 };
-
 export default CaseStudiesPage;

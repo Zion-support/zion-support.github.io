@@ -1,81 +1,21 @@
 import React from 'react';
-
-import Link from 'next/link';
-import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const GdprPage: React.FC = () => {
-  const rights = [
-    {
-      icon: Eye,
-      title: 'Right to Access',
-      description: 'You have the right to request access to your personal data and receive a copy of the data we hold about you.'
-    },
-    {
-      icon: Edit,
-      title: 'Right to Rectification',
-      description: 'You have the right to request correction of inaccurate or incomplete personal data.'
-    },
-    {
-      icon: Trash2,
-      title: 'Right to Erasure',
-      description: 'You have the right to request deletion of your personal data under certain circumstances.'
-    },
-    {
-      icon: Lock,
-      title: 'Right to Restrict Processing',
-      description: 'You have the right to request restriction of processing of your personal data.'
-    },
-    {
-      icon: Download,
-      title: 'Right to Data Portability',
-      description: 'You have the right to receive your personal data in a structured, machine-readable format.'
-    },
-    {
-      icon: Shield,
-      title: 'Right to Object',
-      description: 'You have the right to object to processing of your personal data for certain purposes.'
-    }
-  ];
-
-  const dataTypes = [
-    {
-      category: 'Identity Information',
-      data: ['Name', 'Email address', 'Phone number', 'Mailing address', 'Date of birth']
-    },
-    {
-      category: 'Technical Information',
-      data: ['IP address', 'Browser type', 'Device information', 'Operating system', 'Website usage data']
-    },
-    {
-      category: 'Business Information',
-      data: ['Company name', 'Job title', 'Industry', 'Project requirements', 'Communication history']
-    },
-    {
-      category: 'Marketing Information',
-      data: ['Marketing preferences', 'Newsletter subscriptions', 'Communication preferences', 'Survey responses']
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">GDPR Compliance</h1>
-              <p className="text-gray-600 mt-1">
-                Your rights under the General Data Protection Regulation
-              </p>
-            </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              GDPR Compliance
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Our commitment to data protection and privacy
+            </p>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -226,8 +166,12 @@ const GdprPage: React.FC = () => {
         </div>
       </section>
 
+=======
+        </section>
+      </main>
+      <Footer />
+>>>>>>> origin/main
     </div>
   );
 };
-
 export default GdprPage;

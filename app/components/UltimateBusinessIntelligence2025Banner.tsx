@@ -1,12 +1,9 @@
 'use client';
-
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -51,23 +48,17 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);
     }, 5000);
-
     return () => clearInterval(timer);
   }, [content.length]);
-
   const handleClose = () => {
     setIsVisible(false);
   };
-
   if (!isVisible) return null;
-
   const _currentContent = content[currentSlide];
-
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
@@ -82,7 +73,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
-
       <div className="relative z-10 container mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-16">
@@ -100,7 +90,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {currentContent.description}
           </p>
         </div>
-
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
@@ -123,7 +112,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               Schedule Consultation
             </Link>
           </div>
-
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -143,7 +131,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </svg>
               </div>
             </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
@@ -155,7 +142,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </div>
               ))}
             </div>
-
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {currentContent.tags.map((tag) => (
@@ -167,7 +153,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 </span>
               ))}
             </div>
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
@@ -187,7 +172,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               </a>
             </div>
           </div>
-
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -202,7 +186,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
             ))}
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -220,5 +203,4 @@ const UltimateBusinessIntelligence2025Banner = () => {
     </section>
   );
 };
-
 export default UltimateBusinessIntelligence2025Banner;

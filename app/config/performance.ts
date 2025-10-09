@@ -85,7 +85,5 @@ export const performanceConfig = {
     logThreshold: 'needsImprovement',
   },
 };
-
 export type PerformanceConfig = typeof performanceConfig;
-
 export default performanceConfig;

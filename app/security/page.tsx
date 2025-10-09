@@ -1,169 +1,21 @@
 import React from 'react';
-
-import Link from 'next/link';
-import { ArrowLeft, Shield, Lock, Eye, CheckCircle, AlertTriangle, FileText, Users } from 'lucide-react';
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const SecurityPage: React.FC = () => {
-  const securityMeasures = [
-    {
-      icon: Lock,
-      title: 'Data Encryption',
-      description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols.',
-      details: [
-        'AES-256 encryption for data at rest',
-        'TLS 1.3 for data in transit',
-        'End-to-end encryption for sensitive communications',
-        'Encrypted database backups'
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Access Controls',
-      description: 'Multi-layered access controls ensure only authorized personnel can access your data.',
-      details: [
-        'Role-based access control (RBAC)',
-        'Multi-factor authentication (MFA)',
-        'Regular access reviews and audits',
-        'Principle of least privilege'
-      ]
-    },
-    {
-      icon: Eye,
-      title: 'Monitoring & Logging',
-      description: 'Comprehensive monitoring and logging to detect and prevent security threats.',
-      details: [
-        '24/7 security monitoring',
-        'Real-time threat detection',
-        'Comprehensive audit logs',
-        'Automated incident response'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Security Training',
-      description: 'Regular security training for all employees to maintain the highest security standards.',
-      details: [
-        'Annual security awareness training',
-        'Phishing simulation exercises',
-        'Secure coding practices',
-        'Incident response training'
-      ]
-    }
-  ];
-
-  const certifications = [
-    {
-      name: 'SOC 2 Type II',
-      description: 'Audited controls for security, availability, and confidentiality',
-      status: 'Certified',
-      validUntil: '2025-12-31'
-    },
-    {
-      name: 'ISO 27001',
-      description: 'Information security management system certification',
-      status: 'Certified',
-      validUntil: '2025-08-15'
-    },
-    {
-      name: 'GDPR Compliance',
-      description: 'Full compliance with EU data protection regulations',
-      status: 'Compliant',
-      validUntil: 'Ongoing'
-    },
-    {
-      name: 'CCPA Compliance',
-      description: 'California Consumer Privacy Act compliance',
-      status: 'Compliant',
-      validUntil: 'Ongoing'
-    }
-  ];
-
-  const securityPolicies = [
-    {
-      title: 'Information Security Policy',
-      description: 'Comprehensive security framework and guidelines',
-      lastUpdated: '2024-09-15'
-    },
-    {
-      title: 'Data Protection Policy',
-      description: 'Guidelines for handling and protecting personal data',
-      lastUpdated: '2024-09-10'
-    },
-    {
-      title: 'Incident Response Plan',
-      description: 'Procedures for handling security incidents',
-      lastUpdated: '2024-08-20'
-    },
-    {
-      title: 'Business Continuity Plan',
-      description: 'Disaster recovery and business continuity procedures',
-      lastUpdated: '2024-08-15'
-    }
-  ];
-
   return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Security</h1>
-              <p className="text-gray-600 mt-1">
-                How we protect your data and maintain security
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Security First
-            </h2>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              We implement industry-leading security measures to protect your data and ensure the highest levels of security.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Report Security Issue
-              </Link>
-              <Link 
-                to="/privacy"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
-                Privacy Policy
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Security Measures */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Security Measures
-            </h2>
-            <p className="text-xl text-gray-600">
-              Multi-layered security approach to protect your data
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Security
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Comprehensive security solutions for your business
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {securityMeasures.map((measure, index) => (
               <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8">
@@ -330,3 +182,12 @@ const SecurityPage: React.FC = () => {
 };
 
 export default SecurityPage;
+=======
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+export default SecurityPage;
+>>>>>>> origin/main

@@ -1,14 +1,11 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 const metadata = {
   title: 'Our Team - Zion Tech Group',
   description:
     'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
 };
-
 export { metadata };
-
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {
@@ -36,7 +33,6 @@ const TeamPage: React.FC = () => {
       image: '👨‍🔧',
     },
   ];
-
   return (
     <>
       <div className='min-h-screen bg-slate-50 py-16'>
@@ -50,7 +46,6 @@ const TeamPage: React.FC = () => {
                 Meet the experts behind our innovative AI and IT solutions
               </p>
             </div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {teamMembers.map((member, index) => (
                 <div
@@ -68,7 +63,6 @@ const TeamPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
             <div className='mt-16 bg-white rounded-lg shadow-lg p-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
                 Join Our Team
@@ -89,5 +83,4 @@ const TeamPage: React.FC = () => {
     </>
   );
 };
-
 export default TeamPage;

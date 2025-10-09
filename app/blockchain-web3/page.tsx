@@ -1,6 +1,5 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -136,13 +135,19 @@ const BlockchainWeb3Page: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
   ];
-
   // const categories = [...new Set(blockchainServices.map(service => service.category))];
-
   return (
     <>
+<<<<<<< HEAD
       
 
+=======
+      <Helmet>
+        <title>Blockchain & Web3 Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions." />
+        <meta name="keywords" content="blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse" />
+      </Helmet>
+>>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
@@ -166,7 +171,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,7 +214,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
@@ -231,7 +234,6 @@ const BlockchainWeb3Page: React.FC = () => {
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
-                      
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-2xl font-bold text-purple-600">{service.price}</span>
@@ -241,7 +243,6 @@ const BlockchainWeb3Page: React.FC = () => {
                           Save up to 50% vs market rates
                         </div>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
@@ -253,7 +254,6 @@ const BlockchainWeb3Page: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
@@ -264,7 +264,6 @@ const BlockchainWeb3Page: React.FC = () => {
                           ))}
                         </div>
                       </div>
-
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1">
@@ -276,7 +275,6 @@ const BlockchainWeb3Page: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-
                       <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
                         Get Web3 Consultation
                       </button>
@@ -286,7 +284,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </section>
         ))}
-
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -332,7 +329,6 @@ const BlockchainWeb3Page: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -365,5 +361,4 @@ const BlockchainWeb3Page: React.FC = () => {
     </>
   );
 };
-
 export default BlockchainWeb3Page;

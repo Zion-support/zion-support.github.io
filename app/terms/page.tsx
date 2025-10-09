@@ -1,13 +1,10 @@
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
-
 const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description: 'Terms of service and usage agreement for Zion Tech Group services and website.',
 };
-
 export { metadata };
-
 const TermsPage: React.FC = () => {
   return (
     <>
@@ -18,13 +15,11 @@ const TermsPage: React.FC = () => {
               <h1 className='text-4xl font-bold text-gray-900 mb-8'>
                 Terms of Service
               </h1>
-
               <div className='prose prose-lg max-w-none'>
                 <p className='text-gray-600 mb-6'>
                   <strong>Last updated:</strong>{' '}
                   {new Date().toLocaleDateString()}
                 </p>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Acceptance of Terms
@@ -34,7 +29,6 @@ const TermsPage: React.FC = () => {
                     be bound by the terms and provision of this agreement.
                   </p>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Use License
@@ -64,7 +58,6 @@ const TermsPage: React.FC = () => {
                     </li>
                   </ul>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Service Availability
@@ -75,7 +68,6 @@ const TermsPage: React.FC = () => {
                     right to modify or discontinue services at any time.
                   </p>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     User Responsibilities
@@ -96,7 +88,6 @@ const TermsPage: React.FC = () => {
                     </li>
                   </ul>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Limitation of Liability
@@ -108,7 +99,6 @@ const TermsPage: React.FC = () => {
                     arising out of the use or inability to use our services.
                   </p>
                 </section>
-
                 <section className='mb-8'>
                   <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                     Contact Information
@@ -135,5 +125,4 @@ const TermsPage: React.FC = () => {
     </>
   );
 };
-
 export default TermsPage;

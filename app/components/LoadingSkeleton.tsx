@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -7,7 +6,6 @@ interface SkeletonProps {
   rounded?: boolean;
   animated?: boolean;
 }
-
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
   width,
@@ -18,7 +16,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
   const baseClasses = 'bg-gray-200';
   const roundedClasses = rounded ? 'rounded' : '';
   const animatedClasses = animated ? 'animate-pulse' : '';
-  
   return (
     <div
       className={`${baseClasses} ${roundedClasses} ${animatedClasses} ${className}`}
@@ -30,7 +27,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
     </div>
   );
 };
-
 // Predefined skeleton components for common use cases
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-lg p-6">
@@ -40,7 +36,6 @@ export const CardSkeleton: React.FC = () => (
     <Skeleton height="40px" width="120px" rounded />
   </div>
 );
-
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="space-y-2">
     {Array.from({ length: lines }).map((_, index) => (
@@ -52,7 +47,6 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
     ))}
   </div>
 );
-
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
   aspectRatio = '16/9' 
 }) => (
@@ -65,7 +59,6 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
     <span className="sr-only">Loading image...</span>
   </div>
 );
-
 export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
   <div className="space-y-3">
     {Array.from({ length: items }).map((_, index) => (
@@ -79,7 +72,6 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
     ))}
   </div>
 );
-
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
   rows = 5, 
   columns = 4 
@@ -103,5 +95,4 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
     ))}
   </div>
 );
-
 export default Skeleton;

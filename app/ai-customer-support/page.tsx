@@ -1,6 +1,5 @@
 import React from 'react';
 import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
-
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -28,7 +27,6 @@ const AICustomerSupportPage: React.FC = () => {
       benefits: ['Data encryption', 'Compliance ready', 'Access controls', 'Audit trails']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -82,7 +80,6 @@ const AICustomerSupportPage: React.FC = () => {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: 'Jennifer Martinez',
@@ -106,14 +103,12 @@ const AICustomerSupportPage: React.FC = () => {
       rating: 5
     }
   ];
-
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '90%', label: 'Faster Response Time' },
     { number: '80%', label: 'Issues Resolved Automatically' },
     { number: '24/7', label: 'Always Available' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -131,7 +126,6 @@ const AICustomerSupportPage: React.FC = () => {
               Provide instant, intelligent customer support 24/7 with our advanced AI platform. 
               Reduce response times by 90% while increasing customer satisfaction by 40%.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="tel:+13024640950"
@@ -147,7 +141,6 @@ const AICustomerSupportPage: React.FC = () => {
                 Get Free Demo
               </a>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -160,7 +153,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -172,7 +164,6 @@ const AICustomerSupportPage: React.FC = () => {
               Everything you need to provide exceptional customer support at scale
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -198,7 +189,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -210,7 +200,6 @@ const AICustomerSupportPage: React.FC = () => {
               Simple setup, powerful results in just 3 steps
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -242,7 +231,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -254,7 +242,6 @@ const AICustomerSupportPage: React.FC = () => {
               Choose the plan that fits your support needs. All plans include our core AI features.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -297,7 +284,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -309,7 +295,6 @@ const AICustomerSupportPage: React.FC = () => {
               Join thousands of satisfied customers who have transformed their support operations
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -328,7 +313,6 @@ const AICustomerSupportPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -362,5 +346,4 @@ const AICustomerSupportPage: React.FC = () => {
     </div>
   );
 };
-
 export default AICustomerSupportPage;

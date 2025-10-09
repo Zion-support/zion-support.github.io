@@ -2,7 +2,6 @@
  * Security Configuration
  * Defines security headers and policies for the application
  */
-
 export const securityHeaders = {
   // Content Security Policy
   contentSecurityPolicy: {
@@ -24,7 +23,6 @@ export const securityHeaders = {
       upgradeInsecureRequests: true,
     },
   },
-
   // Security Headers
   headers: {
     'X-DNS-Prefetch-Control': 'on',
@@ -36,7 +34,6 @@ export const securityHeaders = {
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
 };
-
 /**
  * Rate limiting configuration
  */
@@ -45,7 +42,6 @@ export const rateLimitConfig = {
   max: 100, // Limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again later.',
 };
-
 /**
  * CORS configuration
  */
@@ -56,7 +52,6 @@ export const corsConfig = {
   credentials: true,
   maxAge: 86400, // 24 hours
 };
-
 /**
  * Session configuration
  */
@@ -71,7 +66,6 @@ export const sessionConfig = {
     sameSite: 'strict' as const,
   },
 };
-
 /**
  * Input validation patterns
  */
@@ -82,7 +76,6 @@ export const validationPatterns = {
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,
 };
-
 /**
  * Sanitize user input
  */
@@ -93,21 +86,18 @@ export function sanitizeInput(input: string): string {
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
 }
-
 /**
  * Validate email address
  */
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
 }
-
 /**
  * Validate URL
  */
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
 }
-
 /**
  * Generate secure token
  */
@@ -123,7 +113,6 @@ export function generateSecureToken(length: number = 32): string {
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
-
 export default {
   securityHeaders,
   rateLimitConfig,

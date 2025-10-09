@@ -1,97 +1,21 @@
 import React from 'react';
-
-import Link from 'next/link';
-import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
-
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 const NewsPage: React.FC = () => {
-  const newsArticles = [
-    {
-      id: 1,
-      title: 'Zion Tech Group Launches Revolutionary AI Platform for Enterprise Automation',
-      excerpt: 'Our new AI platform promises to revolutionize how enterprises approach automation and digital transformation.',
-      date: '2024-10-08',
-      category: 'Product Launch',
-      image: '🚀',
-      featured: true
-    },
-    {
-      id: 2,
-      title: 'Company Achieves 300% Growth in Q3 2024',
-      excerpt: 'Zion Tech Group reports record-breaking growth with expanded client base and new service offerings.',
-      date: '2024-10-05',
-      category: 'Company News',
-      image: '📈',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'AI Healthcare Solutions Now Available for Medical Institutions',
-      excerpt: 'We\'re expanding our AI healthcare offerings to help medical institutions improve patient outcomes.',
-      date: '2024-10-03',
-      category: 'Service Update',
-      image: '🏥',
-      featured: false
-    },
-    {
-      id: 4,
-      title: 'Partnership with Leading Cloud Provider Announced',
-      excerpt: 'Strategic partnership will enhance our cloud infrastructure capabilities and service delivery.',
-      date: '2024-10-01',
-      category: 'Partnership',
-      image: '🤝',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Zion Tech Group Wins "Best AI Innovation" Award',
-      excerpt: 'Recognition for our groundbreaking work in autonomous business systems and AI automation.',
-      date: '2024-09-28',
-      category: 'Awards',
-      image: '🏆',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'New Office Opening in Silicon Valley',
-      excerpt: 'Expanding our presence on the West Coast to better serve our growing client base.',
-      date: '2024-09-25',
-      category: 'Company News',
-      image: '🏢',
-      featured: false
-    }
-  ];
-
-  const categories = [
-    'All News',
-    'Product Launch',
-    'Company News',
-    'Service Update',
-    'Partnership',
-    'Awards'
-  ];
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Latest News
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="relative z-10">
+        <section className="py-20 px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              News & Updates
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Stay updated with our latest announcements, product launches, and company news
+            <p className="text-xl text-gray-300 mb-8">
+              Latest news and updates from Zion Tech Group
             </p>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -279,8 +203,12 @@ const NewsPage: React.FC = () => {
         </div>
       </section>
 
+=======
+        </section>
+      </main>
+      <Footer />
+>>>>>>> origin/main
     </div>
   );
 };
-
 export default NewsPage;

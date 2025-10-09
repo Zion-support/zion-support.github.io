@@ -1,16 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
-
 export const metadata = {
   title: 'Offline - Zion Tech Group',
   description: 'You are currently offline. Please check your internet connection.',
 };
-
 const OfflinePage: React.FC = () => {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
@@ -39,7 +36,6 @@ const OfflinePage: React.FC = () => {
             network settings and try again.
           </p>
         </div>
-
         <div className='bg-white rounded-lg shadow-lg p-6 mb-6'>
           <h2 className='text-lg font-semibold text-gray-900 mb-4'>
             What you can do:
@@ -95,7 +91,6 @@ const OfflinePage: React.FC = () => {
             </li>
           </ul>
         </div>
-
         <div className='space-y-3'>
           <button
             onClick={() => window.location.reload()}
@@ -110,7 +105,6 @@ const OfflinePage: React.FC = () => {
             Go to Homepage
           </Link>
         </div>
-
         <div className='mt-8 text-sm text-gray-500'>
           <p>
             Need help?{' '}
@@ -125,5 +119,4 @@ const OfflinePage: React.FC = () => {
     </div>
   );
 };
-
 export default OfflinePage;

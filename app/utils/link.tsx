@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface LinkProps {
   href: string;
   children: React.ReactNode;
@@ -9,7 +8,6 @@ interface LinkProps {
   onClick?: () => void;
   'aria-label'?: string;
 }
-
 export const Link: React.FC<LinkProps> = ({
   href,
   children,
@@ -24,14 +22,12 @@ export const Link: React.FC<LinkProps> = ({
     if (onClick) {
       onClick();
     }
-
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {
       e.preventDefault();
       window.location.href = href;
     }
   };
-
   return (
     <a
       href={href}
@@ -46,5 +42,4 @@ export const Link: React.FC<LinkProps> = ({
     </a>
   );
 };
-
 export default Link;
