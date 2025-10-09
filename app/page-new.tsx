@@ -1,6 +1,6 @@
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
-import { Phone, Mail, MapPin, Star, Zap, Shield, Brain, Target, MessageSquare, Eye, ArrowRight, CheckCircle, TrendingUp, Users, Database, Cloud, Code, Settings, Bot, Video, Navigation, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
+import { Phone, Mail, Zap, Shield, Brain, MessageSquare, Eye, CheckCircle, TrendingUp, Database, Cloud, Code, Settings, Bot, Video, Navigation, Zap as Lightning, Shield as Security, CheckCircle as Check, Phone as PhoneIcon, Mail as MailIcon } from 'lucide-react';
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import PerformanceOptimizer from './components/PerformanceOptimizer'

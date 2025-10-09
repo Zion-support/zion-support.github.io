@@ -1,31 +1,16 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { lazy } from 'react';
-=======
 import React, { lazy } from 'react';
->>>>>>> origin/main
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
-<<<<<<< HEAD
-const EmptyComponent = () => null;
-=======
 const EmptyComponent = (): JSX.Element => <div />;
->>>>>>> origin/main
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() => ({ default: EmptyComponent }))
 );
 const ContentPromotion = lazy(() =>
-<<<<<<< HEAD
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({
-    default: EmptyComponent
-  }))
-=======
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => ({ default: EmptyComponent }))
->>>>>>> origin/main
 );
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({ default: EmptyComponent }))
@@ -35,13 +20,9 @@ function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
       <SEOOptimizer />
-<<<<<<< HEAD
-      <AccessibilityEnhancer />
-=======
       <AccessibilityEnhancer enableKeyboardNavigation enableScreenReaderSupport enableHighContrast enableFocusManagement enableSkipLinks>
         <div />
       </AccessibilityEnhancer>
->>>>>>> origin/main
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">

@@ -2,14 +2,7 @@
  * Advanced data visualization utilities
  */
 
-import {
-  DataPoint,
-  ChartData,
-  StoredChart,
-  VisualizationConfig,
-  ChartType,
-  ColorScheme,
-} from '../types/visualization';
+import { DataPoint, ChartData, StoredChart, VisualizationConfig, ChartType, ColorScheme } from '../types/visualization';;
 
 export class AdvancedDataVisualization {
   private config: VisualizationConfig;

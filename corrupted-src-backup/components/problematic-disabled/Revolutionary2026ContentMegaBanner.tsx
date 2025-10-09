@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
   const revolutionaryConten, t = [
     {

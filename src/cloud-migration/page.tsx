@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, ArrowRight, Shield, Zap, CheckCircle, Users, BarChart, Settings, Database, Globe, Lock, Clock, DollarSign, Target } from 'lucide-react';
+import { Cloud, ArrowRight, Shield, Zap, CheckCircle, Settings, Database } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

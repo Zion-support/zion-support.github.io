@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, CheckCircle, Zap, Shield, GitBranch, Search, FileText, Cpu, Brain, Target, ArrowRight, Star, Users, BarChart, Clock, DollarSign } from 'lucide-react';
+import { Code, CheckCircle, Zap, Shield, GitBranch, Search, FileText } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

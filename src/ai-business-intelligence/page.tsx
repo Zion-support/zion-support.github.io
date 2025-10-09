@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { BarChart, Brain, TrendingUp, Target, Users, Database, Zap, Shield, CheckCircle, ArrowRight, Star, Clock, DollarSign, Globe, PieChart } from 'lucide-react';
+import { BarChart, Brain, TrendingUp, Target, Users, Database, Zap, CheckCircle, ArrowRight, DollarSign } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

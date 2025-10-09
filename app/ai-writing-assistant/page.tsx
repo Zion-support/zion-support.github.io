@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { FileText, CheckCircle, Zap, Users, Clock, Star, ArrowRight, Brain, Target, BarChart } from 'lucide-react';
+import { FileText, CheckCircle, Zap, Users, Target, BarChart } from 'lucide-react';;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
