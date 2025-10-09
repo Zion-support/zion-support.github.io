@@ -5,12 +5,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
+
+// Import pages
 import ITServicesPage from './it-services/page';
 import ITInfrastructurePage from './it-infrastructure/page';
 import CybersecurityPage from './cybersecurity/page';
@@ -36,10 +37,7 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
-
 const _HomePage = lazy(() => import('../app/page'));
-
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -48,6 +46,7 @@ const LoadingSpinner: React.FC = () => (
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
+  </div>
 );
 
 // AI Services Pages
@@ -68,38 +67,8 @@ import AIDataVisualizationPage from './ai-data-visualization/page';
 import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
 
-// IT Services Pages
-// Micro SAAS Pages
-
-// Specialized Solutions Pages
-import QuantumComputingPage from './quantum-computing/page';
-import AutonomousSystemsPage from './autonomous-systems/page';
-import BlockchainWeb3Page from './blockchain-web3/page';
-import IoTEdgeComputingPage from './iot-edge-computing/page';
-import BusinessIntelligencePage from './business-intelligence/page';
-import RoboticsPage from './robotics/page';
-
-// Company Pages
-
-// Support Pages
-
-
-
-
-// Additional Pages
-import PricingPage from './pricing/page';
-import DemoPage from './demo/page';
-import ConsultationPage from './consultation/page';
-
-// AI Services
-
-// Additional AI Services
-
-// Specialized Solutions
-
-
+// Micro SAAS Solutions
 import AIProjectManagerPage from './ai-project-manager/page';
-
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
@@ -118,122 +87,44 @@ const App: React.FC = () => {
   const initializeEnhancers = async () => {
     try {
       // Initialize performance enhancer
-      const performanceEnhancer = new PerformanceEnhancer({
-        enableImageOptimization: true,
-        enableLazyLoading: true,
-        enableCodeSplitting: true,
-        enablePrefetching: true,
-        enableServiceWorker: true,
-        enableResourceHints: true,
-        enableCompression: true,
-        enableCaching: true
-      });
-
+      const performanceEnhancer = new PerformanceEnhancer();
+      await performanceEnhancer.initialize();
+      
       // Initialize SEO enhancer
-      const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-        keywords: ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-        canonicalUrl: 'https://ziontechgroup.com',
-        ogImage: 'https://ziontechgroup.com/og-image.jpg',
-        ogType: 'website',
-        twitterCard: 'summary_large_image',
-        structuredData: {
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: {
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        robots: 'index, follow',
-        language: 'en',
-        author: 'Zion Tech Group',
-        publisher: 'Zion Tech Group'
-
+      const seoEnhancer = new SEOEnhancer();
+      await seoEnhancer.initialize();
+      
       // Initialize accessibility enhancer
-      const accessibilityEnhancer = new AccessibilityEnhancer({
-        enableKeyboardNavigation: true,
-        enableScreenReader: true,
-        enableHighContrast: true,
-        enableFocusManagement: true,
-        enableReducedMotion: true,
-        enableColorBlindSupport: true,
-        enableVoiceControl: true
-
+      const accessibilityEnhancer = new AccessibilityEnhancer();
+      await accessibilityEnhancer.initialize();
+      
       // Initialize security enhancer
-      const securityEnhancer = new SecurityEnhancer({
-        enableCSP: true,
-        enableHSTS: true,
-        enableXSSProtection: true,
-        enableClickjackingProtection: true,
-        enableContentTypeOptions: true,
-        enableReferrerPolicy: true,
-        enablePermissionsPolicy: true,
-        enableCORS: true,
-        enableSecureCookies: true
-
+      const securityEnhancer = new SecurityEnhancer();
+      await securityEnhancer.initialize();
+      
       // Initialize UX enhancer
-      const uxEnhancer = new UserExperienceEnhancer({
-        enableSmoothScrolling: true,
-        enableLoadingStates: true,
-        enableErrorBoundaries: true,
-        enableAnalytics: true,
-        enableNotifications: true,
-        enableProgressiveWebApp: true,
-        enableOfflineSupport: true,
-        enablePushNotifications: false,
-        enableDarkMode: true,
-        enableAnimations: true
-
+      const uxEnhancer = new UserExperienceEnhancer();
+      await uxEnhancer.initialize();
+      
       setEnhancers({
         performance: performanceEnhancer,
         seo: seoEnhancer,
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
-        ux: uxEnhancer
-
-      // Optimize for Core Web Vitals
-      seoEnhancer.optimizeForCoreWebVitals();
-
-      // Generate reports (for development)
-      if (process.env.NODE_ENV === 'development') {
-        // Reports generated silently in development
-
+        ux: uxEnhancer,
+      });
+      
       setIsInitialized(true);
-    } catch {
-      // Silently handle enhancer initialization errors
-      setIsInitialized(true); // Continue even if enhancers fail
-      // Continue even if enhancers fail
+    } catch (error) {
+      // console.error('Failed to initialize enhancers:', error);
+      // Continue with app initialization even if enhancers fail
+      setIsInitialized(true);
+    }
   };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
+  }
 
   return (
     <Router>
@@ -250,9 +141,9 @@ const App: React.FC = () => {
         
         {/* Main Services */}
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/demo" element={<DemoPage />} />
-        <Route path="/consultation" element={<ConsultationPage />} />
+        <Route path="/pricing" element={<div>Pricing Page</div>} />
+        <Route path="/demo" element={<div>Demo Page</div>} />
+        <Route path="/consultation" element={<div>Consultation Page</div>} />
         
         {/* AI Services */}
         <Route path="/ai-services" element={<AIServicesPage />} />
@@ -276,52 +167,83 @@ const App: React.FC = () => {
         <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
         <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
         <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
-        <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
-        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-        <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
-        <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-        <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
-        <Route path="/ai-crm" element={<AICRMPage />} />
         
         {/* IT Services */}
         <Route path="/it-services" element={<ITServicesPage />} />
         <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
         <Route path="/cybersecurity" element={<CybersecurityPage />} />
         <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-        <Route path="/devops-cicd" element={<DevOpsPage />} />
-        <Route path="/database-management" element={<DatabasePage />} />
-        <Route path="/network-solutions" element={<NetworkingPage />} />
+        <Route path="/devops" element={<DevOpsPage />} />
+        <Route path="/database" element={<DatabasePage />} />
+        <Route path="/networking" element={<NetworkingPage />} />
         
-        {/* Specialized Solutions */}
-        <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-        <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-        <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-        <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-        <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-        <Route path="/robotics" element={<RoboticsPage />} />
-        
-        {/* Content Pages */}
+        {/* Other Pages */}
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         
-        {/* AI Services Routes */}
+        {/* AI Support Pages */}
+        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
+        <Route path="/ai-code-generation" element={<AICodeGenerationPage />} />
+        <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
+        <Route path="/ai-writing-assistant" element={<AIWritingAssistantPage />} />
         <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
+        <Route path="/ai-crm" element={<AICRMPage />} />
         
-        <Route path="*" element={<NotFoundPage />} />
+        {/* Coming Soon Pages */}
+        <Route path="/ai-ab-testing" element={<div>AI A/B Testing - Coming Soon</div>} />
+        <Route path="/ai-analytics" element={<div>AI Analytics - Coming Soon</div>} />
+        <Route path="/ai-computer-vision" element={<div>AI Computer Vision - Coming Soon</div>} />
+        <Route path="/ai-content-studio" element={<div>AI Content Studio - Coming Soon</div>} />
+        <Route path="/ai-customer-insights" element={<div>AI Customer Insights - Coming Soon</div>} />
+        <Route path="/ai-design-assistant" element={<div>AI Design Assistant - Coming Soon</div>} />
+        <Route path="/ai-document-processor" element={<div>AI Document Processor - Coming Soon</div>} />
+        <Route path="/ai-ecommerce-optimizer" element={<div>AI E-commerce Optimizer - Coming Soon</div>} />
+        <Route path="/ai-edge-computing" element={<div>AI Edge Computing - Coming Soon</div>} />
+        <Route path="/ai-hr-assistant" element={<div>AI HR Assistant - Coming Soon</div>} />
+        <Route path="/ai-inventory-manager" element={<div>AI Inventory Manager - Coming Soon</div>} />
+        <Route path="/ai-invoice-generator" element={<div>AI Invoice Generator - Coming Soon</div>} />
+        <Route path="/ai-lead-scoring" element={<div>AI Lead Scoring - Coming Soon</div>} />
+        <Route path="/ai-mobile-builder" element={<div>AI Mobile Builder - Coming Soon</div>} />
+        <Route path="/ai-nlp" element={<div>AI NLP - Coming Soon</div>} />
+        <Route path="/ai-performance-tracker" element={<div>AI Performance Tracker - Coming Soon</div>} />
+        <Route path="/ai-predictive-analytics" element={<div>AI Predictive Analytics - Coming Soon</div>} />
+        <Route path="/ai-research-development" element={<div>AI Research & Development - Coming Soon</div>} />
+        <Route path="/ai-robotics" element={<div>AI Robotics - Coming Soon</div>} />
+        <Route path="/ai-sales-forecasting" element={<div>AI Sales Forecasting - Coming Soon</div>} />
+        <Route path="/ai-scheduler" element={<div>AI Scheduler - Coming Soon</div>} />
+        <Route path="/ai-security-monitor" element={<div>AI Security Monitor - Coming Soon</div>} />
+        <Route path="/ai-seo-optimizer" element={<div>AI SEO Optimizer - Coming Soon</div>} />
+        <Route path="/ai-voice-assistant" element={<div>AI Voice Assistant - Coming Soon</div>} />
+        
+        {/* Additional Pages */}
+        <Route path="/analytics-tools" element={<div>Analytics Tools - Coming Soon</div>} />
+        <Route path="/ar-vr-solutions" element={<div>AR/VR Solutions - Coming Soon</div>} />
+        <Route path="/business-apps" element={<div>Business Apps - Coming Soon</div>} />
+        <Route path="/compliance" element={<div>Compliance - Coming Soon</div>} />
+        <Route path="/database-management" element={<div>Database Management - Coming Soon</div>} />
+        <Route path="/devops-cicd" element={<div>DevOps CI/CD - Coming Soon</div>} />
+        <Route path="/digital-transformation" element={<div>Digital Transformation - Coming Soon</div>} />
+        <Route path="/expense-tracker" element={<div>Expense Tracker - Coming Soon</div>} />
+        <Route path="/future-technologies" element={<div>Future Technologies - Coming Soon</div>} />
+        <Route path="/global-it-support" element={<div>Global IT Support - Coming Soon</div>} />
+        <Route path="/green-it" element={<div>Green IT - Coming Soon</div>} />
+        <Route path="/innovation-labs" element={<div>Innovation Labs - Coming Soon</div>} />
+        <Route path="/iot-edge" element={<div>IoT Edge - Coming Soon</div>} />
+        <Route path="/it-automation" element={<div>IT Automation - Coming Soon</div>} />
+        <Route path="/it-disaster-recovery" element={<div>IT Disaster Recovery - Coming Soon</div>} />
+        <Route path="/it-infrastructure-design" element={<div>IT Infrastructure Design - Coming Soon</div>} />
+        <Route path="/it-performance-monitoring" element={<div>IT Performance Monitoring - Coming Soon</div>} />
+        <Route path="/it-support" element={<div>IT Support - Coming Soon</div>} />
+        <Route path="/it-training" element={<div>IT Training - Coming Soon</div>} />
+        <Route path="/network-solutions" element={<div>Network Solutions - Coming Soon</div>} />
+        <Route path="/smart-analytics" element={<div>Smart Analytics - Coming Soon</div>} />
+        <Route path="/smart-cities" element={<div>Smart Cities - Coming Soon</div>} />
+        <Route path="/sustainability-tech" element={<div>Sustainability Tech - Coming Soon</div>} />
+        <Route path="/system-administration" element={<div>System Administration - Coming Soon</div>} />
+        <Route path="/task-manager-pro" element={<div>Task Manager Pro - Coming Soon</div>} />
       </Routes>
     </Router>
-
-// 404 Page Component
-const NotFoundPage: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
-      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-      <a
-        href="/"
-        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-      >
-        Go Home
-      </a>
+  );
+};
 
 export default App;
