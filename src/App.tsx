@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useEffect, useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -9,6 +10,10 @@ import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
 >>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
+=======
+import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+>>>>>>> cursor/website-audit-and-update-with-deployment-307a
 
 
 import React, { useEffect, useState, lazy } from 'react';
@@ -149,7 +154,6 @@ const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
 <<<<<<< HEAD
 
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsInitialized(true);
@@ -158,6 +162,7 @@ const App: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
 
 =======
 
@@ -167,6 +172,8 @@ const App: React.FC = () => {
   }, []);
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-d6fe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-307a
   if (!isInitialized) {
     return <LoadingSpinner />;
   }
@@ -299,6 +306,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
-
-
