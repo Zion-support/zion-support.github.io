@@ -47,6 +47,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
       tags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
     }
   ];
+  const currentContent = content[currentSlide];
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % content.length);

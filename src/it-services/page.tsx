@@ -389,7 +389,7 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  <service.icon className="w-8 h-8" />
+                  {React.createElement(service.icon, { className: "w-8 h-8" })}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
@@ -438,10 +438,10 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <div className={`text-lg font-bold ${service.color} mb-2`}>{service.price}</div>
+                  <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
-                    className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
+                    className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
@@ -458,7 +458,7 @@ const ITServicesPage: React.FC = () => {
             {additionalServices.map((service, index) => (
               <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
                 <div className="flex items-center mb-3">
-                  <service.icon className="w-6 h-6 text-cyan-400 mr-3" />
+                  {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" })}
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 text-sm mb-3">{service.description}</p>
