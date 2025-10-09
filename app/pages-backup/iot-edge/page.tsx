@@ -1,143 +1,142 @@
 import React from 'react';
-import { CheckCircle, Star, Wifi, Shield, Zap, BarChart, Globe, Database } from 'lucide-react';
 
-const IoTEdgeComputingPage: React.FC = () => {
+const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
-      title: 'IoT Sensor Network Design',
-      description: 'Comprehensive IoT sensor networks with real-time data collection and edge processing capabilities.',
-      icon: '📡',
-      price: 'Starting at $5,000/project',
-      features: ['Sensor selection & placement', 'Network topology design', 'Data collection protocols', 'Edge processing setup', 'Real-time monitoring'],
-      benefits: ['Improve operational visibility', 'Reduce manual monitoring', 'Enable predictive maintenance'],
-      marketPrice: '$8,000-25,000/project',
-      category: 'Sensor Networks',
-      technologies: ['LoRaWAN', 'NB-IoT', 'Zigbee', 'WiFi 6', '5G']
+      title: 'IoT Device Management Platform',
+      description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
+      icon: '📱',
+      price: 'Starting at $3,500/month',
+      features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
+      benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Device Management',
+      technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'MQTT']
     },
     {
       title: 'Edge Computing Solutions',
-      description: 'Edge computing infrastructure for real-time data processing and reduced latency applications.',
+      description: 'Real-time data processing at the edge with low latency and high performance.',
       icon: '⚡',
-      price: 'Starting at $3,500/month',
-      features: ['Edge server deployment', 'Real-time processing', 'Data filtering & aggregation', 'Local decision making', 'Cloud synchronization'],
-      benefits: ['Reduce latency by 80%', 'Lower bandwidth costs', 'Enable offline operation'],
-      marketPrice: '$6,000-18,000/month',
+      price: 'Starting at $4,500/month',
+      features: ['Edge analytics', 'Real-time processing', 'Local data storage', 'Offline capabilities', 'Edge AI'],
+      benefits: ['Reduce latency by 90%', 'Lower bandwidth costs', 'Enable offline operations'],
+      marketPrice: '$7,000-20,000/month',
       category: 'Edge Computing',
-      technologies: ['Kubernetes', 'Docker', 'Edge AI', 'MQTT', 'Apache Kafka']
+      technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'OpenVINO', 'Edge TPU']
     },
     {
       title: 'Industrial IoT (IIoT) Systems',
-      description: 'Smart manufacturing and industrial automation solutions with IoT integration.',
+      description: 'Smart manufacturing and industrial automation with predictive maintenance.',
       icon: '🏭',
       price: 'Starting at $8,000/month',
-      features: ['Equipment monitoring', 'Predictive maintenance', 'Quality control', 'Energy optimization', 'Safety systems'],
-      benefits: ['Increase production efficiency', 'Reduce downtime by 40%', 'Improve product quality'],
-      marketPrice: '$15,000-50,000/month',
+      features: ['Sensor integration', 'Predictive maintenance', 'Process optimization', 'Quality control', 'Safety monitoring'],
+      benefits: ['Reduce downtime by 50%', 'Improve efficiency by 30%', 'Prevent equipment failures'],
+      marketPrice: '$15,000-40,000/month',
       category: 'Industrial IoT',
-      technologies: ['OPC UA', 'Modbus', 'Ethernet/IP', 'Industrial Protocols', 'SCADA Systems']
+      technologies: ['OPC UA', 'Modbus', 'MQTT', 'Time Series DB', 'Machine Learning']
     },
     {
       title: 'Smart City Solutions',
-      description: 'Comprehensive smart city infrastructure including traffic, utilities, and public services.',
+      description: 'Comprehensive smart city infrastructure with traffic, energy, and environmental monitoring.',
       icon: '🏙️',
-      price: 'Starting at $15,000/month',
-      features: ['Traffic management', 'Smart lighting', 'Waste management', 'Air quality monitoring', 'Public safety'],
-      benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen services'],
-      marketPrice: '$25,000-100,000/month',
+      price: 'Starting at $12,000/month',
+      features: ['Traffic management', 'Energy monitoring', 'Environmental sensors', 'Public safety', 'Citizen services'],
+      benefits: ['Improve city efficiency', 'Reduce energy consumption', 'Enhance citizen experience'],
+      marketPrice: '$20,000-60,000/month',
       category: 'Smart Cities',
-      technologies: ['LPWAN', 'Cellular IoT', 'Edge Computing', 'Data Analytics', 'AI/ML']
+      technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Big Data', 'AI Analytics']
     },
     {
-      title: 'IoT Data Analytics Platform',
-      description: 'Real-time analytics platform for IoT data with machine learning and predictive insights.',
-      icon: '📊',
-      price: 'Starting at $4,500/month',
-      features: ['Real-time data processing', 'Machine learning models', 'Predictive analytics', 'Anomaly detection', 'Custom dashboards'],
-      benefits: ['Extract actionable insights', 'Predict equipment failures', 'Optimize operations'],
-      marketPrice: '$8,000-25,000/month',
-      category: 'Data Analytics',
-      technologies: ['Apache Spark', 'TensorFlow', 'InfluxDB', 'Grafana', 'Time Series DB']
-    },
-    {
-      title: 'IoT Security Solutions',
-      description: 'Comprehensive security solutions for IoT devices and networks with threat detection.',
+      title: 'IoT Security & Compliance',
+      description: 'Comprehensive security solutions for IoT devices and networks with compliance management.',
       icon: '🔒',
-      price: 'Starting at $3,200/month',
-      features: ['Device authentication', 'Encrypted communication', 'Threat detection', 'Vulnerability scanning', 'Security monitoring'],
-      benefits: ['Protect IoT infrastructure', 'Prevent cyber attacks', 'Ensure compliance'],
-      marketPrice: '$6,000-20,000/month',
-      category: 'IoT Security',
-      technologies: ['Zero Trust', 'PKI', 'VPN', 'Firewall', 'SIEM']
-    },
-    {
-      title: 'Connected Vehicle Solutions',
-      description: 'IoT solutions for connected vehicles including fleet management and telematics.',
-      icon: '🚗',
-      price: 'Starting at $6,500/month',
-      features: ['Fleet tracking', 'Driver behavior analysis', 'Vehicle diagnostics', 'Route optimization', 'Fuel monitoring'],
-      benefits: ['Reduce fuel costs by 15%', 'Improve driver safety', 'Optimize fleet operations'],
-      marketPrice: '$12,000-40,000/month',
-      category: 'Connected Vehicles',
-      technologies: ['OBD-II', 'GPS Tracking', 'Cellular Networks', 'CAN Bus', 'Telematics']
-    },
-    {
-      title: 'Smart Agriculture IoT',
-      description: 'Precision agriculture solutions with soil monitoring, crop management, and automated irrigation.',
-      icon: '🌾',
-      price: 'Starting at $4,000/month',
-      features: ['Soil monitoring', 'Weather stations', 'Irrigation control', 'Crop health monitoring', 'Livestock tracking'],
-      benefits: ['Increase crop yield by 20%', 'Reduce water usage', 'Optimize fertilizer application'],
-      marketPrice: '$7,000-25,000/month',
-      category: 'Smart Agriculture',
-      technologies: ['Soil Sensors', 'Weather APIs', 'Irrigation Systems', 'Drones', 'Satellite Imagery']
-    },
-    {
-      title: 'IoT Device Management',
-      description: 'Centralized device management platform for monitoring, updating, and maintaining IoT devices.',
-      icon: '📱',
       price: 'Starting at $2,800/month',
-      features: ['Device provisioning', 'Remote updates', 'Health monitoring', 'Configuration management', 'Troubleshooting'],
-      benefits: ['Reduce maintenance costs', 'Improve device reliability', 'Enable remote management'],
-      marketPrice: '$5,000-15,000/month',
-      category: 'Device Management',
-      technologies: ['Device Twins', 'OTA Updates', 'Device Registry', 'Configuration Management']
+      features: ['Device authentication', 'Encryption', 'Vulnerability scanning', 'Compliance monitoring', 'Incident response'],
+      benefits: ['Protect against cyber threats', 'Ensure compliance', 'Build trust'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Security',
+      technologies: ['PKI', 'TLS/SSL', 'Zero Trust', 'SIEM', 'Compliance Tools']
     },
     {
-      title: 'Environmental Monitoring',
-      description: 'Comprehensive environmental monitoring solutions for air, water, and soil quality.',
-      icon: '🌍',
-      price: 'Starting at $3,500/month',
-      features: ['Air quality sensors', 'Water quality monitoring', 'Noise level detection', 'Weather monitoring', 'Compliance reporting'],
-      benefits: ['Ensure environmental compliance', 'Protect public health', 'Enable data-driven decisions'],
-      marketPrice: '$6,500-20,000/month',
-      category: 'Environmental Monitoring',
-      technologies: ['Environmental Sensors', 'Data Loggers', 'Compliance Systems', 'Reporting Tools']
+      title: 'Real-Time Data Analytics',
+      description: 'Streaming analytics for IoT data with real-time insights and alerting.',
+      icon: '📊',
+      price: 'Starting at $3,200/month',
+      features: ['Stream processing', 'Real-time dashboards', 'Anomaly detection', 'Predictive analytics', 'Alert systems'],
+      benefits: ['Make faster decisions', 'Identify issues early', 'Optimize operations'],
+      marketPrice: '$5,000-15,000/month',
+      category: 'Analytics',
+      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Spark', 'InfluxDB', 'Grafana']
     },
     {
       title: 'IoT Integration Services',
-      description: 'Integration of IoT devices with existing enterprise systems and cloud platforms.',
+      description: 'Connect existing systems with IoT devices and cloud platforms seamlessly.',
       icon: '🔗',
-      price: 'Starting at $4,500/project',
-      features: ['System integration', 'API development', 'Data transformation', 'Cloud connectivity', 'Legacy system integration'],
-      benefits: ['Connect existing systems', 'Enable data sharing', 'Improve interoperability'],
-      marketPrice: '$8,000-30,000/project',
+      price: 'Starting at $2,500/month',
+      features: ['Legacy system integration', 'API development', 'Data transformation', 'Protocol conversion', 'Cloud connectivity'],
+      benefits: ['Modernize existing systems', 'Enable new capabilities', 'Reduce integration costs'],
+      marketPrice: '$4,000-10,000/month',
       category: 'Integration',
-      technologies: ['REST APIs', 'GraphQL', 'Message Queues', 'Cloud Platforms', 'Middleware']
+      technologies: ['REST APIs', 'GraphQL', 'Message Queues', 'ETL Tools', 'Cloud Platforms']
     },
     {
-      title: 'IoT Consulting & Strategy',
-      description: 'Strategic IoT consulting and technology roadmap development for digital transformation.',
-      icon: '💡',
-      price: 'Starting at $350/hour',
-      features: ['IoT strategy development', 'Technology assessment', 'Use case identification', 'ROI analysis', 'Implementation planning'],
-      benefits: ['Navigate IoT landscape', 'Make informed decisions', 'Maximize IoT investment'],
-      marketPrice: '$500-1,200/hour',
-      category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
+      title: 'Predictive Maintenance Systems',
+      description: 'AI-powered predictive maintenance for industrial equipment and machinery.',
+      icon: '🔧',
+      price: 'Starting at $5,500/month',
+      features: ['Vibration analysis', 'Temperature monitoring', 'Performance tracking', 'Failure prediction', 'Maintenance scheduling'],
+      benefits: ['Prevent unplanned downtime', 'Reduce maintenance costs', 'Extend equipment life'],
+      marketPrice: '$8,000-25,000/month',
+      category: 'Predictive Maintenance',
+      technologies: ['Machine Learning', 'Time Series Analysis', 'Vibration Sensors', 'Thermal Cameras', 'AI Models']
+    },
+    {
+      title: 'Environmental Monitoring',
+      description: 'Comprehensive environmental monitoring with air quality, water, and soil sensors.',
+      icon: '🌍',
+      price: 'Starting at $2,200/month',
+      features: ['Air quality monitoring', 'Water quality sensors', 'Soil analysis', 'Weather stations', 'Compliance reporting'],
+      benefits: ['Ensure environmental compliance', 'Protect public health', 'Optimize resource usage'],
+      marketPrice: '$3,500-10,000/month',
+      category: 'Environmental',
+      technologies: ['Environmental Sensors', 'Data Loggers', 'Satellite Data', 'GIS', 'Compliance Systems']
+    },
+    {
+      title: 'Smart Agriculture Solutions',
+      description: 'Precision agriculture with IoT sensors, drones, and AI-powered crop management.',
+      icon: '🌾',
+      price: 'Starting at $4,000/month',
+      features: ['Soil monitoring', 'Crop health analysis', 'Weather tracking', 'Irrigation control', 'Yield optimization'],
+      benefits: ['Increase crop yields by 25%', 'Reduce water usage by 30%', 'Optimize fertilizer use'],
+      marketPrice: '$6,000-18,000/month',
+      category: 'Agriculture',
+      technologies: ['Soil Sensors', 'Drones', 'Satellite Imagery', 'Machine Learning', 'Precision Agriculture']
+    },
+    {
+      title: 'IoT Device Development',
+      description: 'Custom IoT device design and development for specific business requirements.',
+      icon: '⚙️',
+      price: 'Starting at $15,000/project',
+      features: ['Hardware design', 'Firmware development', 'Prototyping', 'Testing & validation', 'Manufacturing support'],
+      benefits: ['Custom solutions', 'Competitive advantage', 'Optimized performance'],
+      marketPrice: '$25,000-100,000/project',
+      category: 'Device Development',
+      technologies: ['Arduino', 'Raspberry Pi', 'ESP32', 'ARM Cortex', 'Custom PCBs']
+    },
+    {
+      title: 'IoT Data Management',
+      description: 'Comprehensive data management for IoT with storage, processing, and analytics.',
+      icon: '🗄️',
+      price: 'Starting at $2,800/month',
+      features: ['Data ingestion', 'Storage optimization', 'Data processing', 'Quality management', 'Analytics'],
+      benefits: ['Handle massive data volumes', 'Ensure data quality', 'Enable advanced analytics'],
+      marketPrice: '$4,500-12,000/month',
+      category: 'Data Management',
+      technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
   ];
 
-  // Categories removed as they were unused
+  const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -150,7 +149,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                 IoT & Edge Computing Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-                Connect the physical and digital worlds with intelligent IoT solutions and edge computing
+                Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
@@ -169,10 +168,10 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IoT Services?
+                Why Choose Our IoT & Edge Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive IoT solutions that transform your business with connected intelligence
+                Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -180,29 +179,29 @@ const IoTEdgeComputingPage: React.FC = () => {
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Connected Intelligence</h3>
-                <p className="text-gray-600">Transform data into actionable insights with IoT</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
+                <p className="text-gray-600">Certified engineers with deep expertise in IoT and edge computing</p>
               </div>
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="w-8 h-8 text-blue-600" />
+                  <Zap className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Processing</h3>
-                <p className="text-gray-600">Real-time processing at the edge for instant decisions</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Processing</h3>
+                <p className="text-gray-600">Ultra-low latency edge computing for critical applications</p>
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
-                <p className="text-gray-600">Bank-level security for all IoT devices and networks</p>
+                <p className="text-gray-600">Bank-level security with end-to-end encryption and monitoring</p>
               </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-orange-600" />
+                  <Target className="w-8 h-8 text-orange-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Scalable Solutions</h3>
-                <p className="text-gray-600">Solutions that grow with your business needs</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>
+                <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries</p>
               </div>
             </div>
           </div>
@@ -214,10 +213,10 @@ const IoTEdgeComputingPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services
+                  {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions for connected environments
+                  Specialized {category.toLowerCase()} services for connected and intelligent systems
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -235,7 +234,7 @@ const IoTEdgeComputingPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 45% vs market rates
+                          Save up to 40% vs market rates
                         </div>
                       </div>
 
@@ -289,42 +288,42 @@ const IoTEdgeComputingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our IoT Capabilities
+                Our IoT & Edge Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive IoT technologies and edge computing expertise
+                Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center p-6 bg-gradient-to-br from-cyan-50 to-blue-100 rounded-lg">
                 <Wifi className="w-12 h-12 text-cyan-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Sensor Networks</h3>
-                <p className="text-gray-600">Comprehensive sensor network design and deployment</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
+                <p className="text-gray-600">Comprehensive platform for managing IoT devices at scale</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
-                <Cpu className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
-                <p className="text-gray-600">Real-time processing and decision making at the edge</p>
+                <p className="text-gray-600">Real-time processing at the edge with ultra-low latency</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
-                <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Security</h3>
-                <p className="text-gray-600">Comprehensive security for IoT devices and networks</p>
+                <Brain className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
+                <p className="text-gray-600">Machine learning and AI for intelligent IoT insights</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg">
                 <BarChart className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Analytics</h3>
-                <p className="text-gray-600">Real-time analytics and machine learning for IoT data</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-Time Analytics</h3>
+                <p className="text-gray-600">Streaming analytics and real-time data processing</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg">
-                <Globe className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
-                <p className="text-gray-600">Comprehensive smart city infrastructure solutions</p>
+                <Settings className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial IoT</h3>
+                <p className="text-gray-600">Smart manufacturing and industrial automation solutions</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg">
-                <Database className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
-                <p className="text-gray-600">Centralized management and monitoring of IoT devices</p>
+                <Globe className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Cities</h3>
+                <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
               </div>
             </div>
           </div>
@@ -362,4 +361,4 @@ const IoTEdgeComputingPage: React.FC = () => {
   );
 };
 
-export default IoTEdgeComputingPage;
+export default IoTEdgePage;

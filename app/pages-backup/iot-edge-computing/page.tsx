@@ -1,5 +1,4 @@
 import React from 'react';
-import { CheckCircle, Star, Wifi, Shield, Zap, BarChart, Globe, Database } from 'lucide-react';
 
 const IoTEdgeComputingPage: React.FC = () => {
   const iotServices = [
@@ -137,7 +136,6 @@ const IoTEdgeComputingPage: React.FC = () => {
     }
   ];
 
-  // Categories removed as they were unused
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

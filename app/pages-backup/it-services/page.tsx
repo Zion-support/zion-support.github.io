@@ -8,42 +8,6 @@ import Footer from '../components/Footer';
 =======
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, 
-  BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, 
-  Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, 
-  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, 
-  Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, 
-  Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, 
-  Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, 
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Monitor, Headphones, Mic, 
-  Image, FileImage, Layers, GitBranch, Terminal, Wifi, HardDrive, Cpu as Processor,
-  WifiOff, RefreshCw, Download, Upload, Share2, Copy, Edit, Trash2, Plus, Minus,
-  Maximize, Minimize, RotateCcw, RotateCw, Move, Grip, Filter, SortAsc, SortDesc,
-  ChevronUp, ChevronDown, ChevronLeft, ChevronRight, X, Check as CheckIcon, AlertCircle, Info,
-  ExternalLink, Link, Lock as LockIcon, Unlock, Eye as EyeIcon, EyeOff, Bell,
-  BellOff, Volume2, VolumeX, Play, Pause, Stop, SkipForward, SkipBack, Repeat,
-  Shuffle, Heart as HeartIcon, ThumbsUp, ThumbsDown, MessageCircle, Send,
-  Paperclip, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Meh as MehIcon,
-  Server, Network, Router, Switch, Firewall, Key, Certificate, Bug, AlertTriangle,
-  Activity as ActivityIcon, Zap as ZapIcon, Globe as GlobeIcon, Shield as ShieldIcon,
-  Database as DatabaseIcon, Cloud as CloudIcon, Code as CodeIcon, Smartphone as SmartphoneIcon,
-  Settings as SettingsIcon, BarChart as BarChartIcon, FileText as FileTextIcon,
-  Search as SearchIcon, Bot as BotIcon, Palette as PaletteIcon, Camera as CameraIcon,
-  Music as MusicIcon, Video as VideoIcon, Gamepad2 as Gamepad2Icon, ShoppingCart as ShoppingCartIcon,
-  CreditCard as CreditCardIcon, Building as BuildingIcon, Factory as FactoryIcon,
-  Car as CarIcon, Plane as PlaneIcon, Ship as ShipIcon, Train as TrainIcon,
-  Home as HomeIcon, Heart as HeartIcon, Stethoscope as StethoscopeIcon,
-  GraduationCap as GraduationCapIcon, Briefcase as BriefcaseIcon, Wrench as WrenchIcon,
-  Hammer as HammerIcon, Paintbrush as PaintbrushIcon, Scissors as ScissorsIcon,
-  BookOpen as BookOpenIcon, Calculator as CalculatorIcon, Calendar as CalendarIcon,
-  Clock3 as Clock3Icon, Compass as CompassIcon, Globe2 as Globe2Icon, Map as MapIcon,
-  Navigation as NavigationIcon, PieChart as PieChartIcon, TrendingDown as TrendingDownIcon,
-  Activity as ActivityIcon, Zap as LightningIcon, Target as CrosshairIcon,
-  Shield as SecurityIcon, Users as PeopleIcon, Star as StarIcon, CheckCircle as CheckIcon,
-  ArrowRight as ArrowIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as LocationIcon
-} from 'lucide-react';
 
 >>>>>>> origin/main
 const ITServicesPage: React.FC = () => {
@@ -627,23 +591,6 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Grid, count: itServices.length },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server, count: itServices.filter(s => s.category === 'infrastructure').length },
-    { id: 'security', name: 'Security', icon: Shield, count: itServices.filter(s => s.category === 'security').length },
-    { id: 'devops', name: 'DevOps', icon: GitBranch, count: itServices.filter(s => s.category === 'devops').length },
-    { id: 'database', name: 'Database', icon: Database, count: itServices.filter(s => s.category === 'database').length },
-    { id: 'networking', name: 'Networking', icon: Network, count: itServices.filter(s => s.category === 'networking').length },
-    { id: 'managed', name: 'Managed Services', icon: Settings, count: itServices.filter(s => s.category === 'managed').length },
-    { id: 'backup', name: 'Backup & Recovery', icon: HardDrive, count: itServices.filter(s => s.category === 'backup').length },
-    { id: 'consulting', name: 'Consulting', icon: Users, count: itServices.filter(s => s.category === 'consulting').length },
-    { id: 'training', name: 'Training', icon: GraduationCap, count: itServices.filter(s => s.category === 'training').length },
-    { id: 'migration', name: 'Migration', icon: Upload, count: itServices.filter(s => s.category === 'migration').length },
-    { id: 'compliance', name: 'Compliance', icon: Certificate, count: itServices.filter(s => s.category === 'compliance').length },
-    { id: 'monitoring', name: 'Monitoring', icon: Activity, count: itServices.filter(s => s.category === 'monitoring').length },
-    { id: 'automation', name: 'Automation', icon: Zap, count: itServices.filter(s => s.category === 'automation').length },
-    { id: 'support', name: 'Support', icon: Headphones, count: itServices.filter(s => s.category === 'support').length }
-  ];
 
   const filteredServices = selectedCategory === 'all' 
     ? itServices 

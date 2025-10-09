@@ -16,8 +16,6 @@ import React, { useState, useMemo } from 'react';
 =======
 >>>>>>> main
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import MicroSAASCard from '../components/MicroSAASCard';
 
 >>>>>>> origin/main
 const MicroSAASPage: React.FC = () => {
@@ -613,15 +611,6 @@ const MicroSAASPage: React.FC = () => {
 >>>>>>> origin/main
   ];
 
-  const filteredServices = selectedCategory === 'all' 
-    ? microSAASServices 
-    : microSAASServices.filter(service => service.category === selectedCategory);
-
-  const totalSavings = microSAASServices.reduce((total, service) => {
-    const original = parseInt(service.originalPrice.replace('$', '').replace('/month', ''));
-    const current = parseInt(service.price.replace('$', '').replace('/month', ''));
-    return total + (original - current);
-  }, 0);
 
   return (
 <<<<<<< HEAD

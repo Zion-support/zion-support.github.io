@@ -1,17 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
->>>>>>> origin/main
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/main
 
 const AIServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const aiServices = [
     {
       title: 'AI Consulting & Strategy',
@@ -631,103 +621,25 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
-<<<<<<< HEAD
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']  }
-=======
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
->>>>>>> origin/main
   ];
 
-  // const categories = [
-  //   { name: 'All', count: aiServices.length },
-  //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-  //   { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
-  //   { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
-  //   { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
-  //   { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-  //   { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
-  //   { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
-  //   { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
-  //   { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
-  //   { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
-  //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-  //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length  }
-  // ];
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
-=======
-
-const AIServicesPage: React.FC = () => {
->>>>>>> main
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 text-center">
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, NLP, computer vision, and automation. Enterprise-grade AI solutions starting at $800/month." />
-        <meta name="keywords" content="ai services, machine learning, nlp, computer vision, ai consulting, automation, artificial intelligence" />
-      </Helmet>
-      {/* Hero Section */  }
-=======
       {/* Hero Section */}
->>>>>>> origin/main
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
->>>>>>> origin/main
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 mb-12 text-center max-w-3xl mx-auto">
-            Comprehensive artificial intelligence solutions to transform your business operations and drive innovation.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
           </p>
-<<<<<<< HEAD
-          {/* Stats */  }
-=======
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
-              <h3 className="text-xl font-bold text-white mb-4">Machine Learning</h3>
-              <p className="text-gray-300 mb-4">
-                Custom ML models tailored to your specific business needs and data requirements.
-              </p>
-              <div className="text-cyan-400 font-semibold">Starting at $1,500/month</div>
-            </div>
-            
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
-              <h3 className="text-xl font-bold text-white mb-4">Natural Language Processing</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced NLP solutions for text analysis, sentiment detection, and language understanding.
-              </p>
-              <div className="text-cyan-400 font-semibold">Starting at $999/month</div>
-            </div>
-            
-            <div className="bg-slate-800/50 p-6 rounded-lg border border-cyan-500/20">
-              <h3 className="text-xl font-bold text-white mb-4">Computer Vision</h3>
-              <p className="text-gray-300 mb-4">
-                Image and video analysis solutions for automated visual inspection and recognition.
-              </p>
-              <div className="text-cyan-400 font-semibold">Starting at $1,299/month</div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <Footer />
-=======
           {/* Stats */}
->>>>>>> origin/main
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">12+</div>
@@ -746,12 +658,8 @@ const AIServicesPage: React.FC = () => {
               <div className="text-gray-300">Support</div>
             </div>
           </div>
-<<<<<<< HEAD
-          {/* Contact Info */  }
-=======
 
           {/* Contact Info */}
->>>>>>> origin/main
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
             <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
               <div className="flex items-center space-x-2">
@@ -770,12 +678,8 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Services Grid */  }
-=======
 
       {/* Services Grid */}
->>>>>>> origin/main
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -797,7 +701,7 @@ const AIServicesPage: React.FC = () => {
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category  }
+                    {service.category}
                   </div>
                 </div>
 
@@ -807,14 +711,14 @@ const AIServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature  }
+                        {feature}
                       </li>
-                    ))  }
+                    ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
                         +{service.features.length - 4} more features
                       </li>
-                    )  }
+                    )}
                   </ul>
                 </div>
 
@@ -824,9 +728,9 @@ const AIServicesPage: React.FC = () => {
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit  }
+                        {benefit}
                       </li>
-                    ))  }
+                    ))}
                   </ul>
                 </div>
 
@@ -835,34 +739,30 @@ const AIServicesPage: React.FC = () => {
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech  }
+                        {tech}
                       </span>
-                    ))  }
+                    ))}
                   </div>
                 </div>
 
                 <div className="text-center">
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`  }
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
                     Get Started Now
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo  }
+                    {service.contactInfo}
                   </p>
                 </div>
               </div>
-            ))  }
+            ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */  }
-=======
 
       {/* CTA Section */}
->>>>>>> origin/main
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -887,14 +787,8 @@ const AIServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      </div>
-=======
->>>>>>> origin/main
-=======
->>>>>>> main
     </div>
->>>>>>> origin/main
   );
 };
 
+export default AIServicesPage;
