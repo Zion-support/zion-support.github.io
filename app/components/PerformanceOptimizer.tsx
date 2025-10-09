@@ -107,11 +107,52 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS((metric) => {
+          // Log to analytics service instead of console
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as { gtag: (command: string, event: string, params: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+              metric_name: metric.name,
+              metric_value: metric.value,
+              metric_delta: metric.delta
+            });
+          }
+        });
+        getFID((metric) => {
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as { gtag: (command: string, event: string, params: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+              metric_name: metric.name,
+              metric_value: metric.value,
+              metric_delta: metric.delta
+            });
+          }
+        });
+        getFCP((metric) => {
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as { gtag: (command: string, event: string, params: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+              metric_name: metric.name,
+              metric_value: metric.value,
+              metric_delta: metric.delta
+            });
+          }
+        });
+        getLCP((metric) => {
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as { gtag: (command: string, event: string, params: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+              metric_name: metric.name,
+              metric_value: metric.value,
+              metric_delta: metric.delta
+            });
+          }
+        });
+        getTTFB((metric) => {
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as { gtag: (command: string, event: string, params: Record<string, unknown>) => void }).gtag('event', 'web_vitals', {
+              metric_name: metric.name,
+              metric_value: metric.value,
+              metric_delta: metric.delta
+            });
+          }
+        });
       });
     }
   }, []);
@@ -120,11 +161,11 @@ const PerformanceOptimizer: React.FC = () => {
   const optimizeMemory = useCallback(() => {
     // Clear unused event listeners periodically
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as any).memory;
-      if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
+      const performanceMemory = (performance as { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (performanceMemory && performanceMemory.usedJSHeapSize > performanceMemory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if ('gc' in window) {
-          (window as any).gc();
+          (window as { gc: () => void }).gc();
         }
       }
     }
