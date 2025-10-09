@@ -1,6 +1,15 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, API, SDK, Framework, Library, Tool, Platform, Service, Solution, Product, Technology, Innovation, Digital, Transformation, Automation, Optimization, Efficiency, Productivity, Growth, Success, Future, Next, Generation, Advanced, Cutting, Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, Disruptive, Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, Network, Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, Computing, Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, NFT, Metaverse, AR, VR, IoT, 5G, 6G, Cybersecurity, Privacy, GDPR, Compliance, Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, G.Skill, ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink } from 'lucide-react';
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo, useMemo } from 'react';
+import { 
+  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, 
+  MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, 
+  Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, 
+  Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, 
+  Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, 
+  Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, 
+  TrendingDown, Activity, Atom, Rocket, Microscope, Layers, Server, Network, HardDrive, 
+  Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch
+} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -33,6 +42,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+    <div className="sr-only">Loading service information...</div>
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
@@ -49,21 +59,57 @@ const HomePage: React.FC = () => {
     // Initialize performance optimizations
     initializePerformanceOptimizations();
     
-    return () => clearTimeout(timer);
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const perfObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
+          }
+        }
+      });
+      perfObserver.observe({ entryTypes: ['navigation'] });
+    }
+    
+    return () => {
+      clearTimeout(timer);
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        // Cleanup performance observer if needed
+      }
+    };
   }, []);
 
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
+    try {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'phone_click', {
+          event_category: 'engagement',
+          event_label: 'main_phone_number'
+        });
+      }
+    } catch (error) {
+      console.warn('Analytics tracking failed:', error);
+    }
+  }, []);
+
+  // Enhanced error handling for service interactions
+  const handleServiceClick = useCallback((serviceName: string, serviceType: string) => {
+    try {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'service_click', {
+          event_category: 'engagement',
+          event_label: `${serviceType}_${serviceName}`,
+          value: serviceName
+        });
+      }
+    } catch (error) {
+      console.warn('Service tracking failed:', error);
     }
   }, []);
 
   // Enhanced Micro SAAS Services with real functionality and pricing
-  const microSAASServices = [
+  const microSAASServices = useMemo(() => [
     {
       title: 'AI Project Manager Pro',
       description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
@@ -272,10 +318,10 @@ const HomePage: React.FC = () => {
       marketPrice: '$499',
       savings: '40%'
     }
-  ];
+  ], []);
 
   // Enhanced AI Services with real capabilities and market pricing
-  const aiServices = [
+  const aiServices = useMemo(() => [
     {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics and decision-making with 99.9% accuracy',
@@ -372,10 +418,10 @@ const HomePage: React.FC = () => {
       savings: '42%',
       contact: 'kleber@ziontechgroup.com'
     }
-  ];
+  ], []);
 
   // Enhanced IT Services with comprehensive capabilities
-  const itServices = [
+  const itServices = useMemo(() => [
     {
       title: 'Cloud Migration & Management',
       description: 'Complete cloud transformation with AWS, Azure, and GCP expertise',
@@ -472,10 +518,10 @@ const HomePage: React.FC = () => {
       savings: '43%',
       contact: '+1 302 464 0950'
     }
-  ];
+  ], []);
 
   // Specialized Services
-  const specializedServices = [
+  const specializedServices = useMemo(() => [
     {
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable business insights with advanced AI analytics',
@@ -548,7 +594,7 @@ const HomePage: React.FC = () => {
       savings: '46%',
       contact: '+1 302 464 0950'
     }
-  ];
+  ], []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -571,10 +617,12 @@ const HomePage: React.FC = () => {
       <Navigation />
 
       {/* Hero Section with Futuristic Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner" aria-label="Hero section">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 opacity-30" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
         
         {/* Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
@@ -587,7 +635,7 @@ const HomePage: React.FC = () => {
 
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse" role="heading" aria-level="1">
               ZION TECH GROUP
             </h1>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
