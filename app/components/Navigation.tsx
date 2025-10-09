@@ -2,10 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -47,7 +43,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
 
   const serviceCategories = [
     {
@@ -73,21 +68,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-<<<<<<< HEAD
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
         { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
         { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
         { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
         { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
-=======
-        { name: 'Machine Learning Models', path: '/machine-learning-models', description: 'Custom ML development' },
-        { name: 'Computer Vision', path: '/computer-vision', description: 'Image recognition & analysis' },
-        { name: 'Natural Language Processing', path: '/natural-language-processing', description: 'Text & language AI' },
-        { name: 'AI Chatbots & Virtual Assistants', path: '/ai-chatbots-virtual-assistants', description: 'Conversational AI' },
-        { name: 'Predictive Analytics', path: '/predictive-analytics', description: 'Forecasting & modeling' },
-        { name: 'AI Recommendation Engines', path: '/ai-recommendation-engines', description: 'Personalized suggestions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       ]
     },
     {
@@ -99,32 +85,6 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-administration', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-<<<<<<< HEAD
-        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
-        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
-        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
-=======
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
-=======
         { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
@@ -140,7 +100,6 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
         { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
         { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
       ]
     },
     {
@@ -292,46 +251,36 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-scan ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center glow-effect group-hover:scale-110 transition-transform duration-300">
               <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl neon-text group-hover:glow-effect transition-all duration-300">Zion Tech Group</span>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium neon-text">
               Home
             </Link>
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </Link>
+            
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium cyber-border px-3 py-2 rounded-lg"
               >
                 <Brain className="w-4 h-4" />
                 <span>AI Services</span>

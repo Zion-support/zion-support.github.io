@@ -121,25 +121,29 @@ const HomePage: React.FC = () => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+          className={`text-center mb-16 transition-all duration-1000 cyber-scan matrix-bg ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
           }`}
           aria-labelledby="hero-heading"
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto relative">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 data-stream"></div>
+            <div className="absolute top-0 left-0 w-full h-1 cyber-scan"></div>
+            
             <h1 
               id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-gradient bg-clip-text text-transparent relative z-10"
               data-text="Zion Tech Group"
             >
-              Zion Tech Group
+              <span className="hologram-effect">Zion Tech Group</span>
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium glow-effect" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed relative z-10">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
               Transform your business with our cutting-edge technology and achieve unprecedented growth.
             </p>

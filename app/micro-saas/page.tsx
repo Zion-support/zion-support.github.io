@@ -10,7 +10,7 @@ const MicroSAASPage: React.FC = () => {
   const [sortBy, setSortBy] = useState('popularity');
 
   const microSAASServices = useMemo(() => [
-    // Featured Services
+    // Featured AI Services
     {
       title: 'AI Code Review Assistant Pro',
       description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
@@ -86,10 +86,358 @@ const MicroSAASPage: React.FC = () => {
       category: 'Support Tools',
       technologies: ['OpenAI GPT', 'Custom AI Models', 'React', 'Node.js', 'WebSocket'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // New AI-Powered Services
+    {
+      title: 'AI Voice Cloning Studio',
+      description: 'Professional voice cloning and synthesis for podcasts, audiobooks, and voice assistants with natural-sounding results.',
+      icon: '🎤',
+      price: '$299/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice conversion', 'Emotion control', 'Multi-language support', 'API integration'],
+      benefits: ['Create professional voice content', 'Save 40+ hours on recording', 'Maintain consistent brand voice', 'Scale voice production'],
+      marketPrice: '$500-1000/month',
+      category: 'AI Tools',
+      technologies: ['Tacotron2', 'WaveNet', 'Custom AI Models', 'Python', 'TensorFlow'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Video Generation Platform',
+      description: 'Create professional videos from text prompts with AI-generated avatars, scenes, and voiceovers.',
+      icon: '🎬',
+      price: '$399/month',
+      features: ['Text-to-video', 'AI avatars', 'Scene generation', 'Voice synthesis', 'Template library', 'Brand customization'],
+      benefits: ['Create videos 10x faster', 'Reduce production costs by 80%', 'Scale video content', 'Maintain brand consistency'],
+      marketPrice: '$600-1500/month',
+      category: 'AI Tools',
+      technologies: ['DALL-E', 'Stable Diffusion', 'Custom AI Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI 3D Asset Generator',
+      description: 'Generate 3D models, textures, and animations using AI for games, AR/VR, and architectural visualization.',
+      icon: '🎮',
+      price: '$249/month',
+      features: ['3D model generation', 'Texture creation', 'Animation tools', 'AR/VR support', 'Export formats', 'Custom training'],
+      benefits: ['Accelerate 3D production', 'Reduce modeling costs', 'Create unique assets', 'Scale 3D content'],
+      marketPrice: '$400-800/month',
+      category: 'AI Tools',
+      technologies: ['Blender API', 'Custom AI Models', 'Python', 'Three.js', 'WebGL'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Music Composer Pro',
+      description: 'Generate original music, sound effects, and audio content using advanced AI composition algorithms.',
+      icon: '🎵',
+      price: '$199/month',
+      features: ['Music generation', 'Style transfer', 'Lyrics generation', 'Instrument separation', 'Mixing tools', 'Royalty-free output'],
+      benefits: ['Create original music instantly', 'Save thousands on licensing', 'Maintain consistent style', 'Scale audio production'],
+      marketPrice: '$300-600/month',
+      category: 'AI Tools',
+      technologies: ['MuseNet', 'Custom AI Models', 'Python', 'React', 'Web Audio API'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Fashion Design Assistant',
+      description: 'Design clothing, accessories, and fashion items with AI-powered trend analysis and style recommendations.',
+      icon: '👗',
+      price: '$179/month',
+      features: ['Fashion design', 'Trend analysis', 'Color matching', 'Pattern generation', 'Size optimization', 'Market insights'],
+      benefits: ['Stay ahead of trends', 'Reduce design time by 60%', 'Optimize for target market', 'Scale design production'],
+      marketPrice: '$250-500/month',
+      category: 'AI Tools',
+      technologies: ['Custom AI Models', 'Computer Vision', 'Python', 'React', 'Fashion APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Fitness Coach Platform',
+      description: 'Personalized fitness and nutrition plans with AI-powered workout optimization and health tracking.',
+      icon: '💪',
+      price: '$149/month',
+      features: ['Workout plans', 'Nutrition tracking', 'Progress analysis', 'Form correction', 'Goal setting', 'Community features'],
+      benefits: ['Personalized fitness plans', 'Improve workout efficiency', 'Track progress accurately', 'Reduce injury risk'],
+      marketPrice: '$200-400/month',
+      category: 'Health & Fitness',
+      technologies: ['Computer Vision', 'Custom AI Models', 'React Native', 'Node.js', 'Health APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // IT Infrastructure Services
+    {
+      title: 'Smart Cloud Migration Assistant',
+      description: 'AI-powered cloud migration with automated assessment, planning, and execution for AWS, Azure, and GCP.',
+      icon: '☁️',
+      price: '$499/month',
+      features: ['Migration assessment', 'Cost optimization', 'Security analysis', 'Automated migration', 'Monitoring setup', 'Performance tuning'],
+      benefits: ['Reduce migration time by 70%', 'Minimize downtime', 'Optimize cloud costs', 'Ensure security compliance'],
+      marketPrice: '$800-2000/month',
+      category: 'IT Services',
+      technologies: ['AWS SDK', 'Azure CLI', 'GCP APIs', 'Terraform', 'Ansible'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Cybersecurity Monitor',
+      description: 'Advanced threat detection and response with AI-powered security monitoring and incident management.',
+      icon: '🛡️',
+      price: '$399/month',
+      features: ['Threat detection', 'Incident response', 'Vulnerability scanning', 'Compliance monitoring', 'Security analytics', 'Automated remediation'],
+      benefits: ['Detect threats 10x faster', 'Reduce false positives', 'Automate response', 'Ensure compliance'],
+      marketPrice: '$600-1500/month',
+      category: 'IT Services',
+      technologies: ['SIEM', 'Custom AI Models', 'Python', 'React', 'Security APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'Smart DevOps Pipeline',
+      description: 'Intelligent CI/CD with automated testing, deployment, and monitoring for faster, more reliable releases.',
+      icon: '🚀',
+      price: '$299/month',
+      features: ['Automated testing', 'Smart deployments', 'Performance monitoring', 'Rollback automation', 'Security scanning', 'Cost optimization'],
+      benefits: ['Deploy 5x faster', 'Reduce deployment failures', 'Improve code quality', 'Optimize resource usage'],
+      marketPrice: '$400-800/month',
+      category: 'IT Services',
+      technologies: ['Jenkins', 'Docker', 'Kubernetes', 'Custom AI Models', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Database Optimizer',
+      description: 'Intelligent database performance tuning with automated optimization and query analysis.',
+      icon: '🗄️',
+      price: '$199/month',
+      features: ['Query optimization', 'Index recommendations', 'Performance monitoring', 'Capacity planning', 'Backup optimization', 'Security hardening'],
+      benefits: ['Improve query performance', 'Reduce database costs', 'Prevent downtime', 'Optimize storage'],
+      marketPrice: '$300-600/month',
+      category: 'IT Services',
+      technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Custom AI Models', 'Python'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart Network Monitor',
+      description: 'AI-powered network monitoring with predictive analytics and automated troubleshooting.',
+      icon: '🌐',
+      price: '$249/month',
+      features: ['Network monitoring', 'Traffic analysis', 'Anomaly detection', 'Performance optimization', 'Security scanning', 'Automated alerts'],
+      benefits: ['Prevent network issues', 'Optimize performance', 'Reduce downtime', 'Improve security'],
+      marketPrice: '$400-800/month',
+      category: 'IT Services',
+      technologies: ['SNMP', 'Custom AI Models', 'Python', 'React', 'Network APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // Business Intelligence & Analytics
+    {
+      title: 'AI Predictive Analytics Suite',
+      description: 'Advanced predictive modeling for sales forecasting, customer behavior, and business intelligence.',
+      icon: '📈',
+      price: '$349/month',
+      features: ['Sales forecasting', 'Customer analytics', 'Risk assessment', 'Market analysis', 'Trend prediction', 'Custom models'],
+      benefits: ['Improve forecasting accuracy', 'Identify opportunities', 'Reduce risks', 'Make data-driven decisions'],
+      marketPrice: '$500-1200/month',
+      category: 'Analytics Tools',
+      technologies: ['TensorFlow', 'Scikit-learn', 'Custom AI Models', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Lead Scoring Engine',
+      description: 'Intelligent lead qualification and scoring with automated follow-up and conversion optimization.',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Lead scoring', 'Behavior tracking', 'Conversion prediction', 'Automated follow-up', 'CRM integration', 'Performance analytics'],
+      benefits: ['Improve conversion rates', 'Prioritize high-value leads', 'Automate follow-up', 'Increase sales efficiency'],
+      marketPrice: '$300-600/month',
+      category: 'Sales Tools',
+      technologies: ['Custom AI Models', 'Python', 'React', 'Salesforce API', 'HubSpot API'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Smart Inventory Manager',
+      description: 'AI-powered inventory optimization with demand forecasting and automated reordering.',
+      icon: '📦',
+      price: '$179/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Automated reordering', 'Waste reduction', 'Supplier management', 'Cost analysis'],
+      benefits: ['Reduce inventory costs', 'Prevent stockouts', 'Minimize waste', 'Optimize cash flow'],
+      marketPrice: '$250-500/month',
+      category: 'Business Tools',
+      technologies: ['Custom AI Models', 'Python', 'React', 'ERP Integration', 'Supply Chain APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Financial Analyzer',
+      description: 'Advanced financial analysis with automated reporting, risk assessment, and investment recommendations.',
+      icon: '💰',
+      price: '$299/month',
+      features: ['Financial modeling', 'Risk analysis', 'Investment recommendations', 'Automated reporting', 'Compliance monitoring', 'Trend analysis'],
+      benefits: ['Improve financial decisions', 'Reduce analysis time', 'Identify opportunities', 'Ensure compliance'],
+      marketPrice: '$400-800/month',
+      category: 'Finance Tools',
+      technologies: ['Custom AI Models', 'Python', 'React', 'Financial APIs', 'Blockchain'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // E-commerce & Marketing
+    {
+      title: 'AI E-commerce Optimizer',
+      description: 'Complete e-commerce optimization with AI-powered product recommendations, pricing, and conversion optimization.',
+      icon: '🛒',
+      price: '$399/month',
+      features: ['Product recommendations', 'Dynamic pricing', 'Conversion optimization', 'Customer segmentation', 'A/B testing', 'Revenue analytics'],
+      benefits: ['Increase conversion rates', 'Maximize revenue', 'Improve customer experience', 'Optimize pricing strategy'],
+      marketPrice: '$600-1500/month',
+      category: 'E-commerce Tools',
+      technologies: ['Custom AI Models', 'Python', 'React', 'Shopify API', 'WooCommerce'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Manager',
+      description: 'Automated social media management with content creation, scheduling, and performance optimization.',
+      icon: '📱',
+      price: '$149/month',
+      features: ['Content creation', 'Post scheduling', 'Engagement optimization', 'Hashtag research', 'Analytics tracking', 'Multi-platform support'],
+      benefits: ['Save 20+ hours/week', 'Increase engagement', 'Improve reach', 'Maintain consistent posting'],
+      marketPrice: '$200-400/month',
+      category: 'Marketing Tools',
+      technologies: ['Social Media APIs', 'Custom AI Models', 'Python', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Ad Campaign Optimizer',
+      description: 'Intelligent advertising campaign management with automated optimization and performance tracking.',
+      icon: '📢',
+      price: '$249/month',
+      features: ['Campaign optimization', 'Bid management', 'Audience targeting', 'Creative testing', 'Performance tracking', 'ROI analysis'],
+      benefits: ['Improve ad performance', 'Reduce cost per acquisition', 'Increase ROI', 'Automate campaign management'],
+      marketPrice: '$300-600/month',
+      category: 'Marketing Tools',
+      technologies: ['Google Ads API', 'Facebook API', 'Custom AI Models', 'Python', 'React'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // Productivity & Automation
+    {
+      title: 'AI Task Automation Suite',
+      description: 'Intelligent task automation with workflow optimization and smart scheduling for maximum productivity.',
+      icon: '⚡',
+      price: '$129/month',
+      features: ['Workflow automation', 'Smart scheduling', 'Task prioritization', 'Time tracking', 'Productivity analytics', 'Integration hub'],
+      benefits: ['Increase productivity by 40%', 'Automate repetitive tasks', 'Optimize time management', 'Improve focus'],
+      marketPrice: '$200-400/month',
+      category: 'Productivity Tools',
+      technologies: ['Zapier API', 'Custom AI Models', 'Python', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Meeting Assistant',
+      description: 'Intelligent meeting management with automated transcription, action items, and follow-up optimization.',
+      icon: '🤝',
+      price: '$99/month',
+      features: ['Meeting transcription', 'Action item extraction', 'Follow-up automation', 'Meeting analytics', 'Calendar integration', 'Note generation'],
+      benefits: ['Never miss action items', 'Improve meeting efficiency', 'Automate follow-ups', 'Track meeting ROI'],
+      marketPrice: '$150-300/month',
+      category: 'Productivity Tools',
+      technologies: ['Speech-to-Text', 'Custom AI Models', 'Python', 'React', 'Calendar APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflow management.',
+      icon: '📄',
+      price: '$179/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation', 'Quality assurance', 'Integration APIs'],
+      benefits: ['Process documents 10x faster', 'Reduce manual errors', 'Automate workflows', 'Improve accuracy'],
+      marketPrice: '$250-500/month',
+      category: 'Productivity Tools',
+      technologies: ['Tesseract OCR', 'Custom AI Models', 'Python', 'React', 'Document APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // Healthcare & Life Sciences
+    {
+      title: 'AI Medical Image Analyzer',
+      description: 'Advanced medical image analysis with AI-powered diagnosis assistance and treatment recommendations.',
+      icon: '🏥',
+      price: '$599/month',
+      features: ['Image analysis', 'Diagnosis assistance', 'Treatment recommendations', 'Patient monitoring', 'Report generation', 'HIPAA compliance'],
+      benefits: ['Improve diagnostic accuracy', 'Reduce analysis time', 'Enhance patient care', 'Ensure compliance'],
+      marketPrice: '$1000-3000/month',
+      category: 'Healthcare Tools',
+      technologies: ['Medical AI Models', 'DICOM', 'Python', 'React', 'Healthcare APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Accelerated drug discovery with AI-powered molecular analysis and compound optimization.',
+      icon: '🧬',
+      price: '$999/month',
+      features: ['Molecular analysis', 'Compound optimization', 'Toxicity prediction', 'Clinical trial optimization', 'Patent analysis', 'Collaboration tools'],
+      benefits: ['Accelerate drug discovery', 'Reduce development costs', 'Improve success rates', 'Optimize clinical trials'],
+      marketPrice: '$1500-5000/month',
+      category: 'Healthcare Tools',
+      technologies: ['Bioinformatics AI', 'Custom Models', 'Python', 'React', 'Scientific APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
+      popular: true
+    },
+    
+    // Real Estate & Construction
+    {
+      title: 'AI Property Valuator',
+      description: 'Intelligent property valuation with market analysis and investment recommendations.',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Neighborhood insights', 'Trend analysis'],
+      benefits: ['Accurate valuations', 'Identify opportunities', 'Reduce analysis time', 'Improve investment decisions'],
+      marketPrice: '$300-600/month',
+      category: 'Real Estate Tools',
+      technologies: ['Real Estate APIs', 'Custom AI Models', 'Python', 'React', 'Geospatial Data'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Construction Manager',
+      description: 'Smart construction project management with progress tracking and risk assessment.',
+      icon: '🏗️',
+      price: '$299/month',
+      features: ['Progress tracking', 'Risk assessment', 'Resource optimization', 'Timeline prediction', 'Quality control', 'Safety monitoring'],
+      benefits: ['Reduce project delays', 'Optimize resources', 'Improve safety', 'Control costs'],
+      marketPrice: '$400-800/month',
+      category: 'Construction Tools',
+      technologies: ['Computer Vision', 'Custom AI Models', 'Python', 'React', 'IoT Sensors'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    
+    // Education & Training
+    {
+      title: 'AI Learning Platform',
+      description: 'Personalized learning with AI-powered curriculum generation and progress tracking.',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning', 'Curriculum generation', 'Progress tracking', 'Adaptive testing', 'Skill assessment', 'Certification management'],
+      benefits: ['Improve learning outcomes', 'Personalize education', 'Track progress', 'Accelerate skill development'],
+      marketPrice: '$200-400/month',
+      category: 'Education Tools',
+      technologies: ['Custom AI Models', 'Python', 'React', 'LMS Integration', 'Assessment APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Language Tutor',
+      description: 'Intelligent language learning with personalized lessons and pronunciation coaching.',
+      icon: '🗣️',
+      price: '$99/month',
+      features: ['Personalized lessons', 'Pronunciation coaching', 'Conversation practice', 'Progress tracking', 'Cultural insights', 'Multi-language support'],
+      benefits: ['Accelerate language learning', 'Improve pronunciation', 'Practice conversation', 'Track progress'],
+      marketPrice: '$150-300/month',
+      category: 'Education Tools',
+      technologies: ['Speech Recognition', 'Custom AI Models', 'Python', 'React', 'Language APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ], []);
 
-  const categories = ['All', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Support Tools'];
+  const categories = ['All', 'Developer Tools', 'Marketing Tools', 'Analytics Tools', 'Content Tools', 'Support Tools', 'AI Tools', 'IT Services', 'Sales Tools', 'Business Tools', 'Finance Tools', 'E-commerce Tools', 'Productivity Tools', 'Health & Fitness', 'Healthcare Tools', 'Real Estate Tools', 'Construction Tools', 'Education Tools'];
 
   const filteredServices = useMemo(() => {
     return microSAASServices.filter(service => {

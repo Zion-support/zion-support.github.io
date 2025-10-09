@@ -1,31 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star, Brain, Cloud, Shield, BarChart, Phone, Mail, MapPin } from 'lucide-react';
 export default function ServicesAdvertisingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg cyber-scan">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-slate-900/95 backdrop-blur-md shadow-lg cyber-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 neon-text">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
+      
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="relative overflow-hidden bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 text-white py-20 matrix-bg">
+        <div className="absolute inset-0 data-stream opacity-30"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-600 text-sm font-semibold mb-6">
-              <Target className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-sm font-semibold mb-6 cyber-border">
+              <Target className="w-4 h-4 mr-2 text-cyan-400" />
               AI-Powered Advertising Solutions
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 neon-text cyber-gradient bg-clip-text text-transparent">
               AI Advertising Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-cyan-200 max-w-3xl mx-auto glow-effect">
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
@@ -33,17 +34,34 @@ export default function ServicesAdvertisingPage() {
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
+            
+            {/* Contact Information */}
+            <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm">
+              <div className="flex items-center space-x-2 text-cyan-300">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2 text-cyan-300">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-cyan-300">
+                <MapPin className="w-4 h-4" />
+                <span>Middletown, DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+                className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center glow-effect"
               >
                 Start Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
                 href="#services"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold py-3 px-8 rounded-lg transition-all duration-300 cyber-border"
               >
                 View Our Services
               </Link>
