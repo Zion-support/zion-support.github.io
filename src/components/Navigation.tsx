@@ -1,10 +1,5 @@
-<<<<<<< HEAD:src/components/Navigation.tsx
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-=======
 import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/components/Navigation.tsx
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -187,7 +182,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -204,6 +199,12 @@ const Navigation: React.FC = memo(() => {
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
+            </Link>
+            <Link to="/solutions" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Solutions
+            </Link>
+            <Link to="/marketplace" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Marketplace
             </Link>
 
             {/* Services Dropdown */}
@@ -335,6 +336,20 @@ const Navigation: React.FC = memo(() => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link
+                to="/solutions"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Solutions
+              </Link>
+              <Link
+                to="/marketplace"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Marketplace
               </Link>
 
               {/* Mobile Services */}

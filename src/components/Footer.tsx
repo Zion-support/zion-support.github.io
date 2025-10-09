@@ -81,14 +81,17 @@ const Footer: React.FC = memo(() => {
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
+    { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
   ];
 
   const supportLinks = [
+    { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
+    { name: 'FAQ', url: '/faq' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
   ];
@@ -309,6 +312,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
+              <li><Link to="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Solutions</Link></li>
+              <li><Link to="/marketplace" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Marketplace</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
               <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
