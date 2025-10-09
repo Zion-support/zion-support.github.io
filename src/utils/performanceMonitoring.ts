@@ -3,6 +3,8 @@
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
  */
+
+import { logger } from './logger';
 export interface PerformanceMetric {
   name: string;
   value: number;

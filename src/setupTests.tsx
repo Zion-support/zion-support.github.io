@@ -2,15 +2,14 @@
 /**
  * Jest setup file for testing environment
  */
-import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+const originalConsoleError = console.error;
 console.error = (...args) => {
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
+  const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
       message.includes('navigation (except hash changes)')) {
     return;

@@ -204,10 +204,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
+    script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
-  };
 
   useEffect(() => {
     if (structuredData) {
