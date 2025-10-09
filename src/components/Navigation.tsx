@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dcf6
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -281,7 +277,6 @@ const Navigation: React.FC = () => {
 
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
@@ -295,21 +290,6 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
-=======
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-eb01
             
             <div className="flex items-center space-x-4">
               <a
@@ -391,7 +371,6 @@ const Navigation: React.FC = () => {
 
               <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-<<<<<<< HEAD
               </Link>
               <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
@@ -405,21 +384,6 @@ const Navigation: React.FC = () => {
               <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </Link>
-=======
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-eb01
               
               <div className="pt-4 border-t border-gray-700">
                 <a
