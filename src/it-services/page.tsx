@@ -577,11 +577,7 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-          </section>
-=======
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-ac16
       </main>
 
       <Footer />
