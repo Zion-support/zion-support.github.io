@@ -118,12 +118,12 @@ const AIContentWriterPage: React.FC = () => {
         keywords={['AI content writer', 'content writing', 'blog writing', 'social media content', 'email marketing', 'SEO content']}
         canonicalUrl="https://ziontechgroup.com/ai-content-writer"
       />
-        <PerformanceOptimizer
-          enableImageOptimization={true}
-          enableLazyLoading={true}
-          enableCodeSplitting={true}
-          enablePrefetching={true}
-        />
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enableCodeSplitting={true}
+        enablePrefetching={true}
+      />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}

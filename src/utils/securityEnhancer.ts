@@ -105,22 +105,19 @@ class SecurityEnhancer {
     this.monitorNetworkRequests()
   }
   private monitorConsoleAccess(): void {
-    const originalConsole = { ...console } as any;
+    const originalConsole = {
+      log: console.log.bind(console),
+      warn: console.warn.bind(console),
+      error: console.error.bind(console),
+      info: console.info.bind(console)
+    };
     // Override console methods to detect debugging
-<<<<<<< HEAD
-    const methods = ['log', 'warn', 'error', 'info'] as const;
-    methods.forEach(method => {
-      (console as any)[method] = (...args: unknown[]) => {
-        this.metrics.suspiciousActivity++;
-        (originalConsole as any)[method](...args);
-      }
-=======
     ['log', 'warn', 'error', 'info'].forEach(method => {
+      const originalMethod = originalConsole[method as keyof typeof originalConsole];
       (console as any)[method] = (...args: unknown[]) => {
         this.metrics.suspiciousActivity++;
-        originalConsole[method](...args);
+        originalMethod(...args);
       };
->>>>>>> cursor/fix-errors-and-merge-to-main-aa19
     });
   }
   private monitorDOMManipulation(): void {
