@@ -1,6 +1,7 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Home, Phone } from 'lucide-react';
-export default function NotFound() {
+
+const NotFound: React.FC = () => {
   const popularPages = [
     {
       title: 'Home',
@@ -97,4 +98,6 @@ export default function NotFound() {
       </div>
     </div>
   );
-}
+};
+
+export default NotFound;

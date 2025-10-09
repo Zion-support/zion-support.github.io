@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
