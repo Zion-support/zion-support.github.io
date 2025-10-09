@@ -1,112 +1,112 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Database, Shield, Zap, BarChart, CheckCircle, Star, TrendingUp, Clock, Users, Globe, Server, Cpu, HardDrive, Lock, RefreshCw, Settings, Phone, Mail, MapPin } from 'lucide-react';
+import { Zap, BarChart, CheckCircle, Star, TrendingUp, Clock, Phone, Mail, MapPin, Brain, Shield, Settings, Globe, Cpu, Database, Wifi, Server, Monitor, HardDrive, Lock, RefreshCw, Target, Gauge } from 'lucide-react';
 
-const DatabasePage: React.FC = () => {
+const PerformanceOptimizationPage: React.FC = () => {
   const services = [
     {
-      icon: Database,
-      title: 'Database Design & Architecture',
-      description: 'Custom database design and architecture solutions for optimal performance and scalability.',
-      features: ['Schema Design', 'Performance Optimization', 'Scalability Planning', 'Data Modeling'],
-      benefits: ['Improved Performance', 'Better Scalability', 'Reduced Costs', 'Enhanced Security']
-    },
-    {
-      icon: Shield,
-      title: 'Database Security',
-      description: 'Comprehensive database security solutions including encryption, access control, and compliance.',
-      features: ['Data Encryption', 'Access Control', 'Audit Logging', 'Compliance Management'],
-      benefits: ['Enhanced Security', 'Regulatory Compliance', 'Data Protection', 'Risk Mitigation']
-    },
-    {
       icon: Zap,
+      title: 'Application Performance Optimization',
+      description: 'Optimize your applications for maximum speed, efficiency, and user experience.',
+      features: ['Code Optimization', 'Database Tuning', 'Caching Strategies', 'Load Balancing'],
+      benefits: ['Faster Applications', 'Better User Experience', 'Reduced Server Load', 'Cost Savings']
+    },
+    {
+      icon: Database,
       title: 'Database Performance Tuning',
-      description: 'Advanced performance optimization to maximize database speed and efficiency.',
-      features: ['Query Optimization', 'Index Tuning', 'Resource Management', 'Monitoring'],
-      benefits: ['Faster Queries', 'Reduced Load', 'Better User Experience', 'Cost Savings']
+      description: 'Advanced database optimization to maximize query performance and reduce response times.',
+      features: ['Query Optimization', 'Index Tuning', 'Resource Management', 'Performance Monitoring'],
+      benefits: ['Faster Queries', 'Reduced Load', 'Better Scalability', 'Improved Reliability']
     },
     {
-      icon: BarChart,
-      title: 'Database Analytics & Reporting',
-      description: 'Advanced analytics and reporting solutions for data-driven insights.',
-      features: ['Real-time Analytics', 'Custom Reports', 'Data Visualization', 'Business Intelligence'],
-      benefits: ['Data Insights', 'Better Decisions', 'Competitive Advantage', 'Improved ROI']
+      icon: Server,
+      title: 'Server Performance Optimization',
+      description: 'Optimize server configurations and resources for maximum performance and efficiency.',
+      features: ['Resource Optimization', 'Configuration Tuning', 'Load Balancing', 'Monitoring'],
+      benefits: ['Better Performance', 'Reduced Costs', 'Higher Availability', 'Scalability']
     },
     {
-      icon: RefreshCw,
-      title: 'Database Migration',
-      description: 'Seamless database migration services with zero downtime and data integrity.',
-      features: ['Zero Downtime', 'Data Validation', 'Performance Testing', 'Rollback Planning'],
-      benefits: ['Smooth Migration', 'No Data Loss', 'Improved Performance', 'Future-Proof']
+      icon: Globe,
+      title: 'Network Performance Optimization',
+      description: 'Optimize network infrastructure for maximum speed, reliability, and efficiency.',
+      features: ['Traffic Analysis', 'Bandwidth Optimization', 'QoS Configuration', 'Network Tuning'],
+      benefits: ['Faster Connectivity', 'Reduced Latency', 'Better Reliability', 'Cost Efficiency']
     },
     {
-      icon: Settings,
-      title: 'Database Administration',
-      description: '24/7 database administration and monitoring for optimal performance and uptime.',
-      features: ['24/7 Monitoring', 'Backup Management', 'Patch Management', 'Performance Tuning'],
-      benefits: ['High Availability', 'Data Protection', 'Proactive Maintenance', 'Expert Support']
+      icon: Monitor,
+      title: 'Website Performance Optimization',
+      description: 'Optimize website speed, loading times, and user experience for better SEO and conversions.',
+      features: ['Page Speed Optimization', 'Image Optimization', 'Caching Implementation', 'CDN Setup'],
+      benefits: ['Faster Loading', 'Better SEO', 'Higher Conversions', 'Improved User Experience']
+    },
+    {
+      icon: Cpu,
+      title: 'System Performance Monitoring',
+      description: 'Continuous monitoring and optimization of system performance with real-time analytics.',
+      features: ['Real-time Monitoring', 'Performance Analytics', 'Alert Systems', 'Optimization Recommendations'],
+      benefits: ['Proactive Optimization', 'Better Visibility', 'Faster Issue Resolution', 'Continuous Improvement']
     }
   ];
 
-  const databaseTypes = [
-    { name: 'MySQL', description: 'Open-source relational database management system' },
-    { name: 'PostgreSQL', description: 'Advanced open-source object-relational database' },
-    { name: 'MongoDB', description: 'NoSQL document database for modern applications' },
-    { name: 'Oracle', description: 'Enterprise-grade relational database management system' },
-    { name: 'SQL Server', description: 'Microsoft\'s relational database management system' },
-    { name: 'Redis', description: 'In-memory data structure store and cache' },
-    { name: 'Elasticsearch', description: 'Distributed search and analytics engine' },
-    { name: 'Cassandra', description: 'Distributed NoSQL database for big data' }
+  const optimizationAreas = [
+    { name: 'Application Performance', description: 'Optimize application code and architecture for maximum performance' },
+    { name: 'Database Performance', description: 'Tune databases for optimal query performance and resource usage' },
+    { name: 'Server Performance', description: 'Optimize server configurations and resource allocation' },
+    { name: 'Network Performance', description: 'Optimize network infrastructure for speed and reliability' },
+    { name: 'Website Performance', description: 'Optimize website speed and user experience' },
+    { name: 'Cloud Performance', description: 'Optimize cloud infrastructure and resource utilization' },
+    { name: 'Mobile Performance', description: 'Optimize mobile applications and responsive design' },
+    { name: 'API Performance', description: 'Optimize API endpoints and response times' }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic Support',
-      price: '$1,500',
-      period: '/month',
-      description: 'Perfect for small databases',
+      name: 'Performance Audit',
+      price: '$2,500',
+      period: '/audit',
+      description: 'Comprehensive performance analysis',
       features: [
-        'Up to 5 databases',
-        'Basic monitoring',
-        'Email support',
-        'Monthly reports',
-        'Backup services',
-        'Security updates'
+        'Performance assessment',
+        'Bottleneck identification',
+        'Optimization recommendations',
+        'Detailed report',
+        'Implementation roadmap',
+        '30-day support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$3,500',
+      name: 'Optimization Project',
+      price: '$5,000',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ongoing optimization services',
       features: [
-        'Up to 20 databases',
-        'Advanced monitoring',
-        '24/7 phone support',
-        'Weekly reports',
-        'Performance tuning',
-        'Security hardening',
-        'Migration services',
-        'Custom optimization'
+        'Performance monitoring',
+        'Continuous optimization',
+        'Regular reporting',
+        'Priority support',
+        'Implementation support',
+        'Performance testing',
+        'Code optimization',
+        'Database tuning'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$7,500',
+      name: 'Performance Retainer',
+      price: '$10,000',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Dedicated performance team',
       features: [
-        'Unlimited databases',
-        'Full monitoring suite',
-        'Dedicated support team',
-        'Daily reports',
+        'Dedicated performance engineer',
+        'Unlimited optimizations',
+        '24/7 monitoring',
+        'Proactive optimization',
         'Custom solutions',
-        'Advanced security',
-        'White-label options',
-        'On-site support'
+        'Executive reporting',
+        'Strategic planning',
+        'Vendor management'
       ],
       popular: false
     }
@@ -114,24 +114,24 @@ const DatabasePage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'DataFlow Systems',
+      name: 'Alex Johnson',
+      company: 'TechFlow Systems',
       role: 'CTO',
-      content: 'Zion Tech Group optimized our database performance by 300%. Our queries are now lightning fast and our costs have decreased significantly.',
+      content: 'Zion Tech Group\'s performance optimization increased our application speed by 300%. Our users are thrilled with the improved experience.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      company: 'TechCorp Industries',
-      role: 'Database Administrator',
-      content: 'The database migration was flawless. We had zero downtime and our new system performs better than expected.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'InnovateTech',
+      name: 'Maria Garcia',
+      company: 'DataCorp Industries',
       role: 'IT Director',
-      content: 'Their 24/7 database support is outstanding. Any issues are resolved quickly, and their proactive monitoring prevents problems.',
+      content: 'The database optimization reduced our query times by 80% and cut our server costs by 50%. Amazing results!',
+      rating: 5
+    },
+    {
+      name: 'David Chen',
+      company: 'InnovateTech',
+      role: 'CEO',
+      content: 'Our website now loads 5x faster, and our conversion rate increased by 40%. The performance optimization was worth every penny.',
       rating: 5
     }
   ];
@@ -145,14 +145,14 @@ const DatabasePage: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Database Services
+              Performance Optimization
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Expert Database Solutions for Modern Applications
+              Maximize Performance, Minimize Costs
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
-              Comprehensive database services including design, optimization, migration, and 24/7 administration. 
-              Ensure your data is secure, performant, and scalable with our expert database solutions.
+              Expert performance optimization services to maximize your system speed, efficiency, and user experience. 
+              Our optimization experts identify bottlenecks and implement solutions that deliver measurable performance improvements.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -175,16 +175,16 @@ const DatabasePage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime Guarantee</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300">Average Speed Increase</div>
               </div>
               <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                <div className="text-gray-300">Support Available</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">50%</div>
+                <div className="text-gray-300">Cost Reduction</div>
               </div>
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
-                <div className="text-gray-300">Databases Managed</div>
+                <div className="text-gray-300">Systems Optimized</div>
               </div>
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
@@ -199,7 +199,7 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Our Database Services
+            Our Optimization Services
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -240,19 +240,19 @@ const DatabasePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Database Types Section */}
+      {/* Optimization Areas Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Supported Database Technologies
+            Performance Areas We Optimize
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {databaseTypes.map((db, index) => (
+            {optimizationAreas.map((area, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Database className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">{db.name}</h3>
-                <p className="text-gray-300 text-sm">{db.description}</p>
+                <Gauge className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">{area.name}</h3>
+                <p className="text-gray-300 text-sm">{area.description}</p>
               </div>
             ))}
           </div>
@@ -263,7 +263,7 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Database Support Plans
+            Optimization Packages
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -342,10 +342,10 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your Database?
+            Ready to Optimize Your Performance?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our database experts help you design, optimize, and manage your database infrastructure.
+            Let our performance optimization experts help you achieve maximum speed and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -360,7 +360,7 @@ const DatabasePage: React.FC = () => {
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Mail className="w-5 h-5 inline mr-2" />
-              Get Free Consultation
+              Get Free Assessment
             </a>
           </div>
         </div>
@@ -371,4 +371,4 @@ const DatabasePage: React.FC = () => {
   );
 };
 
-export default DatabasePage;
+export default PerformanceOptimizationPage;

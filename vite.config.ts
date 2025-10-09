@@ -53,6 +53,7 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['react-router-dom'],
   },
   css: {
     postcss: './postcss.config.js',

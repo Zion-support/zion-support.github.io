@@ -1,112 +1,118 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Database, Shield, Zap, BarChart, CheckCircle, Star, TrendingUp, Clock, Users, Globe, Server, Cpu, HardDrive, Lock, RefreshCw, Settings, Phone, Mail, MapPin } from 'lucide-react';
+import { Shield, Zap, BarChart, CheckCircle, Star, TrendingUp, Clock, Phone, Mail, MapPin, Brain, Settings, Globe, Cpu, Database, Wifi, Server, Monitor, HardDrive, Lock, RefreshCw } from 'lucide-react';
 
-const DatabasePage: React.FC = () => {
+const ManagedITPage: React.FC = () => {
   const services = [
     {
-      icon: Database,
-      title: 'Database Design & Architecture',
-      description: 'Custom database design and architecture solutions for optimal performance and scalability.',
-      features: ['Schema Design', 'Performance Optimization', 'Scalability Planning', 'Data Modeling'],
-      benefits: ['Improved Performance', 'Better Scalability', 'Reduced Costs', 'Enhanced Security']
+      icon: Monitor,
+      title: '24/7 System Monitoring',
+      description: 'Round-the-clock monitoring of your IT infrastructure with proactive issue detection and resolution.',
+      features: ['Real-time Monitoring', 'Proactive Alerts', 'Performance Tracking', 'Uptime Reporting'],
+      benefits: ['99.9% Uptime', 'Faster Resolution', 'Preventive Maintenance', 'Peace of Mind']
     },
     {
       icon: Shield,
-      title: 'Database Security',
-      description: 'Comprehensive database security solutions including encryption, access control, and compliance.',
-      features: ['Data Encryption', 'Access Control', 'Audit Logging', 'Compliance Management'],
-      benefits: ['Enhanced Security', 'Regulatory Compliance', 'Data Protection', 'Risk Mitigation']
-    },
-    {
-      icon: Zap,
-      title: 'Database Performance Tuning',
-      description: 'Advanced performance optimization to maximize database speed and efficiency.',
-      features: ['Query Optimization', 'Index Tuning', 'Resource Management', 'Monitoring'],
-      benefits: ['Faster Queries', 'Reduced Load', 'Better User Experience', 'Cost Savings']
-    },
-    {
-      icon: BarChart,
-      title: 'Database Analytics & Reporting',
-      description: 'Advanced analytics and reporting solutions for data-driven insights.',
-      features: ['Real-time Analytics', 'Custom Reports', 'Data Visualization', 'Business Intelligence'],
-      benefits: ['Data Insights', 'Better Decisions', 'Competitive Advantage', 'Improved ROI']
+      title: 'Security Management',
+      description: 'Comprehensive security management including threat detection, prevention, and incident response.',
+      features: ['Threat Detection', 'Firewall Management', 'Antivirus Updates', 'Security Audits'],
+      benefits: ['Enhanced Security', 'Threat Prevention', 'Compliance', 'Risk Mitigation']
     },
     {
       icon: RefreshCw,
-      title: 'Database Migration',
-      description: 'Seamless database migration services with zero downtime and data integrity.',
-      features: ['Zero Downtime', 'Data Validation', 'Performance Testing', 'Rollback Planning'],
-      benefits: ['Smooth Migration', 'No Data Loss', 'Improved Performance', 'Future-Proof']
+      title: 'Backup & Recovery',
+      description: 'Automated backup solutions and disaster recovery planning to protect your critical data.',
+      features: ['Automated Backups', 'Disaster Recovery', 'Data Encryption', 'Testing & Validation'],
+      benefits: ['Data Protection', 'Quick Recovery', 'Business Continuity', 'Compliance']
     },
     {
       icon: Settings,
-      title: 'Database Administration',
-      description: '24/7 database administration and monitoring for optimal performance and uptime.',
-      features: ['24/7 Monitoring', 'Backup Management', 'Patch Management', 'Performance Tuning'],
-      benefits: ['High Availability', 'Data Protection', 'Proactive Maintenance', 'Expert Support']
+      title: 'System Administration',
+      description: 'Complete system administration including user management, software updates, and maintenance.',
+      features: ['User Management', 'Software Updates', 'System Maintenance', 'Performance Tuning'],
+      benefits: ['Optimized Performance', 'Reduced Downtime', 'Better Security', 'Expert Support']
+    },
+    {
+      icon: Globe,
+      title: 'Network Management',
+      description: 'Comprehensive network management including design, implementation, and ongoing optimization.',
+      features: ['Network Design', 'Performance Monitoring', 'Security Configuration', 'Troubleshooting'],
+      benefits: ['Reliable Connectivity', 'Better Performance', 'Enhanced Security', 'Scalable Design']
+    },
+    {
+      icon: Database,
+      title: 'Database Management',
+      description: 'Expert database administration including optimization, backup, and performance tuning.',
+      features: ['Database Optimization', 'Backup Management', 'Performance Tuning', 'Security Hardening'],
+      benefits: ['Improved Performance', 'Data Protection', 'Better Reliability', 'Cost Savings']
     }
   ];
 
-  const databaseTypes = [
-    { name: 'MySQL', description: 'Open-source relational database management system' },
-    { name: 'PostgreSQL', description: 'Advanced open-source object-relational database' },
-    { name: 'MongoDB', description: 'NoSQL document database for modern applications' },
-    { name: 'Oracle', description: 'Enterprise-grade relational database management system' },
-    { name: 'SQL Server', description: 'Microsoft\'s relational database management system' },
-    { name: 'Redis', description: 'In-memory data structure store and cache' },
-    { name: 'Elasticsearch', description: 'Distributed search and analytics engine' },
-    { name: 'Cassandra', description: 'Distributed NoSQL database for big data' }
+  const managedServices = [
+    { name: 'Help Desk Support', description: '24/7 technical support for all IT issues' },
+    { name: 'Server Management', description: 'Complete server administration and maintenance' },
+    { name: 'Network Security', description: 'Comprehensive network security management' },
+    { name: 'Cloud Management', description: 'Cloud infrastructure and service management' },
+    { name: 'Software Management', description: 'Software licensing, updates, and deployment' },
+    { name: 'Hardware Management', description: 'Hardware procurement, maintenance, and support' },
+    { name: 'Compliance Management', description: 'IT compliance and regulatory adherence' },
+    { name: 'Vendor Management', description: 'IT vendor relationships and contract management' }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic Support',
-      price: '$1,500',
+      name: 'Essential',
+      price: '$2,500',
       period: '/month',
-      description: 'Perfect for small databases',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 5 databases',
+        'Up to 25 users',
         'Basic monitoring',
         'Email support',
         'Monthly reports',
         'Backup services',
-        'Security updates'
+        'Security updates',
+        'Help desk support',
+        'Remote management'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$3,500',
+      price: '$5,000',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 20 databases',
+        'Up to 100 users',
         'Advanced monitoring',
         '24/7 phone support',
         'Weekly reports',
-        'Performance tuning',
+        'Disaster recovery',
+        'Performance optimization',
         'Security hardening',
-        'Migration services',
-        'Custom optimization'
+        'Cloud management',
+        'Proactive maintenance',
+        'Dedicated support team'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$7,500',
+      price: '$10,000',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited databases',
+        'Unlimited users',
         'Full monitoring suite',
         'Dedicated support team',
         'Daily reports',
         'Custom solutions',
         'Advanced security',
         'White-label options',
-        'On-site support'
+        'On-site support',
+        'Executive reporting',
+        'Strategic consulting'
       ],
       popular: false
     }
@@ -114,24 +120,24 @@ const DatabasePage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'DataFlow Systems',
-      role: 'CTO',
-      content: 'Zion Tech Group optimized our database performance by 300%. Our queries are now lightning fast and our costs have decreased significantly.',
+      name: 'Jennifer Davis',
+      company: 'TechFlow Systems',
+      role: 'Operations Manager',
+      content: 'Zion Tech Group\'s managed IT services have been a game-changer. Our systems run smoothly 24/7, and we\'ve reduced our IT costs by 40%.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      company: 'TechCorp Industries',
-      role: 'Database Administrator',
-      content: 'The database migration was flawless. We had zero downtime and our new system performs better than expected.',
+      name: 'Mark Thompson',
+      company: 'DataCorp Industries',
+      role: 'CEO',
+      content: 'The 24/7 monitoring and support gives us peace of mind. Any issues are resolved quickly, and our uptime has improved dramatically.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Lisa Rodriguez',
       company: 'InnovateTech',
       role: 'IT Director',
-      content: 'Their 24/7 database support is outstanding. Any issues are resolved quickly, and their proactive monitoring prevents problems.',
+      content: 'Their proactive approach prevents problems before they occur. We\'ve had zero major IT incidents since switching to their managed services.',
       rating: 5
     }
   ];
@@ -145,14 +151,14 @@ const DatabasePage: React.FC = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Database Services
+              Managed IT Services
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Expert Database Solutions for Modern Applications
+              Complete IT Management for Your Business
             </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12">
-              Comprehensive database services including design, optimization, migration, and 24/7 administration. 
-              Ensure your data is secure, performant, and scalable with our expert database solutions.
+              Comprehensive managed IT services including 24/7 monitoring, security management, backup & recovery, 
+              and system administration. Focus on your business while we handle all your IT needs.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -184,7 +190,7 @@ const DatabasePage: React.FC = () => {
               </div>
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
-                <div className="text-gray-300">Databases Managed</div>
+                <div className="text-gray-300">Systems Managed</div>
               </div>
               <div className="cyber-card p-6 text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-2">15+</div>
@@ -199,7 +205,7 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Our Database Services
+            Our Managed IT Services
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -240,19 +246,19 @@ const DatabasePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Database Types Section */}
+      {/* Managed Services Section */}
       <section className="py-16 px-4 bg-slate-800/50">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Supported Database Technologies
+            What We Manage
           </h2>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {databaseTypes.map((db, index) => (
+            {managedServices.map((service, index) => (
               <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <Database className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">{db.name}</h3>
-                <p className="text-gray-300 text-sm">{db.description}</p>
+                <Settings className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
+                <p className="text-gray-300 text-sm">{service.description}</p>
               </div>
             ))}
           </div>
@@ -263,7 +269,7 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16 neon-text">
-            Database Support Plans
+            Managed IT Plans
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -342,10 +348,10 @@ const DatabasePage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your Database?
+            Ready to Simplify Your IT Management?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our database experts help you design, optimize, and manage your database infrastructure.
+            Let our managed IT experts handle all your technology needs so you can focus on growing your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -360,7 +366,7 @@ const DatabasePage: React.FC = () => {
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               <Mail className="w-5 h-5 inline mr-2" />
-              Get Free Consultation
+              Get Free Assessment
             </a>
           </div>
         </div>
@@ -371,4 +377,4 @@ const DatabasePage: React.FC = () => {
   );
 };
 
-export default DatabasePage;
+export default ManagedITPage;
