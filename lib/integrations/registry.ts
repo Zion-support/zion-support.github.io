@@ -1,10 +1,5 @@
 
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-
-export const PROVIDERS: IntegrationProviderMeta[] = [
-export const PROVIDERS: IntegrationProviderMeta[] = [
+import type { IntegrationProviderMeta } from './types';
 
 export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'salesforce', name: 'Salesforce', category: 'crm', description: 'Enterprise CRM' },

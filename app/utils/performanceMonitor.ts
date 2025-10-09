@@ -233,4 +233,7 @@ class PerformanceMonitor {
     const metrics = this.getMetrics();
     return `
 Performance Report:
-}
+Score: ${score}
+Metrics: ${JSON.stringify(metrics, null, 2)}
+    `;
+  }

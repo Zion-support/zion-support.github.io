@@ -192,7 +192,7 @@ export class TestRunner {
       // Measure memory usage if available
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         if (memory) {
           memoryUsage = memory.usedJSHeapSize;
         }

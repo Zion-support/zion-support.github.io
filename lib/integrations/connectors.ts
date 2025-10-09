@@ -8,6 +8,9 @@ export async function simulateAction<T = unknown>(
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: Math.random().toString(36).substr(2, 9),
+  };
+};
+
 // Simple UUID generator since uuid package is not available
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);

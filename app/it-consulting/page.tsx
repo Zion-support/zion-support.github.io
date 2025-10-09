@@ -52,11 +52,16 @@ import Footer from '../components/Footer';
                     </ul>
 
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                    <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-gray-600">
                           <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
                           {benefit}
+                        </li>
+                      ))}
+                    </ul>
 
-                  <div className="text-center">
+                    <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                     <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                       Get Started
@@ -69,9 +74,14 @@ import Footer from '../components/Footer';
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call Us
+                </button>
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
                   Email Us
+                </button>
+              </div>
+            </div>
+          </section>
         </main>
         
         <Footer />

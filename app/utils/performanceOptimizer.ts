@@ -91,7 +91,10 @@ class PerformanceOptimizer {
       if (navigation) {
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
-    } catch () {}}
+    } catch (error) {
+      console.warn('Failed to measure load time:', error);
+    }
+  }
   /**
    * Measure render time using PerformanceObserver
    */

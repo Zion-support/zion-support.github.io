@@ -72,7 +72,7 @@ export class PerformanceMonitor {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (entry.duration > 50) { // Tasks longer than 50ms
-          }ms`);
+          console.warn(`Long task detected: ${entry.duration}ms`);
         }
       });
     });
