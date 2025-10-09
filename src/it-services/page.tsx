@@ -1,8 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Cloud, Shield, Server, Database, BarChart, Users, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+=======
+import { Cloud, Shield, Server, Settings, Database, Smartphone, Lock, BarChart, Users, ArrowRight, Phone, Mail } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -148,7 +154,11 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
           </section>
+=======
+        </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-39c9
 
           {/* Contact Section */}
           <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
