@@ -75,24 +75,6 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-purple-50',
       hoverColor: 'hover:bg-purple-100',
       services: [
-<<<<<<< HEAD
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-<<<<<<< HEAD
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Analytics', path: '/ai-data-analytics' }
-=======
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
-=======
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
         { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
@@ -100,8 +82,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
+        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud AI solutions' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI' },
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' }
       ]
     },
     {
@@ -111,29 +96,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-<<<<<<< HEAD
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
-<<<<<<< HEAD
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'DevOps', path: '/ai-workflow-automation' },
-        { name: 'Database Services', path: '/ai-data-analytics' }
-=======
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'DevOps', path: '/devops' },
-        { name: 'Database Services', path: '/database' },
-        { name: 'Network Services', path: '/networking' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
-=======
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'DevOps', path: '/ai-workflow-automation', description: 'DevOps automation' },
-        { name: 'Database Services', path: '/ai-data-analytics', description: 'Database management' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
+        { name: 'Database Services', path: '/ai-data-analytics', description: 'Database management' },
+        { name: 'Network Services', path: '/it-infrastructure', description: 'Network solutions' },
+        { name: 'Cloud Migration', path: '/ai-cloud-infrastructure', description: 'Cloud migration services' }
       ]
     },
     {
@@ -147,7 +117,10 @@ const Navigation: React.FC = () => {
         { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' },
+        { name: 'Finance Tools', path: '/micro-saas', description: 'Financial management' },
+        { name: 'HR Tools', path: '/micro-saas', description: 'Human resources' },
+        { name: 'Project Management', path: '/micro-saas', description: 'Project tools' }
       ]
     },
     {
@@ -161,7 +134,9 @@ const Navigation: React.FC = () => {
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
+        { name: 'Robotics', path: '/robotics', description: 'Robotic solutions' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Enterprise services' }
       ]
     }
   ];
