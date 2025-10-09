@@ -1,31 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
-=======
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Award, 
-  Shield, 
-  Zap, 
-  ArrowRight,
-  Brain,
-  Cloud,
-  Code,
-  BarChart,
-  Users,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  Facebook,
-  Instagram,
-  Youtube
-} from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -87,42 +61,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Compliance', url: '/compliance' }
   ];
 
-<<<<<<< HEAD
-  return (
-    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
-=======
-  const socialLinks = [
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  };
-
-  return (
-    <footer className="bg-gray-900 text-white">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-<<<<<<< HEAD
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
-=======
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
@@ -134,70 +78,6 @@ const Footer: React.FC = memo(() => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">Delaware, USA</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">24/7 Support Available</span>
-=======
-                <Phone className="w-4 h-4 text-purple-400" />
-                <a 
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  {contactInfo.phone}
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-purple-400" />
-                <a 
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  {contactInfo.email}
-                </a>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-purple-400 mt-1" />
-                <span className="text-gray-300 text-sm">
-                  {contactInfo.address}
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-4 h-4 text-purple-400" />
-                <span className="text-gray-300 text-sm">
-                  {contactInfo.hours}
-                </span>
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="mt-6">
-              <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
-              <div className="flex space-x-3">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors"
-                    aria-label={social.name}
-                  >
-                    <social.icon className="w-4 h-4" />
-                  </a>
-                ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
               </div>
             </div>
           </div>
@@ -298,56 +178,6 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Tech Trends
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Get insights on AI, emerging technologies, and industry best practices delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-300">Projects Completed</div>
-=======
-        {/* Additional Links */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Resources */}
-            <div>
-              <h4 className="text-sm font-semibold text-white mb-4">Resources</h4>
-              <ul className="space-y-2">
-                {resources.map((resource, index) => (
-                  <li key={index}>
-                    <Link
-                      to={resource.url}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
-                      {resource.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
             </div>
 
             {/* Legal */}
@@ -366,11 +196,6 @@ const Footer: React.FC = memo(() => {
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
-=======
-
-            {/* Newsletter */}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
             <div>
               <h4 className="text-sm font-semibold text-white mb-4">Stay Updated</h4>
               <p className="text-gray-400 text-sm mb-4">
@@ -387,74 +212,10 @@ const Footer: React.FC = memo(() => {
                 </button>
               </div>
             </div>
-<<<<<<< HEAD
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support Available</div>
-            </div>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Bottom Footer */}
-      <div className="bg-gray-800 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-wrap items-center space-x-6 mb-4 md:mb-0">
-              {legalLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={link.url}
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Award className="w-4 h-4" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Shield className="w-4 h-4" />
-                <span>SOC 2 Compliant</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-4 pt-4 border-t border-gray-700 text-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved. 
-              Empowering businesses with AI and IT solutions.
-            </p>
-=======
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span className="flex items-center">
-                <Shield className="w-4 h-4 mr-1" />
-                Enterprise Security
-              </span>
-              <span className="flex items-center">
-                <Award className="w-4 h-4 mr-1" />
-                ISO 27001 Certified
-              </span>
-              <span className="flex items-center">
-                <Globe className="w-4 h-4 mr-1" />
-                Global Services
-              </span>
-            </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
           </div>
         </div>
       </div>
@@ -464,8 +225,3 @@ const Footer: React.FC = memo(() => {
 
 Footer.displayName = 'Footer';
 
-<<<<<<< HEAD
-export default Footer;
-=======
-export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
