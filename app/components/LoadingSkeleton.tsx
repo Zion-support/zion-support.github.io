@@ -1,49 +1,48 @@
-'use client'
-interface LoadingSkeletonProps {
-  className?: string
-  lines?: number
-  height?: string;}
-}
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
-  className = '', 
-  lines = 1, 
-  height = 'h-4' }
-}) => {
-  return (}
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`bg-gray-200 rounded mb-2 ${height} ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'`}
-          }`}
-        />
-      ))}
-    </div>
-  )
-}
+'use client';
+import React from 'react';
+
 export const ServiceCardSkeleton: React.FC = () => (
-  <div className="cyber-card p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-    <div className="mt-4">
-      <div className="h-3 bg-gray-200 rounded mb-1"></div>
-      <div className="h-3 bg-gray-200 rounded mb-1"></div>
-      <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="w-16 h-16 bg-gray-700 rounded-xl mx-auto mb-6"></div>
+    <div className="h-6 bg-gray-700 rounded mb-3"></div>
+    <div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <div className="space-y-2 mb-4">
+      <div className="h-3 bg-gray-700 rounded"></div>
+      <div className="h-3 bg-gray-700 rounded"></div>
+      <div className="h-3 bg-gray-700 rounded w-3/4"></div>
     </div>
+    <div className="h-8 bg-gray-700 rounded"></div>
   </div>
-)
+);
+
 export const HeroSkeleton: React.FC = () => (
   <div className="text-center mb-16 animate-pulse">
-    <div className="h-16 bg-gray-200 rounded mb-6 mx-auto w-3/4"></div>
-    <div className="h-6 bg-gray-200 rounded mb-8 mx-auto w-1/2"></div>
-    <div className="h-4 bg-gray-200 rounded mb-4 mx-auto w-2/3"></div>
-    <div className="h-4 bg-gray-200 rounded mb-8 mx-auto w-1/2"></div>
+    <div className="h-16 bg-gray-700 rounded mb-6 mx-auto max-w-2xl"></div>
+    <div className="h-8 bg-gray-700 rounded mb-8 mx-auto max-w-4xl"></div>
+    <div className="h-6 bg-gray-700 rounded mb-8 mx-auto max-w-3xl"></div>
     <div className="flex justify-center gap-4">
-      <div className="h-12 bg-gray-200 rounded w-32"></div>
-      <div className="h-12 bg-gray-200 rounded w-32"></div>
+      <div className="h-12 bg-gray-700 rounded w-48"></div>
+      <div className="h-12 bg-gray-700 rounded w-48"></div>
     </div>
   </div>
-)
-export default LoadingSkeleton
+);
+
+export const ContentSkeleton: React.FC = () => (
+  <div className="animate-pulse">
+    <div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+  </div>
+);
+
+export const CardSkeleton: React.FC = () => (
+  <div className="cyber-card p-6 animate-pulse">
+    <div className="h-6 bg-gray-700 rounded mb-4"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <div className="h-4 bg-gray-700 rounded w-2/3"></div>
+  </div>
+);
+
+export default ServiceCardSkeleton;
