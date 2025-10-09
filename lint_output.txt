@@ -1,18 +1,29 @@
 
+<<<<<<< HEAD
 > zion-website@1.0.0 lint /workspace
+=======
+> zion-website@1.0.0 lint
+>>>>>>> main
 > eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0
 
 
 /workspace/App.tsx
+<<<<<<< HEAD
   93:7  warning  Unexpected console statement  no-console
+=======
+  55:7  warning  Unexpected console statement  no-console
+>>>>>>> main
 
 /workspace/__tests__/validation.test.ts
   114:33  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   115:38  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
 
+<<<<<<< HEAD
 /workspace/app/App.tsx
   90:7  warning  Unexpected console statement  no-console
 
+=======
+>>>>>>> main
 /workspace/app/components/AdvancedSEOOptimizer.tsx
   150:6   warning  React Hook useCallback has an unnecessary dependency: 'seoData'. Either exclude it or remove the dependency array  react-hooks/exhaustive-deps
   191:41  warning  Unexpected any. Specify a different type                                                                           @typescript-eslint/no-explicit-any
@@ -23,8 +34,12 @@
   27:9  warning  The 'defaultSEO' object makes the dependencies of useMemo Hook (at line 41) change on every render. Move it inside the useMemo callback. Alternatively, wrap the initialization of 'defaultSEO' in its own useMemo() Hook  react-hooks/exhaustive-deps
 
 /workspace/app/components/ErrorBoundary.tsx
+<<<<<<< HEAD
   27:5  warning  Unexpected console statement  no-console
   39:7  warning  Unexpected console statement  no-console
+=======
+  26:5  warning  Unexpected console statement  no-console
+>>>>>>> main
 
 /workspace/app/components/GlobalErrorBoundary.tsx
   30:7  warning  Unexpected console statement  no-console
@@ -35,6 +50,7 @@
   59:7  warning  Unexpected console statement  no-console
 
 /workspace/app/components/PerformanceMonitor.tsx
+<<<<<<< HEAD
    54:35  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
    87:35  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   110:7   warning  Unexpected console statement              no-console
@@ -78,18 +94,55 @@
   220:28  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   221:26  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   223:45  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+=======
+  26:9   warning  Unexpected console statement              no-console
+  32:9   warning  Unexpected console statement              no-console
+  37:40  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  38:9   warning  Unexpected console statement              no-console
+  53:13  warning  Unexpected console statement              no-console
+
+/workspace/app/components/SEOOptimizer.tsx
+  29:9  warning  Unexpected console statement  no-console
+>>>>>>> main
 
 /workspace/app/error.tsx
   13:5  warning  Unexpected console statement  no-console
 
+<<<<<<< HEAD
+=======
+/workspace/app/it-services/page.tsx
+  250:7  warning  Fast refresh only works when a file has exports. Move your component(s) to a separate file                   react-refresh/only-export-components
+  736:6  warning  React Hook useMemo has a missing dependency: 'itServices'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+>>>>>>> main
 /workspace/app/main.tsx
   12:9  warning  Unexpected console statement  no-console
   15:9  warning  Unexpected console statement  no-console
 
+<<<<<<< HEAD
 /workspace/app/types/gtag.d.ts
    9:31  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   15:74  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
   20:76  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+=======
+/workspace/app/micro-saas/page.tsx
+  110:6  warning  React Hook useMemo has a missing dependency: 'microSAASServices'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/app/page-new.tsx
+  28:25  error  Parsing error: Unterminated string literal
+
+/workspace/app/page-optimized.tsx
+  28:25  error  Parsing error: Unterminated string literal
+
+/workspace/app/types/gtag.d.ts
+  13:59  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/workspace/app/types/next.d.ts
+  3:17  error  Parsing error: Expression expected
+
+/workspace/app/utils/accessibility.ts
+  31:2  error  Parsing error: Declaration or statement expected
+>>>>>>> main
 
 /workspace/app/utils/accessibilityChecker.ts
   16:0  error  Parsing error: Declaration or statement expected
@@ -98,7 +151,11 @@
   7:0  error  Parsing error: Declaration or statement expected
 
 /workspace/app/utils/accessibilityUtils.ts
+<<<<<<< HEAD
   6:33  error  Parsing error: Expression expected
+=======
+  74:75  warning  Forbidden non-null assertion  @typescript-eslint/no-non-null-assertion
+>>>>>>> main
 
 /workspace/app/utils/advancedAnalytics.ts
   7:0  error  Parsing error: Declaration or statement expected
@@ -182,7 +239,11 @@
   3:2  error  Parsing error: Declaration or statement expected
 
 /workspace/app/utils/performanceEnhancer.ts
+<<<<<<< HEAD
   9:2  error  Parsing error: '=>' expected
+=======
+  19:0  error  Parsing error: Declaration or statement expected
+>>>>>>> main
 
 /workspace/app/utils/performanceMetrics.ts
   7:0  error  Parsing error: Declaration or statement expected
@@ -223,9 +284,12 @@
 /workspace/app/utils/seoOptimizer.ts
   7:0  error  Parsing error: Declaration or statement expected
 
+<<<<<<< HEAD
 /workspace/app/utils/seoUtils.ts
   14:0  error  Parsing error: Property or signature expected
 
+=======
+>>>>>>> main
 /workspace/app/utils/sitemapGenerator.ts
   2:0  error  Parsing error: Declaration or statement expected
 
@@ -3112,6 +3176,12 @@
 /workspace/next-env.d.ts
   5:5  error  Parsing error: Unknown keyword or identifier. Did you mean 'this'?
 
+<<<<<<< HEAD
+=======
+/workspace/next.config.advanced.js
+  3:9  error  Parsing error: Unexpected token }
+
+>>>>>>> main
 /workspace/optimized-build.js
   2:16  error  Parsing error: Unexpected token }
 
@@ -3269,10 +3339,17 @@
   2:49  error  Parsing error: Unexpected token react
 
 /workspace/src/App.tsx
+<<<<<<< HEAD
   1:0  error  Parsing error: Merge conflict marker encountered
 
 /workspace/src/about/page.tsx
   108:0  error  Parsing error: Merge conflict marker encountered
+=======
+  88:25  error  Parsing error: ',' expected
+
+/workspace/src/about/page.tsx
+  103:7  error  Parsing error: JSX element 'section' has no corresponding closing tag
+>>>>>>> main
 
 /workspace/src/ai-3d-generation/page.tsx
   8:5  error  Parsing error: Variable declaration expected
@@ -3524,7 +3601,11 @@
   6:0  error  Parsing error: Declaration or statement expected
 
 /workspace/src/components/Footer.tsx
+<<<<<<< HEAD
   1:0  error  Parsing error: Merge conflict marker encountered
+=======
+  175:26  error  Parsing error: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+>>>>>>> main
 
 /workspace/src/components/FuturisticServiceCard.tsx
   6:0  error  Parsing error: Declaration or statement expected
@@ -3566,7 +3647,11 @@
   5:5  error  Parsing error: Unexpected keyword or identifier
 
 /workspace/src/components/Navigation.tsx
+<<<<<<< HEAD
   1:0  error  Parsing error: Merge conflict marker encountered
+=======
+  108:12  error  Parsing error: Identifier expected
+>>>>>>> main
 
 /workspace/src/components/NewestContent2025Banner.tsx
   5:0  error  Parsing error: Declaration or statement expected
@@ -3790,7 +3875,11 @@
   11:60  error  Parsing error: Expression expected
 
 /workspace/src/page.tsx
+<<<<<<< HEAD
   1:0  error  Parsing error: Merge conflict marker encountered
+=======
+  159:2  error  Parsing error: Expression expected
+>>>>>>> main
 
 /workspace/src/partners/page.tsx
   13:1  error  Parsing error: ')' expected
@@ -4113,6 +4202,11 @@
 /workspace/vite-env.d.ts
   3:0  error  Parsing error: Declaration or statement expected
 
+<<<<<<< HEAD
 ✖ 1424 problems (1335 errors, 89 warnings)
 
  ELIFECYCLE  Command failed with exit code 1.
+=======
+✖ 1398 problems (1338 errors, 60 warnings)
+
+>>>>>>> main

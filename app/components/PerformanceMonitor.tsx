@@ -18,6 +18,7 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
+<<<<<<< HEAD
     // Monitor Core Web Vitals
     const measureLCP = () => {
       if ('PerformanceObserver' in window) {
@@ -28,6 +29,35 @@ const PerformanceMonitor: React.FC = () => {
         });
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
         return observer;
+=======
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        // This would typically use the web-vitals library
+        // eslint-disable-next-line no-console
+        console.log('Performance monitoring enabled');
+      }
+      
+      // Monitor page load time
+      window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        // eslint-disable-next-line no-console
+        console.log(`Page load time: ${loadTime}ms`);
+      });
+      
+      // Monitor memory usage if available
+      if ('memory' in performance) {
+        const memory = (performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (memory) {
+          // eslint-disable-next-line no-console
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+          });
+        }
+>>>>>>> main
       }
       return null;
     };
@@ -46,6 +76,7 @@ const PerformanceMonitor: React.FC = () => {
       return null;
     };
 
+<<<<<<< HEAD
     const measureCLS = () => {
       if ('PerformanceObserver' in window) {
         let clsValue = 0;
@@ -108,8 +139,26 @@ const PerformanceMonitor: React.FC = () => {
     // Log metrics in development
     if (process.env.NODE_ENV === 'development') {
       console.log('Performance metrics:', metrics);
+=======
+    // Monitor long tasks
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 50) {
+            // eslint-disable-next-line no-console
+            console.warn('Long task detected:', entry.duration + 'ms');
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['longtask'] });
+      
+      return () => {
+        observer.disconnect();
+      };
+>>>>>>> main
     }
 
+<<<<<<< HEAD
     // Cleanup
     return () => {
       observers.forEach(observer => observer?.disconnect());
@@ -118,6 +167,9 @@ const PerformanceMonitor: React.FC = () => {
 
   // This component doesn't render anything visible
   return null;
+=======
+  return null; // This component doesn't render anything
+>>>>>>> main
 };
 
 export default PerformanceMonitor;

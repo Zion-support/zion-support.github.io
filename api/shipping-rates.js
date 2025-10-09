@@ -37,7 +37,10 @@ async function handler(req, res) {
     res.statusCode = 200;
     res.json({ success: true, rates: data.rates });
   } catch (err) {
+<<<<<<< HEAD
     console.error('Shipping rates error:', err);
+=======
+>>>>>>> main
     res.status(500).json({ error: err.message });
   }
 }

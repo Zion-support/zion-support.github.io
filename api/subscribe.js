@@ -23,25 +23,41 @@ async function handler(req, res) {
     let existing = [];
 
     try {
+<<<<<<< HEAD
       if (fs.existsSync(file)) {
         existing = JSON.parse(fs.readFileSync(file, 'utf8'));
       }
     } catch (err) {
       console.error('Error reading existing subscriptions:', err);
+=======
+      const data = fs.readFileSync(file, 'utf8');
+      existing = JSON.parse(data);
+    } catch (err) {
+      // File doesn't exist or is invalid, start with empty array
+>>>>>>> main
     }
 
     existing.push({
       email,
+<<<<<<< HEAD
       name: name || '',
+=======
+      name,
+>>>>>>> main
       source,
       subscribedAt: new Date().toISOString()
     });
 
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
+<<<<<<< HEAD
     res.json({ success: true, message: 'Successfully subscribed' });
   } catch (err) {
     console.error('Subscription error:', err);
+=======
+    res.json({ success: true });
+  } catch (err) {
+>>>>>>> main
     res.status(500).json({ error: err.message || 'Subscription failed' });
   }
 }

@@ -18,6 +18,7 @@ async function handler(req, res) {
     }
 
     // Save subscription logic here
+<<<<<<< HEAD
     // const subscription = {
     //   email,
     //   subscribedAt: new Date().toISOString(),
@@ -28,6 +29,16 @@ async function handler(req, res) {
     res.json({ success: true, message: 'Successfully subscribed to newsletter' });
   } catch (err) {
     console.error('Failed to subscribe to newsletter:', err);
+=======
+    const subscription = {
+      email,
+      subscribedAt: new Date().toISOString()
+    };
+
+    res.statusCode = 200;
+    res.json({ success: true, subscription });
+  } catch (err) {
+>>>>>>> main
     res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
 }

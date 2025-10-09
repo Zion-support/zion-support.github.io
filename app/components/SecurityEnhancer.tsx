@@ -1,5 +1,7 @@
 'use client';
+import React, { useEffect } from 'react';
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface SecurityEnhancerProps {
@@ -323,45 +325,47 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
         metrics,
         isSecure,
         warnings: securityWarnings,
+=======
+interface SecurityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Security enhancement logic
+    const enhanceSecurity = () => {
+      // Add security headers
+      const securityHeaders = {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',
+        'Referrer-Policy': 'strict-origin-when-cross-origin'
+>>>>>>> main
       };
-    }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
-  return (
-    <>
-      {/* Security Status Indicator */}
-      {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS
-        </div>
-      )}
+      // Add CSP meta tag
+      const cspMeta = document.createElement('meta');
+      cspMeta.httpEquiv = 'Content-Security-Policy';
+      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
+      document.head.appendChild(cspMeta);
 
-      {/* Security Warnings */}
-      {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1">
-            {securityWarnings.map((warning, index) => (
-              <li key={index}>• {warning}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+      // Disable right-click context menu
+      document.addEventListener('contextmenu', (e) => {
+        e.preventDefault();
+      });
 
-      {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
-        </div>
-      )}
-    </>
-  );
+      // Disable F12 and other dev tools shortcuts
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+          e.preventDefault();
+        }
+      });
+    };
+
+    enhanceSecurity();
+  }, []);
+
+  return <>{children}</>;
 };
 
 export default SecurityEnhancer;

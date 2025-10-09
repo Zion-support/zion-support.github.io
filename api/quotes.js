@@ -17,6 +17,7 @@ export default async function handler(req, res) {
       email,
       phone,
       details,
+<<<<<<< HEAD
       country: country || 'US',
       service: service || 'general',
       timestamp: new Date().toISOString(),
@@ -30,6 +31,17 @@ export default async function handler(req, res) {
     res.json({ success: true, message: 'Quote submitted successfully', quoteId: quote.id });
   } catch (error) {
     console.error('Quote submission error:', error);
+=======
+      country,
+      service,
+      createdAt: new Date().toISOString()
+    };
+
+    // In a real application, you would save this to a database
+    res.statusCode = 200;
+    res.json({ success: true, quote });
+  } catch (error) {
+>>>>>>> main
     res.status(500).json({ error: error.message || 'Quote submission failed' });
   }
 }

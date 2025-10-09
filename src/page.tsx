@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -36,7 +34,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +45,6 @@ const HomePage: React.FC = () => {
               Comprehensive AI and IT solutions designed to transform your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* AI Services */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -74,7 +70,6 @@ const HomePage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             {/* IT Services */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -99,7 +94,6 @@ const HomePage: React.FC = () => {
                 </li>
               </ul>
             </div>
-
             {/* Digital Transformation */}
             <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="flex items-center mb-4">
@@ -127,7 +121,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,7 +155,6 @@ import ServicesSection from './components/ServicesSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-
 export default function HomePage() {
   return (
     <div className="min-h-screen cyber-grid neural-network-bg">
@@ -176,10 +168,7 @@ export default function HomePage() {
     </div>
   );
 };
-
 export default HomePage;
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       {/* Skip to main content for accessibility */}
@@ -189,12 +178,10 @@ export default HomePage;
       >
         Skip to main content
       </a>
-
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
@@ -218,7 +205,6 @@ export default HomePage;
             Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
-          
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
             <div className="cyber-card hologram-card p-4 sm:p-6">
@@ -237,7 +223,6 @@ export default HomePage;
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
           </div>
-          
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -257,7 +242,6 @@ export default HomePage;
             </Link>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -266,7 +250,6 @@ export default HomePage;
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -284,7 +267,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
@@ -300,7 +282,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
@@ -317,7 +298,6 @@ export default HomePage;
               </article>
             </Suspense>
           </div>
-
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -335,7 +315,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
@@ -351,7 +330,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
@@ -368,7 +346,6 @@ export default HomePage;
               </article>
             </Suspense>
           </div>
-
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -386,7 +363,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
@@ -402,7 +378,6 @@ export default HomePage;
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
@@ -419,7 +394,6 @@ export default HomePage;
               </article>
             </Suspense>
           </div>
-
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <article className="cyber-card hologram-card p-4 sm:p-6">
@@ -436,7 +410,6 @@ export default HomePage;
                 <li>• Predictive Analytics</li>
               </ul>
             </article>
-
             <article className="cyber-card hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
@@ -451,7 +424,6 @@ export default HomePage;
                 <li>• Change Management</li>
               </ul>
             </article>
-
             <article className="cyber-card hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
@@ -467,22 +439,18 @@ export default HomePage;
             </article>
           </div>
         </section>
-
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
         </Suspense>
-
         {/* Content Carousel */}
         <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentCarousel />
         </Suspense>
-
         {/* Dynamic Content Showcase */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <DynamicContentShowcase />
         </Suspense>
-
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
@@ -491,12 +459,10 @@ export default HomePage;
     </div>
   );
 };
-
 export default HomePage;
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
@@ -505,7 +471,6 @@ const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 const Navigation = lazy(() => import('./components/Navigation'));
 const Footer = lazy(() => import('./components/Footer'));
-
 // Preload critical components with better timing
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -525,7 +490,6 @@ const preloadComponents = () => {
     }
   }
 };
-
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -535,11 +499,9 @@ const ServiceCardSkeleton: React.FC = memo(() => (
   </div>
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
@@ -548,7 +510,6 @@ const HomePage: React.FC = () => {
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -558,24 +519,19 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-=======
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-
 // Preload critical components with better timing
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
@@ -584,7 +540,6 @@ const preloadComponents = () => {
     }, 100);
   }
 };
-
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
@@ -597,7 +552,6 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation
@@ -606,7 +560,6 @@ const HomePage: React.FC = () => {
     preloadComponents();
     return () => clearTimeout(timer);
   }, []);
-
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -616,13 +569,10 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
       {/* Navigation */}
       <Navigation />
-      
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
@@ -630,12 +580,10 @@ const HomePage: React.FC = () => {
       >
         Skip to main content
       </a>
-
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
@@ -659,7 +607,6 @@ const HomePage: React.FC = () => {
             Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
-          
           {/* Key Benefits */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto mb-12">
             <div className="cyber-card-enhanced holographic-card quantum-field p-4 sm:p-6">
@@ -678,7 +625,6 @@ const HomePage: React.FC = () => {
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
             </div>
           </div>
-          
           {/* CTA Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -698,7 +644,6 @@ const HomePage: React.FC = () => {
             </a>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -707,7 +652,6 @@ const HomePage: React.FC = () => {
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
-          
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -725,7 +669,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card-enhanced holographic-card quantum-field p-4 sm:p-6 cyber-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line-enhanced">📢</div>
@@ -741,7 +684,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card-enhanced holographic-card quantum-field p-4 sm:p-6 cyber-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line-enhanced">⚙️</div>
@@ -758,7 +700,6 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
-
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -776,7 +717,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
@@ -792,7 +732,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
@@ -809,7 +748,6 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
-
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -827,7 +765,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
@@ -843,7 +780,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
@@ -860,7 +796,6 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
           </div>
-
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <article className="cyber-card hologram-card p-4 sm:p-6">
@@ -877,7 +812,6 @@ const HomePage: React.FC = () => {
                 <li>• Predictive Analytics</li>
               </ul>
             </article>
-
             <article className="cyber-card hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
@@ -892,7 +826,6 @@ const HomePage: React.FC = () => {
                 <li>• Change Management</li>
               </ul>
             </article>
-
             <article className="cyber-card hologram-card p-4 sm:p-6">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
@@ -908,32 +841,26 @@ const HomePage: React.FC = () => {
             </article>
           </div>
         </section>
-
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
         </Suspense>
-
         {/* Content Carousel */}
         <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentCarousel />
         </Suspense>
-
         {/* Dynamic Content Showcase */}
         <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <DynamicContentShowcase />
         </Suspense>
-
         {/* Newsletter Signup */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
       </main>
-
       {/* Footer */}
       <Footer />
     </div>
   );
 };
-
 export default HomePage;
