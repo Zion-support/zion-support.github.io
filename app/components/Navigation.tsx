@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
->>>>>>> origin/main
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-<<<<<<< HEAD
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
-=======
->>>>>>> origin/main
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,10 +19,11 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = () => {
     setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
     setIsOpen(false);
   };
 
-<<<<<<< HEAD
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     if (isOpen) {
@@ -44,15 +38,22 @@ const Navigation: React.FC = () => {
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Brain },
     { name: 'AI Fintech', href: '/ai-fintech', icon: BarChart },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Brain },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud },
+    { name: 'AI E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: Code },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Code }
   ];
 
   const itServices = [
     { name: 'IT Services', href: '/it-services', icon: Code },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud },
-    { name: 'Mobile Development', href: '/ai-mobile-app-development', icon: Code },
-    { name: 'E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: Code },
-    { name: 'Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
+    { name: 'DevOps', href: '/devops', icon: Code },
+    { name: 'Database Services', href: '/database', icon: BarChart },
+    { name: 'Network Services', href: '/networking', icon: Cloud }
   ];
 
   const emergingTech = [
@@ -63,81 +64,28 @@ const Navigation: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
   ];
 
-=======
-  const serviceCategories = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      services: [
-        { name: 'AI Services', path: '/ai-services' },
-        { name: 'AI Marketing', path: '/ai-marketing' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare' },
-        { name: 'AI Fintech', path: '/ai-fintech' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure' },
-        { name: 'IT Services', path: '/it-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'DevOps', path: '/devops' },
-        { name: 'Database Services', path: '/database' },
-        { name: 'Network Services', path: '/networking' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      services: [
-        { name: 'Micro SAAS', path: '/micro-saas' },
-        { name: 'Developer Tools', path: '/micro-saas' },
-        { name: 'Business Apps', path: '/micro-saas' },
-        { name: 'Productivity Tools', path: '/micro-saas' },
-        { name: 'Marketing Tools', path: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { name: 'Business Intelligence', path: '/business-intelligence' }
-      ]
-    }
+  const microSaasServices = [
+    { name: 'Micro SAAS', href: '/micro-saas', icon: Code },
+    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
+    { name: 'Business Apps', href: '/business-apps', icon: BarChart },
+    { name: 'Productivity Tools', href: '/productivity', icon: Zap },
+    { name: 'Marketing Tools', href: '/marketing-tools', icon: BarChart }
   ];
 
->>>>>>> origin/main
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
+        : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-<<<<<<< HEAD
-          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
+          <Link to="/" className={`text-2xl font-bold flex items-center transition-colors ${
+            isScrolled 
+              ? 'text-gray-900' 
+              : 'text-cyan-400 neon-text'
+          }`}>
             <span className="text-3xl mr-2">⚡</span>
             <span className="hidden sm:block">Zion Tech Group</span>
           </Link>
@@ -146,39 +94,34 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-=======
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
-            onClick={closeAllMenus}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
-            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Zion Tech Group
-            </span>
-          </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link
-              to="/"
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+              className={`transition-colors duration-200 font-medium ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-cyan-600' 
+                  : 'text-white hover:text-cyan-400'
               }`}
->>>>>>> origin/main
-              onClick={closeAllMenus}
             >
               Home
             </Link>
             
-<<<<<<< HEAD
+            <Link
+              to="/about"
+              className={`transition-colors duration-200 font-medium ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-cyan-600' 
+                  : 'text-white hover:text-cyan-400'
+              }`}
+            >
+              About
+            </Link>
+
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                className={`flex items-center space-x-1 transition-colors duration-200 font-medium ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-white hover:text-cyan-400'
+                }`}
                 onMouseEnter={() => setAiServicesOpen(true)}
                 onMouseLeave={() => setAiServicesOpen(false)}
               >
@@ -188,152 +131,153 @@ const Navigation: React.FC = () => {
               </button>
               
               {aiServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl py-2 z-50"
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
                   onMouseEnter={() => setAiServicesOpen(true)}
                   onMouseLeave={() => setAiServicesOpen(false)}
                 >
-                  {aiServices.map((service, index) => (
-=======
-            <Link 
-              to="/about" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
-              onClick={closeAllMenus}
-            >
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
-                        </div>
-                        <div className="space-y-2">
-                          {category.services.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                  <div className="grid grid-cols-2 gap-2 px-4">
+                    {aiServices.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <service.icon className="w-5 h-5 text-purple-600" />
+                        <span className="text-gray-700 group-hover:text-purple-600 transition-colors">
+                          {service.name}
+                        </span>
+                      </Link>
                     ))}
-                  </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
->>>>>>> origin/main
-                    <Link
-                      to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link 
-              to="/case-studies" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+            {/* IT Services Dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center space-x-1 transition-colors duration-200 font-medium ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-white hover:text-cyan-400'
+                }`}
+                onMouseEnter={() => setItServicesOpen(true)}
+                onMouseLeave={() => setItServicesOpen(false)}
+              >
+                <Cloud className="w-4 h-4" />
+                <span>IT Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {itServicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-4 z-50"
+                  onMouseEnter={() => setItServicesOpen(true)}
+                  onMouseLeave={() => setItServicesOpen(false)}
+                >
+                  <div className="space-y-2 px-4">
+                    {itServices.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                      >
+                        <service.icon className="w-5 h-5 text-blue-600" />
+                        <span className="text-gray-700 group-hover:text-blue-600 transition-colors">
+                          {service.name}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              to="/micro-saas"
+              className={`transition-colors duration-200 font-medium ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-cyan-600' 
+                  : 'text-white hover:text-cyan-400'
               }`}
-              onClick={closeAllMenus}
             >
-              Case Studies
+              Micro SAAS
             </Link>
+
+            <Link
+              to="/enterprise"
+              className={`transition-colors duration-200 font-medium ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-cyan-600' 
+                  : 'text-white hover:text-cyan-400'
+              }`}
+            >
+              Enterprise
+            </Link>
+
             <Link
               to="/contact"
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
+              className={`transition-colors duration-200 font-medium ${
+                isScrolled 
+                  ? 'text-gray-700 hover:text-cyan-600' 
+                  : 'text-white hover:text-cyan-400'
               }`}
-              onClick={closeAllMenus}
             >
               Contact
             </Link>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-              onClick={closeAllMenus}
-            >
-              Get Started
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
-<<<<<<< HEAD
             onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-            aria-label="Toggle menu"
-=======
-            onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
               isScrolled 
                 ? 'text-gray-700 hover:bg-gray-100' 
                 : 'text-white hover:bg-white/10'
             }`}
->>>>>>> origin/main
+            aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+          <div className="lg:hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 p-4 shadow-xl">
             <div className="space-y-4">
               <Link
                 to="/"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-=======
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
-            <div className="space-y-6">
-              <Link 
-                to="/" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
->>>>>>> origin/main
+                className={`block transition-colors duration-200 font-medium py-2 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-gray-700 hover:text-cyan-600'
+                }`}
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
-<<<<<<< HEAD
+              <Link
+                to="/about"
+                className={`block transition-colors duration-200 font-medium py-2 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-gray-700 hover:text-cyan-600'
+                }`}
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              
               {/* Mobile AI Services */}
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                  className={`flex items-center justify-between w-full transition-colors duration-200 font-medium py-2 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-cyan-600' 
+                      : 'text-gray-700 hover:text-cyan-600'
+                  }`}
                   onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 >
                   <div className="flex items-center space-x-2">
@@ -342,17 +286,17 @@ const Navigation: React.FC = () => {
                   </div>
                   <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
+                
                 {aiServicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
+                  <div className="ml-4 mt-2 space-y-2">
                     {aiServices.map((service, index) => (
                       <Link
                         key={index}
                         to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
+                        className="block text-sm text-gray-600 hover:text-cyan-600 transition-colors py-1"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
+                        {service.name}
                       </Link>
                     ))}
                   </div>
@@ -362,55 +306,30 @@ const Navigation: React.FC = () => {
               {/* Mobile IT Services */}
               <div>
                 <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                  className={`flex items-center justify-between w-full transition-colors duration-200 font-medium py-2 ${
+                    isScrolled 
+                      ? 'text-gray-700 hover:text-cyan-600' 
+                      : 'text-gray-700 hover:text-cyan-600'
+                  }`}
                   onClick={() => setItServicesOpen(!itServicesOpen)}
                 >
                   <div className="flex items-center space-x-2">
-                    <Code className="w-4 h-4" />
-                    <span>IT Solutions</span>
+                    <Cloud className="w-4 h-4" />
+                    <span>IT Services</span>
                   </div>
                   <ChevronDown className={`w-4 h-4 transition-transform ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
+                
                 {itServicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
+                  <div className="ml-4 mt-2 space-y-2">
                     {itServices.map((service, index) => (
                       <Link
                         key={index}
                         to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
+                        className="block text-sm text-gray-600 hover:text-cyan-600 transition-colors py-1"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Emerging Tech */}
-              <div>
-                <button
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                >
-                  <div className="flex items-center space-x-2">
-                    <Zap className="w-4 h-4" />
-                    <span>Emerging Tech</span>
-                  </div>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {emergingTech.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
-                        onClick={closeAllMenus}
-                      >
-                        <service.icon className="w-4 h-4" />
-                        <span>{service.name}</span>
+                        {service.name}
                       </Link>
                     ))}
                   </div>
@@ -418,79 +337,40 @@ const Navigation: React.FC = () => {
               </div>
 
               <Link
-                to="/about"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-=======
-              <Link 
-                to="/about" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
->>>>>>> origin/main
+                to="/micro-saas"
+                className={`block transition-colors duration-200 font-medium py-2 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-gray-700 hover:text-cyan-600'
+                }`}
                 onClick={closeAllMenus}
               >
-                About
+                Micro SAAS
               </Link>
 
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-4 space-y-4">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-2">
-                        <div className="flex items-center space-x-2">
-                          <category.icon className={`w-4 h-4 ${category.color}`} />
-                          <h4 className="font-semibold text-gray-800 text-sm">{category.title}</h4>
-                        </div>
-                        <div className="ml-6 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-sm text-gray-600 hover:text-purple-600 transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link 
-                to="/case-studies" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+              <Link
+                to="/enterprise"
+                className={`block transition-colors duration-200 font-medium py-2 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-gray-700 hover:text-cyan-600'
+                }`}
                 onClick={closeAllMenus}
               >
-                Case Studies
+                Enterprise
               </Link>
-              
-              <Link 
-                to="/contact" 
-                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+
+              <Link
+                to="/contact"
+                className={`block transition-colors duration-200 font-medium py-2 ${
+                  isScrolled 
+                    ? 'text-gray-700 hover:text-cyan-600' 
+                    : 'text-gray-700 hover:text-cyan-600'
+                }`}
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-200">
-                <Link
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-200"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
           </div>
         )}
@@ -499,8 +379,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> origin/main

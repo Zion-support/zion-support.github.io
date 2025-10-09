@@ -101,21 +101,6 @@ const Footer: React.FC = memo(() => {
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-<<<<<<< HEAD
-                <Phone className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">Delaware, USA</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-blue-400" />
-=======
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
                   +1 (302) 464-0950
@@ -136,17 +121,12 @@ const Footer: React.FC = memo(() => {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-cyan-400" />
->>>>>>> origin/main
                 <span className="text-gray-300">24/7 Support Available</span>
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Service Categories */}
-=======
-          {/* Services */}
->>>>>>> origin/main
           <div className="lg:col-span-2">
             <h4 className="text-xl font-semibold mb-6 text-white">Our Services</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -176,22 +156,13 @@ const Footer: React.FC = memo(() => {
 
           {/* Quick Links & Resources */}
           <div className="lg:col-span-1">
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 mb-6">
-=======
             <h4 className="text-lg font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 mb-8">
->>>>>>> origin/main
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
-<<<<<<< HEAD
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-=======
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
->>>>>>> origin/main
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -200,21 +171,13 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
 
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
-=======
             <h4 className="text-lg font-semibold mb-4 text-white">Resources</h4>
->>>>>>> origin/main
             <ul className="space-y-2">
               {resources.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
-<<<<<<< HEAD
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
-=======
                     className="text-gray-300 hover:text-white transition-colors flex items-center group"
->>>>>>> origin/main
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
@@ -245,37 +208,9 @@ const Footer: React.FC = memo(() => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-300">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-300">Expert Team Members</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime Guarantee</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support Available</div>
-            </div>
-=======
->>>>>>> origin/main
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
-=======
         {/* Stats Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -299,23 +234,11 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
 
->>>>>>> origin/main
       {/* Bottom Footer */}
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap items-center space-x-6 mb-4 md:mb-0">
-<<<<<<< HEAD
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
-=======
               {resources.slice(4).map((link, index) => (
                 <Link
                   key={index}
@@ -325,7 +248,6 @@ const Footer: React.FC = memo(() => {
                   {link.name}
                 </Link>
               ))}
->>>>>>> origin/main
             </div>
             
             <div className="flex items-center space-x-6">
@@ -359,13 +281,6 @@ const Footer: React.FC = memo(() => {
                   </svg>
                 </a>
               </div>
-<<<<<<< HEAD
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Shield className="w-4 h-4" />
-                <span>SOC 2 Compliant</span>
-              </div>
-=======
->>>>>>> origin/main
             </div>
           </div>
           
@@ -383,8 +298,4 @@ const Footer: React.FC = memo(() => {
 
 Footer.displayName = 'Footer';
 
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> origin/main
