@@ -185,4 +185,3 @@ export class BaseService {
     throw error;
   }
 }
-export default BaseService;

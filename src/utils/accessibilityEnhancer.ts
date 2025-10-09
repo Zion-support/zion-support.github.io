@@ -2,7 +2,6 @@
  * Advanced Accessibility Enhancer
  * Comprehensive accessibility optimization utilities
  */
-
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
   enableScreenReader: boolean;
@@ -12,7 +11,6 @@ interface AccessibilityConfig {
   enableColorBlindSupport: boolean;
   enableVoiceControl: boolean;
 }
-
 interface A11yMetrics {
   focusableElements: number;
   headingStructure: boolean;
@@ -21,13 +19,11 @@ interface A11yMetrics {
   keyboardAccessibility: number;
   screenReaderCompatibility: number;
 }
-
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: A11yMetrics;
   private focusableElements: HTMLElement[] = [];
   private currentFocusIndex: number = 0;
-
   constructor(config: AccessibilityConfig) {
     this.config = config;
     this.metrics = {
@@ -40,10 +36,8 @@ class AccessibilityEnhancer {
     };
     this.init();
   }
-
   private init(): void {
     if (typeof window === 'undefined') return;
-
     this.setupKeyboardNavigation();
     this.setupScreenReaderSupport();
     this.setupHighContrastMode();
@@ -56,29 +50,23 @@ class AccessibilityEnhancer {
     this.optimizeForms();
     this.optimizeHeadings();
   }
-
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
-
     // Track focusable elements
     this.updateFocusableElements();
-
     // Handle keyboard navigation
     document.addEventListener('keydown', (e) => {
       this.handleKeyboardNavigation(e);
     });
-
     // Update focusable elements on DOM changes
     const observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
-
     observer.observe(document.body, {
       childList: true,
       subtree: true
     });
   }
-
   private updateFocusableElements(): void {
     const selectors = [
       'a[href]',
@@ -92,14 +80,11 @@ class AccessibilityEnhancer {
       'object',
       'embed'
     ];
-
     this.focusableElements = Array.from(
       document.querySelectorAll(selectors.join(', '))
     ) as HTMLElement[];
-
     this.metrics.focusableElements = this.focusableElements.length;
   }
-
   private handleKeyboardNavigation(e: KeyboardEvent): void {
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -113,21 +98,17 @@ class AccessibilityEnhancer {
           ? this.currentFocusIndex + 1 
           : 0;
       }
-
       this.focusableElements[this.currentFocusIndex]?.focus();
     }
-
     // Handle arrow key navigation for custom components
     if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
       this.handleArrowKeyNavigation(e);
     }
-
     // Handle Escape key
     if (e.key === 'Escape') {
       this.handleEscapeKey();
     }
   }
-
   private handleArrowKeyNavigation(e: KeyboardEvent): void {
     const activeElement = document.activeElement as HTMLElement;
     const parent = activeElement.closest('[role="menu"], [role="listbox"], [role="grid"]');
@@ -154,7 +135,6 @@ class AccessibilityEnhancer {
       }
     }
   }
-
   private handleEscapeKey(): void {
     // Close modals, dropdowns, etc.
     const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
@@ -163,10 +143,8 @@ class AccessibilityEnhancer {
       (closeButton as HTMLElement)?.click();
     });
   }
-
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReader) return;
-
     // Add screen reader only text
     this.addScreenReaderText();
     
@@ -176,7 +154,6 @@ class AccessibilityEnhancer {
     // Add live regions for dynamic content
     this.setupLiveRegions();
   }
-
   private addScreenReaderText(): void {
     // Add skip links
     const skipLink = document.createElement('a');
@@ -184,7 +161,6 @@ class AccessibilityEnhancer {
     skipLink.textContent = 'Skip to main content';
     skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
     document.body.insertBefore(skipLink, document.body.firstChild);
-
     // Add screen reader only text for icons
     const icons = document.querySelectorAll('[data-icon]');
     icons.forEach(icon => {
@@ -194,7 +170,6 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private enhanceAriaLabels(): void {
     // Add ARIA labels to buttons without text
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
@@ -207,7 +182,6 @@ class AccessibilityEnhancer {
         button.setAttribute('aria-label', iconName);
       }
     });
-
     // Add ARIA labels to links
     const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
     links.forEach(link => {
@@ -219,7 +193,6 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private setupLiveRegions(): void {
     // Create live region for announcements
     const liveRegion = document.createElement('div');
@@ -229,15 +202,12 @@ class AccessibilityEnhancer {
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
   }
-
   private setupHighContrastMode(): void {
     if (!this.config.enableHighContrast) return;
-
     // Detect high contrast preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
       document.documentElement.classList.add('high-contrast');
     }
-
     // Listen for changes
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       if (e.matches) {
@@ -247,10 +217,8 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
-
     // Trap focus in modals
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
@@ -260,7 +228,6 @@ class AccessibilityEnhancer {
         }
       }
     });
-
     // Manage focus on page load
     window.addEventListener('load', () => {
       const mainContent = document.querySelector('main, [role="main"]');
@@ -269,7 +236,6 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private trapFocus(element: HTMLElement, e: KeyboardEvent): void {
     const focusableElements = element.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
@@ -277,7 +243,6 @@ class AccessibilityEnhancer {
     
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
     if (e.shiftKey) {
       if (document.activeElement === firstElement) {
         lastElement?.focus();
@@ -290,15 +255,12 @@ class AccessibilityEnhancer {
       }
     }
   }
-
   private setupReducedMotion(): void {
     if (!this.config.enableReducedMotion) return;
-
     // Detect reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.documentElement.classList.add('reduced-motion');
     }
-
     // Listen for changes
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       if (e.matches) {
@@ -308,10 +270,8 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private setupColorBlindSupport(): void {
     if (!this.config.enableColorBlindSupport) return;
-
     // Add color blind friendly alternatives
     const colorBlindStyles = document.createElement('style');
     colorBlindStyles.textContent = `
@@ -339,10 +299,8 @@ class AccessibilityEnhancer {
     `;
     document.head.appendChild(colorBlindStyles);
   }
-
   private setupVoiceControl(): void {
     if (!this.config.enableVoiceControl) return;
-
     // Add voice control hints
     const voiceControlHints = document.createElement('div');
     voiceControlHints.className = 'sr-only';
@@ -351,7 +309,6 @@ class AccessibilityEnhancer {
     `;
     document.body.appendChild(voiceControlHints);
   }
-
   private auditAccessibility(): void {
     this.checkHeadingStructure();
     this.checkColorContrast();
@@ -359,13 +316,11 @@ class AccessibilityEnhancer {
     this.checkKeyboardAccessibility();
     this.checkScreenReaderCompatibility();
   }
-
   private checkHeadingStructure(): void {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let hasH1 = false;
     let structureValid = true;
     let lastLevel = 0;
-
     headings.forEach(heading => {
       const level = parseInt(heading.tagName.charAt(1));
       
@@ -377,16 +332,13 @@ class AccessibilityEnhancer {
       
       lastLevel = level;
     });
-
     this.metrics.headingStructure = hasH1 && structureValid;
   }
-
   private checkColorContrast(): void {
     // This is a simplified check - in production, use a proper contrast checker
     const textElements = document.querySelectorAll('p, span, div, a, button');
     let totalElements = textElements.length;
     let accessibleElements = 0;
-
     textElements.forEach(element => {
       const styles = window.getComputedStyle(element);
       const color = styles.color;
@@ -397,10 +349,8 @@ class AccessibilityEnhancer {
         accessibleElements++;
       }
     });
-
     this.metrics.colorContrast = totalElements > 0 ? (accessibleElements / totalElements) * 100 : 0;
   }
-
   private checkAltTextCoverage(): void {
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]:not([alt=""])');
@@ -409,19 +359,16 @@ class AccessibilityEnhancer {
       ? (imagesWithAlt.length / images.length) * 100 
       : 100;
   }
-
   private checkKeyboardAccessibility(): void {
     const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
     const accessibleElements = Array.from(interactiveElements).filter(element => {
       const tabIndex = element.getAttribute('tabindex');
       return tabIndex !== '-1' && !element.hasAttribute('disabled');
     });
-
     this.metrics.keyboardAccessibility = interactiveElements.length > 0 
       ? (accessibleElements.length / interactiveElements.length) * 100 
       : 100;
   }
-
   private checkScreenReaderCompatibility(): void {
     const elements = document.querySelectorAll('*');
     const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby], [aria-describedby], [role]');
@@ -430,7 +377,6 @@ class AccessibilityEnhancer {
       ? (elementsWithAria.length / elements.length) * 100 
       : 0;
   }
-
   private optimizeImages(): void {
     const images = document.querySelectorAll('img');
     
@@ -439,12 +385,10 @@ class AccessibilityEnhancer {
       if (!img.getAttribute('alt')) {
         img.setAttribute('alt', '');
       }
-
       // Add loading attribute for better performance
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-
       // Add dimensions to prevent layout shift
       if (!img.hasAttribute('width') && !img.hasAttribute('height')) {
         img.addEventListener('load', () => {
@@ -454,7 +398,6 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   private optimizeForms(): void {
     const forms = document.querySelectorAll('form');
     
@@ -472,7 +415,6 @@ class AccessibilityEnhancer {
           input.parentNode?.insertBefore(labelElement, input);
         }
       });
-
       // Add fieldset for grouped inputs
       const radioGroups = form.querySelectorAll('input[type="radio"]');
       const groupedRadios = new Map();
@@ -486,7 +428,6 @@ class AccessibilityEnhancer {
           groupedRadios.get(name).push(radio);
         }
       });
-
       groupedRadios.forEach((radios, name) => {
         if (radios.length > 1) {
           const fieldset = document.createElement('fieldset');
@@ -503,7 +444,6 @@ class AccessibilityEnhancer {
       });
     });
   }
-
   private optimizeHeadings(): void {
     // Ensure proper heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
@@ -526,22 +466,18 @@ class AccessibilityEnhancer {
       }
     });
   }
-
   public announce(message: string): void {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
       liveRegion.textContent = message;
     }
   }
-
   public getMetrics(): A11yMetrics {
     return this.metrics;
   }
-
   public generateReport(): string {
     const report = `
 # Accessibility Report
-
 ## Metrics
 - Focusable Elements: ${this.metrics.focusableElements}
 - Heading Structure: ${this.metrics.headingStructure ? 'Valid' : 'Invalid'}
@@ -549,7 +485,6 @@ class AccessibilityEnhancer {
 - Alt Text Coverage: ${this.metrics.altTextCoverage.toFixed(1)}%
 - Keyboard Accessibility: ${this.metrics.keyboardAccessibility.toFixed(1)}%
 - Screen Reader Compatibility: ${this.metrics.screenReaderCompatibility.toFixed(1)}%
-
 ## Recommendations
 ${this.metrics.headingStructure ? '' : '- Fix heading structure hierarchy'}
 ${this.metrics.colorContrast < 80 ? '- Improve color contrast ratios' : ''}

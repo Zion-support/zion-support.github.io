@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>

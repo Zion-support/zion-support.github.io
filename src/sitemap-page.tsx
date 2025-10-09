@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import { React } from 'react';
+import { Link } from 'next/link';
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },

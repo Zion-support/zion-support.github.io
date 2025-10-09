@@ -524,4 +524,3 @@ export class EnhancedLogger {
 // Export singleton instance
 export const logger = EnhancedLogger.getInstance();
 // Export default
-export default EnhancedLogger;

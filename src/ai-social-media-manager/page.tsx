@@ -1,6 +1,4 @@
 import React from 'react';
-import { Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, Zap, Clock, Award, MessageSquare } from 'lucide-react';
-
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {

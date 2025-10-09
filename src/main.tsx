@@ -1,8 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { React } from 'react';
+import { ReactDOM } from 'react-dom/client';
 import App from './App';
-import './globals.css';
-
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

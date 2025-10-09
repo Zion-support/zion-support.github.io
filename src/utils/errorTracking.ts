@@ -249,7 +249,6 @@ class ErrorTrackingService {
   }
 }
 export const errorTracking = ErrorTrackingService.getInstance();
-export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage
 export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {
   const category = options?.category || ErrorCategory.Runtime;

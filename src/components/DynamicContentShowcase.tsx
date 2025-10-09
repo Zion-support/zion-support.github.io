@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 const DynamicContentShowcase: React.FC = () => {
   return (
     <section className="py-16 px-4">

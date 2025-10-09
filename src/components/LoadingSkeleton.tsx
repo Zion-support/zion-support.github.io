@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -28,14 +28,16 @@ const Skeleton: React.FC<SkeletonProps> = ({
   );
 };
 // Predefined skeleton components for common use cases
-export const CardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6">
+export default function CardSkeleton() {
+  return (
+    <div className="bg-white rounded-lg shadow-lg p-6">
     <Skeleton height="24px" width="75%" className="mb-4" />
     <Skeleton height="16px" width="100%" className="mb-2" />
     <Skeleton height="16px" width="90%" className="mb-4" />
     <Skeleton height="40px" width="120px" rounded />
   </div>
-);
+  );
+}
 export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="space-y-2">
     {Array.from({ length: lines }).map((_, index) => (
@@ -95,4 +97,3 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
     ))}
   </div>
 );
-export default Skeleton;

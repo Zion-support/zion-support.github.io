@@ -1,8 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Target, Zap, Settings, BarChart, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
-
 const DigitalTransformationPage: React.FC = () => {
   const features = [
     {

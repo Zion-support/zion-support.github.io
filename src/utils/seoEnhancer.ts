@@ -2,7 +2,6 @@
  * Advanced SEO Enhancer
  * Comprehensive SEO optimization utilities
  */
-
 interface SEOConfig {
   title: string;
   description: string;
@@ -19,24 +18,20 @@ interface SEOConfig {
   lastModified?: string;
   alternateUrls?: { [key: string]: string };
 }
-
 interface MetaTag {
   name?: string;
   property?: string;
   content: string;
   key?: string;
 }
-
 class SEOEnhancer {
   private config: SEOConfig;
   private baseUrl: string;
-
   constructor(config: SEOConfig) {
     this.config = config;
     this.baseUrl = 'https://ziontechgroup.com';
     this.init();
   }
-
   private init(): void {
     this.setTitle();
     this.setMetaTags();
@@ -49,7 +44,6 @@ class SEOEnhancer {
     this.optimizeImages();
     this.setupBreadcrumbs();
   }
-
   private setTitle(): void {
     const title = this.config.title || 'Zion Tech Group - Advanced AI and IT Solutions';
     document.title = title;
@@ -57,7 +51,6 @@ class SEOEnhancer {
     // Update meta title
     this.updateOrCreateMetaTag('name', 'title', title);
   }
-
   private setMetaTags(): void {
     const metaTags: MetaTag[] = [
       { name: 'description', content: this.config.description },
@@ -81,16 +74,13 @@ class SEOEnhancer {
       { name: 'theme-color', content: '#4f46e5' },
       { name: 'color-scheme', content: 'dark light' }
     ];
-
     if (this.config.lastModified) {
       metaTags.push({ name: 'last-modified', content: this.config.lastModified });
     }
-
     metaTags.forEach(tag => {
       this.updateOrCreateMetaTag('name', tag.name!, tag.content);
     });
   }
-
   private setOpenGraphTags(): void {
     const ogTags: MetaTag[] = [
       { property: 'og:type', content: this.config.ogType || 'website' },
@@ -104,12 +94,10 @@ class SEOEnhancer {
       { property: 'og:site_name', content: 'Zion Tech Group' },
       { property: 'og:locale', content: 'en_US' }
     ];
-
     ogTags.forEach(tag => {
       this.updateOrCreateMetaTag('property', tag.property!, tag.content);
     });
   }
-
   private setTwitterTags(): void {
     const twitterTags: MetaTag[] = [
       { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },
@@ -121,45 +109,37 @@ class SEOEnhancer {
       { name: 'twitter:site', content: '@ziontechgroup' },
       { name: 'twitter:creator', content: '@ziontechgroup' }
     ];
-
     twitterTags.forEach(tag => {
       this.updateOrCreateMetaTag('name', tag.name!, tag.content);
     });
   }
-
   private setStructuredData(): void {
     if (!this.config.structuredData) return;
-
     // Remove existing structured data
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
       existingScript.remove();
     }
-
     // Add new structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(this.config.structuredData);
     document.head.appendChild(script);
   }
-
   private setCanonicalUrl(): void {
     // Remove existing canonical
     const existingCanonical = document.querySelector('link[rel="canonical"]');
     if (existingCanonical) {
       existingCanonical.remove();
     }
-
     // Add new canonical
     const canonical = document.createElement('link');
     canonical.rel = 'canonical';
     canonical.href = this.config.canonicalUrl;
     document.head.appendChild(canonical);
   }
-
   private setAlternateUrls(): void {
     if (!this.config.alternateUrls) return;
-
     Object.entries(this.config.alternateUrls).forEach(([hreflang, url]) => {
       const link = document.createElement('link');
       link.rel = 'alternate';
@@ -168,11 +148,9 @@ class SEOEnhancer {
       document.head.appendChild(link);
     });
   }
-
   private setRobotsMeta(): void {
     this.updateOrCreateMetaTag('name', 'robots', this.config.robots || 'index, follow');
   }
-
   private optimizeImages(): void {
     // Add loading="lazy" to images below the fold
     const images = document.querySelectorAll('img:not([loading])');
@@ -181,7 +159,6 @@ class SEOEnhancer {
         img.setAttribute('loading', 'lazy');
       }
     });
-
     // Add alt attributes to images without them
     images.forEach(img => {
       if (!img.getAttribute('alt')) {
@@ -189,7 +166,6 @@ class SEOEnhancer {
       }
     });
   }
-
   private setupBreadcrumbs(): void {
     const breadcrumbSchema = {
       '@context': 'https://schema.org',
@@ -203,18 +179,15 @@ class SEOEnhancer {
         }
       ]
     };
-
     // Add breadcrumb structured data
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbSchema);
     document.head.appendChild(script);
   }
-
   private updateOrCreateMetaTag(attribute: 'name' | 'property', value: string, content: string): void {
     const selector = `meta[${attribute}="${value}"]`;
     let meta = document.querySelector(selector) as HTMLMetaElement;
-
     if (meta) {
       meta.content = content;
     } else {
@@ -224,7 +197,6 @@ class SEOEnhancer {
       document.head.appendChild(meta);
     }
   }
-
   public generateSitemap(): string {
     const pages = [
       { url: '/', priority: '1.0', changefreq: 'daily' },
@@ -233,10 +205,8 @@ class SEOEnhancer {
       { url: '/contact', priority: '0.8', changefreq: 'monthly' },
       { url: '/about', priority: '0.7', changefreq: 'monthly' }
     ];
-
     let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-
     pages.forEach(page => {
       sitemap += '  <url>\n';
       sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;
@@ -244,24 +214,19 @@ class SEOEnhancer {
       sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
       sitemap += '  </url>\n';
     });
-
     sitemap += '</urlset>';
     return sitemap;
   }
-
   public generateRobotsTxt(): string {
     return `User-agent: *
 Allow: /
-
 Sitemap: ${this.baseUrl}/sitemap.xml
-
 # Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/`;
   }
-
   public optimizeForCoreWebVitals(): void {
     // Optimize LCP
     this.optimizeLCP();
@@ -272,7 +237,6 @@ Disallow: /private/`;
     // Optimize CLS
     this.optimizeCLS();
   }
-
   private optimizeLCP(): void {
     // Preload critical resources
     const criticalResources = [
@@ -280,7 +244,6 @@ Disallow: /private/`;
       '/assets/vendor.js',
       '/assets/index.js'
     ];
-
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -289,7 +252,6 @@ Disallow: /private/`;
       document.head.appendChild(link);
     });
   }
-
   private optimizeFID(): void {
     // Defer non-critical JavaScript
     const scripts = document.querySelectorAll('script[src]:not([defer]):not([async])');
@@ -299,7 +261,6 @@ Disallow: /private/`;
       }
     });
   }
-
   private optimizeCLS(): void {
     // Add dimensions to images to prevent layout shift
     const images = document.querySelectorAll('img:not([width]):not([height])');

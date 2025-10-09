@@ -1,6 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast, ZoomIn, ZoomOut } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;

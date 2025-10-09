@@ -2,7 +2,6 @@
  * Advanced Security Enhancer
  * Comprehensive security optimization utilities
  */
-
 interface SecurityConfig {
   enableCSP: boolean;
   enableHSTS: boolean;
@@ -14,7 +13,6 @@ interface SecurityConfig {
   enableCORS: boolean;
   enableSecureCookies: boolean;
 }
-
 interface SecurityHeaders {
   'Content-Security-Policy': string;
   'Strict-Transport-Security': string;
@@ -27,17 +25,14 @@ interface SecurityHeaders {
   'Cross-Origin-Opener-Policy': string;
   'Cross-Origin-Resource-Policy': string;
 }
-
 class SecurityEnhancer {
   private config: SecurityConfig;
   private headers: SecurityHeaders;
-
   constructor(config: SecurityConfig) {
     this.config = config;
     this.headers = this.generateSecurityHeaders();
     this.init();
   }
-
   private init(): void {
     this.setupSecurityHeaders();
     this.setupCSP();
@@ -53,7 +48,6 @@ class SecurityEnhancer {
     this.setupOutputEncoding();
     this.setupSessionSecurity();
   }
-
   private generateSecurityHeaders(): SecurityHeaders {
     return {
       'Content-Security-Policy': this.generateCSP(),
@@ -80,10 +74,8 @@ class SecurityEnhancer {
       'Cross-Origin-Resource-Policy': 'same-origin'
     };
   }
-
   private generateCSP(): string {
     if (!this.config.enableCSP) return '';
-
     const directives = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
@@ -98,10 +90,8 @@ class SecurityEnhancer {
       "frame-ancestors 'none'",
       "upgrade-insecure-requests"
     ];
-
     return directives.join('; ');
   }
-
   private generatePermissionsPolicy(): string {
     const permissions = [
       'camera=()',
@@ -143,29 +133,23 @@ class SecurityEnhancer {
       'web-share=()',
       'xr-spatial-tracking=()'
     ];
-
     return permissions.join(', ');
   }
-
   private setupSecurityHeaders(): void {
     // Note: In a real application, these headers would be set by the server
     // This is for demonstration purposes
     console.log('Security headers configured:', this.headers);
   }
-
   private setupCSP(): void {
     if (!this.config.enableCSP) return;
-
     // Add CSP meta tag as fallback
     const cspMeta = document.createElement('meta');
     cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
     cspMeta.setAttribute('content', this.headers['Content-Security-Policy']);
     document.head.appendChild(cspMeta);
   }
-
   private setupHSTS(): void {
     if (!this.config.enableHSTS) return;
-
     // HSTS is typically set by the server, but we can add a meta tag for development
     if (location.protocol === 'https:') {
       const hstsMeta = document.createElement('meta');
@@ -174,59 +158,46 @@ class SecurityEnhancer {
       document.head.appendChild(hstsMeta);
     }
   }
-
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return;
-
     const xssMeta = document.createElement('meta');
     xssMeta.setAttribute('http-equiv', 'X-XSS-Protection');
     xssMeta.setAttribute('content', this.headers['X-XSS-Protection']);
     document.head.appendChild(xssMeta);
   }
-
   private setupClickjackingProtection(): void {
     if (!this.config.enableClickjackingProtection) return;
-
     const frameOptionsMeta = document.createElement('meta');
     frameOptionsMeta.setAttribute('http-equiv', 'X-Frame-Options');
     frameOptionsMeta.setAttribute('content', this.headers['X-Frame-Options']);
     document.head.appendChild(frameOptionsMeta);
   }
-
   private setupContentTypeOptions(): void {
     if (!this.config.enableContentTypeOptions) return;
-
     const contentTypeMeta = document.createElement('meta');
     contentTypeMeta.setAttribute('http-equiv', 'X-Content-Type-Options');
     contentTypeMeta.setAttribute('content', this.headers['X-Content-Type-Options']);
     document.head.appendChild(contentTypeMeta);
   }
-
   private setupReferrerPolicy(): void {
     if (!this.config.enableReferrerPolicy) return;
-
     const referrerMeta = document.createElement('meta');
     referrerMeta.setAttribute('name', 'referrer');
     referrerMeta.setAttribute('content', this.headers['Referrer-Policy']);
     document.head.appendChild(referrerMeta);
   }
-
   private setupPermissionsPolicy(): void {
     if (!this.config.enablePermissionsPolicy) return;
-
     const permissionsMeta = document.createElement('meta');
     permissionsMeta.setAttribute('http-equiv', 'Permissions-Policy');
     permissionsMeta.setAttribute('content', this.headers['Permissions-Policy']);
     document.head.appendChild(permissionsMeta);
   }
-
   private setupCORS(): void {
     if (!this.config.enableCORS) return;
-
     // CORS is typically handled by the server, but we can add some client-side protections
     this.setupCORSPreflight();
   }
-
   private setupCORSPreflight(): void {
     // Add CORS preflight handling for API requests
     const originalFetch = window.fetch;
@@ -243,14 +214,11 @@ class SecurityEnhancer {
           'X-Content-Type-Options': 'nosniff'
         }
       };
-
       return originalFetch(url, secureInit);
     };
   }
-
   private setupSecureCookies(): void {
     if (!this.config.enableSecureCookies) return;
-
     // Set secure cookie attributes
     let cookieValue = document.cookie;
     
@@ -266,14 +234,12 @@ class SecurityEnhancer {
       }
     });
   }
-
   private setupInputValidation(): void {
     // Sanitize user inputs
     this.sanitizeInputs();
     this.validateForms();
     this.preventXSS();
   }
-
   private sanitizeInputs(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
     
@@ -287,7 +253,6 @@ class SecurityEnhancer {
       });
     });
   }
-
   private sanitizeString(input: string): string {
     // Remove potentially dangerous characters
     return input
@@ -296,7 +261,6 @@ class SecurityEnhancer {
       .replace(/on\w+=/gi, '') // Remove event handlers
       .trim();
   }
-
   private validateForms(): void {
     const forms = document.querySelectorAll('form');
     
@@ -310,11 +274,9 @@ class SecurityEnhancer {
       });
     });
   }
-
   private validateForm(form: HTMLFormElement): boolean {
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
     let isValid = true;
-
     inputs.forEach(input => {
       const element = input as HTMLInputElement;
       
@@ -331,15 +293,12 @@ class SecurityEnhancer {
         this.clearError(element);
       }
     });
-
     return isValid;
   }
-
   private isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
-
   private isValidURL(url: string): boolean {
     try {
       new URL(url);
@@ -348,7 +307,6 @@ class SecurityEnhancer {
       return false;
     }
   }
-
   private showError(element: HTMLElement, message: string): void {
     this.clearError(element);
     
@@ -360,7 +318,6 @@ class SecurityEnhancer {
     element.parentNode?.appendChild(errorDiv);
     element.setAttribute('aria-invalid', 'true');
   }
-
   private clearError(element: HTMLElement): void {
     const errorDiv = element.parentNode?.querySelector('.error-message');
     if (errorDiv) {
@@ -368,7 +325,6 @@ class SecurityEnhancer {
     }
     element.removeAttribute('aria-invalid');
   }
-
   private preventXSS(): void {
     // Override innerHTML to prevent XSS
     const originalInnerHTML = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML')?.set;
@@ -383,12 +339,10 @@ class SecurityEnhancer {
       });
     }
   }
-
   private setupOutputEncoding(): void {
     // Encode output to prevent XSS
     this.encodeOutputs();
   }
-
   private encodeOutputs(): void {
     const textNodes = document.querySelectorAll('*');
     
@@ -398,39 +352,32 @@ class SecurityEnhancer {
       }
     });
   }
-
   private escapeHtml(text: string): string {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
   }
-
   private setupSessionSecurity(): void {
     // Implement session security measures
     this.setupSessionTimeout();
     this.setupConcurrentSessionLimit();
     this.setupSessionRegeneration();
   }
-
   private setupSessionTimeout(): void {
     let timeoutId: NodeJS.Timeout;
     const timeout = 30 * 60 * 1000; // 30 minutes
-
     const resetTimeout = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         this.handleSessionTimeout();
       }, timeout);
     };
-
     // Reset timeout on user activity
     ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
       document.addEventListener(event, resetTimeout, true);
     });
-
     resetTimeout();
   }
-
   private handleSessionTimeout(): void {
     // Clear sensitive data
     localStorage.clear();
@@ -446,7 +393,6 @@ class SecurityEnhancer {
       window.location.reload();
     }, 3000);
   }
-
   private setupConcurrentSessionLimit(): void {
     // Limit concurrent sessions (simplified implementation)
     const sessionId = this.generateSessionId();
@@ -460,7 +406,6 @@ class SecurityEnhancer {
     existingSessions.push(sessionId);
     localStorage.setItem('activeSessions', JSON.stringify(existingSessions));
   }
-
   private setupSessionRegeneration(): void {
     // Regenerate session ID periodically
     setInterval(() => {
@@ -468,22 +413,17 @@ class SecurityEnhancer {
       localStorage.setItem('currentSessionId', newSessionId);
     }, 15 * 60 * 1000); // Every 15 minutes
   }
-
   private generateSessionId(): string {
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
   }
-
   public getSecurityHeaders(): SecurityHeaders {
     return this.headers;
   }
-
   public generateSecurityReport(): string {
     const report = `
 # Security Report
-
 ## Security Headers
 ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not configured'}`).join('\n')}
-
 ## Security Features
 - Content Security Policy: ${this.config.enableCSP ? 'Enabled' : 'Disabled'}
 - HTTP Strict Transport Security: ${this.config.enableHSTS ? 'Enabled' : 'Disabled'}
@@ -494,7 +434,6 @@ ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not 
 - Permissions Policy: ${this.config.enablePermissionsPolicy ? 'Enabled' : 'Disabled'}
 - CORS: ${this.config.enableCORS ? 'Enabled' : 'Disabled'}
 - Secure Cookies: ${this.config.enableSecureCookies ? 'Enabled' : 'Disabled'}
-
 ## Recommendations
 - Ensure all security headers are properly configured on the server
 - Regularly update dependencies to patch security vulnerabilities

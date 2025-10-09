@@ -1,41 +1,33 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-
     // Report error to analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -43,16 +35,13 @@ class ErrorBoundary extends Component<Props, State> {
         fatal: true
       });
     }
-
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
     // Report error to error tracking service
     this.reportError(error, errorInfo);
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // In a real application, you would send this to your error tracking service
     // For example: Sentry, LogRocket, Bugsnag, etc.
@@ -67,16 +56,13 @@ class ErrorBoundary extends Component<Props, State> {
       userId: this.getUserId(),
       sessionId: this.getSessionId()
     };
-
     // Send to error tracking service
     this.sendToErrorService(errorReport);
   };
-
   private getUserId = (): string | null => {
     // Get user ID from localStorage, session, or authentication context
     return localStorage.getItem('userId');
   };
-
   private getSessionId = (): string => {
     // Get or create session ID
     let sessionId = sessionStorage.getItem('sessionId');
@@ -86,7 +72,6 @@ class ErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
-
   private sendToErrorService = (errorReport: any) => {
     // In a real application, you would send this to your error tracking service
     console.log('Error report:', errorReport);
@@ -100,26 +85,21 @@ class ErrorBoundary extends Component<Props, State> {
     //   body: JSON.stringify(errorReport)
     // }).catch(console.error);
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       // Default error UI
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -156,7 +136,6 @@ class ErrorBoundary extends Component<Props, State> {
                   </div>
                 </details>
               )}
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={this.handleRetry}
@@ -177,7 +156,6 @@ class ErrorBoundary extends Component<Props, State> {
                   Go Home
                 </button>
               </div>
-
               <div className="mt-8 text-sm text-gray-400">
                 <p>If this problem persists, please contact our support team:</p>
                 <p className="mt-2">
@@ -196,9 +174,6 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
-export default ErrorBoundary;

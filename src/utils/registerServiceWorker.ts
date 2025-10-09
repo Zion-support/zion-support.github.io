@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Service Worker Registration Utility
  */
@@ -144,4 +143,3 @@ export async function getServiceWorkerStatus(): Promise<{
     };
   }
 }
-export default registerServiceWorker;

@@ -1,4 +1,4 @@
-import React from 'react';
+import { React } from 'react';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;

@@ -1,11 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Globe, Brain, Shield, Code, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-
-const AboutPage: React.FC = () => {
+export default function AboutPage() {
   const team = [
     {
       name: 'Kleber Santos',
@@ -236,4 +230,4 @@ const AboutPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}

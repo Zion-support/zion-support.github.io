@@ -106,4 +106,3 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     measureOperation
   };
 }
-export default useEnhancedPerformance;

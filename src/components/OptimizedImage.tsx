@@ -1,5 +1,3 @@
-import React, { useState, useRef, useEffect } from 'react';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;

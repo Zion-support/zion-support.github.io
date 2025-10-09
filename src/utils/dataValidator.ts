@@ -288,4 +288,3 @@ class DataValidator {
   rules = ValidationRulesBuilder;
 }
 export const dataValidator = DataValidator.getInstance();
-export default DataValidator;

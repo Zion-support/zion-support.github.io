@@ -368,4 +368,3 @@ export class CacheManager {
   }
 }
 export const cacheManager = new CacheManager();
-export default CacheManager;

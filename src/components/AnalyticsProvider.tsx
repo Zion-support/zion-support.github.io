@@ -1,5 +1,3 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string, pagePath?: string) => void;

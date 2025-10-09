@@ -1,6 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -8,14 +5,12 @@ interface Props {
   showDetails?: boolean;
   enableReporting?: boolean;
 }
-
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -26,7 +21,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: null,
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -34,27 +28,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error Boundary caught an error:', error, errorInfo);
     }
-
     // Report error to monitoring service
     if (this.props.enableReporting !== false) {
       this.reportError(error, errorInfo);
     }
-
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
   }
-
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport = {
       errorId: this.state.errorId,
@@ -67,10 +56,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
-
     // Send to error reporting service
     this.sendErrorReport(errorReport);
-
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -82,12 +69,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       });
     }
   };
-
   private sendErrorReport = (errorReport: any) => {
     // In a real application, you would send this to your error reporting service
     // For now, we'll just log it
     console.log('Error Report:', errorReport);
-
     // Example: Send to Sentry, LogRocket, or custom endpoint
     // fetch('/api/errors', {
     //   method: 'POST',
@@ -95,12 +80,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     //   body: JSON.stringify(errorReport),
     // }).catch(console.error);
   };
-
   private getUserId = (): string | null => {
     // Get user ID from your auth system
     return localStorage.getItem('userId') || null;
   };
-
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
@@ -109,7 +92,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
-
   private handleRetry = () => {
     this.setState({
       hasError: false,
@@ -118,15 +100,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: null,
     });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
-
   private handleGoHome = () => {
     window.location.href = '/';
   };
-
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
@@ -135,7 +114,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
     };
-
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         alert('Error details copied to clipboard');
@@ -144,7 +122,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         alert('Failed to copy error details');
       });
   };
-
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
@@ -165,7 +142,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
             </div>
-
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
@@ -192,7 +168,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Go Home
                 </button>
               </div>
-
               {this.state.errorId && (
                 <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
                   <p className="text-sm text-gray-400 mb-2">
@@ -203,7 +178,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   </p>
                 </div>
               )}
-
               {this.props.showDetails && this.state.error && (
                 <details className="mt-6 text-left">
                   <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center">
@@ -226,7 +200,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </details>
               )}
             </div>
-
             <div className="mt-8 text-sm text-gray-500">
               <p>
                 If this problem persists, please contact our support team at{' '}
@@ -239,9 +212,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
-export default EnhancedErrorBoundary;

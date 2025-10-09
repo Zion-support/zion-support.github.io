@@ -2,7 +2,6 @@
  * Advanced Performance Enhancer
  * Optimizes website performance through various techniques
  */
-
 interface PerformanceMetrics {
   lcp: number;
   fid: number;
@@ -11,7 +10,6 @@ interface PerformanceMetrics {
   ttfb: number;
   tbt: number;
 }
-
 interface OptimizationConfig {
   enableImageOptimization: boolean;
   enableLazyLoading: boolean;
@@ -22,20 +20,16 @@ interface OptimizationConfig {
   enableCompression: boolean;
   enableCaching: boolean;
 }
-
 class PerformanceEnhancer {
   private config: OptimizationConfig;
   private metrics: PerformanceMetrics | null = null;
   private observer: PerformanceObserver | null = null;
-
   constructor(config: OptimizationConfig) {
     this.config = config;
     this.init();
   }
-
   private init(): void {
     if (typeof window === 'undefined') return;
-
     this.setupPerformanceMonitoring();
     this.optimizeImages();
     this.setupLazyLoading();
@@ -44,24 +38,20 @@ class PerformanceEnhancer {
     this.optimizeFonts();
     this.setupCriticalCSS();
   }
-
   private setupPerformanceMonitoring(): void {
     if (!('PerformanceObserver' in window)) return;
-
     try {
       this.observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           this.analyzePerformanceEntry(entry);
         }
       });
-
       // Monitor Core Web Vitals
       this.observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (error) {
       console.warn('Performance monitoring setup failed:', error);
     }
   }
-
   private analyzePerformanceEntry(entry: PerformanceEntry): void {
     switch (entry.entryType) {
       case 'largest-contentful-paint':
@@ -86,10 +76,8 @@ class PerformanceEnhancer {
         break;
     }
   }
-
   private optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
-
     const images = document.querySelectorAll('img[data-src]');
     images.forEach((img) => {
       const imageElement = img as HTMLImageElement;
@@ -98,11 +86,9 @@ class PerformanceEnhancer {
         imageElement.removeAttribute('data-src');
       }
     });
-
     // Add WebP support detection
     this.detectWebPSupport();
   }
-
   private detectWebPSupport(): void {
     const webP = new Image();
     webP.onload = webP.onerror = () => {
@@ -114,10 +100,8 @@ class PerformanceEnhancer {
     };
     webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
   }
-
   private setupLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
-
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -131,16 +115,13 @@ class PerformanceEnhancer {
           }
         });
       });
-
       document.querySelectorAll('img[data-src]').forEach((img) => {
         imageObserver.observe(img);
       });
     }
   }
-
   private setupResourceHints(): void {
     if (!this.config.enableResourceHints) return;
-
     // Preconnect to external domains
     const domains = [
       'https://fonts.googleapis.com',
@@ -148,7 +129,6 @@ class PerformanceEnhancer {
       'https://www.googletagmanager.com',
       'https://www.google-analytics.com'
     ];
-
     domains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
@@ -156,20 +136,16 @@ class PerformanceEnhancer {
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     });
-
     // Prefetch critical resources
     this.prefetchCriticalResources();
   }
-
   private prefetchCriticalResources(): void {
     if (!this.config.enablePrefetching) return;
-
     const criticalResources = [
       '/assets/index.css',
       '/assets/vendor.js',
       '/assets/index.js'
     ];
-
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'prefetch';
@@ -177,10 +153,8 @@ class PerformanceEnhancer {
       document.head.appendChild(link);
     });
   }
-
   private setupServiceWorker(): void {
     if (!this.config.enableServiceWorker) return;
-
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
@@ -193,7 +167,6 @@ class PerformanceEnhancer {
       });
     }
   }
-
   private optimizeFonts(): void {
     // Add font-display: swap to all font faces
     const style = document.createElement('style');
@@ -213,7 +186,6 @@ class PerformanceEnhancer {
     `;
     document.head.appendChild(style);
   }
-
   private setupCriticalCSS(): void {
     // Inline critical CSS for above-the-fold content
     const criticalCSS = `
@@ -222,17 +194,14 @@ class PerformanceEnhancer {
       .neon-text { will-change: transform; }
       .cyber-text-3d { will-change: transform; }
     `;
-
     const style = document.createElement('style');
     style.textContent = criticalCSS;
     style.setAttribute('data-critical', 'true');
     document.head.insertBefore(style, document.head.firstChild);
   }
-
   public getMetrics(): PerformanceMetrics | null {
     return this.metrics;
   }
-
   public optimizeBundle(): void {
     // Dynamic imports for non-critical components
     const lazyComponents = [
@@ -242,7 +211,6 @@ class PerformanceEnhancer {
       'ContentStatistics',
       'ContentNewsletterSignup'
     ];
-
     lazyComponents.forEach(component => {
       const element = document.querySelector(`[data-component="${component}"]`);
       if (element && 'IntersectionObserver' in window) {
@@ -258,7 +226,6 @@ class PerformanceEnhancer {
       }
     });
   }
-
   private async loadComponent(componentName: string): Promise<void> {
     try {
       const module = await import(`../components/${componentName}.tsx`);
@@ -268,7 +235,6 @@ class PerformanceEnhancer {
       console.warn(`Failed to load ${componentName}:`, error);
     }
   }
-
   public cleanup(): void {
     if (this.observer) {
       this.observer.disconnect();

@@ -15,4 +15,3 @@ export function dynamic<T extends ComponentType<unknown>>(
     </Suspense>
   );
 }
-export default dynamic;

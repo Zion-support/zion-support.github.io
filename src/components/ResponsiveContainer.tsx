@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-
 interface ResponsiveContainerProps {
   children: React.ReactNode;
   className?: string;

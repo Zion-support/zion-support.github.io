@@ -214,4 +214,3 @@ export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<
 }
 // Export default cache instance
 export const defaultCache = new AdvancedCache();
-export default AdvancedCache;
