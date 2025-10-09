@@ -351,9 +351,6 @@ const AIFintechPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <>
-      <Footer />
-      </></div>
   );
 };
 export default AIFintechPage;

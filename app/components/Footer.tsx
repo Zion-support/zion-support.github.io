@@ -1,30 +1,37 @@
 'use client';
 import React, { memo } from 'react';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI Solutions', price: '$1,500/mo' },
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-Powered Marketing', price: '$199/mo' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process Automation', price: '$399/mo' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI Solutions', price: '$1,999/mo' }
   ];
 
   const itServices = [
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless Cloud Migration', price: '$2,500/mo' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Enterprise Security', price: '$1,800/mo' },
+    { name: 'DevOps Automation', url: '/devops-automation', description: 'Complete DevOps Pipeline', price: '$1,200/mo' },
+    { name: 'Data Analytics', url: '/data-analytics', description: 'Advanced Analytics', price: '$1,600/mo' }
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
-    { name: 'Productivity Tools', url: '/productivity', description: 'Productivity Suite' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing Suite' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Development Tools' }
+    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent Customer Management', price: '$149/mo' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time Business Intelligence', price: '$199/mo' },
+    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete Content Creation Suite', price: '$299/mo' },
+    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code Chatbot Creation', price: '$99/mo' }
   ];
 
   const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum Solutions' },
-    { name: 'Robotics', url: '/robotics', description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen Computing', price: 'Custom' },
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent Robotics', price: '$5,000/mo' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices', price: '$1,800/mo' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions', price: '$2,200/mo' }
   ];
 
   const companyLinks = [
@@ -69,13 +76,28 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
+    <footer className="bg-slate-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* AI Services */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 flex items-center">
+              <Brain className="w-4 h-4 mr-2 text-purple-400" />
+              AI Services
+            </h4>
+            <ul className="space-y-3">
+              {aiServices.map((service, index) => (
                 <li key={index}>
                   <a 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center justify-between"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
+                    <div className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </div>
+                    <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
                   </a>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
@@ -93,13 +115,22 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
+            <h4 className="text-sm font-medium text-white mb-4 flex items-center">
+              <Cloud className="w-4 h-4 mr-2 text-blue-400" />
+              IT Services
+            </h4>
+            <ul className="space-y-3">
+              {itServices.map((service, index) => (
                 <li key={index}>
                   <a 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center justify-between"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
+                    <div className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </div>
+                    <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
                   </a>
                   <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
@@ -114,24 +145,71 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
-                <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 flex items-center">
+              <Code className="w-4 h-4 mr-2 text-green-400" />
+              Micro SAAS
+            </h4>
+            <ul className="space-y-3">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center justify-between"
+                  >
+                    <div className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </div>
+                    <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  href="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Micro SAAS →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Emerging Tech */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-4 flex items-center">
+              <Zap className="w-4 h-4 mr-2 text-orange-400" />
+              Emerging Tech
+            </h4>
+            <ul className="space-y-3">
+              {emergingTech.map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center justify-between"
+                  >
+                    <div className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </div>
+                    <span className="text-xs text-cyan-400 font-semibold">{service.price}</span>
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  href="/emerging-tech"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Emerging Tech →
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -225,6 +303,30 @@ const Footer: React.FC = memo(() => {
               </button>
             </div>
           </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center space-x-6 mb-8">
+          {socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.url}
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+              aria-label={social.name}
+            >
+              <social.icon className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
+
+        {/* Achievements */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center">
+              <achievement.icon className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <p className="text-sm text-gray-300">{achievement.text}</p>
+            </div>
+          ))}
         </div>
       </div>
 
