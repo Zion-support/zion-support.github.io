@@ -13,7 +13,7 @@ const AICRMPage: React.FC = () => {
         'Automatic lead scoring',
         'Behavioral analysis',
         'Predictive modeling',
-        'Real-time updates'
+        'Priority recommendations'
       ],
       price: '$299/month',
       marketPrice: '$599-999/month'
@@ -25,8 +25,8 @@ const AICRMPage: React.FC = () => {
       benefits: [
         'Smart contact grouping',
         'Duplicate detection',
-        'Relationship mapping',
-        'Communication history'
+        'Contact enrichment',
+        'Relationship mapping'
       ],
       price: '$199/month',
       marketPrice: '$399-699/month'
@@ -36,10 +36,10 @@ const AICRMPage: React.FC = () => {
       description: 'AI-driven follow-up sequences that adapt based on customer behavior',
       icon: MessageSquare,
       benefits: [
-        'Behavioral triggers',
-        'Personalized messaging',
-        'Optimal timing',
-        'A/B testing'
+        'Smart follow-up timing',
+        'Personalized messages',
+        'Multi-channel automation',
+        'Response tracking'
       ],
       price: '$249/month',
       marketPrice: '$499-799/month'
@@ -51,64 +51,64 @@ const AICRMPage: React.FC = () => {
       benefits: [
         'Revenue forecasting',
         'Pipeline analysis',
-        'Risk assessment',
-        'Trend identification'
+        'Deal probability',
+        'Risk assessment'
       ],
       price: '$399/month',
-      marketPrice: '$799-1299/month'
+      marketPrice: '$799-1,299/month'
     },
     {
-      title: 'Customer Insights',
-      description: 'Deep customer analytics with AI-powered insights and recommendations',
-      icon: Brain,
-      benefits: [
-        'Customer segmentation',
-        'Churn prediction',
-        'Upsell opportunities',
-        'Lifetime value analysis'
-      ],
-      price: '$349/month',
-      marketPrice: '$699-1199/month'
-    },
-    {
-      title: 'Integration Hub',
-      description: 'Seamlessly connect with 100+ business tools and platforms',
+      title: 'Customer Journey Analytics',
+      description: 'Track and analyze customer interactions across all touchpoints',
       icon: Globe,
       benefits: [
-        '100+ integrations',
-        'API connections',
-        'Data synchronization',
-        'Custom workflows'
+        'Journey mapping',
+        'Touchpoint analysis',
+        'Engagement scoring',
+        'Churn prediction'
       ],
-      price: '$149/month',
-      marketPrice: '$299-499/month'
+      price: '$349/month',
+      marketPrice: '$699-1,199/month'
+    },
+    {
+      title: 'AI Chat Assistant',
+      description: 'Intelligent chatbot for customer support and lead qualification',
+      icon: Bot,
+      benefits: [
+        '24/7 availability',
+        'Lead qualification',
+        'Support automation',
+        'Multi-language support'
+      ],
+      price: '$179/month',
+      marketPrice: '$349-599/month'
     }
   ];
 
-  const crmModules = [
+  const useCases = [
     {
-      title: 'Lead Management',
-      description: 'Capture, qualify, and nurture leads with AI assistance',
+      title: 'Sales Teams',
+      description: 'Empower sales teams with AI-driven insights and automation',
       icon: Target,
-      features: ['Lead capture', 'Qualification scoring', 'Nurture campaigns', 'Conversion tracking']
+      examples: ['Lead scoring', 'Pipeline management', 'Forecasting', 'Follow-up automation']
     },
     {
-      title: 'Contact Management',
-      description: 'Organize and manage customer contacts with intelligent insights',
-      icon: Users,
-      features: ['Contact profiles', 'Interaction history', 'Relationship mapping', 'Communication tracking']
-    },
-    {
-      title: 'Sales Pipeline',
-      description: 'Track and manage sales opportunities through the entire funnel',
+      title: 'Marketing Teams',
+      description: 'Optimize marketing campaigns with customer insights and segmentation',
       icon: BarChart,
-      features: ['Pipeline visualization', 'Stage tracking', 'Deal management', 'Forecasting']
+      examples: ['Customer segmentation', 'Campaign tracking', 'ROI analysis', 'Lead nurturing']
     },
     {
-      title: 'Customer Service',
-      description: 'Provide exceptional customer support with AI-powered tools',
-      icon: MessageSquare,
-      features: ['Ticket management', 'Knowledge base', 'Chat support', 'Satisfaction tracking']
+      title: 'Customer Success',
+      description: 'Improve customer satisfaction with proactive support and insights',
+      icon: Heart,
+      examples: ['Health scoring', 'Churn prevention', 'Upselling opportunities', 'Support automation']
+    },
+    {
+      title: 'Management',
+      description: 'Get executive insights and reports for strategic decision making',
+      icon: TrendingUp,
+      examples: ['Executive dashboards', 'Performance metrics', 'Revenue forecasting', 'Team analytics']
     }
   ];
 
@@ -118,26 +118,26 @@ const AICRMPage: React.FC = () => {
       price: '$199/month',
       description: 'Perfect for small businesses and startups',
       features: [
-        'Up to 1,000 contacts',
+        '1,000 contacts',
         'Basic AI features',
-        'Email integration',
-        'Standard reporting',
-        'Email support'
+        'Email support',
+        'Standard integrations',
+        '1 user account'
       ],
       popular: false
     },
     {
       name: 'Professional',
       price: '$399/month',
-      description: 'Ideal for growing businesses and sales teams',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Up to 10,000 contacts',
+        '10,000 contacts',
         'Advanced AI features',
-        'Full integrations',
-        'Advanced reporting',
         'Priority support',
-        'Custom workflows',
-        'Team collaboration'
+        'All integrations',
+        '5 user accounts',
+        'Custom reports',
+        'API access'
       ],
       popular: true
     },
@@ -148,11 +148,11 @@ const AICRMPage: React.FC = () => {
       features: [
         'Unlimited contacts',
         'All AI features',
-        'Custom integrations',
-        'Advanced analytics',
         '24/7 support',
+        'Custom integrations',
+        'Unlimited users',
         'White-label options',
-        'Dedicated account manager'
+        'Dedicated support'
       ],
       popular: false
     }
@@ -161,23 +161,23 @@ const AICRMPage: React.FC = () => {
   const testimonials = [
     {
       name: 'Jennifer Adams',
-      company: 'Sales Pro Inc.',
-      role: 'Sales Director',
-      content: 'The AI-powered lead scoring has increased our conversion rate by 60%. We can now focus on the most promising prospects.',
+      company: 'SalesPro Inc.',
+      role: 'VP of Sales',
+      content: 'The AI lead scoring has increased our conversion rate by 40%. We can now focus on the most promising prospects.',
       rating: 5
     },
     {
       name: 'Robert Chen',
-      company: 'Tech Solutions',
-      role: 'VP of Sales',
-      content: 'The automated follow-ups are incredible. Our response rates have improved by 80% and our sales team is more productive.',
+      company: 'Marketing Solutions',
+      role: 'Marketing Director',
+      content: 'The customer journey analytics have given us incredible insights into our customer behavior. Our campaigns are now 3x more effective.',
       rating: 5
     },
     {
       name: 'Maria Rodriguez',
       company: 'Customer Success Co.',
-      role: 'Customer Success Manager',
-      content: 'The customer insights help us understand our clients better than ever. We can predict churn and prevent it proactively.',
+      role: 'Head of Customer Success',
+      content: 'The AI chatbot handles 80% of our support queries, freeing up our team to focus on complex issues and relationship building.',
       rating: 5
     }
   ];
@@ -186,33 +186,33 @@ const AICRMPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI CRM - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered CRM system with intelligent lead scoring, automated follow-ups, and predictive analytics. Transform your sales process with our smart CRM solution." />
-        <meta name="keywords" content="ai crm, customer relationship management, lead scoring, sales automation, predictive analytics, crm software" />
+        <meta name="description" content="Advanced AI-powered CRM system with intelligent lead scoring, automated follow-ups, and predictive analytics. Transform your customer relationships with AI." />
+        <meta name="keywords" content="ai crm, customer relationship management, lead scoring, sales automation, predictive analytics, customer insights" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI CRM System
+            AI-Powered CRM
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize your customer relationships with our AI-powered CRM. Intelligent lead scoring, automated follow-ups, and predictive analytics to boost your sales performance.
+            Transform your customer relationships with our intelligent CRM system. AI-powered lead scoring, automated follow-ups, and predictive analytics to boost your sales.
           </p>
           
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
               <div className="text-gray-300">Higher Conversion</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
-              <div className="text-gray-300">Better Response</div>
+              <div className="text-gray-300">Automation</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-purple-400 mb-2">100+</div>
-              <div className="text-gray-300">Integrations</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
+              <div className="text-gray-300">More Effective</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
@@ -242,7 +242,7 @@ const AICRMPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Powerful AI CRM Features
+            Intelligent CRM Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -274,21 +274,21 @@ const AICRMPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CRM Modules Section */}
+      {/* Use Cases Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Complete CRM Solution
+            Perfect for Every Team
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {crmModules.map((module, index) => (
+            {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                <module.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{module.title}</h3>
-                <p className="text-gray-300 mb-4">{module.description}</p>
+                <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 mb-4">{useCase.description}</p>
                 <ul className="space-y-1">
-                  {module.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="text-sm text-gray-400">• {feature}</li>
+                  {useCase.examples.map((example, exampleIndex) => (
+                    <li key={exampleIndex} className="text-sm text-gray-400">• {example}</li>
                   ))}
                 </ul>
               </div>
@@ -301,7 +301,7 @@ const AICRMPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Choose Your CRM Plan
+            Simple, Transparent Pricing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -364,7 +364,7 @@ const AICRMPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Sales Process?
+            Ready to Transform Your Customer Relationships?
           </h2>
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI CRM today and experience the future of customer relationship management.
