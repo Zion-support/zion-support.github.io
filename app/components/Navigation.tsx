@@ -44,9 +44,23 @@ const Navigation: React.FC = () => {
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            <div className="relative group">
+              <button className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">All Services</Link>
+                  <Link href="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">AI Services</Link>
+                  <Link href="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">IT Services</Link>
+                  <Link href="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Micro SAAS</Link>
+                  <Link href="/enterprise" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Enterprise</Link>
+                </div>
+              </div>
+            </div>
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
@@ -90,13 +104,46 @@ const Navigation: React.FC = () => {
               >
                 Home
               </Link>
-              <Link 
-                href="/services" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-              >
-                Services
-              </Link>
+              <div className="px-3 py-2">
+                <div className="text-white font-medium mb-2">Services</div>
+                <div className="pl-4 space-y-1">
+                  <Link 
+                    href="/services" 
+                    className="block py-1 text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    All Services
+                  </Link>
+                  <Link 
+                    href="/ai-services" 
+                    className="block py-1 text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    AI Services
+                  </Link>
+                  <Link 
+                    href="/it-services" 
+                    className="block py-1 text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    IT Services
+                  </Link>
+                  <Link 
+                    href="/micro-saas" 
+                    className="block py-1 text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Micro SAAS
+                  </Link>
+                  <Link 
+                    href="/enterprise" 
+                    className="block py-1 text-gray-300 hover:text-blue-400 transition-colors"
+                    onClick={closeMenu}
+                  >
+                    Enterprise
+                  </Link>
+                </div>
+              </div>
               <Link 
                 href="/about" 
                 className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
