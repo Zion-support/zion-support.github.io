@@ -290,10 +290,6 @@ const Navigation: React.FC = () => {
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-de8d
->>>>>>> origin/main
             
             <div className="flex items-center space-x-4">
               <a
