@@ -121,6 +121,9 @@ const Navigation: React.FC = memo(() => {
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Micro SAAS
             </Link>
+            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              IT Services
+            </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
@@ -174,6 +177,13 @@ const Navigation: React.FC = memo(() => {
                 onClick={closeAllMenus}
               >
                 Micro SAAS
+              </Link>
+              <Link
+                to="/it-services"
+                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors font-medium"
+                onClick={closeAllMenus}
+              >
+                IT Services
               </Link>
               <Link
                 to="/about"

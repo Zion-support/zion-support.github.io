@@ -18,8 +18,43 @@ const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page')
 const SecurityPage = React.lazy(() => import('./app/security/page'));
 const SupportPage = React.lazy(() => import('./app/support/page'));
 
+// Additional missing pages
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'));
+const ITSupportPage = React.lazy(() => import('./app/it-support/page'));
+const DatabaseManagementPage = React.lazy(() => import('./app/database-management/page'));
+const ManagedITPage = React.lazy(() => import('./app/managed-it/page'));
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const DocsPage = React.lazy(() => import('./app/docs/page'));
+const APIDocsPage = React.lazy(() => import('./app/api-docs/page'));
+const StatusPage = React.lazy(() => import('./app/status/page'));
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
+const TermsPage = React.lazy(() => import('./app/terms/page'));
+const CookiesPage = React.lazy(() => import('./app/cookies/page'));
+const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
+const SLAPage = React.lazy(() => import('./app/sla/page'));
+const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/page'));
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainPage = React.lazy(() => import('./app/blockchain/page'));
+const IoTEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'));
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'));
+const ARVRSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const CybersecuritySuitePage = React.lazy(() => import('./app/cybersecurity-suite/page'));
+const ExpenseTrackerPage = React.lazy(() => import('./app/expense-tracker/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+const SmartAnalyticsPage = React.lazy(() => import('./app/smart-analytics/page'));
+const NetworkSolutionsPage = React.lazy(() => import('./app/network-solutions/page'));
+const SmartCitiesPage = React.lazy(() => import('./app/smart-cities/page'));
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+const SystemStatusPage = React.lazy(() => import('./app/system-status/page'));
+const ITInfrastructureSolutionsPage = React.lazy(() => import('./app/it-infrastructure-solutions/page'));
+
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
+const Sidebar = React.lazy(() => import('./app/components/Sidebar'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
 const PerformanceOptimizer = React.lazy(() => import('./app/components/PerformanceOptimizer'));
 const SEOOptimizer = React.lazy(() => import('./app/components/SEOOptimizer'));
@@ -198,7 +233,11 @@ const App: React.FC = () => {
               <Navigation />
             </Suspense>
             
-            <main id="main-content" className="min-h-screen" role="main">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Sidebar />
+            </Suspense>
+            
+            <main id="main-content" className="min-h-screen lg:ml-80" role="main">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
@@ -209,13 +248,82 @@ const App: React.FC = () => {
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-services/business-intelligence" element={React.lazy(() => import('./app/ai-services/business-intelligence/page'))} />
+                  <Route path="/ai-services/document-processing" element={React.lazy(() => import('./app/ai-services/document-processing/page'))} />
+                  <Route path="/ai-services/customer-experience" element={React.lazy(() => import('./app/ai-services/customer-experience/page'))} />
+                  <Route path="/ai-services/marketing-automation" element={React.lazy(() => import('./app/ai-services/marketing-automation/page'))} />
+                  <Route path="/ai-services/predictive-maintenance" element={React.lazy(() => import('./app/ai-services/predictive-maintenance/page'))} />
+                  <Route path="/ai-services/supply-chain" element={React.lazy(() => import('./app/ai-services/supply-chain/page'))} />
+                  <Route path="/ai-services/fraud-detection" element={React.lazy(() => import('./app/ai-services/fraud-detection/page'))} />
+                  <Route path="/ai-services/content-generation" element={React.lazy(() => import('./app/ai-services/content-generation/page'))} />
+                  <Route path="/ai-services/hr-analytics" element={React.lazy(() => import('./app/ai-services/hr-analytics/page'))} />
+                  <Route path="/ai-services/process-automation" element={React.lazy(() => import('./app/ai-services/process-automation/page'))} />
+                  <Route path="/ai-services/quality-assurance" element={React.lazy(() => import('./app/ai-services/quality-assurance/page'))} />
+                  <Route path="/ai-services/energy-management" element={React.lazy(() => import('./app/ai-services/energy-management/page'))} />
+                  
                   <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/micro-saas/analytics-dashboard" element={React.lazy(() => import('./app/micro-saas/analytics-dashboard/page'))} />
+                  <Route path="/micro-saas/support-bot" element={React.lazy(() => import('./app/micro-saas/support-bot/page'))} />
+                  <Route path="/micro-saas/social-manager" element={React.lazy(() => import('./app/micro-saas/social-manager/page'))} />
+                  <Route path="/micro-saas/email-marketing" element={React.lazy(() => import('./app/micro-saas/email-marketing/page'))} />
+                  <Route path="/micro-saas/inventory-management" element={React.lazy(() => import('./app/micro-saas/inventory-management/page'))} />
+                  <Route path="/micro-saas/lead-scoring" element={React.lazy(() => import('./app/micro-saas/lead-scoring/page'))} />
+                  <Route path="/micro-saas/document-processor" element={React.lazy(() => import('./app/micro-saas/document-processor/page'))} />
+                  <Route path="/micro-saas/seo-optimizer" element={React.lazy(() => import('./app/micro-saas/seo-optimizer/page'))} />
+                  <Route path="/micro-saas/appointment-scheduler" element={React.lazy(() => import('./app/micro-saas/appointment-scheduler/page'))} />
+                  <Route path="/micro-saas/chat-analytics" element={React.lazy(() => import('./app/micro-saas/chat-analytics/page'))} />
+                  <Route path="/micro-saas/expense-tracker" element={React.lazy(() => import('./app/micro-saas/expense-tracker/page'))} />
+                  <Route path="/micro-saas/content-generator" element={React.lazy(() => import('./app/micro-saas/content-generator/page'))} />
                   <Route path="/it-consulting" element={<ITConsultingPage />} />
                   <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                   <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                   <Route path="/security" element={<SecurityPage />} />
                   <Route path="/support" element={<SupportPage />} />
+                  
+                  {/* Additional IT Services */}
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/it-support" element={<ITSupportPage />} />
+                  <Route path="/database-management" element={<DatabaseManagementPage />} />
+                  <Route path="/managed-it" element={<ManagedITPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/it-infrastructure-solutions" element={<ITInfrastructureSolutionsPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  
+                  {/* Documentation & Support */}
+                  <Route path="/docs" element={<DocsPage />} />
+                  <Route path="/api-docs" element={<APIDocsPage />} />
+                  <Route path="/status" element={<StatusPage />} />
+                  <Route path="/system-status" element={<SystemStatusPage />} />
+                  
+                  {/* Legal Pages */}
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/gdpr" element={<GDPRPage />} />
+                  <Route path="/sla" element={<SLAPage />} />
+                  <Route path="/compliance" element={<CompliancePage />} />
+                  
+                  {/* Emerging Technologies */}
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/blockchain" element={<BlockchainPage />} />
+                  <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                  <Route path="/robotics" element={<RoboticsPage />} />
+                  <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
+                  
+                  {/* Additional Services */}
+                  <Route path="/cybersecurity-suite" element={<CybersecuritySuitePage />} />
+                  <Route path="/expense-tracker" element={<ExpenseTrackerPage />} />
+                  <Route path="/news" element={<NewsPage />} />
+                  <Route path="/smart-analytics" element={<SmartAnalyticsPage />} />
+                  <Route path="/network-solutions" element={<NetworkSolutionsPage />} />
+                  <Route path="/smart-cities" element={<SmartCitiesPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
                 </Routes>
               </Suspense>
             </main>
