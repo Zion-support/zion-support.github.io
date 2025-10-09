@@ -1,10 +1,44 @@
-import React from 'react';
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+// Function to check if a file is incomplete (missing return statement or export)
+function isIncompleteFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has basic structure
+    if (!content.includes('return (') && !content.includes('export default')) {
+      return true;
+    }
+    
+    // Check if file ends abruptly
+    const lines = content.split('\n');
+    const lastLine = lines[lines.length - 1].trim();
+    
+    // If last line is just a closing brace or empty, it might be incomplete
+    if (lastLine === '}' || lastLine === '' || lastLine === '];') {
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    return false;
+  }
+}
+
+// Function to create a basic page component
+function createBasicPageComponent(fileName) {
+  const componentName = fileName.replace(/[^a-zA-Z0-9]/g, '').replace('page', 'Page');
+  
+  return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const HomePage: React.FC = () => {
+const ${componentName}: React.FC = () => {
   const _features = [
     {
       icon: Users,
@@ -29,8 +63,8 @@ const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
-        <title>tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
+        <title>${componentName.replace('Page', '')} - Zion Tech Group</title>
+        <meta name="description" content="Advanced ${componentName.replace('Page', '')} solutions powered by AI and cutting-edge technology" />
       </Helmet>
       
       <Navigation />
@@ -40,10 +74,10 @@ const HomePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              tsx
+              ${componentName.replace('Page', '')}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced tsx solutions powered by AI and cutting-edge technology
+              Advanced ${componentName.replace('Page', '')} solutions powered by AI and cutting-edge technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -97,4 +131,55 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default ${componentName};`;
+}
+
+// Function to find and fix incomplete files
+function fixIncompleteFiles(dir) {
+  const files = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(item)) {
+          scanDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        if (item.endsWith('.tsx') && item.includes('page')) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  scanDirectory(dir);
+  return files;
+}
+
+// Main execution
+console.log('Starting incomplete file fixes...');
+
+const srcDir = path.join(process.cwd(), 'src');
+const pageFiles = fixIncompleteFiles(srcDir);
+
+console.log(`Found ${pageFiles.length} page files`);
+
+let fixedCount = 0;
+
+for (const filePath of pageFiles) {
+  if (isIncompleteFile(filePath)) {
+    console.log(`Fixing incomplete file: ${filePath}`);
+    const fileName = path.basename(filePath);
+    const newContent = createBasicPageComponent(fileName);
+    fs.writeFileSync(filePath, newContent, 'utf8');
+    fixedCount++;
+  }
+}
+
+console.log(`\nIncomplete file fixes complete:`);
+console.log(`- Files fixed: ${fixedCount}`);

@@ -1,51 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ServicesPage: React.FC = () => {
-=======
-import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
-
-const ServicesPage: React.FC = () => {
-  const _aiServices = [
-    {
-      icon: Brain,
-      title: 'AI Services',
-      description: 'Comprehensive AI solutions for every business need',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month',
-      popular: true
-    },
-    {
-      icon: Zap,
-      title: 'AI Automation',
-      description: 'Intelligent process automation and workflow optimization',
-      features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
-      price: 'Starting at $2,000/month',
-      popular: false
-    },
-    {
-      icon: Shield,
-      title: 'AI Cybersecurity',
-      description: 'Advanced AI-powered security solutions',
-      features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-      price: 'Starting at $2,500/month',
-      popular: false
-    },
-    {
-      icon: BarChart,
-      title: 'AI Data Analytics',
-      description: 'Transform data into actionable insights with AI',
-      features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
-      price: 'Starting at $1,800/month',
-      popular: false
-    }
-  ];
 
   const itServices = [
     {
@@ -147,7 +105,6 @@ const ServicesPage: React.FC = () => {
     { number: '24/7', label: 'Support Available' }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

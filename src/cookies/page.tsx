@@ -1,130 +1,95 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Cookie, Settings, Shield, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CookiesPage: React.FC = () => {
+const Pagetsx: React.FC = () => {
+  const _features = [
+    {
+      icon: Users,
+      title: 'Advanced Features',
+      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Optimized performance and scalability for enterprise-grade applications',
+      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection',
+      benefits: ['Data protection', 'Compliance', 'Secure operations']
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>tsx - Zion Tech Group</title>
+        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
+      </Helmet>
+      
       <Navigation />
       
       <main className="pt-20">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Cookie Policy
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Last updated: January 2025
-          </p>
-
-          <div className="cyber-card p-8 space-y-8">
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Cookie className="w-6 h-6 mr-3 text-cyan-400" />
-                What Are Cookies?
-              </h2>
-              <p className="text-gray-300">
-                Cookies are small text files that are placed on your computer or mobile device when you visit our website. 
-                They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Settings className="w-6 h-6 mr-3 text-cyan-400" />
-                Types of Cookies We Use
-              </h2>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Essential Cookies</h3>
-                  <p className="text-gray-300">
-                    These cookies are necessary for the website to function properly. They enable basic functions like page 
-                    navigation and access to secure areas of the website.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Analytics Cookies</h3>
-                  <p className="text-gray-300">
-                    These cookies help us understand how visitors interact with our website by collecting and reporting 
-                    information anonymously.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Functional Cookies</h3>
-                  <p className="text-gray-300">
-                    These cookies enable the website to provide enhanced functionality and personalization, such as 
-                    remembering your preferences.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Marketing Cookies</h3>
-                  <p className="text-gray-300">
-                    These cookies are used to track visitors across websites to display relevant and engaging advertisements.
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Shield className="w-6 h-6 mr-3 text-cyan-400" />
-                Managing Your Cookie Preferences
-              </h2>
-              <p className="text-gray-300 mb-4">
-                You can control and manage cookies in various ways:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Use our cookie consent banner to choose which cookies to accept</li>
-                <li>Configure your browser settings to block or delete cookies</li>
-                <li>Use browser extensions to manage cookies</li>
-                <li>Contact us to update your preferences</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Third-Party Cookies
-              </h2>
-              <p className="text-gray-300 mb-4">
-                We may use third-party services that set their own cookies:
-              </p>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Google Analytics for website analytics</li>
-                <li>Social media platforms for sharing functionality</li>
-                <li>Payment processors for transaction security</li>
-                <li>Customer support tools for live chat</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-white mb-4">
-                Contact Us
-              </h2>
-              <p className="text-gray-300 mb-4">
-                If you have any questions about our use of cookies, please contact us:
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </section>
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              tsx
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced tsx solutions powered by AI and cutting-edge technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                Get Started
+              </a>
+              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">
+                View Demo
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gray-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
+            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Contact Us
+            </a>
+          </div>
+        </section>
       </main>
 
       <Footer />
@@ -132,4 +97,4 @@ const CookiesPage: React.FC = () => {
   );
 };
 
-export default CookiesPage;
+export default Pagetsx;

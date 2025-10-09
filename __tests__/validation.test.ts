@@ -3,19 +3,23 @@
  */
 
 import {
-  isValidEmail,
-  isValidPhone,
-  isValidUrl,
-  isRequired,
-  isValidPassword,
-  sanitizeInput,
-} from '../app/utils/validators';
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+} from '../src/utils/validation';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
-    expect(isValidEmail('test@example.com')).toBe(true);
-    expect(isValidEmail('user.name+tag@example.co.uk')).toBe(true);
-    expect(isValidEmail('test123@test-domain.com')).toBe(true);
+    expect(validateEmail('test@example.com').isValid).toBe(true);
+    expect(validateEmail('user.name+tag@example.co.uk').isValid).toBe(true);
+    expect(validateEmail('test123@test-domain.com').isValid).toBe(true);
   });
 
   test('rejects invalid email addresses', () => {

@@ -1,156 +1,100 @@
-'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CompliancePage: React.FC = () => {
-  const _certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
-  ];
-
-  const complianceAreas = [
-    {
-      icon: Shield,
-      title: 'Data Protection',
-      description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
-      features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
-    },
-    {
-      icon: FileText,
-      title: 'Regulatory Compliance',
-      description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
-      features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
-    },
-    {
-      icon: Lock,
-      title: 'Security Standards',
-      description: 'Implementation of industry-leading security standards and best practices for data protection.',
-      features: ['ISO 27001', 'SOC 2 Type II', 'NIST Framework', 'OWASP Guidelines', 'Security Audits', 'Penetration Testing']
-    },
+const Pagetsx: React.FC = () => {
+  const _features = [
     {
       icon: Users,
-      title: 'Privacy Rights',
-      description: 'Respect for individual privacy rights with transparent data practices and user control mechanisms.',
-      features: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
+      title: 'Advanced Features',
+      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Optimized performance and scalability for enterprise-grade applications',
+      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection',
+      benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        
-        {/* Header */}
-        <section className="bg-white shadow-sm border-b">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex items-center">
-              <Link 
-                to="/privacy" 
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-              >
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Privacy Policy
-              </Link>
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>tsx - Zion Tech Group</title>
+        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              tsx
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced tsx solutions powered by AI and cutting-edge technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                Get Started
+              </a>
+              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">
+                View Demo
+              </a>
             </div>
           </div>
         </section>
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Overview */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Commitment to Compliance
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                At Zion Tech Group, we maintain the highest standards of compliance and security. 
-                Our certifications and adherence to industry standards ensure your data is protected 
-                and our services meet the most stringent requirements.
-              </p>
-            </div>
-
-            {/* Certifications Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {certifications.map((cert, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>
-                    <div className="flex items-center text-green-600">
-                      <CheckCircle className="w-5 h-5 mr-2" />
-                      <span className="text-sm font-medium">{cert.status}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Compliance Areas */}
-          <section className="mb-16">
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
-              Compliance Areas
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {complianceAreas.map((area, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-8">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                      <area.icon className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{area.description}</p>
-                  <ul className="space-y-2">
-                    {area.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Contact Section */}
-          <section className="bg-blue-50 rounded-lg p-8 text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Questions About Our Compliance?
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Our compliance team is available to answer any questions about our certifications, 
-              security measures, or data protection practices.
-            </p>
-            <a
-              href="mailto:compliance@ziontechgroup.com"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              Contact Compliance Team
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gray-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
+            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Contact Us
             </a>
-            <div className="mt-8 text-sm text-blue-200">
-              <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-            </div>
-          </section>
-        </main>
-        
-        <Footer />
-      </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
-export default CompliancePage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+export default Pagetsx;

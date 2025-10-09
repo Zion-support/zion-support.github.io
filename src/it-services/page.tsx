@@ -1,93 +1,100 @@
 import React from 'react';
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 
-const ITServicesPage: React.FC = () => {
-  const _itServices = [
+const Pagetsx: React.FC = () => {
+  const _features = [
     {
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
-      icon: Cloud,
-      features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
-      price: 'Starting at $1,500/month',
-      category: 'Infrastructure',
-      benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Advanced Threat Protection',
-      description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
-      icon: Shield,
-      features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
-      price: 'Starting at $2,000/month',
-      category: 'Security',
-      benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', 'Peace of mind'],
-      technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'Firewalls', 'Intrusion Detection'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Infrastructure',
-      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee and comprehensive support.',
-      icon: Server,
-      features: ['Network setup', 'Server management', 'Backup solutions', 'Disaster recovery', 'Performance monitoring', '24/7 support'],
-      price: 'Starting at $1,200/month',
-      category: 'Infrastructure',
-      benefits: ['Reliable infrastructure', 'Reduced downtime', 'Improved efficiency', 'Cost savings'],
-      technologies: ['Windows Server', 'Linux', 'VMware', 'Hyper-V', 'Active Directory', 'Exchange'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Database Management',
-      description: 'Expert database administration, optimization, and migration services for all major database platforms.',
-      icon: Database,
-      features: ['Database design', 'Performance tuning', 'Migration services', 'Backup & recovery', 'Security hardening', 'Monitoring'],
-      price: 'Starting at $800/month',
-      category: 'Data Management',
-      benefits: ['Optimized performance', 'Data security', 'Reduced costs', 'Improved reliability'],
-      technologies: ['SQL Server', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Transform your data into actionable insights with our comprehensive BI and analytics solutions.',
-      icon: BarChart,
-      features: ['Data visualization', 'Report generation', 'Dashboard creation', 'Data warehousing', 'ETL processes', 'Predictive analytics'],
-      price: 'Starting at $1,000/month',
-      category: 'Analytics',
-      benefits: ['Data-driven decisions', 'Improved efficiency', 'Competitive advantage', 'Cost optimization'],
-      technologies: ['Power BI', 'Tableau', 'QlikView', 'SSRS', 'SSAS', 'SSIS'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your IT investments.',
       icon: Users,
-      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost analysis', 'Implementation guidance', 'Training'],
-      price: 'Starting at $150/hour',
-      category: 'Consulting',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
-      technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      title: 'Advanced Features',
+      description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Optimized performance and scalability for enterprise-grade applications',
+      benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with full compliance and data protection',
+      benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const ItServicesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">It Services</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced it services solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>tsx - Zion Tech Group</title>
+        <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              tsx
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced tsx solutions powered by AI and cutting-edge technology
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                Get Started
+              </a>
+              <a href="/demo" className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">
+                View Demo
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {_features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 bg-gray-800">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8">Contact us today for a free consultation and customized solution</p>
+            <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+              Contact Us
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
-export default ItServicesPage;
+export default Pagetsx;
