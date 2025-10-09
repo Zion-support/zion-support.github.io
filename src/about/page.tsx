@@ -1,19 +1,58 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-=======
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 import Footer from '../components/Footer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AboutPage: React.FC = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '99%', label: 'Client Satisfaction' }
+  ];
+
+  const values = [
+    {
+      icon: Target,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
+    },
+    {
+      icon: Brain,
+      title: 'Excellence',
+      description: 'We deliver solutions that exceed expectations and drive real business value.'
+    },
+    {
+      icon: Shield,
+      title: 'Integrity',
+      description: 'We maintain the highest ethical standards in all our business practices.'
+    },
+    {
+      icon: Users,
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners in their success.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Lead Developer',
+      bio: 'Full-stack developer passionate about creating scalable solutions.'
+    }
+  ];
+
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-7xl mx-auto'>
         <div className='text-center mb-12'>
@@ -41,10 +80,6 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 
       {/* Stats Section */}
         <section className="py-16 bg-white">
@@ -193,16 +228,9 @@ const AboutPage: React.FC = () => {
         </section>
 
       <Footer />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
     </div>
   );
 };
+
+export default AboutPage;

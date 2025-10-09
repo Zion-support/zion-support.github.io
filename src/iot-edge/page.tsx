@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const IoTEdgePage: React.FC = () => {
@@ -363,6 +362,3 @@ const IoTEdgePage: React.FC = () => {
 };
 
 export default IoTEdgePage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

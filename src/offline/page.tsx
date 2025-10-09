@@ -1,15 +1,11 @@
 'use client';
 import React from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 const OfflinePage: React.FC = () => {
   const handleRetry = () => {
     window.location.reload();
@@ -72,6 +68,4 @@ const OfflinePage: React.FC = () => {
 };
 
 export default OfflinePage;
-=======
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

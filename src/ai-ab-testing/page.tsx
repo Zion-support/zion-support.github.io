@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
 
 const AIABTestingPage: React.FC = () => {
@@ -103,6 +102,3 @@ const AIABTestingPage: React.FC = () => {
 };
 
 export default AIABTestingPage;
-=======
-import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

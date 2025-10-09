@@ -1,9 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
+import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIProjectManagerPage: React.FC = () => {
+const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -85,10 +85,7 @@ const AIProjectManagerPage: React.FC = () => {
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
-const AiProjectManagerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
