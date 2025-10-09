@@ -76,7 +76,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setIsOptimizing(false);
   }, []);
 
-<<<<<<< HEAD
   const optimizeMemory = useCallback(() => {
     // Force garbage collection if available
     if (window.gc) {
@@ -92,52 +91,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           }
         });
       });
-=======
-  // Web Vitals monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('CLS:', metric);
-          }
-        });
-        getFID((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('FID:', metric);
-          }
-        });
-        getFCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('FCP:', metric);
-          }
-        });
-        getLCP((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('LCP:', metric);
-          }
-        });
-        getTTFB((metric) => {
-          if (process.env.NODE_ENV === 'development') {
-            console.log('TTFB:', metric);
-          }
-        });
-      });
-    }
-  }, []);
-
-  // Memory optimization
-  const optimizeMemory = useCallback(() => {
-    // Clear unused event listeners periodically
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as unknown as { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if ('gc' in window) {
-          (window as unknown as { gc: () => void }).gc();
-        }
-      }
->>>>>>> cursor/fix-errors-and-merge-to-main-1917
     }
   }, []);
 

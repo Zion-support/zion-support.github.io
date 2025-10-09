@@ -477,7 +477,6 @@ const AIServicesPage: React.FC = () => {
   });
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
@@ -524,43 +523,6 @@ const AIServicesPage: React.FC = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
-=======
-    <>
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
-        <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and intelligent automation for business transformation." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, business intelligence, automation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main className="pt-24">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                AI Services
-              </h1>
-              <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-                Harness the power of artificial intelligence to transform your business operations, 
-                automate complex processes, and unlock unprecedented insights from your data.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get AI Consultation
-                </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  View All Services
-                </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
               </div>
             </div>
             
@@ -630,11 +592,6 @@ const AIServicesPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-=======
-                  
-                  <p className="text-gray-300 mb-4">{tech.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                   
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
@@ -654,34 +611,9 @@ const AIServicesPage: React.FC = () => {
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
-<<<<<<< HEAD
                   <div className="flex justify-between">
                     <span className="text-gray-400">Free Trial:</span>
                     <span className="text-green-400">{service.freeTrial}</span>
-=======
-=======
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Target:</span>
@@ -712,17 +644,11 @@ const AIServicesPage: React.FC = () => {
                     Get Demo
                   </a>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
         </div>
       </section>
-=======
-              ))}
-            </div>
-          </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
@@ -756,8 +682,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIServicesPage;
-=======
-export default AIServicesPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0761

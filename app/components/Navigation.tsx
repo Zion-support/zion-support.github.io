@@ -110,11 +110,7 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Navigation */}
-=======
-          {/* Desktop Menu */}
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
           <div className="hidden lg:flex space-x-8">
             <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Services
@@ -125,17 +121,12 @@ const Navigation: React.FC = memo(() => {
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Micro SAAS
             </Link>
-<<<<<<< HEAD
             <Link to="/it-consulting" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
-=======
-            <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
               IT Services
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
-<<<<<<< HEAD
             <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
               Case Studies
             </Link>
@@ -212,9 +203,6 @@ const Navigation: React.FC = memo(() => {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-=======
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
               Contact
             </Link>
           </div>
@@ -266,7 +254,6 @@ const Navigation: React.FC = memo(() => {
                 Micro SAAS
               </Link>
               <Link
-<<<<<<< HEAD
                 to="/it-consulting"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -276,10 +263,6 @@ const Navigation: React.FC = memo(() => {
               <Link
                 to="/pricing"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-=======
-                to="/it-services"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors font-medium"
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                 onClick={closeAllMenus}
               >
                 IT Services
@@ -292,7 +275,6 @@ const Navigation: React.FC = memo(() => {
                 About
               </Link>
               <Link
-<<<<<<< HEAD
                 to="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -341,18 +323,13 @@ const Navigation: React.FC = memo(() => {
               </div>
 
               <Link
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
                 to="/contact"
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors font-medium"
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"

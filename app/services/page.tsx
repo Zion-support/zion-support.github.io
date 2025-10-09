@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
-=======
-import { Brain, Zap, Globe, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -34,7 +30,6 @@ const ServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const itServices = [
     {
       title: 'Cloud Infrastructure',
@@ -82,8 +77,6 @@ const ServicesPage: React.FC = () => {
     address: 'Middletown, DE 19709'
   };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-0761
   return (
     <>
       <Helmet>
