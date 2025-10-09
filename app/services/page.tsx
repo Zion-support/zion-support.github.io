@@ -16,7 +16,10 @@ const ServicesPage: React.FC = () => {
         { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
-        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] },
+        { name: 'AI Voice Cloning', price: '$799/month', description: 'Advanced voice synthesis technology with enterprise security', features: ['High-fidelity voice synthesis', 'Real-time processing', 'Multi-voice management', 'Quantum-safe security'] },
+        { name: 'AI Cybersecurity Advanced', price: '$4,999/month', description: 'AI-powered security with real-time threat detection', features: ['AI threat detection', 'Automated response', 'Continuous monitoring', 'Quantum-safe security'] },
+        { name: 'Quantum AI Optimization', price: '$7,999/month', description: 'Quantum computing for AI acceleration and optimization', features: ['Quantum neural networks', 'Exponential speedup', 'Complex optimization', 'Future-proof technology'] }
       ]
     },
     {
@@ -50,7 +53,10 @@ const ServicesPage: React.FC = () => {
         { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
         { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
         { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
-        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] },
+        { name: 'AI Video Generator', price: '$399/month', description: 'AI-powered video creation and editing platform', features: ['Auto video generation', 'Text-to-video', 'Voice synthesis', 'Professional templates'] },
+        { name: 'AI Music Composer', price: '$299/month', description: 'AI music composition and production tools', features: ['Auto composition', 'Style transfer', 'Instrument generation', 'Royalty-free music'] },
+        { name: 'AI 3D Model Generator', price: '$599/month', description: 'AI-powered 3D modeling and animation tools', features: ['3D model generation', 'Texture synthesis', 'Animation creation', 'VR/AR ready models'] }
       ]
     },
     {
