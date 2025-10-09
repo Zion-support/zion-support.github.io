@@ -164,6 +164,8 @@ const AIFintechPage: React.FC = () => {
             </div>
           </div>
         </section>
+        
+        <main>
         {/* Key Benefits */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
