@@ -256,14 +256,184 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$30,000-90,000/month',
       category: 'Space AI',
       technologies: ['Astropy', 'TensorFlow', 'PyTorch', 'OpenCV', 'Space Data APIs']
+    },
+
+    // Advanced AI Research & Development
+    {
+      title: 'AI Research & Development Lab',
+      description: 'Cutting-edge AI research services including custom model development, algorithm optimization, and breakthrough technology implementation.',
+      icon: '🔬',
+      price: 'Starting at $25,000/month',
+      features: ['Custom model development', 'Algorithm research', 'Technology breakthrough', 'Patent development', 'Academic collaboration', 'Research publication'],
+      benefits: ['Stay ahead of competition', 'Develop proprietary AI', 'Create breakthrough solutions', 'Build intellectual property'],
+      marketPrice: '$50,000-150,000/month',
+      category: 'AI Research',
+      technologies: ['PyTorch', 'TensorFlow', 'CUDA', 'Custom Hardware', 'Research Frameworks']
+    },
+    {
+      title: 'AI Model Optimization Suite',
+      description: 'Advanced model optimization including quantization, pruning, distillation, and edge deployment optimization.',
+      icon: '⚡',
+      price: 'Starting at $8,500/month',
+      features: ['Model quantization', 'Neural pruning', 'Knowledge distillation', 'Edge optimization', 'Performance tuning', 'Deployment strategies'],
+      benefits: ['Reduce model size by 90%', 'Increase inference speed 5x', 'Lower deployment costs', 'Enable edge deployment'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Model Optimization',
+      technologies: ['TensorRT', 'ONNX', 'OpenVINO', 'Custom Optimization', 'Edge Frameworks']
+    },
+    {
+      title: 'AI Ethics & Bias Detection',
+      description: 'Comprehensive AI ethics auditing, bias detection, fairness assessment, and responsible AI implementation.',
+      icon: '⚖️',
+      price: 'Starting at $12,000/month',
+      features: ['Bias detection', 'Fairness assessment', 'Ethics auditing', 'Responsible AI guidelines', 'Compliance monitoring', 'Impact assessment'],
+      benefits: ['Ensure ethical AI', 'Prevent bias issues', 'Maintain compliance', 'Build trustworthy systems'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'AI Ethics',
+      technologies: ['Fairness Tools', 'Bias Detection', 'Ethics Frameworks', 'Custom Auditing', 'Compliance Tools']
+    },
+
+    // AI Industry-Specific Solutions
+    {
+      title: 'AI Manufacturing Intelligence',
+      description: 'Smart manufacturing solutions with predictive maintenance, quality control, and production optimization.',
+      icon: '🏭',
+      price: 'Starting at $15,000/month',
+      features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Supply chain intelligence', 'Energy management', 'Safety monitoring'],
+      benefits: ['Reduce downtime by 80%', 'Improve quality by 50%', 'Optimize production', 'Enhance safety'],
+      marketPrice: '$25,000-75,000/month',
+      category: 'Manufacturing AI',
+      technologies: ['Industrial IoT', 'Computer Vision', 'Time Series Analysis', 'Edge Computing', 'Custom ML Models']
+    },
+    {
+      title: 'AI Retail Intelligence Platform',
+      description: 'Comprehensive retail AI including demand forecasting, customer behavior analysis, and inventory optimization.',
+      icon: '🛒',
+      price: 'Starting at $10,000/month',
+      features: ['Demand forecasting', 'Customer analytics', 'Inventory optimization', 'Price optimization', 'Store layout optimization', 'Fraud detection'],
+      benefits: ['Increase sales by 30%', 'Reduce inventory costs', 'Improve customer experience', 'Optimize operations'],
+      marketPrice: '$18,000-55,000/month',
+      category: 'Retail AI',
+      technologies: ['Recommendation Systems', 'Time Series', 'Computer Vision', 'NLP', 'Custom ML Models']
+    },
+    {
+      title: 'AI Transportation & Logistics',
+      description: 'Intelligent transportation solutions with route optimization, fleet management, and predictive logistics.',
+      icon: '🚛',
+      price: 'Starting at $12,000/month',
+      features: ['Route optimization', 'Fleet management', 'Predictive logistics', 'Demand forecasting', 'Fuel optimization', 'Maintenance scheduling'],
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Optimize fuel usage', 'Enhance efficiency'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'Transportation AI',
+      technologies: ['Optimization Algorithms', 'Graph Neural Networks', 'Time Series', 'IoT Sensors', 'Custom ML Models']
+    },
+    {
+      title: 'AI Energy & Utilities',
+      description: 'Smart energy management with grid optimization, renewable energy integration, and consumption prediction.',
+      icon: '⚡',
+      price: 'Starting at $14,000/month',
+      features: ['Grid optimization', 'Renewable integration', 'Demand prediction', 'Energy trading', 'Fault detection', 'Consumption optimization'],
+      benefits: ['Improve grid efficiency', 'Integrate renewables', 'Reduce energy costs', 'Enhance reliability'],
+      marketPrice: '$25,000-75,000/month',
+      category: 'Energy AI',
+      technologies: ['Time Series', 'Optimization', 'Reinforcement Learning', 'IoT Sensors', 'Custom ML Models']
+    },
+
+    // AI Advanced Analytics & Intelligence
+    {
+      title: 'AI Business Intelligence Suite',
+      description: 'Comprehensive BI platform with automated insights, predictive analytics, and intelligent reporting.',
+      icon: '📊',
+      price: 'Starting at $8,000/month',
+      features: ['Automated insights', 'Predictive analytics', 'Natural language queries', 'Custom dashboards', 'Real-time monitoring', 'Anomaly detection'],
+      benefits: ['Make data-driven decisions', 'Discover hidden patterns', 'Reduce analysis time', 'Improve forecasting'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Business Intelligence',
+      technologies: ['Tableau', 'Power BI', 'Custom ML Models', 'NLP', 'Time Series Analysis']
+    },
+    {
+      title: 'AI Market Intelligence Platform',
+      description: 'Advanced market analysis with competitor monitoring, trend prediction, and investment insights.',
+      icon: '📈',
+      price: 'Starting at $9,500/month',
+      features: ['Competitor analysis', 'Trend prediction', 'Market sentiment', 'Investment insights', 'Risk assessment', 'Portfolio optimization'],
+      benefits: ['Stay ahead of market trends', 'Make better investments', 'Reduce risks', 'Identify opportunities'],
+      marketPrice: '$18,000-55,000/month',
+      category: 'Market Intelligence',
+      technologies: ['NLP', 'Time Series', 'Sentiment Analysis', 'Web Scraping', 'Custom ML Models']
+    },
+    {
+      title: 'AI Risk Management System',
+      description: 'Comprehensive risk assessment with predictive modeling, scenario analysis, and automated mitigation.',
+      icon: '🛡️',
+      price: 'Starting at $11,000/month',
+      features: ['Risk assessment', 'Predictive modeling', 'Scenario analysis', 'Mitigation strategies', 'Compliance monitoring', 'Alert systems'],
+      benefits: ['Identify risks early', 'Reduce losses', 'Improve compliance', 'Automate risk management'],
+      marketPrice: '$20,000-60,000/month',
+      category: 'Risk Management',
+      technologies: ['Machine Learning', 'Monte Carlo', 'Time Series', 'Optimization', 'Custom ML Models']
+    },
+
+    // AI Creative & Content Solutions
+    {
+      title: 'AI Creative Studio Pro',
+      description: 'Advanced creative AI including image generation, video production, music composition, and design automation.',
+      icon: '🎨',
+      price: 'Starting at $6,500/month',
+      features: ['Image generation', 'Video production', 'Music composition', 'Design automation', 'Brand consistency', 'Multi-format output'],
+      benefits: ['Create content 10x faster', 'Reduce creative costs', 'Maintain brand consistency', 'Scale creative production'],
+      marketPrice: '$12,000-35,000/month',
+      category: 'Creative AI',
+      technologies: ['DALL-E', 'Midjourney', 'Stable Diffusion', 'Custom Models', 'Creative Frameworks']
+    },
+    {
+      title: 'AI Voice & Audio Intelligence',
+      description: 'Advanced voice AI including speech synthesis, voice cloning, audio analysis, and voice biometrics.',
+      icon: '🎤',
+      price: 'Starting at $7,500/month',
+      features: ['Speech synthesis', 'Voice cloning', 'Audio analysis', 'Voice biometrics', 'Language translation', 'Audio enhancement'],
+      benefits: ['Create realistic voices', 'Improve audio quality', 'Enable voice interfaces', 'Enhance accessibility'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Voice AI',
+      technologies: ['TTS', 'STT', 'Voice Cloning', 'Audio Processing', 'Custom Models']
+    },
+    {
+      title: 'AI Gaming & Entertainment',
+      description: 'Intelligent gaming solutions with procedural generation, NPC behavior, and dynamic content creation.',
+      icon: '🎮',
+      price: 'Starting at $8,000/month',
+      features: ['Procedural generation', 'NPC behavior', 'Dynamic content', 'Player analytics', 'Game balancing', 'Content personalization'],
+      benefits: ['Create engaging games', 'Reduce development time', 'Improve player experience', 'Scale content creation'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'Gaming AI',
+      technologies: ['Reinforcement Learning', 'Procedural Generation', 'Computer Vision', 'NLP', 'Custom Models']
+    },
+
+    // AI Edge & IoT Solutions
+    {
+      title: 'AI Edge Computing Platform',
+      description: 'Intelligent edge solutions with real-time processing, local AI inference, and distributed intelligence.',
+      icon: '📱',
+      price: 'Starting at $9,000/month',
+      features: ['Real-time processing', 'Local inference', 'Distributed intelligence', 'Edge optimization', 'Device management', 'Data synchronization'],
+      benefits: ['Reduce latency', 'Improve privacy', 'Lower bandwidth costs', 'Enable offline operation'],
+      marketPrice: '$18,000-55,000/month',
+      category: 'Edge AI',
+      technologies: ['TensorFlow Lite', 'ONNX Runtime', 'Edge Hardware', 'IoT Protocols', 'Custom Models']
+    },
+    {
+      title: 'AI IoT Analytics Suite',
+      description: 'Comprehensive IoT data analysis with sensor fusion, anomaly detection, and predictive maintenance.',
+      icon: '🌐',
+      price: 'Starting at $7,500/month',
+      features: ['Sensor fusion', 'Anomaly detection', 'Predictive maintenance', 'Real-time analytics', 'Device optimization', 'Energy management'],
+      benefits: ['Optimize IoT operations', 'Prevent failures', 'Improve efficiency', 'Reduce maintenance costs'],
+      marketPrice: '$15,000-45,000/month',
+      category: 'IoT AI',
+      technologies: ['Time Series', 'Sensor Fusion', 'Anomaly Detection', 'Edge Computing', 'Custom Models']
     }
   ];
 
-<<<<<<< HEAD
-  // const categories = [...new Set(aiServices.map(service => service.category))];
-=======
-  const categories = [...new Set(aiServices.map(service => service.category))];
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
   return (
     <>
