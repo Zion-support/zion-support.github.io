@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
@@ -156,7 +156,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 
 const App: React.FC = () => {
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <EnhancedErrorBoundary>
       <Router>
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
@@ -290,7 +290,7 @@ const App: React.FC = () => {
           </Routes>
         </Suspense>
       </Router>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 

@@ -21,12 +21,42 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          router: ['react-router-dom'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('clsx') || id.includes('tailwind-merge')) {
+              return 'vendor-utils';
+            }
+            // Group other large libraries
+            if (id.includes('node_modules')) {
+              return 'vendor-misc';
+            }
+          }
+          // Page chunks - group similar pages
+          if (id.includes('/src/') && id.includes('/page.tsx')) {
+            if (id.includes('/ai-')) {
+              return 'pages-ai';
+            }
+            if (id.includes('/blog/')) {
+              return 'pages-blog';
+            }
+            if (id.includes('/app/')) {
+              return 'pages-app';
+            }
+            return 'pages-misc';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

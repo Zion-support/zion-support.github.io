@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import MobileNavigation from './MobileNavigation';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -193,7 +195,6 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
-<<<<<<< HEAD
                     <div className="grid grid-cols-2 gap-4">
                       <Link
                         to="/services"
@@ -212,23 +213,13 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
-=======
-                    <a href="/services"
-                      className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      <span>View All Services</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
                   </div>
                 </div>
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
-<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
@@ -242,15 +233,6 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
-=======
-            </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
             
             <div className="flex items-center space-x-4">
               <a
@@ -277,103 +259,8 @@ const Navigation: React.FC = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <a href="/services"
-                      className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
-                    </a>
-                  </div>
-                )}
-              </div>
-
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-<<<<<<< HEAD
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </Link>
-=======
-              </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-d937
-              
-              <div className="pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Mobile Navigation */}
+        <MobileNavigation isOpen={isMenuOpen} onClose={closeAllMenus} />
       </div>
     </nav>
   );
