@@ -1149,19 +1149,19 @@ const HomePage: React.FC = () => {
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text holographic-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text holographic-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text holographic-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse sm:col-span-2 lg:col-span-1 xl:col-span-1">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text holographic-text">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
@@ -1199,7 +1199,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`quantum-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400 energy-pulse' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -1208,7 +1208,7 @@ const HomePage: React.FC = () => {
                     </div>
                   )}
                   <div className="text-4xl mb-4 text-center">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text holographic-text">{service.title}</h3>
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
@@ -1266,11 +1266,11 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <article key={index} className="holographic-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text holographic-text">{service.title}</h3>
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
@@ -1316,11 +1316,11 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text holographic-text">{service.title}</h3>
                   <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
                     {service.description}
                   </p>
@@ -1358,25 +1358,25 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven ROI</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text holographic-text">Proven ROI</h3>
                 <p className="text-gray-300 mb-4">Our clients see an average 300% ROI within the first year of implementation</p>
-                <div className="text-2xl font-bold text-cyan-400">300% ROI</div>
+                <div className="text-2xl font-bold text-cyan-400 holographic-text">300% ROI</div>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">Cost Savings</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text holographic-text">Cost Savings</h3>
                 <p className="text-gray-300 mb-4">Reduce operational costs by up to 70% with our AI-powered automation</p>
-                <div className="text-2xl font-bold text-green-400">70% Cost Reduction</div>
+                <div className="text-2xl font-bold text-green-400 holographic-text">70% Cost Reduction</div>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-text">Efficiency Gains</h3>
+                <h3 className="text-xl font-bold text-white mb-3 neon-text holographic-text">Efficiency Gains</h3>
                 <p className="text-gray-300 mb-4">Boost productivity by 90% with intelligent process automation</p>
-                <div className="text-2xl font-bold text-purple-400">90% Efficiency Boost</div>
+                <div className="text-2xl font-bold text-purple-400 holographic-text">90% Efficiency Boost</div>
               </div>
             </div>
             
@@ -1410,9 +1410,9 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text holographic-text">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
                 <a 
                   href="tel:+13024640950" 
@@ -1423,9 +1423,9 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text holographic-text">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
@@ -1435,9 +1435,9 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Address</h3>
+                <h3 className="text-xl font-bold text-white mb-2 neon-text holographic-text">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                 <a 
                   href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709" 
