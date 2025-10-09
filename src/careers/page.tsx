@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Users, MapPin, Clock, DollarSign, Heart, Brain, Code, CheckCircle, Globe, GraduationCap, Coffee } from 'lucide-react';;
+import { Users, MapPin, Clock, DollarSign, Heart, Brain, CheckCircle, Globe, GraduationCap, Coffee } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

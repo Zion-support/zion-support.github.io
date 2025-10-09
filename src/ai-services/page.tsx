@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Target, Shield, BarChart, Users, Globe, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
+import { Brain, Zap, Target, Shield, BarChart, Users, Globe, ArrowRight, CheckCircle, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

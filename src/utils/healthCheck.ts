@@ -181,8 +181,10 @@ class HealthCheckService {
    */
   private checkPerformance(): HealthCheck {
     try {
+      const report = performanceMonitor.getReport()
+      const reportData = JSON.parse(report)
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance metrics available: ${Object.keys(coreWebVitals).length} vitals`
+      let message = 'Performance metrics available'
       
       // Check if any critical metrics are missing or poor
       const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']

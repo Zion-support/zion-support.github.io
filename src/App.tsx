@@ -74,6 +74,7 @@ const CareersPage = lazy(() => import('./careers/page'));
 
 // IT Services Pages
 const AnalyticsToolsPage = lazy(() => import('./analytics-tools/page'));
+const APIDocsPage = lazy(() => import('./api-docs/page'));
 const APIPage = lazy(() => import('./api/page'));
 const AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
 const BlockchainPage = lazy(() => import('./blockchain/page'));

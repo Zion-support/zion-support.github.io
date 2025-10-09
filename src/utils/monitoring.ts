@@ -53,6 +53,7 @@ class MonitoringService {
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
 
+        // First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
@@ -75,6 +76,7 @@ class MonitoringService {
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
 
+        // First Contentful Paint
         const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach(entry => {
@@ -141,6 +143,7 @@ class MonitoringService {
       })
     })
 
+    // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.logError({
         message: `Unhandled Promise Rejection: ${event.reason}`,
@@ -160,8 +163,8 @@ class MonitoringService {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     }
     // Send to analytics (if configured)
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', name, {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals'
       })
