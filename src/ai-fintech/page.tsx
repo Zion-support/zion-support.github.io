@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
@@ -141,7 +141,7 @@ const AIFintechPage: React.FC = () => {
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      <FuturisticNavigation />
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
@@ -352,7 +352,7 @@ const AIFintechPage: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
+      <FuturisticFooter />
     </div>
   );
 };

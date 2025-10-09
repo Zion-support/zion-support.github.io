@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity } from 'lucide-react';
 
@@ -149,7 +149,7 @@ const ServicesPage: React.FC = () => {
         keywords={['AI services', 'IT solutions', 'micro SAAS', 'business automation', 'cloud services', 'cybersecurity']}
         canonicalUrl="https://ziontechgroup.com/services"
       />
-      <Navigation />
+      <FuturisticNavigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -388,7 +388,7 @@ const ServicesPage: React.FC = () => {
         </section>
       </div>
 
-      <Footer />
+      <FuturisticFooter />
     </>
   );
 };

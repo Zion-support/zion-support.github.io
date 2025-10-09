@@ -1,7 +1,7 @@
 import React from 'react';
 import { Phone, Mail, MapPin, CheckCircle, Star, Zap, Brain, Users, Clock, Target, TrendingUp, ArrowRight } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 
 const MachineLearningPage: React.FC = () => {
   const features = [
@@ -59,7 +59,7 @@ const MachineLearningPage: React.FC = () => {
 
   return (
     <>
-      <Navigation />
+      <FuturisticNavigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
@@ -162,7 +162,7 @@ const MachineLearningPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <FuturisticFooter />
       </div>
     </>
   );

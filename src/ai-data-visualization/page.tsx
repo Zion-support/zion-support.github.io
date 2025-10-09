@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
 const AIDataVisualizationPage: React.FC = () => {
@@ -91,7 +91,7 @@ const AIDataVisualizationPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/ai-data-visualization"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <FuturisticNavigation />
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -246,7 +246,7 @@ const AIDataVisualizationPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <FuturisticFooter />
       </div>
     </>
   );

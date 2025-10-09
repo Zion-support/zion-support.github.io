@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 
 export default function AIChatbotBuilderPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-system">
-      <Navigation />
+      <FuturisticNavigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -246,7 +246,7 @@ export default function AIChatbotBuilderPage() {
         </section>
       </main>
       
-      <Footer />
+      <FuturisticFooter />
     </div>
   );
 }

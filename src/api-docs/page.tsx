@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -47,7 +47,7 @@ const ApiDocsPage: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
+        <FuturisticNavigation />
         <div className="container mx-auto px-4 py-8">
           {/* Hero Section */}
           <section className="text-center mb-16 relative overflow-hidden">
@@ -124,7 +124,7 @@ const ApiDocsPage: React.FC = () => {
           </section>
         </div>
       </div>
-      <Footer />
+      <FuturisticFooter />
     </>
   );
 };

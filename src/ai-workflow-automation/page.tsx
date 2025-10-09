@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
@@ -92,7 +92,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <FuturisticNavigation />
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -247,7 +247,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
             </div>
           </section>
         </main>
-        <Footer />
+        <FuturisticFooter />
       </div>
     </>
   );

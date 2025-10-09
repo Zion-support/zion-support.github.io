@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {
@@ -69,7 +69,7 @@ const AICustomerSupportPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
+      <FuturisticNavigation />
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -195,7 +195,7 @@ const AICustomerSupportPage: React.FC = () => {
           </section>
         </div>
         </main>
-        <Footer />
+        <FuturisticFooter />
       </div>
     </>
   );

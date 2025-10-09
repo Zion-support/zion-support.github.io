@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Eye, Users, DollarSign, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe, Target, PieChart, Activity, AlertCircle, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import FuturisticNavigation from '../components/FuturisticNavigation';
+import FuturisticFooter from '../components/FuturisticFooter';
 import SEOOptimizer from '../components/SEOOptimizer';
 
 const AIAnalyticsDashboardPage: React.FC = () => {
@@ -126,7 +126,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         canonicalUrl="https://ziontechgroup.com/ai-analytics-dashboard"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-        <Navigation />
+        <FuturisticNavigation />
         
         {/* Hero Section */}
         <section className="relative py-20 px-4">
@@ -352,7 +352,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-        <Footer />
+        <FuturisticFooter />
       </div>
     </>
   );
