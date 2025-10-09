@@ -43,4 +43,4 @@ const SystemStatusPage: React.FC = () => {
   );
 };
 
-export default System-statusPage;
+export default SystemStatusPage;

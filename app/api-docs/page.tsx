@@ -446,4 +446,4 @@ console.log(result.predictions);`,
   );
 };
 
-export default Api-docsPage;
+export default ApiDocsPage;

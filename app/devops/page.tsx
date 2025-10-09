@@ -1,6 +1,5 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';
 
 const DevOpsPage: React.FC = () => {
@@ -33,8 +32,6 @@ const DevOpsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">DevOps Services</h1>
@@ -65,8 +62,6 @@ const DevOpsPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
-      <Footer />
     </div>
   );
 };
