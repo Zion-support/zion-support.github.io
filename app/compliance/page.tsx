@@ -10,8 +10,6 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS', status: 'Compliant' }
   ];
   return (
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -33,7 +31,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +58,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Frameworks */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -106,7 +102,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Areas */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,17 +129,12 @@ const CompliancePage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-
- cursor/analyze-improve-and-deploy-application-cde4
                 </div>
               </div>
             ))}
           </div>
-
- cursor/analyze-improve-and-deploy-application-cde4
         </div>
       </section>
-
       {/* Audit Schedule */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -182,7 +172,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Compliance Reports */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -222,7 +211,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Compliance Team */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -231,8 +219,6 @@ const CompliancePage: React.FC = () => {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Our compliance team is available to answer your questions and provide additional documentation.
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">

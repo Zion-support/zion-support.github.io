@@ -24,13 +24,13 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0,
+      errorCount: 0
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
+      error
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
@@ -41,7 +41,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href
     });
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -50,7 +50,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     // Update state with error details
     this.setState((prevState) => ({
       errorInfo,
-      errorCount: prevState.errorCount + 1,
+      errorCount: prevState.errorCount + 1
     }));
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -60,9 +60,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
-            componentStack: errorInfo.componentStack,
-          },
-        },
+            componentStack: errorInfo.componentStack
+          }
+        }
       });
     }
   }
@@ -81,7 +81,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,
+      errorInfo: null
     });
   };
   handleReload = (): void => {
@@ -169,7 +169,7 @@ const styles = {
     justifyContent: 'center',
     padding: '20px',
     backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },
   content: {
     maxWidth: '600px',
@@ -178,23 +178,23 @@ const styles = {
     borderRadius: '8px',
     padding: '40px',
     boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const,
+    textAlign: 'center' as const
   },
   icon: {
     fontSize: '48px',
-    marginBottom: '20px',
+    marginBottom: '20px'
   },
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: '16px',
+    marginBottom: '16px'
   },
   message: {
     fontSize: '16px',
     color: '#666',
     marginBottom: '32px',
-    lineHeight: '1.6',
+    lineHeight: '1.6'
   },
   details: {
     textAlign: 'left' as const,
@@ -202,20 +202,20 @@ const styles = {
     backgroundColor: '#f9f9f9',
     padding: '16px',
     borderRadius: '4px',
-    border: '1px solid #e0e0e0',
+    border: '1px solid #e0e0e0'
   },
   summary: {
     cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
-    userSelect: 'none' as const,
+    userSelect: 'none' as const
   },
   errorDetails: {
-    fontSize: '14px',
+    fontSize: '14px'
   },
   errorMessage: {
     marginBottom: '12px',
-    color: '#d32f2f',
+    color: '#d32f2f'
   },
   stack: {
     backgroundColor: '#f5f5f5',
@@ -225,13 +225,13 @@ const styles = {
     overflowX: 'auto' as const,
     fontFamily: 'monospace',
     whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const,
+    wordBreak: 'break-all' as const
   },
   actions: {
     display: 'flex',
     gap: '12px',
     justifyContent: 'center',
-    flexWrap: 'wrap' as const,
+    flexWrap: 'wrap' as const
   },
   button: {
     padding: '12px 24px',
@@ -242,15 +242,15 @@ const styles = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    transition: 'background-color 0.2s',
+    transition: 'background-color 0.2s'
   },
   secondaryButton: {
-    backgroundColor: '#6c757d',
+    backgroundColor: '#6c757d'
   },
   errorCount: {
     marginTop: '24px',
     fontSize: '14px',
-    color: '#999',
-  },
+    color: '#999'
+  }
 };
 export default ImprovedErrorBoundary;

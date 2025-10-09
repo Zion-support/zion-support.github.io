@@ -109,7 +109,7 @@ class PerformanceMonitoringService {
       name,
       value,
       rating,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     };
     this.webVitals[name] = metric;
     logger.info(`Web Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
@@ -126,7 +126,7 @@ class PerformanceMonitoringService {
       FID: { good: 100, poor: 300 },
       CLS: { good: 0.1, poor: 0.25 },
       TTFB: { good: 800, poor: 1800 },
-      INP: { good: 200, poor: 500 },
+      INP: { good: 200, poor: 500 }
     };
     const threshold = thresholds[name];
     if (!threshold) return 'good';
@@ -142,7 +142,7 @@ class PerformanceMonitoringService {
       name,
       value,
       unit,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     };
     this.customMetrics.push(metric);
     // Maintain max metrics limit
@@ -160,7 +160,7 @@ class PerformanceMonitoringService {
         await fetch('/api/analytics/performance', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(metric),
+          body: JSON.stringify(metric)
         });
       }
     } catch (error) {
@@ -226,7 +226,7 @@ class PerformanceMonitoringService {
       score,
       webVitals: this.webVitals,
       customMetrics: this.customMetrics,
-      recommendations,
+      recommendations
     };
   }
   /**
@@ -297,7 +297,7 @@ export enum MetricUnit {
   Milliseconds = 'ms',
   Bytes = 'bytes',
   Count = 'count',
-  Percentage = 'percentage',
+  Percentage = 'percentage'
 }
 // Simple metrics structure for testing
 interface MetricData {
@@ -327,7 +327,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
       min: value,
       max: value,
       unit,
-      rating: getRating(name, value),
+      rating: getRating(name, value)
     });
   }
   // Also record in the main performance monitoring service
@@ -340,7 +340,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     'FID': { good: 100, poor: 300 },
     'CLS': { good: 0.1, poor: 0.25 },
     'TTFB': { good: 800, poor: 1800 },
-    'INP': { good: 200, poor: 500 },
+    'INP': { good: 200, poor: 500 }
   };
   const threshold = thresholds[name];
   if (!threshold) return 'good';

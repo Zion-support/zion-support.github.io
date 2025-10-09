@@ -36,18 +36,18 @@ const config: AppConfig = {
     name: 'Zion Tech Group',
     version: '1.0.0',
     environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
+      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
   },
   api: {
     baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
     timeout: 30000,
-    retryAttempts: 3,
+    retryAttempts: 3
   },
   features: {
     analytics: process.env['NODE_ENV'] === 'production',
     monitoring: true,
     errorTracking: true,
-    performanceOptimization: true,
+    performanceOptimization: true
   },
   performance: {
     enableLazyLoading: true,
@@ -58,8 +58,8 @@ const config: AppConfig = {
   security: {
     enableCSP: true,
     enableHSTS: true,
-    enableXSSProtection: true,
-  },
+    enableXSSProtection: true
+  }
 };
 /**
  * Get configuration value by key path

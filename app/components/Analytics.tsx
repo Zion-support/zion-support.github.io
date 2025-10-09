@@ -21,14 +21,14 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href,
+        page_location: window.location.href
       });
       // Track page views
       const trackPageView = () => {
         gtag('event', 'page_view', {
           page_title: document.title,
           page_location: window.location.href,
-          page_path: window.location.pathname,
+          page_path: window.location.pathname
         });
       };
       // Track initial page view
@@ -51,11 +51,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
           gtag('event', 'timing_complete', {
             name: 'load',
-            value: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
+            value: Math.round(navigation.loadEventEnd - navigation.loadEventStart)
           });
           gtag('event', 'timing_complete', {
             name: 'dom_content_loaded',
-            value: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+            value: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart)
           });
         }
       };
@@ -74,7 +74,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           gtag('event', 'scroll', {
             event_category: 'engagement',
             event_label: `${scrollPercent}%`,
-            value: scrollPercent,
+            value: scrollPercent
           });
         }
       };
@@ -87,7 +87,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           gtag('event', 'click', {
             event_category: 'engagement',
             event_label: link.href,
-            value: 1,
+            value: 1
           });
         }
       };

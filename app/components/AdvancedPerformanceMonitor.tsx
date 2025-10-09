@@ -14,7 +14,7 @@ interface PerformanceMonitorProps {
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
-  enableRealTimeMonitoring = true,
+  enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -22,7 +22,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null,
+    memory: null
   });
   const measureWebVitals = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -60,7 +60,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const _fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
                 ...prev,
-                fid: _fidEntry.processingStart - _fidEntry.startTime,
+                fid: _fidEntry.processingStart - _fidEntry.startTime
               }));
             }
           });
@@ -114,7 +114,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         ...prev,
         fcp: _fcp,
         ttfb,
-        memory,
+        memory
       }));
     } catch (error) {
       // eslint-disable-next-line no-console
@@ -145,7 +145,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
-          size: r.transferSize,
+          size: r.transferSize
         }))
       );
     }

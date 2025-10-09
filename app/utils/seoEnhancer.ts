@@ -28,23 +28,23 @@ export const generateMetaTags = (data: {
     { property: 'og:title', content: data.ogTitle || data.title },
     {
       property: 'og:description',
-      content: data.ogDescription || data.description,
+      content: data.ogDescription || data.description
     },
     { property: 'og:image', content: data.ogImage || '/og-image.jpg' },
     { property: 'og:type', content: 'website' },
     { property: 'og:site_name', content: 'Zion Holdings' },
     {
       name: 'twitter:card',
-      content: data.twitterCard || 'summary_large_image',
+      content: data.twitterCard || 'summary_large_image'
     },
     { name: 'twitter:title', content: data.twitterTitle || data.title },
     {
       name: 'twitter:description',
-      content: data.twitterDescription || data.description,
+      content: data.twitterDescription || data.description
     },
     {
       name: 'twitter:image',
-      content: data.twitterImage || data.ogImage || '/og-image.jpg',
+      content: data.twitterImage || data.ogImage || '/og-image.jpg'
     },
   ];
   return tags;
@@ -87,7 +87,7 @@ const defaultSEOConfig: SEOConfig = {
   language: 'en',
   locale: 'en_US',
   siteName: 'Zion Holdings',
-  author: 'Zion Holdings',
+  author: 'Zion Holdings'
 };
 // Generate structured data
 export const generateStructuredData = (data: {
@@ -106,7 +106,7 @@ export const generateStructuredData = (data: {
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || [],
+    sameAs: data.sameAs || []
   };
   return { ...baseStructure, ...data };
 };
@@ -283,7 +283,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
       description:
         document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
-      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '',
+      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''
     };
   }
 }
@@ -304,7 +304,7 @@ export const generateAdvancedStructuredData = (data: {
     description: data.description,
     url: data.url || '',
     logo: data.logo || '',
-    sameAs: data.sameAs || [],
+    sameAs: data.sameAs || []
   };
   // Add type-specific properties
   if (data.type === 'Organization') {
@@ -312,13 +312,13 @@ export const generateAdvancedStructuredData = (data: {
       ...baseStructure,
       address: {
         '@type': 'PostalAddress',
-        addressCountry: 'US',
+        addressCountry: 'US'
       },
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-555-0123',
-        contactType: 'customer service',
-      },
+        contactType: 'customer service'
+      }
     };
   }
   if (data.type === 'WebSite') {
@@ -328,10 +328,10 @@ export const generateAdvancedStructuredData = (data: {
         '@type': 'SearchAction',
         target: {
           '@type': 'EntryPoint',
-          urlTemplate: `${data.url}/search?q={search_term_string}`,
+          urlTemplate: `${data.url}/search?q={search_term_string}`
         },
-        'query-input': 'required name=search_term_string',
-      },
+        'query-input': 'required name=search_term_string'
+      }
     };
   }
   if (data.type === 'Article') {
@@ -339,18 +339,18 @@ export const generateAdvancedStructuredData = (data: {
       ...baseStructure,
       author: {
         '@type': 'Organization',
-        name: 'Zion Holdings',
+        name: 'Zion Holdings'
       },
       publisher: {
         '@type': 'Organization',
         name: 'Zion Holdings',
         logo: {
           '@type': 'ImageObject',
-          url: data.logo || '/logo.jpg',
-        },
+          url: data.logo || '/logo.jpg'
+        }
       },
       datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(),
+      dateModified: new Date().toISOString()
     };
   }
   return baseStructure;
@@ -371,9 +371,9 @@ export const generateSitemapData = (
         loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
-        priority: page.priority,
-      })),
-    },
+        priority: page.priority
+      }))
+    }
   };
 };
 // Generate robots.txt content
@@ -418,8 +418,8 @@ export const generateBreadcrumbData = (
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: crumb.url,
-    })),
+      item: crumb.url
+    }))
   };
 };
 // Initialize SEO enhancements
@@ -432,7 +432,7 @@ export const initializeSEOEnhancements = () => {
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.jpg',
-    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings'],
+    sameAs: ['https://twitter.com/zionholdings', 'https://linkedin.com/company/zion-holdings']
   });
   const script = document.createElement('script');
   script.type = 'application/ld+json';

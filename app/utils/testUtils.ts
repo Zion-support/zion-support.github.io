@@ -40,7 +40,7 @@ export const mockFetch = (
         status,
         headers: new Headers(headers),
         json: async () => response,
-        text: async () => JSON.stringify(response),
+        text: async () => JSON.stringify(response)
       } as Response)
     ) as typeof fetch;
   }
@@ -84,9 +84,9 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
     Object.defineProperty(global, 'window', {
       value: {
         ...global.window,
-        ...overrides,
+        ...overrides
       },
-      writable: true,
+      writable: true
     });
   }
 };
@@ -103,7 +103,7 @@ export const createMockPerformance = (): Performance => {
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0,
-        toJSON: () => ({}),
+        toJSON: () => ({})
       } as PerformanceEntry);
     },
     measure: (name: string, _startMark?: string, _endMark?: string) => {
@@ -112,7 +112,7 @@ export const createMockPerformance = (): Performance => {
         entryType: 'measure',
         startTime: Date.now(),
         duration: 100,
-        toJSON: () => ({}),
+        toJSON: () => ({})
       } as PerformanceEntry);
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
@@ -131,7 +131,7 @@ export const createMockPerformance = (): Performance => {
     removeEventListener: () => {},
     dispatchEvent: () => true,
     onresourcetimingbufferfull: null,
-    timeOrigin: Date.now(),
+    timeOrigin: Date.now()
   } as unknown as Performance;
 };
 /**
@@ -160,7 +160,7 @@ export const generateTestData = {
   },
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator);
-  },
+  }
 };
 /**
  * Deep clone an object
@@ -279,5 +279,5 @@ export default {
   ConsoleSpy,
   createDeferred,
   retryWithBackoff,
-  measureExecutionTime,
+  measureExecutionTime
 };

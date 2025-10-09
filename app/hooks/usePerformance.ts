@@ -58,7 +58,7 @@ export const usePerformance = () => {
         firstContentfulPaint,
         largestContentfulPaint,
         cumulativeLayoutShift,
-        firstInputDelay,
+        firstInputDelay
       };
       setMetrics(performanceData);
       setIsMonitoring(false);

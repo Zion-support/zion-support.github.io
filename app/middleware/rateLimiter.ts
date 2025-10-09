@@ -27,7 +27,7 @@ export class RateLimiter {
       message: 'Too many requests, please try again later.',
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
-      ...config,
+      ...config
     };
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);
@@ -53,7 +53,7 @@ export class RateLimiter {
       return {
         allowed: true,
         remaining: this.config.max - record.count,
-        resetTime: record.resetTime,
+        resetTime: record.resetTime
       };
     }
     // Limit exceeded
@@ -92,31 +92,31 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.',
+    message: 'Too many requests. Please try again in a minute.'
   }),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({
     windowMs: 15 * 60 * 1000,
-    max: 100,
+    max: 100
   }),
   // Lenient: 1000 requests per hour
   lenient: new RateLimiter({
     windowMs: 60 * 60 * 1000,
-    max: 1000,
+    max: 1000
   }),
   // API: 60 requests per minute
   api: new RateLimiter({
     windowMs: 60 * 1000,
     max: 60,
-    message: 'API rate limit exceeded. Please try again later.',
+    message: 'API rate limit exceeded. Please try again later.'
   }),
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 5,
     message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true,
-  }),
+    skipSuccessfulRequests: true
+  })
 };
 /**
  * Get client identifier from request
@@ -148,7 +148,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
       return new Response(
         JSON.stringify({
           error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000),
+          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         }),
         {
           status: 429,
@@ -157,8 +157,8 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
             'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
             'X-RateLimit-Limit': String(limiter['config'].max),
             'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime),
-          },
+            'X-RateLimit-Reset': String(resetTime)
+          }
         }
       );
     }

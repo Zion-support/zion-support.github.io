@@ -49,7 +49,7 @@ export const defaultTestConfig: TestConfig = {
   enableVisualRegression: false,
   coverageThreshold: 80,
   performanceThreshold: 100,
-  accessibilityThreshold: 90,
+  accessibilityThreshold: 90
 };
 interface TestResult {
   name: string;
@@ -121,7 +121,7 @@ export class TestRunner {
         '**/*.spec.tsx',
       ],
       excludePattern: ['**/node_modules/**', '**/dist/**'],
-      ...config,
+      ...config
     };
   }
   static getInstance(config?: Partial<TestConfig>): TestRunner {
@@ -154,7 +154,7 @@ export class TestRunner {
       beforeAll: [],
       afterAll: [],
       beforeEach: [],
-      afterEach: [],
+      afterEach: []
     };
     const previousSuite = this.currentSuite;
     this.currentSuite = suite;
@@ -179,7 +179,7 @@ export class TestRunner {
     this.currentSuite.tests.push({
       name,
       fn,
-      timeout: timeout || this.config.timeout,
+      timeout: timeout || this.config.timeout
     });
   }
   // Performance test
@@ -202,14 +202,14 @@ export class TestRunner {
     const metrics = {
       renderTime,
       memoryUsage,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString()
     };
     const passed = renderTime < this.config.performanceThreshold;
     this.testResults.push({
       name: `Performance: ${testName}`,
       status: passed ? 'passed' : 'failed',
       duration: renderTime,
-      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`,
+      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`
     });
     return { passed, metrics };
   }
@@ -223,7 +223,7 @@ export class TestRunner {
     this.currentSuite.tests.push({
       name,
       fn,
-      skip: true,
+      skip: true
     });
   }
   /**
@@ -236,7 +236,7 @@ export class TestRunner {
     this.currentSuite.tests.push({
       name,
       fn,
-      only: true,
+      only: true
     });
   }
   /**
@@ -312,7 +312,7 @@ export class TestRunner {
           name: `${suite.name} - ${test.name}`,
           status: 'skipped',
           duration: 0,
-          assertions: [],
+          assertions: []
         });
         continue;
       }
@@ -345,7 +345,7 @@ export class TestRunner {
         name: testName,
         status: 'passed',
         duration: Date.now() - startTime,
-        assertions,
+        assertions
       });
       if (this.config.verbose) {
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`✅ ${testName} (${Date.now() - startTime}ms)`); } }
@@ -356,7 +356,7 @@ export class TestRunner {
         status: 'failed',
         duration: Date.now() - startTime,
         error: error as Error,
-        assertions,
+        assertions
       });
       console.error(`❌ ${testName} (${Date.now() - startTime}ms)`);
       console.error(error);
@@ -433,9 +433,9 @@ export class TestRunner {
         passed: this.results.filter(r => r.status === 'passed').length,
         failed: this.results.filter(r => r.status === 'failed').length,
         skipped: this.results.filter(r => r.status === 'skipped').length,
-        duration: Date.now() - this.startTime,
+        duration: Date.now() - this.startTime
       },
-      results: this.results,
+      results: this.results
     };
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('\n📄 JSON Report:'); } }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(JSON.stringify(report, null, 2)); } }
@@ -536,7 +536,7 @@ export class TestRunner {
       name: `Accessibility: ${testName}`,
       status: passed ? 'passed' : 'failed',
       duration: 0,
-      error: passed ? undefined : `Found ${violations.length} accessibility violations`,
+      error: passed ? undefined : `Found ${violations.length} accessibility violations`
     });
     return { passed, violations };
   }
@@ -552,7 +552,7 @@ export class TestRunner {
       this.testResults.push({
         name: `Component: ${testName}`,
         status: 'passed',
-        duration: 0,
+        duration: 0
       });
       return { passed: true };
     } catch (error) {
@@ -561,7 +561,7 @@ export class TestRunner {
         name: `Component: ${testName}`,
         status: 'failed',
         duration: 0,
-        error: errorMessage,
+        error: errorMessage
       });
       return { passed: false, error: errorMessage };
     }
@@ -600,7 +600,7 @@ export class TestRunner {
       this.testResults.push({
         name: `Integration: ${testName}`,
         status: 'passed',
-        duration: 0,
+        duration: 0
       });
       return { passed: true };
     } catch (error) {
@@ -609,7 +609,7 @@ export class TestRunner {
         name: `Integration: ${testName}`,
         status: 'failed',
         duration: 0,
-        error: errorMessage,
+        error: errorMessage
       });
       return { passed: false, error: errorMessage };
     }
@@ -625,7 +625,7 @@ export class TestRunner {
     this.testResults.push({
       name: `Visual: ${testName}`,
       status: 'passed',
-      duration: 0,
+      duration: 0
     });
     return { passed: true };
   }
@@ -638,14 +638,14 @@ export class TestRunner {
       statements: 85,
       branches: 80,
       functions: 90,
-      lines: 85,
+      lines: 85
     };
     const passed = coverage.statements >= this.config.coverageThreshold;
     this.testResults.push({
       name: 'Coverage',
       status: passed ? 'passed' : 'failed',
       duration: 0,
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`,
+      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`
     });
     return { passed, coverage };
   }
@@ -713,7 +713,7 @@ export class TestRunner {
       passed,
       failed,
       skipped,
-      passRate: total > 0 ? (passed / total) * 100 : 0,
+      passRate: total > 0 ? (passed / total) * 100 : 0
     };
   }
   // Clear test results
@@ -728,7 +728,7 @@ export class TestRunner {
       summary: statistics,
       results,
       timestamp: new Date().toISOString(),
-      config: this.config,
+      config: this.config
     };
   }
 }
@@ -762,7 +762,7 @@ export const useTestRunner = () => {
     getTestResults: () => testRunner.getTestResults(),
     getTestStatistics: () => testRunner.getTestStatistics(),
     clearTestResults: () => testRunner.clearTestResults(),
-    generateTestReport: () => testRunner.generateTestReport(),
+    generateTestReport: () => testRunner.generateTestReport()
   };
 };
 // Test utilities
@@ -776,7 +776,7 @@ export const testUtils = {
         name: `Mock ${type} ${i + 1}`,
         description: `This is a mock ${type} item`,
         createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
       });
     }
     return mockData;
@@ -798,7 +798,7 @@ export const testUtils = {
       });
       observer.observe(document.body, {
         childList: true,
-        subtree: true,
+        subtree: true
       });
       setTimeout(() => {
         observer.disconnect();
@@ -827,7 +827,7 @@ export const testUtils = {
       default:
         throw new Error(`Unknown action: ${action}`);
     }
-  },
+  }
 };
 export default TestRunner;
 /**
@@ -1032,7 +1032,7 @@ class Mock {
     (mockFn as MockFunction).mock = {
       calls,
       results: [],
-      instances: [],
+      instances: []
     };
     return mockFn as MockFunction;
   }
@@ -1048,7 +1048,7 @@ class Mock {
           return overrides[prop as keyof T];
         }
         return Mock.fn();
-      },
+      }
     });
   }
   /**
@@ -1114,5 +1114,5 @@ export type {
   TestSuite,
   Test,
   AssertionResult,
-  CoverageResult,
+  CoverageResult
 };

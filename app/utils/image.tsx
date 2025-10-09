@@ -51,8 +51,8 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover',
-    }),
+      objectFit: 'cover'
+    })
   };
   if (hasError) {
     return (

@@ -166,7 +166,7 @@ export class VirtualScroller<T> {
     return {
       start: Math.max(0, start),
       end: Math.min(this.items.length, end),
-      offsetY,
+      offsetY
     };
   }
   getVisibleItems(scrollTop: number): T[] {
@@ -248,7 +248,7 @@ export function getMemoryUsage(): {
     return {
       used: memory.usedJSHeapSize,
       total: memory.totalJSHeapSize,
-      limit: memory.jsHeapSizeLimit,
+      limit: memory.jsHeapSizeLimit
     };
   }
   return null;
@@ -302,5 +302,5 @@ export default {
   supportsCodeSplitting,
   prefetchBundle,
   getMemoryUsage,
-  FPSMonitor,
+  FPSMonitor
 };

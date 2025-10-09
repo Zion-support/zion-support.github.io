@@ -58,7 +58,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
     method: context.request.method,
-    url: context.request.url,
+    url: context.request.url
   });
   try {
     const _result = await next();
@@ -68,7 +68,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
-      duration,
+      duration
     });
     return result;
   } catch (error) {
@@ -77,7 +77,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
-      duration,
+      duration
     });
     throw error;
   }
@@ -111,11 +111,11 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
       message: error instanceof Error ? error.message : 'Unknown error',
       status: context.response?.status || 500,
       url: context.request.url,
-      method: context.request.method,
+      method: context.request.method
     };
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
       component: 'ErrorHandlingMiddleware',
-      ...standardError,
+      ...standardError
     });
     throw standardError;
   }
@@ -157,7 +157,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const _result = await next();
     cache.set(key, {
       data: result,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     });
     return result;
   };
@@ -179,7 +179,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
             'RetryMiddleware',
             {
               component: 'RetryMiddleware',
-              url: context.request.url,
+              url: context.request.url
             }
           );
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
@@ -246,5 +246,5 @@ export default {
   timeoutMiddleware,
   transformRequestMiddleware,
   transformResponseMiddleware,
-  createDefaultMiddlewareChain,
+  createDefaultMiddlewareChain
 };

@@ -1,7 +1,8 @@
 'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   const aiServices = [
@@ -79,12 +80,28 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Micro SAAS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -112,10 +129,26 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
-          {/* Company */}
+          {/* Specialized Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Specialized</h3>
+            <ul className="space-y-2">
+              {specializedServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          {/* Company & Support */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
@@ -127,9 +160,6 @@ const Footer: React.FC = memo(() => {
                 </li>
               ))}
             </ul>
-          </div>
-          {/* Support & Contact */}
-          <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
             <ul className="space-y-2 mb-6">
               {supportLinks.map((link, index) => (
@@ -189,5 +219,6 @@ const Footer: React.FC = memo(() => {
     </footer>
   );
 });
+
 Footer.displayName = 'Footer';
 export default Footer;

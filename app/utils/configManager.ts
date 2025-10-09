@@ -49,7 +49,7 @@ const defaultConfig: AppConfig = {
     baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true,
+    enableCaching: true
   },
   features: {
     enableAnalytics: false,
@@ -57,30 +57,30 @@ const defaultConfig: AppConfig = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true,
+    enablePWA: true
   },
   performance: {
     enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
-    enableCaching: true,
+    enableCaching: true
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 100,
+    maxRequestsPerMinute: 100
   },
   ui: {
     theme: 'auto',
     language: 'en',
-    timezone: 'UTC',
+    timezone: 'UTC'
   },
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: false,
-  },
+    enableNetwork: false
+  }
 };
 const developmentConfig: Partial<AppConfig> = {
   environment: 'development',
@@ -88,7 +88,7 @@ const developmentConfig: Partial<AppConfig> = {
     baseURL: 'http://localhost:3000/api',
     timeout: 30000,
     retryAttempts: 1,
-    enableCaching: false,
+    enableCaching: false
   },
   features: {
     enableAnalytics: false,
@@ -96,13 +96,13 @@ const developmentConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false,
+    enablePWA: false
   },
   logging: {
     level: 'debug',
     enableConsole: true,
-    enableNetwork: false,
-  },
+    enableNetwork: false
+  }
 };
 const stagingConfig: Partial<AppConfig> = {
   environment: 'staging',
@@ -110,7 +110,7 @@ const stagingConfig: Partial<AppConfig> = {
     baseURL: 'https://staging-api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true,
+    enableCaching: true
   },
   features: {
     enableAnalytics: true,
@@ -118,13 +118,13 @@ const stagingConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true,
+    enablePWA: true
   },
   logging: {
     level: 'info',
     enableConsole: true,
-    enableNetwork: true,
-  },
+    enableNetwork: true
+  }
 };
 const productionConfig: Partial<AppConfig> = {
   environment: 'production',
@@ -132,7 +132,7 @@ const productionConfig: Partial<AppConfig> = {
     baseURL: 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
-    enableCaching: true,
+    enableCaching: true
   },
   features: {
     enableAnalytics: true,
@@ -140,19 +140,19 @@ const productionConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-    enablePWA: true,
+    enablePWA: true
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: true,
+    enableNetwork: true
   },
   security: {
     enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
-    maxRequestsPerMinute: 60,
-  },
+    maxRequestsPerMinute: 60
+  }
 };
 const testConfig: Partial<AppConfig> = {
   environment: 'test',
@@ -160,7 +160,7 @@ const testConfig: Partial<AppConfig> = {
     baseURL: 'http://localhost:3000/api',
     timeout: 5000,
     retryAttempts: 0,
-    enableCaching: false,
+    enableCaching: false
   },
   features: {
     enableAnalytics: false,
@@ -168,13 +168,13 @@ const testConfig: Partial<AppConfig> = {
     enablePerformanceMonitoring: false,
     enableAccessibility: true,
     enableSEO: false,
-    enablePWA: false,
+    enablePWA: false
   },
   logging: {
     level: 'error',
     enableConsole: false,
-    enableNetwork: false,
-  },
+    enableNetwork: false
+  }
 };
 export class ConfigManager {
   private static instance: ConfigManager;
@@ -296,13 +296,13 @@ export class ConfigManager {
         currentValue !== null
       ) {
         this.config[key] = Object.assign({}, currentValue, {
-          [nestedKeyOrValue]: value,
+          [nestedKeyOrValue]: value
         }) as AppConfig[K];
       } else {
         // If current value is not an object, create a new object by merging with default
         const defaultValue = this.getDefaultForKey(key);
         this.config[key] = Object.assign({}, defaultValue, {
-          [nestedKeyOrValue]: value,
+          [nestedKeyOrValue]: value
         }) as AppConfig[K];
       }
     } else {
@@ -319,7 +319,7 @@ export class ConfigManager {
         baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
-        enableCaching: true,
+        enableCaching: true
       },
       features: {
         enableAnalytics: false,
@@ -327,30 +327,30 @@ export class ConfigManager {
         enablePerformanceMonitoring: false,
         enableAccessibility: true,
         enableSEO: true,
-        enablePWA: false,
+        enablePWA: false
       },
       performance: {
         enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
-        enableCaching: true,
+        enableCaching: true
       },
       security: {
         enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
-        maxRequestsPerMinute: 100,
+        maxRequestsPerMinute: 100
       },
       ui: {
         theme: 'light',
         language: 'en',
-        timezone: 'UTC',
+        timezone: 'UTC'
       },
       logging: {
         level: 'info',
         enableConsole: true,
-        enableNetwork: false,
-      },
+        enableNetwork: false
+      }
     };
     return defaultValues[key];
   }
@@ -461,7 +461,7 @@ export class ConfigManager {
     }
     return {
       valid: errors.length === 0,
-      errors,
+      errors
     };
   }
 }

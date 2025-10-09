@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
-
 const AICybersecurityPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const AICybersecurityPage: React.FC = () => {
       benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Essential',
@@ -98,14 +96,12 @@ const AICybersecurityPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
     { number: '99.9%', label: 'Threat Detection' },
     { number: '24/7', label: 'Monitoring' },
     { number: '60%', label: 'Faster Response' },
     { number: '100%', label: 'Compliance' }
   ];
-
   const threats = [
     {
       title: 'Ransomware Protection',
@@ -128,7 +124,6 @@ const AICybersecurityPage: React.FC = () => {
       icon: Globe
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -139,7 +134,6 @@ const AICybersecurityPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -154,7 +148,6 @@ const AICybersecurityPage: React.FC = () => {
                 Our AI-powered cybersecurity platform provides advanced threat detection, 
                 automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
                   href="tel:+13024640950"
@@ -172,7 +165,6 @@ const AICybersecurityPage: React.FC = () => {
                   <span>Get Security Audit</span>
                 </a>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {stats.map((stat, index) => (
@@ -186,7 +178,6 @@ const AICybersecurityPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -210,7 +201,6 @@ const AICybersecurityPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Threats Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -226,7 +216,6 @@ const AICybersecurityPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -277,7 +266,6 @@ const AICybersecurityPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -307,11 +295,9 @@ const AICybersecurityPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
-
 export default AICybersecurityPage;

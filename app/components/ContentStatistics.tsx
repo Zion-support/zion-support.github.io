@@ -1,28 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-const ContentStatistics: React.FC = () => {
-  return (
-    <section className="py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
-          Our Impact
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-            <div className="text-gray-300">Projects Completed</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-            <div className="text-gray-300">Uptime Guarantee</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-            <div className="text-gray-300">Support Available</div>
-          </div>
-        </div>
-=======
-
 const ContentStatistics: React.FC = () => {
   const stats = [
     {
@@ -46,13 +22,11 @@ const ContentStatistics: React.FC = () => {
       description: "Ready-to-use business applications"
     }
   ];
-
   return (
     <section className="mb-16" aria-labelledby="stats-heading">
       <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
         Our Impact
       </h2>
-      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         {stats.map((stat, index) => (
           <div key={index} className="cyber-card hologram-card p-6 text-center">
@@ -67,14 +41,8 @@ const ContentStatistics: React.FC = () => {
             </div>
           </div>
         ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
       </div>
     </section>
   );
 };
-<<<<<<< HEAD
 export default ContentStatistics;
-=======
-
-export default ContentStatistics;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d

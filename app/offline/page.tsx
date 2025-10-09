@@ -6,7 +6,7 @@ import Link from 'next/link';
  */
 export const metadata = {
   title: 'Offline - Zion Tech Group',
-  description: 'You are currently offline. Please check your internet connection.',
+  description: 'You are currently offline. Please check your internet connection.'
 };
 const OfflinePage: React.FC = () => {
   return (

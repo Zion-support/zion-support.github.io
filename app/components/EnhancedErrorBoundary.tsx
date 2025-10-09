@@ -58,7 +58,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
+      url: window.location.href
     };
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -112,7 +112,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href,
+      url: window.location.href
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
@@ -138,13 +138,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-=======
       const canRetry = retryCount < this.maxRetries;
-=======
-=======
-=======
       const canRetry = retryCount < this.maxRetries;
-=======
       const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">

@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { FileText, Eye, Zap, Brain, BarChart, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings, FileImage, Search } from 'lucide-react';
-
 const AIDocumentProcessingPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const AIDocumentProcessingPage: React.FC = () => {
       benefits: ['Review workflows', 'Approval processes', 'Team management']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -95,14 +93,12 @@ const AIDocumentProcessingPage: React.FC = () => {
       popular: false
     }
   ];
-
   const stats = [
     { number: '99.9%', label: 'Accuracy Rate' },
     { number: '90%', label: 'Time Savings' },
     { number: '50+', label: 'Document Types' },
     { number: '24/7', label: 'Processing' }
   ];
-
   const useCases = [
     {
       title: 'Invoice Processing',
@@ -125,7 +121,6 @@ const AIDocumentProcessingPage: React.FC = () => {
       icon: Shield
     }
   ];
-
   return (
     <>
       <SEOOptimizer
@@ -136,7 +131,6 @@ const AIDocumentProcessingPage: React.FC = () => {
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         <main className="pt-16">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16 text-center">
@@ -151,7 +145,6 @@ const AIDocumentProcessingPage: React.FC = () => {
                 Our AI-powered document processing platform automatically extracts, analyzes, and processes 
                 documents with advanced OCR and intelligent data extraction capabilities.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <a
                   href="tel:+13024640950"
@@ -169,7 +162,6 @@ const AIDocumentProcessingPage: React.FC = () => {
                   <span>Get Free Demo</span>
                 </a>
               </div>
-
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
                 {stats.map((stat, index) => (
@@ -183,7 +175,6 @@ const AIDocumentProcessingPage: React.FC = () => {
               </div>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -207,7 +198,6 @@ const AIDocumentProcessingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -223,7 +213,6 @@ const AIDocumentProcessingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* Pricing Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -274,7 +263,6 @@ const AIDocumentProcessingPage: React.FC = () => {
               ))}
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
@@ -304,11 +292,9 @@ const AIDocumentProcessingPage: React.FC = () => {
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     </>
   );
 };
-
 export default AIDocumentProcessingPage;

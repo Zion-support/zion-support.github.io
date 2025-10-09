@@ -23,7 +23,7 @@ export const validationRules = {
    */
   required: (message = 'This field is required'): ValidationRule<string> => ({
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
-    message,
+    message
   }),
   /**
    * Validate email format
@@ -33,21 +33,21 @@ export const validationRules = {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
     },
-    message,
+    message
   }),
   /**
    * Validate minimum length
    */
   minLength: (min: number, message?: string): ValidationRule<string> => ({
     validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`,
+    message: message || `Must be at least ${min} characters`
   }),
   /**
    * Validate maximum length
    */
   maxLength: (max: number, message?: string): ValidationRule<string> => ({
     validate: (value: string) => value.length <= max,
-    message: message || `Must be no more than ${max} characters`,
+    message: message || `Must be no more than ${max} characters`
   }),
   /**
    * Validate phone number (US format)
@@ -57,7 +57,7 @@ export const validationRules = {
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
-    message,
+    message
   }),
   /**
    * Validate URL format
@@ -71,28 +71,28 @@ export const validationRules = {
         return false;
       }
     },
-    message,
+    message
   }),
   /**
    * Validate number range
    */
   numberRange: (min: number, max: number, message?: string): ValidationRule<number> => ({
     validate: (value: number) => value >= min && value <= max,
-    message: message || `Must be between ${min} and ${max}`,
+    message: message || `Must be between ${min} and ${max}`
   }),
   /**
    * Validate pattern match
    */
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
     validate: (value: string) => regex.test(value),
-    message,
+    message
   }),
   /**
    * Validate custom condition
    */
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,
-    message,
+    message
   }),
   /**
    * Validate password strength
@@ -108,14 +108,14 @@ export const validationRules = {
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
-    message,
+    message
   }),
   /**
    * Validate matching fields (e.g., password confirmation)
    */
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`,
+    message: `Must match ${fieldName}`
   }),
   /**
    * Validate file size
@@ -125,15 +125,15 @@ export const validationRules = {
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;
     },
-    message: message || `File size must not exceed ${maxSizeInMB}MB`,
+    message: message || `File size must not exceed ${maxSizeInMB}MB`
   }),
   /**
    * Validate file type
    */
   fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
     validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`,
-  }),
+    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+  })
 };
 /**
  * Validate a single field with multiple rules
@@ -147,7 +147,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   }
   return {
     valid: errors.length === 0,
-    errors,
+    errors
   };
 }
 /**

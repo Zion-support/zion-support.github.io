@@ -30,7 +30,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical,
+  canonical
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
@@ -87,24 +87,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           image: image,
           author: {
             '@type': 'Organization',
-            name: author,
+            name: author
           },
           publisher: {
             '@type': 'Organization',
             name: 'Zion Tech Group',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://ziontechgroup.com/logo.png',
-            },
+              url: 'https://ziontechgroup.com/logo.png'
+            }
           },
           ...(type === 'article' && {
             datePublished: publishedTime,
             dateModified: modifiedTime || publishedTime,
             mainEntityOfPage: {
               '@type': 'WebPage',
-              '@id': url,
-            },
-          }),
+              '@id': url
+            }
+          })
         })}
       </script>
     </Helmet>

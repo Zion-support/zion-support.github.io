@@ -66,8 +66,8 @@ export class PerformanceMetrics {
                 category: 'load',
                 metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
-                  domInteractive: navEntry.domInteractive - navEntry.fetchStart,
-                },
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart
+                }
               });
             }
           }
@@ -84,7 +84,7 @@ export class PerformanceMetrics {
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-                category: 'load',
+                category: 'load'
               });
             }
           }
@@ -102,7 +102,7 @@ export class PerformanceMetrics {
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-              category: 'load',
+              category: 'load'
             });
           }
         });
@@ -121,7 +121,7 @@ export class PerformanceMetrics {
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-            category: 'runtime',
+            category: 'runtime'
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -157,8 +157,8 @@ export class PerformanceMetrics {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
-        domParsing: perfData.domComplete - perfData.domLoading,
-      },
+        domParsing: perfData.domComplete - perfData.domLoading
+      }
     });
   }
   /**
@@ -173,8 +173,8 @@ export class PerformanceMetrics {
       category: 'network',
       metadata: {
         url,
-        status,
-      },
+        status
+      }
     });
   }
   /**
@@ -193,8 +193,8 @@ export class PerformanceMetrics {
       metadata: {
         total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
-        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
-      },
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
+      }
     });
   }
   /**
@@ -209,7 +209,7 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime',
+      category: 'runtime'
     });
     return result;
   }
@@ -225,7 +225,7 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime',
+      category: 'runtime'
     });
     return result;
   }
@@ -320,9 +320,9 @@ export class PerformanceMetrics {
         avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
-        recommendations: this.getRecommendations(),
+        recommendations: this.getRecommendations()
       },
-      timestamp: new Date(),
+      timestamp: new Date()
     };
   }
   /**

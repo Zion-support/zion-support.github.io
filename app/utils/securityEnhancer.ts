@@ -131,7 +131,7 @@ class SecurityEnhancer {
     })
     observer.observe(document.body, {
       childList: true,
-      subtree: true,
+      subtree: true
     })
     this.eventListeners.push(() => observer.disconnect())
   }

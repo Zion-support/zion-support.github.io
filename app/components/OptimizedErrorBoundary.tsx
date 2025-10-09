@@ -24,20 +24,20 @@ class OptimizedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
+      errorId: ''
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -94,8 +94,8 @@ class OptimizedErrorBoundary extends Component<
         fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
-        },
+          component_stack: errorInfo.componentStack
+        }
       });
     }
   };
@@ -108,7 +108,7 @@ class OptimizedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: '',
+        errorId: ''
       });
     }, 100);
   };
