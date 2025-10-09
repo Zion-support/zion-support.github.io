@@ -94,7 +94,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Make announcements available globally
-    (window as any).announceToScreenReader = announceToScreenReader;
+    (window as Window & { announceToScreenReader?: (message: string) => void }).announceToScreenReader = announceToScreenReader;
 
     // Add keyboard shortcuts
     const handleKeyboardShortcuts = (e: KeyboardEvent) => {

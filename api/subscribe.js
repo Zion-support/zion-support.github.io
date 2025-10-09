@@ -4,33 +4,21 @@ const path = require('path');
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.status(405).json({ error: 'Method not allowed' });
     return;
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
   if (!email) {
-<<<<<<< HEAD
     res.status(400).json({ error: 'Email is required' });
     return;
-=======
-    return res.status(400).json({ error: 'Email is required' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   try {
     if (!isValidEmail(email)) {
-<<<<<<< HEAD
       res.status(400).json({ error: 'Invalid email' });
       return;
-=======
-      return res.status(400).json({ error: 'Invalid email format' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
     }
 
     const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');

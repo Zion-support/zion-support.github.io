@@ -124,7 +124,6 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium neon-glow">
@@ -362,38 +361,10 @@ const Navigation: React.FC = memo(() => {
                           </Link>
                         </div>
                       </div>
-=======
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
-            {Object.entries(navigation).map(([category, items]) => (
-              <div
-                key={category}
-                className="relative group"
-                onMouseEnter={() => setServicesOpen(category === 'Services')}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
-                  <span>{category}</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                
-                {servicesOpen && category === 'Services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
 
               <Link
                 to="/case-studies"
@@ -419,14 +390,6 @@ const Navigation: React.FC = memo(() => {
                 Contact
               </Link>
 
-=======
-            ))}
-          </div>
-
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
               <a
                 href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
@@ -435,8 +398,6 @@ const Navigation: React.FC = memo(() => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
-<<<<<<< HEAD
-=======
               <a
                 href="mailto:info@ziontechgroup.com"
                 className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -451,7 +412,6 @@ const Navigation: React.FC = memo(() => {
             >
               Get Quote
             </Link>
-          </div>
 
           {/* Mobile menu button */}
           <button
@@ -461,6 +421,7 @@ const Navigation: React.FC = memo(() => {
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+        </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -512,7 +473,6 @@ const Navigation: React.FC = memo(() => {
                   Get Quote
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
             </div>
           </div>
         )}
