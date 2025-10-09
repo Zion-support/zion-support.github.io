@@ -149,8 +149,12 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
+<<<<<<< HEAD
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
+=======
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text"
+>>>>>>> cursor/website-audit-and-update-with-deployment-11c2
             >
               Zion Tech Group
             </h1>
