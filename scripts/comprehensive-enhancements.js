@@ -206,7 +206,7 @@ export default EnhancedPerformanceMonitor;
 // function implementEnhancedSEO() {// console.log('🔍 Implementing enhanced SEO with advanced features...')}
   const enhancedSEOComponent = `
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 interface EnhancedSEOProps {title?: string;
   description?: string;
   keywords?: string;

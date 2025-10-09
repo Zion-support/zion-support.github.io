@@ -5,18 +5,18 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // Fallback component
-const _EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional
-const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
   )
 );
-const ContentPromotion = lazy(() =>
+
+const UnifiedBanner = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     return { default: EmptyComponent } as { default: React.ComponentType };
   })
 );
+
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     default: EmptyComponent

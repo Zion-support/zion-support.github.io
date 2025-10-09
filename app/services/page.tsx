@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Cpu, Shield, Cloud, Zap, Code, Settings, BarChart, MessageSquare, Eye, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Star, Users, Award, Lock, Database, Globe, Target, Search, FileText, Smartphone, Phone, Mail, MapPin, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
+;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

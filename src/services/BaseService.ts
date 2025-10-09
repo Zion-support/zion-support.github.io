@@ -34,9 +34,7 @@ export class BaseService {
    * Check if cached data is still valid
    */
   protected isCacheValid(key: string): boolean {
-    const _entry = this.cache.get(key);
     if (!entry) return false;
-    const _age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
   }
   /**
@@ -75,9 +73,7 @@ export class BaseService {
    * Make a GET request
    */
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-    const _cacheKey = `GET:${endpoint}`;
     if (useCache) {
-      const _cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
     }
     try {

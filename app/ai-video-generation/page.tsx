@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+;
+;
 
 const AIVideoGenerationPage: React.FC = () => {
   const features = [

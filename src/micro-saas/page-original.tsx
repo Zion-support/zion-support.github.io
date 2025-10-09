@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+;
+;
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools
@@ -1664,7 +1664,6 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-  const saasIdeas = [
     {
       title: 'AI Property Valuation Tool',
       description: 'Machine learning-powered property valuation with market analysis and investment insights.',
@@ -3369,7 +3368,6 @@ const MicroSAASPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-  const categories = [
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },

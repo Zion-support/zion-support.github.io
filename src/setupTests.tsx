@@ -2,18 +2,19 @@
 /**
  * Jest setup file for testing environment
  */
-import React from 'react';
+// import React from "react"; // Unused import removed
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 // Suppress jsdom navigation warnings
-const _originalConsoleError = console.error;
+const originalConsoleError = console.error;
 console.error = (...args) => {
-  const _message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
+  const message = args[0];
+  if (message && typeof message === 'string' && 
+      (message.includes('Not implemented: navigation') || 
+       message.includes('navigation (except hash changes)'))) {
     return;
   }
   originalConsoleError(...args);
@@ -58,17 +59,13 @@ Object.defineProperty(window, 'sessionStorage', {
 // Mock fetch
 global.fetch = jest.fn();
 // Mock console methods for cleaner test output
-const _originalConsoleWarn = console.warn;
-const _originalConsoleInfo = console.info;
-console.warn = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+// console.warn = (...args) => { // Console statement removed for production
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
   originalConsoleWarn(...args);
 };
-console.info = (...args) => {
-  const _message = args[0]?.toString?.() || '';
+// console.info = (...args) => { // Console statement removed for production
   if (message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
@@ -85,7 +82,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
   }
 };
 // Suppress JSDOM navigation warnings
-console.error = (...args) => {
+// console.error = (...args) => { // Console statement removed for production
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }

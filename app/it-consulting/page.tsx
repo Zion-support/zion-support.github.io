@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Users, Target, Zap, Shield, BarChart, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Phone, Mail, MapPin } from 'lucide-react';
+;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

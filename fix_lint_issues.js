@@ -31,7 +31,7 @@ function fixLintIssues(filePath) {
     
     // Fix 2: Remove unused Helmet imports
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {
-      content = content.replace(/import { Helmet } from 'react-helmet-async';\n?/g, '');
+      content = content.replace(/;\n?/g, '');
       modified = true;
     }
     

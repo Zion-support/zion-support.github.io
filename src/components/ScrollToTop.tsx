@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowUp } from 'lucide-react';
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

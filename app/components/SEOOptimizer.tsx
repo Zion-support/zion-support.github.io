@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+;
 
 interface SEOOptimizerProps {
   title: string;

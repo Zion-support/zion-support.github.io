@@ -1,7 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-// import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';
+// ;
+;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

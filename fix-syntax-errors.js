@@ -52,7 +52,7 @@ function fixSyntaxErrors(filePath) {
     // Fix Helmet import issues
     content = content.replace(
       /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g,
-      "import { Helmet } from 'react-helmet-async';"
+      ";"
     );
 
     // Fix Router import issues
@@ -103,9 +103,6 @@ async function main() {
       }
     }
   }
-
-
-
 
   if (fixedFiles > 0) {
 

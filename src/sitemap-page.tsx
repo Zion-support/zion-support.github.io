@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+;
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },

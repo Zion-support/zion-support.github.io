@@ -1,6 +1,6 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import React from 'react';
+;
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

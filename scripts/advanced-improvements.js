@@ -139,7 +139,7 @@ export default AdvancedPerformanceMonitor;
 // function implementAdvancedSEO() {// console.log('🔍 Implementing advanced SEO enhancements...')}
   const advancedSEOComponent = `
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+
 interface AdvancedSEOProps {title?: string;
   description?: string;
   keywords?: string;

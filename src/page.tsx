@@ -1,40 +1,6 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { 
-  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, 
-  BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, 
-  Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, 
-  Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, 
-  Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, 
-  GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, 
-  Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, 
-  Activity, Atom, Rocket, Microscope, Layers, Server, Network, HardDrive, 
-  Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, 
-  Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, 
-  Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, 
-  Documentation, Testing, Quality, Performance, Scalability, Reliability, 
-  Availability, Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, 
-  API, SDK, Framework, Library, Tool, Platform, Service, Solution, Product, 
-  Technology, Innovation, Digital, Transformation, Automation, Optimization, 
-  Efficiency, Productivity, Growth, Success, Future, Next, Generation, Advanced, 
-  Cutting, Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, 
-  Disruptive, Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, 
-  Network, Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, 
-  Computing, Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, 
-  NFT, Metaverse, AR, VR, IoT, Cybersecurity, Privacy, GDPR, Compliance, 
-  Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, 
-  Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, 
-  DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, 
-  AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, 
-  Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, 
-  Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, 
-  NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, 
-  Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, 
-  SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, 
-  ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, 
-  Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, 
-  MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink 
-} from 'lucide-react';
+;
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -45,11 +11,6 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
 const preloadComponents = () => {

@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+;
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -52,7 +52,7 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-  
+
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
