@@ -5,7 +5,8 @@
  */
 export interface ValidationResult {
   isValid: boolean;
-  errors: string[];
+  errors?: string[];
+  error?: string;
 }
 /**
  * Email validation regex pattern
@@ -252,4 +253,183 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   }
   
   return sanitized || null;
+}
+
+// Additional validation functions for tests
+
+/**
+ * Validate email with detailed result
+ */
+export function validateEmail(email: string): ValidationResult {
+  if (!email) {
+    return { isValid: false, error: 'Email is required' };
+  }
+  if (email.length > 254) {
+    return { isValid: false, error: 'Email is too long' };
+  }
+  if (!isValidEmail(email)) {
+    return { isValid: false, error: 'Invalid email format' };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Validate URL with detailed result
+ */
+export function validateURL(url: string): ValidationResult {
+  if (!url) {
+    return { isValid: false, error: 'URL is required' };
+  }
+  if (!isValidUrl(url)) {
+    return { isValid: false, error: 'Invalid URL format' };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Validate string length with detailed result
+ */
+export function validateLength(value: string, min: number, max: number, fieldName = 'Field'): ValidationResult {
+  if (!value) {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  if (value.length < min) {
+    return { isValid: false, error: `${fieldName} must be at least ${min} characters` };
+  }
+  if (value.length > max) {
+    return { isValid: false, error: `${fieldName} must be no more than ${max} characters` };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Validate password with detailed result
+ */
+export function validatePassword(password: string): ValidationResult {
+  if (!password) {
+    return { isValid: false, error: 'Password is required' };
+  }
+  if (password.length < 8) {
+    return { isValid: false, error: 'Password must be at least 8 characters' };
+  }
+  if (password.length > 128) {
+    return { isValid: false, error: 'Password is too long' };
+  }
+  if (!isValidPassword(password)) {
+    return { isValid: false, error: 'Password must contain uppercase, lowercase, number, and special character' };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Sanitize HTML with detailed result
+ */
+export function sanitizeHTML(html: string | null | undefined): string {
+  if (!html) return '';
+  return html
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/\//g, '&#x2F;');
+}
+
+/**
+ * Validate date format
+ */
+export function validateDate(dateString: string): ValidationResult {
+  if (!dateString) {
+    return { isValid: false, error: 'Date is required' };
+  }
+  // Check if it's a valid ISO date format
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dateString)) {
+    return { isValid: false, error: 'Date must be in YYYY-MM-DD format' };
+  }
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+    return { isValid: false, error: 'Invalid date format' };
+  }
+  // Check if the date is actually valid (e.g., 2025-02-30 should be invalid)
+  const [year, month, day] = dateString.split('-').map(Number);
+  const actualDate = new Date(year, month - 1, day);
+  if (actualDate.getFullYear() !== year || actualDate.getMonth() !== month - 1 || actualDate.getDate() !== day) {
+    return { isValid: false, error: 'Invalid date' };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Validate credit card with detailed result
+ */
+export function validateCreditCard(cardNumber: string): ValidationResult {
+  if (!cardNumber) {
+    return { isValid: false, error: 'Credit card number is required' };
+  }
+  const cleaned = cardNumber.replace(/[\s-]/g, '');
+  if (!/^\d{13,19}$/.test(cleaned)) {
+    return { isValid: false, error: 'Invalid credit card number format' };
+  }
+  if (!isValidCreditCard(cleaned)) {
+    return { isValid: false, error: 'Invalid credit card number' };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Validate JSON string
+ */
+export function validateJSON(jsonString: string): ValidationResult {
+  if (!jsonString) {
+    return { isValid: false, error: 'JSON string is required' };
+  }
+  try {
+    JSON.parse(jsonString);
+    return { isValid: true };
+  } catch {
+    return { isValid: false, error: 'Invalid JSON format' };
+  }
+}
+
+/**
+ * Validate required field with detailed result
+ */
+export function validateRequired(value: unknown, fieldName = 'Field'): ValidationResult {
+  if (value === null || value === undefined || value === '') {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  if (typeof value === 'string' && value.trim().length === 0) {
+    return { isValid: false, error: `${fieldName} is required` };
+  }
+  return { isValid: true };
+}
+
+/**
+ * Composite validation
+ */
+export function validateComposite(value: unknown, validators: Array<(val: unknown) => ValidationResult>): ValidationResult {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) {
+      return result;
+    }
+  }
+  return { isValid: true };
+}
+
+/**
+ * Async validation
+ */
+export async function validateAsync(
+  validator: (value: unknown) => Promise<ValidationResult>,
+  value: unknown
+): Promise<ValidationResult> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return { 
+      isValid: false, 
+      error: error instanceof Error ? error.message : 'Validation failed' 
+    };
+  }
 }

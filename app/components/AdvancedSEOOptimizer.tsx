@@ -120,7 +120,45 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
 
-    const faqData = {
+    return {
+      'twitter:card': seoData.twitterCard || 'summary_large_image',
+      'twitter:title': seoData.twitterTitle || seoData.title,
+      'twitter:description': seoData.twitterDescription || seoData.description,
+      'twitter:image': seoData.twitterImage || '/twitter-image.jpg',
+      'twitter:site': '@ZionTechGroup',
+      'twitter:creator': '@ZionTechGroup',
+    };
+  }, [seoData, enableTwitterCards]);
+
+  // Generate breadcrumb structured data
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableSchemaMarkup) return null;
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: seoData.canonicalUrl?.split('/').slice(0, -1).join('/') || 'https://ziontechgroup.com',
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: seoData.title,
+          item: seoData.canonicalUrl,
+        },
+      ],
+    };
+  }, [seoData, enableSchemaMarkup]);
+
+  // Generate FAQ structured data
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableSchemaMarkup) return null;
+
+    return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -150,7 +188,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         },
       ],
     };
-  }, [seoData, enableTwitterCards]);
+  }, [seoData, enableSchemaMarkup]);
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
@@ -170,6 +208,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -205,9 +246,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
