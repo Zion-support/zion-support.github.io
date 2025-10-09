@@ -415,6 +415,54 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .cyber-grid {
+    background-size: 40px 40px;
+  }
+  
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .cyber-card {
+    padding: 1.25rem;
+  }
+  
+  .cyber-button {
+    padding: 11px 22px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cyber-grid {
+    background-size: 35px 35px;
+  }
+  
+  .neon-text {
+    font-size: 1.8rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .cyber-card {
+    padding: 1.1rem;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .cyber-grid {
     background-size: 25px 25px;
@@ -437,11 +485,55 @@ body {
     padding: 10px 20px;
     font-size: 0.9rem;
   }
+  
+  /* Improve grid layouts for mobile */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1.3rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.1rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .cyber-card {
+    padding: 0.9rem;
+  }
+  
+  .cyber-button {
+    padding: 9px 18px;
+    font-size: 0.85rem;
+  }
+  
+  /* Single column layout for very small screens */
+  .grid-cols-4,
+  .grid-cols-3,
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
-    background-size: 20px 20px;
+    background-size: 15px 15px;
   }
   
   .neon-text {
@@ -460,6 +552,72 @@ body {
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
+  }
+  
+  /* Ensure text doesn't overflow */
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .cyber-grid {
+    background-size: 12px 12px;
+  }
+  
+  .neon-text {
+    font-size: 1.1rem;
+  }
+  
+  .cyber-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .cyber-card {
+    padding: 0.6rem;
+  }
+  
+  .cyber-button {
+    padding: 7px 14px;
+    font-size: 0.75rem;
+  }
+  
+  /* Further reduce text sizes for very small screens */
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-xl {
+    font-size: 1rem;
   }
 }
 
