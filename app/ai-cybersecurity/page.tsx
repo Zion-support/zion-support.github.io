@@ -3,93 +3,96 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
 
-const AISalesAutomationPage: React.FC = () => {
+const AICybersecurityPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring using machine learning to identify high-value prospects and prioritize sales efforts.',
-      benefits: ['95% accuracy', 'Real-time scoring', 'Behavioral analysis']
-    },
-    {
-      icon: Target,
-      title: 'Automated Outreach',
-      description: 'AI-powered email sequences, follow-ups, and personalized messaging that converts prospects into customers.',
-      benefits: ['3x higher open rates', 'Personalized content', 'Perfect timing']
-    },
-    {
-      icon: Users,
-      title: 'CRM Integration',
-      description: 'Seamless integration with popular CRMs like Salesforce, HubSpot, and Pipedrive for unified sales management.',
-      benefits: ['One-click sync', 'Real-time updates', 'Unified pipeline']
-    },
-    {
-      icon: BarChart,
-      title: 'Sales Analytics',
-      description: 'Advanced analytics and reporting to track performance, identify trends, and optimize sales strategies.',
-      benefits: ['Real-time insights', 'Predictive analytics', 'ROI tracking']
-    },
-    {
-      icon: Zap,
-      title: 'Workflow Automation',
-      description: 'Automate repetitive sales tasks, follow-ups, and administrative work to focus on closing deals.',
-      benefits: ['80% time savings', 'Consistent processes', 'Error reduction']
+      title: 'AI Threat Detection',
+      description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time, including zero-day attacks and advanced persistent threats.',
+      benefits: ['Real-time detection', 'Zero-day protection', '99.9% accuracy']
     },
     {
       icon: Shield,
-      title: 'Compliance & Security',
-      description: 'Built-in compliance with GDPR, CAN-SPAM, and other regulations to protect your business and customers.',
-      benefits: ['Legal compliance', 'Data protection', 'Audit trails']
+      title: 'Automated Response',
+      description: 'Intelligent automated response system that instantly contains threats, isolates affected systems, and initiates recovery procedures.',
+      benefits: ['Instant containment', 'Auto-recovery', 'Minimal downtime']
+    },
+    {
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: '24/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.',
+      benefits: ['24/7 surveillance', 'Behavioral analysis', 'Anomaly detection']
+    },
+    {
+      icon: BarChart,
+      title: 'Security Analytics',
+      description: 'Comprehensive security analytics and reporting with threat intelligence, risk assessment, and compliance monitoring.',
+      benefits: ['Threat intelligence', 'Risk scoring', 'Compliance reports']
+    },
+    {
+      icon: Zap,
+      title: 'Vulnerability Management',
+      description: 'Automated vulnerability scanning, prioritization, and patching with AI-powered risk assessment and remediation guidance.',
+      benefits: ['Auto-scanning', 'Risk prioritization', 'Patch management']
+    },
+    {
+      icon: Lock,
+      title: 'Zero Trust Architecture',
+      description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
+      benefits: ['Identity verification', 'Device trust', 'Least privilege']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299',
+      name: 'Essential',
+      price: '$799',
       period: '/month',
-      description: 'Perfect for small sales teams',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 leads/month',
-        'Basic AI lead scoring',
-        'Email automation',
-        'CRM integration',
-        'Standard analytics',
-        'Email support'
+        'Up to 50 endpoints',
+        'Basic threat detection',
+        'Email security',
+        '24/7 monitoring',
+        'Email support',
+        'Basic reporting',
+        'Standard compliance'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$1,999',
       period: '/month',
-      description: 'Ideal for growing sales teams',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 leads/month',
-        'Advanced AI algorithms',
-        'Multi-channel automation',
-        'Advanced CRM features',
-        'Custom reporting',
+        'Up to 500 endpoints',
+        'Advanced AI detection',
+        'All security modules',
+        'Real-time response',
         'Priority support',
-        'A/B testing'
+        'Advanced analytics',
+        'Custom compliance',
+        'Incident response'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$4,999',
       period: '/month',
-      description: 'For large sales organizations',
+      description: 'For large organizations',
       features: [
-        'Unlimited leads',
+        'Unlimited endpoints',
         'Custom AI models',
-        'All channels + voice',
-        'Custom integrations',
-        'Real-time dashboard',
-        'Dedicated account manager',
+        'Full security suite',
+        'Dedicated SOC team',
+        'Dedicated support',
         'Custom development',
+        'Advanced compliance',
+        'Penetration testing',
         'SLA guarantee'
       ],
       popular: false
@@ -97,42 +100,42 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const stats = [
-    { number: '300%', label: 'Increase in Sales' },
-    { number: '80%', label: 'Time Savings' },
-    { number: '95%', label: 'Lead Accuracy' },
-    { number: '50+', label: 'CRM Integrations' }
+    { number: '99.9%', label: 'Threat Detection' },
+    { number: '24/7', label: 'Monitoring' },
+    { number: '60%', label: 'Faster Response' },
+    { number: '100%', label: 'Compliance' }
   ];
 
-  const useCases = [
+  const threats = [
     {
-      title: 'B2B Lead Generation',
-      description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
-      icon: Building
+      title: 'Ransomware Protection',
+      description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
+      icon: Shield
     },
     {
-      title: 'E-commerce Upselling',
-      description: 'Intelligent product recommendations and automated follow-up sequences to increase average order value and customer lifetime value.',
-      icon: ShoppingCart
+      title: 'Phishing Detection',
+      description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.',
+      icon: Eye
     },
     {
-      title: 'SaaS Trial Conversion',
-      description: 'Automated onboarding sequences and personalized engagement to convert free trial users into paying customers.',
-      icon: Cloud
+      title: 'Insider Threat Detection',
+      description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.',
+      icon: Users
     },
     {
-      title: 'Real Estate Lead Nurturing',
-      description: 'AI-powered lead nurturing for real estate agents with automated follow-ups, market updates, and personalized property recommendations.',
-      icon: Home
+      title: 'Network Security',
+      description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
+      icon: Globe
     }
   ];
 
   return (
     <>
       <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+        title="AI Cybersecurity Solutions - Zion Tech Group"
+        description="Advanced AI-powered cybersecurity with 99.9% threat detection, 24/7 monitoring, and automated response. Protect your business from evolving cyber threats."
+        keywords={['AI cybersecurity', 'threat detection', 'security monitoring', 'cyber protection', 'AI security']}
+        canonicalUrl="https://ziontechgroup.com/ai-cybersecurity"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -142,14 +145,14 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
+                AI Cybersecurity Solutions
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
+                Protect your business with AI-powered security
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
+                Our AI-powered cybersecurity platform provides advanced threat detection, 
+                automated response, and 24/7 monitoring to protect your business from evolving cyber threats.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -166,7 +169,7 @@ const AISalesAutomationPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
+                  <span>Get Security Audit</span>
                 </a>
               </div>
 
@@ -187,7 +190,7 @@ const AISalesAutomationPage: React.FC = () => {
           {/* Features Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Powerful Sales Automation Features
+              Advanced Security Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -208,17 +211,17 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
+          {/* Threats Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Perfect for Every Industry
+              Protect Against All Threats
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+              {threats.map((threat, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
+                  <threat.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
+                  <p className="text-gray-300">{threat.description}</p>
                 </div>
               ))}
             </div>
@@ -268,7 +271,7 @@ const AISalesAutomationPage: React.FC = () => {
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
                   >
-                    Get Started
+                    Get Protected
                   </a>
                 </div>
               ))}
@@ -279,10 +282,10 @@ const AISalesAutomationPage: React.FC = () => {
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to 3x Your Sales Performance?
+                Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 1,000+ sales teams already using our AI automation platform
+                Join 3,000+ companies already protected by our AI cybersecurity platform
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -298,7 +301,7 @@ const AISalesAutomationPage: React.FC = () => {
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
                 >
                   <Mail className="w-5 h-5" />
-                  <span>Schedule Demo</span>
+                  <span>Get Security Audit</span>
                 </a>
               </div>
             </div>
@@ -311,4 +314,4 @@ const AISalesAutomationPage: React.FC = () => {
   );
 };
 
-export default AISalesAutomationPage;
+export default AICybersecurityPage;
