@@ -1,8 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target,  Calendar,  Users,  Zap,  Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
-const AISchedulerPage: React.FC = () => {
+const,
+  AISchedulerPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
@@ -97,9 +97,9 @@ const AISchedulerPage: React.FC = () => {
           
           
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
+            <a href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500,
+  hover:to-purple-600 transition-all duration-300 flex items-center"
 // >
               
           
@@ -113,9 +113,9 @@ const AISchedulerPage: React.FC = () => {
           <Phone className="w-5 h-5 mr-2" />,
  Call: (302) 464-0950
             </a>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+            <Link href="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white,
+  hover:text-indigo-600 transition-all duration-300"
 Start Free Trial
             </Link>
         {/* Key Benefits */}
@@ -147,7 +147,8 @@ Start Free Trial
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -205,8 +206,11 @@ Most Popular
                     </li>
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500,
+  hover:to-purple-600'
+                    : 'border-2 border-cyan-400 text-cyan-400,
+  hover:bg-cyan-400,
+  hover:text-white'
                   Get Started
                 </button>
         {/* Testimonials */}
@@ -230,32 +234,7 @@ Most Popular
             Ready to Master Your Schedule?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches
-            and maximize productivity.
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+            and maximize productivity.  );
 };
 
 export default PagePage;

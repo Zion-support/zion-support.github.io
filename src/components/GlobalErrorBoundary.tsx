@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -27,25 +26,7 @@ class GlobalErrorBoundary extends Component
 }
   constructor(props: Props) {
   // TODO: Add content
-}
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    super(props);
+}    super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
 
@@ -59,7 +40,6 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       if (this.props.fallback) {
@@ -137,9 +117,9 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
             )}
             {/* Action Buttons */}
             <div className="space-y-3">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
+              <button onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600,
+  hover:to-purple-700 transition-all duration-300 font-medium"
 // >
 //                 Try Again
               
@@ -154,7 +134,8 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
           </button>
               <button
                 onClick={() => window.location.reload()}
-                className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
+                className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg,
+  hover:bg-slate-600 transition-colors duration-300 font-medium"
 // >
 //                 Refresh Page
               
@@ -167,9 +148,9 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
           
           
           </button>
-              <a
-                href="/"
-                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
+              <a href="/"
+                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800,
+  hover:text-white transition-all duration-300 font-medium"
 // >
 //                 Go Home
               
@@ -186,10 +167,10 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
             {/* Contact Information */}
             <div className="mt-8 pt-6 border-t border-gray-700">
               <p className="text-sm text-gray-400 mb-2">
-                Need help? Contact our support team:
+                Need help? Contact our support,
+  team:
               </p>
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="text-cyan-400 hover:text-cyan-300 font-medium"
 // >
 //                 (302) 464-0950
@@ -203,15 +184,7 @@ class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySta
           
           
           </a>
-            </div>
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-          </div>
+            </div>          </div>
         </div>
       );
     }

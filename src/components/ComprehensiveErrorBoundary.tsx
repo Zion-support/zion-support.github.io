@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import ModernLoadingSpinner from './ModernLoadingSpinner';
 interface Props {
   // TODO: Add content
@@ -33,28 +32,14 @@ class ComprehensiveErrorBoundary extends Component
           <Props, State> {
   // TODO: Add content
 }
-  private maxRetries: number;
+  private,
+  maxRetries: number;
   constructor(props: Props) {
-  // TODO: Add content
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
+  // TODO: Add content}
 
 class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
@@ -85,20 +70,11 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
       isRetrying: false
-    };
-=======
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  }
+    };  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
   }
-<<<<<<< HEAD
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
 // Enhanced error reporting,
  message: error.message,
@@ -166,13 +142,8 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   // TODO: Add content
 }
     window.location.reload();
-  };
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  render() {
+  };  render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       if (this.props.fallback) {
@@ -242,15 +213,18 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
           
           </p>
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
-              <h3 className="text-white font-semibold mb-2">Error Details:</h3>
+              <h3 className="text-white font-semibold mb-2">Error,
+  Details:</h3>
               <p className="text-sm text-gray-300 mb-2">
-                <strong>Error ID:</strong> {this.state.errorId}
+                <strong>Error,
+  ID:</strong> {this.state.errorId}
               </p>
               <p className="text-sm text-gray-300 mb-2">
                 <strong>Message:</strong> {this.state.error?.message || 'Unknown error'}
               </p>
               <p className="text-sm text-gray-300">
-                <strong>Retry Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
+                <strong>Retry,
+  Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -325,15 +299,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
                   {this.state.error.stack}
                 </pre>
               </details>
-            )}
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-          </div>
+            )}          </div>
         </div>
       );
     }

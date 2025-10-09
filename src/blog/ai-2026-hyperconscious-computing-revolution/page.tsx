@@ -2,9 +2,9 @@ import React from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const PagePage: React.FC = () => {
+const,
+  PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
 
           
           
@@ -40,29 +40,12 @@ const PagePage: React.FC = () => {
               Join the Hyperconscious Revolution
             </h2><p className="text-gray-300 mb-6">
               Experience the AI 2026 hyperconscious computing revolution.
-            </p><button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+            </p><button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600,
+  hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform,
+  hover:-translate-y-1,
+  hover:shadow-2xl">
               Get Started Today
-            </button></div></div></div></div>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+            </button></div></div></div></div>  );
 };
 
 export default PagePage;

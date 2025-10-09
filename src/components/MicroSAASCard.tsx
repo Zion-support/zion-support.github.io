@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface MicroSAASCardProps {
-<<<<<<< HEAD
   // TODO: Add content
 }
   service: {
@@ -21,7 +20,8 @@ interface MicroSAASCardProps {
     popular?: boolean;
   };
 }
-const MicroSAASCard: React.FC
+const,
+  MicroSAASCard: React.FC
           
           
           
@@ -31,15 +31,11 @@ const MicroSAASCard: React.FC
           
           
           <MicroSAASCardProps> = ({ service }) => {
-  // TODO: Add content
-=======
-  // Add props here
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
+  // TODO: Add content}
 
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
+const,
+  MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-<<<<<<< HEAD
     
           
           
@@ -86,7 +82,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
       </div>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+          <h4 className="text-sm font-semibold text-white mb-2">Key,
+  Features:</h4>
           <ul className="space-y-1">
             {service.features.slice(0, 4).map((feature, index) => ()
               
@@ -121,9 +118,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           </div>
         </div>
         <div className="pt-4">
-          <a
-            href={service.link || 'mailto:kleber@ziontechgroup.com'}
-            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
+          <a href={service.link || 'mailto:kleber@ziontechgroup.com'}
+            className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600,
+  hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
 //             Get Started
             
@@ -139,12 +136,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
-      </div>
-=======
-    <div className="microsaascard">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    </div>
+      </div>    </div>
   );
 };
 

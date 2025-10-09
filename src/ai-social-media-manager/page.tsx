@@ -1,7 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';
-const AISocialMediaManagerPage: React.FC = () => {
+const,
+  AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
@@ -50,8 +50,7 @@ icon: TrendingUp,
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items];
 //         '3 social media accounts',
 //         '50 posts per month',
 //         'Basic AI content generation',
@@ -63,8 +62,12 @@ icon: TrendingUp,
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing brands',
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                    : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white,
+  hover:from-pink-600,
+  hover:to-purple-700'
+                    : 'border-2 border-slate-600 text-white,
+  hover:border-pink-400,
+  hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
       {/* CTA Section */}
       
@@ -82,32 +85,7 @@ icon: TrendingUp,
 Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
-              Contact Sales
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+              Contact Sales  );
 };
 
 export default PagePage;

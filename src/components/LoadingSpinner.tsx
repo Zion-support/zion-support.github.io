@@ -3,13 +3,13 @@ import React from 'react';
 interface LoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
   fullScreen?: boolean;
 }
-const LoadingSpinner: React.FC
+const,
+  LoadingSpinner: React.FC
           
           
           
@@ -24,13 +24,11 @@ const LoadingSpinner: React.FC
   size = 'md',
 //   className,
   text = 'Loading...',
-  fullScreen = false,
-}) => {
+  fullScreen = false}) => {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
-  };
+    xl: 'w-16 h-16'};
   const spinner = ()
     
           
@@ -41,7 +39,7 @@ const LoadingSpinner: React.FC
           
           
           
-          <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+          <div className={cn('flex flex-col items-center justify-center gap-3' className)}>
       <div;
 className={cn()
 // 'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
@@ -86,16 +84,6 @@ className={cn()
       </div>
     );
   }
-  return spinner;
-=======
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = () => {
-  return (
-    <div className="loadingspinner">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-};
+  return spinner;};
 
 export default LoadingSpinner;

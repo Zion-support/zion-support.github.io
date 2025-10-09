@@ -3,12 +3,12 @@ import React from 'react';
 interface OptimizedLoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
 }
-const OptimizedLoadingSpinner: React.FC
+const,
+  OptimizedLoadingSpinner: React.FC
           
           
           
@@ -107,16 +107,4 @@ className="opacity-75"
     );
   }
 );
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-=======
-
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = () => {
-  return (
-    <div className="optimizedloadingspinner">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-export default OptimizedLoadingSpinner;
+OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;

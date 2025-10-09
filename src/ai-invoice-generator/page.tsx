@@ -1,11 +1,11 @@
-<<<<<<< HEAD
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
 'use client';
 import React, { memo } from 'react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
+const,
+  AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
   // TODO: Add content
@@ -54,9 +54,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
   )
     
           <>
-      <SEOOptimizer
-        title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
-        description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
+      <SEOOptimizer title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
+        description="Generate professional invoices instantly with AI-powered automation. Save time reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https:// ziontechgroup.com/ai-invoice-generator"
 //       />
@@ -108,9 +107,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a
-                  href="#pricing"
-                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
+                <a href="#pricing"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600,
+  hover:to-pink-600 transition-all duration-300 inline-flex items-center"
 // >
                   
           
@@ -134,7 +133,9 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           
           </a>
                   href="#demo"
-                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 inline-flex items-center"
+                  className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
+  hover:bg-purple-400,
+  hover:text-white transition-all duration-300 inline-flex items-center"
 <Eye className="w-5 h-5 mr-2" />
                   Watch Demo
               {/* Key Stats */}
@@ -166,7 +167,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 Our AI invoice generator combines cutting-edge technology with user-friendly design
                   to revolutionize your billing process.
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => ()
                   
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -188,7 +190,8 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
                   Perfect for Every Business
 Whether you're a freelancer or a large enterprise, our AI invoice generator
                   adapts to your specific needs and industry requirements.
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
                 {useCases.map((useCase, index) => ()
                   
           <div key={index} className="text-center group">
@@ -240,8 +243,10 @@ Most Popular
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600,
+  hover:to-pink-600'
+                        : 'bg-slate-700 text-white,
+  hover:bg-slate-600'
                       Get Started
                     </button>
           {/* Testimonials Section */}
@@ -277,33 +282,7 @@ Most Popular
                   (302) 464-0950
         </main>
         <Footer />
-    </>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+    </>  );
 };
 
 export default PagePage;

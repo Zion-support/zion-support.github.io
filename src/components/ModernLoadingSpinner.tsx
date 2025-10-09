@@ -3,13 +3,13 @@ import React from 'react';
 interface ModernLoadingSpinnerProps {
   // Add props here
 }
-<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
   fullScreen?: boolean;
 }
-const ModernLoadingSpinner: React.FC
+const,
+  ModernLoadingSpinner: React.FC
           
           
           
@@ -73,15 +73,7 @@ const ModernLoadingSpinner: React.FC
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
-      <span className="sr-only">Loading content, please wait...</span>
-=======
-
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = () => {
-  return (
-    <div className="modernloadingspinner">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    </div>
+      <span className="sr-only">Loading content, please wait...</span>    </div>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
-const IoTEdgePage: React.FC = () => {
+const,
+  IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
   // TODO: Add content
@@ -95,7 +95,8 @@ title: 'IoT Data Management',
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6,
+  lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
 // IoT & Edge Computing Services
@@ -134,13 +135,15 @@ title: 'IoT Data Management',
           
           
           </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white,
+  hover:text-cyan-600 transition-colors">
 Schedule Demo
               </div>
         </section>
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6,
+  lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Our IoT & Edge Services?
@@ -156,7 +159,8 @@ Schedule Demo
           </h2>
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">IoT Experts</h3>
@@ -179,7 +183,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
           <section key={category} className="py-16 bg-gray-50">
                   {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
                 {iotServices
                   .filter(service => service.category === category)
                   .map((service, index) => ()
@@ -194,7 +199,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         <div className="text-sm text-green-600 font-semibold">
 Save up to 40% vs market rates
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Key,
+  Features:</h4>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => ()
                             
@@ -212,7 +218,8 @@ Save up to 40% vs market rates
                               {tech}
                             </span>
                       <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
+                        <h4 className="font-semibold text-gray-900 mb-2">Business,
+  Benefits:</h4>
                           {service.benefits.map((benefit, benefitIndex) => ()
                             
           <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
@@ -249,13 +256,13 @@ Save up to 40% vs market rates
                 <p className="text-gray-600">Comprehensive smart city infrastructure and services</p>
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6,
+  lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
 Ready to Connect Your World?
             <p className="text-xl mb-8 text-cyan-100">
               Contact our IoT experts for a free consultation and custom connected solution strategy
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
 // >
 //                  +1 302 464 0950
@@ -270,35 +277,12 @@ Ready to Connect Your World?
           
           </a>
 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+  hover:bg-white,
+  hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com
             <div className="mt-8 text-sm text-cyan-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>  );
 };
 
 export default PagePage;

@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const GreenITPage: React.FC = () => {
+const,
+  GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -30,8 +30,7 @@ const tabs = [
       description: 'Design and implement energy-efficient data centers with renewable energy integration',
       icon: Zap,
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items];
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -88,9 +87,7 @@ const tabs = [
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
-  const benefits = [,
-
-      icon: TrendingUp,
+  const benefits = [icon: TrendingUp,
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
@@ -118,7 +115,8 @@ const tabs = [
         'Investor confidence boost',
         'Talent attraction and retention'
   const certifications = [
-      name: 'ISO 14001:2015',
+      name: 'ISO,
+  14001:2015',
       description: 'Environmental Management Systems',
       status: 'Certified',
 
@@ -144,9 +142,7 @@ const tabs = [
       value: '100%',
       label: 'Renewable Energy Options',
       color: 'text-purple-400'
-  const caseStudies = [,
-
-      company: 'TechCorp Manufacturing',
+  const caseStudies = [company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
@@ -224,7 +220,7 @@ const tabs = [
             {stats.map((stat, index) => ()
               
           <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                <div className={`w-16 h-16 ${stat.color.replace('text-' 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
@@ -242,7 +238,8 @@ const tabs = [
 }
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
+                      : 'bg-slate-800/50 text-gray-300,
+  hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
                   
@@ -273,7 +270,8 @@ const tabs = [
           
           
           </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => ()
                   
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
@@ -284,7 +282,8 @@ const tabs = [
                         <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
                         <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+  Features:</h4>
                       <ul className="space-y-1">
                         {solution.features.map((feature, featureIndex) => ()
                           
@@ -293,13 +292,13 @@ const tabs = [
                             {feature}
                           </li>
                       </ul>
-<div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
+<div className="text-sm font-semibold text-green-400 mb-1">Environmental,
+  Impact:</div>
                       <div className="text-sm text-gray-300">{solution.impact}</div>
                     <div className="flex items-center justify-between">
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
-                      <a
-                        href="/contact"
+                      <a href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
@@ -323,11 +322,12 @@ Benefits of Green IT
                           {detail}
 {activeTab === 'certifications' && (
                 Our Certifications
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-6">
                 {certifications.map((cert, index) => ()
                   
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
-                    <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                    <div className={`w-16 h-16 ${cert.color.replace('text-' 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
                     <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
@@ -365,40 +365,21 @@ Benefits of Green IT
           
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300,
+  hover:scale-105"
 Get Free Assessment
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold,
+  hover:bg-cyan-400,
+  hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold,
+  hover:bg-green-400,
+  hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      <Footer />
+                Email Us      <Footer />
     </div>
   );
 };

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-const InteractiveAIROICalculator: React.FC = () => {
+const,
+  InteractiveAIROICalculator: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -68,7 +68,10 @@ const InteractiveAIROICalculator: React.FC = () => {
 type='number'
                   value={currentCost}
                   onChange={e => setCurrentCost(Number(e.target.value))}
-                  className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                  className='w-full px-4 py-2 border border-gray-300 rounded-lg,
+  focus:ring-2,
+  focus:ring-blue-500,
+  focus:border-transparent'
 // />
               
           
@@ -118,21 +121,7 @@ Expected Efficiency Gain (%)
                 <p className='text-gray-600 text-sm'>
                   Expected return on investment over {timeframe} months
                 </p>
-    </section>
-=======
-import React from 'react';
-
-interface InteractiveAIROICalculatorProps {
-  // Add props here
-}
-
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = () => {
-  return (
-    <div className="interactiveairoicalculator">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+    </section>  );
 };
 
 export default InteractiveAIROICalculator;

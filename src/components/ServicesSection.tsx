@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 'use client';
 // Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => ()
+const,
+  ServiceCardSkeleton: React.FC = memo(() => ()
   
           
           
@@ -17,21 +17,4 @@ const ServiceCardSkeleton: React.FC = memo(() => ()
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-=======
-import React from 'react';
-
-interface ServicesSectionProps {
-  // Add props here
-}
-
-const ServicesSection: React.FC<ServicesSectionProps> = () => {
-  return (
-    <div className="servicessection">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-export default ServicesSection;
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';export default ServicesSection;

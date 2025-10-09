@@ -1,7 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {  Zap,  Brain,  Cloud } from 'lucide-react';
-const PricingPage: React.FC = () => {
+const,
+  PricingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -20,8 +20,7 @@ const PricingPage: React.FC = () => {
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Basic AI Analytics',
 //         'Email Support',
 //         '5 AI Models',
@@ -41,8 +40,7 @@ const PricingPage: React.FC = () => {
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Advanced AI Analytics',
 //         'Priority Support',
 //         '20 AI Models',
@@ -64,8 +62,7 @@ const PricingPage: React.FC = () => {
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Unlimited AI Models',
 //         '24/7 Dedicated Support',
 //         'Custom AI Development',
@@ -135,31 +132,7 @@ const PricingPage: React.FC = () => {
           
           
           </a>
-      </div>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    </div>
+      </div>    </div>
   );
 };
 

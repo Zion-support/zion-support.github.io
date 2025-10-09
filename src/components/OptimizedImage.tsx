@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   src: string;,
@@ -18,7 +17,8 @@ interface OptimizedImageProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-const OptimizedImage: React.FC
+const,
+  OptimizedImage: React.FC
           
           
           
@@ -42,8 +42,7 @@ const OptimizedImage: React.FC
   sizes = '100vw',
   loading = 'lazy',
 //   onLoad,
-//   onError,
-}) => {
+//   onError}) => {
   // TODO: Add content
 }
   const [isLoaded, setIsLoaded] = useState(false);
@@ -73,8 +72,7 @@ const OptimizedImage: React.FC
   // TODO: Add content
 };
   rootMargin: '50px',
-        threshold: 0.1,
-      }
+        threshold: 0.1}
     );
     if (imgRef.current) {
   // TODO: Add content
@@ -116,9 +114,8 @@ const getOptimizedSrc = () => {
           <div>Coming Soon</div>
   )
     
-          <div
-      ref={imgRef} className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+          <div ref={imgRef} className={`relative overflow-hidden ${className}`}
+      style={{ width height }}
 // >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
@@ -135,8 +132,7 @@ const getOptimizedSrc = () => {
           style={{
   // TODO: Add content
 };
-  backgroundImage: `url(${blurDataURL})`,
-          }}
+  backgroundImage: `url(${blurDataURL})`}}
 //         />
       )}
       {/* Loading skeleton */}
@@ -159,8 +155,7 @@ const getOptimizedSrc = () => {
       {/* Actual image */}
       {isInView && ()
         
-          <img
-          src={getOptimizedSrc()}
+          <img src={getOptimizedSrc()}
           alt={alt}
           width={width}
           height={height}
@@ -173,10 +168,8 @@ onError={handleError} className={`transition-opacity duration-300 ${
           style={{
   // TODO: Add content
 };
-  width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-          }}
+  width: '100%' height: '100%',
+            objectFit: 'cover'}}
 //         />
       )}
     
@@ -188,18 +181,7 @@ onError={handleError} className={`transition-opacity duration-300 ${
           
           
           
-          </div>
-=======
-  // Add props here
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = () => {
-  return (
-    <div className="optimizedimage">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+          </div>  );
 };
 
 export default OptimizedImage;

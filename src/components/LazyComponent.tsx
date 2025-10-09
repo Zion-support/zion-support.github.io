@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface LazyComponentProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   children: ReactNode;
@@ -43,7 +42,8 @@ export const _withLazyLoading =
   );
 };
 // Lazy component wrapper with intersection observer;
-const LazyComponent: React.FC
+const,
+  LazyComponent: React.FC
           
           
           
@@ -68,8 +68,7 @@ const LazyComponent: React.FC
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px',
-}) => {
+  rootMargin = '50px'}) => {
   // TODO: Add content
 }
   const [isVisible, setIsVisible] = React.useState(false);
@@ -107,8 +106,7 @@ const LazyComponent: React.FC
   // TODO: Add content
 }
 //         threshold,
-//         rootMargin,
-      }
+//         rootMargin}
     );
     if (elementRef.current) {
   // TODO: Add content
@@ -213,8 +211,7 @@ const fontPreloads = [
   // TODO: Add items
 ];;
     'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
-    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
-  ];
+    'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap'];
   fontPreloads.forEach((href) => {
   // TODO: Add content
 }
@@ -229,8 +226,7 @@ const imagePreloads = [
   // TODO: Add items
 ];;
 //     '/og-image.jpg',
-//     '/favicon.ico',
-  ];
+//     '/favicon.ico'];
   imagePreloads.forEach((src) => {
   // TODO: Add content
 }
@@ -240,18 +236,4 @@ const imagePreloads = [
     link.href = src;
     document.head.appendChild(link);
   });
-};
-=======
-  // Add props here
-}
-
-const LazyComponent: React.FC<LazyComponentProps> = () => {
-  return (
-    <div className="lazycomponent">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-export default LazyComponent;
+};export default LazyComponent;

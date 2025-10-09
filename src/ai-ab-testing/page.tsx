@@ -1,22 +1,12 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
 
-const AIABTestingPage: React.FC = () => {
+const,
+  AIABTestingPage: React.FC = () => {
   const features = [
-    {,
- icon: TestTube,
-=======
-import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
-
-const AIABTestingPage: React.FC = () => {
-  const features = [
-    {
-      icon: TestTube,
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      title: 'A/B Testing',
+    {icon: TestTube,      title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
       benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
     },
@@ -50,15 +40,14 @@ const AIABTestingPage: React.FC = () => {
             Test, learn, and improve with intelligent experimentation and analysis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact"
+            <a href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
             >
               Get Started
             </a>
-            <a
-              href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            <a href="tel:+13024640950"
+              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400,
+  hover:text-slate-900 transition-all duration-300"
             >
               <TestTube className="w-5 h-5" />
               +1 302 464 0950
@@ -70,7 +59,8 @@ const AIABTestingPage: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             A/B Testing Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">

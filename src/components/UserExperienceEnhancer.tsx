@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface UserExperienceEnhancerProps {
-<<<<<<< HEAD
   // TODO: Add content
 }
   enableSmoothScrolling?: boolean;
@@ -10,7 +9,8 @@ interface UserExperienceEnhancerProps {
   enableAnalytics?: boolean;
   enableNotifications?: boolean;
 }
-const UserExperienceEnhancer: React.FC
+const,
+  UserExperienceEnhancer: React.FC
           
           
           
@@ -119,7 +119,8 @@ const links = document.querySelectorAll('a[href]');
   // TODO: Add content
 }
       const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
+        // console.error('Global error,
+  caught:', event.error);
         // Send error to analytics if available
         if (typeof window !== 'undefined' && 'gtag' in window) {
   // TODO: Add content
@@ -133,7 +134,8 @@ const links = document.querySelectorAll('a[href]');
         }
       };
       const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-// console.error('Unhandled promise rejection:', event.reason);
+// console.error('Unhandled promise,
+  rejection:', event.reason);
         if (typeof window !== 'undefined' && 'gtag' in window) {
   // TODO: Add content
 }
@@ -412,18 +414,6 @@ const observer = new PerformanceObserver((list) => {
       };
     }
   }, []);
-  return null;
-=======
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-};
+  return null;};
 
 export default UserExperienceEnhancer;

@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {
+const,
+  LoginPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -138,7 +138,11 @@ type="email"
                       value={formData.email}
                       onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
+  focus:outline-none,
+  focus:border-cyan-400,
+  focus:ring-2,
+  focus:ring-cyan-400/20"
                       placeholder="Enter your email"
 //                     />
                   
@@ -173,7 +177,11 @@ type={showPassword ? 'text' : 'password'}
                       value={formData.password}
                       onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400,
+  focus:outline-none,
+  focus:border-cyan-400,
+  focus:ring-2,
+  focus:ring-cyan-400/20"
                       placeholder="Enter your password"
 //                     />
                     
@@ -188,7 +196,8 @@ className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-l
           <button;
 type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400,
+  hover:text-white transition-colors"
 // >
                       {showPassword ? 
           
@@ -210,7 +219,9 @@ type="checkbox"
                       name="rememberMe"
                       checked={formData.rememberMe}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
+  focus:ring-cyan-400,
+  focus:ring-2"
 // />
                     
           
@@ -223,8 +234,7 @@ type="checkbox"
           
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
                   </label>
-                  <a
-                    href="/forgot-password"
+                  <a href="/forgot-password"
                     className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
 // >
 //                     Forgot password?
@@ -242,7 +252,10 @@ type="checkbox"
                 <button;
 type="submit"
                   disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300,
+  hover:scale-105,
+  disabled:opacity-50,
+  disabled:cursor-not-allowed"
 // >
                   {isLoading ? ()
                     
@@ -284,8 +297,7 @@ type="submit"
               <div className="mt-8 text-center">
                 <p className="text-gray-300">
                   Don't have an account?{' '}
-                  <a
-                    href="/signup"
+                  <a href="/signup"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 // >
 //                     Sign up here
@@ -411,8 +423,7 @@ type="submit"
           
           
           </p>
-                <a
-                  href="/signup"
+                <a href="/signup"
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 // >
 //                   Create your account
@@ -431,31 +442,7 @@ type="submit"
             </div>
           </div>
         </div>
-      </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      <Footer />
+      </div>      <Footer />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -32,32 +31,18 @@ class EnhancedErrorBoundary extends Component
   // TODO: Add content
 }
   constructor(props: Props) {
-  // TODO: Add content
-=======
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
+  // TODO: Add content}
 
 class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
   hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
-    };
+      errorId: null};
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -76,23 +61,12 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 };
   hasError: true,
 //       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
-=======
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  }
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
   }
-<<<<<<< HEAD
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
- errorId: this.state.errorId,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -100,8 +74,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-    };
+      sessionId: this.getSessionId()};
     // Send to error reporting service
     this.sendErrorReport(errorReport);
     // Send to Google Analytics if available
@@ -116,9 +89,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         custom_map: {
   // TODO: Add content
 };
-  error_id: this.state.errorId,
-        },
-      });
+  error_id: this.state.errorId}});
     }
   };
   private sendErrorReport = (errorReport: any) => {
@@ -143,8 +114,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
-    });
+      errorId: null});
   };
   private handleReload = () => {
   // TODO: Add content
@@ -166,8 +136,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-    };
+      timestamp: new Date().toISOString()};
 //     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
   // TODO: Add content
@@ -179,13 +148,8 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
 }
         alert('Failed to copy error details');
       });
-  };
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  render() {
+  };  render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
   // TODO: Add content
 }
       // Use custom fallback if provided
@@ -240,8 +204,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             </div>
             <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <button
-                  onClick={this.handleRetry}
+                <button onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
 // >
                   
@@ -265,8 +228,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           
           
           </button>
-                <button
-                  onClick={this.handleReload}
+                <button onClick={this.handleReload}
                   className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
 // >
                   
@@ -290,8 +252,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           
           
           </button>
-                <button
-                  onClick={this.handleGoHome}
+                <button onClick={this.handleGoHome}
                   className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
 // >
                   
@@ -320,7 +281,8 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 
           <div className="mt-6 p-4 bg-slate-700/50 rounded-lg">
                   <p className="text-sm text-gray-400 mb-2">
-                    Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
+                    Error,
+  ID: <code className="text-cyan-400">{this.state.errorId}</code>
                   </p>
                   <p className="text-xs text-gray-500">
 // Please include this ID when contacting support.
@@ -358,8 +320,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                       {'\n\n'}
                       {this.state.error.stack}
                     </pre>
-                    <button
-                      onClick={this.copyErrorDetails}
+                    <button onClick={this.copyErrorDetails}
                       className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
 // >
 //                       Copy Error Details
@@ -393,15 +354,7 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           
           </a>
               </p>
-            </div>
-=======
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-          </div>
+            </div>          </div>
         </div>
       );
     }

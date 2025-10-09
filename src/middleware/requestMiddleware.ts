@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Request Middleware System
@@ -51,7 +50,8 @@ export type Middleware = ()
 export class MiddlewareExecutor {
   // TODO: Add content
 }
-  private middlewares: Middleware[] = [];
+  private,
+  middlewares: Middleware[] = [];
    * Add middleware to the chain
   use(middleware: Middleware): this {
   // TODO: Add content
@@ -79,9 +79,11 @@ let index = 0;
       return await middleware(context, next);
     return await next();
  * Logging middleware
-export const loggingMiddleware: Middleware = async (context, next) => {
+export const,
+  loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-export const _loggingMiddleware: Middleware = async (context, next) => {
+export const,
+  _loggingMiddleware: Middleware = async (context, next) => {
   // TODO: Add content
 }
   const _startTime = Date.now();
@@ -106,7 +108,8 @@ url: context.request.url,
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
     throw error;
  * Authentication middleware
-export const authMiddleware: Middleware = async (context, next) => {
+export const,
+  authMiddleware: Middleware = async (context, next) => {
   // TODO: Add content
 }
   const token = getAuthToken();
@@ -121,7 +124,8 @@ function getAuthToken(): string | null {
   if (typeof window === 'undefined') return null;
   return localStorage.getItem('authToken');
  * Error handling middleware
-export const errorHandlingMiddleware: Middleware = async (context, next) => {
+export const,
+  errorHandlingMiddleware: Middleware = async (context, next) => {
 // Transform error into a standardized format
     const standardError = {
       message: error instanceof Error ? error.message : 'Unknown error',
@@ -198,7 +202,8 @@ if (context.request.method !== 'GET') {
       timestamp: Date.now()
  * Retry middleware
 export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
-let lastError: Error | null = null;
+let,
+  lastError: Error | null = null;
     for (let attempt = 0; attempt 
           
           
@@ -226,11 +231,9 @@ let lastError: Error | null = null;
  * Timeout middleware
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {
     return await Promise.race([
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
-    ]);
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))]);
  * Request transformation middleware
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise
@@ -268,7 +271,3 @@ export default {
   transformRequestMiddleware,
   transformResponseMiddleware,
   createDefaultMiddlewareChain
-=======
-// TypeScript file - requestMiddleware
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
@@ -42,26 +41,11 @@ class ImprovedErrorBoundary extends Component
   // TODO: Add content
 }
   constructor(props: Props) {
-  // TODO: Add content
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
+  // TODO: Add content}
 
 class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
@@ -94,7 +78,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   // TODO: Add content
 }
     // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
+    console.error('Error caught by,
+  ImprovedErrorBoundary:', {
   // TODO: Add content
 };
   message: error.message,
@@ -234,7 +219,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   {this.state.errorInfo?.componentStack && ()
                     
           <pre style={styles.stack}>
-                      <strong>Component Stack:</strong>
+                      <strong>Component,
+  Stack:</strong>
                       {this.state.errorInfo.componentStack}
                     </pre>
                   )}
@@ -258,9 +244,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           
           
           </button>
-              <button
-                onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}
+              <button onClick={this.handleReload}
+                style={{...styles.button ...styles.secondaryButton}}
                 aria-label="Reload Page"
 // >
 //                 Reload Page
@@ -274,9 +259,8 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           
           
           </button>
-              <button
-                onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}
+              <button onClick={this.handleGoHome}
+                style={{...styles.button ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
 // >
 //                 Go Home
@@ -296,28 +280,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
           <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
               </p>
-            )}
-=======
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-          </div>
+            )}          </div>
         </div>
       );
     }
@@ -325,7 +288,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-<<<<<<< HEAD
 const styles = {
   // TODO: Add content
 }
@@ -448,7 +410,3 @@ const styles = {
     color: '#999'
   }
 };
-=======
-
-export default ImprovedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

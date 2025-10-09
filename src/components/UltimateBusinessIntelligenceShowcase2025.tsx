@@ -3,7 +3,6 @@ import React from 'react';
 interface UltimateBusinessIntelligenceShowcase2025Props {
   // Add props here
 }
-<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items
@@ -12,7 +11,8 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
   // TODO: Add content
 };
   id: 'ultimate-business-intelligence-revolution',
-      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
+      title: 'AI,
+  2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
       type: 'Blog Post',
@@ -82,7 +82,10 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
               Ready to Transform Your Business?
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>
                 to="/contact"
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl,
+  hover:from-blue-700,
+  hover:to-indigo-700 transition-all duration-300 transform,
+  hover:scale-105 shadow-2xl"
               >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -101,19 +104,8 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
           
           </svg>
                 to="/services"
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,
+  hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

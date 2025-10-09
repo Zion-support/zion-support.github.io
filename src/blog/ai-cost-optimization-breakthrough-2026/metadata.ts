@@ -1,20 +1,20 @@
 export const metadata = {
-<<<<<<< HEAD
   // TODO: Add content
 };
-  title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
+  title: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90% | Zion Tech Group',
   description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
   keywords: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
   openGraph: {
   // TODO: Add content
 };
-  title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
+  title: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
   // TODO: Add content
 };
@@ -29,7 +29,8 @@ export const metadata = {
   // TODO: Add content
 };
   card: 'summary_large_image',
-    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
+    title: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
     images: ['https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
@@ -52,15 +53,4 @@ export const metadata = {
   // TODO: Add content
 };
   canonical: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026'
-  }
-=======
-  title: 'Blog Post - Zion Tech Group',
-  description: 'AI and technology insights from Zion Tech Group',
-  keywords: ['AI', 'Technology', 'Blog', 'Insights'],
-  openGraph: {
-    title: 'Blog Post - Zion Tech Group',
-    description: 'AI and technology insights from Zion Tech Group',
-    type: 'article',
-  },
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-};
+  }};

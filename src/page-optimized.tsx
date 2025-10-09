@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
@@ -50,9 +49,11 @@ export default function OptimizedHomePage() {
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6,
+  lg:px-8 py-24">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl,
+  lg:text-7xl font-bold mb-6 leading-tight">
 // AI Enterprise Transformation
                 
           
@@ -91,8 +92,7 @@ export default function OptimizedHomePage() {
           
           </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <a href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
 // >
 //                   Get Your Free AI Assessment
@@ -107,31 +107,11 @@ export default function OptimizedHomePage() {
           
           </a>
                   href="/case-studies"
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg,
+  hover:bg-white,
+  hover:text-blue-900 transition-colors font-semibold text-lg"
 View Success Stories
-              </div>
-=======
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PageOptimizedPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page Optimized
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-        </section>
+              </div>        </section>
       </main>
       <Footer />
     </div>

@@ -1,10 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const AIAutomationPage: React.FC = () => {
+const,
+  AIAutomationPage: React.FC = () => {
 const features = [
     {
   // TODO: Add content
@@ -50,8 +50,7 @@ const features = [
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Up to 10 automated processes',
 //         'Basic AI decision making',
 //         'Email support',
@@ -68,8 +67,7 @@ const features = [
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Up to 50 automated processes',
 //         'Advanced AI decision making',
 //         'Priority support',
@@ -87,8 +85,7 @@ const features = [
       period: '/month',
       description: 'For large organizations',
       features: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //         'Unlimited processes',
 //         'Premium AI features',
 //         '24/7 support',
@@ -123,7 +120,7 @@ const features = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Automation Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." />
+        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation workflow optimization, and intelligent decision-making." />
       </Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
@@ -143,7 +140,8 @@ const features = [
           
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2,
+  lg:grid-cols-4 gap-8 mb-16">
           {stats.map((stat, index) => ()
             
           <div key={index} className="text-center">
@@ -250,7 +248,8 @@ const features = [
           
           
           </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400,
+  hover:text-slate-900 transition-colors">
 // View Case Studies
             
           
@@ -264,30 +263,7 @@ const features = [
           </button>
           </div>
         </div>
-      </div>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      <Footer />
+      </div>      <Footer />
     </div>
   );
 };

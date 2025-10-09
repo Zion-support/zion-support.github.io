@@ -1,9 +1,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
+const,
+  AIComputerVisionPage: React.FC = () => {
 const features = [
     {
   // TODO: Add content
@@ -37,8 +37,7 @@ const features = [
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-  // TODO: Add items,
-];
+  // TODO: Add items];
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
@@ -76,17 +75,9 @@ const features = [
           <div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      <Navigation />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision
           
@@ -115,8 +106,7 @@ const PagePage: React.FC = () => {
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact"
+            <a href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
@@ -131,7 +121,9 @@ Transform your business with cutting-edge computer vision technology. From objec
           
           </a>
               href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
+  hover:bg-cyan-400,
+  hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
               +1 302 464 0950
           </div>
@@ -150,7 +142,8 @@ Transform your business with cutting-edge computer vision technology. From objec
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
             {features.map((feature, index) => ()
               
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -184,7 +177,8 @@ Transform your business with cutting-edge computer vision technology. From objec
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {application.description}
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use Cases:</h4>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use,
+  Cases:</h4>
                   {application.useCases.map((useCase, useCaseIndex) => ()
                     
           <div key={useCaseIndex} className="flex items-center text-sm text-gray-300">
@@ -217,7 +211,9 @@ Most Popular
 }
 //                     plan.popular
 //                       ? 'cyber-button'
-                      : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                      : 'border-2 border-cyan-400 text-cyan-400,
+  hover:bg-cyan-400,
+  hover:text-slate-900'
                   }`}
         {/* CTA Section */}
         
@@ -237,22 +233,11 @@ Ready to See the Future?
               Transform your business with AI-powered computer vision solutions that see, understand, and act.
                 Start Your Vision Journey
                 href="/demo"
-                className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
+  hover:bg-purple-400,
+  hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
-                Request Demo
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      </main>
+                Request Demo      </main>
       <Footer />
     </div>
   );

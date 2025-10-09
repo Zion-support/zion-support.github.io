@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Rate Limiting Middleware
@@ -24,7 +23,8 @@ interface RequestRecord {
 export class RateLimiter {
   // TODO: Add content
 }
-  private requests: Map
+  private,
+  requests: Map
           
           
           
@@ -34,7 +34,8 @@ export class RateLimiter {
           
           
           <string, RequestRecord> = new Map();
-  private config: RateLimitConfig;
+  private,
+  config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
   // TODO: Add content
 }
@@ -133,15 +134,11 @@ export const rateLimiters = {
     max: 1000
 // API: 60 requests per minute,
 
-    api: new RateLimiter({,
-
-    max: 60,
+    api: new RateLimiter({max: 60,
     message: 'API rate limit exceeded. Please try again later.'
   // Authentication: 5 login attempts per 15 minutes,
 
-    auth: new RateLimiter({,
-
-    max: 5,
+    auth: new RateLimiter({max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true
   })
@@ -205,7 +202,3 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
       );
     // Request allowed - headers can be added to response later
 return null;
-=======
-// TypeScript file - rateLimiter
-export default {};
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60

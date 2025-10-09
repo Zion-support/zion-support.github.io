@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 interface SEOProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
   keywords?: string;
   image?: string;
   url?: string;
@@ -13,7 +12,8 @@ interface SEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-const SEOHead: React.FC
+const,
+  SEOHead: React.FC
           
           
           
@@ -23,14 +23,10 @@ const SEOHead: React.FC
           
           
           <SEOHeadProps> = ({
-  // TODO: Add content
-=======
-  keywords?: string[];
-  canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
+  // TODO: Add content}
 
-const SEOHead: React.FC<SEOProps> = ({
+const,
+  SEOHead: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],

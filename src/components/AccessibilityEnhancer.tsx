@@ -4,8 +4,8 @@ interface AccessibilityEnhancerProps {
   // Add props here
 }
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const,
+  AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
@@ -13,8 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableFocusManagement = true,
   enableSkipLinks = true,
   enableKeyboardNav = true,
-  enableFocusIndicators = true,
-}) => {
+  enableFocusIndicators = true}) => {
   React.useEffect(() => {
     // Initialize accessibility features
     if (enableSkipLinks) {
@@ -78,15 +77,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           
           
           
-          <>{children}</>;
-=======
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
-  return (
-    <div className="accessibilityenhancer">
-      {/* Component content */}
-    </div>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-};
+          <>{children}</>;};
 
 export default AccessibilityEnhancer;

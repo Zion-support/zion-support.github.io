@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * System Monitor Component
@@ -98,20 +97,15 @@ interface SystemMetrics {
   effectiveType: string;,
     downlink: number;,
     rtt: number;,
-    saveData: boolean;
-=======
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-interface SystemMonitorProps {
+    saveData: boolean;interface SystemMonitorProps {
   // Add props here
 }
-<<<<<<< HEAD
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-const SystemMonitor: React.FC
+const,
+  SystemMonitor: React.FC
           
           
           
@@ -156,10 +150,11 @@ const updateMetrics = useCallback(() => {
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {
+      const,
+  newMetrics: SystemMetrics = {
       const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {,
-    score: performanceScore,
+      const,
+  _newMetrics: SystemMetrics = {score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
           largestContentfulPaint: 0, // Not available in current metrics,
@@ -212,9 +207,11 @@ const updateMetrics = useCallback(() => {
             </span>
           {enableExport && ()
             
-          <button
-              onClick={handleExport}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          <button onClick={handleExport}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700,
+  focus:outline-none,
+  focus:ring-2,
+  focus:ring-blue-500"
 // >
 //               Export Data
             
@@ -231,12 +228,14 @@ const updateMetrics = useCallback(() => {
       {lastUpdate && ()
         
           <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
+          Last,
+  updated: {lastUpdate.toLocaleTimeString()}
         </p>
       {/* Performance Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
@@ -255,7 +254,8 @@ const updateMetrics = useCallback(() => {
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
       {/* Error Metrics */}
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-4">
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
               <span className="text-2xl font-bold text-red-600">
                 {metrics.errors.total}
@@ -325,16 +325,4 @@ className={`h-2 rounded-full ${
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()
                   
           <div key={category} className="flex justify-between text-sm">
-                    <span className="capitalize">{category}</span>
-=======
-
-const SystemMonitor: React.FC<SystemMonitorProps> = () => {
-  return (
-    <div className="systemmonitor">
-      {/* Component content */}
-    </div>
-  );
-};
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-export default SystemMonitor;
+                    <span className="capitalize">{category}</span>export default SystemMonitor;

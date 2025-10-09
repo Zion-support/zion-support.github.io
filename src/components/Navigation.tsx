@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
-const Navigation: React.FC = () => {
+const,
+  Navigation: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -85,15 +85,14 @@ const Navigation: React.FC = () => {
                             DevOps
                           </Link><Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
                             Cybersecurity
-                          </Link></div></div></div><div className="border-t border-gray-700 mt-6 pt-4"><Link
-                        to="/services" className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                          </Link></div></div></div><div className="border-t border-gray-700 mt-6 pt-4"><Link to="/services" className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600,
+  hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
                       >
                         View All Services
                       </Link></div></div></div>
               )}
-            </div><Link
-              to="/case-studies" className="font-medium transition-colors hover:text-cyan-400 text-white"
+            </div><Link to="/case-studies" className="font-medium transition-colors hover:text-cyan-400 text-white"
               Case Studies
             </Link><Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
@@ -105,7 +104,8 @@ const Navigation: React.FC = () => {
             </Link></div>
           {/* Mobile Menu Button */}
           <div className="lg:hidden"><button
-              onClick={() => setIsOpen(!isOpen)} className="text-white hover:text-cyan-400 transition-colors"
+              onClick={() => setIsOpen(!isOpen)} className="text-white,
+  hover:text-cyan-400 transition-colors"
               aria-label="Toggle menu"
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button></div></div>
@@ -113,20 +113,17 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20"><div className="px-4 py-6 space-y-6">
               {/* Main Navigation */}
-              <div className="space-y-4"><h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3><Link
-                  to="/" className="block text-white hover:text-cyan-400 transition-colors py-2"
-                </Link><Link
-                  to="/about" className="block text-white hover:text-cyan-400 transition-colors py-2"
-                  to="/services" className="block text-white hover:text-cyan-400 transition-colors py-2"
+              <div className="space-y-4"><h3 className="text-lg font-semibold text-white mb-3 neon-text">Navigation</h3><Link to="/" className="block text-white hover:text-cyan-400 transition-colors py-2"
+                </Link><Link to="/about" className="block text-white hover:text-cyan-400 transition-colors py-2"
+                  to="/services" className="block text-white,
+  hover:text-cyan-400 transition-colors py-2"
                   Services
-                  to="/contact" className="block text-white hover:text-cyan-400 transition-colors py-2"
+                  to="/contact" className="block text-white,
+  hover:text-cyan-400 transition-colors py-2"
               {/* Contact Info */}
-              <div className="space-y-4"><h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3><a
-                  href="tel:+13024640950" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                ><Phone className="w-5 h-5" /><span>(302) 464-0950</span></a><a
-                  href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                ><span>kleber@ziontechgroup.com</span></a><a
-                  href="https:// maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+              <div className="space-y-4"><h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3><a href="tel:+13024640950" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
+                ><Phone className="w-5 h-5" /><span>(302) 464-0950</span></a><a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
+                ><span>kleber@ziontechgroup.com</span></a><a href="https:// maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
                   target="_blank"
                   rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
                 >
@@ -139,21 +136,7 @@ const Navigation: React.FC = () => {
           
           
           <MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
-      </div></nav>
-=======
-import React from 'react';
-
-interface NavigationProps {
-  // Add props here
-}
-
-const Navigation: React.FC<NavigationProps> = () => {
-  return (
-    <div className="navigation">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+      </div></nav>  );
 };
 
 export default Navigation;

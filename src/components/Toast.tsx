@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
@@ -10,7 +9,8 @@ export interface ToastProps {
   onClose?: () => void;,
     show: boolean;
 }
-const Toast: React.FC
+const,
+  Toast: React.FC
           
           
           
@@ -116,7 +116,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           setIsVisible(false);
           if (onClose) onClose();
         }}
-        className="ml-4 hover:opacity-80 transition-opacity"
+        className="ml-4,
+  hover:opacity-80 transition-opacity"
         aria-label="Close notification"
 //       >
 //
@@ -129,20 +130,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           
-          </button>
-=======
-import React from 'react';
-
-interface ToastProps {
-  // Add props here
-}
-
-const Toast: React.FC<ToastProps> = () => {
-  return (
-    <div className="toast">
-      {/* Component content */}
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    </div>
+          </button>    </div>
   );
 };
 

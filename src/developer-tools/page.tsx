@@ -1,7 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import {  Code,  Zap,  BarChart,  Target,  Users,  TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {
+const,
+  DeveloperToolsPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -85,15 +85,16 @@ const DeveloperToolsPage: React.FC = () => {
           <>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
+        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation API testing, database management, and DevOps automation tools." />
+        <meta name="keywords" content="developer tools AI code generation, API testing, database management, DevOps automation, code review" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl,
+  md:text-6xl font-bold text-white mb-6">
 // Developer Tools
             
           
@@ -138,7 +139,9 @@ const DeveloperToolsPage: React.FC = () => {
             </div>
             {/* Contact Info */}
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-              <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex flex-col md:flex-row items-center justify-center space-y-4,
+  md:space-y-0,
+  md:space-x-8">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-5 h-5" />
                   <span className="text-white font-medium">+1 302 464 0950</span>
@@ -170,10 +173,12 @@ const DeveloperToolsPage: React.FC = () => {
           
           
           </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
               {devTools.map((tool, index) => ()
                 
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300,
+  hover:scale-105">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <tool.icon className="w-8 h-8 text-white" />
@@ -185,7 +190,8 @@ const DeveloperToolsPage: React.FC = () => {
                     <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}</div>
                   </div>
                   <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-3">Key,
+  Features:</h4>
                     <ul className="space-y-2">
                       {tool.features.map((feature, featureIndex) => ()
                         
@@ -209,9 +215,9 @@ const DeveloperToolsPage: React.FC = () => {
                     </ul>
                   </div>
                   <div className="text-center">
-                    <a
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
+                    <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700,
+  hover:to-blue-700 transition-all inline-block"
 // >
 //                       Get Started Now
                     
@@ -258,8 +264,7 @@ const DeveloperToolsPage: React.FC = () => {
           
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
+              <a href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
 //                 Call (302) 464-0950
@@ -273,9 +278,9 @@ const DeveloperToolsPage: React.FC = () => {
           
           
           </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+              <a href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white,
+  hover:text-purple-600 transition-colors"
 // >
 //                 Email Us
               
@@ -293,32 +298,7 @@ const DeveloperToolsPage: React.FC = () => {
         </section>
         <Footer />
       </div>
-    </>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+    </>  );
 };
 
 export default PagePage;

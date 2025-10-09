@@ -1,8 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
-const AnalyticsToolsPage: React.FC = () => {
+const,
+  AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
   // TODO: Add content
@@ -67,13 +67,14 @@ const AnalyticsToolsPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
+        <meta name="description" content="AI-powered analytics tools for business intelligence web analytics, marketing analytics, and more. Starting at $179/month." />
+        <meta name="keywords" content="analytics tools business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl,
+  md:text-6xl font-bold text-white mb-6">
 // AI Analytics Tools
           
           
@@ -83,25 +84,10 @@ const AnalyticsToolsPage: React.FC = () => {
           
           
           
-          
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-          </h1>
+                    </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -116,7 +102,9 @@ const PagePage: React.FC = () => {
               <div className="text-gray-300">Monitoring</div>
           {/* Contact Info */}
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4,
+  md:space-y-0,
+  md:space-x-8">
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
@@ -140,7 +128,8 @@ const PagePage: React.FC = () => {
           
           
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => ()
               
           <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
@@ -163,9 +152,9 @@ const PagePage: React.FC = () => {
                   </ul>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                  <a href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600,
+  hover:to-blue-700 transition-all inline-block"
 // >
 //                     Get Started
                   
@@ -180,7 +169,8 @@ const PagePage: React.FC = () => {
           </a>
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => ()
               
           <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
@@ -196,21 +186,14 @@ Ready to Unlock Your Data?
             Get started with our AI analytics tools today and transform your data into actionable insights.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium,
+  hover:bg-gray-100 transition-colors"
 Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              Email Us
-=======
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium,
+  hover:bg-white,
+  hover:text-purple-600 transition-colors"
+              Email Us  );
 };
 
 export default PagePage;

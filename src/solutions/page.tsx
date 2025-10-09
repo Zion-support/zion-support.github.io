@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-const SolutionsPage: React.FC = () => {
+const,
+  SolutionsPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -55,8 +55,7 @@ const SolutionsPage: React.FC = () => {
   // TODO: Add content
 };
   ai: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
   // TODO: Add content
 };
@@ -99,8 +98,7 @@ const SolutionsPage: React.FC = () => {
       }
 //     ],
     it: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
   // TODO: Add content
 };
@@ -143,8 +141,7 @@ const SolutionsPage: React.FC = () => {
       }
 //     ],
     security: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
   // TODO: Add content
 };
@@ -187,8 +184,7 @@ const SolutionsPage: React.FC = () => {
       }
 //     ],
     automation: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
       {
   // TODO: Add content
 };
@@ -320,7 +316,8 @@ const SolutionsPage: React.FC = () => {
 }
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
+                      : 'bg-slate-800/50 text-gray-300,
+  hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
                   
@@ -359,7 +356,8 @@ const SolutionsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
+  Features:</h4>
                     <ul className="space-y-1">
                       {solution.features.map((feature, featureIndex) => ()
                         
@@ -374,8 +372,7 @@ const SolutionsPage: React.FC = () => {
                     <div className={`text-lg font-bold ${solution.color}`}>
                       {solution.pricing}
                     </div>
-                    <a
-                      href="/contact"
+                    <a href="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 // >
 //                       Learn More
@@ -409,7 +406,8 @@ const SolutionsPage: React.FC = () => {
           
           
           </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2,
+  lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => ()
                 
           <div key={index} className="text-center">
@@ -450,8 +448,7 @@ const SolutionsPage: React.FC = () => {
           
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
+              <a href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
                 
@@ -475,9 +472,9 @@ const SolutionsPage: React.FC = () => {
           
           
           </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <a href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400,
+  hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -500,9 +497,9 @@ const SolutionsPage: React.FC = () => {
           
           
           </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <a href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400,
+  hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
                 
           
@@ -528,31 +525,7 @@ const SolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-      <Footer />
+      </div>      <Footer />
     </div>
   );
 };

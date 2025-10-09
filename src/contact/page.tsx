@@ -1,11 +1,11 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
-const ContactPage: React.FC = () => {
+const,
+  ContactPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
   );
@@ -46,7 +46,8 @@ const ContactPage: React.FC = () => {
 }
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
+    // console.log('Form,
+  submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
@@ -104,33 +105,7 @@ const ContactPage: React.FC = () => {
           
           
           </a>
-      </div>
-=======
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+      </div>  );
 };
 
 export default PagePage;

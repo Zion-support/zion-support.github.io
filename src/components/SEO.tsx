@@ -4,7 +4,6 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string[];
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: 'website' | 'article' | 'product' | 'profile';
@@ -31,8 +30,7 @@ interface SEOProps {
   description:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
@@ -43,9 +41,9 @@ interface SEOProps {
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
   locale: 'en_US',
-  twitterCard: 'summary_large_image' as const,
-};
-export const SEO: React.FC
+  twitterCard: 'summary_large_image' as const};
+export const,
+  SEO: React.FC
           
           
           
@@ -71,8 +69,7 @@ export const SEO: React.FC
 //   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],
-}) => {
+  alternateLocales = []}) => {
   // TODO: Add content
 }
   const seo = {
@@ -85,8 +82,7 @@ export const SEO: React.FC
     url: url || defaultSEO.url,
 //     type,
 //     twitterCard,
-//     locale,
-  };
+//     locale};
   // Generate structured data;
 const generateStructuredData = () => {
   // TODO: Add content
@@ -96,7 +92,8 @@ const generateStructuredData = () => {
 }
       return structuredData;
     }
-    const baseStructuredData: Record
+    const,
+  baseStructuredData: Record
           
           
           
@@ -113,8 +110,7 @@ const generateStructuredData = () => {
       headline: seo.title,
       description: seo.description,
       url: seo.url,
-      image: seo.image,
-    };
+      image: seo.image};
     if (author) {
   // TODO: Add content
 }
@@ -122,39 +118,7 @@ const generateStructuredData = () => {
   // TODO: Add content
 }
         '@type': 'Person',
-        name: author,
-      };
-=======
-  canonicalUrl?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-    }
+        name: author};    }
     metaKeywords.setAttribute('content', keywords.join(', '));
     
     // Update canonical URL

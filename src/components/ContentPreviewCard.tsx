@@ -1,7 +1,6 @@
 import React from 'react';
 
 interface ContentPreviewCardProps {
-<<<<<<< HEAD
   // TODO: Add content
 };
   id: string;
@@ -21,7 +20,8 @@ interface ContentPreviewCardProps {
   };
   excerpt?: string;
 }
-const ContentPreviewCard: React.FC
+const,
+  ContentPreviewCard: React.FC
           
           
           
@@ -55,7 +55,8 @@ const ContentPreviewCard: React.FC
   const getCategoryColor = (category: string): string => {
   // TODO: Add content
 }
-    const colors: { [key: string]: string } = {
+    const,
+  colors: { [key: string]: string } = {
   // TODO: Add content
 }
       'Success Story': 'from-green-500 to-emerald-600',
@@ -81,7 +82,8 @@ const ContentPreviewCard: React.FC
           <div>Coming Soon</div>
   )
     
-          <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
+          <article className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform,
+  hover:-translate-y-1 ${
   // TODO: Add content
 }
       featured ? 'ring-2 ring-indigo-200' : ''
@@ -175,8 +177,7 @@ const ContentPreviewCard: React.FC
         {/* Date and CTA */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
-          <Link
-            href={path}
+          <Link href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
 // >
 //             Read Article
@@ -195,18 +196,7 @@ const ContentPreviewCard: React.FC
           </Link>
         </div>
       </div>
-    </article>
-=======
-  // Add props here
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = () => {
-  return (
-    <div className="contentpreviewcard">
-      {/* Component content */}
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+    </article>  );
 };
 
 export default ContentPreviewCard;

@@ -1,8 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
+const,
+  SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
@@ -73,8 +73,10 @@ const SmartAnalyticsPage: React.FC = () => {
   // TODO: Add content
 }
 //                     plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
+                      ? 'bg-cyan-600 text-white,
+  hover:bg-cyan-700'
+                      : 'bg-gray-600 text-white,
+  hover:bg-gray-700'
                   }`}
                   Get Started
         {/* CTA Section */}
@@ -92,8 +94,11 @@ const SmartAnalyticsPage: React.FC = () => {
             Ready to Transform Your Data?
           <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,
+  hover:bg-gray-100 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
+  hover:bg-white,
+  hover:text-cyan-600 transition-colors"
               Get Free Demo
         {/* Contact Info */}
         <section className="mt-16 text-center">
@@ -108,32 +113,7 @@ const SmartAnalyticsPage: React.FC = () => {
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-  );
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>  );
 };
 
 export default PagePage;

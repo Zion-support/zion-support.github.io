@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface SEOOptimizerProps {
   // TODO: Add content
@@ -11,7 +10,8 @@ interface SEOOptimizerProps {
   ogImage?: string;
   twitterCard?: string;
 }
-const SEOOptimizer: React.FC
+const,
+  SEOOptimizer: React.FC
           
           
           
@@ -21,19 +21,10 @@ const SEOOptimizer: React.FC
           
           
           <SEOOptimizerProps> = memo(({
-  // TODO: Add content
-=======
-import React, { useEffect } from 'react';
+  // TODO: Add content}
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-2b60
-}
-
-const SEOOptimizer: React.FC<SEOProps> = ({
+const,
+  SEOOptimizer: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions for modern enterprises',
   keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
