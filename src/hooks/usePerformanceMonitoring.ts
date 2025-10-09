@@ -4,8 +4,8 @@
 export const usePerformanceMonitoring = {
   // Add utility functions here
   init: () => {
-    console.log('usePerformanceMonitoring initialized');
-  }
+    console.log("usePerformanceMonitoring initialized");
+  },
 };
 
 export default usePerformanceMonitoring;

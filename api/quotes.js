@@ -1,8 +1,8 @@
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== "POST") {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader("Allow", "POST");
+    res.end("Method Not Allowed");
     return;
   }
 
@@ -11,19 +11,19 @@ export default async function handler(req, res) {
 
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
-      res.json({ error: 'Name, email, phone, and details are required' });
+      res.json({ error: "Name, email, phone, and details are required" });
       return;
     }
 
     // Process quote submission logic here
     const quote = {
-      id: 'quote_' + Date.now(),
+      id: "quote_" + Date.now(),
       name,
       email,
       phone,
       details,
-      country: country || 'US',
-      service: service || 'general',
+      country: country || "US",
+      service: service || "general",
       submittedAt: new Date().toISOString(),
     };
 
@@ -31,11 +31,11 @@ export default async function handler(req, res) {
     //     res.statusCode = 200;
     res.json({
       success: true,
-      message: 'Quote submitted successfully',
+      message: "Quote submitted successfully",
       quote,
     });
   } catch (error) {
     //     res.statusCode = 500;
-    res.json({ error: error.message || 'Quote submission failed' });
+    res.json({ error: error.message || "Quote submission failed" });
   }
 }

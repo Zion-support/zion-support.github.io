@@ -4,8 +4,8 @@
 export const apiInterceptor = {
   // Add utility functions here
   init: () => {
-    console.log('apiInterceptor initialized');
-  }
+    console.log("apiInterceptor initialized");
+  },
 };
 
 export default apiInterceptor;

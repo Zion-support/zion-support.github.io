@@ -9,7 +9,7 @@ import {
   VisualizationConfig,
   ChartType,
   ColorScheme,
-} from '../types/visualization';
+} from "../types/visualization";
 
 export class AdvancedDataVisualization {
   private config: VisualizationConfig;
@@ -17,8 +17,8 @@ export class AdvancedDataVisualization {
 
   constructor(config: Partial<VisualizationConfig> = {}) {
     this.config = {
-      defaultChartType: 'line',
-      defaultColorScheme: 'blue',
+      defaultChartType: "line",
+      defaultColorScheme: "blue",
       animationDuration: 300,
       responsive: true,
       ...config,
@@ -28,7 +28,7 @@ export class AdvancedDataVisualization {
   public createChart(
     id: string,
     data: ChartData,
-    type: ChartType = this.config.defaultChartType
+    type: ChartType = this.config.defaultChartType,
   ): StoredChart {
     const chart: StoredChart = {
       id,
@@ -67,25 +67,32 @@ export class AdvancedDataVisualization {
     return Array.from(this.charts.values());
   }
 
-  public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {
+  public exportChart(id: string, format: "json" | "csv" = "json"): string {
     const _chart = this.charts.get(id);
     if (!chart) throw new Error(`Chart with id ${id} not found`);
 
-    if (format === 'json') {
+    if (format === "json") {
       return JSON.stringify(chart, null, 2);
     } else {
       return this.convertToCSV(chart.data);
     }
   }
 
-  public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {
-    if (format === 'json') {
+  public importChart(
+    data: string,
+    format: "json" | "csv" = "json",
+  ): StoredChart {
+    if (format === "json") {
       const _chart = JSON.parse(data) as StoredChart;
       this.charts.set(chart.id, chart);
       return chart;
     } else {
       //       const chartData = this.parseCSV(data);
-      const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line');
+      const _chart = this.createChart(
+        `imported-${Date.now()}`,
+        chartData,
+        "line",
+      );
       return chart;
     }
   }
@@ -94,16 +101,16 @@ export class AdvancedDataVisualization {
     //     const headers = ['x', 'y'];
     //     const rows = data.points.map(point => [point.x, point.y]);
 
-    return [headers, ...rows].map(row => row.join(',')).join('\n');
+    return [headers, ...rows].map((row) => row.join(",")).join("\n");
   }
 
   private parseCSV(csv: string): ChartData {
-    const _lines = csv.trim().split('\n');
+    const _lines = csv.trim().split("\n");
     //     const headers = lines[0].split(',');
     const points: DataPoint[] = [];
 
     for (let i = 1; i < lines.length; i++) {
-      const _values = lines[i].split(',');
+      const _values = lines[i].split(",");
       if (values.length >= 2) {
         points.push({
           x: parseFloat(values[0]) || 0,
@@ -115,7 +122,11 @@ export class AdvancedDataVisualization {
     return { points };
   }
 
-  public generateRandomData(count: number, min: number = 0, max: number = 100): ChartData {
+  public generateRandomData(
+    count: number,
+    min: number = 0,
+    max: number = 100,
+  ): ChartData {
     const points: DataPoint[] = [];
 
     for (let i = 0; i < count; i++) {
@@ -128,7 +139,10 @@ export class AdvancedDataVisualization {
     return { points };
   }
 
-  public applyColorScheme(chart: StoredChart, colorScheme: ColorScheme): StoredChart {
+  public applyColorScheme(
+    chart: StoredChart,
+    colorScheme: ColorScheme,
+  ): StoredChart {
     const _updatedChart = { ...chart };
     updatedChart.config.colorScheme = colorScheme;
     updatedChart.updatedAt = new Date();
@@ -150,7 +164,7 @@ export class AdvancedDataVisualization {
     if (points.length === 0) return null;
 
     //     const xValues = points.map(p => p.x);
-    const _yValues = points.map(p => p.y);
+    const _yValues = points.map((p) => p.y);
 
     return {
       pointCount: points.length,

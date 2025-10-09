@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState, useCallback } from 'react';
-import { logger } from '../utils/logger';
+import React, { useEffect, useState, useCallback } from "react";
+import { logger } from "../utils/logger";
 
 interface UserPreferences {
-  theme: 'light' | 'dark' | 'auto';
+  theme: "light" | "dark" | "auto";
   language: string;
   notifications: boolean;
   analytics: boolean;
@@ -12,8 +12,8 @@ interface UserPreferences {
 
 export const UserExperienceEnhancer: React.FC = () => {
   const [preferences, setPreferences] = useState<UserPreferences>({
-    theme: 'auto',
-    language: 'en',
+    theme: "auto",
+    language: "en",
     notifications: true,
     analytics: true,
   });
@@ -23,41 +23,46 @@ export const UserExperienceEnhancer: React.FC = () => {
 
   // Load user preferences
   useEffect(() => {
-    const savedPreferences = localStorage.getItem('user-preferences');
+    const savedPreferences = localStorage.getItem("user-preferences");
     if (savedPreferences) {
       try {
         const parsed = JSON.parse(savedPreferences);
         setPreferences(parsed);
       } catch (error) {
-        logger.error('Failed to parse user preferences', error);
+        logger.error("Failed to parse user preferences", error);
       }
     }
 
     // Check if first visit
-    const isFirstVisit = !localStorage.getItem('has-visited');
+    const isFirstVisit = !localStorage.getItem("has-visited");
     if (isFirstVisit) {
       setShowWelcome(true);
-      localStorage.setItem('has-visited', 'true');
+      localStorage.setItem("has-visited", "true");
     }
 
     setIsLoading(false);
   }, []);
 
   // Apply theme
-  const applyTheme = useCallback((theme: 'light' | 'dark' | 'auto') => {
+  const applyTheme = useCallback((theme: "light" | "dark" | "auto") => {
     const root = document.documentElement;
-    
-    if (theme === 'auto') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', prefersDark);
+
+    if (theme === "auto") {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+      ).matches;
+      root.classList.toggle("dark", prefersDark);
     } else {
-      root.classList.toggle('dark', theme === 'dark');
+      root.classList.toggle("dark", theme === "dark");
     }
 
     // Update meta theme-color
     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
     if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', theme === 'dark' ? '#0f172a' : '#ffffff');
+      metaThemeColor.setAttribute(
+        "content",
+        theme === "dark" ? "#0f172a" : "#ffffff",
+      );
     }
   }, []);
 
@@ -66,74 +71,83 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (isLoading) return;
 
     applyTheme(preferences.theme);
-    
+
     // Store preferences
-    localStorage.setItem('user-preferences', JSON.stringify(preferences));
-    
-    logger.info('User preferences applied', preferences);
+    localStorage.setItem("user-preferences", JSON.stringify(preferences));
+
+    logger.info("User preferences applied", preferences);
   }, [preferences, isLoading, applyTheme]);
 
   // Handle theme change
-  const handleThemeChange = useCallback((theme: 'light' | 'dark' | 'auto') => {
-    setPreferences(prev => ({ ...prev, theme }));
-    applyTheme(theme);
-  }, [applyTheme]);
+  const handleThemeChange = useCallback(
+    (theme: "light" | "dark" | "auto") => {
+      setPreferences((prev) => ({ ...prev, theme }));
+      applyTheme(theme);
+    },
+    [applyTheme],
+  );
 
   // Handle language change
   const handleLanguageChange = useCallback((language: string) => {
-    setPreferences(prev => ({ ...prev, language }));
+    setPreferences((prev) => ({ ...prev, language }));
     // In a real app, you would implement i18n here
-    logger.info('Language changed', { language });
+    logger.info("Language changed", { language });
   }, []);
 
   // Handle notification preference
   const handleNotificationChange = useCallback((notifications: boolean) => {
-    setPreferences(prev => ({ ...prev, notifications }));
-    
-    if (notifications && 'Notification' in window) {
-      Notification.requestPermission().then(permission => {
-        if (permission === 'granted') {
-          logger.info('Notification permission granted');
+    setPreferences((prev) => ({ ...prev, notifications }));
+
+    if (notifications && "Notification" in window) {
+      Notification.requestPermission().then((permission) => {
+        if (permission === "granted") {
+          logger.info("Notification permission granted");
         }
       });
     }
   }, []);
 
   // Show notification
-  const showNotification = useCallback((title: string, body: string) => {
-    if (!preferences.notifications || !('Notification' in window)) return;
-    
-    if (Notification.permission === 'granted') {
-      new Notification(title, { body, icon: '/logo.png' });
-    }
-  }, [preferences.notifications]);
+  const showNotification = useCallback(
+    (title: string, body: string) => {
+      if (!preferences.notifications || !("Notification" in window)) return;
+
+      if (Notification.permission === "granted") {
+        new Notification(title, { body, icon: "/logo.png" });
+      }
+    },
+    [preferences.notifications],
+  );
 
   // Track user interactions
-  const trackInteraction = useCallback((action: string, element: string) => {
-    if (!preferences.analytics) return;
-    
-    logger.info('User interaction tracked', { action, element });
-    
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
-        event_category: 'User Interaction',
-        event_label: element,
-      });
-    }
-  }, [preferences.analytics]);
+  const trackInteraction = useCallback(
+    (action: string, element: string) => {
+      if (!preferences.analytics) return;
+
+      logger.info("User interaction tracked", { action, element });
+
+      if (typeof window !== "undefined" && "gtag" in window) {
+        (window as any).gtag("event", action, {
+          event_category: "User Interaction",
+          event_label: element,
+        });
+      }
+    },
+    [preferences.analytics],
+  );
 
   // Add click tracking to interactive elements
   useEffect(() => {
     const handleClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       const element = target.tagName.toLowerCase();
-      const text = target.textContent?.slice(0, 50) || '';
-      
-      trackInteraction('click', `${element}: ${text}`);
+      const text = target.textContent?.slice(0, 50) || "";
+
+      trackInteraction("click", `${element}: ${text}`);
     };
 
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
   }, [trackInteraction]);
 
   // Show welcome message for new users
@@ -141,8 +155,8 @@ export const UserExperienceEnhancer: React.FC = () => {
     if (showWelcome) {
       setTimeout(() => {
         showNotification(
-          'Welcome to Zion Tech Group!',
-          'Discover our advanced AI and IT solutions.'
+          "Welcome to Zion Tech Group!",
+          "Discover our advanced AI and IT solutions.",
         );
         setShowWelcome(false);
       }, 2000);
@@ -153,25 +167,27 @@ export const UserExperienceEnhancer: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Ctrl/Cmd + K for search
-      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+      if ((event.ctrlKey || event.metaKey) && event.key === "k") {
         event.preventDefault();
-        const searchInput = document.querySelector('input[type="search"]') as HTMLInputElement;
+        const searchInput = document.querySelector(
+          'input[type="search"]',
+        ) as HTMLInputElement;
         if (searchInput) {
           searchInput.focus();
         }
       }
 
       // Ctrl/Cmd + D for theme toggle
-      if ((event.ctrlKey || event.metaKey) && event.key === 'd') {
+      if ((event.ctrlKey || event.metaKey) && event.key === "d") {
         event.preventDefault();
         const currentTheme = preferences.theme;
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
         handleThemeChange(newTheme);
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [preferences.theme, handleThemeChange]);
 
   if (isLoading) return null;
@@ -181,27 +197,29 @@ export const UserExperienceEnhancer: React.FC = () => {
       {/* Theme Toggle Button */}
       <button
         onClick={() => {
-          const newTheme = preferences.theme === 'dark' ? 'light' : 'dark';
+          const newTheme = preferences.theme === "dark" ? "light" : "dark";
           handleThemeChange(newTheme);
-          trackInteraction('theme_toggle', newTheme);
+          trackInteraction("theme_toggle", newTheme);
         }}
         className="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-40"
-        aria-label={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
-        title={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
+        aria-label={`Switch to ${preferences.theme === "dark" ? "light" : "dark"} theme`}
+        title={`Switch to ${preferences.theme === "dark" ? "light" : "dark"} theme`}
       >
-        {preferences.theme === 'dark' ? '☀️' : '🌙'}
+        {preferences.theme === "dark" ? "☀️" : "🌙"}
       </button>
 
       {/* User Preferences Panel */}
       <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
         <h3 className="text-sm font-bold mb-3">Preferences</h3>
-        
+
         <div className="space-y-2 text-sm">
           <div>
             <label className="block text-xs text-gray-300 mb-1">Theme</label>
             <select
               value={preferences.theme}
-              onChange={(e) => handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
+              onChange={(e) =>
+                handleThemeChange(e.target.value as "light" | "dark" | "auto")
+              }
               className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"
             >
               <option value="auto">Auto</option>
@@ -232,7 +250,9 @@ export const UserExperienceEnhancer: React.FC = () => {
               onChange={(e) => handleNotificationChange(e.target.checked)}
               className="rounded"
             />
-            <label htmlFor="notifications" className="text-xs">Notifications</label>
+            <label htmlFor="notifications" className="text-xs">
+              Notifications
+            </label>
           </div>
 
           <div className="flex items-center space-x-2">
@@ -240,10 +260,17 @@ export const UserExperienceEnhancer: React.FC = () => {
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
-              onChange={(e) => setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
+              onChange={(e) =>
+                setPreferences((prev) => ({
+                  ...prev,
+                  analytics: e.target.checked,
+                }))
+              }
               className="rounded"
             />
-            <label htmlFor="analytics" className="text-xs">Analytics</label>
+            <label htmlFor="analytics" className="text-xs">
+              Analytics
+            </label>
           </div>
         </div>
 

@@ -1,28 +1,28 @@
-import React from 'react';
+import React from "react";
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
+  size?: "sm" | "md" | "lg";
   className?: string;
-  color?: 'blue' | 'gray' | 'white';
+  color?: "blue" | "gray" | "white";
   text?: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  className = '',
-  color = 'blue',
+  size = "md",
+  className = "",
+  color = "blue",
   text,
 }) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
+    sm: "h-4 w-4",
+    md: "h-8 w-8",
+    lg: "h-12 w-12",
   };
 
   const colorClasses = {
-    blue: 'border-gray-300 border-t-blue-600',
-    gray: 'border-gray-300 border-t-gray-600',
-    white: 'border-gray-300 border-t-white',
+    blue: "border-gray-300 border-t-blue-600",
+    gray: "border-gray-300 border-t-gray-600",
+    white: "border-gray-300 border-t-white",
   };
 
   return (

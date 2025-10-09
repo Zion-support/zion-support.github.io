@@ -1,45 +1,51 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Get all files with errors
 const getAllFilesWithErrors = () => {
-  const srcDir = path.join(__dirname, 'src');
+  const srcDir = path.join(__dirname, "src");
   const files = [];
-  
+
   const scanDirectory = (dir) => {
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
         files.push(fullPath);
       }
     }
   };
-  
+
   scanDirectory(srcDir);
   return files;
 };
 
 // Template for a simple coming soon page
 const createComingSoonPage = (filePath) => {
-  const relativePath = path.relative(path.join(__dirname, 'src'), filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  
+  const relativePath = path.relative(path.join(__dirname, "src"), filePath);
+  const fileName = path.basename(filePath, ".tsx");
+
   // Skip if it's a component or special file
-  if (fileName === 'page' || fileName === 'layout' || fileName === 'loading' || fileName === 'error') {
+  if (
+    fileName === "page" ||
+    fileName === "layout" ||
+    fileName === "loading" ||
+    fileName === "error"
+  ) {
     const dirName = path.basename(path.dirname(filePath));
-    const title = dirName.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
-    
+    const title = dirName
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+
     return `import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -68,15 +74,15 @@ const ${title}Page: React.FC = () => {
 
 export default ${title}Page;`;
   }
-  
+
   return null;
 };
 
 // Check if file has syntax errors by trying to parse it
 const hasSyntaxErrors = (filePath) => {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+    const content = fs.readFileSync(filePath, "utf8");
+
     // Check for common syntax error patterns
     const errorPatterns = [
       /\/\/ TODO: Add content\s*}/,
@@ -90,10 +96,10 @@ const hasSyntaxErrors = (filePath) => {
       /^\s*\)\s*$/m,
       /\/\/\s*[^/]/,
       /<[^>]*\/\/[^>]*>/,
-      /{\s*\/\/[^}]*$/m
+      /{\s*\/\/[^}]*$/m,
     ];
-    
-    return errorPatterns.some(pattern => pattern.test(content));
+
+    return errorPatterns.some((pattern) => pattern.test(content));
   } catch (error) {
     return true;
   }
@@ -103,7 +109,7 @@ const hasSyntaxErrors = (filePath) => {
 const fixAllFiles = () => {
   const files = getAllFilesWithErrors();
   let fixedCount = 0;
-  
+
   for (const filePath of files) {
     if (hasSyntaxErrors(filePath)) {
       const newContent = createComingSoonPage(filePath);
@@ -118,7 +124,7 @@ const fixAllFiles = () => {
       }
     }
   }
-  
+
   console.log(`Fixed ${fixedCount} files!`);
 };
 

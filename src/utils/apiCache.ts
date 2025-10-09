@@ -4,8 +4,8 @@
 export const apiCache = {
   // Add utility functions here
   init: () => {
-    console.log('apiCache initialized');
-  }
+    console.log("apiCache initialized");
+  },
 };
 
 export default apiCache;

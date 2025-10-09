@@ -1,4 +1,4 @@
-'use client';
+"use client";
 /**
  * Request Middleware System
  * Provides middleware for handling requests and responses
@@ -61,7 +61,7 @@ export class MiddlewareExecutor {
  */
 export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
-  
+
   try {
     const result = await next();
     const duration = Date.now() - startTime;
@@ -77,7 +77,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 export const authMiddleware: Middleware = async (context, next) => {
   const token = getAuthToken();
   if (token) {
-    context.request.headers['Authorization'] = `Bearer ${token}`;
+    context.request.headers["Authorization"] = `Bearer ${token}`;
   }
   return await next();
 };
@@ -86,8 +86,8 @@ export const authMiddleware: Middleware = async (context, next) => {
  * Get authentication token from storage
  */
 function getAuthToken(): string | null {
-  if (typeof window === 'undefined') return null;
-  return localStorage.getItem('authToken');
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem("authToken");
 }
 
 /**
@@ -99,9 +99,9 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     // Transform error into a standardized format
     const standardError = {
-      message: error instanceof Error ? error.message : 'Unknown error',
+      message: error instanceof Error ? error.message : "Unknown error",
       status: context.response?.status || 500,
-      method: context.request.method
+      method: context.request.method,
     };
     throw standardError;
   }
@@ -110,16 +110,19 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
 /**
  * Rate limiting middleware
  */
-export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Middleware => {
+export const rateLimitMiddleware = (
+  maxRequests: number,
+  windowMs: number,
+): Middleware => {
   const requests = new Map<string, number[]>();
   return async (context, next) => {
     const key = context.request.url;
     const now = Date.now();
     const timestamps = requests.get(key) || [];
     // Remove expired timestamps
-    const validTimestamps = timestamps.filter(t => now - t < windowMs);
+    const validTimestamps = timestamps.filter((t) => now - t < windowMs);
     if (validTimestamps.length >= maxRequests) {
-      throw new Error('Rate limit exceeded');
+      throw new Error("Rate limit exceeded");
     }
     validTimestamps.push(now);
     requests.set(key, validTimestamps);
@@ -134,7 +137,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
   const cache = new Map<string, { data: unknown; timestamp: number }>();
   return async (context, next) => {
     const key = context.request.url;
-    if (context.request.method !== 'GET') {
+    if (context.request.method !== "GET") {
       return await next();
     }
     const cached = cache.get(key);
@@ -144,7 +147,7 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const result = await next();
     cache.set(key, {
       data: result,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
     return result;
   };
@@ -153,7 +156,10 @@ export const cachingMiddleware = (ttl: number): Middleware => {
 /**
  * Retry middleware
  */
-export const retryMiddleware = (maxRetries: number, delay: number): Middleware => {
+export const retryMiddleware = (
+  maxRetries: number,
+  delay: number,
+): Middleware => {
   return async (context, next) => {
     let lastError: Error | null = null;
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
@@ -162,7 +168,9 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
       } catch (error) {
         lastError = error as Error;
         if (attempt < maxRetries) {
-          await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
+          await new Promise((resolve) =>
+            setTimeout(resolve, delay * Math.pow(2, attempt)),
+          );
         }
       }
     }
@@ -177,7 +185,9 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
     return await Promise.race([
       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
+      new Promise((_, reject) =>
+        setTimeout(() => reject(new Error("Request timeout")), timeoutMs),
+      ),
     ]);
   };
 };
@@ -186,7 +196,9 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
  * Request transformation middleware
  */
 export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext>
+  transformer: (
+    context: MiddlewareContext,
+  ) => MiddlewareContext | Promise<MiddlewareContext>,
 ): Middleware => {
   return async (context, next) => {
     const transformedContext = await transformer(context);
@@ -198,7 +210,7 @@ export const transformRequestMiddleware = (
  * Response transformation middleware
  */
 export const transformResponseMiddleware = (
-  transformer: (data: unknown) => unknown | Promise<unknown>
+  transformer: (data: unknown) => unknown | Promise<unknown>,
 ): Middleware => {
   return async (context, next) => {
     const result = await next();
@@ -230,5 +242,5 @@ export default {
   timeoutMiddleware,
   transformRequestMiddleware,
   transformResponseMiddleware,
-  createDefaultMiddlewareChain
+  createDefaultMiddlewareChain,
 };

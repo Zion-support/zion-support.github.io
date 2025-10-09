@@ -4,8 +4,8 @@
 export const seoOptimizer = {
   // Add utility functions here
   init: () => {
-    console.log('seoOptimizer initialized');
-  }
+    console.log("seoOptimizer initialized");
+  },
 };
 
 export default seoOptimizer;

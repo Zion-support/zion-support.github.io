@@ -5,7 +5,7 @@
 
 interface EnvConfig {
   // App Configuration
-  NODE_ENV: 'development' | 'production' | 'test';
+  NODE_ENV: "development" | "production" | "test";
   APP_URL: string;
   APP_NAME: string;
 
@@ -22,7 +22,7 @@ interface EnvConfig {
   ENABLE_PERFORMANCE_MONITORING: boolean;
 
   // Logging
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
+  LOG_LEVEL: "DEBUG" | "INFO" | "WARN" | "ERROR" | "NONE";
 
   // Build Configuration
   BUILD_ID?: string;
@@ -46,17 +46,25 @@ class EnvironmentConfig {
   }
 
   private getEnvVar(key: string, defaultValue?: string): string {
-    if (typeof process !== 'undefined' && process.env) {
+    if (typeof process !== "undefined" && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
+      return (
+        process.env[key] ||
+        process.env[`NEXT_PUBLIC_${key}`] ||
+        defaultValue ||
+        ""
+      );
     }
-    return defaultValue || '';
+    return defaultValue || "";
   }
 
-  private getBooleanEnvVar(key: string, defaultValue: boolean = false): boolean {
+  private getBooleanEnvVar(
+    key: string,
+    defaultValue: boolean = false,
+  ): boolean {
     const _value = this.getEnvVar(key);
     if (!value) return defaultValue;
-    return value.toLowerCase() === 'true' || value === '1';
+    return value.toLowerCase() === "true" || value === "1";
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
@@ -68,28 +76,38 @@ class EnvironmentConfig {
   private loadConfig(): EnvConfig {
     return {
       // App Configuration
-      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
-      APP_URL: this.getEnvVar('APP_URL', 'https://ziontechgroup.com'),
-      APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
+      NODE_ENV:
+        (this.getEnvVar("NODE_ENV", "development") as any) || "development",
+      APP_URL: this.getEnvVar("APP_URL", "https://ziontechgroup.com"),
+      APP_NAME: this.getEnvVar("APP_NAME", "Zion Tech Group"),
 
       // Analytics
-      GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
+      GOOGLE_ANALYTICS_ID: this.getEnvVar("GOOGLE_ANALYTICS_ID"),
 
       // API Configuration
-      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https://api.ziontechgroup.com'),
-      API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
+      API_BASE_URL: this.getEnvVar(
+        "API_BASE_URL",
+        "https://api.ziontechgroup.com",
+      ),
+      API_TIMEOUT: this.getNumberEnvVar("API_TIMEOUT", 30000),
 
       // Feature Flags
-      ENABLE_ANALYTICS: this.getBooleanEnvVar('ENABLE_ANALYTICS', true),
-      ENABLE_ERROR_TRACKING: this.getBooleanEnvVar('ENABLE_ERROR_TRACKING', true),
-      ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
+      ENABLE_ANALYTICS: this.getBooleanEnvVar("ENABLE_ANALYTICS", true),
+      ENABLE_ERROR_TRACKING: this.getBooleanEnvVar(
+        "ENABLE_ERROR_TRACKING",
+        true,
+      ),
+      ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar(
+        "ENABLE_PERFORMANCE_MONITORING",
+        true,
+      ),
 
       // Logging
-      LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
+      LOG_LEVEL: (this.getEnvVar("LOG_LEVEL", "INFO") as any) || "INFO",
 
       // Build Configuration
-      BUILD_ID: this.getEnvVar('BUILD_ID'),
-      VERSION: this.getEnvVar('VERSION', '1.0.0'),
+      BUILD_ID: this.getEnvVar("BUILD_ID"),
+      VERSION: this.getEnvVar("VERSION", "1.0.0"),
     };
   }
 
@@ -97,7 +115,7 @@ class EnvironmentConfig {
     const errors: string[] = [];
 
     // Validate NODE_ENV
-    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
+    if (!["development", "production", "test"].includes(this.config.NODE_ENV)) {
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
     }
 
@@ -106,7 +124,10 @@ class EnvironmentConfig {
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
     }
 
-    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {
+    if (
+      this.config.API_BASE_URL &&
+      !this.isValidUrl(this.config.API_BASE_URL)
+    ) {
       errors.push(`Invalid API_BASE_URL: ${this.config.API_BASE_URL}`);
     }
 
@@ -117,8 +138,8 @@ class EnvironmentConfig {
 
     if (errors.length > 0) {
       //       // In production, we might want to throw, but in development just warn
-      if (this.config.NODE_ENV === 'production') {
-        throw new Error(`Environment validation failed: ${errors.join(', ')}`);
+      if (this.config.NODE_ENV === "production") {
+        throw new Error(`Environment validation failed: ${errors.join(", ")}`);
       }
     }
   }
@@ -137,15 +158,15 @@ class EnvironmentConfig {
   }
 
   public isDevelopment(): boolean {
-    return this.config.NODE_ENV === 'development';
+    return this.config.NODE_ENV === "development";
   }
 
   public isProduction(): boolean {
-    return this.config.NODE_ENV === 'production';
+    return this.config.NODE_ENV === "production";
   }
 
   public isTest(): boolean {
-    return this.config.NODE_ENV === 'test';
+    return this.config.NODE_ENV === "test";
   }
 
   // Convenience getters

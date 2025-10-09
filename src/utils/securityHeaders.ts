@@ -4,8 +4,8 @@
 export const securityHeaders = {
   // Add utility functions here
   init: () => {
-    console.log('securityHeaders initialized');
-  }
+    console.log("securityHeaders initialized");
+  },
 };
 
 export default securityHeaders;

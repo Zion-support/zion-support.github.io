@@ -1,24 +1,21 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 function getRelativePath(fromPath, toPath) {
-  return relative.startsWith('.') ? relative : './' + relative;
+  return relative.startsWith(".") ? relative : "./" + relative;
 }
 
 function processFile(filePath) {
   try {
-
     // Calculate relative paths based on file location
 
-
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/';
-      typesPath = '../../types/';
+      utilsPath = "../../utils/";
+      typesPath = "../../types/";
     } else if (isInComponents) {
-      utilsPath = '../utils/';
-      typesPath = '../types/';
+      utilsPath = "../utils/";
+      typesPath = "../types/";
     }
 
     // Define replacements with dynamic paths
@@ -44,7 +41,8 @@ function processFile(filePath) {
         replacement: `import { usePathname } from '${utilsPath}navigation';`,
       },
       {
-        pattern: /import\s+{\s*useSearchParams\s*}\s+from\s+'next\/navigation';/g,
+        pattern:
+          /import\s+{\s*useSearchParams\s*}\s+from\s+'next\/navigation';/g,
         replacement: `import { useSearchParams } from '${utilsPath}navigation';`,
       },
       {
@@ -73,24 +71,21 @@ function processFile(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
 
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-
-  items.forEach(item => {
-
+  items.forEach((item) => {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
       if (processFile(fullPath)) {
         totalFixed++;
       }
@@ -101,4 +96,3 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-

@@ -4,8 +4,8 @@
 export const advancedCaching = {
   // Add utility functions here
   init: () => {
-    console.log('advancedCaching initialized');
-  }
+    console.log("advancedCaching initialized");
+  },
 };
 
 export default advancedCaching;

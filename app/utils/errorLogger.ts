@@ -1,13 +1,13 @@
-'use client';
+"use client";
 /**
  * Comprehensive Error Logging System
  * Provides structured error logging with different severity levels
  */
 export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical'
+  LOW = "low",
+  MEDIUM = "medium",
+  HIGH = "high",
+  CRITICAL = "critical",
 }
 export interface ErrorLogEntry {
   timestamp: string;
@@ -29,7 +29,7 @@ class ErrorLogger {
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown>,
   ): void {
     const entry: ErrorLogEntry = {
       timestamp: new Date().toISOString(),
@@ -37,9 +37,10 @@ class ErrorLogger {
       message,
       error,
       context,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack
+      userAgent:
+        typeof window !== "undefined" ? window.navigator.userAgent : undefined,
+      url: typeof window !== "undefined" ? window.location.href : undefined,
+      stackTrace: error?.stack,
     };
     // Add to internal log
     this.logs.push(entry);
@@ -47,11 +48,14 @@ class ErrorLogger {
       this.logs.shift();
     }
     // Console logging in development
-    if (process.env['NODE_ENV'] === 'development') {
+    if (process.env["NODE_ENV"] === "development") {
       this.logToConsole(entry);
     }
     // Send to external logging service in production
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
+    if (
+      process.env["NODE_ENV"] === "production" &&
+      severity === ErrorSeverity.CRITICAL
+    ) {
       this.sendToExternalService(entry);
     }
   }
@@ -60,18 +64,21 @@ class ErrorLogger {
    */
   private logToConsole(entry: ErrorLogEntry): void {
     const styles: Record<ErrorSeverity, string> = {
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'
+      [ErrorSeverity.LOW]: "color: #4ade80",
+      [ErrorSeverity.MEDIUM]: "color: #fbbf24",
+      [ErrorSeverity.HIGH]: "color: #fb923c",
+      [ErrorSeverity.CRITICAL]: "color: #ef4444; font-weight: bold",
     };
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
+    console.group(
+      `%c[${entry.severity.toUpperCase()}] ${entry.message}`,
+      styles[entry.severity],
+    );
     if (entry.error) {
-      }
+    }
     if (entry.context) {
-      }
+    }
     if (entry.stackTrace) {
-      }
+    }
     console.groupEnd();
   }
   /**
@@ -85,9 +92,9 @@ class ErrorLogger {
         return;
       }
       await fetch(endpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           ...entry,
@@ -95,14 +102,14 @@ class ErrorLogger {
             ? {
                 message: entry.error.message,
                 name: entry.error.name,
-                stack: entry.error.stack
+                stack: entry.error.stack,
               }
-            : undefined
-        })
+            : undefined,
+        }),
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      }
+    }
   }
   /**
    * Get recent logs
@@ -114,7 +121,7 @@ class ErrorLogger {
    * Get logs by severity
    */
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    return this.logs.filter(log => log.severity === severity);
+    return this.logs.filter((log) => log.severity === severity);
   }
   /**
    * Clear all logs
@@ -132,12 +139,20 @@ class ErrorLogger {
 // Singleton instance
 const errorLogger = new ErrorLogger();
 // Convenience functions
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (message: string, context?: Record<string, unknown>) =>
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
+export const logError = (
+  message: string,
+  error?: Error,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
+export const logCritical = (
+  message: string,
+  error?: Error,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
+export const logWarning = (
+  message: string,
+  context?: Record<string, unknown>,
+) => errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export const logInfo = (message: string, context?: Record<string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;

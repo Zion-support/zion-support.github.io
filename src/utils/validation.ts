@@ -4,8 +4,8 @@
 export const validation = {
   // Add utility functions here
   init: () => {
-    console.log('validation initialized');
-  }
+    console.log("validation initialized");
+  },
 };
 
 export default validation;

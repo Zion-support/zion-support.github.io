@@ -7,38 +7,48 @@ export const securityConfig = {
   // Content Security Policy
   csp: {
     directives: {
-      'default-src': ["'self'"],
-      'script-src': [
+      "default-src": ["'self'"],
+      "script-src": [
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
-        'https://www.googletagmanager.com',
+        "https://www.googletagmanager.com",
       ],
-      'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob:'],
-      'font-src': ["'self'", 'https://fonts.gstatic.com'],
-      'connect-src': ["'self'", 'https://www.google-analytics.com'],
-      'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
-      'form-action': ["'self'"],
+      "style-src": [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com",
+      ],
+      "img-src": ["'self'", "data:", "https:", "blob:"],
+      "font-src": ["'self'", "https://fonts.gstatic.com"],
+      "connect-src": ["'self'", "https://www.google-analytics.com"],
+      "frame-ancestors": ["'none'"],
+      "base-uri": ["'self'"],
+      "form-action": ["'self'"],
     },
     reportOnly: false,
   },
 
   // Security Headers
   headers: {
-    'X-Frame-Options': 'DENY',
-    'X-Content-Type-Options': 'nosniff',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
   },
 
   // Input validation
   validation: {
     maxInputLength: 10000,
-    allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
+    allowedFileTypes: [
+      "image/jpeg",
+      "image/png",
+      "image/webp",
+      "image/gif",
+      "application/pdf",
+    ],
     maxFileSize: 10 * 1024 * 1024, // 10MB
   },
 
@@ -52,9 +62,11 @@ export const securityConfig = {
 
   // CORS configuration
   cors: {
-    origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: process.env.ALLOWED_ORIGINS?.split(",") || [
+      "http://localhost:3000",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
     maxAge: 86400, // 24 hours
   },

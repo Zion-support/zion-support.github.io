@@ -4,8 +4,8 @@
 export const dataValidator = {
   // Add utility functions here
   init: () => {
-    console.log('dataValidator initialized');
-  }
+    console.log("dataValidator initialized");
+  },
 };
 
 export default dataValidator;

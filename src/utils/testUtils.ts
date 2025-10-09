@@ -4,8 +4,8 @@
 export const testUtils = {
   // Add utility functions here
   init: () => {
-    console.log('testUtils initialized');
-  }
+    console.log("testUtils initialized");
+  },
 };
 
 export default testUtils;

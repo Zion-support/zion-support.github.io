@@ -1,123 +1,156 @@
-'use client';
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
+  CheckCircle,
+  MessageSquare,
+  Calendar,
+  User,
+  Building,
+  Globe,
+  Shield,
+  Brain,
+  Zap,
+  Cloud,
+  Database,
+  Code,
+  BarChart,
+  Users,
+  Award,
+  Target,
+  Star,
+  TrendingUp,
+  ArrowRight,
+} from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-    timeline: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    service: "",
+    message: "",
+    budget: "",
+    timeline: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
 
   const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
+    phone: "+1 (302) 464-0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008, Middletown, DE 19709",
+    hours: "Mon-Fri: 9AM-6PM EST",
   };
 
   const services = [
-    'AI Services',
-    'IT Services',
-    'Micro SAAS Solutions',
-    'Quantum Computing',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Digital Transformation',
-    'Custom Development',
-    'Consulting',
-    'Other'
+    "AI Services",
+    "IT Services",
+    "Micro SAAS Solutions",
+    "Quantum Computing",
+    "Cybersecurity",
+    "Cloud Migration",
+    "Digital Transformation",
+    "Custom Development",
+    "Consulting",
+    "Other",
   ];
 
   const budgetRanges = [
-    'Under $10K',
-    '$10K - $50K',
-    '$50K - $100K',
-    '$100K - $500K',
-    '$500K+',
-    'Not sure'
+    "Under $10K",
+    "$10K - $50K",
+    "$50K - $100K",
+    "$100K - $500K",
+    "$500K+",
+    "Not sure",
   ];
 
   const timelines = [
-    'ASAP',
-    'Within 1 month',
-    '1-3 months',
-    '3-6 months',
-    '6+ months',
-    'Just exploring'
+    "ASAP",
+    "Within 1 month",
+    "1-3 months",
+    "3-6 months",
+    "6+ months",
+    "Just exploring",
   ];
 
   const offices = [
     {
-      city: 'Middletown, DE',
-      address: '364 E Main St STE 1008, Middletown, DE 19709',
-      phone: '+1 (302) 464-0950',
-      email: 'kleber@ziontechgroup.com',
-      hours: 'Mon-Fri: 9AM-6PM EST',
-      timezone: 'Eastern Time'
+      city: "Middletown, DE",
+      address: "364 E Main St STE 1008, Middletown, DE 19709",
+      phone: "+1 (302) 464-0950",
+      email: "kleber@ziontechgroup.com",
+      hours: "Mon-Fri: 9AM-6PM EST",
+      timezone: "Eastern Time",
     },
     {
-      city: 'San Francisco, CA',
-      address: '123 Tech Street, San Francisco, CA 94105',
-      phone: '+1 (415) 555-0123',
-      email: 'sf@ziontechgroup.com',
-      hours: 'Mon-Fri: 9AM-6PM PST',
-      timezone: 'Pacific Time'
+      city: "San Francisco, CA",
+      address: "123 Tech Street, San Francisco, CA 94105",
+      phone: "+1 (415) 555-0123",
+      email: "sf@ziontechgroup.com",
+      hours: "Mon-Fri: 9AM-6PM PST",
+      timezone: "Pacific Time",
     },
     {
-      city: 'London, UK',
-      address: '456 Innovation Lane, London EC1A 4HD',
-      phone: '+44 20 7946 0958',
-      email: 'london@ziontechgroup.com',
-      hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
-    }
+      city: "London, UK",
+      address: "456 Innovation Lane, London EC1A 4HD",
+      phone: "+44 20 7946 0958",
+      email: "london@ziontechgroup.com",
+      hours: "Mon-Fri: 9AM-6PM GMT",
+      timezone: "Greenwich Mean Time",
+    },
   ];
 
   const faqs = [
     {
-      question: 'How quickly can you start my project?',
-      answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
+      question: "How quickly can you start my project?",
+      answer:
+        "We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.",
     },
     {
-      question: 'Do you offer ongoing support?',
-      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.'
+      question: "Do you offer ongoing support?",
+      answer:
+        "Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.",
     },
     {
-      question: 'What industries do you serve?',
-      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
+      question: "What industries do you serve?",
+      answer:
+        "We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.",
     },
     {
-      question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
-    }
+      question: "Do you work with small businesses?",
+      answer:
+        "Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.",
+    },
   ];
 
   if (isSubmitted) {
@@ -129,7 +162,8 @@ export default function ContactPage() {
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
           <p className="text-xl text-gray-300 mb-6">
-            Your message has been sent successfully. Our team will get back to you within 24 hours.
+            Your message has been sent successfully. Our team will get back to
+            you within 24 hours.
           </p>
           <div className="space-y-4">
             <p className="text-gray-400">
@@ -138,15 +172,21 @@ export default function ContactPage() {
             <div className="space-y-2 text-left max-w-md mx-auto">
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">We'll review your requirements</span>
+                <span className="text-gray-300">
+                  We'll review your requirements
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">Schedule a consultation call</span>
+                <span className="text-gray-300">
+                  Schedule a consultation call
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">Provide a detailed proposal</span>
+                <span className="text-gray-300">
+                  Provide a detailed proposal
+                </span>
               </div>
             </div>
           </div>
@@ -175,17 +215,21 @@ export default function ContactPage() {
               Get In Touch
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Ready to transform your business with AI? Let's discuss your project and explore 
-              how we can help you achieve your goals.
+              Ready to transform your business with AI? Let's discuss your
+              project and explore how we can help you achieve your goals.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">{contactInfo.phone}</span>
+                <span className="text-white font-medium">
+                  {contactInfo.phone}
+                </span>
               </div>
               <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
                 <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">{contactInfo.email}</span>
+                <span className="text-white font-medium">
+                  {contactInfo.email}
+                </span>
               </div>
             </div>
           </div>
@@ -198,7 +242,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-slate-800/50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Send us a message
+              </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -273,7 +319,9 @@ export default function ContactPage() {
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                        <option key={index} value={service}>
+                          {service}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -289,7 +337,9 @@ export default function ContactPage() {
                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => (
-                        <option key={index} value={range}>{range}</option>
+                        <option key={index} value={range}>
+                          {range}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -307,7 +357,9 @@ export default function ContactPage() {
                   >
                     <option value="">Select timeline</option>
                     {timelines.map((timeline, index) => (
-                      <option key={index} value={timeline}>{timeline}</option>
+                      <option key={index} value={timeline}>
+                        {timeline}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -350,41 +402,59 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  Contact Information
+                </h2>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="text-white font-medium">{contactInfo.phone}</div>
-                      <div className="text-gray-400 text-sm">Call us anytime</div>
+                      <div className="text-white font-medium">
+                        {contactInfo.phone}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        Call us anytime
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="text-white font-medium">{contactInfo.email}</div>
+                      <div className="text-white font-medium">
+                        {contactInfo.email}
+                      </div>
                       <div className="text-gray-400 text-sm">Email us</div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="text-white font-medium">Middletown, DE</div>
-                      <div className="text-gray-400 text-sm">{contactInfo.address}</div>
+                      <div className="text-white font-medium">
+                        Middletown, DE
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        {contactInfo.address}
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Clock className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                     <div>
-                      <div className="text-white font-medium">{contactInfo.hours}</div>
-                      <div className="text-gray-400 text-sm">Business hours</div>
+                      <div className="text-white font-medium">
+                        {contactInfo.hours}
+                      </div>
+                      <div className="text-gray-400 text-sm">
+                        Business hours
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Why Choose Us?
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -392,7 +462,9 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">99.9% Uptime Guarantee</span>
+                    <span className="text-gray-300">
+                      99.9% Uptime Guarantee
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -406,7 +478,9 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-slate-800/50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  Quick Actions
+                </h3>
                 <div className="space-y-3">
                   <a
                     href="/consultation"
@@ -442,26 +516,41 @@ export default function ContactPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {offices.map((office, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
+              <div
+                key={index}
+                className="bg-slate-800/50 rounded-lg p-6 text-center"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {office.city}
+                </h3>
                 <div className="space-y-3">
                   <div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-4 h-4 text-cyan-400" />
-                    <span className="text-gray-300 text-sm">{office.address}</span>
+                    <span className="text-gray-300 text-sm">
+                      {office.address}
+                    </span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="w-4 h-4 text-purple-400" />
-                    <span className="text-gray-300 text-sm">{office.phone}</span>
+                    <span className="text-gray-300 text-sm">
+                      {office.phone}
+                    </span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300 text-sm">{office.email}</span>
+                    <span className="text-gray-300 text-sm">
+                      {office.email}
+                    </span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Clock className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300 text-sm">{office.hours}</span>
+                    <span className="text-gray-300 text-sm">
+                      {office.hours}
+                    </span>
                   </div>
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
+                  <div className="text-cyan-400 text-sm font-medium">
+                    {office.timezone}
+                  </div>
                 </div>
               </div>
             ))}
@@ -484,7 +573,9 @@ export default function ContactPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {faq.question}
+                  </h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}

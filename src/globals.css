@@ -1,26 +1,29 @@
 /* Preload critical fonts */
 @font-face {
-  font-family: 'Rajdhani';
+  font-family: "Rajdhani";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/rajdhani/v15/LDI2apCSOBg7S-QT7p4HM-Mu.ttf') format('truetype');
+  src: url("https://fonts.gstatic.com/s/rajdhani/v15/LDI2apCSOBg7S-QT7p4HM-Mu.ttf")
+    format("truetype");
 }
 
 @font-face {
-  font-family: 'Rajdhani';
+  font-family: "Rajdhani";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/rajdhani/v15/LDI1apCSOBg7S-QT7p4HM-Mu.ttf') format('truetype');
+  src: url("https://fonts.gstatic.com/s/rajdhani/v15/LDI1apCSOBg7S-QT7p4HM-Mu.ttf")
+    format("truetype");
 }
 
 @font-face {
-  font-family: 'Orbitron';
+  font-family: "Orbitron";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQDBWGbfyE.woff2') format('woff2');
+  src: url("https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQDBWGbfyE.woff2")
+    format("woff2");
 }
 
 @tailwind base;
@@ -37,12 +40,12 @@
   --neon-orange: #ff8000;
   --neon-red: #ff0040;
   --neon-yellow: #ffff00;
-  
+
   --cyber-dark: #0a0a0a;
   --cyber-darker: #050505;
   --cyber-gray: #1a1a1a;
   --cyber-light: #2a2a2a;
-  
+
   --glow-intensity: 0.8;
   --animation-speed: 0.3s;
 }
@@ -53,7 +56,12 @@
 }
 
 body {
-  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:
+    "Inter",
+    "SF Pro Display",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
   background: var(--cyber-dark);
   color: #ffffff;
   overflow-x: hidden;
@@ -115,7 +123,7 @@ body {
 
 /* Cyber Grid Background */
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -123,15 +131,23 @@ body {
 }
 
 .cyber-grid::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 0, 255, 0.1) 0%,
+      transparent 50%
+    ),
     radial-gradient(circle at 40% 60%, rgba(0, 255, 0, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -142,22 +158,34 @@ body {
 }
 
 .neural-network-bg::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 30% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 70%),
-    radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.05) 0%, transparent 70%);
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(0, 255, 255, 0.05) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(255, 0, 255, 0.05) 0%,
+      transparent 70%
+    );
   animation: neuralPulse 4s ease-in-out infinite alternate;
   pointer-events: none;
 }
 
 @keyframes neuralPulse {
-  0% { opacity: 0.3; }
-  100% { opacity: 0.7; }
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.7;
+  }
 }
 
 /* Matrix Rain Effect */
@@ -167,22 +195,36 @@ body {
 }
 
 .matrix-rain::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    linear-gradient(90deg, transparent 0%, rgba(0, 255, 0, 0.1) 50%, transparent 100%),
-    linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%);
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 255, 0, 0.1) 50%,
+      transparent 100%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 0%,
+      rgba(0, 255, 255, 0.1) 50%,
+      transparent 100%
+    );
   animation: matrixFlow 3s linear infinite;
   pointer-events: none;
 }
 
 @keyframes matrixFlow {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 /* Particle Field */
@@ -191,13 +233,13 @@ body {
 }
 
 .particle-field::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.3), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(255, 0, 255, 0.3), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(0, 255, 0, 0.3), transparent),
@@ -209,14 +251,18 @@ body {
 }
 
 @keyframes particleFloat {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-200px); }
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-200px);
+  }
 }
 
 /* Neon Text Effects */
 .neon-text {
   color: var(--neon-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-cyan),
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
@@ -225,14 +271,22 @@ body {
 }
 
 @keyframes neonFlicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
-    text-shadow: 
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
       0 0 5px var(--neon-cyan),
       0 0 10px var(--neon-cyan),
       0 0 15px var(--neon-cyan),
       0 0 20px var(--neon-cyan);
   }
-  20%, 24%, 55% {
+  20%,
+  24%,
+  55% {
     text-shadow: none;
   }
 }
@@ -247,13 +301,19 @@ body {
 }
 
 @keyframes holographicShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .cyber-text {
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
   font-weight: 900;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -287,27 +347,60 @@ body {
 }
 
 @keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
 }
 
 @keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(2px, -2px); }
-  40% { transform: translate(-2px, 2px); }
-  60% { transform: translate(-2px, -2px); }
-  80% { transform: translate(2px, 2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
 }
 
 @keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(-2px, -2px); }
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
 }
 
 /* Neon Pulse Animation */
@@ -317,13 +410,13 @@ body {
 
 @keyframes neonPulse {
   from {
-    text-shadow: 
+    text-shadow:
       0 0 5px var(--neon-cyan),
       0 0 10px var(--neon-cyan),
       0 0 15px var(--neon-cyan);
   }
   to {
-    text-shadow: 
+    text-shadow:
       0 0 10px var(--neon-cyan),
       0 0 20px var(--neon-cyan),
       0 0 30px var(--neon-cyan),
@@ -338,19 +431,28 @@ body {
 }
 
 .cyber-scan-line::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.4),
+    transparent
+  );
   animation: scanLine 3s linear infinite;
 }
 
 @keyframes scanLine {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* Cyber Scan Effect */
@@ -359,24 +461,38 @@ body {
 }
 
 .cyber-scan-effect::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
   animation: scanEffect 2s ease-in-out infinite;
 }
 
 @keyframes scanEffect {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Quantum Cards */
 .quantum-card {
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(255, 0, 255, 0.1)
+  );
   border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: 12px;
   backdrop-filter: blur(10px);
@@ -385,19 +501,29 @@ body {
 }
 
 .quantum-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
   animation: quantumShimmer 3s ease-in-out infinite;
 }
 
 @keyframes quantumShimmer {
-  0%, 100% { transform: translateX(-100%); }
-  50% { transform: translateX(100%); }
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
 }
 
 .energy-pulse {
@@ -405,11 +531,12 @@ body {
 }
 
 @keyframes energyPulse {
-  0%, 100% { 
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     transform: scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
     transform: scale(1.02);
   }
@@ -417,7 +544,11 @@ body {
 
 /* Cyber Cards */
 .cyber-card {
-  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(42, 42, 42, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(26, 26, 26, 0.9),
+    rgba(42, 42, 42, 0.9)
+  );
   border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 8px;
   backdrop-filter: blur(5px);
@@ -436,24 +567,37 @@ body {
 }
 
 .hologram-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
   animation: hologramScan 4s linear infinite;
 }
 
 @keyframes hologramScan {
-  0% { transform: translateX(-100%) translateY(-100%); }
-  100% { transform: translateX(100%) translateY(100%); }
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
 }
 
 /* Futuristic Glow */
 .futuristic-glow {
-  background: linear-gradient(135deg, rgba(0, 255, 255, 0.05), rgba(255, 0, 255, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.05),
+    rgba(255, 0, 255, 0.05)
+  );
   border: 1px solid rgba(0, 255, 255, 0.2);
   border-radius: 8px;
   position: relative;
@@ -461,25 +605,43 @@ body {
 }
 
 .futuristic-glow::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
   animation: glowSweep 3s ease-in-out infinite;
 }
 
 @keyframes glowSweep {
-  0%, 100% { transform: translateX(-100%); }
-  50% { transform: translateX(100%); }
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
 }
 
 .neural-pattern {
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 0, 255, 0.1) 0%,
+      transparent 50%
+    );
   background-size: 100px 100px;
 }
 
@@ -497,13 +659,18 @@ body {
 }
 
 .cyber-button::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   transition: left 0.5s ease;
 }
 
@@ -518,7 +685,7 @@ body {
 
 /* Neon Glow Effect */
 .neon-glow {
-  text-shadow: 
+  text-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor;
@@ -526,7 +693,7 @@ body {
 }
 
 .neon-glow:hover {
-  text-shadow: 
+  text-shadow:
     0 0 10px currentColor,
     0 0 20px currentColor,
     0 0 30px currentColor,
@@ -538,20 +705,20 @@ body {
   .cyber-grid {
     background-size: 25px 25px;
   }
-  
+
   .neon-text {
     font-size: 1.5rem;
   }
-  
+
   .holographic-text {
     font-size: 2rem;
   }
-  
+
   .quantum-card,
   .cyber-card {
     padding: 1rem;
   }
-  
+
   .cyber-button {
     padding: 10px 20px;
     font-size: 0.9rem;
@@ -563,21 +730,21 @@ body {
   .cyber-grid {
     background-size: 20px 20px;
   }
-  
+
   .neon-text {
     font-size: 1.25rem;
   }
-  
+
   .cyber-text {
     font-size: 1rem;
     letter-spacing: 0.5px;
   }
-  
+
   .cyber-card {
     padding: 0.75rem;
     margin: 0.5rem;
   }
-  
+
   .cyber-button {
     padding: 8px 16px;
     font-size: 0.8rem;
@@ -610,12 +777,20 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, var(--primary-cyan), var(--primary-purple));
+  background: linear-gradient(
+    45deg,
+    var(--primary-cyan),
+    var(--primary-purple)
+  );
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+  background: linear-gradient(
+    45deg,
+    var(--primary-purple),
+    var(--primary-pink)
+  );
 }
 
 /* Selection Styling */
@@ -642,14 +817,14 @@ body {
   .matrix-rain {
     background: none !important;
   }
-  
+
   .neon-text,
   .cyber-text,
   .holographic-text {
     color: #000 !important;
     text-shadow: none !important;
   }
-  
+
   .cyber-card,
   .hologram-card,
   .quantum-card {
@@ -664,13 +839,13 @@ body {
 }
 
 .particle-system::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, #00ffff, transparent),
     radial-gradient(2px 2px at 40px 70px, #ff00ff, transparent),
     radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
@@ -683,8 +858,12 @@ body {
 }
 
 @keyframes particle-float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-200px) rotate(360deg); }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-200px) rotate(360deg);
+  }
 }
 
 /* Advanced Futuristic Effects */
@@ -692,20 +871,21 @@ body {
   position: relative;
   background: linear-gradient(45deg, #0f0f23, #1a1a2e, #16213e);
   border: 1px solid rgba(0, 255, 255, 0.3);
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(0, 255, 255, 0.2),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
   animation: futuristic-pulse 3s ease-in-out infinite;
 }
 
 @keyframes futuristic-pulse {
-  0%, 100% { 
-    box-shadow: 
+  0%,
+  100% {
+    box-shadow:
       0 0 20px rgba(0, 255, 255, 0.2),
       inset 0 0 20px rgba(0, 255, 255, 0.1);
   }
-  50% { 
-    box-shadow: 
+  50% {
+    box-shadow:
       0 0 40px rgba(0, 255, 255, 0.4),
       0 0 80px rgba(0, 255, 255, 0.2),
       inset 0 0 30px rgba(0, 255, 255, 0.2);
@@ -720,7 +900,7 @@ body {
 }
 
 .cyber-border::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -735,8 +915,13 @@ body {
 }
 
 @keyframes cyber-border-flow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .neural-pattern {
@@ -745,26 +930,39 @@ body {
 }
 
 .neural-pattern::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(255, 255, 0, 0.1) 0%, transparent 50%);
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(255, 0, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 0, 0.1) 0%,
+      transparent 50%
+    );
   animation: neural-float 8s ease-in-out infinite;
   pointer-events: none;
 }
 
 @keyframes neural-float {
-  0%, 100% { 
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
     opacity: 0.3;
   }
-  50% { 
+  50% {
     transform: translateY(-20px) rotate(180deg);
     opacity: 0.6;
   }
@@ -778,41 +976,50 @@ body {
 }
 
 .holographic-border::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -1px;
   left: -1px;
   right: -1px;
   bottom: -1px;
-  background: linear-gradient(45deg, 
-    transparent 30%, 
-    rgba(0, 255, 255, 0.5) 50%, 
-    transparent 70%);
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.5) 50%,
+    transparent 70%
+  );
   animation: holographic-sweep 2s linear infinite;
   z-index: -1;
 }
 
 @keyframes holographic-sweep {
-  0% { transform: translateX(-100%) rotate(45deg); }
-  100% { transform: translateX(100%) rotate(45deg); }
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
 }
 
 .quantum-field {
   position: relative;
-  background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.1) 0%, 
-    rgba(236, 72, 153, 0.1) 50%, 
-    rgba(59, 130, 246, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(59, 130, 246, 0.1) 100%
+  );
   border: 1px solid rgba(139, 92, 246, 0.3);
   animation: quantum-vibration 2s ease-in-out infinite;
 }
 
 @keyframes quantum-vibration {
-  0%, 100% { 
+  0%,
+  100% {
     transform: translateZ(0);
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
   }
-  50% { 
+  50% {
     transform: translateZ(2px);
     box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
   }
@@ -825,7 +1032,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: cyber-text-flow 3s ease-in-out infinite;
-  text-shadow: 
+  text-shadow:
     0 0 10px rgba(0, 255, 255, 0.5),
     0 0 20px rgba(255, 0, 255, 0.3),
     0 0 30px rgba(255, 255, 0, 0.2);
@@ -833,11 +1040,12 @@ body {
 }
 
 @keyframes cyber-text-flow {
-  0%, 100% { 
+  0%,
+  100% {
     background-position: 0% 50%;
     transform: perspective(1000px) rotateX(15deg) scale(1);
   }
-  50% { 
+  50% {
     background-position: 100% 50%;
     transform: perspective(1000px) rotateX(15deg) scale(1.05);
   }
@@ -849,13 +1057,13 @@ body {
 }
 
 .particle-field::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(1px 1px at 20px 30px, #00ffff, transparent),
     radial-gradient(1px 1px at 40px 70px, #ff00ff, transparent),
     radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
@@ -868,12 +1076,16 @@ body {
 }
 
 @keyframes particle-drift {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(-150px) rotate(360deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-150px) rotate(360deg);
+  }
 }
 
 .cyber-grid-3d {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
@@ -882,8 +1094,12 @@ body {
 }
 
 @keyframes grid-3d-rotate {
-  0% { transform: perspective(1000px) rotateX(60deg) rotateY(0deg); }
-  100% { transform: perspective(1000px) rotateX(60deg) rotateY(360deg); }
+  0% {
+    transform: perspective(1000px) rotateX(60deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(60deg) rotateY(360deg);
+  }
 }
 
 .neon-pulse {
@@ -891,16 +1107,17 @@ body {
 }
 
 @keyframes neon-pulse-effect {
-  0%, 100% { 
-    text-shadow: 
+  0%,
+  100% {
+    text-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor;
     filter: brightness(1);
   }
-  50% { 
-    text-shadow: 
+  50% {
+    text-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -915,34 +1132,41 @@ body {
 }
 
 .cyber-scan-effect::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 255, 255, 0.4) 50%, 
-    transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
   animation: cyber-scan 3s linear infinite;
   pointer-events: none;
 }
 
 @keyframes cyber-scan {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* Advanced Futuristic Animations */
 @keyframes cyber-pulse {
-  0%, 100% {
-    box-shadow: 
+  0%,
+  100% {
+    box-shadow:
       0 0 20px rgba(0, 255, 255, 0.3),
       inset 0 0 20px rgba(0, 255, 255, 0.1);
   }
   50% {
-    box-shadow: 
+    box-shadow:
       0 0 40px rgba(0, 255, 255, 0.6),
       0 0 80px rgba(0, 255, 255, 0.3),
       inset 0 0 30px rgba(0, 255, 255, 0.2);
@@ -950,7 +1174,8 @@ body {
 }
 
 @keyframes holographic-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px) rotateX(0deg);
   }
   50% {
@@ -982,7 +1207,8 @@ body {
 }
 
 @keyframes neural-pulse-advanced {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.1;
     transform: scale(1);
   }
@@ -993,7 +1219,8 @@ body {
 }
 
 @keyframes cyber-border-glow {
-  0%, 100% {
+  0%,
+  100% {
     border-color: rgba(0, 255, 255, 0.3);
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
   }
@@ -1029,13 +1256,18 @@ body {
 }
 
 .cyber-scan-vertical::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-cyan),
+    transparent
+  );
   animation: cyber-scan-vertical 4s linear infinite;
 }
 
@@ -1049,10 +1281,12 @@ body {
 
 /* Enhanced Cyber Cards */
 .cyber-card-advanced {
-  background: linear-gradient(135deg, 
-    rgba(15, 23, 42, 0.9) 0%, 
-    rgba(30, 41, 59, 0.8) 50%, 
-    rgba(15, 23, 42, 0.9) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.9) 0%,
+    rgba(30, 41, 59, 0.8) 50%,
+    rgba(15, 23, 42, 0.9) 100%
+  );
   backdrop-filter: blur(20px);
   border: 1px solid rgba(0, 255, 255, 0.3);
   border-radius: 16px;
@@ -1062,7 +1296,7 @@ body {
 }
 
 .cyber-card-advanced::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -1084,7 +1318,7 @@ body {
 .cyber-card-advanced:hover {
   transform: translateY(-5px) scale(1.02);
   border-color: rgba(0, 255, 255, 0.6);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 255, 255, 0.2),
     0 0 60px rgba(0, 255, 255, 0.1),
     inset 0 0 20px rgba(0, 255, 255, 0.1);
@@ -1093,16 +1327,18 @@ body {
 /* Quantum Field Effects */
 .quantum-field-advanced {
   position: relative;
-  background: linear-gradient(135deg, 
-    rgba(139, 92, 246, 0.1) 0%, 
-    rgba(236, 72, 153, 0.1) 50%, 
-    rgba(59, 130, 246, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(59, 130, 246, 0.1) 100%
+  );
   border: 1px solid rgba(139, 92, 246, 0.3);
   animation: quantum-vibration 3s ease-in-out infinite;
 }
 
 .quantum-field-advanced::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
@@ -1124,7 +1360,7 @@ body {
 /* Enhanced Neon Effects */
 .neon-text-advanced {
   color: var(--primary-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--primary-cyan),
     0 0 10px var(--primary-cyan),
     0 0 15px var(--primary-cyan),
@@ -1135,7 +1371,7 @@ body {
 }
 
 .neon-text-advanced:hover {
-  text-shadow: 
+  text-shadow:
     0 0 10px var(--primary-cyan),
     0 0 20px var(--primary-cyan),
     0 0 30px var(--primary-cyan),
@@ -1146,7 +1382,7 @@ body {
 
 /* Cyber Grid Advanced */
 .cyber-grid-advanced {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -1155,7 +1391,8 @@ body {
 }
 
 @keyframes grid-pulse {
-  0%, 100% {
+  0%,
+  100% {
     background-size: 50px 50px;
     opacity: 0.3;
   }
@@ -1166,16 +1403,28 @@ body {
 }
 
 .cyber-grid-advanced::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(139, 92, 246, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(0, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 40%,
+      rgba(236, 72, 153, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   animation: neural-pulse-advanced 6s ease-in-out infinite;
 }
@@ -1185,30 +1434,30 @@ body {
   .cyber-grid {
     background-size: 15px 15px;
   }
-  
+
   .neon-text {
-    text-shadow: 
+    text-shadow:
       0 0 10px var(--neon-cyan),
       0 0 20px var(--neon-cyan),
       0 0 30px var(--neon-cyan);
   }
-  
+
   .cyber-text-3d {
     transform: perspective(500px) rotateX(10deg);
   }
-  
+
   .quantum-field {
     animation-duration: 3s;
   }
-  
+
   .holographic-text {
     font-size: 2rem;
   }
-  
+
   .quantum-card {
     padding: 0.75rem;
   }
-  
+
   .hologram-card {
     padding: 0.75rem;
   }
@@ -1218,14 +1467,14 @@ body {
   .cyber-grid {
     background-size: 10px 10px;
   }
-  
+
   .neon-text {
-    text-shadow: 
+    text-shadow:
       0 0 2px #00ffff,
       0 0 4px #00ffff,
       0 0 6px #00ffff;
   }
-  
+
   .cyber-text-3d {
     transform: perspective(300px) rotateX(5deg);
   }
@@ -1240,11 +1489,11 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .cyber-text-3d {
     transform: none;
   }
-  
+
   .quantum-field {
     animation: none;
   }
@@ -1254,38 +1503,38 @@ body {
   .cyber-grid {
     background-size: 15px 15px;
   }
-  
+
   .neon-text {
     font-size: 1rem;
-    text-shadow: 
+    text-shadow:
       0 0 2px #00ffff,
       0 0 4px #00ffff,
       0 0 6px #00ffff;
   }
-  
+
   .cyber-text {
     font-size: 0.9rem;
     letter-spacing: 0.25px;
   }
-  
+
   .cyber-card {
     padding: 0.5rem;
     margin: 0.25rem;
   }
-  
+
   .cyber-button {
     padding: 6px 12px;
     font-size: 0.75rem;
   }
-  
+
   .holographic-text {
     font-size: 1.5rem;
   }
-  
+
   .quantum-card {
     padding: 0.5rem;
   }
-  
+
   .hologram-card {
     padding: 0.5rem;
   }
@@ -1299,13 +1548,13 @@ body {
   .particle-field {
     background: none !important;
   }
-  
+
   .neon-text,
   .holographic-text {
     color: #000 !important;
     text-shadow: none !important;
   }
-  
+
   .quantum-card,
   .cyber-card {
     border: 1px solid #000 !important;
@@ -1333,7 +1582,7 @@ body {
     --text-secondary: #334155;
     --text-muted: #64748b;
   }
-  
+
   .cyber-card,
   .hologram-card,
   .quantum-card {

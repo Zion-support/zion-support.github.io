@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface SearchComponentProps {
   className?: string;
 }
 
 const SearchComponent = React.memo(function SearchComponent({
-  className = '',
+  className = "",
 }: SearchComponentProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>

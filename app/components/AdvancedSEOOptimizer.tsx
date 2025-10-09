@@ -1,6 +1,6 @@
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+"use client";
+import React, { useEffect, useCallback, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 
 interface SEOData {
   title: string;
@@ -40,44 +40,44 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableSchemaMarkup = true,
 }) => {
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
+
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
       return null;
     }
 
     const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'TechCompany',
-      name: 'Zion Tech Group',
+      "@context": "https://schema.org",
+      "@type": "TechCompany",
+      name: "Zion Tech Group",
       description: seoData.description,
       url: seoData.canonicalUrl,
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: "https://ziontechgroup.com/logo.png",
       sameAs: [
-        'https://linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
+        "https://linkedin.com/company/zion-tech-group",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/zion-tech-group",
       ],
       contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
-        availableLanguage: 'English',
+        "@type": "ContactPoint",
+        telephone: "+1-555-ZION-TECH",
+        contactType: "customer service",
+        availableLanguage: "English",
       },
       address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
+        "@type": "PostalAddress",
+        streetAddress: "123 Tech Innovation Drive",
+        addressLocality: "San Francisco",
+        addressRegion: "CA",
+        postalCode: "94105",
+        addressCountry: "US",
       },
       ...seoData.structuredData,
     };
 
     if (seoData.author) {
       baseStructuredData.author = {
-        '@type': 'Person',
+        "@type": "Person",
         name: seoData.author,
       };
     }
@@ -95,7 +95,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     if (seoData.tags && seoData.tags.length > 0) {
-      baseStructuredData.keywords = seoData.tags.join(', ');
+      baseStructuredData.keywords = seoData.tags.join(", ");
     }
 
     return baseStructuredData;
@@ -107,14 +107,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: seoData.breadcrumbs.map((breadcrumb: any, index: number) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: seoData.breadcrumbs.map(
+        (breadcrumb: any, index: number) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: breadcrumb.name,
+          item: breadcrumb.url,
+        }),
+      ),
     };
   }, [seoData, enableStructuredData]);
 
@@ -124,16 +126,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
       mainEntity: seoData.faqs.map((faq: any) => ({
-        '@type': 'Question',
+        "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     };
   }, [seoData, enableStructuredData]);
 
@@ -142,13 +144,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableOpenGraph) return {};
 
     return {
-      'og:title': seoData.ogTitle || seoData.title,
-      'og:description': seoData.ogDescription || seoData.description,
-      'og:url': seoData.canonicalUrl,
-      'og:type': seoData.ogType || 'website',
-      'og:image': seoData.ogImage || '/og-image.jpg',
-      'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
+      "og:title": seoData.ogTitle || seoData.title,
+      "og:description": seoData.ogDescription || seoData.description,
+      "og:url": seoData.canonicalUrl,
+      "og:type": seoData.ogType || "website",
+      "og:image": seoData.ogImage || "/og-image.jpg",
+      "og:site_name": "Zion Tech Group",
+      "og:locale": "en_US",
     };
   }, [seoData, enableOpenGraph]);
 
@@ -157,26 +159,27 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (!enableTwitterCards) return {};
 
     return {
-      'twitter:card': 'summary_large_image',
-      'twitter:title': seoData.ogTitle || seoData.title,
-      'twitter:description': seoData.ogDescription || seoData.description,
-      'twitter:image': seoData.ogImage || 'https://ziontechgroup.com/og-image.jpg',
-      'twitter:site': '@ziontechgroup',
-      'twitter:creator': '@ziontechgroup',
+      "twitter:card": "summary_large_image",
+      "twitter:title": seoData.ogTitle || seoData.title,
+      "twitter:description": seoData.ogDescription || seoData.description,
+      "twitter:image":
+        seoData.ogImage || "https://ziontechgroup.com/og-image.jpg",
+      "twitter:site": "@ziontechgroup",
+      "twitter:creator": "@ziontechgroup",
     };
   }, [seoData, enableTwitterCards]);
 
   // Generate meta tags
   const generateMetaTags = useCallback(() => {
     const metaTags = [
-      { name: 'description', content: seoData.description },
-      { name: 'keywords', content: seoData.keywords.join(', ') },
-      { name: 'author', content: seoData.author || 'Zion Tech Group' },
-      { name: 'robots', content: seoData.robots || 'index, follow' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
-      { name: 'theme-color', content: '#3B82F6' },
-      { name: 'msapplication-TileColor', content: '#3B82F6' },
-      { name: 'msapplication-config', content: '/browserconfig.xml' },
+      { name: "description", content: seoData.description },
+      { name: "keywords", content: seoData.keywords.join(", ") },
+      { name: "author", content: seoData.author || "Zion Tech Group" },
+      { name: "robots", content: seoData.robots || "index, follow" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "theme-color", content: "#3B82F6" },
+      { name: "msapplication-TileColor", content: "#3B82F6" },
+      { name: "msapplication-config", content: "/browserconfig.xml" },
     ];
     return metaTags;
   }, [seoData]);
@@ -187,14 +190,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
       itemListElement: seoData.breadcrumbs.map((breadcrumb, index) => ({
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: index + 1,
         name: breadcrumb.name,
-        item: breadcrumb.url
-      }))
+        item: breadcrumb.url,
+      })),
     };
   }, [seoData.breadcrumbs]);
 
@@ -204,16 +207,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
 
     return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: seoData.faqs.map(faq => ({
-        '@type': 'Question',
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: seoData.faqs.map((faq) => ({
+        "@type": "Question",
         name: faq.question,
         acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer
-        }
-      }))
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
     };
   }, [seoData.faqs]);
 
@@ -224,25 +227,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   useEffect(() => {
     // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
+    if (typeof document !== "undefined") {
       document.title = seoData.title;
-      
+
       let metaDescription = document.querySelector('meta[name="description"]');
       if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
+        metaDescription = document.createElement("meta");
+        metaDescription.setAttribute("name", "description");
         document.head.appendChild(metaDescription);
       }
-      metaDescription.setAttribute('content', seoData.description);
+      metaDescription.setAttribute("content", seoData.description);
 
       // Update canonical URL
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
+        canonicalLink = document.createElement("link");
+        canonicalLink.setAttribute("rel", "canonical");
         document.head.appendChild(canonicalLink);
       }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
+      canonicalLink.setAttribute("href", seoData.canonicalUrl);
     }
   }, [seoData]);
 
@@ -251,9 +254,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
     }
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
     structuredDataRef.current = script;
@@ -265,17 +268,18 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-
   useEffect(() => {
     // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (typeof window !== "undefined" && "performance" in window) {
+      const perfData = performance.getEntriesByType(
+        "navigation",
+      )[0] as PerformanceNavigationTiming;
       if (perfData) {
         // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
+        if (typeof (window as any).gtag === "function") {
+          (window as any).gtag("event", "page_load_performance", {
+            event_category: "Performance",
+            event_label: "Page Load",
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
           });
         }
@@ -315,14 +319,32 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
       <link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="anonymous"
+      />
       <link rel="preconnect" href="https://www.google-analytics.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
 

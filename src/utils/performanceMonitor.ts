@@ -4,8 +4,8 @@
 export const performanceMonitor = {
   // Add utility functions here
   init: () => {
-    console.log('performanceMonitor initialized');
-  }
+    console.log("performanceMonitor initialized");
+  },
 };
 
 export default performanceMonitor;

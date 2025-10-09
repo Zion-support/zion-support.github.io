@@ -1,4 +1,4 @@
-'use client';
+"use client";
 /**
  * Enhanced Security Utilities
  * Generated: 2025-10-08T02:06:22.083Z
@@ -17,9 +17,9 @@ export class SecurityManager {
    */
   sanitizeInput(input: string): string {
     return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
+      .replace(/[<>]/g, "")
+      .replace(/javascript:/gi, "")
+      .replace(/on\w+=/gi, "")
       .trim();
   }
   /**
@@ -28,12 +28,12 @@ export class SecurityManager {
   sanitizeUrl(url: string): string {
     try {
       const parsed = new URL(url);
-      if (!['http:', 'https:'].includes(parsed.protocol)) {
-        throw new Error('Invalid protocol');
+      if (!["http:", "https:"].includes(parsed.protocol)) {
+        throw new Error("Invalid protocol");
       }
       return parsed.toString();
     } catch {
-      return '';
+      return "";
     }
   }
   /**
@@ -41,14 +41,16 @@ export class SecurityManager {
    */
   generateSecureToken(length: number = 32): string {
     const array = new Uint8Array(length);
-    if (typeof window !== 'undefined' && window.crypto) {
+    if (typeof window !== "undefined" && window.crypto) {
       window.crypto.getRandomValues(array);
     } else {
       // Fallback for Node.js environment
-      const crypto = require('crypto');
+      const crypto = require("crypto");
       crypto.randomFillSync(array);
     }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, "0")).join(
+      "",
+    );
   }
   /**
    * Implement rate limiting

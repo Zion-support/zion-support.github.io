@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,28 +10,25 @@ const __dirname = path.dirname(__filename);
 // Function to fix malformed type annotations
 function fixTypeAnnotations(content) {
   // Fix malformed type annotations with comments inside
-  content = content.replace(
-    /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
-    (match, body) => {
-      return `{ ${body.trim()} }`;
-    }
-  );
+  content = content.replace(/\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g, (match, body) => {
+    return `{ ${body.trim()} }`;
+  });
 
   // Fix specific patterns we've seen
   content = content.replace(
     /\{\/\*\/\s*usedJSHeapSize:\s*number\s*\/\*\/\}/g,
-    '{ usedJSHeapSize: number }'
+    "{ usedJSHeapSize: number }",
   );
 
   content = content.replace(
     /\{\/\*\/\s*value:\s*number\s*\/\*\/\}/g,
-    '{ value: number }'
+    "{ value: number }",
   );
 
   // Fix variable name issues
   content = content.replace(
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
-    'const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;\n          memoryUsage = _memory?.'
+    "const _memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;\n          memoryUsage = _memory?.",
   );
 
   return content;
@@ -40,16 +37,16 @@ function fixTypeAnnotations(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // Apply fixes
     const originalContent = content;
-    
+
     content = fixTypeAnnotations(content);
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
       modified = true;
     }
 
@@ -63,17 +60,19 @@ function processFile(filePath) {
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {
   const files = [];
-  
+
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+        if (
+          !["node_modules", ".git", "dist", "build", ".next"].includes(item)
+        ) {
           walkDir(fullPath);
         }
       } else if (stat.isFile()) {
@@ -84,16 +83,16 @@ function findSourceFiles(dir) {
       }
     }
   }
-  
+
   walkDir(dir);
   return files;
 }
 
 // Main execution
-console.log('Starting type annotation fixes...');
+console.log("Starting type annotation fixes...");
 
-const srcDir = path.join(__dirname, 'src');
-const appDir = path.join(__dirname, 'app');
+const srcDir = path.join(__dirname, "src");
+const appDir = path.join(__dirname, "app");
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];
 
 console.log(`Found ${files.length} files to process`);
@@ -107,4 +106,4 @@ for (const file of files) {
 }
 
 console.log(`Processed ${processedCount} files`);
-console.log('Type annotation fixes completed!');
+console.log("Type annotation fixes completed!");

@@ -1,7 +1,7 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
@@ -15,7 +15,7 @@ export default function handler(req, res) {
 
     res.status(200).json({
       success: true,
-      message: 'Error reported successfully',
+      message: "Error reported successfully",
     });
   } catch {
     //     res.status(500).json({ error: 'Failed to process error report' });

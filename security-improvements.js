@@ -16,4 +16,4 @@ const addInputValidation = () => {
 
 // Run security improvements
 
-// 
+//

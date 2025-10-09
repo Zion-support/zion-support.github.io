@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface AdvancedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function AdvancedErrorBoundary({ 
-  className = '', 
-  children 
+export default function AdvancedErrorBoundary({
+  className = "",
+  children,
 }: AdvancedErrorBoundaryProps) {
   return (
     <div className={`advancederrorboundary ${className}`}>
@@ -16,9 +16,7 @@ export default function AdvancedErrorBoundary({
           <h3 className="text-lg font-semibold mb-2">
             Advanced Error Boundary
           </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
+          <p className="text-gray-600">Component content will be added here.</p>
         </div>
       )}
     </div>

@@ -4,8 +4,8 @@
 export const monitoring = {
   // Add utility functions here
   init: () => {
-    console.log('monitoring initialized');
-  }
+    console.log("monitoring initialized");
+  },
 };
 
 export default monitoring;

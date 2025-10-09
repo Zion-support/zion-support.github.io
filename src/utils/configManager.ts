@@ -4,8 +4,8 @@
 export const configManager = {
   // Add utility functions here
   init: () => {
-    console.log('configManager initialized');
-  }
+    console.log("configManager initialized");
+  },
 };
 
 export default configManager;

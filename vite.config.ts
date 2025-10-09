@@ -1,39 +1,38 @@
-
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
 export default defineConfig({
   plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
+  root: "src",
+  publicDir: "../public",
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
+      "@": resolve(__dirname, "src"),
+      "@components": resolve(__dirname, "src/components"),
+      "@utils": resolve(__dirname, "src/utils"),
+      "@hooks": resolve(__dirname, "src/hooks"),
+      "@types": resolve(__dirname, "src/types"),
     },
   },
   build: {
-    target: 'esnext',
-    minify: 'terser',
+    target: "esnext",
+    minify: "terser",
     sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          ui: ["framer-motion", "lucide-react", "@heroicons/react"],
+          utils: ["clsx", "tailwind-merge"],
+          charts: ["recharts"],
+          analytics: ["web-vitals"],
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
+          const info = assetInfo.name.split(".");
           const ext = info[info.length - 1];
           if (/\.(css)$/.test(assetInfo.name)) {
             return `assets/css/[name]-[hash].${ext}`;
@@ -52,7 +51,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
+        pure_funcs: ["console.log", "console.info", "console.warn"],
         passes: 3,
         unsafe: true,
         unsafe_comps: true,
@@ -83,9 +82,9 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
+    include: ["react", "react-dom", "framer-motion", "react-router-dom"],
   },
   css: {
-    postcss: './postcss.config.js',
+    postcss: "./postcss.config.js",
   },
 });

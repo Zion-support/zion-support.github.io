@@ -4,8 +4,8 @@
 export const validators = {
   // Add utility functions here
   init: () => {
-    console.log('validators initialized');
-  }
+    console.log("validators initialized");
+  },
 };
 
 export default validators;

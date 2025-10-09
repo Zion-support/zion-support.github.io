@@ -4,8 +4,8 @@
 export const securityManager = {
   // Add utility functions here
   init: () => {
-    console.log('securityManager initialized');
-  }
+    console.log("securityManager initialized");
+  },
 };
 
 export default securityManager;

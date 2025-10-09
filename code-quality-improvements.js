@@ -16,4 +16,4 @@ const addDocumentation = () => {
 
 // Run code quality improvements
 
-// 
+//

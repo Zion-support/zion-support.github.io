@@ -1,15 +1,15 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { describe, it, expect, beforeEach } from "@jest/globals";
 
-describe('validators', () => {
+describe("validators", () => {
   beforeEach(() => {
     // Setup before each test
   });
 
-  it('should pass basic test', () => {
+  it("should pass basic test", () => {
     expect(true).toBe(true);
   });
 
-  it('should handle basic functionality', () => {
+  it("should handle basic functionality", () => {
     const result = 1 + 1;
     expect(result).toBe(2);
   });

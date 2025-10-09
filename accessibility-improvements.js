@@ -16,4 +16,4 @@ const addAltText = () => {
 
 // Run accessibility improvements
 
-// 
+//

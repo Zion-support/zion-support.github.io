@@ -4,8 +4,8 @@
 export const userExperienceEnhancer = {
   // Add utility functions here
   init: () => {
-    console.log('userExperienceEnhancer initialized');
-  }
+    console.log("userExperienceEnhancer initialized");
+  },
 };
 
 export default userExperienceEnhancer;

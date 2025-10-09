@@ -5,7 +5,7 @@
 interface CacheConfig {
   maxAge: number; // milliseconds
   maxSize: number; // maximum number of entries
-  strategy: 'LRU' | 'LFU' | 'FIFO';
+  strategy: "LRU" | "LFU" | "FIFO";
 }
 
 interface CacheEntry<T> {
@@ -26,7 +26,7 @@ class AdvancedCacheManager<T> {
     this.config = {
       maxAge: 5 * 60 * 1000, // 5 minutes
       maxSize: 1000,
-      strategy: 'LRU',
+      strategy: "LRU",
       ...config,
     };
   }
@@ -112,20 +112,20 @@ class AdvancedCacheManager<T> {
 
   private evictEntry(): void {
     switch (this.config.strategy) {
-      case 'LRU':
+      case "LRU":
         this.evictLRU();
         break;
-      case 'LFU':
+      case "LFU":
         this.evictLFU();
         break;
-      case 'FIFO':
+      case "FIFO":
         this.evictFIFO();
         break;
     }
   }
 
   private evictLRU(): void {
-    let _oldestKey = '';
+    let _oldestKey = "";
     let _oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
@@ -141,7 +141,7 @@ class AdvancedCacheManager<T> {
   }
 
   private evictLFU(): void {
-    let _leastFrequentKey = '';
+    let _leastFrequentKey = "";
     let _leastFrequentCount = Infinity;
 
     for (const [key, entry] of this.cache.entries()) {
@@ -157,7 +157,7 @@ class AdvancedCacheManager<T> {
   }
 
   private evictFIFO(): void {
-    let _oldestKey = '';
+    let _oldestKey = "";
     let _oldestTime = Date.now();
 
     for (const [key, entry] of this.cache.entries()) {
@@ -182,7 +182,7 @@ class AdvancedCacheManager<T> {
       }
     }
 
-    expiredKeys.forEach(key => this.cache.delete(key));
+    expiredKeys.forEach((key) => this.cache.delete(key));
   }
 }
 

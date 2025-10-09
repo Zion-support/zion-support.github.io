@@ -1,4 +1,4 @@
-declare module 'lucide-react' {
+declare module "lucide-react" {
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     size?: string | number;
     absoluteStrokeWidth?: boolean;

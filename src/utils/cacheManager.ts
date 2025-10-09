@@ -4,8 +4,8 @@
 export const cacheManager = {
   // Add utility functions here
   init: () => {
-    console.log('cacheManager initialized');
-  }
+    console.log("cacheManager initialized");
+  },
 };
 
 export default cacheManager;

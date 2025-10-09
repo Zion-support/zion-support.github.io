@@ -71,10 +71,7 @@
       "/ai-scheduler",
       "/ai-design-studio"
     ],
-    "IT Services": [
-      "/it-consulting",
-      "/it-support"
-    ],
+    "IT Services": ["/it-consulting", "/it-support"],
     "Micro SAAS": [],
     "Emerging Tech": [],
     "Company": [],

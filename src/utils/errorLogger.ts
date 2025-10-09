@@ -4,8 +4,8 @@
 export const errorLogger = {
   // Add utility functions here
   init: () => {
-    console.log('errorLogger initialized');
-  }
+    console.log("errorLogger initialized");
+  },
 };
 
 export default errorLogger;

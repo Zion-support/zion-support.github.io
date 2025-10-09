@@ -1,28 +1,30 @@
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
+import fs from "fs";
+import { fileURLToPath } from "url";
 
 function processFile(filePath) {
   try {
-
     // Determine correct relative paths based on file location
     const isInApp =
-      filePath.includes('/app/') && !isInBlog && !isInComponents && !isInGuides && !isInPages;
+      filePath.includes("/app/") &&
+      !isInBlog &&
+      !isInComponents &&
+      !isInGuides &&
+      !isInPages;
 
     let utilsPath, typesPath;
 
     if (isInBlog || isInGuides || isInPages) {
-      utilsPath = '../../utils/';
-      typesPath = '../../types/';
+      utilsPath = "../../utils/";
+      typesPath = "../../types/";
     } else if (isInComponents) {
-      utilsPath = '../utils/';
-      typesPath = '../types/';
+      utilsPath = "../utils/";
+      typesPath = "../types/";
     } else if (isInApp) {
-      utilsPath = './utils/';
-      typesPath = './types/';
+      utilsPath = "./utils/";
+      typesPath = "./types/";
     } else {
-      utilsPath = './utils/';
-      typesPath = './types/';
+      utilsPath = "./utils/";
+      typesPath = "./types/";
     }
 
     // Fix import paths
@@ -40,15 +42,18 @@ function processFile(filePath) {
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       },
       {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        pattern:
+          /import\s+{\s*useRouter\s*}\s+from\s+'\.\/utils\/navigation';/g,
         replacement: `import { useRouter } from '${utilsPath}navigation';`,
       },
       {
-        pattern: /import\s+{\s*usePathname\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        pattern:
+          /import\s+{\s*usePathname\s*}\s+from\s+'\.\/utils\/navigation';/g,
         replacement: `import { usePathname } from '${utilsPath}navigation';`,
       },
       {
-        pattern: /import\s+{\s*useSearchParams\s*}\s+from\s+'\.\/utils\/navigation';/g,
+        pattern:
+          /import\s+{\s*useSearchParams\s*}\s+from\s+'\.\/utils\/navigation';/g,
         replacement: `import { useSearchParams } from '${utilsPath}navigation';`,
       },
       {
@@ -60,7 +65,8 @@ function processFile(filePath) {
         replacement: `import { MetadataRoute } from '${typesPath}next';`,
       },
       {
-        pattern: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        pattern:
+          /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: `import type { Metadata } from '${typesPath}next';`,
       },
     ];
@@ -73,30 +79,27 @@ function processFile(filePath) {
     });
 
     // Fix MetadataRoute namespace issue
-    if (content.includes('MetadataRoute.')) {
-      content = content.replace(/MetadataRoute\./g, 'MetadataRoute.');
+    if (content.includes("MetadataRoute.")) {
+      content = content.replace(/MetadataRoute\./g, "MetadataRoute.");
       modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
 
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-
-  items.forEach(item => {
-
+  items.forEach((item) => {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
       if (processFile(fullPath)) {
         totalFixed++;
       }
@@ -107,4 +110,3 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-

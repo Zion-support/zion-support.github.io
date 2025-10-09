@@ -1,11 +1,11 @@
-'use client';
+"use client";
 /**
  * Advanced Caching Utility
  * Provides intelligent caching with TTL, LRU eviction, and storage options
  */
 export interface CacheOptions {
   ttl?: number; // Time to live in milliseconds
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
+  storage?: "memory" | "localStorage" | "sessionStorage";
   maxSize?: number; // Maximum number of entries
 }
 export interface CacheEntry<T> {
@@ -18,22 +18,22 @@ class AdvancedCache<T = unknown> {
   private cache: Map<string, CacheEntry<T>> = new Map();
   private accessOrder: string[] = [];
   private options: Required<CacheOptions>;
-  private storageKey = 'advanced-cache';
+  private storageKey = "advanced-cache";
   constructor(options: CacheOptions = {}) {
     this.options = {
       ttl: options.ttl || 5 * 60 * 1000, // Default 5 minutes
-      storage: options.storage || 'memory',
-      maxSize: options.maxSize || 100
+      storage: options.storage || "memory",
+      maxSize: options.maxSize || 100,
     };
     // Load from persistent storage if needed
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       this.loadFromStorage();
     }
     // Setup periodic cleanup
     this.setupCleanup();
   }
   private setupCleanup(): void {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Clean expired entries every minute
       setInterval(() => {
         this.cleanExpired();
@@ -41,7 +41,7 @@ class AdvancedCache<T = unknown> {
     }
   }
   private loadFromStorage(): void {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
     try {
       const storage = this.getStorage();
       const data = storage?.getItem(this.storageKey);
@@ -50,26 +50,25 @@ class AdvancedCache<T = unknown> {
         this.cache = new Map(Object.entries(parsed.cache));
         this.accessOrder = parsed.accessOrder || [];
       }
-    } catch (error) {
-      }
+    } catch (error) {}
   }
   private saveToStorage(): void {
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
+    if (typeof window === "undefined" || this.options.storage === "memory")
+      return;
     try {
       const storage = this.getStorage();
       const data = {
         cache: Object.fromEntries(this.cache.entries()),
-        accessOrder: this.accessOrder
+        accessOrder: this.accessOrder,
       };
       storage?.setItem(this.storageKey, JSON.stringify(data));
-    } catch (error) {
-      }
+    } catch (error) {}
   }
   private getStorage(): Storage | null {
-    if (typeof window === 'undefined') return null;
-    if (this.options.storage === 'localStorage') {
+    if (typeof window === "undefined") return null;
+    if (this.options.storage === "localStorage") {
       return window.localStorage;
-    } else if (this.options.storage === 'sessionStorage') {
+    } else if (this.options.storage === "sessionStorage") {
       return window.sessionStorage;
     }
     return null;
@@ -84,12 +83,12 @@ class AdvancedCache<T = unknown> {
       value,
       expiry,
       hits: 0,
-      lastAccessed: Date.now()
+      lastAccessed: Date.now(),
     });
     // Update access order
     this.updateAccessOrder(key);
     // Save to storage if needed
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       this.saveToStorage();
     }
   }
@@ -128,7 +127,7 @@ class AdvancedCache<T = unknown> {
   public clear(): void {
     this.cache.clear();
     this.accessOrder = [];
-    if (this.options.storage !== 'memory') {
+    if (this.options.storage !== "memory") {
       const storage = this.getStorage();
       storage?.removeItem(this.storageKey);
     }
@@ -160,8 +159,8 @@ class AdvancedCache<T = unknown> {
         keysToDelete.push(key);
       }
     });
-    keysToDelete.forEach(key => this.delete(key));
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {
+    keysToDelete.forEach((key) => this.delete(key));
+    if (keysToDelete.length > 0 && this.options.storage !== "memory") {
       this.saveToStorage();
     }
   }
@@ -183,21 +182,21 @@ class AdvancedCache<T = unknown> {
       entries.push({
         key,
         hits: entry.hits,
-        age: now - entry.lastAccessed
+        age: now - entry.lastAccessed,
       });
     });
     return {
       size: this.cache.size,
       maxSize: this.options.maxSize,
       hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)
+      entries: entries.sort((a, b) => b.hits - a.hits),
     };
   }
   // Utility method for async operations with caching
   public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
-    ttl?: number
+    ttl?: number,
   ): Promise<R> {
     const cached = this.get(key);
     if (cached !== null) {
@@ -209,7 +208,9 @@ class AdvancedCache<T = unknown> {
   }
 }
 // Export factory function
-export function createCache<T = unknown>(options?: CacheOptions): AdvancedCache<T> {
+export function createCache<T = unknown>(
+  options?: CacheOptions,
+): AdvancedCache<T> {
   return new AdvancedCache<T>(options);
 }
 // Export default cache instance

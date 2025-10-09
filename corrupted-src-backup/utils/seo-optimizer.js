@@ -6,27 +6,27 @@
 class SEOOptimizer {
   constructor() {
     this.seoConfig = {
-      siteName: 'Zion Tech Group',
+      siteName: "Zion Tech Group",
       siteDescription:
-        'Advanced AI and IT Solutions - Leading technology company providing cutting-edge AI, machine learning, and IT consulting services.',
-      siteUrl: 'https://ziontechgroup.com',
-      defaultImage: '/images/og-image.jpg',
-      twitterHandle: '@ZionTechGroup',
+        "Advanced AI and IT Solutions - Leading technology company providing cutting-edge AI, machine learning, and IT consulting services.",
+      siteUrl: "https://ziontechgroup.com",
+      defaultImage: "/images/og-image.jpg",
+      twitterHandle: "@ZionTechGroup",
       structuredData: {
         organization: {
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          logo: 'https://ziontechgroup.com/images/logo.png',
-          description: 'Advanced AI and IT Solutions',
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Zion Tech Group",
+          url: "https://ziontechgroup.com",
+          logo: "https://ziontechgroup.com/images/logo.png",
+          description: "Advanced AI and IT Solutions",
           address: {
-            '@type': 'PostalAddress',
-            addressCountry: 'US',
+            "@type": "PostalAddress",
+            addressCountry: "US",
           },
           sameAs: [
-            'https://linkedin.com/company/ziontechgroup',
-            'https://twitter.com/ziontechgroup',
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
           ],
         },
       },
@@ -48,21 +48,21 @@ class SEOOptimizer {
 
   setupMetaTags() {
     // Basic meta tags
-    this.addMetaTag('description', this.seoConfig.siteDescription);
+    this.addMetaTag("description", this.seoConfig.siteDescription);
     this.addMetaTag(
-      'keywords',
-      'AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development'
+      "keywords",
+      "AI, artificial intelligence, machine learning, IT solutions, technology consulting, software development",
     );
-    this.addMetaTag('author', 'Zion Tech Group');
-    this.addMetaTag('viewport', 'width=device-width, initial-scale=1.0');
-    this.addMetaTag('robots', 'index, follow');
-    this.addMetaTag('language', 'en');
-    this.addMetaTag('revisit-after', '7 days');
+    this.addMetaTag("author", "Zion Tech Group");
+    this.addMetaTag("viewport", "width=device-width, initial-scale=1.0");
+    this.addMetaTag("robots", "index, follow");
+    this.addMetaTag("language", "en");
+    this.addMetaTag("revisit-after", "7 days");
   }
 
   addMetaTag(name, content) {
     if (!document.querySelector(`meta[name="${name}"]`)) {
-      const _meta = document.createElement('meta');
+      const _meta = document.createElement("meta");
       meta.name = name;
       meta.content = content;
       document.head.appendChild(meta);
@@ -75,8 +75,8 @@ class SEOOptimizer {
   }
 
   addStructuredData(data) {
-    const _script = document.createElement('script');
-    script.type = 'application/ld+json';
+    const _script = document.createElement("script");
+    script.type = "application/ld+json";
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
@@ -88,14 +88,14 @@ class SEOOptimizer {
 
   generateSitemap() {
     const pages = [
-      { url: '/', priority: '1.0', changefreq: 'daily' },
-      { url: '/about', priority: '0.8', changefreq: 'weekly' },
-      { url: '/services', priority: '0.9', changefreq: 'weekly' },
-      { url: '/blog', priority: '0.7', changefreq: 'daily' },
-      { url: '/contact', priority: '0.6', changefreq: 'monthly' },
-      { url: '/team', priority: '0.5', changefreq: 'monthly' },
-      { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
-      { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+      { url: "/", priority: "1.0", changefreq: "daily" },
+      { url: "/about", priority: "0.8", changefreq: "weekly" },
+      { url: "/services", priority: "0.9", changefreq: "weekly" },
+      { url: "/blog", priority: "0.7", changefreq: "daily" },
+      { url: "/contact", priority: "0.6", changefreq: "monthly" },
+      { url: "/team", priority: "0.5", changefreq: "monthly" },
+      { url: "/privacy", priority: "0.3", changefreq: "yearly" },
+      { url: "/terms", priority: "0.3", changefreq: "yearly" },
     ];
 
     const _sitemap = this.buildSitemapXML(pages);
@@ -109,23 +109,23 @@ class SEOOptimizer {
     let _xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-    pages.forEach(page => {
-      xml += '  <url>\n';
+    pages.forEach((page) => {
+      xml += "  <url>\n";
       xml += `    <loc>${baseUrl}${page.url}</loc>\n`;
       xml += `    <lastmod>${lastmod}</lastmod>\n`;
       xml += `    <changefreq>${page.changefreq}</changefreq>\n`;
       xml += `    <priority>${page.priority}</priority>\n`;
-      xml += '  </url>\n';
+      xml += "  </url>\n";
     });
 
-    xml += '</urlset>';
+    xml += "</urlset>";
     return xml;
   }
 
   createSitemapFile(sitemap) {
     // In a real implementation, this would be saved to a file
     // For now, we'll store it in a data attribute for reference
-    document.documentElement.setAttribute('data-sitemap', sitemap);
+    document.documentElement.setAttribute("data-sitemap", sitemap);
   }
 
   setupRobotsTxt() {
@@ -174,32 +174,32 @@ Disallow: /lib_backup/
 Disallow: /services/
 Disallow: /middleware/`;
 
-    document.documentElement.setAttribute('data-robots-txt', robotsTxt);
+    document.documentElement.setAttribute("data-robots-txt", robotsTxt);
   }
 
   setupCanonicalUrls() {
     // Add canonical URL
-    const _canonical = document.createElement('link');
-    canonical.rel = 'canonical';
+    const _canonical = document.createElement("link");
+    canonical.rel = "canonical";
     canonical.href = this.seoConfig.siteUrl + window.location.pathname;
     document.head.appendChild(canonical);
   }
 
   setupOpenGraph() {
     // Open Graph meta tags
-    this.addOGTag('og:type', 'website');
-    this.addOGTag('og:site_name', this.seoConfig.siteName);
-    this.addOGTag('og:title', this.getPageTitle());
-    this.addOGTag('og:description', this.getPageDescription());
-    this.addOGTag('og:url', this.seoConfig.siteUrl + window.location.pathname);
-    this.addOGTag('og:image', this.getPageImage());
-    this.addOGTag('og:locale', 'en_US');
+    this.addOGTag("og:type", "website");
+    this.addOGTag("og:site_name", this.seoConfig.siteName);
+    this.addOGTag("og:title", this.getPageTitle());
+    this.addOGTag("og:description", this.getPageDescription());
+    this.addOGTag("og:url", this.seoConfig.siteUrl + window.location.pathname);
+    this.addOGTag("og:image", this.getPageImage());
+    this.addOGTag("og:locale", "en_US");
   }
 
   addOGTag(property, content) {
     if (!document.querySelector(`meta[property="${property}"]`)) {
-      const _meta = document.createElement('meta');
-      meta.setAttribute('property', property);
+      const _meta = document.createElement("meta");
+      meta.setAttribute("property", property);
       meta.content = content;
       document.head.appendChild(meta);
     }
@@ -207,17 +207,17 @@ Disallow: /middleware/`;
 
   setupTwitterCards() {
     // Twitter Card meta tags
-    this.addTwitterTag('twitter:card', 'summary_large_image');
-    this.addTwitterTag('twitter:site', this.seoConfig.twitterHandle);
-    this.addTwitterTag('twitter:creator', this.seoConfig.twitterHandle);
-    this.addTwitterTag('twitter:title', this.getPageTitle());
-    this.addTwitterTag('twitter:description', this.getPageDescription());
-    this.addTwitterTag('twitter:image', this.getPageImage());
+    this.addTwitterTag("twitter:card", "summary_large_image");
+    this.addTwitterTag("twitter:site", this.seoConfig.twitterHandle);
+    this.addTwitterTag("twitter:creator", this.seoConfig.twitterHandle);
+    this.addTwitterTag("twitter:title", this.getPageTitle());
+    this.addTwitterTag("twitter:description", this.getPageDescription());
+    this.addTwitterTag("twitter:image", this.getPageImage());
   }
 
   addTwitterTag(name, content) {
     if (!document.querySelector(`meta[name="${name}"]`)) {
-      const _meta = document.createElement('meta');
+      const _meta = document.createElement("meta");
       meta.name = name;
       meta.content = content;
       document.head.appendChild(meta);
@@ -234,19 +234,19 @@ Disallow: /middleware/`;
     let _schema = null;
 
     switch (currentPath) {
-      case '/':
+      case "/":
         schema = this.getHomePageSchema();
         break;
-      case '/about':
+      case "/about":
         schema = this.getAboutPageSchema();
         break;
-      case '/services':
+      case "/services":
         schema = this.getServicesPageSchema();
         break;
-      case '/contact':
+      case "/contact":
         schema = this.getContactPageSchema();
         break;
-      case '/blog':
+      case "/blog":
         schema = this.getBlogPageSchema();
         break;
     }
@@ -258,25 +258,26 @@ Disallow: /middleware/`;
 
   getHomePageSchema() {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Zion Tech Group',
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Zion Tech Group",
       url: this.seoConfig.siteUrl,
       description: this.seoConfig.siteDescription,
       potentialAction: {
-        '@type': 'SearchAction',
+        "@type": "SearchAction",
         target: `${this.seoConfig.siteUrl}/search?q={search_term_string}`,
-        'query-input': 'required name=search_term_string',
+        "query-input": "required name=search_term_string",
       },
     };
   }
 
   getAboutPageSchema() {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'AboutPage',
-      name: 'About Zion Tech Group',
-      description: 'Learn about Zion Tech Group, a leading AI and IT solutions company.',
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "About Zion Tech Group",
+      description:
+        "Learn about Zion Tech Group, a leading AI and IT solutions company.",
       url: `${this.seoConfig.siteUrl}/about`,
       mainEntity: this.seoConfig.structuredData.organization,
     };
@@ -284,22 +285,22 @@ Disallow: /middleware/`;
 
   getServicesPageSchema() {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'AI and IT Solutions',
-      description: 'Comprehensive AI and IT consulting services',
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "AI and IT Solutions",
+      description: "Comprehensive AI and IT consulting services",
       provider: this.seoConfig.structuredData.organization,
-      serviceType: 'Technology Consulting',
-      areaServed: 'Worldwide',
+      serviceType: "Technology Consulting",
+      areaServed: "Worldwide",
     };
   }
 
   getContactPageSchema() {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'ContactPage',
-      name: 'Contact Zion Tech Group',
-      description: 'Get in touch with our team for AI and IT solutions',
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      name: "Contact Zion Tech Group",
+      description: "Get in touch with our team for AI and IT solutions",
       url: `${this.seoConfig.siteUrl}/contact`,
       mainEntity: this.seoConfig.structuredData.organization,
     };
@@ -307,10 +308,10 @@ Disallow: /middleware/`;
 
   getBlogPageSchema() {
     return {
-      '@context': 'https://schema.org',
-      '@type': 'Blog',
-      name: 'Zion Tech Group Blog',
-      description: 'Latest insights on AI, technology, and IT solutions',
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      name: "Zion Tech Group Blog",
+      description: "Latest insights on AI, technology, and IT solutions",
       url: `${this.seoConfig.siteUrl}/blog`,
       publisher: this.seoConfig.structuredData.organization,
     };
@@ -324,11 +325,11 @@ Disallow: /middleware/`;
   }
 
   optimizeImages() {
-    const _images = document.querySelectorAll('img');
-    images.forEach(img => {
+    const _images = document.querySelectorAll("img");
+    images.forEach((img) => {
       // Add loading="lazy" for non-critical images
-      if (!img.hasAttribute('loading')) {
-        img.loading = 'lazy';
+      if (!img.hasAttribute("loading")) {
+        img.loading = "lazy";
       }
 
       // Add alt text if missing
@@ -338,7 +339,7 @@ Disallow: /middleware/`;
 
       // Add width and height attributes
       if (!img.width && !img.height) {
-        img.addEventListener('load', () => {
+        img.addEventListener("load", () => {
           img.width = img.naturalWidth;
           img.height = img.naturalHeight;
         });
@@ -348,22 +349,24 @@ Disallow: /middleware/`;
 
   generateAltText(src) {
     //     const filename = src.split('/').pop().split('.')[0];
-    return filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return filename
+      .replace(/[-_]/g, " ")
+      .replace(/\b\w/g, (l) => l.toUpperCase());
   }
 
   optimizeFonts() {
     // Preload critical fonts
     const criticalFonts = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
     ];
 
-    criticalFonts.forEach(font => {
-      const _link = document.createElement('link');
-      link.rel = 'preload';
+    criticalFonts.forEach((font) => {
+      const _link = document.createElement("link");
+      link.rel = "preload";
       link.href = font;
-      link.as = 'style';
+      link.as = "style";
       link.onload = () => {
-        link.rel = 'stylesheet';
+        link.rel = "stylesheet";
       };
       document.head.appendChild(link);
     });
@@ -379,7 +382,7 @@ Disallow: /middleware/`;
       .btn { background: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; }
     `;
 
-    const _style = document.createElement('style');
+    const _style = document.createElement("style");
     style.textContent = criticalCSS;
     document.head.appendChild(style);
   }
@@ -387,14 +390,14 @@ Disallow: /middleware/`;
   getPageTitle() {
     //     const currentPath = window.location.pathname;
     const titles = {
-      '/': 'Zion Tech Group - Advanced AI and IT Solutions',
-      '/about': 'About Us - Zion Tech Group',
-      '/services': 'Our Services - AI and IT Solutions',
-      '/blog': 'Blog - Latest Technology Insights',
-      '/contact': 'Contact Us - Zion Tech Group',
-      '/team': 'Our Team - Zion Tech Group',
-      '/privacy': 'Privacy Policy - Zion Tech Group',
-      '/terms': 'Terms of Service - Zion Tech Group',
+      "/": "Zion Tech Group - Advanced AI and IT Solutions",
+      "/about": "About Us - Zion Tech Group",
+      "/services": "Our Services - AI and IT Solutions",
+      "/blog": "Blog - Latest Technology Insights",
+      "/contact": "Contact Us - Zion Tech Group",
+      "/team": "Our Team - Zion Tech Group",
+      "/privacy": "Privacy Policy - Zion Tech Group",
+      "/terms": "Terms of Service - Zion Tech Group",
     };
     return titles[currentPath] || this.seoConfig.siteName;
   }
@@ -402,17 +405,19 @@ Disallow: /middleware/`;
   getPageDescription() {
     //     const currentPath = window.location.pathname;
     const descriptions = {
-      '/': 'Leading AI and IT solutions company providing cutting-edge technology consulting, machine learning, and software development services.',
-      '/about':
+      "/": "Leading AI and IT solutions company providing cutting-edge technology consulting, machine learning, and software development services.",
+      "/about":
         "Learn about Zion Tech Group's mission to revolutionize technology through innovative AI and IT solutions.",
-      '/services':
-        'Comprehensive AI and IT consulting services including machine learning, software development, and technology strategy.',
-      '/blog':
-        'Stay updated with the latest insights on AI, technology trends, and IT solutions from our expert team.',
-      '/contact': 'Get in touch with Zion Tech Group for your AI and IT consulting needs.',
-      '/team': "Meet the talented team behind Zion Tech Group's innovative AI and IT solutions.",
-      '/privacy': 'Privacy Policy for Zion Tech Group website and services.',
-      '/terms': 'Terms of Service for Zion Tech Group website and services.',
+      "/services":
+        "Comprehensive AI and IT consulting services including machine learning, software development, and technology strategy.",
+      "/blog":
+        "Stay updated with the latest insights on AI, technology trends, and IT solutions from our expert team.",
+      "/contact":
+        "Get in touch with Zion Tech Group for your AI and IT consulting needs.",
+      "/team":
+        "Meet the talented team behind Zion Tech Group's innovative AI and IT solutions.",
+      "/privacy": "Privacy Policy for Zion Tech Group website and services.",
+      "/terms": "Terms of Service for Zion Tech Group website and services.",
     };
     return descriptions[currentPath] || this.seoConfig.siteDescription;
   }
@@ -420,14 +425,17 @@ Disallow: /middleware/`;
   getPageImage() {
     //     const currentPath = window.location.pathname;
     const images = {
-      '/': '/images/og-home.jpg',
-      '/about': '/images/og-about.jpg',
-      '/services': '/images/og-services.jpg',
-      '/blog': '/images/og-blog.jpg',
-      '/contact': '/images/og-contact.jpg',
-      '/team': '/images/og-team.jpg',
+      "/": "/images/og-home.jpg",
+      "/about": "/images/og-about.jpg",
+      "/services": "/images/og-services.jpg",
+      "/blog": "/images/og-blog.jpg",
+      "/contact": "/images/og-contact.jpg",
+      "/team": "/images/og-team.jpg",
     };
-    return this.seoConfig.siteUrl + (images[currentPath] || this.seoConfig.defaultImage);
+    return (
+      this.seoConfig.siteUrl +
+      (images[currentPath] || this.seoConfig.defaultImage)
+    );
   }
 
   // Public methods
@@ -436,20 +444,20 @@ Disallow: /middleware/`;
     document.title = title;
 
     // Update meta description
-    this.updateMetaTag('description', description);
+    this.updateMetaTag("description", description);
 
     // Update Open Graph tags
-    this.updateOGTag('og:title', title);
-    this.updateOGTag('og:description', description);
+    this.updateOGTag("og:title", title);
+    this.updateOGTag("og:description", description);
     if (image) {
-      this.updateOGTag('og:image', image);
+      this.updateOGTag("og:image", image);
     }
 
     // Update Twitter Card tags
-    this.updateTwitterTag('twitter:title', title);
-    this.updateTwitterTag('twitter:description', description);
+    this.updateTwitterTag("twitter:title", title);
+    this.updateTwitterTag("twitter:description", description);
     if (image) {
-      this.updateTwitterTag('twitter:image', image);
+      this.updateTwitterTag("twitter:image", image);
     }
   }
 
@@ -482,10 +490,10 @@ Disallow: /middleware/`;
 
   generateBreadcrumbs(items) {
     const breadcrumbSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
       itemListElement: items.map((item, index) => ({
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: index + 1,
         name: item.name,
         item: item.url,
@@ -498,7 +506,7 @@ Disallow: /middleware/`;
   trackPageView() {
     // Track page view for analytics
     if (window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+      window.gtag("config", "GA_MEASUREMENT_ID", {
         page_title: this.getPageTitle(),
         page_location: window.location.href,
       });

@@ -1,177 +1,153 @@
-import React from 'react';
+import React, { Component, ReactNode, ErrorInfo } from "react";
 
 interface ImprovedErrorBoundaryProps {
   className?: string;
-  children?: React.ReactNode;
-}
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   resetKeys?: Array<string | number>;
 }
+
 interface State {
-  // TODO: Add content
-}
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorCount: number;
 }
-class ImprovedErrorBoundary extends Component<Props, State> {
-  // TODO: Add content
-}
-  constructor(props: Props) {
-  // TODO: Add content
-}
+
+class ImprovedErrorBoundary extends Component<
+  ImprovedErrorBoundaryProps,
+  State
+> {
+  constructor(props: ImprovedErrorBoundaryProps) {
     super(props);
     this.state = {
-  // TODO: Add content
-}
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0
+      errorCount: 0,
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
-  // TODO: Add content
-}
     return {
-  // TODO: Add content
-}
       hasError: true,
-//       error
+      error,
     };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-  // TODO: Add content
-}
     // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
-  // TODO: Add content
-}
+    console.error("Error caught by ImprovedErrorBoundary:", {
       message: error.message,
       stack: error.stack,
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     });
     // Call custom error handler if provided
     if (this.props.onError) {
-  // TODO: Add content
-}
       this.props.onError(error, errorInfo);
     }
     // Update state with error details
     this.setState((prevState) => ({
-  // TODO: Add content
-}
-//       errorInfo,
-      errorCount: prevState.errorCount + 1
+      error,
+      errorInfo,
+      errorCount: prevState.errorCount + 1,
     }));
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-  // TODO: Add content
-}
+    if (process.env["NODE_ENV"] === "development") {
+      console.error("Development error details:", { error, errorInfo });
     }
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-  // TODO: Add content
-}
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
-  // TODO: Add content
-}
-        contexts: {
-  // TODO: Add content
-}
-          react: {
-  // TODO: Add content
-}
-            componentStack: errorInfo.componentStack
-          }
+    if (
+      typeof window !== "undefined" &&
+      (window as unknown as { Sentry: unknown }).Sentry
+    ) {
+      (
+        window as unknown as {
+          Sentry: {
+            captureException: (
+              error: Error,
+              context: Record<string, unknown>,
+            ) => void;
+          };
         }
+      ).Sentry.captureException(error, {
+        contexts: {
+          react: {
+            componentStack: errorInfo.componentStack,
+          },
+        },
       });
     }
   }
-  componentDidUpdate(prevProps: Props): void {
-  // TODO: Add content
-}
+  componentDidUpdate(prevProps: ImprovedErrorBoundaryProps): void {
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
-        (key, index) => key !== prevProps.resetKeys![index]
+      const resetKeysChanged = this.props.resetKeys.some(
+        (key, index) => key !== prevProps.resetKeys![index],
       );
       if (resetKeysChanged && this.state.hasError) {
-  // TODO: Add content
-}
         this.resetErrorBoundary();
       }
     }
   }
+
   resetErrorBoundary = (): void => {
-  // TODO: Add content
-}
     this.setState({
-  // TODO: Add content
-}
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null,
     });
   };
+
   handleReload = (): void => {
-  // TODO: Add content
-}
     window.location.reload();
   };
+
   handleGoHome = (): void => {
-  // TODO: Add content
-}
-    window.location.href = '/';
+    window.location.href = "/";
   };
+
   render(): ReactNode {
-  // TODO: Add content
-}
     if (this.state.hasError) {
-  // TODO: Add content
-}
       // Use custom fallback if provided
       if (this.props.fallback) {
-  // TODO: Add content
-}
         return this.props.fallback;
       }
       // Default error UI
       return (
-  // TODO: Add parameters,
-)
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}></div>
-            <h1 style={styles.title}>Oops! Something Went Wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-  // TODO: Add parameters,
-)
-              <details style={styles.details}>
-                <summary style={styles.summary}>Error Details (Development Only)</summary>
-                <div style={styles.errorDetails}>
-                  <p style={styles.errorMessage}>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center">
+            <div className="mb-6">
+              <div className="w-16 h-16 text-red-400 mx-auto mb-4 text-6xl">
+                ⚠️
+              </div>
+              <h1 className="text-2xl font-bold text-white mb-2">
+                Oops! Something Went Wrong
+              </h1>
+              <p className="text-gray-300 mb-4">
+                We're sorry for the inconvenience. The application encountered
+                an unexpected error.
+              </p>
+            </div>
+            {process.env["NODE_ENV"] === "development" && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white mb-2">
+                  Error Details (Development Only)
+                </summary>
+                <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
+                  <p className="text-sm text-gray-300 mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   </p>
                   {this.state.error.stack && (
-  // TODO: Add parameters,
-)
-                    <pre style={styles.stack}>
+                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
                       {this.state.error.stack}
                     </pre>
                   )}
                   {this.state.errorInfo?.componentStack && (
-  // TODO: Add parameters,
-)
-                    <pre style={styles.stack}>
+                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
                       <strong>Component Stack:</strong>
                       {this.state.errorInfo.componentStack}
                     </pre>
@@ -179,39 +155,40 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-            <div style={styles.actions}>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={this.resetErrorBoundary}
-                style={styles.button}
+                className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
                 aria-label="Try Again"
-//               >
-//                 Try Again
+              >
+                Try Again
               </button>
               <button
                 onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
                 aria-label="Reload Page"
-//               >
-//                 Reload Page
+              >
+                Reload Page
               </button>
               <button
                 onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}
+                className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
                 aria-label="Go to Homepage"
-//               >
-//                 Go Home
+              >
+                Go Home
               </button>
             </div>
             {this.state.errorCount > 1 && (
-  // TODO: Add parameters,
-)
-              <p style={styles.errorCount}>
+              <p className="mt-4 text-sm text-gray-400">
                 This error has occurred {this.state.errorCount} times
               </p>
             )}
           </div>
         </div>
-      )}
-    </div>
-  );
+      );
+    }
+    return this.props.children;
+  }
 }
+
+export default ImprovedErrorBoundary;

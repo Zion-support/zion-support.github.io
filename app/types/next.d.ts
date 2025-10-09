@@ -45,9 +45,9 @@ export interface Metadata {
     googleBot?: {
       index?: boolean;
       follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: string;
-      'max-snippet'?: number;
+      "max-video-preview"?: number;
+      "max-image-preview"?: string;
+      "max-snippet"?: number;
     };
   };
   verification?: {
@@ -59,10 +59,17 @@ export interface MetadataRoute {
   robots?: string;
   manifest?: string;
 }
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
+export type MetadataRouteType = "sitemap" | "robots" | "manifest";
 export interface MetadataRouteSitemap {
   url: string;
   lastModified?: Date | string;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changeFrequency?:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
   priority?: number;
 }

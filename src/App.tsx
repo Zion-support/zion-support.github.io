@@ -1,13 +1,13 @@
-import React, { useEffect, useState, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import PerformanceEnhancer from './utils/performanceEnhancer';
-import SEOEnhancer from './utils/seoEnhancer';
-import AccessibilityEnhancer from './utils/accessibilityEnhancer';
-import SecurityEnhancer from './utils/securityEnhancer';
-import UserExperienceEnhancer from './utils/userExperienceEnhancer';
+import React, { useEffect, useState, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
+import PerformanceEnhancer from "./utils/performanceEnhancer";
+import SEOEnhancer from "./utils/seoEnhancer";
+import AccessibilityEnhancer from "./utils/accessibilityEnhancer";
+import SecurityEnhancer from "./utils/securityEnhancer";
+import UserExperienceEnhancer from "./utils/userExperienceEnhancer";
 
 // Lazy load components for better performance
-const HomePage = lazy(() => import('./page'));
+const HomePage = lazy(() => import("./page"));
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -38,10 +38,11 @@ const App: React.FC = () => {
       // Initialize enhancers
       const performanceEnhancer = new PerformanceEnhancer();
       const seoEnhancer = new SEOEnhancer({
-        title: 'Zion Tech Group - Advanced AI and IT Solutions',
-        description: 'Leading provider of AI and IT solutions for modern enterprises',
-        keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-        canonicalUrl: 'https://ziontechgroup.com',
+        title: "Zion Tech Group - Advanced AI and IT Solutions",
+        description:
+          "Leading provider of AI and IT solutions for modern enterprises",
+        keywords: ["AI", "IT Solutions", "Technology", "Enterprise"],
+        canonicalUrl: "https://ziontechgroup.com",
       });
       const accessibilityEnhancer = new AccessibilityEnhancer();
       const securityEnhancer = new SecurityEnhancer();

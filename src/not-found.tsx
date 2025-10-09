@@ -1,26 +1,26 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home, Phone } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Home, Phone } from "lucide-react";
 
 const popularPages = [
   {
-    title: 'AI Services',
-    description: 'Explore our AI-powered solutions',
-    href: '/services',
-    icon: '🤖'
+    title: "AI Services",
+    description: "Explore our AI-powered solutions",
+    href: "/services",
+    icon: "🤖",
   },
   {
-    title: 'About Us',
-    description: 'Learn about our company',
-    href: '/about',
-    icon: '🏢'
+    title: "About Us",
+    description: "Learn about our company",
+    href: "/about",
+    icon: "🏢",
   },
   {
-    title: 'Contact',
-    description: 'Get in touch with us',
-    href: '/contact',
-    icon: '📞'
-  }
+    title: "Contact",
+    description: "Get in touch with us",
+    href: "/contact",
+    icon: "📞",
+  },
 ];
 
 export default function NotFound() {
@@ -32,16 +32,16 @@ export default function NotFound() {
           <h1 className="text-9xl font-bold text-white/20 mb-4">404</h1>
           <div className="text-6xl mb-4">🔍</div>
         </div>
-        
+
         {/* Error Message */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Page Not Found</h2>
           <p className="text-lg text-gray-300">
-            The page you're looking for doesn't exist or has been moved.
-            Don't worry, let's get you back on track!
+            The page you're looking for doesn't exist or has been moved. Don't
+            worry, let's get you back on track!
           </p>
         </div>
-        
+
         {/* Popular Pages */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {popularPages.map((page, index) => (
@@ -54,13 +54,11 @@ export default function NotFound() {
               <h3 className="text-lg font-semibold text-white mb-2">
                 {page.title}
               </h3>
-              <p className="text-gray-300 text-sm">
-                {page.description}
-              </p>
+              <p className="text-gray-300 text-sm">{page.description}</p>
             </Link>
           ))}
         </div>
-        
+
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link

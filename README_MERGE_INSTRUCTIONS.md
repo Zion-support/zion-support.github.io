@@ -7,16 +7,19 @@
 ## FASTEST WAY TO COMPLETE MERGE
 
 ### Option 1: One Command (Recommended)
+
 ```bash
 bash /workspace/COMMIT_AND_MERGE.sh
 ```
 
 ### Option 2: Python Script
+
 ```bash
 python3 /workspace/auto_merge_prs.py
 ```
 
 ### Option 3: Manual Commands
+
 ```bash
 cd /workspace
 git add api-documentation.tsx app/components/PerformanceMonitor.tsx clean-build/pages/_app.tsx clean-build/pages/about.tsx
@@ -33,8 +36,8 @@ git push origin main
 
 ✅ **api-documentation.tsx** - Fixed JSX structure  
 ✅ **app/components/PerformanceMonitor.tsx** - Added interfaces, fixed functions  
-✅ **clean-build/pages/_app.tsx** - Complete rewrite  
-✅ **clean-build/pages/about.tsx** - Complete rewrite  
+✅ **clean-build/pages/\_app.tsx** - Complete rewrite  
+✅ **clean-build/pages/about.tsx** - Complete rewrite
 
 **Total Errors Fixed:** 140+
 
@@ -43,9 +46,11 @@ git push origin main
 ## AFTER MERGING
 
 1. **Check for open PRs:**
+
    ```bash
    python3 /workspace/merge_current_pr.py
    ```
+
    Or visit: https://github.com/Zion-Holdings/zion.app/pulls
 
 2. **Verify everything works:**
@@ -68,6 +73,7 @@ git push origin main
 ## SUPPORT
 
 If anything fails:
+
 1. Check `TASK_COMPLETION_AND_MERGE_INSTRUCTIONS.md`
 2. Run `git status` to see current state
 3. All scripts are in `/workspace/`

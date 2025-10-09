@@ -1,27 +1,27 @@
 #!/usr/bin/env node
 
-import https from 'https';
+import https from "https";
 
 // GitHub API configuration
 
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'api.github.com',
+      hostname: "api.github.com",
       port: 443,
       path: endpoint,
-      method: 'GET',
+      method: "GET",
       headers: {
-        'User-Agent': 'Zion-App-Automation',
-        'Accept': 'application/vnd.github.v3+json'
-      }
+        "User-Agent": "Zion-App-Automation",
+        Accept: "application/vnd.github.v3+json",
+      },
     };
 
     const req = https.request(options, (res) => {
-      res.on('data', (chunk) => {
+      res.on("data", (chunk) => {
         data += chunk;
       });
-      res.on('end', () => {
+      res.on("end", () => {
         try {
           resolve(jsonData);
         } catch (error) {
@@ -30,7 +30,7 @@ function makeGitHubRequest(endpoint) {
       });
     });
 
-    req.on('error', (error) => {
+    req.on("error", (error) => {
       reject(error);
     });
 
@@ -40,23 +40,13 @@ function makeGitHubRequest(endpoint) {
 
 async function checkOpenPRs() {
   try {
-
     // Get open pull requests
 
-
     if (prs.length === 0) {
-
       return [];
     }
-    
-    
+
     for (const pr of prs) {
-
-
-
-
-
-
       // Check if PR has merge conflicts
 
       prDetails.push({
@@ -68,23 +58,21 @@ async function checkOpenPRs() {
         url: pr.html_url,
         hasConflicts,
         mergeable: prDetail.mergeable,
-        mergeable_state: prDetail.mergeable_state
+        mergeable_state: prDetail.mergeable_state,
       });
     }
-    
-    return prDetails;
-    
-  } catch (error) {
 
+    return prDetails;
+  } catch (error) {
     return [];
   }
 }
 
 // Run the check
-checkOpenPRs().then(prs => {
-
-  process.exit(0);
-}).catch(error => {
-
-  process.exit(1);
-});
+checkOpenPRs()
+  .then((prs) => {
+    process.exit(0);
+  })
+  .catch((error) => {
+    process.exit(1);
+  });

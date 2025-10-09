@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface UserExperienceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function UserExperienceEnhancer({ 
-  className = '', 
-  children 
+export default function UserExperienceEnhancer({
+  className = "",
+  children,
 }: UserExperienceEnhancerProps) {
   return (
     <div className={`userexperienceenhancer ${className}`}>
@@ -16,9 +16,7 @@ export default function UserExperienceEnhancer({
           <h3 className="text-lg font-semibold mb-2">
             User Experience Enhancer
           </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
+          <p className="text-gray-600">Component content will be added here.</p>
         </div>
       )}
     </div>

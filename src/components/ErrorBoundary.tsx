@@ -1,77 +1,57 @@
-import React from 'react';
+import React, { Component, ReactNode, ErrorInfo } from "react";
 
 interface ErrorBoundaryProps {
   className?: string;
-  children?: React.ReactNode;
-}
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
+
 interface State {
-  // TODO: Add content
-}
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
-class ErrorBoundary extends Component<Props, State> {
-  // TODO: Add content
-}
-  constructor(props: Props) {
-  // TODO: Add content
-}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, State> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
-}
     return {
-  // TODO: Add content
-}
       hasError: true,
-//       error
+      error,
     };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
     this.setState({
-  // TODO: Add content
-}
-//       error,
-//       errorInfo
+      error,
+      errorInfo,
     });
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-// console.error('ErrorBoundary caught an error:', error, errorInfo);
+    if (process.env.NODE_ENV === "development") {
+      console.error("ErrorBoundary caught an error:", error, errorInfo);
     }
     // Report error to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
-      (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-}
+    if (typeof window !== "undefined" && "gtag" in window) {
+      (window as any).gtag("event", "exception", {
         description: error.message,
-        fatal: true
+        fatal: true,
       });
     }
     // Call custom error handler
     if (this.props.onError) {
-  // TODO: Add content
-}
       this.props.onError(error, errorInfo);
     }
     // Report error to error tracking service
     this.reportError(error, errorInfo);
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
     // In a real application, you would send this to your error tracking service
     // For example: Sentry, LogRocket, Bugsnag, etc.
+    const errorReport = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -79,93 +59,75 @@ class ErrorBoundary extends Component<Props, State> {
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId()
+      sessionId: this.getSessionId(),
     };
     // Send to error tracking service
     this.sendToErrorService(errorReport);
   };
+
   private getUserId = (): string | null => {
-  // TODO: Add content
-}
     // Get user ID from localStorage, session, or authentication context
-    return localStorage.getItem('userId');
+    return localStorage.getItem("userId");
   };
+
   private getSessionId = (): string => {
-// Get or create session ID
+    // Get or create session ID
+    let sessionId = sessionStorage.getItem("sessionId");
     if (!sessionId) {
-  // TODO: Add content
-}
-      sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
-      sessionStorage.setItem('sessionId', sessionId);
+      sessionId =
+        Math.random().toString(36).substring(2) + Date.now().toString(36);
+      sessionStorage.setItem("sessionId", sessionId);
     }
     return sessionId;
   };
+
   private sendToErrorService = (errorReport: any) => {
-  // TODO: Add content
-}
     // In a real application, you would send this to your error tracking service
-// console.log('Error report:', errorReport);
+    console.log("Error report:", errorReport);
     // Example: Send to your API endpoint
     // fetch('/api/errors', {
-  // TODO: Add content
-}
     //   method: 'POST',
     //   headers: {
-  // TODO: Add content
-}
     //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify(errorReport)
     // }).catch(console.error);
   };
+
   private handleRetry = () => {
-  // TODO: Add content
-}
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
+
   private handleReload = () => {
-  // TODO: Add content
-}
     window.location.reload();
   };
+
   private handleGoHome = () => {
-  // TODO: Add content
-}
-    window.location.href = '/';
+    window.location.href = "/";
   };
   render() {
-  // TODO: Add content
-}
     if (this.state.hasError) {
-  // TODO: Add content
-}
       // Custom fallback UI
       if (this.props.fallback) {
-  // TODO: Add content
-}
         return this.props.fallback;
       }
       // Default error UI
       return (
-  // TODO: Add parameters,
-)
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full">
             <div className="cyber-card p-8 text-center">
-              <div className="text-6xl mb-6"></div>
+              <div className="text-6xl mb-6">⚠️</div>
               <h1 className="text-3xl font-bold text-white mb-4 neon-text">
-//                 Oops! Something Went Wrong
+                Oops! Something Went Wrong
               </h1>
               <p className="text-gray-300 mb-6 leading-relaxed">
-//                 We're sorry, but something unexpected happened. Our team has been notified
-//                 and is working to fix the issue.
+                We're sorry, but something unexpected happened. Our team has
+                been notified and is working to fix the issue.
               </p>
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-  // TODO: Add parameters,
-)
+              {process.env.NODE_ENV === "development" && this.state.error && (
                 <details className="mb-6 text-left">
                   <summary className="text-cyan-400 cursor-pointer mb-2">
-//                     Error Details (Development Only)
+                    Error Details (Development Only)
                   </summary>
                   <div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
                     <div className="mb-2">
@@ -173,14 +135,16 @@ class ErrorBoundary extends Component<Props, State> {
                     </div>
                     <div className="mb-2">
                       <strong>Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">{this.state.error.stack}</pre>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.error.stack}
+                      </pre>
                     </div>
                     {this.state.errorInfo && (
-  // TODO: Add parameters,
-)
                       <div>
                         <strong>Component Stack:</strong>
-                        <pre className="mt-1 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                        <pre className="mt-1 whitespace-pre-wrap">
+                          {this.state.errorInfo.componentStack}
+                        </pre>
                       </div>
                     )}
                   </div>
@@ -190,39 +154,50 @@ class ErrorBoundary extends Component<Props, State> {
                 <button
                   onClick={this.handleRetry}
                   className="cyber-button px-6 py-3 text-lg font-semibold"
-//                 >
-//                   Try Again
+                >
+                  Try Again
                 </button>
                 <button
                   onClick={this.handleReload}
                   className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-//                 >
-//                   Reload Page
+                >
+                  Reload Page
                 </button>
                 <button
                   onClick={this.handleGoHome}
                   className="border-2 border-purple-400 text-purple-400 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-//                 >
-//                   Go Home
+                >
+                  Go Home
                 </button>
               </div>
               <div className="mt-8 text-sm text-gray-400">
-                <p>If this problem persists, please contact our support team:</p>
+                <p>
+                  If this problem persists, please contact our support team:
+                </p>
                 <p className="mt-2">
-                   <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-//                     support@ziontechgroup.com
+                  <a
+                    href="mailto:support@ziontechgroup.com"
+                    className="text-cyan-400 hover:text-cyan-300"
+                  >
+                    support@ziontechgroup.com
                   </a>
                 </p>
                 <p>
-                   <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-//                     +1 (302) 464-0950
+                  <a
+                    href="tel:+13024640950"
+                    className="text-cyan-400 hover:text-cyan-300"
+                  >
+                    +1 (302) 464-0950
                   </a>
                 </p>
               </div>
             </div>
           </div>
         </div>
-      )}
-    </div>
-  );
+      );
+    }
+    return this.props.children;
+  }
 }
+
+export default ErrorBoundary;

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useEffect, useCallback, useState } from 'react';
-import { logger } from '../utils/logger';
+import React, { useEffect, useCallback, useState } from "react";
+import { logger } from "../utils/logger";
 
 interface SecurityMetrics {
   cspViolations: number;
@@ -23,26 +23,35 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Content Security Policy monitoring
   const monitorCSP = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Monitor CSP violations
     const originalConsoleError = console.error;
     console.error = (...args) => {
-      const message = args.join(' ');
-      if (message.includes('Content Security Policy') || message.includes('CSP')) {
-        setMetrics(prev => ({ ...prev, cspViolations: prev.cspViolations + 1 }));
-        logger.warn('CSP violation detected', { message });
+      const message = args.join(" ");
+      if (
+        message.includes("Content Security Policy") ||
+        message.includes("CSP")
+      ) {
+        setMetrics((prev) => ({
+          ...prev,
+          cspViolations: prev.cspViolations + 1,
+        }));
+        logger.warn("CSP violation detected", { message });
       }
       originalConsoleError.apply(console, args);
     };
 
     // Monitor for XSS attempts
     const checkForXSS = () => {
-      const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
+      const scripts = document.querySelectorAll("script");
+      scripts.forEach((script) => {
         if (script.src && !script.src.startsWith(window.location.origin)) {
-          setMetrics(prev => ({ ...prev, xssAttempts: prev.xssAttempts + 1 }));
-          logger.warn('Potential XSS attempt detected', { src: script.src });
+          setMetrics((prev) => ({
+            ...prev,
+            xssAttempts: prev.xssAttempts + 1,
+          }));
+          logger.warn("Potential XSS attempt detected", { src: script.src });
         }
       });
     };
@@ -50,39 +59,43 @@ export const SecurityEnhancer: React.FC = () => {
     checkForXSS();
 
     // Monitor form submissions for CSRF
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', (e) => {
+    const forms = document.querySelectorAll("form");
+    forms.forEach((form) => {
+      form.addEventListener("submit", (e) => {
         const formData = new FormData(form as HTMLFormElement);
-        const token = formData.get('csrf_token');
-        
+        const token = formData.get("csrf_token");
+
         if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
+          setMetrics((prev) => ({
+            ...prev,
+            csrfAttempts: prev.csrfAttempts + 1,
+          }));
+          logger.warn("Potential CSRF attempt detected", { form: form.id });
         }
       });
     });
-
   }, []);
 
   // Input sanitization
   const sanitizeInput = useCallback((input: string): string => {
     return input
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+\s*=/gi, '');
+      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, "")
+      .replace(/javascript:/gi, "")
+      .replace(/on\w+\s*=/gi, "");
   }, []);
 
   // Validate URLs
   const validateURL = useCallback((url: string): boolean => {
     try {
       const urlObj = new URL(url);
-      const allowedProtocols = ['http:', 'https:'];
-      const allowedHosts = ['ziontechgroup.com', 'www.ziontechgroup.com'];
-      
-      return allowedProtocols.includes(urlObj.protocol) && 
-             allowedHosts.includes(urlObj.hostname);
+      const allowedProtocols = ["http:", "https:"];
+      const allowedHosts = ["ziontechgroup.com", "www.ziontechgroup.com"];
+
+      return (
+        allowedProtocols.includes(urlObj.protocol) &&
+        allowedHosts.includes(urlObj.hostname)
+      );
     } catch {
       return false;
     }
@@ -90,7 +103,7 @@ export const SecurityEnhancer: React.FC = () => {
 
   // Monitor suspicious activity
   const monitorSuspiciousActivity = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     // Monitor for suspicious patterns
     const suspiciousPatterns = [
@@ -103,15 +116,18 @@ export const SecurityEnhancer: React.FC = () => {
     ];
 
     const checkSuspiciousCode = () => {
-      const scripts = document.querySelectorAll('script');
-      scripts.forEach(script => {
-        const content = script.textContent || '';
-        suspiciousPatterns.forEach(pattern => {
+      const scripts = document.querySelectorAll("script");
+      scripts.forEach((script) => {
+        const content = script.textContent || "";
+        suspiciousPatterns.forEach((pattern) => {
           if (pattern.test(content)) {
-            setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-            logger.warn('Suspicious code pattern detected', { 
+            setMetrics((prev) => ({
+              ...prev,
+              suspiciousActivity: prev.suspiciousActivity + 1,
+            }));
+            logger.warn("Suspicious code pattern detected", {
               pattern: pattern.toString(),
-              script: script.id || 'inline'
+              script: script.id || "inline",
             });
           }
         });
@@ -124,68 +140,74 @@ export const SecurityEnhancer: React.FC = () => {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
-      
-      if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
-        throw new Error('Suspicious network request blocked');
+
+      if (typeof url === "string" && !validateURL(url)) {
+        setMetrics((prev) => ({
+          ...prev,
+          suspiciousActivity: prev.suspiciousActivity + 1,
+        }));
+        logger.warn("Suspicious network request blocked", { url });
+        throw new Error("Suspicious network request blocked");
       }
-      
+
       return originalFetch.apply(window, args);
     };
-
   }, [validateURL]);
 
   // Security headers validation
   const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const warnings: string[] = [];
 
     // Check for HTTPS
-    if (location.protocol !== 'https:') {
-      warnings.push('Site is not served over HTTPS');
+    if (location.protocol !== "https:") {
+      warnings.push("Site is not served over HTTPS");
       setIsSecure(false);
     }
 
     // Check for security headers (if available)
     const headers = (window as any).securityHeaders;
     if (headers) {
-      if (!headers['x-frame-options']) {
-        warnings.push('X-Frame-Options header missing');
+      if (!headers["x-frame-options"]) {
+        warnings.push("X-Frame-Options header missing");
       }
-      if (!headers['x-content-type-options']) {
-        warnings.push('X-Content-Type-Options header missing');
+      if (!headers["x-content-type-options"]) {
+        warnings.push("X-Content-Type-Options header missing");
       }
-      if (!headers['x-xss-protection']) {
-        warnings.push('X-XSS-Protection header missing');
+      if (!headers["x-xss-protection"]) {
+        warnings.push("X-XSS-Protection header missing");
       }
     }
 
     setSecurityWarnings(warnings);
-    
+
     if (warnings.length > 0) {
-      logger.warn('Security warnings detected', { warnings });
+      logger.warn("Security warnings detected", { warnings });
     }
   }, []);
 
   // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now();
-    const windowStart = now - windowMs;
-    
-    const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart);
-    
-    if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
-    }
-    
-    requests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
-  }, []);
+  const rateLimit = useCallback(
+    (key: string, limit: number, windowMs: number) => {
+      const now = Date.now();
+      const windowStart = now - windowMs;
+
+      const requests = JSON.parse(
+        localStorage.getItem(`rate_limit_${key}`) || "[]",
+      ).filter((timestamp: number) => timestamp > windowStart);
+
+      if (requests.length >= limit) {
+        logger.warn("Rate limit exceeded", { key, limit, windowMs });
+        return false;
+      }
+
+      requests.push(now);
+      localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
+      return true;
+    },
+    [],
+  );
 
   // Initialize security monitoring
   useEffect(() => {
@@ -202,27 +224,30 @@ export const SecurityEnhancer: React.FC = () => {
   }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
 
   // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
-    
-    // Rate limit security events
-    if (!rateLimit('security_events', 10, 60000)) {
-      return;
-    }
+  const handleSecurityEvent = useCallback(
+    (event: string, data: any) => {
+      logger.info("Security event", { event, data });
 
-    // Send to security monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'security_event', {
-        event_category: 'Security',
-        event_label: event,
-        custom_map: data,
-      });
-    }
-  }, [rateLimit]);
+      // Rate limit security events
+      if (!rateLimit("security_events", 10, 60000)) {
+        return;
+      }
+
+      // Send to security monitoring service
+      if (typeof window !== "undefined" && "gtag" in window) {
+        (window as any).gtag("event", "security_event", {
+          event_category: "Security",
+          event_label: event,
+          custom_map: data,
+        });
+      }
+    },
+    [rateLimit],
+  );
 
   // Expose security utilities globally for debugging
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       (window as any).securityUtils = {
         sanitizeInput,
         validateURL,
@@ -232,7 +257,14 @@ export const SecurityEnhancer: React.FC = () => {
         warnings: securityWarnings,
       };
     }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  }, [
+    sanitizeInput,
+    validateURL,
+    rateLimit,
+    metrics,
+    isSecure,
+    securityWarnings,
+  ]);
 
   return (
     <>
@@ -256,7 +288,7 @@ export const SecurityEnhancer: React.FC = () => {
       )}
 
       {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && (
+      {process.env.NODE_ENV === "development" && (
         <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
           <h4 className="font-bold mb-2">Security Metrics</h4>
           <div className="space-y-1">

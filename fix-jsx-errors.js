@@ -1,22 +1,21 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to process a file
 function processFile(filePath) {
   try {
-
     // Fix malformed JSX closing tags
-    if (content.includes('< />')) {
-      content = content.replace(/< \/>/g, '</div>');
+    if (content.includes("< />")) {
+      content = content.replace(/< \/>/g, "</div>");
       modified = true;
     }
 
     // Fix malformed JSX fragments
-    if (content.includes('<>') && !content.includes('</>')) {
-      content = content.replace(/<>/g, '<div>');
-      content = content.replace(/<\/>/g, '</div>');
+    if (content.includes("<>") && !content.includes("</>")) {
+      content = content.replace(/<>/g, "<div>");
+      content = content.replace(/<\/>/g, "</div>");
       modified = true;
     }
 
@@ -31,27 +30,26 @@ function processFile(filePath) {
     }
 
     // Fix malformed Helmet tags
-    if (content.includes('<Helmet>') && !content.includes('</Helmet>')) {
-      content = content.replace(/<Helmet>/g, '<div>');
-      content = content.replace(/<\/Helmet>/g, '</div>');
+    if (content.includes("<Helmet>") && !content.includes("</Helmet>")) {
+      content = content.replace(/<Helmet>/g, "<div>");
+      content = content.replace(/<\/Helmet>/g, "</div>");
       modified = true;
     }
 
     // Fix other common JSX issues
-    if (content.includes('</Helmet>') && !content.includes('<Helmet>')) {
-      content = content.replace(/<\/Helmet>/g, '</div>');
+    if (content.includes("</Helmet>") && !content.includes("<Helmet>")) {
+      content = content.replace(/<\/Helmet>/g, "</div>");
       modified = true;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
 
       return true;
     }
 
     return false;
   } catch (error) {
-
     return false;
   }
 }
@@ -60,12 +58,11 @@ function processFile(filePath) {
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
 
-  files.forEach(file => {
+  files.forEach((file) => {
     if (processFile(file)) {
       fixedCount++;
     }
   });
-
 }
 
 main().catch(console.error);

@@ -4,8 +4,8 @@
 export const enhancedErrorMonitoring = {
   // Add utility functions here
   init: () => {
-    console.log('enhancedErrorMonitoring initialized');
-  }
+    console.log("enhancedErrorMonitoring initialized");
+  },
 };
 
 export default enhancedErrorMonitoring;

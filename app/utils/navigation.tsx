@@ -1,4 +1,4 @@
-'use client';
+"use client";
 export const useRouter = () => {
   const push = useCallback((url: string) => {
     window.location.href = url;
@@ -20,7 +20,7 @@ export const useRouter = () => {
     replace,
     back,
     forward,
-    refresh
+    refresh,
   };
 };
 export const usePathname = () => {

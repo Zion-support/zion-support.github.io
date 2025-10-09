@@ -34,14 +34,17 @@ export const performanceConfig = {
 
   // Resource loading priorities
   resourceHints: {
-    preconnect: ['https://fonts.googleapis.com', 'https://fonts.gstatic.com'],
-    dnsPrefetch: ['https://www.google-analytics.com', 'https://www.googletagmanager.com'],
+    preconnect: ["https://fonts.googleapis.com", "https://fonts.gstatic.com"],
+    dnsPrefetch: [
+      "https://www.google-analytics.com",
+      "https://www.googletagmanager.com",
+    ],
   },
 
   // Lazy loading configuration
   lazyLoading: {
-    imagePlaceholder: 'blur',
-    rootMargin: '50px',
+    imagePlaceholder: "blur",
+    rootMargin: "50px",
     threshold: 0.01,
     enableNativeLazyLoading: true,
   },

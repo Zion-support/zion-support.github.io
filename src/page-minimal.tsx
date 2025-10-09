@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Phone, CheckCircle, Star, ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -18,7 +18,10 @@ export default function HomePage() {
               <Link to="/" className="text-gray-900 hover:text-blue-600">
                 Home
               </Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">
+              <Link
+                to="/services"
+                className="text-gray-900 hover:text-blue-600"
+              >
                 Services
               </Link>
               <Link to="/blog" className="text-gray-900 hover:text-blue-600">
@@ -31,7 +34,7 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      
+
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -41,8 +44,9 @@ export default function HomePage() {
               <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
+              Zion Tech Group delivers cutting-edge AI micro SaaS services,
+              cloud automation, and enterprise IT solutions that drive growth,
+              efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -52,7 +56,7 @@ export default function HomePage() {
                 Explore Our Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <a 
+              <a
                 href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
@@ -62,7 +66,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -83,7 +87,8 @@ export default function HomePage() {
                   Proven Results
                 </h3>
                 <p className="text-gray-600">
-                  Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
+                  Our AI solutions have delivered 300% ROI and 70% cost
+                  reduction for enterprise clients.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -94,7 +99,8 @@ export default function HomePage() {
                   Expert Team
                 </h3>
                 <p className="text-gray-600">
-                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
+                  Our team of AI experts and engineers brings decades of
+                  experience in enterprise transformation.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -105,13 +111,14 @@ export default function HomePage() {
                   Fast Implementation
                 </h3>
                 <p className="text-gray-600">
-                  Get your AI solutions up and running quickly with our streamlined implementation process.
+                  Get your AI solutions up and running quickly with our
+                  streamlined implementation process.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -140,7 +147,7 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,10 +157,18 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link to="/services" className="text-gray-400 hover:text-white">
+                Services
+              </Link>
+              <Link to="/about" className="text-gray-400 hover:text-white">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white">
+                Contact
+              </Link>
+              <Link to="/privacy" className="text-gray-400 hover:text-white">
+                Privacy
+              </Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">

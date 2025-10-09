@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 interface OptimizedLoadingSpinnerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function OptimizedLoadingSpinner({ 
-  className = '', 
-  children 
+export default function OptimizedLoadingSpinner({
+  className = "",
+  children,
 }: OptimizedLoadingSpinnerProps) {
   return (
     <div className={`optimizedloadingspinner ${className}`}>
@@ -16,9 +16,7 @@ export default function OptimizedLoadingSpinner({
           <h3 className="text-lg font-semibold mb-2">
             Optimized Loading Spinner
           </h3>
-          <p className="text-gray-600">
-            Component content will be added here.
-          </p>
+          <p className="text-gray-600">Component content will be added here.</p>
         </div>
       )}
     </div>

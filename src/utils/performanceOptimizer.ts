@@ -4,8 +4,8 @@
 export const performanceOptimizer = {
   // Add utility functions here
   init: () => {
-    console.log('performanceOptimizer initialized');
-  }
+    console.log("performanceOptimizer initialized");
+  },
 };
 
 export default performanceOptimizer;

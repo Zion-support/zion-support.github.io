@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function Post(): React.JSX.Element {
   const { slug } = useParams();
@@ -18,8 +18,8 @@ export default function Post(): React.JSX.Element {
 
           <div className="bg-white rounded-lg shadow-lg p-8">
             <p className="text-gray-600">
-              This is a placeholder for the blog post content. The actual content would be loaded
-              based on the slug parameter.
+              This is a placeholder for the blog post content. The actual
+              content would be loaded based on the slug parameter.
             </p>
           </div>
         </div>

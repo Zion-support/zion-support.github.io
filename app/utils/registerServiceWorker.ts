@@ -10,39 +10,44 @@ export interface ServiceWorkerConfig {
  * Register service worker with lifecycle callbacks
  */
 export async function registerServiceWorker(
-  config: ServiceWorkerConfig = {}
+  config: ServiceWorkerConfig = {},
 ): Promise<ServiceWorkerRegistration | undefined> {
   // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
+  if (typeof window === "undefined" || !("serviceWorker" in navigator)) {
     return;
   }
   // Only register in production or if explicitly enabled
   const isLocalhost = Boolean(
-    window.location.hostname === 'localhost' ||
-      window.location.hostname === '[::1]' ||
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+    window.location.hostname === "localhost" ||
+      window.location.hostname === "[::1]" ||
+      window.location.hostname.match(
+        /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/,
+      ),
   );
   // Use isLocalhost for conditional logic if needed
   if (isLocalhost) {
-    }
+  }
   try {
     // Wait for page to load
     await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {
+      if (document.readyState === "complete") {
         resolve();
       } else {
-        window.addEventListener('load', () => resolve());
+        window.addEventListener("load", () => resolve());
       }
     });
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/'
-    });
+    const registration = await navigator.serviceWorker.register(
+      "/service-worker.js",
+      {
+        scope: "/",
+      },
+    );
     // Handle updates
-    registration.addEventListener('updatefound', () => {
+    registration.addEventListener("updatefound", () => {
       const installingWorker = registration.installing;
       if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {
-        if (installingWorker.state === 'installed') {
+      installingWorker.addEventListener("statechange", () => {
+        if (installingWorker.state === "installed") {
           if (navigator.serviceWorker.controller) {
             // New update available
             if (config.onUpdate) {
@@ -68,7 +73,7 @@ export async function registerServiceWorker(
  * Unregister service worker
  */
 export async function unregisterServiceWorker(): Promise<boolean> {
-  if (!('serviceWorker' in navigator)) {
+  if (!("serviceWorker" in navigator)) {
     return false;
   }
   try {
@@ -83,33 +88,32 @@ export async function unregisterServiceWorker(): Promise<boolean> {
  * Check for service worker updates
  */
 export async function checkForUpdates(): Promise<void> {
-  if (!('serviceWorker' in navigator)) {
+  if (!("serviceWorker" in navigator)) {
     return;
   }
   try {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
-    } catch (error) {
-    }
+  } catch (error) {}
 }
 /**
  * Skip waiting and activate new service worker
  */
 export function skipWaiting(): void {
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+  if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
     return;
   }
-  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' });
+  navigator.serviceWorker.controller.postMessage({ action: "skipWaiting" });
 }
 /**
  * Clear all caches
  */
 export function clearCaches(): void {
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
+  if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) {
     return;
   }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
-  }
+  navigator.serviceWorker.controller.postMessage({ action: "clearCache" });
+}
 /**
  * Get service worker registration status
  */
@@ -118,11 +122,11 @@ export async function getServiceWorkerStatus(): Promise<{
   registered: boolean;
   active: boolean;
 }> {
-  if (!('serviceWorker' in navigator)) {
+  if (!("serviceWorker" in navigator)) {
     return {
       supported: false,
       registered: false,
-      active: false
+      active: false,
     };
   }
   try {
@@ -130,13 +134,13 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: true,
       registered: !!registration,
-      active: !!registration?.active
+      active: !!registration?.active,
     };
   } catch {
     return {
       supported: true,
       registered: false,
-      active: false
+      active: false,
     };
   }
 }

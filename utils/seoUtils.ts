@@ -17,7 +17,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
   tags += `<meta name="description" content="${description}" />`;
 
   if (keywords && keywords.length > 0) {
-    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`;
+    tags += `<meta name="keywords" content="${keywords.join(", ")}" />`;
   }
 
   if (ogImage) {
@@ -32,7 +32,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
 };
 
 export const updatePageTitle = (title: string) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     document.title = title;
   }
 };

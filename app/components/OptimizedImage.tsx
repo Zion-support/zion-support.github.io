@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface OptimizedImageProps {
   src: string;
@@ -14,8 +14,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '',
-  priority = false
+  className = "",
+  priority = false,
 }) => {
   return (
     <img
@@ -24,11 +24,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       width={width}
       height={height}
       className={`${className}`}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority ? "eager" : "lazy"}
       decoding="async"
       style={{
-        width: width ? `${width}px` : 'auto',
-        height: height ? `${height}px` : 'auto'
+        width: width ? `${width}px` : "auto",
+        height: height ? `${height}px` : "auto",
       }}
     />
   );

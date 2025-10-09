@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from "react";
+import { Link } from "react-router-dom";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 const DatabaseManagementPage: React.FC = () => {
   return (
@@ -9,10 +9,14 @@ const DatabaseManagementPage: React.FC = () => {
       <Navigation />
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Database Management</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced database management solutions</p>
-          <Link 
-            to="/contact" 
+          <h1 className="text-4xl font-bold text-white mb-4">
+            Database Management
+          </h1>
+          <p className="text-gray-300 mb-8">
+            Coming Soon - Advanced database management solutions
+          </p>
+          <Link
+            to="/contact"
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
           >
             Contact Us

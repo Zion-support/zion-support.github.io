@@ -1,40 +1,40 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // List of files with syntax errors
 const filesToFix = [
-  'src/ai-analytics/page.tsx',
-  'src/ai-automation/page.tsx',
-  'src/ai-computer-vision/page.tsx',
-  'src/ai-content-generation/page.tsx',
-  'src/ai-content-studio/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-insights/page.tsx',
-  'src/ai-customer-support-bot/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-cybersecurity/page.tsx',
-  'src/ai-data-analytics/page.tsx',
-  'src/ai-data-visualization/page.tsx',
-  'src/ai-design-assistant/page.tsx',
-  'src/ai-document-processing/page.tsx',
-  'src/ai-document-processor/page.tsx',
-  'src/ai-ecommerce-optimizer/page.tsx',
-  'src/ai-ecommerce-solutions/page.tsx',
-  'src/ai-edge-computing/page.tsx',
-  'src/ai-email-assistant/page.tsx',
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-fintech/page.tsx',
-  'src/ai-healthcare/page.tsx',
-  'src/ai-hr-assistant/page.tsx',
-  'src/ai-inventory-manager/page.tsx',
-  'src/ai-invoice-generator/page.tsx',
-  'src/ai-lead-generation/page.tsx',
-  'src/ai-lead-scoring/page.tsx',
-  'src/ai-marketing/page.tsx'
+  "src/ai-analytics/page.tsx",
+  "src/ai-automation/page.tsx",
+  "src/ai-computer-vision/page.tsx",
+  "src/ai-content-generation/page.tsx",
+  "src/ai-content-studio/page.tsx",
+  "src/ai-crm/page.tsx",
+  "src/ai-customer-insights/page.tsx",
+  "src/ai-customer-support-bot/page.tsx",
+  "src/ai-customer-support/page.tsx",
+  "src/ai-cybersecurity/page.tsx",
+  "src/ai-data-analytics/page.tsx",
+  "src/ai-data-visualization/page.tsx",
+  "src/ai-design-assistant/page.tsx",
+  "src/ai-document-processing/page.tsx",
+  "src/ai-document-processor/page.tsx",
+  "src/ai-ecommerce-optimizer/page.tsx",
+  "src/ai-ecommerce-solutions/page.tsx",
+  "src/ai-edge-computing/page.tsx",
+  "src/ai-email-assistant/page.tsx",
+  "src/ai-email-marketing/page.tsx",
+  "src/ai-fintech/page.tsx",
+  "src/ai-healthcare/page.tsx",
+  "src/ai-hr-assistant/page.tsx",
+  "src/ai-inventory-manager/page.tsx",
+  "src/ai-invoice-generator/page.tsx",
+  "src/ai-lead-generation/page.tsx",
+  "src/ai-lead-scoring/page.tsx",
+  "src/ai-marketing/page.tsx",
 ];
 
 // Template for a simple coming soon page
@@ -67,15 +67,16 @@ const ${title}Page: React.FC = () => {
 export default ${title}Page;`;
 
 // Fix each file
-filesToFix.forEach(filePath => {
+filesToFix.forEach((filePath) => {
   const fullPath = path.join(__dirname, filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  
+  const fileName = path.basename(filePath, ".tsx");
+  const title = fileName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+
   const description = `Coming Soon - Advanced ${title.toLowerCase()} solutions`;
-  
+
   try {
     fs.writeFileSync(fullPath, createComingSoonPage(title, description));
     console.log(`Fixed: ${filePath}`);
@@ -84,4 +85,4 @@ filesToFix.forEach(filePath => {
   }
 });
 
-console.log('All files fixed!');
+console.log("All files fixed!");

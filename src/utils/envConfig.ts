@@ -4,8 +4,8 @@
 export const envConfig = {
   // Add utility functions here
   init: () => {
-    console.log('envConfig initialized');
-  }
+    console.log("envConfig initialized");
+  },
 };
 
 export default envConfig;

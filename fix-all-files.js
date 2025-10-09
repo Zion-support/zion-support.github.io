@@ -1,21 +1,22 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-console.log('🔧 Completely fixing all files with proper React components...');
+console.log("🔧 Completely fixing all files with proper React components...");
 
 // Function to create a proper React component
 function createProperComponent(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
-  const isPage = filePath.includes('/page.tsx') || filePath.includes('/page.jsx');
-  const isComponent = filePath.includes('/components/');
-  const isUtil = filePath.includes('/utils/') || filePath.includes('/hooks/');
-  const isConfig = filePath.includes('/config/');
-  const isType = filePath.includes('/types/');
-  
-  let content = '';
-  
+  const isPage =
+    filePath.includes("/page.tsx") || filePath.includes("/page.jsx");
+  const isComponent = filePath.includes("/components/");
+  const isUtil = filePath.includes("/utils/") || filePath.includes("/hooks/");
+  const isConfig = filePath.includes("/config/");
+  const isType = filePath.includes("/types/");
+
+  let content = "";
+
   if (isPage) {
     content = `import React from 'react';
 
@@ -24,7 +25,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-6">
-          ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}
+          ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, " ")}
         </h1>
         <div className="bg-white rounded-lg shadow-md p-6">
           <p className="text-gray-600">
@@ -52,7 +53,13 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
       {children || (
         <div className="p-4">
           <h3 className="text-lg font-semibold mb-2">
-            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
+            ${
+              fileName.charAt(0).toUpperCase() +
+              fileName
+                .slice(1)
+                .replace(/([A-Z])/g, " $1")
+                .trim()
+            }
           </h3>
           <p className="text-gray-600">
             Component content will be added here.
@@ -90,7 +97,7 @@ export default function ${fileName}() {
   return null;
 }`;
   }
-  
+
   return content;
 }
 
@@ -108,20 +115,22 @@ function fixFile(filePath) {
 }
 
 // Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   const files = [];
-  
+
   function traverse(currentDir) {
     try {
       const items = fs.readdirSync(currentDir);
-      
+
       for (const item of items) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           // Skip node_modules and other common directories
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          if (
+            !["node_modules", ".git", "dist", "build", ".next"].includes(item)
+          ) {
             traverse(fullPath);
           }
         } else if (stat.isFile()) {
@@ -135,13 +144,13 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       // Skip directories we can't read
     }
   }
-  
+
   traverse(dir);
   return files;
 }
 
 // Main execution
-const srcDir = path.join(process.cwd(), 'src');
+const srcDir = path.join(process.cwd(), "src");
 const files = findFiles(srcDir);
 
 console.log(`📁 Found ${files.length} files to fix...`);
@@ -166,7 +175,7 @@ console.log(`❌ Errors: ${errorCount}`);
 console.log(`📁 Total files processed: ${files.length}`);
 
 if (fixedCount > 0) {
-  console.log('\n🎉 All files fixed successfully!');
+  console.log("\n🎉 All files fixed successfully!");
 } else {
-  console.log('\n✨ No files needed fixing.');
+  console.log("\n✨ No files needed fixing.");
 }

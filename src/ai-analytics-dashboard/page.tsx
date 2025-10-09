@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 const AiAnalyticsDashboardPage: React.FC = () => {
   return (
@@ -10,10 +10,14 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       <Navigation />
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">AI Analytics Dashboard</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced AI analytics dashboard solutions</p>
-          <a 
-            href="/contact" 
+          <h1 className="text-4xl font-bold text-white mb-4">
+            AI Analytics Dashboard
+          </h1>
+          <p className="text-gray-300 mb-8">
+            Coming Soon - Advanced AI analytics dashboard solutions
+          </p>
+          <a
+            href="/contact"
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
           >
             Contact Us

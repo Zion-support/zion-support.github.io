@@ -1,139 +1,164 @@
-'use client';
-import React, { useState } from 'react';
-import { CheckCircle, X, Star, Phone, Mail, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Award, DollarSign, Clock, Globe, Target, TrendingUp } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import {
+  CheckCircle,
+  X,
+  Star,
+  Phone,
+  Mail,
+  Calendar,
+  MessageSquare,
+  ArrowRight,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Code,
+  BarChart,
+  Users,
+  Award,
+  DollarSign,
+  Clock,
+  Globe,
+  Target,
+  TrendingUp,
+} from "lucide-react";
 
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const [selectedPlan, setSelectedPlan] = useState('professional');
+  const [billingCycle, setBillingCycle] = useState("monthly");
+  const [selectedPlan, setSelectedPlan] = useState("professional");
 
   const plans = [
     {
-      name: 'Starter',
+      name: "Starter",
       price: { monthly: 2999, yearly: 29999 },
-      description: 'Perfect for small businesses getting started with AI',
+      description: "Perfect for small businesses getting started with AI",
       icon: Zap,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
+      color: "text-blue-400",
+      bgColor: "bg-blue-500/10",
       popular: false,
       features: [
-        'AI Content Generation (10,000 words/month)',
-        'Basic Analytics Dashboard',
-        'Email Support',
-        'Standard Security',
-        'Up to 5 users',
-        'Basic Integrations',
-        'Monthly Reports'
+        "AI Content Generation (10,000 words/month)",
+        "Basic Analytics Dashboard",
+        "Email Support",
+        "Standard Security",
+        "Up to 5 users",
+        "Basic Integrations",
+        "Monthly Reports",
       ],
       limitations: [
-        'Limited AI models',
-        'No custom training',
-        'Basic support only'
-      ]
+        "Limited AI models",
+        "No custom training",
+        "Basic support only",
+      ],
     },
     {
-      name: 'Professional',
+      name: "Professional",
       price: { monthly: 7999, yearly: 79999 },
-      description: 'Ideal for growing businesses with advanced AI needs',
+      description: "Ideal for growing businesses with advanced AI needs",
       icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
+      color: "text-purple-400",
+      bgColor: "bg-purple-500/10",
       popular: true,
       features: [
-        'AI Content Generation (50,000 words/month)',
-        'Advanced Analytics Dashboard',
-        'Priority Support',
-        'Enhanced Security',
-        'Up to 25 users',
-        'Advanced Integrations',
-        'Weekly Reports',
-        'Custom AI Models',
-        'API Access',
-        'Training & Onboarding'
+        "AI Content Generation (50,000 words/month)",
+        "Advanced Analytics Dashboard",
+        "Priority Support",
+        "Enhanced Security",
+        "Up to 25 users",
+        "Advanced Integrations",
+        "Weekly Reports",
+        "Custom AI Models",
+        "API Access",
+        "Training & Onboarding",
       ],
-      limitations: [
-        'Limited custom development',
-        'Standard SLA'
-      ]
+      limitations: ["Limited custom development", "Standard SLA"],
     },
     {
-      name: 'Enterprise',
+      name: "Enterprise",
       price: { monthly: 19999, yearly: 199999 },
-      description: 'Complete AI solution for large organizations',
+      description: "Complete AI solution for large organizations",
       icon: Cloud,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-500/10",
       popular: false,
       features: [
-        'Unlimited AI Content Generation',
-        'Custom Analytics Dashboard',
-        '24/7 Dedicated Support',
-        'Enterprise Security',
-        'Unlimited users',
-        'Custom Integrations',
-        'Real-time Reports',
-        'Custom AI Development',
-        'Full API Access',
-        'Dedicated Account Manager',
-        'Custom Training Programs',
-        'SLA Guarantee',
-        'White-label Options'
+        "Unlimited AI Content Generation",
+        "Custom Analytics Dashboard",
+        "24/7 Dedicated Support",
+        "Enterprise Security",
+        "Unlimited users",
+        "Custom Integrations",
+        "Real-time Reports",
+        "Custom AI Development",
+        "Full API Access",
+        "Dedicated Account Manager",
+        "Custom Training Programs",
+        "SLA Guarantee",
+        "White-label Options",
       ],
-      limitations: []
-    }
+      limitations: [],
+    },
   ];
 
   const addOns = [
     {
-      name: 'AI Automation Suite',
-      description: 'Advanced workflow automation and process optimization',
+      name: "AI Automation Suite",
+      description: "Advanced workflow automation and process optimization",
       price: { monthly: 2000, yearly: 20000 },
-      icon: Zap
+      icon: Zap,
     },
     {
-      name: 'AI Analytics Pro',
-      description: 'Advanced analytics and business intelligence',
+      name: "AI Analytics Pro",
+      description: "Advanced analytics and business intelligence",
       price: { monthly: 1500, yearly: 15000 },
-      icon: BarChart
+      icon: BarChart,
     },
     {
-      name: 'AI Security Suite',
-      description: 'Enhanced security and compliance features',
+      name: "AI Security Suite",
+      description: "Enhanced security and compliance features",
       price: { monthly: 1000, yearly: 10000 },
-      icon: Shield
+      icon: Shield,
     },
     {
-      name: 'Custom Development',
-      description: 'Bespoke AI solutions and integrations',
+      name: "Custom Development",
+      description: "Bespoke AI solutions and integrations",
       price: { monthly: 5000, yearly: 50000 },
-      icon: Code
-    }
+      icon: Code,
+    },
   ];
 
   const faqs = [
     {
-      question: 'Can I change my plan anytime?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.'
+      question: "Can I change my plan anytime?",
+      answer:
+        "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.",
     },
     {
-      question: 'What happens if I exceed my usage limits?',
-      answer: 'We\'ll notify you when you\'re approaching your limits. You can either upgrade your plan or purchase additional capacity as needed.'
+      question: "What happens if I exceed my usage limits?",
+      answer:
+        "We'll notify you when you're approaching your limits. You can either upgrade your plan or purchase additional capacity as needed.",
     },
     {
-      question: 'Do you offer custom pricing for large organizations?',
-      answer: 'Yes, we offer custom pricing and solutions for enterprise clients with specific requirements. Contact us to discuss your needs.'
+      question: "Do you offer custom pricing for large organizations?",
+      answer:
+        "Yes, we offer custom pricing and solutions for enterprise clients with specific requirements. Contact us to discuss your needs.",
     },
     {
-      question: 'What support options are available?',
-      answer: 'Support varies by plan: Starter includes email support, Professional includes priority support, and Enterprise includes 24/7 dedicated support.'
+      question: "What support options are available?",
+      answer:
+        "Support varies by plan: Starter includes email support, Professional includes priority support, and Enterprise includes 24/7 dedicated support.",
     },
     {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
+      question: "Is there a free trial available?",
+      answer:
+        "Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.",
     },
     {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, bank transfers, and can accommodate enterprise payment terms for qualified clients.'
-    }
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept all major credit cards, bank transfers, and can accommodate enterprise payment terms for qualified clients.",
+    },
   ];
 
   const calculateSavings = (monthlyPrice: number, yearlyPrice: number) => {
@@ -154,13 +179,15 @@ export default function PricingPage() {
               Pricing Plans
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Choose the perfect plan for your business. All plans include our core AI services 
-              with flexible options to scale as you grow.
+              Choose the perfect plan for your business. All plans include our
+              core AI services with flexible options to scale as you grow.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <CheckCircle className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">14-Day Free Trial</span>
+                <span className="text-white font-medium">
+                  14-Day Free Trial
+                </span>
               </div>
               <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-purple-400" />
@@ -181,21 +208,21 @@ export default function PricingPage() {
           <div className="flex justify-center">
             <div className="bg-slate-800/50 rounded-lg p-1 flex">
               <button
-                onClick={() => setBillingCycle('monthly')}
+                onClick={() => setBillingCycle("monthly")}
                 className={`px-6 py-2 rounded-md font-medium transition-all ${
-                  billingCycle === 'monthly'
-                    ? 'bg-cyan-500 text-white'
-                    : 'text-gray-400 hover:text-white'
+                  billingCycle === "monthly"
+                    ? "bg-cyan-500 text-white"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 Monthly
               </button>
               <button
-                onClick={() => setBillingCycle('yearly')}
+                onClick={() => setBillingCycle("yearly")}
                 className={`px-6 py-2 rounded-md font-medium transition-all ${
-                  billingCycle === 'yearly'
-                    ? 'bg-cyan-500 text-white'
-                    : 'text-gray-400 hover:text-white'
+                  billingCycle === "yearly"
+                    ? "bg-cyan-500 text-white"
+                    : "text-gray-400 hover:text-white"
                 }`}
               >
                 Yearly
@@ -213,12 +240,15 @@ export default function PricingPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => {
-              const savings = calculateSavings(plan.price.monthly, plan.price.yearly);
+              const savings = calculateSavings(
+                plan.price.monthly,
+                plan.price.yearly,
+              );
               return (
                 <div
                   key={index}
                   className={`relative bg-slate-800/50 rounded-lg p-8 ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+                    plan.popular ? "ring-2 ring-cyan-400 scale-105" : ""
                   } hover:bg-slate-700/50 transition-all duration-300`}
                 >
                   {plan.popular && (
@@ -228,40 +258,58 @@ export default function PricingPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
-                    <div className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                    <div
+                      className={`w-16 h-16 ${plan.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}
+                    >
                       <plan.icon className={`w-8 h-8 ${plan.color}`} />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="mb-4">
                       <span className="text-4xl font-bold text-white">
-                        ${plan.price[billingCycle as keyof typeof plan.price].toLocaleString()}
+                        $
+                        {plan.price[
+                          billingCycle as keyof typeof plan.price
+                        ].toLocaleString()}
                       </span>
                       <span className="text-gray-400 ml-2">
-                        /{billingCycle === 'monthly' ? 'month' : 'year'}
+                        /{billingCycle === "monthly" ? "month" : "year"}
                       </span>
                     </div>
-                    {billingCycle === 'yearly' && (
+                    {billingCycle === "yearly" && (
                       <div className="text-green-400 text-sm font-medium">
-                        Save ${savings.savings.toLocaleString()} ({savings.percentage}% off)
+                        Save ${savings.savings.toLocaleString()} (
+                        {savings.percentage}% off)
                       </div>
                     )}
                   </div>
 
                   <div className="space-y-4 mb-8">
-                    <h4 className="text-lg font-semibold text-white mb-3">What's included:</h4>
+                    <h4 className="text-lg font-semibold text-white mb-3">
+                      What's included:
+                    </h4>
                     {plan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-start space-x-3">
+                      <div
+                        key={featureIndex}
+                        className="flex items-start space-x-3"
+                      >
                         <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                     {plan.limitations.map((limitation, limitationIndex) => (
-                      <div key={limitationIndex} className="flex items-start space-x-3">
+                      <div
+                        key={limitationIndex}
+                        className="flex items-start space-x-3"
+                      >
                         <X className="w-5 h-5 text-red-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-400 text-sm">{limitation}</span>
+                        <span className="text-gray-400 text-sm">
+                          {limitation}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -270,11 +318,13 @@ export default function PricingPage() {
                     onClick={() => setSelectedPlan(plan.name.toLowerCase())}
                     className={`w-full py-3 px-6 rounded-lg font-bold transition-all ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700"
+                        : "bg-slate-700 text-white hover:bg-slate-600"
                     }`}
                   >
-                    {selectedPlan === plan.name.toLowerCase() ? 'Selected' : 'Choose Plan'}
+                    {selectedPlan === plan.name.toLowerCase()
+                      ? "Selected"
+                      : "Choose Plan"}
                   </button>
                 </div>
               );
@@ -296,16 +346,26 @@ export default function PricingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addon, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
+              <div
+                key={index}
+                className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"
+              >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <addon.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{addon.name}</h3>
-                <p className="text-gray-300 text-sm mb-4">{addon.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {addon.name}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  {addon.description}
+                </p>
                 <div className="text-2xl font-bold text-white mb-4">
-                  ${addon.price[billingCycle as keyof typeof addon.price].toLocaleString()}
+                  $
+                  {addon.price[
+                    billingCycle as keyof typeof addon.price
+                  ].toLocaleString()}
                   <span className="text-gray-400 text-sm ml-1">
-                    /{billingCycle === 'monthly' ? 'month' : 'year'}
+                    /{billingCycle === "monthly" ? "month" : "year"}
                   </span>
                 </div>
                 <button className="w-full bg-slate-700 text-white py-2 px-4 rounded-lg font-medium hover:bg-slate-600 transition-colors">
@@ -332,7 +392,9 @@ export default function PricingPage() {
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">
+                    {faq.question}
+                  </h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
@@ -348,7 +410,8 @@ export default function PricingPage() {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Start your 14-day free trial today. No credit card required, cancel anytime.
+            Start your 14-day free trial today. No credit card required, cancel
+            anytime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

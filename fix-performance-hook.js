@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from "fs";
 
 // // Read the file
 // const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8');
@@ -226,6 +226,6 @@ export const usePerformanceMonitoring = () => {
 `;
 
 // Write the fixed content
-fs.writeFileSync('src/hooks/usePerformance.ts', fixedContent);
+fs.writeFileSync("src/hooks/usePerformance.ts", fixedContent);
 
-// 
+//

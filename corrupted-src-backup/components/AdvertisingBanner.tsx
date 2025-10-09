@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface AdvertisingBannerProps {
   title: string;
@@ -16,8 +16,8 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   ctaText,
   ctaUrl,
   imageUrl,
-  backgroundColor = '#3b82f6',
-  textColor = '#ffffff',
+  backgroundColor = "#3b82f6",
+  textColor = "#ffffff",
 }) => {
   return (
     <div
@@ -25,12 +25,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       style={{
         backgroundColor,
         color: textColor,
-        padding: '2rem',
-        borderRadius: '0.5rem',
-        margin: '1rem 0',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '2rem',
+        padding: "2rem",
+        borderRadius: "0.5rem",
+        margin: "1rem 0",
+        display: "flex",
+        alignItems: "center",
+        gap: "2rem",
       }}
     >
       {imageUrl && (
@@ -39,34 +39,36 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             src={imageUrl}
             alt={title}
             style={{
-              width: '200px',
-              height: 'auto',
-              borderRadius: '0.25rem',
+              width: "200px",
+              height: "auto",
+              borderRadius: "0.25rem",
             }}
           />
         </div>
       )}
 
       <div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}</h2>
-        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}</p>
+        <h2 style={{ margin: "0 0 1rem 0", fontSize: "1.5rem" }}>{title}</h2>
+        <p style={{ margin: "0 0 1.5rem 0", fontSize: "1rem", opacity: 0.9 }}>
+          {description}
+        </p>
         <a
           href={ctaUrl}
           style={{
-            display: 'inline-block',
-            padding: '0.75rem 1.5rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            display: "inline-block",
+            padding: "0.75rem 1.5rem",
+            backgroundColor: "rgba(255, 255, 255, 0.2)",
             color: textColor,
-            textDecoration: 'none',
-            borderRadius: '0.25rem',
-            fontWeight: 'bold',
-            transition: 'background-color 0.2s',
+            textDecoration: "none",
+            borderRadius: "0.25rem",
+            fontWeight: "bold",
+            transition: "background-color 0.2s",
           }}
-          onMouseOver={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
           }}
-          onMouseOut={e => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
           }}
         >
           {ctaText}

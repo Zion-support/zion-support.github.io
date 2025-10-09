@@ -4,8 +4,8 @@
 export const enhancedErrorHandler = {
   // Add utility functions here
   init: () => {
-    console.log('enhancedErrorHandler initialized');
-  }
+    console.log("enhancedErrorHandler initialized");
+  },
 };
 
 export default enhancedErrorHandler;

@@ -4,8 +4,8 @@
 export const preloadOptimizer = {
   // Add utility functions here
   init: () => {
-    console.log('preloadOptimizer initialized');
-  }
+    console.log("preloadOptimizer initialized");
+  },
 };
 
 export default preloadOptimizer;

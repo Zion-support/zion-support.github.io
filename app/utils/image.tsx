@@ -1,5 +1,5 @@
-'use client';
-import React, { useState, useCallback } from 'react';
+"use client";
+import React, { useState, useCallback } from "react";
 interface ImageProps {
   src: string;
   alt: string;
@@ -8,7 +8,7 @@ interface ImageProps {
   className?: string;
   priority?: boolean;
   _quality?: number;
-  _placeholder?: 'blur' | 'empty';
+  _placeholder?: "blur" | "empty";
   _blurDataURL?: string;
   fill?: boolean;
   sizes?: string;
@@ -24,7 +24,7 @@ export const Image: React.FC<ImageProps> = ({
   className,
   priority = false,
   quality = 75,
-  placeholder = 'empty',
+  placeholder = "empty",
   blurDataURL,
   fill = false,
   sizes,
@@ -46,13 +46,13 @@ export const Image: React.FC<ImageProps> = ({
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
-      position: 'absolute',
+      position: "absolute",
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
-      objectFit: 'cover'
-    })
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    }),
   };
   if (hasError) {
     return (
@@ -74,7 +74,7 @@ export const Image: React.FC<ImageProps> = ({
       className={className}
       style={imageStyle}
       sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority ? "eager" : "lazy"}
       onLoad={handleLoad}
       onError={handleError}
       {...props}

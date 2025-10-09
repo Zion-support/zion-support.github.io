@@ -1,12 +1,12 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
+import { withErrorLogging } from "./withErrorLogging.cjs";
 
-const PROD_DOMAIN = 'https://ziontechgroup.com';
+const PROD_DOMAIN = "https://ziontechgroup.com";
 
 async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== "POST") {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader("Allow", "POST");
+    res.end("Method Not Allowed");
     return;
   }
 
@@ -14,7 +14,7 @@ async function handler(req, res) {
 
   if (!productId) {
     res.statusCode = 400;
-    res.json({ error: 'Product ID is required' });
+    res.json({ error: "Product ID is required" });
     return;
   }
 
@@ -28,11 +28,11 @@ async function handler(req, res) {
     };
 
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify({ success: true, session: sessionData }));
   } catch {
     //     res.statusCode = 500;
-    res.end('Internal Server Error');
+    res.end("Internal Server Error");
   }
 }
 

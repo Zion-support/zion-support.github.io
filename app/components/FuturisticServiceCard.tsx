@@ -1,6 +1,6 @@
-'use client';
-import React, { useState } from 'react';
-import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+"use client";
+import React, { useState } from "react";
+import { ArrowRight, Star, Zap, CheckCircle } from "lucide-react";
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -8,7 +8,7 @@ interface FuturisticServiceCardProps {
   price: string;
   features: string[];
   icon: React.ComponentType<any>;
-  color: 'purple' | 'cyan' | 'pink' | 'blue' | 'green' | 'orange';
+  color: "purple" | "cyan" | "pink" | "blue" | "green" | "orange";
   href: string;
   popular?: boolean;
 }
@@ -21,53 +21,53 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   icon: Icon,
   color,
   href,
-  popular = false
+  popular = false,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const colorClasses = {
     purple: {
-      gradient: 'from-purple-500 to-cyan-500',
-      text: 'text-purple-400',
-      border: 'border-purple-500/30',
-      hover: 'hover:border-purple-500/50',
-      shadow: 'shadow-purple-500/20'
+      gradient: "from-purple-500 to-cyan-500",
+      text: "text-purple-400",
+      border: "border-purple-500/30",
+      hover: "hover:border-purple-500/50",
+      shadow: "shadow-purple-500/20",
     },
     cyan: {
-      gradient: 'from-cyan-500 to-blue-500',
-      text: 'text-cyan-400',
-      border: 'border-cyan-500/30',
-      hover: 'hover:border-cyan-500/50',
-      shadow: 'shadow-cyan-500/20'
+      gradient: "from-cyan-500 to-blue-500",
+      text: "text-cyan-400",
+      border: "border-cyan-500/30",
+      hover: "hover:border-cyan-500/50",
+      shadow: "shadow-cyan-500/20",
     },
     pink: {
-      gradient: 'from-pink-500 to-purple-500',
-      text: 'text-pink-400',
-      border: 'border-pink-500/30',
-      hover: 'hover:border-pink-500/50',
-      shadow: 'shadow-pink-500/20'
+      gradient: "from-pink-500 to-purple-500",
+      text: "text-pink-400",
+      border: "border-pink-500/30",
+      hover: "hover:border-pink-500/50",
+      shadow: "shadow-pink-500/20",
     },
     blue: {
-      gradient: 'from-blue-500 to-indigo-500',
-      text: 'text-blue-400',
-      border: 'border-blue-500/30',
-      hover: 'hover:border-blue-500/50',
-      shadow: 'shadow-blue-500/20'
+      gradient: "from-blue-500 to-indigo-500",
+      text: "text-blue-400",
+      border: "border-blue-500/30",
+      hover: "hover:border-blue-500/50",
+      shadow: "shadow-blue-500/20",
     },
     green: {
-      gradient: 'from-green-500 to-emerald-500',
-      text: 'text-green-400',
-      border: 'border-green-500/30',
-      hover: 'hover:border-green-500/50',
-      shadow: 'shadow-green-500/20'
+      gradient: "from-green-500 to-emerald-500",
+      text: "text-green-400",
+      border: "border-green-500/30",
+      hover: "hover:border-green-500/50",
+      shadow: "shadow-green-500/20",
     },
     orange: {
-      gradient: 'from-orange-500 to-red-500',
-      text: 'text-orange-400',
-      border: 'border-orange-500/30',
-      hover: 'hover:border-orange-500/50',
-      shadow: 'shadow-orange-500/20'
-    }
+      gradient: "from-orange-500 to-red-500",
+      text: "text-orange-400",
+      border: "border-orange-500/30",
+      hover: "hover:border-orange-500/50",
+      shadow: "shadow-orange-500/20",
+    },
   };
 
   const currentColor = colorClasses[color];
@@ -75,7 +75,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   return (
     <div
       className={`relative group cursor-pointer transition-all duration-500 transform ${
-        popular ? 'scale-105' : 'hover:scale-105'
+        popular ? "scale-105" : "hover:scale-105"
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -92,21 +92,21 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
       {/* Card */}
       <div
         className={`glass rounded-2xl p-8 border transition-all duration-500 ${
-          popular ? currentColor.border : 'border-white/10'
+          popular ? currentColor.border : "border-white/10"
         } ${currentColor.hover} ${
-          isHovered ? `shadow-2xl ${currentColor.shadow}` : 'shadow-lg'
+          isHovered ? `shadow-2xl ${currentColor.shadow}` : "shadow-lg"
         }`}
       >
         {/* Icon */}
         <div className="relative mb-6">
           <div
             className={`w-16 h-16 bg-gradient-to-r ${currentColor.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 ${
-              isHovered ? 'neon-cyan' : ''
+              isHovered ? "neon-cyan" : ""
             }`}
           >
             <Icon className="w-8 h-8 text-white" />
           </div>
-          
+
           {/* Animated Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>
@@ -117,9 +117,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
         </h3>
 
         {/* Description */}
-        <p className="text-gray-300 mb-6 leading-relaxed">
-          {description}
-        </p>
+        <p className="text-gray-300 mb-6 leading-relaxed">{description}</p>
 
         {/* Price */}
         <div className="mb-6">
@@ -148,7 +146,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
         <button
           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
             popular
-              ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700'
+              ? "bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700"
               : `border border-${color}-500 text-${color}-300 hover:bg-${color}-500/20`
           } flex items-center justify-center group`}
         >

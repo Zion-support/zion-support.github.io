@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 interface AnalyticsMonitorProps {
   className?: string;
 }
 
 const AnalyticsMonitor = React.memo(function AnalyticsMonitor({
-  className = '',
+  className = "",
 }: AnalyticsMonitorProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>

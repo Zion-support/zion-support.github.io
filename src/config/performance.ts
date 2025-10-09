@@ -4,8 +4,8 @@
 export const performance = {
   // Add utility functions here
   init: () => {
-    console.log('performance initialized');
-  }
+    console.log("performance initialized");
+  },
 };
 
 export default performance;

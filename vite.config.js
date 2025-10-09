@@ -1,22 +1,22 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
     react(),
     visualizer({
-      filename: 'dist/stats.html',
+      filename: "dist/stats.html",
       open: false,
       gzipSize: true,
       brotliSize: true,
     }),
   ],
-  root: '.',
+  root: ".",
   build: {
-    outDir: 'dist',
-    target: 'es2015',
-    minify: 'terser',
+    outDir: "dist",
+    target: "es2015",
+    minify: "terser",
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
@@ -30,7 +30,13 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error'],
+        pure_funcs: [
+          "console.log",
+          "console.info",
+          "console.debug",
+          "console.warn",
+          "console.error",
+        ],
         passes: 3,
         unsafe: false,
         unsafe_comps: false,
@@ -65,15 +71,15 @@ export default defineConfig({
         negate_iife: true,
         typeofs: true,
         global_defs: {
-          'process.env.NODE_ENV': '"production"'
-        }
+          "process.env.NODE_ENV": '"production"',
+        },
       },
       mangle: {
         safari10: true,
         toplevel: true,
         properties: {
-          regex: /^_/
-        }
+          regex: /^_/,
+        },
       },
       format: {
         comments: false,
@@ -86,42 +92,45 @@ export default defineConfig({
       treeshake: {
         moduleSideEffects: false,
       },
-      external: id => {
+      external: (id) => {
         // Externalize Next.js modules to prevent build errors
-        if (id.includes('next/') || id.includes('next')) {
+        if (id.includes("next/") || id.includes("next")) {
           return true;
         }
         return false;
       },
       output: {
-        manualChunks: id => {
+        manualChunks: (id) => {
           // Core React libraries
-          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'vendor';
+          if (
+            id.includes("node_modules/react") ||
+            id.includes("node_modules/react-dom")
+          ) {
+            return "vendor";
           }
           // Router library
-          if (id.includes('node_modules/react-router-dom')) {
-            return 'router';
+          if (id.includes("node_modules/react-router-dom")) {
+            return "router";
           }
           // UI libraries
           if (
-            id.includes('node_modules/framer-motion') ||
-            id.includes('node_modules/lucide-react')
+            id.includes("node_modules/framer-motion") ||
+            id.includes("node_modules/lucide-react")
           ) {
-            return 'ui';
+            return "ui";
           }
           // Utilities and web vitals
-          if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+          if (id.includes("node_modules/web-vitals")) {
+            return "page";
           }
           // Split other node_modules into separate chunks
-          if (id.includes('node_modules')) {
-            return 'libs';
+          if (id.includes("node_modules")) {
+            return "libs";
           }
         },
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: "assets/[name]-[hash][extname]",
+        chunkFileNames: "assets/[name]-[hash].js",
+        entryFileNames: "assets/[name]-[hash].js",
       },
     },
   },
@@ -134,12 +143,18 @@ export default defineConfig({
     host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+    include: [
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "framer-motion",
+      "lucide-react",
+    ],
   },
   css: {
     devSourcemap: false,
   },
   esbuild: {
-    drop: ['console', 'debugger'],
+    drop: ["console", "debugger"],
   },
 });

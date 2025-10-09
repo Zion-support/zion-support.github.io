@@ -1,4 +1,4 @@
-'use client';
+"use client";
 /**
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
@@ -24,19 +24,22 @@ export class ApiCache {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: 'memory'
+      storage: "memory",
     });
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
-      deduplicate: config.deduplicate ?? true
+      deduplicate: config.deduplicate ?? true,
     };
     // Auto-cleanup every 5 minutes
-    setInterval(() => {
-      this.cache.cleanup();
-      this.cleanupPendingRequests();
-    }, 5 * 60 * 1000);
+    setInterval(
+      () => {
+        this.cache.cleanup();
+        this.cleanupPendingRequests();
+      },
+      5 * 60 * 1000,
+    );
   }
   /**
    * Fetch with caching and deduplication
@@ -44,7 +47,7 @@ export class ApiCache {
   async fetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig>,
   ): Promise<T> {
     const cacheKey = this.getCacheKey(url, options);
     const mergedConfig = { ...this.config, ...cacheConfig };
@@ -65,13 +68,13 @@ export class ApiCache {
       url,
       options,
       mergedConfig.maxRetries,
-      mergedConfig.retryDelay
+      mergedConfig.retryDelay,
     );
     // Store pending request
     if (mergedConfig.deduplicate) {
       this.pendingRequests.set(cacheKey, {
         promise: requestPromise,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       });
     }
     try {
@@ -92,7 +95,7 @@ export class ApiCache {
     options: RequestInit,
     maxRetries: number,
     retryDelay: number,
-    attempt = 1
+    attempt = 1,
   ): Promise<T> {
     try {
       const response = await fetch(url, options);
@@ -108,7 +111,7 @@ export class ApiCache {
             options,
             maxRetries,
             retryDelay,
-            attempt + 1
+            attempt + 1,
           );
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -124,7 +127,7 @@ export class ApiCache {
           options,
           maxRetries,
           retryDelay,
-          attempt + 1
+          attempt + 1,
         );
       }
       throw error;
@@ -149,7 +152,7 @@ export class ApiCache {
   getStats() {
     return {
       ...this.cache.stats(),
-      pendingRequests: this.pendingRequests.size
+      pendingRequests: this.pendingRequests.size,
     };
   }
   /**
@@ -158,20 +161,20 @@ export class ApiCache {
   async prefetch<T>(
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig>
+    cacheConfig?: Partial<ApiCacheConfig>,
   ): Promise<void> {
     try {
       await this.fetch<T>(url, options, cacheConfig);
     } catch (error) {
       // Silent fail for prefetch
-      }
+    }
   }
   /**
    * Generate cache key from URL and options
    */
   private getCacheKey(url: string, options: RequestInit): string {
-    const method = options.method || 'GET';
-    const body = options.body ? JSON.stringify(options.body) : '';
+    const method = options.method || "GET";
+    const body = options.body ? JSON.stringify(options.body) : "";
     return `${method}:${url}:${body}`;
   }
   /**
@@ -200,7 +203,7 @@ export const defaultApiCache = new ApiCache({
   ttl: 5 * 60 * 1000, // 5 minutes
   maxRetries: 3,
   retryDelay: 1000,
-  deduplicate: true
+  deduplicate: true,
 });
 /**
  * Cached fetch helper
@@ -208,49 +211,60 @@ export const defaultApiCache = new ApiCache({
 export async function cachedFetch<T>(
   url: string,
   options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig>
+  cacheConfig?: Partial<ApiCacheConfig>,
 ): Promise<T> {
   return defaultApiCache.fetch<T>(url, options, cacheConfig);
 }
 /**
  * Create a cached API client
  */
-export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {}) {
+export function createCachedApi(
+  baseUrl: string,
+  defaultOptions: RequestInit = {},
+) {
   const cache = new ApiCache();
   return {
     get: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
+      cache.fetch<T>(`${baseUrl}${path}`, {
+        ...defaultOptions,
+        ...options,
+        method: "GET",
+      }),
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
         ...defaultOptions,
         ...options,
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           ...(defaultOptions.headers || {}),
-          ...(options?.headers || {})
+          ...(options?.headers || {}),
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       }),
     put: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
         ...defaultOptions,
         ...options,
-        method: 'PUT',
+        method: "PUT",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
           ...(defaultOptions.headers || {}),
-          ...(options?.headers || {})
+          ...(options?.headers || {}),
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       }),
     delete: <T>(path: string, options?: RequestInit) =>
-      cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'DELETE' }),
+      cache.fetch<T>(`${baseUrl}${path}`, {
+        ...defaultOptions,
+        ...options,
+        method: "DELETE",
+      }),
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
     clear: () => cache.clear(),
     stats: () => cache.getStats(),
     prefetch: <T>(path: string, options?: RequestInit) =>
-      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options })
+      cache.prefetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options }),
   };
 }
 export default ApiCache;

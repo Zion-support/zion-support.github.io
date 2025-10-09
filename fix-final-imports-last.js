@@ -1,10 +1,8 @@
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
+import fs from "fs";
+import { fileURLToPath } from "url";
 
 function processFile(filePath) {
   try {
-
     // Fix remaining import path issues
     const replacements = [
       // Fix root-level files
@@ -26,24 +24,21 @@ function processFile(filePath) {
     });
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content, "utf8");
 
       return true;
     }
     return false;
   } catch (error) {
-
     return false;
   }
 }
 
 function processDirectory(dirPath) {
-
-  items.forEach(item => {
-
+  items.forEach((item) => {
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
       if (processFile(fullPath)) {
         totalFixed++;
       }
@@ -54,4 +49,3 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-
