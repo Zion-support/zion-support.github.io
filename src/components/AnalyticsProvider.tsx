@@ -98,4 +98,58 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   }, []);
   return <>{children}</>;
 };
+
+// Simple analytics hook
+export const useAnalytics = () => {
+  const trackError = (error: Error, context?: string) => {
+    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: { context: context || 'unknown' }
+      });
+    }
+  };
+
+  const trackCustomEvent = (category: string, action: string, label?: string, value?: number, metadata?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', action, {
+        event_category: category,
+        event_label: label,
+        value: value,
+        ...metadata
+      });
+    }
+  };
+
+  const trackTiming = (category: string, variable: string, value: number, label?: string) => {
+    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'timing_complete', {
+        name: variable,
+        value: value,
+        event_category: category,
+        event_label: label
+      });
+    }
+  };
+
+  const trackPerformance = (name: string, value: number, rating: string) => {
+    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'timing_complete', {
+        name: name,
+        value: value,
+        event_category: 'performance',
+        event_label: rating
+      });
+    }
+  };
+
+  return {
+    trackError,
+    trackCustomEvent,
+    trackTiming,
+    trackPerformance
+  };
+};
+
 export default AnalyticsProvider;
