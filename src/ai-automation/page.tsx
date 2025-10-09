@@ -99,9 +99,8 @@ const AIAutomationPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Automation Solutions</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business with intelligent automation that handles complex processes, 
-            optimizes workflows, and makes smart decisions 24/7.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your business with intelligent automation that handles complex processes, 
+            optimizes workflows, and makes smart decisions 24/7.</p>
           </p>
         </div>
 
@@ -166,8 +165,7 @@ const AIAutomationPage: React.FC = () => {
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to discuss your automation needs and get a custom solution.
+          <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your automation needs and get a custom solution.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -182,7 +180,13 @@ const AIAutomationPage: React.FC = () => {
       
       <Footer />
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default AIAutomationPage;

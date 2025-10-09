@@ -40,10 +40,9 @@ export default function OptimizedHomePage() {
                   That Delivers Results
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
                 70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
-                autonomous systems, and digital transformation services.
+                autonomous systems, and digital transformation services.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a

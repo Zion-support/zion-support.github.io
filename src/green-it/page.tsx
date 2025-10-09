@@ -175,9 +175,8 @@ const GreenITPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Green IT Solutions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure into a sustainable, environmentally friendly system 
-              that reduces costs while protecting our planet.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your IT infrastructure into a sustainable, environmentally friendly system 
+              that reduces costs while protecting our planet.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
@@ -221,8 +220,7 @@ const GreenITPage: React.FC = () => {
           {/* Tab Content */}
           {activeTab === 'solutions' && (
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions
+              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Our Green IT Solutions</h2>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => (
@@ -305,11 +303,9 @@ const GreenITPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Go Green?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey towards sustainable IT operations. Get a free environmental 
-              assessment and discover how much you can save while protecting the planet.
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Go Green?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Start your journey towards sustainable IT operations. Get a free environmental 
+              assessment and discover how much you can save while protecting the planet.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Assessment

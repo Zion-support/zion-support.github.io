@@ -42,8 +42,7 @@ const Pagetsx: React.FC = () => {
             <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               tsx
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced tsx solutions powered by AI and cutting-edge technology
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Advanced tsx solutions powered by AI and cutting-edge technology</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -94,7 +93,13 @@ const Pagetsx: React.FC = () => {
 
       <Footer />
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default Pagetsx;

@@ -80,9 +80,8 @@ const AICustomerSupportBotPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
-            natural language and escalates complex issues to human agents seamlessly.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
+            natural language and escalates complex issues to human agents seamlessly.</p>
           </p>
         </div>
 
@@ -130,8 +129,7 @@ const AICustomerSupportBotPage: React.FC = () => {
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to discuss your support needs and get a custom AI solution.
+          <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your support needs and get a custom AI solution.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Demo
@@ -144,4 +142,3 @@ const AICustomerSupportBotPage: React.FC = () => {
 
 
 export default AiCustomerSupportBotPage;
-export default AICustomerSupportBotPage;

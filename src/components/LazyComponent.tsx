@@ -66,7 +66,13 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
         fallback
       )}
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 // Preload function for critical components

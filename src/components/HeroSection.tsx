@@ -24,12 +24,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneC
         >
           Zion Tech Group
         </h1>
-        <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-          Advanced AI and IT Solutions
+        <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">Advanced AI and IT Solutions</p>
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-          Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-          Transform your business with our cutting-edge technology and achieve unprecedented growth.
+        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+          Transform your business with our cutting-edge technology and achieve unprecedented growth.</p>
         </p>
         
         {/* Key Benefits */}

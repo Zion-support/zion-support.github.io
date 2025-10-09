@@ -310,4 +310,7 @@ Disallow: /private/`;
   }
 }
 
+
+};
+
 export default SEOEnhancer;

@@ -83,8 +83,7 @@ const SignupPage: React.FC = () => {
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
                   Create Your Account
                 </h1>
-                <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions
+                <p className="text-gray-300">Join thousands of businesses transforming with AI and IT solutions</p>
                 </p>
               </div>
 
@@ -195,13 +194,11 @@ const SignupPage: React.FC = () => {
 
             {/* Right Side - Features and Benefits */}
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text">Transform Your Business Today</h2>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI and IT solutions 
+                <p className="text-xl text-gray-300 mb-8">Join thousands of businesses already using our AI and IT solutions 
                   to achieve unprecedented growth and efficiency.
-
+</p>
               <div className="space-y-6">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-start">
@@ -222,8 +219,7 @@ const SignupPage: React.FC = () => {
                       {benefit}
 
               <div className="text-center">
-                <p className="text-gray-400 text-sm mb-4">
-                  Trusted by 1000+ companies worldwide
+                <p className="text-gray-400 text-sm mb-4">Trusted by 1000+ companies worldwide</p>
                 <div className="flex justify-center items-center space-x-6 opacity-60">
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>

@@ -26,8 +26,7 @@ const BusinessAppsPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Why Choose Our Business Apps?
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Business Apps?</h2>
           </h2>
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
@@ -78,8 +77,7 @@ const BusinessAppsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Need a Custom Business App?
+          <h2 className="text-3xl font-bold text-white mb-6 neon-text">Need a Custom Business App?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We can build custom business applications tailored to your specific needs and requirements</p>
             >Get Custom Quote</a>
               href="tel:+13024640950"
@@ -89,4 +87,7 @@ const BusinessAppsPage: React.FC = () => {
       <Footer />
     </div>);
 }
+
+};
+
 export default BusinessAppsPage

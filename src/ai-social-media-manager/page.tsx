@@ -87,9 +87,8 @@ const AISocialMediaManagerPage: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Social Media Manager
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate your social media presence with AI that creates, schedules, and optimizes 
-              content across all platforms to maximize engagement and grow your audience.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Automate your social media presence with AI that creates, schedules, and optimizes 
+              content across all platforms to maximize engagement and grow your audience.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
@@ -102,12 +101,10 @@ const AISocialMediaManagerPage: React.FC = () => {
 
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              All Platforms, One Solution
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">All Platforms, One Solution</h2>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all your social media accounts from a single, intelligent dashboard
-          
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Manage all your social media accounts from a single, intelligent dashboard
+          </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {platforms.map((platform, index) => (
               <div key={index} className="text-center">
@@ -130,13 +127,12 @@ const AISocialMediaManagerPage: React.FC = () => {
                   <feature.icon className="w-6 h-6 text-pink-400" />
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
-                <p className="text-gray-300">
-                  {feature.description}
+                <p className="text-gray-300">{feature.description}
 
       {/* Benefits Section */}
               Proven Results
               Join thousands of brands who have transformed their social media presence
-          
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-16">
             {benefits.map((benefit, index) => (
                 <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -146,8 +142,7 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Social Media?
-            <p className="text-gray-300 mb-6">
-              Start your free trial today and experience the power of AI-driven social media management
+            <p className="text-gray-300 mb-6">Start your free trial today and experience the power of AI-driven social media management</p>
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
               Get Started Now
 
@@ -186,12 +181,11 @@ const AISocialMediaManagerPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
   );
 };
 
 export default AISocialMediaManagerPage;
+</p>

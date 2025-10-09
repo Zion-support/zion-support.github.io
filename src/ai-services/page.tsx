@@ -51,8 +51,7 @@ const AIServicesPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI services solutions that will transform your business.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Coming Soon - Advanced AI services solutions that will transform your business.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -68,4 +67,3 @@ const AIServicesPage: React.FC = () => {
 
 
 export default AiServicesPage;
-export default AIServicesPage;

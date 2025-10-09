@@ -176,9 +176,8 @@ const MarketplacePage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Zion Tech Marketplace
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover, compare, and purchase AI and IT solutions from verified vendors. 
-              Find the perfect tools, talent, and equipment for your business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Discover, compare, and purchase AI and IT solutions from verified vendors. 
+              Find the perfect tools, talent, and equipment for your business needs.</p>
             </p>
           </div>
 
@@ -226,8 +225,7 @@ const MarketplacePage: React.FC = () => {
 
           {/* Items Grid */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
+            <h2 className="text-2xl font-bold text-white mb-8">{categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredItems.map((item) => (
@@ -291,8 +289,7 @@ const MarketplacePage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
 
           {/* Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Marketplace?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our Marketplace?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -302,11 +299,9 @@ const MarketplacePage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Find Your Perfect Solution?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Browse our marketplace to discover the tools, talent, and equipment you need 
-              to transform your business with cutting-edge technology.
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Find Your Perfect Solution?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Browse our marketplace to discover the tools, talent, and equipment you need 
+              to transform your business with cutting-edge technology.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"

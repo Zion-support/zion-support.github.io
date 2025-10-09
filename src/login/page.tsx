@@ -60,8 +60,7 @@ const LoginPage: React.FC = () => {
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
                   Welcome Back
                 </h1>
-                <p className="text-gray-300">
-                  Sign in to your account to access your AI and IT services
+                <p className="text-gray-300">Sign in to your account to access your AI and IT services</p>
                 </p>
               </div>
 
@@ -145,8 +144,7 @@ const LoginPage: React.FC = () => {
               </form>
 
               <div className="mt-8 text-center">
-                <p className="text-gray-300">
-                  Don't have an account?{' '}
+                <p className="text-gray-300">Don't have an account?{' '}</p>
                   <a
                     href="/signup"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
@@ -157,8 +155,7 @@ const LoginPage: React.FC = () => {
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-700">
-                <p className="text-center text-sm text-gray-400 mb-4">
-                  Or continue with
+                <p className="text-center text-sm text-gray-400 mb-4">Or continue with</p>
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
@@ -183,12 +180,10 @@ const LoginPage: React.FC = () => {
             {/* Right Side - Features */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Access Your AI & IT Services
+                <h2 className="text-3xl font-bold text-white mb-4 neon-text">Access Your AI & IT Services</h2>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8">
-                  Sign in to manage your AI services, view analytics, and access all your 
-                  enterprise solutions in one place.
+                <p className="text-xl text-gray-300 mb-8">Sign in to manage your AI services, view analytics, and access all your 
+                  enterprise solutions in one place.</p>
                 </p>
               </div>
 
@@ -210,9 +205,8 @@ const LoginPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-white mb-3">
                   New to Zion Tech Group?
                 </h3>
-                <p className="text-gray-300 mb-4">
-                  Join thousands of businesses already using our AI and IT solutions 
-                  to transform their operations.
+                <p className="text-gray-300 mb-4">Join thousands of businesses already using our AI and IT solutions 
+                  to transform their operations.</p>
                 </p>
                 <a
                   href="/signup"

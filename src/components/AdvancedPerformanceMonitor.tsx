@@ -258,7 +258,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         )}
       </div>
-    );
+    
+    </div>
+  
+    </div>
+  );
+};
+};
   }
   return null;
 };

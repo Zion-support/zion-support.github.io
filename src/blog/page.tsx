@@ -21,6 +21,9 @@ interface BlogPost {
   };
 }
 
+
+};
+
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);

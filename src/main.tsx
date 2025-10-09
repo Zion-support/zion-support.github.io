@@ -20,4 +20,7 @@ if (root) {
   );
 }
 
+
+};
+
 export default Main;

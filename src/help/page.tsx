@@ -161,9 +161,8 @@ const HelpPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Help Center
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers, get support, and learn how to make the most of our AI and IT services. 
-              We're here to help you succeed.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Find answers, get support, and learn how to make the most of our AI and IT services. 
+              We're here to help you succeed.</p>
             </p>
           </div>
 
@@ -199,8 +198,7 @@ const HelpPage: React.FC = () => {
 
           {/* Articles */}
           <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} Articles
+            <h2 className="text-2xl font-bold text-white mb-8">{categories.find(cat => cat.id === activeCategory)?.name} Articles</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredArticles.map((article, index) => (
@@ -227,8 +225,7 @@ const HelpPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-1" />
 
           {/* Resources */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Additional Resources
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">
@@ -262,11 +259,9 @@ const HelpPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Still Need Help?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you 
-              with any questions or issues you might have.
+            <h2 className="text-2xl font-bold text-white mb-4">Still Need Help?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Can't find what you're looking for? Our support team is here to help you 
+              with any questions or issues you might have.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"

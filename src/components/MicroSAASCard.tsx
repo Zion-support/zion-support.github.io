@@ -93,7 +93,13 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
         </div>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default MicroSAASCard;

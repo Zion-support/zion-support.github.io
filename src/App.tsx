@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
-import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
@@ -48,8 +47,10 @@ const LoadingSpinner: React.FC = () => (
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
-);
 
+    </div>
+  );
+};
 // AI Services Pages
 import AIServicesPage from './ai-services/page';
 import AIMarketingPage from './ai-marketing/page';

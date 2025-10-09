@@ -44,6 +44,11 @@ const Sitemap: React.FC = () => {
     <div>
       <pre>{sitemap}</pre>
     </div>
+  
+    </div>
+  
+    </div>
   );
-
+};
+};
 export default Sitemap;

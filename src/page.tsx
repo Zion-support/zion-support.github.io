@@ -424,14 +424,12 @@ const HomePage: React.FC = () => {
                 data-text="Zion Tech Group"
                 Zion Tech Group
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
-                Advanced AI and IT Solutions
+              <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">Advanced AI and IT Solutions</p>
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               
-              {/* Key Benefits */}
+              {/* Key Benefits */}</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
@@ -452,22 +450,19 @@ const HomePage: React.FC = () => {
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                   Get Started Today
-                </Link>
-                  href="tel:+13024640950"
+                </Link>href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto"</Link>
                   <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="text-sm sm:text-base">+1 302 464 0950</span>
           </section>
 
           {/* Micro SAAS Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="micro-saas-heading">
-            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              Micro SAAS Solutions
+            <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">Micro SAAS Solutions</h2>
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-              Powerful, affordable AI-powered tools designed for modern businesses
-            
+            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">Powerful, affordable AI-powered tools designed for modern businesses
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'cyber-glow-advanced ring-2 ring-cyan-400' : 'holographic-card-advanced'}`}>
@@ -482,9 +477,8 @@ const HomePage: React.FC = () => {
                     <div className="inline-block bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-3 py-1 rounded-full text-xs font-medium text-cyan-400 mb-2">
                       {service.category}
                     <h3 className="text-lg font-bold text-white mb-2 neon-text">{service.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                      {service.description}
-                  
+                    <p className="text-gray-300 text-sm leading-relaxed mb-4">{service.description}
+                  </p>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -518,11 +512,10 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="ai-services-heading">
-            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              AI Services & Solutions
+            <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">AI Services & Solutions
               Advanced artificial intelligence solutions for enterprise applications
             
-              {aiServices.map((service, index) => (
+              {aiServices.map((service, index) => (</h2>
                 <article key={index} className="quantum-entanglement p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
@@ -539,11 +532,10 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="it-services-heading">
-            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              IT Services & Infrastructure
+            <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">IT Services & Infrastructure
               Comprehensive IT solutions for modern enterprise infrastructure
             
-              {itServices.map((service, index) => (
+              {itServices.map((service, index) => (</h2>
                 <article key={index} className="holographic-card-advanced p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   
@@ -557,9 +549,8 @@ const HomePage: React.FC = () => {
 
           {/* Statistics Section */}
           <section className="mb-16" aria-labelledby="stats-heading">
-            <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Our Impact
-            
+            <h2 id="stats-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">Our Impact
+            </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">500+</div>
@@ -573,17 +564,14 @@ const HomePage: React.FC = () => {
 
           {/* Specialized Solutions Section */}
           <section className="mb-16" aria-labelledby="specialized-heading">
-            <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-              Specialized Solutions
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Cutting-edge technologies for next-generation business solutions
-            
+            <h2 id="specialized-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">Specialized Solutions</h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">Cutting-edge technologies for next-generation business solutions
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               <article className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                   <Sparkles className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">Quantum Computing</h3>
-                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                  Next-generation quantum algorithms and quantum security implementations
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">Next-generation quantum algorithms and quantum security implementations</p>
                     <li className="flex items-center text-xs text-gray-300">
                       Quantum Algorithm Development
                       Quantum Security
@@ -659,10 +647,9 @@ const HomePage: React.FC = () => {
 
           {/* Contact Information */}
           <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="contact-heading">
-            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-              Get In Touch
+            <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">Get In Touch
               Ready to transform your business? Contact us for a free consultation and discover how our solutions can drive your success.
-            
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="cyber-glow-advanced p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -692,12 +679,11 @@ const HomePage: React.FC = () => {
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                Get a free consultation and discover how our AI and IT solutions can revolutionize your operations and drive unprecedented growth.
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Get a free consultation and discover how our AI and IT solutions can revolutionize your operations and drive unprecedented growth.
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold transition-all duration-300 hover:scale-105"
                   Get Free Consultation
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"</p>
                   <Phone className="w-5 h-5" />
                   +1 302 464 0950
         </main>

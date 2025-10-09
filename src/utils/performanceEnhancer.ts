@@ -241,4 +241,7 @@ class PerformanceEnhancer {
   }
 }
 
+
+};
+
 export default PerformanceEnhancer;

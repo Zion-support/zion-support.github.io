@@ -104,7 +104,13 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
           Contact Us
         </a>
       </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default ServicesPage;

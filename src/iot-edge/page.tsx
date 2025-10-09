@@ -126,8 +126,7 @@ const IoTEdgePage: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 IoT & Edge Computing Services
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-                Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
+              <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
@@ -142,11 +141,9 @@ const IoTEdgePage: React.FC = () => {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IoT & Edge Services?
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Our IoT & Edge Services?</h2>
               </h2>
-              <p className="text-xl text-gray-600">
-                Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
+              <p className="text-xl text-gray-600">Expert IoT engineers delivering scalable, secure, and intelligent connected solutions</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="bg-cyan-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Wifi className="w-8 h-8 text-cyan-600" />
@@ -244,10 +241,8 @@ const IoTEdgePage: React.FC = () => {
         {/* Contact Section */}
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Connect Your World?
-            <p className="text-xl mb-8 text-cyan-100">
-              Contact our IoT experts for a free consultation and custom connected solution strategy
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Connect Your World?</h2>
+            <p className="text-xl mb-8 text-cyan-100">Contact our IoT experts for a free consultation and custom connected solution strategy</p>
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"

@@ -124,7 +124,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         />
       )}
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default OptimizedImage;

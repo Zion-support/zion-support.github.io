@@ -111,4 +111,7 @@ declare global {
   }
 }
 
+
+};
+
 export default Analytics;

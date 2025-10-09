@@ -30,10 +30,8 @@ const Navigation: React.FC = () => {
           <Link to="/" className="flex items-center space-x-2 group"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"><span className="text-white font-bold text-lg">Z</span></div><div><h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8"><Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link><Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
+          <div className="hidden lg:flex space-x-8"><Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">Home</Link>
+            </Link><Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">About</Link>
             </Link>
             {/* Services Dropdown */}
             <div className="relative group"><button className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"><span>Services</span><ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" /></button>
@@ -41,39 +39,29 @@ const Navigation: React.FC = () => {
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0"><div className="p-6"><h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3><div className="grid grid-cols-2 gap-4">
                       {/* AI Services */}
-                      <div><h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">AI Services</h4><div className="space-y-2"><Link to="/ai-analytics" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Analytics
-                          </Link><Link to="/ai-automation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Automation
-                          </Link><Link to="/ai-content-generation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Content Generation
-                          </Link><Link to="/ai-customer-support" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Customer Support
+                      <div><h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">AI Services</h4><div className="space-y-2"><Link to="/ai-analytics" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>AI Analytics</Link>
+                          </Link><Link to="/ai-automation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>AI Automation</Link>
+                          </Link><Link to="/ai-content-generation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>AI Content Generation</Link>
+                          </Link><Link to="/ai-customer-support" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>AI Customer Support</Link>
                           </Link></div></div>
                       
                       {/* IT Services */}
-                      <div><h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4><div className="space-y-2"><Link to="/it-services" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            IT Services
-                          </Link><Link to="/cloud-migration" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            Cloud Migration
-                          </Link><Link to="/devops" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            DevOps
-                          </Link><Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            Cybersecurity
+                      <div><h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4><div className="space-y-2"><Link to="/it-services" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>IT Services</Link>
+                          </Link><Link to="/cloud-migration" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>Cloud Migration</Link>
+                          </Link><Link to="/devops" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>DevOps</Link>
+                          </Link><Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>Cybersecurity</Link>
                           </Link></div></div></div><div className="border-t border-gray-700 mt-6 pt-4"><Link
                         to="/services" className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
-                      >
-                        View All Services
+                      >View All Services</Link>
                       </Link></div></div></div>
               )}
             </div><Link 
               to="/case-studies" className="font-medium transition-colors hover:text-cyan-400 text-white"
               Case Studies
-            </Link><Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
+            </Link><Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">Contact
 
-            {/* CTA Button */}
+            {/* CTA Button */}</Link>
             <Link
               to="/contact" className="cyber-button inline-flex items-center"
             ><Phone className="w-4 h-4 mr-2" />

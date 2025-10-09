@@ -142,9 +142,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your invoicing process with AI-powered automation. Create, send, and track invoices 
-                effortlessly while gaining valuable insights into your business performance.
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">Transform your invoicing process with AI-powered automation. Create, send, and track invoices 
+                effortlessly while gaining valuable insights into your business performance.</p>
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -175,13 +174,11 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           <section className="py-16 bg-slate-800/30">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Powerful AI Features
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful AI Features</h2>
                 </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Our AI invoice generator combines cutting-edge technology with user-friendly design 
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI invoice generator combines cutting-edge technology with user-friendly design 
                   to revolutionize your billing process.
-              
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -273,9 +270,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
           <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             <div className="container mx-auto px-4 text-center">
                 Ready to Transform Your Invoicing?
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already using AI to streamline their invoicing process. 
-                Start your free trial today and experience the difference.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses already using AI to streamline their invoicing process. 
+                Start your free trial today and experience the difference.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   href="/contact"
                   <Phone className="w-5 h-5 mr-2" />

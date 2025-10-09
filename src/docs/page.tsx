@@ -15,8 +15,7 @@ const Docs: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             Docs
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Documentation and technical resources
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Documentation and technical resources</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -37,11 +36,9 @@ const Docs: React.FC = () => {
 
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Get Started?
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and discover how our solutions can help your business.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and discover how our solutions can help your business.</p>
       </main>
 
       <Footer />

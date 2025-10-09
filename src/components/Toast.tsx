@@ -74,6 +74,12 @@ const Toast: React.FC<ToastProps> = ({
         ✕
       </button>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 export default Toast;

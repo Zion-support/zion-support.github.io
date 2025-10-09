@@ -120,9 +120,8 @@ const AIAnalyticsPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               AI Analytics Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-              Make data-driven decisions that drive growth and optimize performance.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+              Make data-driven decisions that drive growth and optimize performance.</p>
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
@@ -138,8 +137,7 @@ const AIAnalyticsPage: React.FC = () => {
 
           {/* Features */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Key Features</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
@@ -212,11 +210,9 @@ const AIAnalyticsPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Data?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey with AI analytics today. Get a free consultation and discover 
-              how our platform can revolutionize your business intelligence.
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Data?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Start your journey with AI analytics today. Get a free consultation and discover 
+              how our platform can revolutionize your business intelligence.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Consultation

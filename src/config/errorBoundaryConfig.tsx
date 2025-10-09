@@ -93,11 +93,9 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             />
           </svg>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
+        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Oops! Something went wrong</h2>
         </h2>
-        <p className="mt-2 text-center text-gray-600">
-          {error.message || 'An unexpected error occurred'}
+        <p className="mt-2 text-center text-gray-600">{error.message || 'An unexpected error occurred'}</p>
         </p>
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
@@ -118,7 +116,13 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </div>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 }
 /**
  * Network error fallback component
@@ -143,8 +147,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p className="mt-2 text-center text-gray-600">
-          Unable to connect to the server. Please check your internet connection and try again.
+        <p className="mt-2 text-center text-gray-600">Unable to connect to the server. Please check your internet connection and try again.</p>
         </p>
         <div className="mt-6">
           <button
@@ -156,7 +159,13 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         </div>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 }
 /**
  * Not found error fallback component
@@ -167,8 +176,7 @@ function NotFoundFallback(): JSX.Element {
       <div className="max-w-md w-full text-center">
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
+        <p className="mt-2 text-gray-600">The page you're looking for doesn't exist or has been moved.</p>
         </p>
         <div className="mt-6 flex gap-4 justify-center">
           <button
@@ -186,7 +194,13 @@ function NotFoundFallback(): JSX.Element {
         </div>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 }
 /**
  * Get error type from error object

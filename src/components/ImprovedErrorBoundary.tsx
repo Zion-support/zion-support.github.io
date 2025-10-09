@@ -99,8 +99,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+            <p style={styles.message}>We're sorry for the inconvenience. The application encountered an unexpected error.</p>
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
@@ -110,8 +109,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                     <strong>Error:</strong> {this.state.error.message}
                   </p>
                   {this.state.error.stack && (
-                    <pre style={styles.stack}>
-                      {this.state.error.stack}
+                    <pre style={styles.stack}>{this.state.error.stack}</p>
                     </pre>
                   )}
                   {this.state.errorInfo?.componentStack && (
@@ -147,13 +145,18 @@ class ImprovedErrorBoundary extends Component<Props, State> {
               </button>
             </div>
             {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
+              <p style={styles.errorCount}>This error has occurred {this.state.errorCount} times</p>
               </p>
             )}
           </div>
         </div>
-      );
+      
+    </div>
+  
+    </div>
+  );
+};
+};
     }
     return this.props.children;
   }

@@ -253,9 +253,8 @@ const ResearchDevelopmentPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Research & Development
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Pushing the boundaries of technology through cutting-edge research and innovation. 
-              Our R&D team is dedicated to creating the next generation of AI and IT solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Pushing the boundaries of technology through cutting-edge research and innovation. 
+              Our R&D team is dedicated to creating the next generation of AI and IT solutions.</p>
             </p>
           </div>
 
@@ -279,16 +278,14 @@ const ResearchDevelopmentPage: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                {researchAreas.find(area => area.id === activeTab)?.description}
+              <p className="text-gray-300 max-w-2xl mx-auto">{researchAreas.find(area => area.id === activeTab)?.description}</p>
               </p>
             </div>
           </div>
 
           {/* Research Projects */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Current Research Projects
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Current Research Projects</h2>
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {researchProjects[activeTab as keyof typeof researchProjects].map((project, index) => (
@@ -345,8 +342,7 @@ const ResearchDevelopmentPage: React.FC = () => {
 
           {/* Publications */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Recent Publications
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Recent Publications</h2>
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
@@ -380,8 +376,7 @@ const ResearchDevelopmentPage: React.FC = () => {
 
           {/* Achievements */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Research Achievements
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Research Achievements</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {achievements.map((achievement, index) => (
@@ -398,12 +393,10 @@ const ResearchDevelopmentPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Collaborate With Our Research Team
+            <h2 className="text-2xl font-bold text-white mb-4">Collaborate With Our Research Team</h2>
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Interested in collaborating on cutting-edge research? We welcome partnerships with 
-              universities, research institutions, and industry leaders.
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Interested in collaborating on cutting-edge research? We welcome partnerships with 
+              universities, research institutions, and industry leaders.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

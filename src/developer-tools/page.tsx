@@ -68,8 +68,7 @@ const DeveloperToolsPage: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               Developer Tools
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">AI-powered development tools that accelerate your coding workflow and improve productivity</p>
             </p>
             
             {/* Stats */}
@@ -115,8 +114,7 @@ const DeveloperToolsPage: React.FC = () => {
         {/* Tools Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Developer Tools</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {devTools.map((tool, index) => (
@@ -174,11 +172,9 @@ const DeveloperToolsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Supercharge Your Development?
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Supercharge Your Development?</h2>
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Join thousands of developers who have accelerated their productivity with our AI-powered tools.
+            <p className="text-xl text-purple-100 mb-8">Join thousands of developers who have accelerated their productivity with our AI-powered tools.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

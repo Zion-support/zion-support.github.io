@@ -37,7 +37,13 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
       />
     ))}
   </div>
-);
+
+    </div>
+  
+    </div>
+  );
+};
+};
 export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({ 
   aspectRatio = '16/9' 
 }) => (
@@ -53,7 +59,13 @@ export const ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => (
       <div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>
     ))}
   </div>
-);
+
+    </div>
+  
+    </div>
+  );
+};
+};
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
   rows = 5, 
   columns = 4 
@@ -74,5 +86,11 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
       </div>
     ))}
   </div>
-);
+
+    </div>
+  
+    </div>
+  );
+};
+};
 export default Skeleton;

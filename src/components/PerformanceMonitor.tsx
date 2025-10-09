@@ -6,4 +6,7 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
+
+};
+
 export default PerformanceMonitor;

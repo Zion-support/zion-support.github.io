@@ -70,7 +70,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
             <span className="text-2xl">⚡</span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence</p>
             content that&apos;s transforming enterprises worldwide</p>
         {/* Category Filter */}
           {categories.map((category) => (
@@ -99,8 +99,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
                 {item.title}
               </h3>
               {/* Description */}
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                {item.description}
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">{item.description}</p>
               </p>
               {/* Metrics */}
                     {item.metrics.roi}

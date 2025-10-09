@@ -25,19 +25,16 @@ export default function ServicesAdvertisingPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Advertising Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Revolutionize Your Marketing with 300% ROI Guaranteed
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">Revolutionize Your Marketing with 300% ROI Guaranteed</p>
             </p>
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
+            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
-              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
+              methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
-                Start Free Consultation
+              >Start Free Consultation</Link>
                 <ArrowRight className="w-4 h-4 ml-2" />
                 href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
@@ -47,11 +44,9 @@ export default function ServicesAdvertisingPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Proven Advertising Results
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Proven Advertising Results</h2>
             </h2>
-            <p className="text-xl text-gray-600">
-              Our AI-powered advertising delivers measurable business impact
+            <p className="text-xl text-gray-600">Our AI-powered advertising delivers measurable business impact</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-4xl font-bold text-blue-600 mb-2">300%</div>
               <div className="text-gray-600">Average ROI</div>
@@ -69,8 +64,7 @@ export default function ServicesAdvertisingPage() {
             <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-200">
               <div className="text-blue-600 text-4xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>
-              <p className="text-gray-600 mb-4">
-                Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.
+              <p className="text-gray-600 mb-4">Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy.</p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Behavioral analysis</li>
                 <li>• Predictive modeling</li>
@@ -171,10 +165,8 @@ export default function ServicesAdvertisingPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready to Transform Your Advertising?
-          <p className="text-xl mb-8 text-blue-100">
-            Get a free AI advertising assessment and discover how we can boost your ROI by 300%
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Advertising?</h2>
+          <p className="text-xl mb-8 text-blue-100">Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               Get Free Assessment
               href="/case-studies"
@@ -182,3 +174,4 @@ export default function ServicesAdvertisingPage() {
               View Success Stories
   );
 };
+</p>

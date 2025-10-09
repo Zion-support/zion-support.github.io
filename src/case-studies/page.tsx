@@ -78,7 +78,13 @@ const CaseStudiesPage: React.FC = () => {
         </a>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default CaseStudiesPage;

@@ -11,7 +11,7 @@ export default function Page() {
             Agent Release Runbooks v2 (2026)
           </h1>
           <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
-            canaries, approvals and one‑click rollback.
+            canaries, approvals and one‑click rollback.</p>
           </p>
           <div>
             <div>
@@ -30,7 +30,7 @@ export default function Page() {
           <h2>Release Safety Model</h2>
           <p>Operational safety hinges on three primitives: hard;
             budgets, lightweight approvals and KPI-linked canaries that trigger
-            automatic rollback when thresholds are breached.
+            automatic rollback when thresholds are breached.</p>
           </p>
           <h3>Runbook Outline</h3>
           <ol>
@@ -63,8 +63,7 @@ export default function Page() {
             <div>
               <h3 className='text-2xl font-bold flex items-center gap-2'>
                 <FileWarning />Prevent Regressions</h3>
-              <p className='text-white/90'>
-                We implement v2 runbooks in 4–6 weeks with audits and training.
+              <p className='text-white/90'>We implement v2 runbooks in 4–6 weeks with audits and training.</p>
               </p>
             </div>
             <Link

@@ -160,8 +160,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
           Something went wrong
         </h1>
-        <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.
+        <p className='text-gray-600 mb-4'>We&apos;re sorry, but something unexpected happened. Please try again.</p>
         </p>
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
@@ -179,8 +178,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
               {errorInfo && (
                 <div>
                   <strong>Component Stack:</strong>
-                  <pre className='whitespace-pre-wrap'>
-                    {errorInfo.componentStack}
+                  <pre className='whitespace-pre-wrap'>{errorInfo.componentStack}</p>
                   </pre>
                 </div>
               )}

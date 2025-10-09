@@ -48,8 +48,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-bold text-white mb-4">
               Something went wrong
             </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+            <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
             </p>
             {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -64,8 +63,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
                   {this.state.errorInfo && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
+                      <pre className="mt-1 whitespace-pre-wrap">{this.state.errorInfo.componentStack}</p>
                       </pre>
                     </div>
                   )}
@@ -95,8 +93,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
             {/* Contact Information */}
             <div className="mt-8 pt-6 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-2">
-                Need help? Contact our support team:
+              <p className="text-sm text-gray-400 mb-2">Need help? Contact our support team:</p>
               </p>
               <a
                 href="tel:+13024640950"
@@ -107,7 +104,13 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      
+    </div>
+  
+    </div>
+  );
+};
+};
     }
     return this.props.children;
   }

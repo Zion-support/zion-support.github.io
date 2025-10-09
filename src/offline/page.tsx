@@ -27,8 +27,7 @@ const OfflinePage: React.FC = () => {
           You're Offline
         </h1>
         
-        <p className="text-gray-300 mb-6">
-          It looks like you're not connected to the internet. Please check your connection and try again.
+        <p className="text-gray-300 mb-6">It looks like you're not connected to the internet. Please check your connection and try again.</p>
         </p>
 
         <div className="space-y-3">
@@ -52,9 +51,9 @@ const OfflinePage: React.FC = () => {
 
         <div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>
-          <p className="text-xs text-gray-400">
-            Some content may be available offline thanks to our service worker. 
+          <p className="text-xs text-gray-400">Some content may be available offline thanks to our service worker. 
             Try refreshing the page once you're back online.
   );
 
 export default OfflinePage;
+</p>

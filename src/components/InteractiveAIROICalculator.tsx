@@ -18,8 +18,7 @@ const InteractiveAIROICalculator: React.FC = () => {
   return (
     <section className='bg-white py-16 rounded-2xl shadow-lg'>
       <div className='container mx-auto px-4'>
-        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
-          AI ROI Calculator
+        <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>AI ROI Calculator</h2>
         </h2>
         <div className='max-w-4xl mx-auto'>
           <div className='grid md:grid-cols-2 gap-8'>
@@ -61,8 +60,7 @@ const InteractiveAIROICalculator: React.FC = () => {
               <div className='text-center'>
                 <div className='text-6xl font-bold text-blue-600 mb-4'>
                   {roi.toFixed(0)}%
-                <p className='text-gray-600 text-sm'>
-                  Expected return on investment over {timeframe} months
+                <p className='text-gray-600 text-sm'>Expected return on investment over {timeframe} months</p>
                 </p>
     </section>
   );

@@ -30,19 +30,29 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading"
       />
       {text && (
-        <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">
-          {text}
+        <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">{text}</p>
         </p>
       )}
     </div>
+  
+    </div>
+  
+    </div>
   );
-
+};
+};
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
       </div>
-    );
+    
+    </div>
+  
+    </div>
+  );
+};
+};
   }
 
   return spinner;

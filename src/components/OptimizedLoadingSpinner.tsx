@@ -46,7 +46,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           />
         </svg>
       </div>
-    );
+    
+    </div>
+  
+    </div>
+  );
+};
+};
   }
 );
 

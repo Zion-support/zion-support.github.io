@@ -338,7 +338,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default EnhancedPerformanceMonitor;

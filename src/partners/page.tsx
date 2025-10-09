@@ -105,9 +105,8 @@ const PartnersPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Our Partners
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We work with industry-leading technology partners to deliver comprehensive solutions 
-              that drive innovation and business success.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">We work with industry-leading technology partners to deliver comprehensive solutions 
+              that drive innovation and business success.</p>
             </p>
           </div>
 
@@ -131,8 +130,7 @@ const PartnersPage: React.FC = () => {
                   ))}
 
           {/* Partnership Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Partner With Us?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Partner With Us?</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -161,11 +159,9 @@ const PartnersPage: React.FC = () => {
 
           {/* Become a Partner CTA */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Become Our Partner
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
-              Let's build the future together.
+            <h2 className="text-2xl font-bold text-white mb-4">Become Our Partner</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
+              Let's build the future together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"

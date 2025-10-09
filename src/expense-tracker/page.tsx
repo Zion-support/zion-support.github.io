@@ -109,13 +109,11 @@ const ExpenseTrackerPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Expense Tracker
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Smart Financial Management
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">Smart Financial Management</p>
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your expense management with AI-powered receipt scanning, automated categorization, 
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Transform your expense management with AI-powered receipt scanning, automated categorization, 
             and intelligent financial insights. Save time, reduce errors, and gain complete control 
-            over your business finances.
+            over your business finances.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
@@ -128,9 +126,7 @@ const ExpenseTrackerPage: React.FC = () => {
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               Start Free Trial
-            </Link>
-
-        {/* Key Benefits */}
+            </Link>{/* Key Benefits */}</Link>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">8+</div>
@@ -148,8 +144,7 @@ const ExpenseTrackerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Expense Management Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Powerful Expense Management Features</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -217,12 +212,11 @@ const ExpenseTrackerPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Master Your Expenses?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using AI Expense Tracker to streamline financial 
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Master Your Expenses?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses using AI Expense Tracker to streamline financial 
             management and gain better control over their spending.
   );
 };
 
 export default ExpenseTrackerPage;
+</p>

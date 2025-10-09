@@ -133,9 +133,8 @@ const RequestQuotePage: React.FC = () => {
               <h1 className="text-4xl font-bold text-white mb-6 neon-text">
                 Quote Request Submitted!
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Thank you for your interest in our services. We've received your quote request 
-                and will get back to you within 24 hours with a detailed proposal.
+              <p className="text-xl text-gray-300 mb-8">Thank you for your interest in our services. We've received your quote request 
+                and will get back to you within 24 hours with a detailed proposal.</p>
               </p>
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
@@ -188,9 +187,8 @@ const RequestQuotePage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Request a Quote
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get a detailed, no-obligation quote for your AI and IT project. 
-              Our experts will provide you with a comprehensive proposal within 24 hours.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Get a detailed, no-obligation quote for your AI and IT project. 
+              Our experts will provide you with a comprehensive proposal within 24 hours.</p>
             </p>
           </div>
 
@@ -420,8 +418,7 @@ const RequestQuotePage: React.FC = () => {
               {/* Contact Info */}
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  For urgent inquiries or immediate assistance, contact us directly.
+                <p className="text-gray-300 text-sm mb-4">For urgent inquiries or immediate assistance, contact us directly.</p>
                 </p>
                 <div className="space-y-3">
                   <a

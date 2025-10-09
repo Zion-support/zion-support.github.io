@@ -211,9 +211,8 @@ const SolutionsPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Our Solutions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive technology solutions designed to transform your business operations 
-              and drive innovation across every aspect of your organization.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Comprehensive technology solutions designed to transform your business operations 
+              and drive innovation across every aspect of your organization.</p>
             </p>
           </div>
 
@@ -237,8 +236,7 @@ const SolutionsPage: React.FC = () => {
             </div>
             
             <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
-                {solutionCategories.find(cat => cat.id === activeTab)?.description}
+              <p className="text-gray-300 max-w-2xl mx-auto">{solutionCategories.find(cat => cat.id === activeTab)?.description}</p>
               </p>
             </div>
           </div>
@@ -289,8 +287,7 @@ const SolutionsPage: React.FC = () => {
 
           {/* Benefits Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Solutions?
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our Solutions?</h2>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -307,12 +304,10 @@ const SolutionsPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can revolutionize your operations 
-              and drive unprecedented growth.
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Get a free consultation and discover how our solutions can revolutionize your operations 
+              and drive unprecedented growth.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a

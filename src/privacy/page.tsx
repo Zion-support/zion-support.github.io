@@ -7,13 +7,11 @@ const PrivacyPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation /><main className="pt-20"><div className="container mx-auto px-4 py-16 max-w-4xl"><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             Privacy Policy
-          </h1><p className="text-xl text-gray-300 mb-8">
-            Last updated: January 2025
+          </h1><p className="text-xl text-gray-300 mb-8">Last updated: January 2025</p>
           </p><div className="cyber-card p-8 space-y-8"><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Shield className="w-6 h-6 mr-3 text-cyan-400" />
                 Information We Collect
-              </h2><p className="text-gray-300 mb-4">
-                We collect information you provide directly to us, such as when you create an account, 
-                use our services, or contact us for support.
+              </h2><p className="text-gray-300 mb-4">We collect information you provide directly to us, such as when you create an account, 
+                use our services, or contact us for support.</p>
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Contact information (name, email, phone number)</li><li>Business information (company name, industry, size)</li><li>Service usage data and preferences</li><li>Communication records and support requests</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Eye className="w-6 h-6 mr-3 text-cyan-400" />
                 How We Use Your Information
                 We use the information we collect to provide, maintain, and improve our services:
@@ -25,12 +23,10 @@ const PrivacyPage: React.FC = () => {
                 Data Sharing
                 We do not sell, trade, or otherwise transfer your personal information to third parties 
                 without your consent, except as described in this policy.
-              </p></section><section><h2 className="text-2xl font-bold text-white mb-4">
-                Your Rights
-                You have the right to:
-              </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Access your personal information</li><li>Correct inaccurate or incomplete data</li><li>Request deletion of your data</li><li>Object to processing of your data</li><li>Data portability</li><li>Withdraw consent at any time</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4">
-                Contact Us
-                If you have any questions about this Privacy Policy, please contact us:
+              </p></section><section><h2 className="text-2xl font-bold text-white mb-4">Your Rights
+                You have the right to:</h2>
+              </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Access your personal information</li><li>Correct inaccurate or incomplete data</li><li>Request deletion of your data</li><li>Object to processing of your data</li><li>Data portability</li><li>Withdraw consent at any time</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4">Contact Us
+                If you have any questions about this Privacy Policy, please contact us:</h2>
               </p><div className="flex flex-col sm:flex-row gap-4"><a
                   href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                 ><Phone className="w-5 h-5 mr-2" />

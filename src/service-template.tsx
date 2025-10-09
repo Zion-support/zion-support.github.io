@@ -27,8 +27,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             {title}
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            {description}
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">{description}</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -69,8 +68,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
                   Get Started
 
         {/* Benefits Section */}
-          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our {title}?
+          <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">Why Choose Our {title}?</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -81,10 +79,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
 
         {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can revolutionize your operations.
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Get a free consultation and discover how our solutions can revolutionize your operations.</p>
       </main>
 
       <Footer />

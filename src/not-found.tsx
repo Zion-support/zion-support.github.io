@@ -10,9 +10,8 @@ export default function NotFound() {
         {/* Error Message */}
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h2>
-          <p className="text-lg text-gray-600">
-            The page you're looking for doesn't exist or has been moved. 
-            Don't worry, let's get you back on track!
+          <p className="text-lg text-gray-600">The page you're looking for doesn't exist or has been moved. 
+            Don't worry, let's get you back on track!</p>
           </p>
         </div>
         {/* Popular Pages */}
@@ -27,8 +26,7 @@ export default function NotFound() {
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}
               </h3>
-              <p className="text-gray-600 text-sm">
-                {page.description}
+              <p className="text-gray-600 text-sm">{page.description}</p>
               </p>
             </Link>
           ))}

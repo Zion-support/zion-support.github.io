@@ -325,6 +325,9 @@ export function snakeCase(str: string): string {
     .replace(/[\s-]+/g, '_')
     .toLowerCase();
 }
+
+};
+
 export default {
   deepClone,
   deepMerge,

@@ -65,7 +65,13 @@ export const Image: React.FC<ImageProps> = ({
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
+    
+    </div>
+  
+    </div>
+  );
+};
+};
   }
   return (
     <img

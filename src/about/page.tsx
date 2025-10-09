@@ -11,15 +11,19 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-import { Users, Target, Brain, Shield } from 'lucide-react';
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -66,15 +70,13 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
             About Zion Tech Group
           </h1>
-          <p className='text-xl text-gray-600'>
-            Leading the future of AI and IT solutions
-
+          <p className='text-xl text-gray-600'>Leading the future of AI and IT solutions
+</p>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.</p>
           </p>
         </div>
         
@@ -110,35 +112,28 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
         <section className="py-20 bg-gray-50">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
                 </h2>
-                <p className="text-lg text-gray-600 mb-6">
-                  To democratize access to advanced AI technology and empower businesses of all sizes 
-                  to achieve their full potential through innovative digital solutions.
-                <p className="text-lg text-gray-600 mb-8">
-                  We believe that every business deserves access to cutting-edge technology that can 
-                  transform their operations, improve efficiency, and drive growth.
+                <p className="text-lg text-gray-600 mb-6">To democratize access to advanced AI technology and empower businesses of all sizes 
+                  to achieve their full potential through innovative digital solutions.</p>
+                <p className="text-lg text-gray-600 mb-8">We believe that every business deserves access to cutting-edge technology that can 
+                  transform their operations, improve efficiency, and drive growth.</p>
                 <Link
                   to="/contact"
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Get in Touch
+                >Get in Touch</Link>
                 </Link>
               <div className="bg-white rounded-xl shadow-lg p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-                <p className="text-gray-600">
-                  To be the world's leading provider of AI-powered business solutions, 
+                <p className="text-gray-600">To be the world's leading provider of AI-powered business solutions, 
                   helping organizations across all industries achieve digital transformation 
                   and sustainable growth in the age of artificial intelligence.
 
-        {/* Values Section */}
+        {/* Values Section */}</p>
         <section className="py-20 bg-white">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values
-              <p className="text-xl text-gray-600">
-                The principles that guide everything we do
-            
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+              <p className="text-xl text-gray-600">The principles that guide everything we do
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -161,17 +156,14 @@ import { Users, Target, Brain, Shield } from 'lucide-react';
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {member.name}
-                    <p className="text-blue-600 font-semibold mb-3">
-                      {member.role}
+                    <p className="text-blue-600 font-semibold mb-3">{member.role}
                       {member.bio}
 
-        {/* CTA Section */}
+        {/* CTA Section */}</p>
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Work With Us?
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with our AI-powered solutions.
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Let's discuss how we can help transform your business with our AI-powered solutions.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"
                 Start a Project

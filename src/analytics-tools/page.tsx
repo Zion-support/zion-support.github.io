@@ -70,8 +70,7 @@ const AnalyticsToolsPage: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Analytics Tools
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.</p>
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -99,8 +98,7 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* Analytics Tools Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Our Analytics Tools
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Our Analytics Tools</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {analyticsTools.map((tool, index) => (
@@ -140,10 +138,8 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data?
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI analytics tools today and transform your data into actionable insights.
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Unlock Your Data?</h2>
+          <p className="text-xl text-purple-100 mb-8">Get started with our AI analytics tools today and transform your data into actionable insights.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"

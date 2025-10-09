@@ -45,9 +45,8 @@ const CloudServicesPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Cloud Services
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our comprehensive cloud solutions. 
-            From migration to optimization, we provide end-to-end cloud services.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our comprehensive cloud solutions. 
+            From migration to optimization, we provide end-to-end cloud services.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -101,11 +100,9 @@ const CloudServicesPage: React.FC = () => {
         </section>
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Transform Your Infrastructure?
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Infrastructure?</h2>
           </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -125,6 +122,12 @@ const CloudServicesPage: React.FC = () => {
       </main>
       <Footer />
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 export default CloudServicesPage;

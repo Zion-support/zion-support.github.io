@@ -36,13 +36,11 @@ const AIAnalyticsPage: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
             AI Analytics
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">Intelligent Business Intelligence</p>
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics platform. 
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Transform your data into actionable insights with our AI-powered analytics platform. 
             Get real-time visibility into your business performance and make data-driven decisions.
-          
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
@@ -58,8 +56,7 @@ const AIAnalyticsPage: React.FC = () => {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Analytics Features</h2>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -70,8 +67,7 @@ const AIAnalyticsPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">

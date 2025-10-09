@@ -57,7 +57,13 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     <div className={getResponsiveClasses()}>
       {children}
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 // Hook for responsive values

@@ -97,8 +97,7 @@ const FAQPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to common questions about our AI and IT services, pricing, and support.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Find answers to common questions about our AI and IT services, pricing, and support.</p>
             </p>
             
             {/* Search Bar */}
@@ -117,8 +116,7 @@ const FAQPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             {filteredData.map((category, categoryIndex) => (
               <div key={categoryIndex} className="mb-12">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">{category.category}</h2>
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
@@ -145,10 +143,8 @@ const FAQPage: React.FC = () => {
 
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
+            <h2 className="text-2xl font-bold text-white mb-4">Still Have Questions?</h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Can't find the answer you're looking for? Our team is here to help you with any questions about our services.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"

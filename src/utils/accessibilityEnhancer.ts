@@ -560,4 +560,7 @@ ${this.metrics.screenReaderCompatibility < 50 ? '- Add more ARIA labels and role
   }
 }
 
+
+};
+
 export default AccessibilityEnhancer;

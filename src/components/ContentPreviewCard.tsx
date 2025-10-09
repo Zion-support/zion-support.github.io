@@ -91,8 +91,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           {title}
         </h3>
-        <p className="text-gray-600 mb-4 line-clamp-3">
-          {excerpt || description}
+        <p className="text-gray-600 mb-4 line-clamp-3">{excerpt || description}</p>
         </p>
         {/* Stats Row */}
         {stats && (
@@ -120,8 +119,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <Link
             href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-          >
-            Read Article
+          >Read Article</Link>
             <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

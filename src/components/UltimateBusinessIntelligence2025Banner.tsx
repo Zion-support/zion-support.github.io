@@ -75,15 +75,13 @@ const _UltimateBusinessIntelligence2025Banner = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
             {currentContent.title}
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {currentContent.description}
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">{currentContent.description}</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <Link
               to="/services"
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-            >
-              Get Started Today
+            >Get Started Today</Link>
               <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"

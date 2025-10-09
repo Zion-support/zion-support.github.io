@@ -94,7 +94,13 @@ const PricingPage: React.FC = () => {
         </a>
       </div>
     </div>
+  
+    </div>
+  
+    </div>
   );
+};
+};
 };
 
 export default PricingPage;

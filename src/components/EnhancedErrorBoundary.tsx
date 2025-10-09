@@ -157,8 +157,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <h1 className="text-2xl font-bold text-white mb-2">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-300 mb-4">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.</p>
               </p>
             </div>
 
@@ -194,8 +193,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <p className="text-sm text-gray-400 mb-2">
                     Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
                   </p>
-                  <p className="text-xs text-gray-500">
-                    Please include this ID when contacting support.
+                  <p className="text-xs text-gray-500">Please include this ID when contacting support.</p>
                   </p>
                 </div>
               )}
@@ -207,10 +205,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     Technical Details
                   </summary>
                   <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
-                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
-                      {this.state.error.message}
+                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">{this.state.error.message}
                       {'\n\n'}
-                      {this.state.error.stack}
+                      {this.state.error.stack}</p>
                     </pre>
                     <button
                       onClick={this.copyErrorDetails}
@@ -224,8 +221,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
 
             <div className="mt-8 text-sm text-gray-500">
-              <p>
-                If this problem persists, please contact our support team at{' '}
+              <p>If this problem persists, please contact our support team at{' '}</p>
                 <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
                   support@ziontechgroup.com
                 </a>
@@ -233,11 +229,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      
+    </div>
+  
+    </div>
+  );
+};
+};
     }
 
     return this.props.children;
   }
 }
+
+
+};
 
 export default EnhancedErrorBoundary;

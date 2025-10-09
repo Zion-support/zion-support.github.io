@@ -26,8 +26,7 @@ const ProductivityPage: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Why Choose Our Productivity Tools?
+          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Why Choose Our Productivity Tools?</h2>
           </h2>
               <div className="text-4xl mb-4">⚡</div>
               <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>
@@ -78,8 +77,7 @@ const ProductivityPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Ready to Boost Your Productivity?
+          <h2 className="text-3xl font-bold text-white mb-6 neon-text">Ready to Boost Your Productivity?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work</p>
             >Get Started Today</a>
               href="tel:+13024640950"
@@ -89,4 +87,7 @@ const ProductivityPage: React.FC = () => {
       <Footer />
     </div>);
 }
+
+};
+
 export default ProductivityPage

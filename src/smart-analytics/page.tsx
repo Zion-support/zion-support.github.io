@@ -78,8 +78,7 @@ const SmartAnalyticsPage: React.FC = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Smart Analytics
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
-            Transform your data into actionable insights with AI-powered analytics that drive real business results
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">Transform your data into actionable insights with AI-powered analytics that drive real business results</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -98,8 +97,7 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Analytics Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Powerful Analytics Features</h2>
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -147,15 +145,13 @@ const SmartAnalyticsPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data?
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Transform Your Data?</h2>
+          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               Get Free Demo
 
-        {/* Contact Info */}
+        {/* Contact Info */}</p>
         <section className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>

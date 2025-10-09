@@ -503,4 +503,7 @@ ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not 
   }
 }
 
+
+};
+
 export default SecurityEnhancer;

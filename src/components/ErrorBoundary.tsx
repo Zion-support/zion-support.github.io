@@ -126,9 +126,8 @@ class ErrorBoundary extends Component<Props, State> {
               <h1 className="text-3xl font-bold text-white mb-4 neon-text">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix the issue.
+              <p className="text-gray-300 mb-6 leading-relaxed">We're sorry, but something unexpected happened. Our team has been notified 
+                and is working to fix the issue.</p>
               </p>
               
               {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -191,11 +190,20 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      
+    </div>
+  
+    </div>
+  );
+};
+};
     }
 
     return this.props.children;
   }
 }
+
+
+};
 
 export default ErrorBoundary;

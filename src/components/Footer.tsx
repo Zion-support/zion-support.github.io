@@ -78,8 +78,7 @@ const Footer: React.FC = memo(() => {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
-            <div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+            <div className="lg:col-span-1"><div className="flex items-center space-x-2 mb-6"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center"><span className="text-white font-bold text-lg">Z</span></div><div><h2 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h2><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></div><p className="text-gray-300 mb-6 text-sm leading-relaxed">Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.</p>
               </p>
               
               {/* Contact Info */}
@@ -103,8 +102,7 @@ const Footer: React.FC = memo(() => {
                 ))}
                 <li><Link 
                     to="/ai-services" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
-                    View All AI Services →
+                  >View All AI Services →</Link>
                   </Link></li></ul></div>
 
             {/* IT Services */}

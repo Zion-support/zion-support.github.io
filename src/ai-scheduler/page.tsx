@@ -109,13 +109,11 @@ const AISchedulerPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Scheduler
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">Intelligent Meeting & Event Scheduling</p>
           </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
-            for maximum productivity.
+            for maximum productivity.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
@@ -128,9 +126,7 @@ const AISchedulerPage: React.FC = () => {
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               Start Free Trial
-            </Link>
-
-        {/* Key Benefits */}
+            </Link>{/* Key Benefits */}</Link>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <div className="text-center">
             <div className="text-4xl font-bold text-cyan-400 mb-2">5+</div>
@@ -148,8 +144,7 @@ const AISchedulerPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Smart Scheduling Features</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -217,12 +212,11 @@ const AISchedulerPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Master Your Schedule?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
   );
 };
 
 export default AISchedulerPage;
+</p>
