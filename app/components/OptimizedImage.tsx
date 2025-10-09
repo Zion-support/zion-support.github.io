@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState, useCallback } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
 
 interface OptimizedImageProps {
   src: string;

@@ -1,108 +1,78 @@
+'use client';
+
 import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-        '/favicon.ico',
-        '/apple-touch-icon.png'
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
+      // Preload critical fonts
+      const fontLink = document.createElement('link');
+      fontLink.rel = 'preload';
+      fontLink.href = '/fonts/inter-var.woff2';
+      fontLink.as = 'font';
+      fontLink.type = 'font/woff2';
+      fontLink.crossOrigin = 'anonymous';
+      document.head.appendChild(fontLink);
     };
 
-    // Optimize images with lazy loading
     const optimizeImages = () => {
+      // Lazy load images
       const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
+      
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              img.src = img.dataset.src || '';
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
+            }
+          });
         });
-      });
 
-      images.forEach(img => imageObserver.observe(img));
+        images.forEach(img => imageObserver.observe(img));
+      }
     };
 
-<<<<<<< HEAD
-    // Optimize fonts
-    const optimizeFonts = () => {
-      if ('fonts' in document) {
-        document.fonts.ready.then(() => {
-          document.body.classList.add('fonts-loaded');
-        });
+    const optimizeAnimations = () => {
+      // Reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        document.documentElement.style.setProperty('--animation-iteration-count', '1');
       }
-=======
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false;
-      
-      const updateScroll = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll-dependent elements
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
+    };
 
-      window.addEventListener('scroll', updateScroll, { passive: true });
-      return () => window.removeEventListener('scroll', updateScroll);
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
+    const optimizeScrolling = () => {
+      // Smooth scrolling polyfill for older browsers
+      if (!('scrollBehavior' in document.documentElement.style)) {
+        // Add smooth scrolling CSS
+        const style = document.createElement('style');
+        style.textContent = 'html { scroll-behavior: smooth; }';
+        document.head.appendChild(style);
+      }
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-<<<<<<< HEAD
-    optimizeFonts();
+    optimizeAnimations();
+    optimizeScrolling();
 
-    // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        }
+    // Cleanup function
+    return () => {
+      // Remove any added event listeners or observers
+      const images = document.querySelectorAll('img[data-src]');
+      images.forEach(img => {
+        img.removeAttribute('data-src');
       });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-    }
-
-    return () => {
-      // Cleanup
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const observer = new PerformanceObserver(() => {});
-        observer.disconnect();
-      }
-=======
-    const cleanupScroll = optimizeScroll();
-
-    return () => {
-      cleanupScroll();
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
     };
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceOptimizer;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
@@ -30,79 +26,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
         page_title: document.title,
         page_location: window.location.href,
       });
-<<<<<<< HEAD
-    };
-
-    // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
-      }
-    };
-
-    // Track user interactions
-    const trackInteractions = () => {
-      // Track button clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
-          
-          if ((window as { gtag: unknown }).gtag) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: text,
-              value: href
-            });
-          }
-        }
-      });
-
-      // Track form submissions
-      document.addEventListener('submit', (e) => {
-        const form = e.target as HTMLFormElement;
-        if ((window as { gtag: unknown }).gtag) {
-          (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'form_submit', {
-            event_category: 'engagement',
-            event_label: form.id || 'contact_form'
-          });
-        }
-      });
-
-      // Track phone number clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.href && target.href.startsWith('tel:')) {
-          if ((window as { gtag: unknown }).gtag) {
-            (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-              event_label: 'phone_number',
-              value: target.href
-            });
-          }
-        }
-      });
-    };
-
-    // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-=======
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-398f
   }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
