@@ -1,13 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 const OperationalTrustScorecardsPage: React.FC = () => {
+
   return (
+
     <>
-      <Helmet>
-        <title>Operational Trust Scorecards v3</title>
-        <meta name="description" content="Measure reliability, cost, safety, and value with live AI scorecards." />
-        <meta property="og:type" content="article" />
-      </Helmet>
+
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">
@@ -30,6 +27,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
           </p>
         </div>
       </section>
+
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4 space-y-10">
           <div>
@@ -41,6 +39,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               outcomes) so leaders can make tradeoffs responsibly.
             </p>
           </div>
+
           <div>
             <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
             <ul className="list-disc pl-6 text-gray-300 space-y-2">
@@ -62,6 +61,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               </li>
             </ul>
           </div>
+
           <div>
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300">
@@ -76,4 +76,5 @@ const OperationalTrustScorecardsPage: React.FC = () => {
     </>
   );
 }
+
 export default OperationalTrustScorecardsPage;

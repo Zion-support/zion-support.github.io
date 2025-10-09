@@ -1,92 +1,75 @@
 #!/usr/bin/env python3
-"""
-Script to resolve merge conflicts by keeping the newer version (after =======)
-"""
 import os
 import re
 import glob
 
-def resolve_conflicts_in_file(file_path):
-    """Resolve merge conflicts in a single file"""
+def resolve_conflicts(file_path):
+    """Resolve merge conflicts by keeping the HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # Remove all conflict markers and keep only the HEAD version
+        # Pattern to match conflict blocks: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        pattern = r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [^\n]*'
         
-        print(f"Resolving conflicts in {file_path}")
+        def replace_conflict(match):
+            head_content = match.group(1)
+            return head_content
         
-        # Pattern 1: Keep the version after ======= (newer version)
-        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n?'
-        content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
+        # Replace all conflict blocks with HEAD content
+        resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
         
-        # Pattern 2: Remove any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n.*?=======\n.*?>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
+        # Also handle cases where there might be multiple ======= markers
+        # Remove any remaining conflict markers
+        resolved_content = re.sub(r'<<<<<<< HEAD\n?', '', resolved_content)
+        resolved_content = re.sub(r'=======\n?', '', resolved_content)
+        resolved_content = re.sub(r'>>>>>>> [^\n]*\n?', '', resolved_content)
         
-        # Clean up any remaining markers
-        content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^>>>>>>> [^\n]+\n?', '', content, flags=re.MULTILINE)
+        # Clean up any extra newlines
+        resolved_content = re.sub(r'\n\s*\n\s*\n', '\n\n', resolved_content)
         
-        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+            f.write(resolved_content)
         
+        print(f"Resolved conflicts in: {file_path}")
         return True
+        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error resolving conflicts in {file_path}: {e}")
         return False
 
 def main():
-    """Main function to resolve all conflicts"""
-    # Find all files with potential conflicts
-    file_patterns = [
+    # Find all TypeScript/JavaScript files in the app directory
+    patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
         'app/**/*.js',
-        'app/**/*.jsx',
-        'components/**/*.tsx',
-        'components/**/*.ts',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'src/**/*.js',
-        'src/**/*.jsx'
+        'app/**/*.jsx'
     ]
     
     files_processed = 0
-    conflicts_resolved = 0
+    files_with_conflicts = 0
     
-    for pattern in file_patterns:
+    for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
                 files_processed += 1
-                if resolve_conflicts_in_file(file_path):
-                    conflicts_resolved += 1
-    
-    print(f"\nProcessed {files_processed} files")
-    print(f"Resolved conflicts in {conflicts_resolved} files")
-    
-    # Verify no conflicts remain
-    remaining_conflicts = []
-    for pattern in file_patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if os.path.isfile(file_path):
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
-                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                        remaining_conflicts.append(file_path)
-                except:
-                    pass
+                    
+                    if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+                        files_with_conflicts += 1
+                        if resolve_conflicts(file_path):
+                            print(f"✓ Resolved: {file_path}")
+                        else:
+                            print(f"✗ Failed: {file_path}")
+                except Exception as e:
+                    print(f"Error processing {file_path}: {e}")
     
-    if remaining_conflicts:
-        print(f"\nWarning: {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"  - {file_path}")
-    else:
-        print("\n✅ All merge conflicts resolved successfully!")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Found conflicts in {files_with_conflicts} files")
 
 if __name__ == "__main__":
     main()

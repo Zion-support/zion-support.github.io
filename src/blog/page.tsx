@@ -1,7 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
+import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
+
 interface BlogPost {
   id: string;
   title: string;
@@ -17,10 +19,12 @@ interface BlogPost {
     engagement: number;
   };
 }
+
 export default function BlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
   const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: 'ai-enterprise-transformation-2025',
@@ -119,18 +123,23 @@ export default function BlogPage() {
       stats: { views: 11200, engagement: 93 }
     }
   ], []);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setPosts(blogPosts);
       setLoading(false);
     }, 500);
+
     return () => clearTimeout(timer);
   }, [blogPosts]);
+
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
     ? posts 
     : posts.filter(post => post.category === selectedCategory);
+
   const featuredPosts = posts.filter(post => post.featured);
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -153,6 +162,7 @@ export default function BlogPage() {
       </div>
     );
   }
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
@@ -163,6 +173,7 @@ export default function BlogPage() {
             Latest insights on AI, enterprise automation, and digital transformation from our expert team
           </p>
         </header>
+
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
           {categories.map((category) => (
@@ -179,6 +190,7 @@ export default function BlogPage() {
             </button>
           ))}
         </div>
+
         {/* Featured Posts */}
         {selectedCategory === 'all' && (
           <section className="mb-16">
@@ -195,6 +207,7 @@ export default function BlogPage() {
             </div>
           </section>
         )}
+
         {/* All Posts */}
         <section>
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -209,6 +222,7 @@ export default function BlogPage() {
             ))}
           </div>
         </section>
+
         {/* Newsletter CTA */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">

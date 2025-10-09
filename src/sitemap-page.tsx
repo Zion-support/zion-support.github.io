@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import Link from 'next/link';
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },
@@ -34,17 +33,9 @@ const SitemapPage: React.FC = () => {
     { url: '/privacy', title: 'Privacy Policy', priority: '0.3' },
     { url: '/terms', title: 'Terms of Service', priority: '0.3' },
   ];
+
   return (
-    <>
-      <Helmet>
-        <title>Sitemap | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Complete sitemap of Zion Tech Group website. Find all our AI services, IT solutions, and technology resources."
-        />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
         <div className="container mx-auto px-4 py-8">
           <header className="text-center mb-12">
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>
@@ -52,6 +43,7 @@ const SitemapPage: React.FC = () => {
               Complete directory of all pages on our website
             </p>
           </header>
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800 rounded-lg p-8">
               <h2 className="text-2xl font-semibold mb-6">All Pages</h2>
@@ -73,6 +65,7 @@ const SitemapPage: React.FC = () => {
                   </div>
                 ))}
               </div>
+              
               <div className="mt-8 text-center">
                 <Link
                   href="/"
@@ -85,7 +78,7 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
   );
 };
+
 export default SitemapPage;
