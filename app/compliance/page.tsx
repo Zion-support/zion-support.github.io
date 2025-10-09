@@ -288,12 +288,6 @@ const CompliancePage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </section>
-      </main>
-      
-      <Footer />
-=======
         </div>
       </section>
 
@@ -403,13 +397,8 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default CompliancePage;
-=======
-export default CompliancePage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

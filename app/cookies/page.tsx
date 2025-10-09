@@ -281,8 +281,4 @@ const CookiesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default CookiesPage;
-=======
-export default CookiesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

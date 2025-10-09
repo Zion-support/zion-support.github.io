@@ -326,8 +326,4 @@ const DocsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default DocsPage;
-=======
-export default DocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

@@ -481,8 +481,4 @@ console.log(result.predictions);`,
   );
 };
 
-<<<<<<< HEAD
-export default Api-docsPage;
-=======
 export default ApiDocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
