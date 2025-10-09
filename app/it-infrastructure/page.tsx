@@ -5,7 +5,6 @@ import { CheckCircle, Server, Shield, Zap, Settings, Phone, ArrowRight, Database
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-
 const ITInfrastructurePage: React.FC = () => {
   const services = [
     {
@@ -23,14 +22,14 @@ const ITInfrastructurePage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions for modern business needs',
-      features: ['AWS/Azure/GCP', 'Hybrid cloud', 'Cost optimization', 'Disaster recovery']
+      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud',
+      features: ['Auto-scaling', 'Load balancing', 'Disaster recovery', 'Cost optimization']
     },
     {
       icon: Shield,
       title: 'Network Security',
-      description: 'Advanced security solutions to protect your infrastructure',
-      features: ['Firewall management', 'Intrusion detection', 'VPN setup', 'Security audits']
+      description: 'Advanced network security and firewall management',
+      features: ['Firewall configuration', 'Intrusion detection', 'VPN setup', 'Security audits']
     },
     {
       icon: Settings,
@@ -40,113 +39,94 @@ const ITInfrastructurePage: React.FC = () => {
     },
     {
       icon: Cpu,
-      title: 'Hardware Solutions',
-      description: 'Professional hardware procurement and configuration services',
-      features: ['Server procurement', 'Network equipment', 'Storage solutions', 'Hardware maintenance']
+      title: 'Hardware Management',
+      description: 'Physical and virtual hardware management and optimization',
+      features: ['Hardware procurement', 'Virtualization', 'Capacity planning', 'Maintenance']
     }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Basic',
-      price: '$800',
-      period: '/month',
-      description: 'Essential infrastructure support',
-      features: [
-        'Up to 5 servers',
-        'Basic monitoring',
-        'Email support',
-        'Monthly maintenance',
-        'Backup solutions'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$1,600',
-      period: '/month',
-      description: 'Comprehensive infrastructure management',
-      features: [
-        'Up to 20 servers',
-        'Advanced monitoring',
-        'Priority support',
-        'Weekly maintenance',
-        'Security management',
-        'Cloud integration'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$3,200',
-      period: '/month',
-      description: 'Full-scale infrastructure solutions',
-      features: [
-        'Unlimited servers',
-        '24/7 monitoring',
-        'Dedicated support',
-        'Daily maintenance',
-        'Advanced security',
-        'Custom solutions',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ];
-
-  const stats = [
-    { icon: Server, value: '500+', label: 'Servers Managed' },
-    { icon: Shield, value: '99.9%', label: 'Uptime Guarantee' },
-    { icon: Zap, value: '50%', label: 'Cost Reduction' },
-    { icon: CheckCircle, value: '24/7', label: 'Support Available' }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>IT Infrastructure Services - Server Management & Cloud Solutions | Zion Tech Group</title>
-        <meta name="description" content="Professional IT infrastructure services including server management, cloud solutions, database administration, and network security. 99.9% uptime guarantee." />
-        <meta name="keywords" content="IT infrastructure, server management, cloud services, database administration, network security, system administration" />
-        <link rel="canonical" href="https://ziontechgroup.com/it-infrastructure" />
+        <title>IT Infrastructure Solutions - Zion Tech Group</title>
+        <meta name="description" content="Enterprise-grade IT infrastructure solutions with 99.9% uptime guarantee, 24/7 support, and automated scaling." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        <Navigation />
-        
-        <main className="pt-20">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                IT Infrastructure Services
-              </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Comprehensive infrastructure solutions for modern businesses
-              </p>
-              <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-                From server management to cloud solutions, we provide end-to-end IT infrastructure services 
-                that ensure reliability, security, and optimal performance for your business.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="/demo"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
-                >
-                  View Demo
-                </a>
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-flicker-enhanced cyber-text-enhanced">
+            IT Infrastructure Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow-enhanced">
+            Enterprise-Grade Infrastructure with 99.9% Uptime
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Comprehensive IT infrastructure solutions designed to support your business growth. 
+            From server management to cloud migration, we provide reliable, scalable, and secure infrastructure.
+          </p>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+            Our Infrastructure Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="cyber-card-enhanced holographic-card quantum-field p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-center mb-6">
+                  <service.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3 neon-flicker-enhanced">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </section>
+            ))}
+          </div>
+        </section>
 
+        <section className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">
+            Ready to Upgrade Your Infrastructure?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Get started with our enterprise-grade IT infrastructure solutions. 
+            Contact us for a free consultation and infrastructure assessment.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button w-full sm:w-auto text-center"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="cyber-button w-full sm:w-auto text-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              ✉️ Email Us
+            </a>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
 
-"
-
-
+ITInfrastructurePage.displayName = 'ITInfrastructurePage';
+export default ITInfrastructurePage;

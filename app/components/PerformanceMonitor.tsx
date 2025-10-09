@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-
-'use client';
-
-import React, { useEffect, useState } from 'react';
-
-
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-
-=======
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
->>>>>>> cursor/analyze-improve-and-deploy-application-7a1b
 }
 
 const PerformanceMonitor: React.FC = () => {
