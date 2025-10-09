@@ -1,77 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const ServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services to transform your business operations." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT services to transform your business operations and drive growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Cutting-edge artificial intelligence services to automate and optimize your business processes.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300 mb-4">
-                Scalable and secure cloud solutions to support your growing business needs.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• AWS/Azure/GCP Migration</li>
-                <li>• DevOps Implementation</li>
-                <li>• Container Orchestration</li>
-                <li>• Auto-scaling Solutions</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive security solutions to protect your digital assets and data.
-              </p>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Security Audits</li>
-                <li>• Threat Detection</li>
-                <li>• Compliance Management</li>
-                <li>• Incident Response</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
 import Header from '../components/Header';
-=======
-import Navigation from '../components/Navigation';
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 import Footer from '../components/Footer';
 
 const ServicesPage: React.FC = () => {
@@ -238,78 +168,35 @@ const ServicesPage: React.FC = () => {
           {/* IT Services */}
           <section className="container mx-auto px-4 py-16 bg-white/5">
             <div className="text-center mb-12">
-<<<<<<< HEAD
-              <div className="flex items-center justify-center mb-6">
-                <Cloud className="w-12 h-12 text-blue-400 mr-4" />
-                <h2 className="text-4xl font-bold text-white">IT Services</h2>
-              </div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Build and maintain robust IT infrastructure with our comprehensive IT services. 
-                From cloud migration to cybersecurity, we ensure your technology foundation is solid.
-              </p>
+              <h2 className="text-4xl font-bold text-white mb-4 flex items-center justify-center">
+                <Cloud className="w-10 h-10 text-blue-400 mr-3" />
+                IT Services
+              </h2>
+              <p className="text-xl text-gray-300">Reliable and scalable technology infrastructure</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 group">
+                  <div className="text-blue-400 mb-4 group-hover:text-blue-300 transition-colors">
+                    <service.icon className="w-12 h-12" />
                   </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <a
                     href={service.path}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
                   >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Emerging Technologies */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center mb-6">
-                <Zap className="w-12 h-12 text-cyan-400 mr-4" />
-                <h2 className="text-4xl font-bold text-white">Emerging Technologies</h2>
-              </div>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Stay ahead of the curve with cutting-edge technologies that will shape the future. 
-                From quantum computing to autonomous systems, we're pioneering tomorrow's solutions today.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTech.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.path}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
                 </div>
               ))}
@@ -465,25 +352,9 @@ const ServicesPage: React.FC = () => {
         </main>
 
         <Footer />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
       </div>
     </>
   );
 };
 
 export default ServicesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default ServicesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
