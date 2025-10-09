@@ -1,14 +1,15 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-import Navigation from '../src/components/Navigation';
-import Footer from '../src/components/Footer';
-import PerformanceOptimizer from '../src/components/PerformanceOptimizer';
-import SEOOptimizer from '../src/components/SEOOptimizer';
-import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
-import Analytics from '../src/components/Analytics';
-import SecurityEnhancer from '../src/components/SecurityEnhancer';
-import UserExperienceEnhancer from '../src/components/UserExperienceEnhancer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Analytics from './components/Analytics';
+import SecurityEnhancer from './components/SecurityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('../src/components/ContentPromotionBanner'));
@@ -438,6 +439,7 @@ const HomePage: React.FC = () => {
         enableNotifications={true}
       />
       <Analytics />
+      <PerformanceMonitor />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-bg matrix-rain particle-field">
         {/* Navigation */}

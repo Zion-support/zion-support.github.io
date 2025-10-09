@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Zap, Sparkles } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +34,6 @@ const Navigation: React.FC = () => {
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      hoverColor: 'hover:bg-purple-500/20',
       services: [
         { name: 'Machine Learning Solutions', path: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
         { name: 'Natural Language Processing', path: '/ai-nlp', description: 'Advanced text analysis and understanding' },
@@ -50,8 +48,6 @@ const Navigation: React.FC = () => {
       title: 'IT Services',
       icon: Cloud,
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      hoverColor: 'hover:bg-blue-500/20',
       services: [
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
@@ -59,6 +55,32 @@ const Navigation: React.FC = () => {
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
         { name: 'Database Management', path: '/database-management', description: 'Database management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' }
+      ]
+    },
+    {
+      title: 'Micro SAAS',
+      icon: Zap,
+      color: 'text-cyan-400',
+      services: [
+        { name: 'AI CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' }
+      ]
+    },
+    {
+      title: 'Specialized',
+      icon: Sparkles,
+      color: 'text-pink-400',
+      services: [
+        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' }
       ]
     }
   ];
@@ -106,7 +128,7 @@ const Navigation: React.FC = () => {
               </button>
               
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-100 visible transition-all duration-300 transform translate-y-0">
                   <div className="p-6">
                     <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -347,4 +369,5 @@ const Navigation: React.FC = () => {
   );
 };
 
+Navigation.displayName = 'Navigation';
 export default Navigation;

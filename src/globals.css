@@ -1,3 +1,28 @@
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/rajdhani/v15/LDI2apCSOBg7S-QT7p4HM-Mu.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/rajdhani/v15/LDI1apCSOBg7S-QT7p4HM-Mu.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvBhQDBWGbfyE.woff2') format('woff2');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
