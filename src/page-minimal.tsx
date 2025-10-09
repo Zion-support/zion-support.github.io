@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
 =======

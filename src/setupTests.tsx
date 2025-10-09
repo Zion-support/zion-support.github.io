@@ -10,6 +10,7 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // eslint-disable-next-line no-console
 >>>>>>> cursor/fix-errors-and-merge-to-main-1907
@@ -21,6 +22,11 @@ const originalConsoleError = console.error;
 =======
 const __originalConsoleError = console.error;
 >>>>>>> cursor/fix-errors-and-merge-to-main-d933
+=======
+// eslint-disable-next-line no-console
+const originalConsoleError = console.error;
+// eslint-disable-next-line no-console
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -71,6 +77,7 @@ global.fetch = jest.fn();
 // Mock console methods for cleaner test output
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const originalConsoleWarn = console.warn;
 =======
 // eslint-disable-next-line no-console
@@ -83,6 +90,13 @@ const originalConsoleInfo = console.info;
 const originalConsoleWarn = console.warn;
 const originalConsoleInfo = console.info;
 >>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+=======
+// eslint-disable-next-line no-console
+const originalConsoleWarn = console.warn;
+// eslint-disable-next-line no-console
+const originalConsoleInfo = console.info;
+// eslint-disable-next-line no-console
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {

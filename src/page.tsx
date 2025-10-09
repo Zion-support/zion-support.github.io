@@ -17,6 +17,7 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 // Dynamically import heavy components for better performance
 <<<<<<< HEAD
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+<<<<<<< HEAD
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 =======
 const _ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -28,6 +29,12 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+=======
+// const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+// const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+// const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+// const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 
 // Preload critical components
 const preloadComponents = () => {
@@ -63,7 +70,11 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
       (window as unknown as { gtag: (event: string, data: Record<string, string>) => void }).gtag('event', 'phone_click', {
+=======
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

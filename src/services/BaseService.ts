@@ -34,10 +34,14 @@ export class BaseService {
    */
   protected isCacheValid(key: string): boolean {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const entry = this.cache.get(key);
 =======
     const __entry = this.cache.get(key);
 >>>>>>> cursor/fix-errors-and-merge-to-main-d933
+=======
+    const entry = this.cache.get(key);
+>>>>>>> cursor/fix-errors-and-merge-to-main-33f8
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
