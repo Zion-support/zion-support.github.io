@@ -5,12 +5,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
-<<<<<<< HEAD
   const itServices = [
     // Infrastructure & Cloud Services
-=======
   const services = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       icon: Cloud,
       title: 'IT Infrastructure',
@@ -33,7 +30,6 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening']
     },
     {
-<<<<<<< HEAD
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: <HardDrive className="w-8 h-8" />,
@@ -251,7 +247,6 @@ const ITServicesPage: React.FC = () => {
     { name: 'Training', count: itServices.filter(s => s.category === 'Training').length },
     { name: 'Project Management', count: itServices.filter(s => s.category === 'Project Management').length }
   ];
-=======
       icon: Settings,
       title: 'DevOps & CI/CD',
       price: '$1,199/month',
@@ -260,11 +255,9 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <Navigation />
-<<<<<<< HEAD
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -303,7 +296,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
       
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -349,7 +341,6 @@ const ITServicesPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                         {feature}
                       </li>
                     ))}
@@ -361,7 +352,6 @@ const ITServicesPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-<<<<<<< HEAD
                 {service.benefits && (
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
@@ -431,7 +421,6 @@ const ITServicesPage: React.FC = () => {
             </a>
           </div>
         </section>
-=======
               ))}
             </div>
           </section>
@@ -460,7 +449,6 @@ const ITServicesPage: React.FC = () => {
             </div>
           </section>
         </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
       </main>
       <Footer />
     </div>
