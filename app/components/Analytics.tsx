@@ -1,104 +1,35 @@
-'use client';
 import React, { useEffect } from 'react';
 
-interface AnalyticsProps {/* TODO: Fix JSX expression */}
+interface AnalyticsProps {
+  trackingId?: string;
+  children?: React.ReactNode;
 }
 
-const,
-  Analytics: React.FC<AnalyticsProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enablePerformanceMonitoring) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableErrorTracking) {/* TODO: Fix JSX expression */}
-    }
-    
-    if (enableUserBehaviorTracking) {/* TODO: Fix JSX expression */}
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
+const Analytics: React.FC<AnalyticsProps> = ({ 
+  trackingId = 'G-XXXXXXXXXX', 
+  children 
+}) => {
+  useEffect(() => {
+    // Initialize Google Analytics
+    if (typeof window !== 'undefined' && trackingId) {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
 
-  const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
-    }
-    (window as any).gtag = gtag;
-    
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
-    });
-  };
-
-  const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-            }
-          }
-        }
-      });
-
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      // Monitor page load time;
-      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-        }
-      });
-    }
-  };
-
-  const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
-      });
-    });
-
-    // Track unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
-
-    // Track resource loading errors;
-    window.addEventListener('error', (event) => {/* TODO: Fix JSX expression */}
-        });
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
       }
-    }, true);
-  };
-
-  const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
-    });
-
-    // Track scroll depth;
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
-        }
-      }
-    });
-
-    // Track time on page;
-    const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
-    });
-
-    // Track clicks on important elements;
-    document.addEventListener('click', (event) => {/* TODO: Fix JSX expression */}
-        });
-      } else if (tagName === 'button') {/* TODO: Fix JSX expression */}
-        });
-      }
-    });
-
-    // Track form submissions;
-    document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
-      });
-    });
-  };
-
-  const trackEvent = (categor,
-  y: string, actio,)
-  n: string, value?: any) => {/* TODO: Fix JSX expression */}
-      });
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', trackingId);
     }
-  };
+  }, [trackingId]);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default Analytics;

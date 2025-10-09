@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Users, Award, Target, Globe, Brain, Cloud, Shield, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Header />
         
         <main className="pt-24">
           {/* Hero Section */}

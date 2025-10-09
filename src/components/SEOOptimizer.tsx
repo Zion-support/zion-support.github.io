@@ -1,155 +1,242 @@
-
-
 'use client';
+
+
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  titl,
-  e: string;,
-    descriptio,
-  n: string;,
-    keyword,
-  s: string[];,
-    canonicalUr,
-  l: string;
-  structuredData?: object;
-  ogImage?: string;
-  twitterCard?: string;
 }
 
-const SEOOptimizer: React.FC;
-          <SEOOptimizerProps> = memo(({// TODO: Add content;}
-}
+const,
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+    }
+    
+    // Add breadcrumb structured data;
+    addBreadcrumbStructuredData();
+    
+    // Add FAQ structured data;
+    addFAQStructuredData();
+    
+    // Add organization structured data;
+    addOrganizationStructuredData();
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-const SEOOptimizer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-//   structuredData,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  twitterCard = 'summary_large_image',
+  const updateMetaTag = (nam,
+  e: string, conten,
+  t: string, attribut,)
+  e: string = 'name') => {/* TODO: Fix JSX expression */}
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+    if (!meta) {/* TODO: Fix JSX expression */}
+    }
+    meta.setAttribute('content', content);
+  };
 
-}) => {useEffect(() => {}
-  // TOD,
-  O: Add content;
-}
-    // Update document title;
-    document.title = fullTitle;
-    // Update meta description;
-const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      metaDescription.setAttribute('content', description);
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
+  const updateCanonicalUrl = (ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
     }
-    // Update meta keywords;"
-const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
+    canonical.setAttribute('href', url);
+  };
+
+  const addStructuredData = (dat,)
+  a: any) => {/* TODO: Fix JSX expression */}
     }
-    // Update canonical URL;"
-let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      canonical.setAttribute('href', canonicalUrl);
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      canonical.href = canonicalUrl;
-      document.head.appendChild(canonical);
-    }
-    // Update Open Graph tags;
-const updateMetaProperty = (propert,
-  y: string, conten,)
-  t: string) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}"
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        meta.setAttribute('content', content);
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        meta.content = content;
-        document.head.appendChild(meta);
-      }
+    document.head.appendChild(script);
+  };
+
+  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+        }
+      ]
     };
-    updateMetaProperty('o,)
-  g:title', fullTitle);
-    updateMetaProperty('o,)
-  g:description', description);
-    updateMetaProperty('o,)
-  g:url', canonicalUrl);
-    updateMetaProperty('o,)
-  g:image', ogImage);
-    updateMetaProperty('o,)
-  g:type', 'website');
-    // Update Twitter Card tags;
-const updateMetaName = (nam,
-  e: string, conten,)
-  t: string) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}"`
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (meta) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        meta.setAttribute('content', content);
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        meta.content = content;
-        document.head.appendChild(meta);
-      }
-    };
-    updateMetaName('twitte,)
-  r:card', twitterCard);
-    updateMetaName('twitte,)
-  r:title', fullTitle);
-    updateMetaName('twitte,)
-  r:description', description);
-    updateMetaName('twitte,)
-  r:image', ogImage);
-    // Add structured data;
-    if (structuredData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(breadcrumbData);
+    script.id = 'breadcrumb-structured-data';
+    // Remove existing breadcrumb data;
+    const existing = document.getElementById('breadcrumb-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
     }
-  }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
-  return null;
+    document.head.appendChild(script);
+  };
+
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        },
+        {/* TODO: Fix JSX expression */}
+          }
+        }
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(faqData);
+    script.id = 'faq-structured-data';
+    // Remove existing FAQ data;
+    const existing = document.getElementById('faq-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+    }
+    document.head.appendChild(script);
+  };
+
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+      },
+      'address': {/* TODO: Fix JSX expression */}
+      },
+      'sameAs': [
+        'http,
+  s://twitter.com/ziontechgroup',
+        'http,
+  s://linkedin.com/company/ziontechgroup'
+      ]
+    };
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(organizationData);
+    script.id = 'organization-structured-data';
+    // Remove existing organization data;
+    const existing = document.getElementById('organization-structured-data');
+    if (existing) {/* TODO: Fix JSX expression */}
+
+    }
+  };
+
+  const mergedSEOData = { ...defaultSEOData, ...seoData };
+
+  useEffect(() => {
+    // Log SEO optimization
+    logger.info('SEO optimization applied', { 
+      page, 
+      title: mergedSEOData.title,
+      description: mergedSEOData.description 
+    });
+
+    // Track page view for analytics
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: mergedSEOData.title,
+        page_location: mergedSEOData.canonical,
+        custom_map: {
+          page_type: page
+        }
+      });
+    }
+  }, [mergedSEOData, page]);
+
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{mergedSEOData.title}</title>
+      <meta name="description" content={mergedSEOData.description} />
+      <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta name="color-scheme" content="dark light" />
+
+      {/* Canonical URL */}
+      <link rel="canonical" href={mergedSEOData.canonical} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={mergedSEOData.ogType} />
+      <meta property="og:url" content={mergedSEOData.canonical} />
+      <meta property="og:title" content={mergedSEOData.title} />
+      <meta property="og:description" content={mergedSEOData.description} />
+      <meta property="og:image" content={mergedSEOData.ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content={mergedSEOData.twitterCard} />
+      <meta property="twitter:url" content={mergedSEOData.canonical} />
+      <meta property="twitter:title" content={mergedSEOData.title} />
+      <meta property="twitter:description" content={mergedSEOData.description} />
+      <meta property="twitter:image" content={mergedSEOData.ogImage} />
+      <meta property="twitter:creator" content="@ziontechgroup" />
+      <meta property="twitter:site" content="@ziontechgroup" />
+
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+
+      {/* Favicon */}
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
+
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(mergedSEOData.structuredData)}
+      </script>
+
+      {/* Additional structured data for services */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AI and IT Solutions',
+          provider: {
+            '@type': 'Organization',
+            name: 'Zion Tech Group'
+          },
+          description: mergedSEOData.description,
+          serviceType: 'Technology Services',
+          areaServed: 'United States',
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'AI and IT Services',
+            itemListElement: [
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'AI Solutions',
+                  description: 'Advanced artificial intelligence solutions'
+                }
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Cybersecurity',
+                  description: 'Comprehensive cybersecurity solutions'
+                }
+              },
+              {
+                '@type': 'Offer',
+                itemOffered: {
+                  '@type': 'Service',
+                  name: 'Cloud Infrastructure',
+                  description: 'Scalable cloud infrastructure solutions'
+                }
+              }
+            ]
+          }
+        })}
+      </script>
+    </Helmet>
+  );
 };
 
+
+SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
-
 
 

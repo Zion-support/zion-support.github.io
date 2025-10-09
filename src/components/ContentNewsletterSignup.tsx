@@ -1,13 +1,4 @@
-import React from 'react';
-
-
-interface ContentNewsletterSignupProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {/* TODO: Fix JSX expression */}
-      {/* Component content */}
-
-    </div>
-  );
-}
+'use client';
+import React, { useState } from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
+export default ContentNewsletterSignup;

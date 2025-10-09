@@ -6,6 +6,33 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+  // Ignore disabled directories
+  {
+    ignores: [
+      'admin-api-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
+      'automation_backup/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'dist/**',
+      'node_modules/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      '*.cjs',
+      '*.js.broken'
+    ],
+  },
   // Base JavaScript configuration
   {
     files: ['**/*.{js,jsx}'],

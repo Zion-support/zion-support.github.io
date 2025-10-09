@@ -1,303 +1,210 @@
-
-
 'use client';
+import React, { useEffect, useCallback, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOData {/* TODO: Fix JSX expression */}
+}
+
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: unknown;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  locale?: string;
-  alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
-  robots?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  breadcrumbs?: {/* TODO: Fix JSX expression */}
-  l: string }[];
-  faqData?: {/* TODO: Fix JSX expression */}
-  r: string }[];
-  organizationData?: unknown;
-  websiteData?: unknown;
 }
 
-const AdvancedSEOOptimizer: React.FC;
-          <AdvancedSEOOptimizerProps> = ({// TODO: Add content;}
-}
+const,
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+    }
 
-const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-//   structuredData,
-  author = 'Zion Tech Group',
-//   publishedTime,
-  modifiedTime = new Date().toISOString(),
-  section = 'Technology',
-  tags = [],
-  locale = 'en_US',
-  alternateLocales = [],
-  robots = 'index, follow',
-  noindex = false,
-  nofollow = false,
-  breadcrumbs = [],
-  faqData = [],
-//   organizationData,
-//   websiteData;
-}) => {// TODO: Add content;}
+    const baseStructuredData = {/* TODO: Fix JSX expression */}
+      },
+      addres,
+  s: {/* TODO: Fix JSX expression */}
+      },
+      ...seoData.structuredData,
+    };
 
-}
+    if (seoData.author) {/* TODO: Fix JSX expression */}
+      };
+    }
+
+    if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
+    }
+
+    if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
+    }
+
+    if (seoData.section) {/* TODO: Fix JSX expression */}
+    }
+
+    if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
+    }
+
+    return baseStructuredData;
+  }, [seoData, enableStructuredData]);
+
+  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+    }
+
+    return {/* TODO: Fix JSX expression */}
+      }))
+    };
+  }, [seoData, enableStructuredData]);
+
+  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+    }
+
+    return {/* TODO: Fix JSX expression */}
+        }
+      }))
+    };
+  }, [seoData, enableStructuredData]);
+
+  // Generate Open Graph data;
+  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
+    if (!enableOpenGraph) return {};
+
+    return {/* TODO: Fix JSX expression */}
+    };
+  }, [seoData, enableOpenGraph]);
+
+  // Generate Twitter Card data;
+  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
+    if (!enableTwitterCards) return {};
+
+    return {/* TODO: Fix JSX expression */}
+    };
+  }, [seoData, enableTwitterCards]);
+
+  // Generate meta tags;
+  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
+  t: seoData.description },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.keywords.join(', ') },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.author || 'Zion Tech Group' },
+      {/* TODO: Fix JSX expression */}
+  t: seoData.robots || 'index, follow' },
+      {/* TODO: Fix JSX expression */}
+  t: 'width=device-width, initial-scale=1.0' },
+      {/* TODO: Fix JSX expression */}
+  t: '#3B82F6' },
+      {/* TODO: Fix JSX expression */}
+  t: '#3B82F6' },
+      {/* TODO: Fix JSX expression */}
+  t: '/browserconfig.xml' },
+    ];
+    return metaTags;
+  }, [seoData]);
+
+  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+    }
+
+    return {/* TODO: Fix JSX expression */}
+      }))
+    };
+  }, [seoData.breadcrumbs]);
+
+  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+    }
+
+    return {/* TODO: Fix JSX expression */}
+        }
+      }))
+    };
+  }, [seoData.faqs]);
+
+  const structuredData = generateStructuredData();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
+  const metaTags = generateMetaTags();
+
   useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Update page title;
-    document.title = title;
-    // Update meta description;
-    updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords.join(', '));
-    updateMetaTag('author', author);
-    updateMetaTag('robots', noindex ? 'noindex' : robots);
-    // Update Open Graph tags;
-    updateMetaTag('o,)
-  g:title', title, 'property');
-    updateMetaTag('o,)
-  g:description', description, 'property');
-    updateMetaTag('o,)
-  g:image', ogImage, 'property');
-    updateMetaTag('o,)
-  g:url', canonicalUrl, 'property');
-    updateMetaTag('o,)
-  g:type', 'website', 'property');
-    updateMetaTag('o,)
-  g:site_name', 'Zion Tech Group', 'property');
-    updateMetaTag('o,)
-  g:locale', locale, 'property');
-    if (publishedTime) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      updateMetaTag('o,)
-  g:published_time', publishedTime, 'property');
+      }
+      metaDescription.setAttribute('content', seoData.description);
+
+      // Update canonical URL;
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {/* TODO: Fix JSX expression */}
+      }
+      canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-    if (modifiedTime) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      updateMetaTag('o,)
-  g:modified_time', modifiedTime, 'property');
-    }
-    if (section) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      updateMetaTag('o,)
-  g:section', section, 'property');
-    }
-    if (tags.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      updateMetaTag('o,)
-  g:tag', tags.join(', '), 'property');
-    }
-    // Update Twitter tags;
-    updateMetaTag('twitte,)
-  r:card', 'summary_large_image', 'name');
-    updateMetaTag('twitte,)
-  r:title', title, 'name');
-    updateMetaTag('twitte,)
-  r:description', description, 'name');
-    updateMetaTag('twitte,)
-  r:image', ogImage, 'name');
-    updateMetaTag('twitte,)
-  r:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitte,)
-  r:creator', '@ziontechgroup', 'name');
-    // Update canonical URL;
-    updateCanonicalUrl(canonicalUrl);
-    // Add alternate language links;
-    if (alternateLocales.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addAlternateLanguageLinks(alternateLocales);
-    }
-    // Add breadcrumbs structured data;
-    if (breadcrumbs.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addBreadcrumbStructuredData(breadcrumbs);
-    }
-    // Add FAQ structured data;
-    if (faqData.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addFAQStructuredData(faqData);
-    }
-    // Add organization structured data;
-    if (organizationData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addStructuredData(organizationData);
-    }
-    // Add website structured data;
-    if (websiteData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addStructuredData(websiteData);
-    }
-    // Add custom structured data;
-    if (structuredData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      addStructuredData(structuredData);
-    }
-    // Add additional SEO meta tags;
-}, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-    if (!meta) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.content = content;
-  };
-  const updateCanonicalUrl = (ur,)
-  l: string) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
-    }
-    canonical.href = url;
-  };
-  const addAlternateLanguageLinks = (locale,
-  s: {/* TODO: Fix JSX expression */})
-  l: string }[]) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    locales.forEach(({ locale, url }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      const link = document.createElement('link');
-      link.rel = 'alternate';
-      link.hreflang = locale;
-      link.href = url;
-      document.head.appendChild(link);
-    });
-  };
-  const addBreadcrumbStructuredData = (breadcrumb,
-  s: {/* TODO: Fix JSX expression */})
-  l: string }[]) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const breadcrumbData = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      '@context': 'http,
-  s://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElemen,
-  t: breadcrumbs.map((crumb, index) => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        '@type': 'ListItem',
-        positio,
-  n: index + 1,
-        nam,
-  e: crumb.name,
-        ite,
-  m: crumb.url;)
-      }))
-    };
-    addStructuredData(breadcrumbData);
-  };
-  const addFAQStructuredData = (faqDat,
-  a: {/* TODO: Fix JSX expression */})
-  r: string }[]) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const faqStructuredData = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      '@context': 'http,
-  s://schema.org',
-      '@type': 'FAQPage',
-      mainEntit,
-  y: faqData.map(faq => ({/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        '@type': 'Question',
-        nam,
-  e: faq.question,
-        acceptedAnswe,
-  r: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-          '@type': 'Answer',
-          tex,
-  t: faq.answer;
-        })
-      }))
-    };
-    addStructuredData(faqStructuredData);
-  };
+  }, [seoData]);
+
   const addStructuredData = (dat,)
-  a: any) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
+  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
+    }
+    
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
+    structuredDataRef.current = script;
   };
-  const addAdditionalSEOTags = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // Add viewport meta tag if not present;"
-if (!document.querySelector('meta[name="viewport"]')) {}
-      const viewport = document.createElement('meta');
-      viewport.name = 'viewport';
-      viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
-      document.head.appendChild(viewport);
+
+  useEffect(() => {/* TODO: Fix JSX expression */}
     }
-    // Add theme color;
-    updateMetaTag('theme-color', '#4f46e5');
-    updateMetaTag('msapplication-TileColor', '#4f46e5');
-    // Add mobile app meta tags;
-    updateMetaTag('mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-capable', 'yes');
-    updateMetaTag('apple-mobile-web-app-status-bar-style', 'default');
-    updateMetaTag('apple-mobile-web-app-title', 'Zion Tech Group');
-    // Add format detection;
-    updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
-    // Add referrer policy;
-    updateMetaTag('referrer', 'strict-origin-when-cross-origin');
-    // Add content security policy;"
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com; style-src 'self' 'unsafe-inline' http,
-  s://fonts.googleapis.com; img-src 'self' dat,
-  a: http,
-  s: blo,
-  b:; font-src 'self' http,
-  s://fonts.gstatic.com; connect-src 'self' http,")
-  s://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
-  };
-  return null;
+  }, [structuredData]);
+
+
+  useEffect(() => {/* TODO: Fix JSX expression */}
+          });
+        }
+      }
+    }
+  }, []);
+
+  return (<Helmet></Helmet>
+      {/* Basic Meta Tags */}
+      <title>{seoData.title}</title>
+      {/* TODO: Fix JSX expression */}
+        <meta key={index} name={tag.name} content={tag.content} /></meta>)
+      ))}
+
+      {/* Canonical URL */}
+      {/* TODO: Fix JSX expression */}"
+        <link rel="canonical" href={seoData.canonicalUrl} /></link>
+      )}
+
+      {/* Open Graph Tags */}
+      {/* TODO: Fix JSX expression */}
+        <meta key={property} property={property} content={content} /></meta>
+      ))}
+
+      {/* Twitter Card Tags */}
+      {/* TODO: Fix JSX expression */}
+        <meta key={name} name={name} content={content} /></meta>
+      ))}
+
+      {/* Additional SEO Tags */}"
+      <meta name="format-detection" content="telephone=no" /></meta>"
+      <meta name="mobile-web-app-capable" content="yes" /></meta>"
+      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+      {/* Favicon and Icons */}"
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
+      <link rel="manifest" href="/site.webmanifest" /></link>
+      {/* Preconnect to external domains */}"
+      <link rel="preconnect" href="http,"
+  s://fonts.googleapis.com" /></link>"
+      <link rel="preconnect" href="http,"
+  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+      <link rel="preconnect" href="http,"
+  s://www.google-analytics.com" /></link>"
+      <link rel="preconnect" href="http,"
+  s://www.googletagmanager.com" /></link>
+      {/* DNS Prefetch */}"
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
+    </Helmet>
+  );
 };
 
-export default AdvancedSEOOptimizer;"
 
+export default AdvancedSEOOptimizer;
+
+}"
 
 

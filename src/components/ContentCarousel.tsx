@@ -1,13 +1,3 @@
-import React from 'react';
-
-
-interface ContentCarouselProps {/* TODO: Fix JSX expression */}
-}
-
-const,
-  ContentCarousel: React.FC<ContentCarouselProps> = () => {/* TODO: Fix JSX expression */}
-      {/* Component content */}
-
-    </div>
-  );
-}
+import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+export default ContentCarousel;

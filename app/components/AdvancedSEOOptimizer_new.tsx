@@ -1,181 +1,170 @@
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOData {/* TODO: Fix JSX expression */}
+interface SEOData {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
 }
 
-interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface AdvancedSEOOptimizerProps {
+  seoData?: SEOData;
+  children?: React.ReactNode;
 }
 
-const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    }
-
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
-      },
-      addres,
-  s: {/* TODO: Fix JSX expression */}
-      },
-      ...seoData.structuredData,
-    };
-
-    if (seoData.author) {/* TODO: Fix JSX expression */}
-      };
-    }
-
-    if (seoData.publishedTime) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.modifiedTime) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.section) {/* TODO: Fix JSX expression */}
-    }
-
-    if (seoData.tags && seoData.tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
-
-    return baseStructuredData;
-  }, [seoData, enableStructuredData]);
-
-  // Generate Open Graph data;
-  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableOpenGraph) return {};
-
-    return {/* TODO: Fix JSX expression */}
-    };
-  }, [seoData, enableOpenGraph]);
-
-  // Generate Twitter Card data;
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
-    if (!enableTwitterCards) return {};
-
-    const faqData = {/* TODO: Fix JSX expression */}
-          },
-        },
-        {/* TODO: Fix JSX expression */}
-          },
-        },
-        {/* TODO: Fix JSX expression */}
-          },
-        },
-      ],
-    };
-  }, [seoData, enableTwitterCards]);
-
-  // Generate meta tags;
-  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
-  t: seoData.description },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.keywords.join(', ') },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.author || 'Zion Tech Group' },
-      {/* TODO: Fix JSX expression */}
-  t: seoData.robots || 'index, follow' },
-      {/* TODO: Fix JSX expression */}
-  t: 'width=device-width, initial-scale=1.0' },
-      {/* TODO: Fix JSX expression */}
-  t: '#3B82F6' },
-      {/* TODO: Fix JSX expression */}
-  t: '#3B82F6' },
-      {/* TODO: Fix JSX expression */}
-  t: '/browserconfig.xml' },
-    ];
-    return metaTags;
-  }, [seoData]);
-
-  const structuredData = generateStructuredData();
-  const openGraphData = generateOpenGraphData();
-  const twitterCardData = generateTwitterCardData();
-  const metaTags = generateMetaTags();
-
-  useEffect(() => {/* TODO: Fix JSX expression */}
-      }
-      metaDescription.setAttribute('content', seoData.description);
-
-      // Update canonical URL;
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {/* TODO: Fix JSX expression */}
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-    }
-  }, [seoData]);
-
-  const addStructuredData = (dat,)
-  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
-    }
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-    structuredDataRef.current = script;
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ 
+  seoData = {}, 
+  children 
+}) => {
+  const defaultSEO: SEOData = {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services for businesses worldwide.',
+    keywords: ['AI solutions', 'IT consulting', 'cloud infrastructure', 'cybersecurity', 'digital transformation'],
+    canonical: 'https://ziontechgroup.com',
+    ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+    ogDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
+    ogImage: 'https://ziontechgroup.com/og-image.jpg',
+    twitterCard: 'summary_large_image',
+    twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+    twitterDescription: 'Leading provider of AI-powered solutions, IT consulting, and innovative technology services.',
+    twitterImage: 'https://ziontechgroup.com/twitter-image.jpg'
   };
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
-    }
-  }, [structuredData]);
+  const mergedSEO = useMemo(() => ({ ...defaultSEO, ...seoData }), [defaultSEO, seoData]);
 
+  const generateStructuredData = useCallback(() => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: mergedSEO.description,
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        areaServed: 'US',
+        availableLanguage: 'English'
+      },
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup'
+      ]
+    };
+  }, [mergedSEO.description]);
 
-  useEffect(() => {/* TODO: Fix JSX expression */}
-          });
-        }
+  useEffect(() => {
+    // Update meta tags dynamically
+    const updateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = name;
+        document.head.appendChild(meta);
       }
+      meta.content = content;
+    };
+
+    const updatePropertyTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.content = content;
+    };
+
+    if (mergedSEO.title) {
+      document.title = mergedSEO.title;
     }
-  }, []);
+    if (mergedSEO.description) {
+      updateMetaTag('description', mergedSEO.description);
+    }
+    if (mergedSEO.keywords) {
+      updateMetaTag('keywords', mergedSEO.keywords.join(', '));
+    }
+    if (mergedSEO.canonical) {
+      let link = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+      if (!link) {
+        link = document.createElement('link');
+        link.rel = 'canonical';
+        document.head.appendChild(link);
+      }
+      link.href = mergedSEO.canonical;
+    }
 
-  return (<Helmet></Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
-      {/* TODO: Fix JSX expression */}
-        <meta key={index} name={tag.name} content={tag.content} /></meta>)
-      ))}
+    // Open Graph tags
+    if (mergedSEO.ogTitle) {
+      updatePropertyTag('og:title', mergedSEO.ogTitle);
+    }
+    if (mergedSEO.ogDescription) {
+      updatePropertyTag('og:description', mergedSEO.ogDescription);
+    }
+    if (mergedSEO.ogImage) {
+      updatePropertyTag('og:image', mergedSEO.ogImage);
+    }
 
-      {/* Canonical URL */}
-      {/* TODO: Fix JSX expression */}"
-        <link rel="canonical" href={seoData.canonicalUrl} /></link>
-      )}
+    // Twitter Card tags
+    if (mergedSEO.twitterCard) {
+      updateMetaTag('twitter:card', mergedSEO.twitterCard);
+    }
+    if (mergedSEO.twitterTitle) {
+      updateMetaTag('twitter:title', mergedSEO.twitterTitle);
+    }
+    if (mergedSEO.twitterDescription) {
+      updateMetaTag('twitter:description', mergedSEO.twitterDescription);
+    }
+    if (mergedSEO.twitterImage) {
+      updateMetaTag('twitter:image', mergedSEO.twitterImage);
+    }
 
-      {/* Open Graph Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={property} property={property} content={content} /></meta>
-      ))}
+    // Add structured data
+    const structuredData = generateStructuredData();
+    let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
+    if (!script) {
+      script = document.createElement('script');
+      script.type = 'application/ld+json';
+      document.head.appendChild(script);
+    }
+    script.textContent = JSON.stringify(structuredData);
+  }, [mergedSEO, generateStructuredData]);
 
-      {/* Twitter Card Tags */}
-      {/* TODO: Fix JSX expression */}
-        <meta key={name} name={name} content={content} /></meta>
-      ))}
-
-      {/* Additional SEO Tags */}"
-      <meta name="format-detection" content="telephone=no" /></meta>"
-      <meta name="mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
-      {/* Favicon and Icons */}"
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
-      <link rel="manifest" href="/site.webmanifest" /></link>
-      {/* Preconnect to external domains */}"
-      <link rel="preconnect" href="http,"
-  s://fonts.googleapis.com" /></link>"
-      <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>"
-      <link rel="preconnect" href="http,"
-  s://www.google-analytics.com" /></link>"
-      <link rel="preconnect" href="http,"
-  s://www.googletagmanager.com" /></link>
-      {/* DNS Prefetch */}"
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-    </Helmet>
+  return (
+    <>
+      <Helmet>
+        <title>{mergedSEO.title}</title>
+        <meta name="description" content={mergedSEO.description} />
+        {mergedSEO.keywords && (
+          <meta name="keywords" content={mergedSEO.keywords.join(', ')} />
+        )}
+        {mergedSEO.canonical && (
+          <link rel="canonical" href={mergedSEO.canonical} />
+        )}
+        <meta property="og:title" content={mergedSEO.ogTitle} />
+        <meta property="og:description" content={mergedSEO.ogDescription} />
+        <meta property="og:image" content={mergedSEO.ogImage} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content={mergedSEO.twitterCard} />
+        <meta name="twitter:title" content={mergedSEO.twitterTitle} />
+        <meta name="twitter:description" content={mergedSEO.twitterDescription} />
+        <meta name="twitter:image" content={mergedSEO.twitterImage} />
+        <script type="application/ld+json">
+          {JSON.stringify(generateStructuredData())}
+        </script>
+      </Helmet>
+      {children}
+    </>
   );
 };
 
 export default AdvancedSEOOptimizer;
-"
