@@ -1,21 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { Link } from 'react-router-dom';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -169,6 +156,9 @@ console.log(result.predictions);`,
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Navigation />
+      
+      <main>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +206,7 @@ console.log(result.predictions);`,
                 Sign up for an account and get your API key from the dashboard.
               </p>
               <Link 
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
               >
                 Get API Key
@@ -232,7 +222,7 @@ console.log(result.predictions);`,
                 Use our REST API or SDKs to make your first API call.
               </p>
               <Link 
-                to="#examples"
+                href="#examples"
                 className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
               >
                 View Examples
@@ -248,7 +238,7 @@ console.log(result.predictions);`,
                 Integrate AI into your applications and scale with confidence.
               </p>
               <Link 
-                to="/docs"
+                href="/docs"
                 className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
               >
                 Full Documentation
@@ -313,56 +303,6 @@ console.log(result.predictions);`,
             ))}
           </div>
         </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                All API requests require authentication using your API key. Include it in the Authorization header:
-              </p>
-              <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
-              </code>
-            </div>
-            
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
-                API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:dev@ziontechgroup.com"
-              className="cyber-button"
-            >
-              Email Support
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button"
-            >
-              Contact Us
-            </a>
-          </div>
-
-        </section>
-      </main>
-      
-      <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
-        </div>
-      </section>
 
       {/* SDK Examples */}
       <section id="examples" className="py-16 bg-white">
@@ -493,13 +433,13 @@ console.log(result.predictions);`,
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get API Key
             </Link>
             <Link 
-              to="/docs"
+              href="/docs"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Full Docs
@@ -507,9 +447,11 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
+      </main>
+      
+      <Footer />
     </div>
   );
 };
 
 export default ApiDocsPage;
- cursor/analyze-improve-and-deploy-application-cde4

@@ -39,21 +39,9 @@ const SystemStatusPage: React.FC = () => {
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
-
-
     </div>
   );
 };
 
 export default SystemStatusPage;
-
-
-=======
-      </div>    </div>
-  );
-};
-
-export default SystemStatusPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-03be

@@ -298,18 +298,8 @@ const DocsPage: React.FC = () => {
           </p>
         </div>
       </section>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be
     </div>
   );
 };
 
 export default DocsPage;
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be

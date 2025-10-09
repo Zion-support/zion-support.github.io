@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Star, Shield, Zap, Globe, Link, Coins, Database, Brain } from 'lucide-react';
 
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
@@ -137,7 +137,7 @@ const BlockchainWeb3Page: React.FC = () => {
     }
   ];
 
-  // const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">

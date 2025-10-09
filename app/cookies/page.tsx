@@ -236,17 +236,8 @@ const CookiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be
     </div>
   );
 };
 
 export default CookiesPage;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-03be

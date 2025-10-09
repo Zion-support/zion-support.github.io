@@ -137,7 +137,7 @@ const IoTEdgeComputingPage: React.FC = () => {
     }
   ];
 
-  const _categories = [...new Set(iotServices.map(service => service.category))];
+  const categories = [...new Set(iotServices.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
