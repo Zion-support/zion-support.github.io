@@ -3,7 +3,25 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+// import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+
+// Define PerformanceMetrics interface locally since the import path is incorrect
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  cacheHitRate: number;
+  lazyLoading: boolean;
+  firstContentfulPaint?: number;
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fmp?: number;
+  ttfb?: number;
+  memory?: number;
+}
 /**
  * Performance Observer Wrapper
  */
