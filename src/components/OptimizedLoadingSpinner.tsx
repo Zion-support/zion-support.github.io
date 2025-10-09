@@ -64,7 +64,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         case 'pulse':
           return (
             <div
-              className={`${baseClasses} rounded-full animate-pulse`}
+              className={`${_baseClasses} rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'
             />
@@ -104,7 +104,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
         default:
           return (
             <div
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+              className={`${_baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'
             />
@@ -114,7 +114,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
     const containerClasses = useMemo(() => {
       const _baseClasses = 'flex items-center justify-center';
       const _fullScreenClasses = fullScreen ? 'min-h-screen' : '';
-      return `${baseClasses} ${fullScreenClasses} ${className}`;
+      return `${_baseClasses} ${_fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
     return (
       <div className={containerClasses}>

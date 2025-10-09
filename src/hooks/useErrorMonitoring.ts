@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useCallback } from 'react';
-import { useAnalytics } from '../components/AnalyticsProvider';
+// import { useAnalytics } from '../components/AnalyticsProvider';
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
 declare global {
@@ -9,29 +9,30 @@ declare global {
   }
 }
 export const useErrorMonitoring = () => {
-  const { trackError } = useAnalytics();
+  // const { trackError } = useAnalytics();
   const reportError = useCallback(
     (error: Error, context?: string) => {
-      trackError(error, context);
+      console.error('Error reported:', error, context);
+      // trackError(error, context);
     },
-    [trackError]
+    []
   );
   useEffect(() => {
     // Global error handler
     const handleError = (event: unknown) => {
       const _errorEvent = event as { message: string; error?: Error };
-      const _error = new Error(errorEvent.message);
-      error.stack = errorEvent.error?.stack;
-      reportError(error, 'global_error');
+      const _error = new Error(_errorEvent.message);
+      _error.stack = _errorEvent.error?.stack;
+      reportError(_error, 'global_error');
     };
     // Unhandled promise rejection handler
     const handleUnhandledRejection = (event: unknown) => {
       const _rejectionEvent = event as { reason: unknown };
-      const error =
-        rejectionEvent.reason instanceof Error
-          ? rejectionEvent.reason
-          : new Error(String(rejectionEvent.reason));
-      reportError(error, 'unhandled_promise_rejection');
+      const _error =
+        _rejectionEvent.reason instanceof Error
+          ? _rejectionEvent.reason
+          : new Error(String(_rejectionEvent.reason));
+      reportError(_error, 'unhandled_promise_rejection');
     };
     // React error boundary handler (if available)
     const handleReactError = (error: Error, errorInfo: unknown) => {

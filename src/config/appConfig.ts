@@ -68,7 +68,7 @@ const config: AppConfig = {
 export function getConfig<T = unknown>(keyPath: string): T {
   const _keys = keyPath.split('.');
   let value: unknown = config;
-  for (const key of keys) {
+  for (const key of _keys) {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {

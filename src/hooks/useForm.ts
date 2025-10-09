@@ -49,10 +49,10 @@ export function useForm<T extends Record<string, unknown>>({
       if (!validationSchema[field]) return;
       const _fieldValue = values[field];
       const _rules = validationSchema[field];
-      const _result = validateField(fieldValue, rules);
+      const _result = validateField(_fieldValue, _rules);
       setErrors(prev => ({
         ...prev,
-        [field]: result.errors
+        [field]: _result.errors
       }));
     },
     [values, validationSchema]

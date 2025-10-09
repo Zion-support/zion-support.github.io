@@ -22,8 +22,8 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   const _mountTimeRef = useRef<number>(0);
   const _renderCountRef = useRef<number>(0);
   useEffect(() => {
-    mountTimeRef.current = performance.now();
-    renderCountRef.current = 0;
+    _mountTimeRef.current = performance.now();
+    _renderCountRef.current = 0;
     // Track component mount
     if (trackAnalytics) {
       analytics.trackCustomEvent('Component', 'Mounted', component);
@@ -31,14 +31,14 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     return () => {
       // Track component unmount duration
       if (trackPerformance) {
-        const _duration = performance.now() - mountTimeRef.current;
-        if (duration > 5000) {
+        const _duration = performance.now() - _mountTimeRef.current;
+        if (_duration > 5000) {
           // Long-lived component
           analytics.trackCustomEvent(
             'Performance',
             'Long Component Lifetime',
             component,
-            Math.round(duration)
+            Math.round(_duration)
           );
         }
       }
@@ -50,14 +50,14 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   }, [component, trackAnalytics, trackPerformance]);
   // Track render performance
   useEffect(() => {
-    renderCountRef.current++;
-    if (trackPerformance && renderCountRef.current > 10) {
+    _renderCountRef.current++;
+    if (trackPerformance && _renderCountRef.current > 10) {
       // Many re-renders detected
       analytics.trackCustomEvent(
         'Performance',
         'High Render Count',
         component,
-        renderCountRef.current
+        _renderCountRef.current
       );
     }
   });
@@ -86,15 +86,15 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       const _startTime = performance.now();
       return {
         end: () => {
-          const _duration = performance.now() - startTime;
+          const _duration = performance.now() - _startTime;
           if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast'
+              _duration,
+              _duration > 1000 ? 'slow' : 'fast'
             );
           }
-          return duration;
+          return _duration;
         }
       };
     },
