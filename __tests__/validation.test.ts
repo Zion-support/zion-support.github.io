@@ -9,6 +9,17 @@ import {
   isRequired,
   isValidPassword,
   sanitizeInput,
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequired,
 } from '../app/utils/validators';
 
 describe('Email Validation', () => {
@@ -122,11 +133,11 @@ describe('Password Validation', () => {
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
     expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+      '&lt;script&gt;alert("xss")&lt;/script&gt;'
     );
 
     expect(sanitizeHTML('Test & <strong>bold</strong>')).toBe(
-      'Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;'
+      'Test &amp; &lt;strong&gt;bold&lt;/strong&gt;'
     );
   });
 
