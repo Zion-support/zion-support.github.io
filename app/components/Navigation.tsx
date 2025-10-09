@@ -2,10 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -47,193 +44,6 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
-<<<<<<< HEAD
-
-  const serviceCategories = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100',
-      services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
-        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
-        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
-        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-<<<<<<< HEAD
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
-=======
-        { name: 'Machine Learning Models', path: '/machine-learning-models', description: 'Custom ML development' },
-        { name: 'Computer Vision', path: '/computer-vision', description: 'Image recognition & analysis' },
-        { name: 'Natural Language Processing', path: '/natural-language-processing', description: 'Text & language AI' },
-        { name: 'AI Chatbots & Virtual Assistants', path: '/ai-chatbots-virtual-assistants', description: 'Conversational AI' },
-        { name: 'Predictive Analytics', path: '/predictive-analytics', description: 'Forecasting & modeling' },
-        { name: 'AI Recommendation Engines', path: '/ai-recommendation-engines', description: 'Personalized suggestions' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
-      services: [
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-<<<<<<< HEAD
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
-        { name: 'Database Management', path: '/database-management', description: 'Database management' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-administration', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-<<<<<<< HEAD
-        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
-        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
-        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
-=======
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a268
-=======
-        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
-        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
-        { name: 'Database Management', path: '/database-management', description: 'Database optimization' },
-        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking' },
-        { name: 'Mobile App Development', path: '/mobile-app-development', description: 'Native & cross-platform' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support-maintenance', description: '24/7 technical support' },
-        { name: 'System Integration', path: '/system-integration', description: 'API & system integration' },
-        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale solutions' },
-        { name: 'Identity & Access Management', path: '/identity-access-management', description: 'Security & access control' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
-        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
-        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100',
-      services: [
-<<<<<<< HEAD
-        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
-        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
-        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-=======
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Content creation suite' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app builder' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
-        { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
-        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
-        { name: 'AI Financial Planner', path: '/ai-financial-planner', description: 'Financial planning & analysis' },
-        { name: 'AI Health Tracker', path: '/ai-health-tracker', description: 'Personal health monitoring' },
-        { name: 'AI Learning Platform', path: '/ai-learning-platform', description: 'Personalized learning' },
-        { name: 'AI Code Generator', path: '/ai-code-generator', description: 'AI-assisted coding' },
-        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Automated video production' },
-        { name: 'AI Music Composer', path: '/ai-music-composer', description: 'AI music generation' },
-        { name: 'AI App Builder', path: '/ai-app-builder', description: 'Native app development' },
-        { name: 'AI Market Research', path: '/ai-market-research', description: 'Automated market analysis' },
-        { name: 'AI Store Optimizer', path: '/ai-store-optimizer', description: 'E-commerce optimization' },
-        { name: 'AI Data Pipeline', path: '/ai-data-pipeline', description: 'Automated data processing' },
-        { name: 'AI A/B Testing', path: '/ai-ab-testing', description: 'Intelligent testing' },
-        { name: 'AI Website Builder', path: '/ai-website-builder', description: 'AI website creation' },
-        { name: 'AI Live Chat', path: '/ai-live-chat', description: 'Intelligent customer chat' },
-        { name: 'AI Growth Hacker', path: '/ai-growth-hacker', description: 'Automated growth strategies' },
-        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-90b3
-      ]
-    },
-    {
-      title: 'Emerging Tech',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
-        { name: 'Robotics & Automation', path: '/robotics-automation', description: 'Intelligent robotics' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'Biotech AI', path: '/biotech-ai', description: 'AI-powered biotechnology' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-driving & drones' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' }
-      ]
-    }
-=======
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen);
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
@@ -292,7 +102,6 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
   ];
 
   return (
@@ -310,18 +119,6 @@ const Navigation: React.FC = () => {
           </Link>
 
 <<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-            </Link>
-
-            {/* Services Dropdown */}
-            <div className="relative">
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -426,7 +223,6 @@ const Navigation: React.FC = () => {
 
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
                 className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
