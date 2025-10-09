@@ -1,5 +1,10 @@
 
+import React, { Suspense, memo, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 // Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -170,17 +175,10 @@ export default function App() {
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-slate-900">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={
-                  <>
-                    <UnifiedContentPromotion />
-                    <InteractiveAIROICalculator />
-                    <ContentShowcase />
-                    <InteractiveContentShowcase2026 />
-                  </>
-                } />
+                <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/pricing" element={<PricingPage />} />
