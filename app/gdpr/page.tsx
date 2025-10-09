@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
 import Link from 'next/link';
 import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
 
@@ -233,8 +230,4 @@ const GdprPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default GdprPage;
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4

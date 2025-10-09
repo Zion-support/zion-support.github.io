@@ -113,11 +113,11 @@ const EnterpriseTransformationPage: React.FC = () => {
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <Link href="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Transformation Assessment
                 </Link>
-                <Link to="/services"
+                <Link href="/services"
                   className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
                 </Link>

@@ -182,7 +182,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                   >
                     <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -204,7 +204,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.url}
+                    href={service.url}
                     className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
                   >
                     <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
@@ -241,7 +241,7 @@ const Footer: React.FC = memo(() => {
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>
@@ -256,7 +256,7 @@ const Footer: React.FC = memo(() => {
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>
@@ -271,7 +271,7 @@ const Footer: React.FC = memo(() => {
               {legal.map((link, index) => (
                 <li key={index}>
                   <Link
-                    to={link.url}
+                    href={link.url}
                     className="text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group flex items-center"
                   >
                     <span>{link.name}</span>

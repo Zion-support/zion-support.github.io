@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
 import Link from 'next/link';
 import { ArrowLeft, Shield, Lock, Eye, CheckCircle, AlertTriangle, FileText, Users } from 'lucide-react';
 
@@ -100,15 +97,10 @@ const SecurityPage: React.FC = () => {
       title: 'Business Continuity Plan',
       description: 'Disaster recovery and business continuity procedures',
       lastUpdated: '2024-08-15'
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
-
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <section className="bg-white shadow-sm border-b">
@@ -191,9 +183,6 @@ const SecurityPage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-
         </div>
       </section>
 
@@ -343,8 +332,4 @@ const SecurityPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default SecurityPage;
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4

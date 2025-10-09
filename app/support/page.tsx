@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 
 import React, { useState } from 'react';
@@ -125,15 +123,10 @@ const SupportPage: React.FC = () => {
       description: 'Real-time status of all our services',
       icon: CheckCircle,
       link: '/status'
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
-
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -304,8 +297,4 @@ const SupportPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default SupportPage;
-
->>>>>>> cursor/analyze-improve-and-deploy-application-cde4
