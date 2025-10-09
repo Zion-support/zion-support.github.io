@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Award, MessageSquare, Palette, Search, Mail as MailIcon, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2 } from 'lucide-react';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -90,6 +94,7 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
+<<<<<<< HEAD
         { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
         { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
         { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
@@ -106,6 +111,16 @@ const Navigation: React.FC = () => {
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions', icon: Shield },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights', icon: BarChart3 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+        { name: 'AI Voice Cloning', path: '/ai-voice-cloning', description: 'AI voice synthesis' },
+        { name: 'AI Video Generation', path: '/ai-video-generation', description: 'AI video creation' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation', description: 'AI 3D modeling' },
+        { name: 'AI Fashion Design', path: '/ai-fashion-design', description: 'AI fashion solutions' },
+        { name: 'AI Music Composition', path: '/ai-music-composition', description: 'AI music creation' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
+        { name: 'AI Fitness Coach', path: '/ai-fitness-coach', description: 'AI fitness training' },
+        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'AI email management' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -118,6 +133,7 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
+<<<<<<< HEAD
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
         { name: 'Cloud Migration', path: '/cloud-migration', description: 'Cloud migration & setup' },
         { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'DevOps automation' },
@@ -142,6 +158,26 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights', icon: BarChart },
         { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance solutions', icon: CheckSquare }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+        { name: 'Cybersecurity Suite', path: '/cybersecurity-suite', description: 'Advanced security solutions' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+        { name: 'DevOps & CI/CD', path: '/devops-cicd', description: 'Development operations' },
+        { name: 'Database Management', path: '/database-management', description: 'Database optimization' },
+        { name: 'Network Solutions', path: '/network-solutions', description: 'Enterprise networking' },
+        { name: 'Mobile App Development', path: '/mobile-app-development', description: 'Native & cross-platform' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'IT Support & Maintenance', path: '/it-support-maintenance', description: '24/7 technical support' },
+        { name: 'System Integration', path: '/system-integration', description: 'API & system integration' },
+        { name: 'Data Backup & Recovery', path: '/data-backup-recovery', description: 'Disaster recovery' },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale solutions' },
+        { name: 'Identity & Access Management', path: '/identity-access-management', description: 'Security & access control' },
+        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System tuning' },
+        { name: 'Global IT Services', path: '/global-it-services', description: 'Worldwide IT support' },
+        { name: 'IT Training & Certification', path: '/it-training-certification', description: 'Professional development' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud infrastructure' },
+        { name: 'Networking', path: '/networking', description: 'Network infrastructure' },
+        { name: 'Security', path: '/security', description: 'Security solutions' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -151,6 +187,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
@@ -175,6 +212,53 @@ const Navigation: React.FC = () => {
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
         { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
+=======
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ AI-powered tools' },
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Business intelligence' },
+        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Content creation suite' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'Drag-and-drop app builder' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
+        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Social media automation' },
+        { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant', description: 'E-commerce optimization' },
+        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
+        { name: 'AI Design Studio', path: '/ai-design-studio', description: 'AI-powered design tools' },
+        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
+        { name: 'AI Financial Planner', path: '/ai-financial-planner', description: 'Financial planning & analysis' },
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI writing tools' },
+        { name: 'AI Code Generator', path: '/ai-code-generator', description: 'AI-assisted coding' },
+        { name: 'AI Video Creator', path: '/ai-video-creator', description: 'Automated video production' },
+        { name: 'AI Music Composer', path: '/ai-music-composition', description: 'AI music generation' },
+        { name: 'AI App Builder', path: '/ai-app-builder', description: 'Native app development' },
+        { name: 'AI Market Research', path: '/ai-market-research', description: 'Automated market analysis' },
+        { name: 'AI Store Optimizer', path: '/ai-store-optimizer', description: 'E-commerce optimization' },
+        { name: 'AI Data Pipeline', path: '/ai-data-pipeline', description: 'Automated data processing' },
+        { name: 'AI A/B Testing', path: '/ai-ab-testing', description: 'Intelligent testing' },
+        { name: 'AI Website Builder', path: '/ai-website-builder', description: 'AI website creation' },
+        { name: 'AI Live Chat', path: '/ai-live-chat', description: 'Intelligent customer chat' },
+        { name: 'AI Growth Hacker', path: '/ai-growth-hacker', description: 'Automated growth strategies' },
+        { name: 'AI Password Manager', path: '/ai-password-manager', description: 'Secure password management' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
+        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
+        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' },
+        { name: 'AI Health Tracker', path: '/ai-health-tracker', description: 'Personal health monitoring' },
+        { name: 'AI Learning Platform', path: '/ai-learning-platform', description: 'Personalized learning' },
+        { name: 'AI Task Manager Pro', path: '/task-manager-pro', description: 'Intelligent task management' },
+        { name: 'AI Expense Tracker', path: '/expense-tracker', description: 'Smart expense management' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
+        { name: 'AI Business Apps', path: '/business-apps', description: 'Business applications' },
+        { name: 'AI Productivity Tools', path: '/productivity', description: 'Productivity suite' },
+        { name: 'AI Marketing Tools', path: '/marketing-tools', description: 'Marketing suite' },
+        { name: 'AI Developer Tools', path: '/developer-tools', description: 'Development tools' },
+        { name: 'AI Analytics Tools', path: '/analytics-tools', description: 'Analytics suite' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
       ]
     },
     {
@@ -198,6 +282,7 @@ const Navigation: React.FC = () => {
         { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
+<<<<<<< HEAD
 =======
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-generation quantum algorithms', icon: '⚛️' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖' },
@@ -218,6 +303,8 @@ const Navigation: React.FC = () => {
     { name: 'Blog', path: '/blog', icon: '📝' },
     { name: 'Contact', path: '/contact', icon: '📞' }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   ];
 
   return (
@@ -239,7 +326,6 @@ const Navigation: React.FC = () => {
             </div>
           </Link>
 
-<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -283,11 +369,17 @@ const Navigation: React.FC = () => {
                 <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
               </button>
+<<<<<<< HEAD
               
               <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                 <div className="p-6">
                   <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
                   <div className="grid grid-cols-2 gap-4">
+=======
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex items-center space-x-2 mb-2">
@@ -296,7 +388,7 @@ const Navigation: React.FC = () => {
                         </div>
 <<<<<<< HEAD
                         <div className="space-y-2">
-                          {category.services.slice(0, 5).map((service, serviceIndex) => (
+                          {category.services.slice(0, 6).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
@@ -309,7 +401,7 @@ const Navigation: React.FC = () => {
                               </div>
                             </Link>
                           ))}
-                          {category.services.length > 5 && (
+                          {category.services.length > 6 && (
                             <Link
                               href={`/${category.title.toLowerCase().replace(' ', '-')}`}
                               className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
@@ -444,10 +536,13 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             </div>
           </div>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
@@ -512,6 +607,7 @@ const Navigation: React.FC = () => {
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </a>
+<<<<<<< HEAD
 =======
               {/* Services */}
               <div className="space-y-4">
@@ -568,6 +664,8 @@ const Navigation: React.FC = () => {
                 </a>
               </div>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
             </div>
           </div>
         )}
@@ -577,7 +675,11 @@ const Navigation: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 =======
 export default Navigation;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+export default Navigation;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7

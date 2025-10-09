@@ -19,6 +19,9 @@ const Footer: React.FC = memo(() => {
 
   const aiServices = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -34,6 +37,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
+<<<<<<< HEAD
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
     { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
@@ -41,11 +45,17 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
     { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+=======
+    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
+    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
+<<<<<<< HEAD
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
@@ -67,6 +77,29 @@ const Footer: React.FC = memo(() => {
     { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent CRM with AI insights' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
     { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
+=======
+    { name: 'Cybersecurity Suite', url: '/cybersecurity-suite', description: 'Advanced security solutions' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Development operations' },
+    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
+    { name: 'Network Solutions', url: '/network-solutions', description: 'Enterprise networking' },
+    { name: 'Mobile App Development', url: '/mobile-app-development', description: 'Native & cross-platform' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
+    { name: 'IT Support & Maintenance', url: '/it-support-maintenance', description: '24/7 technical support' },
+    { name: 'System Integration', url: '/system-integration', description: 'API & system integration' },
+    { name: 'Data Backup & Recovery', url: '/data-backup-recovery', description: 'Disaster recovery' },
+    { name: 'Enterprise Solutions', url: '/enterprise-solutions', description: 'Large-scale solutions' },
+    { name: 'Identity & Access Management', url: '/identity-access-management', description: 'Security & access control' },
+    { name: 'Performance Optimization', url: '/performance-optimization', description: 'System tuning' },
+    { name: 'Global IT Services', url: '/global-it-services', description: 'Worldwide IT support' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '100+ AI-powered tools' },
+    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
+    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Content creation suite' },
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
     { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
@@ -94,6 +127,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
+<<<<<<< HEAD
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
@@ -132,6 +166,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent robotics', icon: '🦾' },
     { name: 'Business Apps', url: '/business-apps', description: 'Custom applications', icon: '📱' }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+    { name: 'Biotech AI', url: '/biotech-ai', description: 'AI-powered biotechnology' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-driving & drones' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
+    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
   ];
 
   const companyLinks = [
@@ -299,9 +339,15 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
+=======
+            <h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3>
+            <ul className="space-y-3">
+              {itServices.slice(0, 8).map((service, index) => (
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
                 <li key={index}>
                   <Link 
                     href={service.url}
@@ -319,6 +365,7 @@ const Footer: React.FC = memo(() => {
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All IT Services →
+<<<<<<< HEAD
 =======
             <h4 className="text-lg font-semibold text-white mb-6 neon-text flex items-center">
               <Zap className="w-5 h-5 mr-2 text-cyan-400" />
@@ -395,10 +442,16 @@ const Footer: React.FC = memo(() => {
                 </div>
               </div>
             </div>
+=======
+                </a>
+              </li>
+            </ul>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
           </div>
 <<<<<<< HEAD
         </div>
 
+<<<<<<< HEAD
         {/* Contact Information */}
         <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
           <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
@@ -431,6 +484,33 @@ const Footer: React.FC = memo(() => {
                 <div className="text-gray-400 text-sm">Business hours</div>
               </div>
             </div>
+=======
+          {/* Micro SAAS & Emerging Tech */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS & Emerging Tech</h3>
+            <ul className="space-y-3">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href={service.url}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                </li>
+              ))}
+              <li>
+                <a 
+                  href="/micro-saas"
+                  className="text-green-400 hover:text-green-300 transition-colors duration-200 text-sm font-medium"
+                >
+                  View All Micro SAAS →
+                </a>
+              </li>
+            </ul>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
           </div>
         </div>
 
@@ -469,10 +549,23 @@ const Footer: React.FC = memo(() => {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
+<<<<<<< HEAD
               <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
               <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
               <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
+=======
+              {emergingTech.map((tech, index) => (
+                <li key={index}>
+                  <a 
+                    href={tech.url}
+                    className="text-gray-300 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                  >
+                    {tech.name}
+                  </a>
+                </li>
+              ))}
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
             </ul>
           </div>
           <div>
@@ -544,6 +637,7 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Bottom Bar */}
 <<<<<<< HEAD
       <div className="border-t border-gray-700/50">
@@ -570,6 +664,15 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
+=======
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-700 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved. | 
+              <span className="ml-2">Transforming businesses with cutting-edge technology</span>
+            </div>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -579,11 +682,14 @@ const Footer: React.FC = memo(() => {
                 <Award className="w-4 h-4 text-yellow-400" />
                 <span>ISO 27001 Certified</span>
               </div>
+<<<<<<< HEAD
               <div className="flex items-center space-x-2">
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
               </div>
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
             </div>
           </div>
         </div>
