@@ -112,7 +112,7 @@ export default function BlogPost() {
               </p>
               <div className="space-x-4">
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors">
                   Get Optimization Assessment
                 </a>

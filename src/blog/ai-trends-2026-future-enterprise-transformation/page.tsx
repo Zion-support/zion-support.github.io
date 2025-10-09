@@ -108,7 +108,7 @@ export default function AITrends2026FutureEnterpriseTransformation() {
               </p>
               <div className="space-x-4">
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
                   Get 2026 AI Assessment
                 </a>

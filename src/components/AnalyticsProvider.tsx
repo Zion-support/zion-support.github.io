@@ -1,9 +1,11 @@
 'use client';
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
+    const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
     const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
@@ -39,7 +41,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         const target = e.target as HTMLElement;
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
+          const href = (target as HTMLAnchorElement).href || '';
           if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'click', {
               event_category: 'engagement',
@@ -73,6 +75,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         }
       });
     };
+    
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
     // Initialize analytics
     initAnalytics();
     trackPageView();

@@ -145,7 +145,7 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
                     <div className="flex items-center justify-between">
                       <Link 
-                        href="/contact"
+                        to="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
                       >
                         Learn More

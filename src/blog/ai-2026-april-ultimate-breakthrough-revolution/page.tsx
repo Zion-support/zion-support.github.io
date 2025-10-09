@@ -94,7 +94,7 @@ export default function April2026UltimateBreakthroughRevolution() {
               </p>
               <div className="space-x-4">
                 <a 
-                  href="/contact"
+                  to="/contact"
                   className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
                   Get Universal Intelligence Assessment
                 </a>

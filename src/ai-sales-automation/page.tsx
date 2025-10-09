@@ -32,6 +32,29 @@ const AISalesAutomationPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      icon: 'Target',
+      title: 'Lead Generation',
+      description: 'Automatically identify and qualify high-value prospects using AI-powered lead scoring.'
+    },
+    {
+      icon: 'Zap',
+      title: 'Email Automation',
+      description: 'Send personalized, timely emails that convert prospects into customers.'
+    },
+    {
+      icon: 'BarChart',
+      title: 'Sales Forecasting',
+      description: 'Predict sales outcomes and optimize your pipeline with machine learning.'
+    },
+    {
+      icon: 'Users',
+      title: 'Customer Retention',
+      description: 'Identify at-risk customers and implement retention strategies automatically.'
+    }
+  ];
+
   const pricing = [
     {
       name: 'Starter',
