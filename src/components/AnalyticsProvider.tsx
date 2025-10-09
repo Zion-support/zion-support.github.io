@@ -107,9 +107,7 @@ export const useAnalytics = () => {
       (window as any).gtag('event', 'performance_metric', {
         event_category: 'performance',
         event_label: metricName,
-        value: Math.round(value),
-        metric_name: metricName,
-        metric_value: value
+        value: value
       });
     }
   };
