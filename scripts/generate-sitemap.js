@@ -1,1 +1,190 @@
-// #!/usr/bin/env node /** * Sitemap Generator for Zion Tech Group Website * * This script generates a comprehensive sitemap.xml file * including all pages, blog posts, and services. */ import fs from 'fs'' import path from 'path' ' const baseUrl = 'https: //zion.app'' const currentDate = new Date().toISOString().split('T')[0], // Define all static pages const staticPages = [ { url: `${baseUrl}/`, lastmod: currentDate,' changefreq: 'daily', priority: 1.0 }, { url: `${baseUrl}/services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.9 }, { url: `${baseUrl}/services/ai-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/micro-saas`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/it-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/blog`, lastmod: currentDate,' changefreq: 'daily', priority: 0.8 }, { url: `${baseUrl}/case-studies`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/testimonials`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/pricing`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/contact`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/about`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/tools`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/resources`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Blog posts from content files const blogPosts = [ { url: `${baseUrl}/blog/genai-telemetry-observability-2025`,' lastmod: '2025-09-29',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/feature-flags-at-the-edge-2025`,' lastmod: '2025-09-28',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/ai-product-readiness-checks`,' lastmod: '2025-09-27',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/real-time-data-pipelines`,' lastmod: '2025-09-26',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/platform-scorecards-that-stick`,' lastmod: '2025-09-25',' changefreq: 'monthly', priority: 0.7 } ]; // Service-specific pages const servicePages = [ { url: `${baseUrl}/services/ai-autonomous-operations`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/services/enterprise-ai-solutions`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Combine all pages const allPages = [...staticPages, ...blogPosts, ...servicePages]; // Generate sitemap XML function generateSitemapXML() { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"> ${allPages.map(page => ` <url> <loc>${page.url}</loc> <lastmod>${page.lastmod}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> <mobile:mobile/>' </url>`).join('\n')} </urlset>`; return sitemap; } // Generate robots.txt function generateRobotsTxt() { return `User-agent: * Allow: / # Sitemap Sitemap: ${baseUrl}/sitemap.xml # Disallow admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /private/ Disallow: /tmp/ # Allow search engines to crawl static assets Allow: /images/ Allow: /css/ Allow: /js/ Allow: /fonts/ Allow: /assets/ # Crawl delay for respectful crawling Crawl-delay: 1 # Host directive Host: ${baseUrl}`; } // Main function function generateSitemap() {' try { // Ensure public directory exists' const publicDir = path.join(process.cwd(), 'public')} if (!fs.existsSync(publicDir)) { fs.mkdirSync(publicDir} { recursive: true }); } // Generate and save sitemap.xml const sitemapXML = generateSitemapXML();' const sitemapPath = path.join(publicDir) 'sitemap.xml');' fs.writeFileSync(sitemapPath, sitemapXML) 'utf8');' // Generate and save robots.txt const robotsTxt = generateRobotsTxt(),' const robotsPath = path.join(publicDir) 'robots.txt');' fs.writeFileSync(robotsPath, robotsTxt) 'utf8');' // console.log('✅ Robots.txt generated: public/robots.txt'), // Generate sitemap index for multiple sitemaps (future use) const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?> <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <sitemap> <loc>${baseUrl}/sitemap.xml</loc> <lastmod>${currentDate}</lastmod> </sitemap> </sitemapindex>`; ' const sitemapIndexPath = path.join(publicDir) 'sitemap-index.xml');' fs.writeFileSync(sitemapIndexPath, sitemapIndex) 'utf8');' // console.log(`\\n📊 Sitemap Statistics:`), ' ' ' ' ' ' // console.log('4. Monitor sitemap indexing status in search consoles'), } catch (error) {' process.exit(1); } } // Run if called directly if (import.meta.url === `file://${process.argv[1]}`) {generateSitemap()} } export {generateSitemap, generateSitemapXML, generateRobotsTxt, staticPages, blogPosts} servicePages };'
+#!/usr/bin/env node
+
+/**
+ * Sitemap Generator for Zion Tech Group
+ * Generates a comprehensive sitemap.xml file
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const BASE_URL = 'https://ziontechgroup.com';
+const SITEMAP_PATH = path.join(__dirname, '../public/sitemap.xml');
+
+// Define all the pages and their priorities
+const pages = [
+  // Main pages
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/about', priority: '0.9', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.9', changefreq: 'monthly' },
+  { url: '/services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/pricing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/blog', priority: '0.8', changefreq: 'daily' },
+  { url: '/case-studies', priority: '0.7', changefreq: 'monthly' },
+  { url: '/careers', priority: '0.6', changefreq: 'weekly' },
+  { url: '/team', priority: '0.6', changefreq: 'monthly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/cookies', priority: '0.3', changefreq: 'yearly' },
+  { url: '/gdpr', priority: '0.3', changefreq: 'yearly' },
+  
+  // AI Services
+  { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/ai-analytics-dashboard', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-chatbot-builder', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-content-generation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-crm', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-customer-support', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-cybersecurity', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-data-analytics', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-data-visualization', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-document-processing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-ecommerce-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-email-assistant', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-fintech', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-healthcare', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-lead-generation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-marketing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-mobile-app-development', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-sales-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-scheduler', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-workflow-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-writing-assistant', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-project-manager', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-social-media-manager', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-email-marketing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-customer-support-bot', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-seo-optimizer', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-financial-analyzer', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-video-generation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-voice-cloning', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-music-composition', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-fashion-design', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-fitness-coach', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-3d-generation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/machine-learning', priority: '0.8', changefreq: 'weekly' },
+  { url: '/nlp', priority: '0.8', changefreq: 'weekly' },
+  { url: '/computer-vision', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/quantum-ai', priority: '0.8', changefreq: 'weekly' },
+  
+  // IT Services
+  { url: '/it-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/cloud-services', priority: '0.8', changefreq: 'weekly' },
+  { url: '/cybersecurity', priority: '0.8', changefreq: 'weekly' },
+  { url: '/devops', priority: '0.8', changefreq: 'weekly' },
+  { url: '/database-services', priority: '0.8', changefreq: 'weekly' },
+  { url: '/network-infrastructure', priority: '0.8', changefreq: 'weekly' },
+  { url: '/it-support', priority: '0.8', changefreq: 'weekly' },
+  { url: '/it-consulting', priority: '0.8', changefreq: 'weekly' },
+  { url: '/cloud-migration', priority: '0.8', changefreq: 'weekly' },
+  { url: '/compliance', priority: '0.7', changefreq: 'monthly' },
+  { url: '/developer-tools', priority: '0.7', changefreq: 'weekly' },
+  { url: '/marketing-tools', priority: '0.7', changefreq: 'weekly' },
+  { url: '/productivity', priority: '0.7', changefreq: 'weekly' },
+  { url: '/business-intelligence', priority: '0.8', changefreq: 'weekly' },
+  { url: '/analytics-tools', priority: '0.7', changefreq: 'weekly' },
+  { url: '/api', priority: '0.7', changefreq: 'weekly' },
+  { url: '/api-docs', priority: '0.7', changefreq: 'weekly' },
+  { url: '/autonomous-systems', priority: '0.8', changefreq: 'weekly' },
+  { url: '/blockchain', priority: '0.8', changefreq: 'weekly' },
+  { url: '/blockchain-web3', priority: '0.8', changefreq: 'weekly' },
+  { url: '/business-apps', priority: '0.7', changefreq: 'weekly' },
+  { url: '/database', priority: '0.7', changefreq: 'weekly' },
+  { url: '/demo', priority: '0.6', changefreq: 'monthly' },
+  { url: '/docs', priority: '0.7', changefreq: 'weekly' },
+  { url: '/enterprise', priority: '0.8', changefreq: 'weekly' },
+  { url: '/expense-tracker', priority: '0.6', changefreq: 'monthly' },
+  { url: '/iot-edge-computing', priority: '0.7', changefreq: 'weekly' },
+  { url: '/iot-edge', priority: '0.7', changefreq: 'weekly' },
+  { url: '/it-infrastructure', priority: '0.8', changefreq: 'weekly' },
+  { url: '/micro-saas', priority: '0.7', changefreq: 'weekly' },
+  { url: '/networking', priority: '0.7', changefreq: 'weekly' },
+  { url: '/news', priority: '0.6', changefreq: 'daily' },
+  { url: '/offline', priority: '0.3', changefreq: 'yearly' },
+  { url: '/quantum-computing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/robotics', priority: '0.8', changefreq: 'weekly' },
+  { url: '/security', priority: '0.8', changefreq: 'weekly' },
+  { url: '/services-advertising', priority: '0.6', changefreq: 'monthly' },
+  { url: '/sitemap', priority: '0.3', changefreq: 'daily' },
+  { url: '/smart-analytics', priority: '0.7', changefreq: 'weekly' },
+  { url: '/status', priority: '0.5', changefreq: 'daily' },
+  { url: '/support', priority: '0.7', changefreq: 'weekly' },
+  { url: '/system-status', priority: '0.5', changefreq: 'daily' },
+  { url: '/task-manager-pro', priority: '0.6', changefreq: 'monthly' },
+  
+  // Blog posts
+  { url: '/blog/agent-release-runbooks-v2-2026', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2025-2026-mega-trends-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2025-january-advanced-ai-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2025-january-cutting-edge-trends-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2025-march-autonomous-enterprise-operations-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2025-sept-30-operational-trust-scorecards-v3', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-adaptive-neural-architectures-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-advanced-neural-optimization-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-april-revolutionary-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-april-ultimate-breakthrough-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-autonomous-agent-factories', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-autonomous-business-intelligence-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-autonomous-business-intelligence-mega-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-autonomous-enterprise-architecture', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-autonomous-enterprise-automation-mega-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-consensus-intelligence-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-enterprise-automation-revolutionary-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-enterprise-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-february-mega-breakthrough-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-february-ultimate-consciousness-breakthrough', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-2026-hyperconscious-computing-revolution', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-autonomous-business-systems-2026', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-cost-optimization-breakthrough-2026', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-enterprise-transformation-2025', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-enterprise-transformation-ultimate-guide-2025', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-innovation-labs-product-development-2025', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-powered-autonomous-business-processes-2026', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog/ai-trends-2026-future-enterprise-transformation', priority: '0.7', changefreq: 'monthly' }
+];
+
+// Generate sitemap XML
+function generateSitemap() {
+  const currentDate = new Date().toISOString();
+  
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+`;
+
+  pages.forEach(page => {
+    sitemap += `  <url>
+    <loc>${BASE_URL}${page.url}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>
+`;
+  });
+
+  sitemap += `</urlset>`;
+
+  return sitemap;
+}
+
+// Write sitemap to file
+function writeSitemap() {
+  try {
+    const sitemap = generateSitemap();
+    fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
+    console.log(`✅ Sitemap generated successfully at ${SITEMAP_PATH}`);
+    console.log(`📊 Total pages: ${pages.length}`);
+  } catch (error) {
+    console.error('❌ Error generating sitemap:', error);
+    process.exit(1);
+  }
+}
+
+// Run the generator
+writeSitemap();

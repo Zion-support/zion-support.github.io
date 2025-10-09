@@ -40,9 +40,46 @@ class ErrorBoundary extends Component<Props, State> {
       (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
+        error_boundary: true,
+        component_stack: errorInfo.componentStack
       });
     }
+
+    // Send error to error reporting service
+    this.reportError(error, errorInfo);
   }
+
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      // In a real application, you would send this to your error reporting service
+      // For now, we'll just log it and store it in localStorage for debugging
+      const errorReport = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href
+      };
+
+      // Store error in localStorage for debugging
+      const existingErrors = JSON.parse(localStorage.getItem('errorReports') || '[]');
+      existingErrors.push(errorReport);
+      localStorage.setItem('errorReports', JSON.stringify(existingErrors.slice(-10))); // Keep only last 10 errors
+
+      // In production, you would send this to your error reporting service
+      if (process.env.NODE_ENV === 'production') {
+        // Example: Send to Sentry, LogRocket, or your custom error service
+        // await fetch('/api/errors', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify(errorReport)
+        // });
+      }
+    } catch (reportingError) {
+      console.error('Failed to report error:', reportingError);
+    }
+  };
 
   render() {
     if (this.state.hasError) {

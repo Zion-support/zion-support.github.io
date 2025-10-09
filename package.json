@@ -96,7 +96,9 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "preview:build": "npm run build && npm run preview",
     "clean:build": "rm -rf dist && npm run build",
-    "deploy:ready": "npm run build && npm run test:unit && echo 'Ready for deployment'"
+    "deploy:ready": "npm run build && npm run test:unit && echo 'Ready for deployment'",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "build:with-sitemap": "npm run generate:sitemap && npm run build"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
