@@ -107,18 +107,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
-        { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project management with AI automation' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media with AI content creation' },
+        { name: 'AI Email Marketing Pro', path: '/ai-email-marketing', description: 'AI-powered email campaigns and personalization' },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-chatbot', description: '24/7 intelligent customer support chatbot' },
+        { name: 'AI Data Analytics Dashboard', path: '/ai-data-analytics-dashboard', description: 'AI-powered analytics and insights platform' },
+        { name: 'AI CRM System', path: '/ai-crm', description: 'Intelligent customer relationship management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Real-time business intelligence with AI' },
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI-powered content creation and editing' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent appointment and meeting scheduling' },
+        { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'Automated lead generation and qualification' },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document analysis and processing' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Smart business process automation' }
       ]
     },
     {
