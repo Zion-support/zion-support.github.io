@@ -74,7 +74,6 @@ const Navigation: React.FC = memo(() => {
       ]
     },
     {
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4059
       title: 'AI Services',
       icon: Brain,
       color: 'text-purple-400',
@@ -226,7 +225,6 @@ const Navigation: React.FC = memo(() => {
                         View All Services
                       </Link>
                     </div>
-                  </div>
                   </div>
                 </div>
               )}
