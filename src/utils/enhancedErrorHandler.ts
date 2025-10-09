@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 /**
  * Enhanced Error Handling System
  * Provides comprehensive error tracking, reporting, and recovery mechanisms

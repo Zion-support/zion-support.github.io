@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Heart, CreditCard, Music, GraduationCap } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Code, Users, Zap, Database, Settings } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -218,7 +218,7 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Link 
@@ -330,8 +330,8 @@ const Navigation: React.FC = () => {
                 className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
-                Case Studies
-              </Link>
+                (302) 464-0950
+              </a>
 
               <Link
                 to="/blog"

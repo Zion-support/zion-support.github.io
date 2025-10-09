@@ -24,7 +24,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   noindex = false,
   nofollow = false,
-  canonical,
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;

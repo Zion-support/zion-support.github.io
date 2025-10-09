@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle, Search, Phone, Mail, MessageSquare } from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

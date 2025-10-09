@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Globe, Headphones, Shield, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, BarChart, Settings, Code, Cloud, Users, Lock, Award } from 'lucide-react';
+import { Globe, Headphones, Shield, Zap, CheckCircle } from 'lucide-react';
 
 const GlobalITSupportPage: React.FC = () => {
   const features = [

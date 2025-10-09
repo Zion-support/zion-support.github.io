@@ -3,7 +3,6 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 export interface HealthStatus {

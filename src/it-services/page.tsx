@@ -1,4 +1,8 @@
 import React from 'react';
+import { Cloud, Shield, Database, BarChart, Users, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
@@ -179,8 +183,7 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
           {/* Contact Section */}
           <section className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -214,7 +217,6 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
     </>
   );
 };
