@@ -1,45 +1,42 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-// import { Helmet } from 'react-helmet-async';
-import { TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, { useState, useEffect } from 'react'
+// import { Helmet } from 'react-helmet-async'
+import { Phone } from 'lucide-react';
 
-const AISocialMediaManagerPage: React.FC = () => {
-  // const [isLoaded, setIsLoaded] = useState(false);
-
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const AISocialMediaManagerPage: React.FC = React.memo((props) => {
+  // const [isLoaded, setIsLoaded] = useState(false)
   // useEffect(() => {
-//     setIsLoaded(true);
-//   }, []);
-
+//     setIsLoaded(true);}
+//   }, [])
   const features = [
     {
       icon: Brain,
       title: 'AI Content Creation',
       description: 'Generate engaging posts, captions, and hashtags using advanced AI',
-      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']
+      benefits: ['10x faster content creation', 'Higher engagement rates', 'Brand voice consistency']}
     },
     {
       icon: Calendar,
       title: 'Smart Scheduling',
       description: 'AI-optimized posting times for maximum reach and engagement',
-      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']
+      benefits: ['40% more reach', 'Optimal timing', 'Cross-platform coordination']}
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics with AI-powered performance predictions',
-      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']
+      benefits: ['Real-time insights', 'ROI tracking', 'Growth predictions']}
     },
     {
       icon: Users,
       title: 'Audience Intelligence',
       description: 'AI-driven audience analysis and targeting recommendations',
-      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']
+      benefits: ['Better targeting', 'Audience growth', 'Engagement optimization']}
     }
-  ];
-
+  ]
   const platforms = [
     { name: 'Facebook', icon: '📘', features: ['Post scheduling', 'Story management', 'Ad integration'] },
     { name: 'Instagram', icon: '📷', features: ['Feed posts', 'Stories', 'Reels', 'IGTV'] },
@@ -47,8 +44,7 @@ const AISocialMediaManagerPage: React.FC = () => {
     { name: 'LinkedIn', icon: '💼', features: ['Professional posts', 'Company updates', 'B2B content'] },
     { name: 'TikTok', icon: '🎵', features: ['Video scheduling', 'Trend analysis', 'Hashtag optimization'] },
     { name: 'YouTube', icon: '📺', features: ['Video optimization', 'Thumbnail creation', 'SEO optimization'] }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -61,7 +57,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Standard analytics',
         'Email support'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
@@ -75,7 +71,7 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Team collaboration',
         'Priority support'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -90,31 +86,29 @@ const AISocialMediaManagerPage: React.FC = () => {
         'Dedicated support',
         'API access'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Jessica Martinez',
       role: 'Marketing Director, FashionBrand',
-      content: 'AI Social Media Manager increased our engagement by 200% and saved us 20 hours per week!',
-      rating: 5
+      content: 'AI Social Media Manager increased our engagement by 200% and saved us 20 hours per week as any',
+      rating: 5}
     },
     {
       name: 'David Kim',
       role: 'CEO, TechStartup',
       content: 'The AI content suggestions are spot-on. Our social media presence has never been stronger.',
-      rating: 5
+      rating: 5}
     },
     {
       name: 'Lisa Thompson',
       role: 'Social Media Manager, Agency',
-      content: 'Managing 20+ client accounts is now effortless with AI automation. Highly recommended!',
-      rating: 5
+      content: 'Managing 20+ client accounts is now effortless with AI automation. Highly recommended as any',
+      rating: 5}
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -145,13 +139,17 @@ const AISocialMediaManagerPage: React.FC = () => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Start Free Trial
+                ">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="
+                  Watch Demo
+                ">
                   Watch Demo
                 </a>
               </div>
@@ -199,7 +197,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-pink-400">
                         <Target className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -230,7 +228,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                 <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                   <div className="text-6xl mb-4">{platform.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{platform.name}</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2" role="list">
                     {platform.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300 flex items-center justify-center">
                         <Hash className="w-4 h-4 mr-2 text-pink-400" />
@@ -264,15 +262,15 @@ const AISocialMediaManagerPage: React.FC = () => {
                       <div className="bg-pink-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="text-4xl font-bold text-pink-400 mb-2">{plan.price}</div>
-                    <div className="text-gray-400">per month</div>
+                    <div className="text-gray-400" style={{ color: "#9CA3AF" }}>per month</div>
                   </div>
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-4 mb-8" role="list">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <Target className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -285,7 +283,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
                         ? 'bg-pink-400 text-slate-900 hover:bg-pink-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
+                        : 'bg-slate-700 text-white hover:bg-slate-600'`}
                     }`}
                   >
                     Get Started
@@ -340,7 +338,9 @@ const AISocialMediaManagerPage: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Social Media Manager Free Trial Request"
                 className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+               aria-label="
+                Start Free Trial
+              ">
                 Start Free Trial
               </a>
               <a
@@ -360,7 +360,6 @@ const AISocialMediaManagerPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default AISocialMediaManagerPage;
+  )
+}
+export default AISocialMediaManagerPage

@@ -1,18 +1,15 @@
-'use client';
-import React from 'react';
-import Head from 'react-helmet-async';
-
+'use client'
+import Head from 'react-helmet-async'
 interface SEOEnhancerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object;}
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
@@ -21,12 +18,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData}
 }) => {
   return (
-    <Head>
+    <Head>}
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{title} | Zion Tech Group - AI & IT Solutions</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
@@ -52,12 +49,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json">}
           {JSON.stringify(structuredData)}
         </script>
       )}
     </Head>
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer

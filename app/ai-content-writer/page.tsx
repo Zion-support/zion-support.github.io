@@ -1,15 +1,15 @@
 'use client';
-import React from 'react';
+import React, { lazy } from 'react';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
 
-const AIContentWriterPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const PerformanceOptimizer = lazy(() => import('../components/PerformanceOptimizer'))
+const AccessibilityEnhancer = lazy(() => import('../components/AccessibilityEnhancer'))
+const SecurityEnhancer = lazy(() => import('../components/SecurityEnhancer'))
+const Analytics = lazy(() => import('../components/Analytics'))
+const AIContentWriterPage: React.FC = React.memo(() => {
   const contentServices = [
     {
       title: 'Blog Writing',
@@ -73,10 +73,9 @@ const AIContentWriterPage: React.FC = () => {
       icon: TrendingUp,
       price: '$179/month',
       features: ['Keyword Research', 'On-Page SEO', 'Content Optimization', 'Ranking Tracking'],
-      color: 'text-red-400'
+      color: 'text-\w+-\d+'
     }
-  ];
-
+  ]
   const contentTypes = [
     {
       type: 'Blog Posts',
@@ -106,10 +105,9 @@ const AIContentWriterPage: React.FC = () => {
     {
       type: 'Technical Docs',
       description: 'API documentation, user guides, and manuals',
-      count: 'Unlimited'
-    }
-  ];
-
+        count: 'Unlimited'
+      }
+  ]
   return (
     <>
       <SEOOptimizer
@@ -141,7 +139,7 @@ const AIContentWriterPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -190,7 +188,7 @@ const AIContentWriterPage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
@@ -205,7 +203,9 @@ const AIContentWriterPage: React.FC = () => {
                     <a 
                       href="/contact" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
+                     aria-label="
+                      Get Started
+                    ">
                       Get Started
                     </a>
                   </div>
@@ -223,28 +223,28 @@ const AIContentWriterPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">1</span>
+                    <span className="text-2xl font-bold text-white"><span className="sr-only">Screen reader: </span>1</span>
                   </div>
                   <h3 className="text-lg font-semibold text-purple-400 mb-2">Research</h3>
                   <p className="text-gray-300 text-sm">We research your industry, competitors, and target audience to understand what content resonates.</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">2</span>
+                    <span className="text-2xl font-bold text-white"><span className="sr-only">Screen reader: </span>2</span>
                   </div>
                   <h3 className="text-lg font-semibold text-blue-400 mb-2">Strategy</h3>
                   <p className="text-gray-300 text-sm">We develop a content strategy that aligns with your business goals and SEO objectives.</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">3</span>
+                    <span className="text-2xl font-bold text-white"><span className="sr-only">Screen reader: </span>3</span>
                   </div>
                   <h3 className="text-lg font-semibold text-green-400 mb-2">Creation</h3>
                   <p className="text-gray-300 text-sm">Our AI creates high-quality, engaging content that matches your brand voice and style.</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">4</span>
+                    <span className="text-2xl font-bold text-white"><span className="sr-only">Screen reader: </span>4</span>
                   </div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-2">Optimization</h3>
                   <p className="text-gray-300 text-sm">We optimize content for SEO, readability, and conversion to maximize its impact.</p>
@@ -267,7 +267,9 @@ const AIContentWriterPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Start Creating Content
+                ">
                   Start Creating Content
                 </a>
                 <a
@@ -286,6 +288,6 @@ const AIContentWriterPage: React.FC = () => {
       </div>
     </>
   );
-};
+});
 
-export default AIContentWriterPage;
+  export default AIContentWriterPage;

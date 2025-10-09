@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
+'use client'
+import React, { lazy } from 'react'
 import { Code, Smartphone, Globe, Database, Zap, Shield, BarChart, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
 
-const WebDevelopmentPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const PerformanceOptimizer = lazy(() => import('../components/PerformanceOptimizer'))
+const AccessibilityEnhancer = lazy(() => import('../components/AccessibilityEnhancer'))
+const SecurityEnhancer = lazy(() => import('../components/SecurityEnhancer'))
+const Analytics = lazy(() => import('../components/Analytics'))
+const WebDevelopmentPage: React.FC = React.memo(() => {
   const webServices = [
     {
       title: 'Frontend Development',
@@ -73,10 +73,9 @@ const WebDevelopmentPage: React.FC = () => {
       icon: Users,
       price: '$500/month',
       features: ['24/7 Support', 'Regular Updates', 'Bug Fixes', 'Performance Monitoring'],
-      color: 'text-gray-400'
+      color: 'text-\w+-\d+'
     }
-  ];
-
+  ]
   return (
     <>
       <SEOOptimizer
@@ -108,7 +107,7 @@ const WebDevelopmentPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -138,7 +137,7 @@ const WebDevelopmentPage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
@@ -153,7 +152,9 @@ const WebDevelopmentPage: React.FC = () => {
                     <a 
                       href="/contact" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
+                     aria-label="
+                      Get Started
+                    ">
                       Get Started
                     </a>
                   </div>
@@ -171,7 +172,7 @@ const WebDevelopmentPage: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-cyan-400 mb-3">Frontend</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>React/Next.js</li>
                     <li>Vue.js/Angular</li>
                     <li>TypeScript</li>
@@ -180,7 +181,7 @@ const WebDevelopmentPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-purple-400 mb-3">Backend</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>Node.js/Python</li>
                     <li>Express.js/Django</li>
                     <li>PostgreSQL/MongoDB</li>
@@ -189,7 +190,7 @@ const WebDevelopmentPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-green-400 mb-3">Cloud</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>AWS/Azure/GCP</li>
                     <li>Docker/Kubernetes</li>
                     <li>CDN Services</li>
@@ -198,7 +199,7 @@ const WebDevelopmentPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="text-lg font-semibold text-orange-400 mb-3">Tools</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>Git/GitHub</li>
                     <li>Jest/Cypress</li>
                     <li>Webpack/Vite</li>
@@ -223,7 +224,9 @@ const WebDevelopmentPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Start Your Project
+                ">
                   Start Your Project
                 </a>
                 <a
@@ -241,7 +244,6 @@ const WebDevelopmentPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default WebDevelopmentPage;
+  )
+})
+  export default WebDevelopmentPage

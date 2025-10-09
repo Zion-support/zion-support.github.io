@@ -1,61 +1,50 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import SEOEnhancer from './components/SEOEnhancer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-import ErrorBoundary from './components/ErrorBoundary';
-import ServiceWorker from './components/ServiceWorker';
-import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
-
+'use client'
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import { Phone, Mail, MapPin, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, ArrowRight, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Music, Video, Stethoscope, Briefcase, Wrench, Navigation, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import PerformanceOptimizer from './components/PerformanceOptimizer'
+import SEOOptimizer from './components/SEOOptimizer'
+import SEOEnhancer from './components/SEOEnhancer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import Analytics from './components/Analytics'
+import SecurityEnhancer from './components/SecurityEnhancer'
+import ErrorBoundary from './components/ErrorBoundary'
+import ServiceWorker from './components/ServiceWorker'
+import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton'
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
+const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
+const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
 // Preload critical components
-const preloadComponents = () => {
+const preloadComponents = useCallback((...args) => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
     setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner')
+      import('./components/ContentCarousel');}
+    }, 100)
   }
-};
-
+}
 // Loading skeleton component - now imported from LoadingSkeleton.tsx
 
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
+const HomePage: React.FC = React.memo((props) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsLoaded(true);
+    setIsLoaded(true)
     // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
-    preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
-
+    preloadComponents()
+    return () => clearTimeout(timer);}
+  }, [])
   // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
+  
     }
-  }, []);
-
+  }, [])
   const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
@@ -66,7 +55,7 @@ const HomePage: React.FC = () => {
       benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity'}
     },
     {
       title: 'AI Social Media Manager',
@@ -77,7 +66,7 @@ const HomePage: React.FC = () => {
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing'}
     },
     {
       title: 'AI Analytics Dashboard',
@@ -88,7 +77,7 @@ const HomePage: React.FC = () => {
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', 'Faster decision making'],
       link: '/ai-analytics',
       popular: true,
-      category: 'Analytics'
+      category: 'Analytics'}
     },
     {
       title: 'AI Email Marketing Suite',
@@ -99,7 +88,7 @@ const HomePage: React.FC = () => {
       benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', 'Better deliverability'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing'}
     },
     {
       title: 'AI Customer Support Bot',
@@ -110,7 +99,7 @@ const HomePage: React.FC = () => {
       benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', 'Reduced support costs'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Customer Service'
+      category: 'Customer Service'}
     },
     {
       title: 'AI Code Review Assistant',
@@ -121,7 +110,7 @@ const HomePage: React.FC = () => {
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Faster development cycles'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'
+      category: 'Development'}
     },
     {
       title: 'AI Video Generator Pro',
@@ -132,7 +121,7 @@ const HomePage: React.FC = () => {
       benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports', 'Cost-effective production'],
       link: '/ai-video-generation',
       popular: true,
-      category: 'Content Creation'
+      category: 'Content Creation'}
     },
     {
       title: 'AI Voice Cloning Studio',
@@ -143,7 +132,7 @@ const HomePage: React.FC = () => {
       benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing', 'Natural intonation'],
       link: '/ai-voice-cloning',
       popular: false,
-      category: 'Content Creation'
+      category: 'Content Creation'}
     },
     {
       title: 'AI Workflow Automation',
@@ -154,7 +143,7 @@ const HomePage: React.FC = () => {
       benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring', 'Error reduction'],
       link: '/ai-workflow-automation',
       popular: true,
-      category: 'Automation'
+      category: 'Automation'}
     },
     {
       title: 'AI Fashion Design Studio',
@@ -165,7 +154,7 @@ const HomePage: React.FC = () => {
       benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity', 'Market insights'],
       link: '/ai-fashion-design',
       popular: false,
-      category: 'Design'
+      category: 'Design'}
     },
     {
       title: 'AI Music Composition Suite',
@@ -176,7 +165,7 @@ const HomePage: React.FC = () => {
       benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues', 'Custom branding'],
       link: '/ai-music-composition',
       popular: false,
-      category: 'Content Creation'
+      category: 'Content Creation'}
     },
     {
       title: 'AI Fitness Coach Pro',
@@ -187,7 +176,7 @@ const HomePage: React.FC = () => {
       benefits: ['Better results', 'Motivation boost', 'Flexible scheduling', 'Health insights'],
       link: '/ai-fitness-coach',
       popular: false,
-      category: 'Health & Wellness'
+      category: 'Health & Wellness'}
     },
     {
       title: 'AI Sales Automation Hub',
@@ -198,7 +187,7 @@ const HomePage: React.FC = () => {
       benefits: ['35% more leads', '50% conversion increase', '25% revenue growth', 'Better lead quality'],
       link: '/ai-sales-automation',
       popular: true,
-      category: 'Sales'
+      category: 'Sales'}
     },
     {
       title: 'AI Data Visualization Pro',
@@ -209,7 +198,7 @@ const HomePage: React.FC = () => {
       benefits: ['Faster insights', 'Better decisions', 'Stunning presentations', 'Data democratization'],
       link: '/ai-data-visualization',
       popular: false,
-      category: 'Analytics'
+      category: 'Analytics'}
     },
     {
       title: 'AI 3D Generation Studio',
@@ -220,7 +209,7 @@ const HomePage: React.FC = () => {
       benefits: ['Professional 3D content', 'Time savings', 'Creative freedom', 'Industry standards'],
       link: '/ai-3d-generation',
       popular: false,
-      category: 'Design'
+      category: 'Design'}
     },
     {
       title: 'AI Customer Support Pro',
@@ -231,7 +220,7 @@ const HomePage: React.FC = () => {
       benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability', 'Reduced workload'],
       link: '/ai-customer-support',
       popular: true,
-      category: 'Customer Service'
+      category: 'Customer Service'}
     },
     {
       title: 'AI Content Writer Pro',
@@ -242,7 +231,7 @@ const HomePage: React.FC = () => {
       benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency', 'Quality assurance'],
       link: '/ai-content-writer',
       popular: true,
-      category: 'Content Creation'
+      category: 'Content Creation'}
     },
     {
       title: 'AI Inventory Manager Pro',
@@ -253,7 +242,7 @@ const HomePage: React.FC = () => {
       benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts', 'Reduced carrying costs'],
       link: '/ai-inventory-manager',
       popular: false,
-      category: 'Operations'
+      category: 'Operations'}
     },
     {
       title: 'AI HR Assistant Pro',
@@ -264,7 +253,7 @@ const HomePage: React.FC = () => {
       benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias', 'Improved retention'],
       link: '/ai-hr-assistant',
       popular: false,
-      category: 'Human Resources'
+      category: 'Human Resources'}
     },
     {
       title: 'AI Financial Advisor Pro',
@@ -275,7 +264,7 @@ const HomePage: React.FC = () => {
       benefits: ['Better returns', 'Risk management', 'Tax savings', 'Financial security'],
       link: '/ai-financial-advisor',
       popular: false,
-      category: 'Finance'
+      category: 'Finance'}
     },
     {
       title: 'AI Legal Assistant Pro',
@@ -286,7 +275,7 @@ const HomePage: React.FC = () => {
       benefits: ['Faster reviews', 'Risk identification', 'Cost savings', 'Compliance assurance'],
       link: '/ai-legal-assistant',
       popular: false,
-      category: 'Legal'
+      category: 'Legal'}
     },
     {
       title: 'AI SEO Optimizer',
@@ -297,7 +286,7 @@ const HomePage: React.FC = () => {
       benefits: ['Higher rankings', 'More organic traffic', 'Better visibility', 'Competitive advantage'],
       link: '/ai-seo-optimizer',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing'}
     },
     {
       title: 'AI Translation Hub',
@@ -308,7 +297,7 @@ const HomePage: React.FC = () => {
       benefits: ['99% accuracy', 'Cultural sensitivity', 'Faster delivery', 'Cost effective'],
       link: '/ai-translation-hub',
       popular: false,
-      category: 'Communication'
+      category: 'Communication'}
     },
     {
       title: 'AI Security Monitor',
@@ -319,7 +308,7 @@ const HomePage: React.FC = () => {
       benefits: ['Proactive protection', 'Faster response', 'Compliance assurance', 'Risk reduction'],
       link: '/ai-security-monitor',
       popular: true,
-      category: 'Security'
+      category: 'Security'}
     },
     {
       title: 'AI E-commerce Optimizer',
@@ -330,10 +319,9 @@ const HomePage: React.FC = () => {
       benefits: ['Higher conversions', 'Increased revenue', 'Better customer experience', 'Data-driven decisions'],
       link: '/ai-ecommerce-optimizer',
       popular: true,
-      category: 'E-commerce'
+      category: 'E-commerce'}
     }
-  ];
-
+  ]
   const aiServices = [
     {
       title: 'Machine Learning Solutions',
@@ -342,7 +330,7 @@ const HomePage: React.FC = () => {
       price: '$1,500/month',
       features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization'],
       color: 'text-purple-400',
-      category: 'AI Development'
+      category: 'AI Development'}
     },
     {
       title: 'Natural Language Processing',
@@ -351,7 +339,7 @@ const HomePage: React.FC = () => {
       price: '$1,200/month',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development', 'Named Entity Recognition', 'Text Summarization'],
       color: 'text-blue-400',
-      category: 'Language AI'
+      category: 'Language AI'}
     },
     {
       title: 'Computer Vision',
@@ -360,7 +348,7 @@ const HomePage: React.FC = () => {
       price: '$1,800/month',
       features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'OCR Processing', 'Medical Imaging'],
       color: 'text-green-400',
-      category: 'Visual AI'
+      category: 'Visual AI'}
     },
     {
       title: 'AI Automation Suite',
@@ -369,7 +357,7 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling', 'RPA Integration', 'Smart Routing'],
       color: 'text-cyan-400',
-      category: 'Automation'
+      category: 'Automation'}
     },
     {
       title: 'AI Data Intelligence',
@@ -378,7 +366,7 @@ const HomePage: React.FC = () => {
       price: '$1,100/month',
       features: ['Interactive Dashboards', 'Real-time Visualization', 'Custom Charts', 'Data Storytelling', 'Predictive Modeling', 'Anomaly Detection'],
       color: 'text-orange-400',
-      category: 'Data Science'
+      category: 'Data Science'}
     },
     {
       title: 'AI 3D & AR Solutions',
@@ -387,7 +375,7 @@ const HomePage: React.FC = () => {
       price: '$1,600/month',
       features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support', 'Spatial Computing', 'Mixed Reality'],
       color: 'text-pink-400',
-      category: 'Immersive Tech'
+      category: 'Immersive Tech'}
     },
     {
       title: 'AI Voice & Audio',
@@ -396,7 +384,7 @@ const HomePage: React.FC = () => {
       price: '$1,300/month',
       features: ['Voice Cloning', 'Text-to-Speech', 'Emotion Control', 'Multi-language Support', 'Audio Enhancement', 'Voice Biometrics'],
       color: 'text-indigo-400',
-      category: 'Audio AI'
+      category: 'Audio AI'}
     },
     {
       title: 'AI Content Intelligence',
@@ -405,7 +393,7 @@ const HomePage: React.FC = () => {
       price: '$1,000/month',
       features: ['Blog Writing', 'Social Media Content', 'Email Campaigns', 'SEO Optimization', 'Content Strategy', 'Brand Voice Training'],
       color: 'text-yellow-400',
-      category: 'Content AI'
+      category: 'Content AI'}
     },
     {
       title: 'AI Predictive Analytics',
@@ -414,7 +402,7 @@ const HomePage: React.FC = () => {
       price: '$1,700/month',
       features: ['Sales Forecasting', 'Demand Prediction', 'Risk Assessment', 'Trend Analysis', 'Market Intelligence', 'Scenario Planning'],
       color: 'text-red-400',
-      category: 'Predictive AI'
+      category: 'Predictive AI'}
     },
     {
       title: 'AI Recommendation Engine',
@@ -423,7 +411,7 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing', 'Collaborative Filtering', 'Real-time Adaptation'],
       color: 'text-teal-400',
-      category: 'Personalization'
+      category: 'Personalization'}
     },
     {
       title: 'AI Security & Fraud Detection',
@@ -432,7 +420,7 @@ const HomePage: React.FC = () => {
       price: '$1,900/month',
       features: ['Real-time Detection', 'Pattern Recognition', 'Risk Scoring', 'Alert System', 'Threat Intelligence', 'Compliance Monitoring'],
       color: 'text-red-500',
-      category: 'Security AI'
+      category: 'Security AI'}
     },
     {
       title: 'AI Document Intelligence',
@@ -441,7 +429,7 @@ const HomePage: React.FC = () => {
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition', 'Contract Analysis', 'Knowledge Management'],
       color: 'text-gray-400',
-      category: 'Document AI'
+      category: 'Document AI'}
     },
     {
       title: 'AI Healthcare Solutions',
@@ -450,7 +438,7 @@ const HomePage: React.FC = () => {
       price: '$2,200/month',
       features: ['Medical Imaging', 'Diagnostic Support', 'Treatment Planning', 'Drug Discovery', 'Patient Monitoring', 'Clinical Decision Support'],
       color: 'text-emerald-400',
-      category: 'Healthcare AI'
+      category: 'Healthcare AI'}
     },
     {
       title: 'AI Financial Intelligence',
@@ -459,7 +447,7 @@ const HomePage: React.FC = () => {
       price: '$1,800/month',
       features: ['Algorithmic Trading', 'Risk Assessment', 'Portfolio Optimization', 'Fraud Detection', 'Credit Scoring', 'Market Analysis'],
       color: 'text-green-500',
-      category: 'FinTech AI'
+      category: 'FinTech AI'}
     },
     {
       title: 'AI Supply Chain Optimization',
@@ -468,7 +456,7 @@ const HomePage: React.FC = () => {
       price: '$1,600/month',
       features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Sustainability Tracking'],
       color: 'text-blue-500',
-      category: 'Supply Chain AI'
+      category: 'Supply Chain AI'}
     },
     {
       title: 'AI Energy Management',
@@ -477,10 +465,9 @@ const HomePage: React.FC = () => {
       price: '$1,500/month',
       features: ['Energy Optimization', 'Renewable Integration', 'Grid Management', 'Carbon Tracking', 'Predictive Maintenance', 'Smart Buildings'],
       color: 'text-yellow-500',
-      category: 'Energy AI'
+      category: 'Energy AI'}
     }
-  ];
-
+  ]
   const itServices = [
     {
       title: 'Cloud Migration & Management',
@@ -489,7 +476,7 @@ const HomePage: React.FC = () => {
       price: '$1,299/month',
       features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration', 'Multi-cloud Strategy', 'Disaster Recovery'],
       color: 'text-blue-400',
-      category: 'Cloud Computing'
+      category: 'Cloud Computing'}
     },
     {
       title: 'Cybersecurity Solutions',
@@ -498,7 +485,7 @@ const HomePage: React.FC = () => {
       price: '$1,599/month',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance Management', 'Penetration Testing'],
       color: 'text-red-400',
-      category: 'Security'
+      category: 'Security'}
     },
     {
       title: 'DevOps & CI/CD',
@@ -507,7 +494,7 @@ const HomePage: React.FC = () => {
       price: '$1,199/month',
       features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup', 'Infrastructure as Code', 'GitOps Implementation'],
       color: 'text-green-400',
-      category: 'DevOps'
+      category: 'DevOps'}
     },
     {
       title: 'Database Services',
@@ -516,7 +503,7 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Data Migration', 'Real-time Analytics'],
       color: 'text-purple-400',
-      category: 'Data Management'
+      category: 'Data Management'}
     },
     {
       title: 'IT Strategy & Consulting',
@@ -525,7 +512,7 @@ const HomePage: React.FC = () => {
       price: '$1,000/month',
       features: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Change Management', 'ROI Analysis'],
       color: 'text-yellow-400',
-      category: 'Consulting'
+      category: 'Consulting'}
     },
     {
       title: 'Network Infrastructure',
@@ -534,7 +521,7 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring', 'SD-WAN Solutions', 'Network Automation'],
       color: 'text-indigo-400',
-      category: 'Networking'
+      category: 'Networking'}
     },
     {
       title: 'Mobile App Development',
@@ -543,7 +530,7 @@ const HomePage: React.FC = () => {
       price: '$1,500/month',
       features: ['iOS/Android Apps', 'Cross-platform Development', 'UI/UX Design', 'App Store Optimization', 'Progressive Web Apps', 'Mobile Security'],
       color: 'text-pink-400',
-      category: 'Mobile Development'
+      category: 'Mobile Development'}
     },
     {
       title: 'Web Development',
@@ -552,7 +539,7 @@ const HomePage: React.FC = () => {
       price: '$1,200/month',
       features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization', 'Progressive Web Apps', 'Microservices Architecture'],
       color: 'text-cyan-400',
-      category: 'Web Development'
+      category: 'Web Development'}
     },
     {
       title: 'Data Analytics & BI',
@@ -561,7 +548,7 @@ const HomePage: React.FC = () => {
       price: '$1,300/month',
       features: ['Data Warehousing', 'Business Intelligence', 'Reporting Dashboards', 'Data Mining', 'Predictive Analytics', 'Data Visualization'],
       color: 'text-orange-400',
-      category: 'Data Analytics'
+      category: 'Data Analytics'}
     },
     {
       title: 'IT Support & Maintenance',
@@ -570,7 +557,7 @@ const HomePage: React.FC = () => {
       price: '$800/month',
       features: ['24/7 Support', 'System Maintenance', 'Software Updates', 'Hardware Management', 'Remote Monitoring', 'Help Desk Services'],
       color: 'text-gray-400',
-      category: 'Support'
+      category: 'Support'}
     },
     {
       title: 'Blockchain & Web3 Solutions',
@@ -579,7 +566,7 @@ const HomePage: React.FC = () => {
       price: '$2,000/month',
       features: ['Smart Contracts', 'DApp Development', 'Token Creation', 'DeFi Solutions', 'NFT Marketplaces', 'Web3 Integration'],
       color: 'text-yellow-500',
-      category: 'Blockchain'
+      category: 'Blockchain'}
     },
     {
       title: 'IoT & Edge Computing',
@@ -588,7 +575,7 @@ const HomePage: React.FC = () => {
       price: '$1,600/month',
       features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring', 'Edge Computing', 'IoT Security'],
       color: 'text-green-500',
-      category: 'IoT'
+      category: 'IoT'}
     },
     {
       title: 'AI Infrastructure',
@@ -597,7 +584,7 @@ const HomePage: React.FC = () => {
       price: '$1,800/month',
       features: ['GPU Cluster Setup', 'ML Platform Deployment', 'Model Serving', 'Data Pipeline Setup', 'AI Model Training', 'MLOps Implementation'],
       color: 'text-purple-500',
-      category: 'AI Infrastructure'
+      category: 'AI Infrastructure'}
     },
     {
       title: 'Enterprise Integration',
@@ -606,7 +593,7 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['API Development', 'System Integration', 'Legacy Modernization', 'Data Synchronization', 'Workflow Automation', 'Enterprise Architecture'],
       color: 'text-blue-500',
-      category: 'Integration'
+      category: 'Integration'}
     },
     {
       title: 'Disaster Recovery & Backup',
@@ -615,7 +602,7 @@ const HomePage: React.FC = () => {
       price: '$1,100/month',
       features: ['Backup Solutions', 'Disaster Recovery', 'Business Continuity', 'Data Replication', 'Recovery Testing', 'Compliance Backup'],
       color: 'text-red-500',
-      category: 'Data Protection'
+      category: 'Data Protection'}
     },
     {
       title: 'Compliance & Governance',
@@ -624,10 +611,9 @@ const HomePage: React.FC = () => {
       price: '$1,300/month',
       features: ['Compliance Management', 'Audit Preparation', 'Policy Development', 'Risk Assessment', 'Regulatory Reporting', 'Governance Framework'],
       color: 'text-indigo-500',
-      category: 'Compliance'
+      category: 'Compliance'}
     }
-  ];
-
+  ]
   return (
     <ErrorBoundary>
       <SEOEnhancer
@@ -659,7 +645,7 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en'}
           },
           address: {
             '@type': 'PostalAddress',
@@ -667,7 +653,7 @@ const HomePage: React.FC = () => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: 'US'}
           }
         }}
       />
@@ -699,7 +685,7 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en'}
           },
           address: {
             '@type': 'PostalAddress',
@@ -707,7 +693,7 @@ const HomePage: React.FC = () => {
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
+            addressCountry: 'US'}
           }
         }}
       />
@@ -744,7 +730,9 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-        >
+         aria-label="
+          Skip to main content
+        ">
           Skip to main content
         </a>
 
@@ -753,14 +741,14 @@ const HomePage: React.FC = () => {
           <ContentPromotionBanner />
         </Suspense>
 
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main" id="main-content">
           {/* Hero Section */}
           <Suspense fallback={<HeroSkeleton />}>
             <section
               className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
                 isLoaded && isVisible 
                   ? 'opacity-100 translate-y-0' 
-                  : 'opacity-0 translate-y-8'
+                  : 'opacity-0 translate-y-8'`}
               }`}
               aria-labelledby="hero-heading"
             >
@@ -808,7 +796,9 @@ const HomePage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Get Started Today
+                ">
                   Get Started Today
                 </a>
                 <a
@@ -824,7 +814,7 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Micro SAAS Services Section */}
-          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">}
             {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
           </div>}>
           <section className="mb-16" aria-labelledby="micro-saas-heading">
@@ -836,14 +826,14 @@ const HomePage: React.FC = () => {
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
-              {microSAASServices.map((service, index) => (
+              {microSAASServices.map((service, index) => (`}
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
                         Popular
                       </div>
-                    </div>
+                    </div>}
                   )}
                   <div className="text-4xl mb-4 text-center">{service.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}</h3>
@@ -853,7 +843,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
@@ -865,7 +855,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-pink-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                           <TrendingUp className="w-3 h-3 text-pink-400 mr-2 flex-shrink-0" />
@@ -878,7 +868,7 @@ const HomePage: React.FC = () => {
                   <div className="text-center">
                     <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
                     <a 
-                      href={service.link} 
+                      href={service.link}
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
                     >
                       Learn More
@@ -891,7 +881,7 @@ const HomePage: React.FC = () => {
           </Suspense>
 
           {/* AI Services Section */}
-          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">}
             {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
           </div>}>
           <section className="mb-16" aria-labelledby="ai-services-heading">
@@ -915,7 +905,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
@@ -930,7 +920,9 @@ const HomePage: React.FC = () => {
                     <a 
                       href="/ai-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
+                     aria-label="
+                      Learn More
+                    ">
                       Learn More
                     </a>
                   </div>
@@ -941,7 +933,7 @@ const HomePage: React.FC = () => {
           </Suspense>
 
           {/* IT Services Section */}
-          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">}
             {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
           </div>}>
           <section className="mb-16" aria-labelledby="it-services-heading">
@@ -965,7 +957,7 @@ const HomePage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
@@ -980,7 +972,9 @@ const HomePage: React.FC = () => {
                     <a 
                       href="/it-services" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
+                     aria-label="
+                      Learn More
+                    ">
                       Learn More
                     </a>
                   </div>
@@ -1056,7 +1050,9 @@ const HomePage: React.FC = () => {
                   href="tel:+13024640950" 
                   onClick={handlePhoneClick}
                   className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
+                 aria-label="
+                  Call Now
+                ">
                   Call Now
                 </a>
               </div>
@@ -1068,7 +1064,9 @@ const HomePage: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-pink-400 hover:text-pink-300 font-medium transition-colors"
-                >
+                 aria-label="
+                  Send Email
+                ">
                   Send Email
                 </a>
               </div>
@@ -1082,7 +1080,9 @@ const HomePage: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-400 hover:text-green-300 font-medium transition-colors"
-                >
+                 aria-label="
+                  View on Map
+                 (opens in new tab)">
                   View on Map
                 </a>
               </div>
@@ -1094,7 +1094,6 @@ const HomePage: React.FC = () => {
         <Footer />
       </div>
     </ErrorBoundary>
-  );
-};
-
-export default HomePage;
+  )
+}
+export default HomePage

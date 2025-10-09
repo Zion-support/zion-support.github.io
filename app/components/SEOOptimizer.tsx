@@ -1,48 +1,42 @@
-'use client';
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOOptimizerProps {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  structuredData?: any;
-}
-
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+    structuredData?: any;
+  }
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
   keywords,
   canonicalUrl,
-  structuredData,
+  structuredData,}
 }) => {
   useEffect(() => {
     // Update document title
-    document.title = title;
-    
+    document.title = title
     // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
+    const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
-      metaDescription.setAttribute('content', description);
+      metaDescription.setAttribute('content', description);}
     }
-    
     // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    const metaKeywords = document.querySelector('meta[name="keywords"]')
     if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
+      metaKeywords.setAttribute('content', keywords.join(', '));}
     }
-    
     // Update canonical URL
-    const canonical = document.querySelector('link[rel="canonical"]');
+    const canonical = document.querySelector('link[rel="canonical"]')
     if (canonical) {
-      canonical.setAttribute('href', canonicalUrl);
+      canonical.setAttribute('href', canonicalUrl);}
     }
-  }, [title, description, keywords, canonicalUrl]);
-
+  }, [title, description, keywords, canonicalUrl])
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{title} | Zion Tech Group - AI & IT Solutions</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
@@ -60,12 +54,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json">}
           {JSON.stringify(structuredData)}
         </script>
       )}
     </Helmet>
-  );
-};
-
-export default SEOOptimizer;
+  )
+}
+export default SEOOptimizer

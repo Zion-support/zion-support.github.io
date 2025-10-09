@@ -1,11 +1,10 @@
 'use client';
-import React from 'react';
+import React, { lazy } from 'react';
 import { Phone, Mail, MapPin, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube, ArrowRight } from 'lucide-react';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
+const Footer: React.FC = React.memo((props) => {
+  const currentYear = new Date().getFullYear()
+  const quickLinks = [}
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
@@ -13,8 +12,7 @@ const Footer: React.FC = () => {
     { name: 'IT Services', href: '/it-services' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
-  ];
-
+  ]
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
@@ -30,8 +28,7 @@ const Footer: React.FC = () => {
     { name: 'AI Fashion Design', href: '/ai-fashion-design' },
     { name: 'AI Music Composition', href: '/ai-music-composition' },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach' },
-  ];
-
+  ]
   const aiServices = [
     { name: 'Machine Learning', href: '/machine-learning' },
     { name: 'Natural Language Processing', href: '/nlp' },
@@ -41,8 +38,7 @@ const Footer: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
     { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
-  ];
-
+  ]
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration' },
     { name: 'IT Consulting', href: '/it-consulting' },
@@ -56,8 +52,7 @@ const Footer: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
-  ];
-
+  ]
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -65,8 +60,7 @@ const Footer: React.FC = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-  ];
-
+  ]
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
@@ -77,7 +71,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white neon-text"><span className="sr-only">Screen reader: </span>Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -90,7 +84,9 @@ const Footer: React.FC = () => {
                 <a 
                   href="tel:+13024640950" 
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-                >
+                 aria-label="
+                  +1 302 464 0950
+                ">
                   +1 302 464 0950
                 </a>
               </div>
@@ -99,7 +95,9 @@ const Footer: React.FC = () => {
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-                >
+                 aria-label="
+                  kleber@ziontechgroup.com
+                ">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -116,7 +114,7 @@ const Footer: React.FC = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4 neon-text">Quick Links</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -134,7 +132,7 @@ const Footer: React.FC = () => {
           {/* Micro SAAS Services */}
           <div>
             <h3 className="text-lg font-semibold text-cyan-400 mb-4">Micro SAAS Solutions</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list">
               {microSAASServices.map((service) => (
                 <li key={service.name}>
                   <a
@@ -154,7 +152,7 @@ const Footer: React.FC = () => {
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
+                <ul className="space-y-1" role="list">
                   {aiServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
                       <a
@@ -169,7 +167,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
+                <ul className="space-y-1" role="list">
                   {itServices.slice(0, 3).map((service) => (
                     <li key={service.name}>
                       <a
@@ -191,12 +189,12 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex space-x-4 mb-4 md:mb-0">
               {socialLinks.map((social) => (
-                <a
+                <a}
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 p-2 rounded-lg hover:bg-slate-800"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 p-2 rounded-lg hover:bg-slate-800" style={{ color: "#9CA3AF" }}
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
@@ -205,7 +203,7 @@ const Footer: React.FC = () => {
             </div>
             
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm" style={{ color: "#9CA3AF" }}>
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
@@ -216,7 +214,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default Footer;
+  )
+}
+export default Footer

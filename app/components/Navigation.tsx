@@ -1,20 +1,17 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building } from 'lucide-react';
+'use client'
+import React, { useState, useEffect, useCallback } from 'react'
+import { Phone, Mail, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Box, Shield, Cloud, Database, Smartphone, Lock, X, Menu, Users, Palette, Music, Heart, Globe, Building } from 'lucide-react';
 
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
+const Navigation: React.FC = React.memo(() => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+      const handleScroll = useCallback((...args) => {
+        setIsScrolled(window.scrollY > 50);
+      }, []);
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
@@ -23,8 +20,7 @@ const Navigation: React.FC = () => {
     { name: 'IT Services', href: '/it-services', icon: Cpu },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Contact', href: '/contact', icon: Phone },
-  ];
-
+  ]
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
@@ -42,8 +38,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
     { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
-  ];
-
+  ]
   const aiServices = [
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain },
     { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
@@ -53,8 +48,7 @@ const Navigation: React.FC = () => {
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box },
     { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-cybersecurity', icon: Shield },
-  ];
-
+  ]
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
@@ -68,13 +62,12 @@ const Navigation: React.FC = () => {
     { name: 'IT Support', href: '/it-support', icon: Users },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
     { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-  ];
-
+  ]
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
-        : 'bg-transparent'
+        : 'bg-transparent'`}
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -83,27 +76,26 @@ const Navigation: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
               <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white neon-text"><span className="sr-only">Screen reader: </span>Zion Tech Group</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <a}
                 key={item.name}
                 href={item.href}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1 group"
               >
                 <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                <span>{item.name}</span>
+                <span><span className="sr-only">Screen reader: </span>{item.name}</span>
               </a>
             ))}
-            
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center space-x-1" tabIndex="0">
                 <Settings className="w-4 h-4" />
-                <span>Services</span>
+                <span><span className="sr-only">Screen reader: </span>Services</span>
                 <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -118,13 +110,13 @@ const Navigation: React.FC = () => {
                       <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {microSAASServices.slice(0, 4).map((service) => (
-                          <a
+                          <a}
                             key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
-                            <span className="text-xs">{service.name}</span>
+                            <span className="text-xs"><span className="sr-only">Screen reader: </span>{service.name}</span>
                           </a>
                         ))}
                       </div>
@@ -135,13 +127,13 @@ const Navigation: React.FC = () => {
                       <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a
+                          <a}
                             key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
-                            <span className="text-xs">{service.name}</span>
+                            <span className="text-xs"><span className="sr-only">Screen reader: </span>{service.name}</span>
                           </a>
                         ))}
                       </div>
@@ -152,13 +144,13 @@ const Navigation: React.FC = () => {
                       <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
                       <div className="grid grid-cols-1 gap-1">
                         {itServices.map((service) => (
-                          <a
+                          <a}
                             key={service.name}
                             href={service.href}
                             className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                           >
                             <service.icon className="w-3 h-3" />
-                            <span className="text-xs">{service.name}</span>
+                            <span className="text-xs"><span className="sr-only">Screen reader: </span>{service.name}</span>
                           </a>
                         ))}
                       </div>
@@ -169,7 +161,9 @@ const Navigation: React.FC = () => {
                     <a
                       href="/services"
                       className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                    >
+                     aria-label="
+                      View All Services →
+                    ">
                       View All Services →
                     </a>
                   </div>
@@ -185,7 +179,7 @@ const Navigation: React.FC = () => {
               className="flex items-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <Phone className="w-4 h-4" />
-              <span>Call Now</span>
+              <span><span className="sr-only">Screen reader: </span>Call Now</span>
             </a>
           </div>
 
@@ -204,30 +198,29 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
-                <a
+                <a}
                   key={item.name}
                   href={item.href}
                   className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                   onClick={() => setIsOpen(false)}
                 >
                   <item.icon className="w-5 h-5" />
-                  <span>{item.name}</span>
+                  <span><span className="sr-only">Screen reader: </span>{item.name}</span>
                 </a>
               ))}
-              
               {/* Mobile Services Section */}
               <div className="pt-4 border-t border-gray-600">
                 <h3 className="text-cyan-400 font-semibold mb-3">Micro SAAS Solutions</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {microSAASServices.slice(0, 6).map((service) => (
-                    <a
+                    <a}
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
-                      <span className="text-sm">{service.name}</span>
+                      <span className="text-sm"><span className="sr-only">Screen reader: </span>{service.name}</span>
                     </a>
                   ))}
                 </div>
@@ -237,14 +230,14 @@ const Navigation: React.FC = () => {
                 <h3 className="text-purple-400 font-semibold mb-3">AI Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {aiServices.slice(0, 4).map((service) => (
-                    <a
+                    <a}
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
-                      <span className="text-sm">{service.name}</span>
+                      <span className="text-sm"><span className="sr-only">Screen reader: </span>{service.name}</span>
                     </a>
                   ))}
                 </div>
@@ -254,14 +247,14 @@ const Navigation: React.FC = () => {
                 <h3 className="text-green-400 font-semibold mb-3">IT Services</h3>
                 <div className="grid grid-cols-1 gap-2">
                   {itServices.map((service) => (
-                    <a
+                    <a}
                       key={service.name}
                       href={service.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
                       onClick={() => setIsOpen(false)}
                     >
                       <service.icon className="w-4 h-4" />
-                      <span className="text-sm">{service.name}</span>
+                      <span className="text-sm"><span className="sr-only">Screen reader: </span>{service.name}</span>
                     </a>
                   ))}
                 </div>
@@ -274,7 +267,7 @@ const Navigation: React.FC = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call +1 302 464 0950</span>
+                  <span><span className="sr-only">Screen reader: </span>Call +1 302 464 0950</span>
                 </a>
               </div>
             </div>
@@ -283,6 +276,6 @@ const Navigation: React.FC = () => {
       </div>
     </nav>
   );
-};
+});
 
-export default Navigation;
+  export default Navigation;

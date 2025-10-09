@@ -1,64 +1,62 @@
 'use client';
-import React from 'react';
+import React, { lazy } from 'react';
 import { CheckCircle, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
-const AIAnalyticsPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const AIAnalyticsPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
+      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']}
     },
     {
       icon: BarChart,
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
+      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']}
     },
     {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-optimized content and visualizations.',
-      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']
+      benefits: ['Scheduled reports', 'Custom templates', 'PDF export', 'Email delivery']}
     },
     {
       icon: TrendingUp,
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with advanced analytics and benchmarking.',
-      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']
+      benefits: ['KPI monitoring', 'Goal tracking', 'Benchmarking', 'Performance alerts']}
     }
-  ];
-
+  ]
   const analyticsTypes = [
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, pipeline health, and revenue trends.',
       icon: TrendingUp,
-      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']
+      metrics: ['Revenue tracking', 'Sales forecasting', 'Pipeline analysis', 'Conversion rates']}
     },
     {
       title: 'Marketing Analytics',
       description: 'Measure marketing campaign effectiveness and ROI.',
       icon: Target,
-      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']
+      metrics: ['Campaign performance', 'Lead generation', 'Customer acquisition', 'ROI analysis']}
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences.',
       icon: Users,
-      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']
+      metrics: ['Customer segmentation', 'Behavior analysis', 'Retention rates', 'Lifetime value']}
     },
     {
       title: 'Financial Analytics',
       description: 'Monitor financial health and profitability.',
       icon: BarChart,
-      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']
+      metrics: ['Revenue analysis', 'Cost tracking', 'Profit margins', 'Cash flow']}
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: 'Starter',
@@ -73,7 +71,7 @@ const AIAnalyticsPage: React.FC = () => {
         '1,000 data points/month',
         'Basic integrations'
       ],
-      popular: false
+      popular: false}
     },
     {
       name: 'Professional',
@@ -90,7 +88,7 @@ const AIAnalyticsPage: React.FC = () => {
         'API access',
         'Custom metrics'
       ],
-      popular: true
+      popular: true}
     },
     {
       name: 'Enterprise',
@@ -107,10 +105,9 @@ const AIAnalyticsPage: React.FC = () => {
         'Advanced security',
         'Dedicated account manager'
       ],
-      popular: false
+      popular: false}
     }
-  ];
-
+  ]
   const integrations = [
     { name: 'Google Analytics', icon: '📊' },
     { name: 'Salesforce', icon: '☁️' },
@@ -120,8 +117,7 @@ const AIAnalyticsPage: React.FC = () => {
     { name: 'Mailchimp', icon: '📧' },
     { name: 'Facebook Ads', icon: '📱' },
     { name: 'Google Ads', icon: '🔍' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -137,10 +133,14 @@ const AIAnalyticsPage: React.FC = () => {
               Transform your data into actionable insights with our intelligent analytics platform. Make data-driven decisions with AI-powered recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg">
+              <button className="cyber-button px-8 py-4 text-lg" aria-label="
+                Start Free Trial
+              " tabIndex="0">
                 Start Free Trial
               </button>
-              <button className="cyber-button-outline px-8 py-4 text-lg">
+              <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
+                View Demo
+              " tabIndex="0">
                 View Demo
               </button>
             </div>
@@ -184,9 +184,9 @@ const AIAnalyticsPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2" role="list">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                    <li key={idx} className="flex items-center text-sm text-gray-400" style={{ color: "#9CA3AF" }}>
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
                       {benefit}
                     </li>
@@ -214,9 +214,9 @@ const AIAnalyticsPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{type.title}</h3>
                 <p className="text-gray-300 mb-4">{type.description}</p>
-                <ul className="space-y-1">
+                <ul className="space-y-1" role="list">
                   {type.metrics.map((metric, idx) => (
-                    <li key={idx} className="text-sm text-gray-400">• {metric}</li>
+                    <li key={idx} className="text-sm text-gray-400" style={{ color: "#9CA3AF" }}>• {metric}</li>
                   ))}
                 </ul>
               </div>
@@ -257,20 +257,20 @@ const AIAnalyticsPage: React.FC = () => {
               <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"><span className="sr-only">Screen reader: </span>
                       Most Popular
                     </span>
-                  </div>
+                  </div>}
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
                     {plan.price}
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+                    <span className="text-lg text-gray-400" style={{ color: "#9CA3AF" }}><span className="sr-only">Screen reader: </span>{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-8" role="list">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
@@ -281,8 +281,10 @@ const AIAnalyticsPage: React.FC = () => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                    : 'bg-slate-700 text-white hover:bg-slate-600'`}
+                }`} aria-label="
+                  Get Started
+                " tabIndex="0">
                   Get Started
                 </button>
               </div>
@@ -299,10 +301,14 @@ const AIAnalyticsPage: React.FC = () => {
             Join thousands of businesses using AI analytics to make smarter decisions and drive growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg">
+            <button className="cyber-button px-8 py-4 text-lg" aria-label="
+              Start Free Trial
+            " tabIndex="0">
               Start Free Trial
             </button>
-            <button className="cyber-button-outline px-8 py-4 text-lg">
+            <button className="cyber-button-outline px-8 py-4 text-lg" aria-label="
+              Contact Sales
+            " tabIndex="0">
               Contact Sales
             </button>
           </div>
@@ -311,7 +317,6 @@ const AIAnalyticsPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
-
-export default AIAnalyticsPage;
+  )
+}
+export default AIAnalyticsPage

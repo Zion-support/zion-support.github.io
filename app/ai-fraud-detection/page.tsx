@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
+'use client'
+import React, { lazy } from 'react'
 import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
 
-const AIFraudDetectionPage: React.FC = () => {
+const Navigation = lazy(() => import('../components/Navigation'))
+const Footer = lazy(() => import('../components/Footer'))
+const SEOOptimizer = lazy(() => import('../components/SEOOptimizer'))
+const PerformanceOptimizer = lazy(() => import('../components/PerformanceOptimizer'))
+const AccessibilityEnhancer = lazy(() => import('../components/AccessibilityEnhancer'))
+const SecurityEnhancer = lazy(() => import('../components/SecurityEnhancer'))
+const Analytics = lazy(() => import('../components/Analytics'))
+const AIFraudDetectionPage: React.FC = React.memo(() => {
   const fraudServices = [
     {
       title: 'Real-time Fraud Detection',
@@ -73,16 +73,15 @@ const AIFraudDetectionPage: React.FC = () => {
       icon: TrendingDown,
       price: '$800/month',
       features: ['Real-time Dashboards', 'Custom Reports', 'Trend Analysis', 'Performance Metrics'],
-      color: 'text-gray-400'
+      color: 'text-\w+-\d+'
     }
-  ];
-
+  ]
   const benefits = [
     {
       title: '99.9% Accuracy',
       description: 'Our AI models achieve 99.9% accuracy in fraud detection',
-      icon: '🎯'
-    },
+        icon: '🎯'
+      },
     {
       title: 'Real-time Protection',
       description: 'Instant fraud detection and prevention in real-time',
@@ -96,10 +95,9 @@ const AIFraudDetectionPage: React.FC = () => {
     {
       title: 'Compliance Ready',
       description: 'Built-in compliance with industry regulations',
-      icon: '✅'
-    }
-  ];
-
+        icon: '✅'
+      }
+  ]
   return (
     <>
       <SEOOptimizer
@@ -131,7 +129,7 @@ const AIFraudDetectionPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-        <main className="container mx-auto px-4 py-16 pt-24">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
@@ -180,7 +178,7 @@ const AIFraudDetectionPage: React.FC = () => {
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-red-400 mb-2">Features:</h4>
-                    <ul className="space-y-1">
+                    <ul className="space-y-1" role="list">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                           <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
@@ -195,7 +193,9 @@ const AIFraudDetectionPage: React.FC = () => {
                     <a 
                       href="/contact" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
-                    >
+                     aria-label="
+                      Get Started
+                    ">
                       Get Started
                     </a>
                   </div>
@@ -213,7 +213,7 @@ const AIFraudDetectionPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-cyan-400 mb-4">Financial Services</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>• Credit Card Fraud Prevention</li>
                     <li>• Account Takeover Protection</li>
                     <li>• Money Laundering Detection</li>
@@ -222,7 +222,7 @@ const AIFraudDetectionPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-purple-400 mb-4">E-commerce</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>• Payment Fraud Prevention</li>
                     <li>• Chargeback Protection</li>
                     <li>• Fake Account Detection</li>
@@ -231,7 +231,7 @@ const AIFraudDetectionPage: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="text-xl font-semibold text-green-400 mb-4">Insurance</h3>
-                  <ul className="space-y-2 text-sm text-gray-300">
+                  <ul className="space-y-2 text-sm text-gray-300" role="list">
                     <li>• Claims Fraud Detection</li>
                     <li>• Document Verification</li>
                     <li>• Risk Assessment</li>
@@ -256,7 +256,9 @@ const AIFraudDetectionPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="
+                  Get Free Security Audit
+                ">
                   Get Free Security Audit
                 </a>
                 <a
@@ -274,7 +276,6 @@ const AIFraudDetectionPage: React.FC = () => {
         <Footer />
       </div>
     </>
-  );
-};
-
-export default AIFraudDetectionPage;
+  )
+})
+  export default AIFraudDetectionPage

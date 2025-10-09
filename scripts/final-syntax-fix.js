@@ -7,35 +7,20 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log('🔧 Fixing syntax errors...');
+console.log('🔧 Final comprehensive syntax fix...');
 
-// Common syntax fixes
+// Final syntax fixes
 const fixes = [
-  // Fix duplicate 'from' in imports
-  { pattern: /from from/g, replacement: 'from' },
-  // Fix missing semicolons after imports
-  { pattern: /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?=\n)/g, replacement: (match) => match + ';' },
-  // Fix unterminated template literals
-  { pattern: /`([^`]*)$/gm, replacement: '`$1`' },
-  // Fix missing closing braces
-  { pattern: /(\{[^}]*)$/gm, replacement: '$1}' },
-  // Fix module declaration syntax
-  { pattern: /declare module\s+[^'"]/g, replacement: (match) => match.replace(/declare module\s+([^'"])/, 'declare module "$1"') },
-  // Fix require() imports
-  { pattern: /require\(['"]([^'"]+)['"]\)/g, replacement: 'import("$1")' },
-  // Fix Function type usage
-  { pattern: /: Function/g, replacement: ': (...args: any[]) => any' },
-  // Fix empty interfaces
-  { pattern: /interface\s+\w+\s*{\s*}/g, replacement: 'type $1 = Record<string, never>' },
-  // Fix non-null assertions
-  { pattern: /(\w+)!/g, replacement: '$1 as any' },
+  // Fix missing commas in object arrays
+  { pattern: /icon: '[^']+'}\s*},/g, replacement: (match) => match.replace('}', '') },
+  { pattern: /color: 'text-\w+-\d+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
+  { pattern: /price: '[^']+'\s*}\s*},/g, replacement: (match) => match.replace('}', '') },
+  // Fix missing commas in arrays
+  { pattern: /}\s*}\s*];/g, replacement: '}]' },
+  // Fix stray semicolons
+  { pattern: /;\s*$/gm, replacement: '' },
   // Fix console statements
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' },
-  // Fix unused variables
-  { pattern: /const\s+(\w+)\s*=\s*[^;]+;\s*(?=\n)/g, replacement: (match, varName) => {
-    // Only remove if it's clearly unused (simple heuristic)
-    return match.includes('_') ? '' : match;
-  }},
 ];
 
 function fixFile(filePath) {
@@ -101,4 +86,4 @@ files.forEach(file => {
   }
 });
 
-console.log(`\n🎉 Syntax fix complete! Modified ${fixedCount} files.`);
+console.log(`\n🎉 Final syntax fix complete! Modified ${fixedCount} files.`);
