@@ -164,6 +164,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'msapplication-TileColor', content: '#3B82F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
+    return metaTags;
+  }, [seoData]);
 
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();

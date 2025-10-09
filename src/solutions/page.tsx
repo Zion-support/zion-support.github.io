@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Brain, Cloud, Shield, Zap, Target, BarChart, Users, Globe, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
