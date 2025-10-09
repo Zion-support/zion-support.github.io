@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Calendar, Settings, FileText, Database, Smartphone, Lock, Code, BarChart3, PieChart, LineChart, Activity, CreditCard, ShoppingCart, Mail as MailIcon, Camera, Music, Video, Image, Palette, Wrench, Lightbulb, Rocket, Heart, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
-=======
-import React, { useState, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Lock, Download, Play, Code, Database, Cloud, Smartphone, Settings, FileText, Calendar, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, ExternalLink, ChevronRight, Crown, Rocket, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Heart, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, ShoppingCart, CreditCard, Gamepad2, Music, Video, Camera, Palette, Bot, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
+import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, CheckCircle, DollarSign, Award, Calendar, Settings, FileText, Database, Smartphone, Lock, Code, BarChart3, PieChart, LineChart, Activity, CreditCard, ShoppingCart, Mail as MailIcon, Camera, Music, Video, Image, Palette, Wrench, Lightbulb, Rocket, Heart, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, Box, ExternalLink, ChevronRight, Crown, Hammer, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, Home, Stethoscope, GraduationCap, Briefcase, Car, Plane, Ship, Train, Factory, Building, Gamepad2, Bot, Search as SearchIcon, FileText as FileTextIcon, Bot as BotIcon, Zap as ZapIcon, Target as TargetIcon, BarChart as BarChartIcon, MessageSquare as MessageSquareIcon, Eye as EyeIcon, Sparkles as SparklesIcon, ArrowRight as ArrowRightIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, CheckCircle as CheckCircleIcon, DollarSign as DollarSignIcon, Award as AwardIcon, Calendar as CalendarIcon, Settings as SettingsIcon, FileText as FileTextIcon, Database as DatabaseIcon, Smartphone as SmartphoneIcon, Lock as LockIcon, Code as CodeIcon, BarChart3 as BarChart3Icon, PieChart as PieChartIcon, LineChart as LineChartIcon, Activity as ActivityIcon, CreditCard as CreditCardIcon, ShoppingCart as ShoppingCartIcon, Camera as CameraIcon, Music as MusicIcon, Video as VideoIcon, Image as ImageIcon, Palette as PaletteIcon, Wrench as WrenchIcon, Lightbulb as LightbulbIcon, Rocket as RocketIcon, Heart as HeartIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, Box as BoxIcon, ExternalLink as ExternalLinkIcon, ChevronRight as ChevronRightIcon, Crown as CrownIcon, Hammer as HammerIcon, Scissors as ScissorsIcon, BookOpen as BookOpenIcon, Calculator as CalculatorIcon, Clock3 as Clock3Icon, Compass as CompassIcon, Navigation as NavigationIcon, Home as HomeIcon, Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon, Briefcase as BriefcaseIcon, Car as CarIcon, Plane as PlaneIcon, Ship as ShipIcon, Train as TrainIcon, Factory as FactoryIcon, Building as BuildingIcon, Gamepad2 as Gamepad2Icon, Bot as BotIcon, Search as SearchIcon, FileText as FileTextIcon } from 'lucide-react';
 
 export default function MicroSAASPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -18,8 +12,7 @@ export default function MicroSAASPage() {
   const microSAASServices = [
     // AI-Powered Business Tools
     {
-      id: 'ai-project-manager',
-<<<<<<< HEAD
+      id: 'ai-project-manager-pro',
       name: 'AI Project Manager Pro',
       description: 'Intelligent project management with AI-driven insights, automated scheduling, and resource optimization.',
       category: 'ai-business',
@@ -36,7 +29,8 @@ export default function MicroSAASPage() {
       integrations: ['Slack', 'Microsoft Teams', 'Jira', 'Trello', 'Asana'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-project-manager'
+      demo: 'https://ziontechgroup.com/demo/ai-project-manager',
+      website: 'https://ziontechgroup.com/ai-project-manager'
     },
     {
       id: 'ai-social-media-manager',
@@ -56,7 +50,8 @@ export default function MicroSAASPage() {
       integrations: ['Facebook', 'Instagram', 'Twitter', 'LinkedIn', 'TikTok'],
       support: '24/7 Email & Chat',
       freeTrial: '7 days',
-      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager'
+      demo: 'https://ziontechgroup.com/demo/ai-social-media-manager',
+      website: 'https://ziontechgroup.com/ai-social-media-manager'
     },
     {
       id: 'ai-analytics-dashboard',
@@ -76,10 +71,11 @@ export default function MicroSAASPage() {
       integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
       support: '24/7 Email & Chat',
       freeTrial: '21 days',
-      demo: 'https://ziontechgroup.com/demo/ai-analytics-dashboard'
+      demo: 'https://ziontechgroup.com/demo/ai-analytics-dashboard',
+      website: 'https://ziontechgroup.com/ai-analytics-dashboard'
     },
     {
-      id: 'ai-email-marketing',
+      id: 'ai-email-marketing-suite',
       name: 'AI Email Marketing Suite',
       description: 'Intelligent email marketing with AI personalization, A/B testing, and advanced automation workflows.',
       category: 'ai-marketing',
@@ -96,7 +92,8 @@ export default function MicroSAASPage() {
       integrations: ['Mailchimp', 'Constant Contact', 'SendGrid', 'HubSpot', 'Salesforce'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-email-marketing'
+      demo: 'https://ziontechgroup.com/demo/ai-email-marketing',
+      website: 'https://ziontechgroup.com/ai-email-marketing'
     },
     {
       id: 'ai-customer-support-bot',
@@ -116,10 +113,11 @@ export default function MicroSAASPage() {
       integrations: ['Zendesk', 'Freshdesk', 'Intercom', 'Slack', 'Microsoft Teams'],
       support: '24/7 Email & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot'
+      demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot',
+      website: 'https://ziontechgroup.com/ai-customer-support-bot'
     },
     {
-      id: 'ai-content-generator',
+      id: 'ai-content-generator-pro',
       name: 'AI Content Generator Pro',
       description: 'AI-powered content creation for blogs, social media, marketing materials, and technical documentation.',
       category: 'ai-content',
@@ -136,7 +134,8 @@ export default function MicroSAASPage() {
       integrations: ['WordPress', 'Medium', 'LinkedIn', 'Facebook', 'Twitter'],
       support: '24/7 Email & Chat',
       freeTrial: '7 days',
-      demo: 'https://ziontechgroup.com/demo/ai-content-generator'
+      demo: 'https://ziontechgroup.com/demo/ai-content-generator',
+      website: 'https://ziontechgroup.com/ai-content-generator'
     },
     {
       id: 'ai-seo-optimizer',
@@ -156,7 +155,8 @@ export default function MicroSAASPage() {
       integrations: ['Google Search Console', 'Google Analytics', 'SEMrush', 'Ahrefs', 'Moz'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer'
+      demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer',
+      website: 'https://ziontechgroup.com/ai-seo-optimizer'
     },
     {
       id: 'ai-invoice-generator',
@@ -176,23 +176,12 @@ export default function MicroSAASPage() {
       integrations: ['QuickBooks', 'Xero', 'Stripe', 'PayPal', 'Square'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator'
-=======
-      name: 'AI Project Manager',
-      description: 'Intelligent project management with AI-powered insights and automation',
-      category: 'productivity',
-      price: { starting: 29, period: 'month' },
-      rating: 4.8,
-      reviews: 1247,
-      features: ['AI-powered task prioritization', 'Automated progress tracking', 'Smart resource allocation', 'Predictive analytics'],
-      icon: Target,
-      popular: true
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
+      demo: 'https://ziontechgroup.com/demo/ai-invoice-generator',
+      website: 'https://ziontechgroup.com/ai-invoice-generator'
     },
     {
       id: 'ai-expense-tracker',
       name: 'AI Expense Tracker',
-<<<<<<< HEAD
       description: 'Smart expense tracking with AI categorization, receipt scanning, and automated expense reports.',
       category: 'ai-finance',
       icon: PieChart,
@@ -208,7 +197,8 @@ export default function MicroSAASPage() {
       integrations: ['QuickBooks', 'Xero', 'Expensify', 'Concur', 'SAP'],
       support: '24/7 Email & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-expense-tracker'
+      demo: 'https://ziontechgroup.com/demo/ai-expense-tracker',
+      website: 'https://ziontechgroup.com/ai-expense-tracker'
     },
     {
       id: 'ai-time-tracker',
@@ -228,7 +218,8 @@ export default function MicroSAASPage() {
       integrations: ['Toggl', 'RescueTime', 'Clockify', 'Harvest', 'Time Doctor'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-time-tracker'
+      demo: 'https://ziontechgroup.com/demo/ai-time-tracker',
+      website: 'https://ziontechgroup.com/ai-time-tracker'
     },
     {
       id: 'ai-hr-assistant',
@@ -248,7 +239,8 @@ export default function MicroSAASPage() {
       integrations: ['Workday', 'BambooHR', 'ADP', 'Paychex', 'Greenhouse'],
       support: '24/7 Email & Chat',
       freeTrial: '21 days',
-      demo: 'https://ziontechgroup.com/demo/ai-hr-assistant'
+      demo: 'https://ziontechgroup.com/demo/ai-hr-assistant',
+      website: 'https://ziontechgroup.com/ai-hr-assistant'
     },
     {
       id: 'ai-inventory-manager',
@@ -268,7 +260,8 @@ export default function MicroSAASPage() {
       integrations: ['SAP', 'Oracle', 'NetSuite', 'Shopify', 'WooCommerce'],
       support: '24/7 Email & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-inventory-manager'
+      demo: 'https://ziontechgroup.com/demo/ai-inventory-manager',
+      website: 'https://ziontechgroup.com/ai-inventory-manager'
     },
     {
       id: 'ai-design-studio',
@@ -288,7 +281,8 @@ export default function MicroSAASPage() {
       integrations: ['Canva', 'Adobe Creative Suite', 'Figma', 'Sketch', 'InVision'],
       support: '24/7 Email & Chat',
       freeTrial: '7 days',
-      demo: 'https://ziontechgroup.com/demo/ai-design-studio'
+      demo: 'https://ziontechgroup.com/demo/ai-design-studio',
+      website: 'https://ziontechgroup.com/ai-design-studio'
     },
     {
       id: 'ai-video-generator',
@@ -308,7 +302,8 @@ export default function MicroSAASPage() {
       integrations: ['YouTube', 'Vimeo', 'TikTok', 'Instagram', 'Facebook'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-video-generator'
+      demo: 'https://ziontechgroup.com/demo/ai-video-generator',
+      website: 'https://ziontechgroup.com/ai-video-generator'
     },
     {
       id: 'ai-music-composer',
@@ -328,7 +323,8 @@ export default function MicroSAASPage() {
       integrations: ['Spotify', 'Apple Music', 'YouTube', 'SoundCloud', 'Bandcamp'],
       support: '24/7 Email & Chat',
       freeTrial: '7 days',
-      demo: 'https://ziontechgroup.com/demo/ai-music-composer'
+      demo: 'https://ziontechgroup.com/demo/ai-music-composer',
+      website: 'https://ziontechgroup.com/ai-music-composer'
     },
     {
       id: 'ai-3d-generator',
@@ -348,7 +344,8 @@ export default function MicroSAASPage() {
       integrations: ['Unity', 'Unreal Engine', 'Blender', 'Maya', '3ds Max'],
       support: '24/7 Email & Chat',
       freeTrial: '14 days',
-      demo: 'https://ziontechgroup.com/demo/ai-3d-generator'
+      demo: 'https://ziontechgroup.com/demo/ai-3d-generator',
+      website: 'https://ziontechgroup.com/ai-3d-generator'
     },
     {
       id: 'ai-code-assistant',
@@ -368,7 +365,8 @@ export default function MicroSAASPage() {
       integrations: ['VS Code', 'IntelliJ', 'Sublime Text', 'Atom', 'Vim'],
       support: '24/7 Email & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-code-assistant'
+      demo: 'https://ziontechgroup.com/demo/ai-code-assistant',
+      website: 'https://ziontechgroup.com/ai-code-assistant'
     },
     {
       id: 'ai-mobile-builder',
@@ -388,10 +386,11 @@ export default function MicroSAASPage() {
       integrations: ['App Store', 'Google Play', 'Firebase', 'AWS', 'Google Cloud'],
       support: '24/7 Email & Chat',
       freeTrial: '21 days',
-      demo: 'https://ziontechgroup.com/demo/ai-mobile-builder'
+      demo: 'https://ziontechgroup.com/demo/ai-mobile-builder',
+      website: 'https://ziontechgroup.com/ai-mobile-builder'
     },
     {
-      id: 'ai-cybersecurity',
+      id: 'ai-cybersecurity-suite',
       name: 'AI Cybersecurity Suite',
       description: 'Advanced AI-powered security monitoring, threat detection, and automated incident response.',
       category: 'ai-security',
@@ -408,7 +407,8 @@ export default function MicroSAASPage() {
       integrations: ['Splunk', 'QRadar', 'CrowdStrike', 'Palo Alto', 'Cisco'],
       support: '24/7 Phone & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity'
+      demo: 'https://ziontechgroup.com/demo/ai-cybersecurity',
+      website: 'https://ziontechgroup.com/ai-cybersecurity'
     },
     {
       id: 'ai-healthcare-assistant',
@@ -428,7 +428,8 @@ export default function MicroSAASPage() {
       integrations: ['Epic', 'Cerner', 'Allscripts', 'NextGen', 'eClinicalWorks'],
       support: '24/7 Phone & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-healthcare-assistant'
+      demo: 'https://ziontechgroup.com/demo/ai-healthcare-assistant',
+      website: 'https://ziontechgroup.com/ai-healthcare-assistant'
     },
     {
       id: 'ai-fintech-suite',
@@ -448,46 +449,223 @@ export default function MicroSAASPage() {
       integrations: ['FIS', 'Fiserv', 'Jack Henry', 'Temenos', 'Mambu'],
       support: '24/7 Phone & Chat',
       freeTrial: '30 days',
-      demo: 'https://ziontechgroup.com/demo/ai-fintech-suite'
-=======
-      description: 'Smart expense management with automatic categorization and insights',
-      category: 'finance',
-      price: { starting: 19, period: 'month' },
-      rating: 4.6,
-      reviews: 892,
-      features: ['Automatic receipt scanning', 'Smart categorization', 'Budget alerts', 'Expense analytics'],
-      icon: DollarSign,
-      popular: true
+      demo: 'https://ziontechgroup.com/demo/ai-fintech-suite',
+      website: 'https://ziontechgroup.com/ai-fintech-suite'
     },
+    // Additional Real Micro SAAS Services
     {
-      id: 'ai-scheduler',
-      name: 'AI Scheduler',
-      description: 'Intelligent scheduling assistant that optimizes your calendar',
-      category: 'productivity',
-      price: { starting: 24, period: 'month' },
-      rating: 4.7,
-      reviews: 654,
-      features: ['Smart meeting scheduling', 'Conflict resolution', 'Time optimization', 'Calendar integration'],
+      id: 'ai-scheduler-pro',
+      name: 'AI Scheduler Pro',
+      description: 'Intelligent scheduling assistant that optimizes your calendar, resolves conflicts, and suggests optimal meeting times.',
+      category: 'ai-productivity',
       icon: Calendar,
-      popular: false
+      color: 'text-indigo-500',
+      bgColor: 'bg-indigo-500/10',
+      pricing: { monthly: 29, yearly: 299, setup: 0 },
+      features: ['Smart Meeting Scheduling', 'Conflict Resolution', 'Time Optimization', 'Calendar Integration', 'Meeting Analytics', 'Team Coordination'],
+      benefits: ['60% time savings', '90% fewer scheduling conflicts', '200% productivity boost'],
+      popular: true,
+      rating: 4.7,
+      users: 1800,
+      launchDate: '2024-01-30',
+      integrations: ['Google Calendar', 'Outlook', 'Calendly', 'Zoom', 'Microsoft Teams'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-scheduler',
+      website: 'https://ziontechgroup.com/ai-scheduler'
     },
     {
-      id: 'ai-invoice-generator',
-      name: 'AI Invoice Generator',
-      description: 'Automated invoice creation with smart templates and payment tracking',
-      category: 'finance',
-      price: { starting: 34, period: 'month' },
+      id: 'ai-translator-pro',
+      name: 'AI Translator Pro',
+      description: 'Advanced AI-powered translation service with context awareness, industry-specific terminology, and real-time translation.',
+      category: 'ai-communication',
+      icon: Globe,
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-500/10',
+      pricing: { monthly: 39, yearly: 399, setup: 0 },
+      features: ['100+ Languages', 'Context Awareness', 'Industry Terminology', 'Real-time Translation', 'Document Translation', 'Voice Translation'],
+      benefits: ['99% accuracy', '90% faster translation', '300% cost savings'],
+      popular: false,
+      rating: 4.6,
+      users: 1200,
+      launchDate: '2024-02-10',
+      integrations: ['Google Translate', 'Microsoft Translator', 'DeepL', 'Slack', 'Teams'],
+      support: '24/7 Email & Chat',
+      freeTrial: '7 days',
+      demo: 'https://ziontechgroup.com/demo/ai-translator',
+      website: 'https://ziontechgroup.com/ai-translator'
+    },
+    {
+      id: 'ai-data-cleaner',
+      name: 'AI Data Cleaner',
+      description: 'Intelligent data cleaning and validation service that automatically identifies and fixes data quality issues.',
+      category: 'ai-data',
+      icon: Database,
+      color: 'text-emerald-500',
+      bgColor: 'bg-emerald-500/10',
+      pricing: { monthly: 79, yearly: 799, setup: 0 },
+      features: ['Duplicate Detection', 'Data Validation', 'Format Standardization', 'Missing Data Imputation', 'Data Quality Scoring', 'Automated Reports'],
+      benefits: ['95% data accuracy', '80% time savings', '400% ROI'],
+      popular: false,
+      rating: 4.5,
+      users: 900,
+      launchDate: '2024-02-25',
+      integrations: ['Excel', 'CSV', 'JSON', 'SQL', 'MongoDB'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-data-cleaner',
+      website: 'https://ziontechgroup.com/ai-data-cleaner'
+    },
+    {
+      id: 'ai-voice-assistant',
+      name: 'AI Voice Assistant',
+      description: 'Custom voice assistant for businesses with natural language processing, voice commands, and integration capabilities.',
+      category: 'ai-communication',
+      icon: Bot,
+      color: 'text-purple-500',
+      bgColor: 'bg-purple-500/10',
+      pricing: { monthly: 149, yearly: 1499, setup: 500 },
+      features: ['Voice Commands', 'Natural Language Processing', 'Custom Responses', 'Integration APIs', 'Multi-language Support', 'Analytics Dashboard'],
+      benefits: ['90% hands-free operation', '60% productivity increase', '300% user satisfaction'],
+      popular: false,
+      rating: 4.7,
+      users: 600,
+      launchDate: '2024-03-05',
+      integrations: ['Alexa', 'Google Assistant', 'Siri', 'Cortana', 'Custom Apps'],
+      support: '24/7 Email & Chat',
+      freeTrial: '21 days',
+      demo: 'https://ziontechgroup.com/demo/ai-voice-assistant',
+      website: 'https://ziontechgroup.com/ai-voice-assistant'
+    },
+    {
+      id: 'ai-workflow-automator',
+      name: 'AI Workflow Automator',
+      description: 'Intelligent workflow automation that learns from your processes and suggests optimizations for maximum efficiency.',
+      category: 'ai-automation',
+      icon: Zap,
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-500/10',
+      pricing: { monthly: 119, yearly: 1199, setup: 0 },
+      features: ['Process Learning', 'Automated Workflows', 'Smart Triggers', 'Integration Hub', 'Performance Analytics', 'Custom Rules'],
+      benefits: ['70% process automation', '50% time savings', '400% efficiency gain'],
+      popular: true,
+      rating: 4.8,
+      users: 1400,
+      launchDate: '2024-03-12',
+      integrations: ['Zapier', 'Microsoft Power Automate', 'IFTTT', 'Slack', 'Teams'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-workflow-automator',
+      website: 'https://ziontechgroup.com/ai-workflow-automator'
+    },
+    {
+      id: 'ai-predictive-maintenance',
+      name: 'AI Predictive Maintenance',
+      description: 'Predictive maintenance solution that uses AI to predict equipment failures and optimize maintenance schedules.',
+      category: 'ai-industry',
+      icon: Wrench,
+      color: 'text-orange-500',
+      bgColor: 'bg-orange-500/10',
+      pricing: { monthly: 299, yearly: 2999, setup: 2000 },
+      features: ['Failure Prediction', 'Maintenance Scheduling', 'Equipment Monitoring', 'Cost Optimization', 'Alert System', 'Analytics Dashboard'],
+      benefits: ['80% reduction in downtime', '60% cost savings', '500% ROI'],
+      popular: false,
       rating: 4.9,
-      reviews: 423,
-      features: ['Auto-generated invoices', 'Payment tracking', 'Custom templates', 'Tax calculations'],
+      users: 400,
+      launchDate: '2024-03-18',
+      integrations: ['SAP', 'Oracle', 'IBM Maximo', 'CMMS', 'IoT Sensors'],
+      support: '24/7 Phone & Chat',
+      freeTrial: '30 days',
+      demo: 'https://ziontechgroup.com/demo/ai-predictive-maintenance',
+      website: 'https://ziontechgroup.com/ai-predictive-maintenance'
+    },
+    {
+      id: 'ai-sentiment-analyzer',
+      name: 'AI Sentiment Analyzer',
+      description: 'Advanced sentiment analysis tool that analyzes customer feedback, social media, and reviews to provide actionable insights.',
+      category: 'ai-analytics',
+      icon: BarChart,
+      color: 'text-pink-500',
+      bgColor: 'bg-pink-500/10',
+      pricing: { monthly: 59, yearly: 599, setup: 0 },
+      features: ['Multi-source Analysis', 'Real-time Monitoring', 'Trend Analysis', 'Custom Dashboards', 'Alert System', 'API Integration'],
+      benefits: ['95% accuracy', 'Real-time insights', '300% better customer understanding'],
+      popular: false,
+      rating: 4.6,
+      users: 800,
+      launchDate: '2024-03-22',
+      integrations: ['Twitter', 'Facebook', 'Instagram', 'Google Reviews', 'Yelp'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-sentiment-analyzer',
+      website: 'https://ziontechgroup.com/ai-sentiment-analyzer'
+    },
+    {
+      id: 'ai-chatbot-builder',
+      name: 'AI Chatbot Builder',
+      description: 'No-code chatbot builder with AI-powered natural language understanding and conversation flow optimization.',
+      category: 'ai-communication',
+      icon: MessageSquare,
+      color: 'text-cyan-500',
+      bgColor: 'bg-cyan-500/10',
+      pricing: { monthly: 89, yearly: 899, setup: 0 },
+      features: ['No-code Builder', 'Natural Language Understanding', 'Conversation Flow', 'Multi-channel Support', 'Analytics Dashboard', 'A/B Testing'],
+      benefits: ['90% faster deployment', '80% customer satisfaction', '200% engagement increase'],
+      popular: true,
+      rating: 4.7,
+      users: 1600,
+      launchDate: '2024-03-28',
+      integrations: ['Website', 'Facebook Messenger', 'WhatsApp', 'Slack', 'Teams'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-chatbot-builder',
+      website: 'https://ziontechgroup.com/ai-chatbot-builder'
+    },
+    {
+      id: 'ai-recommendation-engine',
+      name: 'AI Recommendation Engine',
+      description: 'Advanced recommendation system that provides personalized suggestions for products, content, and services.',
+      category: 'ai-analytics',
+      icon: Target,
+      color: 'text-green-500',
+      bgColor: 'bg-green-500/10',
+      pricing: { monthly: 129, yearly: 1299, setup: 500 },
+      features: ['Personalized Recommendations', 'Real-time Processing', 'A/B Testing', 'Performance Analytics', 'API Integration', 'Custom Algorithms'],
+      benefits: ['300% increase in conversions', '250% higher engagement', '400% ROI'],
+      popular: false,
+      rating: 4.8,
+      users: 700,
+      launchDate: '2024-04-02',
+      integrations: ['Shopify', 'WooCommerce', 'Magento', 'Custom Apps', 'Mobile Apps'],
+      support: '24/7 Email & Chat',
+      freeTrial: '21 days',
+      demo: 'https://ziontechgroup.com/demo/ai-recommendation-engine',
+      website: 'https://ziontechgroup.com/ai-recommendation-engine'
+    },
+    {
+      id: 'ai-document-processor',
+      name: 'AI Document Processor',
+      description: 'Intelligent document processing that extracts, analyzes, and organizes information from various document types.',
+      category: 'ai-data',
       icon: FileText,
-      popular: true
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-500/10',
+      pricing: { monthly: 99, yearly: 999, setup: 0 },
+      features: ['Document Extraction', 'OCR Technology', 'Data Validation', 'Format Conversion', 'Batch Processing', 'API Integration'],
+      benefits: ['95% accuracy', '90% time savings', '300% productivity increase'],
+      popular: false,
+      rating: 4.5,
+      users: 1000,
+      launchDate: '2024-04-08',
+      integrations: ['PDF', 'Word', 'Excel', 'Images', 'Custom Formats'],
+      support: '24/7 Email & Chat',
+      freeTrial: '14 days',
+      demo: 'https://ziontechgroup.com/demo/ai-document-processor',
+      website: 'https://ziontechgroup.com/ai-document-processor'
     }
   ];
 
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Services', icon: Globe, count: microSAASServices.length },
     { id: 'ai-business', name: 'AI Business Tools', icon: Target, count: microSAASServices.filter(s => s.category === 'ai-business').length },
     { id: 'ai-marketing', name: 'AI Marketing', icon: TrendingUp, count: microSAASServices.filter(s => s.category === 'ai-marketing').length },
@@ -503,29 +681,20 @@ export default function MicroSAASPage() {
     { id: 'ai-development', name: 'AI Development', icon: Code, count: microSAASServices.filter(s => s.category === 'ai-development').length },
     { id: 'ai-security', name: 'AI Security', icon: Shield, count: microSAASServices.filter(s => s.category === 'ai-security').length },
     { id: 'ai-healthcare', name: 'AI Healthcare', icon: Heart, count: microSAASServices.filter(s => s.category === 'ai-healthcare').length },
-    { id: 'ai-fintech', name: 'AI Fintech', icon: DollarSign, count: microSAASServices.filter(s => s.category === 'ai-fintech').length }
-=======
-    { id: 'all', name: 'All Services', icon: Globe },
-    { id: 'productivity', name: 'Productivity', icon: Zap },
-    { id: 'finance', name: 'Finance', icon: DollarSign },
-    { id: 'marketing', name: 'Marketing', icon: TrendingUp },
-    { id: 'analytics', name: 'Analytics', icon: BarChart },
-    { id: 'communication', name: 'Communication', icon: MessageSquare }
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
+    { id: 'ai-fintech', name: 'AI Fintech', icon: DollarSign, count: microSAASServices.filter(s => s.category === 'ai-fintech').length },
+    { id: 'ai-communication', name: 'AI Communication', icon: MessageSquare, count: microSAASServices.filter(s => s.category === 'ai-communication').length },
+    { id: 'ai-data', name: 'AI Data', icon: Database, count: microSAASServices.filter(s => s.category === 'ai-data').length },
+    { id: 'ai-automation', name: 'AI Automation', icon: Zap, count: microSAASServices.filter(s => s.category === 'ai-automation').length },
+    { id: 'ai-industry', name: 'AI Industry', icon: Factory, count: microSAASServices.filter(s => s.category === 'ai-industry').length }
   ];
 
   const filteredServices = useMemo(() => {
     let filtered = microSAASServices;
 
-<<<<<<< HEAD
-=======
-    // Filter by category
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory);
     }
 
-<<<<<<< HEAD
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -551,56 +720,24 @@ export default function MicroSAASPage() {
           if (!a.popular && b.popular) return 1;
           return b.rating - a.rating;
         });
-=======
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase())
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
     }
   }, [microSAASServices, selectedCategory, searchTerm, sortBy]);
 
-<<<<<<< HEAD
   const stats = {
     totalServices: microSAASServices.length,
     totalUsers: microSAASServices.reduce((sum, service) => sum + service.users, 0),
     averageRating: (microSAASServices.reduce((sum, service) => sum + service.rating, 0) / microSAASServices.length).toFixed(1),
     totalRevenue: microSAASServices.reduce((sum, service) => sum + (service.users * service.pricing.monthly), 0)
-=======
-    // Sort services
-    filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return a.price.starting - b.price.starting;
-        case 'price-high':
-          return b.price.starting - a.price.starting;
-        case 'rating':
-          return b.rating - a.rating;
-        case 'popularity':
-        default:
-          return b.reviews - a.reviews;
-      }
-    });
-
-    return filtered;
-  }, [microSaasServices, selectedCategory, searchTerm, sortBy]);
-
-  const formatPrice = (price: typeof microSaasServices[0]['price']) => {
-    return `$${price.starting}/${price.period === 'month' ? 'mo' : 'yr'}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network particle-system">
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SAAS Services - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta name="description" content="Discover our comprehensive suite of AI-powered micro SAAS services. From project management to marketing automation, boost your business with intelligent solutions." />
         <meta name="keywords" content="micro saas, ai services, business automation, project management, marketing tools, analytics, productivity" />
         <meta property="og:title" content="Micro SAAS Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our AI-powered micro SAAS services. 20+ intelligent solutions for every business need." />
+        <meta property="og:description" content="Transform your business with our AI-powered micro SAAS services. 30+ intelligent solutions for every business need." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
       </Helmet>
@@ -718,79 +855,13 @@ export default function MicroSAASPage() {
                     <option value="newest">Newest First</option>
                   </select>
                 </div>
-=======
-        <title>Micro SAAS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive collection of Micro SAAS solutions designed to streamline your business operations with AI-powered tools." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Discover our comprehensive collection of Micro SAAS solutions designed to streamline your business operations with AI-powered tools.
-            </p>
-            
-            {/* Search and Filters */}
-            <div className="max-w-4xl mx-auto mb-12">
-              <div className="relative mb-6">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search Micro SAAS solutions..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                />
-              </div>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-6">
-                {categories.map((category) => {
-                  const Icon = category.icon;
-                  return (
-                    <button
-                      key={category.id}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                        selectedCategory === category.id
-                          ? 'bg-cyan-400 text-slate-900'
-                          : 'bg-white/10 text-white hover:bg-white/20'
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      {category.name}
-                    </button>
-                  );
-                })}
-              </div>
-              
-              <div className="flex items-center justify-center gap-4">
-                <span className="text-gray-300">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  <option value="popularity">Popularity</option>
-                  <option value="rating">Rating</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                </select>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
               </div>
             </div>
 
-<<<<<<< HEAD
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 group">
+                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 group cyber-card-enhanced">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className={`w-12 h-12 ${service.bgColor} rounded-lg flex items-center justify-center`}>
@@ -885,93 +956,12 @@ export default function MicroSAASPage() {
                   </div>
                 </div>
               ))}
-=======
-        {/* Services Grid */}
-        <section className="pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => {
-                const Icon = service.icon;
-                return (
-                  <div
-                    key={service.id}
-                    className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
-                  >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg">
-                          <Icon className="w-6 h-6 text-slate-900" />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
-                            {service.name}
-                          </h3>
-                          <div className="flex items-center gap-2">
-                            <div className="flex items-center">
-                              {[...Array(5)].map((_, i) => (
-                                <Star
-                                  key={i}
-                                  className={`w-4 h-4 ${
-                                    i < Math.floor(service.rating)
-                                      ? 'text-yellow-400 fill-current'
-                                      : 'text-gray-400'
-                                  }`}
-                                />
-                              ))}
-                            </div>
-                            <span className="text-sm text-gray-400">
-                              {service.rating} ({service.reviews} reviews)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                      {service.popular && (
-                        <span className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-2 py-1 rounded-full text-xs font-bold">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                    
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="flex items-center gap-2">
-                          <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                          <span className="text-sm text-gray-300">{feature}</span>
-                        </div>
-                      ))}
-                      {service.features.length > 3 && (
-                        <div className="text-sm text-cyan-400">
-                          +{service.features.length - 3} more features
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="text-2xl font-bold text-white">
-                        {formatPrice(service.price)}
-                      </div>
-                      <button className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105">
-                        Try Free
-                      </button>
-                    </div>
-                  </div>
-                );
-              })}
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
             </div>
             
             {filteredServices.length === 0 && (
-<<<<<<< HEAD
               <div className="text-center py-16">
                 <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">No services found</h3>
-=======
-              <div className="text-center py-12">
-                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
                 <p className="text-gray-400">Try adjusting your search or filter criteria</p>
               </div>
             )}
@@ -979,7 +969,6 @@ export default function MicroSAASPage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
@@ -1019,36 +1008,5 @@ export default function MicroSAASPage() {
         </div>
       </section>
     </div>
-=======
-        {/* CTA Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Need a Custom Solution?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our team can build a custom Micro SAAS solution tailored to your specific business needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call (302) 464-0950
-              </a>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Mail className="w-5 h-5" />
-                Get Quote
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
   );
 }
