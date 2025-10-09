@@ -1,22 +1,39 @@
 const fs = require('fs');
 const path = require('path');
 
-// Additional files with parsing errors
-const additionalFiles = [
-  'src/ai-predictive-analytics/page.tsx',
-  'src/ai-project-manager/page.tsx',
-  'src/ai-research-development/page.tsx',
-  'src/ai-robotics/page.tsx',
-  'src/ai-sales-automation/page.tsx',
-  'src/ai-sales-forecasting/page.tsx',
-  'src/ai-scheduler/page.tsx',
-  'src/ai-security-monitor/page.tsx',
-  'src/ai-seo-optimizer/page.tsx',
-  'src/ai-services/page.tsx',
-  'src/ai-social-media-manager/page.tsx',
-  'src/ai-voice-assistant/page.tsx',
-  'src/ai-workflow-automation/page.tsx',
-  'src/ai-writing-assistant/page.tsx'
+// List of files with parsing errors
+const filesToFix = [
+  'src/ai-computer-vision/page.tsx',
+  'src/ai-content-generation/page.tsx',
+  'src/ai-content-studio/page.tsx',
+  'src/ai-crm/page.tsx',
+  'src/ai-customer-insights/page.tsx',
+  'src/ai-customer-support-bot/page.tsx',
+  'src/ai-customer-support/page.tsx',
+  'src/ai-cybersecurity/page.tsx',
+  'src/ai-data-analytics/page.tsx',
+  'src/ai-data-visualization/page.tsx',
+  'src/ai-design-assistant/page.tsx',
+  'src/ai-document-processing/page.tsx',
+  'src/ai-document-processor/page.tsx',
+  'src/ai-ecommerce-optimizer/page.tsx',
+  'src/ai-ecommerce-solutions/page.tsx',
+  'src/ai-edge-computing/page.tsx',
+  'src/ai-email-assistant/page.tsx',
+  'src/ai-email-marketing/page.tsx',
+  'src/ai-fintech/page.tsx',
+  'src/ai-healthcare/page.tsx',
+  'src/ai-hr-assistant/page.tsx',
+  'src/ai-inventory-manager/page.tsx',
+  'src/ai-invoice-generator/page.tsx',
+  'src/ai-lead-generation/page.tsx',
+  'src/ai-lead-scoring/page.tsx',
+  'src/ai-marketing/page.tsx',
+  'src/ai-ml-platform/page.tsx',
+  'src/ai-mobile-app-development/page.tsx',
+  'src/ai-mobile-builder/page.tsx',
+  'src/ai-nlp/page.tsx',
+  'src/ai-performance-tracker/page.tsx'
 ];
 
 // Common imports and components
@@ -87,7 +104,7 @@ const getDescription = (filePath) => {
 };
 
 // Fix each file
-additionalFiles.forEach(filePath => {
+filesToFix.forEach(filePath => {
   const fullPath = path.join(process.cwd(), filePath);
   
   try {
@@ -106,4 +123,4 @@ ${createSimplePage(pageName, title, description)}`;
   }
 });
 
-console.log('All additional files have been fixed!');
+console.log('All files have been fixed!');
