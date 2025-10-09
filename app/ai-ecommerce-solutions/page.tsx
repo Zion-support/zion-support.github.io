@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { CheckCircle } from 'lucide-react';
 
 const AIEcommerceSolutionsPage: React.FC = () => {
@@ -194,11 +194,11 @@ const AIEcommerceSolutionsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-      <Helmet>
+      <Head>
         <title>AI E-commerce Solutions | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
         <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
-      </Helmet>
+      </Head>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">

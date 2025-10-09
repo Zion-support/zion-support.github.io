@@ -298,12 +298,8 @@ const DocsPage: React.FC = () => {
           </p>
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default DocsPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

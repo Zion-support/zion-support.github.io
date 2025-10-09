@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 const EnterpriseTransformationPage: React.FC = () => {
 
@@ -7,7 +7,7 @@ const EnterpriseTransformationPage: React.FC = () => {
 
     <>
 
-      <Helmet>
+      <Head>
 
         <title>AI Enterprise Transformation: $50M Annual Savings Blueprint | Zion Tech Group</title>
 
@@ -15,7 +15,7 @@ const EnterpriseTransformationPage: React.FC = () => {
 
         <meta property="og:url" content="/og/ai-enterprise-transformation-2025.jpg" />
 
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">

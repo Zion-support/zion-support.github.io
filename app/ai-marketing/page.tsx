@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 
 const AIMarketingPage: React.FC = () => {
@@ -142,11 +142,11 @@ const AIMarketingPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      <Head>
         <title>AI Marketing Services - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered marketing solutions including ad optimization, content generation, social media management, and customer journey mapping." />
         <meta name="keywords" content="AI marketing, marketing automation, ad optimization, content generation, social media AI, email marketing AI" />
-      </Helmet>
+      </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
         {/* Hero Section */}

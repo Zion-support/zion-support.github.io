@@ -2,7 +2,7 @@ import React from 'react';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Users, MapPin, Clock, CheckCircle } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const positions = [
@@ -75,10 +75,8 @@ const CareersPage: React.FC = () => {
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default CareersPage;
- cursor/analyze-improve-and-deploy-application-cde4
