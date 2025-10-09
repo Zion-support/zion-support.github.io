@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -137,3 +135,104 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Business Intelligence Solutions
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our comprehensive BI solutions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our BI Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive business intelligence solutions tailored to your needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {biServices.map((service, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">{service.price}</div>
+                  <div className="text-sm text-gray-500">Market: {service.marketPrice}</div>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex}>• {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex}>• {benefit}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-4">
+                  <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Data?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100">
+            Get started with our business intelligence solutions today
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              Get Started
+            </a>
+            <a 
+              href="/case-studies"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              View Case Studies
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
