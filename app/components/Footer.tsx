@@ -55,18 +55,23 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
               <li>
+                <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors">
+                  Solutions
+                </Link>
+              </li>
+              <li>
                 <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
+                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
+                  Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
-                  Case Studies
+                <Link to="/news" className="text-gray-300 hover:text-white transition-colors">
+                  News
                 </Link>
               </li>
               <li>
@@ -151,13 +156,50 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/careers" className="text-gray-300 hover:text-white transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/partners" className="text-gray-300 hover:text-white transition-colors">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="text-gray-300 hover:text-white transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/help" className="text-gray-300 hover:text-white transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/status" className="text-gray-300 hover:text-white transition-colors">
+                  System Status
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-3" />

@@ -8,6 +8,7 @@ const Navigation: React.FC = () => {
 
   const services = [
     { name: 'AI Services', href: '/ai-services' },
+    { name: 'AI Analytics', href: '/services/ai-analytics' },
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity' },
     { name: 'Data Analytics', href: '/ai-data-analytics' },
@@ -19,6 +20,7 @@ const Navigation: React.FC = () => {
     { name: 'Business Intelligence', href: '/business-intelligence' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
     { name: 'AI Advertising', href: '/services-advertising' },
+    { name: 'Green IT Solutions', href: '/green-it' },
   ];
 
   return (
@@ -83,8 +85,14 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+            <Link to="/solutions" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Solutions
+            </Link>
             <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Case Studies
+            </Link>
+            <Link to="/news" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              News
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Contact
@@ -157,11 +165,25 @@ const Navigation: React.FC = () => {
               </div>
 
               <Link
+                to="/solutions"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Solutions
+              </Link>
+              <Link
                 to="/case-studies"
                 className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 Case Studies
+              </Link>
+              <Link
+                to="/news"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                News
               </Link>
               <Link
                 to="/contact"
