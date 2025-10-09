@@ -58,14 +58,6 @@ const HomePage: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Navigation */}
-      <Navigation />
-=======
     <>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -77,7 +69,6 @@ const HomePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
         <Navigation />
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
       
       {/* Skip to main content for accessibility */}
       <a
@@ -215,7 +206,6 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-<<<<<<< HEAD
           {/* Secondary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -267,8 +257,6 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
 
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
           {/* Micro SAAS Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
@@ -276,7 +264,7 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">💻</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">Micro SAAS Solutions</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Powerful AI-driven tools for modern businesses. 16+ ready-to-use applications starting at $29/month.
+                  Powerful AI-driven tools for modern businesses. 30+ ready-to-use applications starting at $29/month.
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2 neon-text">Starting at $29/month</div>
@@ -287,6 +275,41 @@ const HomePage: React.FC = () => {
               </article>
             </Suspense>
 
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🏢</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Enterprise Solutions</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Comprehensive AI solutions for large organizations. Business intelligence, process automation, and more.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2 neon-text">Starting at $2,500/month</div>
+                  <a href="/ai-enterprise-solutions" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">IT Infrastructure Services</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Complete IT infrastructure solutions including cloud migration, network design, and cybersecurity.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,000/project</div>
+                  <a href="/it-infrastructure" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+          </div>
+
+          {/* Additional Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">✍️</div>
@@ -313,6 +336,22 @@ const HomePage: React.FC = () => {
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $2,999/month</div>
                   <a href="/ai-cloud-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
+
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="quantum-card p-4 sm:p-6 energy-pulse">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🔒</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Cybersecurity</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced AI-powered security solutions including threat detection, vulnerability scanning, and compliance.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2 neon-text">Starting at $99/month</div>
+                  <a href="/ai-cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -374,23 +413,11 @@ const HomePage: React.FC = () => {
         </Suspense>
 
         {/* Content Carousel */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading content showcase..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-
-        {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
-=======
         <Suspense fallback={<LoadingSpinner size="lg" text="Loading dynamic content..." />}>
           <DynamicContentShowcase />
         </Suspense>
@@ -459,22 +486,14 @@ const HomePage: React.FC = () => {
 
         {/* Newsletter Signup */}
         <Suspense fallback={<LoadingSpinner size="md" text="Loading newsletter signup..." />}>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
           <ContentNewsletterSignup />
         </Suspense>
       </main>
-<<<<<<< HEAD
-
+      
       {/* Footer */}
       <Footer />
     </div>
-=======
-      
-        {/* Footer */}
-        <Footer />
-      </div>
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-aba4
   );
 };
 
