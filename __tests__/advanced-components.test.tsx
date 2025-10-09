@@ -5,6 +5,8 @@ import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
 import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
 
+
+
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
@@ -12,15 +14,6 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   }
   return <div>Test content</div>;
 };
-
-// Test component for error boundary tests
-const TestComponent = () => <div>Test component</div>;
-
-// Mock onError callback
-const onError = jest.fn();
-
-// Mock helmet context
-const helmetContext = {};
 
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
@@ -57,7 +50,7 @@ describe('AdvancedErrorBoundary', () => {
   });
 
   it('calls onError callback when error occurs', () => {
-    const onError = jest.fn();
+    const _onError = jest.fn();
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
@@ -79,8 +72,8 @@ describe('AdvancedErrorBoundary', () => {
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
-    let shouldThrow = true;
-    const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
+    let _shouldThrow = true;
+    const _TestComponent = () => <ThrowError shouldThrow={shouldThrow} />;
 
     const { rerender } = render(
       <MemoryRouter>
@@ -90,7 +83,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    const retryButton = screen.getByText('Try Again (3 attempts left)');
+    const _retryButton = screen.getByText('Try Again (3 attempts left)');
     
     // Change shouldThrow before clicking retry
     shouldThrow = false;
@@ -148,7 +141,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders structured data when enabled', async () => {
-    const helmetContext = {};
+    const _helmetContext = {};
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
@@ -168,7 +161,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders Open Graph tags when enabled', async () => {
-    const helmetContext = {};
+    const _helmetContext = {};
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
@@ -185,7 +178,7 @@ describe('AdvancedSEOOptimizer', () => {
   });
 
   it('renders Twitter Card tags when enabled', async () => {
-    const helmetContext = {};
+    const _helmetContext = {};
     const { container } = render(
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
@@ -240,7 +233,7 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('renders nothing in production mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
+    const _originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'production', writable: true });
 
     const { container } = render(
@@ -255,7 +248,7 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('renders performance monitor in development mode', () => {
-    const originalEnv = process.env['NODE_ENV'];
+    const _originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     render(
@@ -270,8 +263,8 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('calls onMetricsUpdate when metrics change', async () => {
-    const onMetricsUpdate = jest.fn();
-    const originalEnv = process.env['NODE_ENV'];
+    const _onMetricsUpdate = jest.fn();
+    const _originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     mockPerformance.getEntriesByName.mockReturnValue([{ startTime: 100 }]);
@@ -293,7 +286,7 @@ describe('AdvancedPerformanceMonitor', () => {
   });
 
   it('shows performance recommendations when metrics are poor', () => {
-    const originalEnv = process.env['NODE_ENV'];
+    const _originalEnv = process.env['NODE_ENV'];
     Object.defineProperty(process.env, 'NODE_ENV', { value: 'development', writable: true });
 
     // Mock poor performance metrics

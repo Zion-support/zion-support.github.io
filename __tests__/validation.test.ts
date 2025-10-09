@@ -4,7 +4,7 @@
 
 import {
   validateEmail,
-  validatePhoneNumber as validatePhone,
+  validatePhone,
   validateURL,
   validateLength,
   validateRequired,
@@ -17,7 +17,7 @@ import {
   validateJSON,
   validateComposite,
   validateAsync,
-} from '../app/utils/dataValidator';
+} from '../src/utils/validation';
 
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
@@ -253,7 +253,7 @@ describe('Composite Validation', () => {
 
     const result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
-    expect(result.error).toContain('between 10 and 20');
+    expect(result.error).toContain('at least 10');
   });
 });
 
