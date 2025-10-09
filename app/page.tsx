@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
       price: '$149/month',
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
-      link: '/ai-analytics-dashboard',
+      link: '/ai-analytics',
       popular: true
     },
     {
@@ -119,6 +119,246 @@ const HomePage: React.FC = () => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
+      popular: false
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing and content generation',
+      icon: '🎥',
+      price: '$199/month',
+      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support'],
+      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports'],
+      link: '/ai-video-generation',
+      popular: true
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for content creation and accessibility',
+      icon: '🎤',
+      price: '$129/month',
+      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration'],
+      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing'],
+      link: '/ai-voice-cloning',
+      popular: false
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow management',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard'],
+      benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring'],
+      link: '/ai-workflow-automation',
+      popular: true
+    },
+    {
+      title: 'AI Fashion Design',
+      description: 'Create stunning fashion designs with AI-powered design tools',
+      icon: '👗',
+      price: '$159/month',
+      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation'],
+      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity'],
+      link: '/ai-fashion-design',
+      popular: false
+    },
+    {
+      title: 'AI Music Composition',
+      description: 'Compose original music with AI-powered composition tools',
+      icon: '🎵',
+      price: '$119/month',
+      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music'],
+      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues'],
+      link: '/ai-music-composition',
+      popular: false
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness coaching with AI-powered workout plans',
+      icon: '💪',
+      price: '$89/month',
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling'],
+      link: '/ai-fitness-coach',
+      popular: false
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Boost sales with AI-powered lead generation and conversion optimization',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration'],
+      benefits: ['35% more leads', '50% higher conversion', '40% time saved'],
+      link: '/ai-sales-automation',
+      popular: true
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Transform complex data into interactive visualizations',
+      icon: '📊',
+      price: '$139/month',
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling'],
+      benefits: ['Better insights', 'Faster decisions', 'Engaging presentations'],
+      link: '/ai-data-visualization',
+      popular: false
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Create 3D models and environments with AI technology',
+      icon: '🎨',
+      price: '$189/month',
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],
+      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom'],
+      link: '/ai-3d-generation',
+      popular: false
+    },
+    {
+      title: 'AI Document Processing',
+      description: 'Automate document analysis and data extraction with AI',
+      icon: '📄',
+      price: '$109/month',
+      features: ['OCR technology', 'Data extraction', 'Document classification', 'Automated workflows'],
+      benefits: ['95% accuracy', '80% time saved', 'Error reduction'],
+      link: '/ai-document-processing',
+      popular: false
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Optimize inventory with AI-powered demand forecasting',
+      icon: '📦',
+      price: '$149/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Automated reordering', 'Analytics dashboard'],
+      benefits: ['30% cost reduction', '99% stock accuracy', 'Zero stockouts'],
+      link: '/ai-inventory-management',
+      popular: false
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment and management',
+      icon: '👥',
+      price: '$169/month',
+      features: ['Resume screening', 'Candidate matching', 'Interview scheduling', 'Performance analytics'],
+      benefits: ['60% faster hiring', 'Better candidate fit', 'Reduced bias'],
+      link: '/ai-hr-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Get personalized financial advice with AI-powered analysis',
+      icon: '💳',
+      price: '$129/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Investment recommendations', 'Tax optimization'],
+      benefits: ['Better returns', 'Risk management', 'Tax savings'],
+      link: '/ai-financial-advisor',
+      popular: false
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'Legal document analysis and contract review with AI',
+      icon: '⚖️',
+      price: '$199/month',
+      features: ['Contract analysis', 'Legal research', 'Document drafting', 'Compliance monitoring'],
+      benefits: ['90% time saved', 'Reduced errors', 'Cost effective'],
+      link: '/ai-legal-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Real Estate Assistant',
+      description: 'Property analysis and market insights with AI technology',
+      icon: '🏠',
+      price: '$149/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'Trend forecasting'],
+      benefits: ['Better investments', 'Market insights', 'Risk assessment'],
+      link: '/ai-real-estate-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical data analysis and patient care optimization',
+      icon: '🏥',
+      price: '$299/month',
+      features: ['Medical imaging analysis', 'Patient monitoring', 'Diagnostic support', 'Treatment recommendations'],
+      benefits: ['Improved accuracy', 'Faster diagnosis', 'Better outcomes'],
+      link: '/ai-healthcare-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning with AI-powered educational content',
+      icon: '🎓',
+      price: '$119/month',
+      features: ['Adaptive learning', 'Progress tracking', 'Content generation', 'Assessment tools'],
+      benefits: ['Better learning outcomes', 'Personalized experience', 'Engagement boost'],
+      link: '/ai-education-platform',
+      popular: false
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered logistics',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Route optimization', 'Demand forecasting', 'Supplier management', 'Risk analysis'],
+      benefits: ['20% cost reduction', 'Faster delivery', 'Better efficiency'],
+      link: '/ai-supply-chain-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Energy Management',
+      description: 'Optimize energy consumption with AI-powered monitoring',
+      icon: '⚡',
+      price: '$179/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Predictive maintenance', 'Cost analysis'],
+      benefits: ['30% energy savings', 'Reduced costs', 'Sustainability'],
+      link: '/ai-energy-management',
+      popular: false
+    },
+    {
+      title: 'AI Quality Assurance',
+      description: 'Automated quality testing and defect detection with AI',
+      icon: '🔍',
+      price: '$159/month',
+      features: ['Automated testing', 'Defect detection', 'Quality metrics', 'Process optimization'],
+      benefits: ['95% accuracy', 'Faster testing', 'Cost reduction'],
+      link: '/ai-quality-assurance',
+      popular: false
+    },
+    {
+      title: 'AI Translation Service',
+      description: 'Real-time translation with AI-powered language processing',
+      icon: '🌐',
+      price: '$89/month',
+      features: ['100+ languages', 'Real-time translation', 'Document translation', 'Voice translation'],
+      benefits: ['99% accuracy', 'Instant translation', 'Multiple formats'],
+      link: '/ai-translation-service',
+      popular: false
+    },
+    {
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation and safety monitoring',
+      icon: '🛡️',
+      price: '$139/month',
+      features: ['Content filtering', 'Spam detection', 'Safety monitoring', 'Compliance checking'],
+      benefits: ['99.9% accuracy', '24/7 monitoring', 'Reduced manual work'],
+      link: '/ai-content-moderation',
+      popular: false
+    },
+    {
+      title: 'AI Weather Forecasting',
+      description: 'Advanced weather prediction with AI-powered models',
+      icon: '🌤️',
+      price: '$99/month',
+      features: ['Accurate forecasts', 'Real-time updates', 'Custom alerts', 'Historical analysis'],
+      benefits: ['95% accuracy', 'Better planning', 'Risk mitigation'],
+      link: '/ai-weather-forecasting',
+      popular: false
+    },
+    {
+      title: 'AI Personal Assistant',
+      description: 'Intelligent personal assistant for productivity and organization',
+      icon: '🤖',
+      price: '$79/month',
+      features: ['Task management', 'Calendar optimization', 'Email handling', 'Smart reminders'],
+      benefits: ['50% productivity boost', 'Better organization', 'Time savings'],
+      link: '/ai-personal-assistant',
       popular: false
     }
   ];
@@ -155,6 +395,38 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'Deep Learning Solutions',
+      description: 'Advanced neural networks for complex pattern recognition and analysis',
+      icon: Cpu,
+      price: '$2,200/month',
+      features: ['Neural Network Design', 'Deep Learning Models', 'Pattern Recognition', 'Advanced Analytics'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'AI Data Science',
+      description: 'Comprehensive data science solutions with AI-powered insights',
+      icon: BarChart,
+      price: '$1,800/month',
+      features: ['Data Mining', 'Statistical Analysis', 'Predictive Modeling', 'Business Intelligence'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'AI Cloud Services',
+      description: 'Scalable AI solutions deployed on cloud infrastructure',
+      icon: Cloud,
+      price: '$1,600/month',
+      features: ['Cloud AI Models', 'Auto-scaling', 'API Management', 'Global Deployment'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'AI Security Solutions',
+      description: 'AI-powered cybersecurity and threat detection systems',
+      icon: Shield,
+      price: '$2,000/month',
+      features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
+      color: 'text-red-400'
     }
   ];
 
@@ -190,6 +462,38 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting for digital transformation and optimization',
+      icon: Briefcase,
+      price: '$1,000/month',
+      features: ['Strategic Planning', 'Technology Assessment', 'Digital Transformation', 'Process Optimization'],
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'Network Infrastructure',
+      description: 'Design and implement robust network infrastructure solutions',
+      icon: Globe,
+      price: '$1,400/month',
+      features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Monitoring'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'Software Development',
+      description: 'Custom software development and application modernization',
+      icon: Code,
+      price: '$1,500/month',
+      features: ['Custom Applications', 'Legacy Modernization', 'API Development', 'Mobile Apps'],
+      color: 'text-cyan-400'
+    },
+    {
+      title: 'IT Support & Maintenance',
+      description: 'Comprehensive IT support and system maintenance services',
+      icon: Wrench,
+      price: '$800/month',
+      features: ['24/7 Support', 'System Maintenance', 'Hardware Management', 'Software Updates'],
+      color: 'text-orange-400'
     }
   ];
 
@@ -255,7 +559,7 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain floating-particles">
         {/* Navigation */}
         <Navigation />
         
@@ -295,9 +599,30 @@ const HomePage: React.FC = () => {
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth.
+                Transform your business with our cutting-edge technology and achieve unprecedented growth. We serve Fortune 500 companies,
+                startups, and enterprises worldwide with proven AI solutions that deliver measurable ROI and competitive advantages.
               </p>
               
+              {/* Statistics Section */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 max-w-6xl mx-auto mb-12">
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-cyan-400 neon-pulse">500+</div>
+                  <div className="text-sm text-gray-300">Clients Served</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-purple-400 neon-pulse">$50M+</div>
+                  <div className="text-sm text-gray-300">Cost Savings</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-pink-400 neon-pulse">95%</div>
+                  <div className="text-sm text-gray-300">Process Automation</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl sm:text-4xl font-bold text-green-400 neon-pulse">300%</div>
+                  <div className="text-sm text-gray-300">Average ROI</div>
+                </div>
+              </div>
+
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
@@ -325,7 +650,7 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyber-button-enhanced px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
                 </a>
@@ -346,11 +671,28 @@ const HomePage: React.FC = () => {
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               Micro SAAS Solutions
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Powerful, affordable AI-powered tools designed for modern businesses
+            <p className="text-lg text-gray-300 text-center mb-8 max-w-3xl mx-auto px-4">
+              Powerful, affordable AI-powered tools designed for modern businesses. Starting from just $79/month,
+              our micro SAAS solutions provide enterprise-grade AI capabilities at startup-friendly prices.
             </p>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center space-x-4 text-sm text-gray-400">
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  Market Average: $200-500/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                  Our Price: $79-299/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  Save up to 60%
+                </span>
+              </div>
+            </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
@@ -409,9 +751,26 @@ const HomePage: React.FC = () => {
             <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               AI Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Advanced artificial intelligence solutions for enterprise applications
+            <p className="text-lg text-gray-300 text-center mb-8 max-w-3xl mx-auto px-4">
+              Advanced artificial intelligence solutions for enterprise applications. Our AI services deliver
+              custom machine learning models, natural language processing, and computer vision solutions.
             </p>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center space-x-6 text-sm text-gray-400">
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  Industry Standard: $2,000-5,000/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                  Our Price: $1,200-2,200/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  Save up to 40%
+                </span>
+              </div>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {aiServices.map((service, index) => (
@@ -455,13 +814,30 @@ const HomePage: React.FC = () => {
             <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               IT Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
-              Comprehensive IT solutions for modern enterprise infrastructure
+            <p className="text-lg text-gray-300 text-center mb-8 max-w-3xl mx-auto px-4">
+              Comprehensive IT solutions for modern enterprise infrastructure. From cloud migration to cybersecurity,
+              we provide end-to-end IT services that keep your business secure and efficient.
             </p>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center space-x-6 text-sm text-gray-400">
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                  Market Rate: $1,500-3,000/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                  Our Price: $800-1,600/month
+                </span>
+                <span className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
+                  Save up to 50%
+                </span>
+              </div>
+            </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -503,7 +879,7 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
@@ -516,7 +892,7 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
@@ -528,7 +904,7 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>

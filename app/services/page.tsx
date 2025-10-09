@@ -257,7 +257,7 @@ const ServicesPage: React.FC = () => {
   const categories = ['All', 'Productivity', 'Marketing', 'Analytics', 'Customer Service', 'Development', 'Content Creation', 'Automation', 'Design', 'Creative', 'Health & Fitness'];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain floating-particles">
       <Navigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -280,9 +280,9 @@ const ServicesPage: React.FC = () => {
             Powerful, affordable AI-powered tools designed for modern businesses
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-6 mb-12">
             {microSAASServices.map((service, index) => (
-              <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <article key={index} className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -351,7 +351,7 @@ const ServicesPage: React.FC = () => {
               <a
                 key={index}
                 href={`/ai-solutions#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
@@ -390,7 +390,7 @@ const ServicesPage: React.FC = () => {
               <a
                 key={index}
                 href={`/it-services#${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+                className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
                   <service.icon className={`w-12 h-12 ${service.color} group-hover:scale-110 transition-transform duration-300`} />
@@ -417,7 +417,7 @@ const ServicesPage: React.FC = () => {
 
         {/* Contact CTA */}
         <section className="text-center">
-          <div className="cyber-card p-8 max-w-4xl mx-auto">
+          <div className="quantum-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-4 neon-text">
               Ready to Transform Your Business?
             </h2>
@@ -427,7 +427,7 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                className="cyber-button-enhanced px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
               >
                 Get Free Consultation
               </a>
