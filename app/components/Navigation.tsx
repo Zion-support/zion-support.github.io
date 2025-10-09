@@ -72,7 +72,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
         { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
         { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
+        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'Smart email management' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Intelligent scheduling' },
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI-powered writing tools' }
       ]
     },
     {
@@ -97,7 +101,10 @@ const Navigation: React.FC = () => {
         { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
         { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
         { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' },
+        { name: 'API Development', path: '/api', description: 'Custom API development' },
+        { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance' },
+        { name: 'Security', path: '/security', description: 'Advanced security solutions' }
       ]
     },
     {
@@ -118,7 +125,10 @@ const Navigation: React.FC = () => {
         { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
         { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
         { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' },
+        { name: 'Task Manager Pro', path: '/task-manager-pro', description: 'Advanced task management' },
+        { name: 'Expense Tracker', path: '/expense-tracker', description: 'Smart expense tracking' },
+        { name: 'Smart Analytics', path: '/smart-analytics', description: 'AI-powered analytics' }
       ]
     },
     {
