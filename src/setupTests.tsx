@@ -6,17 +6,17 @@ import React from 'react';
 import '@testing-library/jest-dom';
 // Polyfill for TextEncoder/TextDecoder
 import { TextEncoder, TextDecoder } from 'util';
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+global.TextEncoder = TextEncoder as any;
+global.TextDecoder = TextDecoder as any;
 // Suppress jsdom navigation warnings
 const _originalConsoleError = console.error;
 console.error = (...args) => {
   const _message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') || 
-      message.includes('navigation (except hash changes)')) {
+  if (_message.includes('Not implemented: navigation') || 
+      _message.includes('navigation (except hash changes)')) {
     return;
   }
-  originalConsoleError(...args);
+  _originalConsoleError(...args);
 };
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -62,17 +62,17 @@ const _originalConsoleWarn = console.warn;
 const _originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const _message = args[0]?.toString?.() || '';
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {
+  if (_message.includes('Warning: ReactDOM.render is no longer supported')) {
     return;
   }
-  originalConsoleWarn(...args);
+  _originalConsoleWarn(...args);
 };
 console.info = (...args) => {
   const _message = args[0]?.toString?.() || '';
-  if (message.includes('ReactDOM.render is no longer supported')) {
+  if (_message.includes('ReactDOM.render is no longer supported')) {
     return;
   }
-  originalConsoleInfo(...args);
+  _originalConsoleInfo(...args);
 };
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
@@ -89,7 +89,7 @@ console.error = (...args) => {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }
-  originalConsoleError.apply(console, args);
+  _originalConsoleError.apply(console, args);
 };
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
