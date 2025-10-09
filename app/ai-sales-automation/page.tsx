@@ -1,6 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap } from 'lucide-react';
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
 
 const AISalesAutomationPage: React.FC = () => {
   const features = [
@@ -85,8 +92,19 @@ const AISalesAutomationPage: React.FC = () => {
       popular: false
     }
   ];
+<<<<<<< HEAD
 
   const testimonials = [
+=======
+  const stats = [
+    { number: '300%', label: 'Increase in Sales' },
+    { number: '80%', label: 'Time Savings' },
+    { number: '95%', label: 'Lead Accuracy' },
+    { number: '50+', label: 'CRM Integrations' }
+  ];
+
+  const useCases = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
     {
       name: 'Robert Johnson',
       role: 'VP of Sales',
@@ -109,6 +127,7 @@ const AISalesAutomationPage: React.FC = () => {
       rating: 5
     }
   ];
+<<<<<<< HEAD
 
   const stats = [
     { number: '60%', label: 'Increase in Close Rate' },
@@ -292,11 +311,123 @@ const AISalesAutomationPage: React.FC = () => {
                     plan.popular
                       ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
+=======
+  return (
+    <>
+      <SEOOptimizer
+        title="AI Sales Automation Platform - Zion Tech Group"
+        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
+        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
+        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="pt-16">
+          {/* Hero Section */}
+          <section className="container mx-auto px-4 py-16 text-center">
+            <div className="max-w-4xl mx-auto">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+                AI Sales Automation Platform
+              </h1>
+              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+                Boost sales by 300% with intelligent automation
+              </p>
+              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
+                and advanced analytics to help sales teams close more deals in less time.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+                <a
+                  href="tel:+13024640950"
+                  className="cyber-button flex items-center space-x-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span>Call (302) 464-0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button flex items-center space-x-2"
+                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>Get Free Demo</span>
+                </a>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                {stats.map((stat, index) => (
+                  <div key={index} className="cyber-card p-6 text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-300 font-medium">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Powerful Sales Automation Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center space-x-2 text-sm text-cyan-400">
+                        <CheckCircle className="w-4 h-4" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Use Cases Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Perfect for Every Industry
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Pricing Section */}
+          <section className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`cyber-card p-8 relative ${
+                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
                   }`}
                 >
                   Get Started
                 </a>
               </div>
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -364,6 +495,15 @@ const AISalesAutomationPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+            </div>
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
   );
 };
 

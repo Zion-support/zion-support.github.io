@@ -1,9 +1,28 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-af41
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+=======
+import { Link } from 'react-router-dom';
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+
+const ApiDocsPage: React.FC = () => {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+
+  const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+    setTimeout(() => setCopiedCode(null), 2000);
+  };
+<<<<<<< HEAD
+enhance-and-expand-ziontechgroup-com-services-and-site-caae
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import Link from 'next/link';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-b494
 const ApiDocsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
