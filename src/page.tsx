@@ -1,5 +1,11 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Brain, MessageSquare, Eye, Zap, Heart, CreditCard, Shield, FileText, BarChart, Music, 
+  Settings, Smartphone, Cloud, Database, Cpu, Globe, Target, Users, GraduationCap, 
+  Lock, Mail, Location, CheckCircle, TrendingUp, Sparkles, Phone 
+} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -44,11 +50,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-<<<<<<< HEAD
-      (window as Record<string, unknown>).gtag('event', 'phone_click', {
-=======
       (window as { gtag: (command: string, action: string, parameters: Record<string, string>) => void }).gtag('event', 'phone_click', {
->>>>>>> cursor/fix-errors-and-merge-to-main-fb42
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });
