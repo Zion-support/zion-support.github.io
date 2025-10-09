@@ -1,22 +1,16 @@
-'use client';
 /**
  * Jest setup file for testing environment
  */
-/* eslint-disable no-console */
 import '@testing-library/jest-dom';
+
 // Polyfill for TextEncoder/TextDecoder
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
+
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-const __originalConsoleError = console.error;
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-const originalConsoleError = console.error;
-const originalConsoleError = console.error;
 console.error = (...args) => {
   const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') || 
@@ -25,6 +19,7 @@ console.error = (...args) => {
   }
   originalConsoleError(...args);
 };
+
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -39,9 +34,11 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn()
   }))
 });
+
 // Mock requestAnimationFrame
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
+
 // Mock localStorage
 const localStorageMock = {
   getItem: jest.fn(),
@@ -52,6 +49,7 @@ const localStorageMock = {
 Object.defineProperty(window, 'localStorage', {
   value: localStorageMock
 });
+
 // Mock sessionStorage
 const sessionStorageMock = {
   getItem: jest.fn(),
@@ -62,23 +60,17 @@ const sessionStorageMock = {
 Object.defineProperty(window, 'sessionStorage', {
   value: sessionStorageMock
 });
+
 // Mock fetch
 global.fetch = jest.fn();
+
 // Mock console methods for cleaner test output
 // eslint-disable-next-line no-console
 const originalConsoleWarn = console.warn;
 // eslint-disable-next-line no-console
 const originalConsoleInfo = console.info;
+
 // eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-// eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
-const originalConsoleWarn = console.warn;
-const originalConsoleInfo = console.info;
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {
@@ -86,6 +78,8 @@ console.warn = (...args) => {
   }
   originalConsoleWarn(...args);
 };
+
+// eslint-disable-next-line no-console
 console.info = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
@@ -93,6 +87,7 @@ console.info = (...args) => {
   }
   originalConsoleInfo(...args);
 };
+
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
@@ -103,21 +98,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
     return [];
   }
 };
-// Additional JSDOM navigation warning suppression
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const suppressNavigationWarnings = (...args: unknown[]) => {
-  if (args[0] && (args[0] as { type?: string; message?: string }).type === 'not implemented' && (args[0] as { type?: string; message?: string }).message?.includes('navigation')) {
-// Suppress JSDOM navigation warnings
-// eslint-disable-next-line no-console
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-// Suppress JSDOM navigation warnings
-console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
-    return; // Suppress JSDOM navigation warnings
-  }
-  originalConsoleError(...args);
-};
+
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {

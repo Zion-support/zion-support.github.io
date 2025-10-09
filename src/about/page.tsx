@@ -4,33 +4,9 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-  const _team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-    },
-import { Link } from 'react-router-dom';
-import { Users, Target, Brain, Shield } from 'lucide-react';
-import Footer from '../components/Footer';
-
-const AboutPage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
+    { number: '150+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
   ];
@@ -58,32 +34,6 @@ const AboutPage: React.FC = () => {
     },
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '150+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' },
-      icon: Target,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: Brain,
-      title: 'Excellence',
-      description: 'We deliver solutions that exceed expectations and drive real business value.'
-    },
-    {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'We maintain the highest ethical standards in all our business practices.'
-    },
-    {
-      icon: Users,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners in their success.'
-    }
-  ];
-
   const team = [
     {
       name: 'Kleber Santos',
@@ -102,20 +52,6 @@ const AboutPage: React.FC = () => {
     }
   ];
 
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            About Zion Tech Group
-          </h1>
-          <p className='text-xl text-gray-600'>
-            Leading the future of AI and IT solutions
-import { Link } from 'react-router-dom';
-import { Users, Target, Brain, Shield } from 'lucide-react';
-import Footer from '../components/Footer';
-
-const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -149,8 +85,8 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
-      {/* Stats Section */}
-        <section className="py-16 bg-white">
+        {/* Stats Section */}
+        <section className="py-16 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -168,7 +104,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -203,7 +139,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -233,7 +169,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 rounded-xl mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -270,7 +206,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
@@ -294,19 +230,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
-
-      <Footer />
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
-    </div>
-    </div>
-      </div>
       </div>
       <Footer />
     </div>

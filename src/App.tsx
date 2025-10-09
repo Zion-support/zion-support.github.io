@@ -30,7 +30,7 @@ import AICodeGenerationPage from './ai-code-generation/page';
 import AISocialMediaManagerPage from './ai-social-media-manager/page';
 import AIMLPlatformPage from './ai-ml-platform/page';
 
-'use client';
+// 'use client'; // This is not needed in Vite/React
 
 // Lazy load components for better performance
 const _HomePage = lazy(() => import('../app/page'));

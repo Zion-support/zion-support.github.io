@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -187,7 +185,4 @@ const AICustomerSupportBotPage: React.FC = () => {
   );
 };
 
-}
-
-export default AiCustomerSupportBotPage;
 export default AICustomerSupportBotPage;

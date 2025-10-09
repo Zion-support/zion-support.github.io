@@ -77,7 +77,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-}
-
-export default AiServicesPage;
 export default AIServicesPage;

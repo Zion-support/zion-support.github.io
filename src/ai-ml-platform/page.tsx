@@ -121,7 +121,4 @@ const AIMLPlatformPage: React.FC = () => {
   );
 };
 
-}
-
-export default AiMlPlatformPage;
 export default AIMLPlatformPage;

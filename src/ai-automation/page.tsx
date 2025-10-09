@@ -185,7 +185,4 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-}
-
-export default AiAutomationPage;
 export default AIAutomationPage;

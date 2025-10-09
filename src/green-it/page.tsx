@@ -1,11 +1,7 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
-'use client';
 import React, { useState } from 'react';
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import React, { useState } from 'react';
-
-'use client';
 
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
@@ -13,495 +9,220 @@ const GreenITPage: React.FC = () => {
   const _tabs = [
     {
       id: 'solutions',
-      name: 'Green Solutions',
-      icon: Leaf,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      label: 'Green Solutions',
+      icon: Leaf
     },
     {
       id: 'benefits',
-      name: 'Benefits',
-      icon: Target,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
+      label: 'Benefits',
+      icon: Target
     },
     {
       id: 'certifications',
-      name: 'Certifications',
-      icon: Award,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-    }
-  ];
-
-  const greenSolutions = [
-    {
-      title: 'Energy-Efficient Data Centers',
-      description: 'Design and implement energy-efficient data centers with renewable energy integration',
-      icon: Zap,
-      color: 'text-yellow-400',
-      features: [
-        'PUE (Power Usage Effectiveness) optimization',
-        'Renewable energy integration',
-        'Cooling system optimization',
-        'Smart power management'
-      ],
-      impact: 'Reduce energy consumption by up to 40%',
-      pricing: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Cloud Carbon Footprint Reduction',
-      description: 'Optimize cloud infrastructure to minimize carbon emissions and environmental impact',
-      icon: Cloud,
-      color: 'text-blue-400',
-      features: [
-        'Carbon footprint monitoring',
-        'Green cloud migration',
-        'Resource optimization',
-        'Renewable energy sourcing'
-      ],
-      impact: 'Reduce carbon footprint by up to 60%',
-      pricing: 'Starting at $1,800/month'
-    },
-    {
-      title: 'Sustainable IT Asset Management',
-      description: 'Implement circular economy principles for IT equipment lifecycle management',
-      icon: Recycle,
-      color: 'text-green-400',
-      features: [
-        'Equipment refurbishment',
-        'Responsible disposal',
-        'Asset tracking and optimization',
-        'Circular economy implementation'
-      ],
-      impact: 'Extend equipment lifecycle by 50%',
-      pricing: 'Starting at $1,200/month'
-    },
-    {
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
-      icon: Code,
-      color: 'text-purple-400',
-      features: [
-        'Energy-efficient coding practices',
-        'Performance optimization',
-        'Resource usage monitoring',
-        'Sustainable architecture design'
-      ],
-      impact: 'Reduce software energy consumption by 30%',
-      pricing: 'Starting at $1,500/month'
-    },
-    {
-      title: 'Remote Work Infrastructure',
-      description: 'Enable sustainable remote work with optimized digital infrastructure',
-      icon: Users,
-      color: 'text-cyan-400',
-      features: [
-        'Virtual desktop infrastructure',
-        'Collaboration tools optimization',
-        'Energy-efficient hardware',
-        'Digital workspace management'
-      ],
-      impact: 'Reduce commuting emissions by 80%',
-      pricing: 'Starting at $800/month'
-    },
-    {
-      title: 'Environmental Monitoring',
-      description: 'Real-time monitoring and reporting of environmental impact metrics',
-      icon: Globe,
-      color: 'text-emerald-400',
-      features: [
-        'Carbon footprint tracking',
-        'Energy consumption monitoring',
-        'Sustainability reporting',
-        'Environmental compliance'
-      ],
-      impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: 'Cost Savings',
-      description: 'Reduce operational costs through energy efficiency and resource optimization',
-      details: [
-        'Up to 40% reduction in energy costs',
-        'Lower maintenance and replacement costs',
-        'Improved resource utilization',
-        'Reduced waste management costs'
-      ]
-    },
-    {
-      icon: Leaf,
-      title: 'Environmental Impact',
-      description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
-      details: [
-        '60% reduction in carbon emissions',
-        '50% less electronic waste',
-        '100% renewable energy options',
-        'Carbon neutral operations'
-      ]
-    },
-    {
-      icon: Award,
-      title: 'Compliance & Certification',
-      description: 'Meet environmental regulations and achieve sustainability certifications',
-      details: [
-        'ISO 14001 environmental management',
-        'LEED certification support',
-        'Carbon Trust certification',
-        'ESG reporting compliance'
-      ]
-    },
-    {
-      icon: Users,
-      title: 'Brand Reputation',
-      description: 'Enhance your brand image and attract environmentally conscious customers',
-      details: [
-        'Improved brand perception',
-        'Customer loyalty increase',
-        'Investor confidence boost',
-        'Talent attraction and retention'
-      ]
-    }
-  ];
-
-  const certifications = [
-    {
-      name: 'ISO 14001:2015',
-      description: 'Environmental Management Systems',
-      icon: Award,
-      color: 'text-green-400',
-      status: 'Certified'
-    },
-    {
-      name: 'LEED Platinum',
-      description: 'Leadership in Energy and Environmental Design',
-      icon: Leaf,
-      color: 'text-emerald-400',
-      status: 'Certified'
-    },
-    {
-      name: 'Carbon Trust Standard',
-      description: 'Carbon Footprint Management',
-      icon: Globe,
-      color: 'text-blue-400',
-      status: 'Certified'
-    },
-    {
-      name: 'Green IT Certification',
-      description: 'Sustainable IT Practices',
-      icon: Zap,
-      color: 'text-yellow-400',
-      status: 'Certified'
-    }
-  ];
-
-  const stats = [
-    {
-      icon: Leaf,
-      value: '60%',
-      label: 'Carbon Footprint Reduction',
-      color: 'text-green-400'
-    },
-    {
-      icon: Zap,
-      value: '40%',
-      label: 'Energy Cost Savings',
-      color: 'text-yellow-400'
-    },
-    {
-      icon: Recycle,
-      value: '50%',
-      label: 'Waste Reduction',
-      color: 'text-blue-400'
-    },
-    {
-      icon: Globe,
-      value: '100%',
-      label: 'Renewable Energy Options',
-      color: 'text-purple-400'
-    }
-  ];
-
-  const caseStudies = [
-    {
-      company: 'TechCorp Manufacturing',
-      industry: 'Manufacturing',
-      challenge: 'High energy consumption in data centers',
-      solution: 'Implemented energy-efficient data center design with renewable energy integration',
-      results: [
-        '45% reduction in energy consumption',
-        '$2.3M annual cost savings',
-        'Carbon neutral operations achieved',
-        'LEED Platinum certification obtained'
-      ],
-      icon: Factory,
-      color: 'text-blue-400'
-    },
-    {
-      company: 'FinanceFirst Bank',
-      industry: 'Financial Services',
-      challenge: 'Large carbon footprint from IT operations',
-      solution: 'Green cloud migration and sustainable IT asset management',
-      results: [
-        '55% reduction in carbon emissions',
-        '60% improvement in energy efficiency',
-        'ISO 14001 certification achieved',
-        'Enhanced brand reputation'
-      ],
-      icon: Building,
-      color: 'text-green-400'
+      label: 'Certifications',
+      icon: Award
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure into a sustainable, environmentally friendly system 
-              that reduces costs while protecting our planet.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center text-green-400">
-                <Leaf className="w-5 h-5 mr-2" />
-                <span className="font-medium">Carbon Neutral Operations</span>
-              </div>
-              <div className="flex items-center text-blue-400">
-                <Zap className="w-5 h-5 mr-2" />
-                <span className="font-medium">Energy Efficient</span>
-              </div>
-              <div className="flex items-center text-purple-400">
-                <Award className="w-5 h-5 mr-2" />
-                <span className="font-medium">Certified Solutions</span>
-              </div>
-            </div>
-          </div>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Green IT Solutions</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Sustainable technology solutions that reduce environmental impact while improving efficiency and performance.
+          </p>
+        </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                </div>
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center mb-12">
+            {_tabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex items-center px-6 py-3 m-2 rounded-lg transition-colors ${
+                  activeTab === tab.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                <tab.icon className="h-5 w-5 mr-2" />
+                {tab.label}
+              </button>
             ))}
           </div>
 
-          {/* Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? `${tab.bgColor} ${tab.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
-                >
-                  <tab.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{tab.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Tab Content */}
           {activeTab === 'solutions' && (
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                    <div className="flex items-start mb-4">
-                      <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                        <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
-                        <p className="text-gray-300 text-sm mb-4">{solution.description}</p>
-                      </div>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <div className="text-sm font-semibold text-green-400 mb-1">Environmental Impact:</div>
-                      <div className="text-sm text-gray-300">{solution.impact}</div>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className={`text-lg font-bold ${solution.color}`}>
-                        {solution.pricing}
-                      </div>
-                      <a
-                        href="/contact"
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                      >
-                        Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
-                    </div>
-                  </div>
-                ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Leaf className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Energy-Efficient Infrastructure</h3>
+                <p className="text-gray-300 mb-4">Optimize your IT infrastructure for maximum energy efficiency and reduced carbon footprint.</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    40% energy reduction
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Smart cooling systems
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Renewable energy integration
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Recycle className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Sustainable Hardware</h3>
+                <p className="text-gray-300 mb-4">Eco-friendly hardware solutions with extended lifecycle and recyclable components.</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Recyclable materials
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Extended warranties
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Carbon-neutral shipping
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                <Zap className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Green Software</h3>
+                <p className="text-gray-300 mb-4">Optimized software solutions that minimize resource consumption and environmental impact.</p>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Low-power algorithms
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Efficient data processing
+                  </li>
+                  <li className="flex items-center text-green-300">
+                    <CheckCircle className="h-4 w-4 mr-2" />
+                    Cloud optimization
+                  </li>
+                </ul>
               </div>
             </div>
           )}
 
           {activeTab === 'benefits' && (
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Benefits of Green IT
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                    <div className="flex items-start mb-4">
-                      <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
-                        <benefit.icon className="w-6 h-6 text-cyan-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                        <p className="text-gray-300 mb-4">{benefit.description}</p>
-                      </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Environmental Benefits</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Reduced Carbon Footprint</h4>
+                      <p className="text-gray-300">Significantly lower CO2 emissions through efficient technology solutions.</p>
                     </div>
-                    <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => (
-                        <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Energy Conservation</h4>
+                      <p className="text-gray-300">Up to 50% reduction in energy consumption through smart optimization.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Waste Reduction</h4>
+                      <p className="text-gray-300">Minimize electronic waste through sustainable hardware practices.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Business Benefits</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Cost Savings</h4>
+                      <p className="text-gray-300">Reduce operational costs through energy efficiency and optimized resource usage.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Compliance</h4>
+                      <p className="text-gray-300">Meet environmental regulations and sustainability standards.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-cyan-400 mr-3 mt-1" />
+                    <div>
+                      <h4 className="text-white font-semibold">Brand Reputation</h4>
+                      <p className="text-gray-300">Enhance your brand image with sustainable technology practices.</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           )}
 
           {activeTab === 'certifications' && (
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Certifications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
-                    <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <cert.icon className={`w-8 h-8 ${cert.color}`} />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
-                    <p className="text-gray-300 text-sm mb-3">{cert.description}</p>
-                    <div className="text-green-400 text-sm font-medium">{cert.status}</div>
-                  </div>
-                ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <Award className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">ISO 14001</h3>
+                <p className="text-gray-300">Environmental Management System Certification</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <Award className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">ENERGY STAR</h3>
+                <p className="text-gray-300">Energy Efficiency Certification</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <Award className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">LEED</h3>
+                <p className="text-gray-300">Leadership in Energy and Environmental Design</p>
               </div>
             </div>
           )}
 
-          {/* Case Studies */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Success Stories
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
-                      <study.icon className={`w-6 h-6 ${study.color}`} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-1">{study.company}</h3>
-                      <p className="text-gray-400 text-sm mb-3">{study.industry}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:</h4>
-                    <p className="text-gray-300 text-sm mb-3">{study.challenge}</p>
-                    
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
-                    <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
-                    
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                          {result}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Go Green?
-            </h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey towards sustainable IT operations. Get a free environmental 
-              assessment and discover how much you can save while protecting the planet.
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-8">Ready to Go Green?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Transform your IT infrastructure with sustainable solutions that benefit both your business and the environment.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-green-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 transition-colors flex items-center justify-center"
               >
-                <Leaf className="w-5 h-5 mr-2" />
-                Get Free Assessment
+                <Leaf className="h-5 w-5 mr-2" />
+                Start Your Green Journey
               </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              <a 
+                href="/demo" 
+                className="bg-transparent text-green-400 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-green-400 hover:bg-green-400 hover:text-white transition-colors flex items-center justify-center"
               >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
+                <Globe className="h-5 w-5 mr-2" />
+                Learn More
               </a>
             </div>
           </div>
         </div>
       </div>
+      
       <Footer />
-    </>
+    </div>
   );
 };
 

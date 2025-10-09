@@ -1,8 +1,10 @@
+import React from 'react';
 import './globals.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
+
 export default function RootLayout({
   children,
 }: {
@@ -175,7 +177,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@ziontechgroup" />
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(_structuredData) }}
         />
       </head>
       <body className='antialiased'>
@@ -187,10 +189,6 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
 
 export default RootLayout;
-}
-}
-}
-}
-}
