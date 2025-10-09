@@ -1,20 +1,12 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { Menu, X, Phone, Mail } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-=======
-import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, Zap, ArrowRight } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,15 +18,6 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-=======
   const closeAllMenus = () => {
     setServicesOpen(false);
     setIsOpen(false);
@@ -105,72 +88,27 @@ const Navigation: React.FC = () => {
       ]
     }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
+          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-white hover:text-blue-400 transition-colors">
-              Home
-            </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
-            <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
-              About
-            </Link>
-            <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
-              Contact
-            </Link>
-            <div className="flex items-center space-x-4 ml-4 pl-4 border-l border-gray-600">
-              <a 
-                href="tel:+13026009898" 
-                className="flex items-center space-x-1 text-blue-400 hover:text-blue-300 transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                <span className="text-sm">(302) 600-9898</span>
-              </a>
-            </div>
-=======
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold"
-            onClick={closeAllMenus}
-          >
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
-            </div>
-            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-              Zion Tech Group
-            </span>
-          </Link>
-
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-blue-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-blue-400 transition-colors font-medium">              
               About
             </Link>
             
@@ -178,9 +116,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
+                className="flex items-center space-x-1 font-medium transition-colors hover:text-purple-400 text-white"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
@@ -203,7 +139,7 @@ const Navigation: React.FC = () => {
                           {category.services.map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
-                              to={service.path}
+                              href={service.path}
                               className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-purple-600 rounded-lg transition-colors"
                               onClick={closeAllMenus}
                             >
@@ -217,7 +153,7 @@ const Navigation: React.FC = () => {
                   
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
                     <Link
-                      to="/services"
+                      href="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
                       onClick={closeAllMenus}
                     >
@@ -229,30 +165,24 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link 
-              to="/case-studies" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/case-studies" 
+              className="font-medium transition-colors hover:text-blue-400 text-white"
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
 
             <Link 
-              to="/blog" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/blog" 
+              className="font-medium transition-colors hover:text-blue-400 text-white"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
 
             <Link 
-              to="/contact" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              href="/contact" 
+              className="font-medium transition-colors hover:text-blue-400 text-white"
               onClick={closeAllMenus}
             >
               Contact
@@ -260,17 +190,16 @@ const Navigation: React.FC = () => {
 
             {/* CTA Button */}
             <Link
-              to="/contact"
+              href="/contact"
               className="cyber-button inline-flex items-center"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="text-white hover:text-blue-400 transition-colors"
@@ -281,92 +210,50 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link 
-                href="/" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              <Link 
-                href="/services" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-              >
-                Services
-              </Link>
-              <Link 
-                href="/about" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
-=======
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
               <Link
-                to="/"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+                href="/"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               
               <Link
-                to="/about"
-                className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+                href="/about"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
               >
                 About
               </Link>
-              <Link 
-                href="/blog" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
+
+              <Link
+                href="/blog"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 Blog
               </Link>
-              <Link 
-                href="/contact" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
-                onClick={closeMenu}
+
+              <Link
+                href="/contact"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-blue-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
               >
                 Contact
               </Link>
-<<<<<<< HEAD
-              <div className="border-t border-gray-600 pt-2 mt-2">
-                <a 
-                  href="tel:+13026009898" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>(302) 600-9898</span>
-                </a>
-                <a 
-                  href="mailto:info@ziontechgroup.com" 
-                  className="flex items-center space-x-2 px-3 py-2 text-blue-400 hover:text-blue-300 transition-colors"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>info@ziontechgroup.com</span>
-                </a>
-              </div>
-=======
 
               <Link
-                to="tel:+13024640950"
+                href="tel:+13024640950"
                 className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
               </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
             </div>
           </div>
         )}
@@ -375,8 +262,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
