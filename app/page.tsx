@@ -8,17 +8,7 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-<<<<<<< HEAD
-
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 const EnhancedServicesShowcase = lazy(() => import('./components/EnhancedServicesShowcase'));
-
 
 // Preload critical components with better timing
 const preloadComponents = () => {
@@ -27,13 +17,6 @@ const preloadComponents = () => {
       // Preload components
     }, 100);
   }
-=======
-// Preload critical components
-const preloadComponents = () => {
-  setTimeout(() => {
-    // Preload components after initial render
-  }, 100);
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
 };
 
 // Loading skeleton component
@@ -278,8 +261,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default HomePage;
-=======
-export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6b21
