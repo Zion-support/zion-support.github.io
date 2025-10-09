@@ -4,12 +4,7 @@ import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Bra
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const MicroSAASPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const microSAASServices = [
+const microSAASServices = [
     {
       id: 'ai-project-manager',
       name: 'AI Project Manager Pro',
@@ -180,6 +175,11 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
 
+const MicroSAASPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
     { id: 'content', name: 'Content Creation', icon: FileText },
@@ -226,7 +226,7 @@ const MicroSAASPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [microSAASServices, searchTerm, selectedCategory, sortBy]);
 
   return (
     <>

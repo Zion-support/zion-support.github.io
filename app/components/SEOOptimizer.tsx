@@ -26,7 +26,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({ children }) => {
       // Optimize meta tags
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription && metaDescription.getAttribute('content')?.length < 160) {
-        console.warn('Meta description is too short for optimal SEO');
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.warn('Meta description is too short for optimal SEO');
+        }
       }
     };
 

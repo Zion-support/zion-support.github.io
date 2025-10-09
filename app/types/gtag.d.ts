@@ -10,5 +10,5 @@ interface GtagEvent {
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
 
 interface Window {
-  gtag: (command: GtagCommand, targetId: string, config?: any) => void;
+  gtag: (command: GtagCommand, targetId: string, config?: GtagEvent | Record<string, unknown>) => void;
 }

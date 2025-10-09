@@ -41,12 +41,7 @@ import {
   Wifi as WifiIcon2, WifiOff as WifiOffIcon2
 } from 'lucide-react';
 
-const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const itServices = [
+const itServices = [
     {
       id: 'managed-it-services',
       name: 'Managed IT Services',
@@ -361,6 +356,11 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+const ITServicesPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -407,7 +407,7 @@ const ITServicesPage: React.FC = () => {
     }
 
     return filtered;
-  }, [searchTerm, selectedCategory, sortBy]);
+  }, [itServices, searchTerm, selectedCategory, sortBy]);
 
   return (
     <>

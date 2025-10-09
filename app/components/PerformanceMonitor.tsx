@@ -23,23 +23,32 @@ const PerformanceMonitor: React.FC = () => {
       // Monitor Core Web Vitals
       if ('web-vitals' in window) {
         // This would typically use the web-vitals library
-        console.log('Performance monitoring enabled');
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log('Performance monitoring enabled');
+        }
       }
       
       // Monitor page load time
       window.addEventListener('load', () => {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        console.log(`Page load time: ${loadTime}ms`);
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log(`Page load time: ${loadTime}ms`);
+        }
       });
       
       // Monitor memory usage if available
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        console.log('Memory usage:', {
-          used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-          total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-          limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-        });
+        const memory = (performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (process.env.NODE_ENV === 'development') {
+          // eslint-disable-next-line no-console
+          console.log('Memory usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+          });
+        }
       }
     };
 
@@ -50,7 +59,10 @@ const PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            console.warn('Long task detected:', entry.duration + 'ms');
+            if (process.env.NODE_ENV === 'development') {
+              // eslint-disable-next-line no-console
+              console.warn('Long task detected:', entry.duration + 'ms');
+            }
           }
         }
       });
