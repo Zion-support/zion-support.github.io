@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface ContentStats {
   totalArticles: number;
@@ -28,7 +28,7 @@ const ContentStatistics: React.FC = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('month');
 
   // Mock data - in a real app, this would come from an API
-  const mockStats: ContentStats = {
+  const mockStats: ContentStats = useMemo(() => ({
     totalArticles: 28,
     totalViews: 156750,
     averageEngagement: 89.2,
@@ -55,7 +55,7 @@ const ContentStatistics: React.FC = () => {
       { title: 'AI 2026: Autonomous Enterprise Architecture Revolution', views: 8900, engagement: 91, category: 'Architecture' },
       { title: 'AI 2026: Autonomous Agent Factories Revolution', views: 7200, engagement: 88, category: 'AI Agents' }
     ]
-  };
+  }), []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
