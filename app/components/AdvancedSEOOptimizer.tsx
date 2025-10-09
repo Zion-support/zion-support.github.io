@@ -167,9 +167,54 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return metaTags;
   }, [seoData]);
 
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: seoData.canonicalUrl?.split('/').slice(0, 3).join('/') || 'https://ziontechgroup.com'
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: seoData.title,
+          item: seoData.canonicalUrl
+        }
+      ]
+    };
+  }, [enableStructuredData, seoData.canonicalUrl, seoData.title]);
+
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does Zion Tech Group offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Zion Tech Group offers comprehensive AI and IT solutions including AI automation, data analytics, cybersecurity, cloud computing, and custom software development.'
+          }
+        }
+      ]
+    };
+  }, [enableStructuredData]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
+  const metaTags = generateMetaTags();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -207,7 +252,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {

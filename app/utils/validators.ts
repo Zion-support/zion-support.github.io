@@ -109,7 +109,7 @@ export function getPasswordStrength(password: string): number {
  * Validate credit card number using Luhn algorithm
  */
 export function isValidCreditCard(cardNumber: string): boolean {
-  const cleaned = cardNumber.replace(/\s/g, '');
+  const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d{13,19}$/.test(cleaned)) {
     return false;
   }
