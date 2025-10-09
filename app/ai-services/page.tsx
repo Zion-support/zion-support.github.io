@@ -290,9 +290,6 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
-<<<<<<< HEAD
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'    }
-=======
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // NEW ADVANCED AI SERVICES
@@ -626,7 +623,6 @@ const AIServicesPage: React.FC = () => {
       category: 'Smart City AI',
       technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
     }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7165
   ];
 
   const categories = [...new Set(aiServices.map(service => service.category))];
