@@ -258,7 +258,7 @@ class HealthCheckService {
           name: 'storage',
           status: 'warn',
           message: 'LocalStorage space limited'
-        }
+        };
       }
       return {
         name: 'storage',
