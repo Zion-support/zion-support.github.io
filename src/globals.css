@@ -851,8 +851,6 @@ body {
 
 @media (max-width: 480px) {
   .cyber-grid {
-<<<<<<< HEAD
-=======
     background-size: 10px 10px;
   }
   
@@ -887,7 +885,6 @@ body {
   }
   
   .cyber-grid {
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb
     background-size: 15px 15px;
   }
   
@@ -1028,7 +1025,6 @@ body {
     border-color: rgba(0, 0, 0, 0.1);
   }
 }
-<<<<<<< HEAD
 
 /* Performance optimizations */
 * {
@@ -1105,5 +1101,3 @@ img {
     text-shadow: none;
   }
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-33eb

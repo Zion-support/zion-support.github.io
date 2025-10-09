@@ -36,7 +36,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Load Google Analytics
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
     document.head.appendChild(script);
 
     // Initialize gtag
@@ -47,7 +47,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     (window as any).gtag = gtag;
     
     gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {
+    gtag('config', 'G-XXXXXXXXXX', {
       page_title: document.title,
       page_location: window.location.href,
       send_page_view: true
