@@ -66,23 +66,24 @@ const Navigation: React.FC = () => {
     { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'AI-Powered CRM', href: '/ai-crm-system', icon: Users, description: 'Intelligent CRM System' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation Suite' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Email Campaigns' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Brain, description: 'No-Code Chatbots' },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Cloud Transformation' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: Shield, description: 'Threat Protection' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Process Automation' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },
     { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management' },
     { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Customer Management' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing' },
     { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media' },
     { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
     { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
     { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Target, description: 'SEO Tools' },
-    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
