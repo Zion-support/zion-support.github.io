@@ -1,6 +1,7 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
 =======
 <<<<<<< HEAD
@@ -10,12 +11,16 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(400).json({ error: 'Name, email, phone, and details are required' });
 =======
@@ -26,10 +31,16 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Name, email, phone, and details are required' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+
+      return res.status(400).json({ error: 'Name, email, phone, and details are required' });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
     }
 
     // Process quote submission logic here
     const quote = {
+<<<<<<< HEAD
 <<<<<<< HEAD
       id: Date.now().toString(),
 =======
@@ -39,6 +50,11 @@ export default async function handler(req, res) {
       id: Date.now().toString(),
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+
+      id: Date.now().toString(),
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
       name,
       email,
       phone,
@@ -60,11 +76,9 @@ export default async function handler(req, res) {
 =======
       country,
       service,
-<<<<<<< HEAD
-      timestamp: new Date().toISOString()
-=======
+
       createdAt: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+
     };
 
     // In a real application, you would save this to a database

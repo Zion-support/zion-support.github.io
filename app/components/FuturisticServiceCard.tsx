@@ -6,6 +6,7 @@ interface FuturisticServiceCardProps {
   title: string;
   description: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   features: string[];
   price?: string;
   isPopular?: boolean;
@@ -15,12 +16,12 @@ interface FuturisticServiceCardProps {
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   icon: React.ComponentType<{ className?: string }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-9def
   features: string[];
   price: string;
   popular?: boolean;
-  icon: React.ComponentType<{ className?: string }>;
   onSelect: () => void;
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 }

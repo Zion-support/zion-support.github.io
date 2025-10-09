@@ -4,6 +4,7 @@ const { isValidEmail } = require('../emailUtils.cjs');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -19,10 +20,15 @@ async function handler(req, res) {
   
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   try {
     const { email } = req.body || {};
 
     if (!email) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(400).json({ error: 'Email is required' });
     }
@@ -47,17 +53,9 @@ async function handler(req, res) {
       res.status(400).json({ error: 'Email is required' });
       return;
     }
-
-    if (!isValidEmail(email)) {
-      res.status(400).json({ error: 'Invalid email format' });
-      return;
-    }
-
-    // Save subscription logic here
-    const subscription = {
-      email,
-      subscribedAt: new Date().toISOString()
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
+
       return res.status(400).json({ error: 'Email is required' });
     }
 
@@ -70,7 +68,7 @@ async function handler(req, res) {
       email,
       subscribedAt: new Date().toISOString(),
       source: 'newsletter'
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+
     };
 
     res.statusCode = 200;

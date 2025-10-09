@@ -5,6 +5,7 @@ const path = require('path');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
 =======
 <<<<<<< HEAD
@@ -14,11 +15,15 @@ async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }
 
   const { email, name, source = 'website' } = req.body || {};
 
   if (!email) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return res.status(400).json({ error: 'Email is required' });
 =======
@@ -29,10 +34,14 @@ async function handler(req, res) {
     return res.status(400).json({ error: 'Email is required' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+    return res.status(400).json({ error: 'Email is required' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }
 
   try {
     if (!isValidEmail(email)) {
+<<<<<<< HEAD
 <<<<<<< HEAD
       return res.status(400).json({ error: 'Invalid email' });
 =======
@@ -43,6 +52,9 @@ async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email format' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+      return res.status(400).json({ error: 'Invalid email format' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
     }
 
     const file = path.join(process.cwd(), 'data', 'newsletter-subscriptions.json');

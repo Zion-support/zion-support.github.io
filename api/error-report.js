@@ -2,6 +2,7 @@
 export default function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -23,19 +24,18 @@ export default function handler(req, res) {
     res.status(405).json({ error: 'Method not allowed' });
     return;
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   try {
     // const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
-<<<<<<< HEAD
-    // In a real application, you would:
-=======
+
     // In a real application, you would send this to your monitoring service
->>>>>>> cursor/fix-errors-and-merge-to-main-0133
+
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
     // 2. Store in database
     // 3. Send alerts to development team

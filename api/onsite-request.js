@@ -5,6 +5,7 @@ const path = require('path');
 async function handler(req, res) {
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -16,17 +17,18 @@ async function handler(req, res) {
 <<<<<<< HEAD
     res.status(405).json({ error: 'Method not allowed' });
     return;
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }
 
-  const { name, email, company, message } = req.body || {};
+  const { name, email, company, message, phone, serviceType, budget, timeline } = req.body || {};
 
   if (!name || !email) {
     res.status(400).json({ error: 'Name and email are required' });
     return;
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
 
+<<<<<<< HEAD
   const {
     name,
     email,
@@ -42,6 +44,8 @@ async function handler(req, res) {
     return res.status(400).json({ error: 'Name and email are required' });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
@@ -72,20 +76,8 @@ async function handler(req, res) {
 =======
     const data = fs.readFileSync(file, 'utf8');
     existing = JSON.parse(data);
-<<<<<<< HEAD
-  } catch (err) {
-    // File doesn't exist or is invalid, start with empty array
-    console.log('No existing data found, starting fresh:', err.message);
-  }
 
-  const newRequest = {
-    name,
-    email,
-    company,
-    message,
-    timestamp: new Date().toISOString()
-=======
-  } catch (error) {
+  } catch {
     // File doesn't exist or is invalid, start with empty array
     existing = [];
   }
@@ -101,14 +93,19 @@ async function handler(req, res) {
     budget,
     timeline,
     createdAt: new Date().toISOString()
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
   };
 
   existing.push(newRequest);
 
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.json({ success: true, message: 'Request submitted successfully' });
 =======
@@ -120,6 +117,11 @@ async function handler(req, res) {
   s: true });
 >>>>>>> cursor/fix-errors-and-merge-to-main-0133
 >>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
+=======
+
+  res.json({ success: true, message: 'Request submitted successfully' });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1917
 }
 
 module.exports = withSentry(handler);
