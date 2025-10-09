@@ -127,9 +127,15 @@ const Footer: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+=======
+      <footer className="bg-slate-900 border-t border-cyan-400/20">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+>>>>>>> cursor/analyze-improve-and-deploy-application-c310
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -248,6 +254,10 @@ const Footer: React.FC = () => {
               View All Services →
             </a>
           </div>
+<<<<<<< HEAD
+=======
+          </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-c310
         </div>
 
         {/* Newsletter Signup */}
@@ -305,8 +315,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   );
 };
 
