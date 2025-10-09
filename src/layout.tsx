@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+<<<<<<< HEAD
 const LayoutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -26,3 +27,41 @@ const LayoutPage: React.FC = () => {
 
 export default LayoutPage;
 
+=======
+import Analytics from './components/Analytics';
+export default function RootLayout({// TODO: Add content;}
+}
+//   children,
+}: {// TODO: Add content;}
+};
+  children: React.ReactNode;
+}) {address: {}
+  // TODO: Add content;
+}
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US',
+    offers: [
+  // TODO: Add items,
+]
+      {// TODO: Add content;}
+}
+        '@type': 'Offer',
+        category: 'AI Solutions',
+        description: 'Enterprise AI solutions, digital transformation, and cloud services',
+        price: '1500',
+        priceCurrency: 'USD',
+        priceSpecification: {// TODO: Add content;}
+}
+          '@type': 'PriceSpecification',
+          billingIncrement: 'P1M'
+        };
+  itemOffered: {// TODO: Add content;}
+}
+            '@type': 'Service',
+            name: 'AI Enterprise Transformation',
+            description: 'Comprehensive AI implementation strategies for enterprise organizations'
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0

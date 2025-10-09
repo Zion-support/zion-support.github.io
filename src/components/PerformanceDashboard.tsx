@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -12,6 +13,23 @@ interface PerformanceMetrics {
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 
+=======
+'use client';
+interface PerformanceMetrics {// TODO: Add content;}
+};
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    fps: number;
+}
+interface PerformanceMetrics {// TODO: Add content;}
+};
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    fps: number;
+  [key: string]: number;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {

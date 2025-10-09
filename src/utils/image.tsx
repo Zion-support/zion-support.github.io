@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 'use client'
 import React, { useState, useCallback } from 'react'
 const Image: React.FC = () => {
 interface ImageProps {
     // TODO: Add content
   }
+=======
+'use client';
+import React, { useState, useCallback } from 'react';
+const Image: React.FC = () => {interface ImageProps {}
+  // TODO: Add content;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   src: string;,
     alt: string
   width?: number
@@ -19,6 +27,7 @@ interface ImageProps {
   onLoad?: () => void
   onError?: () => void
 }
+<<<<<<< HEAD
 export const Image: React.FC
           
           
@@ -31,6 +40,11 @@ export const Image: React.FC
           <ImageProps> = ({
     // TODO: Add content
   }
+=======
+export const Image: React.FC;
+          <ImageProps> = ({// TODO: Add content;}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   src,
 //   alt,
 //   width,
@@ -45,6 +59,7 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
+<<<<<<< HEAD
 //   ...props
 }) => {
     // TODO: Add content
@@ -70,18 +85,47 @@ quality = 75,
     ...(fill && {
     // TODO: Add content
   }
+=======
+//   ...props;
+}) => {// TODO: Add content;}
+}
+  const [, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const _handleLoad = useCallback(() => {// TODO: Add content;}
+}
+    setIsLoaded(true);
+    if (onLoad) onLoad();
+  }, [onLoad]);
+  const handleError = useCallback(() => {// TODO: Add content;}
+}
+    setHasError(true);
+    if (onError) onError();
+  }, [onError]);
+  const imageStyle: React.CSSProperties = {// TODO: Add content;}
+}
+//     ...style,
+    ...(fill && {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
       height: '100%',
       objectFit: 'cover'
+<<<<<<< HEAD
     }
   )
   }
   if (hasError) {
     // TODO: Add content
   }
+=======
+    })
+  };
+  if (hasError) {// TODO: Add content;}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     return (
     
           

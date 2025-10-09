@@ -1,25 +1,23 @@
 'use client'
 /**
- * Performance optimization utilities for the Zion Tech Group website
- * Provides tools for monitoring and optimizing application performance
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
  */
-// Simple logger for performance optimizer
+// Simple logger for performance optimizer;
   info: (message: string, context?: string) => console.log('[INFO]', message, context),
-  performance: (message: string, data: Record
-          
-          
-          
-          
-          
-          
-          
-          
+  performance: (message: string, data: Record;
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+<<<<<<< HEAD
 }
 interface PerformanceMetrics {
     // TODO: Add content
   }
+=======
+};
+interface PerformanceMetrics {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
@@ -35,9 +33,14 @@ interface PerformanceMetrics {
   ttfb?: number
   memory?: number
 }
+<<<<<<< HEAD
 interface OptimizationConfig {
     // TODO: Add content
   }
+=======
+interface OptimizationConfig {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: boolean;,
     enableCodeSplitting: boolean;,
     enableImageOptimization: boolean;,
@@ -45,26 +48,41 @@ interface OptimizationConfig {
     enableCompression: boolean
 }
 interface PerformanceConfig extends OptimizationConfig {}
+<<<<<<< HEAD
 class PerformanceOptimizer {
     // TODO: Add content
   }
   private _metrics: PerformanceMetrics = {
     // TODO: Add content
   }
+=======
+class PerformanceOptimizer {// TODO: Add content;}
+}
+  private _metrics: PerformanceMetrics = {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
+<<<<<<< HEAD
     lazyLoading: false
   }
   private config: OptimizationConfig = {
     // TODO: Add content
   }
+=======
+    lazyLoading: false;
+  };
+  private config: OptimizationConfig = {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
+<<<<<<< HEAD
     enableCompression: true
   }
   private observers: PerformanceObserver[] = []
@@ -83,10 +101,22 @@ class PerformanceOptimizer {
   }
     this.config = { ...this.config, ...config }
     this.initializePerformanceMonitoring()
+=======
+    enableCompression: true;
+  };
+  private observers: PerformanceObserver[] = [];
+  private isMonitoring: boolean = false;
+  constructor(config?: Partial;
+          <OptimizationConfig>) {// TODO: Add content;}
+}
+    this.config = { ...this.config, ...config };
+    this.initializePerformanceMonitoring();
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Initialize performance monitoring
+   * Initialize performance monitoring;
    */
+<<<<<<< HEAD
   private initializePerformanceMonitoring(): void {
     // TODO: Add content
   }
@@ -101,18 +131,38 @@ class PerformanceOptimizer {
   )
     // Monitor render performance
     this.measureRenderTime()
+=======
+  private initializePerformanceMonitoring(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return;
+    // Monitor page load performance;
+    window.addEventListener('load', () => {// TODO: Add content;}
+}
+      this.measureLoadTime();
+      this.measureMemoryUsage();
+    });
+    // Monitor render performance;
+    this.measureRenderTime();
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Public init method for external initialization
+   * Public init method for external initialization;
    */
+<<<<<<< HEAD
   public init(): void {
     // TODO: Add content
   }
     this.initializePerformanceMonitoring()
+=======
+  public init(): void {// TODO: Add content;}
+}
+    this.initializePerformanceMonitoring();
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Measure page load time
+   * Measure page load time;
    */
+<<<<<<< HEAD
   private measureLoadTime(): void {
     // TODO: Add content
   }
@@ -130,11 +180,27 @@ class PerformanceOptimizer {
     } catch (error) {
     // TODO: Add content
   }
+=======
+  private measureLoadTime(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined' || !window.performance) return;
+    if (typeof window.performance.getEntriesByType !== 'function') return;
+    try {// TODO: Add content;}
+}
+      const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {// TODO: Add content;}
+}
+        this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      }
+    } catch (error) {// TODO: Add content;}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
-   * Measure render time using PerformanceObserver
+   * Measure render time using PerformanceObserver;
    */
+<<<<<<< HEAD
   private measureRenderTime(): void {
     // TODO: Add content
   }
@@ -265,6 +331,102 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
             this.metrics.fcp = entry.startTime
+=======
+  private measureRenderTime(): void {// TODO: Add content;}
+}
+    // Check if PerformanceObserver exists (may not be available in test environments)
+    if (typeof PerformanceObserver === 'undefined') return;
+    try {// TODO: Add content;}
+}
+      const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+}
+        const entries = list.getEntries();
+        entries.forEach((entry) => {// TODO: Add content;}
+}
+          if (entry.entryType === 'measure') {// TODO: Add content;}
+}
+            this.metrics.renderTime = entry.duration;
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['measure'] });
+      this.observers.push(observer);
+    } catch (error) {// TODO: Add content;}
+}
+      // PerformanceObserver may not support 'measure' entryType in some environments;
+      }
+  }
+  private observeLCP() {// TODO: Add content;}
+}
+    try {// TODO: Add content;}
+}
+      const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+}
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+        this.metrics.lcp = lastEntry.startTime;
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+//       this.observers.push(observer)
+    } catch {// TODO: Add content;}
+}
+      // Ignore if not supported;
+    }
+  }
+  private observeFID() {// TODO: Add content;}
+}
+    try {// TODO: Add content;}
+}
+      const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+}
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {// TODO: Add content;}
+}
+          const fidEntry = entry as PerformanceEntry & { processingStart: number }
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+        })
+      })
+      observer.observe({ entryTypes: ['first-input'] })
+//       this.observers.push(observer)
+    } catch {// TODO: Add content;}
+}
+      // Ignore if not supported;
+    }
+  }
+  private observeCLS() {// TODO: Add content;}
+}
+    try {const observer = new PerformanceObserver((list) => {}
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {// TODO: Add content;}
+}
+          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
+          if (!clsEntry.hadRecentInput) {// TODO: Add content;}
+}
+            clsValue += clsEntry.value;
+          }
+        })
+        this.metrics.cls = clsValue;
+      })
+      observer.observe({ entryTypes: ['layout-shift'] })
+//       this.observers.push(observer)
+    } catch {// TODO: Add content;}
+}
+      // Ignore if not supported;
+    }
+  }
+  private observeFCP() {// TODO: Add content;}
+}
+    try {// TODO: Add content;}
+}
+      const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+}
+        const entries = list.getEntries()
+        entries.forEach((entry) => {// TODO: Add content;}
+}
+          if (entry.name === 'first-contentful-paint') {// TODO: Add content;}
+}
+            this.metrics.fcp = entry.startTime;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -273,6 +435,7 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['paint'] }
   )
 //       this.observers.push(observer)
+<<<<<<< HEAD
     } catch {
     // TODO: Add content
   }
@@ -297,6 +460,26 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
+=======
+    } catch {// TODO: Add content;}
+}
+      // Ignore if not supported;
+    }
+  }
+  private observeTTFB() {// TODO: Add content;}
+}
+    try {// TODO: Add content;}
+}
+      const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+}
+        const entries = list.getEntries()
+        entries.forEach((entry: PerformanceEntry) => {// TODO: Add content;}
+}
+          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
+          if (navEntry.responseStart > 0) {// TODO: Add content;}
+}
+            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -305,6 +488,7 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['navigation'] }
   )
 //       this.observers.push(observer)
+<<<<<<< HEAD
     } catch {
     // TODO: Add content
   }
@@ -322,12 +506,28 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
         this.metrics.memoryUsage = memory.usedJSHeapSize
+=======
+    } catch {// TODO: Add content;}
+}
+      // Ignore if not supported;
+    }
+  }
+  private observeMemory() {// TODO: Add content;}
+}
+    if (typeof window !== 'undefined' && 'memory' in performance) {// TODO: Add content;}
+}
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      if (memory) {// TODO: Add content;}
+}
+        this.metrics.memoryUsage = memory.usedJSHeapSize;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
   /**
-   * Measure memory usage
+   * Measure memory usage;
    */
+<<<<<<< HEAD
   private measureMemoryUsage(): void {
     // TODO: Add content
   }
@@ -347,11 +547,29 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
       this.metrics.memoryUsage = memory.usedJSHeapSize
+=======
+  private measureMemoryUsage(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
+    const memory = (window.performance as Performance & {// TODO: Add content;}
+}
+      memory?: {// TODO: Add content;}
+};
+  usedJSHeapSize: number;,
+    totalJSHeapSize: number;,
+    jsHeapSizeLimit: number;
+      };)
+    }).memory;
+    if (memory) {// TODO: Add content;}
+}
+      this.metrics.memoryUsage = memory.usedJSHeapSize;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
-   * Optimize images for better performance
+   * Optimize images for better performance;
    */
+<<<<<<< HEAD
   public optimizeImages(): void {
     // TODO: Add content
   }
@@ -382,14 +600,41 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp')
+=======
+  public optimizeImages(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return;
+    if (!this.config.enableImageOptimization) return;
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {// TODO: Add content;}
+}
+      // Add loading="lazy" for better performance;
+      if (!img.hasAttribute('loading')) {// TODO: Add content;}
+}
+        img.setAttribute('loading', 'lazy');
+      }
+      // Add proper alt text if missing;
+      if (!img.hasAttribute('alt')) {// TODO: Add content;}
+}
+        img.setAttribute('alt', 'Zion Tech Group content');
+      }
+      // Optimize image format;
+      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {// TODO: Add content;}
+}
+        // Convert to WebP if supported;
+        if (this.supportsWebP()) {// TODO: Add content;}
+}
+          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
   )
   }
   /**
-   * Check if browser supports WebP
+   * Check if browser supports WebP;
    */
+<<<<<<< HEAD
   private supportsWebP(): boolean {
     // TODO: Add content
   }
@@ -398,10 +643,20 @@ const observer = new PerformanceObserver((list) => {
     canvas.width = 1
     canvas.height = 1
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
+=======
+  private supportsWebP(): boolean {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return false;
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Setup lazy loading for better performance
+   * Setup lazy loading for better performance;
    */
+<<<<<<< HEAD
   public setupLazyLoading(): void {
     // TODO: Add content
   }
@@ -434,11 +689,38 @@ const observer = new PerformanceObserver((list) => {
     // TODO: Add content
   }
                 element.style.backgroundImage = `url(${src})`
+=======
+  public setupLazyLoading(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return;
+    if (!this.config.enableLazyLoading) return;
+    // Intersection Observer for lazy loading;
+    if ('IntersectionObserver' in window) {// TODO: Add content;}
+}
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyObserver = new IntersectionObserver((entries) => {// TODO: Add content;}
+}
+        entries.forEach((entry) => {// TODO: Add content;}
+}
+          if (entry.isIntersecting) {// TODO: Add content;}
+}
+            const element = entry.target as HTMLElement;
+            const src = element.getAttribute('data-lazy');
+            if (src) {// TODO: Add content;}
+}
+              if (element.tagName === 'IMG') {// TODO: Add content;}
+}
+                (element as HTMLImageElement).src = src;
+              } else {// TODO: Add content;}
+}
+                element.style.backgroundImage = `url(${src})`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               }
               element.removeAttribute('data-lazy')
               lazyObserver.unobserve(element)
             }
           }
+<<<<<<< HEAD
         }
   )
       }
@@ -449,23 +731,38 @@ const observer = new PerformanceObserver((list) => {
         lazyObserver.observe(element)
       }
   )
+=======
+        });
+      });
+      lazyElements.forEach((element) => {// TODO: Add content;}
+}
+        lazyObserver.observe(element);
+      });
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.metrics.lazyLoading = true
   }
   /**
-   * Enable code splitting for better performance
+   * Enable code splitting for better performance;
    */
+<<<<<<< HEAD
   enableCodeSplitting(): void {
     // TODO: Add content
   }
     if (!this.config.enableCodeSplitting) return
+=======
+  enableCodeSplitting(): void {// TODO: Add content;}
+}
+    if (!this.config.enableCodeSplitting) return;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     // This would typically be handled by the bundler (Vite/Webpack)
-    // Here we can add runtime optimizations
+    // Here we can add runtime optimizations;
     if (process.env.NODE_ENV === 'development') { }
   }
   /**
-   * Enable caching strategies
+   * Enable caching strategies;
    */
+<<<<<<< HEAD
   enableCaching(): void {
     // TODO: Add content
   }
@@ -482,21 +779,42 @@ const observer = new PerformanceObserver((list) => {
       .catch((error) => {
     // TODO: Add content
   }
+=======
+  enableCaching(): void {// TODO: Add content;}
+}
+    if (!this.config.enableCaching) return;
+    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+    // Register service worker for caching;
+//     navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {// TODO: Add content;}
+}
+        if (process.env.NODE_ENV === 'development') { }
+      })
+      .catch((error) => {// TODO: Add content;}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         if (process.env.NODE_ENV === 'development') { }
       }
   )
   }
   /**
-   * Get current performance metrics
+   * Get current performance metrics;
    */
+<<<<<<< HEAD
   getMetrics(): PerformanceMetrics {
     // TODO: Add content
   }
     return { ...this.metrics }
+=======
+  getMetrics(): PerformanceMetrics {// TODO: Add content;}
+}
+    return { ...this.metrics };
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get performance score (0-100)
    */
+<<<<<<< HEAD
   getPerformanceScore(): number {
     // TODO: Add content
   }
@@ -511,19 +829,42 @@ const observer = new PerformanceObserver((list) => {
     if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB
     else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB
     return Math.max(0, score)
+=======
+  getPerformanceScore(): number {// TODO: Add content;}
+}
+    let score = 100;
+    // Deduct points for slow load times;
+    if (this.metrics.loadTime > 3000) score -= 20;
+    else if (this.metrics.loadTime > 2000) score -= 10;
+    // Deduct points for slow render times;
+    if (this.metrics.renderTime > 100) score -= 15;
+    else if (this.metrics.renderTime > 50) score -= 5;
+    // Deduct points for high memory usage;
+    if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB;
+    else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB;
+    return Math.max(0, score);
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Generate performance report
+   * Generate performance report;
    */
+<<<<<<< HEAD
   generateReport(): string {
     // TODO: Add content
   }
     const score = this.getPerformanceScore()
     return `Performance Score: ${score}`
+=======
+  generateReport(): string {// TODO: Add content;}
+}
+    const score = this.getPerformanceScore();
+    return `Performance Score: ${score}`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Lazy load images for better performance
+   * Lazy load images for better performance;
    */
+<<<<<<< HEAD
   lazyLoadImages(): void {
     // TODO: Add content
   }
@@ -542,6 +883,22 @@ const observer = new PerformanceObserver((list) => {
           img.src = img.dataset.src || ''
           img.removeAttribute('data-src')
           imageObserver.unobserve(img)
+=======
+  lazyLoadImages(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return;
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {// TODO: Add content;}
+}
+      entries.forEach(entry => {// TODO: Add content;}
+}
+        if (entry.isIntersecting) {// TODO: Add content;}
+}
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
   )
@@ -551,8 +908,9 @@ const observer = new PerformanceObserver((list) => {
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
   }
   /**
-   * Add critical resource hints
+   * Add critical resource hints;
    */
+<<<<<<< HEAD
   addCriticalResourceHints(): void {
     // TODO: Add content
   }
@@ -576,10 +934,33 @@ const observer = new PerformanceObserver((list) => {
     }
   )
     logger.info('Critical resource hints added', 'PerformanceOptimizer')
+=======
+  addCriticalResourceHints(): void {// TODO: Add content;}
+}
+    if (typeof window === 'undefined') return;
+    const criticalResources = [
+  // TODO: Add items;
+];;
+      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+      { href: '/css/critical.css', as: 'style' },
+    ];
+    criticalResources.forEach(resource => {// TODO: Add content;}
+}
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource.href;
+      link.as = resource.as;
+      if (resource.type) link.type = resource.type;
+      if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+      document.head.appendChild(link);
+    });
+    logger.info('Critical resource hints added', 'PerformanceOptimizer');
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Measure page load metrics
+   * Measure page load metrics;
    */
+<<<<<<< HEAD
   measurePageLoad(): PerformanceMetrics | null {
     // TODO: Add content
   }
@@ -589,6 +970,15 @@ const observer = new PerformanceObserver((list) => {
     return {
     // TODO: Add content
   }
+=======
+  measurePageLoad(): PerformanceMetrics | null {// TODO: Add content;}
+}
+    if (typeof window === 'undefined' || !('performance' in window)) return null;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+    return {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
       memoryUsage: this.metrics.memoryUsage,
@@ -600,12 +990,18 @@ const observer = new PerformanceObserver((list) => {
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
+<<<<<<< HEAD
       fmp: this.metrics.fmp || 0
     }
+=======
+      fmp: this.metrics.fmp || 0;
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Report web vitals
+   * Report web vitals;
    */
+<<<<<<< HEAD
   reportWebVitals(metrics: PerformanceMetrics): void {
     // TODO: Add content
   }
@@ -632,17 +1028,24 @@ const observer = new PerformanceObserver((list) => {
           (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
     // TODO: Add content
   }
+=======
+  reportWebVitals(metrics: PerformanceMetrics): void {// TODO: Add content;}
+}
+    logger.performance('Web Vitals reported', metrics as unknown as Record;
+          <string, unknown>, 'PerformanceOptimizer');
+    // Send to analytics if available;
+    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {// TODO: Add content;}
+}
+      Object.entries(metrics).forEach(([key, value]) => {// TODO: Add content;}
+}
+        if (typeof value === 'number') {// TODO: Add content;}
+}
+          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   metric_name: key,
             metric_value: value,
-            metric_rating: value 
-          
-          
-          
-          
-          
-          
-          
-          
+            metric_rating: value;
           < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
           }
   )
@@ -652,18 +1055,27 @@ const observer = new PerformanceObserver((list) => {
     }
   }
   /**
-   * Cleanup observers and resources
+   * Cleanup observers and resources;
    */
+<<<<<<< HEAD
   public cleanup(): void {
     // TODO: Add content
   }
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
     this.isMonitoring = false
+=======
+  public cleanup(): void {// TODO: Add content;}
+}
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isMonitoring = false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
-   * Generate comprehensive performance report
+   * Generate comprehensive performance report;
    */
+<<<<<<< HEAD
   generateComprehensiveReport(): string {
     // TODO: Add content
   }
@@ -677,24 +1089,31 @@ Render Time: ${metrics.renderTime.toFixed(2)}ms
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
 Bundle Size: ${metrics.bundleSize}KB
 Cache Hit Rate: ${metrics.cacheHitRate}%
+=======
+  generateComprehensiveReport(): string {// TODO: Add content;}
+}
+    const score = this.getPerformanceScore();
+    const metrics = this.getMetrics();
+    return `
+// Performance Report - Zion Tech Group Website;
+Performance Score: ${score}/100;
+Load Time: ${metrics.loadTime.toFixed(2)}ms;
+Render Time: ${metrics.renderTime.toFixed(2)}ms;
+Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
+Bundle Size: ${metrics.bundleSize}KB;
+Cache Hit Rate: ${metrics.cacheHitRate}%;
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Recommendations:
-${score 
-          
-          
-          
-          
-          
-          
-          
-          
+${score;}
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
 ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
     `.trim()
   }
   /**
-   * Optimize the entire application
+   * Optimize the entire application;
    */
+<<<<<<< HEAD
   optimize(): void {
     // TODO: Add content
   }
@@ -705,6 +1124,16 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     // TODO: Add content
   }
       logger.info('Performance optimization completed')
+=======
+  optimize(): void {// TODO: Add content;}
+}
+    this.optimizeImages();
+    this.enableCodeSplitting();
+    this.enableCaching();
+    if (process.env.NODE_ENV === 'development') {// TODO: Add content;}
+}
+      logger.info('Performance optimization completed');
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }

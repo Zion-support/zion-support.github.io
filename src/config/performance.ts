@@ -1,56 +1,83 @@
 /**
- * Performance Configuration
- * Centralized performance monitoring and optimization settings
+ * Performance Configuration;
+ * Centralized performance monitoring and optimization settings;
  */
+<<<<<<< HEAD
 export const _performanceConfig = {
     // TODO: Add content
   }
+=======
+export const _performanceConfig = {// TODO: Add content;}
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   // Core Web Vitals thresholds,
-  metrics: {
-// lcp: {
+  metrics: {// lcp: {}
 // good: 2500,
-// needsImprovement: 4000
+// needsImprovement: 4000;
     },
+<<<<<<< HEAD
     fid: {
     // TODO: Add content
   }
+=======
+    fid: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 100,
-      needsImprovement: 300
+      needsImprovement: 300;
     },
+<<<<<<< HEAD
     cls: {
     // TODO: Add content
   }
+=======
+    cls: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 0.1,
-      needsImprovement: 0.25
+      needsImprovement: 0.25;
     },
+<<<<<<< HEAD
     fcp: {
     // TODO: Add content
   }
+=======
+    fcp: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 1800,
-      needsImprovement: 3000
+      needsImprovement: 3000;
     },
+<<<<<<< HEAD
     ttfb: {
     // TODO: Add content
   }
+=======
+    ttfb: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   good: 800,
-      needsImprovement: 1800
+      needsImprovement: 1800;
     }
   },
   // Cache strategies,
-  cache: {
-// static: {
-// maxAge: 31536000, // 1 year
-// staleWhileRevalidate: 86400, // 1 day
+  cache: {// static: {}
+// maxAge: 31536000, // 1 year;
+// staleWhileRevalidate: 86400, // 1 day;
     },
+<<<<<<< HEAD
     dynamic: {
     // TODO: Add content
   }
+=======
+    dynamic: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute
+  staleWhileRevalidate: 60, // 1 minute;
     },
-    api: {
-// maxAge: 300, // 5 minutes
-// staleWhileRevalidate: 30, // 30 seconds
+    api: {// maxAge: 300, // 5 minutes;}
+// staleWhileRevalidate: 30, // 30 seconds;
     }
   },
   // Resource hints,
@@ -66,39 +93,39 @@ export const _performanceConfig = {
 //     '/api/config',
 //   ],
   // Image optimization,
-  images: {
-// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+  images: {// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],}
 // imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 // formats: ['image/avif', 'image/webp'],
 // minimumCacheTTL: 60,
-// dangerouslyAllowSVG: false
+// dangerouslyAllowSVG: false;
   },
   // Bundle optimization,
-  bundle: {
-// minChunkSize: 20000,
+  bundle: {// minChunkSize: 20000,}
 // maxChunkSize: 244000,
-// splitChunks: {
-// cacheGroups: {
-// vendor: {
-// test: /[\\/]node_modules[\\/]/,
+// splitChunks: {// cacheGroups: {}
+// vendor: {// test: /[\\/]node_modules[\\/]/,}
 // priority: -10,
-// reuseExistingChunk: true
+// reuseExistingChunk: true;
         },
+<<<<<<< HEAD
         default: {
     // TODO: Add content
   }
+=======
+        default: {// TODO: Add content;}
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   minChunks: 2,
           priority: -20,
-          reuseExistingChunk: true
+          reuseExistingChunk: true;
         }
       }
     }
   },
   // Performance monitoring,
-  monitoring: {
-// enabled: true,
-// sampleRate: 1.0, // 100% in production
-// reportInterval: 30000, // 30 seconds
+  monitoring: {// enabled: true,}
+// sampleRate: 1.0, // 100% in production;
+// reportInterval: 30000, // 30 seconds;
 // sendToAnalytics: true,
 // logThreshold: 'needsImprovement'
   }

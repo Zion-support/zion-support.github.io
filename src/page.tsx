@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Zion Tech Group
+              Zion Tech Group;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced AI and IT Solutions for Modern Enterprises
@@ -37,10 +37,10 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Services
+              Our Services;
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions to transform your business
+              Comprehensive AI and IT solutions to transform your business;
             </p>
           </div>
           
@@ -89,14 +89,14 @@ const HomePage: React.FC = () => {
               to="/contact"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Contact Us
+              Contact Us;
             </Link>
             <a
               href="tel:+1234567890"
               className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               <Phone className="w-5 h-5 inline mr-2" />
-              Call Now
+              Call Now;
             </a>
           </div>
         </div>

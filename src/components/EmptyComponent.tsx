@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EmptyComponentProps {
@@ -12,4 +13,11 @@ const EmptyComponent: React.FC<EmptyComponentProps> = () => {
   );
 };
 
+=======
+'use client';
+/**
+ * Empty Component;
+ * Used as a fallback for optional/missing components;
+ */
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default EmptyComponent;

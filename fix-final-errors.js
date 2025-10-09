@@ -1,102 +1,144 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { execSync } from 'child_process';
+import { glob } from 'glob';
 
-// Get all files with remaining syntax errors
-const files = execSync(
-  "find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'JSX fragment has no corresponding closing tag'",
-  { encoding: 'utf8' }
-)
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
+// Function to fix specific remaining issues
+function fixFinalIssues(content) {
+  // Fix malformed import statements with missing commas
+  content = content.replace(
+    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
+    (match, imports, source) => {
+      // Split by comma and clean up
+      const importList = imports.split(',').map(imp => imp.trim()).filter(imp => imp);
+      
+      // Remove duplicates while preserving order
+      const uniqueImports = [...new Set(importList)];
+      
+      return `import { ${uniqueImports.join(', ')} } from '${source}';`;
+    }
+  );
+  
+  // Fix malformed object literals that start with comma
+  content = content.replace(/\{\s*,/g, '{');
+  
+  // Fix missing closing braces in objects
+  content = content.replace(
+    /\{\s*([^}]+?)\s*$/gm,
+    (match, content) => {
+      if (!content.includes('}') && content.trim()) {
+        return `{${content.trim()}}`;
+      }
+      return match;
+    }
+  );
+  
+  // Fix duplicate function declarations
+  content = content.replace(
+    /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*\};\s*const\s+\1:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,
+    (match, funcName) => {
+      return `const ${funcName}: React.FC = () => {`;
+    }
+  );
+  
+  // Fix duplicate return statements
+  content = content.replace(
+    /return\s*\([^)]+\);\s*\};\s*return\s*\(/g,
+    'return ('
+  );
+  
+  // Fix malformed JSX with missing closing tags
+  content = content.replace(
+    /return\s*\(<div[^>]*>([^<]+)<\/div>\s*\);\s*return\s*\(/g,
+    'return ('
+  );
+  
+  // Fix missing semicolons in JSX
+  content = content.replace(/(\w+)\s*$/gm, (match, word) => {
+    if (word && !word.endsWith(';') && !word.endsWith('}') && !word.endsWith(')') && !word.endsWith(']') && !word.endsWith('>')) {
+      return word + ';';
+    }
+    return match;
+  });
+  
+  // Fix duplicate export statements
+  content = content.replace(
+    /export\s+default\s+(\w+);\s*export\s+default\s+\1;/g,
+    'export default $1;'
+  );
+  
+  // Fix malformed function declarations
+  content = content.replace(
+    /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*\};\s*const\s+\1:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*\};/g,
+    (match, funcName) => {
+      return `const ${funcName}: React.FC = () => {`;
+    }
+  );
+  
+  // Fix specific patterns in blog files
+  content = content.replace(
+    /export\s+const\s+metadata\s*=\s*\{[^}]*\};\s*export\s+const\s+metadata\s*=\s*\{/g,
+    'export const metadata = {'
+  );
+  
+  // Fix malformed JSX attributes
+  content = content.replace(
+    /className="([^"]*)"\s*className="([^"]*)"/g,
+    'className="$1 $2"'
+  );
+  
+  // Fix missing closing parentheses
+  content = content.replace(
+    /(\w+)\s*=\s*\([^)]*$/gm,
+    (match, varName) => {
+      if (!match.includes(')')) {
+        return match + ')';
+      }
+      return match;
+    }
+  );
+  
+  return content;
+}
 
-// Also get files with other syntax errors
-const moreFiles = execSync(
-  "find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'error TS1005'",
-  { encoding: 'utf8' }
-)
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-
-// // Function to process a single file
-function processFile(filePath) {
+// Main function to fix a file
+function fixFile(filePath) {
   try {
-
-    // Fix JSX fragment issues
-    if (content.includes('<>') && !content.includes('</>')) {
-      // Find the last closing tag and add </> before it
-
-      for (let i = lines.length - 1; i >= 0; i--) {
-        if (lines[i].trim().startsWith('</') && !lines[i].includes('</>')) {
-          lastClosingTagIndex = i;
-          break;
-        }
-      }
-
-      if (lastClosingTagIndex !== -1) {
-        lines.splice(lastClosingTagIndex + 1, 0, '    </>');
-        content = lines.join('\n');
-        modified = true;
-      }
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Apply fixes
+    content = fixFinalIssues(content);
+    
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-
-    // Fix any remaining metadata syntax issues
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-
-    // Fix broken object syntax
-    content = content.replace(
-      /\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g,
-      ''
-    );
-
-    // Fix any remaining broken lines
-
-    for (let i = 0; i < lines.length; i++) {
-
-      // Skip broken metadata lines
-      if (line.includes('title:') && !line.includes('//') && !line.includes('<title>')) {
-        skipUntilSemicolon = true;
-        continue;
-      }
-
-      if (
-        skipUntilSemicolon &&
-        (line.trim() === '};' || line.trim() === '}' || line.includes('export default'))
-      ) {
-        skipUntilSemicolon = false;
-        if (line.includes('export default')) {
-          filteredLines.push(line);
-        }
-        continue;
-      }
-
-      if (!skipUntilSemicolon) {
-        filteredLines.push(line);
-      }
-    }
-
-    //     const newContent = filteredLines.join('\n');
-
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      //       return true;
-    }
-
+    
     return false;
   } catch (error) {
-    //     return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-allFiles.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
+// Main execution
+async function main() {
+  // Find all TypeScript/JavaScript files in src directory
+  const files = await glob('src/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
 
-// 
+  console.log(`Found ${files.length} files to check...`);
+
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`Fixed ${fixedCount} files`);
+}
+
+main().catch(console.error);

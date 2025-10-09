@@ -1,4 +1,26 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import {Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react';}
+const AiEmailMarketingPage: React.FC = () => {
+import { Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
+const AIEmailMarketingPage: React.FC = () => {return (}
+    <div>Coming Soon</div>
+  );
+};
+  const _features = [
+  // TODO: Add items;
+];;
+    {// TODO: Add content;}
+};
+  icon: Mail,
+      title: 'AI Content Generation',
+      description: 'Automatically create compelling email content that resonates with your audience'
+    },
+icon: Target,
+      title: 'Smart Segmentation',
+      description: 'AI-powered audience segmentation for highly targeted campaigns',
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -16,12 +38,22 @@ const PagePage: React.FC = () => {
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
+<<<<<<< HEAD
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
         </section>
       </main>
 
+=======
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+// Contact Us;
+          </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+Learn More;
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
