@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -78,7 +79,15 @@ const Navigation: React.FC = () => {
     { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search },
     { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator }
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator },
+    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Music },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Briefcase },
+    { name: 'AI 3D Model Generator', href: '/ai-3d-generation', icon: Camera }
   ];
 
   const aiServices = [
@@ -87,7 +96,13 @@ const Navigation: React.FC = () => {
     { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
     { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield }
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
+    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
+    { name: 'AI CRM & Sales', href: '/ai-crm', icon: Users },
+    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText }
   ];
 
   const itServices = [
@@ -96,7 +111,13 @@ const Navigation: React.FC = () => {
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database-services', icon: Database },
     { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users }
+    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Briefcase },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Building },
+    { name: 'Compliance & Security', href: '/compliance', icon: Lock },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
+    { name: 'API Development', href: '/api', icon: Code }
   ];
 
   const specializedServices = [
@@ -105,7 +126,13 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
     { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings }
+    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
+    { name: 'Enterprise AI Platform', href: '/enterprise', icon: Brain },
+    { name: 'Digital Transformation', href: '/consultation', icon: Zap },
+    { name: 'AI Research & Development', href: '/ai-services', icon: Search },
+    { name: 'Smart City Solutions', href: '/business-apps', icon: Building },
+    { name: 'AI Manufacturing', href: '/productivity', icon: Factory },
+    { name: 'AI Healthcare Platform', href: '/ai-healthcare', icon: Stethoscope }
   ];
 
   return (

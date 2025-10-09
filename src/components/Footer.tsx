@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Calculator, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -8,7 +9,13 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' }
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
+    { name: 'AI Video Generator', url: '/ai-video-generation', description: 'AI-powered video creation' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
+    { name: 'AI Fashion Design', url: '/ai-fashion-design', description: 'AI fashion design tools' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness training' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI music generation' }
   ];
 
   const aiServices = [
@@ -17,7 +24,13 @@ const Footer: React.FC = () => {
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI services' },
+    { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Smart mobile applications' },
+    { name: 'AI CRM & Sales', url: '/ai-crm', description: 'Intelligent sales automation' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Advanced writing tools' }
   ];
 
   const itServices = [
@@ -26,7 +39,13 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
     { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' }
+    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT advisory' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Complete infrastructure solutions' },
+    { name: 'Compliance & Security', url: '/compliance', description: 'Regulatory compliance services' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data analytics solutions' },
+    { name: 'API Development', url: '/api', description: 'Custom API development' }
   ];
 
   const specializedServices = [
@@ -35,7 +54,13 @@ const Footer: React.FC = () => {
     { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
+    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
+    { name: 'Enterprise AI Platform', url: '/enterprise', description: 'Comprehensive AI solutions' },
+    { name: 'Digital Transformation', url: '/consultation', description: 'Complete digital transformation' },
+    { name: 'AI Research & Development', url: '/ai-services', description: 'Cutting-edge AI research' },
+    { name: 'Smart City Solutions', url: '/business-apps', description: 'AI-powered smart cities' },
+    { name: 'AI Manufacturing', url: '/productivity', description: 'Intelligent manufacturing' },
+    { name: 'AI Healthcare Platform', url: '/ai-healthcare', description: 'Comprehensive healthcare AI' }
   ];
 
   const additionalServices = [
