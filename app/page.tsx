@@ -112,7 +112,7 @@ const HomePage: React.FC = () => {
               <div className="text-3xl mb-3">🔒</div>
               <h3 className="font-bold text-gray-900 mb-3 text-lg">Enterprise Security</h3>
               <p className="text-sm text-gray-600 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-            </div>cursor/analyze-improve-and-deploy-application-3d67
+            </div>
           </div>
         </section>
 
@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-          </div>cursor/analyze-improve-and-deploy-application-3d67
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 focus-within:ring-4 focus-within:ring-indigo-300">
@@ -226,8 +226,8 @@ const HomePage: React.FC = () => {
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
             >
               View All Services
-            </a>cursor/analyze-improve-and-deploy-application-3d67
->>>>>>> origin/main
+            </a>
+          </div>
         </section>
       </main>
       
