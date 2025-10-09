@@ -21,7 +21,12 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+    { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
+    { name: 'AI Legal Assistant', url: '/ai-legal-assistant', description: 'AI-powered legal solutions' },
+    { name: 'AI Real Estate', url: '/ai-real-estate', description: 'Real estate AI solutions' },
+    { name: 'AI Supply Chain', url: '/ai-supply-chain', description: 'Supply chain optimization' },
+    { name: 'AI DevOps', url: '/ai-devops', description: 'AI-powered DevOps automation' },
+    { name: 'AI Personal Assistant', url: '/ai-personal-assistant', description: 'Personal productivity AI' }
   ];
 
   const itServices = [
@@ -43,11 +48,11 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Scheduler', url: '/ai-scheduler', description: 'Smart scheduling' },
     { name: 'Expense Tracker', url: '/expense-tracker', description: 'Expense management' },
     { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'Task management' },
-<<<<<<< HEAD
-    { name: 'CRM Lite', url: '/crm-lite', description: 'Customer management' },
-    { name: 'Email Optimizer', url: '/email-optimizer', description: 'Email marketing' },
-    { name: 'Social Media Manager', url: '/social-media-manager', description: 'Social media tools' },
-    { name: 'AI Design Studio', url: '/ai-design-studio', description: 'Design tools' },
+    { name: 'AI Legal Assistant', url: '/ai-legal-assistant', description: 'Legal AI solutions' },
+    { name: 'AI Real Estate Tools', url: '/ai-real-estate', description: 'Real estate AI' },
+    { name: 'AI Supply Chain Tools', url: '/ai-supply-chain', description: 'Supply chain AI' },
+    { name: 'AI DevOps Tools', url: '/ai-devops', description: 'DevOps AI automation' },
+    { name: 'AI Personal Assistant', url: '/ai-personal-assistant', description: 'Personal productivity' },
     { name: 'Landing Page Builder', url: '/landing-page-builder', description: 'Page builder' },
     { name: 'SEO Optimizer', url: '/seo-optimizer', description: 'SEO tools' },
     { name: 'Ad Campaign Manager', url: '/ad-campaign-manager', description: 'Ad management' },
