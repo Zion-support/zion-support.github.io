@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight } from 'lucide-react';
 
@@ -50,11 +49,9 @@ const AIContentGenerationPage: React.FC = () => {
       marketPrice: '$300-600/month',
       technologies: ['OpenAI GPT-4', 'DALL-E', 'Instagram API', 'Twitter API', 'LinkedIn API'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Clock, Shield } from 'lucide-react';
+    }
+  ];
 
-const AIContentGenerationPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
@@ -154,12 +151,10 @@ const AIContentGenerationPage: React.FC = () => {
       company: 'GlobalBrand',
       content: 'The multi-language support is game-changing. We can now create localized content for all our markets without hiring translators.',
       rating: 5
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
     }
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation Services - Zion Tech Group</title>
@@ -337,31 +332,10 @@ const AIContentGenerationPage: React.FC = () => {
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
                           {benefit}
                         </li>
                       ))}
                     </ul>
-                  </div>
-<<<<<<< HEAD
-
-                  <div className="mb-4 p-3 bg-gray-50 rounded-lg">
-                    <p className="text-sm text-gray-700 font-medium">{service.contactInfo}</p>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <a 
-                      href="tel:+13024640950"
-                      className="flex-1 bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center"
-                    >
-                      Call Now
-                    </a>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex-1 border border-purple-600 text-purple-600 py-2 px-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors text-center"
-                    >
-                      Email Us
-                    </a>
                   </div>
                 </div>
               ))}

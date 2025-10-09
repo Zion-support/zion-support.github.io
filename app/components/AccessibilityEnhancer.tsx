@@ -17,12 +17,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // const [isReducedMotion, setIsReducedMotion] = useState(false);
-  // const [isHighContrast, setIsHighContrast] = useState(false);
-  // const [fontSize, setFontSize] = useState(16);
-=======
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -35,43 +29,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     skipLink.className = 'skip-link';
     document.body.insertBefore(skipLink, document.body.firstChild);
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
 
   useEffect(() => {
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-<<<<<<< HEAD
-    const handleChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
-    };
-    
-<<<<<<< HEAD
-=======
-    setIsReducedMotion(mediaQuery.matches);
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
     const handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    setIsReducedMotion(mediaQuery.matches);
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
     mediaQuery.addEventListener('change', handleChange);
     setIsReducedMotion(mediaQuery.matches);
 
     // Check for high contrast preference
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-<<<<<<< HEAD
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
-    };
-    
-    highContrastQuery.addEventListener('change', handleContrastChange);
-=======
     const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+    highContrastQuery.addEventListener('change', handleContrastChange);
     setIsHighContrast(highContrastQuery.matches);
 
     // Check for font size preference
@@ -82,8 +51,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
       highContrastQuery.removeEventListener('change', handleContrastChange);
-<<<<<<< HEAD
-=======
     };
   }, []);
 
@@ -378,10 +345,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (liveRegion) {
         liveRegion.textContent = message;
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
     };
 
-<<<<<<< HEAD
   // Enhanced keyboard navigation
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (!enableKeyboardNav) return;
@@ -495,20 +460,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         z-index: 1000;
         border-radius: 4px;
         transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-      
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+      }
+    `;
+    
+    document.head.appendChild(style);
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px';
+    });
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px';
+    });
+    
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
 
-    if (enableKeyboardNav) {
+  if (enableKeyboardNav) {
       // Add keyboard navigation enhancements
       const handleKeyDown = (e: KeyboardEvent) => {
         // Skip to main content with Alt + M

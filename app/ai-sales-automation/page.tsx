@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap } from 'lucide-react';
+import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
 const AISalesAutomationPage: React.FC = () => {
   const features = [
