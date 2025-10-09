@@ -313,7 +313,7 @@ const HomePage: React.FC = () => {
                   Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $79/month</div>
+                  <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $29/month</div>
                   <a href="/micro-saas" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
@@ -339,14 +339,14 @@ const HomePage: React.FC = () => {
 
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Infrastructure</h3>
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📋</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Project Management</h3>
                 <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
+                  AI-powered project planning, resource optimization, and predictive analytics for better outcomes.
                 </p>
                 <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
-                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
+                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Starting at $99/month</div>
+                  <a href="/ai-project-management" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
@@ -357,14 +357,14 @@ const HomePage: React.FC = () => {
           {/* Additional Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Cybersecurity</h3>
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Email Marketing</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Advanced AI-powered security solutions with threat detection, vulnerability assessment, and automated response.
+                Create, send, and optimize email campaigns with AI-powered content generation and automation.
               </p>
               <div className="text-center">
-                <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">Starting at $799/month</div>
-                <a href="/ai-cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $29/month</div>
+                <a href="/ai-email-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
                   Learn More →
                 </a>
               </div>
@@ -385,14 +385,14 @@ const HomePage: React.FC = () => {
             </article>
 
             <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛒</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI E-commerce</h3>
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
+              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Social Media</h3>
               <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Revolutionize online retail with AI-powered personalization, inventory optimization, and customer experience enhancement.
+                Automate and optimize social media presence with AI content creation and smart scheduling.
               </p>
               <div className="text-center">
-                <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">Starting at $899/month</div>
-                <a href="/ai-ecommerce-solutions" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
+                <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $49/month</div>
+                <a href="/ai-social-media-management" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                   Learn More →
                 </a>
               </div>

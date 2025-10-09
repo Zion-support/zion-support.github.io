@@ -6,11 +6,11 @@ const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
       title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
+      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $29/month.',
       icon: '💻',
       link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
-      price: 'Starting at $79/month',
+      features: ['50+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
+      price: 'Starting at $29/month',
       popular: true
     },
     {
@@ -200,6 +200,48 @@ const ServicesPage: React.FC = () => {
       link: '/ai-data-visualization',
       features: ['Interactive Dashboards', 'AI Insights', '50+ Chart Types', 'Real-time Updates'],
       price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Project Management',
+      description: 'AI-powered project planning, resource optimization, and predictive analytics.',
+      icon: '📋',
+      link: '/ai-project-management',
+      features: ['AI Planning', 'Smart Scheduling', 'Risk Management', 'Team Optimization'],
+      price: 'Starting at $99/month',
+      popular: true
+    },
+    {
+      title: 'AI Customer Analytics',
+      description: 'Unlock customer insights with AI-powered segmentation and predictive analytics.',
+      icon: '👥',
+      link: '/ai-customer-analytics',
+      features: ['Customer Segmentation', 'Predictive Analytics', 'Personalization', 'Sentiment Analysis'],
+      price: 'Starting at $149/month'
+    },
+    {
+      title: 'AI Inventory Management',
+      description: 'Optimize inventory with AI forecasting, automation, and cost reduction.',
+      icon: '📦',
+      link: '/ai-inventory-management',
+      features: ['Demand Forecasting', 'Smart Reordering', 'Price Optimization', 'Anomaly Detection'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'AI Email Marketing',
+      description: 'Create, send, and optimize email campaigns with AI-powered automation.',
+      icon: '📧',
+      link: '/ai-email-marketing',
+      features: ['AI Content Generation', 'Smart Segmentation', 'Automated Campaigns', 'A/B Testing'],
+      price: 'Starting at $29/month',
+      popular: true
+    },
+    {
+      title: 'AI Social Media Management',
+      description: 'Automate and optimize social media presence with AI content creation.',
+      icon: '📱',
+      link: '/ai-social-media-management',
+      features: ['AI Content Creation', 'Smart Scheduling', 'Multi-Platform', 'Trend Analysis'],
+      price: 'Starting at $49/month'
     }
   ];
 
@@ -209,6 +251,8 @@ const ServicesPage: React.FC = () => {
       description: 'Seamless cloud transformation with zero downtime and cost optimization.',
       icon: '☁️',
       features: ['Zero Downtime', 'Cost Optimization', 'Security Enhancement', 'Scalability'],
+      link: '/cloud-migration',
+      price: 'Starting at $2,999'
     },
     {
       title: 'Cybersecurity Solutions',
@@ -338,7 +382,12 @@ const ServicesPage: React.FC = () => {
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
+                {service.price && (
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  </div>
+                )}
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
@@ -346,6 +395,15 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+                {service.link && (
+                  <Link 
+                    href={service.link}
+                    className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                )}
               </div>
             ))}
           </div>
