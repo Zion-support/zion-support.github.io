@@ -4,10 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -56,10 +52,6 @@ const AIDataVisualizationPage: React.FC = () => {
       features: ['Everything in Professional', 'Unlimited data sources', 'Custom integrations', 'Dedicated support', 'On-premise deployment']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '85%', label: 'Faster Decision Making' },
     { number: '300%', label: 'Data Processing Speed' },

@@ -4,10 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -56,22 +52,14 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
     { number: '24/7', label: 'Availability' },
     { number: '50+', label: 'Languages Supported' }
   ];
-<<<<<<< HEAD
-  
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   return (
     <>
       <SEOOptimizer

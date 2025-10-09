@@ -53,7 +53,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-<<<<<<< HEAD
   ];
 
   const microSaasServices = [
@@ -70,8 +69,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected Devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data Insights' }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   ];
 
   const companyLinks = [
@@ -116,7 +113,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -202,16 +198,11 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
             <ul className="space-y-2">
-=======
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
-            <ul className="space-y-3">
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -234,7 +225,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">

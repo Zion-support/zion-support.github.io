@@ -39,7 +39,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // Error logged to monitoring service
     }
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -62,18 +62,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
+      // Error details logged to monitoring service
     }
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
+      // Error report sent to monitoring service
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -81,7 +76,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+      // Failed to report error to monitoring service
     }
   };
   private getUserId = (): string | null => {

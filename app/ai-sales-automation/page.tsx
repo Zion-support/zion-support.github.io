@@ -4,10 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -56,10 +52,6 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },

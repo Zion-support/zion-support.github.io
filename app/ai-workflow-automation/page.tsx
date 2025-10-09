@@ -4,10 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -35,12 +31,8 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['API Integrations', 'Database Connections', 'Cloud Services', 'Legacy Systems']
     }
   ];
-<<<<<<< HEAD
-  const pricingPlans = [
-=======
 
   const pricing = [
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
     {
       name: 'Starter',
       price: '$299/month',
@@ -60,10 +52,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'On-premise deployment']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '70%', label: 'Process Efficiency' },
     { number: '90%', label: 'Error Reduction' },

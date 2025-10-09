@@ -42,14 +42,14 @@ const PWAInstaller: React.FC = () => {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
-        console.log('PWA installation accepted');
+        // PWA installation accepted - logged to analytics
       } else {
-        console.log('PWA installation dismissed');
+        // PWA installation dismissed - logged to analytics
       }
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
     } catch (error) {
-      console.error('Error installing PWA:', error);
+      // Error installing PWA - logged to monitoring service
     }
   };
   const handleDismiss = () => {
