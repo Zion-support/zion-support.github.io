@@ -4,8 +4,20 @@ import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, Ha
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
+interface ITService {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price: string;
+  category: string;
+  benefits: string[];
+  technologies: string[];
+  contactInfo: string;
+}
+
 const ITServicesPage: React.FC = () => {
-  const itServices = [
+  const itServices: ITService[] = [
     // Infrastructure & Cloud Services
     {
       title: 'Data Center Services',
@@ -339,7 +351,7 @@ const ITServicesPage: React.FC = () => {
             {itServices.map((service, index) => (
               <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-cyan-400 mb-4">
-                  {React.createElement(service.icon, { className: "w-8 h-8" })}
+                  <service.icon className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
