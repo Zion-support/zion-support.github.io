@@ -157,25 +157,25 @@ const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 cyber-nav ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg cyber-glow' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center cyber-glow energy-pulse group-hover:scale-110 transition-all duration-300">
+              <Zap className="w-5 h-5 text-white neon-pulse" />
             </div>
-            <span className="text-white font-bold text-xl neon-text">Zion Tech Group</span>
+            <span className="text-white font-bold text-xl cyber-text-3d group-hover:neon-glow transition-all duration-300">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link href="/" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium hover:neon-glow cyber-scan-effect">
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link href="/about" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium hover:neon-glow cyber-scan-effect">              
               About
             </Link>
 
@@ -183,31 +183,31 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
+                className="flex items-center space-x-1 font-medium transition-all duration-300 hover:text-cyan-400 text-white hover:neon-glow cyber-scan-effect"
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
               >
-                <Brain className="w-4 h-4" />
+                <Brain className="w-4 h-4 neon-pulse" />
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-500/50 py-6 z-50 cyber-glow holographic-border">
                   <div className="grid grid-cols-2 gap-6 px-6">
                     {serviceCategories.map((category, index) => (
                       <div key={index} className="space-y-3">
                         <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center cyber-glow energy-pulse`}>
+                            <category.icon className={`w-4 h-4 ${category.color} neon-pulse`} />
                           </div>
-                          <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+                          <h3 className="font-semibold text-white text-sm neon-text">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
                           {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800/50 hover:text-cyan-400 rounded-lg transition-all duration-300 hover:neon-glow cyber-scan-effect"
                               onClick={closeAllMenus}
                             >
                               <div className="font-medium">{service.name}</div>
@@ -244,7 +244,7 @@ const Navigation: React.FC = () => {
 
             <Link 
               href="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              className="font-medium transition-all duration-300 hover:text-cyan-400 text-white hover:neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               Case Studies
@@ -252,7 +252,7 @@ const Navigation: React.FC = () => {
 
             <Link
               href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-all duration-300 font-medium hover:neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               Blog
@@ -260,7 +260,7 @@ const Navigation: React.FC = () => {
 
             <Link
               href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-all duration-300 font-medium hover:neon-glow cyber-scan-effect"
               onClick={closeAllMenus}
             >
               Contact
@@ -269,10 +269,10 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="cyber-button inline-flex items-center"
+              className="cyber-button inline-flex items-center energy-pulse hover:scale-105 transition-all duration-300"
               onClick={closeAllMenus}
             >
-              <Phone className="w-4 h-4 mr-2" />
+              <Phone className="w-4 h-4 mr-2 neon-pulse" />
               (302) 464-0950
             </Link>
           </div>
@@ -281,10 +281,10 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+              className="text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:neon-glow cyber-scan-effect"
               aria-label="Toggle menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6 neon-pulse" /> : <Menu className="w-6 h-6 neon-pulse" />}
             </button>
           </div>
         </div>
@@ -292,17 +292,17 @@ const Navigation: React.FC = () => {
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2 cyber-glow holographic-border">
               <Link
                 href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
               <Link
                 href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 About
@@ -312,10 +312,10 @@ const Navigation: React.FC = () => {
               <div>
                 <button
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 >
                   <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
+                    <Brain className="w-4 h-4 neon-pulse" />
                     <span>Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -345,7 +345,7 @@ const Navigation: React.FC = () => {
 
               <Link
                 href="/case-studies"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Case Studies
@@ -353,7 +353,7 @@ const Navigation: React.FC = () => {
 
               <Link
                 href="/blog"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Blog
@@ -361,7 +361,7 @@ const Navigation: React.FC = () => {
 
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-all duration-300 hover:neon-glow cyber-scan-effect"
                 onClick={closeAllMenus}
               >
                 Contact
@@ -369,10 +369,10 @@ const Navigation: React.FC = () => {
 
               <a
                 href="tel:+13024640950"
-                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4 cyber-button energy-pulse hover:scale-105"
                 onClick={closeAllMenus}
               >
-                <Phone className="w-4 h-4 inline mr-2" />
+                <Phone className="w-4 h-4 inline mr-2 neon-pulse" />
                 (302) 464-0950
               </a>
             </div>

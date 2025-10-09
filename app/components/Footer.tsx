@@ -134,17 +134,17 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg particle-field">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center cyber-glow energy-pulse">
+                <Brain className="w-5 h-5 text-white neon-pulse" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white cyber-text-3d neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -153,9 +153,9 @@ const Footer: React.FC = memo(() => {
             {/* Achievements */}
             <div className="space-y-3 mb-6">
               {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <achievement.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-300">{achievement.text}</span>
+                <div key={index} className="flex items-center space-x-2 cyber-scan-effect">
+                  <achievement.icon className="w-4 h-4 text-cyan-400 neon-pulse" />
+                  <span className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300">{achievement.text}</span>
                 </div>
               ))}
             </div>
@@ -168,10 +168,10 @@ const Footer: React.FC = memo(() => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
+                  className="w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-all duration-300 group cyber-glow hover:scale-110"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 neon-pulse" />
                 </a>
               ))}
             </div>
@@ -179,18 +179,18 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text cyber-scan-effect">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-sm group flex items-center hover:neon-glow cyber-scan-effect"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity neon-pulse" />
                     {service.name}
                   </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  <p className="text-xs text-gray-500 ml-5 hover:text-gray-400 transition-colors duration-300">{service.description}</p>
                 </li>
               ))}
               <li>
