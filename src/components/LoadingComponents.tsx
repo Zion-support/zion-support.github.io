@@ -1,12 +1,10 @@
 import React from 'react';
 
-interface LoadingComponentsProps {
-  // Add props here
+interface LoadingComponentsProps {/* TODO: Fix JSX expression */}
 }
 
-const LoadingComponents: React.FC<LoadingComponentsProps> = () => {
-  return (
-    <div className="loadingcomponents">
+const,
+  LoadingComponents: React.FC<LoadingComponentsProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

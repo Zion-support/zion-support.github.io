@@ -1,22 +1,12 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface OptimizedImageProps {
-
-  // Add props here
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = () => {
-  return (
-    <div className="optimizedimage">
-      {/* Component content */}
-    </div>
-
-=======
-interface OptimizedImageProps {// TODO: Add content;}
+interface OptimizedImageProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  src: string;,
-    alt: string;
+  sr,
+  c: string;,
+    al,
+  t: string;
   width?: number;
   height?: number;
   className?: string;
@@ -29,8 +19,10 @@ interface OptimizedImageProps {// TODO: Add content;}
   onLoad?: () => void;
   onError?: () => void;
 }
-const OptimizedImage: React.FC;
-          <OptimizedImageProps> = ({// TODO: Add content;}
+const,
+  OptimizedImage: React.FC;
+          <OptimizedImageProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //   src,
 //   alt,
@@ -44,71 +36,75 @@ const OptimizedImage: React.FC;
   sizes = '100vw',
   loading = 'lazy',
 //   onLoad,
-//   onError,
-}) => {// TODO: Add content;}
+//   onError,)
+}) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   // Intersection Observer for lazy loading;
-  useEffect(() => {// TODO: Add content;}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (priority || isInView) return;
     const observer = new IntersectionObserver()
-      (entries) => {// TODO: Add content;}
+      (entries) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        entries.forEach((entry) => {// TODO: Add content;}
+        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          if (entry.isIntersecting) {// TODO: Add content;}
+          if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
             setIsInView(true);
             observer.disconnect();
           }
         });
       },
-      {// TODO: Add content;}
+      {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  rootMargin: '50px',
-        threshold: 0.1,
+  rootMargi,
+  n: '50px',
+        threshol,
+  d: 0.1,
       }
     );
-    if (imgRef.current) {// TODO: Add content;}
+    if (imgRef.current) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
   }, [priority, isInView]);
   // Generate optimized image URL;
-const getOptimizedSrc = () => {// TODO: Add content;}
+const getOptimizedSrc = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
+    if (!isInView) return blurDataURL || 'dat,
+  a:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
     // In a real implementation, you would use an image optimization service;
     // like Cloudinary, ImageKit, or Next.js Image Optimization;
     return src;
   };
-  const handleLoad = () => {// TODO: Add content;}
+  const handleLoad = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {// TODO: Add content;}
+  const handleError = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     setHasError(true);
     onError?.();
   };
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+  return (<div>Coming Soon</div>)
   )
     
-          <div
+          <div></div>
       ref={imgRef} className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
 // >
@@ -116,39 +112,45 @@ const getOptimizedSrc = () => {// TODO: Add content;}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (}
           <div className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{}
-  // TODO: Add content;
+  // TOD,
+  O: Add content;
 };
-  backgroundImage: `url(${blurDataURL})`,
+  backgroundImag,)`
+  e: `url(${blurDataURL})`,
           }}
-//         />
+//         /></div>
       )}
       {/* Loading skeleton */}
-      {!isLoaded && !hasError && ()}
-          <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      {!isLoaded && !hasError && ()}"
+          <div className="absolute inset-0 bg-gray-200 animate-pulse" /></div>
       )}
       {/* Error state */}
-      {hasError && (}
-<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>
+      {hasError && (}"
+<div className="absolute inset-0 bg-gray-100 flex items-center justify-center"><div className="text-gray-400 text-sm">Failed to load image</div></div>)
       )}
       {/* Actual image */}
       {isInView && ()}
-          <img
+          <img></img>
           src={getOptimizedSrc()}
           alt={alt}
           width={width}
           height={height}
           sizes={sizes}
           loading={loading}
-          onLoad={handleLoad}
+          onLoad={handleLoad}`
 onError={handleError} className={`transition-opacity duration-300 ${}
-            isLoaded ? 'opacity-100' : 'opacity-0'
+            isLoaded ? 'opacity-100' : 'opacity-0'`
           }`}
           style={{}
-  // TODO: Add content;
+  // TOD,
+  O: Add content;
 };
-  width: '100%',
-            height: '100%',
-            objectFit: 'cover',
+  widt,
+  h: '100%',
+            heigh,
+  t: '100%',
+            objectFi,
+  t: 'cover',
           }}
 //         />
       )}
@@ -162,8 +164,7 @@ onError={handleError} className={`transition-opacity duration-300 ${}
           
           
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
-export default OptimizedImage;
+export default OptimizedImage;"`

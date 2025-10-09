@@ -1,149 +1,100 @@
-<<<<<<< HEAD
-'use client'
-interface PerformanceMetrics {
-    // TODO: Add content
-  }
-=======
 'use client';
-interface PerformanceMetrics {// TODO: Add content;}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  loadTime: number;,
-    domContentLoaded: number;,
-    firstContentfulPaint: number;,
-    largestContentfulPaint: number;,
-    cumulativeLayoutShift: number;,
-    firstInputDelay: number
+  loadTim,
+  e: number;,
+    domContentLoade,
+  d: number;,
+    firstContentfulPain,
+  t: number;,
+    largestContentfulPain,
+  t: number;,
+    cumulativeLayoutShif,
+  t: number;,
+    firstInputDela,
+  y: number;
 }
-<<<<<<< HEAD
-export const _usePerformance = () => {
-    // TODO: Add content
-  }
-  const [metrics, setMetrics] = useState
-          
-          
-          
-          
-          
-          
-          
-          
-          <PerformanceMetrics | null>(null)
-  const [isMonitoring, setIsMonitoring] = useState(false)
-  useEffect(() => {
-    // TODO: Add content
-  }
-    if (typeof window === 'undefined' || !('performance' in window)) return
-    const measurePerformance = () => {
-    // TODO: Add content
-  }
-=======
-export const _usePerformance = () => {// TODO: Add content;}
+export const _usePerformance = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const [metrics, setMetrics] = useState;
           <PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  useEffect(() => {// TODO: Add content;}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {// TODO: Add content;}
+    const measurePerformance = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       const navigation = performance.getEntriesByType()
 //         'navigation'
-      )[0] as PerformanceNavigationTiming
+      )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint')
       const firstContentfulPaint =
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
       const largestContentfulPaint =
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0
+        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
-<<<<<<< HEAD
-      if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
-        const observer = new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-          for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-            if ()
-              entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput,
-) {
-    // TODO: Add content
-  }
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value
-=======
-      if ('PerformanceObserver' in window) {// TODO: Add content;}
+      if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const observer = new PerformanceObserver(list => {// TODO: Add content;}
-}
-          for (const entry of list.getEntries()) {// TODO: Add content;}
+        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
             if ()
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput,
-) {// TODO: Add content;}
+              !(entry as unknown as {/* TODO: Fix JSX expression */})
+  t: boolean }).hadRecentInput,
+) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+              cumulativeLayoutShift += (entry as unknown as {/* TODO: Fix JSX expression */})
+  e: number }).value;
             }
           }
         }
   )
-        observer.observe({ entryTypes: ['layout-shift'] }
+        observer.observe({/* TODO: Fix JSX expression */}
+  s: ['layout-shift'] })
   )
       }
       // Measure FID (First Input Delay)
-<<<<<<< HEAD
-      if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
-        const observer = new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-          for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-            if (entry.entryType === 'first-input') {
-    // TODO: Add content
-  }
-=======
-      if ('PerformanceObserver' in window) {// TODO: Add content;}
+      if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const observer = new PerformanceObserver(list => {// TODO: Add content;}
+        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+          for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          for (const entry of list.getEntries()) {// TODO: Add content;}
+            if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-            if (entry.entryType === 'first-input') {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               firstInputDelay =
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime
+                (entry as unknown as {/* TODO: Fix JSX expression */})
+  t: number }).processingStart - entry.startTime;
             }
           }
         }
   )
-        observer.observe({ entryTypes: ['first-input'] }
+        observer.observe({/* TODO: Fix JSX expression */}
+  s: ['first-input'] })
   )
       }
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
+        loadTim,
+  e: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoade,
+  d:
 //           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
-<<<<<<< HEAD
-//         firstInputDelay
-      }
-      setMetrics(performanceData)
-      setIsMonitoring(false)
-      // Report to analytics using trackTiming
-      analytics.trackTiming('performance', 'load_time', performanceData.loadTime)
-      analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded)
-=======
 //         firstInputDelay;
       };
       setMetrics(performanceData);
@@ -151,7 +102,6 @@ export const _usePerformance = () => {// TODO: Add content;}
       // Report to analytics using trackTiming;
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       analytics.trackTiming()
 //         'performance',
 //         'first_contentful_paint',
@@ -166,44 +116,23 @@ export const _usePerformance = () => {// TODO: Add content;}
 //         'performance',
 //         'cumulative_layout_shift',
 //         performanceData.cumulativeLayoutShift,
-<<<<<<< HEAD
-)
-      analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay)
-    }
-    // Start monitoring
-    setIsMonitoring(true)
-    // Measure performance after page load
-    if (document.readyState === 'complete') {
-    } else {
-    // TODO: Add content
-  }
-      window.addEventListener('load', measurePerformance)
-    }
-    return () => {
-    // TODO: Add content
-  }
-      window.removeEventListener('load', measurePerformance)
-    }
-  }, [])
-  return { metrics, isMonitoring }
-}
-=======
 );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
     // Start monitoring;
     setIsMonitoring(true);
     // Measure performance after page load;
-    if (document.readyState === 'complete') {
-    } else {// TODO: Add content;}
+    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       window.addEventListener('load', measurePerformance);
     }
-    return () => {// TODO: Add content;}
+    return () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
   return { metrics, isMonitoring };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0

@@ -1,82 +1,78 @@
 import React from 'react';
 
-// Mock the components that App depends on
-jest.mock('../components/ErrorBoundary', () => {
-  return function MockErrorBoundary({ children }: { children: React.ReactNode }) {
+// Mock the components that App depends on;
+jest.mock('../components/ErrorBoundary', () => {/* TODO: Fix JSX expression */}
+  return function MockErrorBoundary({ children }: {/* TODO: Fix JSX expression */})
+  n: React.ReactNode }) {/* TODO: Fix JSX expression */}
     return <div data-testid="error-boundary">{children}</div>;
   };
 });
 
-jest.mock('../components/SEO', () => {
-  return function MockSEO() {
+jest.mock('../components/SEO', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="seo">SEO Component</div>;
   };
 });
 
-jest.mock('../components/Loading', () => {
-  return function MockLoading() {
+jest.mock('../components/Loading', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="loading">Loading...</div>;
   };
 });
 
-// Mock the pages
-jest.mock('../pages/Home', () => {
-  return function MockHome() {
+// Mock the pages;
+jest.mock('../pages/Home', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="home-page">Home Page</div>;
   };
 });
 
-jest.mock('../pages/About', () => {
-  return function MockAbout() {
+jest.mock('../pages/About', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="about-page">About Page</div>;
   };
 });
 
-jest.mock('../pages/Services', () => {
-  return function MockServices() {
+jest.mock('../pages/Services', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="services-page">Services Page</div>;
   };
 });
 
-jest.mock('../pages/Blog', () => {
-  return function MockBlog() {
+jest.mock('../pages/Blog', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="blog-page">Blog Page</div>;
   };
 });
 
-jest.mock('../pages/Contact', () => {
-  return function MockContact() {
+jest.mock('../pages/Contact', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="contact-page">Contact Page</div>;
   };
 });
 
-jest.mock('../pages/Team', () => {
-  return function MockTeam() {
+jest.mock('../pages/Team', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="team-page">Team Page</div>;
   };
 });
 
-jest.mock('../pages/Privacy', () => {
-  return function MockPrivacy() {
+jest.mock('../pages/Privacy', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="privacy-page">Privacy Page</div>;
   };
 });
 
-jest.mock('../pages/Terms', () => {
-  return function MockTerms() {
+jest.mock('../pages/Terms', () => {/* TODO: Fix JSX expression */}
+}"
     return <div data-testid="terms-page">Terms Page</div>;
   };
 });
 
-describe('App', () => {
-  it('renders without crashing', () => {
-    render(<App />);
-    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
-    expect(screen.getByTestId('seo')).toBeInTheDocument();
+describe('App', () => {/* TODO: Fix JSX expression */}
   });
 
-  it('renders the home page by default', () => {
-    render(<App />);
-    expect(screen.getByTestId('home-page')).toBeInTheDocument();
+  it('renders the home page by default', () => {/* TODO: Fix JSX expression */}
   });
 });
+"

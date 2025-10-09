@@ -1,33 +1,20 @@
 'use client';
-export const useRouter = () => {
-  const push = useCallback((url: string) => {
-    window.location.href = url;
+export const useRouter = () => {/* TODO: Fix JSX expression */}
   }, []);
-  const replace = useCallback((url: string) => {
-    window.location.replace(url);
+  const replace = useCallback((ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
   }, []);
-  const back = useCallback(() => {
-    window.history.back();
+  const back = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
-  const forward = useCallback(() => {
-    window.history.forward();
+  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
-  const refresh = useCallback(() => {
-    window.location.reload();
+  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   }, []);
-  return {
-    push,
-    replace,
-    back,
-    forward,
-    refresh
+  return {/* TODO: Fix JSX expression */}
   };
 };
-export const usePathname = () => {
-  return window.location.pathname;
+export const usePathname = () => {/* TODO: Fix JSX expression */}
 };
-export const useSearchParams = () => {
-  const params = new URLSearchParams(window.location.search);
-  return params;
+export const useSearchParams = () => {/* TODO: Fix JSX expression */}
 };
 export default { useRouter, usePathname, useSearchParams };

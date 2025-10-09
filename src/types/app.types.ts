@@ -1,30 +1,11 @@
 /**
- * Application Type Definitions
- * Centralized type definitions for the application
+ * Application Type Definitions;
+ * Centralized type definitions for the application;
  */
 /**
- * Performance Metrics Interface
- * Defines the structure for performance monitoring data
+ * Performance Metrics Interface;
+ * Defines the structure for performance monitoring data;
  */
-<<<<<<< HEAD
-export interface PerformanceMetrics {
-fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
-  customMetrics?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number>
-=======
 export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   lcp?: number; // Largest Contentful Paint;
   fid?: number; // First Input Delay;
@@ -33,122 +14,104 @@ export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
   fmp?: number; // First Meaningful Paint;
   customMetrics?: Record;
           <string, number>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
- * Performance Report Interface
- * Complete performance report structure
+ * Performance Report Interface;
+ * Complete performance report structure;
  */
-<<<<<<< HEAD
-export interface PerformanceReport {
-    // TODO: Add content
-  }
-  webVitals: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-=======
-export interface PerformanceReport {// TODO: Add content;}
+export interface PerformanceReport {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  webVitals: Partial;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  webVital,
+  s: Partial;
           <PerformanceMetrics>;,
-    resources: ResourceStats;,
-    memory: MemoryStats | null;,
-    timestamp: number
+    resource,
+  s: ResourceStats;,
+    memor,
+  y: MemoryStats | null;,
+    timestam,
+  p: number;
 }
 /**
- * Resource Statistics Interface
- * Tracks resource loading statistics
+ * Resource Statistics Interface;
+ * Tracks resource loading statistics;
  */
-<<<<<<< HEAD
-export interface ResourceStats {
-    // TODO: Add content
-  }
-=======
-export interface ResourceStats {// TODO: Add content;}
+export interface ResourceStats {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  total: number;,
-    scripts: number;,
-    styles: number;,
-    images: number;,
-    fonts: number
+  tota,
+  l: number;,
+    script,
+  s: number;,
+    style,
+  s: number;,
+    image,
+  s: number;,
+    font,
+  s: number;
 }
 /**
- * Memory Statistics Interface
- * Browser memory usage statistics
+ * Memory Statistics Interface;
+ * Browser memory usage statistics;
  */
-<<<<<<< HEAD
-export interface MemoryStats {
-    // TODO: Add content
-  }
-=======
-export interface MemoryStats {// TODO: Add content;}
+export interface MemoryStats {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number
+  usedJSHeapSiz,
+  e: number;,
+    totalJSHeapSiz,
+  e: number;,
+    jsHeapSizeLimi,
+  t: number;
 }
 /**
- * Performance Alert Interface
- * Structure for performance alerts and warnings
+ * Performance Alert Interface;
+ * Structure for performance alerts and warnings;
  */
-<<<<<<< HEAD
-export interface PerformanceAlert {
-    // TODO: Add content
-  }
-=======
-export interface PerformanceAlert {// TODO: Add content;}
+export interface PerformanceAlert {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  type: 'warning' | 'error' | 'info';,
-    message: string;,
-    metric: keyof PerformanceMetrics;,
-    value: number;,
-    threshold: number;,
-    timestamp: number
+  typ,
+  e: 'warning' | 'error' | 'info';,
+    messag,
+  e: string;,
+    metri,
+  c: keyof PerformanceMetrics;,
+    valu,
+  e: number;,
+    threshol,
+  d: number;,
+    timestam,
+  p: number;
 }
 /**
- * Layout Shift Interface
- * Extends PerformanceEntry for layout shift tracking
+ * Layout Shift Interface;
+ * Extends PerformanceEntry for layout shift tracking;
  */
-<<<<<<< HEAD
-export interface LayoutShift extends PerformanceEntry {
-    // TODO: Add content
-  }
-=======
-export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
+export interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  value: number;,
-    hadRecentInput: boolean
+  valu,
+  e: number;,
+    hadRecentInpu,
+  t: boolean;
 }
 /**
- * Performance with Memory Interface
- * Extends Performance API with memory information
+ * Performance with Memory Interface;
+ * Extends Performance API with memory information;
  */
-<<<<<<< HEAD
-export interface PerformanceWithMemory extends Performance {
-    // TODO: Add content
-  }
-  memory: {
-    // TODO: Add content
-  }
-=======
-export interface PerformanceWithMemory extends Performance {// TODO: Add content;}
+export interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  memory: {// TODO: Add content;}
+  memor,
+  y: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number
+  usedJSHeapSiz,
+  e: number;,
+    totalJSHeapSiz,
+  e: number;,
+    jsHeapSizeLimi,
+  t: number;
   }
 }

@@ -1,87 +1,58 @@
 
-export default defineConfig({
-  plugins: [react()],
-  root: 'src',
-  publicDir: '../public',
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
+export default defineConfig({/* TODO: Fix JSX expression */}
     },
   },
-  build: {
-    target: 'esnext',
-    minify: 'terser',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+  buil,
+  d: {/* TODO: Fix JSX expression */}
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
+        chunkFileName,
+  s: 'assets/[name]-[hash].js',
+        entryFileName,
+  s: 'assets/[name]-[hash].js',
+        assetFileName,)
+  s: (assetInfo) => {/* TODO: Fix JSX expression */}
             return `assets/css/[name]-[hash].${ext}`;
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {/* TODO: Fix JSX expression */}`
             return `assets/images/[name]-[hash].${ext}`;
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {/* TODO: Fix JSX expression */}`
             return `assets/fonts/[name]-[hash].${ext}`;
-          }
+          }`
           return `assets/[name]-[hash].${ext}`;
         },
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
+    terserOption,
+  s: {/* TODO: Fix JSX expression */}
       },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
+      mangl,
+  e: {/* TODO: Fix JSX expression */}
         },
       },
-      format: {
-        comments: false,
+      forma,
+  t: {/* TODO: Fix JSX expression */}
       },
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimi,
+  t: 500,
+    reportCompressedSiz,
+  e: true,
+    cssCodeSpli,
+  t: true,
+    assetsInlineLimi,
+  t: 4096,
   },
-  server: {
-    port: 3000,
-    host: true,
+  serve,
+  r: {/* TODO: Fix JSX expression */}
   },
-  preview: {
-    port: 4173,
-    host: true,
+  previe,
+  w: {/* TODO: Fix JSX expression */}
   },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
+  optimizeDep,
+  s: {/* TODO: Fix JSX expression */}
   },
-  css: {
-    postcss: './postcss.config.js',
+  cs,
+  s: {/* TODO: Fix JSX expression */}
   },
-});
+});`

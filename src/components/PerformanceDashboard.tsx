@@ -1,68 +1,49 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-
-=======
 'use client';
-interface PerformanceMetrics {// TODO: Add content;}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
+  loadTim,
+  e: number;,
+    renderTim,
+  e: number;,
+    memoryUsag,
+  e: number;,
+    fp,
+  s: number;
 }
-interface PerformanceMetrics {// TODO: Add content;}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  loadTime: number;,
-    renderTime: number;,
-    memoryUsage: number;,
-    fps: number;
-  [key: string]: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  loadTim,
+  e: number;,
+    renderTim,
+  e: number;,
+    memoryUsag,
+  e: number;,
+    fp,
+  s: number;
+  [ke,
+  y: string]: number;
 }
 
-const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+const,
+  PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
 
-  useEffect(() => {
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  p: entry.startTime }));
         }
       });
     });
 
-    try {
-      observer.observe({ entryTypes: ['paint'] });
+    try {/* TODO: Fix JSX expression */}
+  s: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+    } catch (error) {/* TODO: Fix JSX expression */}
     }
   }, []);
 
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+  useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [metrics, onMetricsUpdate]);
 

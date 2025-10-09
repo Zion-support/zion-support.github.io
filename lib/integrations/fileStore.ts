@@ -5,40 +5,28 @@ import type { IntegrationsState } from './types';
 // const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 // const STATE_FILE = path.join(DATA_DIR, 'state.json');
 import type { IntegrationsState } from "./types";
-
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+"
+// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");"
 // const STATE_FILE = path.join(DATA_DIR, "state.json");
-
-// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
+"
+// const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");"
 // const STATE_FILE = path.join(DATA_DIR, "state.json");
 
 // const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 // const STATE_FILE = path.join(DATA_DIR, 'state.json');
 
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+function ensureDataDir(): void {/* TODO: Fix JSX expression */}
+  e: true });
   }
   
   
-  if (!fs.existsSync(STATE_FILE)) {
+  if (!fs.existsSync(STATE_FILE)) {/* TODO: Fix JSX expression */}
 }
 
-export function readState(): IntegrationsState {
-  ensureDataDir();
-  
-
-  if (!fs.existsSync(STATE_FILE)) {
-    const initial: IntegrationsState = {
-      connections: [],
-      logs: [],
-      overrides: [],
-      events: [],
+export function readState(): IntegrationsState {/* TODO: Fix JSX expression */}
     };
-  try {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch {
+  try {/* TODO: Fix JSX expression */}
+  } catch {/* TODO: Fix JSX expression */}
 }
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
@@ -53,59 +41,26 @@ export function readState(): IntegrationsState {
 }
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
   }
-}
+}"
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
-}
+}"
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
 }
 
-export function readState(): IntegrationsState {
-  ensureDataDir();
-  
-  try {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-  
-  try {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8');
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");
-    return JSON.parse(raw) as IntegrationsState;
-  } catch (error) {
-    return {
-    const initial: IntegrationsState = {
-      connections: [],
-      logs: [],
-      overrides: [],
-      events: [],
+export function readState(): IntegrationsState {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {/* TODO: Fix JSX expression */}
     };
 
 
@@ -113,85 +68,67 @@ export function readState(): IntegrationsState {
 
 
 
-
+"
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8');
     return initial;
   }
 }
 
-export function writeState(
-  mutator: (state: IntegrationsState) => void
-): IntegrationsState {
-  ensureDataDir();
-//   const current = readState();
-  mutator(current);
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
-  return current;
+export function writeState(mutato,
+  r: (stat,)
+  e: IntegrationsState) => void;
+): IntegrationsState {/* TODO: Fix JSX expression */}
 }
 
-export interface FileStoreOptions {
-  basePath: string;
-  encoding?: BufferEncoding;
+export interface FileStoreOptions {/* TODO: Fix JSX expression */}
 }
 
-export class FileStore {
-  private basePath: string;
-  private encoding: BufferEncoding;
-
-  constructor(options: FileStoreOptions) {
-    this.basePath = options.basePath;
-    this.encoding = options.encoding || 'utf8';
+export class FileStore {/* TODO: Fix JSX expression */}
   }
 
-  async readFile(filePath: string): Promise<string> {
-//     const fullPath = path.join(this.basePath, filePath);
-    return fs.promises.readFile(fullPath, this.encoding);
+  async readFile(filePat,)
+  h: string): Promise<string> {/* TODO: Fix JSX expression */}
   }
 
-  async writeFile(filePath: string, content: string): Promise<void> {
-//     const fullPath = path.join(this.basePath, filePath);
-    const _dir = path.dirname(fullPath);
-
-    // Ensure directory exists
-    await fs.promises.mkdir(dir, { recursive: true });
+  async writeFile(filePat,
+  h: string, conten,)
+  t: string): Promise<void> {/* TODO: Fix JSX expression */}
+  e: true });
 
     return fs.promises.writeFile(fullPath, content, this.encoding);
   }
 
-  async exists(filePath: string): Promise<boolean> {
-//     const fullPath = path.join(this.basePath, filePath);
-    try {
-      await fs.promises.access(fullPath);
-      return true;
-    } catch {
-      return false;
+  async exists(filePat,)
+  h: string): Promise<boolean> {/* TODO: Fix JSX expression */}
+    } catch {/* TODO: Fix JSX expression */}
     }
   }
 
-  async deleteFile(filePath: string): Promise<void> {
-//     const fullPath = path.join(this.basePath, filePath);
-    await fs.promises.unlink(fullPath);
+  async deleteFile(filePat,)
+  h: string): Promise<void> {/* TODO: Fix JSX expression */}
   }
 
-  async listFiles(dirPath: string = ''): Promise<string[]> {
-//     const fullPath = path.join(this.basePath, dirPath);
-//     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });
-    return files
+  async listFiles(dirPat,)
+  h: string = ''): Promise<string[]> {/* TODO: Fix JSX expression */}
+  s: true });
+    return files;
       .filter(file => file.isFile())
       .map(file => path.join(dirPath, file.name));
   }
 
-  async createDirectory(dirPath: string): Promise<void> {
-//     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.mkdir(fullPath, { recursive: true });
+  async createDirectory(dirPat,)
+  h: string): Promise<void> {/* TODO: Fix JSX expression */}
+  e: true });
   }
 
-  async deleteDirectory(dirPath: string): Promise<void> {
-//     const fullPath = path.join(this.basePath, dirPath);
-    await fs.promises.rmdir(fullPath, { recursive: true });
+  async deleteDirectory(dirPat,)
+  h: string): Promise<void> {/* TODO: Fix JSX expression */}
+  e: true });
   }
 }
 
-export const createFileStore = (options: FileStoreOptions) =>
+export const createFileStore = (option,)
+  s: FileStoreOptions) =>
   new FileStore(options);
+"

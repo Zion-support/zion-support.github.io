@@ -3,111 +3,86 @@
  * Basic UX optimization utilities;
  */
 
-<<<<<<< HEAD
-interface UXConfig {
-  enableSmoothScrolling: boolean
-  enableLoadingStates: boolean
-  enableErrorBoundaries: boolean
-  enableAnalytics: boolean
-  enableNotifications: boolean
-  enableProgressiveWebApp: boolean
-  enableOfflineSupport: boolean
-  enablePushNotifications: boolean
-  enableDarkMode: boolean
-  enableAnimations: boolean
+interface UXConfig {/* TODO: Fix JSX expression */}
+  g: boolean;}
+  enableLoadingState,
+  s: boolean;
+  enableErrorBoundarie,
+  s: boolean;
+  enableAnalytic,
+  s: boolean;
+  enableNotification,
+  s: boolean;
+  enableProgressiveWebAp,
+  p: boolean;
+  enableOfflineSuppor,
+  t: boolean;
+  enablePushNotification,
+  s: boolean;
+  enableDarkMod,
+  e: boolean;
+  enableAnimation,
+  s: boolean;
 }
 
-interface UXMetrics {
-  pageLoadTime: number
-  interactionTime: number
-  bounceRate: number
-  userSatisfaction: number
-  accessibilityScore: number
-  performanceScore: number
+interface UXMetrics {/* TODO: Fix JSX expression */}
+  e: number;}
+  interactionTim,
+  e: number;
+  bounceRat,
+  e: number;
+  userSatisfactio,
+  n: number;
+  accessibilityScor,
+  e: number;
+  performanceScor,
+  e: number;
 }
 
-class UserExperienceEnhancer {
-  private config: UXConfig
-  private metrics: UXMetrics
-  constructor(config?: UXConfig) {
-    this.config = config || {
-=======
-interface UXConfig {enableSmoothScrolling: boolean;}
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
-  enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
-}
-
-interface UXMetrics {pageLoadTime: number;}
-  interactionTime: number;
-  bounceRate: number;
-  userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
-}
-
-class UserExperienceEnhancer {private config: UXConfig;}
-  private metrics: UXMetrics;
+class UserExperienceEnhancer {/* TODO: Fix JSX expression */}
+  config: UXConfig;}
+  private,
+  metrics: UXMetrics;
 
   constructor(config?: UXConfig) {this.config = config || {}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      enableSmoothScrolling: true,
-      enableLoadingStates: true,
-      enableErrorBoundaries: true,
-      enableAnalytics: true,
-      enableNotifications: false,
-      enableProgressiveWebApp: false,
-      enableOfflineSupport: false,
-      enablePushNotifications: false,
-      enableDarkMode: false,
-      enableAnimations: true,
-<<<<<<< HEAD
-    }
-    this.metrics = {
-      pageLoadTime: 0,
-=======
+      enableSmoothScrollin,
+  g: true,
+      enableLoadingState,
+  s: true,
+      enableErrorBoundarie,
+  s: true,
+      enableAnalytic,
+  s: true,
+      enableNotification,
+  s: false,
+      enableProgressiveWebAp,
+  p: false,
+      enableOfflineSuppor,
+  t: false,
+      enablePushNotification,
+  s: false,
+      enableDarkMod,
+  e: false,
+      enableAnimation,
+  s: true,
     };
     
-    this.metrics = {pageLoadTime: 0,}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      interactionTime: 0,
-      bounceRate: 0,
-      userSatisfaction: 0,
-      accessibilityScore: 0,
-      performanceScore: 0,
+    this.metrics = {/* TODO: Fix JSX expression */}
+  e: 0,}
+      interactionTim,
+  e: 0,
+      bounceRat,
+  e: 0,
+      userSatisfactio,
+  n: 0,
+      accessibilityScor,
+  e: 0,
+      performanceScor,
+  e: 0,
     }
     this.init()
   }
 
-<<<<<<< HEAD
-  private init(): void {
-    // Initialize UX enhancements
-    this.setupSmoothScrolling()
-    this.setupLoadingStates()
-  }
-
-  private setupSmoothScrolling(): void {
-    if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {
-      document.documentElement.style.scrollBehavior = 'smooth'
-    }
-  }
-
-  private setupLoadingStates(): void {
-    if (typeof document !== 'undefined' && this.config.enableLoadingStates) {
-      // Add loading state management
-      console.log('Loading states enabled')
-    }
-  }
-
-  public getMetrics(): UXMetrics {
-    return this.metrics
-=======
   private init(): void {// Initialize UX enhancements;}
     this.setupSmoothScrolling();
     this.setupLoadingStates();
@@ -125,11 +100,10 @@ class UserExperienceEnhancer {private config: UXConfig;}
   }
 
   public getMetrics(): UXMetrics {return this.metrics;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 
   public cleanup(): void {// Cleanup UX enhancements;}
   }
 }
 
-export default UserExperienceEnhancer
+export default UserExperienceEnhancer;

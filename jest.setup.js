@@ -1,128 +1,87 @@
-// Learn more: https://github.com/testing-library/jest-dom
+// Learn,
+  more: http,
+  s://github.com/testing-library/jest-dom;
 require('@testing-library/jest-dom');
 const { TextEncoder, TextDecoder } = require('util');
 
-// Polyfills for Node.js environment
+// Polyfills for Node.js environment;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
-  logger: {
-    debug: jest.fn(),
-    info: jest.fn(),
-    warn: jest.fn(),
-    error: jest.fn(),
-    log: jest.fn(),
-  },
+// Mock files that use import.meta.env;
+jest.mock('./src/utils/logger.ts', () => ({/* TODO: Fix JSX expression */}
+  },)
 }));
 
-jest.mock('./src/utils/analytics.ts', () => ({
-  trackEvent: jest.fn(),
-  trackPageView: jest.fn(),
-  initAnalytics: jest.fn(),
+jest.mock('./src/utils/analytics.ts', () => ({/* TODO: Fix JSX expression */})
 }));
 
-jest.mock('./src/utils/errorTracking.ts', () => ({
-  reportError: jest.fn(),
-  initErrorReporting: jest.fn(),
+jest.mock('./src/utils/errorTracking.ts', () => ({/* TODO: Fix JSX expression */})
 }));
 
-jest.mock('./src/hooks/usePerformance.ts', () => ({
-  usePerformance: jest.fn(() => ({
-    metrics: {},
-    optimize: jest.fn(),
+jest.mock('./src/hooks/usePerformance.ts', () => ({/* TODO: Fix JSX expression */}
+  s: {},
+    optimiz,)
+  e: jest.fn(),
   })),
 }));
 
-// usePerformanceMonitoring hook mock removed - hook doesn't exist
-
+// usePerformanceMonitoring hook mock removed - hook doesn't exist;
 // Mock React Router (this is a Vite project, not Next.js)
-jest.mock('react-router-dom', () => {
-  const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');
-  return {
-    ...actual,
-    useNavigate: () => jest.fn(),
-    useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
-      state: null,
+jest.mock('react-router-dom', () => {/* TODO: Fix JSX expression */}
     }),
-    useParams: () => ({}),
-    Link: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
+    useParam,
+  s: () => ({}),
+    Lin,
+  k: ({ children, to, ...props }) => {/* TODO: Fix JSX expression */}
+  f: to, ...props }, children);
     },
-    NavLink: ({ children, to, ...props }) => {
-      const React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
+    NavLin,
+  k: ({ children, to, ...props }) => {/* TODO: Fix JSX expression */}
+  f: to, ...props }, children);
     },
-    BrowserRouter: ({ children }) => children,
-    MemoryRouter: ({ children }) => {
+    BrowserRoute,
+  r: ({ children }) => children,
+    MemoryRoute,
+  r: ({ children }) => {/* TODO: Fix JSX expression */}
       const { createMemoryRouter, RouterProvider } = actual;
       const router = createMemoryRouter([
-        {
-          path: '/',
-          element: children,
+        {/* TODO: Fix JSX expression */}
         },
-      ], {
-        initialEntries: ['/'],
-        initialIndex: 0,
+      ], {/* TODO: Fix JSX expression */})
       });
       const React = require('react');
       return React.createElement(RouterProvider, { router });
     },
-    RouterProvider: ({ router }) => null,
+    RouterProvide,
+  r: ({ router }) => null,
   };
 });
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+// Mock window.matchMedia;
+Object.defineProperty(window, 'matchMedia', {/* TODO: Fix JSX expression */})
   })),
 });
 
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {/* TODO: Fix JSX expression */}
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
+  takeRecords() {/* TODO: Fix JSX expression */}
   }
   unobserve() {}
 };
 
-// Suppress console errors in tests
+// Suppress console errors in tests;
 let _originalError;
 
-beforeAll(() => {
-  _originalError = console.error;
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
+beforeAll(() => {/* TODO: Fix JSX expression */}
     }
     _originalError.call(console, ...args);
   });
 });
 
-afterAll(() => {
-  if (_originalError) {
-    console.error = _originalError;
+afterAll(() => {/* TODO: Fix JSX expression */}
   }
 });

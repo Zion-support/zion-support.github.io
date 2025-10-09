@@ -3,230 +3,136 @@
  * Form Validation Utilities;
  * Provides common validation rules and form handling utilities;
  */
-<<<<<<< HEAD
-export interface ValidationRule<T = unknown> {
-    // TODO: Add content
-  }
-=======
-export interface ValidationRule<T = unknown> {// TODO: Add content;}
+export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (value: T) => boolean;,
-    message: string
+  validat,
+  e: (valu,)
+  e: T) => boolean;,
+    messag,
+  e: string;
 }
-<<<<<<< HEAD
-export interface ValidationResult {
-    // TODO: Add content
-  }
-=======
-export interface ValidationResult {// TODO: Add content;}
+export interface ValidationResult {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  valid: boolean;,
-    errors: string[]
+  vali,
+  d: boolean;,
+    error,
+  s: string[]
 }
-<<<<<<< HEAD
-export interface FieldValidation {
-    // TODO: Add content
-  }
-  [fieldName: string]: ValidationRule[]
-=======
-export interface FieldValidation {// TODO: Add content;}
+export interface FieldValidation {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  [fieldName: string]: ValidationRule[];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  [fieldNam,
+  e: string]: ValidationRule[];
 }
 /**
  * Common validation rules;
  */
-<<<<<<< HEAD
-export const _validationRules = {
-    // TODO: Add content
-  }
-=======
-export const _validationRules = {// TODO: Add content;}
+export const _validationRules = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   /**
    * Validate required field;
    */
-<<<<<<< HEAD
-  required: (message = 'This field is required'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-=======
-  required: (message = 'This field is required'): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  require,
+  d: (message = 'This field is required'): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
+  validat,
+  e: (valu,)
+  e: string) => value !== null && value !== undefined && value.trim().length > 0,
 //     message;
   }),
   /**
    * Validate email format;
    */
-<<<<<<< HEAD
-  email: (message = 'Please enter a valid email address'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-  validate: (value: string) => {
-    // TODO: Add content
-  }
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      return emailRegex.test(value)
-=======
-  email: (message = 'Please enter a valid email address'): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  emai,
+  l: (message = 'Please enter a valid email address'): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: string) => {// TODO: Add content;}
+  validat,
+  e: (valu,)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
 //     message;
   }),
   /**
    * Validate minimum length;
    */
-<<<<<<< HEAD
-  minLength: (min: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-=======
-  minLength: (min: number, message?: string): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  minLengt,
+  h: (mi,)
+  n: number, message?: string): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`
+  validat,
+  e: (valu,)
+  e: string) => value.length >= min,
+    messag,
+  e: message || `Must be at least ${min} characters`
   }),
   /**
    * Validate maximum length;
    */
-<<<<<<< HEAD
-  maxLength: (max: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-  validate: (value: string) => value.length 
-          
-          
-          
-          
-          
-          
-          
-          
-=======
-  maxLength: (max: number, message?: string): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  maxLengt,
+  h: (ma,)
+  x: number, message?: string): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: string) => value.length;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  validat,
+  e: (valu,)
+  e: string) => value.length;
           <= max,
-    message: message || `Must be no more than ${max} characters`
+    messag,`
+  e: message || `Must be no more than ${max} characters`
   }),
   /**
    * Validate phone number (US format)
    */
-<<<<<<< HEAD
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
-    // TODO: Add content
-  }
-  validate: (value: string) => {
-    // TODO: Add content
-  }
-      const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
-      return phoneRegex.test(value.replace(/\s/g, ''))
-=======
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({// TODO: Add content;}
+  phoneU,
+  S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: string) => {// TODO: Add content;}
+  validat,
+  e: (valu,)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
 //     message;
   }),
   /**
    * Validate URL format;
    */
-<<<<<<< HEAD
-  url: (message = 'Please enter a valid URL'): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-  validate: (value: string) => {
-    // TODO: Add content
-  }
-      try {
-    // TODO: Add content
-  }
-        new URL(value)
-        return true
-      } catch {
-    // TODO: Add content
-  }
-        return false
-=======
-  url: (message = 'Please enter a valid URL'): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  ur,
+  l: (message = 'Please enter a valid URL'): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: string) => {// TODO: Add content;}
+  validat,
+  e: (valu,)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      try {// TODO: Add content;}
+      try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         new URL(value);
         return true;
-      } catch {// TODO: Add content;}
+      } catch {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     },
 //     message;
@@ -234,55 +140,38 @@ export const _validationRules = {// TODO: Add content;}
   /**
    * Validate number range;
    */
-<<<<<<< HEAD
-  numberRange: (min: number, max: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <number> => ({
-    // TODO: Add content
-  }
-  validate: (value: number) => value >= min && value 
-          
-          
-          
-          
-          
-          
-          
-          
-=======
-  numberRange: (min: number, max: number, message?: string): ValidationRule;
-          <number> => ({// TODO: Add content;}
+  numberRang,
+  e: (mi,
+  n: number, ma,)
+  x: number, message?: string): ValidationRule;
+          <number> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: number) => value >= min && value;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  validat,
+  e: (valu,)
+  e: number) => value >= min && value;
           <= max,
-    message: message || `Must be between ${min} and ${max}`
+    messag,`
+  e: message || `Must be between ${min} and ${max}`
   }),
   /**
    * Validate pattern match;
    */
-<<<<<<< HEAD
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
-    // TODO: Add content
-  }
-=======
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({// TODO: Add content;}
+  patter,
+  n: (rege,)
+  x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (value: string) => regex.test(value),
+  validat,
+  e: (valu,)
+  e: string) => regex.test(value),
 //     message;
   }),
   /**
    * Validate custom condition;
    */
-  custom: 
+  custo,
+  m: 
           
           
           
@@ -291,51 +180,34 @@ export const _validationRules = {// TODO: Add content;}
           
           
           
-<<<<<<< HEAD
-          <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
-    // TODO: Add content
-  }
-=======
-          <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({// TODO: Add content;}
+          <T>(validato,
+  r: (valu,)
+  e: T) => boolean, messag,
+  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: validator,
-//     message;
+  validat,
+  e: validator,
+//     message;)
   }),
   /**
    * Validate password strength;
    */
-  strongPassword: ()
+  strongPasswor,
+  d: ()
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character'
-<<<<<<< HEAD
-  ): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-  validate: (value: string) => {
-    // TODO: Add content
-  }
-      const hasUpperCase = /[A-Z]/.test(value)
-      const hasLowerCase = /[a-z]/.test(value)
-      const hasNumber = /[0-9]/.test(value)
-=======
   ): ValidationRule;
-          <string> => ({// TODO: Add content;}
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (value: string) => {// TODO: Add content;}
+  validat,
+  e: (valu,)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|
           
           
@@ -346,263 +218,167 @@ export const _validationRules = {// TODO: Add content;}
           
           
           <>]/.test(value)
-      const hasMinLength = value.length >= 8
-      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength
+      const hasMinLength = value.length >= 8;
+      return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
 // message;
   }),
   /**
    * Validate matching fields (e.g., password confirmation)
    */
-<<<<<<< HEAD
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <string> => ({
-    // TODO: Add content
-  }
-=======
-  matches: (otherFieldValue: string, fieldName: string): ValidationRule;
-          <string> => ({// TODO: Add content;}
+  matche,
+  s: (otherFieldValu,
+  e: string, fieldNam,)
+  e: string): ValidationRule;
+          <string> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+  validat,
+  e: (valu,)
+  e: string) => value === otherFieldValue,
+    messag,`
+  e: `Must match ${fieldName}`
   }),
   /**
    * Validate file size;
    */
-<<<<<<< HEAD
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule
-          
-          
-          
-          
-          
-          
-          
-          
-          <File> => ({
-    // TODO: Add content
-  }
-  validate: (file: File) => {
-    // TODO: Add content
-  }
-      const maxSizeInBytes = maxSizeInMB * 1024 * 1024
-      return file.size 
-          
-          
-          
-          
-          
-          
-          
-          
-          <= maxSizeInBytes
-=======
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule;
-          <File> => ({// TODO: Add content;}
+  fileSiz,
+  e: (maxSizeInM,)
+  B: number, message?: string): ValidationRule;
+          <File> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  validate: (file: File) => {// TODO: Add content;}
+  validat,
+  e: (fil,)
+  e: File) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size;
           <= maxSizeInBytes;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
-    message: message || `File size must not exceed ${maxSizeInMB}MB`
+    messag,`
+  e: message || `File size must not exceed ${maxSizeInMB}MB`
   }),
   /**
    * Validate file type;
    */
-<<<<<<< HEAD
-  fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({
-    // TODO: Add content
-  }
-=======
-  fileType: (allowedTypes: string[], message?: string): ValidationRule<File> => ({// TODO: Add content;}
+  fileTyp,
+  e: (allowedType,)
+  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+  validat,
+  e: (fil,)
+  e: File) => allowedTypes.includes(file.type),
+    messag,`
+  e: message || `File type must be one,`
+  of: ${allowedTypes.join(', ')}`
   }
   )
 }
 /**
  * Validate a single field with multiple rules;
  */
-<<<<<<< HEAD
-export function validateField
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
-    // TODO: Add content
-  }
-  const errors: string[] = []
-  for (const rule of rules) {
-    // TODO: Add content
-  }
-    if (!rule.validate(value)) {
-    // TODO: Add content
-  }
-      errors.push(rule.message)
-    }
-  }
-  return {
-    // TODO: Add content
-  }
-  valid: errors.length === 0,
-//     errors
-  }
-=======
 export function validateField;
-          <T>(value: T, rules: ValidationRule<T>[]): ValidationResult {// TODO: Add content;}
+          <T>(valu,
+  e: T, rule,)
+  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  const errors: string[] = [];
-  for (const rule of rules) {// TODO: Add content;}
+  const,
+  errors: string[] = [];
+  for (const rule of rules) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!rule.validate(value)) {// TODO: Add content;}
+    if (!rule.validate(value)) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       errors.push(rule.message);
     }
   }
-  return {// TODO: Add content;}
+  return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  valid: errors.length === 0,
+  vali,
+  d: errors.length === 0,
 //     errors;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Validate entire form;
  */
 export function validateForm;
           <T extends Record<string, unknown>>()
-  formData: T,
-  validationSchema: Record;
-          <keyof T, ValidationRule[]>
-<<<<<<< HEAD
-): Record<keyof T, ValidationResult> {
-    // TODO: Add content
-  }
-  const results = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <keyof T, ValidationResult>
-  for (const fieldName in validationSchema) {
-    // TODO: Add content
-=======
-): Record<keyof T, ValidationResult> {// TODO: Add content;}
+  formDat,
+  a: T,
+  validationSchem,
+  a: Record;
+          <keyof T, ValidationRule[]></keyof>
+): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const results = {} as Record;
           <keyof T, ValidationResult>;
-  for (const fieldName in validationSchema) {// TODO: Add content;}
+  for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
     results[fieldName] = validateField(value, rules);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     const value = formData[fieldName]
     const rules = validationSchema[fieldName]
     results[fieldName] = validateField(value, rules)
   }
-  return results
+  return results;
 }
 /**
  * Check if form is valid;
  */
 export function isFormValid;
           <T extends Record<string, unknown>>()
-  validationResults: Record;
-          <keyof T, ValidationResult>
-<<<<<<< HEAD
-): boolean {
-    // TODO: Add content
-  }
-  return Object.values(validationResults).every(result => result.valid)
-=======
-): boolean {// TODO: Add content;}
+  validationResult,
+  s: Record;
+          <keyof T, ValidationResult></keyof>
+): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   return Object.values(validationResults).every(result => result.valid);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Get all form errors;
  */
 export function getFormErrors;
           <T extends Record<string, unknown>>()
-  validationResults: Record;
-          <keyof T, ValidationResult>
-<<<<<<< HEAD
-): Record<keyof T, string[]> {
-    // TODO: Add content
-  }
-  const errors = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <keyof T, string[]>
-  for (const fieldName in validationResults) {
-    // TODO: Add content
-  }
-    const result = validationResults[fieldName]
-    if (!result.valid) {
-    // TODO: Add content
-  }
-      errors[fieldName] = result.errors
-=======
-): Record<keyof T, string[]> {// TODO: Add content;}
+  validationResult,
+  s: Record;
+          <keyof T, ValidationResult></keyof>
+): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const errors = {} as Record;
           <keyof T, string[]>;
-  for (const fieldName in validationResults) {// TODO: Add content;}
+  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const result = validationResults[fieldName];
-    if (!result.valid) {// TODO: Add content;}
+    if (!result.valid) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       errors[fieldName] = result.errors;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
-  return errors
+  return errors;
 }
 /**
  * Sanitize input string;
  */
-<<<<<<< HEAD
-export function sanitizeInput(input: string): string {
-    // TODO: Add content
-  }
-  return input
-=======
-export function sanitizeInput(input: string): string {// TODO: Add content;}
+export function sanitizeInput(inpu,)
+  t: string): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   return input;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     .trim()
 //     .replace(/[
           
@@ -612,7 +388,7 @@ export function sanitizeInput(input: string): string {// TODO: Add content;}
           
           
           
-          
+          )
           <>]/g, '') // Remove potential HTML tags;
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
@@ -620,55 +396,39 @@ export function sanitizeInput(input: string): string {// TODO: Add content;}
  * Debounce function for form validation;
  */
 export function debounce;
-          <T extends (...args: Parameters<T>) => ReturnType<T>>(),
-    func: T,
-  wait: number,
-<<<<<<< HEAD
-): (...args: Parameters
-          <T>) => void {
-    // TODO: Add content
-  }
-  let timeout: NodeJS.Timeout | null = null
-  return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>) {
-    // TODO: Add content
-  }
-    const later = () => {
-    // TODO: Add content
-  }
-      timeout = null
-      func(...args)
-=======
-): (...args: Parameters;
-          <T>) => void {// TODO: Add content;}
+          <T extends (...arg,)
+  s: Parameters<T>) => ReturnType<T>>(),
+    fun,
+  c: T,
+  wai,
+  t: number,
+): (...arg,
+  s: Parameters;)
+          <T>) => void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  let timeout: NodeJS.Timeout | null = null;
-  return function executedFunction(...args: Parameters;
-          <T>) {// TODO: Add content;}
+  let,
+  timeout: NodeJS.Timeout | null = null;
+  return function executedFunction(...arg,
+  s: Parameters;)
+          <T>) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const later = () => {// TODO: Add content;}
+    const later = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       timeout = null;
       func(...args);
     };
-    if (timeout) {// TODO: Add content;}
+    if (timeout) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       clearTimeout(timeout);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    if (timeout) {
-    // TODO: Add content
+    if (timeout) {/* TODO: Fix JSX expression */}
   }
       clearTimeout(timeout)
     }
     timeout = setTimeout(later, wait)
   }
-}
+}"`

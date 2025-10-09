@@ -1,17 +1,12 @@
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-interface SEOProps {
-=======
-interface SEOProps {// TODO: Add content;}
+interface SEOProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
-=======
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -26,130 +21,73 @@ interface SEOProps {// TODO: Add content;}
   section?: string;
   tags?: string[];
 }
-const EnhancedSEO: React.FC;
-          <SEOProps> = ({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+const,
+  EnhancedSEO: React.FC;
+          <SEOProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
-
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-=======
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-//   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-//   structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en',
-  author = 'Zion Tech Group',
-//   publishedTime,
-//   modifiedTime,
-//   section,
-  tags = [],
+const,
+  EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    
-    // Update meta description
+  return (// Update meta description;)
     let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
+    if (!metaDescription) {/* TODO: Fix JSX expression */}
     }
     metaDescription.setAttribute('content', description);
     
-<<<<<<< HEAD
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-    
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-  }, [title, description, keywords, canonicalUrl]);
-
-  return null;
-
-=======
-          <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} /><meta property="og:description" content={fullDescription} /><meta property="og:type" content={ogType} /><meta property="og:url" content={canonicalUrl} /><meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} /><meta name="twitter:site" content={twitterSite} /><meta name="twitter:title" content={fullTitle} /><meta name="twitter:description" content={fullDescription} /><meta name="twitter:image" content={ogImage} />
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+          <Helmet></Helmet>
+      {/* Basic Meta Tags */}"
+      <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} /></link>
+      {/* Open Graph Meta Tags */}"
+      <meta property="o,"
+  g:title" content={fullTitle} /><meta property="o,"
+  g:description" content={fullDescription} /><meta property="o,"
+  g:type" content={ogType} /><meta property="o,"
+  g:url" content={canonicalUrl} /><meta property="o,"
+  g:image" content={ogImage} /><meta property="o,
+  g:imag,"
+  e:width" content="1200" /><meta property="o,
+  g:imag,"
+  e:height" content="630" /><meta property="o,"
+  g:site_name" content="Zion Tech Group" /><meta property="o,"
+  g:locale" content="en_US" /></meta>
+      {/* Twitter Card Meta Tags */}"
+      <meta name="twitte,"
+  r:card" content={twitterCard} /><meta name="twitte,"
+  r:site" content={twitterSite} /><meta name="twitte,"
+  r:title" content={fullTitle} /><meta name="twitte,"
+  r:description" content={fullDescription} /><meta name="twitte,"
+  r:image" content={ogImage} /></meta>
+      {/* Additional Meta Tags */}"
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="theme-color" content="#00ffff" /><meta name="msapplication-TileColor" content="#00ffff" /><meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
       {/* Article Meta Tags */}
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => ()}
-          <meta key={index} property="article:tag" content={tag} />
+      {/* TODO: Fix JSX expression */}"
+  e:published_time" content={publishedTime} />}
+      {/* TODO: Fix JSX expression */}"
+  e:modified_time" content={modifiedTime} />}
+      {/* TODO: Fix JSX expression */}"
+  e:section" content={section} />}
+      {tags.length > 0 && tags.map((tag, index) => ()}"
+          <meta key={index} property="articl,"
+  e:tag" content={tag} /></meta>
       ))}
       {/* Structured Data */}
-      {structuredData && ()}
-          <script type="application/ld+json">
+      {structuredData && ()}"
+          <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
       )}
-      {/* Preconnect to external domains */}
-<link rel="preconnect" href="https:// fonts.googleapis.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          <link rel="preconnect" href="https:// fonts.gstatic.com" crossOrigin="anonymous" />
-          
-          
-          
-          
-          
-          
-          
-          
-          <link rel="preconnect" href="https:// www.google-analytics.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          <link rel="preconnect" href="https:// www.googletagmanager.com" />
+      {/* Preconnect to external domains */}"
+<link rel="preconnect" href="http,"
+  s:// fonts.googleapis.com" /></link>"
+          <link rel="preconnect" href="http,"
+  s:// fonts.gstatic.com" crossOrigin="anonymous" /></link>"
+          <link rel="preconnect" href="http,"
+  s:// www.google-analytics.com" /></link>"
+          <link rel="preconnect" href="http,"
+  s:// www.googletagmanager.com" /></link>
       {/* DNS Prefetch */}
       
           
@@ -159,37 +97,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
           
           
           
-          
-          <link rel="dns-prefetch" href="// fonts.googleapis.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          <link rel="dns-prefetch" href="// www.google-analytics.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          <link rel="dns-prefetch" href="// www.googletagmanager.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+          "
+          <link rel="dns-prefetch" href="// fonts.googleapis.com" /></link>"
+          <link rel="dns-prefetch" href="// www.google-analytics.com" /></link>"
+          <link rel="dns-prefetch" href="// www.googletagmanager.com" /></link>
           </Helmet>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
-export default EnhancedSEO;
+export default EnhancedSEO;"`

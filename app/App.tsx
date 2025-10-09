@@ -3,18 +3,17 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
-// Components
-
-// Lazy load components for better performance
+// Components;
+// Lazy load components for better performance;
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
+// const InteractiveContentShowcase2026 = lazy()
 //   () => import('./components/InteractiveContentShowcase2026')
 // );
-// const InteractiveAIROICalculator = lazy(
+// const InteractiveAIROICalculator = lazy()
 //   () => import('./components/InteractiveAIROICalculator')
 // );
 
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const HomePage = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ServicesPage = lazy(() => import('./services/page'));
@@ -26,7 +25,7 @@ const EnterprisePage = lazy(() => import('./enterprise/page'));
 const ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 
-// Additional service pages
+// Additional service pages;
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -44,16 +43,15 @@ const IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 const IotEdgePage = lazy(() => import('./iot-edge/page'));
 const RoboticsPage = lazy(() => import('./robotics/page'));
 
-// Additional pages
+// Additional pages;
 const BlogPage = lazy(() => import('./blog-index'));
 const GuidesPage = lazy(() => import('./guides/page'));
 const SitemapPage = lazy(() => import('./sitemap/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
 const OfflinePage = lazy(() => import('./offline/page'));
 
-// Utils
-
-// Styles
+// Utils;
+// Styles;
 import './globals.css';
 
 export default App;

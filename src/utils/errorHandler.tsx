@@ -3,16 +3,10 @@
  * Advanced Error Handler;
  * Comprehensive error handling utilities for React applications;
  */
-<<<<<<< HEAD
-// Error types
-export enum ErrorType {
-    // TODO: Add content
-  }
-=======
 // Error types;
-export enum ErrorType {// TODO: Add content;}
+export enum ErrorType {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   RUNTIME = 'RUNTIME',
   NETWORK = 'NETWORK',
   VALIDATION = 'VALIDATION',
@@ -23,65 +17,30 @@ export enum ErrorType {// TODO: Add content;}
   CLIENT = 'CLIENT',
   UNKNOWN = 'UNKNOWN'
 }
-<<<<<<< HEAD
-// Error severity levels
-export enum ErrorSeverity {
-    // TODO: Add content
-  }
-=======
 // Error severity levels;
-export enum ErrorSeverity {// TODO: Add content;}
+export enum ErrorSeverity {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   LOW = 'LOW',
   MEDIUM = 'MEDIUM',
   HIGH = 'HIGH',
   CRITICAL = 'CRITICAL'
 }
-<<<<<<< HEAD
-// Error interface
-export interface AppError {
-    // TODO: Add content
-  }
-=======
 // Error interface;
-export interface AppError {// TODO: Add content;}
+export interface AppError {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: string;,
-    type: ErrorType;,
-    severity: ErrorSeverity;,
-    message: string
+  i,
+  d: string;,
+    typ,
+  e: ErrorType;,
+    severit,
+  y: ErrorSeverity;,
+    messag,
+  e: string;
   stack?: string;,
-<<<<<<< HEAD
-    timestamp: Date
-  userId?: string
-  sessionId?: string
-  url?: string
-  userAgent?: string
-  componentStack?: string
-  context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  resolved?: boolean
-  retryCount?: number
-}
-// Error handler configuration
-export interface ErrorHandlerConfig {
-    // TODO: Add content
-  }
-  enableLogging: boolean
-    enableReporting: boolean
-    enableRetry: boolean
-=======
-    timestamp: Date;
+    timestam,
+  p: Date;
   userId?: string;
   sessionId?: string;
   url?: string;
@@ -93,427 +52,302 @@ export interface ErrorHandlerConfig {
   retryCount?: number;
 }
 // Error handler configuration;
-export interface ErrorHandlerConfig {// TODO: Add content;}
+export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  enableLogging: boolean;
-    enableReporting: boolean;
-    enableRetry: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    maxRetries: number;,
-    retryDelay: number;,
-    enableUserNotification: boolean;,
-    enableConsoleLogging: boolean;,
-    enableNetworkLogging: boolean
+  enableLoggin,
+  g: boolean;
+    enableReportin,
+  g: boolean;
+    enableRetr,
+  y: boolean;
+    maxRetrie,
+  s: number;,
+    retryDela,
+  y: number;,
+    enableUserNotificatio,
+  n: boolean;,
+    enableConsoleLoggin,
+  g: boolean;,
+    enableNetworkLoggin,
+  g: boolean;
   reportEndpoint?: string;,
-    logLevel: 'debug' | 'info' | 'warn' | 'error'
+    logLeve,
+  l: 'debug' | 'info' | 'warn' | 'error'
 }
-<<<<<<< HEAD
-// Default configuration
-export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
-    // TODO: Add content
-  }
-=======
 // Default configuration;
-export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {// TODO: Add content;}
+export const,
+  _defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  enableLogging: true,
-  enableReporting: true,
-  enableRetry: true,
-  maxRetries: 3,
-  retryDelay: 1000,
-  enableUserNotification: true,
-  enableConsoleLogging: true,
-  enableNetworkLogging: true,
-  logLevel: 'error'
-<<<<<<< HEAD
-}
-// Error Handler class
-export class ErrorHandler {
-    // TODO: Add content
-  }
-  private static instance: ErrorHandler
-  private config: ErrorHandlerConfig
-  private errors: AppError[] = []
-  private retryQueue: Array
-          
-          
-          
-          
-          
-          
-          
-          
-          <{ error: AppError; retryCount: number }> = []
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    // TODO: Add content
-  }
-    this.config = { ...defaultErrorHandlerConfig, ...config }
-  }
-  static getInstance(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <ErrorHandlerConfig>): ErrorHandler {
-    // TODO: Add content
-  }
-    if (!ErrorHandler.instance) {
-    // TODO: Add content
-  }
-      ErrorHandler.instance = new ErrorHandler(config)
-=======
+  enableLoggin,
+  g: true,
+  enableReportin,
+  g: true,
+  enableRetr,
+  y: true,
+  maxRetrie,
+  s: 3,
+  retryDela,
+  y: 1000,
+  enableUserNotificatio,
+  n: true,
+  enableConsoleLoggin,
+  g: true,
+  enableNetworkLoggin,
+  g: true,
+  logLeve,
+  l: 'error'
 };
 // Error Handler class;
-export class ErrorHandler {// TODO: Add content;}
+export class ErrorHandler {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private static instance: ErrorHandler;
-  private config: ErrorHandlerConfig;
-  private errors: AppError[] = [];
-  private retryQueue: Array;
-          <{ error: AppError; retryCount: number }> = [];
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {// TODO: Add content;}
+  private static,
+  instance: ErrorHandler;
+  private,
+  config: ErrorHandlerConfig;
+  private,
+  errors: AppError[] = [];
+  private,
+  retryQueue: Array;
+          <{/* TODO: Fix JSX expression */}
+  t: number }> = [];
+  constructor(confi,)
+  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     this.config = { ...defaultErrorHandlerConfig, ...config };
   }
-  static getInstance(config?: Partial;
-          <ErrorHandlerConfig>): ErrorHandler {// TODO: Add content;}
+  static getInstance(config?: Partial;)
+          <ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!ErrorHandler.instance) {// TODO: Add content;}
+    if (!ErrorHandler.instance) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       ErrorHandler.instance = new ErrorHandler(config);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return ErrorHandler.instance
+    return ErrorHandler.instance;
   }
-<<<<<<< HEAD
-  // Handle error
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>): AppError {
-    // TODO: Add content
-  }
-    const appError: AppError = {
-    // TODO: Add content
-  }
-=======
   // Handle error;
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record;
-          <string, unknown>): AppError {// TODO: Add content;}
+  handleError(erro,
+  r: Error, errorInfo?: ErrorInfo, context?: Record;)
+          <string, unknown>): AppError {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const appError: AppError = {// TODO: Add content;}
+    const,
+  appError: AppError = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateErrorId(),
-      type: this.determineErrorType(error),
-      severity: this.determineErrorSeverity(error),
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      componentStack: errorInfo?.componentStack ?? undefined,
+  i,
+  d: this.generateErrorId(),
+      typ,
+  e: this.determineErrorType(error),
+      severit,
+  y: this.determineErrorSeverity(error),
+      messag,
+  e: error.message,
+      stac,
+  k: error.stack,
+      timestam,
+  p: new Date(),
+      ur,
+  l: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgen,
+  t: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      componentStac,
+  k: errorInfo?.componentStack ?? undefined,
 //       context,
-      resolved: false,
-<<<<<<< HEAD
-      retryCount: 0
-    }
-    this.errors.push(appError)
-    if (this.config.enableLogging) {
-    // TODO: Add content
-  }
-      this.logError(appError)
-    }
-    if (this.config.enableReporting) {
-    // TODO: Add content
-  }
-      this.reportError(appError)
-    }
-    if (this.config.enableUserNotification) {
-    // TODO: Add content
-  }
-      this.notifyUser(appError)
-    }
-    if (this.config.enableRetry && this.shouldRetry(appError)) {
-    // TODO: Add content
-  }
-      this.scheduleRetry(appError)
-=======
-      retryCount: 0;
+      resolve,
+  d: false,
+      retryCoun,
+  t: 0;
     };
     this.errors.push(appError);
-    if (this.config.enableLogging) {// TODO: Add content;}
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.logError(appError);
     }
-    if (this.config.enableReporting) {// TODO: Add content;}
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.reportError(appError);
     }
-    if (this.config.enableUserNotification) {// TODO: Add content;}
+    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.notifyUser(appError);
     }
-    if (this.config.enableRetry && this.shouldRetry(appError)) {// TODO: Add content;}
+    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.scheduleRetry(appError);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return appError
+    return appError;
   }
-<<<<<<< HEAD
-  // Handle network error
-  handleNetworkError(error: Error, url: string, status?: number): AppError {
-    // TODO: Add content
-  }
-    const appError: AppError = {
-    // TODO: Add content
-  }
-=======
   // Handle network error;
-  handleNetworkError(error: Error, url: string, status?: number): AppError {// TODO: Add content;}
+  handleNetworkError(erro,
+  r: Error, ur,)
+  l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const appError: AppError = {// TODO: Add content;}
+    const,
+  appError: AppError = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateErrorId(),
-      type: ErrorType.NETWORK,
-      severity: this.determineNetworkErrorSeverity(status),
-      message: error.message,
-      stack: error.stack,
-      timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      context: { networkUrl: url, statusCode: status },
-      resolved: false,
-<<<<<<< HEAD
-      retryCount: 0
-    }
-    this.errors.push(appError)
-    if (this.config.enableLogging) {
-    // TODO: Add content
-  }
-      this.logError(appError)
-    }
-    if (this.config.enableReporting) {
-    // TODO: Add content
-  }
-      this.reportError(appError)
-=======
-      retryCount: 0;
+  i,
+  d: this.generateErrorId(),
+      typ,
+  e: ErrorType.NETWORK,
+      severit,
+  y: this.determineNetworkErrorSeverity(status),
+      messag,
+  e: error.message,
+      stac,
+  k: error.stack,
+      timestam,
+  p: new Date(),
+      ur,
+  l: typeof window !== 'undefined' ? window.location.href : undefined,
+      userAgen,
+  t: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      contex,
+  t: {/* TODO: Fix JSX expression */}
+  e: status },
+      resolve,
+  d: false,
+      retryCoun,
+  t: 0;
     };
     this.errors.push(appError);
-    if (this.config.enableLogging) {// TODO: Add content;}
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.logError(appError);
     }
-    if (this.config.enableReporting) {// TODO: Add content;}
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.reportError(appError);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return appError
+    return appError;
   }
-<<<<<<< HEAD
-  // Handle validation error
-  handleValidationError(field: string, message: string, value?: unknown): AppError {
-    // TODO: Add content
-  }
-    const appError: AppError = {
-    // TODO: Add content
-  }
-=======
   // Handle validation error;
-  handleValidationError(field: string, message: string, value?: unknown): AppError {// TODO: Add content;}
+  handleValidationError(fiel,
+  d: string, messag,)
+  e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const appError: AppError = {// TODO: Add content;}
+    const,
+  appError: AppError = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateErrorId(),
-      type: ErrorType.VALIDATION,
-      severity: ErrorSeverity.LOW,
-      message: `Validation error in ${field}: ${message}`,
-      timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      context: { field, value },
-      resolved: false,
-<<<<<<< HEAD
-      retryCount: 0
-=======
-      retryCount: 0;
+  i,
+  d: this.generateErrorId(),
+      typ,
+  e: ErrorType.VALIDATION,
+      severit,
+  y: ErrorSeverity.LOW,
+      messag,
+  e: `Validation error in ${field}: ${message}`,
+      timestam,
+  p: new Date(),
+      ur,
+  l: typeof window !== 'undefined' ? window.location.href : undefined,
+      contex,
+  t: { field, value },
+      resolve,
+  d: false,
+      retryCoun,
+  t: 0;
     };
     this.errors.push(appError);
-    if (this.config.enableLogging) {// TODO: Add content;}
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.logError(appError);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.errors.push(appError)
-    if (this.config.enableLogging) {
-    // TODO: Add content
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
   }
       this.logError(appError)
     }
-    return appError
+    return appError;
   }
-<<<<<<< HEAD
-  // Generate unique error ID
-  private generateErrorId(): string {
-    // TODO: Add content
-  }
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-  }
-  // Determine error type
-  private determineErrorType(error: Error): ErrorType {
-    const stack = error.stack?.toLowerCase() || ''
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {
-    // TODO: Add content
-  }
-      return ErrorType.NETWORK
-    }
-    if (message.includes('validation') || message.includes('invalid')) {
-    // TODO: Add content
-  }
-      return ErrorType.VALIDATION
-    }
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {
-    // TODO: Add content
-  }
-      return ErrorType.AUTHENTICATION
-    }
-    if (message.includes('permission') || message.includes('unauthorized')) {
-    // TODO: Add content
-  }
-      return ErrorType.AUTHORIZATION
-    }
-    if (message.includes('not found') || message.includes('404')) {
-    // TODO: Add content
-  }
-      return ErrorType.NOT_FOUND
-    }
-    if (message.includes('server') || message.includes('500')) {
-    // TODO: Add content
-  }
-      return ErrorType.SERVER
-    }
-    if (stack.includes('react') || stack.includes('component')) {
-    // TODO: Add content
-  }
-      return ErrorType.CLIENT
-=======
   // Generate unique error ID;
-  private generateErrorId(): string {// TODO: Add content;}
-}
+  private generateErrorId(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   // Determine error type;
-  private determineErrorType(error: Error): ErrorType {const stack = error.stack?.toLowerCase() || '';}
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {// TODO: Add content;}
+  private determineErrorType(erro,)
+  r: Error): ErrorType {const stack = error.stack?.toLowerCase() || '';}
+    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.NETWORK;
     }
-    if (message.includes('validation') || message.includes('invalid')) {// TODO: Add content;}
+    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.VALIDATION;
     }
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {// TODO: Add content;}
+    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.AUTHENTICATION;
     }
-    if (message.includes('permission') || message.includes('unauthorized')) {// TODO: Add content;}
+    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.AUTHORIZATION;
     }
-    if (message.includes('not found') || message.includes('404')) {// TODO: Add content;}
+    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.NOT_FOUND;
     }
-    if (message.includes('server') || message.includes('500')) {// TODO: Add content;}
+    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.SERVER;
     }
-    if (stack.includes('react') || stack.includes('component')) {// TODO: Add content;}
+    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorType.CLIENT;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return ErrorType.UNKNOWN
+    return ErrorType.UNKNOWN;
   }
-<<<<<<< HEAD
-  // Determine error severity
-  private determineErrorSeverity(error: Error): ErrorSeverity {
-    // TODO: Add content
-  }
-    const message = error.message.toLowerCase()
-    if (message.includes('critical') || message.includes('fatal')) {
-    // TODO: Add content
-  }
-      return ErrorSeverity.CRITICAL
-    }
-    if (message.includes('error') || message.includes('exception')) {
-    // TODO: Add content
-  }
-      return ErrorSeverity.HIGH
-    }
-    if (message.includes('warning') || message.includes('deprecated')) {
-    // TODO: Add content
-  }
-      return ErrorSeverity.MEDIUM
-=======
   // Determine error severity;
-  private determineErrorSeverity(error: Error): ErrorSeverity {// TODO: Add content;}
+  private determineErrorSeverity(erro,)
+  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const message = error.message.toLowerCase();
-    if (message.includes('critical') || message.includes('fatal')) {// TODO: Add content;}
+    if (message.includes('critical') || message.includes('fatal')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorSeverity.CRITICAL;
     }
-    if (message.includes('error') || message.includes('exception')) {// TODO: Add content;}
+    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorSeverity.HIGH;
     }
-    if (message.includes('warning') || message.includes('deprecated')) {// TODO: Add content;}
+    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return ErrorSeverity.MEDIUM;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return ErrorSeverity.LOW
+    return ErrorSeverity.LOW;
   }
-<<<<<<< HEAD
-  // Determine network error severity
-  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
-    // TODO: Add content
-  }
-    if (!status) return ErrorSeverity.MEDIUM
-    if (status >= 500) return ErrorSeverity.HIGH
-    if (status >= 400) return ErrorSeverity.MEDIUM
-    return ErrorSeverity.LOW
-  }
-  // Log error
-  private logError(error: AppError) {
-    // TODO: Add content
-  }
-    if (this.config.enableConsoleLogging) {
-    // TODO: Add content
-  }
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
-      switch (error.severity) {
-    // TODO: Add content
-  }
-=======
   // Determine network error severity;
-  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {// TODO: Add content;}
+  private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!status) return ErrorSeverity.MEDIUM;
     if (status >= 500) return ErrorSeverity.HIGH;
@@ -521,172 +355,136 @@ export class ErrorHandler {// TODO: Add content;}
     return ErrorSeverity.LOW;
   }
   // Log error;
-  private logError(error: AppError) {// TODO: Add content;}
+  private logError(erro,)
+  r: AppError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (this.config.enableConsoleLogging) {// TODO: Add content;}
-}
+    if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-      switch (error.severity) {// TODO: Add content;}
+      switch (error.severity) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-        case ErrorSeverity.CRITICAL:
-        case ErrorSeverity.HIGH:
+        case ErrorSeverity.CRITICA,
+  L:
+        case ErrorSeverity.HIG,
+  H:
           // // console.error(logMessage, error)
-          break
-        case ErrorSeverity.MEDIUM:
+          break;
+        case ErrorSeverity.MEDIU,
+  M:
           // // console.warn(logMessage, error)
-          break
-        case ErrorSeverity.LOW:
-<<<<<<< HEAD
-          if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-            if (import.meta.env.DEV) {
-              // console.info(logMessage, error)
-=======
-          if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+          break;
+        case ErrorSeverity.LO,
+  W:
+          if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
             if (import.meta.env.DEV) {// console.info(logMessage, error);}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
             }
           }
-          break
+          break;
       }
     }
-<<<<<<< HEAD
-    if (this.config.enableNetworkLogging) {
-    // TODO: Add content
-  }
-      this.logToNetwork(error)
-    }
-  }
-  // Log to network
-  private async logToNetwork(error: AppError) {
-    // TODO: Add content
-  }
-    if (!this.config.reportEndpoint) return
-    try {
-    // TODO: Add content
-  }
-      await fetch(this.config.reportEndpoint, {
-    // TODO: Add content
-  }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
-  }
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(error)
-      }
-  )
-    } catch (err) {
-// // console.error('Failed to log error to network:', err)
-    }
-  }
-  // Report error
-  private async reportError(error: AppError) {
-    // TODO: Add content
-  }
-    if (!this.config.reportEndpoint) return
-    try {
-    // TODO: Add content
-  }
-      await fetch(this.config.reportEndpoint, {
-    // TODO: Add content
-  }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
-  }
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-    // TODO: Add content
-  }
-//           ...error,
-          timestamp: error.timestamp.toISOString()
-        }
-  )
-      }
-  )
-    } catch (err) {
-// // console.error('Failed to report error:', err)
-    }
-  }
-  // Notify user
-  private notifyUser(error: AppError) {
-    // TODO: Add content
-  }
-    if (typeof window === 'undefined') return
-    const notification = document.createElement('div')
-    notification.className = 'error-notification'
-=======
-    if (this.config.enableNetworkLogging) {// TODO: Add content;}
+    if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.logToNetwork(error);
     }
   }
   // Log to network;
-  private async logToNetwork(error: AppError) {// TODO: Add content;}
+  private async logToNetwork(erro,)
+  r: AppError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.config.reportEndpoint) return;
-    try {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      await fetch(this.config.reportEndpoint, {// TODO: Add content;}
+      await fetch(this.config.reportEndpoint, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  method: 'POST',
-        headers: {// TODO: Add content;}
+  metho,
+  d: 'POST',
+        header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(error)
+        bod,)
+  y: JSON.stringify(error)
       });
-    } catch (err) {// // console.error('Failed to log error to network:', err);}
+    } catch (err) {/* TODO: Fix JSX expression */}
+  network:', err);}
     }
   }
   // Report error;
-  private async reportError(error: AppError) {// TODO: Add content;}
+  private async reportError(erro,)
+  r: AppError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.config.reportEndpoint) return;
-    try {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      await fetch(this.config.reportEndpoint, {// TODO: Add content;}
+      await fetch(this.config.reportEndpoint, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  method: 'POST',
-        headers: {// TODO: Add content;}
+  metho,
+  d: 'POST',
+        header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({// TODO: Add content;}
+        bod,
+  y: JSON.stringify({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //           ...error,
-          timestamp: error.timestamp.toISOString()
+          timestam,)
+  p: error.timestamp.toISOString()
         })
       });
-    } catch (err) {// // console.error('Failed to report error:', err);}
+    } catch (err) {/* TODO: Fix JSX expression */}
+  error:', err);}
     }
   }
   // Notify user;
-  private notifyUser(error: AppError) {// TODO: Add content;}
+  private notifyUser(erro,)
+  r: AppError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (typeof window === 'undefined') return;
     const notification = document.createElement('div');
-    notification.className = 'error-notification';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+    notification.className = 'error-notification';`
     notification.style.cssText = `
-      position: fixed;,
-    top: 20px;,
-    right: 20px;,
-    background: ${this.getNotificationColor(error.severity)}
-      color: white;,
-    padding: 15px
-      border-radius: 5px
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2)
-      z-index: 10000
-      max-width: 400px
-      font-family: Arial, sans-serif
-    `
+      positio,
+  n: fixed;,
+    to,
+  p: 20px;,
+    righ,
+  t: 20px;,
+    backgroun,
+  d: ${this.getNotificationColor(error.severity)}
+      colo,
+  r: white;,
+    paddin,
+  g: 15px;
+      border-radiu,
+  s: 5px;
+      box-shado,
+  w: 0 2px 10px rgba(0,0,0,0.2)
+      z-inde,
+  x: 10000;
+      max-widt,
+  h: 400px;
+      font-famil,
+  y: Arial, sans-serif;`
+    ``
     notification.innerHTML = `
       
           
@@ -697,90 +495,71 @@ export class ErrorHandler {// TODO: Add content;}
           
           
           
-          <div style="display: flex; justify-content: space-between; align-items: center;"><div><strong>${error.severity} Error</strong><p style="margin: 5px 0 0 0; font-size: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
-          background: none;,
-    border: none;,
-    color: white
-          font-size: 18px;,
-    cursor: pointer
-          margin-left: 10px
-">×</button></div>
-<<<<<<< HEAD
-    `
-    document.body.appendChild(notification)
-    // Auto-remove after 5 seconds for non-critical errors
-    if (error.severity !== ErrorSeverity.CRITICAL) {
-    // TODO: Add content
-  }
-      setTimeout(() => {
-    // TODO: Add content
-  }
-        if (notification.parentElement) {
-    // TODO: Add content
-  }
-          notification.remove()
-=======
+          <div style="displa,
+  y: flex; justify-conten,
+  t: space-between; align-item,"
+  s: center;"><div><strong>${error.severity} Error</strong><p style="margi,
+  n: 5px 0 0 0; font-siz,"
+  e: 14px;">${error.message}</p></div><button onclick="this.parentElement.parentElement.remove()" style="
+          backgroun,
+  d: none;,
+    borde,
+  r: none;,
+    colo,
+  r: white;
+          font-siz,
+  e: 18px;,
+    curso,
+  r: pointer;
+          margin-lef,
+  t: 10px;"
+">×</button></div>`
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
-    if (error.severity !== ErrorSeverity.CRITICAL) {// TODO: Add content;}
+    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      setTimeout(() => {// TODO: Add content;}
+      setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        if (notification.parentElement) {// TODO: Add content;}
+        if (notification.parentElement) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           notification.remove();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }, 5000)
     }
   }
-<<<<<<< HEAD
-  // Get notification color based on severity
-  private getNotificationColor(severity: ErrorSeverity): string {
-    // TODO: Add content
-  }
-    switch (severity) {
-    // TODO: Add content
-  }
-      case ErrorSeverity.CRITICAL: return '#dc3545'
-=======
   // Get notification color based on severity;
-  private getNotificationColor(severity: ErrorSeverity): string {// TODO: Add content;}
+  private getNotificationColor(severit,)
+  y: ErrorSeverity): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    switch (severity) {// TODO: Add content;}
+    switch (severity) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      case ErrorSeverity.CRITICAL: return '#dc3545';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      case ErrorSeverity.HIGH:
+      case ErrorSeverity.CRITICA,
+  L: return '#dc3545';
+      case ErrorSeverity.HIG,
+  H:
         return '#fd7e14'
-      case ErrorSeverity.MEDIUM:
+      case ErrorSeverity.MEDIU,
+  M:
         return '#ffc107'
-      case ErrorSeverity.LOW: return '#28a745';,
-    default:
+      case ErrorSeverity.LO,
+  W: return '#28a745';,
+    defaul,
+  t:
         return '#6c757d'
     }
   }
-<<<<<<< HEAD
-  // Check if error should be retried
-  private shouldRetry(error: AppError): boolean {
-    // TODO: Add content
-  }
-=======
   // Check if error should be retried;
-  private shouldRetry(error: AppError): boolean {// TODO: Add content;}
+  private shouldRetry(erro,)
+  r: AppError): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+    return (<div>Coming Soon</div>)
   )
       error.type === ErrorType.NETWORK &&
 // error.retryCount! 
@@ -796,327 +575,163 @@ export class ErrorHandler {// TODO: Add content;}
       error.severity !== ErrorSeverity.CRITICAL,
 )
   }
-<<<<<<< HEAD
-  // Schedule retry
-  private scheduleRetry(error: AppError) {
-    // TODO: Add content
-  }
-    const retryItem = { error, retryCount: error.retryCount! + 1 }
-    this.retryQueue.push(retryItem)
-    setTimeout(() => {
-    // TODO: Add content
-  }
-      this.retryError(retryItem)
-    }, this.config.retryDelay * retryItem.retryCount)
-  }
-  // Retry error
-private async retryError(retryItem: {// error: AppError; retryCount: number}) {
-    try {
-    // TODO: Add content
-  }
-      // Implement retry logic based on error type
-      if (retryItem.error.type === ErrorType.NETWORK) {
-    // TODO: Add content
-  }
-        // Retry network request
-        if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-=======
   // Schedule retry;
-  private scheduleRetry(error: AppError) {// TODO: Add content;}
+  private scheduleRetry(erro,)
+  r: AppError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const retryItem = { error, retryCount: error.retryCount! + 1 };
+    const retryItem = {/* TODO: Fix JSX expression */}
+  t: error.retryCount! + 1 };
     this.retryQueue.push(retryItem);
-    setTimeout(() => {// TODO: Add content;}
+    setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.retryError(retryItem);
     }, this.config.retryDelay * retryItem.retryCount);
   }
   // Retry error;
-private async retryError(retryItem: {// error: AppError; retryCount: number}) {try {}
-  // TODO: Add content;
+private async retryError(retryIte,
+  m: {/* TODO: Fix JSX expression */})
+  t: number}) {try {}
+  // TOD,
+  O: Add content;
 }
       // Implement retry logic based on error type;
-      if (retryItem.error.type === ErrorType.NETWORK) {// TODO: Add content;}
+      if (retryItem.error.type === ErrorType.NETWORK) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         // Retry network request;
-        if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+        if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-          if (import.meta.env.DEV) {
+          if (import.meta.env.DEV) {/* TODO: Fix JSX expression */}`
 // // console.log(`Retrying network request (attempt ${retryItem.retryCount})`)
           }
         }
         // Add your retry logic here;
       }
-<<<<<<< HEAD
-    } catch {
-    // TODO: Add content
-  }
-      if (retryItem.retryCount 
-          
-          
-          
-          
-          
-          
-          
-          
-          < this.config.maxRetries) {
-    // TODO: Add content
-  }
-        this.scheduleRetry(retryItem.error)
-      } else {
-// // console.error('Max retries exceeded for error:', retryItem.error)
-      }
-    }
-  }
-  // Get all errors
-  getErrors(): AppError[] {
-    // TODO: Add content
-  }
-    return [...this.errors]
-  }
-  // Get errors by type
-  getErrorsByType(type: ErrorType): AppError[] {
-    // TODO: Add content
-  }
-    return this.errors.filter(error => error.type === type)
-  }
-  // Get errors by severity
-  getErrorsBySeverity(severity: ErrorSeverity): AppError[] {
-    // TODO: Add content
-  }
-    return this.errors.filter(error => error.severity === severity)
-  }
-  // Get unresolved errors
-  getUnresolvedErrors(): AppError[] {
-    // TODO: Add content
-  }
-    return this.errors.filter(error => !error.resolved)
-  }
-  // Mark error as resolved
-  markErrorResolved(errorId: string): boolean {
-    // TODO: Add content
-  }
-    const error = this.errors.find(e => e.id === errorId)
-    if (error) {
-    // TODO: Add content
-  }
-      error.resolved = true
-      return true
-=======
-    } catch {// TODO: Add content;}
+    } catch {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      if (retryItem.retryCount;
-          < this.config.maxRetries) {// TODO: Add content;}
+      if (retryItem.retryCount;)
+          < this.config.maxRetries) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         this.scheduleRetry(retryItem.error);
-      } else {// // console.error('Max retries exceeded for error:', retryItem.error);}
+      } else {/* TODO: Fix JSX expression */}
+  error:', retryItem.error);}
       }
     }
   }
   // Get all errors;
-  getErrors(): AppError[] {// TODO: Add content;}
+  getErrors(): AppError[] {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return [...this.errors];
   }
   // Get errors by type;
-  getErrorsByType(type: ErrorType): AppError[] {// TODO: Add content;}
+  getErrorsByType(typ,)
+  e: ErrorType): AppError[] {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.errors.filter(error => error.type === type);
   }
   // Get errors by severity;
-  getErrorsBySeverity(severity: ErrorSeverity): AppError[] {// TODO: Add content;}
+  getErrorsBySeverity(severit,)
+  y: ErrorSeverity): AppError[] {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.errors.filter(error => error.severity === severity);
   }
   // Get unresolved errors;
-  getUnresolvedErrors(): AppError[] {// TODO: Add content;}
+  getUnresolvedErrors(): AppError[] {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.errors.filter(error => !error.resolved);
   }
   // Mark error as resolved;
-  markErrorResolved(errorId: string): boolean {// TODO: Add content;}
+  markErrorResolved(errorI,)
+  d: string): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const error = this.errors.find(e => e.id === errorId);
-    if (error) {// TODO: Add content;}
+    if (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       error.resolved = true;
       return true;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return false
+    return false;
   }
-<<<<<<< HEAD
-  // Clear resolved errors
-  clearResolvedErrors(): void {
-    // TODO: Add content
-  }
-    this.errors = this.errors.filter(error => !error.resolved)
-  }
-  // Clear all errors
-  clearAllErrors(): void {
-    // TODO: Add content
-  }
-    this.errors = []
-    this.retryQueue = []
-  }
-  // Get error statistics
-  getErrorStatistics() {
-    // TODO: Add content
-  }
-    const total = this.errors.length
-    const byType = this.errors.reduce()
-      (acc, error) => {
-    // TODO: Add content
-  }
-        acc[error.type] = (acc[error.type] || 0) + 1
-        return acc
-=======
   // Clear resolved errors;
-  clearResolvedErrors(): void {// TODO: Add content;}
+  clearResolvedErrors(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     this.errors = this.errors.filter(error => !error.resolved);
   }
   // Clear all errors;
-  clearAllErrors(): void {// TODO: Add content;}
+  clearAllErrors(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     this.errors = [];
     this.retryQueue = [];
   }
   // Get error statistics;
-  getErrorStatistics() {// TODO: Add content;}
+  getErrorStatistics() {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const total = this.errors.length;
     const byType = this.errors.reduce()
-      (acc, error) => {// TODO: Add content;}
+      (acc, error) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
-          <ErrorType, number>
+          <ErrorType, number></ErrorType>
     )
     const bySeverity = this.errors.reduce()
-<<<<<<< HEAD
-      (acc, error) => {
-    // TODO: Add content
-  }
-        acc[error.severity] = (acc[error.severity] || 0) + 1
-        return acc
-=======
-      (acc, error) => {// TODO: Add content;}
+      (acc, error) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         acc[error.severity] = (acc[error.severity] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
-          <ErrorSeverity, number>
-<<<<<<< HEAD
-    )
-    const resolved = this.errors.filter(error => error.resolved).length
-    const unresolved = total - resolved
-    return {
-    // TODO: Add content
-  }
-=======
+          <ErrorSeverity, number></ErrorSeverity>
     );
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
-    return {// TODO: Add content;}
+    return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       total,
 //       resolved,
 //       unresolved,
 //       byType,
-<<<<<<< HEAD
-//       bySeverity
-    }
-=======
 //       bySeverity;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize error handler;
    */
-<<<<<<< HEAD
-  init(): void {
-    // TODO: Add content
-  }
-    if (typeof window !== 'undefined') {
-    // TODO: Add content
-  }
-      // Set up global error handler
-      window.addEventListener('error', event => {
-    // TODO: Add content
-  }
-        this.handleError(event.error || new Error(event.message))
-      }
-  )
-      // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {
-    // TODO: Add content
-  }
-        this.handleError(new Error(event.reason))
-      }
-  )
-    }
-  }
+  init(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-// React error boundary component
-export class ErrorBoundary extends React.Component
-          
-          
-          
-          
-          
-          
-          
-          
-          <
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {
-    // TODO: Add content
-  }
-  private errorHandler: ErrorHandler
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {
-    // TODO: Add content
-  }
-    super(props)
-    this.state = { hasError: false }
-    this.errorHandler = ErrorHandler.getInstance()
-  }
-  static getDerivedStateFromError(error: Error) {
-    // TODO: Add content
-  }
-    return { hasError: true, error }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // TODO: Add content
-  }
-    this.errorHandler.handleError(error, errorInfo, {
-    // TODO: Add content
-  }
-=======
-  init(): void {// TODO: Add content;}
-}
-    if (typeof window !== 'undefined') {// TODO: Add content;}
+    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Set up global error handler;
-      window.addEventListener('error', event => {// TODO: Add content;}
-}
+      window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
         this.handleError(event.error || new Error(event.message));
       });
       // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {// TODO: Add content;}
-}
+      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
         this.handleError(new Error(event.reason));
       });
     }
@@ -1125,45 +740,52 @@ export class ErrorBoundary extends React.Component
 // React error boundary component;
 export class ErrorBoundary extends React.Component;
           <
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean; error?: Error }
-> {// TODO: Add content;}
+  {/* TODO: Fix JSX expression */}
+  n: React.ReactNode; fallback?: React.ReactNode },
+  {/* TODO: Fix JSX expression */}
+  r: boolean; error?: Error }
+> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private errorHandler: ErrorHandler;
-  constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {// TODO: Add content;}
+  private,
+  errorHandler: ErrorHandler;
+  constructor(prop,
+  s: {/* TODO: Fix JSX expression */})
+  n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     super(props);
-    this.state = { hasError: false };
+    this.state = {/* TODO: Fix JSX expression */}
+  r: false };
     this.errorHandler = ErrorHandler.getInstance();
   }
-  static getDerivedStateFromError(error: Error) {// TODO: Add content;}
+  static getDerivedStateFromError(erro,)
+  r: Error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    return { hasError: true, error };
+    return {/* TODO: Fix JSX expression */}
+  r: true, error };
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {// TODO: Add content;}
+  componentDidCatch(erro,
+  r: Error, errorInf,)
+  o: ErrorInfo) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.errorHandler.handleError(error, errorInfo, {// TODO: Add content;}
+    this.errorHandler.handleError(error, errorInfo, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  component: 'ErrorBoundary'
-    }
+  componen,
+  t: 'ErrorBoundary'
+    })
   )
   }
-<<<<<<< HEAD
-  render() {
-    // TODO: Add content
-  }
-    if (this.state.hasError) {
-    // TODO: Add content
-  }
-=======
-  render() {// TODO: Add content;}
+  render() {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (this.state.hasError) {// TODO: Add content;}
+    if (this.state.hasError) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-      return (
-this.props.fallback || (
+      return (this.props.fallback || (
           
           
           
@@ -1173,23 +795,26 @@ this.props.fallback || (
           
           
           
-          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-<<<<<<< HEAD
-              style={{
-    // TODO: Add content
-  }
-=======
+          <div style={/* TODO: Fix JSX expression */}
+  n: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button></button>
+              onClick={/* TODO: Fix JSX expression */})
+  r: undefined })}
               style={{}
-  // TODO: Add content;
+  // TOD,
+  O: Add content;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer'
+  paddin,
+  g: '10px 20px',
+                backgroundColo,
+  r: '#007bff',
+                colo,
+  r: 'white',
+                borde,
+  r: 'none',
+                borderRadiu,
+  s: '4px',
+                curso,
+  r: 'pointer'
               }}
 >
               Try again;
@@ -1197,85 +822,56 @@ this.props.fallback || (
         )
       )
     }
-    return this.props.children
+    return this.props.children;
   }
 }
-<<<<<<< HEAD
-// React hook for error handling
-export const useErrorHandler = () => {
-    // TODO: Add content
-  }
-  const errorHandler = ErrorHandler.getInstance()
-  const handleError = useCallback()
-    (error: Error, context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>) => {
-    // TODO: Add content
-  }
-      return errorHandler.handleError(error, undefined, context)
-=======
 // React hook for error handling;
-export const useErrorHandler = () => {// TODO: Add content;}
+export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const errorHandler = ErrorHandler.getInstance();
   const handleError = useCallback()
-    (error: Error, context?: Record;
-          <string, unknown>) => {// TODO: Add content;}
+    (erro,
+  r: Error, context?: Record;)
+          <string, unknown>) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return errorHandler.handleError(error, undefined, context);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
 //     [errorHandler]
   )
   const handleNetworkError = useCallback()
-<<<<<<< HEAD
-    (error: Error, url: string, status?: number) => {
-    // TODO: Add content
-  }
-      return errorHandler.handleNetworkError(error, url, status)
-=======
-    (error: Error, url: string, status?: number) => {// TODO: Add content;}
+    (erro,
+  r: Error, ur,)
+  l: string, status?: number) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return errorHandler.handleNetworkError(error, url, status);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
 //     [errorHandler]
   )
   const handleValidationError = useCallback()
-<<<<<<< HEAD
-    (field: string, message: string, value?: unknown) => {
-    // TODO: Add content
-  }
-      return errorHandler.handleValidationError(field, message, value)
-    },
-//     [errorHandler]
-  )
-  return {
-    // TODO: Add content
-  }
-=======
-    (field: string, message: string, value?: unknown) => {// TODO: Add content;}
+    (fiel,
+  d: string, messag,)
+  e: string, value?: unknown) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return errorHandler.handleValidationError(field, message, value);
     },
 //     [errorHandler]
   );
-  return {// TODO: Add content;}
+  return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     handleError,
 //     handleNetworkError,
 //     handleValidationError,
-    getErrors: () => errorHandler.getErrors(),
-    getErrorStatistics: () => errorHandler.getErrorStatistics(),
-    clearResolvedErrors: () => errorHandler.clearResolvedErrors()
+    getError,
+  s: () => errorHandler.getErrors(),
+    getErrorStatistic,
+  s: () => errorHandler.getErrorStatistics(),
+    clearResolvedError,
+  s: () => errorHandler.clearResolvedErrors()
   }
 }
-export default ErrorHandler
+export default ErrorHandler;"`

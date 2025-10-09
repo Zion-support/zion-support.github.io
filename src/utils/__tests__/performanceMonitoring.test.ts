@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { describe, it, expect, beforeEach } from '@jest/globals';
-
-describe('performanceMonitoring', () => {
-=======
-import {// TODO: Add content;}
+import {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //   recordMetric,
 //   getMetrics,
@@ -14,26 +10,16 @@ import {// TODO: Add content;}
 //   getRecommendations,
 //   MetricUnit;
 } from '../performanceMonitoring';
-describe('performanceMonitoring', () => {// TODO: Add content;}
+describe('performanceMonitoring', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  beforeEach(() => {
-    // Setup before each test
+  beforeEach(() => {/* TODO: Fix JSX expression */}
   });
-<<<<<<< HEAD
-
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-
-=======
-  describe('recordMetric', () => {// TODO: Add content;}
+  describe('recordMetric', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should record metrics', () => {// TODO: Add content;}
+    it('should record metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('test-metric', 100, MetricUnit.Milliseconds);
       const metrics = getMetrics();
@@ -41,7 +27,8 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(metrics['test-metric'].values.length).toBe(1);
       expect(metrics['test-metric'].values[0]).toBe(100);
     });
-    it('should accumulate multiple values for same metric', () => {// TODO: Add content;}
+    it('should accumulate multiple values for same metric', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('test-metric', 100);
       recordMetric('test-metric', 200);
@@ -50,7 +37,8 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(metrics['test-metric'].values.length).toBe(3);
       expect(metrics['test-metric'].average).toBe(150);
     });
-    it('should calculate correct statistics', () => {// TODO: Add content;}
+    it('should calculate correct statistics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('test-metric', 100);
       recordMetric('test-metric', 200);
@@ -62,7 +50,8 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(metric.min).toBe(100);
       expect(metric.max).toBe(300);
     });
-    it('should support different units', () => {// TODO: Add content;}
+    it('should support different units', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('time', 100, MetricUnit.Milliseconds);
       recordMetric('size', 1024, MetricUnit.Bytes);
@@ -75,14 +64,17 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(metrics['percent'].unit).toBe(MetricUnit.Percentage);
     });
   });
-  describe('getMetrics', () => {// TODO: Add content;}
+  describe('getMetrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should return empty object when no metrics', () => {// TODO: Add content;}
+    it('should return empty object when no metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const metrics = getMetrics();
       expect(Object.keys(metrics).length).toBe(0);
     });
-    it('should return all recorded metrics', () => {// TODO: Add content;}
+    it('should return all recorded metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('metric1', 100);
       recordMetric('metric2', 200);
@@ -94,9 +86,11 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(metrics['metric3']).toBeDefined();
     });
   });
-  describe('clearMetrics', () => {// TODO: Add content;}
+  describe('clearMetrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should clear all metrics', () => {// TODO: Add content;}
+    it('should clear all metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('metric1', 100);
       recordMetric('metric2', 200);
@@ -104,15 +98,19 @@ describe('performanceMonitoring', () => {// TODO: Add content;}
       expect(Object.keys(getMetrics()).length).toBe(0);
     });
   });
-  describe('measureFunction', () => {// TODO: Add content;}
+  describe('measureFunction', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should measure synchronous function execution time', () => {// TODO: Add content;}
+    it('should measure synchronous function execution time', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      const testFn = () => {// TODO: Add content;}
+      const testFn = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         let sum = 0;
-        for (let i = 0; i;
-          < 1000; i++) {// TODO: Add content;}
+        for (let i = 0; i;)
+          < 1000; i++) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           sum += i;
         }
@@ -125,17 +123,21 @@ const metrics = getMetrics();
       expect(metrics['test-function'].values.length).toBe(1);
       expect(metrics['test-function'].values[0]).toBeGreaterThan(0);
     });
-    it('should return function result', () => {// TODO: Add content;}
+    it('should return function result', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const result = measureFunction('test', () => 'test-value');
       expect(result).toBe('test-value');
     });
   });
-  describe('measureAsyncFunction', () => {// TODO: Add content;}
+  describe('measureAsyncFunction', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should measure async function execution time', async () => {// TODO: Add content;}
+    it('should measure async function execution time', async () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      const asyncFn = async () => {// TODO: Add content;}
+      const asyncFn = async () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         await new Promise(resolve => setTimeout(resolve, 10));
         return 'completed';
@@ -147,18 +149,22 @@ const metrics = getMetrics();
       // Use >= 9 to account for timing variations in test environment;
       expect(metrics['async-test'].values[0]).toBeGreaterThanOrEqual(9);
     });
-    it('should handle async function errors', async () => {// TODO: Add content;}
+    it('should handle async function errors', async () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      const errorFn = async () => {// TODO: Add content;}
+      const errorFn = async () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         throw new Error('Test error');
       };
       await expect(measureAsyncFunction('error-test', errorFn)).rejects.toThrow('Test error');
     });
   });
-  describe('getPerformanceScore', () => {// TODO: Add content;}
+  describe('getPerformanceScore', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should calculate performance score', () => {// TODO: Add content;}
+    it('should calculate performance score', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Good performance metrics;
       recordMetric('FCP', 1000); // 
@@ -180,7 +186,8 @@ const metrics = getMetrics();
 const score = getPerformanceScore();
       expect(score).toBeGreaterThan(80);
     });
-    it('should return 100 for perfect metrics', () => {// TODO: Add content;}
+    it('should return 100 for perfect metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('FCP', 1000);
       recordMetric('LCP', 1500);
@@ -190,15 +197,18 @@ const score = getPerformanceScore();
       const score = getPerformanceScore();
       expect(score).toBe(100);
     });
-    it('should return 0 when no metrics', () => {// TODO: Add content;}
+    it('should return 0 when no metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const score = getPerformanceScore();
       expect(score).toBe(0);
     });
   });
-  describe('getRecommendations', () => {// TODO: Add content;}
+  describe('getRecommendations', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should return recommendations for poor metrics', () => {// TODO: Add content;}
+    it('should return recommendations for poor metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('FCP', 3000); // Poor;
       recordMetric('LCP', 4000); // Poor;
@@ -207,7 +217,8 @@ const recommendations = getRecommendations();
       expect(recommendations.some(r => r.includes('FCP'))).toBe(true);
       expect(recommendations.some(r => r.includes('LCP'))).toBe(true);
     });
-    it('should return empty array for good metrics', () => {// TODO: Add content;}
+    it('should return empty array for good metrics', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('FCP', 1000);
       recordMetric('LCP', 2000);
@@ -216,19 +227,22 @@ const recommendations = getRecommendations();
       const recommendations = getRecommendations();
       expect(recommendations.length).toBe(0);
     });
-    it('should provide specific recommendations', () => {// TODO: Add content;}
+    it('should provide specific recommendations', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('FCP', 3000);
       const recommendations = getRecommendations();
-      expect(recommendations.some(r =>
+      expect(recommendations.some(r =>)
 //         r.includes('critical CSS') ||
 //         r.includes('render-blocking')
       )).toBe(true);
     });
   });
-  describe('metric ratings', () => {// TODO: Add content;}
+  describe('metric ratings', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    it('should rate FCP correctly', () => {// TODO: Add content;}
+    it('should rate FCP correctly', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('FCP', 1500); // Good;
 const metrics = getMetrics();
@@ -238,7 +252,8 @@ const metrics = getMetrics();
       recordMetric('FCP', 3500); // Poor;
       expect(getMetrics()['FCP'].rating).toBe('poor');
     });
-    it('should rate LCP correctly', () => {// TODO: Add content;}
+    it('should rate LCP correctly', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('LCP', 2000); // Good;
       expect(getMetrics()['LCP'].rating).toBe('good');
@@ -247,7 +262,8 @@ const metrics = getMetrics();
       recordMetric('LCP', 5000); // Poor;
       expect(getMetrics()['LCP'].rating).toBe('poor');
     });
-    it('should rate CLS correctly', () => {// TODO: Add content;}
+    it('should rate CLS correctly', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       recordMetric('CLS', 0.05); // Good;
       expect(getMetrics()['CLS'].rating).toBe('good');
@@ -256,6 +272,5 @@ const metrics = getMetrics();
       recordMetric('CLS', 0.3); // Poor;
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   });
 });

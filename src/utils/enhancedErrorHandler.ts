@@ -3,187 +3,126 @@
  * Enhanced Error Handling System;
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
  */
-<<<<<<< HEAD
-interface ErrorContext {
-    // TODO: Add content
-  }
-  userId?: string
-  sessionId?: string
-  url: string;,
-    userAgent: string;,
-    timestamp: string
-  component?: string
-  action?: string
-  props?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  state?: Record<string, unknown>
-}
-interface ErrorReport {
-    // TODO: Add content
-  }
-  id: string
-    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
-    message: string
-=======
-interface ErrorContext {// TODO: Add content;}
+interface ErrorContext {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   userId?: string;
   sessionId?: string;
-  url: string;,
-    userAgent: string;,
-    timestamp: string;
+  ur,
+  l: string;,
+    userAgen,
+  t: string;,
+    timestam,
+  p: string;
   component?: string;
   action?: string;
   props?: Record;
           <string, unknown>;
   state?: Record<string, unknown>;
 }
-interface ErrorReport {// TODO: Add content;}
+interface ErrorReport {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  id: string;
-    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
-    message: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  i,
+  d: string;
+    typ,
+  e: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
+    messag,
+  e: string;
   stack?: string;,
-    context: ErrorContext;,
-    severity: 'low' | 'medium' | 'high' | 'critical';,
-    category: //     | 'syntax'
+    contex,
+  t: ErrorContext;,
+    severit,
+  y: 'low' | 'medium' | 'high' | 'critical';,
+    categor,
+  y: //     | 'syntax'
 //     | 'runtime'
 //     | 'network'
 //     | 'security'
 //     | 'performance'
     | 'unknown';,
-    tags: string[];,
-<<<<<<< HEAD
-    metadata: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  resolved: boolean
-  resolvedAt?: string
-  resolvedBy?: string
-}
-interface ErrorHandlerConfig {
-    // TODO: Add content
-  }
-  enableConsoleLogging: boolean
-    enableRemoteReporting: boolean
-=======
-    metadata: Record;
+    tag,
+  s: string[];,
+    metadat,
+  a: Record;
           <string, unknown>;
-  resolved: boolean;
+  resolve,
+  d: boolean;
   resolvedAt?: string;
   resolvedBy?: string;
 }
-interface ErrorHandlerConfig {// TODO: Add content;}
+interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  enableConsoleLogging: boolean;
-    enableRemoteReporting: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    enableErrorRecovery: boolean;,
-    enableErrorCategorization: boolean;,
-    enableErrorAggregation: boolean;,
-    enablePerformanceImpact: boolean;,
-    maxErrorsPerMinute: number;,
-    errorRetentionDays: number
-  remoteEndpoint?: string
-  apiKey?: string
+  enableConsoleLoggin,
+  g: boolean;
+    enableRemoteReportin,
+  g: boolean;
+    enableErrorRecover,
+  y: boolean;,
+    enableErrorCategorizatio,
+  n: boolean;,
+    enableErrorAggregatio,
+  n: boolean;,
+    enablePerformanceImpac,
+  t: boolean;,
+    maxErrorsPerMinut,
+  e: number;,
+    errorRetentionDay,
+  s: number;
+  remoteEndpoint?: string;
+  apiKey?: string;
 }
-<<<<<<< HEAD
-class EnhancedErrorHandler {
-    // TODO: Add content
-  }
-  private config: ErrorHandlerConfig
-  private errors: ErrorReport[] = []
-  private errorCounts: Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number> = new Map()
-  private errorCategories: Map<string, number> = new Map()
-  private _lastErrorTime: number = 0
-  private errorRateLimit: number = 0
-  private isInitialized: boolean = false
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    // TODO: Add content
-  }
-    this.config = {
-    // TODO: Add content
-  }
-=======
-class EnhancedErrorHandler {// TODO: Add content;}
+class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private config: ErrorHandlerConfig;
-  private errors: ErrorReport[] = [];
-  private errorCounts: Map;
+  private,
+  config: ErrorHandlerConfig;
+  private,
+  errors: ErrorReport[] = [];
+  private,
+  errorCounts: Map;
           <string, number> = new Map();
-  private errorCategories: Map<string, number> = new Map();
-  private _lastErrorTime: number = 0;
-  private errorRateLimit: number = 0;
-  private isInitialized: boolean = false;
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {// TODO: Add content;}
+  private,
+  errorCategories: Map<string, number> = new Map();
+  private,
+  _lastErrorTime: number = 0;
+  private,
+  errorRateLimit: number = 0;
+  private,
+  isInitialized: boolean = false;
+  constructor(confi,)
+  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.config = {// TODO: Add content;}
+    this.config = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  enableConsoleLogging: true,
-      enableRemoteReporting: false,
-      enableErrorRecovery: true,
-      enableErrorCategorization: true,
-      enableErrorAggregation: true,
-      enablePerformanceImpact: true,
-      maxErrorsPerMinute: 10,
-      errorRetentionDays: 30,
-<<<<<<< HEAD
-//       ...config
-    }
-    this.initialize()
-=======
+  enableConsoleLoggin,
+  g: true,
+      enableRemoteReportin,
+  g: false,
+      enableErrorRecover,
+  y: true,
+      enableErrorCategorizatio,
+  n: true,
+      enableErrorAggregatio,
+  n: true,
+      enablePerformanceImpac,
+  t: true,
+      maxErrorsPerMinut,
+  e: 10,
+      errorRetentionDay,
+  s: 30,
 //       ...config;
     };
     this.initialize();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize the error handler;
    */
-<<<<<<< HEAD
-  private initialize(): void {
-    // TODO: Add content
-  }
-    if (this.isInitialized) return
-    this.setupGlobalErrorHandlers()
-    this.setupUnhandledRejectionHandler()
-    this.setupResourceErrorHandler()
-    this.setupNetworkErrorHandler()
-    this.setupPerformanceErrorHandler()
-    this.setupErrorRecovery()
-    this.setupErrorCleanup()
-    this.isInitialized = true
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-=======
-  private initialize(): void {// TODO: Add content;}
+  private initialize(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (this.isInitialized) return;
     this.setupGlobalErrorHandlers();
@@ -194,129 +133,90 @@ class EnhancedErrorHandler {// TODO: Add content;}
     this.setupErrorRecovery();
     this.setupErrorCleanup();
     this.isInitialized = true;
-    if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Setup global error handlers;
    */
-<<<<<<< HEAD
-  private setupGlobalErrorHandlers(): void {
-    // TODO: Add content
-  }
-    window.addEventListener('error', event => {
-    // TODO: Add content
-  }
-      this.handleError({
-    // TODO: Add content
-  }
-=======
-  private setupGlobalErrorHandlers(): void {// TODO: Add content;}
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    window.addEventListener('error', event => {// TODO: Add content;}
+    window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      this.handleError({// TODO: Add content;}
+      this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  type: 'javascript',
-        message: event.message,
-        stack: event.error?.stack,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-<<<<<<< HEAD
-        error: event.error
-      }
-  )
-    }
-  )
-=======
-        error: event.error;
+  typ,
+  e: 'javascript',
+        messag,
+  e: event.message,
+        stac,
+  k: event.error?.stack,
+        filenam,
+  e: event.filename,
+        linen,
+  o: event.lineno,
+        coln,
+  o: event.colno,
+        erro,
+  r: event.error;)
       });
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup unhandled promise rejection handler;
    */
-<<<<<<< HEAD
-  private setupUnhandledRejectionHandler(): void {
-    // TODO: Add content
-  }
-    window.addEventListener('unhandledrejection', event => {
-    // TODO: Add content
-  }
-      this.handleError({
-    // TODO: Add content
-  }
-  type: 'promise',
-        message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
-        reason: event.reason
-      }
-  )
-    }
-  )
-=======
-  private setupUnhandledRejectionHandler(): void {// TODO: Add content;}
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    window.addEventListener('unhandledrejection', event => {// TODO: Add content;}
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      this.handleError({// TODO: Add content;}
+      this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  type: 'promise',
-        message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
-        reason: event.reason;
+  typ,
+  e: 'promise',
+        messag,)
+  e: event.reason?.message || String(event.reason),
+        stac,
+  k: event.reason?.stack,
+        reaso,
+  n: event.reason;
       });
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup resource error handler;
    */
-<<<<<<< HEAD
-  private setupResourceErrorHandler(): void {
-    // TODO: Add content
-  }
-//     window.addEventListener()
-//       'error',
-      event => {
-    // TODO: Add content
-  }
-        if (event.target !== window) {
-            src?: string
-            href?: string
-          }
-          this.handleError({
-    // TODO: Add content
-  }
-  type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
-            element: event.target?.constructor.name,
-            src: target?.src || target?.href
-          }
-  )
-=======
-  private setupResourceErrorHandler(): void {// TODO: Add content;}
+  private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //     window.addEventListener()
 //       'error',
-      event => {// TODO: Add content;}
+      event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         if (event.target !== window) {src?: string;}
             href?: string;
           };
-          this.handleError({// TODO: Add content;}
+          this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
-            element: event.target?.constructor.name,
-            src: target?.src || target?.href;
+  typ,
+  e: 'resource',
+            messag,
+  e: `Failed to load,`
+  resource: ${target?.src || target?.href}`,
+            elemen,
+  t: event.target?.constructor.name,
+            sr,
+  c: target?.src || target?.href;)
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       },
 //       true,
@@ -325,207 +225,136 @@ class EnhancedErrorHandler {// TODO: Add content;}
   /**
    * Setup network error handler;
    */
-<<<<<<< HEAD
-  private setupNetworkErrorHandler(): void {
-    // TODO: Add content
-  }
-    // Monitor fetch requests
-const originalFetch = window.fetch
-    window.fetch = async (...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
-          <typeof fetch>) => {
-    // TODO: Add content
-  }
-      try {
-    // TODO: Add content
-  }
-        const response = await originalFetch(...args)
-        if (!response.ok) {
-    // TODO: Add content
-  }
-          this.handleError({
-    // TODO: Add content
-  }
-=======
-  private setupNetworkErrorHandler(): void {// TODO: Add content;}
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     // Monitor fetch requests;
 const originalFetch = window.fetch;
-    window.fetch = async (...args: Parameters;
-          <typeof fetch>) => {// TODO: Add content;}
+    window.fetch = async (...arg,
+  s: Parameters;)
+          <typeof fetch>) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      try {// TODO: Add content;}
+      try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         const response = await originalFetch(...args);
-        if (!response.ok) {// TODO: Add content;}
+        if (!response.ok) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          this.handleError({// TODO: Add content;}
+          this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  type: 'network',
-            message: `Network request failed: ${response.status} ${response.statusText}`,
-            url: args[0] as string,
-            status: response.status,
-<<<<<<< HEAD
-            statusText: response.statusText
-          }
-  )
-        }
-        return response
-      } catch (error) {
-    // TODO: Add content
-  }
-        this.handleError({
-    // TODO: Add content
-  }
-=======
-            statusText: response.statusText;
+  typ,
+  e: 'network',
+            messag,`
+  e: `Network request,`
+  failed: ${response.status} ${response.statusText}`,
+            ur,
+  l: args[0] as string,
+            statu,
+  s: response.status,
+            statusTex,
+  t: response.statusText;)
           });
         }
         return response;
-      } catch (error) {// TODO: Add content;}
+      } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        this.handleError({// TODO: Add content;}
+        this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  type: 'network',
-          message: `Network request failed: ${error}`,
-          url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error))
+  typ,
+  e: 'network',
+          messag,`
+  e: `Network request,`
+  failed: ${error}`,
+          ur,
+  l: args[0] as string,
+          erro,)
+  r: error instanceof Error ? error : new Error(String(error))
         }
   )
-        throw error
+        throw error;
       }
     }
   }
   /**
    * Setup performance error handler;
    */
-<<<<<<< HEAD
-  private setupPerformanceErrorHandler(): void {
-    // TODO: Add content
-  }
-    if (!this.config.enablePerformanceImpact) return
-    // Monitor long tasks that might indicate performance issues
-    if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
-      try {
-    // TODO: Add content
-  }
-        const observer = new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-          list.getEntries().forEach(entry => {
-    // TODO: Add content
-  }
-            if (entry.duration > 100) {
-    // TODO: Add content
-  }
-              // Tasks longer than 100ms
-              this.handleError({
-    // TODO: Add content
-  }
-=======
-  private setupPerformanceErrorHandler(): void {// TODO: Add content;}
+  private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
-    if ('PerformanceObserver' in window) {// TODO: Add content;}
+    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      try {// TODO: Add content;}
+      try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const observer = new PerformanceObserver(list => {// TODO: Add content;}
-}
-          list.getEntries().forEach(entry => {// TODO: Add content;}
-}
-            if (entry.duration > 100) {// TODO: Add content;}
+        const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+          list.getEntries().forEach(entry => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+            if (entry.duration > 100) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
               // Tasks longer than 100ms;
-              this.handleError({// TODO: Add content;}
+              this.handleError({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  type: 'custom',
-                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
-                duration: entry.duration,
-                category: 'performance'
+  typ,
+  e: 'custom',
+                messag,`
+  e: `Long task,)`
+  detected: ${entry.duration.toFixed(2)}ms`,
+                duratio,
+  n: entry.duration,
+                categor,
+  y: 'performance'
               }
   )
             }
-<<<<<<< HEAD
-          }
-  )
-        }
-  )
-        observer.observe({ type: 'longtask', buffered: true }
-  )
-      } catch (error) {
-    // TODO: Add content
-  }
-=======
           });
         });
-        observer.observe({ type: 'longtask', buffered: true });
-      } catch (error) {// TODO: Add content;}
+        observer.observe({/* TODO: Fix JSX expression */})
+  d: true });
+      } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
     }
   }
   /**
    * Setup error recovery mechanisms;
    */
-<<<<<<< HEAD
-  private setupErrorRecovery(): void {
-    // TODO: Add content
-  }
-    if (!this.config.enableErrorRecovery) return
-    // Auto-recovery for common errors
-    setInterval(() => {
-    // TODO: Add content
-  }
-      this.attemptErrorRecovery()
-    }, 30000); // Check every 30 seconds
-=======
-  private setupErrorRecovery(): void {// TODO: Add content;}
+  private setupErrorRecovery(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.config.enableErrorRecovery) return;
     // Auto-recovery for common errors;
-    setInterval(() => {// TODO: Add content;}
+    setInterval(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.attemptErrorRecovery();
     }, 30000); // Check every 30 seconds;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup error cleanup;
    */
-<<<<<<< HEAD
-  private setupErrorCleanup(): void {
-    // TODO: Add content
-  }
-    // Clean up old errors
-//     setInterval()
-      () => {
-    // TODO: Add content
-  }
-        this.cleanupOldErrors()
-=======
-  private setupErrorCleanup(): void {// TODO: Add content;}
+  private setupErrorCleanup(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     // Clean up old errors;
 //     setInterval()
-      () => {// TODO: Add content;}
+      () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         this.cleanupOldErrors();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
 //       24 * 60 * 60 * 1000,
 ); // Daily cleanup;
@@ -533,106 +362,60 @@ const originalFetch = window.fetch;
   /**
    * Handle error with comprehensive processing;
    */
-<<<<<<< HEAD
-  private handleError(errorData: {
-    if (!sessionId) {
-    // TODO: Add content
-  }
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      sessionStorage.setItem('error_session_id', sessionId)
-=======
-  private handleError(errorData: {if (!sessionId) {}
-  // TODO: Add content;
-}
+  private handleError(errorDat,)
+  a: {if (!sessionId) {}
+  // TOD,
+  O: Add content;
+}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return sessionId
+    return sessionId;
   }
   /**
    * Get user ID;
    */
-<<<<<<< HEAD
-  private getUserId(): string | undefined {
-    // TODO: Add content
-  }
-    return localStorage.getItem('user_id') || undefined
-=======
-  private getUserId(): string | undefined {// TODO: Add content;}
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return localStorage.getItem('user_id') || undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check rate limiting;
    */
-<<<<<<< HEAD
-  private checkRateLimit(): boolean {
-    // TODO: Add content
-  }
-    const now = Date.now()
-    const timeDiff = now - this.lastErrorTime
-    if (timeDiff 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 60000) {
-    // TODO: Add content
-  }
-      // Within 1 minute
-      this.errorRateLimit++
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
-    // TODO: Add content
-  }
-        return false
-      }
-    } else {
-    // TODO: Add content
-  }
-      this.errorRateLimit = 1
-=======
-  private checkRateLimit(): boolean {// TODO: Add content;}
+  private checkRateLimit(): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const now = Date.now();
     const timeDiff = now - this.lastErrorTime;
-    if (timeDiff;
-          < 60000) {// TODO: Add content;}
+    if (timeDiff;)
+          < 60000) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Within 1 minute;
       this.errorRateLimit++;
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {// TODO: Add content;}
+      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         return false;
       }
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.errorRateLimit = 1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    this.lastErrorTime = now
-    return true
+    this.lastErrorTime = now;
+    return true;
   }
   /**
    * Update error counters;
    */
-<<<<<<< HEAD
-  private updateErrorCounts(errorReport: ErrorReport): void {
-    // TODO: Add content
-  }
-    const key = `${errorReport.type}_${errorReport.category}`
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
-=======
-  private updateErrorCounts(errorReport: ErrorReport): void {// TODO: Add content;}
-}
+  private updateErrorCounts(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     this.errorCategories.set()
 //       errorReport.category,
 //       (this.errorCategories.get(errorReport.category) || 0) + 1,
@@ -641,52 +424,40 @@ const originalFetch = window.fetch;
   /**
    * Log error to console;
    */
-<<<<<<< HEAD
-  private logError(errorReport: ErrorReport): void {
-    // TODO: Add content
-  }
-    const emoji = this.getSeverityEmoji(errorReport.severity)
-    console.group(`${emoji} Error Report: ${errorReport.id}`)
-    // // console.error('Message:', errorReport.message)
-    // // console.error('Type:', errorReport.type)
-    // // console.error('Severity:', errorReport.severity)
-    // // console.error('Category:', errorReport.category)
-    // // console.error('Context:', errorReport.context)
-    // // console.error('Metadata:', errorReport.metadata)
-    if (errorReport.stack) {
-      // // console.error('Stack:', errorReport.stack)
-=======
-  private logError(errorReport: ErrorReport): void {// TODO: Add content;}
+  private logError(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const emoji = this.getSeverityEmoji(errorReport.severity);
-    console.group(`${emoji} Error Report: ${errorReport.id}`);
-    // // console.error('Message:', errorReport.message);
-    // // console.error('Type:', errorReport.type);
-    // // console.error('Severity:', errorReport.severity);
-    // // console.error('Category:', errorReport.category);
-    // // console.error('Context:', errorReport.context);
-    // // console.error('Metadata:', errorReport.metadata);
-    if (errorReport.stack) {// // console.error('Stack:', errorReport.stack);}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+    const emoji = this.getSeverityEmoji(errorReport.severity);`
+    console.group(`${emoji} Error,)`
+  Report: ${errorReport.id}`);
+    // // console.error('Messag,)
+  e:', errorReport.message);
+    // // console.error('Typ,)
+  e:', errorReport.type);
+    // // console.error('Severit,)
+  y:', errorReport.severity);
+    // // console.error('Categor,)
+  y:', errorReport.category);
+    // // console.error('Contex,)
+  t:', errorReport.context);
+    // // console.error('Metadat,)
+  a:', errorReport.metadata);
+    if (errorReport.stack) {/* TODO: Fix JSX expression */}
+  k:', errorReport.stack);}
     }
     console.groupEnd()
   }
   /**
    * Get severity emoji;
    */
-<<<<<<< HEAD
-  private getSeverityEmoji(severity: ErrorReport['severity']): string {
-    // TODO: Add content
-  }
-    switch (severity) {
-    // TODO: Add content
-  }
-=======
-  private getSeverityEmoji(severity: ErrorReport['severity']): string {// TODO: Add content;}
+  private getSeverityEmoji(severit,)
+  y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    switch (severity) {// TODO: Add content;}
+    switch (severity) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       case 'critical':
         return ''
       case 'high':
@@ -695,116 +466,74 @@ const originalFetch = window.fetch;
         return ''
       case 'low':
         return ''
-      default:
+      defaul,
+  t:
         return ''
     }
   }
   /**
    * Report to remote service;
    */
-<<<<<<< HEAD
-  private async reportToRemote(errorReport: ErrorReport): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
-  }
-    if (!this.config.remoteEndpoint) return
-    try {
-    // TODO: Add content
-  }
-      await fetch(this.config.remoteEndpoint, {
-    // TODO: Add content
-  }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
-  }
-=======
-  private async reportToRemote(errorReport: ErrorReport): Promise;
-          <void> {// TODO: Add content;}
+  private async reportToRemote(errorRepor,)
+  t: ErrorReport): Promise;
+          <void> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.config.remoteEndpoint) return;
-    try {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      await fetch(this.config.remoteEndpoint, {// TODO: Add content;}
+      await fetch(this.config.remoteEndpoint, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  method: 'POST',
-        headers: {// TODO: Add content;}
+  metho,
+  d: 'POST',
+        header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${this.config.apiKey}`
+          Authorizatio,`
+  n: `Bearer ${this.config.apiKey}`
         },
-        body: JSON.stringify(errorReport)
-<<<<<<< HEAD
-      }
-  )
-    } catch (error) {
-    // TODO: Add content
-  }
-=======
+        bod,)
+  y: JSON.stringify(errorReport)
       });
-    } catch (error) {// TODO: Add content;}
+    } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Aggregate error data;
    */
-<<<<<<< HEAD
-  private aggregateError(errorReport: ErrorReport): void {
-    // TODO: Add content
-  }
-    // This could be expanded to include more sophisticated aggregation
-=======
-  private aggregateError(errorReport: ErrorReport): void {// TODO: Add content;}
+  private aggregateError(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     // This could be expanded to include more sophisticated aggregation;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   /**
    * Assess performance impact;
    */
-<<<<<<< HEAD
-  private assessPerformanceImpact(errorReport: ErrorReport): void {
-    // TODO: Add content
-  }
-    if ()
-      errorReport.type === 'resource' ||
-      errorReport.category === 'performance'
-    ) {
-    // TODO: Add content
-  }
-=======
-  private assessPerformanceImpact(errorReport: ErrorReport): void {// TODO: Add content;}
+  private assessPerformanceImpact(errorRepor,)
+  t: ErrorReport): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if ()
       errorReport.type === 'resource' ||
       errorReport.category === 'performance'
-    ) {// TODO: Add content;}
+    ) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Attempt error recovery;
    */
-<<<<<<< HEAD
-  private attemptErrorRecovery(): void {
-    // TODO: Add content
-  }
-=======
-  private attemptErrorRecovery(): void {// TODO: Add content;}
+  private attemptErrorRecovery(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     const recentErrors = this.errors.filter()
       error =>
 //         !error.resolved &&
@@ -818,205 +547,122 @@ const originalFetch = window.fetch;
           
           
           < 300000 // Last 5 minutes,
-<<<<<<< HEAD
-)
-    if (recentErrors.length > 5) {
-    // TODO: Add content
-  }
-      if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-        }
-      // Implement recovery strategies here
-      this.clearErrorState()
-=======
 );
-    if (recentErrors.length > 5) {// TODO: Add content;}
+    if (recentErrors.length > 5) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         }
       // Implement recovery strategies here;
       this.clearErrorState();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Clear error state;
    */
-<<<<<<< HEAD
-  private clearErrorState(): void {
-    // TODO: Add content
-  }
-    // Reset error counters
-    this.errorCounts.clear()
-    this.errorCategories.clear()
-    this.errorRateLimit = 0
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-=======
-  private clearErrorState(): void {// TODO: Add content;}
+  private clearErrorState(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     // Reset error counters;
     this.errorCounts.clear();
     this.errorCategories.clear();
     this.errorRateLimit = 0;
-    if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Clean up old errors;
    */
-<<<<<<< HEAD
-  private cleanupOldErrors(): void {
-    // TODO: Add content
-  }
-    const cutoffDate = new Date()
-    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
-    this.errors = this.errors.filter()
-      error => new Date(error.context.timestamp) > cutoffDate,
-)
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-=======
-  private cleanupOldErrors(): void {// TODO: Add content;}
+  private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
     this.errors = this.errors.filter()
       error => new Date(error.context.timestamp) > cutoffDate,
 );
-    if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
+    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Get error statistics;
    */
-<<<<<<< HEAD
-  public getErrorStatistics(): {
-    // TODO: Add content
-  }
-  totalErrors: number;,
-    errorsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number>
-    errorsByCategory: Record<string, number>
-    errorsBySeverity: Record<string, number>
-    recentErrors: ErrorReport[]
-  } {
-    // TODO: Add content
-  }
-    const errorsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number> = {}
-    const errorsByCategory: Record<string, number> = {}
-    const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error => {
-    // TODO: Add content
-  }
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
-=======
-  public getErrorStatistics(): {// TODO: Add content;}
+  public getErrorStatistics(): {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  totalErrors: number;,
-    errorsByType: Record;
+  totalError,
+  s: number;,
+    errorsByTyp,
+  e: Record;
           <string, number>;
-    errorsByCategory: Record<string, number>;
-    errorsBySeverity: Record<string, number>;
-    recentErrors: ErrorReport[];
-  } {// TODO: Add content;}
+    errorsByCategor,
+  y: Record<string, number>;
+    errorsBySeverit,
+  y: Record<string, number>;
+    recentError,
+  s: ErrorReport[];
+  } {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const errorsByType: Record;
+    const,
+  errorsByType: Record;
           <string, number> = {};
-    const errorsByCategory: Record<string, number> = {};
-    const errorsBySeverity: Record<string, number> = {};
-    this.errors.forEach(error => {// TODO: Add content;}
-}
+    const,
+  errorsByCategory: Record<string, number> = {};
+    const,
+  errorsBySeverity: Record<string, number> = {};
+    this.errors.forEach(error => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       errorsByCategory[error.category] =
-        (errorsByCategory[error.category] || 0) + 1
+        (errorsByCategory[error.category] || 0) + 1;
       errorsBySeverity[error.severity] =
-<<<<<<< HEAD
-        (errorsBySeverity[error.severity] || 0) + 1
-    }
-  )
-    const recentErrors = this.errors
-=======
         (errorsBySeverity[error.severity] || 0) + 1;
     });
     const recentErrors = this.errors;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       .filter(error => !error.resolved)
 //       .sort()
         (a, b) =>
 //           new Date(b.context.timestamp).getTime() -
 //           new Date(a.context.timestamp).getTime()
 //       )
-<<<<<<< HEAD
-      .slice(0, 10)
-    return {
-    // TODO: Add content
-  }
-=======
       .slice(0, 10);
-    return {// TODO: Add content;}
+    return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  totalErrors: this.errors.length,
+  totalError,
+  s: this.errors.length,
 //       errorsByType,
 //       errorsByCategory,
 //       errorsBySeverity,
-<<<<<<< HEAD
-//       recentErrors
-    }
-=======
 //       recentErrors;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Export error data;
    */
-<<<<<<< HEAD
-  public exportErrorData(): string {
-    // TODO: Add content
-  }
-    return JSON.stringify()
-      {
-    // TODO: Add content
-  }
-=======
-  public exportErrorData(): string {// TODO: Add content;}
+  public exportErrorData(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return JSON.stringify()
-      {// TODO: Add content;}
+      {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  errors: this.errors,
-        statistics: this.getErrorStatistics(),
-        config: this.config,
-        timestamp: new Date().toISOString()
+  error,
+  s: this.errors,
+        statistic,
+  s: this.getErrorStatistics(),
+        confi,
+  g: this.config,
+        timestam,
+  p: new Date().toISOString()
       },
 //       null,
 //       2,
@@ -1025,51 +671,18 @@ const originalFetch = window.fetch;
   /**
    * Manually report error;
    */
-<<<<<<< HEAD
-  public reportError(message: string, context?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <ErrorContext>): string {
-    // TODO: Add content
-  }
-    const errorReport = this.createErrorReport({
-    // TODO: Add content
-  }
-  type: 'custom',
-//       message,
-//       ...context
-    }
-  )
-    this.processError(errorReport)
-    return errorReport.id
-  }
+  public reportError(messag,
+  e: string, context?: Partial;)
+          <ErrorContext>): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-// Export singleton instance
-export const errorHandler = new EnhancedErrorHandler()
-// Export class for custom instances
-export {
-    // TODO: Add content
-  }
-//   EnhancedErrorHandler,
-  type ErrorReport,
-  type ErrorContext,
-  type ErrorHandlerConfig
-}
-=======
-  public reportError(message: string, context?: Partial;
-          <ErrorContext>): string {// TODO: Add content;}
-}
-    const errorReport = this.createErrorReport({// TODO: Add content;}
+    const errorReport = this.createErrorReport({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  type: 'custom',
+  typ,
+  e: 'custom',
 //       message,
-//       ...context;
+//       ...context;)
     });
     this.processError(errorReport);
     return errorReport.id;
@@ -1078,11 +691,12 @@ export {
 // Export singleton instance;
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
-export {// TODO: Add content;}
+export {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
   type ErrorHandlerConfig;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+`

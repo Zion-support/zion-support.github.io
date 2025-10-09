@@ -1,2 +1,2 @@
 
-export default BlockchainPage
+export default BlockchainPage;

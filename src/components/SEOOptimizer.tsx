@@ -1,113 +1,69 @@
-<<<<<<< HEAD
-
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-
-=======
 'use client';
-interface SEOOptimizerProps {// TODO: Add content;}
+interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: string;,
-    description: string;,
-    keywords: string[];,
-    canonicalUrl: string;
+  titl,
+  e: string;,
+    descriptio,
+  n: string;,
+    keyword,
+  s: string[];,
+    canonicalUr,
+  l: string;
   structuredData?: object;
   ogImage?: string;
   twitterCard?: string;
 }
-const SEOOptimizer: React.FC;
-          <SEOOptimizerProps> = memo(({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+const,
+  SEOOptimizer: React.FC;
+          <SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 
-const SEOOptimizer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-    
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-  }, [title, description, keywords, canonicalUrl]);
-
-=======
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-//   structuredData,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  twitterCard = 'summary_large_image',
+const,
+  SEOOptimizer: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
 }) => {useEffect(() => {}
-  // TODO: Add content;
+  // TOD,
+  O: Add content;
 }
     // Update document title;
     document.title = fullTitle;
     // Update meta description;
 const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {// TODO: Add content;}
+    if (metaDescription) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       metaDescription.setAttribute('content', description);
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const meta = document.createElement('meta');
       meta.name = 'description';
       meta.content = description;
       document.head.appendChild(meta);
     }
-    // Update meta keywords;
+    // Update meta keywords;"
 const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {// TODO: Add content;}
+    if (metaKeywords) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const meta = document.createElement('meta');
       meta.name = 'keywords';
       meta.content = keywords.join(', ');
       document.head.appendChild(meta);
     }
-    // Update canonical URL;
+    // Update canonical URL;"
 let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {// TODO: Add content;}
+    if (canonical) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       canonical.setAttribute('href', canonicalUrl);
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
@@ -115,13 +71,18 @@ let canonical = document.querySelector('link[rel="canonical"]');
       document.head.appendChild(canonical);
     }
     // Update Open Graph tags;
-const updateMetaProperty = (property: string, content: string) => {// TODO: Add content;}
-}
+const updateMetaProperty = (propert,
+  y: string, conten,)
+  t: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
       let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {// TODO: Add content;}
+      if (meta) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         meta.setAttribute('content', content);
-      } else {// TODO: Add content;}
+      } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
@@ -129,19 +90,29 @@ const updateMetaProperty = (property: string, content: string) => {// TODO: Add 
         document.head.appendChild(meta);
       }
     };
-    updateMetaProperty('og:title', fullTitle);
-    updateMetaProperty('og:description', description);
-    updateMetaProperty('og:url', canonicalUrl);
-    updateMetaProperty('og:image', ogImage);
-    updateMetaProperty('og:type', 'website');
+    updateMetaProperty('o,)
+  g:title', fullTitle);
+    updateMetaProperty('o,)
+  g:description', description);
+    updateMetaProperty('o,)
+  g:url', canonicalUrl);
+    updateMetaProperty('o,)
+  g:image', ogImage);
+    updateMetaProperty('o,)
+  g:type', 'website');
     // Update Twitter Card tags;
-const updateMetaName = (name: string, content: string) => {// TODO: Add content;}
-}
+const updateMetaName = (nam,
+  e: string, conten,)
+  t: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"`
       let meta = document.querySelector(`meta[name="${name}"]`);
-      if (meta) {// TODO: Add content;}
+      if (meta) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         meta.setAttribute('content', content);
-      } else {// TODO: Add content;}
+      } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         meta = document.createElement('meta');
         meta.setAttribute('name', name);
@@ -149,12 +120,17 @@ const updateMetaName = (name: string, content: string) => {// TODO: Add content;
         document.head.appendChild(meta);
       }
     };
-    updateMetaName('twitter:card', twitterCard);
-    updateMetaName('twitter:title', fullTitle);
-    updateMetaName('twitter:description', description);
-    updateMetaName('twitter:image', ogImage);
+    updateMetaName('twitte,)
+  r:card', twitterCard);
+    updateMetaName('twitte,)
+  r:title', fullTitle);
+    updateMetaName('twitte,)
+  r:description', description);
+    updateMetaName('twitte,)
+  r:image', ogImage);
     // Add structured data;
-    if (structuredData) {// TODO: Add content;}
+    if (structuredData) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const script = document.createElement('script');
       script.type = 'application/ld+json';
@@ -162,8 +138,7 @@ const updateMetaName = (name: string, content: string) => {// TODO: Add content;
       document.head.appendChild(script);
     }
   }, [title, description, keywords, canonicalUrl, structuredData, ogImage, twitterCard, fullTitle]);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return null;
 };
 
-export default SEOOptimizer;
+export default SEOOptimizer;"`

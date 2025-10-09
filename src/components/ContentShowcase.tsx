@@ -1,15 +1,13 @@
 import React from 'react';
 
-interface ContentShowcaseProps {
-  // Add props here
+interface ContentShowcaseProps {/* TODO: Fix JSX expression */}
 }
 
-const ContentShowcase: React.FC<ContentShowcaseProps> = () => {
-  return (
-    <div className="contentshowcase">
+const,
+  ContentShowcase: React.FC<ContentShowcaseProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );
 };
 
-export default ContentShowcase
+export default ContentShowcase;

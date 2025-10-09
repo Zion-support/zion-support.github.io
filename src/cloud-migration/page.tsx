@@ -1,2 +1,2 @@
 
-export default CloudMigrationPage
+export default CloudMigrationPage;

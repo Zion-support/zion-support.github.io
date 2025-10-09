@@ -1,12 +1,10 @@
 import React from 'react';
 
-interface InteractiveContentShowcase2026Props {
-  // Add props here
+interface InteractiveContentShowcase2026Props {/* TODO: Fix JSX expression */}
 }
 
-const InteractiveContentShowcase2026: React.FC<InteractiveContentShowcase2026Props> = () => {
-  return (
-    <div className="interactivecontentshowcase2026">
+const,
+  InteractiveContentShowcase2026: React.FC<InteractiveContentShowcase2026Props> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

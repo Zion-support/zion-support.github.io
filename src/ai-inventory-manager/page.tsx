@@ -1,55 +1,51 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-=======
 import {Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings from 'lucide-react';}
-const AIInventoryManagerPage: React.FC = () => {const features = [}
-    {// TODO: Add content;}
+const,
+  AIInventoryManagerPage: React.FC = () => {const features = [}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  icon: Package,
-      title: 'Inventory Tracking',
-      description: 'AI-powered inventory tracking and management',
-      benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];
+  ico,
+  n: Package,
+      titl,
+  e: 'Inventory Tracking',
+      descriptio,
+  n: 'AI-powered inventory tracking and management',
+      benefit,
+  s: ['Real-time tracking', 'Stock monitoring', 'Automated alerts'];
     },
-      icon: Target,
-      title: 'Demand Forecasting',
-      description: 'Intelligent demand prediction and planning',
-      benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
-      icon: Settings,
-      title: 'Inventory Analytics',
-      description: 'Comprehensive inventory analytics and insights',
-      benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
+      ico,
+  n: Target,
+      titl,
+  e: 'Demand Forecasting',
+      descriptio,
+  n: 'Intelligent demand prediction and planning',
+      benefit,
+  s: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
+      ico,
+  n: Settings,
+      titl,
+  e: 'Inventory Analytics',
+      descriptio,
+  n: 'Comprehensive inventory analytics and insights',
+      benefit,
+  s: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-
-=======
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigation>"
+      <main className="container mx-auto px-4 py-16 pt-24"></main>"
+        <section className="text-center mb-16"></section>"
+          <h1 className="text-5xl,"
+  md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
 // AI Inventory Manager;
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
+          </h1>"
+          <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
 // Smart Inventory Management;
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          </p>"
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 // Optimize your inventory with AI-powered management solutions.
             Track stock, predict demand, and automate reordering for maximum efficiency.
           
@@ -60,47 +56,55 @@ const AIInventoryManagerPage: React.FC = () => {const features = [}
           
           
           
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="/contact"
-              className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+          "
+          <div className="flex flex-col,"
+  sm:flex-row gap-4 justify-center items-center"></div>
+            <a></a>"
+              href="/contact""
+              className="cyber-button px-8 py-4 text-lg font-semibold,"
+  hover:scale-105 transition-all duration-300"
 // >
 //               Get Started;
-          </a>
-              href="tel:+13024640950"
-              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Package className="w-5 h-5" />
+          </a>"
+              href="te,"
+  l:+13024640950""
+              className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
+  hover:bg-cyan-400,"
+  hover:text-slate-900 transition-all duration-300""
+<Package className="w-5 h-5" /></Package>
               +1 302 464 0950;
           </div>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+        </section>"
+        <section className="mb-16"></section>"
+          <h2 className="text-3xl,"
+  md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Inventory Management Features;
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()}
-          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
+          </h2>"
+          <div className="grid grid-cols-1,
+  md:grid-cols-2,"
+  lg:grid-cols-4 gap-8"></div>)
+            {features.map((feature, index) => ()}"
+          <div key={index} className="cyber-card p-6,"
+  hover:scale-105 transition-all duration-300"></div>"
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
+                  <feature.icon className="w-8 h-8 text-white" /></feature>"
+                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
                   {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {feature.description}
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()}
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                </h3>"
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
+                  {feature.description}"
+                <ul className="space-y-2"></ul>
+                  {feature.benefits.map((benefit, benefitIndex) => ()}"
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
                     </li>
                   ))}
                 </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
-      <Footer />
+      <Footer /></Footer>
     </div>
   );
 };
 
-export default PagePage;
+export default PagePage;"

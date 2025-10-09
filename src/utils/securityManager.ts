@@ -1,48 +1,35 @@
 'use client'
 /**
  * Enhanced Security Utilities;
- * Generated: 2025-10-08T02:06:22.083Z;
+ * Generate,
+  d: 2025-10-08T0,
+  2:0,
+  6:22.083Z;
  */
-<<<<<<< HEAD
-export class SecurityManager {
-    // TODO: Add content
-  }
-  private static instance: SecurityManager
-  private constructor() {}
-  static getInstance(): SecurityManager {
-    // TODO: Add content
-  }
-    if (!SecurityManager.instance) {
-    // TODO: Add content
-  }
-      SecurityManager.instance = new SecurityManager()
-=======
-export class SecurityManager {// TODO: Add content;}
+export class SecurityManager {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private static instance: SecurityManager;
+  private static,
+  instance: SecurityManager;
   private constructor() {}
-  static getInstance(): SecurityManager {// TODO: Add content;}
+  static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!SecurityManager.instance) {// TODO: Add content;}
+    if (!SecurityManager.instance) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       SecurityManager.instance = new SecurityManager();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return SecurityManager.instance
+    return SecurityManager.instance;
   }
   /**
    * Sanitize user input to prevent XSS attacks;
    */
-<<<<<<< HEAD
-  sanitizeInput(input: string): string {
-    // TODO: Add content
-  }
-    return input
-=======
-  sanitizeInput(input: string): string {// TODO: Add content;}
+  sanitizeInput(inpu,)
+  t: string): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return input;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       .replace(/[
           
           
@@ -51,99 +38,63 @@ export class SecurityManager {// TODO: Add content;}
           
           
           
-          
+          )
           <>]/g, '')
-      .replace(/javascript:/gi, '')
+      .replace(/javascrip,)
+  t:/gi, '')
       .replace(/on\w+=/gi, '')
       .trim()
   }
   /**
    * Validate and sanitize URL;
    */
-<<<<<<< HEAD
-  sanitizeUrl(url: string): string {
-    // TODO: Add content
-  }
-    try {
-      if (!['http:', 'https:'].includes(parsed.protocol)) {
-    // TODO: Add content
-  }
-        throw new Error('Invalid protocol')
-      }
-      return parsed.toString()
-    } catch {
-    // TODO: Add content
-  }
-      return ''
-=======
-  sanitizeUrl(url: string): string {// TODO: Add content;}
+  sanitizeUrl(ur,)
+  l: string): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    try {if (!['http:', 'https:'].includes(parsed.protocol)) {}
-  // TODO: Add content;
+    try {/* TODO: Fix JSX expression */}
+  s:'].includes(parsed.protocol)) {}
+  // TOD,
+  O: Add content;
 }
         throw new Error('Invalid protocol');
       }
       return parsed.toString();
-    } catch {// TODO: Add content;}
+    } catch {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return '';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Generate secure random token;
    */
-<<<<<<< HEAD
-  generateSecureToken(_length: number = 32): string {
-    // TODO: Add content
-  }
-    const array = new Uint8Array(length)
-    if (typeof window !== 'undefined' && window.crypto) {
-    // TODO: Add content
-  }
-      window.crypto.getRandomValues(array)
-    } else {
-    // TODO: Add content
-  }
-      // Fallback for Node.js environment
-const crypto = require('crypto')
-      crypto.randomFillSync(array)
-=======
-  generateSecureToken(_length: number = 32): string {// TODO: Add content;}
+  generateSecureToken(_lengt,)
+  h: number = 32): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const array = new Uint8Array(length);
-    if (typeof window !== 'undefined' && window.crypto) {// TODO: Add content;}
+    if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       window.crypto.getRandomValues(array);
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Fallback for Node.js environment;
 const crypto = require('crypto');
       crypto.randomFillSync(array);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
   }
   /**
    * Implement rate limiting;
    */
-<<<<<<< HEAD
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {
-    // TODO: Add content
-  }
-    const now = Date.now()
-    const windowStart = now - windowMs
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage()
-    const requests = storage.get(key) || []
-    // Remove old requests
-const validRequests = requests.filter((time: number) => time > windowStart)
-    if (validRequests.length >= limit) {
-    // TODO: Add content
-  }
-      return false
-=======
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {// TODO: Add content;}
+  checkRateLimit(ke,
+  y: string, limi,
+  t: number, windowM,)
+  s: number): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const now = Date.now();
     const windowStart = now - windowMs;
@@ -151,43 +102,27 @@ const validRequests = requests.filter((time: number) => time > windowStart)
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
-const validRequests = requests.filter((time: number) => time > windowStart);
-    if (validRequests.length >= limit) {// TODO: Add content;}
+const validRequests = requests.filter((tim,)
+  e: number) => time > windowStart);
+    if (validRequests.length >= limit) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     validRequests.push(now)
     storage.set(key, validRequests)
-    return true
+    return true;
   }
-<<<<<<< HEAD
-  private getRateLimitStorage(): Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number[]> {
-    // TODO: Add content
-  }
-    if (!global._rateLimitStorage) {
-    // TODO: Add content
-  }
-      global._rateLimitStorage = new Map()
-=======
   private getRateLimitStorage(): Map;
-          <string, number[]> {// TODO: Add content;}
+          <string, number[]> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!global._rateLimitStorage) {// TODO: Add content;}
+    if (!global._rateLimitStorage) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       global._rateLimitStorage = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return global._rateLimitStorage
+    return global._rateLimitStorage;
   }
 }
 export default SecurityManager.getInstance()

@@ -1,138 +1,121 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-=======
-interface SEOEnhancerProps {// TODO: Add content;}
+interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
 }
-<<<<<<< HEAD
-
-const SEOEnhancer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-=======
-const SEOEnhancer: React.FC;
-          <SEOEnhancerProps> = ({// TODO: Add content;}
+const,
+  SEOEnhancer: React.FC;
+          <SEOEnhancerProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-//   children;
-}) => {"@context": "https://schema.org",}
-    "@type": "TechCompany",
-    "name": "Zion Tech Group",
-    "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology",
+  title = "Zion Tech Group - Advanced AI and IT Solutions","
+  description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.","
+  keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group","
+  image = "http,"
+  s://ziontechgroup.com/og-image.jpg","
+  url = "http,"
+  s://ziontechgroup.com",
+//   children;)
+}) => {/* TODO: Fix JSX expression */}"
+  s://schema.org",}"
+    "@type": "TechCompany","
+    "name": "Zion Tech Group","
+    "url": url,"
+    "logo": "http,"
+  s://ziontechgroup.com/logo.png","
+    "description": description,"
+    "foundingDate": "2020","
+    "numberOfEmployees": "50-100","
+    "industry": "Technology","
     "services": [
-  // TODO: Add items,
-]
-//       "AI Solutions",
-//       "Quantum Computing",
-//       "Autonomous Systems",
-//       "Digital Transformation",
-//       "Cloud Services",
-//       "Automation",
+  // TOD,
+  O: Add items,
+]"
+//       "AI Solutions","
+//       "Quantum Computing","
+//       "Autonomous Systems","
+//       "Digital Transformation","
+//       "Cloud Services","
+//       "Automation","
 //       "Business Intelligence"
-//     ],
-    "contactPoint": {// TODO: Add content;}
-}
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "Customer Service",
-      "areaServed": "US",
+//     ],"
+    "contactPoint": {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+      "@type": "ContactPoint","
+      "telephone": "+1-302-464-0950","
+      "contactType": "Customer Service","
+      "areaServed": "US","
       "availableLanguage": "en"
-    },
+    },"
     "sameAs": [
-  // TODO: Add items,
-]
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-//     ],
-    "address": {// TODO: Add content;}
-}
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+  // TOD,
+  O: Add items,
+]"
+      "http,"
+  s://twitter.com/ziontechgroup","
+      "http,"
+  s://linkedin.com/company/ziontechgroup"
+//     ],"
+    "address": {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+      "@type": "PostalAddress","
+      "streetAddress": "364 E Main St STE 1008","
+      "addressLocality": "Middletown","
+      "addressRegion": "DE","
+      "postalCode": "19709","
       "addressCountry": "US"
-    },
+    },"
     "offers": [
-  // TODO: Add items,
+  // TOD,
+  O: Add items,
 ]
-      {// TODO: Add content;}
-}
-        "@type": "Offer",
-        "category": "AI Solutions",
-        "description": "Enterprise AI solutions, digital transformation, and cloud services",
-        "price": "1500",
-        "priceCurrency": "USD",
-        "priceSpecification": {// TODO: Add content;}
-}
-          "@type": "PriceSpecification",
-          "price": "1500",
-          "priceCurrency": "USD",
+      {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+        "@type": "Offer","
+        "category": "AI Solutions","
+        "description": "Enterprise AI solutions, digital transformation, and cloud services","
+        "price": "1500","
+        "priceCurrency": "USD","
+        "priceSpecification": {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+          "@type": "PriceSpecification","
+          "price": "1500","
+          "priceCurrency": "USD","
           "billingIncrement": "P1M"
         }
       }
-//     ],
-    "serviceArea": {// TODO: Add content;}
-}
-      "@type": "GeoCircle",
-      "geoMidpoint": {// TODO: Add content;}
-}
-        "@type": "GeoCoordinates",
-        "latitude": "39.8283",
+//     ],"
+    "serviceArea": {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+      "@type": "GeoCircle","
+      "geoMidpoint": {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}"
+        "@type": "GeoCoordinates","
+        "latitude": "39.8283","
         "longitude": "-75.5795"
-      },
+      },"
       "geoRadius": "1000000"
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
 
     metaDescription.setAttribute('content', description);
     
-    // Update meta keywords
+    // Update meta keywords;"
     let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
+    if (!metaKeywords) {/* TODO: Fix JSX expression */}
     }
     metaKeywords.setAttribute('content', keywords.join(', '));
     
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
+    // Update canonical URL;
+    if (canonicalUrl) {/* TODO: Fix JSX expression */}
       }
       canonical.setAttribute('href', canonicalUrl);
     }
@@ -142,4 +125,4 @@ const SEOEnhancer: React.FC;
 
 };
 
-export default SEOEnhancer;
+export default SEOEnhancer;"

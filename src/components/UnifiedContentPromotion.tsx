@@ -1,15 +1,13 @@
 import React from 'react';
 
-interface UnifiedContentPromotionProps {
-  // Add props here
+interface UnifiedContentPromotionProps {/* TODO: Fix JSX expression */}
 }
 
-const UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {
-  return (
-    <div className="unifiedcontentpromotion">
+const,
+  UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );
 };
 
-export default UnifiedContentPromotion
+export default UnifiedContentPromotion;

@@ -1,36 +1,25 @@
 /**
- * Google Analytics gtag types
+ * Google Analytics gtag types;
  */
-<<<<<<< HEAD
-interface GtagEvent {
-    // TODO: Add content
-  }
-  event_category?: string
-  event_label?: string
-  value?: number
-  [key: string]: unknown
-}
-type GtagCommand = 'config' | 'set' | 'event' | 'js'
-interface Window {
-    // TODO: Add content
-  }
-  gtag?: ()
-=======
-interface GtagEvent {// TODO: Add content;}
+interface GtagEvent {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   event_category?: string;
   event_label?: string;
   value?: number;
-  [key: string]: unknown;
+  [ke,
+  y: string]: unknown;
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {// TODO: Add content;}
+interface Window {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   gtag?: ();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  command: GtagCommand,
-    targetId: string | Date,
-config?: GtagEvent
-  ) => void
+  comman,
+  d: GtagCommand,
+    targetI,
+  d: string | Date,
+config?: GtagEvent;
+  ) => void;
   dataLayer?: unknown[]
 }

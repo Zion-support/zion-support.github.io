@@ -2,133 +2,154 @@
  * Performance Configuration;
  * Centralized performance monitoring and optimization settings;
  */
-<<<<<<< HEAD
-export const _performanceConfig = {
-    // TODO: Add content
-  }
-=======
-export const _performanceConfig = {// TODO: Add content;}
+export const _performanceConfig = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   // Core Web Vitals thresholds,
-  metrics: {// lcp: {}
-// good: 2500,
-// needsImprovement: 4000;
+  metric,
+  s: {/* TODO: Fix JSX expression */}
+  p: {}
+// goo,
+  d: 2500,
+// needsImprovemen,
+  t: 4000;
     },
-<<<<<<< HEAD
-    fid: {
-    // TODO: Add content
-  }
-=======
-    fid: {// TODO: Add content;}
+    fi,
+  d: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  good: 100,
-      needsImprovement: 300;
+  goo,
+  d: 100,
+      needsImprovemen,
+  t: 300;
     },
-<<<<<<< HEAD
-    cls: {
-    // TODO: Add content
-  }
-=======
-    cls: {// TODO: Add content;}
+    cl,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  good: 0.1,
-      needsImprovement: 0.25;
+  goo,
+  d: 0.1,
+      needsImprovemen,
+  t: 0.25;
     },
-<<<<<<< HEAD
-    fcp: {
-    // TODO: Add content
-  }
-=======
-    fcp: {// TODO: Add content;}
+    fc,
+  p: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  good: 1800,
-      needsImprovement: 3000;
+  goo,
+  d: 1800,
+      needsImprovemen,
+  t: 3000;
     },
-<<<<<<< HEAD
-    ttfb: {
-    // TODO: Add content
-  }
-=======
-    ttfb: {// TODO: Add content;}
+    ttf,
+  b: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  good: 800,
-      needsImprovement: 1800;
+  goo,
+  d: 800,
+      needsImprovemen,
+  t: 1800;
     }
   },
   // Cache strategies,
-  cache: {// static: {}
-// maxAge: 31536000, // 1 year;
-// staleWhileRevalidate: 86400, // 1 day;
+  cach,
+  e: {/* TODO: Fix JSX expression */}
+  c: {}
+// maxAg,
+  e: 31536000, // 1 year;
+// staleWhileRevalidat,
+  e: 86400, // 1 day;
     },
-<<<<<<< HEAD
-    dynamic: {
-    // TODO: Add content
-  }
-=======
-    dynamic: {// TODO: Add content;}
+    dynami,
+  c: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute;
+  maxAg,
+  e: 3600, // 1 hour,
+  staleWhileRevalidat,
+  e: 60, // 1 minute;
     },
-    api: {// maxAge: 300, // 5 minutes;}
-// staleWhileRevalidate: 30, // 30 seconds;
+    ap,
+  i: {/* TODO: Fix JSX expression */}
+  e: 300, // 5 minutes;}
+// staleWhileRevalidat,
+  e: 30, // 30 seconds;
     }
   },
   // Resource hints,
-  preload: [
-  // TODO: Add items,
+  preloa,
+  d: [
+  // TOD,
+  O: Add items,
 ]
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    {/* TODO: Fix JSX expression */}
+  n: 'anonymous' },
 //   ],
-  prefetch: [
-  // TODO: Add items,
+  prefetc,
+  h: [
+  // TOD,
+  O: Add items,
 ]
 //     '/api/health',
 //     '/api/config',
 //   ],
   // Image optimization,
-  images: {// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],}
-// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-// formats: ['image/avif', 'image/webp'],
-// minimumCacheTTL: 60,
-// dangerouslyAllowSVG: false;
+  image,
+  s: {/* TODO: Fix JSX expression */}
+  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],}
+// imageSize,
+  s: [16, 32, 48, 64, 96, 128, 256, 384],
+// format,
+  s: ['image/avif', 'image/webp'],
+// minimumCacheTT,
+  L: 60,
+// dangerouslyAllowSV,
+  G: false;
   },
   // Bundle optimization,
-  bundle: {// minChunkSize: 20000,}
-// maxChunkSize: 244000,
-// splitChunks: {// cacheGroups: {}
-// vendor: {// test: /[\\/]node_modules[\\/]/,}
-// priority: -10,
-// reuseExistingChunk: true;
+  bundl,
+  e: {/* TODO: Fix JSX expression */}
+  e: 20000,}
+// maxChunkSiz,
+  e: 244000,
+// splitChunk,
+  s: {/* TODO: Fix JSX expression */}
+  s: {}
+// vendo,
+  r: {/* TODO: Fix JSX expression */}
+  t: /[\\/]node_modules[\\/]/,}
+// priorit,
+  y: -10,
+// reuseExistingChun,
+  k: true;
         },
-<<<<<<< HEAD
-        default: {
-    // TODO: Add content
-  }
-=======
-        default: {// TODO: Add content;}
+        defaul,
+  t: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true;
+  minChunk,
+  s: 2,
+          priorit,
+  y: -20,
+          reuseExistingChun,
+  k: true;
         }
       }
     }
   },
   // Performance monitoring,
-  monitoring: {// enabled: true,}
-// sampleRate: 1.0, // 100% in production;
-// reportInterval: 30000, // 30 seconds;
-// sendToAnalytics: true,
-// logThreshold: 'needsImprovement'
+  monitorin,
+  g: {/* TODO: Fix JSX expression */}
+  d: true,}
+// sampleRat,
+  e: 1.0, // 100% in production;
+// reportInterva,
+  l: 30000, // 30 seconds;
+// sendToAnalytic,
+  s: true,
+// logThreshol,
+  d: 'needsImprovement'
   }
 }
-export type PerformanceConfig = typeof performanceConfig
-export default performanceConfig
+export type PerformanceConfig = typeof performanceConfig;
+export default performanceConfig;

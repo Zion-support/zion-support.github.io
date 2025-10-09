@@ -3,184 +3,128 @@
  * Advanced Analytics System for Zion Tech Group Website;
  * Provides comprehensive user behavior tracking and insights;
  */
-<<<<<<< HEAD
-interface UserEvent {
-    // TODO: Add content
-  }
-  id: string
-=======
-interface UserEvent {// TODO: Add content;}
+interface UserEvent {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  id: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
-    category: string;,
-    action: string
-  label?: string
+  i,
+  d: string;
+    typ,
+  e: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom';,
+    categor,
+  y: string;,
+    actio,
+  n: string;
+  label?: string;
   value?: number;,
-    timestamp: string;,
-    sessionId: string
+    timestam,
+  p: string;,
+    sessionI,
+  d: string;
   userId?: string;,
-<<<<<<< HEAD
-    url: string
-  metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-}
-interface UserSession {
-    // TODO: Add content
-  }
-  id: string
-    startTime: string
-  endTime?: string
-  duration?: number
-=======
-    url: string;
+    ur,
+  l: string;
   metadata?: Record;
           <string, unknown>;
 }
-interface UserSession {// TODO: Add content;}
+interface UserSession {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  id: string;
-    startTime: string;
+  i,
+  d: string;
+    startTim,
+  e: string;
   endTime?: string;
   duration?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    pageViews: number;,
-    events: UserEvent[]
+    pageView,
+  s: number;,
+    event,
+  s: UserEvent[]
   referrer?: string;,
-    userAgent: string;,
-    device: 'desktop' | 'mobile' | 'tablet';,
-    browser: string;,
-    os: string
-  country?: string
-  city?: string
+    userAgen,
+  t: string;,
+    devic,
+  e: 'desktop' | 'mobile' | 'tablet';,
+    browse,
+  r: string;,
+    o,
+  s: string;
+  country?: string;
+  city?: string;
 }
-<<<<<<< HEAD
-interface AnalyticsConfig {
-    // TODO: Add content
-  }
-  enableTracking: boolean
-    enableHeatmaps: boolean
-=======
-interface AnalyticsConfig {// TODO: Add content;}
+interface AnalyticsConfig {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  enableTracking: boolean;
-    enableHeatmaps: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    enableSessionRecording: boolean;,
-    enableA_BTesting: boolean;,
-    enableConversionTracking: boolean;,
-    enablePerformanceTracking: boolean;,
-    enableErrorTracking: boolean;,
-    enableUserJourneyTracking: boolean
+  enableTrackin,
+  g: boolean;
+    enableHeatmap,
+  s: boolean;
+    enableSessionRecordin,
+  g: boolean;,
+    enableA_BTestin,
+  g: boolean;,
+    enableConversionTrackin,
+  g: boolean;,
+    enablePerformanceTrackin,
+  g: boolean;,
+    enableErrorTrackin,
+  g: boolean;,
+    enableUserJourneyTrackin,
+  g: boolean;
 }
-<<<<<<< HEAD
-class AdvancedAnalytics {
-    // TODO: Add content
-  }
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
-  private eventQueue: UserEvent[] = []
-  private maxQueueSize = 1000
-  private isOnline = true
-  private constructor() {
-    // TODO: Add content
-  }
-    this.config = {
-    // TODO: Add content
-  }
-=======
-class AdvancedAnalytics {// TODO: Add content;}
+class AdvancedAnalytics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private static instance: AdvancedAnalytics;
-  private config: AnalyticsConfig;
-  private currentSession: UserSession;
-  private eventQueue: UserEvent[] = [];
+  private static,
+  instance: AdvancedAnalytics;
+  private,
+  config: AnalyticsConfig;
+  private,
+  currentSession: UserSession;
+  private,
+  eventQueue: UserEvent[] = [];
   private maxQueueSize = 1000;
   private isOnline = true;
-  private constructor() {// TODO: Add content;}
+  private constructor() {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.config = {// TODO: Add content;}
+    this.config = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-<<<<<<< HEAD
-      enableUserJourneyTracking: true
-    }
-    this.currentSession = this.createNewSession()
-    this.initializeTracking()
-  }
-  static getInstance(): AdvancedAnalytics {
-    // TODO: Add content
-  }
-    if (!AdvancedAnalytics.instance) {
-    // TODO: Add content
-  }
-      AdvancedAnalytics.instance = new AdvancedAnalytics()
-=======
-      enableUserJourneyTracking: true;
+  enableTrackin,
+  g: true,
+      enableHeatmap,
+  s: true,
+      enableSessionRecordin,
+  g: false,
+      enableA_BTestin,
+  g: true,
+      enableConversionTrackin,
+  g: true,
+      enablePerformanceTrackin,
+  g: true,
+      enableErrorTrackin,
+  g: true,
+      enableUserJourneyTrackin,
+  g: true;
     };
     this.currentSession = this.createNewSession();
     this.initializeTracking();
   }
-  static getInstance(): AdvancedAnalytics {// TODO: Add content;}
+  static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (!AdvancedAnalytics.instance) {// TODO: Add content;}
+    if (!AdvancedAnalytics.instance) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       AdvancedAnalytics.instance = new AdvancedAnalytics();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return AdvancedAnalytics.instance
+    return AdvancedAnalytics.instance;
   }
   /**
    * Initialize comprehensive analytics tracking;
    */
-<<<<<<< HEAD
-  private initializeTracking(): void {
-    // TODO: Add content
-  }
-    if (typeof window === 'undefined' || !this.config.enableTracking) return
-    // Track page views
-    this.trackPageView()
-    // Track clicks
-    this.trackClicks()
-    // Track scrolls
-    this.trackScrolls()
-    // Track form submissions
-    this.trackFormSubmissions()
-    // Track downloads
-    this.trackDownloads()
-    // Track performance
-    if (this.config.enablePerformanceTracking) {
-    // TODO: Add content
-  }
-      this.trackPerformance()
-    }
-    // Track user journey
-    if (this.config.enableUserJourneyTracking) {
-    // TODO: Add content
-  }
-      this.trackUserJourney()
-    }
-    // Setup network monitoring
-    this.setupNetworkMonitoring()
-=======
-  private initializeTracking(): void {// TODO: Add content;}
+  private initializeTracking(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (typeof window === 'undefined' || !this.config.enableTracking) return;
     // Track page views;
@@ -194,80 +138,84 @@ class AdvancedAnalytics {// TODO: Add content;}
     // Track downloads;
     this.trackDownloads();
     // Track performance;
-    if (this.config.enablePerformanceTracking) {// TODO: Add content;}
+    if (this.config.enablePerformanceTracking) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.trackPerformance();
     }
     // Track user journey;
-    if (this.config.enableUserJourneyTracking) {// TODO: Add content;}
+    if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.trackUserJourney();
     }
     // Setup network monitoring;
     this.setupNetworkMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Create new user session;
    */
-<<<<<<< HEAD
-  private createNewSession(): UserSession {
-    // TODO: Add content
-  }
-    return {
-    // TODO: Add content
-  }
-=======
-  private createNewSession(): UserSession {// TODO: Add content;}
+  private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    return {// TODO: Add content;}
+    return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
-      browser: this.detectBrowser(),
-      os: this.detectOS(),
-<<<<<<< HEAD
-      referrer: document.referrer
-    }
-=======
-      referrer: document.referrer;
+  i,
+  d: this.generateSessionId(),
+      startTim,
+  e: new Date().toISOString(),
+      pageView,
+  s: 0,
+      event,
+  s: [],
+      userAgen,
+  t: navigator.userAgent,
+      devic,
+  e: this.detectDevice(),
+      browse,
+  r: this.detectBrowser(),
+      o,
+  s: this.detectOS(),
+      referre,
+  r: document.referrer;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Track page views;
    */
-  trackPageView(url?: string, title?: string): void {id: this.generateEventId(),}
-      type: 'page_view',
-      category: 'navigation',
-      action: 'page_view',
-      label: title || document.title,
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      userId: this.getUserId(),
-      url: url || window.location.href,
-<<<<<<< HEAD
-      metadata: {
-    // TODO: Add content
-  }
-  referrer: document.referrer,
-        viewport: {
-    // TODO: Add content
-  }
-=======
-      metadata: {// TODO: Add content;}
+  trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
+  d: this.generateEventId(),}
+      typ,
+  e: 'page_view',
+      categor,
+  y: 'navigation',
+      actio,
+  n: 'page_view',
+      labe,
+  l: title || document.title,
+      timestam,
+  p: new Date().toISOString(),
+      sessionI,
+  d: this.currentSession.id,
+      userI,
+  d: this.getUserId(),
+      ur,
+  l: url || window.location.href,
+      metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  referrer: document.referrer,
-        viewport: {// TODO: Add content;}
+  referre,
+  r: document.referrer,
+        viewpor,
+  t: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  width: window.innerWidth,
-          height: window.innerHeight;
+  widt,
+  h: window.innerWidth,
+          heigh,
+  t: window.innerHeight;
         }
       }
     }
@@ -277,51 +225,48 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track clicks;
    */
-<<<<<<< HEAD
-  private trackClicks(): void {
-    // TODO: Add content
-  }
-    document.addEventListener('click', event => {
-      const element = this.getElementInfo(target)
-      const clickEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-  private trackClicks(): void {// TODO: Add content;}
+  private trackClicks(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     document.addEventListener('click', event => {const element = this.getElementInfo(target);}
-      const clickEvent: UserEvent = {// TODO: Add content;}
+      const,
+  clickEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-        type: 'click',
-        category: element.category,
-        action: 'click',
-        label: element.label,
-        timestamp: new Date().toISOString(),
-        sessionId: this.currentSession.id,
-        userId: this.getUserId(),
-        url: window.location.href,
-<<<<<<< HEAD
-        metadata: {
-    // TODO: Add content
-  }
-=======
-        metadata: {// TODO: Add content;}
+  i,
+  d: this.generateEventId(),
+        typ,
+  e: 'click',
+        categor,
+  y: element.category,
+        actio,
+  n: 'click',
+        labe,
+  l: element.label,
+        timestam,
+  p: new Date().toISOString(),
+        sessionI,
+  d: this.currentSession.id,
+        userI,
+  d: this.getUserId(),
+        ur,
+  l: window.location.href,
+        metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  element: element.tagName,
-          id: element.id,
-          className: element.className,
-          text: element.text?.substring(0, 100),
-<<<<<<< HEAD
-          position: {
-    // TODO: Add content
-  }
-=======
-          position: {// TODO: Add content;}
+  elemen,
+  t: element.tagName,
+          i,
+  d: element.id,
+          classNam,
+  e: element.className,
+          tex,
+  t: element.text?.substring(0, 100),
+          positio,
+  n: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   x: event.clientX,
             y: event.clientY;
           }
@@ -334,54 +279,50 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track scrolls;
    */
-<<<<<<< HEAD
-  private trackScrolls(): void {
-    // TODO: Add content
-  }
-    let scrollTimeout: NodeJS.Timeout
-    window.addEventListener('scroll', () => {
-    // TODO: Add content
-  }
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {
-    // TODO: Add content
-  }
-        const scrollEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-  private trackScrolls(): void {// TODO: Add content;}
+  private trackScrolls(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    let scrollTimeout: NodeJS.Timeout;
-    window.addEventListener('scroll', () => {// TODO: Add content;}
+    let,
+  scrollTimeout: NodeJS.Timeout;
+    window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {// TODO: Add content;}
+      scrollTimeout = setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const scrollEvent: UserEvent = {// TODO: Add content;}
+        const,
+  scrollEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-          type: 'scroll',
-          category: 'engagement',
-          action: 'scroll',
-          value: Math.round()
+  i,
+  d: this.generateEventId(),
+          typ,
+  e: 'scroll',
+          categor,
+  y: 'engagement',
+          actio,
+  n: 'scroll',
+          valu,
+  e: Math.round()
 //             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 //           ),
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-<<<<<<< HEAD
-          metadata: {
-    // TODO: Add content
-  }
-=======
-          metadata: {// TODO: Add content;}
+          timestam,
+  p: new Date().toISOString(),
+          sessionI,
+  d: this.currentSession.id,
+          userI,
+  d: this.getUserId(),
+          ur,
+  l: window.location.href,
+          metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  scrollY: window.scrollY,
-            scrollPercentage: Math.round()
+  scroll,
+  Y: window.scrollY,
+            scrollPercentag,
+  e: Math.round()
 //               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
 //             )
           }
@@ -394,52 +335,51 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track form submissions;
    */
-<<<<<<< HEAD
-  private trackFormSubmissions(): void {
-    // TODO: Add content
-  }
-    document.addEventListener('submit', event => {
-    // TODO: Add content
-  }
-      const form = event.target as HTMLFormElement
-      const formData = new FormData(form)
-      const formFields = Array.from(formData.keys())
-      const submitEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-  private trackFormSubmissions(): void {// TODO: Add content;}
+  private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    document.addEventListener('submit', event => {// TODO: Add content;}
+    document.addEventListener('submit', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      const form = event.target as HTMLFormElement;
+      const form = event.target as HTMLFormElement;)
       const formData = new FormData(form);
       const formFields = Array.from(formData.keys());
-      const submitEvent: UserEvent = {// TODO: Add content;}
+      const,
+  submitEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-        type: 'form_submit',
-        category: 'conversion',
-        action: 'form_submit',
-        label: form.id || form.className || 'unknown_form',
-        timestamp: new Date().toISOString(),
-        sessionId: this.currentSession.id,
-        userId: this.getUserId(),
-        url: window.location.href,
-<<<<<<< HEAD
-        metadata: {
-    // TODO: Add content
-  }
-=======
-        metadata: {// TODO: Add content;}
+  i,
+  d: this.generateEventId(),
+        typ,
+  e: 'form_submit',
+        categor,
+  y: 'conversion',
+        actio,
+  n: 'form_submit',
+        labe,
+  l: form.id || form.className || 'unknown_form',
+        timestam,
+  p: new Date().toISOString(),
+        sessionI,
+  d: this.currentSession.id,
+        userI,
+  d: this.getUserId(),
+        ur,
+  l: window.location.href,
+        metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  formId: form.id,
-          formClass: form.className,
-          formAction: form.action,
-          formMethod: form.method,
-          fields: formFields;
+  formI,
+  d: form.id,
+          formClas,
+  s: form.className,
+          formActio,
+  n: form.action,
+          formMetho,
+  d: form.method,
+          field,
+  s: formFields;
         }
       }
       this.trackEvent(submitEvent)
@@ -449,52 +389,47 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track downloads;
    */
-<<<<<<< HEAD
-  private trackDownloads(): void {
-    // TODO: Add content
-  }
-    document.addEventListener('click', event => {
-    // TODO: Add content
-  }
-      const target = event.target as HTMLElement
-      const link = target.closest('a')
-      if (link && this.isDownloadLink(link)) {
-    // TODO: Add content
-  }
-        const downloadEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-  private trackDownloads(): void {// TODO: Add content;}
+  private trackDownloads(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    document.addEventListener('click', event => {// TODO: Add content;}
+    document.addEventListener('click', event => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      const target = event.target as HTMLElement;
+      const target = event.target as HTMLElement;)
       const link = target.closest('a');
-      if (link && this.isDownloadLink(link)) {// TODO: Add content;}
+      if (link && this.isDownloadLink(link)) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const downloadEvent: UserEvent = {// TODO: Add content;}
+        const,
+  downloadEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-          type: 'download',
-          category: 'conversion',
-          action: 'download',
-          label: link.href,
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-<<<<<<< HEAD
-          metadata: {
-    // TODO: Add content
-  }
-=======
-          metadata: {// TODO: Add content;}
+  i,
+  d: this.generateEventId(),
+          typ,
+  e: 'download',
+          categor,
+  y: 'conversion',
+          actio,
+  n: 'download',
+          labe,
+  l: link.href,
+          timestam,
+  p: new Date().toISOString(),
+          sessionI,
+  d: this.currentSession.id,
+          userI,
+  d: this.getUserId(),
+          ur,
+  l: window.location.href,
+          metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100)
+  downloadUr,
+  l: link.href,
+            downloadTex,
+  t: link.textContent?.substring(0, 100)
           }
         }
         this.trackEvent(downloadEvent)
@@ -505,110 +440,99 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track performance metrics;
    */
-<<<<<<< HEAD
-  private trackPerformance(): void {
-    // TODO: Add content
-  }
-    if ('PerformanceObserver' in window) {
-    // TODO: Add content
-  }
-      // Track Core Web Vitals
-      new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-        for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-          if (entry.entryType === 'paint') {
-    // TODO: Add content
-  }
-            const paintEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-  private trackPerformance(): void {// TODO: Add content;}
+  private trackPerformance(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if ('PerformanceObserver' in window) {// TODO: Add content;}
+    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Track Core Web Vitals;
-      new PerformanceObserver(list => {// TODO: Add content;}
+      new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+        for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        for (const entry of list.getEntries()) {// TODO: Add content;}
+          if (entry.entryType === 'paint') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          if (entry.entryType === 'paint') {// TODO: Add content;}
-}
-            const paintEvent: UserEvent = {// TODO: Add content;}
+            const,
+  paintEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-              type: 'custom',
-              category: 'performance',
-              action: entry.name,
-              value: entry.startTime,
-              timestamp: new Date().toISOString(),
-              sessionId: this.currentSession.id,
-              userId: this.getUserId(),
-              url: window.location.href,
-<<<<<<< HEAD
-              metadata: {
-    // TODO: Add content
-  }
-=======
-              metadata: {// TODO: Add content;}
+  i,
+  d: this.generateEventId(),
+              typ,
+  e: 'custom',
+              categor,
+  y: 'performance',
+              actio,
+  n: entry.name,
+              valu,
+  e: entry.startTime,
+              timestam,
+  p: new Date().toISOString(),
+              sessionI,
+  d: this.currentSession.id,
+              userI,
+  d: this.getUserId(),
+              ur,
+  l: window.location.href,
+              metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  metric: entry.name,
-                value: entry.startTime;
+  metri,
+  c: entry.name,
+                valu,
+  e: entry.startTime;
               }
             }
             this.trackEvent(paintEvent)
           }
         }
-<<<<<<< HEAD
-      }).observe({ entryTypes: ['paint'] }
-  )
-      // Track navigation timing
-      window.addEventListener('load', () => {
-    // TODO: Add content
-  }
-        const navigation = performance.getEntriesByType()
-//           'navigation'
-        )[0] as PerformanceNavigationTiming
-        const performanceEvent: UserEvent = {
-    // TODO: Add content
-  }
-=======
-      }).observe({ entryTypes: ['paint'] });
+      }).observe({/* TODO: Fix JSX expression */})
+  s: ['paint'] });
       // Track navigation timing;
-      window.addEventListener('load', () => {// TODO: Add content;}
+      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         const navigation = performance.getEntriesByType()
 //           'navigation'
         )[0] as PerformanceNavigationTiming;
-        const performanceEvent: UserEvent = {// TODO: Add content;}
+        const,
+  performanceEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  id: this.generateEventId(),
-          type: 'custom',
-          category: 'performance',
-          action: 'page_load',
-          value: navigation.loadEventEnd - navigation.loadEventStart,
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-<<<<<<< HEAD
-          metadata: {
-    // TODO: Add content
-  }
-=======
-          metadata: {// TODO: Add content;}
+  i,
+  d: this.generateEventId(),
+          typ,
+  e: 'custom',
+          categor,
+  y: 'performance',
+          actio,
+  n: 'page_load',
+          valu,
+  e: navigation.loadEventEnd - navigation.loadEventStart,
+          timestam,
+  p: new Date().toISOString(),
+          sessionI,
+  d: this.currentSession.id,
+          userI,
+  d: this.getUserId(),
+          ur,
+  l: window.location.href,
+          metadat,
+  a: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-            domContentLoaded:
+  loadTim,
+  e: navigation.loadEventEnd - navigation.loadEventStart,
+            domContentLoade,
+  d:
 //               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByte: navigation.responseStart - navigation.requestStart;
+            firstByt,
+  e: navigation.responseStart - navigation.requestStart;
           }
         }
         this.trackEvent(performanceEvent)
@@ -619,254 +543,132 @@ class AdvancedAnalytics {// TODO: Add content;}
   /**
    * Track user journey;
    */
-<<<<<<< HEAD
-  private trackUserJourney(): void {
-// Track page transitions
-    const observer = new MutationObserver(() => {
-    // TODO: Add content
-  }
-      if (window.location.href !== lastUrl) {
-    // TODO: Add content
-  }
-        this.trackPageView()
-        lastUrl = window.location.href
-      }
-    }
-  )
-    observer.observe(document.body, {
-    // TODO: Add content
-  }
-  childList: true,
-      subtree: true
-    }
-  )
-=======
   private trackUserJourney(): void {// Track page transitions;}
-    const observer = new MutationObserver(() => {// TODO: Add content;}
+    const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      if (window.location.href !== lastUrl) {// TODO: Add content;}
+      if (window.location.href !== lastUrl) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         this.trackPageView();
         lastUrl = window.location.href;
       }
     });
-    observer.observe(document.body, {// TODO: Add content;}
+    observer.observe(document.body, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  childList: true,
-      subtree: true;
+  childLis,
+  t: true,
+      subtre,
+  e: true;)
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup network monitoring;
    */
-<<<<<<< HEAD
-  private setupNetworkMonitoring(): void {
-    // TODO: Add content
-  }
-    window.addEventListener('online', () => {
-    // TODO: Add content
-  }
-      this.isOnline = true
-      this.flushEventQueue()
-    }
-  )
-    window.addEventListener('offline', () => {
-    // TODO: Add content
-  }
-      this.isOnline = false
-    }
-  )
-=======
-  private setupNetworkMonitoring(): void {// TODO: Add content;}
+  private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    window.addEventListener('online', () => {// TODO: Add content;}
+    window.addEventListener('online', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.isOnline = true;
       this.flushEventQueue();
     });
-    window.addEventListener('offline', () => {// TODO: Add content;}
+    window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.isOnline = false;
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Track custom event;
    */
-<<<<<<< HEAD
-  trackEvent(event: UserEvent): void {
-    // TODO: Add content
-  }
-    this.currentSession.events.push(event)
-    this.eventQueue.push(event)
-    // Keep queue size manageable
-    if (this.eventQueue.length > this.maxQueueSize) {
-    // TODO: Add content
-  }
-      this.eventQueue.shift()
-    }
-    // Send to analytics service
-    if (this.isOnline) {
-    // TODO: Add content
-  }
-      this.sendEvent(event)
-=======
-  trackEvent(event: UserEvent): void {// TODO: Add content;}
+  trackEvent(even,)
+  t: UserEvent): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     this.currentSession.events.push(event);
     this.eventQueue.push(event);
     // Keep queue size manageable;
-    if (this.eventQueue.length > this.maxQueueSize) {// TODO: Add content;}
+    if (this.eventQueue.length > this.maxQueueSize) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.eventQueue.shift();
     }
     // Send to analytics service;
-    if (this.isOnline) {// TODO: Add content;}
+    if (this.isOnline) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.sendEvent(event);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Send event to analytics service;
    */
-<<<<<<< HEAD
-  private async sendEvent(event: UserEvent): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      await fetch('/api/analytics', {
-    // TODO: Add content
-  }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
-  }
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(event)
-      }
-  )
-    } catch (error) {
-    // TODO: Add content
-  }
-=======
-  private async sendEvent(event: UserEvent): Promise;
-          <void> {// TODO: Add content;}
+  private async sendEvent(even,)
+  t: UserEvent): Promise;
+          <void> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    try {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      await fetch('/api/analytics', {// TODO: Add content;}
+      await fetch('/api/analytics', {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  method: 'POST',
-        headers: {// TODO: Add content;}
+  metho,
+  d: 'POST',
+        header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(event)
+        bod,)
+  y: JSON.stringify(event)
       });
-    } catch (error) {// TODO: Add content;}
+    } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Flush event queue when back online;
    */
-<<<<<<< HEAD
-  private async flushEventQueue(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
-  }
-    if (!this.isOnline) return
-    const eventsToSend = [...this.eventQueue]
-    this.eventQueue = []
-    for (const event of eventsToSend) {
-    // TODO: Add content
-  }
-      await this.sendEvent(event)
-=======
   private async flushEventQueue(): Promise;
-          <void> {// TODO: Add content;}
+          <void> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     if (!this.isOnline) return;
     const eventsToSend = [...this.eventQueue];
     this.eventQueue = [];
-    for (const event of eventsToSend) {// TODO: Add content;}
+    for (const event of eventsToSend) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       await this.sendEvent(event);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Get element information for tracking;
    */
-<<<<<<< HEAD
-  private getElementInfo(element: HTMLElement): {
-    // TODO: Add content
-  }
-=======
-  private getElementInfo(element: HTMLElement): {// TODO: Add content;}
+  private getElementInfo(elemen,)
+  t: HTMLElement): {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  category: string;,
-    label: string;,
-    tagName: string;,
-    id: string;,
-<<<<<<< HEAD
-    className: string
-    text?: string
-  } {
-    // TODO: Add content
-  }
-    const tagName = element.tagName.toLowerCase()
-    const id = element.id || ''
-    const className = element.className || ''
-    const text = element.textContent?.trim()
-    // Determine category based on element type
-let category = 'interaction'
-    if (tagName === 'button' || element.closest('button')) {
-    // TODO: Add content
-  }
-      category = 'button'
-    } else if (tagName === 'a' || element.closest('a')) {
-    // TODO: Add content
-  }
-      category = 'link'
-    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {
-    // TODO: Add content
-  }
-      category = 'form'
-    }
-    // Create label
-let label = id || className || text?.substring(0, 50) || tagName
-    return {
-    // TODO: Add content
-  }
-=======
-    className: string;
+  categor,
+  y: string;,
+    labe,
+  l: string;,
+    tagNam,
+  e: string;,
+    i,
+  d: string;,
+    classNam,
+  e: string;
     text?: string;
-  } {// TODO: Add content;}
+  } {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const tagName = element.tagName.toLowerCase();
     const id = element.id || '';
@@ -874,55 +676,40 @@ let label = id || className || text?.substring(0, 50) || tagName
     const text = element.textContent?.trim();
     // Determine category based on element type;
 let category = 'interaction';
-    if (tagName === 'button' || element.closest('button')) {// TODO: Add content;}
+    if (tagName === 'button' || element.closest('button')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       category = 'button';
-    } else if (tagName === 'a' || element.closest('a')) {// TODO: Add content;}
+    } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       category = 'link';
-    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {// TODO: Add content;}
+    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       category = 'form';
     }
     // Create label;
 let label = id || className || text?.substring(0, 50) || tagName;
-    return {// TODO: Add content;}
+    return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       category,
 //       label,
 //       tagName,
 //       id,
 //       className,
-<<<<<<< HEAD
-//       text
-    }
-=======
 //       text;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if link is a download;
    */
-<<<<<<< HEAD
-  private isDownloadLink(link: HTMLAnchorElement): boolean {
-    // TODO: Add content
-  }
-=======
-  private isDownloadLink(link: HTMLAnchorElement): boolean {// TODO: Add content;}
+  private isDownloadLink(lin,)
+  k: HTMLAnchorElement): boolean {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+    return (<div>Coming Soon</div>)
   )
       link.download !== '' ||
 // !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
@@ -932,48 +719,20 @@ let label = id || className || text?.substring(0, 50) || tagName;
   /**
    * Detect device type;
    */
-<<<<<<< HEAD
-  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
-    // TODO: Add content
-  }
-    const width = window.innerWidth
-    if (width 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 768) return 'mobile'
-    if (width < 1024) return 'tablet'
-    return 'desktop'
-=======
-  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {// TODO: Add content;}
+  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const width = window.innerWidth;
-    if (width;
+    if (width;)
           < 768) return 'mobile';
     if (width < 1024) return 'tablet';
     return 'desktop';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Detect browser;
    */
-<<<<<<< HEAD
-  private detectBrowser(): string {
-    // TODO: Add content
-  }
-    const userAgent = navigator.userAgent
-    if (userAgent.includes('Chrome')) return 'Chrome'
-    if (userAgent.includes('Firefox')) return 'Firefox'
-    if (userAgent.includes('Safari')) return 'Safari'
-    if (userAgent.includes('Edge')) return 'Edge'
-    return 'Unknown'
-=======
-  private detectBrowser(): string {// TODO: Add content;}
+  private detectBrowser(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const userAgent = navigator.userAgent;
     if (userAgent.includes('Chrome')) return 'Chrome';
@@ -981,24 +740,12 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Safari')) return 'Safari';
     if (userAgent.includes('Edge')) return 'Edge';
     return 'Unknown';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Detect operating system;
    */
-<<<<<<< HEAD
-  private detectOS(): string {
-    // TODO: Add content
-  }
-    const userAgent = navigator.userAgent
-    if (userAgent.includes('Windows')) return 'Windows'
-    if (userAgent.includes('Mac')) return 'macOS'
-    if (userAgent.includes('Linux')) return 'Linux'
-    if (userAgent.includes('Android')) return 'Android'
-    if (userAgent.includes('iOS')) return 'iOS'
-    return 'Unknown'
-=======
-  private detectOS(): string {// TODO: Add content;}
+  private detectOS(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const userAgent = navigator.userAgent;
     if (userAgent.includes('Windows')) return 'Windows';
@@ -1007,290 +754,172 @@ let label = id || className || text?.substring(0, 50) || tagName;
     if (userAgent.includes('Android')) return 'Android';
     if (userAgent.includes('iOS')) return 'iOS';
     return 'Unknown';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate session ID;
    */
-<<<<<<< HEAD
-  private generateSessionId(): string {
-    // TODO: Add content
-  }
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
-  private generateSessionId(): string {// TODO: Add content;}
+  private generateSessionId(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate event ID;
    */
-<<<<<<< HEAD
-  private generateEventId(): string {
-    // TODO: Add content
-  }
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
-  private generateEventId(): string {// TODO: Add content;}
-}
+  private generateEventId(): string {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
     return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get user ID from storage or generate one;
    */
-<<<<<<< HEAD
-  private getUserId(): string | undefined {
-    // TODO: Add content
-  }
-    let userId = localStorage.getItem('analytics_user_id')
-    if (!userId) {
-    // TODO: Add content
-  }
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      localStorage.setItem('analytics_user_id', userId)
-=======
-  private getUserId(): string | undefined {// TODO: Add content;}
+  private getUserId(): string | undefined {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     let userId = localStorage.getItem('analytics_user_id');
-    if (!userId) {// TODO: Add content;}
-}
+    if (!userId) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
       userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       localStorage.setItem('analytics_user_id', userId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
-    return userId
+    return userId;
   }
   /**
    * Get analytics summary;
    */
-<<<<<<< HEAD
-  getAnalyticsSummary(): {
-    // TODO: Add content
-  }
-  session: UserSession;,
-    totalEvents: number;,
-    eventsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number>
-    eventsByCategory: Record<string, number>
-    topPages: Array<{ url: string; views: number }>
-    conversionRate: number
-  } {
-    // TODO: Add content
-  }
-    const events = this.currentSession.events
-    const totalEvents = events.length
-    const eventsByType = events.reduce()
-      (acc, event) => {
-    // TODO: Add content
-  }
-        acc[event.type] = (acc[event.type] || 0) + 1
-        return acc
-=======
-  getAnalyticsSummary(): {// TODO: Add content;}
+  getAnalyticsSummary(): {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  session: UserSession;,
-    totalEvents: number;,
-    eventsByType: Record;
+  sessio,
+  n: UserSession;,
+    totalEvent,
+  s: number;,
+    eventsByTyp,
+  e: Record;
           <string, number>;
-    eventsByCategory: Record<string, number>;
-    topPages: Array<{ url: string; views: number }>;
-    conversionRate: number;
-  } {// TODO: Add content;}
+    eventsByCategor,
+  y: Record<string, number>;
+    topPage,
+  s: Array<{/* TODO: Fix JSX expression */}
+  s: number }>;
+    conversionRat,
+  e: number;
+  } {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const events = this.currentSession.events;
     const totalEvents = events.length;
     const eventsByType = events.reduce()
-      (acc, event) => {// TODO: Add content;}
+      (acc, event) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         acc[event.type] = (acc[event.type] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
-          <string, number>
+          <string, number></string>
     )
     const eventsByCategory = events.reduce()
-<<<<<<< HEAD
-      (acc, event) => {
-    // TODO: Add content
-  }
-        acc[event.category] = (acc[event.category] || 0) + 1
-        return acc
-=======
-      (acc, event) => {// TODO: Add content;}
+      (acc, event) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         acc[event.category] = (acc[event.category] || 0) + 1;
         return acc;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
       {} as Record;
-          <string, number>
-<<<<<<< HEAD
-    )
-    const pageViews = events.filter(e => e.type === 'page_view')
-    const topPages = pageViews
-// .reduce()
-        (acc, event) => {
-    // TODO: Add content
-  }
-          const existing = acc.find(p => p.url === event.url)
-          if (existing) {
-    // TODO: Add content
-  }
-            existing.views++
-          } else {
-    // TODO: Add content
-  }
-            acc.push({ url: event.url, views: 1 }
-  )
-=======
+          <string, number></string>
     );
     const pageViews = events.filter(e => e.type === 'page_view');
     const topPages = pageViews;
 // .reduce()
-        (acc, event) => {// TODO: Add content;}
+        (acc, event) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           const existing = acc.find(p => p.url === event.url);
-          if (existing) {// TODO: Add content;}
+          if (existing) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
             existing.views++;
-          } else {// TODO: Add content;}
+          } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-            acc.push({ url: event.url, views: 1 });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+            acc.push({/* TODO: Fix JSX expression */})
+  s: 1 });
           }
-          return acc
+          return acc;
         },
         [] as Array;
-          <{ url: string; views: number }>
+          <{/* TODO: Fix JSX expression */}
+  s: number }>
 // )
-<<<<<<< HEAD
-      .sort((a, b) => b.views - a.views)
-    const conversions = events.filter(e => e.category === 'conversion').length
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0
-    return {
-    // TODO: Add content
-  }
-=======
       .sort((a, b) => b.views - a.views);
     const conversions = events.filter(e => e.category === 'conversion').length;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
-    return {// TODO: Add content;}
+    return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  session: this.currentSession,
+  sessio,
+  n: this.currentSession,
 //       totalEvents,
 //       eventsByType,
 //       eventsByCategory,
-      topPages: topPages.slice(0, 10),
-<<<<<<< HEAD
-//       conversionRate
-    }
-=======
+      topPage,
+  s: topPages.slice(0, 10),
 //       conversionRate;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Send session data to analytics service;
    */
-<<<<<<< HEAD
-  private async sendSessionData(session: UserSession): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      await fetch('/api/analytics/session', {
-    // TODO: Add content
-  }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
-  }
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(session)
-      }
-  )
-    } catch (error) {
-    // TODO: Add content
-  }
-=======
-  private async sendSessionData(session: UserSession): Promise;
-          <void> {// TODO: Add content;}
+  private async sendSessionData(sessio,)
+  n: UserSession): Promise;
+          <void> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    try {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      await fetch('/api/analytics/session', {// TODO: Add content;}
+      await fetch('/api/analytics/session', {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  method: 'POST',
-        headers: {// TODO: Add content;}
+  metho,
+  d: 'POST',
+        header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(session)
+        bod,)
+  y: JSON.stringify(session)
       });
-    } catch (error) {// TODO: Add content;}
+    } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * End current session;
    */
-<<<<<<< HEAD
-  endSession(): void {
-    // TODO: Add content
-  }
-    this.currentSession.endTime = new Date().toISOString()
-    this.currentSession.duration =
-//       new Date(this.currentSession.endTime).getTime() -
-      new Date(this.currentSession.startTime).getTime()
-    // Send session data
-    if (this.isOnline) {
-    // TODO: Add content
-  }
-      this.sendSessionData(this.currentSession)
-    }
-    // Create new session
-    this.currentSession = this.createNewSession()
-=======
-  endSession(): void {// TODO: Add content;}
+  endSession(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     this.currentSession.endTime = new Date().toISOString();
     this.currentSession.duration =
 //       new Date(this.currentSession.endTime).getTime() -
       new Date(this.currentSession.startTime).getTime();
     // Send session data;
-    if (this.isOnline) {// TODO: Add content;}
+    if (this.isOnline) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       this.sendSessionData(this.currentSession);
     }
     // Create new session;
     this.currentSession = this.createNewSession();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const advancedAnalytics = AdvancedAnalytics.getInstance()
-export default advancedAnalytics
+export default advancedAnalytics;`

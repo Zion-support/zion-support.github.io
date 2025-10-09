@@ -2,56 +2,39 @@ const { withSentry } = require('./withSentry.cjs');
 const fs = require('fs');
 const path = require('path');
 
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
+async function handler(req, res) {/* TODO: Fix JSX expression */}
+  r: 'Method not allowed' });
   }
 
-  const {
-    name,
-    email,
-    phone: _phone,
-    company: _company,
-    location,
-    details: _details,
+  const {/* TODO: Fix JSX expression */}
   } = req.body || {};
 
-  if (!name || !email) {
-    return res.status(400).json({ error: 'Name and email are required' });
+  if (!name || !email) {/* TODO: Fix JSX expression */}
+  r: 'Name and email are required' });
   }
 
   const file = path.join(process.cwd(), 'data', 'onsite-requests.json');
   const dir = path.dirname(file);
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(dir)) {/* TODO: Fix JSX expression */}
+  e: true });
   }
 
   let existing = [];
 
-  try {
-    existing = JSON.parse(fs.readFileSync(file, 'utf8'));
-    if (!Array.isArray(existing)) existing = [];
-  } catch {
-    // File doesn't exist or is invalid, use empty array
+  try {/* TODO: Fix JSX expression */}
+  } catch {/* TODO: Fix JSX expression */}
   }
 
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    phone: _phone || '',
-    company: _company || '',
-    location: location || '',
-    details: _details || '',
-    timestamp: new Date().toISOString(),
+  const newRequest = {/* TODO: Fix JSX expression */}
   };
 
   existing.push(newRequest);
 
   fs.writeFileSync(file, JSON.stringify(existing, null, 2));
   res.statusCode = 200;
-  res.json({ success: true });
+  res.json({/* TODO: Fix JSX expression */})
+  s: true });
 }
 
 module.exports = withSentry(handler);

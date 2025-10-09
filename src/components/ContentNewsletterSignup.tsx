@@ -1,12 +1,10 @@
 import React from 'react';
 
-interface ContentNewsletterSignupProps {
-  // Add props here
+interface ContentNewsletterSignupProps {/* TODO: Fix JSX expression */}
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {
-  return (
-    <div className="contentnewslettersignup">
+const,
+  ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

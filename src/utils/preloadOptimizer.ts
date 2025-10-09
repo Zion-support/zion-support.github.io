@@ -2,35 +2,25 @@
  * Preload Optimizer;
  * Optimizes resource loading for better performance;
  */
-<<<<<<< HEAD
-export const _preloadCriticalResources = () => {
-    // TODO: Add content
-  }
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
-const fontPreloads = [
-  // TODO: Add items
-]
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-  ]
-  fontPreloads.forEach(href => {
-    // TODO: Add content
-  }
-=======
-export const _preloadCriticalResources = () => {// TODO: Add content;}
+export const _preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
 const fontPreloads = [
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
+    'http,
+  s://fonts.googleapis.com/css2?family=Inte,
+  r:wght@400;500;600;700&display=swap',
+    'http,
+  s://fonts.googleapis.com/css2?family=JetBrains+Mon,
+  o:wght@400;500;600&display=swap'
   ];
-  fontPreloads.forEach(href => {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  fontPreloads.forEach(href => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'style'
@@ -39,28 +29,18 @@ const fontPreloads = [
 //     document.head.appendChild(link)
   }
   )
-  // Preload critical images
+  // Preload critical images;
 const criticalImages = [
-<<<<<<< HEAD
-  // TODO: Add items
-]
-//     '/images/hero-bg.jpg',
-//     '/images/logo.png',
-//     '/images/favicon.ico'
-  ]
-  criticalImages.forEach(src => {
-    // TODO: Add content
-  }
-=======
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
 //     '/images/hero-bg.jpg',
 //     '/images/logo.png',
 //     '/images/favicon.ico'
   ];
-  criticalImages.forEach(src => {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  criticalImages.forEach(src => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
@@ -69,41 +49,26 @@ const criticalImages = [
   }
   )
 }
-<<<<<<< HEAD
-export const preloadRoute = (route: string) => {
-    // TODO: Add content
-  }
-  if (typeof window === 'undefined') return
-  // Preload route-specific resources
-const routeResources = {
-    // TODO: Add content
-  }
-=======
-export const preloadRoute = (route: string) => {// TODO: Add content;}
+export const preloadRoute = (rout,)
+  e: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
-const routeResources = {// TODO: Add content;}
+const routeResources = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
     '/services': ['/api/services', '/images/services-hero.jpg'],
     '/contact': ['/api/contact', '/images/contact-hero.jpg']
   }
   const resources = routeResources[route as keyof typeof routeResources]
-<<<<<<< HEAD
-  if (resources) {
-    // TODO: Add content
-  }
-    resources.forEach(resource => {
-    // TODO: Add content
-  }
-=======
-  if (resources) {// TODO: Add content;}
+  if (resources) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    resources.forEach(resource => {// TODO: Add content;}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+    resources.forEach(resource => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
       const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource;
@@ -112,59 +77,34 @@ const routeResources = {// TODO: Add content;}
   )
   }
 }
-<<<<<<< HEAD
-export const optimizeImages = () => {
-    // TODO: Add content
-  }
-  if (typeof window === 'undefined') return
-  // Add loading="lazy" to images below the fold
-const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {
-    // TODO: Add content
-  }
-//     img.setAttribute('loading', 'lazy')
-  }
-  )
-  // Add intersection observer for lazy loading
-  if ('IntersectionObserver' in window) {
-    // TODO: Add content
-  }
-    const imageObserver = new IntersectionObserver((entries) => {
-    // TODO: Add content
-  }
-      entries.forEach(entry => {
-    // TODO: Add content
-  }
-        if (entry.isIntersecting) {
-    // TODO: Add content
-  }
-          const img = entry.target as HTMLImageElement
-          if (img.dataset['src']) {
-    // TODO: Add content
-  }
-=======
-export const optimizeImages = () => {// TODO: Add content;}
+export const optimizeImages = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
 const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {// TODO: Add content;}
-}
+  images.forEach(img => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
 //     img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading;
-  if ('IntersectionObserver' in window) {// TODO: Add content;}
+  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const imageObserver = new IntersectionObserver((entries) => {// TODO: Add content;}
+    const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      entries.forEach(entry => {// TODO: Add content;}
-}
-        if (entry.isIntersecting) {// TODO: Add content;}
+      entries.forEach(entry => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
+        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           const img = entry.target as HTMLImageElement;
-          if (img.dataset['src']) {// TODO: Add content;}
+          if (img.dataset['src']) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
             img['src'] = img.dataset['src']
 //             img.removeAttribute('data-src')
 //             imageObserver.unobserve(img)
@@ -178,55 +118,34 @@ const images = document.querySelectorAll('img[data-lazy]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
-<<<<<<< HEAD
-export const optimizeThirdPartyScripts = () => {
-    // TODO: Add content
-  }
-  if (typeof window === 'undefined') return
-  // Defer non-critical scripts
-const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {
-    // TODO: Add content
-  }
-//     script.setAttribute('defer', '')
-  }
-  )
-  // Load analytics after page load
-  if (document.readyState === 'loading') {
-    // TODO: Add content
-  }
-=======
-export const optimizeThirdPartyScripts = () => {// TODO: Add content;}
+export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
 const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {// TODO: Add content;}
-}
+  scripts.forEach(script => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
 //     script.setAttribute('defer', '')
   })
   // Load analytics after page load;
-  if (document.readyState === 'loading') {// TODO: Add content;}
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
 }
   )
-  } else {
+  } else {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
-const loadAnalytics = () => {
-    // TODO: Add content
-  }
-  // Load Google Analytics after page load
-=======
-const loadAnalytics = () => {// TODO: Add content;}
+const loadAnalytics = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   // Load Google Analytics after page load;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 const gaScript = document.createElement('script')
   gaScript.async = true;
-  gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
+  gaScript['src'] = 'http,
+  s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
 //   document.head.appendChild(gaScript)
-}
+}"

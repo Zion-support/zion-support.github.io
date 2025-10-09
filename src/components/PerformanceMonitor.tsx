@@ -1,59 +1,39 @@
 import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-
-=======
-interface PerformanceMetrics {// TODO: Add content;}
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  cls: number | null;,
-    fcp: number | null;,
-    lcp: number | null;,
-    ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  cl,
+  s: number | null;,
+    fc,
+  p: number | null;,
+    lc,
+  p: number | null;,
+    ttf,
+  b: number | null;
 }
 
-interface PerformanceProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
 
-const PerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+const,
+  PerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
 
-  useEffect(() => {
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  p: entry.startTime }));
         }
       });
     });
 
-    try {
-      observer.observe({ entryTypes: ['paint'] });
+    try {/* TODO: Fix JSX expression */}
+  s: ['paint'] });
       return () => observer.disconnect();
-    } catch (error) {
-      console.warn('Performance monitoring not supported:', error);
+    } catch (error) {/* TODO: Fix JSX expression */}
     }
   }, []);
 
-  useEffect(() => {
-    if (onMetricsUpdate) {
-      onMetricsUpdate(metrics);
+  useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [metrics, onMetricsUpdate]);
 

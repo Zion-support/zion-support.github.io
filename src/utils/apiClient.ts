@@ -2,49 +2,8 @@
 /**
  * Enhanced API Client with retry logic, caching, and error handling;
  */
-<<<<<<< HEAD
-export interface ApiClientConfig {
-    // TODO: Add content
-  }
-  baseURL?: string
-  timeout?: number
-  retries?: number
-  retryDelay?: number
-  headers?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, string>
-  cacheOptions?: CacheOptions
-}
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {
-    // TODO: Add content
-  }
-  url: string
-  cacheOptions?: CacheOptions
-  retries?: number
-  timeout?: number
-  skipCache?: boolean
-}
-export interface ApiResponse
-          
-          
-          
-          
-          
-          
-          
-          
-          <T = unknown> {
-    // TODO: Add content
-  }
-=======
-export interface ApiClientConfig {// TODO: Add content;}
+export interface ApiClientConfig {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   baseURL?: string;
   timeout?: number;
@@ -54,156 +13,107 @@ export interface ApiClientConfig {// TODO: Add content;}
           <string, string>;
   cacheOptions?: CacheOptions;
 }
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {// TODO: Add content;}
+export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  url: string;
+  ur,
+  l: string;
   cacheOptions?: CacheOptions;
   retries?: number;
   timeout?: number;
   skipCache?: boolean;
 }
 export interface ApiResponse;
-          <T = unknown> {// TODO: Add content;}
+          <T = unknown> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  data: T;,
-    status: number;,
-    statusText: string;,
-    headers: Headers
+  dat,
+  a: T;,
+    statu,
+  s: number;,
+    statusTex,
+  t: string;,
+    header,
+  s: Headers;
 }
-<<<<<<< HEAD
-export class ApiError extends Error {
-    // TODO: Add content
-  }
-//   constructor()
-  message: string,
-    public status: number,
-    public response?: unknown,
-) {
-    // TODO: Add content
-  }
-    super(message)
-    this.name = 'ApiError'
-  }
-}
-class ApiClient {
-    // TODO: Add content
-  }
-  private config: Required
-          
-          
-          
-          
-          
-          
-          
-          
-          <Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {
-    // TODO: Add content
-  }
-  baseURL: string
-    cacheOptions?: CacheOptions
-  }
-  private abortControllers: Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, AbortController> = new Map()
-  constructor(_config: ApiClientConfig = {}) {
-    // TODO: Add content
-  }
-    this.config = {
-    // TODO: Add content
-  }
-=======
-export class ApiError extends Error {// TODO: Add content;}
+export class ApiError extends Error {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //   constructor();
-  message: string,
-    public status: number,
+  messag,
+  e: string,
+    public,
+  status: number,
     public response?: unknown,
-) {// TODO: Add content;}
+) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     super(message);
     this.name = 'ApiError';
   }
 }
-class ApiClient {// TODO: Add content;}
+class ApiClient {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  private config: Required;
-          <Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {// TODO: Add content;}
+  private,
+  config: Required;
+          <Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  baseURL: string;
+  baseUR,
+  L: string;
     cacheOptions?: CacheOptions;
   };
-  private abortControllers: Map;
+  private,
+  abortControllers: Map;
           <string, AbortController> = new Map();
-  constructor(_config: ApiClientConfig = {}) {// TODO: Add content;}
+  constructor(_confi,)
+  g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.config = {// TODO: Add content;}
+    this.config = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  baseURL: config.baseURL || '',
-      timeout: config.timeout || 30000,
-      retries: config.retries || 3,
-      retryDelay: config.retryDelay || 1000,
-<<<<<<< HEAD
-      headers: config.headers || {
-    // TODO: Add content
-  }
-        'Content-Type': 'application/json'
-      },
-      cacheOptions: config.cacheOptions
-    }
-=======
-      headers: config.headers || {// TODO: Add content;}
+  baseUR,
+  L: config.baseURL || '',
+      timeou,
+  t: config.timeout || 30000,
+      retrie,
+  s: config.retries || 3,
+      retryDela,
+  y: config.retryDelay || 1000,
+      header,
+  s: config.headers || {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         'Content-Type': 'application/json'
       },
-      cacheOptions: config.cacheOptions;
+      cacheOption,
+  s: config.cacheOptions;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * GET request;
    */
   async get;
           <T = unknown>()
-    url: string,
-    config: Omit;
+    ur,
+  l: string,
+    confi,
+  g: Omit;
           <RequestConfig, 'url' | 'method' | 'body'> = {}
-<<<<<<< HEAD
-  ): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    return this.request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>({
-    // TODO: Add content
-  }
-=======
-  ): Promise<ApiResponse<T>> {// TODO: Add content;}
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.request;
-          <T>({// TODO: Add content;}
+          <T>({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       ...config,
 //       url,
-      method: 'GET'
-    }
+      metho,
+  d: 'GET'
+    })
   )
   }
   /**
@@ -211,37 +121,25 @@ class ApiClient {// TODO: Add content;}
    */
   async post;
           <T = unknown>()
-    url: string,
+    ur,
+  l: string,
     data?: unknown,
-    config: Omit;
+    confi,
+  g: Omit;
           <RequestConfig, 'url' | 'method'> = {}
-<<<<<<< HEAD
-  ): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    return this.request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>({
-    // TODO: Add content
-  }
-=======
-  ): Promise<ApiResponse<T>> {// TODO: Add content;}
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.request;
-          <T>({// TODO: Add content;}
+          <T>({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       ...config,
 //       url,
-      method: 'POST',
-      body: JSON.stringify(data)
+      metho,
+  d: 'POST',
+      bod,)
+  y: JSON.stringify(data)
     }
   )
   }
@@ -250,37 +148,25 @@ class ApiClient {// TODO: Add content;}
    */
   async put;
           <T = unknown>()
-    url: string,
+    ur,
+  l: string,
     data?: unknown,
-    config: Omit;
+    confi,
+  g: Omit;
           <RequestConfig, 'url' | 'method'> = {}
-<<<<<<< HEAD
-  ): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    return this.request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>({
-    // TODO: Add content
-  }
-=======
-  ): Promise<ApiResponse<T>> {// TODO: Add content;}
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.request;
-          <T>({// TODO: Add content;}
+          <T>({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       ...config,
 //       url,
-      method: 'PUT',
-      body: JSON.stringify(data)
+      metho,
+  d: 'PUT',
+      bod,)
+  y: JSON.stringify(data)
     }
   )
   }
@@ -289,36 +175,23 @@ class ApiClient {// TODO: Add content;}
    */
   async delete;
           <T = unknown>()
-    url: string,
-    config: Omit;
+    ur,
+  l: string,
+    confi,
+  g: Omit;
           <RequestConfig, 'url' | 'method' | 'body'> = {}
-<<<<<<< HEAD
-  ): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    return this.request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>({
-    // TODO: Add content
-  }
-=======
-  ): Promise<ApiResponse<T>> {// TODO: Add content;}
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.request;
-          <T>({// TODO: Add content;}
+          <T>({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       ...config,
 //       url,
-      method: 'DELETE'
-    }
+      metho,
+  d: 'DELETE'
+    })
   )
   }
   /**
@@ -326,346 +199,191 @@ class ApiClient {// TODO: Add content;}
    */
   async patch;
           <T = unknown>()
-    url: string,
+    ur,
+  l: string,
     data?: unknown,
-    config: Omit;
+    confi,
+  g: Omit;
           <RequestConfig, 'url' | 'method'> = {}
-<<<<<<< HEAD
-  ): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    return this.request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>({
-    // TODO: Add content
-  }
-=======
-  ): Promise<ApiResponse<T>> {// TODO: Add content;}
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return this.request;
-          <T>({// TODO: Add content;}
+          <T>({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       ...config,
 //       url,
-      method: 'PATCH',
-      body: JSON.stringify(data)
+      metho,
+  d: 'PATCH',
+      bod,)
+  y: JSON.stringify(data)
     }
   )
   }
   /**
    * Main request method with retry logic;
    */
-<<<<<<< HEAD
-  private async request
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(config: RequestConfig): Promise<ApiResponse<T>> {
-    // TODO: Add content
-  }
-    const {
-    // TODO: Add content
-  }
-=======
   private async request;
-          <T>(config: RequestConfig): Promise<ApiResponse<T>> {// TODO: Add content;}
+          <T>(confi,)
+  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const {// TODO: Add content;}
+    const {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       url,
       method = 'GET',
       headers = {},
-      cacheOptions: cacheConfig,
+      cacheOption,
+  s: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
-<<<<<<< HEAD
-//       ...fetchConfig
-    } = config
-    const cacheKey = `${method}:${fullUrl}`
-    // Check cache for GET requests
-    if (method === 'GET' && !skipCache) {
-    // TODO: Add content
-  }
-      const cached = cacheManager.get
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(cacheKey)
-      if (cached !== undefined) {
-    // TODO: Add content
-  }
-        return {
-    // TODO: Add content
-  }
-=======
 //       ...fetchConfig;
     } = config;
     const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests;
-    if (method === 'GET' && !skipCache) {// TODO: Add content;}
+    if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const cached = cacheManager.get;
           <T>(cacheKey);
-      if (cached !== undefined) {// TODO: Add content;}
+      if (cached !== undefined) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        return {// TODO: Add content;}
+        return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  data: cached,
-          status: 200,
-          statusText: 'OK (cached)',
-          headers: new Headers()
+  dat,
+  a: cached,
+          statu,
+  s: 200,
+          statusTex,
+  t: 'OK (cached)',
+          header,
+  s: new Headers()
         }
       }
     }
-<<<<<<< HEAD
-    // Create abort controller for timeout
-const controller = new AbortController()
-    this.abortControllers.set(cacheKey, controller)
-    const timeoutId = setTimeout(() => {
-    // TODO: Add content
-  }
-      controller.abort()
-    }, timeout)
-    let lastError: Error | null = null
-    while (attempt 
-          
-          
-          
-          
-          
-          
-          
-          
-          < retries) {
-    // TODO: Add content
-  }
-      try {
-    // TODO: Add content
-  }
-        const response = await fetch(fullUrl, {
-    // TODO: Add content
-  }
-//           ...fetchConfig,
-//           method,
-          headers: {
-    // TODO: Add content
-  }
-=======
     // Create abort controller for timeout;
 const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
-    const timeoutId = setTimeout(() => {// TODO: Add content;}
+    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       controller.abort();
     }, timeout);
-    let lastError: Error | null = null;
-    while (attempt;
-          < retries) {// TODO: Add content;}
+    let,
+  lastError: Error | null = null;
+    while (attempt;)
+          < retries) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      try {// TODO: Add content;}
+      try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        const response = await fetch(fullUrl, {// TODO: Add content;}
+        const response = await fetch(fullUrl, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //           ...fetchConfig,
 //           method,
-          headers: {// TODO: Add content;}
+          header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //             ...this.config.headers,
 //             ...headers;
           },
-<<<<<<< HEAD
-          signal: controller.signal
-        }
-  )
-        clearTimeout(timeoutId)
-        this.abortControllers.delete(cacheKey)
-        if (!response.ok) {
-    // TODO: Add content
-  }
-=======
-          signal: controller.signal;
+          signa,
+  l: controller.signal;)
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
-        if (!response.ok) {// TODO: Add content;}
+        if (!response.ok) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-          throw new ApiError()
+          throw new ApiError()`
             `HTTP ${response.status}: ${response.statusText}`,
 //             response.status,
 //             await response.text()
           )
         }
-<<<<<<< HEAD
-        const contentType = response.headers.get('content-type')
-        let data: T
-        if (contentType?.includes('application/json')) {
-    // TODO: Add content
-  }
-          data = await response.json()
-        } else {
-    // TODO: Add content
-  }
-          data = (await response.text()) as T
-        }
-        // Cache successful GET requests
-        if (method === 'GET' && !skipCache) {
-    // TODO: Add content
-  }
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {}
-  )
-        }
-        return {
-    // TODO: Add content
-  }
-//           data,
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers
-        }
-      } catch (error) {
-    // TODO: Add content
-  }
-        lastError = error as Error
-        attempt++
-        // Log error
-        if (attempt === retries) {
-    // TODO: Add content
-  }
-          if (error instanceof ApiError && error.status >= 500) {
-    // TODO: Add content
-  }
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {
-    // TODO: Add content
-  }
-  url: fullUrl,
-//               method,
-//               attempt
-            }
-  )
-          } else {
-    // TODO: Add content
-  }
-            logError(`API request failed`, error as Error, {
-    // TODO: Add content
-  }
-  url: fullUrl,
-//               method,
-//               attempt
-            }
-  )
-          }
-        }
-        // Don't retry on certain errors
-        if (error instanceof ApiError && error.status 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 500) {
-    // TODO: Add content
-  }
-          throw error
-        }
-        // Wait before retrying
-        if (attempt 
-          
-          
-          
-          
-          
-          
-          
-          
-          < retries) {
-    // TODO: Add content
-  }
-          await this.delay(this.config.retryDelay * attempt)
-=======
         const contentType = response.headers.get('content-type');
-        let data: T;
-        if (contentType?.includes('application/json')) {// TODO: Add content;}
+        let,
+  data: T;
+        if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           data = await response.json();
-        } else {// TODO: Add content;}
+        } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           data = (await response.text()) as T;
         }
         // Cache successful GET requests;
-        if (method === 'GET' && !skipCache) {// TODO: Add content;}
+        if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
-        return {// TODO: Add content;}
+        return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //           data,
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers;
+          statu,
+  s: response.status,
+          statusTex,
+  t: response.statusText,
+          header,
+  s: response.headers;
         };
-      } catch (error) {// TODO: Add content;}
+      } catch (error) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         lastError = error as Error;
         attempt++;
         // Log error;
-        if (attempt === retries) {// TODO: Add content;}
+        if (attempt === retries) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          if (error instanceof ApiError && error.status >= 500) {// TODO: Add content;}
-}
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {// TODO: Add content;}
+          if (error instanceof ApiError && error.status >= 500) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  url: fullUrl,
+  ur,
+  l: fullUrl,
 //               method,
-//               attempt;
+//               attempt;)
             });
-          } else {// TODO: Add content;}
-}
-            logError(`API request failed`, error as Error, {// TODO: Add content;}
+          } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
+            logError(`API request failed`, error as Error, {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  url: fullUrl,
+  ur,
+  l: fullUrl,
 //               method,
-//               attempt;
+//               attempt;)
             });
           }
         }
         // Don't retry on certain errors;
-        if (error instanceof ApiError && error.status;
-          < 500) {// TODO: Add content;}
+        if (error instanceof ApiError && error.status;)
+          < 500) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           throw error;
         }
         // Wait before retrying;
-        if (attempt;
-          < retries) {// TODO: Add content;}
+        if (attempt;)
+          < retries) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           await this.delay(this.config.retryDelay * attempt);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -676,90 +394,52 @@ const controller = new AbortController();
   /**
    * Cancel a pending request;
    */
-<<<<<<< HEAD
-  cancel(url: string, method: string = 'GET'): void {
-    // TODO: Add content
-  }
-    const cacheKey = `${method}:${url}`
-    const controller = this.abortControllers.get(cacheKey)
-    if (controller) {
-    // TODO: Add content
-  }
-      controller.abort()
-      this.abortControllers.delete(cacheKey)
-=======
-  cancel(url: string, method: string = 'GET'): void {// TODO: Add content;}
-}
+  cancel(ur,
+  l: string, metho,)
+  d: string = 'GET'): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
     const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
-    if (controller) {// TODO: Add content;}
+    if (controller) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       controller.abort();
       this.abortControllers.delete(cacheKey);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Cancel all pending requests;
    */
-<<<<<<< HEAD
-  cancelAll(): void {
-    // TODO: Add content
-  }
-    this.abortControllers.forEach(controller => {
-    // TODO: Add content
-  }
-      controller.abort()
-    }
-  )
-    this.abortControllers.clear()
-=======
-  cancelAll(): void {// TODO: Add content;}
+  cancelAll(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.abortControllers.forEach(controller => {// TODO: Add content;}
-}
+    this.abortControllers.forEach(controller => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+})
       controller.abort();
     });
     this.abortControllers.clear();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Update default config;
    */
-<<<<<<< HEAD
-  setConfig(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <ApiClientConfig>): void {
-    // TODO: Add content
-  }
-    this.config = {
-    // TODO: Add content
-  }
-//       ...this.config,
-//       ...config,
-      headers: {
-    // TODO: Add content
-  }
-=======
-  setConfig(config: Partial;
-          <ApiClientConfig>): void {// TODO: Add content;}
+  setConfig(confi,
+  g: Partial;)
+          <ApiClientConfig>): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    this.config = {// TODO: Add content;}
+    this.config = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 //       ...this.config,
 //       ...config,
-      headers: {// TODO: Add content;}
+      header,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         ...this.config.headers,
-        ...(config.headers || {}
+        ...(config.headers || {})
   )
       }
     }
@@ -767,123 +447,72 @@ const controller = new AbortController();
   /**
    * Set authorization header;
    */
-<<<<<<< HEAD
-  setAuthToken(token: string): void {
-    // TODO: Add content
-  }
-    this.config.headers['Authorization'] = `Bearer ${token}`
-=======
-  setAuthToken(token: string): void {// TODO: Add content;}
-}
+  setAuthToken(toke,)
+  n: string): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
     this.config.headers['Authorization'] = `Bearer ${token}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Remove authorization header;
    */
-<<<<<<< HEAD
-  removeAuthToken(): void {
-    // TODO: Add content
-  }
-    delete this.config.headers['Authorization']
-=======
-  removeAuthToken(): void {// TODO: Add content;}
+  removeAuthToken(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     delete this.config.headers['Authorization'];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Delay helper;
    */
-<<<<<<< HEAD
-  private delay(ms: number): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
-  }
-    return new Promise(resolve => setTimeout(resolve, ms))
-=======
-  private delay(ms: number): Promise;
-          <void> {// TODO: Add content;}
+  private delay(m,)
+  s: number): Promise;
+          <void> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     return new Promise(resolve => setTimeout(resolve, ms));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Health check;
    */
-<<<<<<< HEAD
-  async healthCheck(endpoint: string = '/health'): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <boolean> {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 }
-  )
-      return response.status === 200
-    } catch {
-    // TODO: Add content
-  }
-      return false
-    }
-  }
+  async healthCheck(endpoin,)
+  t: string = '/health'): Promise;
+          <boolean> {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-// Create default instance
-const apiClient = new ApiClient({
-    // TODO: Add content
-  }
-=======
-  async healthCheck(endpoint: string = '/health'): Promise;
-          <boolean> {// TODO: Add content;}
+    try {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    try {// TODO: Add content;}
-}
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
+      const response = await this.get(endpoint, {/* TODO: Fix JSX expression */})
+  s: 1 });
       return response.status === 200;
-    } catch {// TODO: Add content;}
+    } catch {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       return false;
     }
   }
 }
 // Create default instance;
-const apiClient = new ApiClient({// TODO: Add content;}
+const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  baseURL: process.env.NEXT_PUBLIC_API_URL || '',
-  timeout: 30000,
-  retries: 3,
-  retryDelay: 1000,
-<<<<<<< HEAD
-  cacheOptions: {
-    // TODO: Add content
-  }
-  ttl: 5 * 60 * 1000, // 5 minutes
-=======
-  cacheOptions: {// TODO: Add content;}
+  baseUR,
+  L: process.env.NEXT_PUBLIC_API_URL || '',
+  timeou,
+  t: 30000,
+  retrie,
+  s: 3,
+  retryDela,
+  y: 1000,
+  cacheOption,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  ttl: 5 * 60 * 1000, // 5 minutes;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  tt,
+  l: 5 * 60 * 1000, // 5 minutes;
   }
-}
+})
   )
-// Export both the class and default instance
+// Export both the class and default instance;
 export { apiClient }
-export default ApiClient
+export default ApiClient;`

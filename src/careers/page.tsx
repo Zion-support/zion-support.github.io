@@ -1,79 +1,89 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-
-=======
-const CareersPage: React.FC = () => {return (}
-    <div>Coming Soon</div>
+const,
+  CareersPage: React.FC = () => {return (}
+    <div>Coming Soon</div>)
   );
 };
   const _openPositions = [
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'Senior AI Engineer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',;
-      type: 'Full-time',
-      description: 'Lead development of cutting-edge AI solutions and machine learning models',
-      requirements: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],
-      icon: Brain;
+  titl,
+  e: 'Senior AI Engineer',
+      departmen,
+  t: 'Engineering',
+      locatio,
+  n: 'Remote / Middletown, DE',;
+      typ,
+  e: 'Full-time',
+      descriptio,
+  n: 'Lead development of cutting-edge AI solutions and machine learning models',
+      requirement,
+  s: ['5+ years AI/ML experience', 'Python, TensorFlow, PyTorch', 'PhD in Computer Science preferred'],
+      ico,
+  n: Brain;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'Full-Stack Developer',
-      department: 'Engineering',
-      location: 'Remote / Middletown, DE',;
-      type: 'Full-time',
-      description: 'Build scalable web applications and integrate AI solutions',
-      requirements: ['3+ years full-stack experience', 'React, Node.js, TypeScript', 'Cloud platform experience'],
-      icon: Code;
+  titl,
+  e: 'Full-Stack Developer',
+      departmen,
+  t: 'Engineering',
+      locatio,
+  n: 'Remote / Middletown, DE',;
+      typ,
+  e: 'Full-time',
+      descriptio,
+  n: 'Build scalable web applications and integrate AI solutions',
+      requirement,
+  s: ['3+ years full-stack experience', 'React, Node.js, TypeScript', 'Cloud platform experience'],
+      ico,
+  n: Code;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'AI Product Manager',
-      department: 'Product',
-      location: 'Remote / Middletown, DE',;
-      type: 'Full-time',
-      description: 'Drive AI product strategy and work with cross-functional teams',
-      requirements: ['3+ years product management', 'AI/ML domain knowledge', 'Strong analytical skills'],
-      icon: Users;
+  titl,
+  e: 'AI Product Manager',
+      departmen,
+  t: 'Product',
+      locatio,
+  n: 'Remote / Middletown, DE',;
+      typ,
+  e: 'Full-time',
+      descriptio,
+  n: 'Drive AI product strategy and work with cross-functional teams',
+      requirement,
+  s: ['3+ years product management', 'AI/ML domain knowledge', 'Strong analytical skills'],
+      ico,
+  n: Users;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'Cybersecurity Specialist',
-      department: 'Security',
-      location: 'Remote / Middletown, DE',;
-      type: 'Full-time',
-      description: 'Ensure security of AI systems and protect client data',
-      requirements: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
-      icon: Shield;
+  titl,
+  e: 'Cybersecurity Specialist',
+      departmen,
+  t: 'Security',
+      locatio,
+  n: 'Remote / Middletown, DE',;
+      typ,
+  e: 'Full-time',
+      descriptio,
+  n: 'Ensure security of AI systems and protect client data',
+      requirement,
+  s: ['4+ years cybersecurity experience', 'AI security knowledge', 'Certifications preferred'],
+      ico,
+  n: Shield;
     }
   ];
   const benefits = [
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
 //     'Competitive salary and equity',
 //     'Comprehensive health insurance',
@@ -84,29 +94,20 @@ const CareersPage: React.FC = () => {return (}
 //     'Team building events',
 //     'Mentorship programs'
   ];
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+  return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced careers solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+      <div className="text-center"></div>"
+        <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>"
+        <p className="text-gray-300 mb-8">Coming Soon - Advanced careers solutions</p>"
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
+  hover:bg-cyan-600 transition-colors"></a>
 // Contact Us;
           </a>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
 
-export default PagePage;
+export default PagePage;"

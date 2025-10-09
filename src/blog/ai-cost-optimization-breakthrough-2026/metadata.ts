@@ -1,62 +1,89 @@
-<<<<<<< HEAD
-export const metadata = {
-
-  title: 'Blog Post - Zion Tech Group',
-  description: 'AI and technology insights from Zion Tech Group',
-  keywords: ['AI', 'Technology', 'Blog', 'Insights'],
-  openGraph: {
-    title: 'Blog Post - Zion Tech Group',
-    description: 'AI and technology insights from Zion Tech Group',
-    type: 'article',
-  },
-
-=======
-export const metadata = {// TODO: Add content;}
+export const metadata = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
-  description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
-  keywords: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
-  openGraph: {// TODO: Add content;}
+  titl,
+  e: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90% | Zion Tech Group',
+  descriptio,
+  n: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains. Proven methods for Fortune 500 companies to maximize AI ROI.',
+  keyword,
+  s: 'AI cost optimization 2026, reduce AI costs 90%, AI spending optimization, enterprise AI cost reduction, AI ROI maximization, Fortune 500 AI savings',
+  openGrap,
+  h: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
-    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
-    images: [
-  // TODO: Add items,
+  titl,
+  e: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90%',
+    descriptio,
+  n: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains for Fortune 500 companies.',
+    typ,
+  e: 'article',
+    ur,
+  l: 'http,
+  s://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
+    image,
+  s: [
+  // TOD,
+  O: Add items,
 ]
-      {// TODO: Add content;}
+      {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Cost Optimization Breakthrough 2026'
+  ur,
+  l: 'http,
+  s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
+        widt,
+  h: 1200,
+        heigh,
+  t: 630,
+        al,
+  t: 'AI Cost Optimization Breakthrough 2026'
       }
 //     ]
   },
-  twitter: {// TODO: Add content;}
+  twitte,
+  r: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  card: 'summary_large_image',
-    title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
-    description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
-    images: ['https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
+  car,
+  d: 'summary_large_image',
+    titl,
+  e: 'AI Cost Optimization Breakthrough,
+  2026: Cut AI Spending by 90%',
+    descriptio,
+  n: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
+    image,
+  s: ['http,
+  s://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
   },
-  robots: {// TODO: Add content;}
+  robot,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  index: true,
-    follow: true,
-    googleBot: {// TODO: Add content;}
+  inde,
+  x: true,
+    follo,
+  w: true,
+    googleBo,
+  t: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  index: true,
-      follow: true,
+  inde,
+  x: true,
+      follo,
+  w: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1;
     }
   },
-  alternates: {// TODO: Add content;}
+  alternate,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  canonical: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026'
+  canonica,
+  l: 'http,
+  s://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026'
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };

@@ -1,12 +1,10 @@
 import React from 'react';
 
-interface ScrollToTopProps {
-  // Add props here
+interface ScrollToTopProps {/* TODO: Fix JSX expression */}
 }
 
-const ScrollToTop: React.FC<ScrollToTopProps> = () => {
-  return (
-    <div className="scrolltotop">
+const,
+  ScrollToTop: React.FC<ScrollToTopProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

@@ -1,80 +1,54 @@
 'use client'
-export const usePerformanceMonitoring = () => {
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-export const _usePerformanceMonitoring = () => {
-    // TODO: Add content
-  }
-  const reportWebVitals = useCallback((metric: any) => {
-    // TODO: Add content
-  }
-    const body = JSON.stringify(metric)
-    const url = '/api/analytics'
-    if (navigator.sendBeacon) {
-    // TODO: Add content
-  }
-      navigator.sendBeacon(url, body)
-    } else {
-    // TODO: Add content
-  }
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {
-    // TODO: Add content
-  }
-        // Analytics reporting failed
-      }
-  )
-    }
-  }, [])
-  useEffect(() => {
-    // TODO: Add content
-  }
-    if (typeof window !== 'undefined' && 'performance' in window) {
-    // TODO: Add content
-  }
-      // Monitor Core Web Vitals
-const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-          reportWebVitals({
-    // TODO: Add content
-  }
-=======
-export const _usePerformanceMonitoring = () => {// TODO: Add content;}
+export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  const reportWebVitals = useCallback((metric: any) => {// TODO: Add content;}
+  const reportWebVitals = useCallback((metri,)
+  c: any) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
-    if (navigator.sendBeacon) {// TODO: Add content;}
+    if (navigator.sendBeacon) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       navigator.sendBeacon(url, body);
-    } else {// TODO: Add content;}
+    } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      fetch(url, { body, method: 'POST', keepalive: true }).catch(() => {// TODO: Add content;}
+      fetch(url, {/* TODO: Fix JSX expression */})
+  e: true }).catch(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         // Analytics reporting failed;
       });
     }
   }, []);
-  useEffect(() => {// TODO: Add content;}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (typeof window !== 'undefined' && 'performance' in window) {// TODO: Add content;}
+    if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       // Monitor Core Web Vitals;
-const observer = new PerformanceObserver((list) => {// TODO: Add content;}
+const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-        for (const entry of list.getEntries()) {// TODO: Add content;}
+        for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-          reportWebVitals({// TODO: Add content;}
+          reportWebVitals({/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  name: entry.name,
-            value: entry.startTime,
-            timestamp: Date.now()
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
+  nam,
+  e: entry.name,
+            valu,
+  e: entry.startTime,
+            timestam,)
+  p: Date.now()
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['navigation', 'paint', 'largest-contentful-paint'] })
   )
       return () => observer.disconnect()
   }, [reportWebVitals])

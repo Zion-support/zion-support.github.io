@@ -3,79 +3,45 @@
  * Basic performance optimization utilities;
  */
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  lcp: number
-  fid: number
-  cls: number
-  fcp: number
-  ttfb: number
-  tbt: number
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  p: number;}
+  fi,
+  d: number;
+  cl,
+  s: number;
+  fc,
+  p: number;
+  ttf,
+  b: number;
+  tb,
+  t: number;
 }
 
-interface OptimizationConfig {
-  enableImageOptimization: boolean
-  enableLazyLoading: boolean
-  enableCodeSplitting: boolean
-  enablePrefetching: boolean
-  enableServiceWorker: boolean
-  enableResourceHints: boolean
-  enableCompression: boolean
-  enableCaching: boolean
+interface OptimizationConfig {/* TODO: Fix JSX expression */}
+  n: boolean;}
+  enableLazyLoadin,
+  g: boolean;
+  enableCodeSplittin,
+  g: boolean;
+  enablePrefetchin,
+  g: boolean;
+  enableServiceWorke,
+  r: boolean;
+  enableResourceHint,
+  s: boolean;
+  enableCompressio,
+  n: boolean;
+  enableCachin,
+  g: boolean;
 }
 
-class PerformanceEnhancer {
-  private config: OptimizationConfig
-  private metrics: PerformanceMetrics | null = null
-  constructor(config: OptimizationConfig) {
-    this.config = config
-    this.init()
-  }
+class PerformanceEnhancer {/* TODO: Fix JSX expression */}
+  config: OptimizationConfig;}
+  private,
+  metrics: PerformanceMetrics | null = null;
 
-  private init(): void {
-    // Initialize performance monitoring
-    this.observePerformance()
-  }
-
-  private observePerformance(): void {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry) => {
-            // Process performance entries
-            console.log('Performance entry:', entry.name, entry.duration)
-          }
-  )
-        }
-  )
-        observer.observe({ entryTypes: ['measure', 'navigation'] }
-  )
-      } catch (error) {
-        console.warn('PerformanceObserver not supported:', error)
-=======
-interface PerformanceMetrics {lcp: number;}
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  tbt: number;
-}
-
-interface OptimizationConfig {enableImageOptimization: boolean;}
-  enableLazyLoading: boolean;
-  enableCodeSplitting: boolean;
-  enablePrefetching: boolean;
-  enableServiceWorker: boolean;
-  enableResourceHints: boolean;
-  enableCompression: boolean;
-  enableCaching: boolean;
-}
-
-class PerformanceEnhancer {private config: OptimizationConfig;}
-  private metrics: PerformanceMetrics | null = null;
-
-  constructor(config: OptimizationConfig) {this.config = config;}
+  constructor(confi,)
+  g: OptimizationConfig) {this.config = config;}
     this.init();
   }
 
@@ -87,27 +53,24 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
       try {const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {// Process performance entries;}
-            console.log('Performance entry:', entry.name, entry.duration);
+            console.log('Performance,)
+  entry:', entry.name, entry.duration);
           });
         });
         
-        observer.observe({ entryTypes: ['measure', 'navigation'] });
-      } catch (error) {console.warn('PerformanceObserver not supported:', error);}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+        observer.observe({/* TODO: Fix JSX expression */})
+  s: ['measure', 'navigation'] });
+      } catch (error) {/* TODO: Fix JSX expression */}
+  supported:', error);}
       }
     }
   }
 
-<<<<<<< HEAD
-  public getMetrics(): PerformanceMetrics | null {
-    return this.metrics
-=======
   public getMetrics(): PerformanceMetrics | null {return this.metrics;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 
   public cleanup(): void {// Cleanup resources;}
   }
 }
 
-export default PerformanceEnhancer
+export default PerformanceEnhancer;

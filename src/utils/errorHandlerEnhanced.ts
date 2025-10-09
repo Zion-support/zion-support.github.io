@@ -1,26 +1,18 @@
-<<<<<<< HEAD
-'use client'
-// Enhanced Error Handler
-export class AppError extends Error {
-    // TODO: Add content
-  }
-  statusCode: number;,
-    isOperational: boolean;,
-    timestamp: string
-  constructor(message: string, statusCode = 500, isOperational = true) {
-    // TODO: Add content
-  }
-=======
 'use client';
 // Enhanced Error Handler;
-export class AppError extends Error {// TODO: Add content;}
+export class AppError extends Error {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  statusCode: number;,
-    isOperational: boolean;,
-    timestamp: string;
-  constructor(message: string, statusCode = 500, isOperational = true) {// TODO: Add content;}
+  statusCod,
+  e: number;,
+    isOperationa,
+  l: boolean;,
+    timestam,
+  p: string;
+  constructor(messag,)
+  e: string, statusCode = 500, isOperational = true) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     super(message)
     this.statusCode = statusCode;
     this.isOperational = isOperational;
@@ -28,58 +20,48 @@ export class AppError extends Error {// TODO: Add content;}
 //     Error.captureStackTrace(this, this.constructor)
   }
 }
-<<<<<<< HEAD
-export const _errorHandler = (error: AppError | Error) => {
-    // TODO: Add content
-  }
-  const isDevelopment = process.env.NODE_ENV === 'development'
-=======
-export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;}
+export const _errorHandler = (erro,)
+  r: AppError | Error) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   const appError = error instanceof AppError ? error : new AppError(error.message)
-// console.error({message: appError.message,}
-    stack: isDevelopment ? appError.stack : undefined,
-    timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-    statusCode: appError.statusCode || 500
-  }
-  )
-  return {
-    // TODO: Add content
-  }
-  message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500
-  }
-}
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {
-    // TODO: Add content
-  }
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {
-    // TODO: Add content
-  }
-    if (next && typeof next === 'function') {
-    // TODO: Add content
-  }
-      next(error)
-=======
-    statusCode: appError.statusCode || 500;
+// console.error({/* TODO: Fix JSX expression */}
+  e: appError.message,}
+    stac,
+  k: isDevelopment ? appError.stack : undefined,
+    timestam,)
+  p: new Date().toISOString(),
+    statusCod,
+  e: appError.statusCode || 500;
   });
-  return {// TODO: Add content;}
+  return {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-    statusCode: appError.statusCode || 500;
+  messag,
+  e: appError.isOperational ? appError.message : 'An unexpected error occurred',
+    statusCod,
+  e: appError.statusCode || 500;
   };
 };
-export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {// TODO: Add content;}
+export const asyncHandler = (f,
+  n: (re,
+  q: unknown, re,
+  s: unknown, nex,)
+  t: unknown) => unknown) => (re,
+  q: unknown, re,
+  s: unknown, nex,)
+  t: unknown) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  Promise.resolve(fn(req, res, next)).catch((error: unknown) => {// TODO: Add content;}
+  Promise.resolve(fn(req, res, next)).catch((erro,)
+  r: unknown) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    if (next && typeof next === 'function') {// TODO: Add content;}
+    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       next(error);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   )

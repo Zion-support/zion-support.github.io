@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface PWAInstallerProps {
-  // Add props here
-
-=======
 'use client';
-interface BeforeInstallPromptEvent extends Event {// TODO: Add content;}
+interface BeforeInstallPromptEvent extends Event {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   prompt(): Promise;
           <void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  userChoic,
+  e: Promise<{/* TODO: Fix JSX expression */}
+  e: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC<PWAInstallerProps> = () => {
-  return (
-    <div className="pwainstaller">
+const,
+  PWAInstaller: React.FC<PWAInstallerProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

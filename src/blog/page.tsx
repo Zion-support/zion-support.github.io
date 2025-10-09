@@ -1,89 +1,103 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-
-=======
 'use client';
 import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
-interface BlogPost {// TODO: Add content;}
+interface BlogPost {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  id: string;
-    title: string;
-    description: string;
-    category: string;,
-    readTime: string;,
-    date: string;,
-    path: string;,
-    image: string;,
-    featured: boolean;
-  stats?: {// TODO: Add content;}
+  i,
+  d: string;
+    titl,
+  e: string;
+    descriptio,
+  n: string;
+    categor,
+  y: string;,
+    readTim,
+  e: string;,
+    dat,
+  e: string;,
+    pat,
+  h: string;,
+    imag,
+  e: string;,
+    feature,
+  d: boolean;
+  stats?: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  views: number;,
-    engagement: number;
+  view,
+  s: number;,
+    engagemen,
+  t: number;
   };
 }
-export default function BlogPage() {// TODO: Add content;}
+export default function BlogPage() {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
   const [posts, setPosts] = useState;
           <BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const blogPosts: BlogPost[] = useMemo(() => [
-  // TODO: Add items,
+  const,
+  blogPosts: BlogPost[] = useMemo(() => [
+  // TOD,
+  O: Add items,
 ]
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
-      readTime: '50 min read',
-      date: '2025-01-28',
-      path: '/blog/ai-enterprise-transformation-2025',
-      image: '',
-      featured: true,
-      stats: { views: 18750, engagement: 97 }
+  i,
+  d: 'ai-enterprise-transformation-2025',
+      titl,
+  e: 'AI Enterprise,
+  Transformation: $50M Annual Savings Blueprint',
+      descriptio,
+  n: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
+      categor,
+  y: 'Success Story',
+      readTim,
+  e: '50 min read',
+      dat,
+  e: '2025-01-28',
+      pat,
+  h: '/blog/ai-enterprise-transformation-2025',
+      imag,
+  e: '',
+      feature,
+  d: true,
+      stat,
+  s: {/* TODO: Fix JSX expression */}
+  t: 97 }
     },
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
-      readTime: '15 min read',
-      date: '2025-01-15',
-      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+      i,
+  d: 'ai-2025-2026-mega-trends-breakthrough',
+      titl,
+  e: 'AI 2025-2026 Mega Trends,
+  Breakthrough: Revolutionary Enterprise Transformation',
+      descriptio,
+  n: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
+      categor,
+  y: 'Mega Trends',
+      readTim,
+  e: '15 min read',
+      dat,
+  e: '2025-01-15',
+      pat,
+  h: '/blog/ai-2025-2026-mega-trends-breakthrough',
+      i,
+  d: 'ai-2026-consensus-intelligence-breakthrough',
+      titl,
+  e: 'AI,
+  2026: Consensus Intelligence Breakthrough',
+      descriptio,
+  n: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
+      categor,
+  y: 'Intelligence',
+      readTim,
+  e: '14 min read',
+      dat,
+  e: '2026-02-15',
+      pat,
+  h: '/blog/ai-2026-consensus-intelligence-breakthrough',

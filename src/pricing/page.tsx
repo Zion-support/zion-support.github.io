@@ -1,48 +1,35 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-
-=======
 import { Zap, Brain, Cloud } from 'lucide-react';
-const PricingPage: React.FC = () => {return (}
-    <div>Coming Soon</div>
+const,
+  PricingPage: React.FC = () => {return (}
+    <div>Coming Soon</div>)
   );
 };
   const _plans = [
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      icon: Zap,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      features: [
-  // TODO: Add items,
+  nam,
+  e: 'Starter',
+      pric,
+  e: '$299',
+      perio,
+  d: '/month',
+      descriptio,
+  n: 'Perfect for small businesses getting started with AI',
+      ico,
+  n: Zap,
+      colo,
+  r: 'text-green-400',
+      bgColo,
+  r: 'bg-green-500/10',
+      feature,
+  s: [
+  // TOD,
+  O: Add items,
 ]
 //         'Basic AI Analytics',
 //         'Email Support',
@@ -50,19 +37,30 @@ const PricingPage: React.FC = () => {return (}
 //         'Monthly Reports',
 //         'Basic Integration'
 //       ],
-      popular: false;
+      popula,
+  r: false;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced AI needs',
-      icon: Brain,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      features: [
-  // TODO: Add items,
+  nam,
+  e: 'Professional',
+      pric,
+  e: '$799',
+      perio,
+  d: '/month',
+      descriptio,
+  n: 'Ideal for growing businesses with advanced AI needs',
+      ico,
+  n: Brain,
+      colo,
+  r: 'text-cyan-400',
+      bgColo,
+  r: 'bg-cyan-500/10',
+      feature,
+  s: [
+  // TOD,
+  O: Add items,
 ]
 //         'Advanced AI Analytics',
 //         'Priority Support',
@@ -72,19 +70,30 @@ const PricingPage: React.FC = () => {return (}
 //         'Custom Integrations',
 //         'Training Sessions'
 //       ],
-      popular: true;
+      popula,
+  r: true;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Complete AI solution for large organizations',
-      icon: Cloud,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      features: [
-  // TODO: Add items,
+  nam,
+  e: 'Enterprise',
+      pric,
+  e: '$1,999',
+      perio,
+  d: '/month',
+      descriptio,
+  n: 'Complete AI solution for large organizations',
+      ico,
+  n: Cloud,
+      colo,
+  r: 'text-purple-400',
+      bgColo,
+  r: 'bg-purple-500/10',
+      feature,
+  s: [
+  // TOD,
+  O: Add items,
 ]
 //         'Unlimited AI Models',
 //         '24/7 Dedicated Support',
@@ -96,57 +105,65 @@ const PricingPage: React.FC = () => {return (}
 //         'On-site Training',
 //         'SLA Guarantee'
 //       ],
-      popular: false;
+      popula,
+  r: false;
     }
   ];
   const addOns = [
-  // TODO: Add items;
+  // TOD,
+  O: Add items;
 ];;
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'AI Security Suite',
-      price: '$199/month',
-      description: 'Advanced security monitoring and compliance',
-      icon: Shield;
+  nam,
+  e: 'AI Security Suite',
+      pric,
+  e: '$199/month',
+      descriptio,
+  n: 'Advanced security monitoring and compliance',
+      ico,
+  n: Shield;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'Custom AI Development',
-      price: '$150/hour',
-      description: 'Bespoke AI solutions for unique requirements',
-      icon: Brain;
+  nam,
+  e: 'Custom AI Development',
+      pric,
+  e: '$150/hour',
+      descriptio,
+  n: 'Bespoke AI solutions for unique requirements',
+      ico,
+  n: Brain;
     },
-    {// TODO: Add content;}
+    {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  name: 'Priority Support',
-      price: '$99/month',
-      description: '24/7 priority support and faster response times',
-      icon: Phone;
+  nam,
+  e: 'Priority Support',
+      pric,
+  e: '$99/month',
+      descriptio,
+  n: '24/7 priority support and faster response times',
+      ico,
+  n: Phone;
     }
   ];
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+  return (<div>Coming Soon</div>)
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+      <div className="text-center"></div>"
+        <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>"
+        <p className="text-gray-300 mb-8">Coming Soon - Advanced pricing solutions</p>"
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
+  hover:bg-cyan-600 transition-colors"></a>
 // Contact Us;
           </a>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
 
-export default PagePage;
+export default PagePage;"

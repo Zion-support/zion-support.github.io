@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-
-interface SEOProps {
-=======
 'use client';
-interface AdvancedSEOOptimizerProps {// TODO: Add content;}
+interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
-
-=======
   ogImage?: string;
   structuredData?: unknown;
   author?: string;
@@ -22,84 +14,31 @@ interface AdvancedSEOOptimizerProps {// TODO: Add content;}
   section?: string;
   tags?: string[];
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: {/* TODO: Fix JSX expression */}
+  l: string }[];
   robots?: string;
   noindex?: boolean;
   nofollow?: boolean;
-  breadcrumbs?: { name: string; url: string }[];
-  faqData?: { question: string; answer: string }[];
+  breadcrumbs?: {/* TODO: Fix JSX expression */}
+  l: string }[];
+  faqData?: {/* TODO: Fix JSX expression */}
+  r: string }[];
   organizationData?: unknown;
   websiteData?: unknown;
 }
-const AdvancedSEOOptimizer: React.FC;
-          <AdvancedSEOOptimizerProps> = ({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+const,
+  AdvancedSEOOptimizer: React.FC;
+          <AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
 
-const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-    
-    // Update meta description
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-    
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-    
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-  }, [title, description, keywords, canonicalUrl]);
-
-=======
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-//   structuredData,
-  author = 'Zion Tech Group',
-//   publishedTime,
-  modifiedTime = new Date().toISOString(),
-  section = 'Technology',
-  tags = [],
-  locale = 'en_US',
-  alternateLocales = [],
-  robots = 'index, follow',
-  noindex = false,
-  nofollow = false,
-  breadcrumbs = [],
-  faqData = [],
-//   organizationData,
-//   websiteData;
-}) => {// TODO: Add content;}
+const,
+  AdvancedSEOOptimizer: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  useEffect(() => {// TODO: Add content;}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     // Update page title;
     document.title = title;
@@ -109,71 +48,99 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
     updateMetaTag('author', author);
     updateMetaTag('robots', noindex ? 'noindex' : robots);
     // Update Open Graph tags;
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', ogImage, 'property');
-    updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
-    updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
-    updateMetaTag('og:locale', locale, 'property');
-    if (publishedTime) {// TODO: Add content;}
+    updateMetaTag('o,)
+  g:title', title, 'property');
+    updateMetaTag('o,)
+  g:description', description, 'property');
+    updateMetaTag('o,)
+  g:image', ogImage, 'property');
+    updateMetaTag('o,)
+  g:url', canonicalUrl, 'property');
+    updateMetaTag('o,)
+  g:type', 'website', 'property');
+    updateMetaTag('o,)
+  g:site_name', 'Zion Tech Group', 'property');
+    updateMetaTag('o,)
+  g:locale', locale, 'property');
+    if (publishedTime) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      updateMetaTag('og:published_time', publishedTime, 'property');
+      updateMetaTag('o,)
+  g:published_time', publishedTime, 'property');
     }
-    if (modifiedTime) {// TODO: Add content;}
+    if (modifiedTime) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      updateMetaTag('og:modified_time', modifiedTime, 'property');
+      updateMetaTag('o,)
+  g:modified_time', modifiedTime, 'property');
     }
-    if (section) {// TODO: Add content;}
+    if (section) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      updateMetaTag('og:section', section, 'property');
+      updateMetaTag('o,)
+  g:section', section, 'property');
     }
-    if (tags.length > 0) {// TODO: Add content;}
+    if (tags.length > 0) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      updateMetaTag('og:tag', tags.join(', '), 'property');
+      updateMetaTag('o,)
+  g:tag', tags.join(', '), 'property');
     }
     // Update Twitter tags;
-    updateMetaTag('twitter:card', 'summary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', ogImage, 'name');
-    updateMetaTag('twitter:site', '@ziontechgroup', 'name');
-    updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
+    updateMetaTag('twitte,)
+  r:card', 'summary_large_image', 'name');
+    updateMetaTag('twitte,)
+  r:title', title, 'name');
+    updateMetaTag('twitte,)
+  r:description', description, 'name');
+    updateMetaTag('twitte,)
+  r:image', ogImage, 'name');
+    updateMetaTag('twitte,)
+  r:site', '@ziontechgroup', 'name');
+    updateMetaTag('twitte,)
+  r:creator', '@ziontechgroup', 'name');
     // Update canonical URL;
     updateCanonicalUrl(canonicalUrl);
     // Add alternate language links;
-    if (alternateLocales.length > 0) {// TODO: Add content;}
+    if (alternateLocales.length > 0) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addAlternateLanguageLinks(alternateLocales);
     }
     // Add breadcrumbs structured data;
-    if (breadcrumbs.length > 0) {// TODO: Add content;}
+    if (breadcrumbs.length > 0) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addBreadcrumbStructuredData(breadcrumbs);
     }
     // Add FAQ structured data;
-    if (faqData.length > 0) {// TODO: Add content;}
+    if (faqData.length > 0) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addFAQStructuredData(faqData);
     }
     // Add organization structured data;
-    if (organizationData) {// TODO: Add content;}
+    if (organizationData) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addStructuredData(organizationData);
     }
     // Add website structured data;
-    if (websiteData) {// TODO: Add content;}
+    if (websiteData) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addStructuredData(websiteData);
     }
     // Add custom structured data;
-    if (structuredData) {// TODO: Add content;}
+    if (structuredData) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       addStructuredData(structuredData);
     }
     // Add additional SEO meta tags;
 }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
-    if (!meta) {// TODO: Add content;}
+    if (!meta) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
@@ -181,10 +148,13 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
     }
     meta.content = content;
   };
-  const updateCanonicalUrl = (url: string) => {// TODO: Add content;}
+  const updateCanonicalUrl = (ur,)
+  l: string) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {// TODO: Add content;}
+    if (!canonical) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
@@ -192,9 +162,13 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
     }
     canonical.href = url;
   };
-  const addAlternateLanguageLinks = (locales: { locale: string; url: string }[]) => {// TODO: Add content;}
+  const addAlternateLanguageLinks = (locale,
+  s: {/* TODO: Fix JSX expression */})
+  l: string }[]) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    locales.forEach(({ locale, url }) => {// TODO: Add content;}
+    locales.forEach(({ locale, url }) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       const link = document.createElement('link');
       link.rel = 'alternate';
@@ -203,51 +177,75 @@ const AdvancedSEOOptimizer: React.FC<SEOProps> = ({
       document.head.appendChild(link);
     });
   };
-  const addBreadcrumbStructuredData = (breadcrumbs: { name: string; url: string }[]) => {// TODO: Add content;}
+  const addBreadcrumbStructuredData = (breadcrumb,
+  s: {/* TODO: Fix JSX expression */})
+  l: string }[]) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const breadcrumbData = {// TODO: Add content;}
+    const breadcrumbData = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      '@context': 'https://schema.org',
+      '@context': 'http,
+  s://schema.org',
       '@type': 'BreadcrumbList',
-      itemListElement: breadcrumbs.map((crumb, index) => ({// TODO: Add content;}
+      itemListElemen,
+  t: breadcrumbs.map((crumb, index) => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         '@type': 'ListItem',
-        position: index + 1,
-        name: crumb.name,
-        item: crumb.url;
+        positio,
+  n: index + 1,
+        nam,
+  e: crumb.name,
+        ite,
+  m: crumb.url;)
       }))
     };
     addStructuredData(breadcrumbData);
   };
-  const addFAQStructuredData = (faqData: { question: string; answer: string }[]) => {// TODO: Add content;}
+  const addFAQStructuredData = (faqDat,
+  a: {/* TODO: Fix JSX expression */})
+  r: string }[]) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    const faqStructuredData = {// TODO: Add content;}
+    const faqStructuredData = {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-      '@context': 'https://schema.org',
+      '@context': 'http,
+  s://schema.org',
       '@type': 'FAQPage',
-      mainEntity: faqData.map(faq => ({// TODO: Add content;}
+      mainEntit,
+  y: faqData.map(faq => ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
         '@type': 'Question',
-        name: faq.question,
-        acceptedAnswer: {// TODO: Add content;}
+        nam,
+  e: faq.question,
+        acceptedAnswe,
+  r: {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
           '@type': 'Answer',
-          text: faq.answer;
-        }
+          tex,
+  t: faq.answer;
+        })
       }))
     };
     addStructuredData(faqStructuredData);
   };
-  const addStructuredData = (data: any) => {// TODO: Add content;}
+  const addStructuredData = (dat,)
+  a: any) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   };
-  const addAdditionalSEOTags = () => {// TODO: Add content;}
+  const addAdditionalSEOTags = () => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-    // Add viewport meta tag if not present;
+    // Add viewport meta tag if not present;"
 if (!document.querySelector('meta[name="viewport"]')) {}
       const viewport = document.createElement('meta');
       viewport.name = 'viewport';
@@ -266,11 +264,17 @@ if (!document.querySelector('meta[name="viewport"]')) {}
     updateMetaTag('format-detection', 'telephone=no,address=no,email=no');
     // Add referrer policy;
     updateMetaTag('referrer', 'strict-origin-when-cross-origin');
-    // Add content security policy;
-    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
+    // Add content security policy;"
+    updateMetaTag('content-security-policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
+  s://www.googletagmanager.com; style-src 'self' 'unsafe-inline' http,
+  s://fonts.googleapis.com; img-src 'self' dat,
+  a: http,
+  s: blo,
+  b:; font-src 'self' http,
+  s://fonts.gstatic.com; connect-src 'self' http,")
+  s://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return null;
 };
 
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer;"

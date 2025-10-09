@@ -1,12 +1,10 @@
 import React from 'react';
 
-interface ContentCarouselProps {
-  // Add props here
+interface ContentCarouselProps {/* TODO: Fix JSX expression */}
 }
 
-const ContentCarousel: React.FC<ContentCarouselProps> = () => {
-  return (
-    <div className="contentcarousel">
+const,
+  ContentCarousel: React.FC<ContentCarouselProps> = () => {/* TODO: Fix JSX expression */}
       {/* Component content */}
     </div>
   );

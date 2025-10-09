@@ -1,32 +1,20 @@
-<<<<<<< HEAD
-// Sitemap generator utility
-export interface SitemapUrl {
-    // TODO: Add content
-  }
-  loc: string
-  lastmod?: string
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
-}
-export const _generateSitemap = (urls: SitemapUrl[]): string => {
-    // TODO: Add content
-  }
-  const baseUrl = 'https://ziontechgroup.com'
-  const currentDate = new Date().toISOString().split('T')[0]
-=======
 // Sitemap generator utility;
-export interface SitemapUrl {// TODO: Add content;}
+export interface SitemapUrl {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
-  loc: string;
+  lo,
+  c: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-export const _generateSitemap = (urls: SitemapUrl[]): string => {// TODO: Add content;}
+export const _generateSitemap = (url,)
+  s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = 'http,
+  s://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   const sitemap = `
           
           
@@ -36,20 +24,14 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {// TODO: Add co
           
           
           
-          <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
-<<<<<<< HEAD
-${urls
-  .map((url) => {
-    // TODO: Add content
-  }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
-=======
+          <?xml version="1.0" encoding="UTF-8"?>"
+<urlset xmlns="htt,"
+  p:// www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${urls;}
-  .map((url) => {// TODO: Add content;}
-}
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+  .map((url) => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}`
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;`
     return `  
           
           
@@ -59,97 +41,151 @@ ${urls;}
           
           
           
-          <url>
+          <url></url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
     <changefreq>${url.changefreq || 'weekly'}</changefreq>
-    <priority>${url.priority || 0.8}</priority>
+    <priority>${url.priority || 0.8}</priority>`
   </url>`
   }
   )
-  .join('\n')}
-<<<<<<< HEAD
-</urlset>`
-  return sitemap
-=======
+  .join('\n')}`
 </urlset>`;
   return sitemap;
 };
 // Define all the pages for the sitemap;
-export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-// Define all the pages for the sitemap
-export const getAllPages = (): SitemapUrl[] => {
-    // TODO: Add content
+// Define all the pages for the sitemap;
+export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
   }
   const currentDate = new Date().toISOString().split('T')[0]
   return [
-  // TODO: Add items,
+  // TOD,
+  O: Add items,
 ]
     // Main pages;
-    { loc: '/', priority: 1.0, changefreq: 'daily' },
-    { loc: '/about', priority: 0.9, changefreq: 'monthly' },
-    { loc: '/contact', priority: 0.9, changefreq: 'monthly' },
-    { loc: '/services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/blog', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/case-studies', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/pricing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/team', priority: 0.7, changefreq: 'monthly' },
-    { loc: '/careers', priority: 0.7, changefreq: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'daily' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
     // AI Services;
-    { loc: '/ai-services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/ai-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-healthcare', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fintech', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-data-analytics', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-cybersecurity', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-workflow-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-customer-support', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-sales-automation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-data-visualization', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-email-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-social-media-manager', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-project-manager', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-content-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-code-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-voice-cloning', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-video-generation', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-music-composition', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fashion-design', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-fitness-coach', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-3d-generation', priority: 0.8, changefreq: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
     // IT Services;
-    { loc: '/it-services', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/cloud-migration', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/cybersecurity', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/devops-cicd', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/database-management', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/it-consulting', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/it-infrastructure', priority: 0.8, changefreq: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
     // Micro SAAS;
-    { loc: '/micro-saas', priority: 0.9, changefreq: 'weekly' },
-    { loc: '/ai-crm', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-analytics-dashboard', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-chatbot-builder', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-email-marketing', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-mobile-app-builder', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-design-studio', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-seo-optimizer', priority: 0.8, changefreq: 'weekly' },
-    { loc: '/ai-writing-assistant', priority: 0.8, changefreq: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
     // Specialized Solutions;
-    { loc: '/quantum-computing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/autonomous-systems', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/blockchain-web3', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/iot-edge-computing', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/business-intelligence', priority: 0.8, changefreq: 'monthly' },
-    { loc: '/digital-transformation', priority: 0.8, changefreq: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
     // Legal pages;
-    { loc: '/privacy', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/terms', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/cookies', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/gdpr', priority: 0.5, changefreq: 'yearly' },
-    { loc: '/accessibility', priority: 0.5, changefreq: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
   ]
-}
+}"`

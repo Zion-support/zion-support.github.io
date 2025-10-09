@@ -1,37 +1,21 @@
-<<<<<<< HEAD
-interface LinkProps {
-    // TODO: Add content
-  }
-=======
-interface LinkProps {// TODO: Add content;}
+interface LinkProps {/* TODO: Fix JSX expression */}
+  O: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
-  href: string;,
-    children: React.ReactNode
-  className?: string
-  target?: string
-  rel?: string
-  onClick?: () => void
-  'aria-label'?: string
+  hre,
+  f: string;,
+    childre,
+  n: React.ReactNode;
+  className?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
+  'aria-label'?: string;
 }
-<<<<<<< HEAD
-export const Link: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <LinkProps> = ({
-    // TODO: Add content
-  }
-=======
-export const Link: React.FC;
-          <LinkProps> = ({// TODO: Add content;}
+export const,
+  Link: React.FC;
+          <LinkProps> = ({/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   href,
 //   children,
 //   className,
@@ -39,38 +23,21 @@ export const Link: React.FC;
 //   rel,
 //   onClick,
   'aria-label': ariaLabel,
-//   ...props;
+//   ...props;)
 }) => {if (onClick) {}
     }
-<<<<<<< HEAD
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-    // TODO: Add content
-  }
-      e.preventDefault()
-      window.location.href = href
-=======
     // Handle internal navigation;
-    if (href.startsWith('/') && !href.startsWith('//')) {// TODO: Add content;}
+    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
       e.preventDefault();
       window.location.href = href;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
-  return (
-    
-          
-          
-          
-          
-          
-          
-          
-          <div>Coming Soon</div>
+  return (<div>Coming Soon</div>)
   )
     
-          <a
+          <a></a>
       href={href}
       className={className}
       target={target}
@@ -92,4 +59,4 @@ export const Link: React.FC;
           </a>
   )
 }
-export default Link
+export default Link;
