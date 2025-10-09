@@ -1,11 +1,9 @@
 'use client';
-
 import React from 'react'
 /**
  * Enhanced Analytics Utility
  * Provides type-safe analytics tracking with error handling
  */
-
 export interface AnalyticsEvent {
   action: string;
   category: string;
@@ -21,23 +19,19 @@ class AnalyticsService {
   private isInitialized = false
   private queue: AnalyticsEvent[] = []
   private readonly maxQueueSize = 100
-
   /**
    * Initialize analytics service
    */
   initialize(): void {
     if (this.isInitialized) return
-    
     try {
       // Check if we're in a browser environment
       if (typeof window === 'undefined') return
-
       // Process queued events
       this.processQueue()
       this.isInitialized = true
     } catch (error) {
-      console.error('Analytics initialization failed:', error)
-    }
+      }
   }
   /**
    * Track a custom event
@@ -61,8 +55,7 @@ class AnalyticsService {
       if (process.env['NODE_ENV'] === 'development') {
         }
     } catch (error) {
-      console.error('Failed to track event:', error)
-    }
+      }
   }
   /**
    * Track page view
@@ -72,12 +65,11 @@ class AnalyticsService {
       if (this.hasGtag()) {
         gtag('config', this.config.gaId, {
           page_path: path,
-          page_title: title,
+          page_title: title
         })
       }
     } catch (error) {
-      console.error('Failed to track page view:', error)
-    }
+      }
   }
   /**
    * Track user properties
@@ -91,8 +83,7 @@ class AnalyticsService {
         })
       }
     } catch (error) {
-      console.error('Failed to identify user:', error)
-    }
+      }
   }
   /**
    * Track error events
@@ -123,12 +114,11 @@ class AnalyticsService {
           name: variable,
           value: Math.round(value),
           event_category: category,
-          event_label: label,
+          event_label: label
         });
       }
     } catch (error) {
-      console.error('Failed to track timing:', error)
-    }
+      }
   }
   /**
    * Track performance metrics
@@ -143,8 +133,7 @@ class AnalyticsService {
         metadata
       })
     } catch (error) {
-      console.error('Failed to track performance:', error)
-    }
+      }
   }
   /**
    * Check if gtag is available
@@ -184,7 +173,6 @@ class AnalyticsService {
 }
 // Export singleton instance
 export const analytics = new AnalyticsService()
-
 // Export convenience functions
 export const trackEvent = (event: AnalyticsEvent) => analytics.trackEvent(event)
 export const trackPageView = (path: string, title?: string) =>
@@ -200,7 +188,6 @@ export const trackTiming = (
   label?: string
 ) => analytics.trackTiming(category, variable, value, label)
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
-
 // Initialize on import
 if (typeof window !== 'undefined') {
   analytics.initialize()

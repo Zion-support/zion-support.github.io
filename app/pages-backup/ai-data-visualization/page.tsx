@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/ai-data-visualization/page.tsx
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+=======
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+>>>>>>> origin/main:app/ai-data-visualization/page.tsx
 
 const AIDataVisualizationPage: React.FC = () => {
   const features = [

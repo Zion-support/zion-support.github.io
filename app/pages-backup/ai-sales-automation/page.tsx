@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:app/pages-backup/ai-sales-automation/page.tsx
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+=======
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap } from 'lucide-react';
+>>>>>>> origin/main:app/ai-sales-automation/page.tsx
 
 const AISalesAutomationPage: React.FC = () => {
   const features = [

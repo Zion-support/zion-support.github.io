@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'link_and_health_scheduler'}
       });
     };
-//   } catch (error) {console.error('❌ link_and_health_scheduler function failed: ') error
+//   } catch (error) {// console.error('❌ link_and_health_scheduler function failed: ') error
       }
     return {
       statusCode: 500,
