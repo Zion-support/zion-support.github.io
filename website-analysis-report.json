@@ -1,0 +1,39 @@
+{
+  "baseUrl": "https://ziontechgroup.com",
+  "analysisDate": "2025-10-08T22:47:45.735Z",
+  "summary": {
+    "totalPagesAnalyzed": 1,
+    "workingLinks": 1,
+    "brokenLinks": 0,
+    "uniqueUrlsVisited": 1
+  },
+  "analyzedPages": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200,
+      "title": "No title",
+      "links": [],
+      "depth": 0
+    }
+  ],
+  "workingLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200,
+      "depth": 0
+    }
+  ],
+  "brokenLinks": [],
+  "recommendations": [
+    {
+      "type": "important",
+      "message": "Missing common pages: /about, /contact, /services, /privacy, /terms, /team, /case-studies",
+      "action": "Create these essential pages for better user experience"
+    },
+    {
+      "type": "seo",
+      "message": "1 pages are missing proper titles",
+      "action": "Add descriptive titles to all pages for better SEO"
+    }
+  ]
+}

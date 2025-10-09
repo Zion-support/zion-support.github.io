@@ -1,101 +1,204 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { BookOpen, ArrowRight, Clock, User, Tag } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
     {
+      id: 'ai-2026-implementation-roadmap',
       title: 'AI 2026 Implementation Roadmap',
-      description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
-      url: '/guides/ai-2026-implementation-roadmap',
-      category: 'AI Implementation'
+      description: 'Comprehensive guide to implementing AI solutions in 2026 with cutting-edge strategies and best practices.',
+      readTime: '15 min read',
+      author: 'Zion Tech Group',
+      tags: ['AI', 'Implementation', '2026', 'Strategy'],
+      href: '/guides/ai-2026-implementation-roadmap',
+      featured: true
     },
     {
+      id: 'ai-2027-implementation-roadmap',
       title: 'AI 2027 Implementation Roadmap',
-      description: 'Advanced roadmap for AI implementation strategies in 2027',
-      url: '/guides/ai-2027-implementation-roadmap',
-      category: 'AI Implementation'
+      description: 'Advanced AI implementation strategies for 2027, including quantum computing integration and autonomous systems.',
+      readTime: '20 min read',
+      author: 'Zion Tech Group',
+      tags: ['AI', 'Quantum Computing', '2027', 'Advanced'],
+      href: '/guides/ai-2027-implementation-roadmap',
+      featured: true
     },
     {
+      id: 'autonomous-business-processes',
       title: 'Autonomous Business Processes Implementation Guide 2026',
-      description: 'Step-by-step guide to implementing autonomous business processes',
-      url: '/guides/autonomous-business-processes-implementation-guide-2026',
-      category: 'Process Automation'
+      description: 'Step-by-step guide to implementing autonomous business processes for maximum efficiency and cost savings.',
+      readTime: '25 min read',
+      author: 'Zion Tech Group',
+      tags: ['Automation', 'Business Processes', '2026', 'Implementation'],
+      href: '/guides/autonomous-business-processes-implementation-guide-2026',
+      featured: false
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Technical Guides | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Comprehensive technical guides for AI implementation, enterprise automation, and digital transformation from Zion Tech Group experts."
-        />
-        <meta
-          name="keywords"
-          content="AI implementation guide, enterprise automation guide, technical documentation, AI roadmap"
-        />
-        <meta property="og:title" content="Technical Guides | Zion Tech Group" />
-        <meta
-          property="og:description"
-          content="Comprehensive technical guides for AI implementation, enterprise automation, and digital transformation."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/guides" />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white">
-        <div className="container mx-auto px-4 py-8">
-          <header className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Technical Guides</h1>
-            <p className="text-xl text-gray-300">
-              Comprehensive guides for AI implementation and enterprise automation
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      {/* Header */}
+      <div className="bg-white shadow-sm">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Technical Guides
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive guides and implementation roadmaps for AI, automation, and cutting-edge technology solutions.
             </p>
-          </header>
-
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {guides.map((guide, index) => (
-                <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
-                  <div className="mb-4">
-                    <span className="inline-block bg-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-                      {guide.category}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">
-                    {guide.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {guide.description}
-                  </p>
-                  <Link
-                    to={guide.url}
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-                  >
-                    Read Guide
-                  </Link>
-                </div>
-              ))}
-            </div>
-            
-            <div className="mt-12 text-center">
-              <div className="bg-gray-800 rounded-lg p-8">
-                <h2 className="text-2xl font-semibold mb-4">Need Custom Guidance?</h2>
-                <p className="text-gray-300 mb-6">
-                  Our experts can create custom implementation guides tailored to your specific needs.
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-                >
-                  Contact Our Experts
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </>
+
+      {/* Featured Guides */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Featured Implementation Guides
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {guides.filter(guide => guide.featured).map((guide) => (
+              <div key={guide.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div className="p-8">
+                  <div className="flex items-center mb-4">
+                    <BookOpen className="w-6 h-6 text-indigo-600 mr-2" />
+                    <span className="text-sm font-medium text-indigo-600">Implementation Guide</span>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {guide.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {guide.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {guide.readTime}
+                      </div>
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-1" />
+                        {guide.author}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {guide.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-indigo-100 text-indigo-700 text-sm rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    to={guide.href}
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold transition-colors"
+                  >
+                    Read Guide
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* All Guides */}
+        <div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            All Technical Guides
+          </h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {guides.map((guide) => (
+              <div key={guide.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                <div className="p-6">
+                  <div className="flex items-center mb-3">
+                    <BookOpen className="w-5 h-5 text-indigo-600 mr-2" />
+                    <span className="text-sm font-medium text-indigo-600">Guide</span>
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {guide.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    {guide.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3 text-xs text-gray-500">
+                      <div className="flex items-center">
+                        <Clock className="w-3 h-3 mr-1" />
+                        {guide.readTime}
+                      </div>
+                      <div className="flex items-center">
+                        <User className="w-3 h-3 mr-1" />
+                        {guide.author}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {guide.tags.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <Link
+                    to={guide.href}
+                    className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm transition-colors"
+                  >
+                    Read Guide
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="mt-16 bg-gradient-to-r from-indigo-600 to-purple-700 rounded-2xl p-12 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Need Custom Implementation Support?
+          </h2>
+          <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+            Our expert team can help you implement these strategies with personalized guidance and support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-50 transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              Get Expert Consultation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/enterprise"
+              className="inline-flex items-center bg-transparent text-white px-8 py-4 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-indigo-600 transition-all duration-300 hover:scale-105"
+            >
+              Enterprise Solutions
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
