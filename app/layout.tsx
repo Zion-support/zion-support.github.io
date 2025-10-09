@@ -124,8 +124,8 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
         {/* Primary meta tags */}
-        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
+        <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology. Call (302) 464-0950 for free consultation." />
+        <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, AI marketing, AI healthcare, AI fintech, micro SAAS, AI content generation, IT infrastructure" />
         <meta name="theme-color" content="#4f46e5" />
         <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
@@ -138,6 +138,7 @@ export default function RootLayout({
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='manifest' href='/site.webmanifest' />
+        <link rel='sitemap' href='/sitemap.xml' />
         <meta name='theme-color' content='#4f46e5' />
         {/* Enhanced SEO meta tags */}
         <meta name='publisher' content='Zion Tech Group' />

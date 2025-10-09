@@ -301,9 +301,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
   animation: cyber-scan 3s linear infinite;
 }
 
@@ -339,9 +337,17 @@ body {
 }
 
 .particle-bg::before {
-=======
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-  animation: cyber-scan 4s linear infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: particle-float 4s ease-in-out infinite;
 }
 
 .quantum-card {
@@ -353,34 +359,19 @@ body {
 }
 
 .quantum-card::after {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-<<<<<<< HEAD
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
-  animation: particle-float 4s ease-in-out infinite;
-=======
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
   animation: neural-network 8s linear infinite;
   pointer-events: none;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
-=======
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
-  animation: cyber-scan 3s linear infinite;
 }
 
 .hologram-card:hover {
   animation: hologram-glitch 0.5s ease-in-out;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .glass-morphism {
@@ -404,15 +395,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-<<<<<<< HEAD
-  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.05) 50%, transparent 52%);
-  animation: neural-network 10s linear infinite;
-=======
-  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%);
-  background-size: 40px 40px;
-  animation: energy-flow 4s linear infinite;
+  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.08) 50%, transparent 52%);
+  background-size: 30px 30px;
+  animation: neural-network 8s linear infinite;
   pointer-events: none;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .data-stream {
