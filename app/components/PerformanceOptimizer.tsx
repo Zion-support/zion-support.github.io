@@ -108,12 +108,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-<<<<<<< HEAD
-            console.log('FID:', (entry as any).processingStart - entry.startTime);
-=======
             const fidEntry = entry as PerformanceEventTiming;
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
           }
         });
       });

@@ -111,11 +111,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       t.src = v;
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
-<<<<<<< HEAD
-=======
-    })(window, document, 'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
     
     (window as any).fbq('init', PIXEL_ID);
