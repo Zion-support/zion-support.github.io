@@ -6,6 +6,15 @@
 import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
+
+// Core Web Vitals thresholds
+const coreWebVitals = {
+  lcp: { good: 2500, needsImprovement: 4000 },
+  fid: { good: 100, needsImprovement: 300 },
+  cls: { good: 0.1, needsImprovement: 0.25 },
+  fcp: { good: 1800, needsImprovement: 3000 },
+  ttfb: { good: 800, needsImprovement: 1800 }
+}
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
@@ -137,10 +146,8 @@ class HealthCheckService {
       };
     }
     try {
-=======
       const memoryInfo = (performance as any).memory;
-      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
+      const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100;
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {
@@ -155,9 +162,9 @@ class HealthCheckService {
         status,
         message,
         details: {
-          used: memory.usedJSHeapSize,
-          total: memory.totalJSHeapSize,
-          limit: memory.jsHeapSizeLimit,
+          used: memoryInfo.usedJSHeapSize,
+          total: memoryInfo.totalJSHeapSize,
+          limit: memoryInfo.jsHeapSizeLimit,
           usedPercent
         }
       }
@@ -179,7 +186,27 @@ class HealthCheckService {
       
       // Check if any critical metrics are missing or poor
       const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
-      const missingMetrics = criticalMetrics.filter(metric => !(metric in coreWebVitals))
+      const missingMetrics: string[] = []
+      const poor: string[] = []
+      const needsImprovement: string[] = []
+      const good: string[] = []
+      
+      criticalMetrics.forEach(metric => {
+        const metrics = performanceMonitor.getMetrics()
+        const value = metrics[metric as keyof typeof metrics]
+        if (value === undefined) {
+          missingMetrics.push(metric)
+        } else {
+          const thresholds = coreWebVitals[metric as keyof typeof coreWebVitals]
+          if (value <= thresholds.good) {
+            good.push(metric)
+          } else if (value <= thresholds.needsImprovement) {
+            needsImprovement.push(metric)
+          } else {
+            poor.push(metric)
+          }
+        }
+      })
       
       if (missingMetrics.length > 2) {
         status = 'warn'
@@ -189,7 +216,6 @@ class HealthCheckService {
       if (missingMetrics.length > 3) {
         status = 'fail'
         message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
       }
       
       return {
@@ -198,16 +224,15 @@ class HealthCheckService {
         message,
         details: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
           vitals,
+=======
+          vitals: Object.keys(coreWebVitals),
+>>>>>>> cursor/fix-errors-and-merge-to-main-4aae
           poor,
           needsImprovement,
           good
-=======
-          metrics: reportData,
-          summary: { good: 0, needsImprovement: 0, poor: 0 }
->>>>>>> cursor/fix-errors-and-merge-to-main-a806
->>>>>>> 8669b08b156fc236de843adab9f429d1f2f974da
         }
       }
     } catch (error) {

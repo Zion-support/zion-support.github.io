@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';;
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
@@ -12,6 +12,7 @@ const ServicesPage = lazy(() => import('./services/page'));
 const BlogPage = lazy(() => import('./blog/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
 const NotFoundPage = lazy(() => import('./not-found'));
+const APIDocumentation = lazy(() => import('../api-documentation'));
 
 // AI Services Pages
 const AIAnalyticsDashboardPage = lazy(() => import('./ai-analytics-dashboard/page'));
@@ -232,7 +233,7 @@ const App: React.FC = () => {
             
             {/* IT Services Pages */}
             <Route path="/analytics-tools" element={<AnalyticsToolsPage />} />
-            <Route path="/api-docs" element={<APIDocsPage />} />
+            <Route path="/api-docs" element={<APIDocumentation />} />
             <Route path="/api" element={<APIPage />} />
             <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
             <Route path="/blockchain" element={<BlockchainPage />} />

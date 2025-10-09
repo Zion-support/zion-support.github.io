@@ -112,7 +112,7 @@ class SecurityEnhancer {
       info: console.info.bind(console)
     };
     // Override console methods to detect debugging
-    });
+    Object.assign(console, originalConsole);
   }
   private monitorDOMManipulation(): void {
     const observer = new MutationObserver((mutations) => {
