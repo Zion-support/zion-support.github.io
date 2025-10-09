@@ -1,33 +1,33 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Brain, Code, FlaskConical, Target, Zap, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Settings, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIResearchDevelopmentPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+      icon: Brain,
+      title: 'Custom AI Research',
+      description: 'Tailored AI research solutions for your specific needs',
+      benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
+    },
+    {
+      icon: Code,
+      title: 'Prototype Development',
+      description: 'Rapid prototyping and development of AI solutions',
+      benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
+    },
+    {
+      icon: FlaskConical,
+      title: 'Experimental Platforms',
+      description: 'Advanced experimental environments for AI testing',
+      benefits: ['Sandbox environments', 'A/B testing', 'Performance analysis']
     },
     {
       icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
-    },
-    {
-      icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      title: 'Innovation Consulting',
+      description: 'Strategic consulting for AI adoption and implementation',
+      benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            AI Research & Development
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Cutting-Edge AI Research and Custom Development
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Partner with our world-class AI research team to develop custom solutions that push the boundaries of artificial intelligence. 
+            From concept to deployment, we bring your AI vision to life.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -53,13 +53,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
             >
-              Get Started
+              Start Research
             </a>
             <a
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <BarChart className="w-5 h-5" />
+              <Brain className="w-5 h-5" />
               +1 302 464 0950
             </a>
           </div>
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            Research Capabilities
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default AIResearchDevelopmentPage;

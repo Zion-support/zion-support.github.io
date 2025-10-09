@@ -3,7 +3,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
@@ -38,13 +38,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            AI Analytics
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
             Intelligent Business Intelligence
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
+            Transform your data into actionable insights with our AI-powered analytics platform. 
             Get real-time visibility into your business performance and make data-driven decisions.
           </p>
           
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default AIAnalyticsPage;

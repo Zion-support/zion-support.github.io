@@ -1,33 +1,33 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Building, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, BarChart, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const SmartCitiesPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+      icon: Building,
+      title: 'Smart Infrastructure',
+      description: 'Intelligent city infrastructure and management systems',
+      benefits: ['Traffic management', 'Energy optimization', 'Waste management']
     },
     {
       icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      title: 'IoT Integration',
+      description: 'Internet of Things solutions for urban environments',
+      benefits: ['Sensor networks', 'Data collection', 'Real-time monitoring']
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      title: 'Energy Management',
+      description: 'Smart energy systems and renewable energy integration',
+      benefits: ['Smart grids', 'Energy storage', 'Renewable integration']
     },
     {
       icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      title: 'Citizen Services',
+      description: 'Digital services and citizen engagement platforms',
+      benefits: ['Mobile apps', 'Digital services', 'Citizen engagement']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            Smart Cities
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Intelligent Urban Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Build the cities of the future with our smart city solutions. From intelligent infrastructure to citizen services, 
+            we help create sustainable, efficient, and connected urban environments.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -59,7 +59,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <BarChart className="w-5 h-5" />
+              <Building className="w-5 h-5" />
               +1 302 464 0950
             </a>
           </div>
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            Smart City Solutions
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default SmartCitiesPage;

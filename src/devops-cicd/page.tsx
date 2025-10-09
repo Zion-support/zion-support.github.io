@@ -1,33 +1,33 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Settings, Zap, Shield, BarChart, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
-    },
-    {
-      icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      icon: Settings,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment pipelines',
+      benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      title: 'Infrastructure as Code',
+      description: 'Manage infrastructure through code and automation',
+      benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
     },
     {
-      icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      icon: Shield,
+      title: 'Security Integration',
+      description: 'Built-in security scanning and compliance checks',
+      benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Security gates']
+    },
+    {
+      icon: BarChart,
+      title: 'Monitoring & Analytics',
+      description: 'Comprehensive monitoring and performance analytics',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            DevOps & CI/CD
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Streamlined Development and Deployment
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Accelerate your development lifecycle with our comprehensive DevOps and CI/CD solutions. 
+            Automate your workflows, improve quality, and deploy faster with confidence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -59,7 +59,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <BarChart className="w-5 h-5" />
+              <Settings className="w-5 h-5" />
               +1 302 464 0950
             </a>
           </div>
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            DevOps Solutions
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default DevOpsCICDPage;

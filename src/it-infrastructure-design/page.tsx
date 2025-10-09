@@ -1,33 +1,33 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { Settings, Target, BarChart, Shield, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+      icon: Settings,
+      title: 'Infrastructure Design',
+      description: 'Custom IT infrastructure design and architecture',
+      benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
     {
       icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      title: 'Capacity Planning',
+      description: 'Strategic capacity planning and resource allocation',
+      benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
     },
     {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      icon: BarChart,
+      title: 'Performance Analysis',
+      description: 'Comprehensive performance analysis and optimization',
+      benefits: ['Performance monitoring', 'Bottleneck identification', 'Optimization']
     },
     {
-      icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      icon: Shield,
+      title: 'Security Design',
+      description: 'Security-first infrastructure design principles',
+      benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            IT Infrastructure Design
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Custom Infrastructure Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Design and build robust IT infrastructure that scales with your business. Our experts create custom solutions 
+            that are secure, efficient, and future-ready.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -59,7 +59,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              <BarChart className="w-5 h-5" />
+              <Settings className="w-5 h-5" />
               +1 302 464 0950
             </a>
           </div>
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            Design Services
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default ITInfrastructureDesignPage;

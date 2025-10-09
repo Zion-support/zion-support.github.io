@@ -1,33 +1,33 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
+import { BarChart, Zap, Shield, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Target, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const ITPerformanceMonitoringPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
-    },
-    {
-      icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      title: 'Real-time Monitoring',
+      description: 'Comprehensive real-time system performance monitoring',
+      benefits: ['Live dashboards', 'Performance metrics', 'Alerting']
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      title: 'Performance Optimization',
+      description: 'Automated performance optimization and tuning',
+      benefits: ['Auto-tuning', 'Bottleneck detection', 'Optimization recommendations']
+    },
+    {
+      icon: Shield,
+      title: 'Proactive Monitoring',
+      description: 'Proactive monitoring to prevent issues before they occur',
+      benefits: ['Predictive analytics', 'Early warning', 'Preventive maintenance']
     },
     {
       icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      title: 'Custom Dashboards',
+      description: 'Customizable dashboards and reporting',
+      benefits: ['Custom metrics', 'Visualization', 'Reporting']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            IT Performance Monitoring
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Comprehensive Performance Monitoring Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Monitor and optimize your IT infrastructure performance with our comprehensive monitoring solutions. 
+            Get real-time insights and proactive alerts to ensure optimal performance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            Monitoring Services
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default ITPerformanceMonitoringPage;

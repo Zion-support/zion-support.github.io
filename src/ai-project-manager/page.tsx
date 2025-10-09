@@ -3,31 +3,31 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { BarChart, Target, Zap, Settings, CheckCircle, ArrowRight, Star, TrendingUp, Cpu, Database, Code, Cloud, Users, Globe, Lock, Award } from 'lucide-react';
 
-const AIAnalyticsDashboardPage: React.FC = () => {
+const AIProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization and insights',
-      benefits: ['Live dashboards', 'Real-time metrics', 'Instant insights']
+      title: 'AI-Powered Planning',
+      description: 'Intelligent project planning with AI-driven insights',
+      benefits: ['Smart scheduling', 'Resource optimization', 'Risk prediction']
     },
     {
       icon: Target,
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictions and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk analysis']
+      title: 'Task Management',
+      description: 'Intelligent task assignment and progress tracking',
+      benefits: ['Auto-assignment', 'Progress monitoring', 'Deadline alerts']
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation and distribution',
-      benefits: ['Auto reports', 'Custom dashboards', 'Scheduled delivery']
+      title: 'Predictive Analytics',
+      description: 'Predict project outcomes and identify potential issues',
+      benefits: ['Outcome prediction', 'Issue detection', 'Performance insights']
     },
     {
       icon: Settings,
-      title: 'Custom Metrics',
-      description: 'Customizable metrics and KPIs',
-      benefits: ['Custom KPIs', 'Flexible metrics', 'Personalized views']
+      title: 'Team Collaboration',
+      description: 'Enhanced team collaboration and communication',
+      benefits: ['Real-time updates', 'Team coordination', 'Communication tools']
     }
   ];
 
@@ -38,14 +38,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Analytics Dashboard
+            AI Project Manager
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent Business Intelligence
+            Intelligent Project Planning & Management
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your data into actionable insights with our AI-powered analytics dashboard. 
-            Get real-time visibility into your business performance and make data-driven decisions.
+            Transform your project management with AI-powered insights and automation. 
+            Plan smarter, execute faster, and deliver better results with our intelligent project management platform.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -67,7 +67,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Analytics Features
+            AI Project Management Features
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -101,4 +101,4 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-export default AIAnalyticsDashboardPage;
+export default AIProjectManagerPage;
