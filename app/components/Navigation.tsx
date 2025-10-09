@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
@@ -35,6 +37,7 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
+    setSidebarOpen(false);
   };
 
   const toggleMenu = () => {
@@ -85,6 +88,22 @@ const Navigation: React.FC = () => {
     { name: 'IoT & Edge', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News', href: '/news' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Support Center', href: '/support' },
+    { name: 'System Status', href: '/status' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (
@@ -206,14 +225,56 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              About
-            </Link>
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <span>Company</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="space-y-2">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <span>Resources</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="space-y-2">
+                  {resourcesLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-colors"
+                      onClick={closeAllMenus}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
-            </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
             </Link>
           </div>
 
@@ -235,14 +296,14 @@ const Navigation: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          {/* Mobile Menu Buttons */}
+          <div className="lg:hidden flex items-center space-x-4">
             <button
-              onClick={toggleMenu}
+              onClick={() => setSidebarOpen(true)}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-              aria-label="Toggle menu"
+              aria-label="Open sidebar"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -339,14 +400,38 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                About
-              </Link>
+              {/* Mobile Company Links */}
+              <div className="space-y-2">
+                <div className="text-sm font-semibold text-cyan-400 mb-2">Company</div>
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 ml-4"
+                    onClick={closeAllMenus}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Resources Links */}
+              <div className="space-y-2">
+                <div className="text-sm font-semibold text-cyan-400 mb-2">Resources</div>
+                {resourcesLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 ml-4"
+                    onClick={closeAllMenus}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+
               <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
-              </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
               </Link>
 
               {/* Mobile Contact Info */}
@@ -374,6 +459,9 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
+      
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </nav>
   );
 };
