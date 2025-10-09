@@ -1,104 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Users, MapPin, Clock, CheckCircle } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const positions = [
-    {
-      title: 'Senior AI Engineer',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Lead AI solution development and implementation'
-    },
-    {
-      title: 'DevOps Engineer',
-      location: 'Delaware, USA',
-      type: 'Full-time',
-      description: 'Build and maintain CI/CD pipelines and infrastructure'
-    },
-    {
-      title: 'Cloud Solutions Architect',
-      location: 'Remote',
-      type: 'Full-time',
-      description: 'Design and implement cloud-based solutions'
-    },
-    {
-      title: 'Cybersecurity Specialist',
-      location: 'Delaware, USA',
-      type: 'Full-time',
-      description: 'Protect and secure our clients digital assets'
-    }
-  ];
-
-  const benefits = [
-    'Competitive Salary',
-    'Health Insurance',
-    'Remote Work Options',
-    'Professional Development',
-    'Flexible Hours',
-    'Stock Options'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Join Our Team</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Be part of the future of technology. Join Zion Tech Group and help us build 
-            innovative AI and IT solutions that transform businesses worldwide.
-          </p>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {positions.map((position, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                <div className="flex items-center text-gray-300 mb-2">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  {position.location}
-                </div>
-                <div className="flex items-center text-gray-300 mb-4">
-                  <Clock className="w-4 h-4 mr-2" />
-                  {position.type}
-                </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
-                  Apply Now
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <p className="text-white font-medium">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
-
-const CareersPage: React.FC = () => {
-  const openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Research',
@@ -142,283 +48,166 @@ const CareersPage: React.FC = () => {
         'Learning and development opportunities',
         'Team building events'
       ]
-    },
-    {
-      title: 'AI Product Manager',
-      department: 'Product',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '4+ years',
-      description: 'Drive product strategy and roadmap for our AI solutions.',
-      requirements: [
-        'Bachelor\'s degree in Business or Technical field',
-        '4+ years product management experience',
-        'Experience with AI/ML products',
-        'Strong analytical and communication skills',
-        'MBA preferred'
-      ],
-      benefits: [
-        'Competitive salary and bonus',
-        'Health and wellness benefits',
-        'Flexible PTO policy',
-        'Professional development opportunities',
-        'Stock options'
-      ]
-    },
-    {
-      title: 'DevOps Engineer',
-      department: 'Infrastructure',
-      location: 'Remote / Delaware',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Manage cloud infrastructure and deployment pipelines.',
-      requirements: [
-        '3+ years DevOps experience',
-        'Expertise in AWS, Docker, Kubernetes',
-        'Experience with CI/CD pipelines',
-        'Knowledge of monitoring and logging tools',
-        'Scripting skills (Python, Bash)'
-      ],
-      benefits: [
-        'Competitive salary',
-        'Health insurance',
-        'Remote work options',
-        'Certification reimbursement',
-        'Performance bonuses'
-      ]
-    }
-  ];
-
-  const companyValues = [
-    {
-      icon: '🚀',
-      title: 'Innovation',
-      description: 'We push the boundaries of what\'s possible with AI and technology.'
-    },
-    {
-      icon: '🤝',
-      title: 'Collaboration',
-      description: 'We believe in the power of diverse teams working together.'
-    },
-    {
-      icon: '📈',
-      title: 'Growth',
-      description: 'We invest in our people\'s professional and personal development.'
-    },
-    {
-      icon: '⚡',
-      title: 'Impact',
-      description: 'We create solutions that make a real difference in the world.'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-grid quantum-particles">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <div className="max-w-4xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-glitch floating">
               Join Our Team
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Build the future of AI and technology with us
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow pulse-glow">
+              Build the Future of AI
             </p>
-            <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
-              We're looking for passionate individuals who want to make a real impact 
-              in the world of artificial intelligence and enterprise technology.
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              We're looking for passionate individuals who want to make a difference 
+              in the world of artificial intelligence. Join us in creating cutting-edge 
+              AI solutions that transform businesses.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="#open-positions"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button w-full sm:w-auto text-center"
               >
-                View Open Positions
-              </Link>
-              <Link 
-                to="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                📞 Call: (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button w-full sm:w-auto text-center"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
               >
-                Get in Touch
-              </Link>
+                📧 Send Resume
+              </a>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Company Values */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Values
-            </h2>
-            <p className="text-xl text-gray-600">
-              What drives us every day
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Work With Us */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Work With Us?
-            </h2>
-            <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Award className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Competitive Benefits</h3>
-              </div>
-              <p className="text-gray-600">
-                Health insurance, 401(k) matching, flexible PTO, and professional development opportunities.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Users className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Great Culture</h3>
-              </div>
-              <p className="text-gray-600">
-                Collaborative environment with smart, passionate people who love what they do.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Cutting-Edge Work</h3>
-              </div>
-              <p className="text-gray-600">
-                Work on the latest AI technologies and solve complex, real-world problems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Open Positions */}
-      <section id="open-positions" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          {/* Open Positions */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Open Positions
             </h2>
-            <p className="text-xl text-gray-600">
-              Find your next opportunity with us
-            </p>
-          </div>
-          <div className="space-y-8">
-            {openPositions.map((position, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}</h3>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                      <div className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        {position.location}
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {position.type}
-                      </div>
-                      <div className="flex items-center">
-                        <Users className="w-4 h-4 mr-1" />
-                        {position.experience}
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {positions.map((position, index) => (
+                <div key={index} className="quantum-hologram p-6 energy-pulse">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-xl font-semibold text-white neon-text">{position.title}</h3>
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {position.type}
+                    </span>
                   </div>
-                  <div className="mt-4 lg:mt-0">
-                    <Link 
-                      to="/contact"
-                      className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+                  
+                  <div className="flex items-center text-gray-300 mb-2">
+                    <MapPin className="w-4 h-4 mr-2" />
+                    <span>{position.location}</span>
+                  </div>
+                  
+                  <div className="flex items-center text-gray-300 mb-4">
+                    <Clock className="w-4 h-4 mr-2" />
+                    <span>{position.experience}</span>
+                  </div>
+
+                  <p className="text-gray-300 mb-4">{position.description}</p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-white mb-2 neon-text">Requirements:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {position.requirements.slice(0, 3).map((req, reqIndex) => (
+                        <li key={reqIndex} className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-2">
+                    <a
+                      href="/contact"
+                      className="flex-1 cyber-button text-center"
                     >
                       Apply Now
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex-1 border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg text-center font-medium hover:bg-cyan-400 hover:text-white transition-colors"
+                    >
+                      Learn More
+                    </a>
                   </div>
                 </div>
-                
-                <p className="text-gray-600 mb-6">{position.description}</p>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Requirements:</h4>
-                    <ul className="space-y-2">
-                      {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="flex items-start">
-                          <span className="text-blue-600 mr-2">•</span>
-                          <span className="text-gray-600 text-sm">{req}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {position.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start">
-                          <span className="text-green-600 mr-2">•</span>
-                          <span className="text-gray-600 text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              ))}
+            </div>
+          </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Don't See the Right Role?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            We're always looking for talented individuals. Send us your resume and let's talk!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Send Your Resume
-            </Link>
-            <Link 
-              to="/about"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
-              Learn About Us
-            </Link>
-          </div>
+          {/* Benefits Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+              Why Work With Us?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="quantum-hologram p-6 energy-pulse text-center">
+                <div className="text-4xl mb-4 cyber-scan-line">💰</div>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Competitive Pay</h3>
+                <p className="text-gray-300">Competitive salaries, equity, and performance bonuses</p>
+              </div>
+
+              <div className="quantum-hologram p-6 energy-pulse text-center">
+                <div className="text-4xl mb-4 cyber-scan-line">🏥</div>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Health Benefits</h3>
+                <p className="text-gray-300">Comprehensive health, dental, and vision insurance</p>
+              </div>
+
+              <div className="quantum-hologram p-6 energy-pulse text-center">
+                <div className="text-4xl mb-4 cyber-scan-line">🏠</div>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Remote Work</h3>
+                <p className="text-gray-300">Flexible work arrangements and remote options</p>
+              </div>
+
+              <div className="quantum-hologram p-6 energy-pulse text-center">
+                <div className="text-4xl mb-4 cyber-scan-line">🚀</div>
+                <h3 className="text-xl font-semibold text-white mb-2 neon-text">Growth</h3>
+                <p className="text-gray-300">Learning opportunities and professional development</p>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6 neon-text">
+              Don't See Your Dream Job?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals. Send us your resume and 
+              we'll keep you in mind for future opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button w-full sm:w-auto text-center"
+              >
+                📧 Send Resume
+              </a>
+              <a
+                href="/contact"
+                className="cyber-button w-full sm:w-auto text-center"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                Contact Us
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+      </main>
+
+      <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default CareersPage;
-=======
-export default CareersPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb

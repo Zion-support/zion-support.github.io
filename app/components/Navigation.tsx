@@ -1,5 +1,6 @@
+'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   ChevronDown, 
   Phone, 
@@ -74,10 +75,19 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud AI solutions' },
-        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI apps' }
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Forecast trends & behavior' },
+        { name: 'AI Design Assistant', path: '/ai-design', description: 'Automated graphic design' },
+        { name: 'AI Voice Assistant', path: '/ai-voice', description: 'Custom voice solutions' },
+        { name: 'AI Sales Optimization', path: '/ai-sales', description: 'Sales process optimization' },
+        { name: 'AI Manufacturing', path: '/ai-manufacturing', description: 'Smart manufacturing solutions' },
+        { name: 'AI Sustainability', path: '/ai-sustainability', description: 'Environmental AI solutions' },
+        { name: 'AI CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot', description: 'No-code chatbot creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media', description: 'Social media automation' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice', description: 'Automated invoicing' },
+        { name: 'AI Scheduling Assistant', path: '/ai-scheduling', description: 'Smart appointment scheduling' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo', description: 'Automated SEO optimization' }
       ]
     },
     {
@@ -90,10 +100,15 @@ const Navigation: React.FC = () => {
         { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
-        { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'AWS, Azure, GCP migration' },
+        { name: 'DevOps & CI/CD', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
-        { name: 'Network Services', path: '/networking', description: 'Network infrastructure' }
+        { name: 'Network Security', path: '/network-security', description: 'Advanced network security' },
+        { name: 'System Administration', path: '/system-admin', description: '24/7 system monitoring' },
+        { name: 'Data Backup & Recovery', path: '/data-backup', description: 'Disaster recovery planning' },
+        { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' },
+        { name: 'Identity & Access Management', path: '/iam', description: 'Secure authentication' },
+        { name: 'Mobile Development', path: '/ai-mobile-app-development', description: 'Native & cross-platform apps' }
       ]
     },
     {
@@ -103,11 +118,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent customer management' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot', description: 'No-code chatbot creation' },
+        { name: 'AI Content Generator', path: '/ai-content-generator', description: 'High-quality content creation' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media', description: 'Social media automation' },
+        { name: 'AI Invoice Generator', path: '/ai-invoice', description: 'Automated invoicing' },
+        { name: 'AI Scheduling Assistant', path: '/ai-scheduling', description: 'Smart appointment scheduling' },
+        { name: 'AI SEO Optimizer', path: '/ai-seo', description: 'Automated SEO optimization' },
+        { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
+        { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
+        { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' }
       ]
     },
     {

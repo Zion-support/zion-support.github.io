@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Shield, CheckCircle, Award } from 'lucide-react';
