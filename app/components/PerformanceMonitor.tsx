@@ -1,16 +1,7 @@
 <<<<<<< HEAD
-'use client';
-import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
-}
-
 =======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -151,5 +142,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
->>>>>>> origin/comprehensive-improvements-final
 export default PerformanceMonitor;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+=======
 // Accessibility utilities for improving user experience and compliance
 
 export const generateId = (prefix: string = 'id'): string => {
@@ -248,6 +249,7 @@ export const setupLandmarkNavigation = (): void => {
   });
 };
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 /**
  * Accessibility Utilities
  * Provides accessibility enhancements and monitoring
@@ -578,4 +580,3 @@ class AccessibilityEnhancer {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
->>>>>>> origin/comprehensive-improvements-final

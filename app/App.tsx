@@ -52,17 +52,54 @@ const NotFoundPage = lazy(() => import('./not-found'));
 const OfflinePage = lazy(() => import('./offline/page'));
 
 // Utils
-<<<<<<< HEAD
-=======
 import { logger } from './utils/logger';
 import { lazyLoadImages, preloadCriticalResources } from './utils/performanceUtils';
 import { performanceOptimizer, performanceMonitor } from './utils/performanceUtils';
 import { seoOptimizer } from './utils/seoUtils';
 import { accessibilityEnhancer } from './utils/accessibilityUtils';
 import { collectPerformanceMetrics } from './utils/performanceUtils';
->>>>>>> origin/comprehensive-improvements-final
+
+// Enhanced Components
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import SEOOptimizer from './components/SEOOptimizer';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import UserExperienceEnhancer from './components/UserExperienceEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Styles
 import './globals.css';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      performanceOptimizer();
+      performanceMonitor();
+      seoOptimizer();
+      accessibilityEnhancer();
+      collectPerformanceMetrics();
+    }
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <div className="App">
+        {/* Enhanced Components */}
+        <PerformanceOptimizer />
+        <SEOOptimizer />
+        <AccessibilityEnhancer />
+        <UserExperienceEnhancer />
+        <SecurityEnhancer />
+        
+        {/* Main App Content */}
+        <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+        </div>}>
+          <HomePage />
+        </Suspense>
+      </div>
+    </HelmetProvider>
+  );
+};
 
 export default App;

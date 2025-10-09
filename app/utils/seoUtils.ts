@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-// SEO utilities for optimizing search engine visibility and performance
-
-export interface SEOData {
-=======
 /**
  * SEO Utilities
  * Provides SEO optimization and meta tag management
  */
 
+<<<<<<< HEAD
 export interface SEOConfig {
->>>>>>> origin/comprehensive-improvements-final
+=======
+export interface SEOData {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
 <<<<<<< HEAD
+=======
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -369,6 +368,7 @@ const addStructuredData = (data: unknown): void => {
   document.head.appendChild(script);
 };
 =======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
   ogImage: string;
   twitterCard: string;
   structuredData: Record<string, any>;
@@ -448,4 +448,3 @@ class SEOOptimizer {
 }
 
 export const seoOptimizer = new SEOOptimizer();
->>>>>>> origin/comprehensive-improvements-final
