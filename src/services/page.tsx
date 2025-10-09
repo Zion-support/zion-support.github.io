@@ -6,11 +6,13 @@ const ServicesPage: React.FC = () => {
 import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car} from 'lucide-react';
   const _aiServices = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Brain,
+    // TODO: Add content
+  },
+    { Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
@@ -34,6 +36,9 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       icon: Database,
       title: 'Database Management',
       description: 'Comprehensive database solutions and optimization',
+  ];
+  ];
+  ];
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
       price: 'Starting at $1,000/month',
       icon: Lock,
@@ -64,7 +69,9 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       description: 'Quick implementation with minimal downtime'
   const stats = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },

@@ -5,22 +5,29 @@ import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code} from 'lucide
 const AIMobileBuilderPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Smartphone,
+    // TODO: Add content
+  },
+    { Smartphone,
       title: 'AI-Assisted Development',
       description: 'Intelligent mobile app development with AI assistance',
+  ];
+  ];
+  ];
       benefits: ['Code generation', 'UI/UX optimization', 'Performance tuning']
     },
       icon: Target,
       title: 'Cross-Platform Support',
       description: 'Build for iOS and Android with a single codebase',
       benefits: ['iOS development', 'Android development', 'Unified codebase']
+    },
+    {
       icon: Settings,
       title: 'App Analytics',
       description: 'Comprehensive app performance and user analytics',
       benefits: ['User behavior', 'Performance metrics', 'Crash reporting']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

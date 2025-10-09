@@ -126,7 +126,9 @@ private setupLazyLoading(): void {
       'https://fonts.gstatic.com',
       'https://www.googletagmanager.com',
       'https://www.google-analytics.com'
-    ];
+  ];
+  ];
+  ];
     domains.forEach(domain => {
       const link = document.createElement('link');
       link.rel = 'preconnect';
@@ -142,7 +144,9 @@ private setupLazyLoading(): void {
     const criticalResources = [
       '/fonts/inter.woff2',
       '/css/critical.css',
-    ];
+  ];
+  ];
+  ];
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -208,7 +212,9 @@ private setupServiceWorker(): void {
       'DynamicContentShowcase',
       'ContentStatistics',
       'ContentNewsletterSignup'
-    ];
+  ];
+  ];
+  ];
     lazyComponents.forEach(component => {
       const element = document.querySelector(`[data-component="${component}"]`);
       if (element && 'IntersectionObserver' in window) {

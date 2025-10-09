@@ -5,22 +5,29 @@ import {Cpu, Zap, Globe, Shield, CheckCircle, Star} from 'lucide-react';
 const AIEdgeComputingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Cpu,
+    // TODO: Add content
+  },
+    { Cpu,
       title: 'Edge AI Processing',
       description: 'AI processing at the edge for real-time decision making',
+  ];
+  ];
+  ];
       benefits: ['Low latency', 'Real-time processing', 'Offline capability']
     },
       icon: Zap,
       title: 'Optimized Models',
       description: 'Lightweight AI models optimized for edge deployment',
       benefits: ['Small footprint', 'Fast inference', 'Resource efficient']
+    },
+    {
       icon: Shield,
       title: 'Secure Edge Computing',
       description: 'Enterprise-grade security for edge AI deployments',
       benefits: ['Data privacy', 'Secure communication', 'Access control']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

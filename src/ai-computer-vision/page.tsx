@@ -1,31 +1,41 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {Target, Shield} from 'lucide-react';
+import {Target, Shield, Settings} from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-}
-      icon: Eye,
+    // TODO: Add content
+  },
+    { Eye,
       title: 'Object Detection',
       description: 'Advanced object detection and recognition with high accuracy',
+  ];
+  ];
+  ];
       benefits: ['Real-time detection', 'Multi-class recognition', 'Custom model training']
     },
       icon: Camera,
       title: 'Image Classification',
       description: 'Automated image categorization and content analysis',
       benefits: ['99%+ accuracy', 'Batch processing', 'Custom categories']
+    },
+    {
       icon: Target,
       title: 'Facial Recognition',
       description: 'Secure and accurate facial recognition technology',
       benefits: ['Identity verification', 'Access control', 'Privacy protection']
     }
   ];
+  ];
+  ];
   const applications = [
       title: 'Security & Surveillance',
       description: 'Intelligent security monitoring and threat detection systems',
       icon: Shield,
+  ];
+  ];
+  ];
       useCases: ['Intrusion detection', 'Person tracking', 'Anomaly detection']
       title: 'Manufacturing',
       description: 'Quality control and automated inspection systems',
@@ -37,7 +47,9 @@ const features = [
       description: 'Perfect for small projects',
       features: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',
@@ -166,8 +178,8 @@ Most Popular
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
 //                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'

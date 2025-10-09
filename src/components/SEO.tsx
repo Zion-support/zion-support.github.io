@@ -4,8 +4,8 @@
  * Provides comprehensive SEO meta tags and structured data
  */
 export interface SEOProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title?: string;
   description?: string;
   keywords?: string[];
@@ -21,8 +21,8 @@ export interface SEOProps {
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
   alternateLocales?: { locale: string; url: string }[];
-}
-  title: 'Zion Tech Group - AI & IT Solutions',
+},
+    { 'Zion Tech Group - AI & IT Solutions',
   description:
 //     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
@@ -41,8 +41,8 @@ export interface SEOProps {
   twitterCard: 'summary_large_image' as const,
 };
 export const SEO: React.FC<SEOProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   title,
 //   description,
 //   keywords,
@@ -59,12 +59,12 @@ export const SEO: React.FC<SEOProps> = ({
   locale = defaultSEO.locale,
   alternateLocales = [],
 }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const seo = {
-  // TODO: Add content
-}
-    title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+    // TODO: Add content
+  },
+    { title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
@@ -75,16 +75,16 @@ export const SEO: React.FC<SEOProps> = ({
   };
   // Generate structured data;
 const generateStructuredData = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (structuredData) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       return structuredData;
     }
     const baseStructuredData: Record<string, unknown> = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
@@ -93,23 +93,23 @@ const generateStructuredData = () => {
       image: seo.image,
     };
     if (author) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.author = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         '@type': 'Person',
         name: author,
       };
     }
     if (publishDate) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;

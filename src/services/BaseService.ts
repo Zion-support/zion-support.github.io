@@ -7,18 +7,18 @@ import logger from '../utils/logger';
 import axios from 'axios';
 // Create axios instance with default config;
 const apiClient = axios.create({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   timeout: 30000,
   headers: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     'Content-Type': 'application/json',
   },
 });
 export interface ServiceOptions {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   baseUrl?: string;
   timeout?: number;
   retries?: number;
@@ -26,13 +26,13 @@ export interface ServiceOptions {
   cacheDuration?: number;
 }
 export interface CacheEntry<T> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   data: T;
   timestamp: number;
 export class BaseService {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
@@ -53,62 +53,62 @@ const entry = this.cache.get(key);
     return age < (this.options.cacheDuration || 300000);
    * Get data from cache
   protected getFromCache<T>(key: string): T | null {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!this.options.cache) return null;
     if (this.isCacheValid(key)) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' });
       return this.cache.get(key)?.data as T;
     this.cache.delete(key);
     return null;
    * Set data in cache
   protected setInCache<T>(key: string, data: T): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!this.options.cache) return;
     this.cache.set(key, {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       data,
       timestamp: Date.now()
    * Clear cache for a specific key or all cache
   protected clearCache(key?: string): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (key) {
     } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.cache.clear();
    * Make a GET request
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const cacheKey = `GET:${endpoint}`;
     if (useCache) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const cached = this.getFromCache<T>(cacheKey);
       if (cached) return cached;
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });
       const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         timeout: this.options.timeout,
         retries: this.options.retries
         this.setInCache(cacheKey, response.data);
       return response.data;
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.error('GET request failed', error as Error, {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         component: 'BaseService',
 endpoint
       throw error;
@@ -134,10 +134,10 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
       logger.error('DELETE request failed', error as Error, {
    * Handle service error
   protected handleError(error: Error, context?: Record<string, unknown>): never {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     logger.error('Service error', error, {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       component: this.constructor.name,
 ...context

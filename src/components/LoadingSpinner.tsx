@@ -1,15 +1,15 @@
 'use client';
 interface LoadingSpinnerProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
   fullScreen?: boolean;
 }
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size = 'md',
 //   className,
   text = 'Loading...',
@@ -44,8 +44,8 @@ className={cn(
     </div>
   );
   if (fullScreen) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
   // TODO: Add parameters,
 )

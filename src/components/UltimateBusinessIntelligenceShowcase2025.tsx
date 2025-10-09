@@ -3,15 +3,17 @@ import React, { useState } from 'react';
         return (
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
@@ -19,8 +21,8 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {
       type: 'Blog Post',
       category: 'blog',
       metrics: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',

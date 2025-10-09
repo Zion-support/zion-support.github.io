@@ -6,16 +6,18 @@ import Footer from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-  // TODO: Add content
-}
-      title: 'Technology Partners',
+    // TODO: Add content
+  },
+    { 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '' },
@@ -34,8 +36,8 @@ const PartnersPage: React.FC = () => {
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
-        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
-      title: 'Integration Partners',
+        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' },
+    { 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
@@ -67,7 +69,9 @@ icon: Globe,
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //         'Joint marketing and sales initiatives',
 //         'Co-development of solutions',
 //         'Priority support and resources',

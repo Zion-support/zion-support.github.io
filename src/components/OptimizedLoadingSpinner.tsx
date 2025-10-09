@@ -1,7 +1,7 @@
 'use client';
 interface OptimizedLoadingSpinnerProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
@@ -15,8 +15,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       lg: 'w-12 h-12'
     };
     const colorClasses = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white: 'text-white'

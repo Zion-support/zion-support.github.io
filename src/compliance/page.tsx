@@ -13,13 +13,17 @@ const CompliancePage: React.FC = () => {
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
   ];
+  ];
+  ];
   const complianceAreas = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']

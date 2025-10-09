@@ -5,11 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
   const _teamMembers = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      name: 'Kleber Santos',
+    // TODO: Add content
+  },
+    { 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
       image: '/api/placeholder/300/300',
@@ -39,7 +41,9 @@ import Footer from '../components/Footer';
   ];
   const stats = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'AI Projects', icon: Brain },

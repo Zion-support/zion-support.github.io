@@ -5,22 +5,29 @@ import {Users, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const AIHRAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Users,
+    // TODO: Add content
+  },
+    { Users,
       title: 'HR Automation',
       description: 'AI-powered HR process automation',
+  ];
+  ];
+  ];
       benefits: ['Recruitment automation', 'Employee onboarding', 'Performance management']
     },
       icon: Target,
       title: 'Talent Management',
       description: 'Intelligent talent acquisition and management',
       benefits: ['Candidate screening', 'Skill matching', 'Career development']
+    },
+    {
       icon: Settings,
       title: 'HR Analytics',
       description: 'Comprehensive HR analytics and insights',
       benefits: ['Workforce analytics', 'Performance metrics', 'Predictive insights']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

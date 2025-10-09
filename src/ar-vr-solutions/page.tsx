@@ -5,22 +5,29 @@ import {Eye, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const ARVRSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Eye,
+    // TODO: Add content
+  },
+    { Eye,
       title: 'AR Development',
       description: 'Augmented reality applications and experiences',
+  ];
+  ];
+  ];
       benefits: ['AR apps', '3D visualization', 'Interactive experiences']
     },
       icon: Target,
       title: 'VR Solutions',
       description: 'Virtual reality platforms and immersive experiences',
       benefits: ['VR environments', 'Training simulations', 'Virtual meetings']
+    },
+    {
       icon: Settings,
       title: 'Hardware Integration',
       description: 'Integration with AR/VR hardware and devices',
       benefits: ['Device compatibility', 'Performance optimization', 'Hardware support']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

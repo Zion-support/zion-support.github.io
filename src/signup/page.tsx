@@ -5,10 +5,10 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const SignupPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [formData, setFormData] = useState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     firstName: '',
     lastName: '',
     email: '',
@@ -25,25 +25,25 @@ const SignupPage: React.FC = () => {
 const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       alert('Passwords do not match');
       return;
     }
     if (!formData.agreeToTerms) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       alert('Please agree to the terms and conditions');
     setIsLoading(true);
     // Simulate signup process
@@ -53,11 +53,13 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     window.location.href = '/';
   const features = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance'
     },
@@ -232,3 +234,6 @@ Join thousands of businesses already using our AI and IT solutions
     </>
   );
 export default SignupPage;
+  ];
+  ];
+  ];

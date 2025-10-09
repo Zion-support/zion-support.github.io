@@ -5,22 +5,29 @@ import {Globe, Shield, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const NetworkSolutionsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Globe,
+    // TODO: Add content
+  },
+    { Globe,
       title: 'Network Design',
       description: 'Custom network architecture design and implementation',
+  ];
+  ];
+  ];
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Shield,
       title: 'Network Security',
       description: 'Comprehensive network security solutions',
       benefits: ['Firewall management', 'Intrusion detection', 'VPN solutions']
+    },
+    {
       icon: Settings,
       title: 'Network Management',
       description: '24/7 network monitoring and management',
       benefits: ['Proactive monitoring', 'Issue resolution', 'Performance reporting']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

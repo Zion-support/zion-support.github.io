@@ -5,22 +5,29 @@ import {Shield, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const AISecurityMonitorPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Threat Detection',
       description: 'AI-powered threat detection and monitoring',
+  ];
+  ];
+  ];
       benefits: ['Real-time monitoring', 'Threat analysis', 'Incident response']
     },
       icon: Target,
       title: 'Vulnerability Assessment',
       description: 'Automated vulnerability scanning and assessment',
       benefits: ['Security scanning', 'Risk assessment', 'Compliance checking']
+    },
+    {
       icon: Settings,
       title: 'Security Analytics',
       description: 'Comprehensive security analytics and reporting',
       benefits: ['Security metrics', 'Threat intelligence', 'Performance reports']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

@@ -5,13 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'products',
       name: 'Products',
       icon: ShoppingCart,
@@ -33,6 +33,9 @@ const categories = [
       rating: 4.9,
       reviews: 127,
       image: '',
+  ];
+  ];
+  ];
       features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
       vendor: 'Zion Tech Group',
       verified: true

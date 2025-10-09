@@ -1,50 +1,50 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {Shield} from 'lucide-react';
+import {Shield, Settings} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-}
       icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
-  // TODO: Add content
-}
       icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
-  // TODO: Add content
-}
-      icon: Clock,
+    // TODO: Add content
+  },
+    { Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
   ];
+  ];
+  ];
   const pricingPlans = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      name: 'Starter',
+    // TODO: Add content
+  },
+    { 'Starter',
       price: '$1,400',
       period: '/month',
       description: 'Perfect for small businesses',
@@ -60,9 +60,9 @@ const features = [
       popular: false
     },
     {
-  // TODO: Add content
-}
-      name: 'Professional',
+    // TODO: Add content
+  },
+    { 'Professional',
       price: '$2,800',
       period: '/month',
       description: 'Ideal for growing companies',
@@ -79,9 +79,9 @@ const features = [
       popular: true
     },
     {
-  // TODO: Add content
-}
-      name: 'Enterprise',
+    // TODO: Add content
+  },
+    { 'Enterprise',
       price: '$5,600',
       period: '/month',
       description: 'For large organizations',
@@ -101,7 +101,9 @@ const features = [
   ];
   const stats = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { icon: Users, value: '200+', label: 'Automated Processes' },
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },

@@ -2,7 +2,7 @@
 import React from 'react';
 const SitemapPage: React.FC = () => {
   // TODO: Add content
-}
+  
   return (
   // TODO: Add parameters,
 )

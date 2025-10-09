@@ -6,11 +6,11 @@ import Footer from '../components/Footer';
 import React from 'react';
 const ContactPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [formData, setFormData] = useState({
-  // TODO: Add content
-}
-    name: '',
+    // TODO: Add content
+  },
+    { '',
     email: '',
     company: '',
     phone: '',
@@ -19,33 +19,35 @@ const ContactPage: React.FC = () => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
     }));
   };
   const handleSubmit = (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       setIsSubmitted(false);
       setFormData({
 }, 3000);
   const services = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'AI Services',
 //     'IT Services',
 //     'Micro SAAS Solutions',
@@ -59,7 +61,9 @@ const ContactPage: React.FC = () => {
   ];
   const achievements = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },

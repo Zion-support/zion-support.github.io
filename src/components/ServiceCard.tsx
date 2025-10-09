@@ -1,7 +1,7 @@
 interface ServiceCardProps {
-  // TODO: Add content
-}
-  title: string;
+    // TODO: Add content
+  },
+    { string;
   description: string;
   icon?: React.ReactNode;
   className?: string;
@@ -10,8 +10,8 @@ interface ServiceCardProps {
  * Reusable ServiceCard component with accessibility features
  */
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, className = '' }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
   // TODO: Add parameters,
 )

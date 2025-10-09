@@ -1,14 +1,16 @@
 import React from 'react';
 const CareersPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const _openPositions = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      title: 'Senior AI Engineer',
+    // TODO: Add content
+  },
+    { 'Senior AI Engineer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -17,9 +19,9 @@ const CareersPage: React.FC = () => {
       icon: Brain
     },
     {
-  // TODO: Add content
-}
-      title: 'Full-Stack Developer',
+    // TODO: Add content
+  },
+    { 'Full-Stack Developer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -28,9 +30,9 @@ const CareersPage: React.FC = () => {
       icon: Code
     },
     {
-  // TODO: Add content
-}
-      title: 'AI Product Manager',
+    // TODO: Add content
+  },
+    { 'AI Product Manager',
       department: 'Product',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -39,9 +41,9 @@ const CareersPage: React.FC = () => {
       icon: Users
     },
     {
-  // TODO: Add content
-}
-      title: 'Cybersecurity Specialist',
+    // TODO: Add content
+  },
+    { 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Middletown, DE',;
       type: 'Full-time',
@@ -52,7 +54,9 @@ const CareersPage: React.FC = () => {
   ];
   const benefits = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'Competitive salary and equity',
 //     'Comprehensive health insurance',
 //     'Flexible remote work options',

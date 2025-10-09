@@ -6,14 +6,16 @@ import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Brain,
+    // TODO: Add content
+  },
+    { Brain,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -181,8 +183,8 @@ icon: BarChart,
                   <a
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
@@ -223,3 +225,6 @@ Get Free Consultation
   );
 };
 export default AIAnalyticsPage;
+  ];
+  ];
+  ];

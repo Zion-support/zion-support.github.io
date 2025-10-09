@@ -50,7 +50,7 @@ const App: React.FC = () => {
       });
       setIsInitialized(true);
     } catch (error) {
-      console.error('Failed to initialize enhancers:', error);
+      // console.error('Failed to initialize enhancers:', error);
       setIsInitialized(true);
     }
   };

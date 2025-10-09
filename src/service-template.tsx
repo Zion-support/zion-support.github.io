@@ -5,9 +5,9 @@ import {CheckCircle, Star, Phone} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 interface ServicePageProps {
-  // TODO: Add content
-}
-  title: string;
+    // TODO: Add content
+  },
+    { string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
   services: Array<{
@@ -17,8 +17,8 @@ interface ServicePageProps {
   benefits: string[];
 }
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
   // TODO: Add parameters,
 )

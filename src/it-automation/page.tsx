@@ -5,22 +5,29 @@ import {Settings, Zap, Shield, BarChart, CheckCircle, Star} from 'lucide-react';
 const ITAutomationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Settings,
+    // TODO: Add content
+  },
+    { Settings,
       title: 'Process Automation',
       description: 'Automate repetitive IT processes and workflows',
+  ];
+  ];
+  ];
       benefits: ['Workflow automation', 'Task scheduling', 'Process optimization']
     },
       icon: Zap,
       title: 'Infrastructure Automation',
       description: 'Automate infrastructure provisioning and management',
       benefits: ['Auto-provisioning', 'Configuration management', 'Scaling']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring Automation',
       description: 'Automated monitoring and alerting systems',
       benefits: ['Auto-monitoring', 'Smart alerts', 'Performance tracking']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

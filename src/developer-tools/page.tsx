@@ -1,14 +1,16 @@
 import React from 'react';
 const DeveloperToolsPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const _devTools = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      title: 'AI Code Generator',
+    // TODO: Add content
+  },
+    { 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
       icon: Code,
       features: ['Multi-language Support', 'Code Completion', 'Bug Detection', 'Documentation Generation'],
@@ -16,9 +18,9 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $99/month'
     },
     {
-  // TODO: Add content
-}
-      title: 'API Testing Suite',
+    // TODO: Add content
+  },
+    { 'API Testing Suite',
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
       features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
@@ -26,9 +28,9 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $149/month'
     },
     {
-  // TODO: Add content
-}
-      title: 'Database Management Tool',
+    // TODO: Add content
+  },
+    { 'Database Management Tool',
       description: 'Advanced database administration and optimization',
       icon: BarChart,
       features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
@@ -36,9 +38,9 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $199/month'
     },
     {
-  // TODO: Add content
-}
-      title: 'DevOps Automation',
+    // TODO: Add content
+  },
+    { 'DevOps Automation',
       description: 'Streamline development and deployment processes',
       icon: Target,
       features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
@@ -46,9 +48,9 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $299/month'
     },
     {
-  // TODO: Add content
-}
-      title: 'Code Review Assistant',
+    // TODO: Add content
+  },
+    { 'Code Review Assistant',
       description: 'AI-powered code review and quality assurance',
       icon: Users,
       features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
@@ -56,9 +58,9 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $79/month'
     },
     {
-  // TODO: Add content
-}
-      title: 'Performance Profiler',
+    // TODO: Add content
+  },
+    { 'Performance Profiler',
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],

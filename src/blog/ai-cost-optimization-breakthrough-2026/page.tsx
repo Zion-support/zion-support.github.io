@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 export default function AICostOptimizationBreakthrough2026() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
   // TODO: Add parameters,
 )

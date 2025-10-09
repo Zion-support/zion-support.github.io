@@ -8,14 +8,14 @@ export const getAllPages = () => [
   { path: '/about', priority: 0.6 }
 ];
 export const generateSitemap = (pages: Array<{ path: string; priority: number }>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const baseUrl = 'https://ziontechgroup.com';
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
   sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   pages.forEach(page => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     sitemap += `  <url>\n`;
     sitemap += `    <loc>${baseUrl}${page.path}</loc>\n`;
     sitemap += `    <priority>${page.priority}</priority>\n`;
@@ -27,7 +27,7 @@ export const generateSitemap = (pages: Array<{ path: string; priority: number }>
 // This would typically be handled by a server-side route
 // For now, we'll create a static sitemap.xml file;
 export const generateStaticSitemap = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return generateSitemap(getAllPages());
 };

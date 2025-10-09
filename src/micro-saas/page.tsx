@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MicroSaas: React.FC = () => {
   // TODO: Add content
-}
+  
   return (
   // TODO: Add parameters,
 )

@@ -1,7 +1,7 @@
 
 interface SEOProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title?: string;
   description?: string;
   keywords?: string[];
@@ -21,8 +21,8 @@ interface SEOProps {
   tags?: string[];
 }
 const EnhancedSEO: React.FC<SEOProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],

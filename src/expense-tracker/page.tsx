@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Receipt,
+    // TODO: Add content
+  },
+    { Receipt,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefit: 'Save 8+ hours per month'
@@ -25,6 +25,8 @@ const ExpenseTrackerPage: React.FC = () => {
       description: 'Ensure compliance with tax regulations and company policies with automated checks and audit trails.',
       benefit: '100% compliance guarantee'
     }
+  ];
+  ];
   ];
   const pricingPlans = [
       name: 'Business',
@@ -119,8 +121,8 @@ Integrates with Your Tools
   // TODO: Add parameters,
 )
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
@@ -158,6 +160,9 @@ Most Popular
 )
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
+  ];
+  ];
+  ];
                   {[...Array(testimonial.rating)].map((_, i) => (
   // TODO: Add parameters,
 )

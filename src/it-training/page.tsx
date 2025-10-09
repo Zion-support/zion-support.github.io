@@ -5,22 +5,29 @@ import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star} from 'lucide-r
 const ITTrainingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: GraduationCap,
+    // TODO: Add content
+  },
+    { GraduationCap,
       title: 'Certification Programs',
       description: 'Industry-recognized IT certification training programs',
+  ];
+  ];
+  ];
       benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
     },
       icon: BookOpen,
       title: 'Custom Training',
       description: 'Tailored training programs for your specific needs',
       benefits: ['Custom curriculum', 'On-site training', 'Online learning']
+    },
+    {
       icon: Award,
       title: 'Expert Instructors',
       description: 'Learn from industry experts and certified professionals',
       benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

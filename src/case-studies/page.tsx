@@ -1,13 +1,15 @@
 import React from 'react';
 const CaseStudiesPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const _caseStudies = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 1,
       title: 'E-commerce Platform Transformation',
       company: 'TechRetail Inc.',
@@ -15,8 +17,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Low conversion rates and high customer acquisition costs',
       solution: 'AI-powered personalization and dynamic pricing optimization',
       results: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         roi: '340%',
         conversion: '+85%',
         costReduction: '-65%',
@@ -26,8 +28,8 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 2,
       title: 'Financial Services Automation',
       company: 'FinTech Solutions',
@@ -35,8 +37,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Manual processes causing delays and errors in loan processing',
       solution: 'AI-powered document processing and risk assessment automation',
       results: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         roi: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
@@ -46,8 +48,8 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 3,
       title: 'Healthcare Data Analytics',
       company: 'MedTech Innovations',
@@ -55,8 +57,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Fragmented patient data and inefficient treatment planning',
       solution: 'AI-powered data integration and predictive analytics for treatment optimization',
       results: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         roi: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
@@ -66,8 +68,8 @@ const CaseStudiesPage: React.FC = () => {
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 4,
       title: 'Manufacturing Optimization',
       company: 'AutoParts Manufacturing',
@@ -75,8 +77,8 @@ const CaseStudiesPage: React.FC = () => {
       challenge: 'Production inefficiencies and quality control issues',
       solution: 'AI-powered predictive maintenance and quality control automation',
       results: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         roi: '310%',
         efficiency: '+75%',
         defects: '-90%',

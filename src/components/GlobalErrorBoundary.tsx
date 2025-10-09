@@ -1,62 +1,62 @@
 'use client';
 interface Props {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   children: ReactNode;
   fallback?: ReactNode;
 }
 interface State {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 class GlobalErrorBoundary extends Component<Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   constructor(props: Props) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     super(props);
     this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return { hasError: true, error };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       }
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
   handleRetry = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return this.props.fallback;
       }
       return (

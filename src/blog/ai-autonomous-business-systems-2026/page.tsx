@@ -1,8 +1,8 @@
 'use client';
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 <div>
             <Link href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">← Back to Blog</Link>

@@ -5,22 +5,29 @@ import {Mic, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Mic,
+    // TODO: Add content
+  },
+    { Mic,
       title: 'Voice Recognition',
       description: 'Advanced voice recognition and processing',
+  ];
+  ];
+  ];
       benefits: ['Speech-to-text', 'Voice commands', 'Multi-language support']
     },
       icon: Target,
       title: 'Natural Language Processing',
       description: 'Intelligent conversation and understanding',
       benefits: ['Context understanding', 'Intent recognition', 'Response generation']
+    },
+    {
       icon: Settings,
       title: 'Custom Integration',
       description: 'Custom voice assistant integration',
       benefits: ['API integration', 'Custom commands', 'Third-party apps']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

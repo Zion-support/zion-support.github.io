@@ -1,7 +1,7 @@
 'use client';
 interface LazyImageProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   src: string;
   alt: string;
   className?: string;
@@ -13,8 +13,8 @@ interface LazyImageProps {
   onError?: () => void;
 }
 const LazyImage: React.FC<LazyImageProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   src,
 //   alt,
 //   className,
@@ -25,51 +25,51 @@ const LazyImage: React.FC<LazyImageProps> = ({
 //   onLoad,
 //   onError,
 }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (priority) return;
     const observer = new IntersectionObserver(
   // TODO: Add parameters,
 )
       ([entry]) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (entry.isIntersecting) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           setIsInView(true);
           observer.disconnect();
         }
       },
       {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         threshold: 0.1,
         rootMargin: '50px',
       }
     );
     if (imgRef.current) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       observer.observe(imgRef.current);
     }
     return () => observer.disconnect();
   }, [priority]);
   const handleLoad = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     setIsLoaded(true);
     onLoad?.();
   };
   const handleError = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     setHasError(true);
     onError?.();
   };

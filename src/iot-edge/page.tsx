@@ -3,12 +3,15 @@ import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings,
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
-  // TODO: Add content
-}
-      title: 'IoT Device Management Platform',
+    // TODO: Add content
+  },
+    { 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '',
       price: 'Starting at $3,500/month',
+  ];
+  ];
+  ];
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Security management'],
       benefits: ['Reduce management overhead by 70%', 'Improve device reliability', 'Enable remote operations'],
       marketPrice: '$5,000-15,000/month',

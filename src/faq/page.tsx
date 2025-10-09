@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const FAQPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 const toggleItem = (index: number) => {
@@ -17,10 +17,12 @@ const toggleItem = (index: number) => {
   };
   const faqData = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       category: 'General Questions',
       questions: [
 question: 'What is Zion Tech Group?',
@@ -81,8 +83,8 @@ question: 'What is Zion Tech Group?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ];
   const filteredData = faqData.map(category => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //     ...category,
     questions: category.questions.filter(q =>
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -126,8 +128,8 @@ type="text"
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                       <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">

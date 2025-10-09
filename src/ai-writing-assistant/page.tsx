@@ -1,7 +1,7 @@
 import React from 'react';
 const AIWritingAssistantPage: React.FC = () => {
   // TODO: Add content
-}
+  
   return (
   // TODO: Add parameters,
 )

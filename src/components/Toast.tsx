@@ -1,8 +1,8 @@
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   message: string;
   type?: ToastType;
   duration?: number;
@@ -10,20 +10,20 @@ export interface ToastProps {
   show: boolean;
 }
 const Toast: React.FC<ToastProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   message,
   type = 'success',
   duration = 3000,
 //   onClose,
 //   show
 }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     setIsVisible(show);
     if (show && duration > 0) {
 setIsVisible(false);
@@ -36,11 +36,11 @@ setIsVisible(false);
   }, [show, duration, onClose]);
   if (!isVisible) return null;
   const getToastStyles = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (type) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case 'success':
         return 'bg-green-600 text-white';
       case 'error':
@@ -54,11 +54,11 @@ setIsVisible(false);
     }
   };
   const getIcon = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (type) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case 'success':
         return '';
       case 'error':
@@ -83,8 +83,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       <span>{message}</span>
       <button
         onClick={() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           setIsVisible(false);
           if (onClose) onClose();
         }}

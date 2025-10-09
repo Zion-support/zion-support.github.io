@@ -5,22 +5,29 @@ import {Leaf, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const SustainabilityTechPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Leaf,
+    // TODO: Add content
+  },
+    { Leaf,
       title: 'Green Technology',
       description: 'Sustainable technology solutions for environmental impact',
+  ];
+  ];
+  ];
       benefits: ['Carbon reduction', 'Energy efficiency', 'Waste reduction']
     },
       icon: Target,
       title: 'Sustainability Analytics',
       description: 'Data-driven sustainability insights and reporting',
       benefits: ['Environmental metrics', 'Sustainability reporting', 'Impact analysis']
+    },
+    {
       icon: Settings,
       title: 'Circular Economy',
       description: 'Circular economy solutions and waste management',
       benefits: ['Waste reduction', 'Resource optimization', 'Recycling systems']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

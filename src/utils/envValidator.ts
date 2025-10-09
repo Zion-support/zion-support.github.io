@@ -4,24 +4,24 @@
  * Ensures all required environment variables are present and valid
  */
 export interface EnvConfig {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SITE_URL?: string;
 }
 class EnvValidator {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private errors: string[] = []
   private warnings: string[] = []
   /**
    * Validate all environment variables
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.errors = []
     this.warnings = []
     // Validate NODE_ENV
@@ -29,8 +29,8 @@ class EnvValidator {
     // Validate optional but recommended variables
 //     this.validateOptionalVars()
     return {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       isValid: this.errors.length === 0,
       errors: this.errors,
       warnings: this.warnings
@@ -41,8 +41,8 @@ class EnvValidator {
    */
   getConfig(): EnvConfig {
     if (!validation.isValid) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       throw new Error(
   // TODO: Add parameters,
 )
@@ -53,14 +53,14 @@ class EnvValidator {
     const nodeEnv = process.env['NODE_ENV'];
     const validEnvs = ['development', 'production', 'test']
     if (!nodeEnv) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       this.errors.push('NODE_ENV is not set')
 //       return
     }
     if (!validEnvs.includes(nodeEnv)) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       this.errors.push(
   // TODO: Add parameters,
 )
@@ -69,16 +69,16 @@ class EnvValidator {
     }
   }
   private validateOptionalVars(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set
     if (nodeEnv === 'production') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         this.warnings.push(
   // TODO: Add parameters,
 )
@@ -86,8 +86,8 @@ class EnvValidator {
 //         )
       }
       if (!process.env['NEXT_PUBLIC_GA_ID']) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         this.warnings.push(
   // TODO: Add parameters,
 )
@@ -97,8 +97,8 @@ class EnvValidator {
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
   }
@@ -107,8 +107,8 @@ class EnvValidator {
 export const envValidator = new EnvValidator()
 // Export convenience function;
 export function validateEnv(): EnvConfig {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return envValidator.getConfig()
 }
 export default envValidator;

@@ -2,14 +2,16 @@
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [activeTab, setActiveTab] = useState('ai');
   const _solutionCategories = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'ai',
       name: 'AI Solutions',
       icon: Brain,
@@ -18,8 +20,8 @@ const SolutionsPage: React.FC = () => {
       description: 'Transform your business with cutting-edge artificial intelligence'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'it',
       name: 'IT Infrastructure',
       icon: Cloud,
@@ -28,8 +30,8 @@ const SolutionsPage: React.FC = () => {
       description: 'Robust and scalable IT infrastructure solutions'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
@@ -38,8 +40,8 @@ const SolutionsPage: React.FC = () => {
       description: 'Comprehensive security solutions for your digital assets'
     },
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'automation',
       name: 'Automation',
       icon: Zap,
@@ -49,15 +51,15 @@ const SolutionsPage: React.FC = () => {
     }
   ];
   const solutions = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     ai: [
   // TODO: Add items,
 ]
       {
-  // TODO: Add content
-}
-        title: 'AI-Powered Analytics',
+    // TODO: Add content
+  },
+    { 'AI-Powered Analytics',
         description: 'Transform raw data into actionable insights with advanced AI analytics',
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
@@ -65,9 +67,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-blue-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'AI Marketing Automation',
+    // TODO: Add content
+  },
+    { 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
@@ -75,9 +77,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-pink-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'AI Customer Support',
+    // TODO: Add content
+  },
+    { 'AI Customer Support',
         description: 'Enhance customer experience with intelligent AI-powered support systems',
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
@@ -85,9 +87,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'AI Process Automation',
+    // TODO: Add content
+  },
+    { 'AI Process Automation',
         description: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
@@ -99,9 +101,9 @@ const SolutionsPage: React.FC = () => {
   // TODO: Add items,
 ]
       {
-  // TODO: Add content
-}
-        title: 'Cloud Migration',
+    // TODO: Add content
+  },
+    { 'Cloud Migration',
         description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
@@ -109,9 +111,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-blue-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'IT Infrastructure Management',
+    // TODO: Add content
+  },
+    { 'IT Infrastructure Management',
         description: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
@@ -119,9 +121,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'DevOps & CI/CD',
+    // TODO: Add content
+  },
+    { 'DevOps & CI/CD',
         description: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
@@ -129,9 +131,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-purple-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'Database Management',
+    // TODO: Add content
+  },
+    { 'Database Management',
         description: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
@@ -143,9 +145,9 @@ const SolutionsPage: React.FC = () => {
   // TODO: Add items,
 ]
       {
-  // TODO: Add content
-}
-        title: 'Cybersecurity Suite',
+    // TODO: Add content
+  },
+    { 'Cybersecurity Suite',
         description: 'Comprehensive security solutions with threat detection and response',
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
@@ -153,9 +155,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-red-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'AI Security Monitoring',
+    // TODO: Add content
+  },
+    { 'AI Security Monitoring',
         description: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
@@ -163,9 +165,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-purple-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'Compliance Management',
+    // TODO: Add content
+  },
+    { 'Compliance Management',
         description: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
@@ -173,9 +175,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-green-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'Security Training',
+    // TODO: Add content
+  },
+    { 'Security Training',
         description: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
@@ -187,9 +189,9 @@ const SolutionsPage: React.FC = () => {
   // TODO: Add items,
 ]
       {
-  // TODO: Add content
-}
-        title: 'Business Process Automation',
+    // TODO: Add content
+  },
+    { 'Business Process Automation',
         description: 'Automate complex business processes with intelligent workflow management',
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
@@ -197,9 +199,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-yellow-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'IT Automation',
+    // TODO: Add content
+  },
+    { 'IT Automation',
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
@@ -207,9 +209,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-blue-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'Marketing Automation',
+    // TODO: Add content
+  },
+    { 'Marketing Automation',
         description: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
@@ -217,9 +219,9 @@ const SolutionsPage: React.FC = () => {
         color: 'text-pink-400'
       },
       {
-  // TODO: Add content
-}
-        title: 'Data Automation',
+    // TODO: Add content
+  },
+    { 'Data Automation',
         description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
@@ -230,32 +232,34 @@ const SolutionsPage: React.FC = () => {
   };
   const benefits = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Star,
+    // TODO: Add content
+  },
+    { Star,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients'
     },
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for all our solutions'
     },
     {
-  // TODO: Add content
-}
-      icon: Globe,
+    // TODO: Add content
+  },
+    { Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
     },
     {
-  // TODO: Add content
-}
-      icon: Users,
+    // TODO: Add content
+  },
+    { Users,
       title: 'Expert Team',
       description: 'Certified professionals with years of industry experience'
     }
@@ -287,8 +291,8 @@ const SolutionsPage: React.FC = () => {
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     activeTab === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'

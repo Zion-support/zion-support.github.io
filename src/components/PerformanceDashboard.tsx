@@ -1,15 +1,15 @@
 'use client';
 interface PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
 }
 interface PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   loadTime: number;
   renderTime: number;
   memoryUsage: number;

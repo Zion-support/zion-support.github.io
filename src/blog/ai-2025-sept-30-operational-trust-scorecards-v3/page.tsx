@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const Pagetsx: React.FC = () => {
@@ -9,6 +9,9 @@ const Pagetsx: React.FC = () => {
       icon: Users,
       title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
+  ];
+  ];
+  ];
       benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
@@ -23,6 +26,8 @@ const Pagetsx: React.FC = () => {
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
+  ];
+  ];
   ];
   return (
     <div className="min-h-screen bg-gray-900 text-white">

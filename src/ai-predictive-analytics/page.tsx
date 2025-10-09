@@ -5,22 +5,29 @@ import {TrendingUp, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: TrendingUp,
+    // TODO: Add content
+  },
+    { TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',
+  ];
+  ];
+  ];
       benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
     },
       icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
       benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
+    },
+    {
       icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
       benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

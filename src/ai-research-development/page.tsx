@@ -5,22 +5,29 @@ import {Brain, Code, FlaskConical, Target, CheckCircle, Star} from 'lucide-react
 const AIResearchDevelopmentPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Brain,
+    // TODO: Add content
+  },
+    { Brain,
       title: 'Custom AI Research',
       description: 'Tailored AI research solutions for your specific needs',
+  ];
+  ];
+  ];
       benefits: ['Custom algorithms', 'Research partnerships', 'Innovation labs']
     },
       icon: Code,
       title: 'Prototype Development',
       description: 'Rapid prototyping and development of AI solutions',
       benefits: ['Fast iteration', 'Proof of concept', 'MVP development']
+    },
+    {
       icon: Target,
       title: 'Innovation Consulting',
       description: 'Strategic consulting for AI adoption and implementation',
       benefits: ['Technology roadmaps', 'Risk assessment', 'ROI analysis']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

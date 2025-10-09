@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Calendar,
+    // TODO: Add content
+  },
+    { Calendar,
       title: 'Smart Scheduling',
       description: 'AI-powered scheduling that automatically finds the best meeting times based on availability, preferences, and time zones.',
       benefit: 'Save 5+ hours per week'
@@ -25,6 +25,8 @@ const AISchedulerPage: React.FC = () => {
       description: 'Enterprise-grade security with end-to-end encryption and compliance with data protection regulations.',
       benefit: '100% secure scheduling'
     }
+  ];
+  ];
   ];
   const pricingPlans = [
       name: 'Team',
@@ -119,8 +121,8 @@ Works with Your Favorite Tools
   // TODO: Add parameters,
 )
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
@@ -158,6 +160,9 @@ Most Popular
 )
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
                 <div className="flex items-center mb-4">
+  ];
+  ];
+  ];
                   {[...Array(testimonial.rating)].map((_, i) => (
   // TODO: Add parameters,
 )

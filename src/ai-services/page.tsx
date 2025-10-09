@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, BarChart } from 'lucide-react';
+import {Brain, Zap, Shield, BarChart} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -8,11 +8,14 @@ import Footer from '../components/Footer';
 const AIServicesPage: React.FC = () => {
   const services = [
     {
-  // TODO: Add content
-}
-      title: 'AI Strategy & Consulting',
+    // TODO: Add content
+  },
+    { 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
+  ];
+  ];
+  ];
       features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
       price: 'Starting at $2,500/month'
     },
@@ -60,3 +63,6 @@ Learn More
 };
 export default AiServicesPage;
 export default AIServicesPage;
+  ];
+  ];
+  ];

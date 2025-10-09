@@ -5,22 +5,29 @@ import {Shield, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
 const ITDisasterRecoveryPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Backup Solutions',
       description: 'Comprehensive backup and recovery solutions',
+  ];
+  ];
+  ];
       benefits: ['Automated backups', 'Data protection', 'Recovery testing']
     },
       icon: Zap,
       title: 'Rapid Recovery',
       description: 'Fast disaster recovery and business continuity',
       benefits: ['RTO optimization', 'RPO minimization', 'Quick restoration']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring & Alerts',
       description: 'Real-time monitoring and alerting for disaster recovery',
       benefits: ['Health monitoring', 'Alert systems', 'Status reporting']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

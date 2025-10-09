@@ -1,8 +1,8 @@
 'use client';
 import ModernLoadingSpinner from './ModernLoadingSpinner';
 interface Props {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -11,8 +11,8 @@ interface Props {
   showRetryButton?: boolean;
 }
 interface State {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
@@ -21,16 +21,16 @@ interface State {
   isRetrying: boolean;
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private maxRetries: number;
   constructor(props: Props) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     super(props);
     this.state = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       hasError: false,
       retryCount: 0,
       isRetrying: false,
@@ -39,11 +39,11 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -52,22 +52,22 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
     });
     if (this.props.onError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.props.onError(error, errorInfo);
     }
     if (this.props.enableErrorReporting) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.reportError(error, errorInfo);
     }
   }
@@ -84,16 +84,16 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     };
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         description: error.message,
         fatal: false,
         custom_map: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           error_id: this.state.errorId,
           retry_count: this.state.retryCount
         }
@@ -101,22 +101,22 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       }
   };
   private handleRetry = async () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.retryCount < this.maxRetries) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.setState({ isRetrying: true });
       // Simulate retry delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       this.setState(prevState => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         hasError: false,
         error: undefined,
         errorInfo: undefined,
@@ -126,24 +126,24 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     }
   };
   private handleReload = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     window.location.reload();
   };
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return this.props.fallback;
       }
       if (this.state.isRetrying) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return (
   // TODO: Add parameters,
 )

@@ -1,14 +1,16 @@
 import React from 'react';
 const PricingPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const _plans = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      name: 'Starter',
+    // TODO: Add content
+  },
+    { 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses getting started with AI',
@@ -27,9 +29,9 @@ const PricingPage: React.FC = () => {
       popular: false
     },
     {
-  // TODO: Add content
-}
-      name: 'Professional',
+    // TODO: Add content
+  },
+    { 'Professional',
       price: '$799',
       period: '/month',
       description: 'Ideal for growing businesses with advanced AI needs',
@@ -50,9 +52,9 @@ const PricingPage: React.FC = () => {
       popular: true
     },
     {
-  // TODO: Add content
-}
-      name: 'Enterprise',
+    // TODO: Add content
+  },
+    { 'Enterprise',
       price: '$1,999',
       period: '/month',
       description: 'Complete AI solution for large organizations',
@@ -77,27 +79,29 @@ const PricingPage: React.FC = () => {
   ];
   const addOns = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      name: 'AI Security Suite',
+    // TODO: Add content
+  },
+    { 'AI Security Suite',
       price: '$199/month',
       description: 'Advanced security monitoring and compliance',
       icon: Shield
     },
     {
-  // TODO: Add content
-}
-      name: 'Custom AI Development',
+    // TODO: Add content
+  },
+    { 'Custom AI Development',
       price: '$150/hour',
       description: 'Bespoke AI solutions for unique requirements',
       icon: Brain
     },
     {
-  // TODO: Add content
-}
-      name: 'Priority Support',
+    // TODO: Add content
+  },
+    { 'Priority Support',
       price: '$99/month',
       description: '24/7 priority support and faster response times',
       icon: Phone

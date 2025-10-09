@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: BarChart,
+    // TODO: Add content
+  },
+    { BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
@@ -24,6 +24,8 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
+  ];
+  ];
   ];
   const pricingPlans = [
       name: 'Professional',
@@ -52,8 +54,8 @@ const SmartAnalyticsPage: React.FC = () => {
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
@@ -85,3 +87,6 @@ const SmartAnalyticsPage: React.FC = () => {
   );
 };
 export default SmartAnalyticsPage;
+  ];
+  ];
+  ];

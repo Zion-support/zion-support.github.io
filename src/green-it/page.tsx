@@ -5,12 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const GreenITPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [activeTab, setActiveTab] = useState('solutions');
 const tabs = [
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -27,7 +27,9 @@ const tabs = [
       icon: Zap,
       features: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -92,7 +94,9 @@ const tabs = [
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
-      ]
+  ];
+  ];
+  ];
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
@@ -202,8 +206,8 @@ name: 'LEED Platinum',
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
@@ -324,3 +328,6 @@ Get Free Assessment
   );
 };
 export default GreenITPage;
+  ];
+  ];
+  ];

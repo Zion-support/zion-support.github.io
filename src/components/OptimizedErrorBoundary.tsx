@@ -1,7 +1,7 @@
 'use client';
 interface OptimizedErrorBoundaryProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -9,8 +9,8 @@ interface OptimizedErrorBoundaryProps {
   resetKeys?: Array<string | number>;
 }
 interface State {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -20,16 +20,16 @@ class OptimizedErrorBoundary extends Component<
 //   OptimizedErrorBoundaryProps,
 //   State
 > {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     super(props);
     this.state = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       hasError: false,
       error: null,
       errorInfo: null,
@@ -37,57 +37,57 @@ class OptimizedErrorBoundary extends Component<
     };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     }
     // Call custom error handler if provided
     if (this.props.onError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.props.onError(error, errorInfo);
     }
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.reportError(error, errorInfo);
     }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { resetKeys, resetOnPropsChange } = this.props;
     const { hasError } = this.state;
     if (hasError && prevProps.resetKeys !== resetKeys) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
         );
         if (hasResetKeyChanged) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           this.resetErrorBoundary();
         }
       }
@@ -99,33 +99,33 @@ class OptimizedErrorBoundary extends Component<
 //       resetOnPropsChange &&
       prevProps.children !== this.props.children,
 ) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.resetErrorBoundary();
     }
   }
   componentWillUnmount() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.resetTimeoutId) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       clearTimeout(this.resetTimeoutId);
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const gtag = (
   // TODO: Add parameters,
 )
         window as unknown as {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           gtag: (
   // TODO: Add parameters,
 )
@@ -136,13 +136,13 @@ class OptimizedErrorBoundary extends Component<
         }
       ).gtag;
       gtag('event', 'exception', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         description: error.message,
         fatal: false,
         custom_map: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
@@ -150,19 +150,19 @@ class OptimizedErrorBoundary extends Component<
     }
   };
   private resetErrorBoundary = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.resetTimeoutId) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       clearTimeout(this.resetTimeoutId);
     }
     this.resetTimeoutId = window.setTimeout(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         hasError: false,
         error: null,
         errorInfo: null,
@@ -171,19 +171,19 @@ class OptimizedErrorBoundary extends Component<
     }, 100);
   };
   private handleRetry = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.resetErrorBoundary();
   };
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return this.props.fallback;
       }
       return (
@@ -201,8 +201,8 @@ class OptimizedErrorBoundary extends Component<
   }
 }
 interface ErrorFallbackProps {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;

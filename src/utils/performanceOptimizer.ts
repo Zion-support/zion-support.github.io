@@ -9,8 +9,8 @@
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };
 interface PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -27,8 +27,8 @@ interface PerformanceMetrics {
   memory?: number;
 }
 interface OptimizationConfig {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   enableLazyLoading: boolean;
   enableCodeSplitting: boolean;
   enableImageOptimization: boolean;
@@ -37,11 +37,11 @@ interface OptimizationConfig {
 }
 interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private _metrics: PerformanceMetrics = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
@@ -50,8 +50,8 @@ class PerformanceOptimizer {
     lazyLoading: false
   };
   private config: OptimizationConfig = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
@@ -61,8 +61,8 @@ class PerformanceOptimizer {
   private observers: PerformanceObserver[] = [];
   private isMonitoring: boolean = false;
   constructor(config?: Partial<OptimizationConfig>) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
   }
@@ -70,13 +70,13 @@ class PerformanceOptimizer {
    * Initialize performance monitoring
    */
   private initializePerformanceMonitoring(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     // Monitor page load performance
     window.addEventListener('load', () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.measureLoadTime();
       this.measureMemoryUsage();
     });
@@ -87,53 +87,53 @@ class PerformanceOptimizer {
    * Public init method for external initialization
    */
   public init(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.initializePerformanceMonitoring();
   }
   /**
    * Measure page load time
    */
   private measureLoadTime(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined' || !window.performance) return;
     if (typeof window.performance.getEntriesByType !== 'function') return;
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
       }
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       }
   }
   /**
    * Measure render time using PerformanceObserver
    */
   private measureRenderTime(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Check if PerformanceObserver exists (may not be available in test environments)
     if (typeof PerformanceObserver === 'undefined') return;
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries();
         entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.entryType === 'measure') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             this.metrics.renderTime = entry.duration;
           }
         });
@@ -141,20 +141,20 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['measure'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // PerformanceObserver may not support 'measure' entryType in some environments
       }
   }
   private observeLCP() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
@@ -162,24 +162,24 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
 //       this.observers.push(observer)
     } catch {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Ignore if not supported
     }
   }
   private observeFID() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
         })
@@ -187,24 +187,24 @@ class PerformanceOptimizer {
       observer.observe({ entryTypes: ['first-input'] })
 //       this.observers.push(observer)
     } catch {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Ignore if not supported
     }
   }
   private observeCLS() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
 const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             clsValue += clsEntry.value
           }
         })
@@ -213,27 +213,27 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['layout-shift'] })
 //       this.observers.push(observer)
     } catch {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Ignore if not supported
     }
   }
   private observeFCP() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries()
         entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.name === 'first-contentful-paint') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             this.metrics.fcp = entry.startTime
           }
         })
@@ -241,28 +241,28 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['paint'] })
 //       this.observers.push(observer)
     } catch {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Ignore if not supported
     }
   }
   private observeTTFB() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
           }
         })
@@ -270,21 +270,21 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['navigation'] })
 //       this.observers.push(observer)
     } catch {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Ignore if not supported
     }
   }
   private observeMemory() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window !== 'undefined' && 'memory' in performance) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         this.metrics.memoryUsage = memory.usedJSHeapSize
       }
     }
@@ -293,23 +293,23 @@ const observer = new PerformanceObserver((list) => {
    * Measure memory usage
    */
   private measureMemoryUsage(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
     const memory = (window.performance as Performance & {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       memory?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         usedJSHeapSize: number;
         totalJSHeapSize: number;
         jsHeapSizeLimit: number;
       };
     }).memory;
     if (memory) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.metrics.memoryUsage = memory.usedJSHeapSize;
     }
   }
@@ -317,34 +317,34 @@ const observer = new PerformanceObserver((list) => {
    * Optimize images for better performance
    */
   public optimizeImages(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     if (!this.config.enableImageOptimization) return;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Add loading="lazy" for better performance
       if (!img.hasAttribute('loading')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         img.setAttribute('loading', 'lazy');
       }
       // Add proper alt text if missing
       if (!img.hasAttribute('alt')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         img.setAttribute('alt', 'Zion Tech Group content');
       }
       // Optimize image format
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         // Convert to WebP if supported
         if (this.supportsWebP()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
         }
       }
@@ -354,8 +354,8 @@ const observer = new PerformanceObserver((list) => {
    * Check if browser supports WebP
    */
   private supportsWebP(): boolean {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return false;
     const canvas = document.createElement('canvas');
     canvas.width = 1;
@@ -366,36 +366,36 @@ const observer = new PerformanceObserver((list) => {
    * Setup lazy loading for better performance
    */
   public setupLazyLoading(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     if (!this.config.enableLazyLoading) return;
     // Intersection Observer for lazy loading
     if ('IntersectionObserver' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const lazyElements = document.querySelectorAll('[data-lazy]');
       const lazyObserver = new IntersectionObserver((entries) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.isIntersecting) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             const element = entry.target as HTMLElement;
             const src = element.getAttribute('data-lazy');
             if (src) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
               if (element.tagName === 'IMG') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                 (element as HTMLImageElement).src = src;
               } else {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                 element.style.backgroundImage = `url(${src})`;
               }
               element.removeAttribute('data-lazy');
@@ -405,8 +405,8 @@ const observer = new PerformanceObserver((list) => {
         });
       });
       lazyElements.forEach((element) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         lazyObserver.observe(element);
       });
     }
@@ -416,8 +416,8 @@ const observer = new PerformanceObserver((list) => {
    * Enable code splitting for better performance
    */
   enableCodeSplitting(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!this.config.enableCodeSplitting) return;
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations
@@ -427,20 +427,20 @@ const observer = new PerformanceObserver((list) => {
    * Enable caching strategies
    */
   enableCaching(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!this.config.enableCaching) return;
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
     // Register service worker for caching
 //     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (process.env.NODE_ENV === 'development') { }
       })
       .catch((error) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (process.env.NODE_ENV === 'development') { }
       });
   }
@@ -448,16 +448,16 @@ const observer = new PerformanceObserver((list) => {
    * Get current performance metrics
    */
   getMetrics(): PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return { ...this.metrics };
   }
   /**
    * Get performance score (0-100)
    */
   getPerformanceScore(): number {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     let score = 100;
     // Deduct points for slow load times
     if (this.metrics.loadTime > 3000) score -= 20;
@@ -474,8 +474,8 @@ const observer = new PerformanceObserver((list) => {
    * Generate performance report
    */
   generateReport(): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const score = this.getPerformanceScore();
     return `Performance Score: ${score}`;
   }
@@ -483,19 +483,19 @@ const observer = new PerformanceObserver((list) => {
    * Lazy load images for better performance
    */
   lazyLoadImages(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       entries.forEach(entry => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (entry.isIntersecting) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
           img.removeAttribute('data-src');
@@ -510,18 +510,20 @@ const observer = new PerformanceObserver((list) => {
    * Add critical resource hints
    */
   addCriticalResourceHints(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined') return;
     const criticalResources = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
       { href: '/css/critical.css', as: 'style' },
     ];
     criticalResources.forEach(resource => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -536,14 +538,14 @@ const observer = new PerformanceObserver((list) => {
    * Measure page load metrics
    */
   measurePageLoad(): PerformanceMetrics | null {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null;
     return {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
       memoryUsage: this.metrics.memoryUsage,
@@ -562,22 +564,22 @@ const observer = new PerformanceObserver((list) => {
    * Report web vitals
    */
   reportWebVitals(metrics: PerformanceMetrics): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     logger.performance('Web Vitals reported', metrics as unknown as Record<string, unknown>, 'PerformanceOptimizer');
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       Object.entries(metrics).forEach(([key, value]) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (typeof value === 'number') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             metric_name: key,
             metric_value: value,
             metric_rating: value < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
@@ -590,8 +592,8 @@ const observer = new PerformanceObserver((list) => {
    * Cleanup observers and resources
    */
   public cleanup(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
@@ -600,8 +602,8 @@ const observer = new PerformanceObserver((list) => {
    * Generate comprehensive performance report
    */
   generateComprehensiveReport(): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const score = this.getPerformanceScore();
     const metrics = this.getMetrics();
     return `
@@ -622,14 +624,14 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
    * Optimize the entire application
    */
   optimize(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.optimizeImages();
     this.enableCodeSplitting();
     this.enableCaching();
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.info('Performance optimization completed');
     }
   }

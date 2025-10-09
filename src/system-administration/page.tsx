@@ -5,22 +5,29 @@ import {Settings, Shield, BarChart, Zap, CheckCircle, Star} from 'lucide-react';
 const SystemAdministrationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Settings,
+    // TODO: Add content
+  },
+    { Settings,
       title: 'System Management',
       description: 'Comprehensive system administration and maintenance',
+  ];
+  ];
+  ];
       benefits: ['Server management', 'User administration', 'System monitoring']
     },
       icon: Shield,
       title: 'Security Administration',
       description: 'System security hardening and compliance',
       benefits: ['Security patches', 'Access control', 'Compliance monitoring']
+    },
+    {
       icon: Zap,
       title: 'Automation',
       description: 'Automated system administration tasks',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

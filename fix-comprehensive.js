@@ -3,9 +3,14 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix final syntax errors
-function fixFinalErrors(content) {
+// Function to fix comprehensive syntax errors
+function fixComprehensive(content) {
   let fixed = content;
+  
+  // Fix duplicate semicolons and brackets
+  fixed = fixed.replace(/;\s*;\s*/g, ';');
+  fixed = fixed.replace(/\]\s*;\s*\]\s*;/g, '];');
+  fixed = fixed.replace(/\]\s*;\s*\]\s*$/gm, '];');
   
   // Fix missing closing brackets in arrays
   fixed = fixed.replace(/const\s+\w+\s*=\s*\[[^\]]*$/gm, (match) => {
@@ -100,7 +105,7 @@ function fixFinalErrors(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixFinalErrors(content);
+    const fixed = fixComprehensive(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -142,4 +147,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixFinalErrors, processFile };
+export { fixComprehensive, processFile };

@@ -5,22 +5,29 @@ import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
 const GlobalITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Globe,
+    // TODO: Add content
+  },
+    { Globe,
       title: 'Global Coverage',
       description: '24/7 IT support across multiple time zones',
+  ];
+  ];
+  ];
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
     },
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
       benefits: ['Always available', 'Fast response', 'Expert technicians']
+    },
+    {
       icon: Zap,
       title: 'Rapid Response',
       description: 'Quick problem resolution and escalation',
       benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

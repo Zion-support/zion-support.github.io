@@ -5,22 +5,29 @@ import {Target, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
 const DigitalTransformationPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Target,
+    // TODO: Add content
+  },
+    { Target,
       title: 'Strategy Development',
       description: 'Digital transformation strategy and roadmap development',
+  ];
+  ];
+  ];
       benefits: ['Strategic planning', 'Technology assessment', 'Change management']
     },
       icon: Zap,
       title: 'Process Automation',
       description: 'Automate and optimize business processes',
       benefits: ['Workflow automation', 'Process optimization', 'Efficiency gains']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Data-driven insights and business intelligence',
       benefits: ['Data analytics', 'Business intelligence', 'Performance metrics']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

@@ -5,22 +5,29 @@ import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code} from 'lucide-r
 const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Settings,
+    // TODO: Add content
+  },
+    { Settings,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines',
+  ];
+  ];
+  ];
       benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
       icon: Zap,
       title: 'Infrastructure as Code',
       description: 'Manage infrastructure through code and automation',
       benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
+    },
+    {
       icon: BarChart,
       title: 'Monitoring & Analytics',
       description: 'Comprehensive monitoring and performance analytics',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

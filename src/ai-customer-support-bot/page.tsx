@@ -1,28 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart} from 'lucide-react';
 import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AICustomerSupportBotPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-}
-      icon: Bot,
+    // TODO: Add content
+  },
+    { Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
+  ];
+  ];
+  ];
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
+    },
+    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
+  ];
+  ];
   ];
   const pricingPlans = [
       name: 'Professional',
@@ -47,7 +54,9 @@ const features = [
         'Custom training'
   const stats = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },

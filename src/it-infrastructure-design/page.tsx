@@ -5,22 +5,29 @@ import {Settings, Target, BarChart, Shield, CheckCircle, Star} from 'lucide-reac
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Settings,
+    // TODO: Add content
+  },
+    { Settings,
       title: 'Infrastructure Design',
       description: 'Custom IT infrastructure design and architecture',
+  ];
+  ];
+  ];
       benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
       icon: Target,
       title: 'Capacity Planning',
       description: 'Strategic capacity planning and resource allocation',
       benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
+    },
+    {
       icon: Shield,
       title: 'Security Design',
       description: 'Security-first infrastructure design principles',
       benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

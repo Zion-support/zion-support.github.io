@@ -6,18 +6,20 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIProjectManagerPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const _features = [
 const AiProjectManagerPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const features = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: BarChart,
+    // TODO: Add content
+  },
+    { BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
@@ -26,11 +28,15 @@ const AiProjectManagerPage: React.FC = () => {
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+    },
+    {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
     }
+  ];
+  ];
   ];
   const pricingPlans = [
       name: 'Professional',
@@ -55,7 +61,9 @@ const AiProjectManagerPage: React.FC = () => {
         'API access'
   const stats = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { icon: Users, value: '500+', label: 'Active Teams' },
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },

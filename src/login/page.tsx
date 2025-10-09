@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 const LoginPage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [formData, setFormData] = useState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     email: '',
     password: '',
     rememberMe: false
@@ -13,19 +13,19 @@ const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     setIsLoading(true);
     // Simulate login process
@@ -36,25 +36,27 @@ const LoginPage: React.FC = () => {
   };
   const features = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Shield,
+    // TODO: Add content
+  },
+    { Shield,
       title: 'Secure Access',
       description: 'Bank-level security with multi-factor authentication'
     },
     {
-  // TODO: Add content
-}
-      icon: CheckCircle,
+    // TODO: Add content
+  },
+    { CheckCircle,
       title: '24/7 Support',
       description: 'Round-the-clock support for all your needs'
     },
     {
-  // TODO: Add content
-}
-      icon: Phone,
+    // TODO: Add content
+  },
+    { Phone,
       title: 'Mobile Ready',
       description: 'Access your account from any device, anywhere'
     }

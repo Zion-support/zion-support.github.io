@@ -3,9 +3,9 @@ import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, 
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Share2,
+    // TODO: Add content
+  },
+    { Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
@@ -25,6 +25,8 @@ icon: TrendingUp,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
     }
+  ];
+  ];
   ];
   const benefits = [
 'Increase engagement by 300%',
@@ -46,7 +48,9 @@ icon: TrendingUp,
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //         '3 social media accounts',
 //         '50 posts per month',
 //         'Basic AI content generation',

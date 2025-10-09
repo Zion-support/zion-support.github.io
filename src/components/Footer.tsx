@@ -5,7 +5,9 @@ import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedi
 const Footer: React.FC = memo(() => {
   const aiServices = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },
     { name: 'Natural Language Processing', url: '/ai-nlp', description: 'Advanced text analysis and understanding' },
     { name: 'Computer Vision', url: '/ai-computer-vision', description: 'Image and video analysis solutions' },
@@ -17,7 +19,9 @@ const Footer: React.FC = memo(() => {
   ];
   const itServices = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration, setup, and optimization' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Streamlined development workflows' },
@@ -28,7 +32,9 @@ const Footer: React.FC = memo(() => {
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT support and maintenance' }
   const microSaasServices = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media management' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered business intelligence' },
@@ -39,7 +45,9 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' }
   const emergingTech = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics', url: '/robotics', description: 'Intelligent robotics' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -50,7 +58,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
   const companyLinks = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -59,7 +69,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Contact', url: '/contact' }
   const supportLinks = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'Help Center', url: '/help' },
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -69,7 +81,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Troubleshooting', url: '/troubleshooting' }
   const legalLinks = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },

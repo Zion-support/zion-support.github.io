@@ -4,8 +4,8 @@
  * Tracks Core Web Vitals and custom metrics
  */
 interface PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   fcp?: number; // First Contentful Paint
   lcp?: number; // Largest Contentful Paint
   fid?: number; // First Input Delay
@@ -15,18 +15,18 @@ interface PerformanceMetrics {
   customMetrics: Record<string, number>;
 }
 class PerformanceMonitor {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private _metrics: PerformanceMetrics = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     customMetrics: {}
   };
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
   init(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
@@ -37,25 +37,25 @@ class PerformanceMonitor {
    * Initialize performance observers
    */
   private initializeObservers(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Observe paint metrics
       if ('PerformanceObserver' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         // First Contentful Paint
         this.observeEntry('paint', (entries) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             if (entry.name === 'first-contentful-paint') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
               this.recordMetric('FCP', entry.startTime);
             }
           });
@@ -63,8 +63,8 @@ class PerformanceMonitor {
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {
           if (lastEntry) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //             this.recordMetric(
   // TODO: Add parameters,
 )
@@ -75,12 +75,12 @@ class PerformanceMonitor {
         });
         // First Input Delay
         this.observeEntry('first-input', entries => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
@@ -88,42 +88,42 @@ class PerformanceMonitor {
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           entries.forEach((entry: PerformanceEntry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             if (!(entry as any).hadRecentInput) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
               clsValue += (entry as any).value;
             }
           });
           if (clsValue > 0) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             this.recordMetric('CLS', clsValue);
           }
         });
       }
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.error('Failed to initialize performance observers', error as Error);
     }
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.name === name) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
@@ -132,20 +132,20 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Performance observation failed - handled silently
     }
   }
   private observeLCP(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
@@ -154,23 +154,23 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // LCP observation failed - handled silently
     }
   }
   private observeFID(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
@@ -178,27 +178,27 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // FID observation failed - handled silently
     }
   }
   private observeCLS(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (!(entry as any).hadRecentInput) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             clsValue += (entry as any).value;
           }
         }
@@ -208,51 +208,51 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // CLS observation failed - handled silently
     }
   }
   private setupCustomMetrics(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Time to First Byte
     if (performance.timing) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb);
     }
     // Page Load Time
     if (performance.timing) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('pageLoadTime', loadTime);
     }
     // DOM Content Loaded
     if (performance.timing) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('domContentLoaded', domContentLoaded);
     }
   }
   private setupResourceTiming(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const observer = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.entryType === 'resource') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
             const resourceEntry = entry as PerformanceResourceTiming;
             this.analyzeResource(resourceEntry);
           }
@@ -261,20 +261,20 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Resource observation failed - handled silently
     }
   }
   private analyzeResource(entry: PerformanceResourceTiming): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;
     // Track slow resources
     if (duration > 1000) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.addCustomMetric(`slowResource_${entry.name}`, duration);
     }
     // Track large resources
@@ -283,26 +283,26 @@ class PerformanceMonitor {
     }
   }
   addCustomMetric(name: string, value: number): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.metrics.customMetrics[name] = value;
     this.logMetric(name, value);
   }
   private logMetric(name: string, value: number): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Performance metric logged
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as any).gtag('event', 'performance_metric', {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         metric_name: name,
         metric_value: Math.round(value),
         event_category: 'performance'
@@ -310,26 +310,26 @@ class PerformanceMonitor {
     }
   }
   getMetrics(): PerformanceMetrics {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return { ...this.metrics };
   }
   getScore(): number {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const scores = [];
     // FCP scoring (0-100)
     if (this.metrics.fcp) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.metrics.fcp <= 1800) scores.push(100);
       else if (this.metrics.fcp <= 4000) scores.push(50);
       else scores.push(25);
     }
     // LCP scoring (0-100)
     if (this.metrics.lcp) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.metrics.lcp <= 2500) scores.push(100);
       else if (this.metrics.lcp <= 4000) scores.push(75);
       else if (this.metrics.lcp <= 6000) scores.push(50);
@@ -337,8 +337,8 @@ class PerformanceMonitor {
     }
     // FID scoring (0-100)
     if (this.metrics.fid) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.metrics.fid <= 100) scores.push(100);
       else if (this.metrics.fid <= 300) scores.push(75);
       else if (this.metrics.fid <= 500) scores.push(50);
@@ -346,8 +346,8 @@ class PerformanceMonitor {
     }
     // CLS scoring (0-100)
     if (this.metrics.cls) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.metrics.cls <= 0.1) scores.push(100);
       else if (this.metrics.cls <= 0.25) scores.push(75);
       else if (this.metrics.cls <= 0.4) scores.push(50);
@@ -356,8 +356,8 @@ class PerformanceMonitor {
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
   generateReport(): string {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const score = this.getScore();
     const metrics = this.getMetrics();
     return `

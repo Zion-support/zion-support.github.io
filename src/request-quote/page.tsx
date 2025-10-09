@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
   // TODO: Add content
-}
+  
   const [formData, setFormData] = useState({
-  // TODO: Add content
-}
-    name: '',
+    // TODO: Add content
+  },
+    { '',
     email: '',
     company: '',
     phone: '',
@@ -21,7 +21,9 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const _serviceTypes = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -34,7 +36,9 @@ const RequestQuotePage: React.FC = () => {
   ];
   const projectSizes = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
@@ -42,7 +46,9 @@ const RequestQuotePage: React.FC = () => {
   ];
   const timelines = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
@@ -52,7 +58,9 @@ const RequestQuotePage: React.FC = () => {
   ];
   const budgetRanges = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
@@ -61,19 +69,19 @@ const RequestQuotePage: React.FC = () => {
 //     'To be discussed'
   ];
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const { name, value } = e.target;
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
     }));
   };
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -83,71 +91,75 @@ const RequestQuotePage: React.FC = () => {
   };
   const benefits = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Calculator,
+    // TODO: Add content
+  },
+    { Calculator,
       title: 'Free Quote',
       description: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
-  // TODO: Add content
-}
-      icon: Clock,
+    // TODO: Add content
+  },
+    { Clock,
       title: 'Quick Response',
       description: 'We respond to all quote requests within 4 hours'
     },
     {
-  // TODO: Add content
-}
-      icon: CheckCircle,
+    // TODO: Add content
+  },
+    { CheckCircle,
       title: 'Transparent Pricing',
       description: 'Clear, detailed pricing with no hidden fees'
     },
     {
-  // TODO: Add content
-}
-      icon: Star,
+    // TODO: Add content
+  },
+    { Star,
       title: 'Expert Consultation',
       description: 'Free consultation with our technology experts'
     }
   ];
   const whyChooseUs = [
   // TODO: Add items,
-]
+  ];
+  ];
+  ];
     {
-  // TODO: Add content
-}
-      icon: Users,
+    // TODO: Add content
+  },
+    { Users,
       title: '50+ Successful Projects',
       description: 'Proven track record of delivering results'
     },
     {
-  // TODO: Add content
-}
-      icon: Award,
+    // TODO: Add content
+  },
+    { Award,
       title: '300% Average ROI',
       description: 'Our clients see significant returns on investment'
     },
     {
-  // TODO: Add content
-}
-      icon: Clock,
+    // TODO: Add content
+  },
+    { Clock,
       title: '24/7 Support',
       description: 'Round-the-clock support for all our clients'
     },
     {
-  // TODO: Add content
-}
-      icon: Star,
+    // TODO: Add content
+  },
+    { Star,
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
     }
   ];
   if (isSubmitted) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
   // TODO: Add parameters,
 )

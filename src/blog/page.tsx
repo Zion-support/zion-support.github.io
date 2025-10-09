@@ -4,8 +4,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   id: string;
   title: string;
   description: string;
@@ -16,15 +16,15 @@ interface BlogPost {
   image: string;
   featured: boolean;
   stats?: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     views: number;
     engagement: number;
   };
 }
 export default function BlogPage() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -32,8 +32,8 @@ export default function BlogPage() {
   // TODO: Add items,
 ]
     {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
       description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',

@@ -5,22 +5,29 @@ import {Package, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-}
-      icon: Package,
+    // TODO: Add content
+  },
+    { Package,
       title: 'Inventory Tracking',
       description: 'AI-powered inventory tracking and management',
+  ];
+  ];
+  ];
       benefits: ['Real-time tracking', 'Stock monitoring', 'Automated alerts']
     },
       icon: Target,
       title: 'Demand Forecasting',
       description: 'Intelligent demand prediction and planning',
       benefits: ['Demand prediction', 'Seasonal analysis', 'Trend forecasting']
+    },
+    {
       icon: Settings,
       title: 'Inventory Analytics',
       description: 'Comprehensive inventory analytics and insights',
       benefits: ['Performance metrics', 'Cost analysis', 'Optimization recommendations']
     }
+  ];
+  ];
   ];
   return (
   // TODO: Add parameters,

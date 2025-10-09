@@ -4,11 +4,14 @@ import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, Map
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
-  // TODO: Add content
-}
-      title: 'AI Business Intelligence',
+    // TODO: Add content
+  },
+    { 'AI Business Intelligence',
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
+  ];
+  ];
+  ];
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Data visualization', 'ROI tracking', 'Performance forecasting'],
       icon: '',
       category: 'Business Intelligence'
@@ -151,3 +154,6 @@ Call (302) 464-0950
   );
 };
 export default AnalyticsToolsPage;
+  ];
+  ];
+  ];
