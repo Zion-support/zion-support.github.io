@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Target, Globe, Database, Smartphone, Settings, Lock, TrendingUp, Star, Award, ArrowRight, Facebook, Twitter, Linkedin, Github, Youtube, Instagram, MessageSquare, Share2, Heart, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -39,14 +39,29 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Real-time business intelligence' },
     { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
     { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
-    { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' }
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-builder', description: 'AI-assisted app development' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
+    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
+    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
+    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
+    { name: 'AI Design Assistant', url: '/ai-design-assistant', description: 'AI-powered design tool' },
+    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
+    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
+    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management' },
+    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
+    { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
   ];
 
   const emergingTech = [
@@ -58,7 +73,10 @@ const Footer: React.FC = () => {
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
-    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' }
+    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
+    { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
+    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
+    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
   ];
 
   const companyLinks = [
@@ -213,14 +231,14 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Micro SAAS & Emerging Tech */}
+          {/* Micro SAAS Solutions */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
             <ul className="space-y-3">
               {microSaasServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    to={service.url}
+                    href={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -230,11 +248,12 @@ const Footer: React.FC = () => {
                 </li>
               ))}
               <li>
-                <Link 
-                  to="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                <Link
+                  href="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
                 >
-                  View All Solutions →
+                  View All Solutions
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </li>
             </ul>
