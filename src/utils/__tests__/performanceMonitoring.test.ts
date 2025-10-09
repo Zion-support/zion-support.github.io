@@ -1,11 +1,25 @@
 // PerformanceMonitoring.test utility
 // This file contains utility functions and configurations
 
-export const performanceMonitoring.test = {
+import { describe, it, expect } from '@jest/globals';
+
+export const performanceMonitoringTest = {
   // Add utility functions here
   init: () => {
-    console.log('performanceMonitoring.test initialized');
+    console.log('performanceMonitoringTest initialized');
   }
 };
 
-export default performanceMonitoring.test;
+describe('PerformanceMonitoring', () => {
+  it('should initialize correctly', () => {
+    expect(() => {
+      performanceMonitoringTest.init();
+    }).not.toThrow();
+  });
+
+  it('should have init function', () => {
+    expect(typeof performanceMonitoringTest.init).toBe('function');
+  });
+});
+
+export default performanceMonitoringTest;
