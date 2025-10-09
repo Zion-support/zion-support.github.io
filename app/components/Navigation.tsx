@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Server, Building, MessageCircle, FileText } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,6 +7,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [emergingTechOpen, setEmergingTechOpen] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,6 +25,7 @@ const Navigation: React.FC = () => {
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen);
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
+  const toggleEmergingTech = () => setEmergingTechOpen(!emergingTechOpen);
 
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
@@ -35,24 +37,34 @@ const Navigation: React.FC = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
     { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' }
+    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: MessageCircle, description: 'AI Chatbots' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, description: 'Workflow AI' },
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: FileText, description: 'Document AI' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Users, description: 'Lead AI' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp, description: 'Sales AI' }
   ];
 
   const itServices = [
+    { name: 'IT Services', href: '/it-services', icon: Server, description: 'Comprehensive IT Solutions' },
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
     { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' }
+    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Analytics' },
+    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building, description: 'Enterprise IT' }
   ];
 
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '100+ AI Tools' },
     { name: 'Business Apps', href: '/business-apps', icon: Users, description: 'Business Applications' },
     { name: 'Productivity Tools', href: '/productivity', icon: Zap, description: 'Productivity Suite' },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, description: 'Marketing Suite' },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code, description: 'Development Tools' }
+    { name: 'Developer Tools', href: '/developer-tools', icon: Code, description: 'Development Tools' },
+    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart, description: 'Data Analytics' },
+    { name: 'API Services', href: '/api', icon: Globe, description: 'API Solutions' }
   ];
 
   const emergingTech = [
@@ -60,7 +72,8 @@ const Navigation: React.FC = () => {
     { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
     { name: 'IoT & Edge', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' }
+    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, description: 'Self-Managing Systems' }
   ];
 
   return (
@@ -170,6 +183,38 @@ const Navigation: React.FC = () => {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleEmergingTech}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Emerging Tech</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${emergingTechOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {emergingTechOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                  <div className="grid grid-cols-1 gap-2">
+                    {emergingTech.map((tech) => (
+                      <a
+                        key={tech.name}
+                        href={tech.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                      >
+                        <tech.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <div>
+                          <div className="text-white font-medium">{tech.name}</div>
+                          <div className="text-xs text-gray-400">{tech.description}</div>
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </a>
@@ -303,6 +348,33 @@ const Navigation: React.FC = () => {
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                       >
                         {service.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile Emerging Technologies */}
+              <div>
+                <button
+                  onClick={toggleEmergingTech}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Sparkles className="w-4 h-4" />
+                    <span>Emerging Tech</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${emergingTechOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {emergingTechOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {emergingTech.map((tech) => (
+                      <a
+                        key={tech.name}
+                        href={tech.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                      >
+                        {tech.name}
                       </a>
                     ))}
                   </div>
