@@ -118,13 +118,13 @@ export function useForm<T extends Record<string, unknown>>({
       }
       setIsSubmitting(true);
       try {
-        await _onSubmit(values);
+        await onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);
       }
     },
-    [values, validateAllFields]
+    [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically
   const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
