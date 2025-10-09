@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
@@ -385,11 +380,6 @@ const AICybersecurityPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-export default AICybersecurityPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 
 export default AICybersecurityPage;

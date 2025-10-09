@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
   return (
-<<<<<<< HEAD:app/about/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -40,17 +39,6 @@ const AboutPage: React.FC = () => {
                 to innovate, compete, and thrive in the digital age.
               </p>
             </div>
-=======
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='text-center mb-12'>
-            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-              About Zion Tech Group
-            </h1>
-            <p className='text-xl text-gray-600'>
-              Leading the future of AI and IT solutions
-            </p>
->>>>>>> origin/main:src/about/page.tsx
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -73,7 +61,6 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD:app/about/page.tsx
       </main>
       <Footer />
     </div>
@@ -81,8 +68,3 @@ const AboutPage: React.FC = () => {
 };
 
 export default AboutPage;
-=======
-      </div>
-  );
-};
->>>>>>> origin/main:src/about/page.tsx

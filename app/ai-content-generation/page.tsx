@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React from 'react';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
@@ -341,11 +336,6 @@ const AIContentGenerationPage: React.FC = () => {
       </div>
   );
 };
-<<<<<<< HEAD
-export default AIContentGenerationPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 
 export default AIContentGenerationPage;

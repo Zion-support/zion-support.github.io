@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, MessageCircle, Clock, Users, Shield, Zap } from 'lucide-react';
@@ -369,11 +364,6 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AICustomerSupportPage;
-=======
-import React from "react"; export default function Page() { return <div>Page</div>; }
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 export default AICustomerSupportPage;
 >>>>>>> origin/main

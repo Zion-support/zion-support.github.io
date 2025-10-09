@@ -1,16 +1,5 @@
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-<<<<<<< HEAD
-  enableSkipLinks?: boolean;
-  enableARIALabels?: boolean;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -18,14 +7,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true,
-<<<<<<< HEAD
-  enableSkipLinks = true,
-  enableARIALabels = true
-}) => {
-  // Add skip links
-=======
-const AccessibilityEnhancer: React.FC = () => {
->>>>>>> origin/main
   useEffect(() => {
     // Add skip links
     const addSkipLinks = () => {
@@ -36,10 +17,6 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-<<<<<<< HEAD
-=======
-}) => {
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
   // Add keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (enableKeyboardNavigation) {
@@ -90,26 +67,6 @@ const AccessibilityEnhancer: React.FC = () => {
       `;
       document.head.appendChild(style);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Add ARIA labels and roles
-  useEffect(() => {
-    if (enableARIALabels) {
-      // Add ARIA landmarks
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-        main.setAttribute('aria-label', 'Main content');
-      }
-=======
-      // Trap focus in modals
-      const trapFocus = (element: HTMLElement) => {
-        const focusableElements = element.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
->>>>>>> origin/main
 
         element.addEventListener('keydown', (e) => {
           if (e.key === 'Tab') {
@@ -218,21 +175,6 @@ const AccessibilityEnhancer: React.FC = () => {
     };
   }, []);
 
-<<<<<<< HEAD
-  // Add screen reader announcements
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.id = 'announcements';
-      document.body.appendChild(announcement);
-    }
-  }, [enableScreenReaderSupport]);
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 >>>>>>> origin/main
   return null;

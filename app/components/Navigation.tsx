@@ -1,13 +1,5 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings } from 'lucide-react';
-
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -65,102 +57,6 @@ const Navigation: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
-  const serviceCategories = [
-    {
-      title: 'AI Services',
-      icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      hoverColor: 'hover:bg-purple-100',
-      services: [
-        { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
-        { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-        { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
-        { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' }
-      ]
-    },
-    {
-      title: 'IT Services',
-      icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      hoverColor: 'hover:bg-blue-100',
-      services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
-        { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
-        { name: 'Cloud Infrastructure', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'DevOps', path: '/ai-workflow-automation', description: 'DevOps automation' },
-        { name: 'Database Services', path: '/ai-data-analytics', description: 'Database management' }
-      ]
-    },
-    {
-      title: 'Micro SAAS',
-      icon: Code,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      hoverColor: 'hover:bg-green-100',
-      services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
-        { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
-        { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
-        { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
-      services: [
-        { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
-        { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
-      ]
-    }
-  ];
-
-=======
-  const aiServices = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
-    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
-    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' }
-  ];
-
-  const itServices = [
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'Business Apps', href: '/business-apps', icon: Users, description: 'Business Applications' },
-    { name: 'Productivity Tools', href: '/productivity', icon: Zap, description: 'Productivity Suite' },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target, description: 'Marketing Suite' },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code, description: 'Development Tools' }
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -205,34 +101,13 @@ const Navigation: React.FC = () => {
               About
             </Link>
 
-<<<<<<< HEAD
-            {/* Services Dropdown */}
-=======
-            {/* AI Services Dropdown */}
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
             <div className="relative">
               <button
-<<<<<<< HEAD
-                onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                className="flex items-center space-x-1 font-medium transition-colors hover:text-cyan-400 text-white"
-                aria-expanded={aiServicesOpen}
-=======
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
-                }`}
-                aria-expanded={servicesOpen}
->>>>>>> origin/main
                 aria-haspopup="true"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              
->>>>>>> origin/main
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-[800px] bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
                   <div className="grid grid-cols-2 gap-6 px-6">
@@ -374,17 +249,6 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <Link
-              href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-=======
-            <Link 
-              href="/blog" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
             <Link 
               to="/blog" 
@@ -396,17 +260,6 @@ const Navigation: React.FC = () => {
             >
               Blog
             </Link>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-            <Link
-              href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-=======
-            <Link 
-              href="/contact" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
 =======
             <Link 
               to="/contact" 
@@ -418,47 +271,12 @@ const Navigation: React.FC = () => {
             >
               Contact
             </Link>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
             {/* CTA Button */}
             <Link
               to="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all flex items-center space-x-2"
               onClick={closeAllMenus}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
-            </Link>
-          </div>
-
-=======
-              Get Started
-            </Link>
-          </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm">(302) 464-0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm">Email</span>
-            </a>
-          </div>
-
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
           {/* Mobile Menu Button */}
 =======
               <Phone className="w-4 h-4" />
@@ -502,20 +320,6 @@ const Navigation: React.FC = () => {
                 About
               </Link>
 
-<<<<<<< HEAD
-              {/* Mobile Services */}
-<<<<<<< HEAD
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-=======
-              {/* Mobile AI Services */}
-              <div>
-                <button
-                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
@@ -525,34 +329,6 @@ const Navigation: React.FC = () => {
                 </button>
                 {servicesOpen && (
                   <div className="mt-2 ml-4 space-y-2">
-<<<<<<< HEAD
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-=======
-                    {aiServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
                     ))}
 =======
               <div className="space-y-1">
@@ -591,65 +367,6 @@ const Navigation: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
-=======
-              {/* Mobile IT Services */}
-              <div>
-                <button
-                  onClick={() => setItServicesOpen(!itServicesOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Cloud className="w-4 h-4" />
-                    <span>IT Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {itServicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {itServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Micro SAAS */}
-              <div>
-                <button
-                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
-                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Cpu className="w-4 h-4" />
-                    <span>Micro SAAS</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {microSaasOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {microSaasServices.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        onClick={closeAllMenus}
-                      >
-                        {service.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
               <Link
                 to="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
@@ -657,10 +374,6 @@ const Navigation: React.FC = () => {
               >
                 Case Studies
               </Link>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
               <Link
                 to="/blog"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
@@ -668,10 +381,6 @@ const Navigation: React.FC = () => {
               >
                 Blog
               </Link>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af41
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
