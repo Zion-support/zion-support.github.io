@@ -54,19 +54,6 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 }
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
-  TTFB: { good: 800, poor: 1800 },
   TTFB: { good: 800, poor: 1800 },
 };
 

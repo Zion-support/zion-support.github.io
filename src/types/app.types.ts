@@ -1,82 +1,85 @@
 /**
  * Application Type Definitions
+ * Centralized type definitions for the application
  */
 
+/**
+ * Performance Metrics Interface
+ * Defines the structure for performance monitoring data
+ */
 export interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-  tti: number;
-  tbt: number;
-  si: number;
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+  fmp?: number; // First Meaningful Paint
+  customMetrics?: Record<string, number>;
 }
 
-export interface UserMetrics {
-  userId: string;
-  sessionId: string;
+/**
+ * Performance Report Interface
+ * Complete performance report structure
+ */
+export interface PerformanceReport {
+  webVitals: Partial<PerformanceMetrics>;
+  resources: ResourceStats;
+  memory: MemoryStats | null;
   timestamp: number;
-  page: string;
-  referrer?: string;
-  userAgent: string;
-  viewport: {
-    width: number;
-    height: number;
-  };
 }
 
-export interface ErrorMetrics {
+/**
+ * Resource Statistics Interface
+ * Tracks resource loading statistics
+ */
+export interface ResourceStats {
+  total: number;
+  scripts: number;
+  styles: number;
+  images: number;
+  fonts: number;
+}
+
+/**
+ * Memory Statistics Interface
+ * Browser memory usage statistics
+ */
+export interface MemoryStats {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
+/**
+ * Performance Alert Interface
+ * Structure for performance alerts and warnings
+ */
+export interface PerformanceAlert {
+  type: 'warning' | 'error' | 'info';
   message: string;
-  stack?: string;
-  filename?: string;
-  lineno?: number;
-  colno?: number;
+  metric: keyof PerformanceMetrics;
+  value: number;
+  threshold: number;
   timestamp: number;
-  userId?: string;
-  sessionId?: string;
-  page: string;
 }
 
-export interface ApiMetrics {
-  endpoint: string;
-  method: string;
-  statusCode: number;
-  responseTime: number;
-  timestamp: number;
-  userId?: string;
-  sessionId?: string;
+/**
+ * Layout Shift Interface
+ * Extends PerformanceEntry for layout shift tracking
+ */
+export interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
 }
 
-export interface NavigationMetrics {
-  from: string;
-  to: string;
-  duration: number;
-  timestamp: number;
-  userId?: string;
-  sessionId?: string;
-}
-
-export interface CustomEvent {
-  name: string;
-  category: string;
-  value?: number;
-  properties?: Record<string, any>;
-  timestamp: number;
-  userId?: string;
-  sessionId?: string;
-}
-
-export type MetricType = 
-  | 'performance'
-  | 'user'
-  | 'error'
-  | 'api'
-  | 'navigation'
-  | 'custom';
-
-export interface MetricData {
-  type: MetricType;
-  data: PerformanceMetrics | UserMetrics | ErrorMetrics | ApiMetrics | NavigationMetrics | CustomEvent;
-  timestamp: number;
+/**
+ * Performance with Memory Interface
+ * Extends Performance API with memory information
+ */
+export interface PerformanceWithMemory extends Performance {
+  memory: {
+    usedJSHeapSize: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
+  };
 }

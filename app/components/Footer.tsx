@@ -1,60 +1,38 @@
-'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Award, 
-  Shield, 
-  Zap, 
-  ArrowRight,
-  Brain,
-  Cloud,
-  Code,
-  BarChart,
-  Users,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  Facebook,
-  Instagram,
-  Youtube,
-  Star,
-  TrendingUp,
-  Settings
-} from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
-    { name: 'AI Services', url: '/ai-services', icon: Brain, description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', icon: TrendingUp, description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', icon: Settings, description: 'Intelligent process automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Users, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', icon: TrendingUp, description: 'Financial AI applications' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield, description: 'AI security solutions' },
-    { name: 'AI Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Cloud, description: 'Cloud AI solutions' },
+    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
   ];
 
   const itServices = [
-    { name: 'IT Solutions', url: '/it-services', icon: Code, description: 'Core IT services' },
-    { name: 'Micro SAAS', url: '/micro-saas', icon: Star, description: '50+ ready-to-use apps' },
-    { name: 'Cybersecurity', url: '/cybersecurity', icon: Shield, description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', icon: Globe, description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', icon: Code, description: 'Mobile applications' },
+    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
+    { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
+    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
+    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
+    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
   ];
 
-  const emergingTech = [
-    { name: 'Quantum Computing', url: '/quantum-computing', icon: Zap, description: 'Quantum solutions' },
-    { name: 'Blockchain & Web3', url: '/blockchain-web3', icon: Shield, description: 'Decentralized solutions' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', icon: Cloud, description: 'Connected devices' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', icon: Settings, description: 'Self-managing systems' },
-    { name: 'Robotics', url: '/robotics', icon: Code, description: 'Intelligent robots' },
-    { name: 'Business Intelligence', url: '/business-intelligence', icon: BarChart, description: 'Data insights' },
+  const specializedServices = [
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
+    { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
   ];
 
   const companyLinks = [
@@ -63,7 +41,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' },
+    { name: 'News', url: '/news' }
   ];
 
   const supportLinks = [
@@ -72,7 +50,7 @@ const Footer: React.FC = memo(() => {
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Support Center', url: '/support' },
     { name: 'Status Page', url: '/status' },
-    { name: 'System Status', url: '/system-status' },
+    { name: 'System Status', url: '/system-status' }
   ];
 
   const legal = [
@@ -81,7 +59,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Cookie Policy', url: '/cookies' },
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security Policy', url: '/security' },
-    { name: 'SLA Agreement', url: '/sla' },
+    { name: 'SLA Agreement', url: '/sla' }
   ];
 
   const socialLinks = [
@@ -144,7 +122,7 @@ const Footer: React.FC = memo(() => {
                   {contactInfo.address}
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 text-gray-300">
                 <Clock className="w-4 h-4 text-cyan-400" />
                 <span className="text-gray-300 text-sm">
                   {contactInfo.hours}
@@ -183,11 +161,15 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     href={service.url}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
-                    <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div>
+                      <div className="font-medium">{service.name}</div>
+                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
+                        {service.description}
+                      </div>
+                    </div>
                   </Link>
                 </li>
               ))}
@@ -205,11 +187,15 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     href={service.url}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
-                    <service.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div>
+                      <div className="font-medium">{service.name}</div>
+                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
+                        {service.description}
+                      </div>
+                    </div>
                   </Link>
                 </li>
               ))}
@@ -219,13 +205,13 @@ const Footer: React.FC = memo(() => {
             <div className="mt-8">
               <h4 className="text-md font-semibold mb-4 text-gray-200">Emerging Tech</h4>
               <ul className="space-y-2">
-                {emergingTech.slice(0, 4).map((tech, index) => (
+                {specializedServices.slice(0, 4).map((tech, index) => (
                   <li key={index}>
                     <Link
                       href={tech.url}
                       className="flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group"
                     >
-                      <tech.icon className="w-3 h-3 group-hover:scale-110 transition-transform" />
+                      <Zap className="w-3 h-3 group-hover:scale-110 transition-transform" />
                       <span>{tech.name}</span>
                     </Link>
                   </li>
