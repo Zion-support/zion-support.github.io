@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -14,105 +14,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
-  useEffect(() => {
-    // Keyboard navigation
-    if (enableKeyboardNavigation && typeof window !== 'undefined') {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey === false) {
-          const skipLink = document.querySelector('a[href="#main-content"]');
-          if (skipLink && document.activeElement === document.body) {
-            skipLink.focus();
-          }
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-
-    // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
-      const trapFocus = (element: HTMLElement) => {
-        const focusableContent = element.querySelectorAll(focusableElements);
-        const firstFocusableElement = focusableContent[0] as HTMLElement;
-        const lastFocusableElement = focusableContent[focusableContent.length - 1] as HTMLElement;
-
-        element.addEventListener('keydown', (e) => {
-          if (e.key === 'Tab') {
-            if (e.shiftKey) {
-              if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
-                e.preventDefault();
-              }
-            } else {
-              if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
-                e.preventDefault();
-              }
-            }
-          }
-        });
-      };
-
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach(trapFocus);
-    }
-
-    // High contrast mode
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
-      const updateContrast = () => {
-        if (prefersHighContrast.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
-      };
-
-      updateContrast();
-      prefersHighContrast.addEventListener('change', updateContrast);
-    }
-
-    // Screen reader announcements
-    if (enableScreenReader && typeof window !== 'undefined') {
-      const announceToScreenReader = (message: string) => {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.textContent = message;
-        document.body.appendChild(announcement);
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Focus management
+      if (enableFocusManagement) {
+        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
         
-        setTimeout(() => {
-          document.body.removeChild(announcement);
-        }, 1000);
-      };
-
-      // Announce page changes
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNode = mutation.addedNodes[0] as Element;
-            if (addedNode && addedNode.getAttribute && addedNode.getAttribute('aria-label')) {
-              announceToScreenReader(addedNode.getAttribute('aria-label')!);
+        const handleTabKey = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {
+            const focusable = document.querySelectorAll(focusableElements);
+            const firstFocusable = focusable[0] as HTMLElement;
+            const lastFocusable = focusable[focusable.length - 1] as HTMLElement;
+            
+            if (e.shiftKey && document.activeElement === firstFocusable) {
+              lastFocusable.focus();
+              e.preventDefault();
+            } else if (!e.shiftKey && document.activeElement === lastFocusable) {
+              firstFocusable.focus();
+              e.preventDefault();
             }
           }
-        });
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-
-      return () => observer.disconnect();
+        };
+        
+        document.addEventListener('keydown', handleTabKey);
+        return () => document.removeEventListener('keydown', handleTabKey);
+      }
     }
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+  }, [enableFocusManagement]);
 
   return null;
 };

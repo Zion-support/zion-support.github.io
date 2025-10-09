@@ -1,6 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, MapPin, ChevronDown, Brain, Cpu, Zap, Shield, Heart, CreditCard, BarChart3, Eye, Settings, Users, Globe, Award, Lock, Database, Cloud, Code, Smartphone, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, Building, Factory, Car, Plane, Ship, Train, Home, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import React, { useState, useEffect, memo } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +15,26 @@ const Navigation: React.FC = () => {
   }, []);
 
   const serviceCategories = [
+    {
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'AI-powered invoice generation', icon: '📄', popular: true },
+        { name: 'AI Expense Tracker', path: '/ai-expense-tracker', description: 'Smart expense management', icon: '🧾', popular: true },
+        { name: 'AI Time Tracker', path: '/ai-time-tracker', description: 'Intelligent time tracking', icon: '⏰', popular: true },
+        { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
+        { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+        { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation', icon: '✍️', popular: false },
+        { name: 'AI SEO Optimizer', path: '/ai-marketing', description: 'AI-driven SEO optimization', icon: '🎯', popular: false }
+      ]
+    },
     {
       title: 'AI Services',
       icon: Brain,
