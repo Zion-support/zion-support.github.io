@@ -1,73 +1,73 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Eye, Camera, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Brain, Globe, Lock, Image, Search, Filter } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Mic, Volume2, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Brain, Globe, Lock, Headphones, MessageSquare, Languages } from 'lucide-react';
 
-const AIImageRecognitionPage: React.FC = () => {
+const AIVoiceProcessingPage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
-      title: 'Object Detection',
-      description: 'Identify and locate objects in images with 99.5% accuracy',
-      benefits: ['Real-time Processing', 'Multi-object Detection', 'Bounding Box Coordinates', 'Confidence Scores']
+      icon: Mic,
+      title: 'Speech Recognition',
+      description: 'Convert speech to text with 99%+ accuracy in 100+ languages',
+      benefits: ['Real-time Transcription', 'Multi-language Support', 'Noise Cancellation', 'Speaker Identification']
     },
     {
-      icon: Camera,
-      title: 'Facial Recognition',
-      description: 'Advanced facial recognition for security and user authentication',
-      benefits: ['Face Detection', 'Identity Verification', 'Emotion Analysis', 'Age Estimation']
+      icon: Volume2,
+      title: 'Text-to-Speech',
+      description: 'Generate natural-sounding speech from text with human-like voices',
+      benefits: ['Natural Voices', 'Emotion Control', 'Speed Adjustment', 'Custom Voice Training']
     },
     {
-      icon: Search,
-      title: 'Image Classification',
-      description: 'Automatically categorize and tag images based on content',
-      benefits: ['Custom Categories', 'Batch Processing', 'API Integration', 'Confidence Thresholds']
+      icon: MessageSquare,
+      title: 'Voice Analytics',
+      description: 'Analyze voice patterns for sentiment, emotion, and intent detection',
+      benefits: ['Sentiment Analysis', 'Emotion Detection', 'Intent Recognition', 'Voice Biometrics']
     },
     {
-      icon: Filter,
-      title: 'Content Moderation',
-      description: 'Automatically detect inappropriate or sensitive content',
-      benefits: ['NSFW Detection', 'Violence Detection', 'Hate Speech', 'Custom Filters']
+      icon: Languages,
+      title: 'Language Translation',
+      description: 'Real-time voice translation between multiple languages',
+      benefits: ['Live Translation', 'Accent Adaptation', 'Cultural Context', 'Offline Support']
     }
   ];
 
   const useCases = [
     {
-      industry: 'Retail',
-      application: 'Visual Search',
-      description: 'Enable customers to search products using images instead of text',
-      roi: '45% increase in conversion rates'
-    },
-    {
-      industry: 'Security',
-      application: 'Surveillance',
-      description: 'Automated monitoring and threat detection in security systems',
-      roi: '80% reduction in false alarms'
+      industry: 'Customer Service',
+      application: 'Voice Assistants',
+      description: 'AI-powered voice assistants for 24/7 customer support',
+      roi: '70% reduction in call center costs'
     },
     {
       industry: 'Healthcare',
-      application: 'Medical Imaging',
-      description: 'Assist doctors in diagnosing conditions from medical images',
-      roi: '30% faster diagnosis times'
+      application: 'Medical Transcription',
+      description: 'Automated transcription of medical consultations and reports',
+      roi: '50% faster documentation'
     },
     {
-      industry: 'Manufacturing',
-      application: 'Quality Control',
-      description: 'Automated inspection and defect detection in production lines',
-      roi: '60% reduction in defects'
+      industry: 'Education',
+      application: 'Language Learning',
+      description: 'Interactive voice-based language learning and pronunciation training',
+      roi: '40% improvement in learning outcomes'
+    },
+    {
+      industry: 'Accessibility',
+      application: 'Voice Control',
+      description: 'Voice-controlled interfaces for users with disabilities',
+      roi: '95% improvement in accessibility'
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$149',
       period: '/month',
-      description: 'Perfect for small businesses starting with image recognition',
+      description: 'Perfect for small businesses starting with voice processing',
       features: [
-        'Up to 10,000 images/month',
-        'Basic object detection',
-        'Standard accuracy (95%)',
+        'Up to 10,000 minutes/month',
+        'Basic speech recognition',
+        'Standard voices',
         'Email support',
         'REST API access',
         'Basic analytics'
@@ -77,16 +77,16 @@ const AIImageRecognitionPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$499',
       period: '/month',
       description: 'Advanced features for growing businesses with complex needs',
       features: [
-        'Up to 100,000 images/month',
-        'All recognition types',
-        'High accuracy (98%)',
+        'Up to 100,000 minutes/month',
+        'Advanced speech recognition',
+        'Premium voices',
         'Priority support',
         'Real-time processing',
-        'Custom model training',
+        'Custom voice training',
         'Advanced analytics',
         'Webhook integration'
       ],
@@ -95,13 +95,13 @@ const AIImageRecognitionPage: React.FC = () => {
     },
     {
       name: 'Enterprise',
-      price: '$1,499',
+      price: '$1,299',
       period: '/month',
       description: 'Full-scale solution for large enterprises with unlimited requirements',
       features: [
-        'Unlimited images',
+        'Unlimited minutes',
         'Custom AI models',
-        'Maximum accuracy (99.5%)',
+        'Maximum accuracy (99%+)',
         '24/7 dedicated support',
         'On-premise deployment',
         'White-label solution',
@@ -116,10 +116,10 @@ const AIImageRecognitionPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Image Recognition - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI image recognition solutions with 99.5% accuracy. Object detection, facial recognition, content moderation, and visual search for businesses." />
-        <meta name="keywords" content="AI image recognition, computer vision, object detection, facial recognition, image classification, visual search" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-image-recognition" />
+        <title>AI Voice Processing - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI voice processing solutions with 99%+ accuracy. Speech recognition, text-to-speech, voice analytics, and real-time translation for businesses." />
+        <meta name="keywords" content="AI voice processing, speech recognition, text-to-speech, voice analytics, voice translation, speech synthesis" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-processing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,18 +128,18 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-8">
-                <Eye className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-300 text-sm font-medium">AI Image Recognition</span>
+                <Mic className="w-5 h-5 text-purple-400 mr-2" />
+                <span className="text-purple-300 text-sm font-medium">AI Voice Processing</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                See Beyond the
-                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Visible</span>
+                Hear the Future with
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> AI Voice</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge AI image recognition technology. 
-                Achieve 99.5% accuracy in object detection, facial recognition, and visual analysis.
+                Transform your business with cutting-edge AI voice processing technology. 
+                Achieve 99%+ accuracy in speech recognition, natural text-to-speech, and real-time translation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -159,11 +159,11 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Image Recognition Capabilities
+                Advanced Voice Processing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered image recognition platform combines computer vision with machine learning 
-                to deliver unparalleled accuracy and performance.
+                Our AI-powered voice processing platform combines speech recognition, synthesis, 
+                and analytics to deliver natural voice interactions.
               </p>
             </div>
 
@@ -197,7 +197,7 @@ const AIImageRecognitionPage: React.FC = () => {
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how AI image recognition is revolutionizing businesses across industries.
+                See how AI voice processing is transforming businesses across industries.
               </p>
             </div>
 
@@ -221,10 +221,10 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your image recognition needs. All plans include 14-day free trial.
+                Choose the perfect plan for your voice processing needs. All plans include 14-day free trial.
               </p>
             </div>
 
@@ -279,10 +279,10 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 rounded-2xl p-12 border border-purple-500/30">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to See the Future?
+                Ready to Hear the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI image recognition to automate and enhance their operations.
+                Join thousands of businesses using AI voice processing to enhance customer experiences and automate operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
@@ -324,4 +324,4 @@ const AIImageRecognitionPage: React.FC = () => {
   );
 };
 
-export default AIImageRecognitionPage;
+export default AIVoiceProcessingPage;

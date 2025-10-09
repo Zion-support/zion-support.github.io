@@ -1,73 +1,73 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Eye, Camera, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Brain, Globe, Lock, Image, Search, Filter } from 'lucide-react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Brain, Globe, Lock, ShoppingCart, Heart, Eye, Filter } from 'lucide-react';
 
-const AIImageRecognitionPage: React.FC = () => {
+const AIRecommendationEnginePage: React.FC = () => {
   const features = [
     {
+      icon: Target,
+      title: 'Personalized Recommendations',
+      description: 'AI-powered recommendations that increase engagement by 40%',
+      benefits: ['Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Approaches', 'Real-time Updates']
+    },
+    {
+      icon: Brain,
+      title: 'Machine Learning Models',
+      description: 'Advanced ML algorithms that learn from user behavior patterns',
+      benefits: ['Deep Learning', 'Neural Networks', 'A/B Testing', 'Continuous Learning']
+    },
+    {
       icon: Eye,
-      title: 'Object Detection',
-      description: 'Identify and locate objects in images with 99.5% accuracy',
-      benefits: ['Real-time Processing', 'Multi-object Detection', 'Bounding Box Coordinates', 'Confidence Scores']
-    },
-    {
-      icon: Camera,
-      title: 'Facial Recognition',
-      description: 'Advanced facial recognition for security and user authentication',
-      benefits: ['Face Detection', 'Identity Verification', 'Emotion Analysis', 'Age Estimation']
-    },
-    {
-      icon: Search,
-      title: 'Image Classification',
-      description: 'Automatically categorize and tag images based on content',
-      benefits: ['Custom Categories', 'Batch Processing', 'API Integration', 'Confidence Thresholds']
+      title: 'Behavioral Analysis',
+      description: 'Analyze user interactions to predict preferences and interests',
+      benefits: ['Click Tracking', 'View Duration', 'Purchase History', 'Search Patterns']
     },
     {
       icon: Filter,
-      title: 'Content Moderation',
-      description: 'Automatically detect inappropriate or sensitive content',
-      benefits: ['NSFW Detection', 'Violence Detection', 'Hate Speech', 'Custom Filters']
+      title: 'Multi-Criteria Filtering',
+      description: 'Filter recommendations based on multiple criteria and constraints',
+      benefits: ['Category Filters', 'Price Ranges', 'Availability', 'User Preferences']
     }
   ];
 
   const useCases = [
     {
-      industry: 'Retail',
-      application: 'Visual Search',
-      description: 'Enable customers to search products using images instead of text',
-      roi: '45% increase in conversion rates'
+      industry: 'E-commerce',
+      application: 'Product Recommendations',
+      description: 'Increase sales with personalized product suggestions',
+      roi: '35% increase in conversion rates'
     },
     {
-      industry: 'Security',
-      application: 'Surveillance',
-      description: 'Automated monitoring and threat detection in security systems',
-      roi: '80% reduction in false alarms'
+      industry: 'Media',
+      application: 'Content Discovery',
+      description: 'Help users discover relevant content and media',
+      roi: '60% increase in engagement'
     },
     {
-      industry: 'Healthcare',
-      application: 'Medical Imaging',
-      description: 'Assist doctors in diagnosing conditions from medical images',
-      roi: '30% faster diagnosis times'
+      industry: 'Finance',
+      application: 'Investment Advice',
+      description: 'Personalized investment recommendations based on risk profile',
+      roi: '25% improvement in portfolio performance'
     },
     {
-      industry: 'Manufacturing',
-      application: 'Quality Control',
-      description: 'Automated inspection and defect detection in production lines',
-      roi: '60% reduction in defects'
+      industry: 'Education',
+      application: 'Learning Paths',
+      description: 'Recommend personalized learning paths and courses',
+      roi: '45% improvement in learning outcomes'
     }
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses starting with image recognition',
+      description: 'Perfect for small businesses starting with recommendations',
       features: [
-        'Up to 10,000 images/month',
-        'Basic object detection',
-        'Standard accuracy (95%)',
+        'Up to 50,000 users',
+        'Basic recommendation models',
+        'Standard accuracy (85%)',
         'Email support',
         'REST API access',
         'Basic analytics'
@@ -77,31 +77,31 @@ const AIImageRecognitionPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$799',
       period: '/month',
       description: 'Advanced features for growing businesses with complex needs',
       features: [
-        'Up to 100,000 images/month',
-        'All recognition types',
-        'High accuracy (98%)',
+        'Up to 500,000 users',
+        'Advanced ML models',
+        'High accuracy (92%)',
         'Priority support',
-        'Real-time processing',
-        'Custom model training',
+        'Real-time recommendations',
+        'A/B testing',
         'Advanced analytics',
-        'Webhook integration'
+        'Custom algorithms'
       ],
       cta: 'Start Free Trial',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,499',
+      price: '$1,999',
       period: '/month',
       description: 'Full-scale solution for large enterprises with unlimited requirements',
       features: [
-        'Unlimited images',
+        'Unlimited users',
         'Custom AI models',
-        'Maximum accuracy (99.5%)',
+        'Maximum accuracy (95%+)',
         '24/7 dedicated support',
         'On-premise deployment',
         'White-label solution',
@@ -116,10 +116,10 @@ const AIImageRecognitionPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Image Recognition - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI image recognition solutions with 99.5% accuracy. Object detection, facial recognition, content moderation, and visual search for businesses." />
-        <meta name="keywords" content="AI image recognition, computer vision, object detection, facial recognition, image classification, visual search" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-image-recognition" />
+        <title>AI Recommendation Engine - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI recommendation engine with 95%+ accuracy. Personalized recommendations, machine learning models, and behavioral analysis for businesses." />
+        <meta name="keywords" content="AI recommendation engine, personalized recommendations, machine learning, collaborative filtering, content-based filtering" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-recommendation-engine" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,18 +128,18 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-8">
-                <Eye className="w-5 h-5 text-purple-400 mr-2" />
-                <span className="text-purple-300 text-sm font-medium">AI Image Recognition</span>
+                <Target className="w-5 h-5 text-purple-400 mr-2" />
+                <span className="text-purple-300 text-sm font-medium">AI Recommendation Engine</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                See Beyond the
-                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Visible</span>
+                Perfect Recommendations
+                <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"> Every Time</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge AI image recognition technology. 
-                Achieve 99.5% accuracy in object detection, facial recognition, and visual analysis.
+                Transform your business with AI-powered recommendation engines that increase engagement by 40% 
+                and boost conversion rates with personalized suggestions.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -159,11 +159,11 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Image Recognition Capabilities
+                Advanced Recommendation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered image recognition platform combines computer vision with machine learning 
-                to deliver unparalleled accuracy and performance.
+                Our AI recommendation engine combines machine learning with behavioral analysis 
+                to deliver highly personalized and accurate suggestions.
               </p>
             </div>
 
@@ -197,7 +197,7 @@ const AIImageRecognitionPage: React.FC = () => {
                 Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how AI image recognition is revolutionizing businesses across industries.
+                See how AI recommendation engines are transforming businesses across industries.
               </p>
             </div>
 
@@ -221,10 +221,10 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Scalable Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your image recognition needs. All plans include 14-day free trial.
+                Choose the perfect plan for your recommendation needs. All plans include 14-day free trial.
               </p>
             </div>
 
@@ -279,10 +279,10 @@ const AIImageRecognitionPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-900/50 to-cyan-900/50 rounded-2xl p-12 border border-purple-500/30">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to See the Future?
+                Ready to Boost Engagement?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses using AI image recognition to automate and enhance their operations.
+                Join thousands of businesses using AI recommendation engines to increase sales and user engagement.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
@@ -324,4 +324,4 @@ const AIImageRecognitionPage: React.FC = () => {
   );
 };
 
-export default AIImageRecognitionPage;
+export default AIRecommendationEnginePage;

@@ -40,7 +40,6 @@ import {
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
-    // Infrastructure & Cloud Services
     {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure Management',
