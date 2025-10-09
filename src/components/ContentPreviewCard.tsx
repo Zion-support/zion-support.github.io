@@ -1,3 +1,6 @@
+import React from 'react';
+import Link from 'next/link';
+
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -27,11 +30,13 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   stats,
   excerpt
 }) => {
+  const formatNumber = (num: number): string => {
     if (num >= 1000) {
       return (num / 1000).toFixed(1) + 'k';
     }
     return num.toString();
   };
+
   const getCategoryColor = (category: string): string => {
     const colors: { [key: string]: string } = {
       'Success Story': 'from-green-500 to-emerald-600',

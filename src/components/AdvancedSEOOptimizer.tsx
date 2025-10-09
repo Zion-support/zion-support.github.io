@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 interface AdvancedSEOOptimizerProps {
   title?: string;
   description?: string;
@@ -44,7 +46,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   faqData = [],
   organizationData,
   websiteData
-}) => {
+}: AdvancedSEOOptimizerProps) => {
   useEffect(() => {
     // Update page title
     document.title = title;
@@ -119,9 +121,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     
     // Add additional SEO meta tags
-    
+    addAdditionalSEOTags();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, author, publishedTime, modifiedTime, section, tags, locale, alternateLocales, robots, noindex, nofollow, breadcrumbs, faqData, organizationData, websiteData]);
 
+  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
+    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);

@@ -14,8 +14,5 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AICustomerSupportPage;
-=======
 export default AiCustomerSupportPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3a03
+

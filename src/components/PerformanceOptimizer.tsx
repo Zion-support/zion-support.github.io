@@ -1,5 +1,7 @@
 'use client';
 
+import React, { useState, useEffect } from 'react';
+
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
