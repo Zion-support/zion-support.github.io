@@ -1,9 +1,15 @@
-'use client';
+
+
+
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const aiServices = [
@@ -13,7 +19,8 @@ const ServicesPage: React.FC = () => {
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
-      popular: true
+      popular: true,
+      link: '/ai-services'
     },
     {
       icon: Zap,
@@ -21,15 +28,8 @@ const ServicesPage: React.FC = () => {
       description: 'Intelligent process automation and workflow optimization',
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
       price: 'Starting at $2,000/month',
-      popular: false
-    },
-    {
-      icon: Shield,
-      title: 'AI Cybersecurity',
-      description: 'Advanced AI-powered security solutions',
-      features: ['Threat Detection', 'Anomaly Detection', 'Security Monitoring', 'Incident Response'],
-      price: 'Starting at $2,500/month',
-      popular: false
+      popular: false,
+      link: '/ai-automation'
     },
     {
       icon: BarChart,
@@ -37,77 +37,149 @@ const ServicesPage: React.FC = () => {
       description: 'Transform data into actionable insights with AI',
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
       price: 'Starting at $1,800/month',
-      popular: false
+      popular: false,
+      link: '/ai-data-analytics'
+    },
+    {
+      icon: MessageSquare,
+      title: 'AI Customer Support',
+      description: '24/7 AI-powered customer service solutions',
+      features: ['Chatbots', 'Voice Assistants', 'Ticket Management', 'Sentiment Analysis'],
+      price: 'Starting at $299/month',
+      popular: true,
+      link: '/ai-customer-support'
+    },
+    {
+      icon: Target,
+      title: 'AI Marketing',
+      description: 'Revolutionary AI-powered marketing automation',
+      features: ['Ad Optimization', 'Content Generation', 'Lead Scoring', 'Campaign Management'],
+      price: 'Starting at $199/month',
+      popular: true,
+      link: '/ai-marketing'
+    },
+    {
+      icon: Eye,
+      title: 'AI Computer Vision',
+      description: 'Advanced computer vision and image processing',
+      features: ['Object Detection', 'Image Recognition', 'Quality Control', 'Facial Recognition'],
+      price: 'Starting at $1,200/month',
+      popular: false,
+      link: '/ai-computer-vision'
     }
   ];
 
   const itServices = [
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services',
-      features: ['Cloud Migration', 'Infrastructure Setup', 'Scalability', 'Security'],
-      price: 'Starting at $1,200/month',
-      popular: false
-    },
     {
       icon: Database,
       title: 'Database Management',
       description: 'Comprehensive database solutions and optimization',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Monitoring'],
       price: 'Starting at $1,000/month',
-      popular: false
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline development and deployment processes',
-      features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
-      price: 'Starting at $1,500/month',
-      popular: false
+      popular: false,
+      link: '/database-management'
     },
     {
       icon: Lock,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions for your business',
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      price: 'Starting at $2,000/month',
-      popular: false
+      price: 'Starting at $1,500/month',
+      popular: true,
+      link: '/cybersecurity'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration',
+      features: ['Cloud Migration', 'Infrastructure Setup', 'Monitoring', 'Cost Optimization'],
+      price: 'Starting at $800/month',
+      popular: true,
+      link: '/cloud-services'
+    },
+    {
+      icon: Code,
+      title: 'DevOps & CI/CD',
+      description: 'Automated development and deployment pipelines',
+      features: ['CI/CD Setup', 'Container Orchestration', 'Monitoring', 'Security Scanning'],
+      price: 'Starting at $1,200/month',
+      popular: false,
+      link: '/devops-cicd'
+    },
+    {
+      icon: Settings,
+      title: 'System Administration',
+      description: 'Complete system management and maintenance',
+      features: ['Server Management', 'Performance Tuning', 'Updates', 'Troubleshooting'],
+      price: 'Starting at $600/month',
+      popular: false,
+      link: '/system-administration'
+    },
+    {
+      icon: Globe,
+      title: 'Network Solutions',
+      description: 'Enterprise network infrastructure and security',
+      features: ['Network Design', 'Security Implementation', 'Monitoring', 'Optimization'],
+      price: 'Starting at $900/month',
+      popular: false,
+      link: '/network-solutions'
     }
   ];
 
   const microSaasServices = [
     {
-      icon: Code,
-      title: 'Developer Tools',
-      description: 'AI-powered development and productivity tools',
-      features: ['Code Generation', 'Bug Detection', 'Performance Analysis', 'Documentation'],
-      price: 'Starting at $15/month',
-      popular: true
-    },
-    {
       icon: BarChart3,
-      title: 'Analytics Tools',
-      description: 'Advanced business intelligence and analytics',
-      features: ['Real-time Dashboards', 'Custom Reports', 'Data Integration', 'Predictive Analytics'],
-      price: 'Starting at $25/month',
-      popular: false
-    },
-    {
-      icon: MessageSquare,
-      title: 'Communication Tools',
-      description: 'AI-enhanced communication and collaboration',
-      features: ['Smart Chat', 'Meeting Assistant', 'Translation', 'Sentiment Analysis'],
-      price: 'Starting at $20/month',
-      popular: false
+      title: 'AI Analytics Dashboard',
+      description: 'Real-time business intelligence and analytics',
+      features: ['Custom Dashboards', 'Real-time Data', 'Predictive Insights', 'Export Reports'],
+      price: '$79/month',
+      popular: true,
+      link: '/ai-analytics-dashboard'
     },
     {
       icon: ShoppingCart,
-      title: 'E-commerce Tools',
-      description: 'Complete e-commerce solutions and automation',
+      title: 'AI E-commerce Assistant',
+      description: 'Complete e-commerce automation and optimization',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics'],
-      price: 'Starting at $30/month',
-      popular: false
+      price: '$99/month',
+      popular: true,
+      link: '/ai-ecommerce-solutions'
+    },
+    {
+      icon: Smartphone,
+      title: 'AI Mobile App Builder',
+      description: 'No-code mobile app development with AI',
+      features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics'],
+      price: '$149/month',
+      popular: false,
+      link: '/ai-mobile-app-development'
+    },
+    {
+      icon: FileText,
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing and management',
+      features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'],
+      price: '$59/month',
+      popular: true,
+      link: '/ai-document-processing'
+    },
+    {
+      icon: Bot,
+      title: 'AI Chatbot Builder',
+      description: 'Create intelligent chatbots for any platform',
+      features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training'],
+      price: '$49/month',
+      popular: true,
+      link: '/ai-chatbot-builder'
+    },
+    {
+      icon: Music,
+      title: 'AI Content Creator',
+      description: 'AI-powered content generation and optimization',
+      features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization'],
+      price: '$39/month',
+      popular: false,
+      link: '/ai-content-generation'
     }
   ];
 
@@ -123,46 +195,45 @@ const ServicesPage: React.FC = () => {
       description: '50+ certified professionals with 10+ years experience'
     },
     {
-      icon: Shield,
+      icon: Clock,
       title: '24/7 Support',
       description: 'Round-the-clock support with guaranteed response times'
     },
     {
-      icon: Clock,
+      icon: Shield,
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { label: 'Projects Completed', value: '500+' },
+    { label: 'Happy Clients', value: '200+' },
+    { label: 'Uptime Guarantee', value: '99.9%' },
+    { label: 'Support Available', value: '24/7' }
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="Our Services - AI & IT Solutions | Zion Tech Group"
-        description="Comprehensive AI services, IT solutions, and micro SAAS tools. Transform your business with our cutting-edge technology solutions."
-        keywords={['AI services', 'IT solutions', 'micro SAAS', 'business automation', 'cloud services', 'cybersecurity']}
-        canonicalUrl="https://ziontechgroup.com/services"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="AI & IT Services - Zion Tech Group"
+        description="Comprehensive AI and IT solutions including AI services, automation, cybersecurity, cloud services, and micro SAAS applications. Starting from $39/month."
+        keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
       />
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Our <span className="text-cyan-400">Services</span>
+      {/* Hero Section */}
+      <section className="pt-24 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business. 
-              From cutting-edge AI services to robust IT infrastructure, we've got you covered.
+              Comprehensive AI and IT solutions designed to transform your business operations and drive growth
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <a href="/contact"
                 className="cyber-button inline-flex items-center justify-center"
               >
@@ -175,21 +246,36 @@ const ServicesPage: React.FC = () => {
                 <Eye className="w-5 h-5 mr-2" />
                 View Case Studies
               </a>
+=======
+              <a
+                href="tel:+13024640950"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Call (302) 464-0950
+              </a>
+              <Link
+                to="/contact"
+                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Get Free Consultation
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-300 font-medium">{stat.label}</div>
+      {/* Stats Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                  {stat.value}
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -382,15 +468,223 @@ const ServicesPage: React.FC = () => {
                   <Eye className="w-5 h-5 mr-2" />
                   Request Demo
                 </a>
+=======
+                <div className="text-gray-300 text-sm md:text-base">
+                  {stat.label}
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Services Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced artificial intelligence solutions to automate, optimize, and transform your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {service.popular && (
+                  <div className="flex items-center justify-center mb-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <Link
+                    to={service.link}
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services Section */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Robust IT infrastructure and support services to keep your business running smoothly
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {service.popular && (
+                  <div className="flex items-center justify-center mb-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}</div>
+                  <Link
+                    to={service.link}
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SAAS Services Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSaasServices.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {service.popular && (
+                  <div className="flex items-center justify-center mb-4">
+                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="flex items-center mb-4">
+                  <service.icon className="h-8 w-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
+                  <Link
+                    to={service.link}
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-24 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We deliver exceptional results with proven expertise and cutting-edge technology
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-cyan-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="h-8 w-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+              Contact us today to discuss how our AI and IT solutions can help your organization thrive.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Call (302) 464-0950
+              </a>
+              <Link
+                to="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
+              >
+                Get Free Consultation
+              </Link>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
 export default ServicesPage;
+
+

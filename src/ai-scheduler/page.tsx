@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Calendar, Clock, Users, Zap, Brain, Shield, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Target, BarChart } from 'lucide-react';
 
 const AISchedulerPage: React.FC = () => {
@@ -318,5 +319,8 @@ const AISchedulerPage: React.FC = () => {
     </div>
   );
 };
+=======
+import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
 
 export default AISchedulerPage;

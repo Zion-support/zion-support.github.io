@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 const API: React.FC = () => {
   const apiEndpoints = [
@@ -169,4 +170,9 @@ const API: React.FC = () => {
     </div>
   );
 };
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
 export default API;
+
+

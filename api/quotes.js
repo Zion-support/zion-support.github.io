@@ -1,41 +1,50 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+<<<<<<< HEAD
+    res.status(405).json({ error: 'Method not allowed' });
     return;
+=======
+    return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-0133
   }
 
   try {
     const { name, email, phone, details, country, service } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-      res.statusCode = 400;
-      res.json({ error: 'Name, email, phone, and details are required' });
+<<<<<<< HEAD
+      res.status(400).json({ error: 'Name, email, phone, and details are required' });
       return;
+=======
+      return res.status(400).json({ error: 'Name, email, phone, and details are required' });
+>>>>>>> cursor/fix-errors-and-merge-to-main-0133
     }
 
     // Process quote submission logic here
     const quote = {
-      id: 'quote_' + Date.now(),
+<<<<<<< HEAD
+      id: 'quote_' + Math.random().toString(36).substr(2, 9),
+=======
+      id: Date.now().toString(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-0133
       name,
       email,
       phone,
       details,
-      country: country || 'US',
-      service: service || 'general',
-      submittedAt: new Date().toISOString(),
+      country,
+      service,
+<<<<<<< HEAD
+      timestamp: new Date().toISOString()
+=======
+      createdAt: new Date().toISOString()
+>>>>>>> cursor/fix-errors-and-merge-to-main-0133
     };
 
     // In a real application, you would save this to a database
-    //     res.statusCode = 200;
-    res.json({
-      success: true,
-      message: 'Quote submitted successfully',
-      quote,
-    });
+    res.statusCode = 200;
+    res.json({ success: true, quote });
   } catch (error) {
-    //     res.statusCode = 500;
-    res.json({ error: error.message || 'Quote submission failed' });
+    console.error('Error processing quote:', error);
+    res.status(500).json({ error: error.message || 'Quote submission failed' });
   }
 }

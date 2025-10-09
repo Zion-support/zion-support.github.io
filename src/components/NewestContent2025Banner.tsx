@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const NewestContent2025Banner: React.FC = () => {
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden">
@@ -110,6 +111,20 @@ const NewestContent2025Banner: React.FC = () => {
         </div>
       </div>
     </section>
+=======
+
+
+interface NewestContent2025BannerProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  NewestContent2025Banner: React.FC<NewestContent2025BannerProps> = () => {/* TODO: Fix JSX expression */}
+      {/* Component content */}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
   );
 };
+
 export default NewestContent2025Banner;
+
+

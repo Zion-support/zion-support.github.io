@@ -1,1 +1,4 @@
-res.status(200).json({ meta: updated }) } catch (error: unknown) { res.status(500).json({ error: error?.message |'Failed to update status' }) } } '
+res.status(200).json({/* TODO: Fix JSX expression */})
+  a: updated }) } catch (erro,)
+  r: unknown) {/* TODO: Fix JSX expression */}
+  r: error?.message |'Failed to update status' }) } } '

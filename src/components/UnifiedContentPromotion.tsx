@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 const UnifiedContentPromotion: React.FC = () => {
   const features = [
     {
@@ -44,7 +45,20 @@ const UnifiedContentPromotion: React.FC = () => {
           ))}
         </div>
       </div>
+=======
+
+
+interface UnifiedContentPromotionProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  UnifiedContentPromotion: React.FC<UnifiedContentPromotionProps> = () => {/* TODO: Fix JSX expression */}
+      {/* Component content */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
     </div>
   );
 };
+
 export default UnifiedContentPromotion;
+
+

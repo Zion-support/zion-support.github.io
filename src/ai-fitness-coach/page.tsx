@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -209,3 +210,10 @@ const AIFitnessCoachPage: React.FC = () => {
 };
 
 export default AIFitnessCoachPage;
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, Star, Phone, Mail, Dumbbell, Zap, Shield, Clock, Target, TrendingUp, Users } from 'lucide-react';
+
+export default AIFitnessCoachPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b

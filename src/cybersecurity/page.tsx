@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
@@ -323,28 +325,36 @@ const CybersecurityPage: React.FC = () => {
             </h2>
             <p className="text-xl mb-8 text-red-100">
               Contact our cybersecurity experts for a free security assessment and custom protection strategy
+=======
+import { Shield, ArrowRight } from 'lucide-react';
+
+export default function CybersecurityPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Cybersecurity
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Advanced security solutions to protect your business from cyber threats.
+          </p>
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Cybersecurity Solutions</h2>
+            <p className="text-gray-300 mb-6">
+              Protect your business with comprehensive cybersecurity services and monitoring.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-red-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+            <a
+              href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
+            </a>
           </div>
-        </section>
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-export default CybersecurityPage;
+}

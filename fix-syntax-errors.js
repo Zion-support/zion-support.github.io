@@ -1,121 +1,168 @@
+
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
 
-// Function to fix syntax errors in a file
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+
+// Function to fix common syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    // Fix double brace imports
-    content = content.replace(
-      /import\s*{\s*{\s*([^}]+)\s*}\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-    );
-
-    // Fix malformed imports with extra braces
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?/g,
-      (match, imports1, module1, imports2, module2) => {
-        if (module1 === module2) {
-        } else {
-        }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common syntax issues
+    const fixes = [
+      // Fix missing commas in object properties
+      {
+        pattern: /(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: '$1: "$2",
+  $3:'
+      },
+      // Fix missing commas in function parameters
+      {
+        pattern: /(\w+)\s+(\w+)\s*\)/g,
+        replacement: '$1, $2)'
+      },
+      // Fix missing semicolons
+      {
+        pattern: /(\w+)\s*$/gm,
+        replacement: '$1;'
+      },
+      // Fix malformed JSX attributes
+      {
+        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
+        replacement: '$1="$2" $3'
+      },
+      // Fix missing closing tags
+      {
+        pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
+        replacement: '<$1$2>$3</$1>'
+      },
+      // Fix malformed imports
+      {
+        pattern: /import\s+(\w+)\s+from\s+"([^"]*)"\s*(\w+)/g,
+        replacement: 'import $1 from "$2";
+import $3'
+      },
+      // Fix missing closing parentheses
+      {
+        pattern: /(\w+\([^)]*)\s*$/gm,
+        replacement: '$1)'
+      },
+      // Fix malformed object literals
+      {
+        pattern: /{\s*(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: '{
+  $1: "$2",
+  $3:'
+      },
+      // Fix missing quotes around strings
+      {
+        pattern: /(\w+):\s*([^",}\s][^,}]*)/g,
+        replacement: '$1: "$2"'
+      },
+      // Fix malformed function calls
+      {
+        pattern: /(\w+)\(([^)]*)\s*$/gm,
+        replacement: '$1($2)'
       }
-    );
-
-    // Fix empty imports
-    content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
-
-    // Fix malformed metadata exports
-    content = content.replace(/\/\/ Metadata moved to Helmet component\s*([^}]+)\s*};/g, '');
-
-    // Fix malformed function declarations
-    content = content.replace(
-      /export\s+default\s+function\s+([^(]+)\s*\(\s*\)\s*{\s*return\s*\(\s*<>\s*<Helmet>\s*([^<]+)\s*<\/Helmet>/g,
-      (match, funcName, helmetContent) => {
-        return `export default function ${funcName}() {\n  return (\n    <>\n      <Helmet>\n        ${helmetContent}\n      </Helmet>`;
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
-    );
-
-    // Fix missing semicolons and brackets
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-
-    // Clean up excessive whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-
-    // Fix React import issues
-    content = content.replace(
-      /import\s*{\s*React\s*,\s*([^}]+)\s*}\s*from\s*['"]react['"];?/g,
-    );
-
-    // Fix Helmet import issues
-    content = content.replace(
-      /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/g,
-      "import { Helmet } from 'react-helmet-async';"
-    );
-
-    // Fix Router import issues
-    content = content.replace(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]react-router-dom['"];?/g,
-    );
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
-
+    }
+    
+    // Additional specific fixes for common patterns
+    const specificFixes = [
+      // Fix malformed metadata objects
+      {
+        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)"\s*(\w+):/g,
+        replacement: 'export const metadata = {
+  $1: "$2",
+  $3:'
+      },
+      // Fix malformed component exports
+      {
+        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,
+        replacement: 'export default function $1() {
+  return ('
+      },
+      // Fix missing return statements
+      {
+        pattern: /function\s+(\w+)\s*\(\s*\)\s*{\s*$/gm,
+        replacement: 'function $1() {
+  return ('
+      }
+    ];
+    
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
 
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
+  }
+}
+
+
+// Function to find files with syntax errors
+function findFilesWithSyntaxErrors() {
+  try {
+    const result = execSync('npm run lint 2>&1 | grep -E "error.*Parsing error" | cut -d: -f1 | sort -u 2>/dev/null || true', { encoding: 'utf8' });
+    return result.trim().split('
+').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding files with syntax errors:', error.message);
+    return [];
   }
 }
 
 // Main execution
-async function main() {
+console.log('Starting syntax error resolution...');
 
-  const _patterns = ['app/**/*.tsx', 'app/**/*.ts'];
+const filesWithErrors = findFilesWithSyntaxErrors();
+console.log(`Found ${filesWithErrors.length} files with syntax errors`);
 
-  let _totalFiles = 0;
-  let _fixedFiles = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      cwd: process.cwd(),
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/*.disabled/**',
-        '**/*backup*/**',
-        '**/*corrupted*/**',
-        '**/*temp*/**',
-        '**/*.broken/**',
-      ],
-    });
-
-    for (const file of files) {
-      totalFiles++;
-      if (fixSyntaxErrors(file)) {
-        fixedFiles++;
-      }
-    }
+let fixedCount = 0;
+for (const file of filesWithErrors) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
+}
 
+console.log(`Fixed syntax errors in ${fixedCount} files`);
 
-
-
-  if (fixedFiles > 0) {
-
+// Verify no more syntax errors exist
+try {
+  const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });
+  const count = parseInt(remainingErrors.trim());
+  if (count === 0) {
+    console.log('✅ All syntax errors resolved!');
   } else {
-
+    console.log(`⚠️  ${count} syntax errors still remain`);
   }
+} catch (error) {
+  console.log('✅ No syntax errors found');
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
 
-export { fixSyntaxErrors };

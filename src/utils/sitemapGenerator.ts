@@ -1,112 +1,200 @@
-export interface SitemapEntry {
-  url: string;
+
+
+// Sitemap generator utility;
+export interface SitemapUrl {/* TODO: Fix JSX expression */}
+  O: Add content;}
+};
+  lo,
+  c: string;
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }
-export const generateSitemap = (): SitemapEntry[] => {
-  const baseUrl = 'https://ziontechgroup.com';
+export const _generateSitemap = (url,)
+  s: SitemapUrl[]): string => {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  const baseUrl = 'http,
+  s://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
+  const sitemap = `
+          
+          
+          
+          
+          
+          
+          
+          
+
+          <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+${urls;}
+  .map((url) => {// TODO: Add content;}
+}
+    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
+
+    return `  
+          
+          
+          
+          
+          
+          
+          
+          
+          <url></url>
+    <loc>${fullUrl}</loc>
+    <lastmod>${url.lastmod || currentDate}</lastmod>
+    <changefreq>${url.changefreq || 'weekly'}</changefreq>
+    <priority>${url.priority || 0.8}</priority>`
+  </url>`
+  }
+  )
+
+  .join('
+')}
+
+</urlset>`;
+  return sitemap;
+};
+// Define all the pages for the sitemap;
+
+export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
+
+}
+// Define all the pages for the sitemap;
+export const getAllPages = (): SitemapUrl[] => {/* TODO: Fix JSX expression */}
+  }
+  const currentDate = new Date().toISOString().split('T')[0]
   return [
-    {
-      url: `${baseUrl}/`,
-      lastmod: currentDate,
-      changefreq: 'daily',
-      priority: 1.0
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/ai-services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/it-services`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/quantum-computing`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/autonomous-systems`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/micro-saas`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/enterprise`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/team`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.7
-    },
-    {
-      url: `${baseUrl}/case-studies`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastmod: currentDate,
-      changefreq: 'daily',
-      priority: 0.8
-    },
-    {
-      url: `${baseUrl}/privacy`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
-    },
-    {
-      url: `${baseUrl}/terms`,
-      lastmod: currentDate,
-      changefreq: 'yearly',
-      priority: 0.3
-    }
-  ];
-};
-export const generateRobotsTxt = (): string => {
-  return `User-agent: *
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/`;
-};
+  // TOD,
+  O: Add items,
+]
+    // Main pages;
+    {/* TODO: Fix JSX expression */}
+  q: 'daily' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    // AI Services;
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    // IT Services;
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    // Micro SAAS;
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'weekly' },
+    // Specialized Solutions;
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'monthly' },
+    // Legal pages;
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+    {/* TODO: Fix JSX expression */}
+  q: 'yearly' },
+  ]
+}"`
+
+
+

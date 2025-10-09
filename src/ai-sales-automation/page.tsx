@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -251,5 +252,8 @@ const AISalesAutomationPage: React.FC = () => {
     </>
   );
 };
+=======
+import { TrendingUp, Target, Users, BarChart, CheckCircle, Phone, Mail } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
 
 export default AISalesAutomationPage;

@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Link, Shield, Zap, Globe, Star, Coins, Database, Brain } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
@@ -333,28 +335,36 @@ const BlockchainWeb3Page: React.FC = () => {
             </h2>
             <p className="text-xl mb-8 text-purple-100">
               Contact our blockchain experts for a free consultation and custom Web3 strategy
+=======
+import { Link, ArrowRight } from 'lucide-react';
+
+export default function BlockchainWeb3Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            Blockchain & Web3
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Decentralized solutions and blockchain technology for the future of the web.
+          </p>
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're developing innovative blockchain and Web3 solutions. Contact us to learn more.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="mt-8 text-sm text-purple-200">
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+            <a
+              href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
+            </a>
           </div>
-        </section>
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-export default BlockchainWeb3Page;
+}

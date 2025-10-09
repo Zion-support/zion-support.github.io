@@ -1,13 +1,22 @@
+'use client';
 import React from 'react';
-const LoadingSpinner: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div 
-        className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"
-        role="status"
-        aria-label="Loading"
-      ></div>
+import { Loader2 } from 'lucide-react';
+
+interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
+}
+
+const,
+  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
+}) => {/* TODO: Fix JSX expression */}
+  };
+
+  return (<div className={`flex flex-col items-center justify-center gap-3 ${className}`}></div>`
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} /></Loader2>
+      {/* TODO: Fix JSX expression */}
+        <p className="text-gray-300 text-sm animate-pulse">{text}</p>)
+      )}
     </div>
   );
 };
-export default LoadingSpinner;
+
+export default LoadingSpinner;"`

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -209,3 +210,10 @@ const AIVoiceCloningPage: React.FC = () => {
 };
 
 export default AIVoiceCloningPage;
+=======
+'use client';
+import React from 'react';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
+
+export default AIVoiceCloningPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b

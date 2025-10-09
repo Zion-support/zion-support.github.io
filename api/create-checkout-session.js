@@ -5,8 +5,8 @@ const PROD_DOMAIN = 'https://ziontechgroup.com';
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
@@ -14,25 +14,26 @@ async function handler(req, res) {
 
   if (!productId) {
     res.statusCode = 400;
-    res.json({ error: 'Product ID is required' });
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
 
   try {
-    // Basic checkout session creation logic
     const sessionData = {
       productId,
       userId,
-      domain: PROD_DOMAIN,
-      timestamp: new Date().toISOString(),
+      domain: PROD_DOMAIN
     };
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, session: sessionData }));
-  } catch {
-    //     res.statusCode = 500;
-    res.end('Internal Server Error');
+    res.end(JSON.stringify({ session: sessionData }));
+  } catch (err) {
+    console.error('Error creating checkout session:', err);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
 

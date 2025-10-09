@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
+
+export default ITSupportPage;
+=======
 import React from 'react';
 import { Phone, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -43,3 +50,4 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const SitemapPage: React.FC = () => {
@@ -86,3 +87,12 @@ const SitemapPage: React.FC = () => {
   );
 };
 export default SitemapPage;
+=======
+// sitemap-page file
+// This file is under development
+
+
+export default SitemapPage;
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b

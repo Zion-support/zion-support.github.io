@@ -14,6 +14,7 @@ export interface Metadata {
   metadataBase?: URL;
   alternates?: {
     canonical?: string;
+    languages?: Record<string, string>;
   };
   openGraph?: {
     title?: string;
@@ -32,12 +33,12 @@ export interface Metadata {
     publishedTime?: string;
   };
   twitter?: {
-    card?: string;
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
+    site?: string;
+    creator?: string;
     title?: string;
     description?: string;
     images?: string[];
-    site?: string;
-    creator?: string;
   };
   robots?: {
     index?: boolean;
@@ -46,23 +47,30 @@ export interface Metadata {
       index?: boolean;
       follow?: boolean;
       'max-video-preview'?: number;
-      'max-image-preview'?: string;
+      'max-image-preview'?: 'none' | 'standard' | 'large';
       'max-snippet'?: number;
     };
   };
   verification?: {
     google?: string;
+    yandex?: string;
+    yahoo?: string;
+    other?: Record<string, string>;
   };
 }
+
 export interface MetadataRoute {
-  sitemap?: string;
-  robots?: string;
-  manifest?: string;
-}
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
-export interface MetadataRouteSitemap {
   url: string;
-  lastModified?: Date | string;
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+
+export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
+
+export interface MetadataRouteSitemap extends MetadataRoute {
+  url: string;
+  lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
 }

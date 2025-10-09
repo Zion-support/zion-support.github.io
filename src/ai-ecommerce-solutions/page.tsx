@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Users, BarChart3, Zap, Shield } from 'lucide-react';
@@ -381,6 +382,24 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+
+
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+
+          Contact Us;
+        </a></div></div>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
   );
 };
-export default AIEcommerceSolutionsPage;
+export default AiEcommerceSolutionsPage;
+
+
+
+
+export default PagePage;
+
+

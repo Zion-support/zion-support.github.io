@@ -9,10 +9,7 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Pattern 1: Keep everything after ======= and before >>>>>>>
+        if ' and before >>>>>>>
         pattern1 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?'
         content = re.sub(pattern1, r'\1', content, flags=re.DOTALL)
         
@@ -22,7 +19,7 @@ def fix_merge_conflicts(file_path):
         # Pattern 3: Remove any remaining ======= lines
         content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
         
-        # Pattern 4: Remove any remaining >>>>>>> lines
+        # Pattern 4: Remove any remaining 
         content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
         
         # Clean up any double newlines

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Link, Shield, Zap, Target, Star, Coins, Brain, BarChart, Cpu } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
@@ -358,3 +359,10 @@ const BlockchainPage: React.FC = () => {
   );
 };
 export default BlockchainPage;
+=======
+
+
+export default BlockchainPage;
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e44b
