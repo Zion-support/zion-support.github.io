@@ -11,6 +11,20 @@ import {
   sanitizeInput,
 } from '../app/utils/validators';
 
+import {
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateRequired,
+  validateComposite,
+  validateAsync
+} from '../src/utils/validation';
+
 describe('Email Validation', () => {
   test('validates correct email addresses', () => {
     expect(isValidEmail('test@example.com')).toBe(true);

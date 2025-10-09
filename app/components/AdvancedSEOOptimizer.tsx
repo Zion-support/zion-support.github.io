@@ -165,6 +165,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
 
+    return metaTags;
+  }, [seoData]);
+
   const structuredData = generateStructuredData();
   const breadcrumbData = generateBreadcrumbStructuredData();
   const faqData = generateFAQStructuredData();
@@ -191,8 +194,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-
-    return metaTags;
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
@@ -203,9 +204,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
 
   useEffect(() => {
     if (structuredData) {
