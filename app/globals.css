@@ -250,6 +250,79 @@ body {
   }
 }
 
+@keyframes matrix-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram-scan {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) skewX(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes quantum-entanglement {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    transform: scale(0.9) rotate(180deg);
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes cyber-pulse {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes data-stream-flow {
+  0% {
+    transform: translateX(-100%) scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100vw) scaleX(1);
+    opacity: 0;
+  }
+}
+
 @keyframes hologram-glitch {
   0%, 100% {
     transform: translateX(0);
@@ -847,6 +920,148 @@ body {
 
 .cyber-input::placeholder {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Enhanced Futuristic Components */
+.quantum-entanglement {
+  animation: quantum-entanglement 4s ease-in-out infinite;
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 2s ease-in-out infinite;
+}
+
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 0, 0.1) 2px,
+    rgba(0, 255, 0, 0.1) 4px
+  );
+  animation: matrix-fall 3s linear infinite;
+}
+
+.hologram-scan {
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-scan::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  animation: hologram-scan 4s linear infinite;
+}
+
+.data-stream {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: data-stream-flow 3s linear infinite;
+}
+
+.neon-glow {
+  animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: cyber-scan 3s linear infinite;
+}
+
+.quantum-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(59, 130, 246, 0.15) 50%, rgba(236, 72, 153, 0.15) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  backdrop-filter: blur(15px);
+  animation: quantum-float 6s ease-in-out infinite;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.quantum-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.quantum-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+  animation: neural-network 8s linear infinite;
+  pointer-events: none;
+}
+
+.neural-network-bg {
+  background: linear-gradient(45deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(59, 130, 246, 0.1) 25%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(16, 185, 129, 0.1) 75%, 
+    rgba(139, 92, 246, 0.1) 100%);
+  background-size: 400% 400%;
+  animation: neural-network 15s ease infinite;
+}
+
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  position: relative;
+}
+
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%);
+  background-size: 40px 40px;
+  animation: energy-flow 4s linear infinite;
+  pointer-events: none;
 }
 
 /* Custom scrollbar */

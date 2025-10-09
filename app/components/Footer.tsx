@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Star, Sparkles, Rocket, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -51,17 +51,17 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white cyber-grid">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center energy-pulse">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold cyber-text neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology 
@@ -70,20 +70,20 @@ const Footer: React.FC = memo(() => {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-blue-400" />
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-gray-300">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-blue-400" />
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                <Mail className="w-5 h-5 text-cyan-400" />
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-blue-400" />
-                <span className="text-gray-300">Delaware, USA</span>
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                <MapPin className="w-5 h-5 text-cyan-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-blue-400" />
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-200">
+                <Clock className="w-5 h-5 text-cyan-400" />
                 <span className="text-gray-300">24/7 Support Available</span>
               </div>
             </div>
@@ -91,8 +91,8 @@ const Footer: React.FC = memo(() => {
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-blue-400" />
+            <h3 className="text-lg font-semibold mb-4 flex items-center neon-text">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
               AI Services
             </h3>
             <ul className="space-y-2">
@@ -100,8 +100,9 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center group"
                   >
+                    <CheckCircle className="w-3 h-3 mr-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -111,8 +112,8 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Code className="w-5 h-5 mr-2 text-blue-400" />
+            <h3 className="text-lg font-semibold mb-4 flex items-center neon-text">
+              <Code className="w-5 h-5 mr-2 text-cyan-400" />
               IT Services
             </h3>
             <ul className="space-y-2">
@@ -120,8 +121,9 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link
                     to={service.url}
-                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors text-sm flex items-center group"
                   >
+                    <CheckCircle className="w-3 h-3 mr-2 text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
                   </Link>
                 </li>
@@ -168,9 +170,9 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-cyan-500/20 mt-12 pt-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4 neon-text cyber-text">
               Stay Updated with Latest Tech Trends
             </h3>
             <p className="text-gray-300 mb-6">
@@ -180,9 +182,10 @@ const Footer: React.FC = memo(() => {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                className="flex-1 px-4 py-3 rounded-lg bg-slate-800/50 border border-cyan-500/30 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent cyber-input"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center">
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center cyber-button">
+                <Sparkles className="w-4 h-4 mr-2" />
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
@@ -191,22 +194,22 @@ const Footer: React.FC = memo(() => {
         </div>
 
         {/* Stats Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-cyan-500/20 mt-12 pt-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
+            <div className="quantum-card p-4 energy-pulse">
+              <div className="text-3xl font-bold text-cyan-400 mb-2 neon-text">500+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+            <div className="quantum-card p-4 energy-pulse">
+              <div className="text-3xl font-bold text-purple-400 mb-2 neon-text">50+</div>
               <div className="text-gray-300">Expert Team Members</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+            <div className="quantum-card p-4 energy-pulse">
+              <div className="text-3xl font-bold text-green-400 mb-2 neon-text">99.9%</div>
               <div className="text-gray-300">Uptime Guarantee</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+            <div className="quantum-card p-4 energy-pulse">
+              <div className="text-3xl font-bold text-orange-400 mb-2 neon-text">24/7</div>
               <div className="text-gray-300">Support Available</div>
             </div>
           </div>
@@ -214,7 +217,7 @@ const Footer: React.FC = memo(() => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="bg-gray-800 border-t border-gray-700">
+      <div className="bg-slate-800/50 border-t border-cyan-500/20 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-wrap items-center space-x-6 mb-4 md:mb-0">
@@ -222,7 +225,7 @@ const Footer: React.FC = memo(() => {
                 <Link
                   key={index}
                   to={link.url}
-                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 text-sm transition-colors duration-200"
                 >
                   {link.name}
                 </Link>
@@ -230,21 +233,25 @@ const Footer: React.FC = memo(() => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
+              <div className="flex items-center space-x-2 text-sm text-cyan-400">
                 <Award className="w-4 h-4" />
                 <span>ISO 27001 Certified</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-400">
+              <div className="flex items-center space-x-2 text-sm text-cyan-400">
                 <Shield className="w-4 h-4" />
                 <span>SOC 2 Compliant</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-cyan-400">
+                <Star className="w-4 h-4" />
+                <span>5-Star Rated</span>
               </div>
             </div>
           </div>
           
-          <div className="mt-4 pt-4 border-t border-gray-700 text-center">
+          <div className="mt-4 pt-4 border-t border-cyan-500/20 text-center">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Zion Tech Group. All rights reserved. 
-              Empowering businesses with AI and IT solutions.
+              <span className="text-cyan-400 ml-2">Empowering businesses with AI and IT solutions.</span>
             </p>
           </div>
         </div>
