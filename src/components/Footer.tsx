@@ -1,6 +1,5 @@
 'use client';
 import React, { memo } from 'react';
-<<<<<<< HEAD:src/components/Footer.tsx
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -62,32 +61,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
 
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
-    { name: 'AI-Powered CRM', url: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Real-time business intelligence' },
-    { name: 'AI Content Studio', url: '/ai-content-studio', description: 'Complete content creation suite' },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Automated email campaigns' },
-    { name: 'AI Mobile App Builder', url: '/ai-mobile-builder', description: 'AI-assisted app development' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoicing' },
-    { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-    { name: 'AI Sales Forecasting', url: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-    { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-    { name: 'AI Design Assistant', url: '/ai-design-assistant', description: 'AI-powered design tool' },
-    { name: 'AI Document Processor', url: '/ai-document-processor', description: 'Intelligent document processing' },
-    { name: 'AI Security Monitor', url: '/ai-security-monitor', description: 'Real-time security monitoring' },
-    { name: 'AI Performance Tracker', url: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Custom voice assistants' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI HR Assistant', url: '/ai-hr-assistant', description: 'Intelligent HR management' },
-    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Smart inventory management' },
-    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Deep customer insights' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-    { name: 'AI A/B Testing Platform', url: '/ai-ab-testing', description: 'Advanced A/B testing' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-  ];
 
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -95,7 +68,6 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-<<<<<<< HEAD:app/components/Footer.tsx
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
@@ -103,7 +75,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
     { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
     { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
->>>>>>> origin/main:app/components/Footer.tsx
   ];
 
   const companyLinks = [
@@ -191,7 +162,6 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
-<<<<<<< HEAD:app/components/Footer.tsx
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -238,15 +208,17 @@ const Footer: React.FC = memo(() => {
                 >
                   View All IT Services →
                 </Link>
-              ))}
-              <Link
+              </li>
+              <li>
+                <Link
                 href="/micro-saas"
                 className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
               >
                 View All Solutions
                 <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
-            </div>
+              </li>
+            </ul>
           </div>
 
           {/* AI & IT Services */}
@@ -269,7 +241,7 @@ const Footer: React.FC = memo(() => {
                       <span>{service.name}</span>
                     </Link>
                   ))}
-                </ul>
+                </div>
               </div>
               <div>
                 <h5 className="text-sm font-semibold text-blue-400 mb-2">IT Services</h5>
@@ -400,6 +372,7 @@ const Footer: React.FC = memo(() => {
               <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
+            </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <Shield className="w-4 h-4 text-green-400" />
@@ -413,7 +386,6 @@ const Footer: React.FC = memo(() => {
                 <Globe className="w-4 h-4 text-blue-400" />
                 <span>Global Reach</span>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
             </div>
           </div>
         </div>
