@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { BarChart, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
-=======
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
+import { BarChart, BarChart3, PieChart, TrendingUp, Eye, Brain, Zap, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Database, Globe, Settings } from 'lucide-react';
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -59,7 +52,6 @@ const AIDataVisualizationPage: React.FC = () => {
       features: ['Unlimited dashboards', 'Custom development', 'White-label options', '24/7 support', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
   const stats = [
     { number: '95%', label: 'Faster Insights' },
     { number: '100+', label: 'Data Sources' },
@@ -140,7 +132,6 @@ const AIDataVisualizationPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
@@ -171,7 +162,6 @@ const AIDataVisualizationPage: React.FC = () => {
               >
                 Learn More
               </a>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
             </div>
           </section>
           {/* Features Section */}
@@ -197,7 +187,6 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -213,15 +202,12 @@ const AIDataVisualizationPage: React.FC = () => {
               ))}
             </div>
           </section>
-=======
 
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -233,14 +219,12 @@ const AIDataVisualizationPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            </span><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 ${index === 1 ? 'ring-2 ring-cyan-400' : ''}`}>
                   {index === 1 && (
                     <div className="text-center mb-4">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                         Most Popular
                       </span>
                     </div>
@@ -267,7 +251,6 @@ const AIDataVisualizationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
@@ -299,7 +282,6 @@ const AIDataVisualizationPage: React.FC = () => {
         <Footer />
       </div>
     </>
-=======
           <section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Visualize Your Data?
@@ -327,7 +309,6 @@ const AIDataVisualizationPage: React.FC = () => {
       
       <Footer />
     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   );
 };
 
