@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIProjectManagerPage: React.FC = () => {
   const features = [
@@ -85,8 +82,6 @@ const AIProjectManagerPage: React.FC = () => {
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiProjectManagerPage: React.FC = () => {
   return (
@@ -103,3 +98,4 @@ const AiProjectManagerPage: React.FC = () => {
 };
 
 export default AiProjectManagerPage;
+}

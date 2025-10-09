@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 
 const ProductivityPage: React.FC = () => {
   const productivityTools = [
@@ -276,6 +273,3 @@ const ProductivityPage: React.FC = () => {
 };
 
 export default ProductivityPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

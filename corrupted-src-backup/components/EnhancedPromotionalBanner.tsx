@@ -37,3 +37,6 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
         </div>
       </div>
     </div>
+
+export default EnhancedPromotionalBanner;
+}

@@ -10,7 +10,6 @@ impo, r, t {
   Z, a, p,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import Header, from '../../componen, t, s/Head, e, r';
 
 const AutonomousDevOpsServic, e = () => { 
   return (
@@ -221,3 +220,4 @@ const AutonomousDevOpsServic, e = () => {
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
                 Getted, Today
                 <Link, className='w-5 h-5' />
+}

@@ -139,3 +139,6 @@ const CybersecurityPage: React.FC = () => {
  ];
 
  const _categories = [...new Set(securityServices.map(service => service.category))];
+
+export default CybersecurityPage;
+}

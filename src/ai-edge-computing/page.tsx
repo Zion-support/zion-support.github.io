@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 
 const AIEdgeComputingPage: React.FC = () => {
   const features = [
@@ -102,6 +99,3 @@ const AIEdgeComputingPage: React.FC = () => {
 };
 
 export default AIEdgeComputingPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

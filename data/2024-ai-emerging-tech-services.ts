@@ -1,4 +1,3 @@
-import { ServiceVariant } from "../types/service-variants"
 export interface AIEmergingTechService {id: string;
   name: string;
   tagline: string;

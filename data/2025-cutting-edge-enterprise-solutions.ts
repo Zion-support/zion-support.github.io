@@ -1,4 +1,3 @@
-import { UnifiedService } from '../types/unified-service-types'
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [,
   // ENTERPRISE SOLUTIONS
     id: 'ai-powered-enterprise-risk-management',
@@ -373,7 +372,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [,
     contactInfo: contact,
   }
 ];
-import { UnifiedService } from '../types/unified-service-types';
 // const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -524,7 +522,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: contact,
   }
 ];
-import { UnifiedService } from '../types/unified-service-types';
 // const contact = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';

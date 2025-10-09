@@ -1,6 +1,5 @@
 impo, r, t { ArrowLe, f, t, GraduationC, a, p, Targ, e, t, CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import Header, from '../../../componen, t, s/Head, e, r';
 
 const AdaptiveLearningPlatform, s = () => { 
   return (
@@ -199,3 +198,4 @@ const AdaptiveLearningPlatform, s = () => {
                 >
                   <Target, classNam, e='w-5 h-5' />
                   Request, Dem, o
+}

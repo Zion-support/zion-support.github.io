@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface AdvancedAIAutomationService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -269,7 +268,6 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     reviews: 38,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedAIAutomationService {;
   id: string;
   name: string;

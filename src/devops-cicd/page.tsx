@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 
 const DevOpsCICDPage: React.FC = () => {
   const features = [
@@ -102,6 +99,3 @@ const DevOpsCICDPage: React.FC = () => {
 };
 
 export default DevOpsCICDPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

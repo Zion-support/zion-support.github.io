@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 const Ultimate2026ContentShowcas, e: React.FC = () => {
   const showcaseConten, t = [
     {

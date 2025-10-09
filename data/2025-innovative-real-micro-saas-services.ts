@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types/service-variants'
 export interface InnovativeMicroSaasService {id: string;
   name: string;
   tagline: string;
@@ -821,7 +820,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface EnhancedRealMicroSaasService {;
   id: string;
   name: string;
@@ -910,7 +908,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface EnhancedRealMicroSaasService {;
   id: string;
   name: string;

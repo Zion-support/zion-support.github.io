@@ -3,7 +3,6 @@
  * Base Service Class
  * Provides common functionality for all service classes
  */
-import logger from '../utils/logger';
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;

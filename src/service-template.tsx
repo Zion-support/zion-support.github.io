@@ -1,14 +1,8 @@
 import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
 
 interface ServicePageProps {
   title: string;
   description: string;
-<<<<<<< HEAD
-=======
-  icon: React.ComponentType<{ className?: string }>;
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
   services: Array<{
     title: string;
     description: string;

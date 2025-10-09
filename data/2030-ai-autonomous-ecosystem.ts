@@ -69,7 +69,6 @@ customers: 23;
 rating: 4 && 4.9;
 reviews: 12,
 }];  reviews: number,
-import { ServiceVariant } from '../types/service-variants'
 export interface AIAutonomousEcosystem2030 {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -348,7 +347,6 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     reviews: 12,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface AIAutonomousEcosystem2030 {;
   id: string;
   name: string;

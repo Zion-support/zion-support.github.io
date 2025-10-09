@@ -46,3 +46,4 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
           <div, classNam, e="te, x, t-cent, e, r">
             <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>
             <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</d, i, v>
+}}

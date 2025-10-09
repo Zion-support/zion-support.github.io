@@ -1,6 +1,4 @@
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const SitemapPage: React.FC = () => {
   const mainPages = [
@@ -147,3 +145,7 @@ const SitemapPage: React.FC = () => {
 
       <Footer />
 
+
+
+export default SitemapPage;
+}

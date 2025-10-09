@@ -11,7 +11,6 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
           conte, n, t='multimoda, l, A, I, enterprise, intelligenc, e, computer, visio, n, N, L, P, audio, A, I, unified, AI, platform, G, P, T-4V, Claude, Visio, n, DA, L, L-E 3'
         />
       </Helm, e, t>
-import Header from "../../../components/Header";"
 const MultimodalEnterpriseIntelligence: () => {
   return (
     <div>
@@ -179,3 +178,4 @@ const MultimodalEnterpriseIntelligence: () => {
                 >
                   <TrendingUp, classNam, e='w-5 h-5' />
                   Schedule, Free, Consultation
+}

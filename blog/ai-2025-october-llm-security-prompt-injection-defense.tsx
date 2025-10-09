@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async"
 import { ArrowLeft, Shield, Lock, AlertTriangle, CheckCircle, Zap, Target, Code, Eye } from "lucide-react"
-import { Link } from "react-router-dom"
 
 const LLMSecurityPromptInjectionDefense = () => {
   return (<div>

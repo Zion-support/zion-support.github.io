@@ -1,5 +1,4 @@
 import {ArrowLeft, Leaf, Battery, Wind, Droplet} TrendingDown; Zap } from "lucide-react"
-import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 const SustainableAIComputing2026 = () =>
   return (<div>

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 const AIEmailMarketingPage: React.FC = () => {
   const features = [
@@ -101,8 +100,6 @@ const AIEmailMarketingPage: React.FC = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiEmailMarketingPage: React.FC = () => {
   return (
@@ -119,3 +116,4 @@ const AiEmailMarketingPage: React.FC = () => {
 };
 
 export default AiEmailMarketingPage;
+}

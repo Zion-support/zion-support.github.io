@@ -1,5 +1,4 @@
 import React, { memo, useMemo, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Lazy load pages for better performance

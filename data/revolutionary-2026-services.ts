@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface Revolutionary2026Service {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1068,7 +1067,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [,
     reviews: 25,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
   name: string;
@@ -1145,7 +1143,6 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [,
 ,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
   name: string;

@@ -1,5 +1,4 @@
 import React from 'react';
-import App from '../App';
 
 // Mock the components that App depends on
 jest.mock('../components/ErrorBoundary', () => {

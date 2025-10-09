@@ -1,13 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -1207,6 +1199,3 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-=======
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

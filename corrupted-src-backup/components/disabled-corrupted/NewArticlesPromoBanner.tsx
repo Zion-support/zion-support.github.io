@@ -1,5 +1,4 @@
 import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
-import { Link } from 'react-router-dom';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 interface NewArticlesPromoBannerProp, s { 
   varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t';

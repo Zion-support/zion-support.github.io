@@ -189,3 +189,4 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
                 <input, typ, e="ema, i, l"
                   <Link, classNam, e="w-5 h-5" />
+}}

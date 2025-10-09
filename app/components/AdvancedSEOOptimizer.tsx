@@ -296,3 +296,5 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 };
 
 export default AdvancedSEOOptimizer;
+
+}

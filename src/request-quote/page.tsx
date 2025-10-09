@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const RequestQuotePage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -460,6 +457,3 @@ const RequestQuotePage: React.FC = () => {
 };
 
 export default RequestQuotePage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

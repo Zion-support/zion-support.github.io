@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -87,8 +84,6 @@ const AIAutomationPage: React.FC = () => {
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiAutomationPage: React.FC = () => {
   return (
@@ -104,4 +99,5 @@ const AiAutomationPage: React.FC = () => {
   );
 };
 
-export default AiAutomationPage;
+export default AIAutomationPage;
+}

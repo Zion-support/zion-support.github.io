@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface EmergingTech2026ServiceV2 {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -540,7 +539,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [,
     reviews: 45,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {;
   id: string;
   name: string;
@@ -618,7 +616,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [,
 ,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {;
   id: string;
   name: string;

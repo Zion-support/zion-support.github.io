@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 
 const DigitalTransformationPage: React.FC = () => {
   const features = [
@@ -102,6 +99,3 @@ const DigitalTransformationPage: React.FC = () => {
 };
 
 export default DigitalTransformationPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

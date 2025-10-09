@@ -7,57 +7,44 @@ Checking out main branch...
 
 Progress: 1/5
 
-============================================================
 Processing PR #25947: cursor/fix-errors-and-merge-to-main-3ec6
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-3ec6...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-3ec6
 
 
 Progress: 2/5
 
-============================================================
 Processing PR #25946: cursor/fix-errors-and-merge-to-main-aebc
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-aebc...
 Attempting merge...
 ✓ Successfully merged PR #25946
 
 Progress: 3/5
 
-============================================================
 Processing PR #25945: cursor/fix-errors-and-merge-to-main-1035
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-1035...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-1035
 
 
 Progress: 4/5
 
-============================================================
 Processing PR #25944: cursor/fix-errors-and-merge-to-main-a40c
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-a40c...
 ✗ Failed to fetch branch: fatal: couldn't find remote ref cursor/fix-errors-and-merge-to-main-a40c
 
 
 Progress: 5/5
 
-============================================================
 Processing PR #25943: cursor/fix-errors-and-merge-to-main-5b7e
-============================================================
 Fetching branch cursor/fix-errors-and-merge-to-main-5b7e...
 Attempting merge...
 ✓ Successfully merged PR #25943
 
-============================================================
 MERGE SUMMARY
-============================================================
 Successful merges:      2
 Conflicts resolved:     0
 Failed merges:          3
 Skipped:                0
-============================================================
 
 Failed PRs:
   - PR #25947: cursor/fix-errors-and-merge-to-main-3ec6 (Reason: fetch_failed)

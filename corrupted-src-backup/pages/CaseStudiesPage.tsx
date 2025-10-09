@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import SuccessStoriesShowcase from '../components/SuccessStoriesShowcase';
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [

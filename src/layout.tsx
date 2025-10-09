@@ -1,8 +1,5 @@
 import './globals.css';
 import './styles/accessibility.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import ErrorBoundary from './components/ErrorBoundary';
-import Analytics from './components/Analytics';
 export default function RootLayout({
   children,
 }: {
@@ -187,13 +184,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-
-export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

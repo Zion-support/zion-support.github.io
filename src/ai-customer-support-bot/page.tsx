@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AICustomerSupportBotPage: React.FC = () => {
   const features = [
@@ -85,8 +82,6 @@ const AICustomerSupportBotPage: React.FC = () => {
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiCustomerSupportBotPage: React.FC = () => {
   return (
@@ -103,3 +98,4 @@ const AiCustomerSupportBotPage: React.FC = () => {
 };
 
 export default AiCustomerSupportBotPage;
+}

@@ -1,7 +1,4 @@
-import { render, screen } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
-import { MemoryRouter } from 'react-router-dom';
-import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
 
 // Mock SEO data
 const mockSEOData = {

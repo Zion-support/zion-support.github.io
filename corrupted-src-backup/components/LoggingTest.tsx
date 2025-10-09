@@ -94,3 +94,6 @@ export const LoggingTest: React.FC = () => {
     </div>
   );
 };
+
+
+export default Button;

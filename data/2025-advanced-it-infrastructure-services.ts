@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface AdvancedITInfrastructureService
         'Hybrid quantum-classical computing',
   customers: number;
@@ -1459,7 +1458,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24,
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedITInfrastructureService {;
   id: string;
   name: string;
@@ -1554,7 +1552,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
 ;
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedITInfrastructureService {;
   id: string;
   name: string;

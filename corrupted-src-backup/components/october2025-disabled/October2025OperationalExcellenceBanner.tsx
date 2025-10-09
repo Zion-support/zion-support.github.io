@@ -21,7 +21,6 @@ impo, r, t {
   BarChar, t, 3,
   BookOp, e, n,
 } fr, o, m 'luci, d, e-rea, c, t';
-import { Link } from 'react-router-dom';
 const October2025OperationalExcellenceBanne, r = () => { 
   return (
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }

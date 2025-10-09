@@ -1,4 +1,3 @@
-import { MicroSaasService } from './enhanced-real-micro-saas-services'
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
     tagline: unknown,
@@ -616,7 +615,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [,
 }
 		rating: 4.8;
 		reviews: 38,
-import { MicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
@@ -811,7 +809,6 @@ export const enterpriseITSolutions: MicroSaasService[] = [;
 	}
 ];
 ;
-import { MicroSaasService } from './enhanced-real-micro-saas-services';
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';

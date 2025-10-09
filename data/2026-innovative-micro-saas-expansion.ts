@@ -969,7 +969,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number
   });
 }
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasService2026 {;
   id: string;
   name: string;

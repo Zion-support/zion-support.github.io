@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const ContactPage: React.FC = () => {
   return (

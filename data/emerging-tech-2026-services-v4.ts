@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface EmergingTech2026ServiceV4 {mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -336,7 +335,6 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [,
     implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.'
     launchDate: '2026-05-15'
     customers: 30,
-import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV4 {;
   id: string;
   name: string;

@@ -108,8 +108,6 @@ const AIVoiceCloningPage: React.FC = () => {
     }
 
 import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIVoiceCloningPage: React.FC = () => {
   const features = [
@@ -347,3 +345,5 @@ const AIVoiceCloningPage: React.FC = () => {
 
 export default AIVoiceCloningPage;
 
+
+}

@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const SolutionsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
@@ -349,6 +346,3 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default SolutionsPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

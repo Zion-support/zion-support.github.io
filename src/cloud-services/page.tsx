@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -129,6 +126,3 @@ const CloudServicesPage: React.FC = () => {
   );
 };
 export default CloudServicesPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

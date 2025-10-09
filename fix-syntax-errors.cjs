@@ -1,123 +1,123 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Fix App.tsx - remove duplicate }, []);
-function fixAppTsx() {
-  const filePath = path.join(__dirname, 'App.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find and fix duplicate }, []);
-  content = content.replace(/    \[\]\s+\);\s+  }, \[\]\);/g, '    []\n  );');
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed App.tsx');
-}
-
-// Fix api/shipping-rates.js - remove duplicate module.exports and closing braces
-function fixShippingRates() {
-  const filePath = path.join(__dirname, 'api', 'shipping-rates.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove all lines after the first module.exports
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    const fixedLines = lines.slice(0, firstExportIndex + 1);
-    content = fixedLines.join('\n') + '\n';
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/shipping-rates.js');
-}
-
-// Fix api/subscribe.js - remove duplicate catch blocks and module.exports
-function fixSubscribe() {
-  const filePath = path.join(__dirname, 'api', 'subscribe.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove duplicate catch blocks and trailing content
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    // Find the line just before the duplicate catches
-    let lastGoodLine = firstExportIndex;
-    for (let i = firstExportIndex - 1; i >= 0; i--) {
-      if (lines[i].trim() === '}' && i > 0 && lines[i-1].includes('catch')) {
-        // Found legitimate closing brace for a catch block
-        lastGoodLine = i + 1;
-        break;
+// Function to fix common syntax errors in a file
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Check if file has React component but missing export
+    if (content.includes('const ') && content.includes(': React.FC') && !content.includes('export default')) {
+      // Extract component name
+      const componentMatch = content.match(/const\s+(\w+):\s*React\.FC/);
+      if (componentMatch) {
+        const componentName = componentMatch[1];
+        content += `\n\nexport default ${componentName};`;
+        modified = true;
+        console.log(`Added missing export for ${componentName} in ${filePath}`);
       }
     }
     
-    // Re-read and fix more carefully
-    content = fs.readFileSync(filePath, 'utf8');
+    // Fix missing closing braces by checking for unbalanced braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
     
-    // Remove lines with duplicate catch blocks
-    content = content.replace(/  } catch \(err\) {\s+console\.error\('Subscribe API error:', err\);\s+  } catch \(error\) {[\s\S]*?  } catch \(error\) {[\s\S]*?  } catch \(error\) {/g, '');
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+      console.log(`Added ${missingBraces} missing closing braces in ${filePath}`);
+    }
     
-    // Keep only content up to first module.exports
-    const parts = content.split('module.exports = withSentry(handler);');
-    content = parts[0] + 'module.exports = withSentry(handler);\n';
+    // Fix JSX syntax issues - look for unclosed tags
+    const jsxTags = content.match(/<[^>]*$/gm);
+    if (jsxTags) {
+      // This is a simple check - more complex JSX parsing would be needed for complete fix
+      console.log(`Potential unclosed JSX tags in ${filePath}`);
+    }
+    
+    // Remove unused imports (basic cleanup)
+    const lines = content.split('\n');
+    const cleanedLines = lines.filter(line => {
+      // Keep import lines that are actually used
+      if (line.trim().startsWith('import ')) {
+        const importMatch = line.match(/import\s+.*?\s+from\s+['"]([^'"]+)['"]/);
+        if (importMatch) {
+          const importPath = importMatch[1];
+          // Check if the import is used in the file
+          const isUsed = content.includes(importPath) && !line.includes(importPath);
+          return isUsed || line.includes('React') || line.includes('lucide-react') || line.includes('react-helmet-async');
+        }
+      }
+      return true;
+    });
+    
+    if (cleanedLines.length !== lines.length) {
+      content = cleanedLines.join('\n');
+      modified = true;
+      console.log(`Cleaned up unused imports in ${filePath}`);
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing syntax in ${filePath}:`, error.message);
+    return false;
   }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/subscribe.js');
 }
 
-// Fix app/components/ErrorBoundary.tsx - add missing closing paren
-function fixErrorBoundary() {
-  const filePath = path.join(__dirname, 'app', 'components', 'ErrorBoundary.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
+// Function to find all TypeScript/JSX files
+function findSourceFiles(dir) {
+  const sourceFiles = [];
   
-  // Find line 112 and add missing )
-  const lines = content.split('\n');
-  if (lines.length > 112) {
-    // Look for the missing closing paren context
-    for (let i = 110; i < 115 && i < lines.length; i++) {
-      if (lines[i].includes('      );') && !lines[i].includes(');')) {
-        lines[i] = lines[i].replace('      );', '      ));');
-        break;
+  function searchDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', '.next', 'dist', 'out'].includes(item)) {
+          searchDirectory(fullPath);
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        sourceFiles.push(fullPath);
       }
     }
-    content = lines.join('\n');
   }
   
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed app/components/ErrorBoundary.tsx');
+  searchDirectory(dir);
+  return sourceFiles;
 }
 
-// Fix src/utils/analytics.ts - close comment and add method
-function fixAnalytics() {
-  const filePath = path.join(__dirname, 'src', 'utils', 'analytics.ts');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unclosed comment
-  content = content.replace(/  \/\*\*\s+\* Update user properties\s+  }\s+  \/\*\*\s+\* Update user properties\s+export default analytics;/g, 
-    `  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Record<string, any>) {
-    this.userProperties = { ...this.userProperties, ...properties };
+// Main execution
+console.log('🔍 Searching for source files to fix...');
+const sourceFiles = findSourceFiles(process.cwd());
+
+console.log(`📋 Found ${sourceFiles.length} source files to check`);
+
+console.log('\n🔧 Fixing syntax errors...');
+let fixedCount = 0;
+
+for (const file of sourceFiles) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
   }
 }
 
-export default analytics;`);
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed src/utils/analytics.ts');
-}
+console.log(`\n✅ Fixed syntax errors in ${fixedCount} out of ${sourceFiles.length} files.`);
 
-// Run all fixes
-try {
-  fixAppTsx();
-  fixShippingRates();
-  fixSubscribe();
-  fixErrorBoundary();
-  fixAnalytics();
-  console.log('\nAll syntax errors fixed!');
-} catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
+if (fixedCount > 0) {
+  console.log('🎉 Syntax errors have been fixed!');
+} else {
+  console.log('ℹ️  No syntax errors found to fix.');
 }

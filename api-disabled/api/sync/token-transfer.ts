@@ -1,8 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState, writeState, upsertEvent } from '../../../utils/sync/storage';
-import { signPayload } from '../../../utils/sync/signature';
-import axios from 'axios';
-import { nextVersionFor } from '../../../utils/sync/versioning';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {

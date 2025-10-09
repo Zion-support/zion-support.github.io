@@ -1,6 +1,5 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

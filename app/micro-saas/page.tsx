@@ -6,7 +6,6 @@
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, Filter, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-import MicroSAASCard from '../components/MicroSAASCard';
 
 const MicroSAASPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -534,3 +533,7 @@ const MicroSAASPage: React.FC = () => {
                 Call: (302) 464-0950
               </a>
 
+
+
+export default MicroSAASPage;
+}

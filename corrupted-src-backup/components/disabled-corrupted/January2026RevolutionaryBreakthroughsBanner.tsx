@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
   const breakthroughs = [
     {

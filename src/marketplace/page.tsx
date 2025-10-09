@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
@@ -480,6 +477,3 @@ const MarketplacePage: React.FC = () => {
 };
 
 export default MarketplacePage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

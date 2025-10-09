@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
 import { ArrowLeft, TrendingUp, Zap, Target, CheckCircle } from 'lucide-react'
 
 const VisionLanguageModelsBreakthrough2026 = () => {

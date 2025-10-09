@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface Innovative2026AIServiceV4 {mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -580,7 +579,6 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [,
     reviews: 167,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIServiceV4 {;
   id: string;
   name: string;

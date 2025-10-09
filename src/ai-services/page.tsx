@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIServicesPage: React.FC = () => {
   const services = [
@@ -41,8 +38,6 @@ const AIServicesPage: React.FC = () => {
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
 
 const AiServicesPage: React.FC = () => {
   return (
@@ -59,3 +54,4 @@ const AiServicesPage: React.FC = () => {
 };
 
 export default AiServicesPage;
+}

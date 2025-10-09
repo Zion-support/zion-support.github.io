@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 // import AdvancedCacheManager from '../utils/advancedCache';
-import { enhancedAccessibility } from '../utils/enhancedAccessibility';
 // import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
 
@@ -241,3 +240,5 @@ const AdvancedDashboard: React.FC = () => {
 };
 
 export default AdvancedDashboard;
+
+}

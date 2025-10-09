@@ -1,7 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
 
 const AISalesForecastingPage: React.FC = () => {
   const features = [
@@ -102,6 +99,3 @@ const AISalesForecastingPage: React.FC = () => {
 };
 
 export default AISalesForecastingPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

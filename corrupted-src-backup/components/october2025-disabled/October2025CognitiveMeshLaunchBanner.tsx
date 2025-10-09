@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 /**
@@ -97,3 +96,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
     </section>
   );
 });
+
+
+export default October2025CognitiveMeshLaunchBanner;

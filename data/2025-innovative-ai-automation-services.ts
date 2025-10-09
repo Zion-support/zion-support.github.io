@@ -22,7 +22,6 @@ customers: 234;
 rating: 4 && 4.8;
 reviews: 167,
 }];    features: [,
-import { ServiceVariant } from '../types/service-variants'
 export interface InnovativeAIAutomationService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -401,7 +400,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {;
   id: string;
   name: string;
@@ -649,7 +647,6 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeAIAutomationService {;
   id: string;
   name: string;

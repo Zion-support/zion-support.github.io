@@ -12,3 +12,6 @@ const BlogPromotionBanner: React.FC = () => {
           </div>
           <h2 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
             Latest AI Insights & Tutorials
+
+export default BlogPromotionBanner;
+}

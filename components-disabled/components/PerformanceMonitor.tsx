@@ -1,1 +1,4 @@
 import React; { useEffect } from 'react' interface PerformanceMonitorProps { // TODO: Implement } onPerformanceData?: (data: unknown) => void, const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => { <div className="text-left" >" </div> <div>Load: {metrics.loadTime.toFixed(2)}ms</div> <div>Render: {metrics.renderTime.toFixed(2)}ms</div> <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div> </div>"'
+
+export default PerformanceMonitor;
+}

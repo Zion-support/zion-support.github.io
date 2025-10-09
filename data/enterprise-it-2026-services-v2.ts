@@ -1,7 +1,6 @@
 
 export interface EnterpriseIt2026ServiceV2
 export interface EnterpriseIt2026ServiceV2 {;
-import { ServiceVariant } from '../types/service-variants'
 export interface EnterpriseIt2026ServiceV2
 export interface EnterpriseIt2026ServiceV2 {;
 export interface EnterpriseIt2026ServiceV2 {
@@ -668,7 +667,6 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [,
     reviews: 180,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV2 {;
   id: string;
   name: string;

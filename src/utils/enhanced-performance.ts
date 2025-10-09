@@ -3,7 +3,6 @@
  * Comprehensive performance tracking and optimization utilities
  */
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
 /**
  * Performance Observer Wrapper
  */

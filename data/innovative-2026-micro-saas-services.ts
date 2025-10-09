@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface Innovative2026MicroSaasService
         'Real-time data processing and analysis',
   customers: number;
@@ -1120,7 +1119,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasService {;
   id: string;
   name: string;
@@ -1209,7 +1207,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasService {;
   id: string;
   name: string;

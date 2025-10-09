@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types/service-variants',
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 marketAdvantage: 'First platform to combine content creation, optimization; and distribution in one AI-powered solution'
@@ -9,7 +8,6 @@ marketAdvantage: 'First platform to combine content creation, optimization; and 
 name: 'AI Healthcare Diagnostics Platform'
 tagline: 'Advanced AI - powered medical diagnostics with 99.7% accuracy'
 market_advantage: 'First platform to combine content creation, optimization, and distribution in one AI - powered solution'
-import { ServiceVariant } from '../types/service-variants',
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
 marketAdvantage: 'First platform to combine content creation, optimization; and distribution in one AI-powered solution'
@@ -343,8 +341,6 @@ contact_info: contact;
 real_implementation: true,
 implementation_details: 'Enterprise - grade autonomous systems platform with AI orchestration and comprehensive safety features'
 launch_date: '2024 - 03 - 10'
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant } from '../types/service-variants'
 export interface ComprehensiveMicroSaasService {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -631,7 +627,6 @@ capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_
 market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
 }];
 ;
-import { ServiceVariant } from '../types/service-variants',
 const contact =
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -1034,7 +1029,6 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalability'],
     capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'],
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
-import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {;
   id: string;
   name: string;

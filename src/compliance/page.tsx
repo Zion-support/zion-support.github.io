@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const CompliancePage: React.FC = () => {
   const certifications = [
@@ -146,6 +143,3 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

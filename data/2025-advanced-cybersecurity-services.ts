@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface AdvancedCybersecurityService {customers: number;
   rating: number;
   reviews: number;
@@ -612,7 +611,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string;
   name: string;
@@ -701,7 +699,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedCybersecurityService {;
   id: string;
   name: string;

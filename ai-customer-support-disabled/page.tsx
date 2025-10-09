@@ -1,8 +1,5 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {
   const features = [
@@ -240,20 +237,12 @@ const AICustomerSupportPage2: React.FC = () => {
                   <span>Schedule Demo</span>
                 </a>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
             </div>
           </section>
         </main>
         <Footer />
       </div>
-<<<<<<< HEAD
     </div>
-<<<<<<< HEAD
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-2bfb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
   );
 };
 

@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface Innovative2025Service
 export const innovative2025Services: Innovative2025Service[] = [,
   // AI & Machine Learning Innovation Services
@@ -920,7 +919,6 @@ export const innovative2025Services: Innovative2025Service[] = [,
   }
 ];
 ;
-import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2025Service {;
   id: string;
   name: string;

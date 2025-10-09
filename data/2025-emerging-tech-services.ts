@@ -1,4 +1,3 @@
-import { MicroSaasService } from './enhanced-real-micro-saas-services'
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services
   id: string;

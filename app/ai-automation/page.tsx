@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     'Intelligent process automation',
     'Workflow optimization',
     'Data processing automation',
@@ -46,89 +39,6 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-=======
-    {
-      icon: Settings,
-      title: 'Process Automation',
-      description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
-    },
-    {
-      icon: Zap,
-      title: 'Workflow Optimization',
-      description: 'AI-powered workflow analysis and optimization for maximum productivity',
-      benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Decision Trees',
-      description: 'Advanced decision-making algorithms for complex business scenarios',
-      benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
-    },
-    {
-      icon: Clock,
-      title: 'Exception Handling',
-      description: 'Intelligent handling of exceptions and edge cases in automated processes',
-      benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$1,400',
-      period: '/month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 10 automated processes',
-        'Basic AI decision making',
-        'Email support',
-        'Standard integrations',
-        'Basic analytics'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$2,800',
-      period: '/month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 50 automated processes',
-        'Advanced AI decision making',
-        'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'Workflow optimization'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$5,600',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited processes',
-        'Premium AI features',
-        '24/7 support',
-        'Custom development',
-        'White-label options',
-        'API access',
-        'Dedicated support'
-      ],
-      popular: false
-    }
-  ];
-
-  const stats = [
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
   return (
     <>
       <Helmet>
@@ -140,7 +50,6 @@ const AIAutomationPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
         <main className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -157,10 +66,7 @@ const AIAutomationPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAutomationPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
         
         <main className="pt-20">
           {/* Hero Section */}
@@ -182,7 +88,6 @@ export default AIAutomationPage;
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
-<<<<<<< HEAD
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
@@ -270,9 +175,6 @@ export default AIAutomationPage;
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
-=======
-                  Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
                 </a>
                 <a
                   href="tel:+13024640950"
@@ -282,7 +184,6 @@ export default AIAutomationPage;
                   +1 302 464 0950
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="mt-8 text-sm opacity-90">
                 <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
@@ -311,8 +212,6 @@ export default AIAutomationPage;
               <button className="bg-transparent text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                 Learn More
               </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
             </div>
           </section>
 
@@ -444,9 +343,4 @@ export default AIAutomationPage;
   );
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5ca5
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5a2f
 export default AIAutomationPage;

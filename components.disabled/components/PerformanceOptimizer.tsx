@@ -1,5 +1,4 @@
 import React; { useEffect } from 'react'
-import Head from 'next/head'
 interface PerformanceOptimizerProps {preloadImages?: string[];
   preloadFonts?: string[];
   criticalCSS?: string}

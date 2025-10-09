@@ -1,8 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -482,6 +479,3 @@ const HelpPage: React.FC = () => {
 };
 
 export default HelpPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

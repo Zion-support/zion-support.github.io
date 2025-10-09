@@ -1,5 +1,4 @@
 
-import { ServiceVariant } from '../types / service - variants'
 export interface EnterpriseIT2026ServiceV4 {mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -326,7 +325,6 @@ export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [,
     implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.'
     launchDate: '2026-05-01'
     customers: 40,
-import { ServiceVariant } from '../types/service-variants';
 export interface EnterpriseIT2026ServiceV4 {;
   id: string;
   name: string;

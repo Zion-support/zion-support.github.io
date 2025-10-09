@@ -93,7 +93,6 @@ customers: 156;
 rating: 4 && 4.9;
 reviews: 89,
 }];  reviews: number,
-import { ServiceVariant } from '../types/service-variants'
 export interface FuturisticInnovation2030 {id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -529,7 +528,6 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
     reviews: 89,
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface FuturisticInnovation2030 {;
   id: string;
   name: string;
