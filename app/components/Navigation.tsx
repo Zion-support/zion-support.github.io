@@ -194,11 +194,17 @@ const Navigation: React.FC = memo(() => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow">              
               About
+            </Link>
+            <Link to="/services" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow">
+              All Services
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium cyber-glow">
+              Pricing
             </Link>
 
             {/* Services Dropdown */}
@@ -268,7 +274,7 @@ const Navigation: React.FC = memo(() => {
 
             <Link 
               to="/case-studies" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              className="font-medium transition-colors hover:text-cyan-400 text-white cyber-glow"
               onClick={closeAllMenus}
             >
               Case Studies
@@ -276,15 +282,23 @@ const Navigation: React.FC = memo(() => {
 
             <Link
               to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-glow"
               onClick={closeAllMenus}
             >
               Blog
             </Link>
 
             <Link
+              to="/demo"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-glow"
+              onClick={closeAllMenus}
+            >
+              Demo
+            </Link>
+
+            <Link
               to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium cyber-glow"
               onClick={closeAllMenus}
             >
               Contact
@@ -330,6 +344,20 @@ const Navigation: React.FC = memo(() => {
                 onClick={closeAllMenus}
               >
                 About
+              </Link>
+              <Link
+                to="/services"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                All Services
+              </Link>
+              <Link
+                to="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
 
               {/* Mobile Services */}
@@ -386,6 +414,14 @@ const Navigation: React.FC = memo(() => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+
+              <Link
+                to="/demo"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Demo
               </Link>
 
               <Link
