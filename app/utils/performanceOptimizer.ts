@@ -99,7 +99,7 @@ class PerformanceOptimizer {
   /**
    * Optimize images for better performance
    */
-  private optimizeImages(): void {
+  public optimizeImages(): void {
     if (!this.config.enableImageOptimization) return;
 
     const images = document.querySelectorAll('img');
@@ -130,7 +130,7 @@ class PerformanceOptimizer {
   /**
    * Setup lazy loading for better performance
    */
-  private setupLazyLoading(): void {
+  public setupLazyLoading(): void {
     if (!this.config.enableLazyLoading) return;
 
     // Intersection Observer for lazy loading
