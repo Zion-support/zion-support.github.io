@@ -65,10 +65,10 @@ const HomePage: React.FC = () => {
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+      <main id="main-content" className="container mx-auto px-4 py-20 pt-28" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+          className={`text-center mb-20 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
               : 'opacity-0 translate-y-8'
@@ -128,15 +128,15 @@ const HomePage: React.FC = () => {
           </div>
         </section>
         {/* Services Section */}
-        <section className="mb-16" aria-labelledby="services-heading">
-          <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+        <section className="mb-20" aria-labelledby="services-heading">
+          <h2 id="services-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 text-center neon-text">
             Our Services
           </h2>
-          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+          <p className="text-lg sm:text-xl text-gray-300 text-center mb-16 max-w-4xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations
           </p>
           {/* Primary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="quantum-card p-4 sm:p-6 energy-pulse">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>
@@ -184,7 +184,7 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
@@ -232,7 +232,7 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           {/* Micro SAAS Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
             <Suspense fallback={<ServiceCardSkeleton />}>
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💻</div>
@@ -280,7 +280,7 @@ const HomePage: React.FC = () => {
             </Suspense>
           </div>
           {/* Additional Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16">
             <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
               <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Cybersecurity</h3>

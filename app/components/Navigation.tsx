@@ -6,6 +6,10 @@ const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [aiServicesOpen, setAiServicesOpen] = useState(false);
+  const [itServicesOpen, setItServicesOpen] = useState(false);
+  const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -13,6 +17,7 @@ const Navigation: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
   const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -36,14 +41,14 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
+        { name: 'AI Automation', path: '/ai-workflow-automation', description: 'Intelligent process automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
         { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Cybersecurity', path: '/cybersecurity', description: 'AI security solutions' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' }
       ]
     },
     {
@@ -53,14 +58,14 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
       ]
     },
     {
@@ -74,8 +79,8 @@ const Navigation: React.FC = () => {
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
-        { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'Productivity Tools', path: '/productivity', description: 'Workflow optimization' },
+        { name: 'E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'AI-powered e-commerce' }
       ]
     },
     {
@@ -89,8 +94,8 @@ const Navigation: React.FC = () => {
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
-        { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale implementations' }
       ]
     }
   ];
