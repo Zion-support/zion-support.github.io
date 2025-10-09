@@ -121,7 +121,6 @@ class MonitoringService {
         const resourceObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {
-<<<<<<< HEAD
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
               // console.warn('Slow resource detected:', {
@@ -130,13 +129,6 @@ class MonitoringService {
               //   type: resourceEntry.initiatorType
               // })
             }
-=======
-            // console.warn('Slow resource detected:', {
-            //   name: resourceEntry.name,
-            //   duration: resourceEntry.duration,
-            //   type: resourceEntry.initiatorType
-            // })
->>>>>>> cursor/fix-errors-and-merge-to-main-869e
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
