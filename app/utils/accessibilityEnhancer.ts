@@ -578,3 +578,7 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+Metrics: ${JSON.stringify(metrics)}
+`;
+  }
+}
