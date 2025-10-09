@@ -53,7 +53,11 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'AI Customer Management' },
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'AI Business Analytics' },
+    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'AI Content Creation' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'AI Email Campaigns' }
   ];
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
@@ -63,7 +67,14 @@ const Navigation: React.FC = () => {
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
+    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Cloud Migration Services' },
+    { name: 'Cybersecurity Suite', href: '/cybersecurity-suite', icon: Shield, description: 'Advanced Security' },
+    { name: 'DevOps CI/CD', href: '/devops-cicd', icon: Settings, description: 'CI/CD Pipeline Setup' },
+    { name: 'Database Management', href: '/database-management', icon: Database, description: 'Database Administration' },
+    { name: 'Network Solutions', href: '/network-solutions', icon: Globe, description: 'Network Infrastructure' },
+    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone, description: 'Mobile Applications' },
+    { name: 'IT Support', href: '/it-support', icon: Settings, description: 'Technical Support' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
