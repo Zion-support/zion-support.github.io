@@ -298,7 +298,10 @@ const DocsPage: React.FC = () => {
           </p>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     </div>
   );
 };

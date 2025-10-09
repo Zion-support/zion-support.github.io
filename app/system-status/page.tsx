@@ -39,8 +39,17 @@ const SystemStatusPage: React.FC = () => {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>    </div>
   );
 };
 
 export default SystemStatusPage;
+=======
+      </div>
+    </div>
+  );
+};
+
+export default SystemStatusPage;
+>>>>>>> origin/main

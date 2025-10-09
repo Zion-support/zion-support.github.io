@@ -278,7 +278,10 @@ const NewsPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     </div>
   );
 };

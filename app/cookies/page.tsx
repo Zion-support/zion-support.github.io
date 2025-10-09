@@ -236,7 +236,10 @@ const CookiesPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     </div>
   );
 };

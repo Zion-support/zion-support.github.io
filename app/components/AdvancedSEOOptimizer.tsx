@@ -1,7 +1,11 @@
-'use client';
+<<<<<<< HEAD
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
+=======
+'use client';
+import React, { useEffect, useCallback, useRef } from 'react';
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
 interface SEOData {
   title: string;
   description: string;
@@ -39,13 +43,43 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
+<<<<<<< HEAD
+  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+=======
   const _structuredDataRef = useRef<HTMLScriptElement | null>(null);
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
   
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) return null;
 
     const baseStructuredData = {
       '@context': 'https://schema.org',
+<<<<<<< HEAD
+      '@type': 'TechCompany',
+      name: 'Zion Tech Group',
+      description: seoData.description,
+      url: seoData.canonicalUrl,
+      logo: 'https://ziontechgroup.com/logo.png',
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+        'https://github.com/zion-tech-group',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: 'English',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '123 Tech Innovation Drive',
+        addressLocality: 'San Francisco',
+        addressRegion: 'CA',
+        postalCode: '94105',
+        addressCountry: 'US',
+      },
+=======
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -60,16 +94,25 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         'https://twitter.com/ziontechgroup',
         'https://github.com/Zion-Holdings',
       ],
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
       ...seoData.structuredData,
     };
 
     return baseStructuredData;
+<<<<<<< HEAD
+  }, [seoData, enableStructuredData]);
+=======
   }, [enableStructuredData, seoData.structuredData]);
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
 
   const generateBreadcrumbStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
 
+<<<<<<< HEAD
+    return {
+=======
     const breadcrumbData = {
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
@@ -87,9 +130,13 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         },
       ],
     };
+<<<<<<< HEAD
+  }, [seoData, enableSchemaMarkup]);
+=======
 
     return breadcrumbData;
   }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
 
   const generateFAQStructuredData = useCallback(() => {
     if (!enableSchemaMarkup) return null;
@@ -103,7 +150,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
+<<<<<<< HEAD
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
+=======
             text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.',
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
           },
         },
         {
@@ -111,7 +162,19 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           name: 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
+<<<<<<< HEAD
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What makes Zion Tech Group different?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
+=======
             text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.',
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
           },
         },
       ],
@@ -120,6 +183,42 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     return faqData;
   }, [enableSchemaMarkup]);
 
+<<<<<<< HEAD
+  const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
+
+  useEffect(() => {
+    // Update page title and meta description for better SEO
+    if (typeof document !== 'undefined') {
+      document.title = seoData.title;
+      
+      let metaDescription = document.querySelector('meta[name="description"]');
+      if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.setAttribute('name', 'description');
+        document.head.appendChild(metaDescription);
+      }
+      metaDescription.setAttribute('content', seoData.description);
+
+      // Update canonical URL
+      let canonicalLink = document.querySelector('link[rel="canonical"]');
+      if (!canonicalLink) {
+        canonicalLink = document.createElement('link');
+        canonicalLink.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonicalLink);
+      }
+      canonicalLink.setAttribute('href', seoData.canonicalUrl);
+    }
+  }, [seoData]);
+
+  const addStructuredData = (data: Record<string, unknown>) => {
+    // Remove existing structured data
+    if (structuredDataRef.current) {
+      structuredDataRef.current.remove();
+    }
+    
+=======
   const _structuredData = generateStructuredData();
   const _breadcrumbData = generateBreadcrumbStructuredData();
   const _faqData = generateFAQStructuredData();
@@ -149,37 +248,55 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, [seoData]);
 
   const _addStructuredData = (data: Record<string, unknown>) => {
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+<<<<<<< HEAD
+    structuredDataRef.current = script;
   };
 
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl,
-      });
+  useEffect(() => {
+    if (structuredData) {
+      addStructuredData(structuredData);
     }
-  };
+  }, [structuredData]);
 
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
-          });
+  useEffect(() => {
+    if (breadcrumbData) {
+      addStructuredData(breadcrumbData);
+    }
+  }, [breadcrumbData]);
+
+  useEffect(() => {
+    if (faqData) {
+      addStructuredData(faqData);
+    }
+  }, [faqData]);
+
+  useEffect(() => {
+    // Track page performance
+    if (typeof window !== 'undefined' && 'performance' in window && typeof performance.getEntriesByType === 'function') {
+      try {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          // Track performance metrics
+          if (typeof (window as any).gtag === 'function') {
+            (window as any).gtag('event', 'page_load_performance', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            });
+          }
         }
-      });
+      } catch (error) {
+        // Performance API not available in test environment
+        console.debug('Performance tracking not available:', error);
+      }
     }
-  };
+  }, []);
 
   return (
     <Helmet>
@@ -225,21 +342,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="theme-color" content="#4F46E5" />
 
       {/* Structured Data */}
-      {enableSchemaMarkup && _structuredData && (
+      {enableSchemaMarkup && structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(_structuredData)}
+          {JSON.stringify(structuredData)}
         </script>
       )}
 
-      {enableSchemaMarkup && _breadcrumbData && (
+      {enableSchemaMarkup && breadcrumbData && (
         <script type="application/ld+json">
-          {JSON.stringify(_breadcrumbData)}
+          {JSON.stringify(breadcrumbData)}
         </script>
       )}
 
-      {enableSchemaMarkup && _faqData && (
+      {enableSchemaMarkup && faqData && (
         <script type="application/ld+json">
-          {JSON.stringify(_faqData)}
+          {JSON.stringify(faqData)}
         </script>
       )}
 
@@ -258,3 +375,37 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 };
 
 export default AdvancedSEOOptimizer;
+=======
+    _structuredDataRef.current = script;
+  };
+
+  const _trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,
+        page_location: config.canonicalUrl,
+      });
+    }
+  };
+
+  const _trackPerformanceMetrics = () => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      window.addEventListener('load', () => {
+        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (_perfData) {
+          (window as any).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
+          });
+        }
+      });
+    }
+  };
+
+  return (
+    );
+};
+
+export default AdvancedSEOOptimizer;
+>>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2

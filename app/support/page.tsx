@@ -292,8 +292,17 @@ const SupportPage: React.FC = () => {
             <p>🕒 Available 24/7 for all support requests</p>
           </div>
         </div>
+<<<<<<< HEAD
       </section>    </div>
   );
 };
 
 export default SupportPage;
+=======
+      </section>
+    </div>
+  );
+};
+
+export default SupportPage;
+>>>>>>> origin/main
