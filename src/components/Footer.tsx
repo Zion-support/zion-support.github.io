@@ -38,6 +38,15 @@ const Footer: React.FC = () => {
     { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
   ];
 
+  const specializedServicesFooter = [
+    { name: 'Specialized Solutions', url: '/specialized-services', description: 'Advanced technologies' },
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen algorithms' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-optimizing systems' },
+    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
+    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' }
+  ];
+
   const additionalServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
@@ -55,7 +64,8 @@ const Footer: React.FC = () => {
     { name: 'Blog', url: '/blog' },
     { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'Demo', url: '/demo' }
+    { name: 'Demo', url: '/demo' },
+    { name: 'Enterprise', url: '/enterprise' }
   ];
 
   const supportLinks = [
@@ -79,7 +89,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -188,13 +198,34 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {additionalServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.url}
+                  <a
+                    href={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Specialized Services */}
+          <div>
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Settings className="w-4 h-4 mr-2" />
+              Specialized
+            </h3>
+            <ul className="space-y-2">
+              {specializedServicesFooter.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.url}
+                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <span>{service.name}</span>
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </a>
                 </li>
               ))}
             </ul>
