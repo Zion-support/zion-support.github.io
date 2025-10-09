@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useCallback } from 'react';
 
@@ -185,8 +184,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     
-=======
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.documentElement.style.setProperty('--motion-reduce', '1');
+      } else {
+        document.documentElement.style.removeProperty('--motion-reduce');
+      }
+    };
+
+    handleMotionChange(mediaQuery);
+    mediaQuery.addEventListener('change', handleMotionChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMotionChange);
+    };
+  }, []);
+
+  return null;
+};
 
 interface AccessibilityContextType {
   announce: (message: string) => void;
@@ -252,7 +267,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
 
     // Add reduced motion support
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
->>>>>>> origin/comprehensive-improvements-final
     const handleMotionChange = (e: MediaQueryListEvent) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
@@ -260,8 +274,6 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
         document.body.classList.remove('reduced-motion');
       }
     };
-
-<<<<<<< HEAD
     // Check initial state
     if (mediaQuery.matches) {
       document.body.classList.add('reduced-motion');
