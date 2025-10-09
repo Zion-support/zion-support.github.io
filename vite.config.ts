@@ -23,15 +23,25 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
           utils: ['clsx', 'tailwind-merge'],
+          charts: ['recharts'],
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     },
+    chunkSizeWarningLimit: 1000,
   },
   server: {
     port: 3000,
