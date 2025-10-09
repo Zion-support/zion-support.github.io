@@ -138,3 +138,31 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-8">Business Intelligence Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {biServices.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6">
+              <div className="text-4xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="text-lg font-bold text-blue-600 mb-4">{service.price}</div>
+              <div className="space-y-2">
+                <h4 className="font-semibold text-gray-900">Features:</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx}>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BusinessIntelligencePage;
