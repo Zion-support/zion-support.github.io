@@ -14,14 +14,13 @@ interface SEOHeadProps {
   section?: string;
   tags?: string[];
   noindex?: boolean;
-  nofollow?: boolean;
   canonical?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, artificial intelligence, enterprise automation, digital transformation, cloud services, machine learning, business intelligence',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
+  keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence',
   image = 'https://ziontechgroup.com/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
@@ -31,88 +30,98 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   section,
   tags = [],
   noindex = false,
-  nofollow = false,
   canonical,
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
-  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
+      {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
+      <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
-      <meta name="robots" content={robotsContent} />
+      <meta name="robots" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      <meta name="googlebot" content={noindex ? 'noindex,nofollow' : 'index,follow'} />
+      
+      {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
-
-      {/* Open Graph Meta Tags */}
+      
+      {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card Meta Tags */}
+      
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-
-      {/* Article specific meta tags */}
-      {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {author && <meta property="article:author" content={author} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-
-      {/* Additional SEO Meta Tags */}
+      
+      {/* Additional Meta Tags */}
       <meta name="theme-color" content="#4f46e5" />
       <meta name="msapplication-TileColor" content="#4f46e5" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="application-name" content="Zion Tech Group" />
-
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+      
+      {/* Article specific meta tags */}
+      {type === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {type === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime} />
+      )}
+      {type === 'article' && author && (
+        <meta property="article:author" content={author} />
+      )}
+      {type === 'article' && section && (
+        <meta property="article:section" content={section} />
+      )}
+      {type === 'article' && tags.length > 0 && (
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))
+      )}
+      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
-          '@type': type === 'article' ? 'Article' : 'WebPage',
+          '@type': type === 'article' ? 'Article' : 'WebSite',
           name: fullTitle,
           description: description,
           url: url,
           image: image,
-          author: {
+          author: type === 'article' ? {
             '@type': 'Organization',
             name: author,
-          },
+            url: 'https://ziontechgroup.com'
+          } : undefined,
           publisher: {
             '@type': 'Organization',
             name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
             logo: {
               '@type': 'ImageObject',
-              url: 'https://ziontechgroup.com/logo.png',
-            },
+              url: 'https://ziontechgroup.com/logo.png'
+            }
           },
-          ...(type === 'article' && {
-            datePublished: publishedTime,
-            dateModified: modifiedTime || publishedTime,
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': url,
-            },
-          }),
+          datePublished: type === 'article' ? publishedTime : undefined,
+          dateModified: type === 'article' ? modifiedTime : undefined,
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': url
+          }
         })}
       </script>
     </Helmet>
