@@ -1,15 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Phone } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 
 interface ServicePageProps {
   title: string;
   description: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<{ className?: string }>;
   services: Array<{
     title: string;
     description: string;
-    icon: React.ComponentType<any>;
+    icon: React.ComponentType<{ className?: string }>;
     features: string[];
     price: string;
   }>;
@@ -24,6 +26,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, icon: Ico
       <main className="pt-20">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
+          <div className="flex justify-center mb-6">
+            <Icon className="w-16 h-16 text-cyan-400" />
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
             {title}
           </h1>

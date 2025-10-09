@@ -64,7 +64,8 @@ export default [
       '*.test.ts',
       '*.test.js',
       '*.test.jsx',
-      '__tests__/**'
+      '__tests__/**',
+      'src/setupTests.tsx'
     ]
   },
   // Base JavaScript configuration
