@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-=======
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
->>>>>>> pr-26771
 import ContentPreviewCard from '../components/ContentPreviewCard';
 
 interface BlogPost {

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-
-import React from 'react'
->>>>>>> pr-26771
 /**
  * Enhanced Logger Utility
  * Provides structured logging with different levels and contexts

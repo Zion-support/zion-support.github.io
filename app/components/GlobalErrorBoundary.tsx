@@ -2,11 +2,6 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
-=======
-import { logger } from '../utils/logger';
-
->>>>>>> pr-26771
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
