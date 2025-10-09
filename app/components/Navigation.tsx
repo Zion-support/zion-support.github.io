@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, MessageSquare, Eye, Bot, Share2, Mail as EmailIcon, BarChart3, Projector, Headphones } from 'lucide-react';
 =======
 import React, { useState } from 'react';
@@ -13,6 +14,9 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
 const Navigation: React.FC = () => {
 =======
 'use client';
@@ -63,6 +67,7 @@ const Navigation: React.FC = memo(() => {
     }
   };
 
+<<<<<<< HEAD
   const serviceCategories = [
     {
 <<<<<<< HEAD
@@ -356,6 +361,25 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
       ]
     }
+=======
+  const aiServices = [
+    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
+    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
+    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
+    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
+    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
+    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, description: 'Sales AI' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
   ];
 
   const mainNavItems = [
@@ -433,7 +457,10 @@ const Navigation: React.FC = memo(() => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
   ];
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-22b1
@@ -480,6 +507,7 @@ const Navigation: React.FC = memo(() => {
           </Link>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
 <<<<<<< HEAD
@@ -517,12 +545,15 @@ const Navigation: React.FC = memo(() => {
             <div className="relative group">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
 
+<<<<<<< HEAD
             {/* Services Dropdown */}
             <div className="relative">
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
@@ -538,6 +569,16 @@ const Navigation: React.FC = memo(() => {
               >
                 <Brain className="w-4 h-4" />
                 <span>Services</span>
+=======
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Emerging Tech</span>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
 <<<<<<< HEAD
 =======
@@ -571,6 +612,7 @@ const Navigation: React.FC = memo(() => {
                   <div className="grid grid-cols-2 gap-4">
 =======
               {servicesOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-2 w-[900px] bg-gray-900 rounded-xl shadow-2xl border border-cyan-500 py-6 z-50">
@@ -741,10 +783,31 @@ const Navigation: React.FC = memo(() => {
                     </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-22b1
                   </div>
+=======
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                  <div className="grid grid-cols-1 gap-2">
+                    {emergingTech.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        onClick={closeAllMenus}
+                      >
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <div>
+                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
+                          <div className="text-xs text-gray-400">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </Link>
+                    ))}
+                  </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -757,6 +820,8 @@ const Navigation: React.FC = memo(() => {
               onClick={closeAllMenus}
             >
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -779,6 +844,7 @@ const Navigation: React.FC = memo(() => {
             <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
               Blog
             </Link>
+<<<<<<< HEAD
             <Link to="/contact" className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors font-medium">
               Contact
             </Link>
@@ -838,6 +904,11 @@ const Navigation: React.FC = memo(() => {
             </a>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
+=======
+          </div>
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
             <a
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
@@ -845,7 +916,10 @@ const Navigation: React.FC = memo(() => {
               <Phone className="w-4 h-4" />
               <span>(302) 464-0950</span>
             </a>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
           </div>
 
           {/* Mobile menu button */}
@@ -861,6 +935,7 @@ const Navigation: React.FC = memo(() => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Mobile menu */}
         {isOpen && (
 <<<<<<< HEAD
@@ -871,13 +946,16 @@ const Navigation: React.FC = memo(() => {
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
               >
+=======
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+            <div className="pt-4 space-y-4">
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                 Home
               </Link>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
+              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
 =======
@@ -909,14 +987,19 @@ const Navigation: React.FC = memo(() => {
               </Link>
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
 
-              {/* Mobile Services */}
+              {/* Mobile AI Services */}
               <div>
                 <button
+<<<<<<< HEAD
                   onClick={() => setServicesOpen(!servicesOpen)}
+=======
+                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                   className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
+<<<<<<< HEAD
                     <span>Services</span>
                   </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -976,11 +1059,63 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
                         </div>
                       </div>
+=======
+                    <span>AI Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {aiServicesOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {aiServices.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <Link
+                      href="/ai-services"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
+                    >
+                      View All AI Services →
+                    </Link>
+                  </div>
+                )}
+              </div>
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={() => setItServicesOpen(!itServicesOpen)}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Cloud className="w-4 h-4" />
+                    <span>IT Services</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {itServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                     ))}
                   </div>
 <<<<<<< HEAD
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1098,13 +1233,57 @@ const Navigation: React.FC = memo(() => {
                         </Link>
                       ))}
                     </div>
+=======
+              {/* Mobile Micro SAAS */}
+              <div>
+                <button
+                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+                >
+                  <span className="flex items-center space-x-2">
+                    <Zap className="w-4 h-4" />
+                    <span>Micro SAAS</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {microSaasOpen && (
+                  <div className="mt-2 ml-4 space-y-2">
+                    {microSaasServices.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                    <Link
+                      href="/micro-saas"
+                      className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                      onClick={closeAllMenus}
+                    >
+                      View All Micro SAAS →
+                    </Link>
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
 
               {/* Contact Info */}
               <div className="space-y-4 pt-4 border-t border-gray-700">
                 <h3 className="text-lg font-semibold text-white mb-3 neon-text">Contact</h3>
+=======
+              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Contact
+              </Link>
+              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Blog
+              </Link>
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-3 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-2"
@@ -1139,6 +1318,7 @@ const Navigation: React.FC = memo(() => {
                 </a>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-05a6
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82c7
@@ -1146,6 +1326,8 @@ const Navigation: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dbf5
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
             </div>
           </div>
 =======
@@ -1237,6 +1419,7 @@ const Navigation: React.FC = memo(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 =======
 export default Navigation;
@@ -1253,3 +1436,6 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+export default Navigation;
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76

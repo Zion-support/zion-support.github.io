@@ -493,6 +493,7 @@ body {
   }
 }
 
+<<<<<<< HEAD:src/globals.css
 /* Enhanced Responsive Design */
 @media (max-width: 640px) {
   .cyber-grid {
@@ -519,6 +520,8 @@ body {
   }
 }
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76:app/globals.css
 /* Loading Animations */
 @keyframes fadeInUp {
   from {
@@ -592,6 +595,34 @@ body {
     background: #fff !important;
   }
 }
+<<<<<<< HEAD:src/globals.css
+=======
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .neon-text {
+    font-size: 1.2rem;
+  }
+  
+  .cyber-text {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .cyber-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76:app/globals.css
 /* Particle System */
 .particle-system {
   position: relative;
@@ -945,6 +976,7 @@ body {
     animation: none;
   }
 }
+<<<<<<< HEAD:src/globals.css
 
 @media (max-width: 320px) {
   .cyber-grid {
@@ -1164,3 +1196,5 @@ img {
     text-shadow: none;
   }
 }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76:app/globals.css

@@ -12,6 +12,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
@@ -27,6 +28,8 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'AI-driven SEO' }
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
@@ -38,11 +41,15 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
     { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -52,6 +59,8 @@ const Footer: React.FC = memo(() => {
     { name: 'System Administration', url: '/system-administration', description: 'System management' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' }
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
@@ -94,7 +103,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
 =======
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
   ];
 
   const companyLinks = [
@@ -432,8 +444,11 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-15c5
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
             <ul className="space-y-3">
               {itServices.slice(0, 6).map((service, index) => (
@@ -487,7 +502,10 @@ const Footer: React.FC = memo(() => {
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
               </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-0a76
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
