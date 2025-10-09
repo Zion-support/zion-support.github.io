@@ -1,14 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -98,9 +93,6 @@ const AISalesAutomationPage: React.FC = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
-  const testimonials = [
-=======
 
   const stats = [
     { number: '300%', label: 'Increase in Sales' },
@@ -110,7 +102,6 @@ const AISalesAutomationPage: React.FC = () => {
   ];
 
   const useCases = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
     {
       title: 'B2B Lead Generation',
       description: 'Automatically identify and score high-value B2B prospects using AI-powered analysis of company data, website behavior, and engagement patterns.',
@@ -132,15 +123,19 @@ const AISalesAutomationPage: React.FC = () => {
       icon: Home
     }
   ];
-<<<<<<< HEAD
-  const stats = [
-    { number: '60%', label: 'Increase in Close Rate' },
-    { number: '3x', label: 'Higher Response Rates' },
-    { number: '40%', label: 'Time Saved on Follow-ups' },
-    { number: '95%', label: 'Lead Scoring Accuracy' }
-  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <SEOOptimizer
+        title="AI Sales Automation Platform - Zion Tech Group"
+        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
+        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
+        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="pt-16">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
@@ -306,7 +301,6 @@ const AISalesAutomationPage: React.FC = () => {
                     plan.popular
                       ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
-=======
 
   return (
     <>
@@ -417,7 +411,6 @@ const AISalesAutomationPage: React.FC = () => {
                   key={index}
                   className={`cyber-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
                   }`}
                 >
                   {plan.popular && (
@@ -484,80 +477,6 @@ const AISalesAutomationPage: React.FC = () => {
                   <span>Schedule Demo</span>
                 </a>
               </div>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of sales teams who have transformed their performance with AI
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Sales Process?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start closing more deals with AI-powered sales automation. 
-            Join thousands of sales teams already using our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-400">
-            <p>✓ Free 14-day trial • ✓ No setup fees • ✓ Cancel anytime</p>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
-            </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8b7d
   );
 };
 export default AISalesAutomationPage;
