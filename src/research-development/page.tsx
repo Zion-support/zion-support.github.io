@@ -11,32 +11,32 @@ const ResearchDevelopmentPage: React.FC = () => {
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description: 'Advancing the frontiers of AI and machine learning'
-    },
+      description:     ,
+$4},
     {
       id: 'quantum',
       name: 'Quantum Computing',
       icon: Atom,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description: 'Exploring quantum algorithms and quantum advantage'
-    },
+      description:     ,
+$4},
     {
       id: 'autonomous',
       name: 'Autonomous Systems',
       icon: Rocket,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Developing self-managing and intelligent systems'
-    },
+      description:     ,
+$4},
     {
       id: 'emerging',
       name: 'Emerging Technologies',
       icon: Lightbulb,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description: 'Researching next-generation technologies'
-    }
+      description:     ,
+$4}
   ];
 
   const researchProjects = {
@@ -54,8 +54,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Published 3 papers in top-tier conferences'
         ],
         icon: Brain,
-        color: 'text-purple-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Autonomous Business Intelligence',
         description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
@@ -69,8 +69,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Patent filed for core algorithms'
         ],
         icon: Target,
-        color: 'text-green-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Neural Architecture Search for Enterprise',
         description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
@@ -84,8 +84,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Open-source framework released'
         ],
         icon: Microscope,
-        color: 'text-blue-400'
-      }
+        color:       ,
+$4}
     ],
     quantum: [
       {
@@ -101,8 +101,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Partnership with leading quantum hardware companies'
         ],
         icon: Atom,
-        color: 'text-blue-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Quantum Error Correction for Business Applications',
         description: 'Researching practical quantum error correction methods for commercial quantum computing',
@@ -116,8 +116,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Industry collaboration established'
         ],
         icon: Zap,
-        color: 'text-yellow-400'
-      }
+        color:       ,
+$4}
     ],
     autonomous: [
       {
@@ -133,8 +133,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Real-world deployment in 5 enterprises'
         ],
         icon: Rocket,
-        color: 'text-green-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Multi-Agent Coordination Systems',
         description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
@@ -148,8 +148,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Published in Nature Communications'
         ],
         icon: Users,
-        color: 'text-purple-400'
-      }
+        color:       ,
+$4}
     ],
     emerging: [
       {
@@ -165,8 +165,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Industry partnerships established'
         ],
         icon: Lightbulb,
-        color: 'text-yellow-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Edge AI for IoT Systems',
         description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
@@ -180,8 +180,8 @@ const ResearchDevelopmentPage: React.FC = () => {
           'Commercial product launched'
         ],
         icon: Globe,
-        color: 'text-blue-400'
-      }
+        color:       ,
+$4}
     ]
   };
 
@@ -192,55 +192,55 @@ const ResearchDevelopmentPage: React.FC = () => {
       journal: 'Nature Machine Intelligence',
       year: '2025',
       impact: 'High',
-      link: '#'
-    },
+      link:     ,
+$4},
     {
       title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       authors: 'Dr. James Wilson, Dr. Lisa Park, et al.',
       journal: 'Journal of Artificial Intelligence Research',
       year: '2025',
       impact: 'High',
-      link: '#'
-    },
+      link:     ,
+$4},
     {
       title: 'Quantum Machine Learning for Financial Risk Assessment',
       authors: 'Dr. Alex Kumar, Dr. Maria Santos, et al.',
       journal: 'Quantum Information Processing',
       year: '2024',
       impact: 'Medium',
-      link: '#'
-    },
+      link:     ,
+$4},
     {
       title: 'Multi-Agent Coordination in Distributed Systems',
       authors: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.',
       journal: 'Nature Communications',
       year: '2024',
       impact: 'High',
-      link: '#'
-    }
+      link:     ,
+$4}
   ];
 
   const achievements = [
     {
       icon: Award,
       title: '50+ Research Papers',
-      description: 'Published in top-tier conferences and journals'
-    },
+      description:     ,
+$4},
     {
       icon: Users,
       title: '100+ Researchers',
-      description: 'World-class research team across multiple disciplines'
-    },
+      description:     ,
+$4},
     {
       icon: Target,
       title: '15+ Patents',
-      description: 'Innovative technologies and methodologies'
-    },
+      description:     ,
+$4},
     {
       icon: Globe,
       title: 'Global Collaborations',
-      description: 'Partnerships with leading universities and research institutions'
-    }
+      description:     ,
+$4}
   ];
 
   return (

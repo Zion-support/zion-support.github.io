@@ -12,8 +12,8 @@ export const metadata = {
         url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
         width: 1200,
         height: 630,
-        alt: 'AI Cost Optimization Breakthrough 2026'
-      }
+        alt:       ,
+$4}
     ]
   },
   twitter: {
@@ -34,6 +34,6 @@ export const metadata = {
     }
   },
   alternates: {
-    canonical: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026'
-  }
+    canonical:   ,
+$4}
 };

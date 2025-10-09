@@ -130,8 +130,8 @@ class HealthCheckService {
       return {
         name: 'memory',
         status: 'pass',
-        message: 'Memory API not available'
-      };
+        message:       ,
+$4};
     }
     try {
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
@@ -159,8 +159,8 @@ class HealthCheckService {
       return {
         name: 'memory',
         status: 'warn',
-        message: 'Could not check memory usage'
-      };
+        message:       ,
+$4};
     }
   }
   /**
@@ -192,8 +192,8 @@ class HealthCheckService {
       return {
         name: 'performance',
         status: 'warn',
-        message: 'Could not check performance'
-      }
+        message:       ,
+$4}
     }
   }
   /**
@@ -224,8 +224,8 @@ class HealthCheckService {
     return {
       name: 'browser-apis',
       status: 'pass',
-      message: 'All required browser APIs available'
-    }
+      message:     ,
+$4}
   }
   /**
    * Check storage availability
@@ -242,8 +242,8 @@ class HealthCheckService {
         return {
           name: 'storage',
           status: 'fail',
-          message: 'LocalStorage not working correctly'
-        }
+          message:         ,
+$4}
       }
       // Check available space (approximate)
       const testData = 'x'.repeat(1024 * 1024); // 1MB
@@ -254,20 +254,20 @@ class HealthCheckService {
         return {
           name: 'storage',
           status: 'warn',
-          message: 'LocalStorage space limited'
-        }
+          message:         ,
+$4}
       }
       return {
         name: 'storage',
         status: 'pass',
-        message: 'Storage working correctly'
-      };
+        message:       ,
+$4};
     } catch {
       return {
         name: 'storage',
         status: 'fail',
-        message: 'LocalStorage not available'
-      }
+        message:       ,
+$4}
     }
   }
   /**

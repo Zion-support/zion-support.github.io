@@ -24,8 +24,8 @@ export class ApiCache {
     this.cache = new CacheManager({
       maxSize: 500,
       defaultTTL: config.ttl || 5 * 60 * 1000, // 5 minutes
-      storage: 'memory'
-    });
+      storage:     ,
+$4});
     this.config = {
       ttl: config.ttl || 5 * 60 * 1000,
       maxRetries: config.maxRetries || 3,

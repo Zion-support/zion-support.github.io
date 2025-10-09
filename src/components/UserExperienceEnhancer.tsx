@@ -115,14 +115,14 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         if (document.hidden) {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_hidden', {
-              event_category: 'engagement'
-            });
+              event_category:             ,
+$4});
           }
         } else {
           if ('gtag' in window) {
             (window as any).gtag('event', 'page_visible', {
-              event_category: 'engagement'
-            });
+              event_category:             ,
+$4});
           }
         }
       };
@@ -177,8 +177,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
           (window as any).gtag('event', 'timing_complete', {
             name: 'time_on_page',
             value: timeOnPage,
-            event_category: 'engagement'
-          });
+            event_category:           ,
+$4});
         }
       };
 
@@ -225,16 +225,16 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
+                event_category:               ,
+$4});
             }
           } else if (entry.entryType === 'first-input') {
             if ('gtag' in window) {
               (window as any).gtag('event', 'web_vitals', {
                 name: 'FID',
                 value: Math.round(entry.processingStart - entry.startTime),
-                event_category: 'Performance'
-              });
+                event_category:               ,
+$4});
             }
           } else if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
@@ -242,8 +242,8 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
                 (window as any).gtag('event', 'web_vitals', {
                   name: 'CLS',
                   value: Math.round((entry as any).value * 1000),
-                  event_category: 'Performance'
-                });
+                  event_category:                 ,
+$4});
               }
             }
           }

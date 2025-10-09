@@ -12,8 +12,8 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: ''
-  });
+    message:   ,
+$4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 

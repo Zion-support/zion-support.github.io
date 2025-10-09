@@ -83,8 +83,8 @@ export class PerformanceMetrics {
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-                category: 'load'
-              });
+                category:               ,
+$4});
             }
           }
         });
@@ -101,8 +101,8 @@ export class PerformanceMetrics {
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-              category: 'load'
-            });
+              category:             ,
+$4});
           }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -119,8 +119,8 @@ export class PerformanceMetrics {
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-            category: 'runtime'
-          });
+            category:           ,
+$4});
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
@@ -207,8 +207,8 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
-    });
+      category:     ,
+$4});
     return result;
   }
   /**
@@ -223,8 +223,8 @@ export class PerformanceMetrics {
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'
-    });
+      category:     ,
+$4});
     return result;
   }
   /**

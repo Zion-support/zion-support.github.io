@@ -99,5 +99,4 @@ const AiProjectManagerPage: React.FC = () => {
 };
 
 
-export default AiProjectManagerPage;
-export default AIProjectManagerPage;
+export default $1;

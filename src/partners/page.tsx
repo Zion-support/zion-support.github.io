@@ -50,14 +50,14 @@ const PartnersPage: React.FC = () => {
   const benefits = [
       icon: Globe,
       title: 'Global Reach',
-      description: 'Access to worldwide markets and customers through our partner network'
-      icon: Users,
+      description:       ,
+icon$5: Users,
       title: 'Expertise Sharing',
-      description: 'Collaborative knowledge sharing and best practices across industries'
-      icon: Star,
+      description:       ,
+icon$5: Star,
       title: 'Innovation',
-      description: 'Joint innovation initiatives and cutting-edge technology development'
-      icon: CheckCircle,
+      description:       ,
+icon$5: CheckCircle,
       title: 'Quality Assurance',
       description: 'Rigorous partner certification and quality standards'
 
@@ -73,8 +73,8 @@ const PartnersPage: React.FC = () => {
         'Custom pricing and terms'
       ],
       color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10'
-      name: 'Solution Partners',
+      bgColor:       ,
+namename: 'Solution Partners',
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
         'Technical integration support',
@@ -83,8 +83,8 @@ const PartnersPage: React.FC = () => {
         'Training and certification',
         'Preferred pricing'
       color: 'text-gray-400',
-      bgColor: 'bg-gray-500/10'
-      name: 'Channel Partners',
+      bgColor:       ,
+namename: 'Channel Partners',
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
         'Reseller program access',

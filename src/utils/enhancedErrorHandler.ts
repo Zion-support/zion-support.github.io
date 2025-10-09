@@ -181,8 +181,8 @@ class EnhancedErrorHandler {
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
-                category: 'performance'
-              });
+                category:               ,
+$4});
             }
           });
         });

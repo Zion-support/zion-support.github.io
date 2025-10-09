@@ -51,8 +51,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         'PDF export'
       ],
       popular: false,
-      color: 'blue'
-      name: 'Professional',
+      color:       ,
+namename: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
         'Unlimited invoices',
@@ -64,8 +64,8 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
         'Multi-user accounts',
         'Automated reminders'
       popular: true,
-      color: 'purple'
-      name: 'Enterprise',
+      color:       ,
+namename: 'Enterprise',
       price: '$199',
       description: 'For large organizations',
         'Everything in Professional',
@@ -84,13 +84,13 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       company: 'Creative Studio',
       content: 'AI Invoice Generator has saved me 10+ hours per week. The AI understands my clients and creates perfect invoices every time.',
       rating: 5,
-      avatar: '👩‍🎨'
-      name: 'Michael Chen',
+      avatar:       ,
+namename: 'Michael Chen',
       role: 'CEO',
       company: 'TechStart Inc.',
       content: 'The analytics insights helped us identify payment patterns and improve our cash flow by 40%. Game changer!',
-      avatar: '👨‍💼'
-      name: 'Emily Rodriguez',
+      avatar:       ,
+namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',

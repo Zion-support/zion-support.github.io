@@ -12,8 +12,8 @@ const RequestQuotePage: React.FC = () => {
     timeline: '',
     budget: '',
     description: '',
-    requirements: ''
-  });
+    requirements:   ,
+$4});
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -78,46 +78,46 @@ const RequestQuotePage: React.FC = () => {
     {
       icon: Calculator,
       title: 'Free Quote',
-      description: 'Get a detailed, no-obligation quote within 24 hours'
-    },
+      description:     ,
+$4},
     {
       icon: Clock,
       title: 'Quick Response',
-      description: 'We respond to all quote requests within 4 hours'
-    },
+      description:     ,
+$4},
     {
       icon: CheckCircle,
       title: 'Transparent Pricing',
-      description: 'Clear, detailed pricing with no hidden fees'
-    },
+      description:     ,
+$4},
     {
       icon: Star,
       title: 'Expert Consultation',
-      description: 'Free consultation with our technology experts'
-    }
+      description:     ,
+$4}
   ];
 
   const whyChooseUs = [
     {
       icon: Users,
       title: '50+ Successful Projects',
-      description: 'Proven track record of delivering results'
-    },
+      description:     ,
+$4},
     {
       icon: Award,
       title: '300% Average ROI',
-      description: 'Our clients see significant returns on investment'
-    },
+      description:     ,
+$4},
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all our clients'
-    },
+      description:     ,
+$4},
     {
       icon: Star,
       title: '99.9% Uptime',
-      description: 'Reliable, high-performance solutions'
-    }
+      description:     ,
+$4}
   ];
 
   if (isSubmitted) {

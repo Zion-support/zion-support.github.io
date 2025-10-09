@@ -23,8 +23,8 @@ class OptimizedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
-    };
+      errorId:     ,
+$4};
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -106,8 +106,8 @@ class OptimizedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: ''
-      });
+        errorId:       ,
+$4});
     }, 100);
   };
   private handleRetry = () => {

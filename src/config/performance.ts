@@ -82,8 +82,8 @@ export const _performanceConfig = {
 // sampleRate: 1.0, // 100% in production
 // reportInterval: 30000, // 30 seconds
 // sendToAnalytics: true,
-// logThreshold: 'needsImprovement'
-  }
+// logThreshold:   ,
+$4}
 };
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;

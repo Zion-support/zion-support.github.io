@@ -108,8 +108,8 @@ export class ErrorReporter {
       low: 'color: #2196F3; font-weight: bold',
       medium: 'color: #FF9800; font-weight: bold',
       high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px'
-    };
+      critical:     ,
+$4};
     return styles[severity];
   }
   /**

@@ -193,8 +193,8 @@ class PerformanceMonitor {
       (window as any).gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: Math.round(value),
-        event_category: 'performance'
-      });
+        event_category:       ,
+$4});
     }
   }
   getMetrics(): PerformanceMetrics {

@@ -244,8 +244,8 @@ class SEOOptimizer {
       (window as any).gtag('event', 'seo_metric', {
         metric_name: metric,
         metric_value: Math.round(value),
-        event_category: 'seo'
-      });
+        event_category:       ,
+$4});
     }
   }
   /**
@@ -258,8 +258,8 @@ class SEOOptimizer {
         url: this.config.siteUrl,
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
-        priority: '1.0'
-      }
+        priority:       ,
+$4}
     ];
   }
   /**

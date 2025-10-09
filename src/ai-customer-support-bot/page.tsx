@@ -143,5 +143,4 @@ const AICustomerSupportBotPage: React.FC = () => {
 };
 
 
-export default AiCustomerSupportBotPage;
-export default AICustomerSupportBotPage;
+export default $1;

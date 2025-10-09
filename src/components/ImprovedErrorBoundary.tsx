@@ -179,28 +179,28 @@ const styles = {
   },
   icon: {
     fontSize: '48px',
-    marginBottom: '20px'
-  },
+    marginBottom:   ,
+$4},
   title: {
     fontSize: '24px',
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: '16px'
-  },
+    marginBottom:   ,
+$4},
   message: {
     fontSize: '16px',
     color: '#666',
     marginBottom: '32px',
-    lineHeight: '1.6'
-  },
+    lineHeight:   ,
+$4},
   details: {
     textAlign: 'left' as const,
     marginBottom: '24px',
     backgroundColor: '#f9f9f9',
     padding: '16px',
     borderRadius: '4px',
-    border: '1px solid #e0e0e0'
-  },
+    border:   ,
+$4},
   summary: {
     cursor: 'pointer',
     fontWeight: 'bold',
@@ -208,12 +208,12 @@ const styles = {
     userSelect: 'none' as const
   },
   errorDetails: {
-    fontSize: '14px'
-  },
+    fontSize:   ,
+$4},
   errorMessage: {
     marginBottom: '12px',
-    color: '#d32f2f'
-  },
+    color:   ,
+$4},
   stack: {
     backgroundColor: '#f5f5f5',
     padding: '12px',
@@ -239,14 +239,14 @@ const styles = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
-    transition: 'background-color 0.2s'
-  },
+    transition:   ,
+$4},
   secondaryButton: {
-    backgroundColor: '#6c757d'
-  },
+    backgroundColor:   ,
+$4},
   errorCount: {
     marginTop: '24px',
     fontSize: '14px',
-    color: '#999'
-  }
+    color:   ,
+$4}
 };

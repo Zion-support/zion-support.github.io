@@ -161,16 +161,16 @@ const App: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
-          },
+            availableLanguage:           ,
+$4},
           address: {
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
             addressRegion: 'DE',
             postalCode: '19709',
-            addressCountry: 'US'
-          }
+            addressCountry:           ,
+$4}
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',

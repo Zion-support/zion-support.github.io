@@ -49,8 +49,8 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          billingIncrement: 'P1M'
-        }
+          billingIncrement:         ,
+$4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
@@ -59,8 +59,8 @@ export default function RootLayout({
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
-        longitude: '-75.5795'
-      geoRadius: '1000000'
+        longitude:       ,
+geoRadiusgeoRadius: '1000000'
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
@@ -68,12 +68,12 @@ export default function RootLayout({
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
-            description: 'Comprehensive AI implementation strategies for enterprise organizations'
-            name: 'Digital Automation',
-            description: 'Process automation and workflow optimization services'
-            name: 'Cloud Infrastructure',
-            description: 'Cloud migration and infrastructure optimization services'
-      ]
+            description:             ,
+name$5: 'Digital Automation',
+            description:             ,
+name$5: 'Cloud Infrastructure',
+            description:       ,
+$4]
   };
   return (
     <html lang='en'>

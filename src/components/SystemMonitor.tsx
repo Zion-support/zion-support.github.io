@@ -168,8 +168,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString()
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json'
-    });
+      type:     ,
+$4});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;

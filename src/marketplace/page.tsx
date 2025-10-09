@@ -16,21 +16,21 @@ const MarketplacePage: React.FC = () => {
       icon: ShoppingCart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description: 'AI-powered software products and solutions'
-    },
+      description:     ,
+$4},
       id: 'talent',
       name: 'Talent',
       icon: Users,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-      description: 'Expert professionals and consultants'
-      id: 'equipment',
+      description:       ,
+idid: 'equipment',
       name: 'Equipment',
       icon: Wrench,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description: 'Hardware and infrastructure solutions'
-    }
+      description:     ,
+$4}
   ];
 
   const products = [
@@ -140,14 +140,14 @@ const MarketplacePage: React.FC = () => {
   const stats = [
       value: '500+',
       label: 'Products Available',
-      color: 'text-blue-400'
-      value: '200+',
+      color:       ,
+valuevalue: '200+',
       label: 'Expert Professionals',
-      color: 'text-green-400'
-      value: '100+',
+      color:       ,
+valuevalue: '100+',
       label: 'Equipment Solutions',
-      color: 'text-purple-400'
-      icon: Star,
+      color:       ,
+iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
       color: 'text-yellow-400'
@@ -155,14 +155,14 @@ const MarketplacePage: React.FC = () => {
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
-      description: 'All vendors are thoroughly vetted and verified'
-      icon: Shield,
+      description:       ,
+icon$5: Shield,
       title: 'Secure Transactions',
-      description: 'Bank-level security for all marketplace transactions'
-      icon: Clock,
+      description:       ,
+icon$5: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support for all marketplace activities'
-      icon: Award,
+      description:       ,
+icon$5: Award,
       title: 'Quality Guarantee',
       description: '100% satisfaction guarantee on all purchases'
 

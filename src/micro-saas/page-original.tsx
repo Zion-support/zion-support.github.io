@@ -28,8 +28,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Developer Tools',
       technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'Smart API Documentation Generator',
       description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
@@ -40,8 +40,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Developer Tools',
       technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Marketing & SEO Tools
     {
       title: 'AI SEO Optimizer Pro',
@@ -53,8 +53,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Social Media Manager',
       description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
@@ -65,8 +65,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Email Marketing Platform',
       description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
@@ -77,8 +77,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Marketing',
       technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Content Generator Pro',
       description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
@@ -89,8 +89,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$180-350/month',
       category: 'Content Creation',
       technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Business Intelligence & Analytics
     {
       title: 'AI Analytics Dashboard Pro',
@@ -102,8 +102,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Analytics',
       technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Lead Scoring Engine',
       description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
@@ -114,8 +114,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Sales',
       technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Customer Insights Platform',
       description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
@@ -126,8 +126,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Customer Analytics',
       technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Finance & Accounting Tools
     {
       title: 'AI Invoice Generator Pro',
@@ -139,8 +139,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Finance',
       technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Financial Planning Assistant',
       description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
@@ -151,8 +151,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Expense Management System',
       description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
@@ -163,8 +163,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Finance',
       technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Healthcare & Wellness
     {
       title: 'AI Health Monitoring Platform',
@@ -176,8 +176,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Healthcare',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Fitness Coach Pro',
       description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
@@ -188,8 +188,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$80-150/month',
       category: 'Health & Fitness',
       technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Mental Health Assistant',
       description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
@@ -200,8 +200,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Education & Learning
     {
       title: 'AI Language Learning Platform',
@@ -213,8 +213,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Education',
       technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Study Assistant Pro',
       description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
@@ -225,8 +225,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$100-200/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Skill Assessment Platform',
       description: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
@@ -237,8 +237,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI E-commerce & Retail
     {
       title: 'AI Inventory Optimizer Pro',
@@ -250,8 +250,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Supply Chain',
       technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Product Recommendation Engine',
       description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
@@ -262,8 +262,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Price Optimization Tool',
       description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
@@ -274,8 +274,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Legal & Compliance
     {
       title: 'AI Legal Document Analyzer',
@@ -287,8 +287,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Real Estate & Property Management
     {
       title: 'AI Property Valuation Engine',
@@ -300,8 +300,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI HR & Recruitment
     {
       title: 'AI Resume Parser & Matcher',
@@ -313,8 +313,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Interview Scheduler Pro',
       description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
@@ -325,8 +325,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-300/month',
       category: 'HR & Recruitment',
       technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -337,8 +337,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Finance & Accounting
     {
       title: 'AI Expense Tracker & Categorizer',
@@ -350,8 +350,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Invoice Processing System',
       description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
@@ -362,8 +362,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Finance & Accounting',
       technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Financial Forecasting Tool',
       description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
@@ -374,8 +374,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Finance & Accounting',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Project Management
     {
       title: 'AI Project Manager Assistant',
@@ -387,8 +387,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Time Tracking & Analytics',
       description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
@@ -399,8 +399,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Customer Service
     {
       title: 'AI Live Chat Assistant',
@@ -412,8 +412,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Ticket Classification System',
       description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
@@ -424,8 +424,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-350/month',
       category: 'Customer Service',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Sales & CRM
     {
       title: 'AI Lead Scoring Engine',
@@ -437,8 +437,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Sales Forecasting Platform',
       description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
@@ -449,8 +449,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Healthcare & Wellness
     {
       title: 'AI Symptom Checker Pro',
@@ -462,8 +462,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Healthcare',
       technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Fitness Coach Platform',
       description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
@@ -474,8 +474,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Healthcare',
       technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Security & Compliance
     {
       title: 'AI Security Monitoring System',
@@ -487,8 +487,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Security',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Compliance Checker',
       description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
@@ -499,8 +499,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Security',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Productivity & Automation
     {
       title: 'AI Meeting Assistant Pro',
@@ -512,8 +512,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Productivity',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Email Management System',
       description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
@@ -524,8 +524,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Document Management Platform',
       description: 'Intelligent document organization with search, version control, and collaboration features.',
@@ -536,8 +536,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-500/month',
       category: 'Productivity',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Analytics & Reporting
     {
       title: 'AI Business Intelligence Suite',
@@ -549,8 +549,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Analytics',
       technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Social Media Analytics',
       description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
@@ -561,8 +561,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Analytics',
       technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Development & DevOps
     {
       title: 'AI Code Quality Monitor',
@@ -574,8 +574,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Development',
       technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Deployment Automation',
       description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
@@ -586,8 +586,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Development',
       technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Communication & Collaboration
     {
       title: 'AI Team Collaboration Hub',
@@ -599,8 +599,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Collaboration',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Video Conferencing Assistant',
       description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
@@ -611,8 +611,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Collaboration',
       technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Marketing & Advertising
     {
       title: 'AI Ad Campaign Optimizer',
@@ -624,8 +624,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Marketing',
       technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Influencer Marketing Platform',
       description: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
@@ -636,8 +636,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Marketing',
       technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI E-commerce & Retail
     {
       title: 'AI Customer Behavior Analyzer',
@@ -649,8 +649,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'E-commerce',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Supply Chain Optimizer',
       description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
@@ -661,8 +661,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Education & Training
     {
       title: 'AI Corporate Training Platform',
@@ -674,8 +674,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Knowledge Management System',
       description: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
@@ -686,8 +686,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-500/month',
       category: 'Education',
       technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Legal & Compliance
     {
       title: 'AI Contract Management System',
@@ -699,8 +699,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Privacy Compliance Monitor',
       description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
@@ -711,8 +711,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Legal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Real Estate & Property
     {
       title: 'AI Property Management Suite',
@@ -724,8 +724,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Market Research Platform',
       description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
@@ -736,8 +736,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Research',
       technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Agriculture & Environment
     {
       title: 'AI Crop Monitoring System',
@@ -749,8 +749,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Environmental Monitoring',
       description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
@@ -761,8 +761,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Environment',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Transportation & Logistics
     {
       title: 'AI Fleet Management System',
@@ -774,8 +774,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Logistics Optimizer',
       description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
@@ -786,8 +786,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Entertainment & Media
     {
       title: 'AI Content Moderation Platform',
@@ -799,8 +799,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Media',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Video Production Assistant',
       description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
@@ -811,8 +811,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Media',
       technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Gaming & Entertainment
     {
       title: 'AI Game Development Platform',
@@ -824,8 +824,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Player Behavior Analytics',
       description: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
@@ -836,8 +836,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Gaming',
       technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -849,8 +849,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Patent Analysis Tool',
       description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
@@ -861,8 +861,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Energy & Utilities
     {
       title: 'AI Energy Management System',
@@ -874,8 +874,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Smart Grid Optimizer',
       description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
@@ -886,8 +886,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Energy',
       technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Manufacturing & Industrial
     {
       title: 'AI Quality Control System',
@@ -899,8 +899,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Manufacturing',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Production Planning Optimizer',
       description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
@@ -911,8 +911,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Manufacturing',
       technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Insurance & Risk Management
     {
       title: 'AI Risk Assessment Platform',
@@ -924,8 +924,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Insurance',
       technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Claims Processing System',
       description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
@@ -936,8 +936,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Insurance',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Government & Public Sector
     {
       title: 'AI Citizen Services Platform',
@@ -949,8 +949,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$800-1500/month',
       category: 'Government',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Public Safety System',
       description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
@@ -961,8 +961,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1000-2000/month',
       category: 'Government',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Non-Profit & Social Impact
     {
       title: 'AI Donor Management System',
@@ -974,8 +974,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Volunteer Matching Platform',
       description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
@@ -986,8 +986,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-500/month',
       category: 'Non-Profit',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Travel & Hospitality
     {
       title: 'AI Travel Planning Assistant',
@@ -999,8 +999,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Travel',
       technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Hotel Revenue Optimizer',
       description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
@@ -1011,8 +1011,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Hospitality',
       technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Sports & Fitness
     {
       title: 'AI Sports Performance Analyzer',
@@ -1024,8 +1024,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Sports',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Fitness Nutrition Coach',
       description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
@@ -1036,8 +1036,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Fitness',
       technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Beauty & Fashion
     {
       title: 'AI Virtual Try-On Platform',
@@ -1049,8 +1049,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Fashion',
       technologies: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Beauty Analysis Tool',
       description: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
@@ -1061,8 +1061,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Beauty',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Home & Lifestyle
     {
       title: 'AI Smart Home Controller',
@@ -1074,8 +1074,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Personal Assistant Platform',
       description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
@@ -1086,8 +1086,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Personal',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Pets & Animals
     {
       title: 'AI Pet Health Monitor',
@@ -1099,8 +1099,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Pet Training Assistant',
       description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
@@ -1111,8 +1111,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Pets',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Education & Learning
     {
       title: 'AI Tutoring Platform',
@@ -1124,8 +1124,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Education',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Homework Helper',
       description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
@@ -1136,8 +1136,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Education',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Music & Audio
     {
       title: 'AI Music Composition Tool',
@@ -1149,8 +1149,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Music',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Audio Enhancement Platform',
       description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
@@ -1161,8 +1161,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Audio',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Art & Design
     {
       title: 'AI Design Assistant Pro',
@@ -1174,8 +1174,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Logo Generator Platform',
       description: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
@@ -1186,8 +1186,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Dating & Relationships
     {
       title: 'AI Dating Assistant',
@@ -1199,8 +1199,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Dating',
       technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Relationship Counselor',
       description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
@@ -1211,8 +1211,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Relationships',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Parenting & Family
     {
       title: 'AI Parenting Assistant',
@@ -1224,8 +1224,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Parenting',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Family Organizer',
       description: 'Smart family management with scheduling, task coordination, and communication tools.',
@@ -1236,8 +1236,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Family',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Senior Care & Aging
     {
       title: 'AI Senior Care Monitor',
@@ -1249,8 +1249,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Senior Care',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Memory Assistant',
       description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
@@ -1261,8 +1261,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Memory',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Accessibility & Inclusion
     {
       title: 'AI Accessibility Assistant',
@@ -1274,8 +1274,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Accessibility',
       technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Language Translation Pro',
       description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
@@ -1286,8 +1286,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Translation',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Emergency & Crisis Management
     {
       title: 'AI Emergency Response System',
@@ -1299,8 +1299,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$800-1500/month',
       category: 'Emergency',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Crisis Communication Platform',
       description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
@@ -1311,8 +1311,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Crisis Management',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Space & Astronomy
     {
       title: 'AI Space Mission Planner',
@@ -1324,8 +1324,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1000-2000/month',
       category: 'Space',
       technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Astronomical Data Analyzer',
       description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
@@ -1336,8 +1336,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Astronomy',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Ocean & Marine
     {
       title: 'AI Marine Life Tracker',
@@ -1349,8 +1349,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Marine',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Ocean Current Predictor',
       description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
@@ -1361,8 +1361,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Oceanography',
       technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Archaeology & History
     {
       title: 'AI Archaeological Site Analyzer',
@@ -1374,8 +1374,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Archaeology',
       technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Historical Document Processor',
       description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
@@ -1386,8 +1386,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'History',
       technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Psychology & Mental Health
     {
       title: 'AI Mental Health Tracker',
@@ -1399,8 +1399,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Mental Health',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Therapy Assistant',
       description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
@@ -1411,8 +1411,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Therapy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Philosophy & Ethics
     {
       title: 'AI Ethical Decision Maker',
@@ -1424,8 +1424,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Ethics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Philosophy Research Assistant',
       description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
@@ -1436,8 +1436,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Philosophy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Spirituality & Religion
     {
       title: 'AI Spiritual Guidance Platform',
@@ -1449,8 +1449,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Spirituality',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Religious Text Analyzer',
       description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
@@ -1461,8 +1461,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Religion',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Future & Innovation
     {
       title: 'AI Innovation Predictor',
@@ -1474,8 +1474,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Innovation',
       technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Future Scenario Generator',
       description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
@@ -1486,8 +1486,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Future Planning',
       technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Consciousness & AI Ethics
     {
       title: 'AI Consciousness Monitor',
@@ -1499,8 +1499,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$800-1500/month',
       category: 'AI Ethics',
       technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Rights Management System',
       description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
@@ -1511,8 +1511,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'AI Rights',
       technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Time & Space
     {
       title: 'AI Time Management Master',
@@ -1524,8 +1524,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Time Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Space-Time Analyzer',
       description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
@@ -1536,8 +1536,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1000-2000/month',
       category: 'Space-Time',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Quantum & Advanced Physics
     {
       title: 'AI Quantum Simulator Pro',
@@ -1549,8 +1549,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1200-2500/month',
       category: 'Quantum Computing',
       technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Physics Research Assistant',
       description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
@@ -1561,8 +1561,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Physics',
       technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Multiverse & Parallel Realities
     {
       title: 'AI Multiverse Explorer',
@@ -1574,8 +1574,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1500-3000/month',
       category: 'Multiverse',
       technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Reality Manipulation Tool',
       description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
@@ -1586,8 +1586,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$2000-4000/month',
       category: 'Reality',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Transcendence & Enlightenment
     {
       title: 'AI Enlightenment Assistant',
@@ -1599,8 +1599,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$800-1500/month',
       category: 'Enlightenment',
       technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Transcendence Platform',
       description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
@@ -1611,8 +1611,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$1500-3000/month',
       category: 'Transcendence',
       technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Universal Consciousness
     {
       title: 'AI Universal Consciousness Connector',
@@ -1624,8 +1624,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$3000-6000/month',
       category: 'Universal Consciousness',
       technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Cosmic Intelligence Platform',
       description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
@@ -1636,8 +1636,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$5000-10000/month',
       category: 'Cosmic Intelligence',
       technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Infinite Possibilities
     {
       title: 'AI Infinite Possibility Generator',
@@ -1649,8 +1649,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$10000-20000/month',
       category: 'Infinite Possibilities',
       technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Ultimate Reality Creator',
       description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
@@ -1661,8 +1661,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$20000-50000/month',
       category: 'Ultimate Reality',
       technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+      contactInfo:     ,
+$4}
   ];
   
   const realEstateSaaS = [
@@ -1676,8 +1676,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Tenant Screening Platform',
       description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
@@ -1688,8 +1688,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Property Management',
       technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Agriculture & Food Tech
     {
       title: 'AI Crop Monitoring System',
@@ -1701,8 +1701,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Food Safety Inspector',
       description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
@@ -1713,8 +1713,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Food Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Transportation & Logistics
     {
       title: 'AI Route Optimization Pro',
@@ -1726,8 +1726,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Logistics',
       technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Fleet Maintenance Predictor',
       description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
@@ -1738,8 +1738,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Fleet Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Energy & Sustainability
     {
       title: 'AI Energy Management System',
@@ -1751,8 +1751,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Energy Management',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Carbon Footprint Tracker',
       description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
@@ -1763,8 +1763,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Entertainment & Media
     {
       title: 'AI Content Moderation Suite',
@@ -1776,8 +1776,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Content Moderation',
       technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Video Editor Pro',
       description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
@@ -1788,8 +1788,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Video Production',
       technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Security & Surveillance
     {
       title: 'AI Security Camera System',
@@ -1801,8 +1801,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Security',
       technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Fraud Detection Engine',
       description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
@@ -1813,8 +1813,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Fraud Prevention',
       technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -1826,8 +1826,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Patent Search Engine',
       description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
@@ -1838,8 +1838,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Compliance Monitoring Suite',
       description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
@@ -1850,8 +1850,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Real Estate & Property
     {
       title: 'AI Real Estate Analyzer Pro',
@@ -1863,8 +1863,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Property Management System',
       description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
@@ -1875,8 +1875,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Real Estate',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI HR & Recruitment
     {
       title: 'AI HR Recruitment Suite',
@@ -1888,8 +1888,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -1900,8 +1900,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'HR & Recruitment',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Project Management
     {
       title: 'AI Project Manager Pro',
@@ -1913,8 +1913,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Task Automation Suite',
       description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
@@ -1925,8 +1925,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Supply Chain & Logistics
     {
       title: 'AI Supply Chain Optimizer',
@@ -1938,8 +1938,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Supply Chain',
       technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Warehouse Management System',
       description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
@@ -1950,8 +1950,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Supply Chain',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Agriculture & Food Tech
     {
       title: 'AI Precision Agriculture Platform',
@@ -1963,8 +1963,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Agriculture',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Food Safety Monitor',
       description: 'Automated food safety inspection with contamination detection and quality control.',
@@ -1975,8 +1975,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Food Tech',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Energy & Sustainability
     {
       title: 'AI Energy Management System',
@@ -1988,8 +1988,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Energy',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Carbon Footprint Tracker',
       description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
@@ -2000,8 +2000,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Sustainability',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Gaming & Entertainment
     {
       title: 'AI Game Development Suite',
@@ -2013,8 +2013,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Gaming',
       technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Content Moderation Platform',
       description: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
@@ -2025,8 +2025,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Content Moderation',
       technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Transportation & Mobility
     {
       title: 'AI Fleet Management System',
@@ -2038,8 +2038,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Transportation',
       technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Traffic Management Platform',
       description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
@@ -2050,8 +2050,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$800-1500/month',
       category: 'Smart Cities',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -2063,8 +2063,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Patent Analysis Tool',
       description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
@@ -2075,8 +2075,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$500-1000/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Personal Productivity
     {
       title: 'AI Personal Assistant Pro',
@@ -2088,8 +2088,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$80-150/month',
       category: 'Personal Productivity',
       technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Meeting Assistant',
       description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
@@ -2100,8 +2100,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Meeting Management',
       technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Insurance Underwriting Assistant',
       description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
@@ -2973,8 +2973,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Task Management & Prioritization',
       description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
@@ -2985,8 +2985,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Productivity',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Email Management & Prioritization',
       description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
@@ -2997,8 +2997,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$100-200/month',
       category: 'Communication',
       technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI HR & Recruitment
     {
       title: 'AI Resume Parser & Candidate Matcher',
@@ -3010,8 +3010,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'HR & Recruitment',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Employee Performance Tracker',
       description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
@@ -3022,8 +3022,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'HR & Performance',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Workplace Safety Monitor',
       description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
@@ -3034,8 +3034,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Workplace Safety',
       technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Customer Service & Support
     {
       title: 'AI Customer Support Ticket Router',
@@ -3047,8 +3047,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Customer Feedback Analyzer',
       description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
@@ -3059,8 +3059,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Customer Analytics',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Live Chat Assistant',
       description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
@@ -3071,8 +3071,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Customer Support',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Sales & CRM
     {
       title: 'AI Sales Pipeline Optimizer',
@@ -3084,8 +3084,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Sales & CRM',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Sales Call Analyzer',
       description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
@@ -3096,8 +3096,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Sales Training',
       technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Proposal Generator Pro',
       description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
@@ -3108,8 +3108,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$180-350/month',
       category: 'Sales Tools',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Project Management
     {
       title: 'AI Project Risk Predictor',
@@ -3121,8 +3121,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Project Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Resource Allocation Optimizer',
       description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
@@ -3133,8 +3133,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Resource Management',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Project Timeline Predictor',
       description: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
@@ -3145,8 +3145,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Project Planning',
       technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Security & Compliance
     {
       title: 'AI Security Threat Detector',
@@ -3158,8 +3158,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Cybersecurity',
       technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Compliance Monitor',
       description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
@@ -3170,8 +3170,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$350-700/month',
       category: 'Compliance',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Data Privacy Manager',
       description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
@@ -3182,8 +3182,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Data Privacy',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Quality Assurance & Testing
     {
       title: 'AI Automated Testing Suite',
@@ -3195,8 +3195,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$250-500/month',
       category: 'Quality Assurance',
       technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Bug Prediction & Prevention',
       description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
@@ -3207,8 +3207,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Quality Assurance',
       technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Performance Monitoring Pro',
       description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
@@ -3219,8 +3219,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Performance Monitoring',
       technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Content & Media
     {
       title: 'AI Video Content Generator',
@@ -3232,8 +3232,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Content Creation',
       technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Podcast Production Suite',
       description: 'Complete podcast production with audio editing, transcription, and show notes generation.',
@@ -3244,8 +3244,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Audio Production',
       technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Image & Design Generator',
       description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
@@ -3256,8 +3256,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Design',
       technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Research & Development
     {
       title: 'AI Research Assistant Pro',
@@ -3269,8 +3269,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Research',
       technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Patent Analyzer & Generator',
       description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
@@ -3281,8 +3281,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$600-1200/month',
       category: 'Intellectual Property',
       technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Innovation Tracker',
       description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
@@ -3293,8 +3293,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$200-400/month',
       category: 'Innovation',
       technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Personal & Lifestyle
     {
       title: 'AI Personal Finance Manager',
@@ -3306,8 +3306,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Personal Finance',
       technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Personal Assistant Pro',
       description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
@@ -3318,8 +3318,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$150-300/month',
       category: 'Personal Assistant',
       technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Home Energy Optimizer',
       description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
@@ -3330,8 +3330,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$120-250/month',
       category: 'Smart Home',
       technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     // AI Gaming & Entertainment
     {
       title: 'AI Game Development Assistant',
@@ -3343,8 +3343,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$400-800/month',
       category: 'Game Development',
       technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Music Composition Studio',
       description: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
@@ -3355,8 +3355,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$300-600/month',
       category: 'Music Production',
       technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
+      contactInfo:     ,
+$4},
     {
       title: 'AI Streaming Content Optimizer',
       description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
@@ -3367,8 +3367,8 @@ const MicroSAASPage: React.FC = () => {
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+      contactInfo:     ,
+$4}
   ];
   const categories = [
     { name: 'All', count: microSAASServices.length },

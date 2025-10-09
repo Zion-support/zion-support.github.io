@@ -69,8 +69,8 @@ class AccessibilityService {
           type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'
-        });
+          wcag:         ,
+$4});
       } else if (img.alt === '') {
         warnings.push({
           type: 'empty-alt',
@@ -91,8 +91,8 @@ class AccessibilityService {
           type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
-        });
+          wcag:         ,
+$4});
       }
     });
     // Check for proper heading hierarchy
@@ -104,8 +104,8 @@ class AccessibilityService {
           type: 'heading-hierarchy',
           element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
-          suggestion: 'Maintain proper heading hierarchy'
-        });
+          suggestion:         ,
+$4});
       }
       prevLevel = level;
     });
@@ -116,8 +116,8 @@ class AccessibilityService {
         type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
-      });
+        suggestion:       ,
+$4});
     }
     // Check for language attribute
     const html = document.documentElement;
@@ -126,8 +126,8 @@ class AccessibilityService {
         type: 'missing-lang',
         element: 'html',
         message: 'Missing lang attribute on html element',
-        wcag: '3.1.1 (Level A)'
-      });
+        wcag:       ,
+$4});
     }
     // Check for sufficient link text
     document.querySelectorAll('a').forEach(link => {
@@ -138,15 +138,15 @@ class AccessibilityService {
           type: 'empty-link',
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
-          wcag: '2.4.4 (Level A)'
-        });
+          wcag:         ,
+$4});
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {
         warnings.push({
           type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
-        });
+          suggestion:         ,
+$4});
       }
     });
     // Check for touch target size
@@ -157,8 +157,8 @@ class AccessibilityService {
           type: 'small-touch-target',
           element: element.tagName.toLowerCase(),
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
-          suggestion: 'Increase touch target size to at least 44x44px'
-        });
+          suggestion:         ,
+$4});
       }
     });
     // Calculate score (100 - errors * 10 - warnings * 2)

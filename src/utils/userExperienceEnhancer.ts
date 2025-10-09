@@ -67,8 +67,8 @@ class UserExperienceEnhancer {
         if (targetElement) {
           targetElement.scrollIntoView({
             behavior: 'smooth',
-            block: 'start'
-          });
+            block:           ,
+$4});
         }
       });
     });
@@ -351,8 +351,8 @@ class UserExperienceEnhancer {
       new Notification(title, {
         body: body,
         icon: icon || '/favicon.ico',
-        badge: '/favicon.ico'
-      });
+        badge:       ,
+$4});
     }
   }
   private setupProgressiveWebApp(): void {

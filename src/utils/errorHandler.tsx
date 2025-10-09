@@ -445,8 +445,8 @@ export class ErrorBoundary extends React.Component<
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
-      component: 'ErrorBoundary'
-    });
+      component:     ,
+$4});
   }
   render() {
     if (this.state.hasError) {
@@ -460,8 +460,8 @@ export class ErrorBoundary extends React.Component<
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px',
-                cursor: 'pointer'
-              }}
+                cursor:               ,
+$4}}
             >
               Try again
             </button></div>

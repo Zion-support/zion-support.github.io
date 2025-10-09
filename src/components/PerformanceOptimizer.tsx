@@ -98,13 +98,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
         as: 'style',
-        type: 'text/css'
-      },
+        type:       ,
+$4},
       {
         href: '/styles/critical.css',
         as: 'style',
-        type: 'text/css'
-      }
+        type:       ,
+$4}
     ];
 
     criticalResources.forEach((resource) => {
@@ -171,8 +171,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               (window as any).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
+                event_category:               ,
+$4});
             }
           }
         }

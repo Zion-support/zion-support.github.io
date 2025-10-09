@@ -9,24 +9,24 @@ const AIEmailMarketingPage: React.FC = () => {
     {
       icon: Mail,
       title: 'AI Content Generation',
-      description: 'Automatically create compelling email content that resonates with your audience'
-    },
+      description:     ,
+$4},
       icon: Target,
       title: 'Smart Segmentation',
-      description: 'AI-powered audience segmentation for highly targeted campaigns'
-      icon: Send,
+      description:       ,
+icon$5: Send,
       title: 'Optimal Send Times',
-      description: 'AI determines the best time to send emails for maximum engagement'
-      icon: BarChart,
+      description:       ,
+icon$5: BarChart,
       title: 'Predictive Analytics',
-      description: 'Forecast campaign performance and optimize for better results'
-      icon: Users,
+      description:       ,
+icon$5: Users,
       title: 'Behavioral Triggers',
-      description: 'Automated email sequences based on user behavior and actions'
-      icon: TrendingUp,
+      description:       ,
+icon$5: TrendingUp,
       title: 'A/B Testing',
-      description: 'Intelligent A/B testing with AI-powered optimization'
-    }
+      description:     ,
+$4}
   ];
 
   const benefits = [
@@ -112,5 +112,4 @@ import Footer from '../components/Footer';
 };
 
 
-export default AiEmailMarketingPage;
-export default AIEmailMarketingPage;
+export default $1;

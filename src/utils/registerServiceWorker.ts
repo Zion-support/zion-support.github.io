@@ -33,8 +33,8 @@ export async function registerServiceWorker(
       }
     });
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/'
-    });
+      scope:     ,
+$4});
     // Handle updates
     registration.addEventListener('updatefound', () => {
       const installingWorker = registration.installing;

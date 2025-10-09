@@ -34,14 +34,14 @@ class EnhancedErrorTracker {
       window.addEventListener('error', event => {
         this.trackError(event.error, {
           component: 'Global',
-          action: 'Uncaught Error'
-        });
+          action:         ,
+$4});
       });
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
-          action: 'Unhandled Promise Rejection'
-        });
+          action:         ,
+$4});
       });
     }
   }

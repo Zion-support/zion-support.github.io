@@ -11,32 +11,32 @@ const SolutionsPage: React.FC = () => {
       icon: Brain,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-      description: 'Transform your business with cutting-edge artificial intelligence'
-    },
+      description:     ,
+$4},
     {
       id: 'it',
       name: 'IT Infrastructure',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
-      description: 'Robust and scalable IT infrastructure solutions'
-    },
+      description:     ,
+$4},
     {
       id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
-      description: 'Comprehensive security solutions for your digital assets'
-    },
+      description:     ,
+$4},
     {
       id: 'automation',
       name: 'Automation',
       icon: Zap,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10',
-      description: 'Streamline operations with intelligent automation'
-    }
+      description:     ,
+$4}
   ];
 
   const solutions = {
@@ -47,32 +47,32 @@ const SolutionsPage: React.FC = () => {
         features: ['Predictive Analytics', 'Real-time Insights', 'Automated Reporting', 'Custom Dashboards'],
         pricing: 'Starting at $1,500/month',
         icon: BarChart,
-        color: 'text-blue-400'
-      },
+        color:       ,
+$4},
       {
         title: 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color: 'text-pink-400'
-      },
+        color:       ,
+$4},
       {
         title: 'AI Customer Support',
         description: 'Enhance customer experience with intelligent AI-powered support systems',
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
         icon: Users,
-        color: 'text-green-400'
-      },
+        color:       ,
+$4},
       {
         title: 'AI Process Automation',
         description: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color: 'text-yellow-400'
-      }
+        color:       ,
+$4}
     ],
     it: [
       {
@@ -81,32 +81,32 @@ const SolutionsPage: React.FC = () => {
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
-        color: 'text-blue-400'
-      },
+        color:       ,
+$4},
       {
         title: 'IT Infrastructure Management',
         description: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
         icon: Globe,
-        color: 'text-green-400'
-      },
+        color:       ,
+$4},
       {
         title: 'DevOps & CI/CD',
         description: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
         icon: Zap,
-        color: 'text-purple-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Database Management',
         description: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
         icon: BarChart,
-        color: 'text-orange-400'
-      }
+        color:       ,
+$4}
     ],
     security: [
       {
@@ -115,32 +115,32 @@ const SolutionsPage: React.FC = () => {
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
-        color: 'text-red-400'
-      },
+        color:       ,
+$4},
       {
         title: 'AI Security Monitoring',
         description: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
         icon: Brain,
-        color: 'text-purple-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Compliance Management',
         description: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
         icon: CheckCircle,
-        color: 'text-green-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Security Training',
         description: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
         icon: Users,
-        color: 'text-blue-400'
-      }
+        color:       ,
+$4}
     ],
     automation: [
       {
@@ -149,32 +149,32 @@ const SolutionsPage: React.FC = () => {
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
-        color: 'text-yellow-400'
-      },
+        color:       ,
+$4},
       {
         title: 'IT Automation',
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
         icon: Cloud,
-        color: 'text-blue-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Marketing Automation',
         description: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
         icon: Target,
-        color: 'text-pink-400'
-      },
+        color:       ,
+$4},
       {
         title: 'Data Automation',
         description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
         icon: BarChart,
-        color: 'text-green-400'
-      }
+        color:       ,
+$4}
     ]
   };
 
@@ -182,23 +182,23 @@ const SolutionsPage: React.FC = () => {
     {
       icon: Star,
       title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients'
-    },
+      description:     ,
+$4},
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all our solutions'
-    },
+      description:     ,
+$4},
     {
       icon: Globe,
       title: 'Global Support',
-      description: '24/7 support and services across multiple time zones'
-    },
+      description:     ,
+$4},
     {
       icon: Users,
       title: 'Expert Team',
-      description: 'Certified professionals with years of industry experience'
-    }
+      description:     ,
+$4}
   ];
 
   return (

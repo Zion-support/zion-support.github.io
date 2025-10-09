@@ -200,8 +200,8 @@ export class AccessibilityChecker {
           wcagCriterion: '2.4.6',
           message: `Empty ${heading.tagName} at position ${index + 1}`,
           element: heading.tagName.toLowerCase(),
-          fix: 'Add descriptive text to the heading'
-        });
+          fix:         ,
+$4});
       }
       previousLevel = level;
     });
@@ -215,8 +215,8 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.6',
         message: `Found ${h1Count} h1 elements (should have only one)`,
         element: 'h1',
-        fix: 'Use only one h1 per page for the main heading'
-      });
+        fix:       ,
+$4});
     }
   }
   /**
@@ -357,8 +357,8 @@ export class AccessibilityChecker {
           wcagCriterion: '1.4.3',
           message: 'Element has inline color without explicit background',
           element: el.tagName.toLowerCase(),
-          fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
-        });
+          fix:         ,
+$4});
       }
     });
   }
@@ -401,8 +401,8 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
-        });
+          codeExample:         ,
+$4});
       }
     });
   }
@@ -446,8 +446,8 @@ export class AccessibilityChecker {
           wcagCriterion: '4.1.2',
           message: `Invalid ARIA role: "${role}"`,
           element: el.tagName.toLowerCase(),
-          fix: 'Use a valid ARIA role or remove the role attribute'
-        });
+          fix:         ,
+$4});
       }
       // Check aria-labelledby references
       const labelledBy = el.getAttribute('aria-labelledby');
@@ -461,8 +461,8 @@ export class AccessibilityChecker {
             wcagCriterion: '4.1.2',
             message: `aria-labelledby references non-existent element: "${labelledBy}"`,
             element: el.tagName.toLowerCase(),
-            fix: 'Ensure the referenced element exists'
-          });
+            fix:           ,
+$4});
         }
       }
     });
@@ -484,8 +484,8 @@ export class AccessibilityChecker {
         wcagCriterion: '2.4.1',
         message: 'Page is missing a main landmark',
         fix: 'Add a <main> element or role="main"',
-        codeExample: '<main><!-- Main content --></main>'
-      });
+        codeExample:       ,
+$4});
     }
   }
   /**

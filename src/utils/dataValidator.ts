@@ -217,16 +217,16 @@ export const ValidationRulesBuilder = {
       if (Array.isArray(value) && value.length === 0) return false;
       return true;
     },
-    message: 'This field is required'
-  }),
+    message:   ,
+$4}),
   email: (): ValidationRule<string> => ({
     validate: (value: string) => validateEmail(value),
-    message: 'Please enter a valid email address'
-  }),
+    message:   ,
+$4}),
   url: (): ValidationRule<string> => ({
     validate: (value: string) => validateURL(value),
-    message: 'Please enter a valid URL'
-  }),
+    message:   ,
+$4}),
   minLength: (min: number): ValidationRule<string> => ({
     validate: (value: string) => value.length >= min,
     message: `Must be at least ${min} characters long`

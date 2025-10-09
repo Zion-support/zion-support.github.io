@@ -46,15 +46,15 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
       icon: TrendingUp,
-      color: 'text-green-400'
-      title: 'Customer Behavior Insights',
+      color:       ,
+titletitle: 'Customer Behavior Insights',
       description: 'Understand customer preferences and behavior patterns for better targeting',
       icon: Users,
-      color: 'text-blue-400'
-      title: 'Financial Forecasting',
+      color:       ,
+titletitle: 'Financial Forecasting',
       description: 'Predict revenue, expenses, and cash flow with high accuracy',
-      color: 'text-purple-400'
-      title: 'Operational Efficiency',
+      color:       ,
+titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
       color: 'text-yellow-400'
 
@@ -71,8 +71,8 @@ const AIAnalyticsPage: React.FC = () => {
         'Standard integrations'
       ],
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10'
-      name: 'Professional',
+      bgColor:       ,
+namename: 'Professional',
       price: '$3,500',
       description: 'Ideal for growing businesses with complex analytics needs',
         'Up to 50 data sources',
@@ -101,12 +101,12 @@ const AIAnalyticsPage: React.FC = () => {
   const benefits = [
       icon: Star,
       title: '95% Accuracy',
-      description: 'Industry-leading accuracy in predictions and insights'
-      title: 'Real-time Processing',
-      description: 'Instant analysis of data as it comes in'
-      title: 'Actionable Insights',
-      description: 'Clear, actionable recommendations for business improvement'
-      icon: Award,
+      description:       ,
+title$5: 'Real-time Processing',
+      description:       ,
+title$5: 'Actionable Insights',
+      description:       ,
+icon$5: Award,
       title: 'Proven Results',
       description: '300% average ROI for our analytics clients'
 

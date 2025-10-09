@@ -69,8 +69,8 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.'
-  }),
+    message:   ,
+$4}),
   // Standard: 100 requests per 15 minutes
   standard: new RateLimiter({
     windowMs: 15 * 60 * 1000,

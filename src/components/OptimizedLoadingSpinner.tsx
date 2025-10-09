@@ -10,14 +10,14 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({ size = 'md', color = 'primary', className = '' }) => {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
-      lg: 'w-12 h-12'
-    };
+      lg:     ,
+$4};
 
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
-      white: 'text-white'
-    };
+      white:     ,
+$4};
 
     return (
       <div
