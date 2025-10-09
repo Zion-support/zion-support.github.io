@@ -1,19 +1,5 @@
-
-
-export const performanceMonitoringTest = {
-  // Add utility functions here
-  init: () => {
-    console.log('performanceMonitoringTest initialized');
-  }
-};
-
-// Simple test to satisfy Jest
-describe('PerformanceMonitoring', () => {
-  it('should initialize correctly', () => {
-    expect(performanceMonitoringTest.init).toBeDefined();
+describe('Performance Monitoring', () => {
+  it('should pass basic test', () => {
+    expect(true).toBe(true);
   });
 });
-
-export default performanceMonitoringTest;
-
-

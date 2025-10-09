@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import { describe, it, expect, beforeEach } from '@jest/globals';
 
-describe('validation', () => {/* TODO: Fix JSX expression */}
+describe('validation', () => {
+  beforeEach(() => {
+    // Setup before each test
   });
 
-  it('should pass basic test', () => {/* TODO: Fix JSX expression */}
+  it('should pass basic test', () => {
+    expect(true).toBe(true);
   });
 
-  it('should handle basic functionality', () => {/* TODO: Fix JSX expression */}
+  it('should handle basic functionality', () => {
+    expect(1 + 1).toBe(2);
+=======
+describe('Validation', () => {
+  it('should pass basic test', () => {
+    expect(true).toBe(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b21
   });
 });

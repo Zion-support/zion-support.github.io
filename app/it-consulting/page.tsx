@@ -1,153 +1,69 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
-    {
-
-      title: 'Digital Transformation',
-      description: 'Comprehensive digital transformation strategies to modernize your business operations.',
-      icon: Brain,
-      features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
-      benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
-      price: 'Starting at $5,000/month'
-    },
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to cloud platforms with minimal downtime and maximum security.',
-      icon: Cloud,
-      features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
-      benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
-      price: 'Starting at $3,500/month'
-
-    }
-  ];
-
-  return (<>
-      <Helmet></Helmet>
+  return (
+    <>
+      <Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" /></meta>
+        <meta name="description" content="Expert IT consulting services for digital transformation, cloud migration, and cybersecurity solutions." />
       </Helmet>
-      "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation /></Navigation>"
-        <main className="pt-24 pb-16 px-4"></main>"
-          <div className="max-w-7xl mx-auto"></div>"
-            <div className="text-center mb-16"></div>"
-              <h1 className="text-4xl,"
-  md:text-6xl font-bold text-gray-900 mb-6"></h1>
-                IT Consulting Services;
-              </h1>"
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
-                Transform your business with expert IT consulting. We provide strategic guidance, 
-                digital transformation, and technology solutions that drive growth and efficiency.
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16 pt-24">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Consulting</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Expert IT consulting services to help your business navigate digital transformation and technology challenges.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
+              <p className="text-gray-300 mb-4">
+                Strategic guidance to modernize your business processes and technology infrastructure.
               </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Technology Strategy</li>
+                <li>• Process Optimization</li>
+                <li>• Change Management</li>
+                <li>• ROI Analysis</li>
+              </ul>
             </div>
-
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
-              {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-100 rounded-xl mr-4">
-                      <service.icon className="w-8 h-8 text-blue-600" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
-                      <p className="text-gray-600">{service.description}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-
-                          {feature}
-                        </li>)
-                      ))}
-                    </ul>
-
-
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-
-
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.map((benefit, idx) => (
-
-                        <li key={idx} className="flex items-center">
-
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-
-                    </ul>
-
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                        Get Started
-                      </button>
-                    </div>
-
-                  </div>
-                </div>
-              ))}
-            </div>
-
-          </section>
-
-          {/* CTA Section */}
-          <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
-
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?</h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Contact our experts for a free consultation and discover how we can help your business.
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Cloud Migration</h3>
+              <p className="text-gray-300 mb-4">
+                Seamless migration to cloud platforms with minimal disruption to your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Phone className="w-5 h-5 inline mr-2" />
-
-                  Call Us
-                </button>
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us
-                </button>
-              </div>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Cloud Strategy Planning</li>
+                <li>• Migration Execution</li>
+                <li>• Cost Optimization</li>
+                <li>• Security Implementation</li>
+              </ul>
             </div>
-          </section>
-
-
-        </main>
-        
-        <Footer />
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity Consulting</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive security assessments and implementation of best practices.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Security Audits</li>
+                <li>• Risk Assessment</li>
+                <li>• Compliance Planning</li>
+                <li>• Incident Response</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-
-
     </>
   );
 };
 
 export default ITConsultingPage;
-
-
-
