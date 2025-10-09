@@ -62,10 +62,9 @@ const Footer: React.FC = memo(() => {
   const resources = [
     { name: 'Blog & Insights', path: '/blog' },
     { name: 'Technical Guides', path: '/guides' },
-    { name: 'Documentation', path: '/docs' },
-    { name: 'API Reference', path: '/api' },
     { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' }
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Sitemap', path: '/sitemap' }
   ];
 
   return (

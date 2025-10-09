@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Sidebar as SidebarIcon } from 'lucide-react';
+import Sidebar from './Sidebar';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
@@ -22,6 +24,7 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setIsOpen(false);
+    setSidebarOpen(false);
   };
 
   const serviceCategories = [
@@ -193,6 +196,15 @@ const Navigation: React.FC = () => {
             </a>
           </div>
 
+          {/* Sidebar Toggle Button */}
+          <button
+            className="lg:hidden p-2 mr-2"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label="Toggle sidebar"
+          >
+            <SidebarIcon className={`w-6 h-6 ${isScrolled ? 'text-gray-700' : 'text-white'}`} />
+          </button>
+
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2"
@@ -293,6 +305,9 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </div>
+
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
     </nav>
   );
 };

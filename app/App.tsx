@@ -69,7 +69,8 @@ const _RoboticsPage = lazy(() => import('./robotics/page'));
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog/page'));
 const _GuidesPage = lazy(() => import('./guides/page'));
-const _SitemapPage = lazy(() => import('./sitemap-page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
+const _OfflinePage = lazy(() => import('./offline/page'));
 
 // Utils
 import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
@@ -240,6 +241,7 @@ const App: React.FC = () => {
                         <Route path="/blog" element={<_BlogPage />} />
                         <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
+                        <Route path="/offline" element={<_OfflinePage />} />
                       </Routes>
                     </Suspense>
                   </main>
