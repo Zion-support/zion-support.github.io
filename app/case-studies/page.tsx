@@ -70,15 +70,7 @@ const CaseStudiesPage: React.FC = () => {
   ];
   return (
     <>
-<<<<<<< HEAD
-      
-      
-=======
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
->>>>>>> origin/main
+
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">

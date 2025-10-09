@@ -14,12 +14,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-<<<<<<< HEAD
-=======
   typescript: {
     ignoreBuildErrors: true,
   },
->>>>>>> origin/main
   
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],

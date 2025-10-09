@@ -138,16 +138,7 @@ const AIMarketingPage: React.FC = () => {
   const categories = [...new Set(aiMarketingServices.map(service => service.category))];
   return (
     <>
-<<<<<<< HEAD
-      
 
-=======
-      <Helmet>
-        <title>AI Marketing Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered marketing solutions including ad optimization, content generation, social media management, and customer journey mapping." />
-        <meta name="keywords" content="AI marketing, marketing automation, ad optimization, content generation, social media AI, email marketing AI" />
-      </Helmet>
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-pink-600 to-rose-700 text-white py-20">

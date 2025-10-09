@@ -135,26 +135,7 @@ const Navigation: React.FC = () => {
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
-<<<<<<< HEAD
-=======
 
-            <Link 
-              href="/solutions" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Solutions
-            </Link>
-
-            <Link 
-              href="/industries" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Industries
-            </Link>
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -223,46 +204,12 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
-<<<<<<< HEAD
-            <Link 
-              href="/blog" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-=======
 
-            <Link 
-              href="/resources" 
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Resources
-            </Link>
-            
-            <Link
-              href="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Blog
             </Link>
-<<<<<<< HEAD
-            <Link 
-              href="/contact" 
-              className="font-medium transition-colors hover:text-cyan-400 text-white"
-=======
 
-            <Link
-              href="/pricing"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Pricing
-            </Link>
-            
-            <Link
-              href="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Contact
@@ -304,58 +251,7 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
-<<<<<<< HEAD
-=======
 
-              <Link 
-                href="/solutions" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Solutions
-              </Link>
-
-              <Link 
-                href="/industries" 
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Industries
-              </Link>
-
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="ml-4 space-y-2 mt-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex} className="space-y-1">
-                        <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 4).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/services"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -363,18 +259,7 @@ const Navigation: React.FC = () => {
               >
                 Services
               </Link>
-<<<<<<< HEAD
-=======
 
-              <Link
-                href="/resources"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Resources
-              </Link>
-              
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -382,18 +267,7 @@ const Navigation: React.FC = () => {
               >
                 Blog
               </Link>
-<<<<<<< HEAD
-=======
 
-              <Link
-                href="/pricing"
-                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
-                onClick={closeAllMenus}
-              >
-                Pricing
-              </Link>
-              
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"

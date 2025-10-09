@@ -1,12 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
-=======
-import Link from 'next/link';
-import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/main
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -86,15 +80,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-<<<<<<< HEAD
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
-=======
-              <Link
-                href="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
->>>>>>> origin/main
+
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home

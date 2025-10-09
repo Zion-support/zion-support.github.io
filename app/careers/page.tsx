@@ -1,13 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { MapPin, Clock } from 'lucide-react';
 
-=======
-import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
->>>>>>> origin/main
 const CareersPage: React.FC = () => {
   const positions = [
     {

@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/main
 const SitemapPage: React.FC = () => {
   const pages = [
     { url: '/', title: 'Home', priority: '1.0' },

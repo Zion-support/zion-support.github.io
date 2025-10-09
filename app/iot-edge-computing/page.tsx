@@ -138,16 +138,7 @@ const IoTEdgeComputingPage: React.FC = () => {
   const _categories = [...new Set(iotServices.map(service => service.category))];
   return (
     <>
-<<<<<<< HEAD
-      
 
-=======
-      <Helmet>
-        <title>IoT & Edge Computing Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced IoT and edge computing solutions for smart cities, industrial automation, and connected devices." />
-        <meta name="keywords" content="IoT services, edge computing, smart cities, industrial IoT, sensor networks, connected devices" />
-      </Helmet>
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">

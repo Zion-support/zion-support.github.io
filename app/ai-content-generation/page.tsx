@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> origin/main
+
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
 const AIContentGenerationPage: React.FC = () => {
@@ -71,17 +67,7 @@ const AIContentGenerationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      
 
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
->>>>>>> origin/main
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

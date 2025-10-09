@@ -15,19 +15,4 @@ const SystemStatusPage: React.FC = () => {
               Real-time status of our systems
             </p>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div></div>
-  );
-};
 
-export default SystemStatusPage;
-=======
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
-};
-export default SystemStatusPage;
->>>>>>> origin/main

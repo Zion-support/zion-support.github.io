@@ -1,25 +1,5 @@
 'use client';
-<<<<<<< HEAD
 
-import React, { useEffect, createContext, useContext } from 'react';
-
-interface AnalyticsContextType {
-  trackPerformance: (name: string, value: number) => void;
-  trackError: (error: Error, context?: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-=======
->>>>>>> origin/main
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -98,56 +78,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     initAnalytics();
     trackPageView();
     trackInteractions();
-<<<<<<< HEAD
 
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-=======
->>>>>>> origin/main
     window.addEventListener('popstate', handleRouteChange);
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
-<<<<<<< HEAD
 
-  const trackPerformance = (name: string, value: number) => {
-    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metric', {
-        event_category: 'performance',
-        event_label: name,
-        value: value
-      });
-    }
-  };
-
-  const trackError = (error: Error, context?: string) => {
-    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_context: context || 'unknown',
-          error_stack: error.stack || ''
-        }
-      });
-    }
-  };
-
-  const contextValue: AnalyticsContextType = {
-    trackPerformance,
-    trackError
-  };
-
-  return (
-    <AnalyticsContext.Provider value={contextValue}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-=======
-  return <>{children}</>;
->>>>>>> origin/main
 };
 export default AnalyticsProvider;

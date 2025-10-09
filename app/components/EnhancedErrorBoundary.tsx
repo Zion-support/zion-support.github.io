@@ -37,23 +37,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
 
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-=======
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-    // Enhanced error reporting
->>>>>>> origin/main
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
@@ -146,76 +130,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
       const { retryCount, error, errorId } = this.state;
-=======
+
       const canRetry = retryCount < this.maxRetries;
-=======
-=======
-=======
+
       const canRetry = retryCount < this.maxRetries;
-=======
+
       const canRetry = retryCount < this.maxRetries;
       return (
-<<<<<<< HEAD
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {this.state.errorId}</p>
-          {this.state.retryCount < this.maxRetries && (
-            <button onClick={this.handleRetry}>
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <div className="space-y-4">
-              {canRetry && (
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
-                  Try Again ({this.maxRetries - retryCount} attempts left)
-                </button>
-              )}
-              <button
-                onClick={this.handleReload}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={this.handleGoHome}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Go Home
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-                <button
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
-                </button>
-              </details>
-            )}
-          </div>
->>>>>>> origin/main
+
         </div>
       );
     }

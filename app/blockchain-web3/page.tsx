@@ -138,16 +138,7 @@ const BlockchainWeb3Page: React.FC = () => {
   // const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
     <>
-<<<<<<< HEAD
-      
 
-=======
-      <Helmet>
-        <title>Blockchain & Web3 Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced blockchain and Web3 development services including DeFi, NFTs, smart contracts, and metaverse solutions." />
-        <meta name="keywords" content="blockchain development, Web3, DeFi, NFTs, smart contracts, DAOs, cryptocurrency, metaverse" />
-      </Helmet>
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">

@@ -1,10 +1,6 @@
 'use client';
 import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 
-=======
-import { useAnalytics } from '../components/AnalyticsProvider';
->>>>>>> origin/main
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
 declare global {
@@ -13,24 +9,7 @@ declare global {
   }
 }
 export const useErrorMonitoring = () => {
-<<<<<<< HEAD
-  const trackError = useCallback((error: Error, context?: string) => {
-    // Track errors without analytics provider
-    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_context: context || 'unknown',
-          error_stack: error.stack || ''
-        }
-      });
-    }
-  }, []);
 
-=======
-  const { trackError } = useAnalytics();
->>>>>>> origin/main
   const reportError = useCallback(
     (error: Error, context?: string) => {
       trackError(error, context);

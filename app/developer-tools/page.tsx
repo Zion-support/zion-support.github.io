@@ -21,9 +21,4 @@ const DeveloperToolsPage: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
 
-export default DevelopertoolsPage;
-=======
-export default DeveloperToolsPage;
->>>>>>> origin/main

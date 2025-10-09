@@ -183,11 +183,7 @@ const AIDataAnalyticsPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-<<<<<<< HEAD
-      
 
-=======
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>

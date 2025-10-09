@@ -1,23 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/main
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
 
-      
-
-=======
-      <Helmet>
-        <title>Operational Trust Scorecards v3</title>
-        <meta name="description" content="Measure reliability, cost, safety, and value with live AI scorecards." />
-        <meta property="og:type" content="article" />
-      </Helmet>
->>>>>>> origin/main
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">

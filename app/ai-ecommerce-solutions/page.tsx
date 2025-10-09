@@ -189,16 +189,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
   ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
-<<<<<<< HEAD
-      
 
-=======
-      <Helmet>
-        <title>AI E-commerce Solutions | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered e-commerce solutions including personalized shopping, inventory management, payment processing, and marketing automation. Boost your online sales with cutting-edge technology." />
-        <meta name="keywords" content="AI e-commerce, online store, e-commerce platform, inventory management, payment processing, marketing automation, customer service" />
-      </Helmet>
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>

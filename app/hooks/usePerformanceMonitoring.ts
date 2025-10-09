@@ -1,27 +1,9 @@
 'use client';
 import { useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 
-=======
-import { useAnalytics } from '../components/AnalyticsProvider';
->>>>>>> origin/main
 // PerformanceMetrics interface removed as it's not used in this hook
 export const usePerformanceMonitoring = () => {
-<<<<<<< HEAD
-  const trackPerformance = useCallback((name: string, value: number) => {
-    // Track performance metrics without analytics provider
-    if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'performance_metric', {
-        event_category: 'performance',
-        event_label: name,
-        value: value
-      });
-    }
-  }, []);
 
-=======
-  const { trackPerformance } = useAnalytics();
->>>>>>> origin/main
   const reportMetric = useCallback(
     (name: string, value: number) => {
       trackPerformance(name, value);

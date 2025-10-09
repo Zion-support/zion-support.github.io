@@ -1,10 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> origin/main
+
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
@@ -143,15 +139,7 @@ const AIFintechPage: React.FC = () => {
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
-<<<<<<< HEAD
-    <>
-      
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
->>>>>>> origin/main
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

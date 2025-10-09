@@ -197,16 +197,7 @@ const ITInfrastructurePage: React.FC = () => {
   ];
   return (
     <>
-<<<<<<< HEAD
-      
 
-=======
-      <Helmet>
-        <title>IT Infrastructure Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT infrastructure services including cloud management, DevOps, database administration, and 24/7 support. Enterprise-grade solutions at competitive prices." />
-        <meta name="keywords" content="IT infrastructure, cloud management, DevOps, database administration, server management, IT support, cybersecurity" />
-      </Helmet>
->>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
