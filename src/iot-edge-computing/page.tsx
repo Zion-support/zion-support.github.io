@@ -136,7 +136,7 @@ const IoTEdgeComputingPage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Risk Analysis', 'ROI Modeling']
     }
   ];
-  const _categories = [...new Set(iotServices.map(service => service.category))];
+  const categories = [...new Set(iotServices.map(service => service.category))];
   return (
     <>
       <Helmet>

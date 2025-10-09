@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -13,23 +12,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-gray-900">
+              <a href="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
-              </Link>
+              </a>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-blue-600">
+              <a href="/" className="text-gray-900 hover:text-blue-600">
                 Home
-              </Link>
-              <Link href="/services" className="text-gray-900 hover:text-blue-600">
+              </a>
+              <a href="/services" className="text-gray-900 hover:text-blue-600">
                 Services
-              </Link>
-              <Link href="/blog" className="text-gray-900 hover:text-blue-600">
+              </a>
+              <a href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
-              </Link>
-              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
+              </a>
+              <a href="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
-              </Link>
+              </a>
             </nav>
           </div>
         </div>
@@ -47,13 +46,12 @@ export default function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
+              <a href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
-                <Link className="w-5 h-5 ml-2" />
-              </Link>
+                <a className="w-5 h-5 ml-2" />
+              </a>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
@@ -99,7 +97,7 @@ export default function HomePage() {
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Link className="w-6 h-6 text-purple-600" />
+                  <a className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Fast Implementation
@@ -121,20 +119,18 @@ export default function HomePage() {
               Let's discuss how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <a href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
-                <Link className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                href="/blog"
+                <a className="w-5 h-5 ml-2" />
+              </a>
+              <a href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -148,10 +144,10 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <a href="/services" className="text-gray-400 hover:text-white">Services</a>
+              <a href="/about" className="text-gray-400 hover:text-white">About</a>
+              <a href="/contact" className="text-gray-400 hover:text-white">Contact</a>
+              <a href="/privacy" className="text-gray-400 hover:text-white">Privacy</a>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">

@@ -15,7 +15,13 @@ const Footer: React.FC = () => {
     { name: 'AI Video Editor', url: '/ai-video-editor', description: 'AI-powered video editing' },
     { name: 'AI Legal Assistant', url: '/ai-legal-assistant', description: 'Legal document analysis' },
     { name: 'AI Healthcare Assistant', url: '/ai-healthcare-assistant', description: 'Medical data analysis' },
-    { name: 'AI Real Estate Assistant', url: '/ai-real-estate-assistant', description: 'Property management' }
+    { name: 'AI Real Estate Assistant', url: '/ai-real-estate-assistant', description: 'Property management' },
+    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
+    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
+    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
+    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
+    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
+    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
   ];
 
   const aiServices = [
@@ -30,7 +36,13 @@ const Footer: React.FC = () => {
     { name: 'AI Recommendation Engine', url: '/ai-recommendation-engine', description: 'Personalization systems' },
     { name: 'AI Data Mining', url: '/ai-data-mining', description: 'Pattern recognition' },
     { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Edge AI solutions' },
-    { name: 'AI Fraud Detection', url: '/ai-fraud-detection', description: 'Advanced fraud prevention' }
+    { name: 'AI Fraud Detection', url: '/ai-fraud-detection', description: 'Advanced fraud prevention' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI applications' },
+    { name: 'AI Fintech Solutions', url: '/ai-fintech', description: 'Financial AI services' },
+    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Smart mobile apps' },
+    { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
+    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
+    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
   ];
 
   const itServices = [
@@ -45,7 +57,12 @@ const Footer: React.FC = () => {
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT consulting' },
     { name: 'Mobile App Development', url: '/mobile-app-development', description: 'Native & cross-platform apps' },
     { name: 'Web Development', url: '/web-development', description: 'Modern web applications' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle management' }
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle management' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
+    { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
+    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
+    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
   ];
 
   const specializedServices = [
@@ -60,7 +77,13 @@ const Footer: React.FC = () => {
     { name: '5G Network Solutions', url: '/5g-network-solutions', description: 'Next-gen connectivity' },
     { name: 'AI Ethics & Governance', url: '/ai-ethics-governance', description: 'Responsible AI' },
     { name: 'Space Technology Solutions', url: '/space-technology-solutions', description: 'Satellite technology' },
-    { name: 'Neuromorphic Computing', url: '/neuromorphic-computing', description: 'Brain-inspired computing' }
+    { name: 'Neuromorphic Computing', url: '/neuromorphic-computing', description: 'Brain-inspired computing' },
+    { name: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-grade solutions' },
+    { name: 'Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics' },
+    { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
+    { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
+    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
+    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
   ];
 
   const additionalServices = [

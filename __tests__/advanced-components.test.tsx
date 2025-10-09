@@ -1,9 +1,9 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 import { MemoryRouter, RouterProvider, createMemoryRouter } from 'react-router-dom';
-import AdvancedErrorBoundary from '../app/components/AdvancedErrorBoundary';
-import AdvancedSEOOptimizer from '../app/components/AdvancedSEOOptimizer';
-import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
+import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from '../src/components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from '../src/components/AdvancedPerformanceMonitor';
 
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {

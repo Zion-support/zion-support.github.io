@@ -1,6 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 const UltimateBusinessIntelligenceShowcase2025 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const content = [
@@ -166,13 +165,12 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 ))}
               </div>
               {/* CTA */}
-              <Link
-                href={item.url}
+              <a href={item.url}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
               >
                 Read {item.readingTime}
                 <span className="text-lg">→</span>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -186,8 +184,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               Join thousands of enterprises already using our AI-powered solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link
-                to="/contact"
+              <a href="/contact"
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
               >
                 Start Your Transformation
@@ -199,13 +196,12 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </Link>
-              <Link
-                to="/services"
+              </a>
+              <a href="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </div>
         </div>

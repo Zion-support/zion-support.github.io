@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -120,15 +119,14 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {/* Date and CTA */}
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
-          <Link
-            href={path}
+          <a href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
             Read Article
             <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
       </div>
     </article>
