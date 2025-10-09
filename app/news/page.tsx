@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { Calendar, ArrowRight, ExternalLink } from 'lucide-react';
 
@@ -277,13 +279,8 @@ const NewsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section>    </div>
   );
 };
 
 export default NewsPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

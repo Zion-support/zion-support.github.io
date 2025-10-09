@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, BarChart, TrendingUp, Target } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {

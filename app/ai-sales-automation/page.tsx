@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
 
 const AISalesAutomationPage: React.FC = () => {

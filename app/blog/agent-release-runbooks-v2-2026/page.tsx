@@ -1,4 +1,6 @@
 import Link from 'next/link';
+
+export const dynamic = 'force-dynamic';
 import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
 
 export default function Page() {

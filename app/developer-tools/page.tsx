@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -24,10 +26,8 @@ const DevelopertoolsPage: React.FC = () => {
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default DevelopertoolsPage;
- cursor/analyze-improve-and-deploy-application-cde4

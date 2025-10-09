@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, Atom, Cpu, Shield, Zap, Target, BarChart, Brain, Lock } from 'lucide-react';
 
 const QuantumComputingPage: React.FC = () => {

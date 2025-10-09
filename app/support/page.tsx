@@ -2,6 +2,8 @@
 'use client';
 
 import React, { useState } from 'react';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, HelpCircle, FileText, Video, BookOpen } from 'lucide-react';
 
@@ -292,13 +294,8 @@ const SupportPage: React.FC = () => {
             <p>🕒 Available 24/7 for all support requests</p>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section>    </div>
   );
 };
 
 export default SupportPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

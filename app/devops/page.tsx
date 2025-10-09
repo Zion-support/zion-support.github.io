@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';

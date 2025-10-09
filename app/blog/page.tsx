@@ -1,6 +1,8 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 

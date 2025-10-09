@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
 
 const AutonomousSystemsPage: React.FC = () => {

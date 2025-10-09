@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, MessageCircle, Clock, Users, Shield } from 'lucide-react';
 
 const AICustomerSupportPage: React.FC = () => {

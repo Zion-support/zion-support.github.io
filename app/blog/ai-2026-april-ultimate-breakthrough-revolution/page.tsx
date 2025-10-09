@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 // import { Metadata } from 'next'; // Removed for Vite
 
 // Metadata removed for Vite compatibility

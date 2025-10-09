@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Settings, BarChart, User } from 'lucide-react';
 
@@ -236,11 +238,8 @@ const CookiesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default CookiesPage;
- cursor/analyze-improve-and-deploy-application-cde4

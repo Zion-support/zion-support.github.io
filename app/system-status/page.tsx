@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
@@ -39,13 +41,8 @@ const SystemStatusPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </div>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </div>    </div>
   );
 };
 
 export default SystemStatusPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

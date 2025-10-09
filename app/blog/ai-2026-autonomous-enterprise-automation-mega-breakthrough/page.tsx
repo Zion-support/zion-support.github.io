@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+export const dynamic = 'force-dynamic';
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 
@@ -73,11 +74,6 @@ const CaseStudiesPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Explore our successful AI implementation case studies. See how we've helped companies achieve 300%+ ROI with our AI solutions." />
-      </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Header */}
         <header className="bg-white shadow-sm border-b">

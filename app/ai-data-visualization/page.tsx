@@ -1,4 +1,6 @@
 import React from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
 
 const AIDataVisualizationPage: React.FC = () => {

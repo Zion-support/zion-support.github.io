@@ -3,6 +3,8 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Download, Eye, Trash2, Edit, Lock } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 const GdprPage: React.FC = () => {
   const rights = [
     {
@@ -224,13 +226,8 @@ const GdprPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section>    </div>
   );
 };
 
 export default GdprPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

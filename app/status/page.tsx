@@ -2,6 +2,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+
+export const dynamic = 'force-dynamic';
 import { CheckCircle, XCircle, AlertCircle, Clock, RefreshCw } from 'lucide-react';
 
 const StatusPage: React.FC = () => {
@@ -252,10 +254,7 @@ const StatusPage: React.FC = () => {
                 <div className="mt-4">
                   <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(service.status)}`}>
                     {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
-                  </span>
-
- cursor/analyze-improve-and-deploy-application-cde4
-                </div>
+                  </span>                </div>
               </div>
             ))}
           </div>
@@ -339,13 +338,8 @@ const StatusPage: React.FC = () => {
             This status page is updated every minute. For more information, contact our support team.
           </p>
         </div>
-      </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
-    </div>
+      </section>    </div>
   );
 };
 
 export default StatusPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

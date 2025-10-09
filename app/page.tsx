@@ -1,5 +1,7 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+
+export const dynamic = 'force-dynamic';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
