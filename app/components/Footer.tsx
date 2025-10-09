@@ -1,9 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
-=======
 import { 
   Phone, 
   Mail, 
@@ -26,7 +22,6 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 
 const Footer: React.FC = memo(() => {
   const aiServices = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+// No lucide-react imports needed for this component
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -137,4 +137,71 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <Helmet>
+        <title>Business Intelligence Services | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with our comprehensive business intelligence services including data analytics, reporting, and strategic consulting." />
+      </Helmet>
+      
+      {/* Header Section */}
+      <div className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Business Intelligence Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our comprehensive BI solutions
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {biServices.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="text-3xl mb-4">{service.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+              <p className="text-gray-600 mb-4">{service.description}</p>
+              <div className="text-2xl font-bold text-blue-600 mb-2">{service.price}</div>
+              <div className="text-sm text-gray-500 mb-4">Market rate: {service.marketPrice}</div>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx}>• {feature}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  {service.benefits.map((benefit, idx) => (
+                    <li key={idx}>• {benefit}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="mb-4">
+                <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.technologies.map((tech, idx) => (
+                    <span key={idx} className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BusinessIntelligencePage;
 
