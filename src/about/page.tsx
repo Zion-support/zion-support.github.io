@@ -86,6 +86,7 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
       </section>
 
         {/* Stats Section */}
