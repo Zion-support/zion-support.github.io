@@ -1,18 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
-=======
-import { Link } from 'react-router-dom';
-import { Phone, CheckCircle, Star } from 'lucide-react';
-export const _metadata = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };

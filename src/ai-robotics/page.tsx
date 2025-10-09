@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const AIRoboticsPage: React.FC = () => {
   const _features = [
     {
@@ -106,6 +100,3 @@ const AIRoboticsPage: React.FC = () => {
 };
 
 export default AIRoboticsPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

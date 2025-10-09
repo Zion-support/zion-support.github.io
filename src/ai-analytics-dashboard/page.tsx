@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+
+
 
 const AiAnalyticsDashboardPage: React.FC = () => {
   return (

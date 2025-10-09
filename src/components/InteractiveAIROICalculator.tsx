@@ -4,18 +4,10 @@ const InteractiveAIROICalculator: React.FC = () => {
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-<<<<<<< HEAD
   const calculateROI = () => {
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
-=======
-  const _calculateROI = () => {
-    const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = annualSavings * (timeframe / 12);
-    const _roi = ((totalSavings - currentCost) / currentCost) * 100;
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-    return Math.max(0, roi);
+    const roi = ((totalSavings - currentCost) / currentCost) * 100;    return Math.max(0, roi);
   };
   const roi = calculateROI();
   return (

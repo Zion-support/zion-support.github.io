@@ -1,110 +1,71 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Brain, Shield, Target, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
-import Footer from '../components/Footer';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-
-const AboutPage: React.FC = () => {
-=======
 import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-  const _team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.',
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-    },
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   const values = [
     {
+      icon: Target,
+      title: 'Excellence',
+      description: 'We strive for excellence in everything we do, delivering solutions that exceed expectations.'
+    },
+    {
       icon: Brain,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.',
-    },
-    {
-      icon: Target,
-      title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.',
+      description: 'We embrace cutting-edge technology and innovative approaches to solve complex problems.'
     },
     {
       icon: Users,
-      title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.',
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners, ensuring their success is our success.'
     },
+    {
+      icon: Shield,
+      title: 'Integrity',
+      description: 'We maintain the highest standards of integrity and transparency in all our interactions.'
+    }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '150+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' },
+  const team = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      bio: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead Developer',
+      bio: 'Full-stack developer passionate about creating scalable solutions.'
+    }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   return (
-<<<<<<< HEAD
-    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             About Zion Tech Group
           </h1>
-          <p className='text-xl text-gray-600'>
+          <p className="text-xl text-gray-600">
             Leading the future of AI and IT solutions
           </p>
         </div>
-        <div className='prose prose-lg max-w-none'>
-          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
-            <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-              Our Mission
-            </h2>
-            <p className='text-gray-600 mb-4'>
-              At Zion Tech Group, we are dedicated to transforming
-              businesses through cutting-edge AI and IT solutions. Our
-              mission is to empower organizations with the technology they
-              need to thrive in the digital age.
-            </p>
-            <p className='text-gray-600'>
-              We combine deep technical expertise with innovative thinking
-              to deliver solutions that drive real business value.
-            </p>
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1907
 
-      {/* Stats Section */}
-        <section className="py-16 bg-white">
+        {/* Stats Section */}
+        <section className="py-16 bg-white rounded-lg shadow-lg mb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -122,7 +83,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 rounded-lg shadow-lg mb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -157,7 +118,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Values Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white rounded-lg shadow-lg mb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -187,7 +148,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-50 rounded-lg shadow-lg mb-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -224,7 +185,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg shadow-lg">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
@@ -248,18 +209,9 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </section>
+      </div>
 
       <Footer />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">About</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced about solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
-        </a>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
     </div>
   );
 };

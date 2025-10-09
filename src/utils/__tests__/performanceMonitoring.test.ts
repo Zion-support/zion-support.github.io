@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {
   recordMetric,
   getMetrics,
@@ -202,5 +202,4 @@ describe('performanceMonitoring', () => {
     });
   });
 });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
+

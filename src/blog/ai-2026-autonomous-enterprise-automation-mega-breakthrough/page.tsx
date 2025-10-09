@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import { Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-// import { Metadata } from 'next'; // Removed for Vite
+import React from 'react';// import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
   return (

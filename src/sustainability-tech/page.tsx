@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Leaf, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const SustainabilityTechPage: React.FC = () => {
   const _features = [
     {
@@ -106,6 +100,3 @@ const SustainabilityTechPage: React.FC = () => {
 };
 
 export default SustainabilityTechPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

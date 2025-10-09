@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-export default function AIAutonomousBusinessSystems2026() {
+import React from 'react';export default function AIAutonomousBusinessSystems2026() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">

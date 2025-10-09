@@ -1,11 +1,5 @@
 'use client';
-<<<<<<< HEAD
-export const usePerformanceMonitoring = () => {
-=======
-import { useEffect, useCallback } from 'react';
-export const _usePerformanceMonitoring = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-  const reportWebVitals = useCallback((metric: any) => {
+export const usePerformanceMonitoring = () => {  const reportWebVitals = useCallback((metric: any) => {
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
     if (navigator.sendBeacon) {

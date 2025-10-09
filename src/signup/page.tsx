@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -364,6 +359,4 @@ const SignupPage: React.FC = () => {
 };
 
 export default SignupPage;
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
+

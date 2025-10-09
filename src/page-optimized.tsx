@@ -3,15 +3,8 @@ import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PerformanceMonitor from './components/PerformanceMonitor';
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Fallback component
-<<<<<<< HEAD
-const EmptyComponent = () => null;
-=======
-const __EmptyComponent = () => null;
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-// Lazy load heavy components - these may not exist, so make them optional
+const EmptyComponent = () => null;// Lazy load heavy components - these may not exist, so make them optional
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
@@ -30,27 +23,6 @@ const ContentShowcase = lazy(() =>
     default: EmptyComponent
   }))
 );
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
-=======
-
-// Lazy load heavy components - these may not exist, so make them optional
-// const UnifiedBanner = lazy(() =>
-//   import('./components/NewestContent2025Banner').catch(() =>
-//     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
-//   )
-// );
-// const ContentPromotion = lazy(() =>
-//   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-//     return { default: EmptyComponent } as { default: React.ComponentType };
-//   })
-// );
-// const ContentShowcase = lazy(() =>
-//   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-//     default: EmptyComponent
-//   }))
-// );
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">

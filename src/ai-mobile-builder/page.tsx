@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Smartphone, Target, Zap, Settings, CheckCircle, Star, Code} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const AIMobileBuilderPage: React.FC = () => {
   const _features = [
     {
@@ -106,6 +100,3 @@ const AIMobileBuilderPage: React.FC = () => {
 };
 
 export default AIMobileBuilderPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

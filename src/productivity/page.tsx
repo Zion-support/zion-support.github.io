@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const ProductivityPage: React.FC = () => {
   const _productivityTools = [
     {
@@ -280,6 +274,3 @@ const ProductivityPage: React.FC = () => {
 };
 
 export default ProductivityPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

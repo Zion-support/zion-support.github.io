@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Building, Target, Zap, Settings, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const SmartCitiesPage: React.FC = () => {
   const _features = [
     {
@@ -106,6 +100,3 @@ const SmartCitiesPage: React.FC = () => {
 };
 
 export default SmartCitiesPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

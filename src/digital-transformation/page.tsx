@@ -1,12 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
-import {Target, Zap, Settings, BarChart, CheckCircle, Star} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
-
 const DigitalTransformationPage: React.FC = () => {
   const _features = [
     {
@@ -106,6 +100,3 @@ const DigitalTransformationPage: React.FC = () => {
 };
 
 export default DigitalTransformationPage;
-=======
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f
