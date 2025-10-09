@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Database, Brain, BarChart3, Target } from 'lucide-react';
 
 const AIDataAnalyticsPage: React.FC = () => {
   const analyticsServices = [
@@ -165,22 +165,22 @@ const AIDataAnalyticsPage: React.FC = () => {
     {
       title: 'Advanced Data Processing',
       description: 'Handle massive datasets with real-time processing capabilities',
-      icon: <Database className="w-8 h-8 text-blue-600" />
+      icon: 'Database'
     },
     {
       title: 'Machine Learning Models',
       description: 'Custom ML models trained on your specific data',
-      icon: <Brain className="w-8 h-8 text-purple-600" />
+      icon: 'Brain'
     },
     {
       title: 'Interactive Dashboards',
       description: 'Beautiful, responsive dashboards for all devices',
-      icon: <BarChart3 className="w-8 h-8 text-green-600" />
+      icon: 'BarChart3'
     },
     {
       title: 'Predictive Insights',
       description: 'AI-powered predictions and recommendations',
-      icon: <Target className="w-8 h-8 text-orange-600" />
+      icon: 'Target'
     }
   ];
 
@@ -287,15 +287,20 @@ const AIDataAnalyticsPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {additionalFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
+            {additionalFeatures.map((feature, index) => {
+              const IconComponent = feature.icon === 'Database' ? Database :
+                                  feature.icon === 'Brain' ? Brain :
+                                  feature.icon === 'BarChart3' ? BarChart3 : Target;
+              return (
+                <div key={index} className="text-center">
+                  <div className="flex justify-center mb-4">
+                    <IconComponent className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

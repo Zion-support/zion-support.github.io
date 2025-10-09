@@ -1,28 +1,6 @@
-<<<<<<< HEAD
 'use client';
-=======
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-
-const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
 import Link from 'next/link';
-=======
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -319,57 +297,6 @@ console.log(result.predictions);`,
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                All API requests require authentication using your API key. Include it in the Authorization header:
-              </p>
-              <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
-              </code>
-            </div>
-            
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
-                API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:dev@ziontechgroup.com"
-              className="cyber-button"
-            >
-              Email Support
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button"
-            >
-              Contact Us
-            </a>
-          </div>
-
-        </section>
-      </main>
-      
-      <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
-=======
         </div>
       </section>
 
@@ -502,13 +429,13 @@ console.log(result.predictions);`,
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               Get API Key
             </Link>
             <Link 
-              to="/docs"
+              href="/docs"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Full Docs
@@ -516,13 +443,8 @@ console.log(result.predictions);`,
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
     </div>
   );
 };
 
 export default ApiDocsPage;
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
