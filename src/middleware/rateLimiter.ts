@@ -38,11 +38,11 @@ export class RateLimiter {
    * @returns Whether the request is allowed
    */
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
-    const _now = Date.now();
-    const _record = this.requests.get(identifier);
+    const now = Date.now();
+    const record = this.requests.get(identifier);
     // No record or expired
     if (!record || now > record.resetTime) {
-      const _resetTime = now + this.config.windowMs;
+      const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
     }
@@ -70,7 +70,7 @@ export class RateLimiter {
    * Cleanup expired entries
    */
   private cleanup(): void {
-    const _now = Date.now();
+    const now = Date.now();
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
         this.requests.delete(key);
