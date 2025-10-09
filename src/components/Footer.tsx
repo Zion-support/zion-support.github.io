@@ -6,6 +6,16 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
+  const microSaasServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning', icon: '📊', popular: true },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media', icon: '📱', popular: true },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'AI-powered analytics', icon: '📈', popular: true },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support', icon: '🤖', popular: true },
+    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis', icon: '🔍', popular: false },
+    { name: 'AI Content Generator', url: '/ai-content-generation', description: 'AI content creation', icon: '✍️', popular: false },
+    { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
+  ];
 
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -15,40 +25,16 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
-    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
-    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
-    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
-    { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Intelligent document processing' },
-    { name: 'AI Machine Learning Platform', url: '/ai-ml-platform', description: 'Complete ML platform' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Advanced computer vision' },
-    { name: 'AI Natural Language Processing', url: '/ai-nlp', description: 'Advanced NLP solutions' },
-    { name: 'AI Robotics Platform', url: '/ai-robotics', description: 'Intelligent robotics' },
-    { name: 'AI Research & Development', url: '/ai-research-development', description: 'Custom AI R&D' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'AI at the edge' }
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' }
   ];
 
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud migration & setup' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'DevOps automation' },
-    { name: 'Database Management', url: '/database-management', description: 'Database management' },
-    { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
-    { name: 'System Administration', url: '/system-administration', description: 'System management' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
-    { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT management' },
-    { name: 'IT Training & Certification', url: '/it-training', description: 'Staff development' },
-    { name: 'IT Infrastructure Design', url: '/it-infrastructure-design', description: 'Custom infrastructure' },
-    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'Real-time monitoring' },
-    { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Disaster recovery' },
-    { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
-    { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
+    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
+    { name: 'DevOps & CI/CD', url: '/devops', description: 'DevOps automation' },
+    { name: 'Database Management', url: '/database', description: 'Database management' },
+    { name: 'Network Solutions', url: '/networking', description: 'Network infrastructure' }
   ];
 
   const emergingTech = [
@@ -57,13 +43,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
-    { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' },
-    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Business modernization' },
-    { name: 'Innovation Labs', url: '/innovation-labs', description: 'R&D and prototyping' },
-    { name: 'Sustainability Tech', url: '/sustainability-tech', description: 'Green technology solutions' },
-    { name: 'Future Technologies', url: '/future-technologies', description: 'Emerging tech solutions' }
+    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
   ];
 
   const companyLinks = [
@@ -201,7 +181,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Emerging Technologies */}
           <div>
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Emerging Tech</h3>
@@ -210,16 +189,6 @@ const Footer: React.FC = memo(() => {
                 <li key={index}>
                   <Link 
                     to={service.url}
-=======
-          {/* Micro SAAS Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS</h3>
-            <ul className="space-y-3">
-              {microSaasServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -230,17 +199,10 @@ const Footer: React.FC = memo(() => {
               ))}
               <li>
                 <Link 
-<<<<<<< HEAD
                   to="/quantum-computing"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All Technologies →
-=======
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Solutions →
->>>>>>> cursor/analyze-improve-and-deploy-application-2e27
                 </Link>
               </li>
             </ul>
