@@ -242,8 +242,9 @@ class PerformanceOptimizer {
   /**
    * Optimize images for better performance
    */
-  optimizeImages(): void {
+  public optimizeImages(): void {
     if (typeof window === 'undefined') return;
+    if (!this.config.enableImageOptimization) return;
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
@@ -277,6 +278,42 @@ class PerformanceOptimizer {
     canvas.width = 1;
     canvas.height = 1;
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  }
+
+  /**
+   * Setup lazy loading for better performance
+   */
+  public setupLazyLoading(): void {
+    if (typeof window === 'undefined') return;
+    if (!this.config.enableLazyLoading) return;
+
+    // Intersection Observer for lazy loading
+    if ('IntersectionObserver' in window) {
+      const lazyElements = document.querySelectorAll('[data-lazy]');
+      const lazyObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            const src = element.getAttribute('data-lazy');
+            if (src) {
+              if (element.tagName === 'IMG') {
+                (element as HTMLImageElement).src = src;
+              } else {
+                element.style.backgroundImage = `url(${src})`;
+              }
+              element.removeAttribute('data-lazy');
+              lazyObserver.unobserve(element);
+            }
+          }
+        });
+      });
+
+      lazyElements.forEach((element) => {
+        lazyObserver.observe(element);
+      });
+    }
+
+    this.metrics.lazyLoading = true;
   }
 
   /**
