@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   return (

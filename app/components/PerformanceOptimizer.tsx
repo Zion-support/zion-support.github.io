@@ -56,7 +56,7 @@ const PerformanceOptimizer: React.FC = () => {
     deferNonCriticalJS();
 
     // Performance monitoring
-    if ('performance' in window) {
+    if ('performance' in window && process.env.NODE_ENV === 'development') {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {

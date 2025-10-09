@@ -31,7 +31,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -41,36 +41,36 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError();
     }
   }
 
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+  private reportError = () => {
     // Enhanced error reporting logic
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
+    // const errorReport = {
+    //   message: error.message,
+    //   stack: error.stack,
+    //   componentStack: errorInfo.componentStack,
+    //   timestamp: new Date().toISOString(),
+    //   userAgent: navigator.userAgent,
+    //   url: window.location.href,
+    // };
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
+      // console.group('🚨 Error Boundary Caught Error');
+      // console.error('Error:', error);
+      // console.error('Error Info:', errorInfo);
+      // console.error('Component Stack:', errorInfo.componentStack);
+      // console.groupEnd();
     }
 
     // Send to error reporting service (implement as needed)
     try {
       // Example: Send to error reporting service
       // errorReportingService.report(errorReport);
-    } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
+    } catch {
+      // console.error('Failed to report error:', reportingError);
     }
   };
 

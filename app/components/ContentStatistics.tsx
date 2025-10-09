@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface ContentStats {
   totalArticles: number;
@@ -28,7 +28,7 @@ const ContentStatistics: React.FC = () => {
   const [selectedPeriod, setSelectedPeriod] = useState<'week' | 'month' | 'year'>('month');
 
   // Mock data - in a real app, this would come from an API
-  const mockStats: ContentStats = {
+  const mockStats: ContentStats = useMemo(() => ({
     totalArticles: 28,
     totalViews: 156750,
     averageEngagement: 89.2,
@@ -55,7 +55,7 @@ const ContentStatistics: React.FC = () => {
       { title: 'AI 2026: Autonomous Enterprise Architecture Revolution', views: 8900, engagement: 91, category: 'Architecture' },
       { title: 'AI 2026: Autonomous Agent Factories Revolution', views: 7200, engagement: 88, category: 'AI Agents' }
     ]
-  };
+  }), []);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -64,7 +64,7 @@ const ContentStatistics: React.FC = () => {
     }, 800);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [mockStats]);
 
   const formatNumber = (num: number): string => {
     if (num >= 1000000) {
@@ -170,7 +170,7 @@ const ContentStatistics: React.FC = () => {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Content Categories</h3>
             <div className="space-y-4">
-              {stats.topCategories.map((category, index) => (
+              {stats.topCategories.map((category) => (
                 <div key={category.name} className="flex items-center justify-between">
                   <div className="flex items-center">
                     <div className="w-3 h-3 rounded-full bg-indigo-500 mr-3"></div>
@@ -196,8 +196,8 @@ const ContentStatistics: React.FC = () => {
           <div className="bg-gray-50 rounded-xl p-6">
             <h3 className="text-xl font-bold text-gray-900 mb-6">Top Performing Articles</h3>
             <div className="space-y-4">
-              {stats.topPerforming.slice(0, 5).map((article, index) => (
-                <div key={index} className="flex items-center justify-between p-3 bg-white rounded-lg">
+              {stats.topPerforming.slice(0, 5).map((article) => (
+                <div key={article.title} className="flex items-center justify-between p-3 bg-white rounded-lg">
                   <div className="flex-1 min-w-0">
                     <div className="text-sm font-medium text-gray-900 truncate">
                       {article.title}
@@ -228,7 +228,7 @@ const ContentStatistics: React.FC = () => {
         <div className="mt-8 bg-gray-50 rounded-xl p-6">
           <h3 className="text-xl font-bold text-gray-900 mb-6">Content Growth Trend</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {stats.monthlyGrowth.map((month, index) => (
+            {stats.monthlyGrowth.map((month) => (
               <div key={month.month} className="text-center">
                 <div className="text-sm text-gray-600 mb-2">{month.month}</div>
                 <div className="bg-indigo-500 rounded-t-lg mx-auto mb-2" style={{ height: `${(month.views / 40000) * 100}px`, width: '20px' }}></div>
