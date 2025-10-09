@@ -73,6 +73,722 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
+      title: 'AI Email Assistant Pro',
+      description: 'Smart email management with AI-powered sorting, auto-responses, and intelligent scheduling',
+      icon: '📧',
+      price: '$49/month',
+      features: ['Smart email sorting', 'Auto-response generation', 'Meeting scheduling', 'Email analytics', 'Spam filtering', 'Priority detection'],
+      benefits: ['60% time saved', '90% email accuracy', '50% response time reduction', 'Better organization'],
+      link: '/ai-email-assistant',
+      popular: true,
+      category: 'Communication'
+    },
+    {
+      title: 'AI Meeting Scheduler',
+      description: 'Automated meeting scheduling with calendar integration and conflict resolution',
+      icon: '📅',
+      price: '$39/month',
+      features: ['Calendar integration', 'Conflict resolution', 'Timezone handling', 'Meeting optimization', 'Follow-up automation', 'Analytics dashboard'],
+      benefits: ['80% scheduling efficiency', 'Zero conflicts', 'Time zone accuracy', 'Automated follow-ups'],
+      link: '/ai-meeting-scheduler',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with OCR, data extraction, and automated categorization',
+      icon: '📄',
+      price: '$79/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Form recognition', 'Batch processing', 'API integration'],
+      benefits: ['95% accuracy', '90% time reduction', 'Automated workflows', 'Error elimination'],
+      link: '/ai-document-processor',
+      popular: true,
+      category: 'Document Management'
+    },
+    {
+      title: 'AI Lead Generator',
+      description: 'Automated lead generation with AI-powered prospecting and qualification',
+      icon: '🎯',
+      price: '$149/month',
+      features: ['Lead prospecting', 'Contact discovery', 'Lead scoring', 'Email sequences', 'CRM integration', 'Analytics tracking'],
+      benefits: ['300% more leads', '85% qualification accuracy', '50% conversion increase', 'Automated nurturing'],
+      link: '/ai-lead-generator',
+      popular: true,
+      category: 'Sales'
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'Smart expense tracking with receipt scanning and automated categorization',
+      icon: '💰',
+      price: '$29/month',
+      features: ['Receipt scanning', 'Auto-categorization', 'Expense reports', 'Budget tracking', 'Tax preparation', 'Mobile app'],
+      benefits: ['90% automation', '100% accuracy', 'Tax compliance', 'Time savings'],
+      link: '/ai-expense-tracker',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Task Manager',
+      description: 'Intelligent task management with priority optimization and deadline tracking',
+      icon: '✅',
+      price: '$59/month',
+      features: ['Smart prioritization', 'Deadline tracking', 'Team collaboration', 'Progress analytics', 'Automation rules', 'Mobile sync'],
+      benefits: ['70% productivity boost', 'Zero missed deadlines', 'Better team coordination', 'Automated workflows'],
+      link: '/ai-task-manager',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Chatbot Builder',
+      description: 'Create intelligent chatbots with no coding required and advanced conversation flows',
+      icon: '🤖',
+      price: '$89/month',
+      features: ['No-code builder', 'Multi-language support', 'Integration APIs', 'Analytics dashboard', 'Custom branding', 'Live chat handoff'],
+      benefits: ['24/7 availability', '80% query resolution', 'Easy setup', 'Scalable solution'],
+      link: '/ai-chatbot-builder',
+      popular: true,
+      category: 'Customer Service'
+    },
+    {
+      title: 'AI Social Media Scheduler',
+      description: 'Smart social media management with AI-powered content optimization and scheduling',
+      icon: '📱',
+      price: '$69/month',
+      features: ['Content scheduling', 'Hashtag optimization', 'Best time posting', 'Analytics insights', 'Multi-platform support', 'Content suggestions'],
+      benefits: ['200% engagement increase', '50% time saved', 'Better reach', 'Optimized timing'],
+      link: '/ai-social-scheduler',
+      popular: true,
+      category: 'Marketing'
+    },
+    {
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice generation with smart templates and payment tracking',
+      icon: '🧾',
+      price: '$39/month',
+      features: ['Auto-generation', 'Smart templates', 'Payment tracking', 'Tax calculations', 'Client management', 'Recurring billing'],
+      benefits: ['90% time reduction', 'Zero errors', 'Faster payments', 'Professional appearance'],
+      link: '/ai-invoice-generator',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Website Analyzer',
+      description: 'Comprehensive website analysis with performance insights and optimization recommendations',
+      icon: '🔍',
+      price: '$79/month',
+      features: ['Performance analysis', 'SEO insights', 'Security scanning', 'Speed optimization', 'Mobile testing', 'Competitor analysis'],
+      benefits: ['Better rankings', 'Faster loading', 'Improved security', 'Higher conversions'],
+      link: '/ai-website-analyzer',
+      popular: true,
+      category: 'Web Development'
+    },
+    {
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security recommendations and breach monitoring',
+      icon: '🔐',
+      price: '$19/month',
+      features: ['Secure storage', 'Password generation', 'Breach monitoring', 'Multi-device sync', 'Family sharing', 'Security audit'],
+      benefits: ['Enhanced security', 'Convenient access', 'Breach protection', 'Peace of mind'],
+      link: '/ai-password-manager',
+      popular: true,
+      category: 'Security'
+    },
+    {
+      title: 'AI Time Tracker',
+      description: 'Intelligent time tracking with automatic project detection and productivity insights',
+      icon: '⏱️',
+      price: '$39/month',
+      features: ['Auto-tracking', 'Project detection', 'Productivity insights', 'Team monitoring', 'Billing integration', 'Reports generation'],
+      benefits: ['Accurate tracking', 'Productivity insights', 'Automated billing', 'Better time management'],
+      link: '/ai-time-tracker',
+      popular: true,
+      category: 'Productivity'
+    },
+    {
+      title: 'AI Meeting Transcriber',
+      description: 'Real-time meeting transcription with AI-powered summaries and action items extraction',
+      icon: '🎙️',
+      price: '$59/month',
+      features: ['Real-time transcription', 'AI summaries', 'Action items extraction', 'Speaker identification', 'Search functionality', 'Export options'],
+      benefits: ['100% accuracy', 'Time savings', 'Better follow-ups', 'Searchable records'],
+      link: '/ai-meeting-transcriber',
+      popular: true,
+      category: 'Communication'
+    },
+    {
+      title: 'AI Customer Feedback Analyzer',
+      description: 'Intelligent analysis of customer feedback with sentiment analysis and actionable insights',
+      icon: '💬',
+      price: '$89/month',
+      features: ['Sentiment analysis', 'Trend identification', 'Actionable insights', 'Multi-channel support', 'Real-time monitoring', 'Custom dashboards'],
+      benefits: ['Better understanding', 'Proactive responses', 'Improved satisfaction', 'Data-driven decisions'],
+      link: '/ai-feedback-analyzer',
+      popular: true,
+      category: 'Customer Service'
+    },
+    {
+      title: 'AI Inventory Optimizer',
+      description: 'Smart inventory management with demand forecasting and automated reordering',
+      icon: '📦',
+      price: '$129/month',
+      features: ['Demand forecasting', 'Auto-reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Reporting dashboard'],
+      benefits: ['30% inventory reduction', 'Zero stockouts', 'Cost optimization', 'Automated management'],
+      link: '/ai-inventory-optimizer',
+      popular: true,
+      category: 'Operations'
+    },
+    {
+      title: 'AI Contract Analyzer',
+      description: 'Intelligent contract analysis with risk assessment and compliance checking',
+      icon: '📋',
+      price: '$199/month',
+      features: ['Risk assessment', 'Compliance checking', 'Clause analysis', 'Renewal tracking', 'Version control', 'Team collaboration'],
+      benefits: ['Risk mitigation', 'Compliance assurance', 'Time savings', 'Better negotiations'],
+      link: '/ai-contract-analyzer',
+      popular: true,
+      category: 'Legal'
+    },
+    {
+      title: 'AI Employee Scheduler',
+      description: 'Smart employee scheduling with shift optimization and conflict resolution',
+      icon: '👥',
+      price: '$79/month',
+      features: ['Shift optimization', 'Conflict resolution', 'Labor law compliance', 'Employee preferences', 'Overtime tracking', 'Mobile app'],
+      benefits: ['Fair scheduling', 'Compliance assurance', 'Employee satisfaction', 'Cost optimization'],
+      link: '/ai-employee-scheduler',
+      popular: true,
+      category: 'Human Resources'
+    },
+    {
+      title: 'AI Backup Manager',
+      description: 'Automated backup management with intelligent scheduling and disaster recovery',
+      icon: '💾',
+      price: '$49/month',
+      features: ['Automated backups', 'Smart scheduling', 'Disaster recovery', 'Version control', 'Cloud integration', 'Monitoring alerts'],
+      benefits: ['Data protection', 'Automated processes', 'Quick recovery', 'Peace of mind'],
+      link: '/ai-backup-manager',
+      popular: true,
+      category: 'Data Management'
+    },
+    {
+      title: 'AI Performance Monitor',
+      description: 'Real-time performance monitoring with AI-powered insights and alerting',
+      icon: '📈',
+      price: '$99/month',
+      features: ['Real-time monitoring', 'AI insights', 'Smart alerting', 'Performance optimization', 'Trend analysis', 'Custom dashboards'],
+      benefits: ['Proactive monitoring', 'Better performance', 'Reduced downtime', 'Cost optimization'],
+      link: '/ai-performance-monitor',
+      popular: true,
+      category: 'Monitoring'
+    },
+    {
+      title: 'AI Compliance Checker',
+      description: 'Automated compliance checking with regulatory updates and audit preparation',
+      icon: '⚖️',
+      price: '$149/month',
+      features: ['Regulatory monitoring', 'Compliance checking', 'Audit preparation', 'Risk assessment', 'Documentation', 'Reporting'],
+      benefits: ['Compliance assurance', 'Risk reduction', 'Audit readiness', 'Time savings'],
+      link: '/ai-compliance-checker',
+      popular: true,
+      category: 'Compliance'
+    },
+    {
+      title: 'AI API Manager',
+      description: 'Intelligent API management with monitoring, optimization, and security features',
+      icon: '🔌',
+      price: '$119/month',
+      features: ['API monitoring', 'Performance optimization', 'Security scanning', 'Rate limiting', 'Analytics dashboard', 'Documentation'],
+      benefits: ['Better performance', 'Enhanced security', 'Cost optimization', 'Developer experience'],
+      link: '/ai-api-manager',
+      popular: true,
+      category: 'Development'
+    },
+    {
+      title: 'AI Database Optimizer',
+      description: 'Smart database optimization with query analysis and performance tuning',
+      icon: '🗄️',
+      price: '$159/month',
+      features: ['Query optimization', 'Performance tuning', 'Index recommendations', 'Capacity planning', 'Security scanning', 'Monitoring'],
+      benefits: ['Faster queries', 'Better performance', 'Cost reduction', 'Improved reliability'],
+      link: '/ai-database-optimizer',
+      popular: true,
+      category: 'Database'
+    },
+    {
+      title: 'AI Network Monitor',
+      description: 'Intelligent network monitoring with threat detection and performance optimization',
+      icon: '🌐',
+      price: '$139/month',
+      features: ['Network monitoring', 'Threat detection', 'Performance analysis', 'Traffic optimization', 'Security scanning', 'Alerting'],
+      benefits: ['Enhanced security', 'Better performance', 'Proactive monitoring', 'Cost optimization'],
+      link: '/ai-network-monitor',
+      popular: true,
+      category: 'Networking'
+    },
+    {
+      title: 'AI Cloud Cost Optimizer',
+      description: 'Smart cloud cost optimization with usage analysis and automated scaling',
+      icon: '☁️',
+      price: '$179/month',
+      features: ['Cost analysis', 'Usage optimization', 'Auto-scaling', 'Resource recommendations', 'Budget tracking', 'Alerting'],
+      benefits: ['40% cost reduction', 'Better resource utilization', 'Automated optimization', 'Budget control'],
+      link: '/ai-cloud-optimizer',
+      popular: true,
+      category: 'Cloud Computing'
+    },
+    {
+      title: 'AI Security Scanner',
+      description: 'Comprehensive security scanning with vulnerability detection and remediation',
+      icon: '🛡️',
+      price: '$199/month',
+      features: ['Vulnerability scanning', 'Threat detection', 'Compliance checking', 'Remediation guidance', 'Continuous monitoring', 'Reporting'],
+      benefits: ['Enhanced security', 'Risk mitigation', 'Compliance assurance', 'Proactive protection'],
+      link: '/ai-security-scanner',
+      popular: true,
+      category: 'Security'
+    },
+    {
+      title: 'AI Workflow Designer',
+      description: 'Visual workflow designer with AI-powered automation and integration capabilities',
+      icon: '🔄',
+      price: '$129/month',
+      features: ['Visual designer', 'AI automation', 'Integration hub', 'Conditional logic', 'Error handling', 'Analytics'],
+      benefits: ['Easy automation', 'Better efficiency', 'Reduced errors', 'Scalable processes'],
+      link: '/ai-workflow-designer',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      title: 'AI Test Generator',
+      description: 'Automated test generation with AI-powered test cases and coverage analysis',
+      icon: '🧪',
+      price: '$89/month',
+      features: ['Test generation', 'Coverage analysis', 'Automated execution', 'Bug detection', 'Performance testing', 'Reporting'],
+      benefits: ['Better coverage', 'Faster testing', 'Quality assurance', 'Cost reduction'],
+      link: '/ai-test-generator',
+      popular: true,
+      category: 'Quality Assurance'
+    },
+    {
+      title: 'AI Log Analyzer',
+      description: 'Intelligent log analysis with pattern detection and anomaly identification',
+      icon: '📊',
+      price: '$79/month',
+      features: ['Log analysis', 'Pattern detection', 'Anomaly identification', 'Real-time monitoring', 'Alerting', 'Dashboards'],
+      benefits: ['Faster troubleshooting', 'Proactive monitoring', 'Better insights', 'Reduced downtime'],
+      link: '/ai-log-analyzer',
+      popular: true,
+      category: 'Monitoring'
+    },
+    {
+      title: 'AI Code Reviewer',
+      description: 'Automated code review with AI-powered analysis and improvement suggestions',
+      icon: '👨‍💻',
+      price: '$99/month',
+      features: ['Code analysis', 'Bug detection', 'Security scanning', 'Performance optimization', 'Best practices', 'Team collaboration'],
+      benefits: ['Better code quality', 'Faster reviews', 'Security assurance', 'Knowledge sharing'],
+      link: '/ai-code-reviewer',
+      popular: true,
+      category: 'Development'
+    },
+    {
+      title: 'AI Deployment Manager',
+      description: 'Intelligent deployment management with automated testing and rollback capabilities',
+      icon: '🚀',
+      price: '$149/month',
+      features: ['Automated deployment', 'Testing integration', 'Rollback capabilities', 'Environment management', 'Monitoring', 'Notifications'],
+      benefits: ['Faster deployments', 'Reduced risk', 'Better reliability', 'Automated processes'],
+      link: '/ai-deployment-manager',
+      popular: true,
+      category: 'DevOps'
+    },
+    {
+      title: 'AI Incident Manager',
+      description: 'Smart incident management with automated response and resolution workflows',
+      icon: '🚨',
+      price: '$169/month',
+      features: ['Incident detection', 'Automated response', 'Escalation management', 'Resolution tracking', 'Post-mortem analysis', 'Team coordination'],
+      benefits: ['Faster resolution', 'Reduced impact', 'Better coordination', 'Continuous improvement'],
+      link: '/ai-incident-manager',
+      popular: true,
+      category: 'Operations'
+    },
+    {
+      title: 'AI Knowledge Base',
+      description: 'Intelligent knowledge management with AI-powered search and content organization',
+      icon: '📚',
+      price: '$69/month',
+      features: ['AI search', 'Content organization', 'Auto-categorization', 'Version control', 'Collaboration tools', 'Analytics'],
+      benefits: ['Better knowledge sharing', 'Faster information access', 'Improved collaboration', 'Reduced support load'],
+      link: '/ai-knowledge-base',
+      popular: true,
+      category: 'Knowledge Management'
+    },
+    {
+      title: 'AI Training Platform',
+      description: 'Personalized training platform with AI-powered content recommendations and progress tracking',
+      icon: '🎓',
+      price: '$89/month',
+      features: ['Personalized content', 'Progress tracking', 'Skill assessment', 'Certification', 'Team management', 'Analytics'],
+      benefits: ['Better learning outcomes', 'Personalized experience', 'Progress visibility', 'Skill development'],
+      link: '/ai-training-platform',
+      popular: true,
+      category: 'Education'
+    },
+    {
+      title: 'AI Customer Onboarding',
+      description: 'Automated customer onboarding with personalized experiences and progress tracking',
+      icon: '👋',
+      price: '$79/month',
+      features: ['Personalized journeys', 'Progress tracking', 'Automated tasks', 'Communication templates', 'Analytics', 'Integration'],
+      benefits: ['Faster onboarding', 'Better experience', 'Reduced churn', 'Automated processes'],
+      link: '/ai-customer-onboarding',
+      popular: true,
+      category: 'Customer Success'
+    },
+    {
+      title: 'AI Vendor Manager',
+      description: 'Intelligent vendor management with performance tracking and contract optimization',
+      icon: '🤝',
+      price: '$119/month',
+      features: ['Performance tracking', 'Contract management', 'Cost optimization', 'Risk assessment', 'Compliance monitoring', 'Reporting'],
+      benefits: ['Better vendor relationships', 'Cost optimization', 'Risk mitigation', 'Compliance assurance'],
+      link: '/ai-vendor-manager',
+      popular: true,
+      category: 'Procurement'
+    },
+    {
+      title: 'AI Asset Tracker',
+      description: 'Smart asset tracking with IoT integration and predictive maintenance',
+      icon: '🏷️',
+      price: '$99/month',
+      features: ['Asset tracking', 'IoT integration', 'Predictive maintenance', 'Location monitoring', 'Usage analytics', 'Alerts'],
+      benefits: ['Better asset utilization', 'Reduced maintenance costs', 'Improved tracking', 'Predictive insights'],
+      link: '/ai-asset-tracker',
+      popular: true,
+      category: 'Asset Management'
+    },
+    {
+      title: 'AI Compliance Reporter',
+      description: 'Automated compliance reporting with regulatory updates and audit trail management',
+      icon: '📋',
+      price: '$139/month',
+      features: ['Automated reporting', 'Regulatory updates', 'Audit trails', 'Documentation', 'Workflow management', 'Notifications'],
+      benefits: ['Compliance assurance', 'Time savings', 'Audit readiness', 'Automated processes'],
+      link: '/ai-compliance-reporter',
+      popular: true,
+      category: 'Compliance'
+    },
+    {
+      title: 'AI Budget Planner',
+      description: 'Intelligent budget planning with forecasting and optimization recommendations',
+      icon: '💰',
+      price: '$89/month',
+      features: ['Budget forecasting', 'Cost optimization', 'Scenario planning', 'Expense tracking', 'Reporting', 'Alerts'],
+      benefits: ['Better financial planning', 'Cost optimization', 'Accurate forecasting', 'Budget control'],
+      link: '/ai-budget-planner',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      title: 'AI Meeting Room Optimizer',
+      description: 'Smart meeting room management with booking optimization and resource utilization',
+      icon: '🏢',
+      price: '$59/month',
+      features: ['Room booking', 'Resource optimization', 'Conflict resolution', 'Usage analytics', 'Mobile app', 'Integration'],
+      benefits: ['Better space utilization', 'Reduced conflicts', 'Cost optimization', 'Improved experience'],
+      link: '/ai-meeting-room-optimizer',
+      popular: true,
+      category: 'Facilities'
+    },
+    {
+      title: 'AI Document Signer',
+      description: 'Automated document signing with AI-powered verification and workflow management',
+      icon: '✍️',
+      price: '$69/month',
+      features: ['Digital signatures', 'Identity verification', 'Workflow management', 'Audit trails', 'Integration', 'Compliance'],
+      benefits: ['Faster processing', 'Enhanced security', 'Compliance assurance', 'Automated workflows'],
+      link: '/ai-document-signer',
+      popular: true,
+      category: 'Document Management'
+    },
+    {
+      title: 'AI Customer Journey Mapper',
+      description: 'Intelligent customer journey mapping with touchpoint analysis and optimization',
+      icon: '🗺️',
+      price: '$129/month',
+      features: ['Journey mapping', 'Touchpoint analysis', 'Optimization recommendations', 'Customer insights', 'A/B testing', 'Analytics'],
+      benefits: ['Better customer experience', 'Optimized touchpoints', 'Data-driven insights', 'Improved conversions'],
+      link: '/ai-customer-journey-mapper',
+      popular: true,
+      category: 'Customer Experience'
+    },
+    {
+      title: 'AI Risk Assessor',
+      description: 'Comprehensive risk assessment with AI-powered analysis and mitigation strategies',
+      icon: '⚠️',
+      price: '$199/month',
+      features: ['Risk identification', 'Impact analysis', 'Mitigation strategies', 'Monitoring', 'Reporting', 'Compliance'],
+      benefits: ['Proactive risk management', 'Better decision making', 'Compliance assurance', 'Cost reduction'],
+      link: '/ai-risk-assessor',
+      popular: true,
+      category: 'Risk Management'
+    },
+    {
+      title: 'AI Performance Predictor',
+      description: 'Predictive performance analysis with AI-powered forecasting and optimization',
+      icon: '🔮',
+      price: '$179/month',
+      features: ['Performance forecasting', 'Trend analysis', 'Optimization recommendations', 'Scenario planning', 'Alerts', 'Reporting'],
+      benefits: ['Proactive optimization', 'Better planning', 'Performance insights', 'Cost optimization'],
+      link: '/ai-performance-predictor',
+      popular: true,
+      category: 'Analytics'
+    },
+    {
+      title: 'AI Content Moderator',
+      description: 'Automated content moderation with AI-powered detection and filtering',
+      icon: '🛡️',
+      price: '$89/month',
+      features: ['Content detection', 'Automated filtering', 'Policy enforcement', 'Real-time monitoring', 'Reporting', 'Customization'],
+      benefits: ['Consistent moderation', 'Reduced manual work', 'Better compliance', 'Scalable solution'],
+      link: '/ai-content-moderator',
+      popular: true,
+      category: 'Content Management'
+    },
+    {
+      title: 'AI Data Cleaner',
+      description: 'Intelligent data cleaning with AI-powered validation and standardization',
+      icon: '🧹',
+      price: '$79/month',
+      features: ['Data validation', 'Duplicate detection', 'Standardization', 'Error correction', 'Quality scoring', 'Automation'],
+      benefits: ['Better data quality', 'Reduced errors', 'Time savings', 'Improved accuracy'],
+      link: '/ai-data-cleaner',
+      popular: true,
+      category: 'Data Management'
+    },
+    {
+      title: 'AI Workflow Optimizer',
+      description: 'Smart workflow optimization with AI-powered analysis and improvement suggestions',
+      icon: '⚡',
+      price: '$119/month',
+      features: ['Workflow analysis', 'Bottleneck identification', 'Optimization suggestions', 'Performance monitoring', 'Automation', 'Reporting'],
+      benefits: ['Better efficiency', 'Reduced bottlenecks', 'Cost optimization', 'Improved productivity'],
+      link: '/ai-workflow-optimizer',
+      popular: true,
+      category: 'Process Optimization'
+    },
+    {
+      title: 'AI Customer Lifetime Value Predictor',
+      description: 'Predictive customer lifetime value analysis with AI-powered insights and recommendations',
+      icon: '💎',
+      price: '$149/month',
+      features: ['CLV prediction', 'Customer segmentation', 'Retention strategies', 'Upselling opportunities', 'Analytics', 'Reporting'],
+      benefits: ['Better customer insights', 'Improved retention', 'Revenue optimization', 'Data-driven decisions'],
+      link: '/ai-clv-predictor',
+      popular: true,
+      category: 'Customer Analytics'
+    },
+    {
+      title: 'AI Churn Predictor',
+      description: 'Predictive churn analysis with AI-powered early warning and retention strategies',
+      icon: '📉',
+      price: '$129/month',
+      features: ['Churn prediction', 'Early warning system', 'Retention strategies', 'Customer scoring', 'Intervention triggers', 'Analytics'],
+      benefits: ['Proactive retention', 'Reduced churn', 'Better customer experience', 'Revenue protection'],
+      link: '/ai-churn-predictor',
+      popular: true,
+      category: 'Customer Analytics'
+    },
+    {
+      title: 'AI Price Optimizer',
+      description: 'Dynamic pricing optimization with AI-powered analysis and competitive intelligence',
+      icon: '💲',
+      price: '$199/month',
+      features: ['Dynamic pricing', 'Competitive analysis', 'Demand forecasting', 'Price elasticity', 'A/B testing', 'Revenue optimization'],
+      benefits: ['Revenue optimization', 'Competitive advantage', 'Better pricing strategy', 'Increased profitability'],
+      link: '/ai-price-optimizer',
+      popular: true,
+      category: 'Pricing'
+    },
+    {
+      title: 'AI Recommendation Engine',
+      description: 'Personalized recommendation system with AI-powered content and product suggestions',
+      icon: '🎯',
+      price: '$159/month',
+      features: ['Personalized recommendations', 'Content filtering', 'Behavioral analysis', 'A/B testing', 'Real-time updates', 'Analytics'],
+      benefits: ['Better user experience', 'Increased engagement', 'Higher conversions', 'Personalized content'],
+      link: '/ai-recommendation-engine',
+      popular: true,
+      category: 'Personalization'
+    },
+    {
+      title: 'AI Fraud Detector',
+      description: 'Advanced fraud detection with AI-powered pattern recognition and real-time monitoring',
+      icon: '🚨',
+      price: '$299/month',
+      features: ['Pattern recognition', 'Real-time detection', 'Risk scoring', 'Machine learning', 'Integration', 'Reporting'],
+      benefits: ['Fraud prevention', 'Risk reduction', 'Cost savings', 'Enhanced security'],
+      link: '/ai-fraud-detector',
+      popular: true,
+      category: 'Security'
+    },
+    {
+      title: 'AI Sentiment Analyzer',
+      description: 'Real-time sentiment analysis with AI-powered emotion detection and trend analysis',
+      icon: '😊',
+      price: '$89/month',
+      features: ['Sentiment analysis', 'Emotion detection', 'Trend analysis', 'Multi-language support', 'Real-time processing', 'API integration'],
+      benefits: ['Better customer insights', 'Proactive responses', 'Improved satisfaction', 'Data-driven decisions'],
+      link: '/ai-sentiment-analyzer',
+      popular: true,
+      category: 'Analytics'
+    },
+    {
+      title: 'AI Market Research',
+      description: 'Intelligent market research with AI-powered data collection and analysis',
+      icon: '📊',
+      price: '$179/month',
+      features: ['Data collection', 'Market analysis', 'Trend identification', 'Competitor analysis', 'Consumer insights', 'Reporting'],
+      benefits: ['Better market understanding', 'Competitive advantage', 'Data-driven strategy', 'Cost-effective research'],
+      link: '/ai-market-research',
+      popular: true,
+      category: 'Market Research'
+    },
+    {
+      title: 'AI Supply Chain Predictor',
+      description: 'Predictive supply chain analysis with AI-powered forecasting and optimization',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Supply optimization', 'Risk assessment', 'Cost analysis', 'Scenario planning', 'Integration'],
+      benefits: ['Better planning', 'Cost optimization', 'Risk mitigation', 'Improved efficiency'],
+      link: '/ai-supply-chain-predictor',
+      popular: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'AI Energy Optimizer',
+      description: 'Smart energy optimization with AI-powered consumption analysis and cost reduction',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy analysis', 'Cost optimization', 'Usage forecasting', 'Efficiency recommendations', 'Monitoring', 'Reporting'],
+      benefits: ['Cost reduction', 'Energy efficiency', 'Environmental impact', 'Better monitoring'],
+      link: '/ai-energy-optimizer',
+      popular: true,
+      category: 'Energy Management'
+    },
+    {
+      title: 'AI Quality Predictor',
+      description: 'Predictive quality analysis with AI-powered defect detection and prevention',
+      icon: '🔍',
+      price: '$169/month',
+      features: ['Quality prediction', 'Defect detection', 'Prevention strategies', 'Process optimization', 'Monitoring', 'Reporting'],
+      benefits: ['Better quality', 'Reduced defects', 'Cost savings', 'Process improvement'],
+      link: '/ai-quality-predictor',
+      popular: true,
+      category: 'Quality Management'
+    },
+    {
+      title: 'AI Maintenance Scheduler',
+      description: 'Predictive maintenance scheduling with AI-powered optimization and cost reduction',
+      icon: '🔧',
+      price: '$189/month',
+      features: ['Predictive scheduling', 'Cost optimization', 'Resource planning', 'Risk assessment', 'Integration', 'Analytics'],
+      benefits: ['Reduced downtime', 'Cost optimization', 'Better planning', 'Improved reliability'],
+      link: '/ai-maintenance-scheduler',
+      popular: true,
+      category: 'Maintenance'
+    },
+    {
+      title: 'AI Capacity Planner',
+      description: 'Intelligent capacity planning with AI-powered forecasting and resource optimization',
+      icon: '📈',
+      price: '$159/month',
+      features: ['Capacity forecasting', 'Resource optimization', 'Demand planning', 'Scenario analysis', 'Cost modeling', 'Reporting'],
+      benefits: ['Better planning', 'Cost optimization', 'Resource efficiency', 'Improved scalability'],
+      link: '/ai-capacity-planner',
+      popular: true,
+      category: 'Capacity Planning'
+    },
+    {
+      title: 'AI Talent Matcher',
+      description: 'Intelligent talent matching with AI-powered candidate analysis and job fit scoring',
+      icon: '👥',
+      price: '$199/month',
+      features: ['Candidate analysis', 'Job matching', 'Skill assessment', 'Cultural fit', 'Interview scheduling', 'Analytics'],
+      benefits: ['Better matches', 'Faster hiring', 'Reduced bias', 'Improved retention'],
+      link: '/ai-talent-matcher',
+      popular: true,
+      category: 'Human Resources'
+    },
+    {
+      title: 'AI Performance Coach',
+      description: 'Personalized performance coaching with AI-powered insights and improvement recommendations',
+      icon: '🏆',
+      price: '$129/month',
+      features: ['Performance analysis', 'Goal setting', 'Progress tracking', 'Feedback generation', 'Skill development', 'Coaching'],
+      benefits: ['Better performance', 'Skill development', 'Goal achievement', 'Personalized coaching'],
+      link: '/ai-performance-coach',
+      popular: true,
+      category: 'Performance Management'
+    },
+    {
+      title: 'AI Learning Path Designer',
+      description: 'Personalized learning path creation with AI-powered content curation and progress tracking',
+      icon: '🎯',
+      price: '$99/month',
+      features: ['Path creation', 'Content curation', 'Progress tracking', 'Adaptive learning', 'Skill assessment', 'Certification'],
+      benefits: ['Personalized learning', 'Better outcomes', 'Skill development', 'Flexible paths'],
+      link: '/ai-learning-path-designer',
+      popular: true,
+      category: 'Learning & Development'
+    },
+    {
+      title: 'AI Success Predictor',
+      description: 'Predictive success analysis with AI-powered outcome forecasting and optimization',
+      icon: '🎯',
+      price: '$179/month',
+      features: ['Success prediction', 'Outcome forecasting', 'Optimization recommendations', 'Risk assessment', 'Scenario planning', 'Analytics'],
+      benefits: ['Better outcomes', 'Risk mitigation', 'Optimized strategies', 'Data-driven decisions'],
+      link: '/ai-success-predictor',
+      popular: true,
+      category: 'Predictive Analytics'
+    },
+    {
+      title: 'AI Innovation Catalyst',
+      description: 'AI-powered innovation platform with idea generation and market opportunity analysis',
+      icon: '💡',
+      price: '$299/month',
+      features: ['Idea generation', 'Market analysis', 'Opportunity assessment', 'Innovation tracking', 'Collaboration tools', 'Analytics'],
+      benefits: ['Foster innovation', 'Market opportunities', 'Competitive advantage', 'Growth acceleration'],
+      link: '/ai-innovation-catalyst',
+      popular: true,
+      category: 'Innovation'
+    },
+    {
+      title: 'AI Transformation Advisor',
+      description: 'Digital transformation guidance with AI-powered strategy and implementation planning',
+      icon: '🔄',
+      price: '$399/month',
+      features: ['Strategy planning', 'Implementation guidance', 'Change management', 'Progress tracking', 'Best practices', 'Consulting'],
+      benefits: ['Successful transformation', 'Reduced risk', 'Better outcomes', 'Expert guidance'],
+      link: '/ai-transformation-advisor',
+      popular: true,
+      category: 'Digital Transformation'
+    },
+    {
+      title: 'AI Future Predictor',
+      description: 'Advanced future prediction with AI-powered trend analysis and scenario planning',
+      icon: '🔮',
+      price: '$499/month',
+      features: ['Trend analysis', 'Scenario planning', 'Future forecasting', 'Risk assessment', 'Strategy development', 'Insights'],
+      benefits: ['Future readiness', 'Strategic planning', 'Competitive advantage', 'Risk mitigation'],
+      link: '/ai-future-predictor',
+      popular: true,
+      category: 'Strategic Planning'
+    }
+  ];
+    {
       title: 'AI Code Review Assistant',
       description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization suggestions',
       icon: '🔍',
@@ -1125,7 +1841,7 @@ const HomePage: React.FC = () => {
       />
       <ServiceWorker />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain-advanced particle-field-advanced holographic-effect">
         {/* Navigation */}
         <Navigation />
         
@@ -1156,7 +1872,7 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-glow-advanced glitch cyber-scan-advanced"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
@@ -1171,22 +1887,22 @@ const HomePage: React.FC = () => {
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 max-w-7xl mx-auto mb-12">
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern-advanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern-advanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="futuristic-glow neural-pattern-advanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div className="futuristic-glow neural-pattern-advanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1 energy-pulse">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
@@ -1196,7 +1912,7 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyber-button-advanced px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                 >
                   Get Started Today
                 </a>
@@ -1226,7 +1942,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`quantum-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -1343,7 +2059,7 @@ const HomePage: React.FC = () => {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <article key={index} className="quantum-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -1385,21 +2101,21 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">Proven ROI</h3>
                 <p className="text-gray-300 mb-4">Our clients see an average 300% ROI within the first year of implementation</p>
                 <div className="text-2xl font-bold text-cyan-400">300% ROI</div>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">Cost Savings</h3>
                 <p className="text-gray-300 mb-4">Reduce operational costs by up to 70% with our AI-powered automation</p>
                 <div className="text-2xl font-bold text-green-400">70% Cost Reduction</div>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <div className="text-4xl mb-4">🚀</div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-text">Efficiency Gains</h3>
                 <p className="text-gray-300 mb-4">Boost productivity by 90% with intelligent process automation</p>
@@ -1407,7 +2123,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             
-            <div className="cyber-card p-8 text-center">
+            <div className="quantum-card p-8 text-center energy-pulse">
               <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing</h3>
               <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
                 Our competitive pricing starts from just $79/month for micro SAAS solutions, with enterprise AI services beginning at $1,000/month. 
@@ -1437,7 +2153,7 @@ const HomePage: React.FC = () => {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
                 <p className="text-gray-300 mb-4">+1 302 464 0950</p>
@@ -1450,7 +2166,7 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Mail className="w-12 h-12 text-pink-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Email</h3>
                 <p className="text-gray-300 mb-4">kleber@ziontechgroup.com</p>
@@ -1462,7 +2178,7 @@ const HomePage: React.FC = () => {
                 </a>
               </div>
               
-              <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+              <div className="quantum-card p-6 text-center hover:scale-105 transition-all duration-300 energy-pulse">
                 <Location className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Address</h3>
                 <p className="text-gray-300 mb-4">364 E Main St STE 1008<br />Middletown, DE 19709</p>
