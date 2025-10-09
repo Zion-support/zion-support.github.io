@@ -1,6 +1,53 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
+// Optimized icon imports - only import what's actually used
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Star, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Brain, 
+  Cpu, 
+  Target, 
+  BarChart, 
+  MessageSquare, 
+  Eye, 
+  ArrowRight, 
+  CheckCircle, 
+  TrendingUp, 
+  Users, 
+  Award, 
+  Lock, 
+  Database, 
+  Cloud, 
+  Code, 
+  Smartphone, 
+  Settings, 
+  FileText, 
+  Search, 
+  Bot, 
+  Palette, 
+  Camera, 
+  Music, 
+  Video, 
+  Building, 
+  Heart, 
+  Stethoscope, 
+  GraduationCap, 
+  Briefcase, 
+  Wrench, 
+  Cube, 
+  Mic, 
+  DollarSign, 
+  Truck, 
+  Link, 
+  HardDrive, 
+  FileCheck 
+} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -11,6 +58,7 @@ import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
 import ErrorBoundary from './components/ErrorBoundary';
 import ServiceWorker from './components/ServiceWorker';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
 
 // Dynamically import heavy components for better performance
@@ -20,14 +68,21 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-// Preload critical components
+// Enhanced preloading strategy
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render
-    setTimeout(() => {
+    const preloadCritical = () => {
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
-    }, 100);
+    };
+    
+    // Preload on idle
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadCritical, { timeout: 2000 });
+    } else {
+      setTimeout(preloadCritical, 100);
+    }
   }
 };
 
@@ -629,22 +684,47 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <ErrorBoundary>
+    <ErrorBoundary fallback={
+      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="text-center p-8">
+          <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+          <p className="text-gray-300 mb-6">
+            We're working to fix this issue. Please try refreshing the page.
+          </p>
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-cyan-600 text-white px-6 py-2 rounded-lg hover:bg-cyan-700 transition-colors"
+          >
+            Refresh Page
+          </button>
+        </div>
+      </div>
+    }>
       <SEOEnhancer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        title="Zion Tech Group - Advanced AI and IT Solutions | Enterprise AI Consulting"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, and digital transformation services. 300% ROI guaranteed. Expert AI consulting for Fortune 500 companies. Call +1-302-464-0950"
+        keywords={[
+          'AI solutions', 'artificial intelligence consulting', 'quantum computing', 
+          'autonomous systems', 'digital transformation', 'enterprise AI', 
+          'machine learning', 'automation', 'cloud services', 'AI consulting',
+          'business intelligence', 'AI implementation', 'Fortune 500 AI',
+          'AI ROI', 'AI strategy', 'AI development', 'AI integration'
+        ]}
         canonicalUrl="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.jpg"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
+          alternateName: 'Zion Tech',
           url: 'https://ziontechgroup.com',
+          logo: 'https://ziontechgroup.com/logo.png',
           description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
           foundingDate: '2020',
           numberOfEmployees: '50-100',
           industry: 'Technology',
+          areaServed: 'Worldwide',
+          serviceType: 'AI Consulting and IT Solutions',
           services: [
             'AI Solutions',
             'Quantum Computing',
@@ -652,14 +732,18 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'Machine Learning',
+            'AI Consulting',
+            'IT Infrastructure'
           ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
+            hoursAvailable: '24/7'
           },
           address: {
             '@type': 'PostalAddress',
@@ -668,6 +752,19 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
+          },
+          sameAs: [
+            'https://linkedin.com/company/zion-tech-group',
+            'https://twitter.com/ziontechgroup',
+            'https://github.com/ziontechgroup'
+          ],
+          offers: {
+            '@type': 'Offer',
+            name: 'AI Enterprise Solutions',
+            description: 'Comprehensive AI solutions with guaranteed 300% ROI',
+            price: '50000',
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock'
           }
         }}
       />
@@ -735,15 +832,17 @@ const HomePage: React.FC = () => {
       />
       <Analytics />
       <ServiceWorker />
+      <PerformanceMonitor />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
         <Navigation />
         
-        {/* Skip to main content for accessibility */}
+        {/* Enhanced skip to main content for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50 transition-all duration-200 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          aria-label="Skip to main content"
         >
           Skip to main content
         </a>
@@ -769,6 +868,7 @@ const HomePage: React.FC = () => {
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
                 data-text="Zion Tech Group"
+                aria-label="Zion Tech Group - Advanced AI and IT Solutions"
               >
                 Zion Tech Group
               </h1>
