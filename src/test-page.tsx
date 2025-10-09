@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-// test-page file
-// This file is under development
 
-export default function test_page() {
-  return null;
-}
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
@@ -98,4 +91,3 @@ const testPagetsx: React.FC = () => {
   );
 };
 export default testPagetsx;
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc

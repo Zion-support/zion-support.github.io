@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-// requestMiddleware file
-// This file is under development
 
-export default function requestMiddleware() {
-  return null;
-}
-=======
 'use client';
 /**
  * Request Middleware System
@@ -240,4 +233,3 @@ export default {
   transformResponseMiddleware,
   createDefaultMiddlewareChain
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc

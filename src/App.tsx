@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-// App file
-// This file is under development
 
-export default function App() {
-  return null;
-}
-=======
 import React, { useEffect, useState, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
@@ -74,4 +67,3 @@ const App: React.FC = () => {
   );
 };
 export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-11dc
