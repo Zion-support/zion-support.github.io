@@ -1,161 +1,225 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import React, { useState, useEffect } from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  BarChart, 
+  Users, 
+  Mail, 
+  Calendar, 
+  FileText, 
+  Image, 
+  Video, 
+  Code, 
+  Database,
+  Globe,
+  Smartphone,
+  Cloud,
+  Lock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  ExternalLink
+} from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
 
 const MicroSAASPage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   const microSAASServices = [
-    // AI-Powered Developer Tools
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
-      benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
-      marketPrice: '$150-300/month',
-      category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 1,
+      name: "AI Content Writer Pro",
+      description: "Advanced AI-powered content generation for blogs, social media, emails, and marketing materials with 50+ templates.",
+      icon: FileText,
+      price: "$79",
+      period: "/month",
+      features: [
+        "50+ Content Templates",
+        "Multi-language Support",
+        "SEO Optimization",
+        "Brand Voice Training",
+        "Plagiarism Checker",
+        "Social Media Scheduler"
+      ],
+      category: "Content Creation",
+      color: "text-pink-400",
+      bgColor: "bg-pink-500/10",
+      borderColor: "border-pink-500/30"
     },
     {
-      title: 'AI Test Generation Suite',
-      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
-      icon: '🧪',
-      price: '$149/month',
-      features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
-      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
-      marketPrice: '$250-500/month',
-      category: 'Developer Tools',
-      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 2,
+      name: "Smart Analytics Dashboard",
+      description: "Real-time business intelligence with AI-powered insights, custom reports, and automated alerts.",
+      icon: BarChart,
+      price: "$149",
+      period: "/month",
+      features: [
+        "Real-time Analytics",
+        "Custom Dashboards",
+        "AI Insights",
+        "Automated Reports",
+        "Data Visualization",
+        "Mobile App Access"
+      ],
+      category: "Analytics",
+      color: "text-blue-400",
+      bgColor: "bg-blue-500/10",
+      borderColor: "border-blue-500/30"
     },
     {
-      title: 'Smart API Documentation Generator',
-      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
-      icon: '📚',
-      price: '$79/month',
-      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
-      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
-      marketPrice: '$120-250/month',
-      category: 'Developer Tools',
-      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Marketing & SEO Tools
-    {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
-      icon: '🎯',
-      price: '$199/month',
-      features: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
-      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],
-      marketPrice: '$300-600/month',
-      category: 'Marketing',
-      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 3,
+      name: "AI Customer Support Bot",
+      description: "Intelligent chatbot with natural language processing, 24/7 availability, and seamless human handoff.",
+      icon: Users,
+      price: "$199",
+      period: "/month",
+      features: [
+        "24/7 Availability",
+        "Multi-language Support",
+        "Human Handoff",
+        "Knowledge Base Integration",
+        "Sentiment Analysis",
+        "Custom Training"
+      ],
+      category: "Customer Service",
+      color: "text-green-400",
+      bgColor: "bg-green-500/10",
+      borderColor: "border-green-500/30"
     },
     {
-      title: 'AI Social Media Manager',
-      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
-      icon: '📱',
-      price: '$129/month',
-      features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
-      benefits: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 4,
+      name: "Email Marketing Automation",
+      description: "AI-driven email campaigns with personalization, A/B testing, and advanced segmentation capabilities.",
+      icon: Mail,
+      price: "$99",
+      period: "/month",
+      features: [
+        "AI Personalization",
+        "A/B Testing",
+        "Advanced Segmentation",
+        "Drip Campaigns",
+        "Analytics & Reporting",
+        "Template Library"
+      ],
+      category: "Marketing",
+      color: "text-purple-400",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/30"
     },
     {
-      title: 'AI Email Marketing Platform',
-      description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
-      icon: '📧',
-      price: '$149/month',
-      features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
-      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 5,
+      name: "Image & Video AI Editor",
+      description: "AI-powered image and video editing with automatic enhancement, background removal, and style transfer.",
+      icon: Image,
+      price: "$129",
+      period: "/month",
+      features: [
+        "Auto Enhancement",
+        "Background Removal",
+        "Style Transfer",
+        "Batch Processing",
+        "Cloud Storage",
+        "API Integration"
+      ],
+      category: "Media",
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/30"
     },
     {
-      title: 'AI Content Generator Pro',
-      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
-      icon: '✍️',
-      price: '$119/month',
-      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
-      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
-      marketPrice: '$180-350/month',
-      category: 'Content Creation',
-      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Business Intelligence & Analytics
-    {
-      title: 'AI Analytics Dashboard Pro',
-      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
-      icon: '📊',
-      price: '$199/month',
-      features: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
-      benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
-      marketPrice: '$300-600/month',
-      category: 'Analytics',
-      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 6,
+      name: "Smart Project Manager",
+      description: "AI-powered project management with automated task assignment, progress tracking, and resource optimization.",
+      icon: Calendar,
+      price: "$179",
+      period: "/month",
+      features: [
+        "AI Task Assignment",
+        "Progress Tracking",
+        "Resource Optimization",
+        "Team Collaboration",
+        "Time Tracking",
+        "Gantt Charts"
+      ],
+      category: "Productivity",
+      color: "text-indigo-400",
+      bgColor: "bg-indigo-500/10",
+      borderColor: "border-indigo-500/30"
     },
     {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
-      icon: '🎯',
-      price: '$139/month',
-      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
-      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
-      marketPrice: '$200-400/month',
-      category: 'Sales',
-      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 7,
+      name: "AI Code Assistant",
+      description: "Intelligent coding assistant with code generation, debugging, documentation, and best practice suggestions.",
+      icon: Code,
+      price: "$199",
+      period: "/month",
+      features: [
+        "Code Generation",
+        "Debugging Assistant",
+        "Auto Documentation",
+        "Best Practices",
+        "Multi-language Support",
+        "IDE Integration"
+      ],
+      category: "Development",
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-500/10",
+      borderColor: "border-cyan-500/30"
     },
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
-      icon: '👥',
-      price: '$179/month',
-      features: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
-      benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
-      marketPrice: '$250-500/month',
-      category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-
-    // AI Finance & Accounting Tools
-    {
-      title: 'AI Invoice Generator Pro',
-      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
-      icon: '💰',
-      price: '$79/month',
-      features: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
-      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
-      marketPrice: '$120-250/month',
-      category: 'Finance',
-      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 8,
+      name: "Smart Database Manager",
+      description: "AI-powered database management with automated optimization, backup, and performance monitoring.",
+      icon: Database,
+      price: "$249",
+      period: "/month",
+      features: [
+        "Auto Optimization",
+        "Smart Backups",
+        "Performance Monitoring",
+        "Query Optimization",
+        "Security Scanning",
+        "Cloud Integration"
+      ],
+      category: "Database",
+      color: "text-red-400",
+      bgColor: "bg-red-500/10",
+      borderColor: "border-red-500/30"
     },
     {
-      title: 'AI Financial Planning Assistant',
-      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
-      icon: '📈',
-      price: '$89/month',
-      features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
-      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      id: 9,
+      name: "AI Website Builder",
+      description: "Intelligent website builder with AI design suggestions, content generation, and SEO optimization.",
+      icon: Globe,
+      price: "$149",
+      period: "/month",
+      features: [
+        "AI Design Suggestions",
+        "Content Generation",
+        "SEO Optimization",
+        "Mobile Responsive",
+        "E-commerce Ready",
+        "Analytics Integration"
+      ],
+      category: "Web Development",
+      color: "text-teal-400",
+      bgColor: "bg-teal-500/10",
+      borderColor: "border-teal-500/30"
     },
     {
+<<<<<<< HEAD
       title: 'AI Expense Management System',
       description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
       icon: '🧾',
@@ -1426,10 +1490,31 @@ const MicroSAASPage: React.FC = () => {
       category: 'SEO Reporting',
       technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-ab91
+=======
+      id: 10,
+      name: "Mobile App AI Assistant",
+      description: "AI-powered mobile app development with automated UI generation, testing, and deployment.",
+      icon: Smartphone,
+      price: "$299",
+      period: "/month",
+      features: [
+        "Auto UI Generation",
+        "Automated Testing",
+        "Cross-platform Support",
+        "Push Notifications",
+        "Analytics Integration",
+        "App Store Deployment"
+      ],
+      category: "Mobile Development",
+      color: "text-yellow-400",
+      bgColor: "bg-yellow-500/10",
+      borderColor: "border-yellow-500/30"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
     }
   ];
 
   const categories = [
+<<<<<<< HEAD
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -1497,11 +1582,72 @@ const MicroSAASPage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
+=======
+    "All",
+    "Content Creation",
+    "Analytics",
+    "Customer Service",
+    "Marketing",
+    "Media",
+    "Productivity",
+    "Development",
+    "Database",
+    "Web Development",
+    "Mobile Development"
+  ];
+
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [filteredServices, setFilteredServices] = useState(microSAASServices);
+
+  useEffect(() => {
+    if (selectedCategory === "All") {
+      setFilteredServices(microSAASServices);
+    } else {
+      setFilteredServices(microSAASServices.filter(service => service.category === selectedCategory));
+    }
+  }, [selectedCategory]);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Navigation />
+      
+      <main className="container mx-auto px-4 py-16 pt-24">
+        {/* Hero Section */}
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text">
+            Micro SAAS Solutions
+          </h1>
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
+            Powerful AI-driven tools for modern businesses
+          </p>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Choose from 50+ ready-to-use applications designed to streamline your business operations 
+            and boost productivity with cutting-edge AI technology.
+          </p>
+          
+          {/* Key Benefits */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="quantum-card p-6 energy-pulse">
+              <div className="text-3xl mb-4">⚡</div>
+              <h3 className="font-bold text-white mb-3 text-lg">Instant Setup</h3>
+              <p className="text-sm text-gray-300">Get started in minutes with our plug-and-play solutions</p>
+            </div>
+            <div className="quantum-card p-6 energy-pulse">
+              <div className="text-3xl mb-4">🔒</div>
+              <h3 className="font-bold text-white mb-3 text-lg">Enterprise Security</h3>
+              <p className="text-sm text-gray-300">Bank-level security and compliance for all your data</p>
+            </div>
+            <div className="quantum-card p-6 energy-pulse">
+              <div className="text-3xl mb-4">📈</div>
+              <h3 className="font-bold text-white mb-3 text-lg">Proven ROI</h3>
+              <p className="text-sm text-gray-300">Average 300% ROI within the first 6 months</p>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -1580,11 +1726,29 @@ const MicroSAASPage: React.FC = () => {
                   </p>
                 </div>
               </div>
+=======
+        {/* Category Filter */}
+        <section className="mb-12">
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  selectedCategory === category
+                    ? 'cyber-button'
+                    : 'quantum-card text-gray-300 hover:text-white hover:neon-glow'
+                }`}
+              >
+                {category}
+              </button>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -1610,6 +1774,196 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+        {/* Services Grid */}
+        <section className="mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => (
+              <div
+                key={service.id}
+                className={`quantum-card p-6 energy-pulse ${service.borderColor} border-2`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 ${service.bgColor} rounded-lg flex items-center justify-center`}>
+                    <service.icon className={`w-6 h-6 ${service.color}`} />
+                  </div>
+                  <span className={`text-xs font-medium px-3 py-1 rounded-full ${service.bgColor} ${service.color}`}>
+                    {service.category}
+                  </span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 neon-text">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <span className="text-3xl font-bold text-white">{service.price}</span>
+                  <span className="text-gray-400">{service.period}</span>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <div className="flex gap-3">
+                  <button className="cyber-button flex-1 text-center py-3">
+                    Start Free Trial
+                  </button>
+                  <button className={`quantum-card ${service.borderColor} border-2 px-4 py-3 hover:neon-glow transition-all duration-300`}>
+                    <ExternalLink className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Pricing Tiers */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
+            Choose Your Plan
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="quantum-card p-8 energy-pulse">
+              <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">$99</span>
+                <span className="text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  3 Micro SAAS Tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Basic Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Standard Templates
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Email Support
+                </li>
+              </ul>
+              <button className="cyber-button w-full text-center py-3">
+                Get Started
+              </button>
+            </div>
+
+            <div className="quantum-card p-8 energy-pulse border-2 border-cyan-400 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-bold">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">$199</span>
+                <span className="text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  10 Micro SAAS Tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Priority Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Premium Templates
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Phone & Email Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom Integrations
+                </li>
+              </ul>
+              <button className="cyber-button w-full text-center py-3">
+                Get Started
+              </button>
+            </div>
+
+            <div className="quantum-card p-8 energy-pulse">
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="mb-6">
+                <span className="text-4xl font-bold text-white">$499</span>
+                <span className="text-gray-400">/month</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Unlimited Tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  24/7 Dedicated Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  Custom Development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  On-premise Deployment
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                  SLA Guarantee
+                </li>
+              </ul>
+              <button className="cyber-button w-full text-center py-3">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 quantum-card">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our Micro SAAS solutions to boost productivity and drive growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button w-full sm:w-auto text-center"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button w-full sm:w-auto text-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Consultation
+            </a>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
     </div>
   );
 };

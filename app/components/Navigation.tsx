@@ -11,14 +11,19 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-fe44
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +111,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -118,6 +125,7 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = () => {
     setServicesOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,6 +150,8 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
     setIsOpen(false);
 =======
     }
@@ -163,12 +173,17 @@ const Navigation: React.FC = () => {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare' },
         { name: 'AI Fintech', path: '/ai-fintech' },
+<<<<<<< HEAD
+=======
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
         { name: 'AI Data Analytics', path: '/ai-data-analytics' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
         { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 =======
@@ -183,6 +198,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
       ]
     },
     {
@@ -198,6 +215,7 @@ const Navigation: React.FC = () => {
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
         { name: 'DevOps', path: '/ai-workflow-automation' },
+<<<<<<< HEAD
         { name: 'Database Services', path: '/ai-data-analytics' }
 <<<<<<< HEAD
 =======
@@ -217,6 +235,10 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+        { name: 'Database Services', path: '/ai-data-analytics' },
+        { name: 'Network Services', path: '/it-infrastructure' }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
       ]
     },
     {
@@ -247,6 +269,7 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' }
       ]
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -366,11 +389,15 @@ const Navigation: React.FC = () => {
     { name: '5G Solutions', href: '/ai-services', icon: Zap },
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+  ];
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -378,6 +405,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -388,6 +417,7 @@ const Navigation: React.FC = () => {
           >
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const toggleServices = () => {
@@ -466,6 +496,9 @@ const Navigation: React.FC = () => {
 =======
             </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+            </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
             <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
 =======
             <span className={`text-xl font-bold transition-colors ${
@@ -476,6 +509,7 @@ const Navigation: React.FC = () => {
             </span>
           </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -501,14 +535,20 @@ const Navigation: React.FC = () => {
               className="text-white hover:text-cyan-400 font-medium transition-colors"
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
+<<<<<<< HEAD
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
               onClick={closeAllMenus}
             >
               Home
@@ -516,11 +556,14 @@ const Navigation: React.FC = () => {
             
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
             <Link 
               to="/about" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-cyan-400 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
               onClick={closeAllMenus}
@@ -534,6 +577,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
@@ -561,6 +605,17 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {servicesOpen && (
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
                   <div className="grid grid-cols-2 gap-6 px-6">
@@ -651,7 +706,10 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                     <Link
                       to="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
@@ -695,13 +753,17 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
             <Link 
               to="/case-studies" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
+              className={`font-medium transition-colors hover:text-cyan-400 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             {/* Micro SAAS Dropdown */}
@@ -793,6 +855,30 @@ const Navigation: React.FC = () => {
               }`}
               onClick={closeAllMenus}
             >
+=======
+              onClick={closeAllMenus}
+            >
+              Case Studies
+            </Link>
+
+            <Link 
+              to="/blog" 
+              className={`font-medium transition-colors hover:text-cyan-400 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Blog
+            </Link>
+
+            <Link 
+              to="/contact" 
+              className={`font-medium transition-colors hover:text-cyan-400 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
               Contact
             </Link>
 
@@ -801,12 +887,14 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
               to="/contact"
               className="cyber-button inline-flex items-center"
+              onClick={closeAllMenus}
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
+<<<<<<< HEAD
 =======
             <Link
               to="/contact"
@@ -900,11 +988,22 @@ const Navigation: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="lg:hidden p-2 rounded-lg text-white hover:text-cyan-400 hover:bg-white/10 transition-colors"
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-gray-100' 
+                : 'text-white hover:bg-white/10'
+            }`}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
@@ -951,6 +1050,15 @@ const Navigation: React.FC = () => {
                 to="/blog"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
+            <div className="space-y-6">
+              <Link 
+                to="/" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 onClick={closeAllMenus}
               >
                 Home
@@ -958,15 +1066,22 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
               
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Link
                 to="/about"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+=======
+              <Link 
+                to="/about" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 onClick={closeAllMenus}
               >
                 About
               </Link>
 
               {/* Mobile Services */}
+<<<<<<< HEAD
               <div className="space-y-1">
                 <div className="px-3 py-2 text-sm font-semibold text-gray-500 uppercase tracking-wider">
                   Services
@@ -1005,19 +1120,54 @@ const Navigation: React.FC = () => {
               <Link
                 to="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+=======
+              <div>
+                <div className="text-lg font-medium text-gray-900 mb-3">Services</div>
+                <div className="ml-4 space-y-2">
+                  {serviceCategories.map((category, index) => (
+                    <div key={index}>
+                      <div className="text-sm font-semibold text-gray-700 mb-2">{category.title}</div>
+                      <div className="ml-4 space-y-1">
+                        {category.services.slice(0, 3).map((service, serviceIndex) => (
+                          <Link
+                            key={serviceIndex}
+                            to={service.path}
+                            className="block text-sm text-gray-600 hover:text-purple-600 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Link 
+                to="/case-studies" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 onClick={closeAllMenus}
               >
                 Case Studies
               </Link>
 
+<<<<<<< HEAD
               <Link
                 to="/blog"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
+=======
+              <Link 
+                to="/blog" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 onClick={closeAllMenus}
               >
                 Blog
               </Link>
 
+<<<<<<< HEAD
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md"
@@ -1026,10 +1176,16 @@ const Navigation: React.FC = () => {
                 to="/contact"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+              <Link 
+                to="/contact" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Link
@@ -1078,6 +1234,8 @@ const Navigation: React.FC = () => {
               </Link>
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
               
               {/* Mobile Contact Info */}
               <div className="pt-4 border-t border-gray-700">
@@ -1090,12 +1248,19 @@ const Navigation: React.FC = () => {
                   <span>kleber@ziontechgroup.com</span>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="flex items-center space-x-2 text-sm text-cyan-300 py-2">
                   <MapPin className="w-4 h-4" />
                   <span>Middletown, DE</span>
                 </div>
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+                <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
               </div>
               
               {/* Mobile CTA */}
@@ -1118,6 +1283,7 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 =======
 export default Navigation;
@@ -1125,3 +1291,6 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+export default Navigation;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
