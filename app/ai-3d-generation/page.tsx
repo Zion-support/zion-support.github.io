@@ -1,9 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera } from 'lucide-react';
 

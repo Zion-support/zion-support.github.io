@@ -2,12 +2,8 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { Copy, Check } from 'lucide-react';
-=======
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
->>>>>>> origin/main
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);

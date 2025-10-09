@@ -1,13 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle } from 'lucide-react';
-=======
 import { CheckCircle, Workflow, Zap, Brain, BarChart, Clock, Shield, Users, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
->>>>>>> origin/main
 
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
@@ -122,55 +118,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI Workflow Automation
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-green-100 max-w-3xl mx-auto">
-              Transform your business with intelligent automation that works 24/7 to streamline processes and boost productivity
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
-              </a>
-              <a 
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-              >
-                ✉️ Get Free Automation Audit
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Steps */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              How Our Automation Works
-            </h2>
-            <p className="text-xl text-gray-600">
-              Simple 4-step process to transform your business with AI automation
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.step}
-=======
     <>
       <SEOOptimizer
         title="AI Workflow Automation Platform - Zion Tech Group"
@@ -207,7 +154,6 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   >
                     Watch Demo
                   </a>
->>>>>>> origin/main
                 </div>
               </div>
             </div>

@@ -44,8 +44,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-<<<<<<< HEAD
-=======
  cursor/analyze-improve-and-deploy-application-cde4
     
     // Log error to console in development
@@ -54,16 +52,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Call custom error handler if provided
->>>>>>> origin/main
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
-=======
  cursor/analyze-improve-and-deploy-application-cde4
     // Enhanced error reporting
->>>>>>> origin/main
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
@@ -184,8 +178,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </button>
           )}        </div>
           )}
-<<<<<<< HEAD
-=======
  cursor/analyze-improve-and-deploy-application-cde4
       // Custom fallback UI
       if (this.props.fallback) {
@@ -249,7 +241,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
->>>>>>> origin/main
         </div>
       );
     }

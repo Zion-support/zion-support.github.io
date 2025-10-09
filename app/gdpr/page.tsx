@@ -224,12 +224,8 @@ const GdprPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>    </div>
-=======
       </section>
     </div>
->>>>>>> origin/main
   );
 };
 

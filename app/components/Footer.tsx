@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap } from 'lucide-react';
-=======
 'use client';
 import React, { memo } from 'react';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
@@ -99,7 +94,6 @@ const Footer: React.FC = memo(() => {
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
   ];
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
 
 const Footer: React.FC = () => {
   return (
@@ -107,66 +101,6 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-<<<<<<< HEAD
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous
-              systems.
-            </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/services-advertising" className="text-gray-300 hover:text-white transition-colors">
-                  AI Advertising
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-gray-300 hover:text-white transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                  Enterprise
-                </Link>
-              </li>
-              <li>
-                <Link to="/team" className="text-gray-300 hover:text-white transition-colors">
-                  Team
-                </Link>
-              </li>
-            </ul>
-=======
 
           <div className="space-y-6">
 
@@ -202,39 +136,10 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
           </div>
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
-            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link to="/ai-services" className="hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-marketing" className="hover:text-white transition-colors">
-                  AI Marketing
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-automation" className="hover:text-white transition-colors">
-                  AI Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-healthcare" className="hover:text-white transition-colors">
-                  AI Healthcare
-                </Link>
-              </li>
-              <li>
-                <Link to="/ai-fintech" className="hover:text-white transition-colors">
-                  AI Fintech
-                </Link>
-=======
             <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
             <ul className="space-y-3">
               {aiServices.slice(0, 8).map((service, index) => (
@@ -256,66 +161,10 @@ const Footer: React.FC = () => {
                 >
                   View All AI Services →
                 </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
               </li>
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Technology Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Technology</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>
-                <Link to="/services" className="hover:text-white transition-colors">
-                  All Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas" className="hover:text-white transition-colors">
-                  Micro SAAS
-                </Link>
-              </li>
-              <li>
-                <Link to="/quantum-computing" className="hover:text-white transition-colors">
-                  Quantum Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/autonomous-systems" className="hover:text-white transition-colors">
-                  Autonomous Systems
-                </Link>
-              </li>
-              <li>
-                <Link to="/business-intelligence" className="hover:text-white transition-colors">
-                  Business Intelligence
-                </Link>
-              </li>
-              <li>
-                <Link to="/blockchain-web3" className="hover:text-white transition-colors">
-                  Blockchain & Web3
-                </Link>
-              </li>
-              <li>
-                <Link to="/iot-edge-computing" className="hover:text-white transition-colors">
-                  IoT & Edge Computing
-                </Link>
-              </li>
-              <li>
-                <Link to="/cybersecurity" className="hover:text-white transition-colors">
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link to="/robotics" className="hover:text-white transition-colors">
-                  Robotics
-                </Link>
-=======
           {/* Micro SAAS Solutions */}
           <div>
 
@@ -340,57 +189,10 @@ const Footer: React.FC = () => {
                 >
                   View All Solutions →
                 </a>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
               </li>
             </ul>
           </div>
 
-<<<<<<< HEAD
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: contact@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 600-9898</p>
-              <p>Website: ziontechgroup.com</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, 
-                and comprehensive IT services. Transforming businesses through cutting-edge technology.
-              </p>
-              
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                    +1 302 464 0950
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 mr-3 text-blue-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                    kleber@ziontechgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center">
-                  <MapPin className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-3 text-blue-400" />
-                  <span className="text-gray-300">24/7 Support Available</span>
-                </div>
-              </div>
-            </div>
-=======
           {/* IT Services */}
           <div>
 
@@ -513,7 +315,6 @@ const Footer: React.FC = () => {
                 Subscribe
               </button>
             </div>
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
           </div>
         </div>
       </div>
@@ -568,8 +369,6 @@ const Footer: React.FC = () => {
                   <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
-<<<<<<< HEAD
-=======
 
             </div>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
@@ -586,7 +385,6 @@ const Footer: React.FC = () => {
                 <span>Global Reach</span>
               </div>
 
->>>>>>> origin/cursor/website-audit-and-update-with-deployment-c6b2
             </div>
           </div>
         </div>
