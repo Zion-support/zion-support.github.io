@@ -24,6 +24,8 @@ export default [
       'temp-files/**',
       'cache/**',
       'dist/**',
+      '.next/**',
+      'out/**',
       'node_modules/**',
       'analyze-*.js',
       'check-*.js',
