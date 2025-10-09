@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings } from 'lucide-react';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -9,6 +10,7 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -40,6 +42,7 @@ const Navigation: React.FC = () => {
       closeAllMenus();
     }
   };
+
   const aiServices = [
     { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -58,6 +61,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
     { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
   ];
+
   const itServices = [
     { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
@@ -68,13 +72,14 @@ const Navigation: React.FC = () => {
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
     { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
   ];
+
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling' },
+    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Code, description: 'Smart Scheduling' },
     { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
+    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Code, description: 'Task Management' },
     { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Customer Management' },
     { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing' },
     { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media' },
@@ -84,9 +89,9 @@ const Navigation: React.FC = () => {
     { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' },
     { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' }
   ];
+
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
     { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
@@ -94,11 +99,61 @@ const Navigation: React.FC = () => {
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
     { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+  ];
+
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-500/20' : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Home
+            </Link>
+            
+            {/* AI Services Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
+              >
+                <Brain className="w-4 h-4" />
+                <span>AI Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {aiServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                  <div className="grid grid-cols-1 gap-2">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        onClick={closeAllMenus}
+                      >
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <div>
+                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
+                          <div className="text-xs text-gray-400">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
+
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -124,13 +179,14 @@ const Navigation: React.FC = () => {
                           <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
+
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -156,44 +212,14 @@ const Navigation: React.FC = () => {
                           <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
                         </div>
-                      </a>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                      </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Emerging Tech Dropdown */}
-            <div className="relative group">
-              <button
-                onClick={toggleServices}
-                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-              >
-                <Sparkles className="w-4 h-4" />
-                <span>Emerging Tech</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                  <div className="grid grid-cols-1 gap-2">
-                    {emergingTech.map((service) => (
-                      <a
-                        key={service.name}
-                        href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
-                      >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-300">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
-                        </div>
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
               <button
@@ -226,10 +252,23 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
+
             <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+            </Link>
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Contact
+            </Link>
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Blog
+            </Link>
+          </div>
+
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <a
+              href="tel:+13024640950"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
             >
               <Phone className="w-4 h-4" />
               <span>Call Now</span>
@@ -247,15 +286,20 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+            <div className="pt-4 space-y-4">
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
+              
               {/* Mobile AI Services */}
               <div>
                 <button
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Brain className="w-4 h-4" />
@@ -264,8 +308,13 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aiServicesOpen && (
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                  <div className="mt-2 ml-4 space-y-2">
+                    {aiServices.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
                         {service.name}
                       </Link>
@@ -280,8 +329,12 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={() => setItServicesOpen(!itServicesOpen)}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Cloud className="w-4 h-4" />
@@ -290,13 +343,13 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {itServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
+                  <div className="mt-2 ml-4 space-y-2">
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
                         {service.name}
                       </Link>
@@ -304,11 +357,12 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
+
               {/* Mobile Micro SAAS */}
               <div>
                 <button
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                  onClick={() => setMicroSaasOpen(!microSaasOpen)}
+                  className="flex items-center justify-between w-full text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 >
                   <span className="flex items-center space-x-2">
                     <Zap className="w-4 h-4" />
@@ -317,8 +371,13 @@ const Navigation: React.FC = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {microSaasOpen && (
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+                  <div className="mt-2 ml-4 space-y-2">
+                    {microSaasServices.slice(0, 8).map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                        onClick={closeAllMenus}
                       >
                         {service.name}
                       </Link>
@@ -333,8 +392,38 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+
+              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                About
+              </Link>
+              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Contact
+              </Link>
+              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Blog
+              </Link>
+              
+              {/* Mobile Contact Info */}
+              <div className="pt-4 border-t border-cyan-500/20 space-y-2">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>(302) 464-0950</span>
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>kleber@ziontechgroup.com</span>
+                </a>
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
             </div>
           </div>
         )}
@@ -342,5 +431,5 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
+
+export default Navigation;
