@@ -1,32 +1,16 @@
-import React, { memo, useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Phone, Mail, ChevronDown, Brain, Cloud, Shield, Code, Users, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
 
-const Navigation: React.FC = memo(() => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+const Header: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-        setServicesOpen(false);
-      }
-    };
-
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    setMobileMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
 
   const navigation = {
     'Services': [
@@ -34,28 +18,28 @@ const Navigation: React.FC = memo(() => {
       { name: 'IT Services', href: '/it-services', icon: Code },
       { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud },
       { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-      { name: 'All Services', href: '/services', icon: Settings }
+      { name: 'All Services', href: '/services', icon: Briefcase }
     ],
     'Solutions': [
-      { name: 'AI Marketing', href: '/ai-marketing', icon: Target },
-      { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Users },
-      { name: 'AI Fintech', href: '/ai-fintech', icon: BarChart },
-      { name: 'Micro SAAS', href: '/micro-saas', icon: Cpu }
+      { name: 'AI Marketing', href: '/ai-marketing', icon: Brain },
+      { name: 'AI Automation', href: '/ai-automation', icon: Brain },
+      { name: 'AI Healthcare', href: '/ai-healthcare', icon: Brain },
+      { name: 'AI Fintech', href: '/ai-fintech', icon: Brain },
+      { name: 'Quantum Computing', href: '/quantum-computing', icon: Brain }
     ],
     'Company': [
       { name: 'About Us', href: '/about', icon: Users },
       { name: 'Our Team', href: '/team', icon: Users },
       { name: 'Careers', href: '/careers', icon: Briefcase },
-      { name: 'Case Studies', href: '/case-studies', icon: FileText },
-      { name: 'Contact', href: '/contact', icon: Phone }
+      { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+      { name: 'Contact', href: '/contact', icon: MessageSquare }
     ]
   };
 
+  const isActive = (path: string) => location.pathname === path;
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-lg border-b border-white/10' : 'bg-transparent'
-    }`}>
+    <header className="bg-slate-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -72,26 +56,28 @@ const Navigation: React.FC = memo(() => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             {Object.entries(navigation).map(([category, items]) => (
               <div
                 key={category}
                 className="relative group"
-                onMouseEnter={() => setServicesOpen(category === 'Services')}
-                onMouseLeave={() => setServicesOpen(false)}
+                onMouseEnter={() => setActiveDropdown(category)}
+                onMouseLeave={() => setActiveDropdown(null)}
               >
                 <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
                   <span>{category}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
-                {servicesOpen && category === 'Services' && (
+                {activeDropdown === category && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
                     {items.map((item, index) => (
                       <Link
                         key={index}
                         to={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
+                        className={`flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors ${
+                          isActive(item.href) ? 'text-cyan-400 bg-slate-700/30' : 'text-gray-300'
+                        }`}
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
@@ -101,7 +87,7 @@ const Navigation: React.FC = memo(() => {
                 )}
               </div>
             ))}
-          </div>
+          </nav>
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -132,15 +118,15 @@ const Navigation: React.FC = memo(() => {
           {/* Mobile menu button */}
           <button
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {mobileMenuOpen && (
           <div className="lg:hidden border-t border-white/10 py-4">
             <div className="space-y-4">
               {Object.entries(navigation).map(([category, items]) => (
@@ -151,8 +137,10 @@ const Navigation: React.FC = memo(() => {
                       <Link
                         key={index}
                         to={item.href}
-                        className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                        onClick={() => setIsOpen(false)}
+                        className={`flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors ${
+                          isActive(item.href) ? 'text-cyan-400 bg-slate-700/30' : 'text-gray-300'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
@@ -183,7 +171,7 @@ const Navigation: React.FC = memo(() => {
                 <Link
                   to="/contact"
                   className="block mt-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Get Quote
                 </Link>
@@ -192,10 +180,8 @@ const Navigation: React.FC = memo(() => {
           </div>
         )}
       </div>
-    </nav>
+    </header>
   );
-});
+};
 
-Navigation.displayName = 'Navigation';
-
-export default Navigation;
+export default Header;
