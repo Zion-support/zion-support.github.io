@@ -1,8 +1,71 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+<<<<<<< HEAD
+
+const ServicesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services to transform your business operations." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16 pt-24">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive AI and IT services to transform your business operations and drive growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
+              <p className="text-gray-300 mb-4">
+                Cutting-edge artificial intelligence services to automate and optimize your business processes.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Machine Learning Models</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision</li>
+                <li>• Predictive Analytics</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
+              <p className="text-gray-300 mb-4">
+                Scalable and secure cloud solutions to support your growing business needs.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• AWS/Azure/GCP Migration</li>
+                <li>• DevOps Implementation</li>
+                <li>• Container Orchestration</li>
+                <li>• Auto-scaling Solutions</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">
+                Comprehensive security solutions to protect your digital assets and data.
+              </p>
+              <ul className="space-y-2 text-gray-300">
+                <li>• Security Audits</li>
+                <li>• Threat Detection</li>
+                <li>• Compliance Management</li>
+                <li>• Incident Response</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+=======
 import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Building, Clock, Phone, Mail, MapPin, Target, Globe, Database, Smartphone, Lock, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Link } from 'lucide-react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const ServicesPage: React.FC = () => {
   const aiServices = [
@@ -177,14 +240,14 @@ const ServicesPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+        <Header />
         
         <main className="pt-24">
           {/* Hero Section */}
           <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-                Our Services
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl text-cyan-400 mb-8 max-w-4xl mx-auto">
                 Comprehensive AI and IT solutions designed to transform your business and drive innovation. 
@@ -208,7 +271,7 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-transform duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-purple-400 mr-3" />
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -248,7 +311,7 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-transform duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-blue-400 mr-3" />
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -288,7 +351,7 @@ const ServicesPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {emergingTech.map((service, index) => (
-                <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-transform duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="flex items-center mb-4">
                     <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -321,22 +384,22 @@ const ServicesPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center cyber-card p-6">
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Star className="w-16 h-16 text-yellow-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Proven Expertise</h3>
                 <p className="text-gray-300">20+ years of experience in AI and IT solutions</p>
               </div>
-              <div className="text-center cyber-card p-6">
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Shield className="w-16 h-16 text-green-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security and compliance standards</p>
               </div>
-              <div className="text-center cyber-card p-6">
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <TrendingUp className="w-16 h-16 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">Proven ROI</h3>
                 <p className="text-gray-300">300% average ROI for our implementations</p>
               </div>
-              <div className="text-center cyber-card p-6">
+              <div className="text-center bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <Clock className="w-16 h-16 text-blue-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
                 <p className="text-gray-300">Round-the-clock support and monitoring</p>
@@ -346,7 +409,7 @@ const ServicesPage: React.FC = () => {
 
           {/* Contact CTA */}
           <section className="container mx-auto px-4 py-16">
-            <div className="cyber-card text-center p-12">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl text-center p-12 border border-white/20">
               <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss which services are right for your business and how we can help 
@@ -355,15 +418,14 @@ const ServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="cyber-button inline-flex items-center justify-center"
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="cyber-button inline-flex items-center justify-center"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center justify-center"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
@@ -374,10 +436,14 @@ const ServicesPage: React.FC = () => {
         </main>
 
         <Footer />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
+>>>>>>> cursor/website-audit-and-update-with-deployment-6747
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default ServicesPage;
+=======
+export default ServicesPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-6747

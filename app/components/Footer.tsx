@@ -6,33 +6,17 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
 
   const aiServices = [
-    { name: 'AI Business Intelligence', url: '/ai-services/business-intelligence', description: 'Advanced analytics & insights' },
-    { name: 'AI Document Processing', url: '/ai-services/document-processing', description: 'Intelligent document analysis' },
-    { name: 'AI Customer Experience', url: '/ai-services/customer-experience', description: 'AI-powered customer interactions' },
-    { name: 'AI Marketing Automation', url: '/ai-services/marketing-automation', description: 'Intelligent marketing campaigns' },
-    { name: 'AI Predictive Maintenance', url: '/ai-services/predictive-maintenance', description: 'Equipment failure prevention' },
-    { name: 'AI Supply Chain', url: '/ai-services/supply-chain', description: 'Supply chain optimization' },
-    { name: 'AI Fraud Detection', url: '/ai-services/fraud-detection', description: 'Advanced fraud prevention' },
-    { name: 'AI Content Generation', url: '/ai-services/content-generation', description: 'AI content creation' },
-    { name: 'AI HR Analytics', url: '/ai-services/hr-analytics', description: 'Human resources optimization' },
-    { name: 'AI Process Automation', url: '/ai-services/process-automation', description: 'Intelligent workflow automation' },
-    { name: 'AI Quality Assurance', url: '/ai-services/quality-assurance', description: 'AI-powered quality control' },
-    { name: 'AI Energy Management', url: '/ai-services/energy-management', description: 'Energy optimization solutions' }
-  ];
-
-  const microSaaSServices = [
-    { name: 'AI Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Real-time business intelligence' },
-    { name: 'Smart Support Bot', url: '/micro-saas/support-bot', description: 'AI customer service automation' },
-    { name: 'Social Media Manager', url: '/micro-saas/social-manager', description: 'AI social media automation' },
-    { name: 'Email Marketing Suite', url: '/micro-saas/email-marketing', description: 'AI email campaigns' },
-    { name: 'Inventory Management', url: '/micro-saas/inventory-management', description: 'Smart inventory optimization' },
-    { name: 'Lead Scoring System', url: '/micro-saas/lead-scoring', description: 'Intelligent lead qualification' },
-    { name: 'Document Processor', url: '/micro-saas/document-processor', description: 'AI document analysis' },
-    { name: 'SEO Optimizer', url: '/micro-saas/seo-optimizer', description: 'AI SEO automation' },
-    { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Smart scheduling system' },
-    { name: 'Chat Analytics', url: '/micro-saas/chat-analytics', description: 'Conversation analysis' },
-    { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'AI expense management' },
-    { name: 'Content Generator', url: '/micro-saas/content-generator', description: 'AI content creation' }
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'AI-powered project management' }
   ];
 
   const itServices = [
@@ -69,28 +53,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Terms of Service', url: '/terms' }
   ];
 
-  const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/ziontechgroup' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/ziontechgroup' },
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/ziontechgroup' },
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/ziontechgroup' },
-    { name: 'YouTube', icon: Youtube, url: 'https://youtube.com/ziontechgroup' },
-    { name: 'GitHub', icon: Github, url: 'https://github.com/ziontechgroup' }
-  ];
-
-  const contactInfo = {
-    phone: '(302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  };
-
-  const achievements = [
-    { text: '50+ Successful Projects' },
-    { text: '100+ Happy Clients' },
-    { text: '300% Average ROI' },
-    { text: '99.9% Uptime Guarantee' }
-  ];
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
@@ -142,33 +104,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-          {/* Micro SaaS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SaaS</h3>
-            <ul className="space-y-3">
-              {microSaaSServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link
-                    to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-                  </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
-                </li>
-              ))}
-              <li>
-                <Link
-                  to="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All Micro SaaS →
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {/* IT Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">IT Services</h4>
@@ -216,6 +151,14 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+        </div>
+        
+        <div className="border-t border-white/10 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
+=======
 
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
@@ -276,7 +219,7 @@ const Footer: React.FC = memo(() => {
               </div>
             </div>
           </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-66f0
+>>>>>>> cursor/website-audit-and-update-with-deployment-6747
         </div>
       </div>
     </footer>
@@ -284,5 +227,9 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+<<<<<<< HEAD
 
 export default Footer;
+=======
+export default Footer;
+>>>>>>> cursor/website-audit-and-update-with-deployment-6747
