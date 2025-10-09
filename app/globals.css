@@ -375,7 +375,6 @@ a {
 
 /* Cyber Button */
 .cyber-button {
-<<<<<<< HEAD
   background: linear-gradient(45deg, #00ffff, #ff00ff);
   border: 1px solid #00ffff;
   color: white;
@@ -394,10 +393,6 @@ a {
   background: linear-gradient(45deg, #ff00ff, #00ffff);
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
   transform: translateY(-2px);
-=======
-  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
-  background-size: 400% 400%;
-  border: none;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -411,8 +406,7 @@ a {
   animation: cyber-glow 3s ease-in-out infinite;
   box-shadow: 
     0 0 20px rgba(0, 255, 255, 0.5),
-    inset 0 0 20px rgba(0, 255, 255, 0.1);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c33d
+     inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .cyber-button::before {
@@ -422,204 +416,11 @@ a {
   left: -100%;
   width: 100%;
   height: 100%;
-<<<<<<< HEAD
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-=======
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c33d
   transition: left 0.5s;
 }
 
 .cyber-button:hover::before {
   left: 100%;
-}
-
-<<<<<<< HEAD
-/* Cyber Card */
-.cyber-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-
-.cyber-card:hover {
-  border-color: rgba(0, 255, 255, 0.6);
-  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.2);
-  transform: translateY(-4px);
-=======
-.cyber-button:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 
-    0 15px 30px rgba(0, 255, 255, 0.6),
-    0 0 40px rgba(255, 0, 255, 0.4),
-    inset 0 0 30px rgba(0, 255, 255, 0.2);
-  animation-duration: 1s;
-}
-
-/* Advanced Neon Glow Effects */
-.neon-glow {
-  box-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor,
-    0 0 20px currentColor;
-}
-
-.neon-glow:hover {
-  box-shadow: 
-    0 0 10px currentColor,
-    0 0 20px currentColor,
-    0 0 30px currentColor,
-    0 0 40px currentColor;
-}
-
-/* Matrix Rain Effect */
-.matrix-rain {
-  position: relative;
-  overflow: hidden;
-}
-
-.matrix-rain::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    linear-gradient(90deg, transparent 98%, #00ff00 100%),
-    linear-gradient(0deg, transparent 98%, #00ff00 100%);
-  background-size: 3px 3px;
-  animation: matrix-rain 20s linear infinite;
-  opacity: 0.1;
-  pointer-events: none;
-}
-
-@keyframes matrix-rain {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
-
-/* Holographic Text Effect */
-.holographic-text {
-  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: holographic-shift 4s ease-in-out infinite;
-  text-shadow: 
-    0 0 10px rgba(255, 0, 255, 0.5),
-    0 0 20px rgba(0, 255, 255, 0.5),
-    0 0 30px rgba(255, 255, 0, 0.5);
-}
-
-@keyframes holographic-shift {
-  0%, 100% { background-position: 0% 50%; }
-  25% { background-position: 100% 50%; }
-  50% { background-position: 100% 100%; }
-  75% { background-position: 0% 100%; }
-}
-
-/* Cyber Grid Enhanced */
-.cyber-grid-enhanced {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(255, 0, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 0, 255, 0.05) 1px, transparent 1px);
-  background-size: 20px 20px, 20px 20px, 40px 40px, 40px 40px;
-  animation: grid-pulse 10s ease-in-out infinite;
-}
-
-@keyframes grid-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
-}
-
-/* Floating Particles */
-.floating-particles {
-  position: relative;
-}
-
-.floating-particles::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #00ffff, transparent),
-    radial-gradient(2px 2px at 40px 70px, #ff00ff, transparent),
-    radial-gradient(1px 1px at 90px 40px, #ffff00, transparent),
-    radial-gradient(1px 1px at 130px 80px, #00ff00, transparent),
-    radial-gradient(2px 2px at 160px 30px, #ff0080, transparent);
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: particle-float 25s linear infinite;
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-@keyframes particle-float {
-  0% { transform: translateY(0px) rotate(0deg); }
-  100% { transform: translateY(-200px) rotate(360deg); }
-}
-
-/* Glitch Effect */
-.glitch {
-  position: relative;
-  animation: glitch 2s infinite;
-}
-
-.glitch::before,
-.glitch::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.glitch::before {
-  animation: glitch-1 0.5s infinite;
-  color: #ff00ff;
-  z-index: -1;
-}
-
-.glitch::after {
-  animation: glitch-2 0.5s infinite;
-  color: #00ffff;
-  z-index: -2;
-}
-
-@keyframes glitch {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
-}
-
-@keyframes glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(2px, -2px); }
-  40% { transform: translate(-2px, 2px); }
-  60% { transform: translate(-2px, -2px); }
-  80% { transform: translate(2px, 2px); }
-}
-
-@keyframes glitch-2 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(-2px, -2px); }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-c33d
 }
 
 /* Reduced Motion */

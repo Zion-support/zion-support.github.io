@@ -51,8 +51,7 @@ const HomePage: React.FC = () => {
     }
   }, []);
   return (
-    <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg floating-particles matrix-rain">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -127,6 +126,7 @@ const HomePage: React.FC = () => {
               </a>
             </div>
           </div>
+        </section>
         {/* Services Section */}
         <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
@@ -339,11 +339,9 @@ const HomePage: React.FC = () => {
           <ContentNewsletterSignup />
         </Suspense>
       </main>
-
       {/* Footer */}
       <Footer />
     </div>
-    </>
   );
 };
 export default HomePage;

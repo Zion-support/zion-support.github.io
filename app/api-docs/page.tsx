@@ -4,16 +4,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
-
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
-
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(id);
     setTimeout(() => setCopiedCode(null), 2000);
   };
-
   const apiEndpoints = [
     {
       title: 'AI Services',
@@ -51,11 +48,9 @@ const ApiDocsPage: React.FC = () => {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -65,7 +60,6 @@ const ApiDocsPage: React.FC = () => {
             Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
           </p>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>
           <div className="space-y-8">
@@ -73,7 +67,6 @@ const ApiDocsPage: React.FC = () => {
               <div key={categoryIndex} className="cyber-card hologram-card p-6">
                 <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
-                
                 <div className="space-y-4">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
@@ -104,7 +97,6 @@ const ApiDocsPage: React.FC = () => {
             ))}
           </div>
         </section>
-
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -117,7 +109,6 @@ const ApiDocsPage: React.FC = () => {
                 Authorization: Bearer YOUR_API_KEY
               </code>
             </div>
-            
             <div className="cyber-card hologram-card p-6">
               <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
               <p className="text-gray-300 mb-4">
@@ -126,7 +117,6 @@ const ApiDocsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
           <p className="text-gray-300 mb-8">
@@ -148,10 +138,8 @@ const ApiDocsPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
       <Footer />
     </div>
   );
 };
-
 export default ApiDocsPage;
