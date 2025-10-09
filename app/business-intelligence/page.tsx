@@ -36,10 +36,9 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ];
-<<<<<<< HEAD
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -181,5 +180,3 @@ const BusinessIntelligencePage: React.FC = () => {
 };
 
 export default BusinessIntelligencePage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7970
