@@ -40,18 +40,46 @@ const Navigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link href="/" className="text-white hover:text-blue-400 transition-colors">
               Home
             </Link>
-            <Link href="/services" className="text-white hover:text-blue-400 transition-colors">
-              Services
-            </Link>
+            <div className="relative group">
+              <button className="text-white hover:text-blue-400 transition-colors flex items-center">
+                Services
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link href="/services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    All Services
+                  </Link>
+                  <div className="border-t border-gray-200 my-1"></div>
+                  <Link href="/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    AI Services
+                  </Link>
+                  <Link href="/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Micro SAAS
+                  </Link>
+                  <Link href="/it-services" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    IT Services
+                  </Link>
+                  <Link href="/cybersecurity" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link href="/about" className="text-white hover:text-blue-400 transition-colors">
               About
             </Link>
             <Link href="/blog" className="text-white hover:text-blue-400 transition-colors">
               Blog
+            </Link>
+            <Link href="/case-studies" className="text-white hover:text-blue-400 transition-colors">
+              Case Studies
             </Link>
             <Link href="/contact" className="text-white hover:text-blue-400 transition-colors">
               Contact
@@ -90,12 +118,41 @@ const Navigation: React.FC = () => {
               >
                 Home
               </Link>
+              <div className="px-3 py-2 text-white font-medium">Services</div>
               <Link 
                 href="/services" 
-                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
                 onClick={closeMenu}
               >
-                Services
+                All Services
+              </Link>
+              <Link 
+                href="/ai-services" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                AI Services
+              </Link>
+              <Link 
+                href="/micro-saas" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
+                href="/it-services" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                IT Services
+              </Link>
+              <Link 
+                href="/cybersecurity" 
+                className="block px-6 py-2 text-gray-300 hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Cybersecurity
               </Link>
               <Link 
                 href="/about" 
@@ -110,6 +167,20 @@ const Navigation: React.FC = () => {
                 onClick={closeMenu}
               >
                 Blog
+              </Link>
+              <Link 
+                href="/case-studies" 
+                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                href="/careers" 
+                className="block px-3 py-2 text-white hover:text-blue-400 transition-colors"
+                onClick={closeMenu}
+              >
+                Careers
               </Link>
               <Link 
                 href="/contact" 

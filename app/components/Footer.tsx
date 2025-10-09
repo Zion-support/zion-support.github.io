@@ -53,11 +53,14 @@ const Footer: React.FC = memo(() => {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">All Services</Link></li>
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link href="/it-services" className="text-gray-300 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
               <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
               <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
               <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
 
@@ -66,6 +69,7 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold text-white">Company</h3>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Our Team</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
               <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
