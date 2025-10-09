@@ -224,7 +224,7 @@ const HomePage: React.FC = () => {
                 </p>
                 <div className="text-center">
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
-                  <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
+                  <a href="/ai-workflow-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
                   </a>
                 </div>
@@ -337,7 +337,7 @@ const HomePage: React.FC = () => {
               </p>
               <div className="text-center">
                 <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">Starting at $799/month</div>
-                <a href="/ai-cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
+                <a href="/cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                   Learn More →
                 </a>
               </div>

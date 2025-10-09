@@ -1,280 +1,340 @@
 #!/usr/bin/env node
-import axios from 'axios'
-import * as cheerio from 'cheerio'
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-// const __filename = fileURLToPath(import.meta.url);
-// const __dirname = path.dirname(__filename);
-class WebsiteAnalyzer {constructor(baseUrl) {
-    this.baseUrl = baseUrl;
-    this.visitedUrls = new Set();
-    this.brokenLinks = [];
-    this.missingPages = [];
-    this.externalLinks = [];
-    this.internalLinks = [];
-    this.images = [];
-    this.forms = [];
-    this.navigation = [];
-    this.contentIssues = []}
-  }
-  async analyzeWebsite() {
-//     try {//Start with homepage
-      await this.analyzePage(this.baseUrl);
-      //Analyze all internal links found
-//       const urlsToAnalyze = Array.from(this.internalLinks);
-      for (const url of urlsToAnalyze) {
-        if (!this.visitedUrls.has(url)) {
-          await this.analyzePage(url)}
-        }
-      }
-      //Generate comprehensive report
-      this.generateReport();
-//     } catch (error) {}
-  }
-  async analyzePage(url) {if (this.visitedUrls.has(url)) return}
-//     this.visitedUrls.add(url);
-    try {const response = await axios.get(url, {
-        timeout: 10000,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible) WebsiteAnalyzer/1.0)'}
-        },
-      });
-      const $ = cheerio.load(response.data);
-      //Analyze page content
-      this.analyzePageContent(url) $);
-      //Extract all links
-      this.extractLinks(url) $);
-      //Extract images
-      this.extractImages(url) $);
-      //Extract forms
-      this.extractForms(url) $);
-      //Analyze navigation
-      this.analyzeNavigation(url) $);
-    } catch (error) {
-//       this.brokenLinks.push({url,
-        status: error.response?.status || 'ERROR',
-        error: error.message)
-        type: 'page'}
-      });
-    }
-  }
-  analyzePageContent(url) $) {//Check for placeholder content
-    const _text = $.text().toLowerCase();
-    const placeholders = [
-      'lorem ipsum',
-      'placeholder',
-      'coming soon',
-      'under construction',
-      'page not found',
-      '404',
-      'home.hero_title',
-      'home.hero_subtitle',
-    ]}
-    placeholders.forEach(placeholder => {
-      if (text.includes(placeholder)) {
-        this.contentIssues.push({
-          url}
-          issue: `Contains placeholder text: "${placeholder}"`,
-          type: 'placeholder')
-        });
-      }
-    });
-    //Check for empty content
-    const mainContent = $('main, .content, #content) .main-content')
-      .text()
-      .trim();
-    if (mainContent.length < 100) {this.contentIssues.push({
-        url,
-        issue: 'Very little content found')
-        type: 'minimal_content'}
-      });
-    }
-    //Check for missing meta tags
-    const _title = $('title').text().trim();
-    const _description = $('meta[name="description"]').attr('content');
-    if (!title || title.length < 10) {this.contentIssues.push({
-        url,
-        issue: 'Missing or inadequate page title')
-        type: 'seo'}
-      });
-    }
-    if (!description || description.length < 50) {this.contentIssues.push({
-        url,
-        issue: 'Missing or inadequate meta description')
-        type: 'seo'}
-      });
-    }
-  }
-  extractLinks(url) $) {$('a[href]').each((index) element) => {
-//       const href = $(element).attr('href');
-      const _text = $(element).text().trim();
-      if (!href) return;
-      const absoluteUrl = this.resolveUrl(url) href)}
-      const linkData = {
-        url: absoluteUrl,
-        text,
-        source: url,
-        type: this.getLinkType(absoluteUrl)}
-      };
-      if (this.isInternalLink(absoluteUrl)) {this.internalLinks.add(absoluteUrl)}
-      } else {this.externalLinks.push(linkData)}
-      }
-    });
-  }
-  extractImages(url) $) {$('img[src]').each((index) element) => {
-//       const src = $(element).attr('src');
-//       const alt = $(element).attr('alt');
-      if (!src) return;
-      const imageUrl = this.resolveUrl(url) src)}
-      this.images.push({
-        url: imageUrl,
-        alt: alt || '',
-        source: url)
-        hasAlt: !!alt}
-      });
-    });
-  }
-  extractForms(url) $) {$('form').each((index) element) => {
-//       const action = $(element).attr('action');
-      const method = $(element).attr('method') || 'GET'
-      const inputs = $(element).find('input, textarea) select').length}
-      this.forms.push({
-        url,
-        action: action ? this.resolveUrl(url) action) : url,
-        method,
-        inputCount: inputs}
-      });
-    });
-  }
-  analyzeNavigation(url) $) {$('nav, .navigation) .menu').each((index) element) => {
-      const _navLinks = [];
-      $(element)
-        .find('a[href]')
-        .each((i) link) => {
-//           const href = $(link).attr('href');
-          const text = $(link).text().trim()}
-          if (href && text) {
-            navLinks.push({
-              url: this.resolveUrl(url) href),
-              text,
-              isInternal: this.isInternalLink(this.resolveUrl(url) href))}
-            });
-          }
-        });
-      if (navLinks.length > 0) {this.navigation.push({
-          url)
-          links: navLinks}
-        });
-      }
-    });
-  }
-  resolveUrl(baseUrl) href) {try {
-      return new URL(href) baseUrl).href}
-    } catch {return href}
-    }
-  }
-  isInternalLink(url) {try {
-//       const baseDomain = new URL(this.baseUrl).hostname;
-//       const linkDomain = new URL(url).hostname;
-      return baseDomain === linkDomain}
-    } catch {return false}
-    }
-  }
-  getLinkType(url) {
-    if (url.startsWith('mailto:')) return 'email'
-    if (url.startsWith('tel:')) return 'phone'
-    if (url.startsWith('#')) return 'anchor'
-    return 'http'
-  }
-  generateReport() {const report = {
-      analysisDate: new Date().toISOString(),
-      baseUrl: this.baseUrl,
-      summary: {
-        totalPagesAnalyzed: this.visitedUrls.size,
-        totalInternalLinks: this.internalLinks.size,
-        totalExternalLinks: this.externalLinks.length,
-        totalImages: this.images.length,
-        totalForms: this.forms.length,
-        brokenLinks: this.brokenLinks.length,
-        contentIssues: this.contentIssues.length}
-      },
-      brokenLinks: this.brokenLinks,
-      contentIssues: this.contentIssues,
-      missingPages: this.missingPages,
-      externalLinks: this.externalLinks,
-      images: this.images,
-      forms: this.forms,
-      navigation: this.navigation,
-      recommendations: this.generateRecommendations();
-    };
-    //Save detailed report
-    fs.writeFileSync(path.join(__dirname) 'website-analysis-comprehensive.json'),
-      JSON.stringify(report, null) 2),
-    );
-    //Generate markdown report
-    this.generateMarkdownReport(report);
-//     //     //     //     //     //     //     //     return report;
-  }
-  generateMarkdownReport(report) {
-    let _markdown = `# Website Analysis Report - ${this.baseUrl}\n\n`;
-    markdown += `**Analysis Date:** ${new Date(report.analysisDate).toLocaleString()}\n\n`;
-    markdown += `## Summary\n\n`;
-    markdown += `- **Pages Analyzed:** ${report.summary.totalPagesAnalyzed}\n`;
-    markdown += `- **Internal Links:** ${report.summary.totalInternalLinks}\n`;
-    markdown += `- **External Links:** ${report.summary.totalExternalLinks}\n`;
-    markdown += `- **Broken Links:** ${report.summary.brokenLinks}\n`;
-    markdown += `- **Content Issues:** ${report.summary.contentIssues}\n`;
-    markdown += `- **Images:** ${report.summary.totalImages}\n`;
-    markdown += `- **Forms:** ${report.summary.totalForms}\n\n`;
-    if (report.brokenLinks.length > 0) {markdown += `## 🚨 Broken Links\n\n`}
-      report.brokenLinks.forEach(link => {
-        markdown += `- **${link.url}** (Status: ${link.status})\n`;
-        markdown += `  - Error: ${link.error}\n`;
-        markdown += `  - Type: ${link.type}\n\n`;
-      });
-    }
-    if (report.contentIssues.length > 0) {markdown += `## ⚠️ Content Issues\n\n`}
-      report.contentIssues.forEach(issue => {
-        markdown += `- **${issue.url}**\n`;
-        markdown += `  - Issue: ${issue.issue}\n`;
-        markdown += `  - Type: ${issue.type}\n\n`)
-      });
-    }
-    markdown += `## 📋 Recommendations\n\n`;
-    report.recommendations.forEach(rec => {
-      markdown += `- ${rec}\n`)
-    });
-    fs.writeFileSync(path.join(__dirname) 'website-analysis-report.md'),
-      markdown,
-    );
-  }
-  generateRecommendations() {const recommendations = [];
-    if (this.brokenLinks.length > 0) {
-      recommendations.push('Fix all broken links identified in the analysis')}
-    }
-    if (this.contentIssues.length > 0) {recommendations.push(
-        'Address content issues including placeholders and missing meta tags'}
-      );
-    }
-    const _imagesWithoutAlt = this.images.filter(img => !img.hasAlt);
-    if (imagesWithoutAlt.length > 0) {
-      recommendations.push(`Add alt text to ${imagesWithoutAlt.length} images for accessibility`)
-      );
-    }
-    recommendations.push('Implement proper error handling for 404 pages');
-    recommendations.push('Add structured data markup for better SEO');
-    recommendations.push('Optimize images for better performance');
-    recommendations.push('Implement proper caching headers');
-    recommendations.push('Add security headers (CSP, HSTS) etc.)');
-    return recommendations;
-  }
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+console.log('🔍 Starting comprehensive website analysis...\n');
+
+// Define all expected pages based on navigation and routing
+const expectedPages = [
+  // Main pages
+  '/',
+  '/about',
+  '/contact',
+  '/services',
+  '/blog',
+  '/case-studies',
+  '/pricing',
+  '/resources',
+  '/solutions',
+  '/industries',
+  
+  // AI Services
+  '/ai-services',
+  '/ai-marketing',
+  '/ai-automation',
+  '/ai-healthcare',
+  '/ai-fintech',
+  '/ai-content-generation',
+  '/ai-data-analytics',
+  '/ai-cybersecurity',
+  '/ai-workflow-automation',
+  '/ai-mobile-app-development',
+  '/ai-ecommerce-solutions',
+  '/ai-customer-support',
+  '/ai-sales-automation',
+  '/ai-data-visualization',
+  
+  // IT Services
+  '/it-services',
+  '/it-infrastructure',
+  '/cybersecurity',
+  '/cloud-services',
+  '/devops',
+  '/database',
+  '/networking',
+  '/system-admin',
+  '/it-consulting',
+  '/managed-it',
+  '/it-training',
+  '/it-project-management',
+  
+  // Micro SAAS
+  '/micro-saas',
+  '/developer-tools',
+  '/business-apps',
+  '/marketing-tools',
+  '/analytics-tools',
+  '/communication-tools',
+  '/productivity-tools',
+  '/hr-recruitment-tools',
+  '/customer-support-tools',
+  '/sales-crm-tools',
+  '/project-management-tools',
+  '/content-creation-tools',
+  
+  // Specialized Services
+  '/quantum-computing',
+  '/autonomous-systems',
+  '/blockchain-web3',
+  '/iot-edge-computing',
+  '/business-intelligence',
+  '/robotics',
+  '/ar-vr-solutions',
+  '/smart-cities',
+  '/digital-transformation',
+  '/innovation-labs',
+  '/sustainability-tech',
+  '/future-technologies',
+  
+  // Additional pages
+  '/team',
+  '/careers',
+  '/news',
+  '/api-docs',
+  '/status',
+  '/support',
+  '/privacy',
+  '/terms',
+  '/gdpr',
+  '/cookies',
+  '/compliance',
+  '/sitemap',
+  '/offline'
+];
+
+// Check if pages exist
+function checkPageExists(pagePath) {
+  const fullPath = path.join(__dirname, 'app', pagePath === '/' ? 'page.tsx' : `${pagePath}/page.tsx`);
+  return fs.existsSync(fullPath);
 }
-//Run analysis
-async function main() {const analyzer = new WebsiteAnalyzer('https: //ziontechgroup.com')}
-  await analyzer.analyzeWebsite()}
+
+// Analyze navigation links
+function analyzeNavigation() {
+  console.log('📋 Analyzing navigation structure...');
+  
+  const navigationFile = path.join(__dirname, 'app/components/Navigation.tsx');
+  if (!fs.existsSync(navigationFile)) {
+    console.log('❌ Navigation component not found');
+    return [];
+  }
+  
+  const navContent = fs.readFileSync(navigationFile, 'utf8');
+  const linkMatches = navContent.match(/href="([^"]+)"/g) || [];
+  const links = linkMatches.map(match => match.replace('href="', '').replace('"', ''));
+  
+  console.log(`✅ Found ${links.length} navigation links`);
+  return [...new Set(links)]; // Remove duplicates
 }
-//Run analysis
-// main().catch(console.error);
-export default WebsiteAnalyzer;
-// #!/usr/bin/env node import axios from 'axios'' import * as cheerio from 'cheerio'' import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class WebsiteAnalyzer {constructor(baseUrl) { this.baseUrl = baseUrl; this.visitedUrls = new Set(); this.brokenLinks = []; this.missingPages = []; this.externalLinks = []; this.internalLinks = []; this.images = []; this.forms = []; this.navigation = []; this.contentIssues = []} } async analyzeWebsite() { try {//Start with homepage await this.analyzePage(this.baseUrl); //Analyze all internal links found const urlsToAnalyze = Array.from(this.internalLinks); for (const url of urlsToAnalyze) { if (!this.visitedUrls.has(url)) { await this.analyzePage(url)} } } //Generate comprehensive report this.generateReport(); } catch (error) {' } } async analyzePage(url) {if (this.visitedUrls.has(url)) return} this.visitedUrls.add(url); try {const response = await axios.get(url, { timeout: 10000) headers: {' 'User-Agent': 'Mozilla/5.0 (compatible} WebsiteAnalyzer/1.0)' } }); const $ = cheerio.load(response.data); //Analyze page content this.analyzePageContent(url) $); //Extract all links this.extractLinks(url) $); //Extract images this.extractImages(url) $); //Extract forms this.extractForms(url) $); //Analyze navigation this.analyzeNavigation(url) $); } catch (error) { this.brokenLinks.push({url,' status: error.response?.status || 'ERROR') error: error.message}' type: 'page' }); } } analyzePageContent(url) $) {//Check for placeholder content const text = $.text().toLowerCase(); const placeholders = [' 'lorem ipsum',' 'placeholder',' 'coming soon',' 'under construction',' 'page not found',' '404',' 'home.hero_title',' 'home.hero_subtitle' ]} placeholders.forEach(placeholder => { if (text.includes(placeholder)) { this.contentIssues.push({ url} issue: `Contains placeholder text: "${placeholder}"`)' type: 'placeholder' }); } }); //Check for empty content' const mainContent = $('main, .content, #content) .main-content').text().trim(); if (mainContent.length < 100) {this.contentIssues.push({ url)' issue: 'Very little content found'}' type: 'minimal_content' }); } //Check for missing meta tags' const title = $('title').text().trim();' const description = $('meta[name="description"]').attr('content'); if (!title || title.length < 10) {this.contentIssues.push({ url)' issue: 'Missing or inadequate page title'}' type: 'seo' }); } if (!description || description.length < 50) {this.contentIssues.push({ url)' issue: 'Missing or inadequate meta description'}' type: 'seo' }); } } extractLinks(url) $) {' $('a[href]').each((index) element) => {' const href = $(element).attr('href'); const text = $(element).text().trim(); if (!href) return; const absoluteUrl = this.resolveUrl(url) href)} const linkData = { url: absoluteUrl, text, source: url} type: this.getLinkType(absoluteUrl) }; if (this.isInternalLink(absoluteUrl)) {this.internalLinks.add(absoluteUrl)} } else {this.externalLinks.push(linkData)} } }); } extractImages(url) $) {' $('img[src]').each((index) element) => {' const src = $(element).attr('src');' const alt = $(element).attr('alt'); if (!src) return; const imageUrl = this.resolveUrl(url) src)} this.images.push({ url: imageUrl,' alt: alt || '') source: url} hasAlt: !!alt }); }); } extractForms(url) $) {' $('form').each((index) element) => {' const action = $(element).attr('action');' const method = $(element).attr('method') || 'GET'' const inputs = $(element).find('input, textarea) select').length} this.forms.push({ url, action: action ? this.resolveUrl(url) action) : url, method} inputCount: inputs }); }); } analyzeNavigation(url) $) {' $('nav, .navigation) .menu').each((index) element) => { const navLinks = [];' $(element).find('a[href]').each((i) link) => {' const href = $(link).attr('href'); const text = $(link).text().trim()} if (href && text) { navLinks.push({ url: this.resolveUrl(url) href), text, isInternal: this.isInternalLink(this.resolveUrl(url} href)) }); } }); if (navLinks.length > 0) {this.navigation.push({ url} links: navLinks }); } }); } resolveUrl(baseUrl) href) {try { return new URL(href) baseUrl).href} } catch {return href} } } isInternalLink(url) {try { const baseDomain = new URL(this.baseUrl).hostname; const linkDomain = new URL(url).hostname; return baseDomain === linkDomain} } catch {return false} } } getLinkType(url) {' if (url.startsWith('mailto:')) return 'email'' if (url.startsWith('tel:')) return 'phone'' if (url.startsWith('#')) return 'anchor'' return 'http' } generateReport() {const report = { analysisDate: new Date().toISOString(), baseUrl: this.baseUrl, summary: { totalPagesAnalyzed: this.visitedUrls.size, totalInternalLinks: this.internalLinks.size, totalExternalLinks: this.externalLinks.length, totalImages: this.images.length, totalForms: this.forms.length, brokenLinks: this.brokenLinks.length} contentIssues: this.contentIssues.length }, brokenLinks: this.brokenLinks, contentIssues: this.contentIssues, missingPages: this.missingPages, externalLinks: this.externalLinks, images: this.images, forms: this.forms, navigation: this.navigation; recommendations: this.generateRecommendations() }; //Save detailed report fs.writeFileSync(' path.join(__dirname) 'website-analysis-comprehensive.json'), JSON.stringify(report, null) 2) ); //Generate markdown report this.generateMarkdownReport(report); ' return report; } generateMarkdownReport(report) { let markdown = `# Website Analysis Report - ${this.baseUrl}\\n\\n`; markdown += `**Analysis Date:** ${new Date(report.analysisDate).toLocaleString()}\\n\\n`; markdown += `## Summary\\n\\n`; markdown += `- **Pages Analyzed:** ${report.summary.totalPagesAnalyzed}\\n`; markdown += `- **Internal Links:** ${report.summary.totalInternalLinks}\\n`; markdown += `- **External Links:** ${report.summary.totalExternalLinks}\\n`; markdown += `- **Broken Links:** ${report.summary.brokenLinks}\\n`; markdown += `- **Content Issues:** ${report.summary.contentIssues}\\n`; markdown += `- **Images:** ${report.summary.totalImages}\\n`; markdown += `- **Forms:** ${report.summary.totalForms}\\n\\n`; if (report.brokenLinks.length > 0) {markdown += `## 🚨 Broken Links\\n\\n`} report.brokenLinks.forEach(link => { markdown += `- **${link.url}** (Status: ${link.status})\\n`; markdown += ` - Error: ${link.error}\\n`; markdown += ` - Type: ${link.type}\\n\\n`; }); } if (report.contentIssues.length > 0) {markdown += `## ⚠️ Content Issues\\n\\n`} report.contentIssues.forEach(issue => { markdown += `- **${issue.url}**\\n`; markdown += ` - Issue: ${issue.issue}\\n`; markdown += ` - Type: ${issue.type}\\n\\n`) }); } markdown += `## 📋 Recommendations\\n\\n`; report.recommendations.forEach(rec => { markdown += `- ${rec}\\n`) }); fs.writeFileSync(' path.join(__dirname) 'website-analysis-report.md'), markdown ); } generateRecommendations() {const recommendations = []; if (this.brokenLinks.length > 0) {' recommendations.push('Fix all broken links identified in the analysis')} } if (this.contentIssues.length > 0) {' recommendations.push('Address content issues including placeholders and missing meta tags')} } const imagesWithoutAlt = this.images.filter(img => !img.hasAlt); if (imagesWithoutAlt.length > 0) { recommendations.push(`Add alt text to ${imagesWithoutAlt.length} images for accessibility`); } ' recommendations.push('Implement proper error handling for 404 pages');' recommendations.push('Add structured data markup for better SEO');' recommendations.push('Optimize images for better performance');' recommendations.push('Implement proper caching headers');' recommendations.push('Add security headers (CSP, HSTS) etc.)'); return recommendations; } } //Run analysis async function main() {' const analyzer = new WebsiteAnalyzer('https: //ziontechgroup.com')} await analyzer.analyzeWebsite()} } // Run analysis main().catch(console.error); export default WebsiteAnalyzer;'
+
+// Check for missing pages
+function findMissingPages() {
+  console.log('\n🔍 Checking for missing pages...');
+  
+  const missingPages = [];
+  const existingPages = [];
+  
+  expectedPages.forEach(page => {
+    if (checkPageExists(page)) {
+      existingPages.push(page);
+    } else {
+      missingPages.push(page);
+    }
+  });
+  
+  console.log(`✅ Found ${existingPages.length} existing pages`);
+  console.log(`❌ Found ${missingPages.length} missing pages`);
+  
+  if (missingPages.length > 0) {
+    console.log('\n📝 Missing pages:');
+    missingPages.forEach(page => {
+      console.log(`  - ${page}`);
+    });
+  }
+  
+  return { missingPages, existingPages };
+}
+
+// Check for broken internal links
+function findBrokenInternalLinks() {
+  console.log('\n🔗 Checking for broken internal links...');
+  
+  const brokenLinks = [];
+  const allFiles = getAllTsxFiles();
+  
+  allFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    const linkMatches = content.match(/href="([^"]+)"/g) || [];
+    
+    linkMatches.forEach(match => {
+      const link = match.replace('href="', '').replace('"', '');
+      
+      // Skip external links
+      if (link.startsWith('http') || link.startsWith('mailto:') || link.startsWith('tel:')) {
+        return;
+      }
+      
+      // Skip anchor links
+      if (link.startsWith('#')) {
+        return;
+      }
+      
+      // Check if internal page exists
+      if (!checkPageExists(link)) {
+        brokenLinks.push({
+          file: path.relative(__dirname, file),
+          link: link
+        });
+      }
+    });
+  });
+  
+  console.log(`❌ Found ${brokenLinks.length} broken internal links`);
+  
+  if (brokenLinks.length > 0) {
+    console.log('\n📝 Broken links:');
+    brokenLinks.forEach(({ file, link }) => {
+      console.log(`  - ${file}: ${link}`);
+    });
+  }
+  
+  return brokenLinks;
+}
+
+// Get all TSX files
+function getAllTsxFiles() {
+  const files = [];
+  
+  function walkDir(dir) {
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
+    });
+  }
+  
+  walkDir(path.join(__dirname, 'app'));
+  return files;
+}
+
+// Check for missing components
+function findMissingComponents() {
+  console.log('\n🧩 Checking for missing components...');
+  
+  const missingComponents = [];
+  const allFiles = getAllTsxFiles();
+  
+  allFiles.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    const importMatches = content.match(/import.*from\s+['"]([^'"]+)['"]/g) || [];
+    
+    importMatches.forEach(match => {
+      const importPath = match.match(/from\s+['"]([^'"]+)['"]/)[1];
+      
+      // Skip external imports
+      if (importPath.startsWith('react') || importPath.startsWith('next') || 
+          importPath.startsWith('lucide') || importPath.startsWith('framer') ||
+          importPath.startsWith('@')) {
+        return;
+      }
+      
+      // Check if component file exists
+      const componentPath = path.join(__dirname, 'app', importPath + '.tsx');
+      if (!fs.existsSync(componentPath)) {
+        missingComponents.push({
+          file: path.relative(__dirname, file),
+          component: importPath
+        });
+      }
+    });
+  });
+  
+  console.log(`❌ Found ${missingComponents.length} missing components`);
+  
+  if (missingComponents.length > 0) {
+    console.log('\n📝 Missing components:');
+    missingComponents.forEach(({ file, component }) => {
+      console.log(`  - ${file}: ${component}`);
+    });
+  }
+  
+  return missingComponents;
+}
+
+// Generate comprehensive report
+function generateReport() {
+  console.log('\n📊 Generating comprehensive analysis report...\n');
+  
+  const navLinks = analyzeNavigation();
+  const { missingPages, existingPages } = findMissingPages();
+  const brokenLinks = findBrokenInternalLinks();
+  const missingComponents = findMissingComponents();
+  
+  const report = {
+    timestamp: new Date().toISOString(),
+    summary: {
+      totalExpectedPages: expectedPages.length,
+      existingPages: existingPages.length,
+      missingPages: missingPages.length,
+      brokenInternalLinks: brokenLinks.length,
+      missingComponents: missingComponents.length
+    },
+    navigation: {
+      totalLinks: navLinks.length,
+      links: navLinks
+    },
+    pages: {
+      existing: existingPages,
+      missing: missingPages
+    },
+    brokenLinks: brokenLinks,
+    missingComponents: missingComponents,
+    recommendations: []
+  };
+  
+  // Add recommendations
+  if (missingPages.length > 0) {
+    report.recommendations.push('Create missing pages to complete the website structure');
+  }
+  
+  if (brokenLinks.length > 0) {
+    report.recommendations.push('Fix broken internal links to improve user experience');
+  }
+  
+  if (missingComponents.length > 0) {
+    report.recommendations.push('Create missing components to resolve import errors');
+  }
+  
+  // Save report
+  fs.writeFileSync(
+    path.join(__dirname, 'website-analysis-report.json'),
+    JSON.stringify(report, null, 2)
+  );
+  
+  console.log('✅ Analysis complete! Report saved to website-analysis-report.json');
+  
+  return report;
+}
+
+// Main execution
+try {
+  const report = generateReport();
+  
+  console.log('\n🎯 SUMMARY:');
+  console.log(`📄 Pages: ${report.summary.existingPages}/${report.summary.totalExpectedPages} exist`);
+  console.log(`🔗 Broken links: ${report.summary.brokenInternalLinks}`);
+  console.log(`🧩 Missing components: ${report.summary.missingComponents}`);
+  
+  if (report.recommendations.length > 0) {
+    console.log('\n💡 RECOMMENDATIONS:');
+    report.recommendations.forEach((rec, index) => {
+      console.log(`${index + 1}. ${rec}`);
+    });
+  }
+  
+} catch (error) {
+  console.error('❌ Analysis failed:', error.message);
+  process.exit(1);
+}
