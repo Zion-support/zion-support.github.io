@@ -17,7 +17,7 @@ const BusinessIntelligencePage: React.FC = () => {
     },
     {
       title: 'Predictive Analytics & Forecasting',
-      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',cursor/add-new-services-and-deploy-updates-f159
+      description: 'Advanced forecasting models for sales, demand, inventory, and business trend prediction.',
       icon: '🔮',
       price: 'Starting at $3,500/month',
       features: ['Time series forecasting', 'Demand prediction', 'Sales forecasting', 'Risk assessment', 'Scenario modeling'],
@@ -134,7 +134,7 @@ const BusinessIntelligencePage: React.FC = () => {
       benefits: ['Align BI with business goals', 'Maximize BI investment', 'Ensure successful adoption'],
       marketPrice: '$500-1,200/hour',
       category: 'BI Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']cursor/add-new-services-and-deploy-updates-f159
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Change Management', 'Training Programs']
     }
   ];
 
@@ -150,8 +150,7 @@ const BusinessIntelligencePage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">cursor/add-new-services-and-deploy-updates-f159
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+        <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20">          <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -164,8 +163,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                   Explore BI Solutions
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">cursor/add-new-services-and-deploy-updates-f159
-                  Schedule Demo
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">                  Schedule Demo
                 </button>
               </div>
             </div>
@@ -180,8 +178,7 @@ const BusinessIntelligencePage: React.FC = () => {
                 Why Choose Our BI Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert business intelligence solutions that turn your data into competitive advantagecursor/add-new-services-and-deploy-updates-f159
-              </p>
+                Expert business intelligence solutions that turn your data into competitive advantage              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -203,15 +200,13 @@ const BusinessIntelligencePage: React.FC = () => {
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Security</h3>
-                <p className="text-gray-600">Enterprise-grade security with compliance and data governance</p>cursor/add-new-services-and-deploy-updates-f159
-              </div>
+                <p className="text-gray-600">Enterprise-grade security with compliance and data governance</p>              </div>
               <div className="text-center">
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Actionable Insights</h3>
-                <p className="text-gray-600">Clear, actionable recommendations for business growth</p>cursor/add-new-services-and-deploy-updates-f159
-              </div>
+                <p className="text-gray-600">Clear, actionable recommendations for business growth</p>              </div>
             </div>
           </div>
         </section>
@@ -225,8 +220,7 @@ const BusinessIntelligencePage: React.FC = () => {
                   {category} Solutions
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} services tailored to your business needscursor/add-new-services-and-deploy-updates-f159
-                </p>
+                  Specialized {category.toLowerCase()} services tailored to your business needs                </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {biServices
@@ -239,8 +233,7 @@ const BusinessIntelligencePage: React.FC = () => {
                       
                       <div className="mb-4">
                         <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>cursor/add-new-services-and-deploy-updates-f159
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                          <span className="text-2xl font-bold text-purple-600">{service.price}</span>                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates
@@ -263,8 +256,7 @@ const BusinessIntelligencePage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">cursor/add-new-services-and-deploy-updates-f159
-                              {tech}
+                            <span key={techIndex} className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">                              {tech}
                             </span>
                           ))}
                         </div>
@@ -282,8 +274,7 @@ const BusinessIntelligencePage: React.FC = () => {
                         </ul>
                       </div>
 
-                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">cursor/add-new-services-and-deploy-updates-f159
-                        Get BI Consultation
+                      <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">                        Get BI Consultation
                       </button>
                     </div>
                   ))}
@@ -332,37 +323,31 @@ const BusinessIntelligencePage: React.FC = () => {
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg">
                 <Cpu className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Insights</h3>
-                <p className="text-gray-600">Automated insights, anomaly detection, and natural language queries</p>cursor/add-new-services-and-deploy-updates-f159
-              </div>
+                <p className="text-gray-600">Automated insights, anomaly detection, and natural language queries</p>              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">cursor/add-new-services-and-deploy-updates-f159
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Transform Your Data into Insights?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">cursor/add-new-services-and-deploy-updates-f159
-              Contact our BI experts for a free consultation and custom analytics strategy
+            <p className="text-xl mb-8 text-purple-100">              Contact our BI experts for a free consultation and custom analytics strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"cursor/add-new-services-and-deploy-updates-f159
-              >
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"              >
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"cursor/add-new-services-and-deploy-updates-f159
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"              >
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
-            <div className="mt-8 text-sm text-purple-200">cursor/add-new-services-and-deploy-updates-f159
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <div className="mt-8 text-sm text-purple-200">              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
         </section>

@@ -94,7 +94,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // For now, we'll just log it
       // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
-      origin/cursor/fix-errors-and-merge-to-main-6395
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -103,8 +102,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // });
     } catch (reportingError) {
       // eslint-disable-next-line no-console
-      console.warn('Failed to send error report:', reportingError);origin/cursor/fix-errors-and-merge-to-main-6395
-    }
+      console.warn('Failed to send error report:', reportingError);    }
   };
 
   private getUserId = (): string | null => {
@@ -189,8 +187,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       const { retryCount, error, errorId } = this.state;
       const _canRetry = retryCount < this.maxRetries;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
-      return (
+>>>>>>>       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>

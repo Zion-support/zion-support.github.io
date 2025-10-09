@@ -130,8 +130,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (enableDebug) {
        
       // eslint-disable-next-line no-console
-      console.error('Analytics Error:', error, context);origin/cursor/fix-errors-and-merge-to-main-6395
-    }
+      console.error('Analytics Error:', error, context);    }
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {

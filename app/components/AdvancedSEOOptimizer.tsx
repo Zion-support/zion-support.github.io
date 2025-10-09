@@ -180,8 +180,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   //     canonicalLink.href = url;
   //     document.head.appendChild(canonicalLink);
   //   }
-  // };origin/cursor/fix-errors-and-merge-to-main-6395
-
+  // };
   // const _addStructuredData = (data: Record<string, unknown>) => {
   //   // Remove existing structured data
   //   // if (structuredDataRef.current) {
@@ -225,8 +224,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         }
       });
     }
-  };origin/cursor/fix-errors-and-merge-to-main-6395
-
+  };
   return (
     <Helmet>
       {/* Basic Meta Tags */}

@@ -91,8 +91,7 @@ const ServicesPage: React.FC = () => {
       description: 'Decentralized applications, smart contracts, and Web3 solutions.',
       icon: '🔗',
       link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],cursor/add-new-services-and-deploy-updates-f159
-      price: 'Starting at $8,000/project'
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],      price: 'Starting at $8,000/project'
     },
     {
       title: 'IoT & Edge Computing',
@@ -115,8 +114,7 @@ const ServicesPage: React.FC = () => {
       description: 'Advanced security services including threat detection and compliance.',
       icon: '🛡️',
       link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],cursor/add-new-services-and-deploy-updates-f159
-      price: 'Starting at $2,500/month'
+      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],      price: 'Starting at $2,500/month'
     }
   ];
 

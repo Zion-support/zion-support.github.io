@@ -24,8 +24,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = `Navigated to ${title}`;
-      document.body.appendChild(announcement);origin/cursor/fix-errors-and-merge-to-main-6395
-
+      document.body.appendChild(announcement);
   // Check for user preferences
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -46,8 +45,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         childList: true,
         subtree: true,
       });
-    }origin/cursor/fix-errors-and-merge-to-main-6395
-
+    }
     const handleContrastChange = (e: MediaQueryListEvent) => {
       setIsHighContrast(e.matches);
     };
@@ -111,8 +109,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Remove keyboard navigation class on mouse use
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');origin/cursor/fix-errors-and-merge-to-main-6395
-    };
+      document.body.classList.remove('keyboard-navigation');    };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -213,8 +210,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         outline-offset: 2px;
       }
     `;
-    document.head.appendChild(style);origin/cursor/fix-errors-and-merge-to-main-6395
-
+    document.head.appendChild(style);
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
