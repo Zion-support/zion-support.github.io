@@ -35,6 +35,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
 
   // Web Vitals measurement
+  useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 
     // First Contentful Paint (FCP)
