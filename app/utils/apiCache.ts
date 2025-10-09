@@ -188,8 +188,7 @@ export class ApiCache {
       await this.fetch<T>(url, options, cacheConfig);
     } catch (error) {
       // Silent fail for prefetch
-      console.warn('Prefetch failed:', url, error);
-    }
+      }
   }
 
   /**

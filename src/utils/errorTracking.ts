@@ -161,10 +161,8 @@ class ErrorTracker {
         console.error(logMessage, error);
         break;
       case ErrorSeverity.MEDIUM:
-        console.warn(logMessage, error);
         break;
       case ErrorSeverity.LOW:
-        console.info(logMessage, error);
         break;
     }
   }

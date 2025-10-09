@@ -92,8 +92,7 @@ class EnhancedErrorHandler {
     this.isInitialized = true;
      
     if (process.env['NODE_ENV'] === 'development') {
-      console.log('🛡️ Enhanced Error Handler initialized');
-    }
+      }
   }
 
   /**
@@ -207,8 +206,7 @@ class EnhancedErrorHandler {
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
          
-        console.warn('Failed to setup performance error handler:', error);
-      }
+        }
     }
   }
 
@@ -565,8 +563,7 @@ class EnhancedErrorHandler {
       });
     } catch (error) {
        
-      console.warn('Failed to report error to remote service:', error);
-    }
+      }
   }
 
   /**
@@ -575,10 +572,7 @@ class EnhancedErrorHandler {
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
      
-    console.log(
-      `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
-    );
-  }
+    }
 
   /**
    * Assess performance impact
@@ -589,8 +583,7 @@ class EnhancedErrorHandler {
       errorReport.category === 'performance'
     ) {
        
-      console.warn('⚠️ Performance impact detected from error');
-    }
+      }
   }
 
   /**
@@ -606,8 +599,7 @@ class EnhancedErrorHandler {
     if (recentErrors.length > 5) {
        
       if (process.env['NODE_ENV'] === 'development') { 
-        console.log('🔄 Attempting error recovery...'); 
-      }
+        }
       // Implement recovery strategies here
       this.clearErrorState();
     }
@@ -622,10 +614,8 @@ class EnhancedErrorHandler {
     this.errorCategories.clear();
     this.errorRateLimit = 0;
 
-     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log('🧹 Error state cleared'); 
-    }
+      }
   }
 
   /**
@@ -639,10 +629,8 @@ class EnhancedErrorHandler {
       error => new Date(error.context.timestamp) > cutoffDate
     );
 
-     
     if (process.env['NODE_ENV'] === 'development') { 
-      console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
-    }
+      }
   }
 
   /**

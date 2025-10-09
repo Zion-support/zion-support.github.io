@@ -259,10 +259,9 @@ const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
 //           console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-//           console.warn(logMessage, error);
-          break;
+//           break;
         case ErrorSeverity.LOW:
-if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.info(logMessage, error); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { } }
           break;
       }
     }
@@ -399,7 +398,7 @@ if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { conso
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request
-if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`Retrying network request (attempt ${retryItem.retryCount})`); } }
+if(process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Retrying network error'); } }
         // Add your retry logic here
       }
     } catch {
