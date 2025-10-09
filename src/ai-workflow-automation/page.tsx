@@ -58,6 +58,31 @@ const AIWorkflowAutomationPage: React.FC = () => {
     { number: '99.9%', label: 'Reliability' }
   ];
 
+  const useCases = [
+    {
+      icon: Zap,
+      title: 'HR Onboarding',
+      description: 'Automate employee onboarding with document processing, task assignments, and compliance tracking.'
+    },
+    {
+      icon: Database,
+      title: 'Data Processing',
+      description: 'Streamline data collection, validation, and transformation across multiple systems.'
+    },
+    {
+      icon: Users,
+      title: 'Customer Support',
+      description: 'Automate ticket routing, response generation, and escalation based on priority and type.'
+    },
+    {
+      icon: Globe,
+      title: 'Marketing Campaigns',
+      description: 'Orchestrate multi-channel marketing campaigns with automated triggers and personalization.'
+    }
+  ];
+
+  const pricing = pricingPlans;
+
   return (
     <>
       <SEOOptimizer

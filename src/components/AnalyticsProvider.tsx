@@ -1,9 +1,12 @@
 'use client';
+import React, { useEffect } from 'react';
+
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+  
   useEffect(() => {
     // Initialize Google Analytics
     const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
       // Load Google Analytics script
       const script = document.createElement('script');
       script.async = true;
@@ -73,6 +76,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
         }
       });
     };
+    
+    // Handle route changes
+    const handleRouteChange = () => {
+      trackPageView();
+    };
+    
     // Initialize analytics
     initAnalytics();
     trackPageView();

@@ -158,7 +158,7 @@ const AISchedulerPage: React.FC = () => {
               Call: (302) 464-0950
             </a>
             <Link 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial
@@ -308,7 +308,7 @@ const AISchedulerPage: React.FC = () => {
               Call: (302) 464-0950
             </a>
             <Link 
-              href="/contact"
+              to="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
             >
               Start Free Trial

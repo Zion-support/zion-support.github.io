@@ -121,7 +121,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500">{date}</span>
           <Link
-            href={path}
+            to={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
           >
             Read Article
