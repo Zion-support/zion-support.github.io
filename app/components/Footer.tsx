@@ -157,17 +157,17 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
                 <span className="text-gray-300">
-                  123 Innovation Drive<br />
-                  Tech Valley, CA 94000
+                  364 E Main St STE 1008<br />
+                  Middletown, DE 19709
                 </span>
               </div>
               <div className="flex items-center">
