@@ -291,6 +291,198 @@ const ITServicesPage: React.FC = () => {
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Assessment', 'ROI Analysis', 'Change Management', 'Vendor Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Powered IT Operations Center',
+      description: 'Intelligent IT operations with predictive maintenance, automated incident response, and self-healing infrastructure.',
+      icon: '🤖',
+      price: '$4,999/month',
+      features: [
+        'Predictive maintenance',
+        'Automated incident response',
+        'Self-healing infrastructure',
+        'Intelligent monitoring',
+        'Anomaly detection',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Reduce downtime by 80%',
+        'Prevent issues before they occur',
+        'Automate 90% of routine tasks',
+        'Improve system reliability'
+      ],
+      marketPrice: '$8,000-15,000/month',
+      category: 'AI Operations',
+      technologies: ['Machine Learning', 'ITSM', 'Monitoring Tools', 'Automation', 'Python', 'APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Zero-Trust Security Architecture',
+      description: 'Complete zero-trust security implementation with identity verification, micro-segmentation, and continuous monitoring.',
+      icon: '🔐',
+      price: '$3,999/month',
+      features: [
+        'Identity and access management',
+        'Micro-segmentation',
+        'Continuous verification',
+        'Threat detection',
+        'Policy enforcement',
+        'Compliance monitoring'
+      ],
+      benefits: [
+        'Eliminate security breaches',
+        'Reduce attack surface by 95%',
+        'Ensure compliance',
+        'Enable secure remote work'
+      ],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Security',
+      technologies: ['Zero Trust', 'IAM', 'Network Security', 'SIEM', 'SOAR', 'Compliance Tools'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed edge computing platform with low-latency processing, IoT integration, and real-time analytics.',
+      icon: '⚡',
+      price: '$2,999/month',
+      features: [
+        'Edge data centers',
+        'Low-latency processing',
+        'IoT device management',
+        'Real-time analytics',
+        'Content delivery',
+        '5G integration'
+      ],
+      benefits: [
+        'Reduce latency by 90%',
+        'Enable real-time applications',
+        'Improve user experience',
+        'Support IoT growth'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Edge Computing',
+      technologies: ['Edge Servers', 'IoT Platforms', '5G Networks', 'CDN', 'Real-time Processing', 'Microservices'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Hybrid Multi-Cloud Management',
+      description: 'Unified management platform for hybrid and multi-cloud environments with cost optimization and governance.',
+      icon: '☁️',
+      price: '$2,499/month',
+      features: [
+        'Multi-cloud orchestration',
+        'Cost optimization',
+        'Governance and compliance',
+        'Resource monitoring',
+        'Disaster recovery',
+        'Security management'
+      ],
+      benefits: [
+        'Reduce cloud costs by 30%',
+        'Improve governance',
+        'Enable vendor flexibility',
+        'Simplify management'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Cloud Management',
+      technologies: ['Multi-Cloud Tools', 'Cost Management', 'Governance', 'Monitoring', 'Automation', 'APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Future-proof cryptographic solutions resistant to quantum computing attacks with seamless migration.',
+      icon: '🔒',
+      price: '$1,999/month',
+      features: [
+        'Post-quantum cryptography',
+        'Quantum key distribution',
+        'Migration planning',
+        'Compliance support',
+        'Risk assessment',
+        'Implementation guidance'
+      ],
+      benefits: [
+        'Future-proof security',
+        'Protect against quantum threats',
+        'Ensure long-term compliance',
+        'Maintain data integrity'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'Quantum Security',
+      technologies: ['Post-Quantum Crypto', 'Quantum Key Distribution', 'Cryptographic Libraries', 'Migration Tools', 'Compliance', 'Risk Assessment'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: '5G Private Network Solutions',
+      description: 'Private 5G network deployment for enterprises with ultra-low latency, high reliability, and security.',
+      icon: '📡',
+      price: '$4,499/month',
+      features: [
+        'Private 5G deployment',
+        'Ultra-low latency',
+        'High reliability',
+        'Network slicing',
+        'IoT connectivity',
+        'Security management'
+      ],
+      benefits: [
+        'Enable Industry 4.0',
+        'Support real-time applications',
+        'Improve operational efficiency',
+        'Enhance security'
+      ],
+      marketPrice: '$7,000-14,000/month',
+      category: '5G Networks',
+      technologies: ['5G Core', 'Network Slicing', 'Edge Computing', 'IoT Integration', 'Security', 'Management'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI-Driven Data Center Automation',
+      description: 'Intelligent data center management with automated provisioning, optimization, and predictive maintenance.',
+      icon: '🏢',
+      price: '$3,499/month',
+      features: [
+        'Automated provisioning',
+        'Resource optimization',
+        'Predictive maintenance',
+        'Energy efficiency',
+        'Capacity planning',
+        'Performance monitoring'
+      ],
+      benefits: [
+        'Reduce operational costs by 40%',
+        'Improve efficiency by 60%',
+        'Prevent downtime',
+        'Optimize resource usage'
+      ],
+      marketPrice: '$5,500-11,000/month',
+      category: 'Data Center',
+      technologies: ['AI/ML', 'Automation', 'Monitoring', 'Energy Management', 'Capacity Planning', 'Orchestration'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts, decentralized applications, and digital asset management.',
+      icon: '⛓️',
+      price: '$2,999/month',
+      features: [
+        'Blockchain deployment',
+        'Smart contract development',
+        'Digital asset management',
+        'Consensus mechanisms',
+        'Interoperability',
+        'Security auditing'
+      ],
+      benefits: [
+        'Enable decentralized applications',
+        'Improve transparency',
+        'Reduce intermediaries',
+        'Enhance security'
+      ],
+      marketPrice: '$4,500-9,000/month',
+      category: 'Blockchain',
+      technologies: ['Ethereum', 'Hyperledger', 'Smart Contracts', 'Web3', 'Cryptography', 'Consensus'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
 
@@ -307,7 +499,14 @@ const ITServicesPage: React.FC = () => {
     { name: 'Mobile Management', count: itServices.filter(s => s.category === 'Mobile Management').length },
     { name: 'Compliance', count: itServices.filter(s => s.category === 'Compliance').length },
     { name: 'Asset Management', count: itServices.filter(s => s.category === 'Asset Management').length },
-    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length }
+    { name: 'Consulting', count: itServices.filter(s => s.category === 'Consulting').length },
+    { name: 'AI Operations', count: itServices.filter(s => s.category === 'AI Operations').length },
+    { name: 'Edge Computing', count: itServices.filter(s => s.category === 'Edge Computing').length },
+    { name: 'Cloud Management', count: itServices.filter(s => s.category === 'Cloud Management').length },
+    { name: 'Quantum Security', count: itServices.filter(s => s.category === 'Quantum Security').length },
+    { name: '5G Networks', count: itServices.filter(s => s.category === '5G Networks').length },
+    { name: 'Data Center', count: itServices.filter(s => s.category === 'Data Center').length },
+    { name: 'Blockchain', count: itServices.filter(s => s.category === 'Blockchain').length }
   ];
 
   return (

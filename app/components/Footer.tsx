@@ -25,7 +25,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
@@ -49,15 +49,42 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Services</h3>
+            <h3 className="text-lg font-semibold text-white">AI Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/ai-services" className="text-gray-300 hover:text-white transition-colors">AI Solutions</Link></li>
+              <li><Link href="/ai-automation" className="text-gray-300 hover:text-white transition-colors">AI Automation</Link></li>
+              <li><Link href="/ai-marketing" className="text-gray-300 hover:text-white transition-colors">AI Marketing</Link></li>
+              <li><Link href="/ai-healthcare" className="text-gray-300 hover:text-white transition-colors">AI Healthcare</Link></li>
+              <li><Link href="/ai-fintech" className="text-gray-300 hover:text-white transition-colors">AI Fintech</Link></li>
+              <li><Link href="/ai-content-generation" className="text-gray-300 hover:text-white transition-colors">AI Content</Link></li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Micro SAAS</h3>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/micro-saas" className="text-gray-300 hover:text-white transition-colors">All Tools</Link></li>
+              <li><Link href="/micro-saas#developer-tools" className="text-gray-300 hover:text-white transition-colors">Developer Tools</Link></li>
+              <li><Link href="/micro-saas#marketing" className="text-gray-300 hover:text-white transition-colors">Marketing Tools</Link></li>
+              <li><Link href="/micro-saas#analytics" className="text-gray-300 hover:text-white transition-colors">Analytics Tools</Link></li>
+              <li><Link href="/micro-saas#productivity" className="text-gray-300 hover:text-white transition-colors">Productivity</Link></li>
+              <li><Link href="/micro-saas#content-creation" className="text-gray-300 hover:text-white transition-colors">Content Creation</Link></li>
+            </ul>
+          </div>
+
+          {/* Advanced Solutions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Advanced Solutions</h3>
+            <ul className="space-y-2 text-sm">
               <li><Link href="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">Quantum Computing</Link></li>
               <li><Link href="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">Autonomous Systems</Link></li>
+              <li><Link href="/blockchain" className="text-gray-300 hover:text-white transition-colors">Blockchain & Web3</Link></li>
+              <li><Link href="/iot-edge" className="text-gray-300 hover:text-white transition-colors">IoT & Edge Computing</Link></li>
+              <li><Link href="/robotics" className="text-gray-300 hover:text-white transition-colors">Robotics</Link></li>
               <li><Link href="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">Business Intelligence</Link></li>
-              <li><Link href="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
 
@@ -68,7 +95,7 @@ const Footer: React.FC = memo(() => {
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link href="/careers" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link href="/team" className="text-gray-300 hover:text-white transition-colors">Our Team</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -79,8 +106,8 @@ const Footer: React.FC = memo(() => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-gray-400" />
-                <a href="tel:+13026009898" className="text-gray-300 hover:text-white transition-colors">
-                  (302) 600-9898
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  (302) 464-0950
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -100,6 +127,26 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
+        {/* Newsletter Signup */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-white mb-4">Stay Updated with Latest AI Innovations</h3>
+              <p className="text-gray-300 mb-6">Get exclusive insights, product updates, and industry trends delivered to your inbox.</p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-4 py-3 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:border-blue-500 focus:outline-none"
+                />
+                <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -111,6 +158,9 @@ const Footer: React.FC = memo(() => {
               </Link>
               <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
+              </Link>
+              <Link href="/sitemap" className="text-gray-400 hover:text-white text-sm transition-colors">
+                Sitemap
               </Link>
             </div>
           </div>

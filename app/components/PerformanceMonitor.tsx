@@ -1,4 +1,6 @@
 
+import React, { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   lcp: number | null;
   fid: number | null;
@@ -31,3 +33,33 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
+    const collectMetrics = () => {
+      // Collect Web Vitals
+      if ('web-vitals' in window) {
+        // Implementation would go here
+      }
+
+      // Collect memory usage
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
+      }
+    };
+
+    collectMetrics();
+    
+    const interval = setInterval(collectMetrics, reportInterval);
+    return () => clearInterval(interval);
+  }, [reportInterval]);
+
+  if (enableConsoleLogging) {
+    console.log('Performance Metrics:', metrics);
+  }
+
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;

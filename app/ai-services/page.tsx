@@ -290,7 +290,248 @@ const AIServicesPage: React.FC = () => {
       marketPrice: '$3,000-6,000/month',
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'    }
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Quantum Machine Learning',
+      description: 'Revolutionary quantum-enhanced machine learning algorithms for solving complex optimization problems and pattern recognition.',
+      icon: '⚛️',
+      price: '$4,999/month',
+      features: [
+        'Quantum neural networks',
+        'Quantum optimization algorithms',
+        'Quantum feature mapping',
+        'Hybrid classical-quantum models',
+        'Quantum data processing',
+        'Quantum advantage analysis'
+      ],
+      benefits: [
+        'Solve exponentially complex problems',
+        'Achieve quantum speedup',
+        'Break through classical limitations',
+        'Enable breakthrough discoveries'
+      ],
+      marketPrice: '$8,000-15,000/month',
+      category: 'Quantum AI',
+      technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Quantum Hardware', 'Quantum Simulators', 'Hybrid Algorithms'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Autonomous Vehicle Systems',
+      description: 'Complete autonomous vehicle AI stack including perception, planning, control, and safety systems.',
+      icon: '🚗',
+      price: '$7,999/month',
+      features: [
+        'Computer vision for perception',
+        'Path planning algorithms',
+        'Real-time decision making',
+        'Sensor fusion',
+        'Safety monitoring',
+        'Fleet management'
+      ],
+      benefits: [
+        'Enable fully autonomous driving',
+        'Improve safety by 95%',
+        'Reduce transportation costs',
+        'Optimize traffic flow'
+      ],
+      marketPrice: '$12,000-25,000/month',
+      category: 'Autonomous Systems',
+      technologies: ['Computer Vision', 'Lidar Processing', 'ROS', 'TensorFlow', 'CUDA', 'Real-time Systems'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Advanced AI platform for pharmaceutical research, molecular design, and drug development optimization.',
+      icon: '💊',
+      price: '$5,999/month',
+      features: [
+        'Molecular property prediction',
+        'Drug-target interaction modeling',
+        'Synthetic pathway optimization',
+        'Toxicity prediction',
+        'Clinical trial optimization',
+        'Patent analysis'
+      ],
+      benefits: [
+        'Accelerate drug discovery by 10x',
+        'Reduce development costs by 60%',
+        'Improve success rates',
+        'Enable personalized medicine'
+      ],
+      marketPrice: '$10,000-20,000/month',
+      category: 'Pharmaceutical AI',
+      technologies: ['Deep Learning', 'Molecular AI', 'Bioinformatics', 'Python', 'RDKit', 'PyTorch'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Climate Change Solutions',
+      description: 'AI-powered climate modeling, carbon footprint analysis, and environmental impact optimization.',
+      icon: '🌍',
+      price: '$2,999/month',
+      features: [
+        'Climate modeling and prediction',
+        'Carbon footprint tracking',
+        'Renewable energy optimization',
+        'Environmental impact assessment',
+        'Sustainability reporting',
+        'Green technology recommendations'
+      ],
+      benefits: [
+        'Reduce carbon footprint by 40%',
+        'Optimize energy consumption',
+        'Enable sustainable operations',
+        'Meet climate goals faster'
+      ],
+      marketPrice: '$5,000-10,000/month',
+      category: 'Climate AI',
+      technologies: ['Climate Models', 'IoT Sensors', 'Machine Learning', 'Python', 'R', 'Environmental APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Space Technology Platform',
+      description: 'Advanced AI solutions for space exploration, satellite management, and space mission optimization.',
+      icon: '🚀',
+      price: '$6,999/month',
+      features: [
+        'Satellite constellation management',
+        'Space debris tracking',
+        'Mission planning optimization',
+        'Earth observation analysis',
+        'Space weather prediction',
+        'Autonomous spacecraft control'
+      ],
+      benefits: [
+        'Optimize space operations',
+        'Reduce mission costs by 50%',
+        'Improve satellite efficiency',
+        'Enable autonomous space missions'
+      ],
+      marketPrice: '$10,000-20,000/month',
+      category: 'Space AI',
+      technologies: ['Orbital Mechanics', 'Computer Vision', 'Machine Learning', 'Python', 'C++', 'Space APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Metaverse Development Platform',
+      description: 'Complete AI-powered metaverse creation platform with virtual worlds, avatars, and immersive experiences.',
+      icon: '🌐',
+      price: '$3,999/month',
+      features: [
+        'Virtual world generation',
+        'AI-powered avatars',
+        'Natural language interaction',
+        'Procedural content creation',
+        'Social AI systems',
+        'Cross-platform integration'
+      ],
+      benefits: [
+        'Create immersive virtual worlds',
+        'Enable natural interactions',
+        'Scale virtual experiences',
+        'Reduce development time by 70%'
+      ],
+      marketPrice: '$6,000-12,000/month',
+      category: 'Metaverse AI',
+      technologies: ['Unity', 'Unreal Engine', 'NLP', 'Computer Vision', 'WebXR', 'Blockchain'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Brain-Computer Interface',
+      description: 'Revolutionary AI system for direct brain-computer communication and neural signal processing.',
+      icon: '🧠',
+      price: '$8,999/month',
+      features: [
+        'Neural signal processing',
+        'Brain pattern recognition',
+        'Thought-to-text conversion',
+        'Motor control assistance',
+        'Cognitive enhancement',
+        'Medical diagnosis support'
+      ],
+      benefits: [
+        'Enable direct brain control',
+        'Assist disabled individuals',
+        'Enhance cognitive abilities',
+        'Revolutionize human-computer interaction'
+      ],
+      marketPrice: '$15,000-30,000/month',
+      category: 'Neuro AI',
+      technologies: ['Neural Networks', 'Signal Processing', 'Machine Learning', 'Python', 'MATLAB', 'EEG Analysis'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Agricultural Intelligence',
+      description: 'Smart farming AI platform with crop monitoring, yield prediction, and automated agricultural management.',
+      icon: '🌾',
+      price: '$1,999/month',
+      features: [
+        'Crop health monitoring',
+        'Yield prediction models',
+        'Pest and disease detection',
+        'Irrigation optimization',
+        'Soil analysis',
+        'Weather integration'
+      ],
+      benefits: [
+        'Increase crop yields by 30%',
+        'Reduce water usage by 25%',
+        'Minimize pesticide use',
+        'Optimize farming operations'
+      ],
+      marketPrice: '$3,000-6,000/month',
+      category: 'AgriTech AI',
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'Python', 'Drones', 'Satellite Imagery'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Cybersecurity AI',
+      description: 'Next-generation AI security platform with advanced threat detection, automated response, and zero-trust architecture.',
+      icon: '🛡️',
+      price: '$4,999/month',
+      features: [
+        'Advanced threat hunting',
+        'Behavioral analysis',
+        'Automated incident response',
+        'Zero-trust implementation',
+        'Threat intelligence',
+        'Compliance automation'
+      ],
+      benefits: [
+        'Detect 99.9% of advanced threats',
+        'Reduce response time by 90%',
+        'Prevent data breaches',
+        'Ensure regulatory compliance'
+      ],
+      marketPrice: '$8,000-15,000/month',
+      category: 'Security AI',
+      technologies: ['Deep Learning', 'SIEM', 'SOAR', 'Threat Intelligence', 'Python', 'Security APIs'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    },
+    {
+      title: 'AI Personalization Engine',
+      description: 'Ultra-advanced personalization AI that creates unique experiences for every user across all touchpoints.',
+      icon: '🎯',
+      price: '$2,499/month',
+      features: [
+        'Real-time personalization',
+        'Cross-channel consistency',
+        'Behavioral prediction',
+        'Content optimization',
+        'A/B testing automation',
+        'Privacy-preserving AI'
+      ],
+      benefits: [
+        'Increase engagement by 200%',
+        'Boost conversion rates by 150%',
+        'Improve customer satisfaction',
+        'Maximize lifetime value'
+      ],
+      marketPrice: '$4,000-8,000/month',
+      category: 'Personalization AI',
+      technologies: ['Machine Learning', 'Real-time Processing', 'Recommendation Systems', 'Python', 'Redis', 'Kafka'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+    }
   ];
 
   const categories = [
@@ -306,7 +547,17 @@ const AIServicesPage: React.FC = () => {
     { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
     { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
     { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
+    { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length },
+    { name: 'Quantum AI', count: aiServices.filter(s => s.category === 'Quantum AI').length },
+    { name: 'Autonomous Systems', count: aiServices.filter(s => s.category === 'Autonomous Systems').length },
+    { name: 'Pharmaceutical AI', count: aiServices.filter(s => s.category === 'Pharmaceutical AI').length },
+    { name: 'Climate AI', count: aiServices.filter(s => s.category === 'Climate AI').length },
+    { name: 'Space AI', count: aiServices.filter(s => s.category === 'Space AI').length },
+    { name: 'Metaverse AI', count: aiServices.filter(s => s.category === 'Metaverse AI').length },
+    { name: 'Neuro AI', count: aiServices.filter(s => s.category === 'Neuro AI').length },
+    { name: 'AgriTech AI', count: aiServices.filter(s => s.category === 'AgriTech AI').length },
+    { name: 'Security AI', count: aiServices.filter(s => s.category === 'Security AI').length },
+    { name: 'Personalization AI', count: aiServices.filter(s => s.category === 'Personalization AI').length }
   ];
 
   return (
