@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -217,8 +217,7 @@ const Navigation: React.FC = memo(() => {
                     </Link>
                   </div>
                 </div>
-                </div>
-              )}
+              </div>
             </div>
 
             <Link 
@@ -330,6 +329,14 @@ const Navigation: React.FC = memo(() => {
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all mt-4"
                 onClick={closeAllMenus}
               >
                 Contact

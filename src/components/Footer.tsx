@@ -1,6 +1,6 @@
 'use client';
 import React, { memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -49,6 +49,7 @@ const Footer: React.FC = () => {
     { name: 'IT Automation', url: '/it-automation', description: 'IT process automation' },
     { name: 'Global IT Support', url: '/global-it-support', description: 'Worldwide support' }
   ];
+
 
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -227,31 +228,20 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Micro SAAS Solutions */}
+          {/* Company Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Micro SAAS Solutions</h3>
+            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Company</h3>
             <ul className="space-y-3">
-              {microSaasServices.slice(0, 6).map((service, index) => (
+              {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    href={link.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
+                    {link.name}
                   </Link>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
-                >
-                  View All Solutions
-                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
