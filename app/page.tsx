@@ -104,7 +104,7 @@ const HomePage: React.FC = () => {
             Advanced AI and IT Solutions
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
+            Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
             Transform your business with our cutting-edge technology and achieve unprecedented growth.
           </p>
           
@@ -274,9 +274,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           </div>
 
           {/* Micro SAAS Services Grid */}
@@ -328,28 +325,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
-                </p>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </Suspense>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
           </div>
 
           {/* Additional Services Grid */}
@@ -393,133 +368,34 @@ const HomePage: React.FC = () => {
               <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
                 <li>• Cloud Migration</li>
                 <li>• Infrastructure as Code</li>
-                <li>• DevOps & CI/CD</li>
-                <li>• 24/7 Monitoring</li>
+                <li>• Auto-scaling</li>
+                <li>• Disaster Recovery</li>
               </ul>
             </article>
           </div>
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/services"
-              className="inline-block bg-indigo-600 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300 text-sm sm:text-base"
-            >
-              View All Services
-            </a>
-          </div>
         </section>
 
+        {/* Statistics Section */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+          <ContentStatistics />
+        </Suspense>
+
         {/* Content Carousel */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentCarousel />
         </Suspense>
 
         {/* Dynamic Content Showcase */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <DynamicContentShowcase />
         </Suspense>
 
-        {/* Content Statistics */}
-        <Suspense fallback={<div className="h-64 bg-gray-100 rounded-lg animate-pulse"></div>}>
-          <ContentStatistics />
-        </Suspense>
-
-        {/* Social Proof Section */}
-        <section className="bg-gradient-to-r from-slate-800 to-purple-900 py-12 sm:py-16 rounded-2xl" aria-labelledby="social-proof-heading">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 id="social-proof-heading" className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12 neon-text">
-              Trusted by Industry Leaders
-            </h2>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-8 sm:mb-12">
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                <div className="text-gray-300 text-xs sm:text-base">Enterprise Clients</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
-                <div className="text-gray-300 text-xs sm:text-base">Cost Savings Delivered</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-xs sm:text-base">Uptime Guarantee</div>
-              </div>
-              <div className="text-center cyber-card p-4 sm:p-6">
-                <div className="text-2xl sm:text-4xl font-bold text-orange-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-xs sm:text-base">Support Available</div>
-              </div>
-            </div>
-
-            <div className="cyber-card hologram-card p-6 sm:p-8">
-              <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-4">What Our Clients Say</h3>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <div className="text-center">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Zion Tech Group transformed our operations with AI solutions that delivered $50M in annual savings. Their expertise is unmatched."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Sarah Johnson</div>
-                  <div className="text-xs sm:text-sm text-gray-400">CTO, Fortune 500 Company</div>
-                </div>
-                
-                <div className="text-center">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"The digital transformation they implemented increased our efficiency by 300%. Highly recommend their services."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Michael Chen</div>
-                  <div className="text-xs sm:text-sm text-gray-400">VP Operations, Global Corp</div>
-                </div>
-                
-                <div className="text-center sm:col-span-2 lg:col-span-1">
-                  <div className="text-yellow-400 text-xl sm:text-2xl mb-4">★★★★★</div>
-                  <p className="text-gray-300 mb-4 italic text-sm sm:text-base">"Outstanding cloud infrastructure and AI implementation. They exceeded all our expectations."</p>
-                  <div className="font-semibold text-white text-sm sm:text-base">Emily Rodriguez</div>
-                  <div className="text-xs sm:text-sm text-gray-400">Director of Technology, Tech Giant</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Newsletter Signup */}
-        <Suspense fallback={<div className="h-32 bg-gray-100 rounded-lg animate-pulse"></div>}>
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
-
-        {/* Call to Action Section */}
-        <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-8 sm:p-12 cyber-card" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6 neon-text">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Join thousands of enterprises that have already transformed their operations with our AI solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="tel:+13024640950"
-              onClick={handlePhoneClick}
-              className="cyber-button w-full sm:w-auto text-center"
-              aria-label="Call us at (302) 464-0950"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button w-full sm:w-auto text-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Consultation
-            </a>
-          </div>
-          
-          <div className="mt-6 sm:mt-8 text-xs sm:text-sm text-gray-400 space-y-1">
-            <p>✓ Free initial consultation</p>
-            <p>✓ Custom solution design</p>
-            <p>✓ 24/7 support available</p>
-          </div>
-        </section>
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>
