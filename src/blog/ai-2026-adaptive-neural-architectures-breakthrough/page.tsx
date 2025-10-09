@@ -127,4 +127,5 @@ export default function AdaptiveNeuralArchitecturesPage() {
         </div>
       </div>
     </div>
-};
+  );
+}

@@ -80,4 +80,5 @@ export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
         </div>
       </div>
     </div>
-};
+  );
+}

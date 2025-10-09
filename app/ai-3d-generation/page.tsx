@@ -64,6 +64,8 @@ const AI3DGenerationPage: React.FC = () => {
       icon: '🏭',
       examples: ['Product prototypes', 'Assembly instructions', 'Quality control models', 'Packaging designs']
     }
+  ];
+
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

@@ -95,4 +95,5 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
         </div>
       </div>
     </div>
-};
+  );
+}

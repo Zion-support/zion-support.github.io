@@ -94,4 +94,5 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
         </div>
       </div>
     </div>
-};
+  );
+}
