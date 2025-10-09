@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Lock, Cloud, Database, Smartphone, Car, Gamepad2, Package, GraduationCap, Utensils, Briefcase, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,35 +29,35 @@ const Navigation: React.FC = () => {
     { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant', icon: Home },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Package },
+    { name: 'AI Education Platform', href: '/ai-education-platform', icon: GraduationCap },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager', icon: Zap },
+    { name: 'AI Restaurant Manager', href: '/ai-restaurant-manager', icon: Utensils },
+    { name: 'AI Home Automation', href: '/ai-home-automation', icon: Home },
+    { name: 'AI Job Matcher', href: '/ai-job-matcher', icon: Briefcase },
   ];
 
   const aiServices = [
     { name: 'Machine Learning', href: '/ai-ml', icon: Brain },
     { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Car },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Smartphone },
+    { name: 'AI Blockchain Integration', href: '/ai-blockchain', icon: Lock },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse', icon: Gamepad2 },
   ];
 
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database', icon: Database },
-    { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
-    { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'Quantum Computing Services', href: '/quantum-computing', icon: Cpu },
+    { name: '5G Network Solutions', href: '/5g-networks', icon: Globe },
+    { name: 'Edge Computing Services', href: '/edge-computing', icon: Smartphone },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings },
   ];
 
   return (

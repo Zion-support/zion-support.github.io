@@ -19,33 +19,33 @@ const Footer: React.FC = () => {
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
-    { name: 'AI Video Generator', href: '/ai-video-generation' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
-    { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Real Estate Assistant', href: '/ai-real-estate-assistant' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
+    { name: 'AI Education Platform', href: '/ai-education-platform' },
+    { name: 'AI Energy Manager', href: '/ai-energy-manager' },
+    { name: 'AI Home Automation', href: '/ai-home-automation' },
   ];
 
   const aiServices = [
     { name: 'Machine Learning', href: '/ai-ml' },
     { name: 'Natural Language Processing', href: '/ai-nlp' },
     { name: 'Computer Vision', href: '/ai-vision' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Blockchain Integration', href: '/ai-blockchain' },
+    { name: 'AI Metaverse Solutions', href: '/ai-metaverse' },
   ];
 
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration' },
     { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/mobile-development' },
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Quantum Computing Services', href: '/quantum-computing' },
+    { name: '5G Network Solutions', href: '/5g-networks' },
+    { name: 'Edge Computing Services', href: '/edge-computing' },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
   ];
 
   const socialLinks = [

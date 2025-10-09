@@ -270,6 +270,196 @@ const HomePage: React.FC = () => {
       benefits: ['Faster reviews', 'Risk identification', 'Cost savings'],
       link: '/ai-legal-assistant',
       popular: false
+    },
+    {
+      title: 'AI Real Estate Assistant',
+      description: 'Intelligent property analysis and market insights for real estate professionals',
+      icon: '🏠',
+      price: '$179/month',
+      features: ['Property valuation', 'Market analysis', 'Investment insights', 'Lead generation'],
+      benefits: ['30% faster deals', 'Better pricing accuracy', 'Increased ROI'],
+      link: '/ai-real-estate-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered demand forecasting',
+      icon: '📦',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Risk assessment'],
+      benefits: ['25% cost reduction', '99% on-time delivery', 'Zero stockouts'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'Medical diagnosis support and patient care optimization',
+      icon: '🏥',
+      price: '$299/month',
+      features: ['Symptom analysis', 'Treatment recommendations', 'Patient monitoring', 'Medical records'],
+      benefits: ['Faster diagnosis', 'Better outcomes', 'Reduced errors'],
+      link: '/ai-healthcare-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning experiences with AI-powered curriculum',
+      icon: '🎓',
+      price: '$129/month',
+      features: ['Adaptive learning', 'Progress tracking', 'Content generation', 'Assessment tools'],
+      benefits: ['40% better retention', 'Personalized paths', 'Engaging content'],
+      link: '/ai-education-platform',
+      popular: true
+    },
+    {
+      title: 'AI Energy Manager',
+      description: 'Smart energy consumption optimization for buildings and facilities',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy monitoring', 'Consumption optimization', 'Predictive maintenance', 'Cost analysis'],
+      benefits: ['35% energy savings', 'Reduced carbon footprint', 'Lower costs'],
+      link: '/ai-energy-manager',
+      popular: true
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with personalized recommendations',
+      icon: '✈️',
+      price: '$89/month',
+      features: ['Route optimization', 'Hotel recommendations', 'Activity suggestions', 'Budget planning'],
+      benefits: ['50% time saved', 'Better experiences', 'Cost optimization'],
+      link: '/ai-travel-planner',
+      popular: false
+    },
+    {
+      title: 'AI Restaurant Manager',
+      description: 'Complete restaurant management with AI-powered operations',
+      icon: '🍽️',
+      price: '$159/month',
+      features: ['Menu optimization', 'Inventory management', 'Staff scheduling', 'Customer insights'],
+      benefits: ['20% revenue increase', 'Reduced waste', 'Better service'],
+      link: '/ai-restaurant-manager',
+      popular: true
+    },
+    {
+      title: 'AI Event Planner',
+      description: 'Automated event planning and management solutions',
+      icon: '🎉',
+      price: '$119/month',
+      features: ['Venue selection', 'Guest management', 'Budget tracking', 'Timeline creation'],
+      benefits: ['Stress-free planning', 'Cost control', 'Perfect execution'],
+      link: '/ai-event-planner',
+      popular: false
+    },
+    {
+      title: 'AI Personal Trainer',
+      description: 'AI-powered fitness coaching and workout optimization',
+      icon: '💪',
+      price: '$79/month',
+      features: ['Workout plans', 'Form analysis', 'Progress tracking', 'Nutrition advice'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling'],
+      link: '/ai-personal-trainer',
+      popular: true
+    },
+    {
+      title: 'AI Language Tutor',
+      description: 'Personalized language learning with AI conversation practice',
+      icon: '🗣️',
+      price: '$99/month',
+      features: ['Conversation practice', 'Grammar correction', 'Pronunciation help', 'Cultural insights'],
+      benefits: ['Faster fluency', 'Confidence building', 'Real-world practice'],
+      link: '/ai-language-tutor',
+      popular: true
+    },
+    {
+      title: 'AI Home Automation',
+      description: 'Smart home control and automation with AI intelligence',
+      icon: '🏡',
+      price: '$149/month',
+      features: ['Device control', 'Energy optimization', 'Security monitoring', 'Predictive maintenance'],
+      benefits: ['Convenience', 'Energy savings', 'Enhanced security'],
+      link: '/ai-home-automation',
+      popular: true
+    },
+    {
+      title: 'AI Trading Assistant',
+      description: 'Algorithmic trading and investment analysis with AI',
+      icon: '📈',
+      price: '$399/month',
+      features: ['Market analysis', 'Trading signals', 'Portfolio optimization', 'Risk management'],
+      benefits: ['Better returns', 'Reduced risk', '24/7 monitoring'],
+      link: '/ai-trading-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Content Moderator',
+      description: 'Automated content moderation and safety monitoring',
+      icon: '🛡️',
+      price: '$189/month',
+      features: ['Content filtering', 'Spam detection', 'Safety monitoring', 'Compliance checking'],
+      benefits: ['Safer platforms', 'Reduced manual work', 'Consistent moderation'],
+      link: '/ai-content-moderator',
+      popular: true
+    },
+    {
+      title: 'AI Weather Predictor',
+      description: 'Advanced weather forecasting and climate analysis',
+      icon: '🌤️',
+      price: '$139/month',
+      features: ['Weather forecasting', 'Climate analysis', 'Alert systems', 'Data visualization'],
+      benefits: ['Accurate predictions', 'Risk mitigation', 'Better planning'],
+      link: '/ai-weather-predictor',
+      popular: false
+    },
+    {
+      title: 'AI Job Matcher',
+      description: 'Intelligent job matching and career development platform',
+      icon: '💼',
+      price: '$169/month',
+      features: ['Job matching', 'Skill assessment', 'Career guidance', 'Interview prep'],
+      benefits: ['Better job fits', 'Career growth', 'Time savings'],
+      link: '/ai-job-matcher',
+      popular: true
+    },
+    {
+      title: 'AI Pet Care Assistant',
+      description: 'Comprehensive pet health monitoring and care management',
+      icon: '🐕',
+      price: '$89/month',
+      features: ['Health monitoring', 'Vaccination reminders', 'Behavior analysis', 'Vet scheduling'],
+      benefits: ['Better pet health', 'Peace of mind', 'Cost savings'],
+      link: '/ai-pet-care-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Garden Planner',
+      description: 'Smart gardening assistance and plant care optimization',
+      icon: '🌱',
+      price: '$69/month',
+      features: ['Plant selection', 'Care schedules', 'Pest detection', 'Harvest planning'],
+      benefits: ['Better yields', 'Healthier plants', 'Less waste'],
+      link: '/ai-garden-planner',
+      popular: false
+    },
+    {
+      title: 'AI Sleep Optimizer',
+      description: 'AI-powered sleep analysis and improvement recommendations',
+      icon: '😴',
+      price: '$79/month',
+      features: ['Sleep tracking', 'Pattern analysis', 'Improvement tips', 'Environment optimization'],
+      benefits: ['Better sleep quality', 'Increased energy', 'Health improvements'],
+      link: '/ai-sleep-optimizer',
+      popular: true
+    },
+    {
+      title: 'AI Meditation Guide',
+      description: 'Personalized meditation and mindfulness coaching',
+      icon: '🧘',
+      price: '$59/month',
+      features: ['Guided sessions', 'Progress tracking', 'Personalized plans', 'Stress monitoring'],
+      benefits: ['Reduced stress', 'Better focus', 'Mental wellness'],
+      link: '/ai-meditation-guide',
+      popular: true
     }
   ];
 
@@ -369,6 +559,94 @@ const HomePage: React.FC = () => {
       price: '$1,200/month',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Form Recognition'],
       color: 'text-gray-400'
+    },
+    {
+      title: 'AI Quantum Computing',
+      description: 'Quantum algorithms and quantum machine learning solutions',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum Algorithms', 'Quantum ML', 'Optimization Problems', 'Cryptography'],
+      color: 'text-purple-500'
+    },
+    {
+      title: 'AI Autonomous Systems',
+      description: 'Self-driving vehicles and autonomous robotics solutions',
+      icon: Car,
+      price: '$3,500/month',
+      features: ['Autonomous Vehicles', 'Robotics Control', 'Path Planning', 'Sensor Fusion'],
+      color: 'text-blue-500'
+    },
+    {
+      title: 'AI Edge Computing',
+      description: 'AI processing at the edge for real-time applications',
+      icon: Smartphone,
+      price: '$2,200/month',
+      features: ['Edge AI Models', 'Real-time Processing', 'Low Latency', 'Offline Capability'],
+      color: 'text-green-500'
+    },
+    {
+      title: 'AI Blockchain Integration',
+      description: 'AI-powered blockchain solutions and smart contracts',
+      icon: Lock,
+      price: '$2,800/month',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Generation', 'Crypto Analysis'],
+      color: 'text-yellow-500'
+    },
+    {
+      title: 'AI Metaverse Solutions',
+      description: 'Virtual and augmented reality AI applications',
+      icon: Gamepad2,
+      price: '$3,200/month',
+      features: ['VR/AR AI', 'Virtual Worlds', 'Avatar Creation', 'Spatial Computing'],
+      color: 'text-pink-500'
+    },
+    {
+      title: 'AI Climate Solutions',
+      description: 'Environmental monitoring and climate change mitigation',
+      icon: Globe,
+      price: '$2,500/month',
+      features: ['Climate Modeling', 'Carbon Tracking', 'Renewable Energy', 'Environmental Monitoring'],
+      color: 'text-teal-500'
+    },
+    {
+      title: 'AI Space Technology',
+      description: 'AI applications for space exploration and satellite operations',
+      icon: Plane,
+      price: '$4,000/month',
+      features: ['Satellite AI', 'Space Exploration', 'Orbital Mechanics', 'Space Weather'],
+      color: 'text-indigo-500'
+    },
+    {
+      title: 'AI Biotech Solutions',
+      description: 'AI-powered biotechnology and pharmaceutical research',
+      icon: Stethoscope,
+      price: '$3,800/month',
+      features: ['Drug Discovery', 'Protein Folding', 'Genomic Analysis', 'Clinical Trials'],
+      color: 'text-red-500'
+    },
+    {
+      title: 'AI Financial Modeling',
+      description: 'Advanced financial modeling and risk assessment',
+      icon: CreditCard,
+      price: '$2,600/month',
+      features: ['Risk Modeling', 'Portfolio Optimization', 'Algorithmic Trading', 'Fraud Detection'],
+      color: 'text-emerald-500'
+    },
+    {
+      title: 'AI Supply Chain Intelligence',
+      description: 'End-to-end supply chain optimization and visibility',
+      icon: Ship,
+      price: '$2,400/month',
+      features: ['Supply Chain Mapping', 'Demand Forecasting', 'Logistics Optimization', 'Risk Management'],
+      color: 'text-orange-500'
+    },
+    {
+      title: 'AI Cybersecurity AI',
+      description: 'AI-powered cybersecurity and threat intelligence',
+      icon: Shield,
+      price: '$2,900/month',
+      features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Security Automation'],
+      color: 'text-red-600'
     }
   ];
 
@@ -468,6 +746,118 @@ const HomePage: React.FC = () => {
       price: '$1,600/month',
       features: ['IoT Device Development', 'Sensor Integration', 'Data Collection', 'Real-time Monitoring'],
       color: 'text-green-500'
+    },
+    {
+      title: 'Quantum Computing Services',
+      description: 'Quantum computing infrastructure and algorithm development',
+      icon: Cpu,
+      price: '$4,500/month',
+      features: ['Quantum Hardware', 'Algorithm Development', 'Quantum Software', 'Research Support'],
+      color: 'text-purple-600'
+    },
+    {
+      title: '5G Network Solutions',
+      description: '5G network design, implementation, and optimization',
+      icon: Globe,
+      price: '$2,800/month',
+      features: ['5G Infrastructure', 'Network Optimization', 'Edge Computing', 'IoT Integration'],
+      color: 'text-blue-600'
+    },
+    {
+      title: 'Edge Computing Services',
+      description: 'Edge computing infrastructure and application deployment',
+      icon: Smartphone,
+      price: '$2,200/month',
+      features: ['Edge Infrastructure', 'Application Deployment', 'Data Processing', 'Low Latency Solutions'],
+      color: 'text-green-600'
+    },
+    {
+      title: 'AI Infrastructure',
+      description: 'AI/ML infrastructure setup and management',
+      icon: Brain,
+      price: '$3,200/month',
+      features: ['GPU Clusters', 'ML Pipelines', 'Model Deployment', 'AI Monitoring'],
+      color: 'text-purple-500'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategy and implementation',
+      icon: Settings,
+      price: '$2,500/month',
+      features: ['Strategy Development', 'Process Automation', 'Technology Integration', 'Change Management'],
+      color: 'text-cyan-500'
+    },
+    {
+      title: 'API Development & Management',
+      description: 'RESTful and GraphQL API development and management',
+      icon: Code,
+      price: '$1,400/month',
+      features: ['API Design', 'Documentation', 'Testing', 'Monitoring'],
+      color: 'text-orange-500'
+    },
+    {
+      title: 'Microservices Architecture',
+      description: 'Microservices design, development, and deployment',
+      icon: Settings,
+      price: '$2,000/month',
+      features: ['Service Design', 'Container Orchestration', 'Service Mesh', 'Monitoring'],
+      color: 'text-indigo-500'
+    },
+    {
+      title: 'Serverless Solutions',
+      description: 'Serverless architecture design and implementation',
+      icon: Cloud,
+      price: '$1,800/month',
+      features: ['Function Development', 'Event Processing', 'Auto-scaling', 'Cost Optimization'],
+      color: 'text-blue-500'
+    },
+    {
+      title: 'Data Engineering',
+      description: 'Data pipeline development and ETL processes',
+      icon: Database,
+      price: '$1,900/month',
+      features: ['Data Pipelines', 'ETL Processes', 'Data Warehousing', 'Real-time Processing'],
+      color: 'text-teal-500'
+    },
+    {
+      title: 'Machine Learning Operations',
+      description: 'MLOps implementation and model lifecycle management',
+      icon: Brain,
+      price: '$2,300/month',
+      features: ['Model Training', 'Deployment', 'Monitoring', 'Retraining'],
+      color: 'text-pink-500'
+    },
+    {
+      title: 'Cloud Security',
+      description: 'Comprehensive cloud security solutions and compliance',
+      icon: Shield,
+      price: '$2,100/month',
+      features: ['Security Assessment', 'Compliance', 'Threat Protection', 'Access Control'],
+      color: 'text-red-500'
+    },
+    {
+      title: 'Disaster Recovery',
+      description: 'Business continuity and disaster recovery solutions',
+      icon: Shield,
+      price: '$1,700/month',
+      features: ['Backup Solutions', 'Recovery Planning', 'Testing', 'Monitoring'],
+      color: 'text-yellow-500'
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'Application and infrastructure performance optimization',
+      icon: Zap,
+      price: '$1,500/month',
+      features: ['Performance Analysis', 'Optimization', 'Monitoring', 'Scaling'],
+      color: 'text-green-500'
+    },
+    {
+      title: 'Compliance & Governance',
+      description: 'IT governance, compliance, and risk management',
+      icon: FileText,
+      price: '$1,800/month',
+      features: ['Compliance Auditing', 'Risk Assessment', 'Policy Development', 'Training'],
+      color: 'text-gray-500'
     }
   ];
 
@@ -804,24 +1194,69 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="cyber-card p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing</h3>
-              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
-                Our competitive pricing starts from just $79/month for micro SAAS solutions, with enterprise AI services beginning at $1,000/month. 
-                All plans include 24/7 support, regular updates, and comprehensive training.
+              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing & Value</h3>
+              <p className="text-gray-300 mb-6 max-w-4xl mx-auto">
+                Our competitive pricing delivers exceptional value with micro SAAS solutions starting at just $59/month, 
+                enterprise AI services from $1,000/month, and comprehensive IT services from $800/month. 
+                All plans include 24/7 support, regular updates, comprehensive training, and 30-day money-back guarantee.
               </p>
+              
+              {/* Market Comparison */}
+              <div className="mb-8">
+                <h4 className="text-lg font-semibold text-cyan-400 mb-4">Industry Comparison</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                  <div className="bg-slate-800/50 p-4 rounded-lg">
+                    <h5 className="font-semibold text-white mb-2">Our Pricing</h5>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      <li>• Micro SAAS: $59-$399/month</li>
+                      <li>• AI Services: $1,000-$5,000/month</li>
+                      <li>• IT Services: $800-$4,500/month</li>
+                      <li>• No setup fees</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-800/50 p-4 rounded-lg">
+                    <h5 className="font-semibold text-white mb-2">Competitor Average</h5>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      <li>• Micro SAAS: $99-$599/month</li>
+                      <li>• AI Services: $2,000-$8,000/month</li>
+                      <li>• IT Services: $1,500-$6,000/month</li>
+                      <li>• $5,000+ setup fees</li>
+                    </ul>
+                  </div>
+                  <div className="bg-slate-800/50 p-4 rounded-lg">
+                    <h5 className="font-semibold text-white mb-2">Your Savings</h5>
+                    <ul className="text-sm text-green-400 space-y-1">
+                      <li>• 40-50% cost reduction</li>
+                      <li>• $5,000+ setup savings</li>
+                      <li>• Faster implementation</li>
+                      <li>• Better ROI</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-cyan-400">$79</div>
+                  <div className="text-3xl font-bold text-cyan-400">$59</div>
                   <div className="text-gray-300">Micro SAAS Starting</div>
+                  <div className="text-xs text-green-400 mt-1">40% below market</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-purple-400">$1,000</div>
                   <div className="text-gray-300">AI Services Starting</div>
+                  <div className="text-xs text-green-400 mt-1">50% below market</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-green-400">$800</div>
                   <div className="text-gray-300">IT Services Starting</div>
+                  <div className="text-xs text-green-400 mt-1">47% below market</div>
                 </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg border border-cyan-400/20">
+                <p className="text-sm text-gray-300">
+                  <strong className="text-cyan-400">Money-Back Guarantee:</strong> Not satisfied? Get a full refund within 30 days, no questions asked.
+                </p>
               </div>
             </div>
           </section>
