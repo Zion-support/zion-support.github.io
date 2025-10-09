@@ -1,6 +1,6 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import Link from 'next/link';
+import { logger } from '../utils/productionLogger';
 import { FileWarning, AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
@@ -24,10 +24,12 @@ class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+    // Log error using production logger
+    logger.error('ErrorBoundary caught an error', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack
+    }, 'ErrorBoundary');
     // Send error to analytics/monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', 'exception', {
@@ -81,13 +83,13 @@ class ErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-              <Link
-                href="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
+              </button>
             </div>
             <div className="mt-6 text-sm text-gray-400">
               If this problem persists, please contact our support team.
