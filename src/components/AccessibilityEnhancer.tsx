@@ -73,7 +73,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         
         if (currentIndex !== -1) {
           const nextIndex = event.key === 'ArrowDown' 
-//             ? Math.min(currentIndex + 1, focusableElements.length - 1)
+            ? Math.min(currentIndex + 1, focusableElements.length - 1)
             : Math.max(currentIndex - 1, 0);
           
           (focusableElements[nextIndex] as HTMLElement)?.focus();
@@ -166,7 +166,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           onClick={toggleHighContrast}
           className="sr-only focus:not-sr-only fixed top-4 right-4 bg-gray-800 text-white px-3 py-2 rounded text-sm z-50"
           aria-label={`Toggle high contrast mode. Currently ${isHighContrast ? 'on' : 'off'}`}
-//         >
+        >
           {isHighContrast ? 'High Contrast: On' : 'High Contrast: Off'}
         </button>
       )}
@@ -175,8 +175,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-//       >
-//         Skip to main content
+      >
+        Skip to main content
       </a>
     </div>
   );

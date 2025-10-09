@@ -135,7 +135,7 @@ export default function BlogPage() {
 
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
-//     ? posts 
+    ? posts 
     : posts.filter(post => post.category === selectedCategory);
 
   const featuredPosts = posts.filter(post => post.featured);

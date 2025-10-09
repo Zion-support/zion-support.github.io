@@ -23,8 +23,8 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-//       isScrolled 
-//         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
+      isScrolled 
+        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -103,8 +103,8 @@ const Navigation: React.FC = () => {
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
-//                       >
-//                         View All Services
+                      >
+                        View All Services
                       </Link>
                     </div>
                   </div>
