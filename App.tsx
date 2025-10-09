@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
 // Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -75,11 +74,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true, error };
   }
 
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
        
-      // console.error('App Error Boundary caught an error:', error, errorInfo);
+      // console.error('App Error Boundary caught an error:', _error, _errorInfo);
     }
   }
 
