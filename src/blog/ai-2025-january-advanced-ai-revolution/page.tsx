@@ -117,4 +117,4 @@ export default function January2025AdvancedAIRevolution() {
         </div>
       </div>
     </div>
-  );
+};

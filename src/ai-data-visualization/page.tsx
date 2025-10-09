@@ -224,7 +224,8 @@ const AIDataVisualizationPage: React.FC = () => {
           </section>
         </main>
         <Footer />
-      </div>
+        </div>
+    </>
   );
 };
 

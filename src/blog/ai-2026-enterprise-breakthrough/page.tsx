@@ -80,4 +80,4 @@ export default function AI2026EnterpriseBreakthrough() {
         </div>
       </div>
     </div>
-  );
+};

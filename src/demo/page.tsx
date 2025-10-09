@@ -303,6 +303,7 @@ const DemoPage: React.FC = () => {
         </main>
         <Footer />
       </div>
+    </>
   );
 };
 

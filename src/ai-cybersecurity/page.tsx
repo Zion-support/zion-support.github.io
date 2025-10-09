@@ -220,7 +220,8 @@ const AICybersecurityPage: React.FC = () => {
           </section>
         </main>
         <Footer />
-      </div>
+        </div>
+    </>
   );
 };
 
