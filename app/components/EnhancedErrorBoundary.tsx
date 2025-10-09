@@ -73,7 +73,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
+      // console.log('Error Report:', errorReport);
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -90,7 +90,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
+    if ( ?? nullsessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
@@ -120,7 +120,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         const button = document.getElementById('copy-error-details');
         if (button) {
           const originalText = button.textContent;
-          button.textContent = 'Copied!';
+          button.textContent = 'Copied ?? null';
           setTimeout(() => {
             button.textContent = originalText;
           }, 2000);
@@ -146,7 +146,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
+              Oops ?? null Something went wrong
             </h1>
             <p className="text-gray-600 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.

@@ -4,10 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -56,10 +52,6 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited contacts', 'Custom AI models', 'Advanced analytics', 'Dedicated support', 'Custom integrations']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
   const stats = [
     { number: '40%', label: 'Increase in Sales' },
     { number: '60%', label: 'Time Saved' },
@@ -145,8 +137,7 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
-          {/* Use Cases Section */}
+{/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Perfect for Every Industry
@@ -161,10 +152,7 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-          {/* Pricing Section */}
+{/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans

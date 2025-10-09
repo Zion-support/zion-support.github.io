@@ -37,14 +37,14 @@ const PWAInstaller: React.FC = () => {
     };
   }, []);
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
+    if ( ?? nulldeferredPrompt) return;
     try {
       await deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
-        console.log('PWA installation accepted');
+        // console.log('PWA installation accepted');
       } else {
-        console.log('PWA installation dismissed');
+        // console.log('PWA installation dismissed');
       }
       setDeferredPrompt(null);
       setShowInstallPrompt(false);
@@ -58,7 +58,7 @@ const PWAInstaller: React.FC = () => {
     sessionStorage.setItem('pwa-install-dismissed', 'true');
   };
   // Don't show if already installed or dismissed this session
-  if (isInstalled || !showInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
+  if (isInstalled ||  ?? nullshowInstallPrompt || sessionStorage.getItem('pwa-install-dismissed')) {
     return null;
   }
   return (

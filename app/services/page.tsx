@@ -1,16 +1,8 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity } from 'lucide-react';
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
 const ServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -35,8 +27,7 @@ const ServicesPage: React.FC = () => {
       link: '/ai-customer-support'
     },
     {
-<<<<<<< HEAD
-      title: 'Specialized Solutions',
+title: 'Specialized Solutions',
       icon: Sparkles,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
@@ -52,9 +43,7 @@ const ServicesPage: React.FC = () => {
   ];
   const benefits = [
     {
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-      icon: TrendingUp,
+icon: TrendingUp,
       title: 'AI Sales Automation',
       description: 'Automate and optimize your sales process',
       features: ['Lead Scoring', 'Sales Forecasting', 'Customer Segmentation', 'Automated Follow-ups'],
@@ -203,8 +192,7 @@ const ServicesPage: React.FC = () => {
                   <span>Get Free Consultation</span>
                 </a>
               </div>
-<<<<<<< HEAD
-              <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
@@ -262,21 +250,12 @@ const ServicesPage: React.FC = () => {
                           Get Started
                         </a>
                       </div>
-=======
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-                    </div>
+</div>
                     <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
                 ))}
               </div>
-<<<<<<< HEAD
-            ))}
+))}
           </div>
         </div>
       </section>
@@ -323,180 +302,7 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-=======
-            </div>
-          </section>
-
-          {/* AI Services Section */}
-          <section className="mb-16">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                AI Services
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiServices.map((service, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href={service.link}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* IT Services Section */}
-          <section className="mb-16">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                IT Services
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {itServices.map((service, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href={service.link}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Micro SAAS Section */}
-          <section className="mb-16">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                Micro SAAS Solutions
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {microSaasServices.map((service, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href={service.link}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Emerging Technologies Section */}
-          <section className="mb-16">
-            <div className="container mx-auto px-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-                Emerging Technologies
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {emergingTech.map((service, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href={service.link}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let's discuss how our technology services can drive your business forward
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Consultation</span>
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-  );
+);
 };
 
 export default ServicesPage;

@@ -7,10 +7,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
 
 const ITServicesPage: React.FC = () => {
   const itServices = [
-<<<<<<< HEAD
-    // Infrastructure & Cloud Services
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -33,7 +29,6 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved Performance', 'Data Security', 'Reduced Downtime', 'Better Reliability']
     },
     {
-<<<<<<< HEAD
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: <HardDrive className="w-8 h-8" />,
@@ -292,8 +287,7 @@ const ITServicesPage: React.FC = () => {
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-=======
-      icon: Settings,
+icon: Settings,
       title: 'DevOps & CI/CD',
       description: 'Streamline development and deployment processes',
       features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Monitoring', 'Automation'],
@@ -467,8 +461,7 @@ const ITServicesPage: React.FC = () => {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-                        {feature}
+{feature}
                       </li>
                     ))}
                   </ul>
@@ -479,8 +472,7 @@ const ITServicesPage: React.FC = () => {
                     Get Started
                   </a>
                 </div>
-<<<<<<< HEAD
-                {service.benefits && (
+{service.benefits && (
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits:</h4>
                     <ul className="text-sm text-gray-400 space-y-1">
@@ -552,45 +544,7 @@ const ITServicesPage: React.FC = () => {
       </main>
       <Footer />
     </div>
-=======
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Optimize Your IT Infrastructure?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Let our experts assess your current setup and recommend the best solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center justify-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Schedule Assessment</span>
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/website-audit-and-update-with-deployment-3d8d
-  );
+);
 };
 
 export default ITServicesPage;

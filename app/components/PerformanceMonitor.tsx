@@ -17,7 +17,7 @@ const PerformanceMonitor: React.FC = () => {
   });
   useEffect(() => {
     // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    if (process.env.NODE_ENV  ?? null== 'production') return;
     const measurePerformance = () => {
       // Measure First Contentful Paint
       if ('PerformanceObserver' in window) {
@@ -55,7 +55,7 @@ const PerformanceMonitor: React.FC = () => {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
+            if ( ?? null(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
             }
           }

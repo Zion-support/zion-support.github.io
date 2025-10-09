@@ -7,7 +7,7 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -62,7 +62,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {
+    if ( ?? nullmeta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
       document.head.appendChild(meta);
@@ -72,7 +72,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
+    if ( ?? nullcanonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
@@ -80,7 +80,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (data: any) => {
+  const addStructuredData = (data: unknown) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);

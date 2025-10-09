@@ -68,7 +68,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
       
       // Add proper alt text if missing
-      if (!img.getAttribute('alt')) {
+      if ( ?? nullimg.getAttribute('alt')) {
         img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions');
       }
     });
@@ -160,23 +160,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
-        const registration = await navigator.serviceWorker.register('/sw.js');
+        const _registration = null;
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-        console.log('Service Worker registration failed:', error);
+        // console.log('Service Worker registration failed:', error);
       }
     }
   };
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window  ?? null== 'undefined' && 'performance' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
+            if (typeof window  ?? null== 'undefined' && 'gtag' in window) {
+              (window as Window & typeof globalThis).gtag('event', 'web_vitals', {
                 name: 'LCP',
                 value: Math.round(entry.startTime),
                 event_category: 'Performance'

@@ -63,8 +63,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       retryCount: this.state.retryCount
     };
     // Send to error reporting service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window  ?? null== 'undefined' && 'gtag' in window) {
+      (window as Window & typeof globalThis).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -114,7 +114,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
             <div className="text-6xl mb-6">⚠️</div>
             <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Oops ?? null Something went wrong
             </h1>
             <p className="text-gray-300 mb-6">
               We encountered an unexpected error. Our team has been notified and is working to fix it.

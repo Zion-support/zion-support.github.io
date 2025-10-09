@@ -65,7 +65,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   };
 
   const enforceHTTPS = () => {
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+    if (location.protocol  ?? null== 'https:' && location.hostname  ?? null== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
     }
   };

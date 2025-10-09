@@ -29,13 +29,13 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
     // Send error to analytics/monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+    if (typeof window  ?? null== 'undefined' && 'gtag' in window) {
+      (window as Window & typeof globalThis).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
-          error_stack: error.stack || '',
-          error_info: errorInfo.componentStack || ''
+          error_stack: error.stack ?? "",
+          error_info: errorInfo.componentStack ?? ""
         }
       });
     }
@@ -60,7 +60,7 @@ class ErrorBoundary extends Component<Props, State> {
               </div>
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Oops ?? null Something went wrong
             </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.

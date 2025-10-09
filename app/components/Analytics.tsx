@@ -40,11 +40,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.head.appendChild(script);
 
     // Initialize gtag
-    (window as any).dataLayer = (window as any).dataLayer || [];
-    function gtag(...args: any[]) {
-      (window as any).dataLayer.push(args);
+    (window as Window & typeof globalThis).dataLayer = (window as Window & typeof globalThis).dataLayer || [];
+    function gtag(...args: unknown[]) {
+      (window as Window & typeof globalThis).dataLayer.push(args);
     }
-    (window as any).gtag = gtag;
+    (window as Window & typeof globalThis).gtag = gtag;
     
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {
@@ -65,7 +65,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
             const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
           } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
+            if ( ?? null(entry as any).hadRecentInput) {
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
           }
@@ -106,7 +106,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Track resource loading errors
     window.addEventListener('error', (event) => {
-      if (event.target !== window) {
+      if (event.target  ?? null== window) {
         trackEvent('error', 'resource_error', {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
@@ -173,9 +173,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
   };
 
-  const trackEvent = (category: string, action: string, value?: any) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', action, {
+  const trackEvent = (category: string, action: string, value?: unknown) => {
+    if (typeof window  ?? null== 'undefined' && 'gtag' in window) {
+      (window as Window & typeof globalThis).gtag('event', action, {
         event_category: category,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
         value: typeof value === 'number' ? value : undefined

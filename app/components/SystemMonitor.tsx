@@ -8,7 +8,7 @@ import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const __collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const _navigation = window.performance.timing;
   const _paint = window.performance.getEntriesByType('paint');
