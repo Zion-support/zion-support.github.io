@@ -135,8 +135,8 @@ const Navigation: React.FC = () => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
-                  <div className="grid grid-cols-2 gap-6">
+                <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                  <div className="grid grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
@@ -175,16 +175,45 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Settings className="w-4 h-4 mr-2" />
+                        IT Services
+                      </h3>
+                      <div className="space-y-2">
+                        {itServices.slice(0, 6).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.href}
+                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                            onClick={closeAllMenus}
+                          >
+                            <service.icon className="w-3 h-3" />
+                            <span>{service.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
-                    <Link
-                      to="/services"
-                      className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      <span>View All Services</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="grid grid-cols-2 gap-4">
+                      <Link
+                        to="/services"
+                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <span>View All Services</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                      <Link
+                        to="/specialized-services"
+                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
+                        onClick={closeAllMenus}
+                      >
+                        <span>Specialized Solutions</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -193,11 +222,17 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
+            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
             </Link>
             <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
+            </Link>
+            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
             </Link>
             
             <div className="flex items-center space-x-4">
@@ -285,11 +320,17 @@ const Navigation: React.FC = () => {
               <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
+              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
               </Link>
               <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
+              </Link>
+              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </Link>
+              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
               </Link>
               
               <div className="pt-4 border-t border-gray-700">

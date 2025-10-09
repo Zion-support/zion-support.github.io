@@ -39,13 +39,24 @@ const Footer: React.FC = () => {
     { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' }
   ];
 
+  const additionalServices = [
+    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
+    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
+    { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
+  ];
+
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
-    { name: 'News', url: '/news' }
+    { name: 'News', url: '/news' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'Demo', url: '/demo' }
   ];
 
   const supportLinks = [
@@ -69,7 +80,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -174,6 +185,27 @@ const Footer: React.FC = () => {
             </Link>
           </div>
 
+          {/* Additional AI Services */}
+          <div>
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Zap className="w-4 h-4 mr-2" />
+              AI Tools
+            </h3>
+            <ul className="space-y-2">
+              {additionalServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.url}
+                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    <span>{service.name}</span>
+                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Company & Support */}
           <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
@@ -181,7 +213,7 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-medium mb-2">Company</h4>
                 <ul className="space-y-1">
-                  {companyLinks.slice(0, 3).map((link) => (
+                  {companyLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
                       <Link
                         to={link.url}
@@ -196,7 +228,7 @@ const Footer: React.FC = () => {
               <div>
                 <h4 className="text-white font-medium mb-2">Support</h4>
                 <ul className="space-y-1">
-                  {supportLinks.slice(0, 3).map((link) => (
+                  {supportLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
                       <Link
                         to={link.url}

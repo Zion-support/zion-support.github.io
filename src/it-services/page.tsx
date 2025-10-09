@@ -578,11 +578,9 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
           </section>
-        </div>
-      </main>
-
-      <Footer />
-    </div>
+        </main>
+        <Footer />
+      </div>
   );
 };
 
