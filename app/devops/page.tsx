@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/FooterSimple';
 import { Code, GitBranch, Zap, Shield, BarChart, CheckCircle } from 'lucide-react';
 
 const DevOpsPage: React.FC = () => {

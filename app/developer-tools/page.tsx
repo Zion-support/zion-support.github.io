@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/FooterSimple';
 
 const DevelopertoolsPage: React.FC = () => {
   return (
@@ -24,10 +24,8 @@ const DevelopertoolsPage: React.FC = () => {
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default DevelopertoolsPage;
- cursor/analyze-improve-and-deploy-application-cde4

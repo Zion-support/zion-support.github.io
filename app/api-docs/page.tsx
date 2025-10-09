@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
+import Footer from '../components/FooterSimple';
 import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
@@ -153,10 +152,8 @@ const ApiDocsPage: React.FC = () => {
       </main>
       
       <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default ApiDocsPage;
- cursor/analyze-improve-and-deploy-application-cde4

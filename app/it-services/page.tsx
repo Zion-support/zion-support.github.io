@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/FooterSimple';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Mail, Calendar, FileText, Image, Video, Music, Globe, Smartphone, Laptop, Database, Lock, Settings, TrendingUp, Target, Rocket, Award, Clock, DollarSign, Server, Network, HardDrive, Cpu, Monitor, Wifi, Headphones, Printer, Camera, Wrench, Cog, Activity, MessageCircle, Mic, Phone } from 'lucide-react';
 

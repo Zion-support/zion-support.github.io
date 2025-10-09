@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense, lazy, useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
@@ -12,7 +11,7 @@ import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+import Footer from './components/FooterSimple';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance

@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -114,21 +113,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
 
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <link rel="canonical" href={canonicalUrl} />
-    </Head>
-  );
+  return null;
 };
 
 export default SEOOptimizer;

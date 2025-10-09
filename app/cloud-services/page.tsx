@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/FooterSimple';
 import { Cloud, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
