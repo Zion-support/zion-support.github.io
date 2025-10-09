@@ -191,64 +191,6 @@ const Navigation: React.FC = () => {
     }
       ]
     }
-=======
-  const aiServices = [
-    { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
-    { name: 'AI Marketing', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
-    { name: 'AI E-commerce', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, description: 'Sales AI' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
-  ];
-
-  const itServices = [
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Cloud & Infrastructure' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
-  ];
-
-  const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'AI Writing Tool' },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Business Analytics' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Code, description: 'Smart Scheduling' },
-    { name: 'Expense Tracker', href: '/expense-tracker', icon: TrendingUp, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Code, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Customer Management' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Marketing' },
-    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
-    { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
-    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Target, description: 'SEO Tools' },
-    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: TrendingUp, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' }
-  ];
-
-  const emergingTech = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
-    { name: 'Robotics', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-f5b1
   ];
 
   const mainNavItems = [
@@ -267,6 +209,38 @@ const Navigation: React.FC = () => {
         ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
+=======
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isOpen]);
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (servicesOpen && !(event.target as Element).closest('.services-dropdown')) {
+        setServicesOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [servicesOpen]);
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
+
+  const toggleServices = useCallback(() => {
+    setServicesOpen(!servicesOpen);
+  }, [servicesOpen]);
+
+  const closeMobileMenu = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  return (
+    <nav className="bg-slate-900/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f4ac
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -436,6 +410,25 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
+            <Link 
+              to="/enterprise" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
+              Enterprise
+            </Link>
+            <Link 
+              to="/team" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+            >
+              Team
+            </Link>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 transform hover:scale-105"
+            >
+              Contact
+            </Link>
+          </div>
 
             <Link
               href="/blog"
@@ -473,29 +466,6 @@ const Navigation: React.FC = () => {
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
             </Link>
-=======
-'use client';
-import React, { useState } from 'react';
-import { Menu, X, Brain } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
-            </a>
-          </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-f5b1
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -526,7 +496,6 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden">
@@ -686,9 +655,6 @@ const Navigation: React.FC = () => {
                 <span>(302) 464-0950</span>
               </a>
 =======
-              </a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
-=======
 
               {/* Mobile IT Services */}
               <div>
@@ -785,6 +751,141 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-f5b1
+=======
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-gray-300 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link 
+                    to="/services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    All Services
+                  </Link>
+                  <Link 
+                    to="/micro-saas" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link 
+                    to="/ai-services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Services
+                  </Link>
+                  <Link 
+                    to="/it-services" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    IT Services
+                  </Link>
+                  <Link 
+                    to="/ai-data-analytics" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Data Analytics
+                  </Link>
+                  <Link 
+                    to="/ai-cybersecurity" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Cybersecurity
+                  </Link>
+                  <Link 
+                    to="/ai-workflow-automation" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Workflow Automation
+                  </Link>
+                  <Link 
+                    to="/ai-cloud-infrastructure" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Cloud Infrastructure
+                  </Link>
+                  <Link 
+                    to="/ai-ecommerce-solutions" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI E-commerce Solutions
+                  </Link>
+                  <Link 
+                    to="/ai-mobile-app-development" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    AI Mobile App Development
+                  </Link>
+                  <Link 
+                    to="/quantum-computing" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Quantum Computing
+                  </Link>
+                  <Link 
+                    to="/autonomous-systems" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Autonomous Systems
+                  </Link>
+                  <Link 
+                    to="/blockchain-web3" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Blockchain & Web3
+                  </Link>
+                  <Link 
+                    to="/cybersecurity" 
+                    className="block text-gray-400 hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                    onClick={closeMobileMenu}
+                  >
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              
+              <Link 
+                to="/case-studies" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
+                Case Studies
+              </Link>
+              <Link 
+                to="/enterprise" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
+                Enterprise
+              </Link>
+              <Link 
+                to="/team" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md px-2 py-1"
+                onClick={closeMobileMenu}
+              >
+                Team
+              </Link>
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-medium text-center focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 transform hover:scale-105"
+                onClick={closeMobileMenu}
+              >
+                Contact Us
+              </Link>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-f4ac
             </div>
           </div>
         )}
@@ -795,14 +896,10 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 export default Navigation;
 
 Navigation.displayName = 'Navigation';
 export default Navigation;
-=======
-export default Navigation;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-fd40
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-f783
 =======

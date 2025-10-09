@@ -4,23 +4,29 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
       gzipSize: true,
       brotliSize: true,
+      template: 'treemap', // Use treemap for better visualization
     }),
   ],
   root: '.',
   build: {
     outDir: 'dist',
-    target: 'es2015',
+    target: 'es2020', // Updated to ES2020 for better performance
     minify: 'terser',
     sourcemap: false,
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500, // Reduced warning limit
     cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048, // Reduced inline limit
     reportCompressedSize: true,
     // Optimize build performance
     emptyOutDir: true,
@@ -77,14 +83,19 @@ export default defineConfig({
       },
       format: {
         comments: false,
-        ecma: 2015,
+        ecma: 2020,
+        // Better formatting
+        beautify: false,
+        ascii_only: true,
       },
     },
     // Reduce memory usage during build
     rollupOptions: {
-      maxParallelFileOps: 2,
+      maxParallelFileOps: 3, // Increased for better performance
       treeshake: {
         moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
       },
       external: id => {
         // Externalize Next.js modules to prevent build errors
@@ -97,31 +108,54 @@ export default defineConfig({
         manualChunks: id => {
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
-            return 'vendor';
+            return 'react';
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
             return 'router';
           }
           // UI libraries
-          if (
-            id.includes('node_modules/framer-motion') ||
-            id.includes('node_modules/lucide-react')
-          ) {
-            return 'ui';
+          if (id.includes('node_modules/framer-motion')) {
+            return 'framer-motion';
           }
-          // Utilities and web vitals
+          if (id.includes('node_modules/lucide-react')) {
+            return 'lucide-react';
+          }
+          // Web vitals and analytics
           if (id.includes('node_modules/web-vitals')) {
-            return 'page';
+            return 'web-vitals';
+          }
+          // Other UI libraries
+          if (id.includes('node_modules/@heroicons/react')) {
+            return 'heroicons';
+          }
+          // Utilities
+          if (id.includes('node_modules/clsx') || id.includes('node_modules/tailwind-merge')) {
+            return 'utils';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
-            return 'libs';
+            return 'vendor';
           }
         },
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(css)$/.test(assetInfo.name)) {
+            return 'assets/css/[name]-[hash][extname]';
+          }
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+            return 'assets/images/[name]-[hash][extname]';
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+        // Optimize chunk loading
+        experimentalMinChunkSize: 10000,
       },
     },
   },
