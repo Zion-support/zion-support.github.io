@@ -33,23 +33,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // const _reportWebVitals = (_metric: { name: string; value: number }) => {
     //   // Log to console in development (only on client side)
     //   if (typeof window !== 'undefined' && enableConsoleLogging) {
     //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
     //   }
     // };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     const updateMetrics = () => {
       const currentMetrics: PerformanceMetrics = {
         lcp: null,
@@ -97,51 +86,28 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
-<<<<<<< HEAD
     const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
       let score = 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (metrics.renderTime > 1500) score -= 15;
       if (metrics.loadTime > 3000) score -= 20;
       if (metrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);    };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
     const metrics: PerformanceMetrics = {
       lcp: null,
       fid: null,
       cls: null,
       fcp: null,
-<<<<<<< HEAD
       ttfb: null
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
       if (currentMetrics.renderTime > 1500) score -= 15;
       if (currentMetrics.loadTime > 3000) score -= 20;
       if (currentMetrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
       ttfb: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     };
 
-<<<<<<< HEAD
     // Measure Core Web Vitals
     const measureWebVitals = () => {
       // LCP - Largest Contentful Paint
-=======
     // Initial metrics update
     updateMetrics();
 
@@ -151,7 +117,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Set up performance observers
     const setupPerformanceObservers = () => {
       // Observe LCP
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if ('PerformanceObserver' in window) {
         try {
           const lcpObserver = new PerformanceObserver((list) => {
@@ -166,11 +131,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           // LCP observer not supported
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
       setMetrics(currentMetrics);
 
       const score = getPerformanceScore();
@@ -181,17 +141,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           logger.debug('Performance Metrics', {
             metrics: currentMetrics,
             score,          });
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: any) => {
             metrics.fid = entry.processingStart - entry.startTime;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
         // FID - First Input Delay
         const fidObserver = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry: PerformanceEntry & { processingStart: number; startTime: number }) => {
@@ -199,9 +152,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         });
         
-=======
         // Observe FID
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
         try {
           const fidObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
@@ -246,7 +197,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           // FCP observer not supported
         }
 
-<<<<<<< HEAD
       // Send metrics to analytics after page load
       window.addEventListener('load', () => {
         setTimeout(() => {
@@ -276,7 +226,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             }
           }
         }, 2000);
-=======
     // Monitor Core Web Vitals
     const navigation = performance.getEntriesByType('navigation')[0] as
       | PerformanceNavigationTiming
@@ -307,7 +256,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         if (entry.entryType === 'first-input') {
           metrics.fid = entry.processingStart - entry.startTime;
         }
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
       });
     });
 
@@ -317,7 +265,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       console.warn('FID observer not supported:', error);
     }
 
-<<<<<<< HEAD
     // Monitor resource loading
     const monitorResources = () => {
       if ('PerformanceObserver' in window) {
@@ -329,9 +276,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         });
         
-=======
         // Observe TTFB
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
         try {
           const ttfbObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
@@ -343,9 +288,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
           ttfbObserver.observe({ entryTypes: ['navigation'] });
         } catch {
-<<<<<<< HEAD
           // Resource observer not supported
-=======
     // Monitor Cumulative Layout Shift (CLS)
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
@@ -353,10 +296,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       entries.forEach((entry) => {
         if (!(entry as any).hadRecentInput) {
           clsValue += (entry as any).value;
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
           // TTFB observer not supported
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
         }
       });
       metrics.cls = clsValue;
@@ -382,7 +322,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     }
 
-<<<<<<< HEAD
     // Log performance metrics in development
     if (process.env.NODE_ENV === 'development') {
       const logMetrics = () => {
@@ -399,25 +338,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         console.groupEnd();
       };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, updateInterval);
-=======
-=======
     // Initial metrics update
     updateMetrics();
-=======
-=======
       // Log metrics after a delay to allow for collection
       setTimeout(logMetrics, 5000);
     }
 
     // Cleanup observers
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
     return () => {
       try {
         lcpObserver.disconnect();
@@ -428,11 +357,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
     // Initial metrics update
     updateMetrics();
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
 
     // Set up interval for continuous monitoring
     const interval = setInterval(updateMetrics, 5000);
@@ -442,7 +368,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
   }, [enabled, collectPerformanceMetrics]);
 
-=======
     setupPerformanceObservers();
 
     return () => {
@@ -491,7 +416,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return Math.max(0, score);
   }, []);
 
-<<<<<<< HEAD
   const reportMetrics = useCallback((metrics: PerformanceMetrics, score: number) => {
     // In a real application, you would send this data to your analytics service
     // For now, we'll just store it in localStorage for debugging
@@ -535,11 +459,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [getMetrics, getScore]);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
   return null; // This component doesn't render anything
-=======
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
 };
 
 export default PerformanceMonitor;

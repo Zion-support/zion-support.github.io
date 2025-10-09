@@ -4,7 +4,8 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
-import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import SEOOptimizer from './components/SEOOptimizer';
 
 export default function RootLayout({
   children,
@@ -123,14 +124,38 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+        
         {/* Primary meta tags */}
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence" />
-        <meta name="theme-color" content="#4f46e5" />
-        <meta name="color-scheme" content="dark light" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
+        <meta name="theme-color" content="#4f46e5" />
+        <meta name="color-scheme" content="dark light" />
+        
+        {/* Enhanced SEO meta tags */}
+        <meta name="publisher" content="Zion Tech Group" />
+        <meta name="copyright" content="Zion Tech Group" />
+        <meta name="language" content="en" />
+        <meta name="revisit-after" content="3 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <meta name="application-name" content="Zion Tech Group" />
+        <meta name="msapplication-TileColor" content="#4f46e5" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Resource hints for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
         {/* Favicons */}
         <link rel='icon' href='/favicon.ico' />
@@ -138,30 +163,8 @@ export default function RootLayout({
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#4f46e5' />
-        {/* Enhanced SEO meta tags */}
-        <meta name='publisher' content='Zion Tech Group' />
-        <meta name='copyright' content='Zion Tech Group' />
-        <meta name='language' content='en' />
-        <meta name='revisit-after' content='3 days' />
-        <meta name='distribution' content='global' />
-        <meta name='rating' content='general' />
-        <meta name='format-detection' content='telephone=yes' />
-        <meta name='mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-capable' content='yes' />
-        <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-        <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-        <meta name='application-name' content='Zion Tech Group' />
-        <meta name='msapplication-TileColor' content='#4f46e5' />
-        <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
-        
-        {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
@@ -172,6 +175,7 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -181,13 +185,15 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
+        
+        {/* Structured data */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body className='antialiased'>
-        <GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
               <PerformanceMonitor />
@@ -196,7 +202,7 @@ export default function RootLayout({
               {children}
             </AccessibilityEnhancer>
           </AnalyticsProvider>
-        </GlobalErrorBoundary>
+        </EnhancedErrorBoundary>
       </body>
     </html>
   );
