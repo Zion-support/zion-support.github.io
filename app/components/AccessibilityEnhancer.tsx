@@ -48,39 +48,6 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     };
 
-<<<<<<< HEAD
-    const addFocusManagement = () => {
-      // Add focus management for modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"]');
-      modals.forEach(modal => {
-        if (!modal.hasAttribute('tabindex')) {
-          modal.setAttribute('tabindex', '-1');
-        }
-      });
-    };
-
-    const enhanceKeyboardNavigation = () => {
-      // Add keyboard navigation enhancements
-      const interactiveElements = document.querySelectorAll('a, button, input, select, textarea');
-      interactiveElements.forEach(element => {
-        if (!element.hasAttribute('tabindex')) {
-          element.setAttribute('tabindex', '0');
-        }
-      });
-    };
-
-    // Run enhancements
-    addAriaLabels();
-    addFocusManagement();
-    enhanceKeyboardNavigation();
-
-    // Set up observer for dynamic content
-    const observer = new MutationObserver(() => {
-      addAriaLabels();
-      addFocusManagement();
-      enhanceKeyboardNavigation();
-    });
-=======
     document.addEventListener('keydown', handleKeyDown);
 
     // Add high contrast mode support
@@ -105,7 +72,6 @@ const AccessibilityEnhancer: React.FC = () => {
         document.documentElement.classList.remove('reduce-motion');
       }
     };
->>>>>>> cursor/website-audit-and-update-with-deployment-a7b4
 
     prefersReducedMotion.addEventListener('change', updateReducedMotion);
     updateReducedMotion({ matches: prefersReducedMotion.matches } as MediaQueryListEvent);
