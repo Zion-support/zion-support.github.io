@@ -1,6 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
+import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page.tsx'));
@@ -134,37 +136,23 @@ const BlogAIInnovationLabsProductDevelopment2025Page = lazy(() => import('./blog
 const BlogAIPoweredAutonomousBusinessProcesses2026Page = lazy(() => import('./blog/ai-powered-autonomous-business-processes-2026/page'));
 const BlogAITrends2026FutureEnterpriseTransformationPage = lazy(() => import('./blog/ai-trends-2026-future-enterprise-transformation/page'));
 
-// Loading component
-const LoadingSpinner = () => (
+// Main loading component
+const MainLoadingSpinner = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg">Loading...</p>
-    </div>
-  </div>
-);
-
-// Error fallback component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center max-w-md mx-auto p-8">
-      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-      <p className="text-gray-300 mb-6">{error.message}</p>
-      <button
-        onClick={resetErrorBoundary}
-        className="bg-cyan-400 text-slate-900 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition-colors"
-      >
-        Try again
-      </button>
-    </div>
+    <LoadingSpinner size="xl" text="Loading Zion Tech Group..." />
   </div>
 );
 
 const App: React.FC = () => {
+  // Initialize performance monitoring
+  React.useEffect(() => {
+    performanceMonitor.reportMetrics();
+  }, []);
+
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <ErrorBoundary>
       <Router>
-        <Suspense fallback={<LoadingSpinner />}>
+        <Suspense fallback={<MainLoadingSpinner />}>
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<HomePage />} />

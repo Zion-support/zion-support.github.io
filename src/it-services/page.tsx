@@ -577,10 +577,18 @@ const ITServicesPage: React.FC = () => {
               </a>
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+=======
           </section>
         </main>
         <Footer />
       </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-eb01
   );
 };
 

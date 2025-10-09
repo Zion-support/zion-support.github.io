@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Target, TrendingUp, Shield, Clock, Users, CheckCircle, ArrowRight, Star, Award, Globe } from 'lucide-react';
+import { CheckCircle, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
