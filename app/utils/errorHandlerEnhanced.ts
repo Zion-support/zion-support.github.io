@@ -14,8 +14,11 @@ export class AppError extends Error {
 }
 export const errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
-  const appError = error instanceof AppError ? error : new AppError(error.message)
-  .toISOString(),
+  const appError = error instanceof AppError ? error : new AppError(error.message);
+  
+  console.error('Error occurred:', {
+    message: appError.message,
+    timestamp: new Date().toISOString(),
     statusCode: appError.statusCode || 500
   });
   return {

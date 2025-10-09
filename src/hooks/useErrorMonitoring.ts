@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events

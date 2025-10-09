@@ -95,6 +95,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     const PIXEL_ID = 'XXXXXXXXXXXXXXX'; // Replace with actual Pixel ID
 
+<<<<<<< HEAD
     // Facebook Pixel initialization
     (function(f: any, b: any, e: any, v: any, n: any, t: any, s: any) {
       if (f.fbq) return;
@@ -112,6 +113,17 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
     })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+=======
+    (function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+    })(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+>>>>>>> cursor/fix-errors-and-merge-to-main-393f
     
     (window as any).fbq('init', PIXEL_ID);
     (window as any).fbq('track', 'PageView');

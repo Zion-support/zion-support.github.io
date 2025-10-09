@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Sparkles, ArrowRight, Star } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
   return (

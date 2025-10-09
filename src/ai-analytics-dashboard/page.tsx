@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart3, TrendingUp, Eye, Users, DollarSign, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe, Target, PieChart, Activity, AlertCircle, CheckCircle } from 'lucide-react';
+
+import { BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
