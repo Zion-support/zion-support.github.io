@@ -108,22 +108,44 @@ const HomePage: React.FC = () => {
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
               </div>
             </div>
-            {/* CTA Buttons */}
+            {/* Enhanced CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 onClick={handlePhoneClick}
-                className="cyber-button w-full sm:w-auto text-center"
+                className="cyber-button w-full sm:w-auto text-center hover:scale-105 transition-all duration-300"
                 aria-label="Call us at (302) 464-0950"
               >
                 📞 Call: (302) 464-0950
               </a>
               <a 
                 href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:neon-glow w-full sm:w-auto text-center"
               >
                 Get Free Consultation
               </a>
+              <a 
+                href="/micro-saas"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 hover:neon-glow w-full sm:w-auto text-center"
+              >
+                Explore Micro SAAS
+              </a>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              <div className="text-center cyber-card p-4 rounded-lg">
+                <div className="text-3xl font-bold text-cyan-400 neon-text">50+</div>
+                <div className="text-sm text-gray-300">Micro SAAS Solutions</div>
+              </div>
+              <div className="text-center cyber-card p-4 rounded-lg">
+                <div className="text-3xl font-bold text-purple-400 neon-text">$50M+</div>
+                <div className="text-sm text-gray-300">Client Savings Generated</div>
+              </div>
+              <div className="text-center cyber-card p-4 rounded-lg">
+                <div className="text-3xl font-bold text-pink-400 neon-text">95%</div>
+                <div className="text-sm text-gray-300">Process Automation Rate</div>
+              </div>
             </div>
           </div>
         </section>
@@ -322,6 +344,122 @@ const HomePage: React.FC = () => {
             </article>
           </div>
         </section>
+        {/* Enhanced Pricing Section */}
+        <section className="mb-16" aria-labelledby="pricing-heading">
+          <h2 id="pricing-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+            Transparent Pricing
+          </h2>
+          <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            Choose the perfect plan for your business needs. All plans include 24/7 support and free setup.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Micro SAAS Plan */}
+            <div className="cyber-card p-8 rounded-xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">💻</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SAAS</h3>
+              <div className="text-4xl font-bold text-cyan-400 mb-2 neon-text">$79</div>
+              <div className="text-gray-400 mb-6">per month</div>
+              <ul className="text-left space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  50+ Ready-to-use AI Tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  No Setup Fees
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  24/7 Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  API Access
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Custom Integrations
+                </li>
+              </ul>
+              <a href="/micro-saas" className="cyber-button w-full text-center block">
+                Get Started
+              </a>
+            </div>
+
+            {/* Enterprise AI Plan */}
+            <div className="quantum-card p-8 rounded-xl text-center hover:scale-105 transition-all duration-300 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise AI</h3>
+              <div className="text-4xl font-bold text-purple-400 mb-2 neon-text">$1,500</div>
+              <div className="text-gray-400 mb-6">per month</div>
+              <ul className="text-left space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Custom AI Solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Dedicated Support Team
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Advanced Analytics
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Priority Support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Custom Training
+                </li>
+              </ul>
+              <a href="/contact" className="cyber-button w-full text-center block">
+                Contact Sales
+              </a>
+            </div>
+
+            {/* Custom Solutions */}
+            <div className="cyber-card p-8 rounded-xl text-center hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
+              <div className="text-4xl font-bold text-pink-400 mb-2 neon-text">Custom</div>
+              <div className="text-gray-400 mb-6">pricing</div>
+              <ul className="text-left space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Tailored AI Solutions
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Full Development Team
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  White-label Options
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Ongoing Maintenance
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <span className="text-green-400 mr-2">✓</span>
+                  Source Code Access
+                </li>
+              </ul>
+              <a href="/contact" className="cyber-button w-full text-center block">
+                Get Quote
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
 const RoboticsPage: React.FC = () => {
   const roboticsServices = [
@@ -138,12 +137,7 @@ const RoboticsPage: React.FC = () => {
   ];
   const categories = [...new Set(roboticsServices.map(service => service.category))];
   return (
-    <>
-      <Helmet>
-        <title>Robotics & Automation Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced robotics and automation services including RPA, industrial robots, service robots, and AI-powered automation solutions." />
-        <meta name="keywords" content="robotics services, RPA, industrial automation, service robots, AI robotics, robotic process automation" />
-      </Helmet>
+    
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-cyan-700 text-white py-20">
@@ -354,7 +348,7 @@ const RoboticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 export default RoboticsPage;

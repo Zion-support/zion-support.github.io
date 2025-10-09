@@ -54,6 +54,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       document.head.appendChild(style);
     }
   }, [enableFocusIndicators]);
-  return <>{children}</>;
+  return {children};
 };
 export default AccessibilityEnhancer;

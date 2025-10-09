@@ -82,6 +82,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, []);
-  return <>{children}</>;
+  return {children};
 };
 export default AnalyticsProvider;
