@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { TrendingUp, Target, Users, BarChart, Zap, Brain, Phone, Mail, CheckCircle, Star, ArrowRight, DollarSign, Clock, Shield, Building, ShoppingCart, Cloud, Home } from 'lucide-react';
-=======
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -59,7 +52,6 @@ const AISalesAutomationPage: React.FC = () => {
       features: ['Unlimited users', 'Custom AI training', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
   const stats = [
     { number: '300%', label: 'Increase in Sales' },
     { number: '80%', label: 'Time Savings' },
@@ -197,7 +189,6 @@ const AISalesAutomationPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -221,7 +212,6 @@ const AISalesAutomationPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -267,7 +257,6 @@ const AISalesAutomationPage: React.FC = () => {
             </div>
           </section>
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="container mx-auto px-4 py-16 text-center">
             <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">

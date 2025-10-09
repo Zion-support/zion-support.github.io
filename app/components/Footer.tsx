@@ -1,16 +1,11 @@
 'use client';
 import React, { memo } from 'react';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
-  const aiServices = [
-  ];
-
-  const itServices = [
-  ];
-
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI Tools' },
     { name: 'Business Apps', url: '/business-apps', description: 'Business Applications' },
@@ -61,76 +56,121 @@ const Footer: React.FC = memo(() => {
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
-  const achievements = [
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
-  ];
-
   return (
-                <li key={index}>
-                  <a 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-                  </a>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
-                </li>
-              ))}
-              <li>
-                <Link 
-                  href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+    <footer className="bg-slate-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold neon-text">Zion Tech Group</span>
+            </div>
+            <p className="text-gray-400 text-sm mb-4">
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-cyan-600 transition-colors"
+                  aria-label={social.name}
                 >
-                  View All AI Services →
-                </Link>
-              </li>
-            </ul>
+                  <social.icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
           </div>
 
-          {/* IT Services */}
-          <div>
-                <li key={index}>
+          {/* Services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
+              <ul className="space-y-2">
+                {microSaasServices.map((service, index) => (
+                  <li key={index}>
+                    <a 
+                      href={service.url}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </a>
+                    <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  </li>
+                ))}
+                <li>
                   <a 
-                    href={service.url}
+                    href="/micro-saas"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  >
+                    View All Micro SAAS →
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-white mb-2">IT Services</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a 
+                    href="/it-services"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
+                    IT Services
                   </a>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  <p className="text-xs text-gray-500 ml-5">Comprehensive IT support</p>
                 </li>
-              ))}
-              <li>
-                <Link 
-                  href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
-                  View All IT Services →
-                </Link>
-              </li>
-            </ul>
-          </div>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
-                <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <li>
+                  <a 
+                    href="/cloud-services"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    Cloud Services
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">Cloud migration & setup</p>
+                </li>
+                <li>
+                  <a 
+                    href="/cybersecurity"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    Cybersecurity
+                  </a>
+                  <p className="text-xs text-gray-500 ml-5">Security solutions</p>
+                </li>
+                <li>
+                  <a 
+                    href="/it-services"
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  >
+                    View All IT Services →
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
+              <ul className="space-y-2">
+                {emergingTech.slice(0, 3).map((service, index) => (
+                  <li key={index}>
+                    <a 
+                      href={service.url}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      {service.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>

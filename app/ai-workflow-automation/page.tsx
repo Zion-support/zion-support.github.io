@@ -1,16 +1,9 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
-=======
-import { CheckCircle, Star, Zap, Settings, Clock, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -38,12 +31,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
     }
   ];
-<<<<<<< HEAD
   const pricingPlans = [
-=======
-
-  const pricing = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
     {
       name: 'Starter',
       price: '$399/month',
