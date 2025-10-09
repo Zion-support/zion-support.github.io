@@ -277,6 +277,7 @@ const Navigation: React.FC = () => {
 
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
+<<<<<<< HEAD
             </Link>
             <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
@@ -290,6 +291,21 @@ const Navigation: React.FC = () => {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </Link>
+=======
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
+              Blog
+            </a>
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
+              Case Studies
+            </a>
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+              Pricing
+            </a>
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+              Contact
+            </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-de8d
             
             <div className="flex items-center space-x-4">
               <a
@@ -371,6 +387,7 @@ const Navigation: React.FC = () => {
 
               <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
+<<<<<<< HEAD
               </Link>
               <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
@@ -384,6 +401,21 @@ const Navigation: React.FC = () => {
               <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </Link>
+=======
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Blog
+              </a>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Case Studies
+              </a>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Pricing
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+                Contact
+              </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-de8d
               
               <div className="pt-4 border-t border-gray-700">
                 <a

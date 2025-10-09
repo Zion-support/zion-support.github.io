@@ -5,9 +5,13 @@ import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
+import SEOEnhancer from './components/SEOEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import ErrorBoundary from './components/ErrorBoundary';
+import ServiceWorker from './components/ServiceWorker';
+import { ServiceCardSkeleton, HeroSkeleton } from './components/LoadingSkeleton';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -27,15 +31,7 @@ const preloadComponents = () => {
   }
 };
 
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+// Loading skeleton component - now imported from LoadingSkeleton.tsx
 
 const HomePage: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -633,7 +629,48 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <>
+    <ErrorBoundary>
+      <SEOEnhancer
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="https://ziontechgroup.com/og-image.jpg"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'TechCompany',
+          name: 'Zion Tech Group',
+          url: 'https://ziontechgroup.com',
+          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+          foundingDate: '2020',
+          numberOfEmployees: '50-100',
+          industry: 'Technology',
+          services: [
+            'AI Solutions',
+            'Quantum Computing',
+            'Autonomous Systems',
+            'Digital Transformation',
+            'Cloud Services',
+            'Automation',
+            'Business Intelligence'
+          ],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+1-302-464-0950',
+            contactType: 'Customer Service',
+            areaServed: 'US',
+            availableLanguage: 'en'
+          },
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '364 E Main St STE 1008',
+            addressLocality: 'Middletown',
+            addressRegion: 'DE',
+            postalCode: '19709',
+            addressCountry: 'US'
+          }
+        }}
+      />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
@@ -679,12 +716,16 @@ const HomePage: React.FC = () => {
         enableLazyLoading={true}
         enableCodeSplitting={true}
         enablePrefetching={true}
+        enableCriticalCSS={true}
+        enableResourceHints={true}
       />
       <AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReader={true}
         enableHighContrast={true}
         enableFocusManagement={true}
+        enableAriaLabels={true}
+        enableReducedMotion={true}
       />
       <SecurityEnhancer
         enableCSP={true}
@@ -693,6 +734,7 @@ const HomePage: React.FC = () => {
         enableClickjackingProtection={true}
       />
       <Analytics />
+      <ServiceWorker />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
         {/* Navigation */}
@@ -713,14 +755,15 @@ const HomePage: React.FC = () => {
 
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-          <section
-            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-              isLoaded && isVisible 
-                ? 'opacity-100 translate-y-0' 
-                : 'opacity-0 translate-y-8'
-            }`}
-            aria-labelledby="hero-heading"
-          >
+          <Suspense fallback={<HeroSkeleton />}>
+            <section
+              className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+                isLoaded && isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              aria-labelledby="hero-heading"
+            >
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
@@ -781,6 +824,9 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Micro SAAS Services Section */}
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
+          </div>}>
           <section className="mb-16" aria-labelledby="micro-saas-heading">
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               Micro SAAS Solutions
@@ -842,8 +888,12 @@ const HomePage: React.FC = () => {
               ))}
             </div>
           </section>
+          </Suspense>
 
           {/* AI Services Section */}
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
+          </div>}>
           <section className="mb-16" aria-labelledby="ai-services-heading">
             <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               AI Services
@@ -888,8 +938,12 @@ const HomePage: React.FC = () => {
               ))}
             </div>
           </section>
+          </Suspense>
 
           {/* IT Services Section */}
+          <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            {Array.from({ length: 8 }).map((_, i) => <ServiceCardSkeleton key={i} />)}
+          </div>}>
           <section className="mb-16" aria-labelledby="it-services-heading">
             <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               IT Services
@@ -1034,11 +1088,12 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
+          </Suspense>
         </main>
 
         <Footer />
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 
