@@ -84,59 +84,6 @@ const AISalesAutomationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="AI Sales Automation Platform - Zion Tech Group"
-        description="Revolutionary AI sales automation that increases revenue by 300% and saves 80% of sales time. Lead scoring, automated outreach, and CRM integration."
-        keywords={['AI sales automation', 'lead scoring', 'sales CRM', 'automated outreach', 'sales analytics']}
-        canonicalUrl="https://ziontechgroup.com/ai-sales-automation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-16">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Sales Automation Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Boost sales by 300% with intelligent automation
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered sales automation platform combines intelligent lead scoring, automated outreach, 
-                and advanced analytics to help sales teams close more deals in less time.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-  return (
-    <>
-      <SEOOptimizer
         title="AI Sales Automation Solutions - Zion Tech Group"
         description="Revolutionize your sales process with AI-powered automation, lead scoring, and intelligent customer engagement. Increase sales by 300%."
         keywords={['AI sales automation', 'lead scoring', 'sales intelligence', 'customer engagement', 'sales optimization']}

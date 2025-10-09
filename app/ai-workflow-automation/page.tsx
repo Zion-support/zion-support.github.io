@@ -1,5 +1,9 @@
 'use client';
 import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -48,8 +52,47 @@ const AIWorkflowAutomationPage: React.FC = () => {
       features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
     }
   ];
+
+  return (
+    <>
+      <SEOOptimizer
+        title="AI Workflow Automation Solutions - Zion Tech Group"
+        description="Automate complex business processes with AI-powered workflow automation. Increase efficiency by 90% and reduce errors by 75%."
+        keywords={['AI workflow automation', 'business process automation', 'workflow optimization', 'process automation', 'business automation']}
+        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+        <Navigation />
+        
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              AI Workflow Automation
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Automate complex business processes with AI-powered workflow automation. 
+              Increase efficiency by 90% and reduce errors by 75%.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call (302) 464-0950</span>
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button flex items-center space-x-2"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                <Mail className="w-5 h-5" />
+                <span>Get Free Demo</span>
+              </a>
             </div>
           </section>
+
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -132,6 +175,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
               </a>
             </div>
           </section>
+        </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 

@@ -148,7 +148,33 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
+
           {/* CTA Section */}
+          <section className="text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Customer Support?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already using our AI-powered customer support solutions to deliver exceptional experiences.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button flex items-center space-x-2"
+              >
+                <Phone className="w-5 h-5" />
+                <span>Call (302) 464-0950</span>
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="cyber-button flex items-center space-x-2"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                <Mail className="w-5 h-5" />
+                <span>Get Free Consultation</span>
+              </a>
+            </div>
+          </section>
         </div>
         <Footer />
       </div>

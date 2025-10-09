@@ -84,59 +84,6 @@ const AIDataVisualizationPage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="AI Data Visualization Platform - Zion Tech Group"
-        description="Transform data into actionable insights with AI-powered visualization. 95% faster insights, 100+ data sources, and interactive dashboards."
-        keywords={['data visualization', 'business intelligence', 'dashboards', 'data analytics', 'AI insights']}
-        canonicalUrl="https://ziontechgroup.com/ai-data-visualization"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="pt-16">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-                AI Data Visualization Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Transform data into actionable insights with AI
-              </p>
-              <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-                Our AI-powered data visualization platform helps businesses make data-driven decisions 
-                with interactive dashboards, intelligent insights, and 100+ data source integrations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <a
-                  href="tel:+13024640950"
-                  className="cyber-button flex items-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call (302) 464-0950</span>
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="cyber-button flex items-center space-x-2"
-                  style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Demo</span>
-                </a>
-              </div>
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-  return (
-    <>
-      <SEOOptimizer
         title="AI Data Visualization Solutions - Zion Tech Group"
         description="Transform your data into stunning, interactive visualizations with AI-powered insights and real-time analytics. Make data-driven decisions faster."
         keywords={['AI data visualization', 'interactive dashboards', 'data analytics', 'business intelligence', 'data insights']}
