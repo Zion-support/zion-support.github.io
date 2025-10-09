@@ -7,7 +7,7 @@ const Analytics: React.FC = () => {
       // Google Analytics 4
       const script = document.createElement('script');
       script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-4QZ8XQYQZQ';
       document.head.appendChild(script);
 
       // Initialize gtag
@@ -17,7 +17,7 @@ const Analytics: React.FC = () => {
       }
       (window as any).gtag = gtag;
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
+      gtag('config', 'G-4QZ8XQYQZQ', {
         page_title: document.title,
         page_location: window.location.href,
       });

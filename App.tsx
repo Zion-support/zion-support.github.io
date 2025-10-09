@@ -1,5 +1,6 @@
 import React, { memo, useMemo, Suspense } from 'react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
+import ErrorBoundary from './app/components/ErrorBoundary';
 
 // Memoized components for better performance
 const UnifiedContentPromotion = memo(() => (
