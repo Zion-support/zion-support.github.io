@@ -22,14 +22,10 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
-<<<<<<< HEAD
-    }
-  ];
 
-  const heroFeatures = [
-=======
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
+    },
     {
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
@@ -57,30 +53,7 @@ const CloudMigrationPage: React.FC = () => {
 
   const migrationSteps = [
     {
-      title: 'Assessment & Planning',
-      description: 'Comprehensive analysis of current infrastructure and migration strategy',
-      icon: CheckCircle,
-      features: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
-    },
-    {
-      step: '2',
-      title: 'Planning',
-<<<<<<< HEAD
-      description: 'Create detailed migration plan with timelines and rollback strategies',
-      icon: CheckCircle,
-      features: ['Migration strategy', 'Timeline planning', 'Risk assessment']
-    },
-    {
-      step: '3',
-      title: 'Optimization & Support',
-      description: 'Post-migration optimization and ongoing support',
-      features: ['Performance tuning', 'Cost optimization', '24/7 support'],
-      icon: TrendingUp
-    }
-  ];
 
-  const processSteps = [
-=======
       description: 'Create detailed migration plan with timelines and rollback strategies'
     },
     {
@@ -88,32 +61,37 @@ const CloudMigrationPage: React.FC = () => {
       description: 'Post-migration optimization and ongoing support',
       features: ['Performance tuning', 'Cost optimization', '24/7 support']
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
     {
       step: '01',
       title: 'Assessment',
+      step: '01',
+      title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
+      icon: CheckCircle,
       duration: '1-2 weeks'
     },
     {
       step: '02',
       title: 'Architecture Design',
-<<<<<<< HEAD
-      description: 'Design optimal cloud architecture tailored to your business needs.',
-      duration: '1-2 weeks'
-=======
+
       description: 'Design optimal cloud architecture tailored to your business needs.'
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
+
+      icon: Target,
+      duration: '1-2 weeks'
     },
     {
       step: '03',
       title: 'Migration Execution',
       description: 'Execute the migration with minimal downtime and maximum data integrity.',
+      icon: Zap,
       duration: '2-4 weeks'
     },
     {
       step: '04',
-      title: 'Optimization',
+
+      title: 'Optimization & Support',
+
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
       duration: 'Ongoing'
@@ -139,6 +117,7 @@ const CloudMigrationPage: React.FC = () => {
     {
       name: 'Professional',
       price: '$7,500',
+      period: 'one-time',
       description: 'Ideal for growing businesses with complex requirements',
       features: [
         'Up to 50 servers',
@@ -425,3 +404,4 @@ const CloudMigrationPage: React.FC = () => {
 };
 
 export default CloudMigrationPage;
+
