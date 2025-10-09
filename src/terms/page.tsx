@@ -21,6 +21,7 @@ const TermsPage: React.FC = () => {
                 This is the grant of a license, not a transfer of title, and under this license you may not:
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Modify or copy the materials</li><li>Use the materials for any commercial purpose or for any public display</li><li>Attempt to reverse engineer any software contained on our website</li><li>Remove any copyright or other proprietary notations from the materials</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Shield className="w-6 h-6 mr-3 text-cyan-400" />
                 Service Availability
+              </h2><p className="text-gray-300 mb-4">
                 We strive to maintain high service availability but do not guarantee uninterrupted access. 
                 We reserve the right to modify, suspend, or discontinue any part of our services at any time.
               </p></section><section><h2 className="text-2xl font-bold text-white mb-4">

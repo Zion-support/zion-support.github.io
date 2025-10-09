@@ -16,6 +16,7 @@ const PrivacyPage: React.FC = () => {
                 use our services, or contact us for support.
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Contact information (name, email, phone number)</li><li>Business information (company name, industry, size)</li><li>Service usage data and preferences</li><li>Communication records and support requests</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Eye className="w-6 h-6 mr-3 text-cyan-400" />
                 How We Use Your Information
+              </h2><p className="text-gray-300 mb-4">
                 We use the information we collect to provide, maintain, and improve our services:
               </p><ul className="list-disc list-inside text-gray-300 space-y-2"><li>Deliver and maintain our AI services</li><li>Process transactions and send related information</li><li>Send technical notices and support messages</li><li>Respond to your comments and questions</li><li>Improve our services and develop new features</li></ul></section><section><h2 className="text-2xl font-bold text-white mb-4 flex items-center"><Lock className="w-6 h-6 mr-3 text-cyan-400" />
                 Data Security

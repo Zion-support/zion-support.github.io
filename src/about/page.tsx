@@ -11,15 +11,46 @@ const AboutPage: React.FC = () => {
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
     },
+    {
       name: 'Sarah Johnson',
       role: 'CTO',
       image: '/images/team/sarah.jpg',
       bio: 'Technical expert specializing in machine learning and cloud architecture.',
+    },
+    {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
-import { Users, Target, Brain, Shield } from 'lucide-react';
+    }
+  ];
+
+  const features = [
+    {
+      icon: Users,
+      title: 'Expert Team',
+      description: 'Experienced professionals with deep expertise in AI and technology',
+      benefits: ['15+ years experience', 'Proven track record', 'Continuous learning']
+    },
+    {
+      icon: Target,
+      title: 'Client-Focused',
+      description: 'We prioritize your business goals and success',
+      benefits: ['Custom solutions', 'Dedicated support', 'Long-term partnerships']
+    },
+    {
+      icon: Brain,
+      title: 'Innovation',
+      description: 'Cutting-edge AI solutions and emerging technologies',
+      benefits: ['Latest technologies', 'Research & development', 'Future-proof solutions']
+    },
+    {
+      icon: Shield,
+      title: 'Security',
+      description: 'Enterprise-grade security and compliance',
+      benefits: ['Data protection', 'Compliance standards', 'Secure infrastructure']
+    }
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },

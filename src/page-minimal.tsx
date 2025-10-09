@@ -23,12 +23,16 @@ export default function HomePage() {
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
                 Home
+              </Link>
               <Link href="/services" className="text-gray-900 hover:text-blue-600">
                 Services
+              </Link>
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
+              </Link>
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
+              </Link>
             </nav>
       </header>
       <main>
@@ -107,6 +111,11 @@ export default function HomePage() {
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
                 © 2026 Zion Tech Group. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
       </footer>
+    </div>
   );
 export default HomePage;

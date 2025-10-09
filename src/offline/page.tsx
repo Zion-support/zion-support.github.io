@@ -15,6 +15,7 @@ const OfflinePage: React.FC = () => {
 
   const handleGoHome = () => {
     window.location.href = '/';
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -49,12 +50,18 @@ const OfflinePage: React.FC = () => {
           <p className="flex items-center justify-center gap-2">
             <Wifi className="w-4 h-4" />
             Check your internet connection
+          </p>
+        </div>
 
         <div className="mt-8 p-4 bg-black/20 rounded-lg">
           <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>
           <p className="text-xs text-gray-400">
             Some content may be available offline thanks to our service worker. 
             Try refreshing the page once you're back online.
+          </p>
+        </div>
+      </div>
+    </div>
   );
 
 export default OfflinePage;

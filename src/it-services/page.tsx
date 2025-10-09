@@ -6,7 +6,6 @@ import { Cloud } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
 const ITServicesPage: React.FC = () => {
   const _itServices = [
     {
@@ -20,6 +19,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
+    {
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
@@ -83,9 +83,13 @@ const ITServicesPage: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
+            </button>
           </div>
+        </div>
+      </div>
       
       <Footer />
+    </div>
   );
 };
 
