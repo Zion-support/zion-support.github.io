@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
   recordMetric,
   getMetrics,
@@ -11,7 +10,6 @@ import {
 } from '../performanceMonitoring';
 describe('performanceMonitoring', () => {
   beforeEach(() => {
-    clearMetrics();
   });
   describe('recordMetric', () => {
     it('should record metrics', () => {
@@ -73,7 +71,6 @@ describe('performanceMonitoring', () => {
       recordMetric('metric1', 100);
       recordMetric('metric2', 200);
       expect(Object.keys(getMetrics()).length).toBe(2);
-      clearMetrics();
       expect(Object.keys(getMetrics()).length).toBe(0);
     });
   });
@@ -173,34 +170,26 @@ describe('performanceMonitoring', () => {
       recordMetric('FCP', 1500); // Good
       const metrics = getMetrics();
       expect(metrics['FCP'].rating).toBe('good');
-      clearMetrics();
       recordMetric('FCP', 2500); // Needs improvement
       expect(getMetrics()['FCP'].rating).toBe('needs-improvement');
-      clearMetrics();
       recordMetric('FCP', 3500); // Poor
       expect(getMetrics()['FCP'].rating).toBe('poor');
     });
     it('should rate LCP correctly', () => {
       recordMetric('LCP', 2000); // Good
       expect(getMetrics()['LCP'].rating).toBe('good');
-      clearMetrics();
       recordMetric('LCP', 3000); // Needs improvement
       expect(getMetrics()['LCP'].rating).toBe('needs-improvement');
-      clearMetrics();
       recordMetric('LCP', 5000); // Poor
       expect(getMetrics()['LCP'].rating).toBe('poor');
     });
     it('should rate CLS correctly', () => {
       recordMetric('CLS', 0.05); // Good
       expect(getMetrics()['CLS'].rating).toBe('good');
-      clearMetrics();
       recordMetric('CLS', 0.15); // Needs improvement
       expect(getMetrics()['CLS'].rating).toBe('needs-improvement');
-      clearMetrics();
       recordMetric('CLS', 0.3); // Poor
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
   });
 });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d933

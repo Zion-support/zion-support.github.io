@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -29,28 +28,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   useEffect(() => {
     if (enableImageOptimization) {
-      optimizeImages();
     }
     if (enableLazyLoading) {
-      setupLazyLoading();
     }
     if (enablePreloading) {
-      preloadCriticalResources();
     }
     if (enableCodeSplitting) {
-      setupCodeSplitting();
     }
     if (enableResourceHints) {
-      addResourceHints();
     }
     if (enableServiceWorker) {
-      registerServiceWorker();
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-  const _optimizeImages = () => {
     const images = document.querySelectorAll('img');
-    let _optimized = 0;
     
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold

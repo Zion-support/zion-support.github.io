@@ -2,27 +2,16 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 function getRelativePath(fromPath, toPath) {
-  const _relative = path.relative(path.dirname(fromPath), toPath);
   return relative.startsWith('.') ? relative : './' + relative;
 }
 
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Calculate relative paths based on file location
-    const _isInBlog = filePath.includes('/blog/');
-    const _isInComponents = filePath.includes('/components/');
-    const _isInGuides = filePath.includes('/guides/');
-    const _isInPages = filePath.includes('/pages/');
 
-    let _utilsPath = '../utils/';
-    let _typesPath = '../types/';
 
     if (isInBlog || isInGuides || isInPages) {
       utilsPath = '../../utils/';
@@ -96,12 +85,8 @@ function processFile(filePath) {
 }
 
 function processDirectory(dirPath) {
-  const _items = fs.readdirSync(dirPath);
-  let _totalFixed = 0;
 
   items.forEach(item => {
-    const _fullPath = path.join(dirPath, item);
-    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -116,6 +101,4 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const _appDir = path.join(__dirname, 'app');
 
-const _fixedCount = processDirectory(appDir);

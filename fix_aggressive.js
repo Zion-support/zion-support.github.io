@@ -9,7 +9,6 @@ import { fileURLToPath } from 'url';
 
 //Function to aggressively fix corrupted syntax
 function fixCorruptedSyntax(text) {
-  let _fixed = text;
 
   //Fix import statements that got completely corrupted
   fixed = fixed.replace(
@@ -202,14 +201,12 @@ function processFile(filePath) {
 
 //Function to recursively find and process files
 function processDirectory(dirPath) {
-  let _processedCount = 0;
 
   try {
     //     const items = fs.readdirSync(dirPath);
 
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
-      const _stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
@@ -237,3 +234,4 @@ function processDirectory(dirPath) {
 // let processedCount = processDirectory('./src');
 processedCount += processDirectory('./utils');
 // 
+}}}}}}}}}}}}}

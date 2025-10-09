@@ -27,7 +27,6 @@ export class SecurityManager {
    */
   sanitizeUrl(url: string): string {
     try {
-      const _parsed = new URL(url);
       if (!['http:', 'https:'].includes(parsed.protocol)) {
         throw new Error('Invalid protocol');
       }

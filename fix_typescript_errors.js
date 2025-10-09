@@ -3,7 +3,6 @@ import fs from 'fs';
 // // 1. Fix AdvancedSEOOptimizer component props
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
 if (fs.existsSync(seoOptimizerPath)) {
-  let _content = fs.readFileSync(seoOptimizerPath, 'utf8');
 
   // Update the interface to include missing props
   content = content.replace(
@@ -29,7 +28,6 @@ if (fs.existsSync(seoOptimizerPath)) {
 // 2. Fix App.tsx SEO component usage
 // // const appPath = '/workspace/App.tsx';
 if (fs.existsSync(appPath)) {
-  let _content = fs.readFileSync(appPath, 'utf8');
 
   // Fix the AdvancedSEOOptimizer usage
   content = content.replace(
@@ -44,7 +42,6 @@ if (fs.existsSync(appPath)) {
 // // Fix AppMinimal.test.tsx
 // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
 if (fs.existsSync(appMinimalTestPath)) {
-  let _content = fs.readFileSync(appMinimalTestPath, 'utf8');
 
   // Replace @jest/globals import
   content = content.replace(
@@ -58,7 +55,6 @@ if (fs.existsSync(appMinimalTestPath)) {
 // Fix advanced-components.test.tsx
 // const advancedComponentsTestPath = '/workspace/__tests__/advanced-components.test.tsx';
 if (fs.existsSync(advancedComponentsTestPath)) {
-  let _content = fs.readFileSync(advancedComponentsTestPath, 'utf8');
 
   // Update AdvancedSEOOptimizer usage in tests
   content = content.replace(/<AdvancedSEOOptimizer\s+config=\{/g, '<AdvancedSEOOptimizer config={');
@@ -75,7 +71,6 @@ if (fs.existsSync(advancedComponentsTestPath)) {
 
 blogPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Remove the 'type' property from metadata
     content = content.replace(/\s+type: ['"][^'"]*['"],?\s*/g, '');
@@ -92,7 +87,6 @@ blogPages.forEach(pagePath => {
 
 openGraphPages.forEach(pagePath => {
   if (fs.existsSync(pagePath)) {
-    let _content = fs.readFileSync(pagePath, 'utf8');
 
     // Fix authors format
     content = content.replace(
@@ -107,7 +101,6 @@ openGraphPages.forEach(pagePath => {
 // 6. Fix missing Calculator import
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
 if (fs.existsSync(calculatorPagePath)) {
-  let _content = fs.readFileSync(calculatorPagePath, 'utf8');
 
   // Replace Calculator with CalculatorIcon
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
@@ -119,7 +112,6 @@ if (fs.existsSync(calculatorPagePath)) {
 // 7. Fix dataLayer declaration conflicts
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
 if (fs.existsSync(analyticsTrackerPath)) {
-  let _content = fs.readFileSync(analyticsTrackerPath, 'utf8');
 
   // Add proper dataLayer declaration
   content = content.replace(
@@ -136,7 +128,6 @@ if (fs.existsSync(analyticsTrackerPath)) {
 // 8. Fix performanceEnhancer references
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
 if (fs.existsSync(systemMonitorPath)) {
-  let _content = fs.readFileSync(systemMonitorPath, 'utf8');
 
   // Add import for performanceEnhancer
   content = content.replace(
@@ -151,7 +142,6 @@ import { performanceEnhancer } from '../utils/performanceEnhancer';`
 // 9. Fix gtag declaration conflicts
 // // const performancePath = '/workspace/lib/performance.ts';
 if (fs.existsSync(performancePath)) {
-  let _content = fs.readFileSync(performancePath, 'utf8');
 
   // Add proper gtag declaration
   content = content.replace(
@@ -166,3 +156,4 @@ if (fs.existsSync(performancePath)) {
   //     }
 
 // 
+}}}}}

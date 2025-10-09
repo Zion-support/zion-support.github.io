@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, memo } from 'react';
 
 interface SEOOptimizerProps {
   title: string;
@@ -20,7 +19,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   twitterCard = 'summary_large_image',
 }) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
 
   useEffect(() => {
     // Update document title

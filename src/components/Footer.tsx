@@ -1,13 +1,6 @@
 'use client';
-import React, { memo } from 'react';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 
 const Footer: React.FC = memo(() => {
-  const _currentYear = new Date().getFullYear();
   
   const aiServices = [
     { name: 'Machine Learning Solutions', url: '/ai-ml-solutions', description: 'Custom ML models and analytics' },

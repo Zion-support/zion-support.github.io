@@ -62,7 +62,6 @@ export class CacheManager {
    * Remove expired entries
    */
   private cleanup(): void {
-    const _now = Date.now();
     // Clean memory cache
     for (const [key, entry] of this.memoryCache.entries()) {
       if (this.isExpired(entry, now)) {

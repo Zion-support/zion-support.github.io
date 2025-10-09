@@ -121,7 +121,6 @@ function mergeBranch(branchName) {
 
 //Merge each branch
 for (const branch of newBranches) {
-  const _result = mergeBranch(branch);
   results.summary.total++;
 
   if (result.success) {

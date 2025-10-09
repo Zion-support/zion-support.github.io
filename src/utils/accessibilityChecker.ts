@@ -177,7 +177,6 @@ export class AccessibilityChecker {
   private checkHeadings(element: Element): void {
     const headings = Array.from(element.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     if (headings.length === 0) return;
-    let _previousLevel = 0;
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
       // Check for skipped heading levels

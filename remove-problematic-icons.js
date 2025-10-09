@@ -5,12 +5,9 @@ import { glob } from 'glob';
 
 async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components
-  const _files = await glob('src/components/**/*.{ts,tsx,js,jsx}');
 
   //   for (const filePath of files) {
     try {
-      let _content = fs.readFileSync(filePath, 'utf8');
-      let _modified = false;
 
       //Remove all problematic icon usage patterns
       //Remove <span className="...">IconName</span>

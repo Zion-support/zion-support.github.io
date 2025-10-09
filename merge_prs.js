@@ -3,9 +3,6 @@
 import https from 'https';
 
 // GitHub API configuration
-const _GITHUB_API_BASE = 'https://api.github.com';
-const _REPO_OWNER = 'Zion-Holdings';
-const _REPO_NAME = 'zion.app';
 
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
@@ -26,13 +23,11 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {
     }
 
     const req = https.request(options, (res) => {
-      let _responseData = '';
       res.on('data', (chunk) => {
         responseData += chunk;
       });
       res.on('end', () => {
         try {
-          const _jsonData = responseData ? JSON.parse(responseData) : {};
           resolve({ status: res.statusCode, data: jsonData });
         } catch (error) {
           reject(new Error(`Failed to parse JSON: ${error.message}`));
@@ -54,7 +49,6 @@ function makeGitHubRequest(endpoint, method = 'GET', data = null) {
 
 async function getOpenPRs() {
   try {
-    const _response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
     return response.data;
   } catch (error) {
 
@@ -64,7 +58,6 @@ async function getOpenPRs() {
 
 async function getPRDetails(prNumber) {
   try {
-    const _response = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}`);
     return response.data;
   } catch (error) {
 
@@ -76,7 +69,6 @@ async function mergePR(prNumber, title) {
   try {
 
     // Get PR details first
-    const _prDetails = await getPRDetails(prNumber);
     if (!prDetails) {
 
       return false;
@@ -122,7 +114,6 @@ async function mergePR(prNumber, title) {
 async function mergeAllPRs() {
   try {
 
-    const _prs = await getOpenPRs();
     
     if (prs.length === 0) {
 
@@ -142,12 +133,9 @@ async function mergeAllPRs() {
       return;
     }
 
-    let _successCount = 0;
-    let _failCount = 0;
 
     // Merge PRs one by one
     for (const pr of mainPRs) {
-      const _success = await mergePR(pr.number, pr.title);
       if (success) {
         successCount++;
       } else {

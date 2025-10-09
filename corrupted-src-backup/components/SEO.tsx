@@ -20,3 +20,4 @@ interface SEOProps {
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
+}

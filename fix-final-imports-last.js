@@ -1,13 +1,9 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Fix remaining import path issues
     const replacements = [
@@ -42,12 +38,8 @@ function processFile(filePath) {
 }
 
 function processDirectory(dirPath) {
-  const _items = fs.readdirSync(dirPath);
-  let _totalFixed = 0;
 
   items.forEach(item => {
-    const _fullPath = path.join(dirPath, item);
-    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -62,6 +54,4 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const _appDir = path.join(__dirname, 'app');
 
-const _fixedCount = processDirectory(appDir);

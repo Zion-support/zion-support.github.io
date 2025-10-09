@@ -121,10 +121,8 @@ async function main() {
     }
     
     // Step 2: Clean up console.log statements
-    cleanConsoleLogs();
     
     // Step 3: Optimize performance
-    optimizePerformance();
     
     // Step 4: Run type check
     console.log('🔍 Running TypeScript type check...');
@@ -163,5 +161,3 @@ async function main() {
     process.exit(1);
   }
 }
-
-main();

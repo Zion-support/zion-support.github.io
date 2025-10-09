@@ -1,5 +1,4 @@
 'use client';
-import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string;
   alt: string;
@@ -35,7 +34,6 @@ export const Image: React.FC<ImageProps> = ({
 }) => {
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const _handleLoad = useCallback(() => {
     setIsLoaded(true);
     if (onLoad) onLoad();
   }, [onLoad]);

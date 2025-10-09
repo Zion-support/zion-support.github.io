@@ -5,17 +5,13 @@ import { glob } from 'glob';
 
 async function main() {
   //Find all TSX files in src/components
-  const _files = await glob('src/components/**/*.tsx');
 
   //   files.forEach(file => {
     try {
-      let _content = fs.readFileSync(file, 'utf8');
-      let _modified = false;
 
       //Fix common JSX syntax issues
 
       //1. Fix key prop placement: <div>\nkey={...} -> <div\nkey={...}
-      const _keyPropFix = content.replace(/<(\w+)>\s*\n\s*key=\{([^}]+)\}/g, '<$1\nkey={$2}');
       if (keyPropFix !== content) {
         content = keyPropFix;
         modified = true;
@@ -42,7 +38,6 @@ async function main() {
       }
 
       //4. Fix style prop placement: <div>\nstyle={...} -> <div\nstyle={...}
-      const _styleFix = content.replace(/<(\w+)>\s*\n\s*style=\{([^}]+)\}/g, '<$1\nstyle={$2}');
       if (styleFix !== content) {
         content = styleFix;
         modified = true;

@@ -178,8 +178,6 @@ const fixes = [
 
 function fixFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     fixes.forEach(fix => {
       //       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -202,7 +200,6 @@ function fixFile(filePath) {
 //Main function
 async function main() {
   //Find all TypeScript/TSX files
-  const _files = await glob('src/**/*.{ts,tsx}');
 
   //   let fixedCount = 0;
   files.forEach(file => {

@@ -1,5 +1,4 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -24,7 +23,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Check for user preferences
     if (typeof window !== 'undefined') {
-      const _prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       
       setIsHighContrast(prefersHighContrast);
@@ -107,7 +105,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       });
     };
 
-    manageFocus();
 
     // Re-run when DOM changes
     const observer = new MutationObserver(manageFocus);

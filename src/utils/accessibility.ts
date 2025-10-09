@@ -29,7 +29,6 @@ class AccessibilityService {
     ratio: number;
     passes: { normal: boolean; large: boolean };
   } {
-    const _rgb1 = this.hexToRgb(foreground);
     const rgb2 = this.hexToRgb(background);
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);
@@ -98,7 +97,6 @@ class AccessibilityService {
     });
     // Check for proper heading hierarchy
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
-    let _prevLevel = 0;
     headings.forEach(heading => {
       const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {

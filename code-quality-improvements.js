@@ -15,8 +15,5 @@ const addDocumentation = () => {
 };
 
 // Run code quality improvements
-addErrorHandling();
-improveLogging();
-addDocumentation();
 
 // 

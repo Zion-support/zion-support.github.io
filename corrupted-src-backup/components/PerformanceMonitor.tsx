@@ -286,3 +286,4 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default PerformanceMonitor;
+}

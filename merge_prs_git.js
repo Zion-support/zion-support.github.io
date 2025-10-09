@@ -4,9 +4,6 @@ import https from 'https';
 import { execSync } from 'child_process';
 
 // GitHub API configuration
-const _GITHUB_API_BASE = 'https://api.github.com';
-const _REPO_OWNER = 'Zion-Holdings';
-const _REPO_NAME = 'zion.app';
 
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
@@ -22,13 +19,11 @@ function makeGitHubRequest(endpoint) {
     };
 
     const req = https.request(options, (res) => {
-      let _data = '';
       res.on('data', (chunk) => {
         data += chunk;
       });
       res.on('end', () => {
         try {
-          const _jsonData = JSON.parse(data);
           resolve(jsonData);
         } catch (error) {
           reject(new Error(`Failed to parse JSON: ${error.message}`));
@@ -46,7 +41,6 @@ function makeGitHubRequest(endpoint) {
 
 async function getOpenPRs() {
   try {
-    const _prs = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls?state=open&per_page=100`);
     return prs;
   } catch (error) {
 
@@ -56,7 +50,6 @@ async function getOpenPRs() {
 
 async function getPRDetails(prNumber) {
   try {
-    const _prDetails = await makeGitHubRequest(`/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}`);
     return prDetails;
   } catch (error) {
 
@@ -87,7 +80,6 @@ async function mergePRWithGit(pr) {
 
 
     // Get detailed PR info
-    const _prDetails = await getPRDetails(pr.number);
     if (!prDetails) {
 
       return false;
@@ -100,7 +92,6 @@ async function mergePRWithGit(pr) {
 
     // Fetch the PR branch
 
-    const _fetchResult = runGitCommand(`git fetch origin ${pr.head.ref}`);
     if (!fetchResult.success) {
 
       return false;
@@ -108,7 +99,6 @@ async function mergePRWithGit(pr) {
 
     // Try to merge the branch
 
-    const _mergeResult = runGitCommand(`git merge origin/${pr.head.ref} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`);
     
     if (mergeResult.success) {
 
@@ -117,17 +107,14 @@ async function mergePRWithGit(pr) {
       // If merge failed due to conflicts, try to resolve them
 
       // Check if there are merge conflicts
-      const _statusResult = runGitCommand(`git status --porcelain`);
       if (statusResult.success && statusResult.output.includes('UU')) {
 
         // Use our conflict resolution script
-        const _conflictResult = runGitCommand(`python3 fix_merge_conflicts.py`);
         if (conflictResult.success) {
           // Add resolved files
           runGitCommand(`git add .`);
           
           // Commit the merge
-          const _commitResult = runGitCommand(`git commit -m "Merge PR #${pr.number}: ${pr.title} (conflicts resolved)"`);
           if (commitResult.success) {
 
             return true;
@@ -154,7 +141,6 @@ async function mergePRWithGit(pr) {
 async function mergeAllPRsWithGit() {
   try {
 
-    const _prs = await getOpenPRs();
     
     if (prs.length === 0) {
 
@@ -163,19 +149,15 @@ async function mergeAllPRsWithGit() {
 
 
     // Filter PRs that target main branch
-    const _mainPRs = prs.filter(pr => pr.base.ref === 'main');
 
     if (mainPRs.length === 0) {
 
       return;
     }
 
-    let _successCount = 0;
-    let _failCount = 0;
 
     // Process PRs one by one
     for (const pr of mainPRs) {
-      const _success = await mergePRWithGit(pr);
       if (success) {
         successCount++;
       } else {

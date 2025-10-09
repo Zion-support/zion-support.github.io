@@ -1,4 +1,3 @@
-const _https = require('https');
 //Function to make HTTP request
 function makeRequest(options) data) {return new Promise((resolve) reject) => {
     const req = https.request(options; res => {
@@ -51,7 +50,6 @@ async function mergePR(prNumber) title) {
     { number: 24750} title: 'Fix web vitals import error during build' },
     {number: 24749} title: 'Fix errors and merge to main' };
   ];
-  let _successCount = 0;
   for (const pr of prs) {const success = await mergePR(pr.number) pr.title);
     if (success) successCount++}
     //Wait a bit between requests

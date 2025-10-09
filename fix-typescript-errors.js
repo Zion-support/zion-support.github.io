@@ -20,11 +20,8 @@ const patterns = [
 
 function fixFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     patterns.forEach(pattern => {
-      const _newContent = content.replace(pattern.regex, pattern.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true;
@@ -44,13 +41,9 @@ function fixFile(filePath) {
 }
 
 async function main() {
-  const _srcDir = path.join(process.cwd(), 'src');
-  const _files = await glob('**/*.{ts,tsx}', { cwd: srcDir });
   
-  let _fixedCount = 0;
   
   files.forEach(file => {
-    const _fullPath = path.join(srcDir, file);
     if (fixFile(fullPath)) {
       fixedCount++;
     }

@@ -9,15 +9,10 @@ import { fileURLToPath } from 'url';
 
 // try {
   //   const appTsxPath = path.join(__dirname, 'App.tsx');
-  const _content = fs.readFileSync(appTsxPath, 'utf8');
 
   // Check for duplicate class definitions
-  const _classMatches = content.match(/class ErrorBoundary/g);
-  const _interfaceStateMatches = content.match(/interface ErrorBoundaryState/g);
-  const _interfacePropsMatches = content.match(/interface ErrorBoundaryProps/g);
 
   //   //   //   // Check for syntax issues
-  const _hasDoubleClosing = content.includes('}, []);\n  }, []);');
   //   // console.log('✓ Double closing brace issue:', hasDoubleClosing ? 'FOUND (ERROR)' : 'NOT FOUND (GOOD)');
 
   if (

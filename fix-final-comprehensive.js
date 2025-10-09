@@ -1,8 +1,6 @@
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Files that need specific fixes
 const specificFixes = {
@@ -34,19 +32,14 @@ const specificFixes = {
 
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
 
     // Apply specific fixes
-    const _relativePath = path.relative(path.join(__dirname, 'app'), filePath);
     if (specificFixes[relativePath]) {
-      const _fix = specificFixes[relativePath];
       if (fix.keywords) {
         const keywordArray = fix.keywords
           .split(', ')
           .map(k => `'${k}'`)
           .join(', ');
-        const _pattern = /keywords:\s*'[^']+',/g;
         if (pattern.test(content)) {
           content = content.replace(pattern, `keywords: [${keywordArray}],`);
           modified = true;
@@ -92,12 +85,8 @@ function processFile(filePath) {
 }
 
 function processDirectory(dirPath) {
-  const _items = fs.readdirSync(dirPath);
-  let _totalFixed = 0;
 
   items.forEach(item => {
-    const _fullPath = path.join(dirPath, item);
-    const _stat = fs.statSync(fullPath);
 
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath);
@@ -112,6 +101,4 @@ function processDirectory(dirPath) {
 }
 
 // Process the app directory
-const _appDir = path.join(__dirname, 'app');
 
-const _fixedCount = processDirectory(appDir);

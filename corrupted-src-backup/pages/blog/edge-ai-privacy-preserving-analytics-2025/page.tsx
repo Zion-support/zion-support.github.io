@@ -32,3 +32,4 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/bl, o, g' className='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
           </Li, n, k>
+}

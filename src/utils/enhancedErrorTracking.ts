@@ -103,7 +103,6 @@ class EnhancedErrorTracker {
   } {
     const byComponent: Record<string, number> = {};
     this.errors.forEach(error => {
-      const _component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;
     });
     return {

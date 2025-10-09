@@ -51,7 +51,6 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
 export function getSecurityHeaders(
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {
-  const _config = { ...defaultSecurityHeaders, ...customConfig };
   const headers: Record<string, string> = {
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'

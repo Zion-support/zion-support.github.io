@@ -47,7 +47,6 @@ class PerformanceMonitoringService {
     }
     try {
       // Observe paint metrics (FCP)
-      const _paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
             this.recordWebVital('FCP', entry.startTime);
@@ -67,7 +66,6 @@ class PerformanceMonitoringService {
       lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
       this.observers.push(lcpObserver);
       // Observe CLS
-      let _clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (!(entry as PerformanceEntry & { hadRecentInput: boolean }).hadRecentInput) {

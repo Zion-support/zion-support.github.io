@@ -1,4 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -43,7 +42,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Load settings from localStorage
   useEffect(() => {
-    const _savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       try {
         setSettings(JSON.parse(savedSettings));
@@ -216,7 +214,6 @@ const EnhancedAccessibility: React.FC<AccessibilityProps> = ({
 
   // Reset all settings
   const resetSettings = () => {
-    const _defaultSettings: AccessibilitySettings = {
       highContrast: false,
       largeText: false,
       reducedMotion: false,

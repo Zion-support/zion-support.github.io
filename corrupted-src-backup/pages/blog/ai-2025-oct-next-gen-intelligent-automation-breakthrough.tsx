@@ -105,3 +105,4 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
                   >
                     Book, Free, Assessment
                     <Rocket, classNam, e='w-5 h-5' />
+}}

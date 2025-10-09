@@ -1,5 +1,4 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 // import { Link } from 'react-router-dom';
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -72,7 +71,6 @@ class AdvancedErrorBoundary extends Component<
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const _errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
       error,
       errorInfo,
@@ -99,7 +97,6 @@ class AdvancedErrorBoundary extends Component<
   private getSessionId = (): string => {
     // Generate or retrieve session ID
     try {
-      let _sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);

@@ -7,7 +7,6 @@ async function closeDuplicatePRs() {
     const response = await fetch(
       'https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100'
     );
-    const _prs = await response.json();
 
 //     const duplicatePRs = prs.filter(
       pr =>
@@ -16,7 +15,6 @@ async function closeDuplicatePRs() {
     );
 
 //     let closedCount = 0;
-    let _errorCount = 0;
 
     for (const pr of duplicatePRs) {
       try {

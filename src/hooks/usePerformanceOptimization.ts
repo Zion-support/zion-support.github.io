@@ -14,13 +14,8 @@ export const _usePerformanceOptimization = () => {
     const navigation = performance.getEntriesByType(
       'navigation'
     )[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
     const paintEntries = performance.getEntriesByType('paint');
     const metrics: PerformanceMetrics = {
-=======
-    const _paintEntries = performance.getEntriesByType('paint');
-    const _metrics: PerformanceMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
       loadTime: navigation
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
@@ -41,7 +36,6 @@ export const _usePerformanceOptimization = () => {
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let __clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
@@ -117,9 +111,7 @@ export const _usePerformanceOptimization = () => {
       }
     }, 1000);
     // Optimize images
-    optimizeImages();
     // Preload critical resources
-    preloadCriticalResources();
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {

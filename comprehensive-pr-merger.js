@@ -73,7 +73,6 @@ function resolveConflictsAndMerge(branchName) {
   } catch (error) {
 //     //Check for merge conflicts
     try {
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
         status.includes('UU') ||
@@ -167,7 +166,6 @@ function resolveConflictsAndMerge(branchName) {
 
 //Merge priority branches first
 // for (const branch of mergeStrategy.priority) {
-  const _result = resolveConflictsAndMerge(branch);
   results.priority.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {
@@ -183,7 +181,6 @@ function resolveConflictsAndMerge(branchName) {
 //Merge feature branches
 // for (const branch of mergeStrategy.features) {
   if (!mergeStrategy.skip.includes(branch)) {
-    const _result = resolveConflictsAndMerge(branch);
     results.features.push({ branch, ...result });
     results.summary.total++;
     if (result.success) {
@@ -200,7 +197,6 @@ function resolveConflictsAndMerge(branchName) {
 //Merge content branches
 // for (const branch of mergeStrategy.content) {
   if (!mergeStrategy.skip.includes(branch)) {
-    const _result = resolveConflictsAndMerge(branch);
     results.content.push({ branch, ...result });
     results.summary.total++;
     if (result.success) {

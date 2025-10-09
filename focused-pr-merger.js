@@ -148,7 +148,6 @@ function resolveConflictsAndMerge(branchName) {
 
 //Merge priority branches first
 // for (const branch of priorityBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.priority.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {
@@ -166,7 +165,6 @@ function resolveConflictsAndMerge(branchName) {
 //Merge cursor branches (limit to 10 most recent)
 // const recentCursorBranches = cursorBranches.slice(0, 10);
 for (const branch of recentCursorBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.cursor.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {

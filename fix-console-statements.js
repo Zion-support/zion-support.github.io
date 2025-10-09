@@ -4,8 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Function to properly fix console statements
 function fixConsoleStatements(content) {
@@ -54,13 +52,11 @@ const filesToFix = [
 
 function fixFile(filePath) {
   try {
-    const _fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
 
       return;
     }
 
-    let _content = fs.readFileSync(fullPath, 'utf8');
 
     // Apply fixes
     content = fixConsoleStatements(content);

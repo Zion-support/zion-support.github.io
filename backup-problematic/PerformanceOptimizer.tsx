@@ -111,3 +111,5 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
  // Cleanup if needed
  };
  }, []);
+
+}}}

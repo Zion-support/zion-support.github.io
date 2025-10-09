@@ -155,7 +155,6 @@ function resolveConflictsAndMerge(branchName) {
 
 //Merge all remaining branches
 for (const branch of remainingBranches) {
-  const _result = resolveConflictsAndMerge(branch);
   results.branches.push({ branch, ...result });
   results.summary.total++;
   if (result.success) {

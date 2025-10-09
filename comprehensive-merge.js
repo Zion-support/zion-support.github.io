@@ -26,7 +26,6 @@ const prBranches = [
 ];
 
 // let mergedCount = 0;
-let _conflictCount = 0;
 
 for (const branch of prBranches) {
   //   //Check if branch exists
@@ -56,7 +55,6 @@ for (const branch of prBranches) {
 
 // // // //Push changes if any were merged
 if (mergedCount > 0) {
-  const _pushResult = safeGitCommand('git push origin main', 'Push changes to main');
   if (pushResult.success) {
     //     } else {
     //     }

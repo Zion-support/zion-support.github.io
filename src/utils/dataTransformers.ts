@@ -17,7 +17,6 @@ export function deepClone<T>(obj: T): T {
     return obj.map(item => deepClone(item)) as unknown as T;
   }
   if (obj instanceof Object) {
-    const _clonedObj = {} as T;
     for (const key in obj) {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         clonedObj[key] = deepClone(obj[key]);
@@ -91,7 +90,6 @@ export function unflattenObject(
   for (const key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       const keys = key.split(separator);
-      let _current = result;
       for (let i = 0; i < keys.length; i++) {
         const k = keys[i];
         if (i === keys.length - 1) {

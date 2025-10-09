@@ -177,8 +177,6 @@ async function main() {
     
     // Clean up and optimize
     console.log('\n🧹 Post-merge cleanup...');
-    cleanConsoleLogs();
-    optimizeBuild();
     
     // Final commit
     console.log('\n💾 Committing final optimizations...');
@@ -202,5 +200,3 @@ async function main() {
     process.exit(1);
   }
 }
-
-main();

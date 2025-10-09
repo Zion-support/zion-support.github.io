@@ -112,7 +112,6 @@ export const usePerformanceMonitoring = () => {
     };
     // Monitor performance after page load
     if (document.readyState === 'complete') {
-      updateMetrics();
     } else {
       window.addEventListener('load', updateMetrics);
     }
@@ -151,7 +150,6 @@ export const useMemoryMonitoring = () => {
         });
       }
     };
-    updateMemoryInfo();
     const interval = setInterval(updateMemoryInfo, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -190,7 +188,6 @@ export const useBundleSizeMonitoring = () => {
     if (typeof window === 'undefined') return;
     const calculateBundleSize = () => {
       const resources = performance.getEntriesByType('resource');
-      let _totalSize = 0;
       let jsSize = 0;
       let cssSize = 0;
       let imageSize = 0;
@@ -214,7 +211,6 @@ export const useBundleSizeMonitoring = () => {
     };
     // Calculate after page load
     if (document.readyState === 'complete') {
-      calculateBundleSize();
     } else {
       window.addEventListener('load', calculateBundleSize);
     }

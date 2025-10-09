@@ -62,7 +62,6 @@ function resolveConflictsAndMerge(branchName) {
   } catch (error) {
 //     try {
       //Check for merge conflicts
-      const _status = execSync('git status --porcelain', { encoding: 'utf8' });
 
       if (
         status.includes('UU') ||
@@ -161,7 +160,6 @@ function resolveConflictsAndMerge(branchName) {
 
 //Process each branch
 for (const branch of branchesToMerge) {
-  const _result = resolveConflictsAndMerge(branch);
   results.summary.total++;
 
   if (result.success) {

@@ -3,7 +3,6 @@
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
-import React, { ErrorInfo, useCallback } from 'react';
 // Error types
 export enum ErrorType {
   RUNTIME = 'RUNTIME',
@@ -160,7 +159,6 @@ export class ErrorHandler {
   }
   // Determine error type
   private determineErrorType(error: Error): ErrorType {
-    const _message = error.message.toLowerCase();
     const stack = error.stack?.toLowerCase() || '';
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {
       return ErrorType.NETWORK;

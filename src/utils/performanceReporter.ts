@@ -2,9 +2,7 @@
 /**
  * Performance Reporter
  * Comprehensive performance monitoring and reporting
-<<<<<<< HEAD
  */
-import React from 'react'
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -276,6 +274,3 @@ if (typeof window !== 'undefined') {
   })
 }
 export default performanceReporter
-=======
- */
->>>>>>> cursor/fix-errors-and-merge-to-main-d933

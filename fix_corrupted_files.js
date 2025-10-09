@@ -9,7 +9,6 @@ function fixCorruptedText(text) {
   //Pattern to match commas that are incorrectly placed in the middle of words
   //This looks for commas that are followed by a space and then a lowercase letter
   //or commas that are in the middle of identifiers
-  let _fixed = text;
   //Fix common patterns of corruption
   //Remove commas that are incorrectly placed in the middle of words
   fixed = fixed.replace(/([a-zA-Z]),\s*([a-zA-Z])/g, '$1$2');
@@ -127,12 +126,10 @@ function processFile(filePath) {
 }
 //Function to recursively find and process files
 function processDirectory(dirPath) {
-  let _processedCount = 0;
   try {
     //     const items = fs.readdirSync(dirPath);
     for (const item of items) {
       //       const fullPath = path.join(dirPath, item);
-      const _stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         //Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {

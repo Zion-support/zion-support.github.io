@@ -10,7 +10,6 @@ export interface ValidationResult {
 /**
  * Email validation regex pattern
  */
-const _EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 /**
  * Phone number validation regex (US format)
  */
@@ -91,7 +90,6 @@ export function isStrongPassword(password: string): boolean {
  * Get password strength score (0-4)
  */
 export function getPasswordStrength(password: string): number {
-  let _score = 0;
   if (password.length >= 8) score++;
   if (password.length >= 12) score++;
   if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++;
