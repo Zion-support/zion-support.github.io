@@ -83,6 +83,11 @@ const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { logger } from './utils/logger';
+import { lazyLoadImages, preloadCriticalResources } from './utils/performanceUtils';
+import { performanceOptimizer, performanceMonitor } from './utils/performanceUtils';
+import { seoOptimizer } from './utils/seoUtils';
+import { accessibilityEnhancer } from './utils/accessibilityUtils';
+import { collectPerformanceMetrics } from './utils/performanceUtils';
 
 // Styles
 import './globals.css';
