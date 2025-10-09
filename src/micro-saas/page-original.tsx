@@ -1663,34 +1663,35 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
   
-  const realEstateSaaS = [
-    {
-      title: 'AI Property Valuation Platform',
-      description: 'Advanced property valuation using machine learning and real estate data analysis.',
-      icon: '🏠',
-      price: '$299/month',
-      features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
-      benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    {
-      title: 'AI Tenant Screening Platform',
-      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
-      icon: '🔍',
-      price: '$149/month',
-      features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
-      benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
-      marketPrice: '$200-400/month',
-      category: 'Property Management',
-      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    },
-    // AI Agriculture & Food Tech
-    {
-      title: 'AI Crop Monitoring System',
+  // Removed unused realEstateSaaS array - was causing parsing errors
+  /*
+  //   {
+  //     title: 'AI Property Valuation Platform',
+  //     description: 'Advanced property valuation using machine learning and real estate data analysis.',
+  //     icon: '🏠',
+  //     price: '$299/month',
+  //     features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
+  //     benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
+  //     marketPrice: '$300-600/month',
+  //     category: 'Real Estate',
+  //     technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
+  //     contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+  //   },
+  //   {
+  //     title: 'AI Tenant Screening Platform',
+  //     description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
+  //     icon: '🔍',
+  //     price: '$149/month',
+  //     features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
+  //     benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
+  //     marketPrice: '$200-400/month',
+  //     category: 'Property Management',
+  //     technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
+  //     contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+  //   },
+  //   // AI Agriculture & Food Tech
+  //   {
+  //     title: 'AI Crop Monitoring System',
       description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
       icon: '🌾',
       price: '$299/month',
@@ -3367,11 +3368,9 @@ const MicroSAASPage: React.FC = () => {
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
-  ];
-  const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
+  */
+  // Removed unused categories array - was causing parsing errors
+  /*
     { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
     { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
     { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
@@ -3391,7 +3390,7 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  ];
+  */
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

@@ -1,8 +1,7 @@
 import React from 'react';
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-};
+import Link from 'next/link';
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
