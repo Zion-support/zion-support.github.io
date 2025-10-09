@@ -1,6 +1,5 @@
 import React from 'react';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-
 function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -156,6 +155,5 @@ function HomePage() {
       </footer>
     </div>
   );
-}
-
+};
 export default HomePage;

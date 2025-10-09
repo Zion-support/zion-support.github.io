@@ -3,7 +3,34 @@
  * API Caching Utility
  * Provides caching, deduplication, and retry logic for API calls
  */
-import { CacheManager } from '../utils/enhanced-cache';
+// Simple cache implementation
+class SimpleCacheManager {
+  private cache = new Map<string, { data: any; timestamp: number; ttl: number }>();
+  
+  set(key: string, data: any, ttl: number = 300000): void {
+    this.cache.set(key, { data, timestamp: Date.now(), ttl });
+  }
+  
+  get(key: string): any | null {
+    const item = this.cache.get(key);
+    if (!item) return null;
+    if (Date.now() - item.timestamp > item.ttl) {
+      this.cache.delete(key);
+      return null;
+    }
+    return item.data;
+  }
+  
+  delete(key: string): void {
+    this.cache.delete(key);
+  }
+  
+  clear(): void {
+    this.cache.clear();
+  }
+}
+
+const CacheManager = SimpleCacheManager;
 interface ApiCacheConfig {
   ttl?: number;
   maxRetries?: number;

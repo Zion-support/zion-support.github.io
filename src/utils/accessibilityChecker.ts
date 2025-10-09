@@ -559,11 +559,6 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
-    
-    const report = this.issues.map(issue => 
-      `- ${issue.type}: ${issue.message} (${issue.wcagLevel})`
-    ).join('\n');
-    
-    return `Found ${this.issues.length} accessibility issues:\n${report}`;
+    return `Found ${this.issues.length} accessibility issues that need attention.`;
   }
 }
