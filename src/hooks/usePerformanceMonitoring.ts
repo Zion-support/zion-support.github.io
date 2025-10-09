@@ -3,12 +3,12 @@ import { useEffect, useCallback } from 'react';
 import { useAnalytics } from '../components/AnalyticsProvider';
 // PerformanceMetrics interface removed as it's not used in this hook
 export const usePerformanceMonitoring = () => {
-  const { trackPerformance } = useAnalytics();
+  const { trackEvent } = useAnalytics();
   const reportMetric = useCallback(
     (name: string, value: number) => {
-      trackPerformance(name, value);
+      trackEvent(name, { value });
     },
-    [trackPerformance]
+    [trackEvent]
   );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -17,8 +17,8 @@ export const usePerformanceMonitoring = () => {
     try {
       // LCP - Largest Contentful Paint
       const lcpObserver = new PerformanceObserver(list => {
-        const _entries = list.getEntries();
-        const _lastEntry = entries[entries.length - 1];
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
         reportMetric('LCP', lastEntry.startTime);
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
