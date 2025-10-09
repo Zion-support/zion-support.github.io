@@ -1,75 +1,80 @@
-
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-import React, { useEffect, useCallback } from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
 }
 
-/**
- * Accessibility Enhancer Component
- * Provides comprehensive accessibility improvements
- */
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableSkipLinks = true,
   enableKeyboardNav = true,
   enableFocusIndicators = true,
 }) => {
-  // Add skip links
-  useEffect(() => {
-    if (enableSkipLinks) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-  }, [enableSkipLinks]);
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
 
-  // Add keyboard navigation
-  const handleKeyDown = useCallback((event: KeyboardEvent) => {
-    if (enableKeyboardNav) {
-      // Handle keyboard navigation
-      if (event.key === 'Tab') {
-        // Ensure focus indicators are visible
-        document.body.classList.add('keyboard-navigation');
-      }
+  useEffect(() => {
+    // Check for high contrast preference
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Tab') {
+      document.body.classList.add('keyboard-navigation');
     }
-  }, [enableKeyboardNav]);
+  }, []);
+
+  const handleMouseDown = useCallback(() => {
+    document.body.classList.remove('keyboard-navigation');
+  }, []);
 
   useEffect(() => {
     if (enableKeyboardNav) {
       document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
     }
-  }, [enableKeyboardNav, handleKeyDown]);
+  }, [enableKeyboardNav, handleKeyDown, handleMouseDown]);
 
-  // Add focus indicators
-  useEffect(() => {
-    if (enableFocusIndicators) {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, [enableFocusIndicators]);
-
-  return <>{children}</>;
+  return (
+    <div
+      className={`accessibility-enhanced ${
+        isHighContrast ? 'high-contrast' : ''
+      } ${fontSize}`}
+    >
+      {enableSkipLinks && (
+        <a
+          href="#main-content"
+          className="skip-link"
+          onClick={(e) => {
+            e.preventDefault();
+            const mainContent = document.getElementById('main-content');
+            if (mainContent) {
+              mainContent.focus();
+              mainContent.scrollIntoView();
+            }
+          }}
+        >
+          Skip to main content
+        </a>
+      )}
+      {children}
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
