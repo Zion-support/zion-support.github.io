@@ -1,169 +1,123 @@
-'use client';
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
-  enableResourceHints?: boolean;
-  enableServiceWorker?: boolean;
+  enablePrefetching?: boolean;
+}
+
+interface OptimizationStatus {
+  imagesOptimized: boolean;
+  lazyLoadingEnabled: boolean;
+  codeSplittingEnabled: boolean;
+  prefetchingEnabled: boolean;
+  serviceWorker: boolean;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
-  enablePreloading = true,
   enableCodeSplitting = true,
-  enableResourceHints = true,
-  enableServiceWorker = true
+  enablePrefetching = true
 }) => {
-  const [optimizationStatus, setOptimizationStatus] = useState({
-    imagesOptimized: 0,
-    lazyLoaded: 0,
-    preloaded: 0,
-    codeSplit: false,
-    resourceHints: 0,
+  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
+    imagesOptimized: false,
+    lazyLoadingEnabled: false,
+    codeSplittingEnabled: false,
+    prefetchingEnabled: false,
     serviceWorker: false
   });
 
+  // Image optimization
   useEffect(() => {
     if (enableImageOptimization) {
-      optimizeImages();
-    }
-    if (enableLazyLoading) {
-      setupLazyLoading();
-    }
-    if (enablePreloading) {
-      preloadCriticalResources();
-    }
-    if (enableCodeSplitting) {
-      setupCodeSplitting();
-    }
-    if (enableResourceHints) {
-      addResourceHints();
-    }
-    if (enableServiceWorker) {
-      registerServiceWorker();
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
-
-  const optimizeImages = () => {
-    const images = document.querySelectorAll('img');
-    let optimized = 0;
-    
-    images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-        optimized++;
-      }
-      
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async');
-      
-      // Add fetchpriority="high" for above-the-fold images
-      if (img.getBoundingClientRect().top <= window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high');
-      }
-      
-      // Add proper alt text if missing
-      if (!img.getAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions');
-      }
-    });
-    
-    setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }));
-  };
-
-  const setupLazyLoading = () => {
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img');
+        images.forEach((img) => {
+          // Add loading="lazy" for better performance
+          if (enableLazyLoading && !img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+          }
+          
+          // Add decoding="async" for better performance
+          if (!img.hasAttribute('decoding')) {
+            img.setAttribute('decoding', 'async');
           }
         });
-      }, {
-        rootMargin: '50px 0px',
-        threshold: 0.1
-      });
-      
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach((img) => observer.observe(img));
-      
-      setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
+        
+        setOptimizationStatus(prev => ({ ...prev, imagesOptimized: true, lazyLoadingEnabled: true }));
+      };
+
+      // Run optimization after DOM is loaded
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', optimizeImages);
+      } else {
+        optimizeImages();
+      }
     }
-  };
+  }, [enableImageOptimization, enableLazyLoading]);
 
-  const preloadCriticalResources = () => {
-    const criticalResources = [
-      {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
-        type: 'text/css'
-      },
-      {
-        href: '/styles/critical.css',
-        as: 'style',
-        type: 'text/css'
-      }
-    ];
+  // Code splitting optimization
+  useEffect(() => {
+    if (enableCodeSplitting) {
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        const criticalResources = [
+          '/src/components/Navigation.tsx',
+          '/src/components/Footer.tsx',
+          '/src/page.tsx'
+        ];
 
-    criticalResources.forEach((resource) => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) {
-        link.type = resource.type;
-      }
-      document.head.appendChild(link);
-    });
+        criticalResources.forEach((resource) => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = resource;
+          link.as = 'script';
+          document.head.appendChild(link);
+        });
 
-    setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
-  };
+        setOptimizationStatus(prev => ({ ...prev, codeSplittingEnabled: true }));
+      };
 
-  const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports
-    setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
-  };
+      preloadCriticalResources();
+    }
+  }, [enableCodeSplitting]);
 
-  const addResourceHints = () => {
-    const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ];
+  // Prefetching optimization
+  useEffect(() => {
+    if (enablePrefetching) {
+      const prefetchResources = () => {
+        // Prefetch likely next pages
+        const prefetchPages = [
+          '/about',
+          '/services',
+          '/contact',
+          '/blog'
+        ];
 
-    hints.forEach((hint) => {
-      const link = document.createElement('link');
-      link.rel = hint.rel;
-      link.href = hint.href;
-      if (hint.crossorigin) {
-        link.crossOrigin = hint.crossorigin;
-      }
-      document.head.appendChild(link);
-    });
+        prefetchPages.forEach((page) => {
+          const link = document.createElement('link');
+          link.rel = 'prefetch';
+          link.href = page;
+          document.head.appendChild(link);
+        });
 
-    setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }));
-  };
+        setOptimizationStatus(prev => ({ ...prev, prefetchingEnabled: true }));
+      };
 
+      // Delay prefetching to not interfere with critical resources
+      setTimeout(prefetchResources, 2000);
+    }
+  }, [enablePrefetching]);
+
+  // Service Worker registration
   const registerServiceWorker = async () => {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
       } catch (error) {
-<<<<<<< HEAD:src/components/PerformanceOptimizer.tsx
         // Service Worker registration failed - handled silently in production
       }
     }
@@ -171,27 +125,71 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
+      }
+
+      // Monitor resource loading
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Performance'
-              });
-            }
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
           }
         }
       });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-    }
+
+      observer.observe({ entryTypes: ['navigation', 'resource'] });
+    };
+
+    monitorPerformance();
+    registerServiceWorker();
   }, []);
 
-  return null;
+  // Resource hints for better performance
+  useEffect(() => {
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.googletagmanager.com',
+        'https://www.google-analytics.com'
+      ];
+
+      dnsPrefetchDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = domain;
+        document.head.appendChild(link);
+      });
+
+      // Preconnect to critical domains
+      const preconnectDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com'
+      ];
+
+      preconnectDomains.forEach((domain) => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+    };
+
+    addResourceHints();
+  }, []);
+
+  return null; // This component doesn't render anything
 };
 
 export default PerformanceOptimizer;
