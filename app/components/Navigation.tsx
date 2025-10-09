@@ -37,6 +37,7 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
+<<<<<<< HEAD
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -183,6 +184,25 @@ const Navigation: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Code },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'DevOps', href: '/devops', icon: Code },
+=======
+  const services = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'AI Content Generation', href: '/ai-content-generation' },
+    { name: 'AI Customer Support', href: '/ai-customer-support' },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
+    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure' },
+    { name: 'Cybersecurity', href: '/ai-cybersecurity' },
+    { name: 'Data Analytics', href: '/ai-data-analytics' },
+    { name: 'Mobile Development', href: '/ai-mobile-app-development' },
+    { name: 'Workflow Automation', href: '/ai-workflow-automation' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Blockchain & Web3', href: '/blockchain' },
+    { name: 'Autonomous Systems', href: '/autonomous-systems' },
+    { name: 'Business Intelligence', href: '/business-intelligence' },
+    { name: 'Enterprise Solutions', href: '/enterprise' },
+    { name: 'AI Advertising', href: '/services-advertising' },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
   ];
 
   const emergingTech = [
@@ -214,12 +234,17 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
 
   return (
+<<<<<<< HEAD
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
+=======
+    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20 cyber-glow">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -238,6 +263,10 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-012c
           <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
             <span className="text-3xl mr-2">⚡</span>
+=======
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center cyber-text">
+            <span className="text-3xl mr-2 energy-pulse">⚡</span>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
             Zion Tech Group
 =======
 =======
@@ -873,7 +902,7 @@ const Navigation: React.FC = () => {
             {/* CTA Button */}
             <Link
               to="/contact"
-              className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-2 rounded-lg font-medium transition-colors flex items-center"
+              className="cyber-button inline-flex items-center"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />

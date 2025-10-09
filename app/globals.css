@@ -42,19 +42,68 @@ body {
 /* Futuristic Animations */
 @keyframes neon-glow {
   0%, 100% {
-    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
   }
   50% {
-    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
   }
 }
 
 @keyframes neon-pulse {
   0%, 100% {
-    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
   }
   50% {
-    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+  }
+}
+
+@keyframes cyber-scan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram-glitch {
+  0%, 100% {
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    filter: hue-rotate(90deg);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    filter: hue-rotate(180deg);
+  }
+  60% {
+    transform: translate(2px, 2px);
+    filter: hue-rotate(270deg);
+  }
+  80% {
+    transform: translate(2px, -2px);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes energy-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
@@ -253,6 +302,7 @@ body {
   width: 100%;
   height: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
   background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
   animation: cyber-scan 3s linear infinite;
 }
@@ -323,6 +373,14 @@ body {
   animation: neural-network 8s linear infinite;
   pointer-events: none;
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
+=======
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  animation: cyber-scan 3s linear infinite;
+}
+
+.hologram-card:hover {
+  animation: hologram-glitch 0.5s ease-in-out;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .glass-morphism {
@@ -346,8 +404,15 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+<<<<<<< HEAD
   background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.05) 50%, transparent 52%);
   animation: neural-network 10s linear infinite;
+=======
+  background: linear-gradient(45deg, transparent 48%, rgba(0, 255, 255, 0.1) 49%, rgba(0, 255, 255, 0.1) 51%, transparent 52%);
+  background-size: 40px 40px;
+  animation: energy-flow 4s linear infinite;
+  pointer-events: none;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 }
 
 .data-stream {
@@ -414,11 +479,13 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 .cyber-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+  animation: neon-pulse 1s ease-in-out infinite alternate;
 }
 
 .cyber-button::before {
@@ -428,12 +495,28 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   transition: left 0.5s;
 }
 
 .cyber-button:hover::before {
   left: 100%;
+}
+
+.cyber-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cyber-button:hover::after {
+  opacity: 1;
 }
 
 /* Futuristic Cards */
@@ -472,6 +555,60 @@ body {
   .cyber-button {
     padding: 10px 20px;
     font-size: 14px;
+  }
+  
+  .neon-text {
+    font-size: 2rem;
+  }
+  
+  .cyber-text {
+    font-size: 2rem;
+  }
+  
+  .hologram-card {
+    margin-bottom: 1rem;
+  }
+  
+  .cyber-grid::before {
+    background-size: 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cyber-button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-card {
+    padding: 12px;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .cyber-card {
+    padding: 32px;
+  }
+  
+  .cyber-button {
+    padding: 16px 32px;
+    font-size: 16px;
   }
 }
 
@@ -638,6 +775,78 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Additional Futuristic Components */
+.neon-border-glow {
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan), inset 0 0 10px var(--neon-cyan);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+.cyber-text {
+  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+.energy-pulse {
+  animation: energy-flow 3s ease-in-out infinite;
+}
+
+.hologram-effect {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hologram-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  animation: cyber-scan 3s linear infinite;
+}
+
+.cyber-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3), 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+.cyber-glow:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.2);
+}
+
+.matrix-text {
+  font-family: 'Courier New', monospace;
+  color: var(--neon-green);
+  text-shadow: 0 0 10px var(--neon-green);
+  animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+.cyber-input {
+  background: rgba(15, 15, 35, 0.8);
+  border: 1px solid var(--neon-cyan);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  outline: none;
+  border-color: var(--neon-purple);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+}
+
+.cyber-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Custom scrollbar */

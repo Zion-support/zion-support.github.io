@@ -151,6 +151,7 @@ const Footer: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ea96
 =======
 import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, Brain, Cloud, Code, BarChart, Users, Globe, ArrowRight } from 'lucide-react';
@@ -216,6 +217,9 @@ const Footer: React.FC = memo(() => {
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
     <footer className="bg-gray-900 text-white">
+=======
+    <footer className="bg-gray-900 text-white cyber-glow">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -223,8 +227,8 @@ const Footer: React.FC = memo(() => {
 <<<<<<< HEAD
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <span className="text-3xl mr-2">⚡</span>
-              <h3 className="text-2xl font-bold text-cyan-400">Zion Tech Group</h3>
+              <span className="text-3xl mr-2 energy-pulse">⚡</span>
+              <h3 className="text-2xl font-bold text-cyan-400 cyber-text">Zion Tech Group</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
@@ -423,7 +427,85 @@ const Footer: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Contact */}
+=======
+          {/* AI Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/ai-services" className="text-gray-300 hover:text-white transition-colors">
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generation" className="text-gray-300 hover:text-white transition-colors">
+                  Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-customer-support" className="text-gray-300 hover:text-white transition-colors">
+                  Customer Support
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-sales-automation" className="text-gray-300 hover:text-white transition-colors">
+                  Sales Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-visualization" className="text-gray-300 hover:text-white transition-colors">
+                  Data Visualization
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cloud-infrastructure" className="text-gray-300 hover:text-white transition-colors">
+                  Cloud Infrastructure
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Advanced Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Advanced Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/quantum-computing" className="text-gray-300 hover:text-white transition-colors">
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link to="/blockchain" className="text-gray-300 hover:text-white transition-colors">
+                  Blockchain & Web3
+                </Link>
+              </li>
+              <li>
+                <Link to="/autonomous-systems" className="text-gray-300 hover:text-white transition-colors">
+                  Autonomous Systems
+                </Link>
+              </li>
+              <li>
+                <Link to="/business-intelligence" className="text-gray-300 hover:text-white transition-colors">
+                  Business Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity" className="text-gray-300 hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
+                  Enterprise Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
@@ -450,7 +532,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                <span className="text-gray-300">info@ziontechgroup.com</span>
+                <span className="text-gray-300">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 text-cyan-400 mr-3 mt-1" />
