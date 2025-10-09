@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Brain, BarChart, Palette, CreditCard, Music, ShieldCheck, Monitor, Settings2, CheckCircle, Star, Zap } from 'lucide-react';;
+import { BarChart, Palette, CreditCard, ShieldCheck, Settings2, CheckCircle, Star, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 

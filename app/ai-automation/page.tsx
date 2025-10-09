@@ -10,7 +10,7 @@ const AIAutomationPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'Intelligent Process Discovery',
       description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
-      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']}
+      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
     },
     {
       icon: Zap,

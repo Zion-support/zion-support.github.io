@@ -1,7 +1,7 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, 
+  Phone, Mail, MapPin, Clock, Zap, Shield, Brain, Cpu, Target, BarChart, 
   MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
   Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
   Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
@@ -27,11 +27,11 @@ import SecurityEnhancer from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+// const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
+// const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
+// const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
+// const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
+// const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
 // Preload critical components
 const preloadComponents = () => {
@@ -54,11 +54,11 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  // const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    // setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+      (window as Window & { gtag: (command: string, action: string, parameters?: Record<string, any>) => void }).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
       });

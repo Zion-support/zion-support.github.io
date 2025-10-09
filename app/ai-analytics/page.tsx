@@ -10,7 +10,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations powered by advanced machine learning algorithms.',
-      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']}
+      benefits: ['Predictive analytics', 'Anomaly detection', 'Trend analysis', 'Smart recommendations']
     },
     {
       icon: BarChart,

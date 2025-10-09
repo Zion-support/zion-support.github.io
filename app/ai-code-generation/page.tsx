@@ -26,7 +26,7 @@ const AICodeGenerationPage: React.FC = React.memo((props) => {
     'Reduce development costs by 60%',
     'Enable rapid prototyping and MVP development'
   ]
-  const languages = [}
+  const languages = [
     { name: 'JavaScript', description: 'Web development and Node.js', icon: '🟨' },
     { name: 'Python', description: 'Data science and backend development', icon: '🐍' },
     { name: 'Java', description: 'Enterprise applications and Android', icon: '☕' },
