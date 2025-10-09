@@ -40,23 +40,6 @@ const,
     return baseStructuredData;
   }, [seoData, enableStructuredData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
-    };
-  }, [seoData, enableStructuredData]);
-
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {};
@@ -69,7 +52,16 @@ const,
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {};
 
-    return {/* TODO: Fix JSX expression */}
+    const faqData = {/* TODO: Fix JSX expression */}
+          },
+        },
+        {/* TODO: Fix JSX expression */}
+          },
+        },
+        {/* TODO: Fix JSX expression */}
+          },
+        },
+      ],
     };
   }, [seoData, enableTwitterCards]);
 
@@ -94,23 +86,6 @@ const,
     return metaTags;
   }, [seoData]);
 
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-      }))
-    };
-  }, [seoData.breadcrumbs]);
-
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
-    }
-
-    return {/* TODO: Fix JSX expression */}
-        }
-      }))
-    };
-  }, [seoData.faqs]);
-
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
@@ -134,7 +109,7 @@ const,
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
+    script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script);
     structuredDataRef.current = script;
   };
@@ -202,9 +177,5 @@ const,
   );
 };
 
-
 export default AdvancedSEOOptimizer;
-
-}"
-
-
+"

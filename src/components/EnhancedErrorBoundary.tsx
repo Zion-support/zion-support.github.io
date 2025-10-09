@@ -1,372 +1,176 @@
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 
-  children: ReactNode;
-
-  fallback?: ReactNode;
-  onError?: (erro,
-  r: Error, errorInf,)
-  o: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableReporting?: boolean;
+interface Props {/* TODO: Fix JSX expression */}
 }
 
 interface State {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: boolean;,
-    erro,
-  r: Error | null;,
-    errorInf,
-  o: ErrorInfo | null;,
-    errorI,
-  d: string | null;
-}
-class EnhancedErrorBoundary extends Component;
-          <Props, State> {/* TODO: Fix JSX expression */}
-  O: Add content;}
 }
 
-  constructor(props: Props) {// TODO: Add content;}
-}
+class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
-class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {// TODO: Add content;}
-
-};
-  hasErro,
-  r: false,
-      erro,
-  r: null,
-      errorInf,
-  o: null,
-      errorI,
-  d: null,
     };
+    this.maxRetries = props.maxRetries || 3;
   }
-  static getDerivedStateFromError(erro,)
-  r: Error): Partial;
-          <State> {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: true,
 
-//       error,
-      errorI,
+
+  static getDerivedStateFromError(erro,)
+  r: Error): State {/* TODO: Fix JSX expression */}`
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      retryCoun,
+  t: 0;
+
     };
   }
 
   componentDidCatch(erro,
   r: Error, errorInf,)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-
-}
-//       error,
-//       errorInfo,)
     });
 
+
+ cursor/analyze-improve-and-deploy-application-cde4;
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-  error:', error, errorInfo);}
     }
-    // Report error to monitoring service;
-    if (this.props.enableReporting !== false) {/* TODO: Fix JSX expression */}
-  O: Add content;}
 
-}
-      this.reportError(error, errorInfo);
+    // Call custom error handler if provided;
+    if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+
+ cursor/analyze-improve-and-deploy-application-cde4;
+    // Enhanced error reporting;
+    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
+    }
   }
 
   private reportError = (erro,
   r: Error, errorInf,)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-  d: this.state.errorId,}
-      messag,
-  e: error.message,
-      stac,
-  k: error.stack,
-      componentStac,
-  k: errorInfo.componentStack,
-      timestam,
-  p: new Date().toISOString(),
-      userAgen,
-  t: navigator.userAgent,
-      ur,
-  l: window.location.href,
-      userI,
-  d: this.getUserId(),
-      sessionI,
-  d: this.getSessionId(),
+  };
 
+  private handleRetry = () => {/* TODO: Fix JSX expression */}
+      }));
+    }
+    // Enhanced error reporting logic;
+    const errorReport = {/* TODO: Fix JSX expression */}
     };
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
 
-    // Send to Google Analytics if available;
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  descriptio,
-  n: error.message,
-        fata,
-  l: false,
-        custom_ma,
-  p: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  error_i,
-  d: this.state.errorId,
-        },)
-      });
+    // Log to console in development;
+    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    }
+
+    // Send to error reporting service (implement as needed)
+    try {/* TODO: Fix JSX expression */}
+  s: {// 'Content-Type': 'application/json'},
+      //   bod,
+  y: JSON.stringify(errorReport)
+      // });
+    } catch (reportingError) {/* TODO: Fix JSX expression */}
     }
   };
-  private sendErrorReport = (errorRepor,)
-  t: any) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    // In a real application, you would send this to your error reporting service;
-    // For now, we'll just log it;
-    if (!sessionId) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}`
-
+  private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
+  };
+  private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
   };
-
   private handleRetry = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  hasErro,
-  r: false,
-      erro,
-  r: null,
-      errorInf,
-  o: null,
-      errorI,
-  d: null,)
-    });
+  o: undefined });
   };
+
   private handleReload = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    window.location.reload();
   };
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    window.location.href = '/';
   };
   private copyErrorDetails = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    const errorDetails = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  errorI,
-  d: this.state.errorId,
-      messag,
-  e: this.state.error?.message,
-      stac,
-  k: this.state.error?.stack,
-      componentStac,
-  k: this.state.errorInfo?.componentStack,
-      timestam,
-  p: new Date().toISOString(),
     };
-//     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-        alert('Error details copied to clipboard');
+          }, 2000);
+        }
       })
       .catch(() => {/* TODO: Fix JSX expression */}
-  O: Add content;}
-
-}
-        alert('Failed to copy error details');
       });
   };
 
   render() {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-}
-      // Use custom fallback if provided;
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content;}
-
-}
-        return this.props.fallback;
       }
+
+      return (<div className="error-boundary"></div>
+          <h2>Something went wrong</h2>
+          <p>Error,
+  ID: {// this.state.errorId}</p>
+          {/* TODO: Fix JSX expression */}
+            <button onClick={this.handleRetry}></button>)
+              Retry ({this.maxRetries - this.state.retryCount} attempts left)
+            </button>
+          )}        </div>
+          )}
+ cursor/analyze-improve-and-deploy-application-cde4;
+      // Custom fallback UI;
+      if (this.props.fallback) {/* TODO: Fix JSX expression */}
+
+      }
+
       const { retryCount, error, errorId } = this.state;
+      const canRetry = retryCount < this.maxRetries;
 
-      const canRetry = retryCount;
-          < this.maxRetries;
-      return (<div>Coming Soon</div>)
-  )
-        
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
-          <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-md border border-red-500/20 rounded-lg p-8 text-center"></div>"
-            <div className="mb-6"></div>"
-              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
-              <h1 className="text-2xl font-bold text-white mb-2"></h1>
-// Oops! Something went wrong;
-          </h1>"
-              <p className="text-gray-300 mb-4"></p>
-// We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-            </div>"
-            <div className="space-y-4"></div>"
-              <div className="flex flex-col,"
-  sm:flex-row gap-3 justify-center"></div>
-                <button></button>
+
+      return ("
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
+            <div className="text-6xl mb-4">⚠️</div>"
+            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
+              Oops! Something went wrong;
+            </h1>"
+            <p className="text-gray-600 mb-6"></p>
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>"
+            <div className="space-y-4"></div>
+              {/* TODO: Fix JSX expression */}
                   onClick={this.handleRetry}"
-                  className="flex items-center justify-center px-6 py-3 bg-cyan-600,"
-  hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
-// >
-                  
-          
-          
-          
-          
-          
-          
-          
-          "
-          <RefreshCw className="w-4 h-4 mr-2" /></RefreshCw>
-// Try Again;
-          </button>
-                <button></button>
-                  onClick={this.handleReload}"
-                  className="flex items-center justify-center px-6 py-3 bg-blue-600,"
-  hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-// >
-                  
-          
-          
-          
-          
-          
-          
-          
-          "
-          <RefreshCw className="w-4 h-4 mr-2" /></RefreshCw>
-// Reload Page;
-          </button>
-                <button></button>
-                  onClick={this.handleGoHome}"
-                  className="flex items-center justify-center px-6 py-3 bg-purple-600,"
-  hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
-// >
-                  
-          
-          
-          
-          
-          
-          
-          
-          "
-          <Home className="w-4 h-4 mr-2" /></Home>
-// Go Home;
-          </button>
-              </div>
-              {this.state.errorId && ()}"
-          <div className="mt-6 p-4 bg-slate-700/50 rounded-lg"></div>"
-                  <p className="text-sm text-gray-400 mb-2"></p>
-                    Error,"
-  ID: <code className="text-cyan-400">{this.state.errorId}</code>
-                  </p>"
-                  <p className="text-xs text-gray-500"></p>
-// Please include this ID when contacting support.
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </p>
-                </div>
+                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+  hover:bg-indigo-700 transition-colors"
+                >)
+                  Try Again ({this.maxRetries - retryCount} attempts left)
+                </button>
               )}
-              {this.props.showDetails && this.state.error && ()}"
-          <details className="mt-6 text-left"></details>"
-                  <summary className="cursor-pointer text-sm text-gray-400,"
-  hover:text-white mb-2 flex items-center"></summary>"
-                    <Bug className="w-4 h-4 mr-2" /></Bug>
-// Technical Details;
-          </summary>"
-                  <div className="mt-2 p-4 bg-slate-900/50 rounded-lg"></div>"
-                    <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40"></pre>
-
-                      {this.state.error.message}
-                      {'
-
-'}
-                      {this.state.error.stack}
-                    </pre>
-
-                    <button></button>
-                      onClick={this.copyErrorDetails}"
-                      className="mt-2 text-xs text-cyan-400,"
-  hover:text-cyan-300"
-// >
-//                       Copy Error Details;
-          </button>
-                  </div>
-                </details>
-              )}
-            </div>"
-            <div className="mt-8 text-sm text-gray-500"></div>
-              <p></p>
-                If this problem persists, please contact our support team at{' '}"
-                <a href="mailt,"
-  o:support@ziontechgroup.com" className="text-cyan-400,"
-  hover:text-cyan-300"></a>
-// support@ziontechgroup.com;
-          </a>
-
-              </p>
+              <button></button>
+                onClick={this.handleReload}"
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+  hover:bg-indigo-700 transition-colors"
+              >
+                Try Again;
+              </button>
+              <button></button>
+                onClick={this.handleGoHome}"
+                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
+  hover:bg-gray-300 transition-colors"
+              >
+                Go Home;
+              </button>
             </div>
+            {/* TODO: Fix JSX expression */}
+                  {error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+                <button></button>"
+                  id="copy-error-details"
+                  onClick={this.copyErrorDetails}"
+                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
+  hover:bg-gray-300"
+                >
+                  Copy Error Details;
+                </button>
+
+              </details>
+            )}
           </div>
         </div>
-
       );
     }
 
@@ -374,8 +178,5 @@ class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   }
 }
 
-export default EnhancedErrorBoundary;"`
-
-
-
-
+export default EnhancedErrorBoundary;
+"`

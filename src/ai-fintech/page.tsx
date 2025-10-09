@@ -1,6 +1,33 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CreditCard, TrendingUp, Shield, Brain, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Zap, Target, Globe, Award, Users, Cpu, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, DollarSign, BarChart3, Lock, Eye, AlertTriangle } from 'lucide-react';
+import { DollarSign, ArrowRight } from 'lucide-react';
 
-export default AIFintechPage;
+export default function AIFintechPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            AI Fintech
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Revolutionary AI-powered financial services including trading, fraud detection, and risk management.
+          </p>
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">AI Financial Solutions</h2>
+            <p className="text-gray-300 mb-6">
+              Enhance your financial services with AI-driven insights, automated trading, and fraud prevention.
+            </p>
+            <a
+              href="/contact"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
