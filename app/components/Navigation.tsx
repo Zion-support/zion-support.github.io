@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, Phone, Mail, MapPin, Menu, X } from 'lucide-react';
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, ArrowRight } from 'lucide-react';
@@ -85,12 +86,16 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +111,9 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+  const [saasServicesOpen, setSaasServicesOpen] = useState(false);
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -118,6 +126,7 @@ const Navigation: React.FC = () => {
 
   const closeAllMenus = () => {
     setServicesOpen(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -142,6 +151,11 @@ const Navigation: React.FC = () => {
     setAiServicesOpen(false);
     setItServicesOpen(false);
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setSaasServicesOpen(false);
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
     setIsOpen(false);
 =======
     }
@@ -163,11 +177,16 @@ const Navigation: React.FC = () => {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare' },
         { name: 'AI Fintech', path: '/ai-fintech' },
+<<<<<<< HEAD
+=======
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
         { name: 'AI Data Analytics', path: '/ai-data-analytics' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
         { name: 'AI Cloud Infrastructure', path: '/ai-cloud-infrastructure' },
         { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions' },
+<<<<<<< HEAD
         { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' }
 <<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4848
@@ -183,6 +202,12 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
       ]
     },
     {
@@ -197,6 +222,7 @@ const Navigation: React.FC = () => {
         { name: 'IT Services', path: '/it-services' },
         { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'Cloud Services', path: '/ai-cloud-infrastructure' },
+<<<<<<< HEAD
         { name: 'DevOps', path: '/ai-workflow-automation' },
         { name: 'Database Services', path: '/ai-data-analytics' }
 <<<<<<< HEAD
@@ -217,6 +243,14 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+        { name: 'DevOps', path: '/devops' },
+        { name: 'Database Services', path: '/database' },
+        { name: 'Network Services', path: '/networking' },
+        { name: 'System Administration', path: '/system-admin' },
+        { name: 'Backup & Recovery', path: '/backup-recovery' },
+        { name: 'Monitoring & Alerting', path: '/monitoring' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
       ]
     },
     {
@@ -226,11 +260,24 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
+<<<<<<< HEAD
         { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
         { name: 'Developer Tools', path: '/micro-saas', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/micro-saas', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/micro-saas', description: 'Marketing automation' },
         { name: 'Analytics Tools', path: '/micro-saas', description: 'Business intelligence' }
+=======
+        { name: 'Micro SAAS', path: '/micro-saas' },
+        { name: 'Developer Tools', path: '/developer-tools' },
+        { name: 'Business Apps', path: '/business-apps' },
+        { name: 'Productivity Tools', path: '/productivity-tools' },
+        { name: 'Marketing Tools', path: '/marketing-tools' },
+        { name: 'Analytics Tools', path: '/analytics-tools' },
+        { name: 'Communication Tools', path: '/communication-tools' },
+        { name: 'Project Management', path: '/project-management' },
+        { name: 'CRM Solutions', path: '/crm-solutions' },
+        { name: 'HR Management', path: '/hr-management' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
       ]
     },
     {
@@ -240,6 +287,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-orange-50',
       hoverColor: 'hover:bg-orange-100',
       services: [
+<<<<<<< HEAD
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
@@ -366,11 +414,25 @@ const Navigation: React.FC = () => {
     { name: '5G Solutions', href: '/ai-services', icon: Zap },
   ];
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+        { name: 'Quantum Computing', path: '/quantum-computing' },
+        { name: 'Autonomous Systems', path: '/autonomous-systems' },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3' },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing' },
+        { name: 'Business Intelligence', path: '/business-intelligence' },
+        { name: 'Robotics', path: '/robotics' },
+        { name: 'AR/VR Solutions', path: '/ar-vr' },
+        { name: '5G Solutions', path: '/5g-solutions' }
+      ]
+    }
+  ];
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -378,6 +440,8 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d197
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -388,6 +452,7 @@ const Navigation: React.FC = () => {
           >
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const toggleServices = () => {
@@ -472,10 +537,15 @@ const Navigation: React.FC = () => {
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
+=======
+            </div>
+            <span className={`transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               Zion Tech Group
             </span>
           </Link>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -501,14 +571,20 @@ const Navigation: React.FC = () => {
               className="text-white hover:text-cyan-400 font-medium transition-colors"
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
+<<<<<<< HEAD
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               onClick={closeAllMenus}
             >
               Home
@@ -516,13 +592,14 @@ const Navigation: React.FC = () => {
             
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
             <Link 
               to="/about" 
-              className={`font-medium transition-colors hover:text-purple-600 ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
               About
@@ -534,6 +611,7 @@ const Navigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
@@ -561,6 +639,17 @@ const Navigation: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {servicesOpen && (
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
                 <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
                   <div className="grid grid-cols-2 gap-6 px-6">
@@ -627,7 +716,7 @@ const Navigation: React.FC = () => {
                           <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
                         </div>
                         <div className="space-y-2">
-                          {category.services.map((service, serviceIndex) => (
+                          {category.services.slice(0, 5).map((service, serviceIndex) => (
                             <Link
                               key={serviceIndex}
                               to={service.path}
@@ -638,6 +727,15 @@ const Navigation: React.FC = () => {
                               {service.name}
                             </Link>
                           ))}
+                          {category.services.length > 5 && (
+                            <Link
+                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                              onClick={closeAllMenus}
+                            >
+                              View All →
+                            </Link>
+                          )}
                         </div>
 <<<<<<< HEAD
                       )}
@@ -651,7 +749,10 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
                     <Link
                       to="/services"
                       className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
@@ -693,6 +794,7 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -755,10 +857,16 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+            <Link 
+              to="/case-studies" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               onClick={closeAllMenus}
             >
               Case Studies
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -779,10 +887,17 @@ const Navigation: React.FC = () => {
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+            
+            <Link
+              to="/blog"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               onClick={closeAllMenus}
             >
               Blog
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -791,22 +906,38 @@ const Navigation: React.FC = () => {
               className={`font-medium transition-colors hover:text-purple-600 ${
                 isScrolled ? 'text-gray-700' : 'text-white'
               }`}
+=======
+            
+            <Link
+              to="/contact"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               onClick={closeAllMenus}
             >
               Contact
             </Link>
+<<<<<<< HEAD
 
             {/* CTA Button */}
             <Link
 <<<<<<< HEAD
               to="/contact"
               className="cyber-button inline-flex items-center"
+=======
+            
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="cyber-button inline-flex items-center"
+              onClick={closeAllMenus}
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>
 
+<<<<<<< HEAD
 =======
             <Link
               to="/contact"
@@ -900,6 +1031,13 @@ const Navigation: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="lg:hidden p-2 rounded-lg text-white hover:text-cyan-400 hover:bg-white/10 transition-colors"
+=======
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
+            aria-label="Toggle menu"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -907,6 +1045,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
             <div className="space-y-4">
               <Link
@@ -915,10 +1054,18 @@ const Navigation: React.FC = () => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
 =======
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
+=======
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+            <div className="space-y-4">
+              <Link
+                to="/"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
                 onClick={closeAllMenus}
               >
                 Home
               </Link>
+<<<<<<< HEAD
               <Link
                 to="/about"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
@@ -945,9 +1092,67 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
                 onClick={closeAllMenus}
               >
+=======
+              
+              <Link 
+                to="/about" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index}>
+                        <div className="text-cyan-400 font-semibold text-sm mb-2">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 3).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/case-studies"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
                 Case Studies
               </Link>
+              
               <Link
+                to="/blog"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+              
+              <Link
+<<<<<<< HEAD
                 to="/blog"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
@@ -1026,10 +1231,15 @@ const Navigation: React.FC = () => {
                 to="/contact"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium"
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+                to="/contact"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
                 onClick={closeAllMenus}
               >
                 Contact
               </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
               <Link
@@ -1097,16 +1307,25 @@ const Navigation: React.FC = () => {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
               </div>
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               
               {/* Mobile CTA */}
               <Link
                 to="/contact"
+<<<<<<< HEAD
                 className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 mt-4"
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7726
                 onClick={closeAllMenus}
               >
                 <Phone className="w-4 h-4 inline mr-2" />
                 (302) 464-0950
+=======
+                className="block bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center mt-4"
+                onClick={closeAllMenus}
+              >
+                Get Started
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
               </Link>
             </div>
           </div>
@@ -1118,6 +1337,7 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Navigation;
 =======
 export default Navigation;
@@ -1125,3 +1345,6 @@ export default Navigation;
 =======
 export default Navigation;
 >>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+=======
+export default Navigation;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6a80
