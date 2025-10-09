@@ -3,9 +3,29 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ziontechgroup.com'
   
-  const routes = [
+  // Static pages
+  const staticPages = [
     '',
     '/about',
+    '/contact',
+    '/blog',
+    '/careers',
+    '/privacy',
+    '/terms',
+    '/cookies',
+    '/gdpr',
+    '/compliance',
+    '/support',
+    '/status',
+    '/system-status',
+    '/docs',
+    '/api-docs',
+    '/news',
+    '/sitemap'
+  ]
+
+  // Service pages
+  const servicePages = [
     '/ai-services',
     '/ai-marketing',
     '/ai-automation',
@@ -13,51 +33,61 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ai-fintech',
     '/ai-content-generation',
     '/ai-data-analytics',
-    '/ai-cybersecurity',
-    '/ai-workflow-automation',
-    '/ai-cloud-infrastructure',
-    '/ai-ecommerce-solutions',
-    '/ai-mobile-app-development',
-    '/ai-sales-automation',
     '/ai-data-visualization',
+    '/ai-ecommerce-solutions',
+    '/ai-sales-automation',
+    '/ai-workflow-automation',
     '/ai-customer-support',
-    '/it-services',
-    '/it-infrastructure',
-    '/cybersecurity',
-    '/cloud-services',
-    '/devops',
-    '/database',
-    '/networking',
-    '/micro-saas',
+    '/ai-cybersecurity',
+    '/ai-cloud-infrastructure',
     '/quantum-computing',
     '/autonomous-systems',
+    '/blockchain',
     '/blockchain-web3',
-    '/iot-edge-computing',
     '/business-intelligence',
+    '/business-apps',
+    '/cloud-services',
+    '/cybersecurity',
+    '/devops',
+    '/it-infrastructure',
+    '/it-services',
+    '/micro-saas',
+    '/marketing-tools',
+    '/developer-tools',
+    '/productivity',
+    '/networking',
+    '/database',
     '/robotics',
-    '/enterprise',
+    '/iot-edge',
+    '/iot-edge-computing',
     '/case-studies',
-    '/blog',
-    '/contact',
-    '/team',
-    '/careers',
-    '/news',
-    '/docs',
-    '/api-docs',
-    '/support',
-    '/status',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/gdpr',
-    '/security',
-    '/compliance'
+    '/team'
   ]
 
-  return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8,
-  }))
+  // Generate sitemap entries
+  const sitemap: MetadataRoute.Sitemap = [
+    // Homepage
+    {
+      url: baseUrl,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 1,
+    },
+    // Static pages
+    ...staticPages.map((page) => ({
+      url: `${baseUrl}${page}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: page === '' ? 1 : 0.8,
+    })),
+    // Service pages
+    ...servicePages.map((page) => ({
+      url: `${baseUrl}${page}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })),
+  ]
+
+  return sitemap
 }

@@ -1,142 +1,128 @@
 'use client';
 
 import React, { useState } from 'react';
+import { Mail, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContentNewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [error, setError] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
+    setStatus('loading');
+    setMessage('');
 
     // Simulate API call
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      if (email.includes('@')) {
-        setIsSubscribed(true);
-        setEmail('');
-      } else {
-        setError('Please enter a valid email address');
-      }
-    } catch (_err) {
-      setError('Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+      // Simulate success
+      setStatus('success');
+      setMessage('Thank you for subscribing! Check your email for confirmation.');
+      setEmail('');
+    } catch (error) {
+      setStatus('error');
+      setMessage('Something went wrong. Please try again.');
     }
   };
 
-  if (isSubscribed) {
-    return (
-      <div className="bg-gradient-to-r from-green-50 to-emerald-50 py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-6xl mb-6">🎉</div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Welcome to Our Content Community!
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            You'll receive our latest AI insights, enterprise transformation guides, and breakthrough content directly in your inbox.
-          </p>
-          <div className="bg-white rounded-lg p-6 shadow-lg max-w-md mx-auto">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">What's Next?</h3>
-            <ul className="text-left text-gray-600 space-y-2">
-              <li>✅ Weekly AI trend reports</li>
-              <li>✅ Exclusive enterprise case studies</li>
-              <li>✅ Early access to new content</li>
-              <li>✅ Invitation to expert webinars</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 px-4">
+    <section className="py-16 px-4 bg-gradient-to-r from-slate-900 to-gray-900">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="text-6xl mb-6">📧</div>
-        <h2 className="text-4xl font-bold text-white mb-4">
-          Stay Ahead with AI Insights
-        </h2>
-        <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-          Get exclusive access to our latest AI breakthroughs, enterprise transformation guides, 
-          and cutting-edge content that's transforming businesses worldwide.
-        </p>
+        <div className="mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Stay Updated with AI Innovation
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Get the latest insights, case studies, and AI breakthroughs delivered to your inbox. 
+            Join 10,000+ professionals who trust our expertise.
+          </p>
+        </div>
 
-        <div className="bg-white rounded-2xl p-8 shadow-2xl max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
-            Join 10,000+ Enterprise Leaders
-          </h3>
-          
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-                required
-              />
+        <div className="bg-gray-800 rounded-2xl p-8 md:p-12 border border-gray-700">
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex-1 relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email address"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  required
+                />
+              </div>
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="px-8 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={status === 'loading'}
+                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
-                {isSubmitting ? 'Subscribing...' : 'Get Free Content'}
+                {status === 'loading' ? (
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5 mr-2" />
+                    Subscribe
+                  </>
+                )}
               </button>
             </div>
-            
-            {error && (
-              <p className="text-red-600 text-sm">{error}</p>
-            )}
-          </form>
 
-          <div className="mt-6 text-sm text-gray-600">
-            <p>🔒 We respect your privacy. Unsubscribe at any time.</p>
-          </div>
+            {message && (
+              <div className={`flex items-center justify-center space-x-2 p-3 rounded-lg ${
+                status === 'success' 
+                  ? 'bg-green-900/20 text-green-400 border border-green-800' 
+                  : 'bg-red-900/20 text-red-400 border border-red-800'
+              }`}>
+                {status === 'success' ? (
+                  <CheckCircle className="w-5 h-5" />
+                ) : (
+                  <AlertCircle className="w-5 h-5" />
+                )}
+                <span className="text-sm">{message}</span>
+              </div>
+            )}
+
+            <p className="text-gray-400 text-sm">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </form>
 
           {/* Benefits */}
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
             <div className="flex items-start space-x-3">
-              <div className="text-2xl">🚀</div>
+              <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <CheckCircle className="w-4 h-4 text-white" />
+              </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Latest AI Trends</h4>
-                <p className="text-sm text-gray-600">Weekly insights on breakthrough technologies</p>
+                <h3 className="text-white font-semibold mb-1">Weekly Insights</h3>
+                <p className="text-gray-400 text-sm">Latest AI trends and industry updates</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="text-2xl">💼</div>
+              <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <CheckCircle className="w-4 h-4 text-white" />
+              </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Enterprise Guides</h4>
-                <p className="text-sm text-gray-600">Proven strategies from Fortune 500 companies</p>
+                <h3 className="text-white font-semibold mb-1">Case Studies</h3>
+                <p className="text-gray-400 text-sm">Real-world success stories and implementations</p>
               </div>
             </div>
             <div className="flex items-start space-x-3">
-              <div className="text-2xl">🎯</div>
+              <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <CheckCircle className="w-4 h-4 text-white" />
+              </div>
               <div>
-                <h4 className="font-semibold text-gray-900">Exclusive Content</h4>
-                <p className="text-sm text-gray-600">Early access to premium resources</p>
+                <h3 className="text-white font-semibold mb-1">Exclusive Content</h3>
+                <p className="text-gray-400 text-sm">Early access to new features and tools</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Social Proof */}
-        <div className="mt-12 text-center">
-          <p className="text-indigo-100 mb-4">Trusted by leading enterprises</p>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-white font-bold text-lg">Fortune 500</div>
-            <div className="text-white font-bold text-lg">Global 2000</div>
-            <div className="text-white font-bold text-lg">Enterprise</div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
