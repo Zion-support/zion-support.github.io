@@ -717,7 +717,7 @@ const HomePage: React.FC = () => {
                   <div className="text-center">
                     <div className={`text-lg font-bold mb-2 neon-text ${service.color}`}>{service.price}</div>
                     <a 
-                      href="/ai-services" 
+                      href="/ai-solutions" 
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 ${service.color} border border-current hover:bg-current hover:text-slate-900`}
                     >
                       Learn More
