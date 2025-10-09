@@ -72,6 +72,206 @@ const HomePage: React.FC = () => {
       popular: true
     },
     {
+      title: 'AI Website Builder',
+      description: 'Create stunning websites in minutes with AI-powered design and content generation',
+      icon: '🌐',
+      price: '$79/month',
+      features: ['AI design generation', 'Content creation', 'SEO optimization', 'Mobile responsive'],
+      benefits: ['90% faster development', 'Professional quality', 'Zero coding required'],
+      link: '/ai-website-builder',
+      popular: true
+    },
+    {
+      title: 'AI Logo Designer',
+      description: 'Generate professional logos and brand assets with AI-powered design tools',
+      icon: '🎨',
+      price: '$49/month',
+      features: ['Unlimited logo generation', 'Brand guidelines', 'Multiple formats', 'Commercial license'],
+      benefits: ['Professional designs', 'Brand consistency', 'Cost-effective'],
+      link: '/ai-logo-designer',
+      popular: true
+    },
+    {
+      title: 'AI Meeting Scheduler',
+      description: 'Intelligent meeting scheduling with calendar optimization and conflict resolution',
+      icon: '📅',
+      price: '$69/month',
+      features: ['Smart scheduling', 'Calendar integration', 'Time zone handling', 'Meeting analytics'],
+      benefits: ['50% time saved', 'Zero conflicts', 'Better productivity'],
+      link: '/ai-meeting-scheduler',
+      popular: false
+    },
+    {
+      title: 'AI Expense Tracker',
+      description: 'Automated expense tracking and categorization with receipt scanning',
+      icon: '💰',
+      price: '$59/month',
+      features: ['Receipt scanning', 'Auto categorization', 'Tax preparation', 'Spending insights'],
+      benefits: ['90% automation', 'Tax compliance', 'Better budgeting'],
+      link: '/ai-expense-tracker',
+      popular: true
+    },
+    {
+      title: 'AI Translation Service',
+      description: 'Real-time translation with context-aware accuracy for 100+ languages',
+      icon: '🌍',
+      price: '$89/month',
+      features: ['100+ languages', 'Context awareness', 'Document translation', 'API integration'],
+      benefits: ['99% accuracy', 'Real-time processing', 'Global reach'],
+      link: '/ai-translation-service',
+      popular: false
+    },
+    {
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security recommendations',
+      icon: '🔐',
+      price: '$39/month',
+      features: ['Secure storage', 'Password generation', 'Breach monitoring', 'Multi-device sync'],
+      benefits: ['Enhanced security', 'Convenience', 'Peace of mind'],
+      link: '/ai-password-manager',
+      popular: true
+    },
+    {
+      title: 'AI Time Tracker',
+      description: 'Intelligent time tracking with productivity insights and automated reporting',
+      icon: '⏱️',
+      price: '$49/month',
+      features: ['Auto time tracking', 'Productivity analytics', 'Project insights', 'Team reporting'],
+      benefits: ['Better time management', 'Increased productivity', 'Data-driven insights'],
+      link: '/ai-time-tracker',
+      popular: false
+    },
+    {
+      title: 'AI Invoice Generator',
+      description: 'Automated invoice creation with smart templates and payment tracking',
+      icon: '📄',
+      price: '$69/month',
+      features: ['Smart templates', 'Auto calculations', 'Payment tracking', 'Tax compliance'],
+      benefits: ['Faster invoicing', 'Professional appearance', 'Better cash flow'],
+      link: '/ai-invoice-generator',
+      popular: true
+    },
+    {
+      title: 'AI Lead Generator',
+      description: 'AI-powered lead generation with automated prospecting and qualification',
+      icon: '🎯',
+      price: '$199/month',
+      features: ['Automated prospecting', 'Lead scoring', 'Contact enrichment', 'CRM integration'],
+      benefits: ['300% more leads', 'Higher quality prospects', 'Time savings'],
+      link: '/ai-lead-generator',
+      popular: true
+    },
+    {
+      title: 'AI Document Scanner',
+      description: 'Advanced document scanning with OCR and intelligent data extraction',
+      icon: '📱',
+      price: '$79/month',
+      features: ['High-quality scanning', 'OCR processing', 'Data extraction', 'Cloud storage'],
+      benefits: ['Paperless office', 'Easy search', 'Better organization'],
+      link: '/ai-document-scanner',
+      popular: false
+    },
+    {
+      title: 'AI Meeting Transcriber',
+      description: 'Real-time meeting transcription with speaker identification and action items',
+      icon: '🎙️',
+      price: '$99/month',
+      features: ['Real-time transcription', 'Speaker identification', 'Action item extraction', 'Search functionality'],
+      benefits: ['Better meeting notes', 'Improved follow-up', 'Time savings'],
+      link: '/ai-meeting-transcriber',
+      popular: true
+    },
+    {
+      title: 'AI Stock Tracker',
+      description: 'Intelligent stock market analysis with AI-powered predictions and alerts',
+      icon: '📈',
+      price: '$149/month',
+      features: ['Market analysis', 'Price predictions', 'Smart alerts', 'Portfolio tracking'],
+      benefits: ['Better investment decisions', 'Risk management', 'Higher returns'],
+      link: '/ai-stock-tracker',
+      popular: false
+    },
+    {
+      title: 'AI Weather Predictor',
+      description: 'Advanced weather forecasting with AI-powered accuracy for business planning',
+      icon: '🌤️',
+      price: '$59/month',
+      features: ['Hyperlocal forecasts', 'Business impact analysis', 'Alert system', 'API integration'],
+      benefits: ['Better planning', 'Risk mitigation', 'Cost savings'],
+      link: '/ai-weather-predictor',
+      popular: false
+    },
+    {
+      title: 'AI Recipe Generator',
+      description: 'Personalized recipe creation with dietary restrictions and ingredient optimization',
+      icon: '👨‍🍳',
+      price: '$39/month',
+      features: ['Personalized recipes', 'Dietary restrictions', 'Ingredient substitution', 'Nutritional analysis'],
+      benefits: ['Healthier eating', 'Meal variety', 'Cost optimization'],
+      link: '/ai-recipe-generator',
+      popular: false
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with personalized itineraries and real-time updates',
+      icon: '✈️',
+      price: '$89/month',
+      features: ['Personalized itineraries', 'Price optimization', 'Real-time updates', 'Local insights'],
+      benefits: ['Better trips', 'Cost savings', 'Time efficiency'],
+      link: '/ai-travel-planner',
+      popular: true
+    },
+    {
+      title: 'AI Learning Assistant',
+      description: 'Personalized learning platform with AI-powered content and progress tracking',
+      icon: '📚',
+      price: '$79/month',
+      features: ['Personalized content', 'Progress tracking', 'Skill assessment', 'Certification'],
+      benefits: ['Faster learning', 'Better retention', 'Career advancement'],
+      link: '/ai-learning-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Health Monitor',
+      description: 'Personal health tracking with AI-powered insights and recommendations',
+      icon: '🏥',
+      price: '$99/month',
+      features: ['Health tracking', 'AI insights', 'Doctor integration', 'Emergency alerts'],
+      benefits: ['Better health', 'Early detection', 'Peace of mind'],
+      link: '/ai-health-monitor',
+      popular: false
+    },
+    {
+      title: 'AI Home Automation',
+      description: 'Smart home control with AI-powered automation and energy optimization',
+      icon: '🏠',
+      price: '$129/month',
+      features: ['Smart controls', 'Energy optimization', 'Security monitoring', 'Voice commands'],
+      benefits: ['Convenience', 'Energy savings', 'Enhanced security'],
+      link: '/ai-home-automation',
+      popular: true
+    },
+    {
+      title: 'AI Event Planner',
+      description: 'Intelligent event planning with vendor management and budget optimization',
+      icon: '🎉',
+      price: '$149/month',
+      features: ['Vendor management', 'Budget optimization', 'Timeline planning', 'Guest management'],
+      benefits: ['Perfect events', 'Cost savings', 'Stress reduction'],
+      link: '/ai-event-planner',
+      popular: false
+    },
+    {
+      title: 'AI Backup Manager',
+      description: 'Automated backup solutions with AI-powered optimization and recovery',
+      icon: '💾',
+      price: '$69/month',
+      features: ['Automated backups', 'Smart compression', 'Quick recovery', 'Version control'],
+      benefits: ['Data protection', 'Space efficiency', 'Quick recovery'],
+      link: '/ai-backup-manager',
+      popular: true
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation and smart scheduling',
       icon: '📱',
@@ -79,6 +279,16 @@ const HomePage: React.FC = () => {
       features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
       benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
       link: '/ai-social-media-manager',
+      popular: true
+    },
+    {
+      title: 'AI Analytics Dashboard',
+      description: 'Transform your data into actionable insights with AI-powered analytics',
+      icon: '📈',
+      price: '$149/month',
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
+      link: '/ai-analytics',
       popular: true
     },
     {
