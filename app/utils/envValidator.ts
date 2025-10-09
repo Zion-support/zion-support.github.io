@@ -59,7 +59,7 @@ class EnvValidator {
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      )
+      );
     }
   }
   private validateOptionalVars(): void {
