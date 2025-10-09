@@ -6,12 +6,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { performanceOptimizer } from '../utils/performanceOptimizer';
 import { errorHandler } from '../utils/enhancedErrorHandler';
-import { errorHandler } from '../utils/enhancedErrorHandler';
 // Collect basic performance metrics
-const _collectPerformanceMetrics = () => {
+const collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
-  const _navigation = window.performance.timing;
-  const _paint = window.performance.getEntriesByType('paint');
+  const navigation = window.performance.timing;
+  const paint = window.performance.getEntriesByType('paint');
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
@@ -19,9 +18,9 @@ const _collectPerformanceMetrics = () => {
 };
 // Helper functions
 const calculatePerformanceScore = () => {
-  const _metrics = performanceOptimizer.getMetrics();
+  const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let _score = 100;
+  let score = 100;
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;
@@ -30,6 +29,34 @@ const calculatePerformanceScore = () => {
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   return Math.max(0, score);
 };
+
+// Helper function to get memory info
+const getMemoryInfo = () => {
+  if (typeof window === 'undefined' || !('memory' in performance)) {
+    return { used: 0, total: 0, limit: 0, percentage: 0 };
+  }
+  const memory = (performance as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+  const used = memory?.usedJSHeapSize || 0;
+  const total = memory?.totalJSHeapSize || 0;
+  const limit = memory?.jsHeapSizeLimit || 0;
+  const percentage = limit > 0 ? Math.round((used / limit) * 100) : 0;
+  return { used, total, limit, percentage };
+};
+
+// Helper function to get network info
+const getNetworkInfo = () => {
+  if (typeof window === 'undefined' || !('connection' in navigator)) {
+    return { effectiveType: 'unknown', downlink: 0, rtt: 0, saveData: false };
+  }
+  const connection = (navigator as { connection?: NetworkConnection }).connection;
+  return {
+    effectiveType: connection?.effectiveType || 'unknown',
+    downlink: connection?.downlink || 0,
+    rtt: connection?.rtt || 0,
+    saveData: connection?.saveData || false
+  };
+};
+
 // Network connection interface
 interface NetworkConnection {
   effectiveType?: string;
@@ -95,13 +122,13 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const _performanceMetrics = performanceOptimizer.getMetrics();
-      const _performanceScore = calculatePerformanceScore();
-      const _errorStats = errorHandler.getErrorStatistics();
+      const performanceMetrics = performanceOptimizer.getMetrics();
+      const performanceScore = calculatePerformanceScore();
+      const errorStats = errorHandler.getErrorStatistics();
       // Get memory info
-      const _memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryInfo();
       // Get network info
-      const _networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
         performance: {
           score: performanceScore,
@@ -112,17 +139,17 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           cumulativeLayoutShift: 0, // Not available in current metrics
         },
         errors: {
-          total: errorStats.totalErrors,
-          byType: errorStats.errorsByType,
-          byCategory: errorStats.errorsByCategory,
-          bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
+          total: errorStats?.totalErrors || 0,
+          byType: errorStats?.errorsByType || {},
+          byCategory: errorStats?.errorsByCategory || {},
+          bySeverity: errorStats?.errorsBySeverity || {},
+          recent: errorStats?.recentErrors?.map(error => ({
             id: error.id,
             message: error.message,
             type: error.type,
             severity: error.severity,
             timestamp: error.context.timestamp
-          }))
+          })) || []
         },
         memory: memoryInfo,
         network: networkInfo
@@ -148,40 +175,9 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   // Update metrics periodically
   useEffect(() => {
     if (!isMonitoring) return;
-    const _interval = setInterval(updateMetrics, refreshInterval);
+    const interval = setInterval(updateMetrics, refreshInterval);
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information
-  const getMemoryInfo = () => {
-    if ('memory' in performance) {
-      const _memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const _percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
-    }
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
-  };
-  // Get network information
-  const getNetworkInfo = () => {
-    if ('connection' in navigator) {
-      const _nav = navigator as NavigatorWithConnection;
-      const _connection = nav.connection;
-      return {
-        effectiveType: connection?.effectiveType || 'unknown',
-        downlink: connection?.downlink || 0,
-        rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false
-      };
-    }
-    return {
-      effectiveType: 'unknown',
-      downlink: 0,
-      rtt: 0,
-      saveData: false
-    };
-  };
   // Export data
   const handleExport = () => {
     if (!metrics) return;
@@ -194,8 +190,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type: 'application/json'
     });
-    const _url = URL.createObjectURL(blob);
-    const _a = document.createElement('a');
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);

@@ -83,10 +83,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <span className='text-2xl'>⚡</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            {currentContent.title}
+            {content[currentSlide].title}
           </h1>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            {currentContent.description}
+            {content[currentSlide].description}
           </p>
         </div>
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -130,7 +130,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              {Object.entries(currentContent.metrics).map(([key, value]) => (
+              {Object.entries(content[currentSlide].metrics).map(([key, value]) => (
                 <div key={key} className="text-center bg-white/5 rounded-xl p-4">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{value}</div>
                   <div className="text-sm text-gray-300 capitalize">
@@ -141,7 +141,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
-              {currentContent.tags.map((tag) => (
+              {content[currentSlide].tags.map((tag) => (
                 <span
                   key={tag}
                   className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20"
@@ -152,11 +152,11 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a href={currentContent.url}
+              <a href={content[currentSlide].url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
+                <span>Read {content[currentSlide].type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <a
