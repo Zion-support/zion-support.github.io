@@ -1,6 +1,9 @@
 import React from 'react';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-11d0
 function HomePage() {
   return (
     <div className="min-h-screen bg-white">
