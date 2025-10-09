@@ -1,10 +1,10 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+// import Navigation from './components/Navigation';
+// import Footer from './components/Footer';
+// import PerformanceOptimizer from './components/PerformanceOptimizer';
+// import SEOOptimizer from './components/SEOOptimizer';
+// import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <SEOOptimizer
+      {/* <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
@@ -111,10 +111,10 @@ const HomePage: React.FC = () => {
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
-      />
+      /> */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
-        <Navigation />
+        {/* <Navigation /> */}
       
       {/* Skip to main content for accessibility */}
       <a
@@ -536,7 +536,7 @@ const HomePage: React.FC = () => {
       </main>
 
         {/* Footer */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

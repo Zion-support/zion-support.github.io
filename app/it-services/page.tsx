@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Star, Zap, Brain, Cloud, Shield, Code, BarChart, Users, Mail, Calendar, FileText, Image, Video, Music, Globe, Smartphone, Laptop, Database, Lock, Settings, TrendingUp, Target, Rocket, Award, Clock, DollarSign, Server, Network, HardDrive, Cpu, Monitor, Wifi, Headphones, Printer, Camera, Wrench, Cog, Activity, MessageCircle, Mic, Phone } from 'lucide-react';
 
@@ -61,7 +61,7 @@ const ITServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      {/* <Navigation /> */}
       
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -129,7 +129,7 @@ const ITServicesPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

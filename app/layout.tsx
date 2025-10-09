@@ -182,13 +182,13 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-        <ComprehensiveErrorBoundary
+        {/* <ComprehensiveErrorBoundary
           enableErrorReporting={true}
           maxRetries={3}
           showRetryButton={true}
-        >
+        > */}
           {children}
-        </ComprehensiveErrorBoundary>
+        {/* </ComprehensiveErrorBoundary> */}
       </body>
     </html>
   );

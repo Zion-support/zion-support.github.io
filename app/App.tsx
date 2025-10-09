@@ -11,8 +11,8 @@ import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor'
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
 import LoadingSpinner from './components/LoadingSpinner';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
+// import Navigation from './components/Navigation';
+// import Footer from './components/Footer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
@@ -161,7 +161,7 @@ const App: React.FC = () => {
               <Router>
                 <div className="App">
                   <Analytics trackingId="G-XXXXXXXXXX" />
-                  <Navigation />
+                  {/* <Navigation /> */}
                   <main id="main-content">
                     <Suspense fallback={<LoadingSpinner />}>
                       <Routes>
@@ -229,7 +229,7 @@ const App: React.FC = () => {
                       </Routes>
                     </Suspense>
                   </main>
-                  <Footer />
+                  {/* <Footer /> */}
 
                   {/* Performance Dashboard */}
                   <PerformanceDashboard />

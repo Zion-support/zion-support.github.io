@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
- cursor/analyze-improve-and-deploy-application-cde4
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
 import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -56,7 +55,7 @@ const ApiDocsPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      {/* <Navigation /> */}
       
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -152,11 +151,9 @@ const ApiDocsPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
- cursor/analyze-improve-and-deploy-application-cde4
+      {/* <Footer /> */}
     </div>
   );
 };
 
 export default ApiDocsPage;
- cursor/analyze-improve-and-deploy-application-cde4

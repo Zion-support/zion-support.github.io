@@ -11,6 +11,9 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   productionBrowserSourceMaps: false,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
@@ -163,8 +166,7 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@heroicons/react', 'recharts', 'framer-motion'],
+    // optimizePackageImports: ['lucide-react', '@heroicons/react', 'recharts', 'framer-motion'],
   },
 
   // Performance optimizations

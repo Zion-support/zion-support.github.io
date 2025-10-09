@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+// import Navigation from '../components/Navigation';
+// import Footer from '../components/Footer';
 import { Cloud, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
@@ -42,7 +42,7 @@ const CloudServicesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+      {/* <Navigation /> */}
       
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
@@ -132,7 +132,7 @@ const CloudServicesPage: React.FC = () => {
         </section>
       </main>
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

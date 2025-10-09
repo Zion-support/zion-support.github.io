@@ -253,8 +253,6 @@ const StatusPage: React.FC = () => {
                   <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(service.status)}`}>
                     {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                   </span>
-
- cursor/analyze-improve-and-deploy-application-cde4
                 </div>
               </div>
             ))}
@@ -340,12 +338,8 @@ const StatusPage: React.FC = () => {
           </p>
         </div>
       </section>
-
- cursor/analyze-improve-and-deploy-application-cde4
     </div>
   );
 };
 
 export default StatusPage;
-
- cursor/analyze-improve-and-deploy-application-cde4

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
 import { CheckCircle, Star, Zap, Settings, Clock, Shield, Brain, Target } from 'lucide-react';
 
 const AIAutomationPage: React.FC = () => {
@@ -142,11 +142,6 @@ const AIAutomationPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>AI Business Automation Services - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered business automation solutions that streamline processes, reduce costs, and improve efficiency across all business functions." />
-        <meta name="keywords" content="AI automation, business automation, process automation, workflow automation, AI-powered automation" />
-      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
