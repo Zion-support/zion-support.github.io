@@ -7,74 +7,74 @@ const AIFashionDesignPage: React.FC = () => {
   const features = [
     'Generate fashion designs from text descriptions',
     'Create custom clothing patterns and templates',
-    'Virtual try-on technology for customers',
-    'Trend prediction and analysis',
+    'Virtual try-on technology with body scanning',
+    'Trend analysis and prediction algorithms',
     'Color palette generation and matching',
     'Size optimization and fit prediction',
     'Fabric recommendation and sourcing',
     'Sustainable fashion design suggestions',
-    'Brand style consistency maintenance',
-    'Real-time design collaboration tools'
+    '3D garment visualization and modeling',
+    'Automated pattern grading and sizing'
   ];
 
   const benefits = [
     'Reduce design time by 75%',
     'Lower production costs by 60%',
-    'Increase design accuracy by 90%',
+    'Increase design accuracy and consistency',
     'Enable rapid prototyping and iteration',
-    'Improve customer satisfaction with virtual try-on',
-    'Predict and follow fashion trends',
+    'Predict fashion trends with 85% accuracy',
     'Reduce waste through better sizing',
-    'Enable sustainable fashion practices'
+    'Enable personalized fashion design',
+    'Accelerate time-to-market for collections'
   ];
 
-  const categories = [
-    { name: 'Women\'s Fashion', description: 'Dresses, tops, bottoms, and accessories', icon: '👗' },
-    { name: 'Men\'s Fashion', description: 'Shirts, pants, suits, and casual wear', icon: '👔' },
-    { name: 'Children\'s Wear', description: 'Kids clothing and accessories', icon: '👶' },
-    { name: 'Activewear', description: 'Sportswear and fitness clothing', icon: '🏃' },
-    { name: 'Formal Wear', description: 'Evening gowns, suits, and special occasion', icon: '🎩' },
-    { name: 'Accessories', description: 'Bags, shoes, jewelry, and fashion accessories', icon: '👜' },
+  const designTypes = [
+    { name: 'Casual Wear', description: 'Everyday clothing and street fashion', icon: '👕' },
+    { name: 'Formal Wear', description: 'Business attire and evening wear', icon: '👔' },
+    { name: 'Activewear', description: 'Sports and fitness clothing', icon: '🏃' },
     { name: 'Lingerie', description: 'Intimate apparel and sleepwear', icon: '👙' },
-    { name: 'Outerwear', description: 'Coats, jackets, and seasonal clothing', icon: '🧥' }
+    { name: 'Outerwear', description: 'Jackets, coats, and seasonal wear', icon: '🧥' },
+    { name: 'Accessories', description: 'Bags, shoes, and fashion accessories', icon: '👜' },
+    { name: 'Children\'s Wear', description: 'Clothing for kids and babies', icon: '👶' },
+    { name: 'Plus Size', description: 'Fashion for all body types', icon: '👗' }
   ];
 
   const useCases = [
     {
-      title: 'Fashion Retail',
-      description: 'Create and manage clothing collections for retail stores',
-      icon: '🛍️',
-      examples: ['Seasonal collections', 'Trend-based designs', 'Customer preferences', 'Inventory optimization']
+      title: 'Fashion Brands',
+      description: 'Create new collections and design variations',
+      icon: '🏷️',
+      examples: ['Seasonal collections', 'Design variations', 'Trend analysis', 'Market research']
     },
     {
       title: 'E-commerce',
-      description: 'Design products for online fashion stores',
-      icon: '💻',
-      examples: ['Virtual try-on', 'Size recommendations', 'Custom designs', 'Personalized styling']
+      description: 'Generate product images and virtual try-ons',
+      icon: '🛒',
+      examples: ['Product visualization', 'Virtual fitting rooms', 'Size recommendations', 'Style matching']
     },
     {
-      title: 'Fashion Brands',
-      description: 'Develop unique brand identities and collections',
-      icon: '🏷️',
-      examples: ['Brand consistency', 'Signature styles', 'Collection themes', 'Market positioning']
+      title: 'Fashion Designers',
+      description: 'Accelerate design process and creativity',
+      icon: '👨‍🎨',
+      examples: ['Design inspiration', 'Pattern creation', 'Color matching', 'Fabric selection']
     },
     {
-      title: 'Sustainable Fashion',
-      description: 'Create eco-friendly and sustainable designs',
-      icon: '🌱',
-      examples: ['Eco materials', 'Zero waste patterns', 'Circular fashion', 'Sustainable practices']
-    },
-    {
-      title: 'Custom Design',
-      description: 'Create personalized clothing for individual customers',
-      icon: '✂️',
-      examples: ['Bespoke tailoring', 'Wedding dresses', 'Custom fits', 'Personal styling']
+      title: 'Retail Stores',
+      description: 'Improve customer experience and sales',
+      icon: '🏪',
+      examples: ['Virtual styling', 'Size optimization', 'Inventory management', 'Customer insights']
     },
     {
       title: 'Fashion Education',
-      description: 'Teach fashion design and trend analysis',
+      description: 'Teach design principles and techniques',
       icon: '🎓',
-      examples: ['Design courses', 'Trend workshops', 'Pattern making', 'Fashion history']
+      examples: ['Design courses', 'Pattern making', 'Color theory', 'Trend analysis']
+    },
+    {
+      title: 'Sustainable Fashion',
+      description: 'Create eco-friendly and ethical designs',
+      icon: '🌱',
+      examples: ['Waste reduction', 'Sustainable materials', 'Circular fashion', 'Ethical production']
     }
   ];
 
@@ -85,27 +85,27 @@ const AIFashionDesignPage: React.FC = () => {
       description: 'Perfect for individual designers',
       features: [
         'Up to 100 designs/month',
-        'Basic trend analysis',
+        'Basic design tools',
         'Standard quality output',
         'Email support',
         'Basic templates',
-        'PNG/PDF export'
+        'PNG export'
       ],
       popular: false
     },
     {
-      name: 'Studio',
+      name: 'Brand',
       price: '$499/month',
-      description: 'Ideal for fashion studios',
+      description: 'Ideal for fashion brands',
       features: [
         'Up to 500 designs/month',
-        'Advanced trend analysis',
+        'Advanced design tools',
         'High quality output',
         'Priority support',
-        'Advanced templates',
+        'Custom templates',
         'Multiple export formats',
-        'Virtual try-on',
-        'Collaboration tools'
+        'Trend analysis',
+        'Virtual try-on'
       ],
       popular: true
     },
@@ -115,7 +115,7 @@ const AIFashionDesignPage: React.FC = () => {
       description: 'For large fashion companies',
       features: [
         'Unlimited designs',
-        'Premium trend analysis',
+        'Premium design tools',
         'Ultra-high quality output',
         'Dedicated support',
         'Custom model training',
@@ -129,8 +129,8 @@ const AIFashionDesignPage: React.FC = () => {
 
   const technologies = [
     'FashionGAN', 'Virtual Try-On', 'Trend Analysis', 'Computer Vision',
-    'Custom Fashion Models', 'Deep Learning', 'Generative AI',
-    'Pattern Recognition', 'Color Analysis', 'Fabric Simulation'
+    '3D Modeling', 'Pattern Recognition', 'Color Theory', 'Fabric Simulation',
+    'Deep Learning', 'Generative AI', 'Fashion AI'
   ];
 
   const workflow = [
@@ -148,15 +148,15 @@ const AIFashionDesignPage: React.FC = () => {
     },
     {
       step: 3,
-      title: 'Review & Refine',
-      description: 'Review designs and make adjustments',
-      icon: '👁️'
+      title: 'Virtual Try-On',
+      description: 'Test designs with virtual fitting and adjustments',
+      icon: '👗'
     },
     {
       step: 4,
-      title: 'Produce & Launch',
-      description: 'Generate patterns and launch your design',
-      icon: '🚀'
+      title: 'Finalize & Produce',
+      description: 'Refine designs and prepare for production',
+      icon: '✂️'
     }
   ];
 
@@ -164,8 +164,8 @@ const AIFashionDesignPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Fashion Design - Zion Tech Group</title>
-        <meta name="description" content="Generate fashion designs with AI. Create clothing patterns, virtual try-on, and trend analysis. Perfect for fashion brands and designers. Starting at $199/month." />
-        <meta name="keywords" content="AI fashion design, fashion technology, virtual try-on, trend analysis, clothing design, fashion AI" />
+        <meta name="description" content="Generate fashion designs with AI. Create clothing patterns, virtual try-ons, and trend predictions. Starting at $199/month." />
+        <meta name="keywords" content="AI fashion, fashion design, virtual try-on, clothing design, fashion trends, pattern making" />
       </Helmet>
 
       {/* Hero Section */}
@@ -179,8 +179,8 @@ const AIFashionDesignPage: React.FC = () => {
             AI Fashion Design
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Create stunning fashion designs with AI. Generate clothing patterns, virtual try-on experiences, 
-            and trend analysis to revolutionize your fashion business.
+            Create stunning fashion designs with AI-powered technology. 
+            Generate clothing patterns, virtual try-ons, and trend predictions for the fashion industry.
           </p>
           
           {/* Stats */}
@@ -190,12 +190,12 @@ const AIFashionDesignPage: React.FC = () => {
               <div className="text-gray-300">Time Saved</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">85%</div>
+              <div className="text-gray-300">Trend Accuracy</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
-              <div className="text-gray-300">Design Accuracy</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
+              <div className="text-gray-300">Cost Reduction</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
@@ -253,18 +253,18 @@ const AIFashionDesignPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Categories */}
+      {/* Design Types */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Fashion Categories
+            Fashion Design Categories
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
+            {designTypes.map((type, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <div className="text-4xl mb-3">{category.icon}</div>
-                <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
-                <p className="text-gray-300 text-sm">{category.description}</p>
+                <div className="text-4xl mb-3">{type.icon}</div>
+                <h3 className="text-lg font-bold text-white mb-2">{type.name}</h3>
+                <p className="text-gray-300 text-sm">{type.description}</p>
               </div>
             ))}
           </div>
