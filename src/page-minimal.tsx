@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import React from 'react';
 import Link from 'next/link';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';

@@ -1,4 +1,6 @@
 'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -111,23 +113,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory
       }));
     } catch (error) {
-       
-      }
+      console.error('Error measuring performance:', error);
+    }
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-           
-          }
+          console.error('Error disconnecting observer:', error);
+        }
       });
     };
   }, []);
+
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter(
+    const slowResources = resources.filter(
       (resource: PerformanceResourceTiming) => resource.duration > 1000
     );
     if (slowResources.length > 0) {
@@ -139,6 +142,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // })));
     }
   }, []);
+
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
@@ -174,6 +178,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       // web-vitals not available, continue without it
     }
   }, []);
+
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
     const cleanup = measureWebVitals();
@@ -225,6 +230,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
     return recommendations;
   }, [metrics]);
+
   const recommendations = getPerformanceRecommendations();
   if (process.env['NODE_ENV'] === 'development') {
     return (
