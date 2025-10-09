@@ -36,6 +36,25 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     
+    <!-- Critical CSS inline for faster rendering -->
+    <style>
+      /* Critical above-the-fold styles */
+      body { margin: 0; font-family: 'Space Grotesk', sans-serif; background: #0a0a0a; color: #ffffff; }
+      .min-h-screen { min-height: 100vh; }
+      .bg-gradient-to-br { background: linear-gradient(to bottom right, #1e293b, #581c87, #1e293b); }
+      .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+      .text-center { text-align: center; }
+      .font-bold { font-weight: 700; }
+      .text-white { color: #ffffff; }
+      .text-cyan-400 { color: #22d3ee; }
+      .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+      @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+    </style>
+    
+    <!-- Resource hints for better performance -->
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/orbitron.woff2" as="font" type="font/woff2" crossorigin>
+    
     <title>Zion Tech Group - Advanced AI and IT Solutions</title>
   </head>
   <body>

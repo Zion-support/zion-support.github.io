@@ -8,6 +8,16 @@ interface SEOOptimizerProps {
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: any;
+  noIndex?: boolean;
+  alternateLanguages?: { href: string; hreflang: string }[];
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  articleData?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  };
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -16,11 +26,18 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData,
+  noIndex = false,
+  alternateLanguages = [],
+  breadcrumbs = [],
+  articleData
 }) => {
   useEffect(() => {
     // Update page title
     document.title = title;
+    
+    // Update robots meta tag
+    updateMetaTag('robots', noIndex ? 'noindex, nofollow' : 'index, follow');
     
     // Update meta description
     updateMetaTag('description', description);
@@ -31,8 +48,30 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateMetaTag('og:description', description, 'property');
     updateMetaTag('og:image', ogImage, 'property');
     updateMetaTag('og:url', canonicalUrl, 'property');
-    updateMetaTag('og:type', 'website', 'property');
+    updateMetaTag('og:type', articleData ? 'article' : 'website', 'property');
     updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
+    updateMetaTag('og:locale', 'en_US', 'property');
+    
+    // Add article-specific Open Graph tags
+    if (articleData) {
+      if (articleData.publishedTime) {
+        updateMetaTag('og:article:published_time', articleData.publishedTime, 'property');
+      }
+      if (articleData.modifiedTime) {
+        updateMetaTag('og:article:modified_time', articleData.modifiedTime, 'property');
+      }
+      if (articleData.author) {
+        updateMetaTag('og:article:author', articleData.author, 'property');
+      }
+      if (articleData.section) {
+        updateMetaTag('og:article:section', articleData.section, 'property');
+      }
+      if (articleData.tags) {
+        articleData.tags.forEach(tag => {
+          updateMetaTag('og:article:tag', tag, 'property');
+        });
+      }
+    }
     
     // Update Twitter tags
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
@@ -45,20 +84,34 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Update canonical URL
     updateCanonicalUrl(canonicalUrl);
     
+    // Add alternate language links
+    alternateLanguages.forEach(alt => {
+      addAlternateLanguage(alt.href, alt.hreflang);
+    });
+    
     // Add structured data
     if (structuredData) {
       addStructuredData(structuredData);
     }
     
     // Add breadcrumb structured data
-    addBreadcrumbStructuredData();
+    if (breadcrumbs.length > 0) {
+      addBreadcrumbStructuredData(breadcrumbs);
+    } else {
+      addBreadcrumbStructuredData();
+    }
     
     // Add FAQ structured data
     addFAQStructuredData();
     
     // Add organization structured data
     addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    
+    // Add article structured data if provided
+    if (articleData) {
+      addArticleStructuredData(articleData);
+    }
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, alternateLanguages, breadcrumbs, articleData]);
 
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -93,18 +146,35 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
 
-  const addBreadcrumbStructuredData = () => {
+  const addAlternateLanguage = (href: string, hreflang: string) => {
+    const link = document.createElement('link');
+    link.rel = 'alternate';
+    link.href = href;
+    link.hreflang = hreflang;
+    document.head.appendChild(link);
+  };
+
+  const addBreadcrumbStructuredData = (customBreadcrumbs?: Array<{ name: string; url: string }>) => {
+    const breadcrumbItems = customBreadcrumbs && customBreadcrumbs.length > 0 
+      ? customBreadcrumbs.map((crumb, index) => ({
+          '@type': 'ListItem',
+          'position': index + 1,
+          'name': crumb.name,
+          'item': crumb.url
+        }))
+      : [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': 'https://ziontechgroup.com'
+          }
+        ];
+
     const breadcrumbData = {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
-      'itemListElement': [
-        {
-          '@type': 'ListItem',
-          'position': 1,
-          'name': 'Home',
-          'item': 'https://ziontechgroup.com'
-        }
-      ]
+      'itemListElement': breadcrumbItems
     };
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -198,6 +268,60 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     script.id = 'organization-structured-data';
     // Remove existing organization data
     const existing = document.getElementById('organization-structured-data');
+    if (existing) {
+      existing.remove();
+    }
+    document.head.appendChild(script);
+  };
+
+  const addArticleStructuredData = (articleData: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    section?: string;
+    tags?: string[];
+  }) => {
+    const articleStructuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': title,
+      'description': description,
+      'image': ogImage,
+      'url': canonicalUrl,
+      'datePublished': articleData.publishedTime || new Date().toISOString(),
+      'dateModified': articleData.modifiedTime || new Date().toISOString(),
+      'author': {
+        '@type': 'Organization',
+        'name': articleData.author || 'Zion Tech Group'
+      },
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'Zion Tech Group',
+        'logo': {
+          '@type': 'ImageObject',
+          'url': 'https://ziontechgroup.com/logo.png'
+        }
+      },
+      'mainEntityOfPage': {
+        '@type': 'WebPage',
+        '@id': canonicalUrl
+      },
+      'keywords': keywords.join(', '),
+      'articleSection': articleData.section || 'Technology',
+      'wordCount': description.length + title.length, // Approximate word count
+      'inLanguage': 'en-US'
+    };
+
+    if (articleData.tags && articleData.tags.length > 0) {
+      articleStructuredData['keywords'] = articleData.tags.join(', ');
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(articleStructuredData);
+    script.id = 'article-structured-data';
+    // Remove existing article data
+    const existing = document.getElementById('article-structured-data');
     if (existing) {
       existing.remove();
     }
