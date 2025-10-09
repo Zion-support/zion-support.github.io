@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, AlertCircle, XCircle } from 'lucide-react';
-
-const StatusPage: React.FC = () => {
-  const services = [
-    { name: 'Website', status: 'operational', uptime: '99.9%' },
-    { name: 'API Services', status: 'operational', uptime: '99.8%' },
-    { name: 'Database', status: 'operational', uptime: '99.9%' },
-    { name: 'CDN', status: 'operational', uptime: '99.95%' }
-=======
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, XCircle, AlertCircle, Clock, RefreshCw } from 'lucide-react';
 
