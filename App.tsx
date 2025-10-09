@@ -2,6 +2,7 @@ import React, { Suspense, lazy, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/home/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const PricingPage = React.lazy(() => import('./app/pricing/page'));
@@ -122,7 +123,7 @@ const App: React.FC = () => {
         <div className="App">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
-              <Route path="/" element={<div>Home Page</div>} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/pricing" element={<PricingPage />} />
