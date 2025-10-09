@@ -1,83 +1,59 @@
-/**
- * Enhanced Performance Monitoring
- * Comprehensive performance tracking and optimization utilities
- */
+
 
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
 /**
- * Performance Observer Wrapper
+ * Enhanced Performance Monitoring;
+ * Comprehensive performance tracking and optimization utilities;
  */
-export class PerformanceMonitor {
-  private metrics: Map<string, number[]> = new Map();
-  private observers: PerformanceObserver[] = [];
-  
-  constructor() {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+ * Performance Observer Wrapper;
+export class PerformanceMonitor {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+  private,
+  metrics: Map;
+          <string, number[]> = new Map();
+  private,
+  observers: PerformanceObserver[] = [];
+  constructor() {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
       this.initializeObservers();
     }
-  }
-  
-  /**
-   * Initialize performance observers
-   */
-  private initializeObservers(): void {
-    // Monitor navigation timing
-    if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
-      const navObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
+   * Initialize performance observers;
+  private initializeObservers(): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+}
+    // Monitor navigation timing;
+    if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
+  // TOD,
+  O: Add content;
+}
           this.recordMetric('navigation', entry.duration);
-        }
       });
-      navObserver.observe({ entryTypes: ['navigation'] });
+      navObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['navigation'] });
       this.observers.push(navObserver);
-    }
-    
-    // Monitor resource timing
-    if (PerformanceObserver.supportedEntryTypes.includes('resource')) {
-      const resourceObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
           this.recordMetric('resource', entry.duration);
-        }
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
+      resourceObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['resource'] });
       this.observers.push(resourceObserver);
-    }
-    
-    // Monitor paint timing
-    if (PerformanceObserver.supportedEntryTypes.includes('paint')) {
-      const paintObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
           this.recordMetric(entry.name, entry.startTime);
-        }
-      });
-      paintObserver.observe({ entryTypes: ['paint'] });
+      paintObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['paint'] });
       this.observers.push(paintObserver);
-    }
-    
-    // Monitor largest contentful paint
-    if (PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint')) {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          this.recordMetric('lcp', lastEntry.startTime);
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    }
-    
-    // Monitor first input delay
-    if (PerformanceObserver.supportedEntryTypes.includes('first-input')) {
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
           const fidEntry = entry as PerformanceEventTiming;
           const fid = fidEntry.processingStart - fidEntry.startTime;
           this.recordMetric('fid', fid);
-        }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['first-input'] });
       this.observers.push(fidObserver);
+<<<<<<< HEAD
     }
     
     // Monitor layout shift
@@ -276,66 +252,35 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
     
     return result;
   }) as T;
+=======
+// Types;
+//   PerformanceReport,
+//   ResourceStats,
+//   MemoryStats,
+//   PerformanceWithMemory,
+//   LayoutShift;
+} from '../types/app.types';
+// Utility Functions;
+ * Throttle function;
+export function throttle;
+          <T extends (...arg,)
+  s: unknown[]) => any>(* Request idle callback wrapper;
+export function runWhenIdle(callbac,)
+  k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
+  O: Add content;}
+>>>>>>> origin/main
 }
-
-/**
- * Debounce function
- */
-export function debounce<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-  let timeoutId: NodeJS.Timeout | null = null;
-  
-  return (...args: Parameters<T>) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-    
-    timeoutId = setTimeout(() => {
-      fn(...args);
-    }, delay);
-  };
+  if (typeof window === 'undefined') {return;}
+  if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-
-/**
- * Throttle function
- */
-export function throttle<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-  let lastCall = 0;
-  
-  return (...args: Parameters<T>) => {
-    const now = Date.now();
-    
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      fn(...args);
-    }
-  };
-}
-
-/**
- * Request idle callback wrapper
- */
-export function runWhenIdle(callback: () => void, timeout = 1000): void {
-  if (typeof window === 'undefined') {
-    callback();
-    return;
-  }
-  
-  if ('requestIdleCallback' in window) {
     window.requestIdleCallback(callback, { timeout });
-  } else {
-    setTimeout(callback, 0);
-  }
+  } else {/* TODO: Fix JSX expression */}
+  O: Add content;}
 }
-
-/**
- * Default performance monitor instance
- */
+    setTimeout(callback, 0);
+* Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor();
 
-export default PerformanceMonitor;
+
+

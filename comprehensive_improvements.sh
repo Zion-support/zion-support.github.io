@@ -27,8 +27,8 @@ done
 # 2. Remove merge conflict markers
 echo "🧹 Cleaning up merge conflict markers..."
 find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | while read file; do
-    if grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file"; then
-        sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
+    if grep -q "\|
+        sed -i '/^
         echo "  Removed conflict markers from $file"
     fi
 done

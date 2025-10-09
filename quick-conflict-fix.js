@@ -1,16 +1,11 @@
-#!/usr/bin/env node
-
-const _fs = require('fs');
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
 
-// //Function to fix a single file
-function fixFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    
-    //Check if file has conflicts
-    if (!content.includes('      return false;
+// //Function to fix a single file;
+function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
     
-//     //Remove conflict markers and choose the better version
+//     //Remove conflict markers and choose the better version;
     const sections = content.split(/
+
+})

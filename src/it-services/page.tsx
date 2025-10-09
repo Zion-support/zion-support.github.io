@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Microphone, Speaker, Battery, Power, Wrench, Hammer, Screwdriver, Tool, Cog, Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -349,9 +350,14 @@ const ITServicesPage: React.FC = () => {
       description: 'Microsoft, AWS, and Google certified engineers'
     }
   ];
+=======
+import { Cloud, ArrowRight } from 'lucide-react';
+>>>>>>> origin/main
 
+export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
       <Navigation />
       
       <main className="container mx-auto px-4 py-16 pt-24">
@@ -361,25 +367,30 @@ const ITServicesPage: React.FC = () => {
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
               IT Services & Infrastructure
             </span>
+=======
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+            IT Services
+>>>>>>> origin/main
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Comprehensive IT solutions to support and optimize your business infrastructure. 
-            From cloud migration to cybersecurity, we keep your technology running smoothly.
+          <p className="text-xl text-gray-300 mb-8">
+            Comprehensive IT support and services to keep your business running smoothly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="bg-slate-800/50 rounded-lg p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">IT Services Solutions</h2>
+            <p className="text-gray-300 mb-6">
+              Get expert IT support, infrastructure management, and technology consulting.
+            </p>
             <a
               href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              Get Free IT Assessment
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              (302) 464-0950
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Contact Us
             </a>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Main Services Grid */}
@@ -585,8 +596,10 @@ const ITServicesPage: React.FC = () => {
       </main>
 
       <Footer />
+=======
+        </div>
+      </div>
+>>>>>>> origin/main
     </div>
   );
-};
-
-export default ITServicesPage;
+}
