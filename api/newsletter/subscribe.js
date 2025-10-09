@@ -1,29 +1,34 @@
 const { withSentry } = require('../withSentry.cjs');
 const { isValidEmail } = require('../emailUtils.cjs');
 
-async function handler(req, res) {/* TODO: Fix JSX expression */}
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
-  try {/* TODO: Fix JSX expression */}
+
+  try {
     const { email } = req.body || {};
 
-    if (!email) {/* TODO: Fix JSX expression */}
-  r: 'Email is required' });
-      return;
+    if (!email) {
+      return res.status(400).json({ error: 'Email is required' });
     }
 
-    if (!isValidEmail(email)) {/* TODO: Fix JSX expression */}
-  r: 'Invalid email format' });
-      return;
+    if (!isValidEmail(email)) {
+      return res.status(400).json({ error: 'Invalid email format' });
     }
-    // Save subscription logic here;
-    const subscription = {/* TODO: Fix JSX expression */}
+
+    // Save subscription logic here
+    const subscription = {
+      email,
+      subscribedAt: new Date().toISOString(),
+      status: 'active'
     };
 
     res.statusCode = 200;
-    res.json({/* TODO: Fix JSX expression */})
-    });
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Failed to subscribe to newsletter' });
+    res.json({ success: true, message: 'Successfully subscribed to newsletter' });
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
+    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
   }
 }
 
