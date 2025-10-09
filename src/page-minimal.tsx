@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, CheckCircle, Star } from 'lucide-react';
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -46,7 +46,7 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
-                <a className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
@@ -119,7 +119,7 @@ export default function HomePage() {
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
-                <a className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
@@ -155,5 +155,4 @@ export default function HomePage() {
       </footer>
     </div>
   );
-};
-export default HomePage;
+}
