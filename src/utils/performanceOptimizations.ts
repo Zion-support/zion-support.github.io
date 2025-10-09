@@ -1,151 +1,209 @@
-'use client';
-/**
- * Advanced Performance Optimizations for Zion Tech Group
- * Implements cutting-edge performance techniques
- */
-
-// Critical resource preloading
-export const preloadCriticalResources = () => {
+// Performance optimization utilities
+export const initializePerformanceOptimizations = () => {
   if (typeof window === 'undefined') return;
 
-  const criticalResources = [
-    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-    { href: '/css/critical.css', as: 'style' },
-    { href: '/js/vendor.js', as: 'script' },
-  ];
+  // Preload critical resources
+  const preloadCriticalResources = () => {
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/images/hero-bg.jpg',
+      '/icons/favicon.ico'
+    ];
 
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource.href;
-    link.as = resource.as;
-    if (resource.type) link.type = resource.type;
-    if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
-    document.head.appendChild(link);
-  });
-};
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+      if (resource.endsWith('.woff2')) {
+        link.crossOrigin = 'anonymous';
+      }
+      document.head.appendChild(link);
+    });
+  };
 
-// Image optimization with WebP support
-export const optimizeImages = () => {
-  if (typeof window === 'undefined') return;
-
-  const images = document.querySelectorAll('img');
-  images.forEach((img) => {
-    // Add loading="lazy" for better performance
-    if (!img.hasAttribute('loading')) {
-      img.setAttribute('loading', 'lazy');
-    }
-    
-    // Add proper alt text if missing
-    if (!img.hasAttribute('alt')) {
-      img.setAttribute('alt', 'Zion Tech Group content');
-    }
-    
-    // Convert to WebP if supported
-    if (supportsWebP() && (img.src.includes('.jpg') || img.src.includes('.jpeg'))) {
-      img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
-    }
-  });
-};
-
-// Check WebP support
-const supportsWebP = (): boolean => {
-  if (typeof window === 'undefined') return false;
-  const canvas = document.createElement('canvas');
-  canvas.width = 1;
-  canvas.height = 1;
-  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-};
-
-// Advanced lazy loading with Intersection Observer
-export const setupAdvancedLazyLoading = () => {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
-
-  const lazyElements = document.querySelectorAll('[data-lazy]');
-  const lazyObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+  // Optimize images
+  const optimizeImages = () => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          const src = element.getAttribute('data-lazy');
-          if (src) {
-            if (element.tagName === 'IMG') {
-              (element as HTMLImageElement).src = src;
-            } else {
-              element.style.backgroundImage = `url(${src})`;
-            }
-            element.removeAttribute('data-lazy');
-            lazyObserver.unobserve(element);
-          }
+          const img = entry.target as HTMLImageElement;
+          img.src = img.dataset.src || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
         }
       });
-    },
-    { rootMargin: '50px' }
-  );
-
-  lazyElements.forEach((element) => {
-    lazyObserver.observe(element);
-  });
-};
-
-// Service Worker registration for caching
-export const registerServiceWorker = () => {
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
-
-  navigator.serviceWorker.register('/sw.js')
-    .then((registration) => {
-      // Service Worker registered successfully
-    })
-    .catch((error) => {
-      // Service Worker registration failed - handled silently
     });
-};
 
-// Critical CSS inlining
-export const inlineCriticalCSS = () => {
-  if (typeof window === 'undefined') return;
+    images.forEach(img => imageObserver.observe(img));
+  };
 
-  const criticalCSS = `
-    /* Critical CSS for above-the-fold content */
-    .cyber-grid { background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px); background-size: 50px 50px; }
-    .neon-text { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
-    .cyber-button { background: linear-gradient(45deg, #00ffff, #8b5cf6); border: none; padding: 12px 24px; border-radius: 8px; color: white; font-weight: 600; }
-  `;
+  // Debounce scroll events
+  const debounceScroll = () => {
+    let scrollTimeout: NodeJS.Timeout;
+    
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        // Handle scroll events here
+        const scrolled = window.scrollY > 50;
+        document.body.classList.toggle('scrolled', scrolled);
+      }, 10);
+    };
 
-  const style = document.createElement('style');
-  style.textContent = criticalCSS;
-  document.head.appendChild(style);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+  };
+
+  // Optimize animations
+  const optimizeAnimations = () => {
+    // Use requestAnimationFrame for smooth animations
+    const animate = (callback: () => void) => {
+      requestAnimationFrame(callback);
+    };
+
+    // Add CSS for smooth scrolling
+    const style = document.createElement('style');
+    style.textContent = `
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      .lazy {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      
+      .lazy.loaded {
+        opacity: 1;
+      }
+      
+      .scrolled nav {
+        backdrop-filter: blur(10px);
+        background: rgba(15, 23, 42, 0.95);
+      }
+    `;
+    document.head.appendChild(style);
+  };
+
+  // Initialize all optimizations
+  preloadCriticalResources();
+  optimizeImages();
+  debounceScroll();
+  optimizeAnimations();
 };
 
 // Performance monitoring
-export const monitorPerformance = () => {
-  if (typeof window === 'undefined' || !('performance' in window)) return;
+export const performanceMonitor = {
+  metrics: {
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0
+  },
 
-  // Monitor Core Web Vitals
-  const observer = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => {
-      if (entry.entryType === 'largest-contentful-paint') {
-        // Track LCP
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'web_vitals', {
-            metric_name: 'LCP',
-            metric_value: Math.round(entry.startTime),
-            metric_rating: entry.startTime < 2500 ? 'good' : entry.startTime < 4000 ? 'needs-improvement' : 'poor'
-          });
-        }
+  reportMetrics: () => {
+    if (typeof window === 'undefined') return;
+
+    // Report Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            performanceMonitor.metrics.lcp = entry.startTime;
+          }
+          if (entry.entryType === 'first-input') {
+            performanceMonitor.metrics.fid = (entry as any).processingStart - entry.startTime;
+          }
+          if (entry.entryType === 'layout-shift') {
+            performanceMonitor.metrics.cls += (entry as any).value;
+          }
+          if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+            performanceMonitor.metrics.fcp = entry.startTime;
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+    }
+
+    // Report TTFB
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      performanceMonitor.metrics.ttfb = navigation.responseStart - navigation.requestStart;
+    }
+
+    // Send to analytics
+    setTimeout(() => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'performance_metrics', {
+          event_category: 'performance',
+          lcp: performanceMonitor.metrics.lcp,
+          fid: performanceMonitor.metrics.fid,
+          cls: performanceMonitor.metrics.cls,
+          fcp: performanceMonitor.metrics.fcp,
+          ttfb: performanceMonitor.metrics.ttfb
+        });
       }
-    });
-  });
-
-  observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    }, 2000);
+  }
 };
 
-// Initialize all optimizations
-export const initializePerformanceOptimizations = () => {
-  preloadCriticalResources();
-  optimizeImages();
-  setupAdvancedLazyLoading();
-  registerServiceWorker();
-  inlineCriticalCSS();
-  monitorPerformance();
+// Image optimization
+export const optimizeImage = (src: string, width?: number, height?: number): string => {
+  if (!src) return '';
+  
+  // Add WebP support detection
+  const supportsWebP = () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 1;
+    canvas.height = 1;
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+  };
+
+  // Add responsive image parameters
+  let optimizedSrc = src;
+  
+  if (width && height) {
+    optimizedSrc += `?w=${width}&h=${height}`;
+  }
+  
+  if (supportsWebP()) {
+    optimizedSrc = optimizedSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  }
+  
+  return optimizedSrc;
+};
+
+// Lazy loading utility
+export const lazyLoad = (element: HTMLElement, callback: () => void) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        callback();
+        observer.unobserve(element);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(element);
+};
+
+// Memory management
+export const cleanup = () => {
+  // Clean up event listeners
+  window.removeEventListener('scroll', () => {});
+  window.removeEventListener('resize', () => {});
+  
+  // Clear intervals and timeouts
+  const highestTimeoutId = setTimeout(() => {}, 0);
+  for (let i = 0; i < highestTimeoutId; i++) {
+    clearTimeout(i);
+  }
+  
+  const highestIntervalId = setInterval(() => {}, 0);
+  for (let i = 0; i < highestIntervalId; i++) {
+    clearInterval(i);
+  }
 };

@@ -244,7 +244,7 @@ export class AccessibilityChecker {
           message: `Link ${index + 1} has no accessible text`,
           element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<a href="..." aria-label="Description">...</a>'
+          codeExample: '<a href="..." aria-label="Description" aria-label="Link">...</a>'
         });
       }
       // Check for generic link text
@@ -276,7 +276,7 @@ export class AccessibilityChecker {
           element: `a[href="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<a href="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</a>'
+            '<a href="..." target="_blank" rel="noopener noreferrer" aria-label="Link">Link text (opens in new window)</a>'
         });
       }
     });
@@ -303,7 +303,7 @@ export class AccessibilityChecker {
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+          codeExample: '<button aria-label="Close dialog" aria-label="Button">×</button>'
         });
       }
     });
@@ -384,7 +384,7 @@ export class AccessibilityChecker {
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
+          codeExample: '<button tabindex="0" aria-label="Button">Accessible button</button>'
         });
       }
     });
@@ -403,7 +403,7 @@ export class AccessibilityChecker {
           message: `${el.tagName.toLowerCase()} has onclick but no keyboard support`,
           element: el.tagName.toLowerCase(),
           fix: 'Add role, tabindex, and keyboard event handlers, or use a button',
-          codeExample: '<button onClick={handleClick}>Click me</button>'
+          codeExample: '<button onClick={handleClick} aria-label="Button">Click me</button>'
         });
       }
     });

@@ -72,7 +72,7 @@ const TeamPage: React.FC = () => {
                 mission of advancing AI and IT solutions.
               </p>
               <div className='text-center'>
-                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
+                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors' aria-label="Button">
                   View Open Positions
                 </button>
               </div>

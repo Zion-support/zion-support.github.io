@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Users, Award, TrendingUp, Shield } from 'lucide-react';
+import { Send } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -195,7 +195,7 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 flex items-center justify-center"
-                >
+                 aria-label="Button">
                   <Send className="w-5 h-5 mr-2" />
                   Send Message
                 </button>
@@ -216,7 +216,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
-                    <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Link">
                       +1 (302) 464-0950
                     </a>
                     <p className="text-sm text-gray-400 mt-1">Mon-Fri 9AM-6PM EST</p>
@@ -229,7 +229,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" aria-label="Link">
                       kleber@ziontechgroup.com
                     </a>
                     <p className="text-sm text-gray-400 mt-1">We respond within 24 hours</p>
@@ -288,7 +288,7 @@ const ContactPage: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+               aria-label="Link">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: (302) 464-0950
               </a>

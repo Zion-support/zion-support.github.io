@@ -3,7 +3,6 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Users, Clock, DollarSign, Award, TrendingUp } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const pricingPlans = [
@@ -171,7 +170,7 @@ const PricingPage: React.FC = () => {
                         ? 'cyber-button'
                         : 'bg-gray-700 text-white hover:bg-gray-600'
                     }`}
-                  >
+                   aria-label="Link">
                     {plan.popular ? 'Contact Sales' : plan.cta}
                   </a>
                 </div>
@@ -223,7 +222,7 @@ const PricingPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -231,7 +230,7 @@ const PricingPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Get Free Quote</span>
                 </a>

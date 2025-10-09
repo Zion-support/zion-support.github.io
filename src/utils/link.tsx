@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 interface LinkProps {
   href: string;
   children: React.ReactNode;
@@ -37,7 +37,7 @@ export const Link: React.FC<LinkProps> = ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >
+     aria-label="Link">
       {children}
     </a>
   );

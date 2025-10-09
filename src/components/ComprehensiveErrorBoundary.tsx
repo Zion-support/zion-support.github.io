@@ -1,175 +1,225 @@
-'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
-  showRetryButton?: boolean;
 }
+
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
-  isRetrying: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  errorId: string;
 }
+
 class ComprehensiveErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0,
-      isRetrying: false,
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return {
+      hasError: true,
+      error,
+      errorInfo: null,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-    this.maxRetries = props.maxRetries || 3;
   }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true, 
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      retryCount: 0,
-      isRetrying: false
-    };
-  }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
-    }
-  }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Enhanced error reporting
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.state.retryCount
-    };
-    // Send to error reporting service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          retry_count: this.state.retryCount
-        }
-      });
-    }
-    // Log to console in development
+
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Send error to analytics/monitoring service
+    this.logErrorToService(error, errorInfo);
+  }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    try {
+      // Send to Google Analytics if available
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            error_id: this.state.errorId,
+            error_stack: error.stack,
+            component_stack: errorInfo.componentStack
+          }
+        });
       }
-  };
-  private handleRetry = async () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState({ isRetrying: true });
-      // Simulate retry delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1,
-        isRetrying: false
-      }));
+
+      // Send to custom error reporting service
+      if (typeof window !== 'undefined' && 'fetch' in window) {
+        fetch('/api/error-reporting', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            errorId: this.state.errorId,
+            message: error.message,
+            stack: error.stack,
+            componentStack: errorInfo.componentStack,
+            url: window.location.href,
+            userAgent: navigator.userAgent,
+            timestamp: new Date().toISOString()
+          })
+        }).catch(() => {
+          // Silently fail if error reporting service is unavailable
+        });
+      }
+    } catch (reportingError) {
+      // Silently fail if error reporting fails
+      console.warn('Failed to report error:', reportingError);
     }
   };
-  private handleReload = () => {
+
+  handleRetry = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    });
+  };
+
+  handleReload = () => {
     window.location.reload();
   };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  handleReportError = () => {
+    const errorDetails = {
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      url: window.location.href,
+      timestamp: new Date().toISOString()
+    };
+
+    const subject = `Error Report - ${this.state.errorId}`;
+    const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
+    
+    window.open(`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+  };
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      if (this.state.isRetrying) {
-        return (
-          <ModernLoadingSpinner 
-            size="lg" 
-            text="Retrying..." 
-            fullScreen={true}
-          />
-        );
-      }
+
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
-            <div className="text-6xl mb-6">⚠️</div>
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We encountered an unexpected error. Our team has been notified and is working to fix it.
-            </p>
-            <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
-              <h3 className="text-white font-semibold mb-2">Error Details:</h3>
-              <p className="text-sm text-gray-300 mb-2">
-                <strong>Error ID:</strong> {this.state.errorId}
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-slate-800/90 backdrop-blur-lg rounded-2xl p-8 border border-red-400/30 shadow-2xl">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-8 h-8 text-red-400" />
+              </div>
+              
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
-              <p className="text-sm text-gray-300 mb-2">
-                <strong>Message:</strong> {this.state.error?.message || 'Unknown error'}
-              </p>
-              <p className="text-sm text-gray-300">
-                <strong>Retry Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {this.state.retryCount < this.maxRetries && (
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="bg-slate-900/50 rounded-lg p-4 mb-6 text-left">
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <p className="text-sm text-gray-300 mb-2">
+                    <strong>Message:</strong> {this.state.error.message}
+                  </p>
+                  <p className="text-sm text-gray-300 mb-2">
+                    <strong>Error ID:</strong> {this.state.errorId}
+                  </p>
+                  {this.state.error.stack && (
+                    <details className="text-xs text-gray-400">
+                      <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
+                      <pre className="mt-2 whitespace-pre-wrap overflow-auto max-h-32">
+                        {this.state.error.stack}
+                      </pre>
+                    </details>
+                  )}
+                </div>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={this.handleRetry}
-                  className="cyber-button"
-                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
+                  className="flex items-center justify-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors"
                 >
-                  🔄 Try Again ({this.maxRetries - this.state.retryCount} left)
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Try Again
                 </button>
-              )}
-              <button
-                onClick={this.handleReload}
-                className="cyber-button"
-                aria-label="Reload the entire page"
-              >
-                🔄 Reload Page
-              </button>
-              <a
-                href="/contact"
-                className="cyber-button"
-                aria-label="Contact support for help with this error"
-              >
-                📞 Contact Support
-              </a>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="flex items-center justify-center px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-colors"
+                >
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
+                </button>
+                
+                <button
+                  onClick={this.handleReload}
+                  className="flex items-center justify-center px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-colors"
+                >
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Reload Page
+                </button>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-sm text-gray-400 mb-4">
+                  If this problem persists, please contact our support team.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="flex items-center justify-center px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    <Mail className="w-4 h-4 mr-2" />
+                    Contact Support
+                  </a>
+                  
+                  <button
+                    onClick={this.handleReportError}
+                    className="flex items-center justify-center px-4 py-2 text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    <AlertTriangle className="w-4 h-4 mr-2" />
+                    Report Error
+                  </button>
+                </div>
+              </div>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
-              <details className="mt-6 text-left">
-                <summary className="text-white cursor-pointer hover:text-cyan-400">
-                  Technical Details (Development)
-                </summary>
-                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
-                  {this.state.error.stack}
-                </pre>
-              </details>
-            )}
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
+
 export default ComprehensiveErrorBoundary;

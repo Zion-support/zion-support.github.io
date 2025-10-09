@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Brain, BarChart, MessageSquare, Palette, Search, Mail, CreditCard, Headphones, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap } from 'lucide-react';
+import { Code, Palette, CreditCard, Camera, Music, Gamepad2, BookOpen, ShieldCheck, Wifi, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings2 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -135,13 +135,13 @@ const MicroSAASPage: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
+             aria-label="Link">
               Browse All Solutions
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+             aria-label="Link">
               (302) 464-0950
             </a>
           </div>
@@ -171,7 +171,7 @@ const MicroSAASPage: React.FC = () => {
                         <a
                           href="/contact"
                           className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
-                        >
+                         aria-label="Link">
                           Learn More →
                         </a>
                       </div>
@@ -225,7 +225,7 @@ const MicroSAASPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -253,7 +253,7 @@ const MicroSAASPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -281,7 +281,7 @@ const MicroSAASPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Contact Sales
               </a>
             </div>
@@ -299,13 +299,13 @@ const MicroSAASPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+               aria-label="Link">
                 Browse All Solutions
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 (302) 464-0950
               </a>
             </div>

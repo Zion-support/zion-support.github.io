@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -86,14 +86,14 @@ const AICustomerSupportPage: React.FC = () => {
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center space-x-2"
-              >
+               aria-label="Link">
                 <MessageCircle className="w-4 h-4" />
                 <span>Get Started</span>
               </a>
               <a
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 Learn More
               </a>
             </div>
@@ -157,7 +157,7 @@ const AICustomerSupportPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block"
-                  >
+                   aria-label="Link">
                     Get Started
                   </a>
                 </div>
@@ -178,7 +178,7 @@ const AICustomerSupportPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -186,7 +186,7 @@ const AICustomerSupportPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
                 </a>

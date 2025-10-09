@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
+import { Workflow } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
@@ -111,7 +111,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -119,7 +119,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Get Free Demo</span>
                 </a>
@@ -210,7 +210,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${plan.name} Plan`}
                     className="cyber-button w-full text-center block"
-                  >
+                   aria-label="Link">
                     Get Started
                   </a>
                 </div>
@@ -231,7 +231,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -239,7 +239,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Schedule Demo</span>
                 </a>

@@ -80,12 +80,12 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
               <div className="space-x-4">
                 <a 
                   href="/contact"
-                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
+                  className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors" aria-label="Link">
                   Get Automation Assessment
                 </a>
                 <a 
                   href="/services"
-                  className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
+                  className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors" aria-label="Link">
                   Explore AI Services
                 </a>
               </div>

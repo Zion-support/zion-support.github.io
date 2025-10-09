@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Calendar, Clock, Users, CheckCircle, Phone, Mail, ArrowRight, Star, Zap, Brain, Shield } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -222,7 +221,7 @@ const DemoPage: React.FC = () => {
                     <button
                       type="submit"
                       className="w-full cyber-button py-3 px-6 text-center"
-                    >
+                     aria-label="Button">
                       Schedule Demo
                     </button>
                   </form>
@@ -257,13 +256,13 @@ const DemoPage: React.FC = () => {
                     <div className="space-y-4">
                       <div className="flex items-center">
                         <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                        <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
+                        <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400" aria-label="Link">
                           (302) 464-0950
                         </a>
                       </div>
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                        <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
+                        <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400" aria-label="Link">
                           kleber@ziontechgroup.com
                         </a>
                       </div>

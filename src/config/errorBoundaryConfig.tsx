@@ -3,7 +3,7 @@
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
  */
-import React from 'react';
+import React, { useCallback } from 'react';
 export interface ErrorBoundaryConfig {
   /**
    * Whether to log errors to console
@@ -108,7 +108,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           <button
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
+           aria-label="Button">
             Try Again
           </button>
           <button
@@ -152,7 +152,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           <button
             onClick={resetError}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
+           aria-label="Button">
             Retry Connection
           </button>
         </div>

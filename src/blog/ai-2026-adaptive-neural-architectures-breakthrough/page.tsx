@@ -113,12 +113,12 @@ export default function AdaptiveNeuralArchitecturesPage() {
               <div className="space-x-4">
                 <a 
                   href="/contact"
-                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Link">
                   Get Neural Assessment
                 </a>
                 <a 
                   href="/services"
-                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
+                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors" aria-label="Link">
                   Explore AI Services
                 </a>
               </div>

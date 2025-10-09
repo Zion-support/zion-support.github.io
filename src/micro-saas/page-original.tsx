@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     // AI-Powered Developer Tools
@@ -3511,7 +3509,7 @@ const MicroSAASPage: React.FC = () => {
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
-                  >
+                   aria-label="Link">
                     Get Started Now
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
@@ -3536,13 +3534,13 @@ const MicroSAASPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
+             aria-label="Link">
               Call (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
+             aria-label="Link">
               Email Us
             </a>
           </div>

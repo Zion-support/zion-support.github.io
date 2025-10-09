@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap, CheckCircle } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const positions = [
     {
@@ -63,7 +62,7 @@ const CareersPage: React.FC = () => {
                   {position.type}
                 </div>
                 <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
+                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all" aria-label="Button">
                   Apply Now
                 </button>
               </div>

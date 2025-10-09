@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
+import { Palette, Camera } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -82,13 +82,13 @@ const AIFashionDesignPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="Link">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="Link">
                   <Camera className="w-5 h-5" />
                   View Gallery
                 </a>
@@ -167,7 +167,7 @@ const AIFashionDesignPage: React.FC = () => {
                         ? 'cyber-button'
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
-                  >
+                   aria-label="Link">
                     Get Started
                   </a>
                 </div>
@@ -188,13 +188,13 @@ const AIFashionDesignPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="Link">
                   Start Your Free Trial
                 </a>
                 <a
                   href="tel:+13024640950"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="Link">
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>

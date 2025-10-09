@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { BarChart, TrendingUp, Target, Zap, Brain, Shield, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Users, Database } from 'lucide-react';
 
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
@@ -152,13 +151,13 @@ const SmartAnalyticsPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+             aria-label="Link">
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+             aria-label="Link">
               Get Free Demo
             </a>
           </div>
@@ -256,7 +255,7 @@ const SmartAnalyticsPage: React.FC = () => {
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                }`} aria-label="Button">
                   Get Started
                 </button>
               </div>
@@ -301,13 +300,13 @@ const SmartAnalyticsPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+             aria-label="Link">
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <a href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+             aria-label="Link">
               Start Free Trial
             </a>
           </div>

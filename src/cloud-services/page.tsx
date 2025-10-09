@@ -1,7 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Cloud, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -54,13 +54,13 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
+             aria-label="Link">
               Get Started Today
             </a>
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-            >
+             aria-label="Link">
               Learn More
             </a>
           </div>
@@ -112,13 +112,13 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
+             aria-label="Link">
               Call (302) 464-0950
             </a>
             <a
               href="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-            >
+             aria-label="Link">
               Get Free Consultation
             </a>
           </div>

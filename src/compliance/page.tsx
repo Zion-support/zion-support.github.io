@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock, Phone } from 'lucide-react';
+import { ArrowLeft, FileText, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -23,7 +23,7 @@ const CompliancePage: React.FC = () => {
             <div className="flex items-center">
               <a href="/privacy" 
                 className="flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-              >
+               aria-label="Link">
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 Back to Privacy Policy
               </a>
@@ -117,7 +117,7 @@ const CompliancePage: React.FC = () => {
             <a
               href="mailto:compliance@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center"
-            >
+             aria-label="Link">
               Contact Compliance Team
             </a>
             <div className="mt-8 text-sm text-blue-200">

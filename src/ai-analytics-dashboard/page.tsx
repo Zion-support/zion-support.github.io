@@ -1,7 +1,6 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart3, TrendingUp, Eye, Users, DollarSign, Zap, Brain, ArrowRight, Phone, Mail, MapPin, Star, Shield, Globe, Target, PieChart, Activity, AlertCircle, CheckCircle } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { BarChart3 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -147,13 +146,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <a
                   href="#pricing"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
+                 aria-label="Link">
                   Start Free Trial
                 </a>
                 <a
                   href="#demo"
                   className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
-                >
+                 aria-label="Link">
                   Watch Demo
                 </a>
               </div>
@@ -282,7 +281,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                         ? 'bg-blue-400 text-slate-900 hover:bg-blue-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+                   aria-label="Link">
                     Get Started
                   </a>
                 </div>
@@ -335,13 +334,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=AI Analytics Dashboard Free Trial Request"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+               aria-label="Link">
                 Start Free Trial
               </a>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all"
-              >
+               aria-label="Link">
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
               </a>

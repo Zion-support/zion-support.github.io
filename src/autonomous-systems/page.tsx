@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { CheckCircle, Star, Bot, Cpu, BarChart } from 'lucide-react';
 const AutonomousSystemsPage: React.FC = () => {
   const autonomousServices = [
     {
@@ -48,10 +47,10 @@ const AutonomousSystemsPage: React.FC = () => {
               Transform your operations with intelligent autonomous systems that work 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors" aria-label="Button">
                 Explore Autonomous Solutions
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors" aria-label="Button">
                 Schedule Demo
               </button>
             </div>
@@ -153,10 +152,10 @@ const AutonomousSystemsPage: React.FC = () => {
             Let our autonomous systems transform your business with intelligent automation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors" aria-label="Button">
               Get Started Today
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors" aria-label="Button">
               Learn More
             </button>
           </div>

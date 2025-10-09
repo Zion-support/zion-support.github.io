@@ -1,96 +1,94 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  lcp: number;
+  fid: number;
+  cls: number;
+  fcp: number;
+  ttfb: number;
 }
+
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null
-  });
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Monitor Core Web Vitals
     const measurePerformance = () => {
-      // Measure First Contentful Paint
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          }
-        });
-        observer.observe({ entryTypes: ['paint'] });
-      }
-      // Measure Largest Contentful Paint
+      const metrics: Partial<PerformanceMetrics> = {};
+
+      // Largest Contentful Paint (LCP)
       if ('PerformanceObserver' in window) {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          metrics.lcp = lastEntry.startTime;
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      }
-      // Measure First Input Delay
-      if ('PerformanceObserver' in window) {
+
+        // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
-              setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
-            }
-          }
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            metrics.fid = entry.processingStart - entry.startTime;
+          });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-      }
-      // Measure Cumulative Layout Shift
-      if ('PerformanceObserver' in window) {
+
+        // Cumulative Layout Shift (CLS)
         let clsValue = 0;
         const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
             }
-          }
-          setMetrics(prev => ({ ...prev, cls: clsValue }));
+          });
+          metrics.cls = clsValue;
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
       }
-      // Measure Time to First Byte
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        }));
+
+      // First Contentful Paint (FCP)
+      if ('PerformanceObserver' in window) {
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              metrics.fcp = entry.startTime;
+            }
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
       }
+
+      // Time to First Byte (TTFB)
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        metrics.ttfb = navigation.responseStart - navigation.requestStart;
+      }
+
+      // Report metrics after page load
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          console.log('Performance Metrics:', metrics);
+          
+          // Send to analytics if available
+          if (typeof window !== 'undefined' && 'gtag' in window) {
+            (window as any).gtag('event', 'performance_metrics', {
+              event_category: 'performance',
+              lcp: metrics.lcp,
+              fid: metrics.fid,
+              cls: metrics.cls,
+              fcp: metrics.fcp,
+              ttfb: metrics.ttfb
+            });
+          }
+        }, 1000);
+      });
     };
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+
+    measurePerformance();
   }, []);
-  return (
-    <div className="performance-monitor">
-      <h3>Performance Metrics</h3>
-      <div className="metrics">
-        <div>LCP: {metrics.lcp || 'N/A'}</div>
-        <div>FID: {metrics.fid || 'N/A'}</div>
-        <div>CLS: {metrics.cls || 'N/A'}</div>
-        <div>FCP: {metrics.fcp || 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: N/A</div>
-      </div>
-    </div>
-  );
+
+  return null;
 };
+
 export default PerformanceMonitor;

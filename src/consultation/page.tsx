@@ -1,9 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Calendar, Clock, Users, CheckCircle, Phone, Mail, ArrowRight, Star, Zap, Brain, Shield, Target, TrendingUp, Award } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -131,7 +130,7 @@ const ConsultationPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -139,7 +138,7 @@ const ConsultationPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Schedule Now</span>
                 </a>
@@ -378,7 +377,7 @@ const ConsultationPage: React.FC = () => {
                     <button
                       type="submit"
                       className="w-full cyber-button py-3 px-6 text-center"
-                    >
+                     aria-label="Button">
                       Schedule Free Consultation
                     </button>
                   </form>
@@ -417,13 +416,13 @@ const ConsultationPage: React.FC = () => {
                     <div className="space-y-4">
                       <div className="flex items-center">
                         <Phone className="w-5 h-5 text-cyan-400 mr-3" />
-                        <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400">
+                        <a href="tel:+13024640950" className="text-gray-300 hover:text-cyan-400" aria-label="Link">
                           (302) 464-0950
                         </a>
                       </div>
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-                        <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400">
+                        <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-cyan-400" aria-label="Link">
                           kleber@ziontechgroup.com
                         </a>
                       </div>

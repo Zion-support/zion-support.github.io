@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -78,7 +77,7 @@ const CaseStudiesPage: React.FC = () => {
         {/* Header */}
         <header className="bg-white shadow-sm border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200" aria-label="Link">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Home
             </a>
@@ -145,7 +144,7 @@ const CaseStudiesPage: React.FC = () => {
                     <div className="flex items-center justify-between">
                       <a href="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
-                      >
+                       aria-label="Link">
                         Learn More
                       </a>
                       <div className="flex items-center text-green-600">
@@ -202,13 +201,13 @@ const CaseStudiesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
+               aria-label="Link">
                 Start Your Project
                 <TrendingUp className="w-4 h-4 ml-2" />
               </a>
               <a href="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
+               aria-label="Link">
                 View Our Services
               </a>
             </div>

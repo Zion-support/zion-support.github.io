@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';
+import { Cloud, Smartphone, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings2, ShieldCheck, FileText, Code, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -370,13 +370,13 @@ const ITServicesPage: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
+             aria-label="Link">
               Get Free IT Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+             aria-label="Link">
               (302) 464-0950
             </a>
           </div>
@@ -442,7 +442,7 @@ const ITServicesPage: React.FC = () => {
                   <a
                     href="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
-                  >
+                   aria-label="Link">
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -492,7 +492,7 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -520,7 +520,7 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -548,7 +548,7 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+               aria-label="Link">
                 Contact Sales
               </a>
             </div>
@@ -566,13 +566,13 @@ const ITServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+               aria-label="Link">
                 Get Free IT Assessment
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 (302) 464-0950
               </a>
             </div>

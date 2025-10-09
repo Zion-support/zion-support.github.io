@@ -1,6 +1,6 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import React, { useCallback, useEffect, Suspense, lazy, memo } from 'react';
+import { Lock, Cloud, Code, Smartphone, FileText, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, TrendingDown, Atom } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -8,6 +8,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
@@ -566,6 +568,17 @@ const HomePage: React.FC = () => {
       
       {/* Security Enhancer */}
       <SecurityEnhancer />
+      
+      {/* Performance Monitor */}
+      <PerformanceMonitor />
+      
+      {/* SEO Enhancer */}
+      <SEOEnhancer 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS"
+        canonical="https://ziontechgroup.com"
+      />
 
       {/* Navigation */}
       <Navigation />
@@ -596,13 +609,13 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
                 <Phone className="w-6 h-6 mr-2" />
-                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
+                <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors" aria-label="Link">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors" aria-label="Link">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -708,7 +721,7 @@ const HomePage: React.FC = () => {
                   <a 
                     href={service.link}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
+                   aria-label="Link">
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -787,7 +800,7 @@ const HomePage: React.FC = () => {
                   <a 
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
+                   aria-label="Link">
                     Contact Us
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -866,7 +879,7 @@ const HomePage: React.FC = () => {
                   <a 
                     href={`tel:${service.contact}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
+                   aria-label="Link">
                     Call Now
                     <Phone className="w-4 h-4 ml-2" />
                   </a>
@@ -945,7 +958,7 @@ const HomePage: React.FC = () => {
                   <a 
                     href={service.contact.startsWith('+') ? `tel:${service.contact}` : `mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-3 px-6 rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
+                   aria-label="Link">
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -973,7 +986,7 @@ const HomePage: React.FC = () => {
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
+              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold" aria-label="Link">
                 +1 302 464 0950
               </a>
             </div>
@@ -982,7 +995,7 @@ const HomePage: React.FC = () => {
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
               <p className="text-gray-300 mb-4">Send us your requirements</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300 text-lg font-semibold" aria-label="Link">
                 kleber@ziontechgroup.com
               </a>
             </div>

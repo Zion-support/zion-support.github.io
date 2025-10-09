@@ -1,5 +1,4 @@
 import React from 'react';
-import { Phone, CheckCircle, Star } from 'lucide-react';
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
@@ -12,21 +11,21 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <a href="/" className="text-2xl font-bold text-gray-900">
+              <a href="/" className="text-2xl font-bold text-gray-900" aria-label="Link">
                 Zion Tech Group
               </a>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="/" className="text-gray-900 hover:text-blue-600">
+              <a href="/" className="text-gray-900 hover:text-blue-600" aria-label="Link">
                 Home
               </a>
-              <a href="/services" className="text-gray-900 hover:text-blue-600">
+              <a href="/services" className="text-gray-900 hover:text-blue-600" aria-label="Link">
                 Services
               </a>
-              <a href="/blog" className="text-gray-900 hover:text-blue-600">
+              <a href="/blog" className="text-gray-900 hover:text-blue-600" aria-label="Link">
                 Blog
               </a>
-              <a href="/contact" className="text-gray-900 hover:text-blue-600">
+              <a href="/contact" className="text-gray-900 hover:text-blue-600" aria-label="Link">
                 Contact
               </a>
             </nav>
@@ -48,13 +47,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-              >
+               aria-label="Link">
                 Explore Our Services
                 <a className="w-5 h-5 ml-2" />
               </a>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-              >
+               aria-label="Link">
                 <Phone className="w-5 h-5 mr-2" />
                 Call +1 302 464 0950
               </a>
@@ -121,13 +120,13 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-              >
+               aria-label="Link">
                 Get Started Today
                 <a className="w-5 h-5 ml-2" />
               </a>
               <a href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-              >
+               aria-label="Link">
                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
@@ -144,10 +143,10 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <a href="/services" className="text-gray-400 hover:text-white">Services</a>
-              <a href="/about" className="text-gray-400 hover:text-white">About</a>
-              <a href="/contact" className="text-gray-400 hover:text-white">Contact</a>
-              <a href="/privacy" className="text-gray-400 hover:text-white">Privacy</a>
+              <a href="/services" className="text-gray-400 hover:text-white" aria-label="Link">Services</a>
+              <a href="/about" className="text-gray-400 hover:text-white" aria-label="Link">About</a>
+              <a href="/contact" className="text-gray-400 hover:text-white" aria-label="Link">Contact</a>
+              <a href="/privacy" className="text-gray-400 hover:text-white" aria-label="Link">Privacy</a>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">

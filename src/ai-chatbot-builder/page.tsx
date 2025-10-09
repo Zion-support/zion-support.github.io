@@ -26,13 +26,13 @@ export default function AIChatbotBuilderPage() {
             <a
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
-            >
+             aria-label="Link">
               📞 Call: (302) 464-0950
             </a>
             <a 
               href="/contact"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
+             aria-label="Link">
               Try Free Demo
             </a>
           </div>
@@ -180,7 +180,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ Email support</li>
                 <li>✓ Basic analytics</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a href="/contact" className="cyber-button w-full text-center" aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -197,7 +197,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ Advanced analytics</li>
                 <li>✓ Custom integrations</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a href="/contact" className="cyber-button w-full text-center" aria-label="Link">
                 Get Started
               </a>
             </div>
@@ -213,7 +213,7 @@ export default function AIChatbotBuilderPage() {
                 <li>✓ Custom analytics</li>
                 <li>✓ API access</li>
               </ul>
-              <a href="/contact" className="cyber-button w-full text-center">
+              <a href="/contact" className="cyber-button w-full text-center" aria-label="Link">
                 Contact Sales
               </a>
             </div>
@@ -233,13 +233,13 @@ export default function AIChatbotBuilderPage() {
             <a
               href="tel:+13024640950"
               className="cyber-button w-full sm:w-auto text-center"
-            >
+             aria-label="Link">
               📞 Call: (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-black transition-all duration-300"
-            >
+             aria-label="Link">
               📧 Email Us
             </a>
           </div>

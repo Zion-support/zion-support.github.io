@@ -1,5 +1,4 @@
 import React from 'react';
-import { Phone, Mail, MapPin, CheckCircle, Star, Zap, Brain, Users, Clock, Target, TrendingUp, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -78,13 +77,13 @@ const MachineLearningPage: React.FC = () => {
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
-              >
+               aria-label="Link">
                 Get Started
               </a>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
               </a>
@@ -149,13 +148,13 @@ const MachineLearningPage: React.FC = () => {
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold"
-              >
+               aria-label="Link">
                 Contact Us
               </a>
               <a
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 <Phone className="w-5 h-5" />
                 +1 302 464 0950
               </a>

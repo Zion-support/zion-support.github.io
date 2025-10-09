@@ -1,12 +1,12 @@
 import React from 'react';
-import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <a href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200" aria-label="Link">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </a>
@@ -35,13 +35,13 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-              >
+               aria-label="Link">
                 Start Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
               <a href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-              >
+               aria-label="Link">
                 View Our Services
               </a>
             </div>
@@ -234,7 +234,7 @@ export default function ServicesAdvertisingPage() {
                   <span>2 platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Get Started
               </button>
             </div>
@@ -271,7 +271,7 @@ export default function ServicesAdvertisingPage() {
                   <span>All platforms included</span>
                 </li>
               </ul>
-              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Get Started
               </button>
             </div>
@@ -305,7 +305,7 @@ export default function ServicesAdvertisingPage() {
                   <span>White-label options</span>
                 </li>
               </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200" aria-label="Button">
                 Contact Sales
               </button>
             </div>
@@ -324,13 +324,13 @@ export default function ServicesAdvertisingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
-            >
+             aria-label="Link">
               Get Free Assessment
               <ArrowRight className="w-4 h-4 ml-2" />
             </a>
             <a href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
-            >
+             aria-label="Link">
               View Success Stories
             </a>
           </div>

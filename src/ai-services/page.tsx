@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Brain, Zap, Target, Shield, BarChart, Users, Globe, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -99,13 +98,13 @@ const AIServicesPage: React.FC = () => {
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
+             aria-label="Link">
               Get Free Consultation
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+             aria-label="Link">
               (302) 464-0950
             </a>
           </div>
@@ -135,7 +134,7 @@ const AIServicesPage: React.FC = () => {
                   <a
                     href="/contact"
                     className={`inline-flex items-center text-sm font-medium ${service.color} hover:opacity-80 transition-opacity`}
-                  >
+                   aria-label="Link">
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
@@ -173,13 +172,13 @@ const AIServicesPage: React.FC = () => {
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+               aria-label="Link">
                 Get Free Consultation
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+               aria-label="Link">
                 (302) 464-0950
               </a>
             </div>

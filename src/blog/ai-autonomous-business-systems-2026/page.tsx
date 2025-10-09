@@ -6,7 +6,7 @@ export default function AIAutonomousBusinessSystems2026() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="mb-6">
-            <a href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4">
+            <a href="/blog" className="text-indigo-600 hover:text-indigo-700 flex items-center mb-4" aria-label="Link">
               ← Back to Blog
             </a>
           </div>
@@ -118,12 +118,12 @@ export default function AIAutonomousBusinessSystems2026() {
               <div className="space-x-4">
                 <a 
                   href="/contact"
-                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+                  className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors" aria-label="Link">
                   Get Automation Assessment
                 </a>
                 <a 
                   href="/services"
-                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
+                  className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors" aria-label="Link">
                   Explore AI Services
                 </a>
               </div>

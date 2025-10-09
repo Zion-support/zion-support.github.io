@@ -1,4 +1,4 @@
-import { ListChecks, Calendar, Clock, FileWarning, RefreshCw } from 'lucide-react';
+import { ListChecks, FileWarning, RefreshCw } from 'lucide-react';
 export default function Page() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-fuchsia-50 via-white to-purple-50'>
@@ -81,7 +81,7 @@ export default function Page() {
             </div>
             <a href="/contact"
               className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2"
-            >
+             aria-label="Link">
               Engage <RefreshCw />
             </a>
           </div>

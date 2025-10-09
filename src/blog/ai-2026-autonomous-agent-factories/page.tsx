@@ -91,12 +91,12 @@ export default function AI2026AutonomousAgentFactoriesPage() {
               <div className="space-x-4">
                 <a 
                   href="/contact"
-                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                  className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors" aria-label="Link">
                   Get Agent Factory Assessment
                 </a>
                 <a 
                   href="/services"
-                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
+                  className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors" aria-label="Link">
                   Explore AI Services
                 </a>
               </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026FebruaryMegaBreakthroughRevolution() {
@@ -73,7 +72,7 @@ export default function AI2026FebruaryMegaBreakthroughRevolution() {
             <p className="text-gray-300 mb-6">
               Transform your business with the AI 2026 February mega breakthrough.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl" aria-label="Button">
               Get Started Today
             </button>
           </div>

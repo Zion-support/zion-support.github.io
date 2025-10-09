@@ -2,7 +2,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {
@@ -81,13 +80,13 @@ const AIContentGenerationPage: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button"
-            >
+             aria-label="Link">
               Get Started
             </a>
             <a
               href="tel:+13024640950"
               className="cyber-button"
-            >
+             aria-label="Link">
               Call (302) 464-0950
             </a>
           </div>
@@ -115,7 +114,7 @@ const AIContentGenerationPage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button w-full text-center block"
-                >
+                 aria-label="Link">
                   Get Started
                 </a>
               </div>
@@ -153,13 +152,13 @@ const AIContentGenerationPage: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button"
-            >
+             aria-label="Link">
               Start Free Trial
             </a>
             <a
               href="tel:+13024640950"
               className="cyber-button"
-            >
+             aria-label="Link">
               Call (302) 464-0950
             </a>
           </div>

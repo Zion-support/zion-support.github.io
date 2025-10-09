@@ -1,4 +1,4 @@
-import { Home, Phone } from 'lucide-react';
+import { Home } from 'lucide-react';
 export default function NotFound() {
   const popularPages = [
     {
@@ -82,7 +82,7 @@ export default function NotFound() {
             <a key={index}
               href={page.href}
               className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
-            >
+             aria-label="Link">
               <div className="text-3xl mb-3">{page.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}
@@ -97,13 +97,13 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="/"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
-          >
+           aria-label="Link">
             <Home className="w-4 h-4 mr-2" />
             Go Home
           </a>
           <a href="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300"
-          >
+           aria-label="Link">
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
           </a>

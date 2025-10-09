@@ -2,7 +2,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 const AIFintechPage: React.FC = () => {
   const aiFintechServices = [
     {
@@ -155,10 +154,10 @@ const AIFintechPage: React.FC = () => {
                 Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors" aria-label="Button">
                   Start Fintech AI
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors" aria-label="Button">
                   View Trading Demo
                 </button>
               </div>
@@ -269,7 +268,7 @@ const AIFintechPage: React.FC = () => {
                           ))}
                         </ul>
                       </div>
-                      <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                      <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors" aria-label="Button">
                         Get Fintech Consultation
                       </button>
                     </div>
@@ -336,13 +335,13 @@ const AIFintechPage: React.FC = () => {
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
-              >
+               aria-label="Link">
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-              >
+               aria-label="Link">
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>

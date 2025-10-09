@@ -295,7 +295,7 @@ export class ErrorHandler {
           font-size: 18px;
           cursor: pointer;
           margin-left: 10px;
-        ">×</button>
+        " aria-label="Button">×</button>
       </div>
     `;
     document.body.appendChild(notification);

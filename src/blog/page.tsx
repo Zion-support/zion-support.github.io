@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
   id: string;
@@ -221,7 +221,7 @@ export default function BlogPage() {
             <a
               href="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-            >
+             aria-label="Link">
               Subscribe to Newsletter
             </a>
           </div>

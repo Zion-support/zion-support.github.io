@@ -21,7 +21,7 @@ const EnterprisePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-              >
+               aria-label="Link">
                 <span>Schedule Enterprise Demo</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   &rarr;
@@ -30,7 +30,7 @@ const EnterprisePage: React.FC = () => {
               <a
                 href="#solutions"
                 className="group flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-700"
-              >
+               aria-label="Link">
                 <span>View Solutions</span>
                 <span className="group-hover:translate-x-1 transition-transform">
                   &darr;
@@ -98,7 +98,7 @@ const EnterprisePage: React.FC = () => {
           <div className="text-center mt-12">
             <a href="/contact"
               className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
-            >
+             aria-label="Link">
               Get Started Today
             </a>
           </div>

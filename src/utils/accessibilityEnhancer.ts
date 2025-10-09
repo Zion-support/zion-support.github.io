@@ -198,9 +198,9 @@ class AccessibilityEnhancer {
     const skipLinks = document.createElement('div');
     skipLinks.className = 'skip-links';
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
-      <a href="#footer" class="skip-link">Skip to footer</a>
+      <a href="#main-content" class="skip-link" aria-label="Link">Skip to main content</a>
+      <a href="#navigation" class="skip-link" aria-label="Link">Skip to navigation</a>
+      <a href="#footer" class="skip-link" aria-label="Link">Skip to footer</a>
     `;
     // Add styles
     const style = document.createElement('style');

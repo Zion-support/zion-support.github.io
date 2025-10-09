@@ -3,7 +3,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Shield, Lock, Eye, Zap, Brain, BarChart, Users, CheckCircle, Phone, Mail, ArrowRight, AlertTriangle, Database, Globe, Settings } from 'lucide-react';
+import { Lock } from 'lucide-react';
 const AICybersecurityPage: React.FC = () => {
   const features = [
     {
@@ -152,7 +152,7 @@ const AICybersecurityPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -160,7 +160,7 @@ const AICybersecurityPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
                 </a>
@@ -259,7 +259,7 @@ const AICybersecurityPage: React.FC = () => {
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
+                   aria-label="Link">
                     Get Protected
                   </a>
                 </div>
@@ -279,7 +279,7 @@ const AICybersecurityPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="cyber-button flex items-center justify-center space-x-2"
-                >
+                 aria-label="Link">
                   <Phone className="w-5 h-5" />
                   <span>Call (302) 464-0950</span>
                 </a>
@@ -287,7 +287,7 @@ const AICybersecurityPage: React.FC = () => {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button flex items-center justify-center space-x-2"
                   style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-                >
+                 aria-label="Link">
                   <Mail className="w-5 h-5" />
                   <span>Get Security Audit</span>
                 </a>

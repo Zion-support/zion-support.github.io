@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+import { Code, Key, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
@@ -108,14 +108,14 @@ const ApiDocsPage: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
+                 aria-label="Link">
                   <Key className="w-5 h-5" />
                   +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
+                 aria-label="Link">
                   <Code className="w-5 h-5" />
                   kleber@ziontechgroup.com
                 </a>
