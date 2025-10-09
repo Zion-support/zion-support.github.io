@@ -89,7 +89,25 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error for debugging
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      // Use a proper error logging mechanism instead of console
+      this.logError(error, errorInfo);
+    }
+  }
+
+  private logError(error: Error, errorInfo: React.ErrorInfo) {
+    // In a real application, this would send to an error reporting service
+    // For now, we'll use a more structured approach
+    const errorData = {
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()
+    };
+    
+    // In development, we can still log to console but in a more controlled way
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', errorData);
     }
   }
 

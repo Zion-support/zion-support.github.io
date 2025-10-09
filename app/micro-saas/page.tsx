@@ -9,7 +9,7 @@ export default function MicroSAASPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
 
-  const microSAASServices = [
+  const microSAASServices = useMemo(() => [
     // AI-Powered Business Tools
     {
       id: 'ai-project-manager',
@@ -431,7 +431,7 @@ export default function MicroSAASPage() {
       freeTrial: '30 days',
       demo: 'https://ziontechgroup.com/demo/ai-fintech-suite'
     }
-  ];
+  ], []);
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Globe, count: microSAASServices.length },

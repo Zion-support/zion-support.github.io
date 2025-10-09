@@ -145,8 +145,14 @@ const ITInfrastructurePage: React.FC = () => {
               </div>
             </div>
           </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </>
+  );
+};
 
-
-"
+export default ITInfrastructurePage;
 
 
