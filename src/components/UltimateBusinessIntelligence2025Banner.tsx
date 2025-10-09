@@ -1,10 +1,9 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-const UltimateBusinessIntelligence2025Banner = () => {
-import { Link } from 'react-router-dom';
-const _UltimateBusinessIntelligence2025Banner = () => {
-  // TODO: Add content
+import React from 'react';
+
+interface UltimateBusinessIntelligence2025BannerProps {
+  // Add props here
 }
+<<<<<<< HEAD
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
   const content = [
@@ -74,5 +73,15 @@ const _UltimateBusinessIntelligence2025Banner = () => {
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
+=======
+
+const UltimateBusinessIntelligence2025Banner: React.FC<UltimateBusinessIntelligence2025BannerProps> = () => {
+  return (
+    <div className="ultimatebusinessintelligence2025banner">
+      {/* Component content */}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
+};
+
 export default UltimateBusinessIntelligence2025Banner;

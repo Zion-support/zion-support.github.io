@@ -1,7 +1,9 @@
-'use client';
+import React from 'react';
+
 interface OptimizedLoadingSpinnerProps {
-  // TODO: Add content
+  // Add props here
 }
+<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
@@ -106,4 +108,15 @@ className="opacity-75"
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
+=======
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = () => {
+  return (
+    <div className="optimizedloadingspinner">
+      {/* Component content */}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default OptimizedLoadingSpinner;

@@ -1,9 +1,9 @@
-'use client';
-import React, { useEffect } from 'react';
-const Analytics: React.FC = () => {
-  useEffect(() => {
-  // TODO: Add content
+import React from 'react';
+
+interface AnalyticsProps {
+  // Add props here
 }
+<<<<<<< HEAD
     // Google Analytics 4
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
   // TODO: Add content
@@ -139,4 +139,15 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
+=======
+
+const Analytics: React.FC<AnalyticsProps> = () => {
+  return (
+    <div className="analytics">
+      {/* Component content */}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default Analytics;

@@ -1,4 +1,7 @@
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
+<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -27,10 +30,25 @@ class ErrorBoundary extends Component
 }
   constructor(props: Props) {
   // TODO: Add content
+=======
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
   // TODO: Add content
 }
@@ -40,8 +58,15 @@ class ErrorBoundary extends Component
   hasError: true,
 //       error
     };
+=======
+
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+    return { hasError: true, error };
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
   // TODO: Add content
 }
     this.setState({
@@ -73,77 +98,14 @@ class ErrorBoundary extends Component
     }
     // Report error to error tracking service
     this.reportError(error, errorInfo);
+=======
+    this.setState({ error, errorInfo });
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
-    // In a real application, you would send this to your error tracking service
-    // For example: Sentry, LogRocket, Bugsnag, etc.
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId()
-    };
-    // Send to error tracking service
-    this.sendToErrorService(errorReport);
-  };
-  private getUserId = (): string | null => {
-  // TODO: Add content
-}
-    // Get user ID from localStorage, session, or authentication context
-    return localStorage.getItem('userId');
-  };
-  private getSessionId = (): string => {
-// Get or create session ID
-    if (!sessionId) {
-  // TODO: Add content
-}
-      sessionId = Math.random().toString(36).substring(2) + Date.now().toString(36);
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
-  private sendToErrorService = (errorReport: any) => {
-  // TODO: Add content
-}
-    // In a real application, you would send this to your error tracking service
-// console.log('Error report:', errorReport);
-    // Example: Send to your API endpoint
-    // fetch('/api/errors', {
-  // TODO: Add content
-}
-    //   method: 'POST',
-    //   headers: {
-  // TODO: Add content
-}
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(errorReport)
-    // }).catch(console.error);
-  };
-  private handleRetry = () => {
-  // TODO: Add content
-}
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-  private handleReload = () => {
-  // TODO: Add content
-}
-    window.location.reload();
-  };
-  private handleGoHome = () => {
-  // TODO: Add content
-}
-    window.location.href = '/';
-  };
+
   render() {
-  // TODO: Add content
-}
     if (this.state.hasError) {
+<<<<<<< HEAD
   // TODO: Add content
 }
       // Custom fallback UI
@@ -306,11 +268,20 @@ class ErrorBoundary extends Component
                 </p>
               </div>
             </div>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300">Please refresh the page and try again.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
+
 export default ErrorBoundary;

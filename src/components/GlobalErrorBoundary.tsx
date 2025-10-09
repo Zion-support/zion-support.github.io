@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 interface Props {
   // TODO: Add content
 };
@@ -27,40 +28,38 @@ class GlobalErrorBoundary extends Component
   constructor(props: Props) {
   // TODO: Add content
 }
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null };
+  }
+
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
   }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
-    this.setState({
-  // TODO: Add content
-}
-//       error,
-//       errorInfo
-    });
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
-      }
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    this.setState({ error, errorInfo });
   }
-  handleRetry = () => {
-  // TODO: Add content
-}
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+
   render() {
-  // TODO: Add content
-}
     if (this.state.hasError) {
+<<<<<<< HEAD
   // TODO: Add content
 }
       if (this.props.fallback) {
@@ -205,12 +204,20 @@ class GlobalErrorBoundary extends Component
           
           </a>
             </div>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300">Please refresh the page and try again.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
-export { GlobalErrorBoundary };
+
 export default GlobalErrorBoundary;

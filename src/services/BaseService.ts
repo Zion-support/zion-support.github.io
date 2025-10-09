@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Base Service Class
@@ -213,3 +214,20 @@ logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
 };
   component: this.constructor.name,
 ...context
+=======
+export abstract class BaseService {
+  protected baseUrl: string;
+  
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+  }
+  
+  protected async request<T>(endpoint: string, options?: RequestInit): Promise<T> {
+    const response = await fetch(`${this.baseUrl}${endpoint}`, options);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.json();
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60

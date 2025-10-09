@@ -1,22 +1,31 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface ErrorBoundaryState {
+<<<<<<< HEAD
   // TODO: Add content
 };
   hasError: boolean;,
     error: Error | null;,
     errorInfo: ErrorInfo | null;,
     errorId: string | null;
+=======
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
+
 interface ErrorBoundaryProps {
+<<<<<<< HEAD
   // TODO: Add content
 };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
 }
+<<<<<<< HEAD
 interface ErrorReport {
   // TODO: Add content
 };
@@ -49,10 +58,13 @@ class AdvancedErrorBoundary extends Component
 }
   private retryCount = 0;
   private maxRetries = 3;
+=======
+
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   constructor(props: ErrorBoundaryProps) {
-  // TODO: Add content
-}
     super(props);
+<<<<<<< HEAD
     this.state = {
   // TODO: Add content
 };
@@ -81,8 +93,17 @@ class AdvancedErrorBoundary extends Component
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
+=======
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
+
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
+    return { hasError: true, error };
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
+  }
+
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
   // TODO: Add content
 }
     this.setState({
@@ -242,10 +263,14 @@ class AdvancedErrorBoundary extends Component
 }
     window.location.href = '/';
   };
+=======
+    this.setState({ error, errorInfo });
+  }
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   render() {
-  // TODO: Add content
-}
     if (this.state.hasError) {
+<<<<<<< HEAD
   // TODO: Add content
 }
       // Custom fallback UI
@@ -340,8 +365,20 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
                   >
                     kleber@ziontechgroup.com
                   </a></p></div></div></div></div>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300">Please refresh the page and try again.</p>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       );
     }
+
     return this.props.children;
   }
 }
+
+export default AdvancedErrorBoundary;

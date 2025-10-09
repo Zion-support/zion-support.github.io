@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
@@ -139,5 +140,20 @@ const Navigation: React.FC = () => {
           
           <MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
       </div></nav>
+=======
+import React from 'react';
+
+interface NavigationProps {
+  // Add props here
+}
+
+const Navigation: React.FC<NavigationProps> = () => {
+  return (
+    <div className="navigation">
+      {/* Component content */}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
+};
+
 export default Navigation;

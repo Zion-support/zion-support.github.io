@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * System Monitor Component
@@ -98,9 +99,14 @@ interface SystemMetrics {
     downlink: number;,
     rtt: number;,
     saveData: boolean;
+=======
+import React from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 interface SystemMonitorProps {
-  // TODO: Add content
+  // Add props here
 }
+<<<<<<< HEAD
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
@@ -320,4 +326,15 @@ className={`h-2 rounded-full ${
                   
           <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
+=======
+
+const SystemMonitor: React.FC<SystemMonitorProps> = () => {
+  return (
+    <div className="systemmonitor">
+      {/* Component content */}
+    </div>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 export default SystemMonitor;

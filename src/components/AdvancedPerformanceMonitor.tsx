@@ -1,5 +1,7 @@
-'use client';
+import React, { useEffect, useState } from 'react';
+
 interface PerformanceMetrics {
+<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;,
@@ -11,8 +13,18 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
+=======
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
+
+interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+<<<<<<< HEAD
   enableRealTimeMonitoring?: boolean;
 }
 const AdvancedPerformanceMonitor: React.FC
@@ -45,38 +57,28 @@ const AdvancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
+=======
+}
+
+const AdvancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    memory: null
   });
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-    const observers: PerformanceObserver[] = [];
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || [];
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null;
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {
-  // TODO: Add content
-}
-      try {
-  // TODO: Add content
-}
-        const lcpObserver = new PerformanceObserver(list => {
-  // TODO: Add content
-}
-          const entries = list.getEntries();
-          const lastEntry = _entries[_entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: _lastEntry.startTime }));
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {
-  // TODO: Add content
-}
+
+  useEffect(() => {
+    // Basic performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
+<<<<<<< HEAD
     }
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
@@ -219,85 +221,25 @@ const memory =
 }
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
+=======
+      });
+    });
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     try {
-  // TODO: Add content
-}
-//       import('web-vitals')
-        .then(webVitals => {
-  // TODO: Add content
-}
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-          if (onCLS) {
-  // TODO: Add content
-}
-            onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
-            );
-          }
-          if (onFCP) {
-  // TODO: Add content
-}
-            onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
-          if (onLCP) {
-  // TODO: Add content
-}
-            onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
-          if (onTTFB) {
-  // TODO: Add content
-}
-            onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
-        })
-        .catch(() => {
-  // TODO: Add content
-}
-          // web-vitals not available, continue without it
-        });
-    } catch {
-  // TODO: Add content
-}
-      // web-vitals not available, continue without it
+      observer.observe({ entryTypes: ['paint'] });
+      return () => observer.disconnect();
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
     }
   }, []);
+
   useEffect(() => {
-  // TODO: Add content
-}
-    if (!enableRealTimeMonitoring) return;
-    const cleanup = measureWebVitals();
-// Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-    }, 5000);
-    return () => {
-  // TODO: Add content
-}
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
-    };
-  }, [
-  // TODO: Add items,
-]
-//     enableRealTimeMonitoring,
-//     measureWebVitals,
-//     measureResourceTiming,
-//     measureCoreWebVitals,
-  ]);
-  useEffect(() => {
-  // TODO: Add content
-}
     if (onMetricsUpdate) {
-  // TODO: Add content
-}
       onMetricsUpdate(metrics);
     }
   }, [metrics, onMetricsUpdate]);
+<<<<<<< HEAD
   // Performance recommendations;
 const getPerformanceRecommendations = useCallback(() => {
   // TODO: Add content
@@ -389,6 +331,10 @@ const getPerformanceRecommendations = useCallback(() => {
       </div>
     );
   }
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   return null;
 };
+
 export default AdvancedPerformanceMonitor;

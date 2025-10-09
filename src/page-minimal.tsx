@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {
@@ -6,13 +7,15 @@ export const _metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 import React from 'react';
-import Link from 'next/link';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
-export default function HomePage() {
-  // TODO: Add content
-}
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
+const PageMinimalPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     
           
           
@@ -169,21 +172,26 @@ Ready to Transform Your Business?
                 href="/blog"
                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page Minimal
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Blog Post
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This blog post is under development. Please check back soon for the full content.
+          </p>
+        </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-400 mb-6">
-              Advanced AI and IT Solutions for Enterprise Transformation
-            <div className="flex justify-center space-x-6">
-              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
-            <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-gray-400 text-sm">
-© 2026 Zion Tech Group. All rights reserved.
-      </footer>
+      <Footer />
+    </div>
   );
-export default HomePage;
+};
+
+export default PageMinimalPage;

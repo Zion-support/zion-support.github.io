@@ -1,4 +1,6 @@
+import React from 'react';
 
+<<<<<<< HEAD
 interface AnalyticsContextType {
   // TODO: Add content
 };
@@ -202,17 +204,18 @@ trackEvent,
           <AnalyticsContext.Provider value={contextValue}>
       {children}
     </AnalyticsContext.Provider>
+=======
+interface AnalyticsProviderProps {
+  // Add props here
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = () => {
+  return (
+    <div className="analyticsprovider">
+      {/* Component content */}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
-export const useAnalytics = (): AnalyticsContextType => {
-  // TODO: Add content
-}
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-  // TODO: Add content
-}
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
+
 export default AnalyticsProvider;

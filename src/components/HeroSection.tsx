@@ -1,5 +1,7 @@
-'use client';
+import React from 'react';
+
 interface HeroSectionProps {
+<<<<<<< HEAD
   // TODO: Add content
 };
   isLoaded: boolean;,
@@ -17,8 +19,14 @@ const HeroSection: React.FC
           
           <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
   // TODO: Add content
+=======
+  // Add props here
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
+
+const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
+<<<<<<< HEAD
     
           
           
@@ -151,6 +159,12 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
         </div>
       </div>
     </section>
+=======
+    <div className="herosection">
+      {/* Component content */}
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   );
 };
+
 export default HeroSection;

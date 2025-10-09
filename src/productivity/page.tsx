@@ -1,25 +1,24 @@
-
+import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {CheckCircle, Star} from 'lucide-react';
-const ProductivityPage: React.FC = () => {
-      return (
-    <div>
+
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
-        {/* Hero Section */}
         <section className="text-center mb-16">
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Productivity Tools</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">AI-powered productivity tools to streamline your workflow, boost efficiency, and achieve more in less time</p>
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >Get Productivity Suite</a>
-              href="/micro-saas"
-              className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-            >View All Tools</a>
-          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This page is under development. Please check back soon for updates.
+          </p>
         </section>
+<<<<<<< HEAD
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
@@ -89,8 +88,12 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
             >Get Started Today</a>
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       </main>
       <Footer />
-</div>);
-}
-export default ProductivityPage
+    </div>
+  );
+};
+
+export default PagePage;

@@ -1,5 +1,7 @@
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
+<<<<<<< HEAD
   // TODO: Add content
 };
   fcp: number | null;
@@ -13,8 +15,18 @@ interface PerformanceMetrics {
 }
 interface PerformanceMonitorProps {
   // TODO: Add content
+=======
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }
+
+interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+<<<<<<< HEAD
   enableReporting?: boolean;
   reportInterval?: number;
 }
@@ -49,29 +61,28 @@ const EnhancedPerformanceMonitor: React.FC
   // TODO: Add content
 };
   fcp: null,
+=======
+}
+
+const EnhancedPerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    fmp: null,
-    tbt: null,
-    si: null,
   });
-  const [isVisible, setIsVisible] = useState(false);
-// Web Vitals measurement
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-  // TODO: Add content
-}
-      for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
-        if (entry.name === 'first-contentful-paint') {
-  // TODO: Add content
-}
+
+  useEffect(() => {
+    // Basic performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
+<<<<<<< HEAD
       }
     });
     fcpObserver.observe({ entryTypes: ['paint'] });
@@ -305,46 +316,19 @@ const reportMetrics = useCallback(() => {
           fid: metrics.fid,
           cls: metrics.cls,
         },
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
       });
+    });
+
+    try {
+      observer.observe({ entryTypes: ['paint'] });
+      return () => observer.disconnect();
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
     }
-    // Callback for custom handling
-    onMetricsUpdate?.(metrics);
-// console.log('Performance Report:', report);
-  }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
-  useEffect(() => {
-  // TODO: Add content
-}
-    const cleanup = measureWebVitals();
-// Report metrics periodically
-    const interval = setInterval(reportMetrics, reportInterval);
-    // Report metrics on page unload
-    const handleBeforeUnload = () => {
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => {
-  // TODO: Add content
-}
-      cleanup?.();
-      clearInterval(interval);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [measureWebVitals, reportMetrics, reportInterval]);
-  // Toggle visibility for debugging
-  useEffect(() => {
-  // TODO: Add content
-}
-    const handleKeyPress = (e: KeyboardEvent) => {
-  // TODO: Add content
-}
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-  // TODO: Add content
-}
-        setIsVisible(prev => !prev);
-      }
-    };
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
   }, []);
+<<<<<<< HEAD
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics);
   return (
@@ -435,5 +419,16 @@ const reportMetrics = useCallback(() => {
           </div>
     </div>
   );
+=======
+
+  useEffect(() => {
+    if (onMetricsUpdate) {
+      onMetricsUpdate(metrics);
+    }
+  }, [metrics, onMetricsUpdate]);
+
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
+
 export default EnhancedPerformanceMonitor;

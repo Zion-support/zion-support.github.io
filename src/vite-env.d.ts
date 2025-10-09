@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // / 
           
           
@@ -8,15 +9,15 @@
           
           
           <reference types="vite/client" />
+=======
+/// <reference types="vite/client" />
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 interface ImportMetaEnv {
-  // TODO: Add content
+  readonly VITE_API_URL: string;
+  readonly VITE_APP_TITLE: string;
 }
-  readonly DEV: boolean;
-  readonly PROD: boolean;
-  readonly MODE: string;
-}
+
 interface ImportMeta {
-  // TODO: Add content
-}
   readonly env: ImportMetaEnv;
 }

@@ -25,7 +25,36 @@ const App: React.FC = () => {
     
     return () => clearTimeout(timer);
   }, []);
+<<<<<<< HEAD
 
+=======
+  const initializeEnhancers = async () => {
+    try {
+      // Initialize enhancers
+      const performanceEnhancer = new PerformanceEnhancer();
+      const seoEnhancer = new SEOEnhancer({
+        title: 'Zion Tech Group - Advanced AI and IT Solutions',
+        description: 'Leading provider of AI and IT solutions for modern enterprises',
+        keywords: ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
+        canonicalUrl: 'https://ziontechgroup.com',
+      });
+      const accessibilityEnhancer = new AccessibilityEnhancer();
+      const securityEnhancer = new SecurityEnhancer();
+      const uxEnhancer = new UserExperienceEnhancer();
+      setEnhancers({
+        performance: performanceEnhancer,
+        seo: seoEnhancer,
+        accessibility: accessibilityEnhancer,
+        security: securityEnhancer,
+        ux: uxEnhancer,
+      });
+      setIsInitialized(true);
+    } catch (error) {
+      // console.error('Failed to initialize enhancers:', error);
+      setIsInitialized(true);
+    }
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   if (!isInitialized) {
     return <LoadingSpinner />;
   }

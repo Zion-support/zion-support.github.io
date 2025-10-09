@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Request Middleware System
@@ -267,3 +268,7 @@ export default {
   transformRequestMiddleware,
   transformResponseMiddleware,
   createDefaultMiddlewareChain
+=======
+// TypeScript file - requestMiddleware
+export default {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60

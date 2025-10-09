@@ -1,29 +1,29 @@
 import React from 'react';
-'use client';
-/**
- * Jest setup file for testing environment
- */
-/* eslint-disable no-console */
-import '@testing-library/jest-dom';
-// Polyfill for TextEncoder/TextDecoder
-global.TextEncoder = TextEncoder;
-global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
-// Suppress jsdom navigation warnings
-const originalConsoleError = console.error;
-// eslint-disable-next-line no-console
-const __originalConsoleError = console.error;
-console.error = (...args) => {
-  // TODO: Add content
-}
-  const message = args[0]?.toString?.() || args[0]?.message || '';
-  if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {
-  // TODO: Add content
-}
-    return;
-  }
-  originalConsoleError(...args);
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+
+const SetupTestsPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            SetupTests
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Blog Post
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This blog post is under development. Please check back soon for the full content.
+          </p>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
 };
+<<<<<<< HEAD
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   // TODO: Add content
@@ -103,3 +103,7 @@ delete (window as unknown as Record
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()
+=======
+
+export default SetupTestsPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60

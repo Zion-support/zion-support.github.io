@@ -1,13 +1,12 @@
-interface SEOEnhancerProps {
-  // TODO: Add content
-}
+import React, { useEffect } from 'react';
+
+interface SEOProps {
   title?: string;
   description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  children: React.ReactNode;
+  keywords?: string[];
+  canonicalUrl?: string;
 }
+<<<<<<< HEAD
 const SEOEnhancer: React.FC
           
           
@@ -26,86 +25,27 @@ const SEOEnhancer: React.FC
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
 //   children
+=======
+
+const SEOEnhancer: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI and IT solutions for modern enterprises',
+  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
+  canonicalUrl
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 }) => {
-    "@context": "https://schema.org",
-    "@type": "TechCompany",
-    "name": "Zion Tech Group",
-    "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
-    "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
-    "industry": "Technology",
-    "services": [
-  // TODO: Add items,
-]
-//       "AI Solutions",
-//       "Quantum Computing",
-//       "Autonomous Systems",
-//       "Digital Transformation",
-//       "Cloud Services",
-//       "Automation",
-//       "Business Intelligence"
-//     ],
-    "contactPoint": {
-  // TODO: Add content
-}
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "Customer Service",
-      "areaServed": "US",
-      "availableLanguage": "en"
-    },
-    "sameAs": [
-  // TODO: Add items,
-]
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-//     ],
-    "address": {
-  // TODO: Add content
-}
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "offers": [
-  // TODO: Add items,
-]
-      {
-  // TODO: Add content
-}
-        "@type": "Offer",
-        "category": "AI Solutions",
-        "description": "Enterprise AI solutions, digital transformation, and cloud services",
-        "price": "1500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-  // TODO: Add content
-}
-          "@type": "PriceSpecification",
-          "price": "1500",
-          "priceCurrency": "USD",
-          "billingIncrement": "P1M"
-        }
-      }
-//     ],
-    "serviceArea": {
-  // TODO: Add content
-}
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-  // TODO: Add content
-}
-        "@type": "GeoCoordinates",
-        "latitude": "39.8283",
-        "longitude": "-75.5795"
-      },
-      "geoRadius": "1000000"
+  useEffect(() => {
+    // Update document title
+    document.title = title;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+<<<<<<< HEAD
   };
   return (
     
@@ -123,5 +63,32 @@ const SEOEnhancer: React.FC
       {children}
     </>
   );
+=======
+    metaDescription.setAttribute('content', description);
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords.join(', '));
+    
+    // Update canonical URL
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', canonicalUrl);
+    }
+  }, [title, description, keywords, canonicalUrl]);
+
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
+
 export default SEOEnhancer;

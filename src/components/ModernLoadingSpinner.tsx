@@ -1,7 +1,9 @@
-'use client';
+import React from 'react';
+
 interface ModernLoadingSpinnerProps {
-  // TODO: Add content
+  // Add props here
 }
+<<<<<<< HEAD
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'accent';
   text?: string;
@@ -72,7 +74,15 @@ const ModernLoadingSpinner: React.FC
         )}
       </div>
       <span className="sr-only">Loading content, please wait...</span>
+=======
+
+const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = () => {
+  return (
+    <div className="modernloadingspinner">
+      {/* Component content */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
     </div>
   );
 };
+
 export default ModernLoadingSpinner;

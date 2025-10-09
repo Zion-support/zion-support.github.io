@@ -1,4 +1,5 @@
 export const metadata = {
+<<<<<<< HEAD
   // TODO: Add content
 };
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',
@@ -52,4 +53,14 @@ export const metadata = {
 };
   canonical: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026'
   }
+=======
+  title: 'Blog Post - Zion Tech Group',
+  description: 'AI and technology insights from Zion Tech Group',
+  keywords: ['AI', 'Technology', 'Blog', 'Insights'],
+  openGraph: {
+    title: 'Blog Post - Zion Tech Group',
+    description: 'AI and technology insights from Zion Tech Group',
+    type: 'article',
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };

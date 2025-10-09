@@ -1,25 +1,12 @@
+import React, { useEffect } from 'react';
 
 interface SEOProps {
-  // TODO: Add content
-}
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
 }
+<<<<<<< HEAD
 const EnhancedSEO: React.FC
           
           
@@ -32,24 +19,16 @@ const EnhancedSEO: React.FC
           <SEOProps> = ({
   // TODO: Add content
 }
+=======
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
-//   canonicalUrl,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-//   structuredData,
-  noindex = false,
-  nofollow = false,
-  lang = 'en',
-  author = 'Zion Tech Group',
-//   publishedTime,
-//   modifiedTime,
-//   section,
-  tags = [],
+  description = 'Leading provider of AI and IT solutions for modern enterprises',
+  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
+  canonicalUrl
 }) => {
+<<<<<<< HEAD
   const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
@@ -156,5 +135,43 @@ const EnhancedSEO: React.FC
           
           </Helmet>
   );
+=======
+  useEffect(() => {
+    // Update document title
+    document.title = title;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords.join(', '));
+    
+    // Update canonical URL
+    if (canonicalUrl) {
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute('href', canonicalUrl);
+    }
+  }, [title, description, keywords, canonicalUrl]);
+
+  return null;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2b60
 };
+
 export default EnhancedSEO;
