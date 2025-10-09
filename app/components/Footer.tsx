@@ -6,7 +6,6 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
@@ -23,20 +22,9 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
     { name: 'AI E-commerce', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' }
-=======
-    { name: 'AI Services', url: '/ai-services', description: 'Core AI Solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-Powered Marketing' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Process Automation' },
-    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI Solutions' },
-    { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Content Creation' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Data Intelligence' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'Security AI' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   ];
 
   const itServices = [
-<<<<<<< HEAD
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
     { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
@@ -72,14 +60,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data insights' },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' }
-=======
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Cloud & Infrastructure' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development Operations' },
-    { name: 'Database Services', url: '/database', description: 'Data Management' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security Solutions' },
-    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud Solutions' },
-    { name: 'Networking', url: '/networking', description: 'Network Solutions' }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
   ];
 
   const microSaasServices = [
@@ -140,7 +120,6 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-<<<<<<< HEAD
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -152,56 +131,6 @@ const Footer: React.FC = memo(() => {
             </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 8).map((service, index) => (
-=======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
-            </p>
-            
-            {/* Achievements */}
-            <div className="space-y-3 mb-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <achievement.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-300">{achievement.text}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
-            <ul className="space-y-3">
-              {aiServices.map((service, index) => (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                 <li key={index}>
                   <a 
                     href={service.url}
@@ -226,18 +155,12 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
-=======
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
-            <ul className="space-y-3">
-              {itServices.map((service, index) => (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
                 <li key={index}>
                   <a 
                     href={service.url}
@@ -259,7 +182,6 @@ const Footer: React.FC = memo(() => {
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
@@ -343,28 +265,6 @@ const Footer: React.FC = memo(() => {
                 <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
                   {contactInfo.phone}
                 </a>
-=======
-
-          {/* Micro SAAS & Emerging Tech */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
-                <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
               </div>
               <div>
                 <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
