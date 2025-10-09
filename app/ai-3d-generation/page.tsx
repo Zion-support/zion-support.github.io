@@ -27,6 +27,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Improve visual quality and consistency',
     'Scale content production instantly',
     'Reduce dependency on 3D artists'
+  ];
 
   const applications = [
     {

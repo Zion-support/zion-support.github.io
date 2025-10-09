@@ -10,7 +10,7 @@
     "build:no-check": "vite build",
     "build:analyze": "vite build --mode analyze",
     "preview": "vite preview",
-    "lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --ignore-pattern 'src/components/**' --ignore-pattern 'src/pages/**' --ignore-pattern 'src/content/**' --ignore-pattern 'src/data/**' --ignore-pattern 'src/hooks/**' --ignore-pattern 'src/types/**' --ignore-pattern 'src/utils/**' --ignore-pattern 'src/config/**' --max-warnings 0",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
     "type-check": "tsc --noEmit --skipLibCheck",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",
