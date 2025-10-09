@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 const SystemStatusPage: React.FC = () => {
@@ -43,4 +45,4 @@ const SystemStatusPage: React.FC = () => {
   );
 };
 
-export default System-statusPage;
+export default SystemStatusPage;

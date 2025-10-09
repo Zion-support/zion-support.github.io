@@ -1,6 +1,8 @@
+'use client';
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import Link from 'next/link';
-import { FileWarning } from 'lucide-react';
+import { FileWarning, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -66,7 +68,7 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-8 h-8 text-red-400" />
+                <FileWarning className="w-8 h-8 text-red-400" />
               </div>
             </div>
             

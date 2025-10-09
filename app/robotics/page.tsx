@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';

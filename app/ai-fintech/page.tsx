@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';

@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
@@ -446,4 +448,4 @@ console.log(result.predictions);`,
   );
 };
 
-export default Api-docsPage;
+export default ApiDocsPage;

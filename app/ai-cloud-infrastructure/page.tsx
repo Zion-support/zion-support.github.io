@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Zap } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
   const cloudServices = [
