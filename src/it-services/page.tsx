@@ -106,7 +106,7 @@ const ITServicesPage: React.FC = () => {
   const categories = ['All', 'Infrastructure', 'Security', 'Development', 'Data', 'Analytics', 'Consulting'];
 
   return (
-    <>
+    <div>
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, database management, and business intelligence solutions."
@@ -179,7 +179,6 @@ const ITServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
           {/* Contact Section */}
@@ -214,9 +213,8 @@ const ITServicesPage: React.FC = () => {
 
         <Footer />
       </div>
-      <Footer />
-    </>
-  );
+    </div>
+    );
 };
 
 export default ITServicesPage;

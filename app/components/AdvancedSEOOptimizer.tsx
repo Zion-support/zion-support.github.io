@@ -165,9 +165,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'msapplication-config', content: '/browserconfig.xml' },
     ];
 
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
+    const structuredData = generateStructuredData();
+    const breadcrumbData = generateBreadcrumbStructuredData();
+    const faqData = generateFAQStructuredData();
+
+    return metaTags;
+  }, [seoData]);
 
   useEffect(() => {
     // Update page title and meta description for better SEO
@@ -191,8 +194,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
       canonicalLink.setAttribute('href', seoData.canonicalUrl);
     }
-
-    return metaTags;
   }, [seoData]);
 
   const addStructuredData = (data: Record<string, unknown>) => {
@@ -203,9 +204,44 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
-    _structuredDataRef.current = script;
+    structuredDataRef.current = script;
+  };
+
+  const generateBreadcrumbStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: seoData.canonicalUrl
+        }
+      ]
+    };
+  }, [enableStructuredData, seoData.canonicalUrl]);
+
+  const generateFAQStructuredData = useCallback(() => {
+    if (!enableStructuredData) return null;
+    
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: []
+    };
+  }, [enableStructuredData]);
+
+  const structuredData = generateStructuredData();
+  const breadcrumbData = generateBreadcrumbStructuredData();
+  const faqData = generateFAQStructuredData();
+  const metaTags = generateMetaTags();
+  const openGraphData = generateOpenGraphData();
+  const twitterCardData = generateTwitterCardData();
 
   useEffect(() => {
     if (structuredData) {
@@ -227,17 +263,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   useEffect(() => {
     // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+    if (typeof window !== 'undefined' && 'performance' in window && performance.getEntriesByType) {
+      try {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          // Track performance metrics
+          if (typeof (window as any).gtag === 'function') {
+            (window as any).gtag('event', 'page_load_performance', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            });
+          }
         }
+      } catch (error) {
+        // Silently handle performance API errors in test environments
+        console.warn('Performance tracking not available:', error);
       }
     }
   }, []);
@@ -256,12 +297,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       )}
 
       {/* Open Graph Tags */}
-      {Object.entries(openGraphData).map(([property, content]) => (
+      {openGraphData && Object.entries(openGraphData).map(([property, content]) => (
         <meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
-      {Object.entries(twitterCardData).map(([name, content]) => (
+      {twitterCardData && Object.entries(twitterCardData).map(([name, content]) => (
         <meta key={name} name={name} content={content} />
       ))}
 

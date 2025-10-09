@@ -253,3 +253,160 @@ export function sanitizeInput(input: string | null | undefined, maxLength?: numb
   
   return sanitized || null;
 }
+
+// Additional validation functions for comprehensive testing
+export function validateEmail(email: string): ValidationResult {
+  const isValid = isValidEmail(email);
+  return {
+    isValid,
+    errors: isValid ? [] : ['Invalid email format']
+  };
+}
+
+export function validateURL(url: string): ValidationResult {
+  const isValid = isValidUrl(url);
+  return {
+    isValid,
+    errors: isValid ? [] : ['Invalid URL format']
+  };
+}
+
+export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {
+  const errors: string[] = [];
+  
+  if (value.length < min) {
+    errors.push(`${fieldName} must be at least ${min} characters long`);
+  }
+  
+  if (value.length > max) {
+    errors.push(`${fieldName} must be no more than ${max} characters long`);
+  }
+  
+  return {
+    isValid: errors.length === 0,
+    errors
+  };
+}
+
+export function validatePassword(password: string): ValidationResult {
+  const errors: string[] = [];
+  
+  if (password.length < 8) {
+    errors.push('Password must be at least 8 characters long');
+  }
+  
+  if (password.length > 128) {
+    errors.push('Password must be no more than 128 characters long');
+  }
+  
+  if (!/[a-z]/.test(password)) {
+    errors.push('Password must contain at least one lowercase letter');
+  }
+  
+  if (!/[A-Z]/.test(password)) {
+    errors.push('Password must contain at least one uppercase letter');
+  }
+  
+  if (!/\d/.test(password)) {
+    errors.push('Password must contain at least one number');
+  }
+  
+  if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+    errors.push('Password must contain at least one special character');
+  }
+  
+  return {
+    isValid: errors.length === 0,
+    errors
+  };
+}
+
+export function sanitizeHTML(html: string): string {
+  return sanitizeHtml(html);
+}
+
+export function validateDate(dateString: string): ValidationResult {
+  if (!dateString.match(/^\d{4}-\d{2}-\d{2}$/)) {
+    return {
+      isValid: false,
+      errors: ['Invalid date format. Use YYYY-MM-DD']
+    };
+  }
+  
+  const date = new Date(dateString);
+  const year = parseInt(dateString.substring(0, 4));
+  const month = parseInt(dateString.substring(5, 7));
+  const day = parseInt(dateString.substring(8, 10));
+  
+  // Check if the date is valid
+  const isValid = !isNaN(date.getTime()) && 
+                 date.getFullYear() === year &&
+                 date.getMonth() === month - 1 &&
+                 date.getDate() === day;
+  
+  return {
+    isValid,
+    errors: isValid ? [] : ['Invalid date format. Use YYYY-MM-DD']
+  };
+}
+
+export function validateCreditCard(cardNumber: string): ValidationResult {
+  // Remove spaces and dashes for validation
+  const cleanNumber = cardNumber.replace(/[\s-]/g, '');
+  const isValid = isValidCreditCard(cleanNumber);
+  return {
+    isValid,
+    errors: isValid ? [] : ['Invalid credit card number']
+  };
+}
+
+export function validateJSON(jsonString: string): ValidationResult {
+  try {
+    JSON.parse(jsonString);
+    return {
+      isValid: true,
+      errors: []
+    };
+  } catch {
+    return {
+      isValid: false,
+      errors: ['Invalid JSON format']
+    };
+  }
+}
+
+export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
+  for (const validator of validators) {
+    const result = validator(value);
+    if (!result.isValid) {
+      return result;
+    }
+  }
+  
+  return {
+    isValid: true,
+    errors: []
+  };
+}
+
+export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
+  const isValid = value !== null && value !== undefined && value !== '';
+  return {
+    isValid,
+    errors: isValid ? [] : [`${fieldName} is required`]
+  };
+}
+
+export async function validateAsync(
+  validator: (value: string) => Promise<ValidationResult>,
+  value: string
+): Promise<ValidationResult> {
+  try {
+    return await validator(value);
+  } catch (error) {
+    return {
+      isValid: false,
+      errors: [error instanceof Error ? error.message : 'Validation failed']
+    };
+  }
+}

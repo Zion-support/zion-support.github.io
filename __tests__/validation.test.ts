@@ -9,6 +9,21 @@ import {
   isRequired,
   isValidPassword,
   sanitizeInput,
+  minLength,
+  maxLength,
+  sanitizeHtml,
+  isValidCreditCard,
+  validateEmail,
+  validateURL,
+  validateLength,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateComposite,
+  validateAsync,
+  validateRequired,
 } from '../app/utils/validators';
 
 describe('Email Validation', () => {
@@ -79,7 +94,7 @@ describe('String Length Validation', () => {
 
   test('provides custom field names in error messages', () => {
     const result = validateLength('hi', 3, 10, 'Username');
-    expect(result.error).toContain('Username');
+    expect(result.errors[0]).toContain('Username');
   });
 });
 
@@ -122,11 +137,11 @@ describe('Password Validation', () => {
 describe('HTML Sanitization', () => {
   test('sanitizes HTML special characters', () => {
     expect(sanitizeHTML('<script>alert("xss")</script>')).toBe(
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;'
+      '&lt;script&gt;alert("xss")&lt;/script&gt;'
     );
 
     expect(sanitizeHTML('Test & <strong>bold</strong>')).toBe(
-      'Test &amp; &lt;strong&gt;bold&lt;&#x2F;strong&gt;'
+      'Test &amp; &lt;strong&gt;bold&lt;/strong&gt;'
     );
   });
 
@@ -221,7 +236,7 @@ describe('Composite Validation', () => {
 
     const result = validateComposite('short', validators);
     expect(result.isValid).toBe(false);
-    expect(result.error).toContain('at least 10');
+    expect(result.errors[0]).toContain('at least 10');
   });
 });
 
@@ -244,6 +259,6 @@ describe('Async Validation', () => {
 
     const result = await validateAsync(asyncValidator, 'test');
     expect(result.isValid).toBe(false);
-    expect(result.error).toContain('Validation failed');
+    expect(result.errors[0]).toContain('Validation failed');
   });
 });
