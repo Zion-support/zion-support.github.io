@@ -105,7 +105,10 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
+let _originalError;
+
 beforeAll(() => {
+  _originalError = console.error;
   console.error = jest.fn((...args) => {
     if (
       typeof args[0] === 'string' &&
@@ -119,5 +122,7 @@ beforeAll(() => {
 });
 
 afterAll(() => {
-  console.error = _originalError;
+  if (_originalError) {
+    console.error = _originalError;
+  }
 });
