@@ -43,7 +43,11 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI E-commerce Solutions', path: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI-powered customer service' },
+        { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
+        { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' }
       ]
     },
     {
@@ -53,14 +57,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-blue-50',
       hoverColor: 'hover:bg-blue-100',
       services: [
-        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT support' },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', description: 'Enterprise infrastructure' },
         { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
-        { name: 'Cloud Services', path: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & setup' },
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
+        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
+        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' }
       ]
     },
     {
@@ -70,12 +78,18 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-green-50',
       hoverColor: 'hover:bg-green-100',
       services: [
-        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '50+ ready-to-use apps' },
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: '100+ ready-to-use apps' },
         { name: 'Developer Tools', path: '/developer-tools', description: 'AI-powered dev tools' },
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
         { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' }
+        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
+        { name: 'Productivity Tools', path: '/productivity-tools', description: 'Time management & efficiency' },
+        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
+        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
+        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
+        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
+        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
       ]
     },
     {
@@ -90,7 +104,13 @@ const Navigation: React.FC = () => {
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' }
+        { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
+        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
+        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
+        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
+        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
+        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
       ]
     }
   ];
@@ -115,6 +135,26 @@ const Navigation: React.FC = () => {
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
+<<<<<<< HEAD
+=======
+
+            <Link 
+              href="/solutions" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Solutions
+            </Link>
+
+            <Link 
+              href="/industries" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Industries
+            </Link>
+
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
             {/* Services Dropdown */}
             <div className="relative">
               <button
@@ -183,16 +223,46 @@ const Navigation: React.FC = () => {
             >
               Case Studies
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/blog" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
+=======
+
+            <Link 
+              href="/resources" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Resources
+            </Link>
+            
+            <Link
+              href="/blog"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Blog
             </Link>
+<<<<<<< HEAD
             <Link 
               href="/contact" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
+=======
+
+            <Link
+              href="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+            
+            <Link
+              href="/contact"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               onClick={closeAllMenus}
             >
               Contact
@@ -234,6 +304,58 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
+<<<<<<< HEAD
+=======
+
+              <Link 
+                href="/solutions" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Solutions
+              </Link>
+
+              <Link 
+                href="/industries" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Industries
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    {serviceCategories.map((category, categoryIndex) => (
+                      <div key={categoryIndex} className="space-y-1">
+                        <div className="text-cyan-400 font-semibold text-sm">{category.title}</div>
+                        <div className="ml-4 space-y-1">
+                          {category.services.slice(0, 4).map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              href={service.path}
+                              className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 text-sm"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/services"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -241,6 +363,18 @@ const Navigation: React.FC = () => {
               >
                 Services
               </Link>
+<<<<<<< HEAD
+=======
+
+              <Link
+                href="/resources"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Resources
+              </Link>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/blog"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -248,6 +382,18 @@ const Navigation: React.FC = () => {
               >
                 Blog
               </Link>
+<<<<<<< HEAD
+=======
+
+              <Link
+                href="/pricing"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+              
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-caae
               <Link
                 href="/contact"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
