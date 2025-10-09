@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Mail as MailIcon, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, ShoppingCart, Target, Shield, Eye, Cube, Heart, Cloud, Database, Smartphone, Lock, RefreshCw, X, Menu } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,40 +24,46 @@ const Navigation: React.FC = () => {
   ];
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Mic },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
+    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation', icon: TrendingUp },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Target },
+    { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor', icon: Shield },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/ai-ml', icon: Brain },
+    { name: 'Machine Learning Solutions', href: '/ai-ml', icon: Brain },
     { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
+    { name: 'AI Automation Platform', href: '/ai-automation', icon: Zap },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Heart },
+    { name: 'AI Financial Services', href: '/ai-financial', icon: DollarSign },
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
+    { name: 'Cloud Services & Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'IT Consulting & Strategy', href: '/it-consulting', icon: Settings },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
     { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: RefreshCw },
   ];
 
   return (

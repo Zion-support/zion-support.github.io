@@ -14,38 +14,44 @@ const Footer: React.FC = () => {
   ];
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager' },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
     { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
-    { name: 'AI Video Generator', href: '/ai-video-generation' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
-    { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation' },
+    { name: 'AI Sales Automation Pro', href: '/ai-sales-automation' },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer' },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+    { name: 'AI Cybersecurity Monitor', href: '/ai-cybersecurity-monitor' },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/ai-ml' },
+    { name: 'Machine Learning Solutions', href: '/ai-ml' },
     { name: 'Natural Language Processing', href: '/ai-nlp' },
     { name: 'Computer Vision', href: '/ai-vision' },
-    { name: 'AI Automation', href: '/ai-automation' },
+    { name: 'AI Automation Platform', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
     { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
     { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+    { name: 'AI Financial Services', href: '/ai-financial' },
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Services & Migration', href: '/cloud-migration' },
+    { name: 'IT Consulting & Strategy', href: '/it-consulting' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
     { name: 'Mobile App Development', href: '/mobile-development' },
     { name: 'Web Development', href: '/web-development' },
     { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
   ];
 
   const socialLinks = [
