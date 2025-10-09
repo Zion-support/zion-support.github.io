@@ -1,6 +1,7 @@
 'use client';
 import React, { memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle, Settings, Database, Smartphone, Lock, Target, Sparkles } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -8,13 +9,12 @@ const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Automation', url: '/ai-workflow-automation', description: 'Intelligent process automation' },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
     { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
     { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Intelligent sales processes' },
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
@@ -70,121 +70,112 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' },
-    { name: 'Contact', url: '/contact' }
+    { name: 'Blog', url: '/blog' }
   ];
 
   const supportLinks = [
+    { name: 'Contact Us', url: '/contact' },
+    { name: 'Support Center', url: '/support' },
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
-    { name: 'Support Center', url: '/support' },
     { name: 'System Status', url: '/status' },
+    { name: 'Help Center', url: '/help' }
+  ];
+
+  const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' }
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Cookie Policy', url: '/cookies' },
+    { name: 'GDPR Compliance', url: '/gdpr' },
+    { name: 'Security', url: '/security' },
+    { name: 'Compliance', url: '/compliance' }
   ];
 
   const socialLinks = [
-    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
     { name: 'YouTube', url: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github }
-  ];
-
-  const contactInfo = {
-    phone: '+1 (302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  };
-
-  const achievements = [
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+    { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram }
   ];
 
   return (
-<<<<<<< HEAD
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Brain className="w-5 h-5 mr-2" />
-              AI Services
-            </h3>
-            <ul className="space-y-2">
-              {aiServices.slice(0, 8).map((service, index) => (
-=======
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg quantum-particles">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold text-white neon-text">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white cyber-text">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 cyber-body">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
             </p>
             
-            {/* Achievements */}
-            <div className="space-y-3 mb-6">
-              {achievements.map((achievement, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <achievement.icon className="w-4 h-4 text-cyan-400" />
-                  <span className="text-sm text-gray-300">{achievement.text}</span>
-                </div>
-              ))}
+            {/* Contact Info */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                <Phone className="w-4 h-4" />
+                <a href="tel:+13024640950" className="text-sm">+1 (302) 464-0950</a>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                <Mail className="w-4 h-4" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-sm">kleber@ziontechgroup.com</a>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-cyan-500/20 transition-colors duration-300 group"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400" />
-                </a>
-              ))}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">AI Services</h3>
-            <ul className="space-y-3">
-              {aiServices.map((service, index) => (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
-                <li key={index}>
-                  <a 
+            <div className="flex items-center space-x-2 mb-6">
+              <Brain className="w-5 h-5 text-purple-400" />
+              <h3 className="text-lg font-semibold text-white cyber-subtitle">AI Services</h3>
+            </div>
+            <ul className="space-y-2">
+              {aiServices.slice(0, 8).map((service) => (
+                <li key={service.name}>
+                  <Link
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300 block py-1"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </a>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
-                  View All AI Services →
+                  View all AI services →
                 </Link>
               </li>
             </ul>
@@ -192,277 +183,150 @@ const Footer: React.FC = memo(() => {
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Cloud className="w-5 h-5 mr-2" />
-              IT Services
-            </h3>
+            <div className="flex items-center space-x-2 mb-6">
+              <Cloud className="w-5 h-5 text-blue-400" />
+              <h3 className="text-lg font-semibold text-white cyber-subtitle">IT Services</h3>
+            </div>
             <ul className="space-y-2">
-              {itServices.slice(0, 6).map((service, index) => (
-=======
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">IT Services</h3>
-            <ul className="space-y-3">
-              {itServices.map((service, index) => (
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
-                <li key={index}>
-                  <a 
+              {itServices.slice(0, 8).map((service) => (
+                <li key={service.name}>
+                  <Link
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300 block py-1"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                     {service.name}
-                  </a>
-                  <p className="text-xs text-gray-500 ml-5">{service.description}</p>
+                  </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
-                  View All IT Services →
+                  View all IT services →
                 </Link>
               </li>
             </ul>
           </div>
-<<<<<<< HEAD
+
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Code className="w-5 h-5 mr-2" />
-              Micro SAAS
-            </h3>
+            <div className="flex items-center space-x-2 mb-6">
+              <Zap className="w-5 h-5 text-green-400" />
+              <h3 className="text-lg font-semibold text-white cyber-subtitle">Micro SAAS</h3>
+            </div>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 8).map((service, index) => (
-                <li key={index}>
-                  <Link 
+              {microSaasServices.slice(0, 8).map((service) => (
+                <li key={service.name}>
+                  <Link
                     href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300 block py-1"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link 
+                <Link
                   href="/micro-saas"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
-                  View All Micro SAAS →
+                  View all 50+ tools →
                 </Link>
               </li>
             </ul>
           </div>
-          {/* Emerging Technologies */}
+        </div>
+
+        {/* Secondary Footer Links */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 pt-8 border-t border-gray-700">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech
-            </h3>
+            <h4 className="text-sm font-semibold text-cyan-400 mb-4 uppercase tracking-wider">Company</h4>
             <ul className="space-y-2">
-              {emergingTech.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.url}
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300"
                   >
-                    {service.name}
+                    {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
-              <Users className="w-5 h-5 mr-2" />
-              Company
-            </h3>
-            <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
-            <ul className="space-y-2 mb-6">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <div className="space-y-2">
-              <div className="flex items-center text-sm text-gray-300">
-                <Phone className="w-4 h-4 mr-2" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors">
-                  {contactInfo.phone}
-                </a>
-=======
 
-          {/* Micro SAAS & Emerging Tech */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-cyan-400 neon-text">Solutions</h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Micro SAAS</h4>
-                <ul className="space-y-2">
-                  {microSaasServices.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-4856
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-white mb-2">Emerging Tech</h4>
-                <ul className="space-y-2">
-                  {emergingTech.slice(0, 3).map((service, index) => (
-                    <li key={index}>
-                      <a 
-                        href={service.url}
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                      >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <h4 className="text-sm font-semibold text-cyan-400 mb-4 uppercase tracking-wider">Support</h4>
+            <ul className="space-y-2">
+              {supportLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.url}
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-semibold text-cyan-400 mb-4 uppercase tracking-wider">Legal</h4>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.url}
+                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Call us anytime</div>
-              </div>
+        {/* Newsletter Signup */}
+        <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-lg p-6 mb-8 cyber-card neon-border">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-4 md:mb-0">
+              <h4 className="text-lg font-semibold text-white mb-2">Stay Updated</h4>
+              <p className="text-gray-300 text-sm">Get the latest AI and tech insights delivered to your inbox.</p>
             </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email us</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">Middletown, DE</div>
-                <div className="text-gray-400 text-sm">{contactInfo.address}</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Company Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
-            <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <a 
-                    href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</a></li>
-              <li><a href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</a></li>
-              <li><a href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</a></li>
-              <li><a href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
-            <div className="flex space-x-2">
+            <div className="flex w-full md:w-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
+                className="flex-1 md:w-64 px-4 py-2 bg-slate-800 border border-gray-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 transition-colors duration-300"
               />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-r-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
                 Subscribe
               </button>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </a>
-            </div>
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-700">
+          <div className="text-sm text-gray-400 mb-4 md:mb-0">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </div>
+          <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <span className="flex items-center space-x-1">
+              <Shield className="w-4 h-4 text-green-400" />
+              <span>SSL Secured</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <Award className="w-4 h-4 text-yellow-400" />
+              <span>ISO 27001 Certified</span>
+            </span>
+            <span className="flex items-center space-x-1">
+              <Clock className="w-4 h-4 text-blue-400" />
+              <span>24/7 Support</span>
+            </span>
           </div>
         </div>
       </div>
@@ -471,4 +335,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+
 export default Footer;

@@ -16,9 +16,42 @@ Disallow: /temp/
 Disallow: /backup/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
 Allow: /contact
+Allow: /about
 Allow: /blog
-Allow: /case-studies
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /*.old$
+Disallow: /*.tmp$
+
+# Block search parameters
+Disallow: /*?*utm_*
+Disallow: /*?*ref=*
+Disallow: /*?*source=*
+Disallow: /*?*campaign=*
+
+# Block duplicate content
+Disallow: /*?*print=*
+Disallow: /*?*view=*
+Disallow: /*?*format=*
+
+# Block session IDs
+Disallow: /*?*sessionid=*
+Disallow: /*?*sid=*
+Disallow: /*?*PHPSESSID=*
+
+# Block tracking parameters
+Disallow: /*?*fbclid=*
+Disallow: /*?*gclid=*
+Disallow: /*?*msclkid=*
+Disallow: /*?*twclid=*
+Disallow: /*?*li_fat_id=*
