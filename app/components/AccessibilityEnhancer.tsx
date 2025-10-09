@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React, { useEffect, useCallback, createContext, useContext, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -202,6 +203,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   return null;
 };
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 
 interface AccessibilityContextType {
   announce: (message: string) => void;
@@ -274,6 +278,7 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
         document.body.classList.remove('reduced-motion');
       }
     };
+<<<<<<< HEAD
     // Check initial state
     if (mediaQuery.matches) {
       document.body.classList.add('reduced-motion');
@@ -301,6 +306,26 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ ch
 
   return null;
 };
+=======
+    motionQuery.addEventListener('change', handleMotionChange);
+    if (motionQuery.matches) {
+      document.body.classList.add('reduced-motion');
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      mediaQuery.removeEventListener('change', handleContrastChange);
+      motionQuery.removeEventListener('change', handleMotionChange);
+      
+      const announcement = document.getElementById('accessibility-announcements');
+      if (announcement) {
+        announcement.remove();
+      }
+    };
+  }, []);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 
 const AccessibilityProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const announce = (message: string) => {

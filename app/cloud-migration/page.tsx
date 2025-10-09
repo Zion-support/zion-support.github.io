@@ -22,10 +22,14 @@ const CloudMigrationPage: React.FC = () => {
       title: 'Infrastructure Setup',
       description: 'Complete cloud infrastructure setup and configuration',
       benefits: ['Auto-scaling', 'Load balancing', 'Security configuration']
+<<<<<<< HEAD
     }
   ];
 
   const heroFeatures = [
+=======
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     {
       title: 'Seamless Cloud Migration',
       description: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
@@ -61,6 +65,7 @@ const CloudMigrationPage: React.FC = () => {
     {
       step: '2',
       title: 'Planning',
+<<<<<<< HEAD
       description: 'Create detailed migration plan with timelines and rollback strategies',
       icon: CheckCircle,
       features: ['Migration strategy', 'Timeline planning', 'Risk assessment']
@@ -75,6 +80,15 @@ const CloudMigrationPage: React.FC = () => {
   ];
 
   const processSteps = [
+=======
+      description: 'Create detailed migration plan with timelines and rollback strategies'
+    },
+    {
+      title: 'Optimization & Support',
+      description: 'Post-migration optimization and ongoing support',
+      features: ['Performance tuning', 'Cost optimization', '24/7 support']
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     {
       step: '01',
       title: 'Assessment',
@@ -84,8 +98,12 @@ const CloudMigrationPage: React.FC = () => {
     {
       step: '02',
       title: 'Architecture Design',
+<<<<<<< HEAD
       description: 'Design optimal cloud architecture tailored to your business needs.',
       duration: '1-2 weeks'
+=======
+      description: 'Design optimal cloud architecture tailored to your business needs.'
+>>>>>>> cursor/fix-errors-and-merge-to-main-0e35
     },
     {
       step: '03',
@@ -237,11 +255,17 @@ const CloudMigrationPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Seamlessly migrate your applications and data to the cloud with our expert migration services
               <a
+                href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
                 Get Started
               </a>
+              <a
+                href="/demo"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300 inline-flex items-center"
+              >
                 View Demo
+              </a>
           </section>
 
           <section className="mb-16">

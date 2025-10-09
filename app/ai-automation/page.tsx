@@ -84,6 +84,7 @@ const AIAutomationPage: React.FC = () => {
     { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
     { icon: Clock, value: '60%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'Client Rating' }
+  ];
 
   return (
     <>
