@@ -1,33 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-=======
 import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -119,14 +90,7 @@ const toggleItem = (index: number) => {setOpenItems(prev =>}
 //     )
   })).filter(category => category.questions.length > 0);
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -141,15 +105,7 @@ const toggleItem = (index: number) => {setOpenItems(prev =>}
           </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Find answers to common questions about our AI and IT services, pricing, and support.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
@@ -161,15 +117,7 @@ type="text"
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 // />
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
@@ -184,29 +132,13 @@ type="text"
 }
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
 // >
-                          
-          
-          
-          
-          
-          
-          
-          
-          
+
           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? ()}
           <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -244,4 +176,5 @@ type="text"
       <Footer />
     </>
 export default FAQPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

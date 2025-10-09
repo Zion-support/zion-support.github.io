@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-=======
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react';}
 'use client';
 import React, { useState } from 'react';
@@ -188,14 +163,7 @@ const tabs = [
         'Enhanced brand reputation'
       icon: Building,
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -211,15 +179,7 @@ const tabs = [
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
               that reduces costs while protecting our planet.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-green-400">
@@ -256,15 +216,7 @@ const tabs = [
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
 //                 >
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
                 </button>
@@ -350,15 +302,7 @@ Benefits of Green IT;
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
 // Start your journey towards sustainable IT operations. Get a free environmental;
               assessment and discover how much you can save while protecting the planet.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 Get Free Assessment;
@@ -370,10 +314,10 @@ Get Free Assessment;
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
 
 export default PagePage;
+};

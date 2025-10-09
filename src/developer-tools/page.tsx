@@ -1,25 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-=======
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {return (}
     <div>Coming Soon</div>
@@ -84,14 +63,7 @@ const DeveloperToolsPage: React.FC = () => {return (}
     }
   ];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -209,27 +181,11 @@ const DeveloperToolsPage: React.FC = () => {return (}
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
 // Ready to Supercharge Your Development?
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
             <p className="text-xl text-purple-100 mb-8">
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -246,7 +202,6 @@ const DeveloperToolsPage: React.FC = () => {return (}
           </a>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         </section>
       </main>
       <Footer />
@@ -256,3 +211,4 @@ const DeveloperToolsPage: React.FC = () => {return (}
 };
 
 export default PagePage;
+};

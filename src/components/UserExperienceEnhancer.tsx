@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UserExperienceEnhancerProps {
-
-  // Add props here
-}
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = () => {
-  return (
-    <div className="userexperienceenhancer">
-      {/* Component content */}
-    </div>
-  );
-
-=======
 'use client';
 interface UserExperienceEnhancerProps {// TODO: Add content;}
 }
@@ -157,7 +141,6 @@ const handleVisibilityChange = () => {// TODO: Add content;}
         }
       };
 // Track scroll depth;
-      const handleScroll = () => {// TODO: Add content;}
 }
         const scrollDepth = Math.round()
 //           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100,
@@ -214,7 +197,6 @@ const handleVisibilityChange = () => {// TODO: Add content;}
       };
       // Track time on page;
 const startTime = Date.now();
-      const handleBeforeUnload = () => {// TODO: Add content;}
 }
         const timeOnPage = Math.round((Date.now() - startTime) / 1000);
         if ('gtag' in window) {// TODO: Add content;}
@@ -316,7 +298,7 @@ const observer = new PerformanceObserver((list) => {// TODO: Add content;}
     }
   }, []);
   return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default UserExperienceEnhancer;
+};

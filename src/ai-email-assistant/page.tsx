@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-=======
 'use client';
 export default function AIEmailAssistantPage() {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -16,27 +8,36 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
 
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-=======
+  return (
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 // AI Email Assistant;
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-glow">
 // Smart Email Management with AI-Powered Intelligence;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-<<<<<<< HEAD
 
-=======
+  return (
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+
+          </p>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            This page is under development. Please check back soon for updates.
+          </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <a
               href="tel:+13024640950"
@@ -64,15 +65,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
 // AI-powered email responses that understand context and tone, automatically generating;
 //                 professional replies based on your communication style.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <div className="cyber-card hologram-card p-6">
@@ -81,15 +74,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
 // Automatically schedule meetings, set reminders, and manage your calendar based on;
 //                 email content and your availability preferences.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <div className="cyber-card hologram-card p-6">
@@ -98,15 +83,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
 // AI analyzes email importance and urgency, automatically organizing your inbox;
 //                 with smart priority levels and categorization.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <div className="cyber-card hologram-card p-6">
@@ -115,15 +92,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <div className="cyber-card hologram-card p-6">
@@ -132,15 +101,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
 // Track email performance, response times, and engagement metrics with detailed;
 //                 analytics and insights.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
             <div className="cyber-card hologram-card p-6">
@@ -149,15 +110,7 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
               <p className="text-gray-300">
 // Bank-level encryption and security protocols ensure your email data remains;
 //                 private and protected at all times.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             </div>
           </div>
@@ -219,28 +172,12 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-8 neon-text">
 // Ready to Transform Your Email Workflow?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
 // Contact us today to schedule a free demo and see how our AI Email Assistant;
 //             can revolutionize your business communication.
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <a
@@ -256,7 +193,6 @@ export default function AIEmailAssistantPage() {// TODO: Add content;}
 //                Email Us;
           </a>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         </section>
       </main>
       <Footer />

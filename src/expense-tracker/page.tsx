@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone, Shield from 'lucide-react';}
 import { Link } from 'react-router-dom';
 const ExpenseTrackerPage: React.FC = () => {const features = [}
@@ -15,41 +13,14 @@ const ExpenseTrackerPage: React.FC = () => {const features = [}
       title: 'Real-time Analytics',
       description: 'Get instant insights into your spending patterns with interactive charts, budget tracking, and financial forecasting.',
       benefit: 'Reduce expenses by 25%',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
 
-=======
-    
-          
-          
-          
-          
-          
-          
-          
+  return (
+
           <div>Coming Soon</div>
   )
     
@@ -75,15 +46,7 @@ Transform your expense management with AI-powered receipt scanning, automated ca
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           <Phone className="w-5 h-5 mr-2" />,
  Call: (302) 464-0950;
             </a>
@@ -181,8 +144,8 @@ Most Popular;
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of businesses using AI Expense Tracker to streamline financial;
             management and gain better control over their spending.
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default PagePage;
+};

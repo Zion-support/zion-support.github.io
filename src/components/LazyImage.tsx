@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LazyImageProps {
-
-  // Add props here
-}
-
-const LazyImage: React.FC<LazyImageProps> = () => {
-  return (
-    <div className="lazyimage">
-      {/* Component content */}
-
-=======
 'use client';
 interface LazyImageProps {// TODO: Add content;}
 };
@@ -71,20 +57,12 @@ const LazyImage: React.FC;
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {// TODO: Add content;}
 }
     setHasError(true);
     onError?.();
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -100,14 +78,6 @@ const LazyImage: React.FC;
 // />
       ) : (
 
-          
-          
-          
-          
-          
-          
-          
-          
           <><img
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
@@ -124,9 +94,9 @@ const LazyImage: React.FC;
           )}
         </>
       )}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
 
 export default LazyImage;
+};

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface HeroSectionProps {
-
-  // Add props here
-
-=======
 'use client';
 interface HeroSectionProps {// TODO: Add content;}
 };
@@ -15,26 +7,14 @@ interface HeroSectionProps {// TODO: Add content;}
 }
 const HeroSection: React.FC;
           <HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
-const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
-<<<<<<< HEAD
 
-    <div className="herosection">
-      {/* Component content */}
-    </div>
+}
 
-=======
-    
-          
-          
-          
-          
-          
-          
-          
+  return (
+
           <div>Coming Soon</div>
   )
     
@@ -48,15 +28,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
       }`}
       aria-labelledby="hero-heading"
 //     >
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="max-w-6xl mx-auto">
         <h1
           id="hero-heading"
@@ -71,15 +43,7 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 // Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
 //           Transform your business with our cutting-edge technology and achieve unprecedented growth.
-        
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
         {/* Key Benefits */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
@@ -123,8 +87,8 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${}
         </div>
       </div>
     </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default HeroSection;
+};

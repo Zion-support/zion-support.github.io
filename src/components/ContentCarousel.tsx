@@ -13,3 +13,4 @@ const ContentCarousel: React.FC<ContentCarouselProps> = () => {
 };
 
 export default ContentCarousel;
+};

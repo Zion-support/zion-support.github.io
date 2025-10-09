@@ -1,43 +1,16 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-=======
 'use client';
 interface PerformanceOptimizerProps {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-<<<<<<< HEAD
 
-const PerformanceOptimizer: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+}
 
-  });
-
-  useEffect(() => {
-
-    // Basic performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-
-=======
+interface PerformanceProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
 const PerformanceOptimizer: React.FC;
           <PerformanceOptimizerProps> = ({// TODO: Add content;}
 }
@@ -125,7 +98,6 @@ if ('IntersectionObserver' in window) {}
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }));
     }
   };
-  const preloadCriticalResources = () => {// TODO: Add content;}
 }
     const criticalResources = [
   // TODO: Add items;
@@ -157,12 +129,10 @@ if ('IntersectionObserver' in window) {}
     });
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   };
-  const setupCodeSplitting = () => {// TODO: Add content;}
 }
     // This would be handled by Next.js dynamic imports;
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
-  const addResourceHints = () => {// TODO: Add content;}
 }
     const hints = [
   // TODO: Add items;
@@ -223,7 +193,6 @@ if ('IntersectionObserver' in window) {}
               });
             }
           }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       });
     });
@@ -246,3 +215,4 @@ if ('IntersectionObserver' in window) {}
 };
 
 export default PerformanceOptimizer;
+};

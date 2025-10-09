@@ -1,19 +1,4 @@
 'use client';
-<<<<<<< HEAD
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-
-=======
 interface OptimizedErrorBoundaryProps {// TODO: Add content;}
 };
   children: ReactNode;
@@ -38,38 +23,18 @@ class OptimizedErrorBoundary extends Component;
 }
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props);
-<<<<<<< HEAD
+'use client';
 
-    this.state = { hasError: false, error: null, errorInfo: null };
-  }
+}
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
-
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
-          </div>
-        </div>
-
-=======
+class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
     this.state = {// TODO: Add content;}
 };
   hasError: false,
@@ -198,14 +163,7 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
         return this.props.fallback;
       }
       return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
         
@@ -215,18 +173,26 @@ class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
 // />
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       );
     }
 
     return this.props.children;
   }
 }
-<<<<<<< HEAD
+'use client';
 
-export default OptimizedErrorBoundary;
+}
 
-=======
+class OptimizedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+
+      );
+    }
+
+    return this.props.children;
+  }
+}
 interface ErrorFallbackProps {// TODO: Add content;}
 };
   error: Error | null;,
@@ -248,30 +214,14 @@ className='w-6 h-6 text-red-600'
               stroke='currentColor'
               viewBox='0 0 24 24'
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           <path
                 strokeLinecap='round'
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
 // />
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </svg>
           </div>
         </div>
@@ -285,15 +235,7 @@ className='w-6 h-6 text-red-600'
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
 // Error Details (Development)
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
@@ -336,4 +278,5 @@ className='w-6 h-6 text-red-600'
 //   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

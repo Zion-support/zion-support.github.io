@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const ServiceTemplatePage: React.FC = () => {
-=======
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 import { CheckCircle, Star, Phone } from 'lucide-react';
@@ -24,7 +17,6 @@ interface ServicePageProps {// TODO: Add content;}
 }
 const ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
@@ -37,28 +29,25 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, description, services,
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Blog Post
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Service Template
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Blog Post
           </p>
-
-        </section>
-
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
 // >
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           <Phone className="w-5 h-5 mr-2" />
 // Get Free Consultation;
           </Link>
@@ -106,7 +95,6 @@ Get Started;
 Ready to Transform Your Business?
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free consultation and discover how our solutions can revolutionize your operations.
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
       <Footer />
     </div>
@@ -114,3 +102,4 @@ Ready to Transform Your Business?
 };
 
 export default ServiceTemplatePage;
+};

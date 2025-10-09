@@ -1,8 +1,6 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import {Target, Shield,  Eye,  Camera,  Target,  Shield,  Settings from 'lucide-react';}
 const AIComputerVisionPage: React.FC = () => {const features = [}
     {// TODO: Add content;}
@@ -44,29 +42,20 @@ const AIComputerVisionPage: React.FC = () => {const features = [}
 //         'Standard API'
 //       ],
       popular: false,
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
 
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
-=======
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
 // AI Computer Vision;
           </h1>
@@ -157,15 +146,7 @@ Most Popular;
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
         {/* CTA Section */}
-        
-          
-          
-          
-          
-          
-          
-          
-          
+
           <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
@@ -177,7 +158,6 @@ Ready to See the Future?
                 className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
                 <Camera className="w-5 h-5" />
                 Request Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       </main>
       <Footer />
     </div>
@@ -185,3 +165,4 @@ Ready to See the Future?
 };
 
 export default PagePage;
+};

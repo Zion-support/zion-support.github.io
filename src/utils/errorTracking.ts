@@ -3,27 +3,31 @@
  * Advanced Error Tracking and Reporting System;
  * Provides comprehensive error tracking with categorization and analytics;
  */
-<<<<<<< HEAD
-export enum ErrorSeverity {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
 export enum ErrorSeverity {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Low = 'low',
   Medium = 'medium',
   High = 'high',
   Critical = 'critical'
 }
-<<<<<<< HEAD
-export enum ErrorCategory {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
 export enum ErrorCategory {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Network = 'network',
   Validation = 'validation',
   Authorization = 'authorization',
@@ -31,34 +35,25 @@ export enum ErrorCategory {// TODO: Add content;}
   Configuration = 'configuration',
   ExternalService = 'external_service'
 }
-<<<<<<< HEAD
-export interface ErrorMetadata {
-    // TODO: Add content
-  }
-  category: ErrorCategory;,
-    severity: ErrorSeverity
-  userId?: string
-  sessionId?: string
-  context?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  tags?: string[]
-  timestamp: number
-  stackTrace?: string
-  userAgent?: string
-  url?: string
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
 }
-export interface TrackedError {
-    // TODO: Add content
-  }
-=======
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
 export interface ErrorMetadata {// TODO: Add content;}
 };
   category: ErrorCategory;,
@@ -75,7 +70,6 @@ export interface ErrorMetadata {// TODO: Add content;}
 }
 export interface TrackedError {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: string;,
     message: string;,
     metadata: ErrorMetadata;,
@@ -83,36 +77,33 @@ export interface TrackedError {// TODO: Add content;}
     firstSeen: number;,
     lastSeen: number
 }
-<<<<<<< HEAD
-class ErrorTrackingService {
-    // TODO: Add content
-  }
-  private static instance: ErrorTrackingService
-  private errors: Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, TrackedError> = new Map()
-  private errorListeners: Array<(error: TrackedError) => void> = []
-  private maxStoredErrors = 1000
-  private constructor() {
-    // TODO: Add content
-  }
-    this.setupGlobalErrorHandlers()
-  }
-  static getInstance(): ErrorTrackingService {
-    // TODO: Add content
-  }
-    if (!ErrorTrackingService.instance) {
-    // TODO: Add content
-  }
-      ErrorTrackingService.instance = new ErrorTrackingService()
-=======
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
 class ErrorTrackingService {// TODO: Add content;}
 }
   private static instance: ErrorTrackingService;
@@ -129,31 +120,46 @@ class ErrorTrackingService {// TODO: Add content;}
     if (!ErrorTrackingService.instance) {// TODO: Add content;}
 }
       ErrorTrackingService.instance = new ErrorTrackingService();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return ErrorTrackingService.instance
   }
   /**
    * Set up global error handlers;
    */
-<<<<<<< HEAD
-  private setupGlobalErrorHandlers(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    if (typeof window === 'undefined') return
-    // Handle unhandled errors
-    window.addEventListener('error', event => {
-    // TODO: Add content
-  }
-      this.trackError(event.error || new Error(event.message), {
-    // TODO: Add content
-  }
-  category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High,
-        context: {
-    // TODO: Add content
-  }
-=======
+  /**
+   * Set up global error handlers;
+   */
   private setupGlobalErrorHandlers(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -166,24 +172,49 @@ class ErrorTrackingService {// TODO: Add content;}
         severity: ErrorSeverity.High,
         context: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   filename: event.filename,
           lineno: event.lineno,
           colno: event.colno;
         }
-<<<<<<< HEAD
-      }
-  )
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
     }
-  )
-    // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', event => {
-    // TODO: Add content
+    return ErrorTrackingService.instance
   }
-      this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
-    // TODO: Add content
-  }
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
       });
     });
     // Handle unhandled promise rejections;
@@ -191,7 +222,6 @@ class ErrorTrackingService {// TODO: Add content;}
 }
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   category: ErrorCategory.Runtime,
         severity: ErrorSeverity.Critical,
         context: { reason: event.reason }
@@ -207,35 +237,126 @@ class ErrorTrackingService {// TODO: Add content;}
     error: Error,
     metadata: Partial;
           <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
-<<<<<<< HEAD
-  ): string {
-const timestamp = Date.now()
-=======
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
+  }
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {const timestamp = Date.now();}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       ...metadata,
       timestamp,
       stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-<<<<<<< HEAD
-      url: typeof window !== 'undefined' ? window.location.href : undefined
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
     }
-    const existingError = this.errors.get(errorId)
-    if (existingError) {
-    // TODO: Add content
+    return ErrorTrackingService.instance
   }
-      // Update existing error
-      existingError.occurrences++
-      existingError.lastSeen = timestamp
-      existingError.metadata = fullMetadata
-    } else {
-    // TODO: Add content
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
   }
-      // Create new error entry
-const trackedError: TrackedError = {
-    // TODO: Add content
-  }
-=======
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined;
     };
     const existingError = this.errors.get(errorId);
@@ -250,41 +371,77 @@ const trackedError: TrackedError = {
       // Create new error entry;
 const trackedError: TrackedError = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   id: errorId,
         message: error.message,
         metadata: fullMetadata,
         occurrences: 1,
         firstSeen: timestamp,
-<<<<<<< HEAD
-        lastSeen: timestamp
-      }
-      this.errors.set(errorId, trackedError)
-      // Notify listeners
-      this.notifyListeners(trackedError)
-      // Maintain max stored errors
-      if (this.errors.size > this.maxStoredErrors) {
-    // TODO: Add content
-  }
-        const oldestKey = Array.from(this.errors.keys())[0]
-        this.errors.delete(oldestKey)
-      }
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
     }
-    // Log the error
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
-    // TODO: Add content
+    return ErrorTrackingService.instance
   }
-  error_id: errorId,
-      category: metadata.category,
-//       ...metadata.context
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
     }
   )
-    // Send to external service if critical
-    if (metadata.severity === ErrorSeverity.Critical) {
-    // TODO: Add content
   }
-      this.reportToExternalService(errorId)
-=======
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
         lastSeen: timestamp;
       };
       this.errors.set(errorId, trackedError);
@@ -308,32 +465,85 @@ const trackedError: TrackedError = {// TODO: Add content;}
     if (metadata.severity === ErrorSeverity.Critical) {// TODO: Add content;}
 }
       this.reportToExternalService(errorId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return errorId
   }
   /**
    * Generate a unique error ID based on the message;
    */
-<<<<<<< HEAD
-  private generateErrorId(message: string): string {
-// Simple hash function for error ID
-    for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < message.length; i++) {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-      const char = message.charCodeAt(i)
-      hash = (hash * 32) - hash + char
-      hash = hash & hash; // Convert to 32bit integer
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
   private generateErrorId(message: string): string {// Simple hash function for error ID;}
     for (let i = 0; i;
           < message.length; i++) {// TODO: Add content;}
@@ -341,57 +551,281 @@ const trackedError: TrackedError = {// TODO: Add content;}
       const char = message.charCodeAt(i);
       hash = (hash * 32) - hash + char;
       hash = hash & hash; // Convert to 32bit integer;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return `err_${Math.abs(hash).toString(36)}`
   }
   /**
    * Add an error listener;
    */
-<<<<<<< HEAD
-  addListener(listener: (error: TrackedError) => void): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    this.errorListeners.push(listener)
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
   addListener(listener: (error: TrackedError) => void): void {// TODO: Add content;}
 }
     this.errorListeners.push(listener);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Remove an error listener;
    */
-<<<<<<< HEAD
-  removeListener(listener: (error: TrackedError) => void): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    this.errorListeners = this.errorListeners.filter(l => l !== listener)
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
   removeListener(listener: (error: TrackedError) => void): void {// TODO: Add content;}
 }
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Notify all listeners of a new error;
    */
-<<<<<<< HEAD
-  private notifyListeners(error: TrackedError): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    this.errorListeners.forEach(listener => {
-    // TODO: Add content
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
   }
-      try {
-    // TODO: Add content
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
   }
-        listener(error)
-      } catch (listenerError) {
-    // TODO: Add content
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
   }
-        logger.error('Error in error listener', listenerError as Error)
-=======
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
   private notifyListeners(error: TrackedError): void {// TODO: Add content;}
 }
     this.errorListeners.forEach(listener => {// TODO: Add content;}
@@ -402,7 +836,6 @@ const trackedError: TrackedError = {// TODO: Add content;}
       } catch (listenerError) {// TODO: Add content;}
 }
         logger.error('Error in error listener', listenerError as Error);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   )
@@ -410,31 +843,104 @@ const trackedError: TrackedError = {// TODO: Add content;}
   /**
    * Report critical errors to external service;
    */
-<<<<<<< HEAD
-  private async reportToExternalService(errorId: string): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    const error = this.errors.get(errorId)
-    if (!error) return
-    try {
-    // TODO: Add content
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
   }
-      if (typeof window !== 'undefined' && 'fetch' in window) {
-    // TODO: Add content
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
   }
-        await fetch('/api/error-report', {
-    // TODO: Add content
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
   }
-=======
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
   private async reportToExternalService(errorId: string): Promise;
           <void> {// TODO: Add content;}
 }
@@ -446,106 +952,620 @@ const trackedError: TrackedError = {// TODO: Add content;}
 }
         await fetch('/api/error-report', {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
         }
   )
       }
-<<<<<<< HEAD
-    } catch (reportError) {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-      logger.error('Failed to report error to external service', reportError as Error)
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
     } catch (reportError) {// TODO: Add content;}
 }
       logger.error('Failed to report error to external service', reportError as Error);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Get all tracked errors;
    */
-<<<<<<< HEAD
-  getErrors(): TrackedError[] {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    return Array.from(this.errors.values())
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
   getErrors(): TrackedError[] {// TODO: Add content;}
 }
     return Array.from(this.errors.values());
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get errors by category;
    */
-<<<<<<< HEAD
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    return this.getErrors().filter(e => e.metadata.category === category)
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {// TODO: Add content;}
 }
     return this.getErrors().filter(e => e.metadata.category === category);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get errors by severity;
    */
-<<<<<<< HEAD
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    return this.getErrors().filter(e => e.metadata.severity === severity)
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
+
+  }
+  /**
+   * Get errors by severity;
+   */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {// TODO: Add content;}
 }
     return this.getErrors().filter(e => e.metadata.severity === severity);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get error statistics;
    */
-<<<<<<< HEAD
-  getStatistics(): {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-  total: number;,
-    byCategory: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <ErrorCategory, number>
-    bySeverity: Record<ErrorSeverity, number>
-    topErrors: TrackedError[]
-  } {
-    // TODO: Add content
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
   }
-    const errors = this.getErrors()
-    const byCategory = {} as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <ErrorCategory, number>
-    const bySeverity = {} as Record<ErrorSeverity, number>
-    errors.forEach(error => {
-    // TODO: Add content
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
   }
-=======
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
+
+  }
+  /**
+   * Get errors by severity;
+   */
+
+  }
+  /**
+   * Get error statistics;
+   */
   getStatistics(): {// TODO: Add content;}
 };
   total: number;,
@@ -561,24 +1581,139 @@ const trackedError: TrackedError = {// TODO: Add content;}
     const bySeverity = {} as Record<ErrorSeverity, number>;
     errors.forEach(error => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       byCategory[error.metadata.category] =
         (byCategory[error.metadata.category] || 0) + error.occurrences
       bySeverity[error.metadata.severity] =
-<<<<<<< HEAD
-        (bySeverity[error.metadata.severity] || 0) + error.occurrences
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
+  }
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
     }
   )
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10)
-    return {
-    // TODO: Add content
   }
-  total: errors.length,
-//       byCategory,
-//       bySeverity,
-//       topErrors
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
     }
-=======
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
+
+  }
+  /**
+   * Get errors by severity;
+   */
+
+  }
+  /**
+   * Get error statistics;
+   */
+
+      byCategory[error.metadata.category] =
+        (byCategory[error.metadata.category] || 0) + error.occurrences
+      bySeverity[error.metadata.severity] =
         (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
@@ -589,38 +1724,292 @@ const trackedError: TrackedError = {// TODO: Add content;}
 //       bySeverity,
 //       topErrors;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Clear all errors;
    */
-<<<<<<< HEAD
-  clearErrors(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    this.errors.clear()
-=======
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
+  }
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
+  }
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
+
+  }
+  /**
+   * Get errors by severity;
+   */
+
+  }
+  /**
+   * Get error statistics;
+   */
+
+      byCategory[error.metadata.category] =
+        (byCategory[error.metadata.category] || 0) + error.occurrences
+      bySeverity[error.metadata.severity] =
+
+  }
+  /**
+   * Clear all errors;
+   */
   clearErrors(): void {// TODO: Add content;}
 }
     this.errors.clear();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Clear errors older than specified time;
    */
-<<<<<<< HEAD
-  clearOldErrors(maxAge: number): void {
-    // TODO: Add content
+'use client'
+/**
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
+ */
+
+  Low = 'low',
+  Medium = 'medium',
+  High = 'high',
+  Critical = 'critical'
+}
+
+  Network = 'network',
+  Validation = 'validation',
+  Authorization = 'authorization',
+  Runtime = 'runtime',
+  Configuration = 'configuration',
+  ExternalService = 'external_service'
+}
+
+  id: string;,
+    message: string;,
+    metadata: ErrorMetadata;,
+    occurrences: number;,
+    firstSeen: number;,
+    lastSeen: number
+}
+
+    }
+    return ErrorTrackingService.instance
   }
-    const now = Date.now()
-    for (const [id, error] of this.errors.entries()) {
-    // TODO: Add content
+  /**
+   * Set up global error handlers;
+   */
+
+  filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno;
+        }
+
+  category: ErrorCategory.Runtime,
+        severity: ErrorSeverity.Critical,
+        context: { reason: event.reason }
+      }
+  )
+    }
+  )
   }
-      if (now - error.lastSeen > maxAge) {
-    // TODO: Add content
+  /**
+   * Track an error with metadata;
+   */
+//   trackError()
+    error: Error,
+    metadata: Partial;
+          <ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+
+      ...metadata,
+      timestamp,
+      stackTrace: error.stack,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+
+  id: errorId,
+        message: error.message,
+        metadata: fullMetadata,
+        occurrences: 1,
+        firstSeen: timestamp,
+
+    }
+    return errorId
   }
-        this.errors.delete(id)
-=======
+  /**
+   * Generate a unique error ID based on the message;
+   */
+
+    }
+    return `err_${Math.abs(hash).toString(36)}`
+  }
+  /**
+   * Add an error listener;
+   */
+
+  }
+  /**
+   * Remove an error listener;
+   */
+
+  }
+  /**
+   * Notify all listeners of a new error;
+   */
+
+      }
+    }
+  )
+  }
+  /**
+   * Report critical errors to external service;
+   */
+
+  method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(error)
+        }
+  )
+      }
+
+    }
+  }
+  /**
+   * Get all tracked errors;
+   */
+
+  }
+  /**
+   * Get errors by category;
+   */
+
+  }
+  /**
+   * Get errors by severity;
+   */
+
+  }
+  /**
+   * Get error statistics;
+   */
+
+      byCategory[error.metadata.category] =
+        (byCategory[error.metadata.category] || 0) + error.occurrences
+      bySeverity[error.metadata.severity] =
+
+  }
+  /**
+   * Clear all errors;
+   */
+
+  }
+  /**
+   * Clear errors older than specified time;
+   */
   clearOldErrors(maxAge: number): void {// TODO: Add content;}
 }
     const now = Date.now();
@@ -629,10 +2018,10 @@ const trackedError: TrackedError = {// TODO: Add content;}
       if (now - error.lastSeen > maxAge) {// TODO: Add content;}
 }
         this.errors.delete(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
 }
 export const errorTracking = ErrorTrackingService.getInstance()
 export default ErrorTrackingService
+};

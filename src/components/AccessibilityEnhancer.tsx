@@ -1,18 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface AccessibilityEnhancerProps {
-  // Add props here
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = () => {
-  return (
-    <div className="accessibilityenhancer">
-      {/* Component content */}
-    </div>
-  );
-
-=======
 interface AccessibilityEnhancerProps {children: React.ReactNode;}
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
@@ -58,7 +45,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children,}
     document.body.insertBefore(skipLink, document.body.firstChild);
   };
 
-  const addFocusIndicators = () => {const style = document.createElement('style');}
     style.textContent = `
       *:focus {outline: 2px solid #4F46E5;}
         outline-offset: 2px;
@@ -67,7 +53,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children,}
     document.head.appendChild(style);
   };
 
-  const setupKeyboardNavigation = () => {document.addEventListener('keydown', (e) => {}
       if (e.key === 'Tab') {document.body.classList.add('keyboard-navigation');}
       }
     });
@@ -78,7 +63,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children,}
 
   return;
           <>{children}</>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default AccessibilityEnhancer;
+};

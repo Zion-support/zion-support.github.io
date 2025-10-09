@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface UltimateBusinessIntelligenceShowcase2025Props {
-  // Add props here
-}
-
-const UltimateBusinessIntelligenceShowcase2025: React.FC<UltimateBusinessIntelligenceShowcase2025Props> = () => {
-  return (
-    <div className="ultimatebusinessintelligenceshowcase2025">
-      {/* Component content */}
-    </div>
-  );
-};
-
-export default UltimateBusinessIntelligenceShowcase2025;
-
-=======
 'use client';
 import React, { useState } from 'react';
         return (
@@ -57,15 +39,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {// TODO: Add content;}
       type: 'Implementation Guide',
       category: 'resource',
               {/* Badge */}
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
@@ -105,19 +79,12 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {// TODO: Add content;}
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
 // />
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </svg>
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

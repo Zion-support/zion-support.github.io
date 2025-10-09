@@ -3,20 +3,11 @@
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z;
  */
-<<<<<<< HEAD
-export class SecurityManager {
-    // TODO: Add content
-  }
-  private static instance: SecurityManager
-  private constructor() {}
-  static getInstance(): SecurityManager {
-    // TODO: Add content
-  }
-    if (!SecurityManager.instance) {
-    // TODO: Add content
-  }
-      SecurityManager.instance = new SecurityManager()
-=======
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
 export class SecurityManager {// TODO: Add content;}
 }
   private static instance: SecurityManager;
@@ -26,32 +17,29 @@ export class SecurityManager {// TODO: Add content;}
     if (!SecurityManager.instance) {// TODO: Add content;}
 }
       SecurityManager.instance = new SecurityManager();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return SecurityManager.instance
   }
   /**
    * Sanitize user input to prevent XSS attacks;
    */
-<<<<<<< HEAD
-  sanitizeInput(input: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
+
+    }
+    return SecurityManager.instance
   }
-    return input
-=======
+  /**
+   * Sanitize user input to prevent XSS attacks;
+   */
   sanitizeInput(input: string): string {// TODO: Add content;}
 }
     return input;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       .replace(/[
-          
-          
-          
-          
-          
-          
-          
-          
+
           <>]/g, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+=/gi, '')
@@ -60,22 +48,29 @@ export class SecurityManager {// TODO: Add content;}
   /**
    * Validate and sanitize URL;
    */
-<<<<<<< HEAD
-  sanitizeUrl(url: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
+
+    }
+    return SecurityManager.instance
   }
-    try {
-      if (!['http:', 'https:'].includes(parsed.protocol)) {
-    // TODO: Add content
+  /**
+   * Sanitize user input to prevent XSS attacks;
+   */
+
+//       .replace(/[
+
+          <>]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
   }
-        throw new Error('Invalid protocol')
-      }
-      return parsed.toString()
-    } catch {
-    // TODO: Add content
-  }
-      return ''
-=======
+  /**
+   * Validate and sanitize URL;
+   */
   sanitizeUrl(url: string): string {// TODO: Add content;}
 }
     try {if (!['http:', 'https:'].includes(parsed.protocol)) {}
@@ -87,28 +82,40 @@ export class SecurityManager {// TODO: Add content;}
     } catch {// TODO: Add content;}
 }
       return '';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Generate secure random token;
    */
-<<<<<<< HEAD
-  generateSecureToken(_length: number = 32): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
+
+    }
+    return SecurityManager.instance
   }
-    const array = new Uint8Array(length)
-    if (typeof window !== 'undefined' && window.crypto) {
-    // TODO: Add content
+  /**
+   * Sanitize user input to prevent XSS attacks;
+   */
+
+//       .replace(/[
+
+          <>]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
   }
-      window.crypto.getRandomValues(array)
-    } else {
-    // TODO: Add content
+  /**
+   * Validate and sanitize URL;
+   */
+
+    }
   }
-      // Fallback for Node.js environment
-const crypto = require('crypto')
-      crypto.randomFillSync(array)
-=======
+  /**
+   * Generate secure random token;
+   */
   generateSecureToken(_length: number = 32): string {// TODO: Add content;}
 }
     const array = new Uint8Array(length);
@@ -120,29 +127,48 @@ const crypto = require('crypto')
       // Fallback for Node.js environment;
 const crypto = require('crypto');
       crypto.randomFillSync(array);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
   }
   /**
    * Implement rate limiting;
    */
-<<<<<<< HEAD
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
+
+    }
+    return SecurityManager.instance
   }
-    const now = Date.now()
-    const windowStart = now - windowMs
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage()
-    const requests = storage.get(key) || []
-    // Remove old requests
-const validRequests = requests.filter((time: number) => time > windowStart)
-    if (validRequests.length >= limit) {
-    // TODO: Add content
+  /**
+   * Sanitize user input to prevent XSS attacks;
+   */
+
+//       .replace(/[
+
+          <>]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
   }
-      return false
-=======
+  /**
+   * Validate and sanitize URL;
+   */
+
+    }
+  }
+  /**
+   * Generate secure random token;
+   */
+
+    }
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+  }
+  /**
+   * Implement rate limiting;
+   */
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {// TODO: Add content;}
 }
     const now = Date.now();
@@ -155,39 +181,62 @@ const validRequests = requests.filter((time: number) => time > windowStart);
     if (validRequests.length >= limit) {// TODO: Add content;}
 }
       return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
   }
-<<<<<<< HEAD
-  private getRateLimitStorage(): Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number[]> {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Security Utilities;
+ * Generated: 2025-10-08T02:06:22.083Z;
+ */
+
+    }
+    return SecurityManager.instance
   }
-    if (!global._rateLimitStorage) {
-    // TODO: Add content
+  /**
+   * Sanitize user input to prevent XSS attacks;
+   */
+
+//       .replace(/[
+
+          <>]/g, '')
+      .replace(/javascript:/gi, '')
+      .replace(/on\w+=/gi, '')
+      .trim()
   }
-      global._rateLimitStorage = new Map()
-=======
+  /**
+   * Validate and sanitize URL;
+   */
+
+    }
+  }
+  /**
+   * Generate secure random token;
+   */
+
+    }
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+  }
+  /**
+   * Implement rate limiting;
+   */
+
+    }
+    validRequests.push(now)
+    storage.set(key, validRequests)
+    return true
+  }
   private getRateLimitStorage(): Map;
           <string, number[]> {// TODO: Add content;}
 }
     if (!global._rateLimitStorage) {// TODO: Add content;}
 }
       global._rateLimitStorage = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return global._rateLimitStorage
   }
 }
 export default SecurityManager.getInstance()
+};

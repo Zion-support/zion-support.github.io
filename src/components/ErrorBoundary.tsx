@@ -1,18 +1,8 @@
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-<<<<<<< HEAD
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
+'use client';
 
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-
-=======
 interface Props {// TODO: Add content;}
 };
   children: ReactNode;
@@ -29,7 +19,6 @@ class ErrorBoundary extends Component;
           <Props, State> {// TODO: Add content;}
 }
   constructor(props: Props) {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -37,29 +26,15 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-<<<<<<< HEAD
+'use client';
 
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return { hasError: true, error };
+}
 
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-
-    this.setState({ error, errorInfo });
-
-  }
-
-  render() {
-    if (this.state.hasError) {
-
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300">Please refresh the page and try again.</p>
-
-=======
   static getDerivedStateFromError(error: Error): State {// TODO: Add content;}
 }
     return {// TODO: Add content;}
@@ -162,14 +137,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
       }
       // Default error UI;
       return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
         
@@ -183,29 +151,13 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <p className="text-gray-300 mb-6 leading-relaxed">
 // We're sorry, but something unexpected happened. Our team has been notified;
 //                 and is working to fix the issue.
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
               {process.env.NODE_ENV === 'development' && this.state.error && ()}
           <details className="mb-6 text-left">
                   <summary className="text-cyan-400 cursor-pointer mb-2">
 // Error Details (Development Only)
-                  
-          
-          
-          
-          
-          
-          
-          
-          
+
           </summary>
                   <div className="bg-gray-800 p-4 rounded-lg text-sm text-gray-300 overflow-auto">
                     <div className="mb-2">
@@ -258,7 +210,6 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 </p>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </div>
         </div>
       );

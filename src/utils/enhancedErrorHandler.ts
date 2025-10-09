@@ -3,36 +3,11 @@
  * Enhanced Error Handling System;
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
  */
-<<<<<<< HEAD
-interface ErrorContext {
-    // TODO: Add content
-  }
-  userId?: string
-  sessionId?: string
-  url: string;,
-    userAgent: string;,
-    timestamp: string
-  component?: string
-  action?: string
-  props?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  state?: Record<string, unknown>
-}
-interface ErrorReport {
-    // TODO: Add content
-  }
-  id: string
-    type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom'
-    message: string
-=======
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
 interface ErrorContext {// TODO: Add content;}
 }
   userId?: string;
@@ -51,7 +26,6 @@ interface ErrorReport {// TODO: Add content;}
   id: string;
     type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
     message: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   stack?: string;,
     context: ErrorContext;,
     severity: 'low' | 'medium' | 'high' | 'critical';,
@@ -62,27 +36,22 @@ interface ErrorReport {// TODO: Add content;}
 //     | 'performance'
     | 'unknown';,
     tags: string[];,
-<<<<<<< HEAD
-    metadata: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-  resolved: boolean
-  resolvedAt?: string
-  resolvedBy?: string
-}
-interface ErrorHandlerConfig {
-    // TODO: Add content
-  }
-  enableConsoleLogging: boolean
-    enableRemoteReporting: boolean
-=======
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
     metadata: Record;
           <string, unknown>;
   resolved: boolean;
@@ -93,7 +62,6 @@ interface ErrorHandlerConfig {// TODO: Add content;}
 };
   enableConsoleLogging: boolean;
     enableRemoteReporting: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     enableErrorRecovery: boolean;,
     enableErrorCategorization: boolean;,
     enableErrorAggregation: boolean;,
@@ -103,33 +71,32 @@ interface ErrorHandlerConfig {// TODO: Add content;}
   remoteEndpoint?: string
   apiKey?: string
 }
-<<<<<<< HEAD
-class EnhancedErrorHandler {
-    // TODO: Add content
-  }
-  private config: ErrorHandlerConfig
-  private errors: ErrorReport[] = []
-  private errorCounts: Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number> = new Map()
-  private errorCategories: Map<string, number> = new Map()
-  private _lastErrorTime: number = 0
-  private errorRateLimit: number = 0
-  private isInitialized: boolean = false
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    // TODO: Add content
-  }
-    this.config = {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
 class EnhancedErrorHandler {// TODO: Add content;}
 }
   private config: ErrorHandlerConfig;
@@ -144,7 +111,6 @@ class EnhancedErrorHandler {// TODO: Add content;}
 }
     this.config = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -153,36 +119,88 @@ class EnhancedErrorHandler {// TODO: Add content;}
       enablePerformanceImpact: true,
       maxErrorsPerMinute: 10,
       errorRetentionDays: 30,
-<<<<<<< HEAD
-//       ...config
-    }
-    this.initialize()
-=======
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
 //       ...config;
     };
     this.initialize();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize the error handler;
    */
-<<<<<<< HEAD
-  private initialize(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    if (this.isInitialized) return
-    this.setupGlobalErrorHandlers()
-    this.setupUnhandledRejectionHandler()
-    this.setupResourceErrorHandler()
-    this.setupNetworkErrorHandler()
-    this.setupPerformanceErrorHandler()
-    this.setupErrorRecovery()
-    this.setupErrorCleanup()
-    this.isInitialized = true
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
-  }
-=======
+  /**
+   * Initialize the error handler;
+   */
   private initialize(): void {// TODO: Add content;}
 }
     if (this.isInitialized) return;
@@ -196,70 +214,187 @@ class EnhancedErrorHandler {// TODO: Add content;}
     this.isInitialized = true;
     if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Setup global error handlers;
    */
-<<<<<<< HEAD
-  private setupGlobalErrorHandlers(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    window.addEventListener('error', event => {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-      this.handleError({
-    // TODO: Add content
-  }
-=======
+  /**
+   * Setup global error handlers;
+   */
   private setupGlobalErrorHandlers(): void {// TODO: Add content;}
 }
     window.addEventListener('error', event => {// TODO: Add content;}
 }
       this.handleError({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   type: 'javascript',
         message: event.message,
         stack: event.error?.stack,
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-<<<<<<< HEAD
-        error: event.error
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
+  }
+  /**
+   * Initialize the error handler;
+   */
+
       }
-  )
-    }
-  )
-=======
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
         error: event.error;
       });
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup unhandled promise rejection handler;
    */
-<<<<<<< HEAD
-  private setupUnhandledRejectionHandler(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    window.addEventListener('unhandledrejection', event => {
-    // TODO: Add content
-  }
-      this.handleError({
-    // TODO: Add content
-  }
-  type: 'promise',
-        message: event.reason?.message || String(event.reason),
-        stack: event.reason?.stack,
-        reason: event.reason
+  /**
+   * Initialize the error handler;
+   */
+
       }
-  )
-    }
-  )
-=======
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
   private setupUnhandledRejectionHandler(): void {// TODO: Add content;}
 }
     window.addEventListener('unhandledrejection', event => {// TODO: Add content;}
@@ -272,34 +407,73 @@ class EnhancedErrorHandler {// TODO: Add content;}
         reason: event.reason;
       });
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup resource error handler;
    */
-<<<<<<< HEAD
-  private setupResourceErrorHandler(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-//     window.addEventListener()
-//       'error',
-      event => {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-        if (event.target !== window) {
-            src?: string
-            href?: string
-          }
-          this.handleError({
-    // TODO: Add content
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
   }
-  type: 'resource',
-            message: `Failed to load resource: ${target?.src || target?.href}`,
-            element: event.target?.constructor.name,
-            src: target?.src || target?.href
-          }
-  )
-=======
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
   private setupResourceErrorHandler(): void {// TODO: Add content;}
 }
 //     window.addEventListener()
@@ -316,7 +490,6 @@ class EnhancedErrorHandler {// TODO: Add content;}
             element: event.target?.constructor.name,
             src: target?.src || target?.href;
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       },
 //       true,
@@ -325,35 +498,78 @@ class EnhancedErrorHandler {// TODO: Add content;}
   /**
    * Setup network error handler;
    */
-<<<<<<< HEAD
-  private setupNetworkErrorHandler(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    // Monitor fetch requests
-const originalFetch = window.fetch
-    window.fetch = async (...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
-          <typeof fetch>) => {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-      try {
-    // TODO: Add content
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
   }
-        const response = await originalFetch(...args)
-        if (!response.ok) {
-    // TODO: Add content
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
   }
-          this.handleError({
-    // TODO: Add content
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
   }
-=======
+  /**
+   * Setup network error handler;
+   */
   private setupNetworkErrorHandler(): void {// TODO: Add content;}
 }
     // Monitor fetch requests;
@@ -368,24 +584,87 @@ const originalFetch = window.fetch;
 }
           this.handleError({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   type: 'network',
             message: `Network request failed: ${response.status} ${response.statusText}`,
             url: args[0] as string,
             status: response.status,
-<<<<<<< HEAD
-            statusText: response.statusText
-          }
-  )
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
+  }
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
         }
-        return response
-      } catch (error) {
-    // TODO: Add content
+      },
+//       true,
+)
   }
-        this.handleError({
-    // TODO: Add content
-  }
-=======
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
             statusText: response.statusText;
           });
         }
@@ -394,7 +673,6 @@ const originalFetch = window.fetch;
 }
         this.handleError({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
@@ -408,32 +686,97 @@ const originalFetch = window.fetch;
   /**
    * Setup performance error handler;
    */
-<<<<<<< HEAD
-  private setupPerformanceErrorHandler(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    if (!this.config.enablePerformanceImpact) return
-    // Monitor long tasks that might indicate performance issues
-    if ('PerformanceObserver' in window) {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-      try {
-    // TODO: Add content
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
   }
-        const observer = new PerformanceObserver(list => {
-    // TODO: Add content
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
   }
-          list.getEntries().forEach(entry => {
-    // TODO: Add content
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
   }
-            if (entry.duration > 100) {
-    // TODO: Add content
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
   }
-              // Tasks longer than 100ms
-              this.handleError({
-    // TODO: Add content
-  }
-=======
+  /**
+   * Setup performance error handler;
+   */
   private setupPerformanceErrorHandler(): void {// TODO: Add content;}
 }
     if (!this.config.enablePerformanceImpact) return;
@@ -451,7 +794,6 @@ const originalFetch = window.fetch;
               // Tasks longer than 100ms;
               this.handleError({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
@@ -459,41 +801,222 @@ const originalFetch = window.fetch;
               }
   )
             }
-<<<<<<< HEAD
-          }
-  )
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
+  }
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
         }
   )
-        observer.observe({ type: 'longtask', buffered: true }
-  )
-      } catch (error) {
-    // TODO: Add content
+        throw error
+      }
+    }
   }
-=======
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
           });
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
     }
   }
   /**
    * Setup error recovery mechanisms;
    */
-<<<<<<< HEAD
-  private setupErrorRecovery(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    if (!this.config.enableErrorRecovery) return
-    // Auto-recovery for common errors
-    setInterval(() => {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-      this.attemptErrorRecovery()
-    }, 30000); // Check every 30 seconds
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
   private setupErrorRecovery(): void {// TODO: Add content;}
 }
     if (!this.config.enableErrorRecovery) return;
@@ -502,22 +1025,121 @@ const originalFetch = window.fetch;
 }
       this.attemptErrorRecovery();
     }, 30000); // Check every 30 seconds;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup error cleanup;
    */
-<<<<<<< HEAD
-  private setupErrorCleanup(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    // Clean up old errors
-//     setInterval()
-      () => {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-        this.cleanupOldErrors()
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
   private setupErrorCleanup(): void {// TODO: Add content;}
 }
     // Clean up old errors;
@@ -525,7 +1147,6 @@ const originalFetch = window.fetch;
       () => {// TODO: Add content;}
 }
         this.cleanupOldErrors();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       },
 //       24 * 60 * 60 * 1000,
 ); // Daily cleanup;
@@ -533,70 +1154,400 @@ const originalFetch = window.fetch;
   /**
    * Handle error with comprehensive processing;
    */
-<<<<<<< HEAD
-  private handleError(errorData: {
-    if (!sessionId) {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-      sessionStorage.setItem('error_session_id', sessionId)
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
   private handleError(errorData: {if (!sessionId) {}
   // TODO: Add content;
 }
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return sessionId
   }
   /**
    * Get user ID;
    */
-<<<<<<< HEAD
-  private getUserId(): string | undefined {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    return localStorage.getItem('user_id') || undefined
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
   private getUserId(): string | undefined {// TODO: Add content;}
 }
     return localStorage.getItem('user_id') || undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check rate limiting;
    */
-<<<<<<< HEAD
-  private checkRateLimit(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    const now = Date.now()
-    const timeDiff = now - this.lastErrorTime
-    if (timeDiff 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 60000) {
-    // TODO: Add content
-  }
-      // Within 1 minute
-      this.errorRateLimit++
-      if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
-    // TODO: Add content
-  }
-        return false
+  /**
+   * Initialize the error handler;
+   */
+
       }
-    } else {
-    // TODO: Add content
   }
-      this.errorRateLimit = 1
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
   private checkRateLimit(): boolean {// TODO: Add content;}
 }
     const now = Date.now();
@@ -613,7 +1564,6 @@ const originalFetch = window.fetch;
     } else {// TODO: Add content;}
 }
       this.errorRateLimit = 1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.lastErrorTime = now
     return true
@@ -621,18 +1571,149 @@ const originalFetch = window.fetch;
   /**
    * Update error counters;
    */
-<<<<<<< HEAD
-  private updateErrorCounts(errorReport: ErrorReport): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    const key = `${errorReport.type}_${errorReport.category}`
-    this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1)
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
   private updateErrorCounts(errorReport: ErrorReport): void {// TODO: Add content;}
 }
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     this.errorCategories.set()
 //       errorReport.category,
 //       (this.errorCategories.get(errorReport.category) || 0) + 1,
@@ -641,21 +1722,154 @@ const originalFetch = window.fetch;
   /**
    * Log error to console;
    */
-<<<<<<< HEAD
-  private logError(errorReport: ErrorReport): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    const emoji = this.getSeverityEmoji(errorReport.severity)
-    console.group(`${emoji} Error Report: ${errorReport.id}`)
-    // // console.error('Message:', errorReport.message)
-    // // console.error('Type:', errorReport.type)
-    // // console.error('Severity:', errorReport.severity)
-    // // console.error('Category:', errorReport.category)
-    // // console.error('Context:', errorReport.context)
-    // // console.error('Metadata:', errorReport.metadata)
-    if (errorReport.stack) {
-      // // console.error('Stack:', errorReport.stack)
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
   private logError(errorReport: ErrorReport): void {// TODO: Add content;}
 }
     const emoji = this.getSeverityEmoji(errorReport.severity);
@@ -667,26 +1881,171 @@ const originalFetch = window.fetch;
     // // console.error('Context:', errorReport.context);
     // // console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {// // console.error('Stack:', errorReport.stack);}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     console.groupEnd()
   }
   /**
    * Get severity emoji;
    */
-<<<<<<< HEAD
-  private getSeverityEmoji(severity: ErrorReport['severity']): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    switch (severity) {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
   private getSeverityEmoji(severity: ErrorReport['severity']): string {// TODO: Add content;}
 }
     switch (severity) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       case 'critical':
         return ''
       case 'high':
@@ -702,31 +2061,177 @@ const originalFetch = window.fetch;
   /**
    * Report to remote service;
    */
-<<<<<<< HEAD
-  private async reportToRemote(errorReport: ErrorReport): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    if (!this.config.remoteEndpoint) return
-    try {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-      await fetch(this.config.remoteEndpoint, {
-    // TODO: Add content
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
   }
-  method: 'POST',
-        headers: {
-    // TODO: Add content
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
   }
-=======
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
   private async reportToRemote(errorReport: ErrorReport): Promise;
           <void> {// TODO: Add content;}
 }
@@ -738,52 +2243,570 @@ const originalFetch = window.fetch;
   method: 'POST',
         headers: {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           'Content-Type': 'application/json',
           Authorization: `Bearer ${this.config.apiKey}`
         },
         body: JSON.stringify(errorReport)
-<<<<<<< HEAD
-      }
-  )
-    } catch (error) {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
       });
     } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Aggregate error data;
    */
-<<<<<<< HEAD
-  private aggregateError(errorReport: ErrorReport): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    // This could be expanded to include more sophisticated aggregation
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
   private aggregateError(errorReport: ErrorReport): void {// TODO: Add content;}
 }
     // This could be expanded to include more sophisticated aggregation;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   /**
    * Assess performance impact;
    */
-<<<<<<< HEAD
-  private assessPerformanceImpact(errorReport: ErrorReport): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    if ()
-      errorReport.type === 'resource' ||
-      errorReport.category === 'performance'
-    ) {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
   private assessPerformanceImpact(errorReport: ErrorReport): void {// TODO: Add content;}
 }
     if ()
@@ -791,45 +2814,412 @@ const originalFetch = window.fetch;
       errorReport.category === 'performance'
     ) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Attempt error recovery;
    */
-<<<<<<< HEAD
-  private attemptErrorRecovery(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
   private attemptErrorRecovery(): void {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     const recentErrors = this.errors.filter()
       error =>
 //         !error.resolved &&
 //         Date.now() - new Date(error.context.timestamp).getTime() 
-          
-          
-          
-          
-          
-          
-          
-          
+
           < 300000 // Last 5 minutes,
-<<<<<<< HEAD
-)
-    if (recentErrors.length > 5) {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-      if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
         }
-      // Implement recovery strategies here
-      this.clearErrorState()
-=======
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
 );
     if (recentErrors.length > 5) {// TODO: Add content;}
 }
@@ -838,24 +3228,217 @@ const originalFetch = window.fetch;
         }
       // Implement recovery strategies here;
       this.clearErrorState();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Clear error state;
    */
-<<<<<<< HEAD
-  private clearErrorState(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    // Reset error counters
-    this.errorCounts.clear()
-    this.errorCategories.clear()
-    this.errorRateLimit = 0
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
   private clearErrorState(): void {// TODO: Add content;}
 }
     // Reset error counters;
@@ -864,25 +3447,223 @@ const originalFetch = window.fetch;
     this.errorRateLimit = 0;
     if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Clean up old errors;
    */
-<<<<<<< HEAD
-  private cleanupOldErrors(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    const cutoffDate = new Date()
-    cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays)
-    this.errors = this.errors.filter()
-      error => new Date(error.context.timestamp) > cutoffDate,
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
 )
-    if (process.env['NODE_ENV'] === 'development') {
-    // TODO: Add content
   }
-=======
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
   private cleanupOldErrors(): void {// TODO: Add content;}
 }
     const cutoffDate = new Date();
@@ -892,50 +3673,229 @@ const originalFetch = window.fetch;
 );
     if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Get error statistics;
    */
-<<<<<<< HEAD
-  public getErrorStatistics(): {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-  totalErrors: number;,
-    errorsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number>
-    errorsByCategory: Record<string, number>
-    errorsBySeverity: Record<string, number>
-    recentErrors: ErrorReport[]
-  } {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-    const errorsByType: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, number> = {}
-    const errorsByCategory: Record<string, number> = {}
-    const errorsBySeverity: Record<string, number> = {}
-    this.errors.forEach(error => {
-    // TODO: Add content
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
   }
-      errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
-=======
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
   public getErrorStatistics(): {// TODO: Add content;}
 };
   totalErrors: number;,
@@ -953,66 +3913,960 @@ const originalFetch = window.fetch;
     this.errors.forEach(error => {// TODO: Add content;}
 }
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
-<<<<<<< HEAD
-        (errorsBySeverity[error.severity] || 0) + 1
-    }
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
+  }
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
   )
-    const recentErrors = this.errors
-=======
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
+
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1
+      errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1;
     });
     const recentErrors = this.errors;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       .filter(error => !error.resolved)
 //       .sort()
         (a, b) =>
 //           new Date(b.context.timestamp).getTime() -
 //           new Date(a.context.timestamp).getTime()
 //       )
-<<<<<<< HEAD
-      .slice(0, 10)
-    return {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-=======
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
+
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1
+      errorsBySeverity[error.severity] =
+
+      .filter(error => !error.resolved)
+//       .sort()
+        (a, b) =>
+//           new Date(b.context.timestamp).getTime() -
+//           new Date(a.context.timestamp).getTime()
+//       )
       .slice(0, 10);
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   totalErrors: this.errors.length,
 //       errorsByType,
 //       errorsByCategory,
 //       errorsBySeverity,
-<<<<<<< HEAD
-//       recentErrors
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
+  }
+  /**
+   * Initialize the error handler;
+   */
+
+      }
+  }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
     }
-=======
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
+
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1
+      errorsBySeverity[error.severity] =
+
+      .filter(error => !error.resolved)
+//       .sort()
+        (a, b) =>
+//           new Date(b.context.timestamp).getTime() -
+//           new Date(a.context.timestamp).getTime()
+//       )
+
+  totalErrors: this.errors.length,
+//       errorsByType,
+//       errorsByCategory,
+//       errorsBySeverity,
 //       recentErrors;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Export error data;
    */
-<<<<<<< HEAD
-  public exportErrorData(): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    return JSON.stringify()
-      {
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-=======
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
+  )
+        throw error
+      }
+    }
+  }
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
+  }
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
+
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1
+      errorsBySeverity[error.severity] =
+
+      .filter(error => !error.resolved)
+//       .sort()
+        (a, b) =>
+//           new Date(b.context.timestamp).getTime() -
+//           new Date(a.context.timestamp).getTime()
+//       )
+
+  totalErrors: this.errors.length,
+//       errorsByType,
+//       errorsByCategory,
+//       errorsBySeverity,
+
+  }
+  /**
+   * Export error data;
+   */
   public exportErrorData(): string {// TODO: Add content;}
 }
     return JSON.stringify()
       {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   errors: this.errors,
         statistics: this.getErrorStatistics(),
         config: this.config,
@@ -1025,43 +4879,258 @@ const originalFetch = window.fetch;
   /**
    * Manually report error;
    */
-<<<<<<< HEAD
-  public reportError(message: string, context?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <ErrorContext>): string {
-    // TODO: Add content
+'use client'
+/**
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
+ */
+
+  stack?: string;,
+    context: ErrorContext;,
+    severity: 'low' | 'medium' | 'high' | 'critical';,
+    category: //     | 'syntax'
+//     | 'runtime'
+//     | 'network'
+//     | 'security'
+//     | 'performance'
+    | 'unknown';,
+    tags: string[];,
+
+    enableErrorRecovery: boolean;,
+    enableErrorCategorization: boolean;,
+    enableErrorAggregation: boolean;,
+    enablePerformanceImpact: boolean;,
+    maxErrorsPerMinute: number;,
+    errorRetentionDays: number
+  remoteEndpoint?: string
+  apiKey?: string
+}
+
+  enableConsoleLogging: true,
+      enableRemoteReporting: false,
+      enableErrorRecovery: true,
+      enableErrorCategorization: true,
+      enableErrorAggregation: true,
+      enablePerformanceImpact: true,
+      maxErrorsPerMinute: 10,
+      errorRetentionDays: 30,
+
   }
-    const errorReport = this.createErrorReport({
-    // TODO: Add content
+  /**
+   * Initialize the error handler;
+   */
+
+      }
   }
-  type: 'custom',
-//       message,
-//       ...context
-    }
+  /**
+   * Setup global error handlers;
+   */
+
+  type: 'javascript',
+        message: event.message,
+        stack: event.error?.stack,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno,
+
+  }
+  /**
+   * Setup unhandled promise rejection handler;
+   */
+
+  }
+  /**
+   * Setup resource error handler;
+   */
+
+        }
+      },
+//       true,
+)
+  }
+  /**
+   * Setup network error handler;
+   */
+
+  type: 'network',
+            message: `Network request failed: ${response.status} ${response.statusText}`,
+            url: args[0] as string,
+            status: response.status,
+
+  type: 'network',
+          message: `Network request failed: ${error}`,
+          url: args[0] as string,
+          error: error instanceof Error ? error : new Error(String(error))
+        }
   )
-    this.processError(errorReport)
-    return errorReport.id
+        throw error
+      }
+    }
   }
-}
-// Export singleton instance
-export const errorHandler = new EnhancedErrorHandler()
-// Export class for custom instances
-export {
-    // TODO: Add content
+  /**
+   * Setup performance error handler;
+   */
+
+  type: 'custom',
+                message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
+                duration: entry.duration,
+                category: 'performance'
+              }
+  )
+            }
+
+        }
+    }
   }
-//   EnhancedErrorHandler,
-  type ErrorReport,
-  type ErrorContext,
-  type ErrorHandlerConfig
-}
-=======
+  /**
+   * Setup error recovery mechanisms;
+   */
+
+  }
+  /**
+   * Setup error cleanup;
+   */
+
+      },
+//       24 * 60 * 60 * 1000,
+); // Daily cleanup;
+  }
+  /**
+   * Handle error with comprehensive processing;
+   */
+
+    }
+    return sessionId
+  }
+  /**
+   * Get user ID;
+   */
+
+  }
+  /**
+   * Check rate limiting;
+   */
+
+    }
+    this.lastErrorTime = now
+    return true
+  }
+  /**
+   * Update error counters;
+   */
+
+//     this.errorCategories.set()
+//       errorReport.category,
+//       (this.errorCategories.get(errorReport.category) || 0) + 1,
+)
+  }
+  /**
+   * Log error to console;
+   */
+
+    }
+    console.groupEnd()
+  }
+  /**
+   * Get severity emoji;
+   */
+
+      case 'critical':
+        return ''
+      case 'high':
+        return ''
+      case 'medium':
+        return ''
+      case 'low':
+        return ''
+      default:
+        return ''
+    }
+  }
+  /**
+   * Report to remote service;
+   */
+
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${this.config.apiKey}`
+        },
+        body: JSON.stringify(errorReport)
+
+      }
+  }
+  /**
+   * Aggregate error data;
+   */
+
+    }
+  /**
+   * Assess performance impact;
+   */
+
+      }
+  }
+  /**
+   * Attempt error recovery;
+   */
+
+    const recentErrors = this.errors.filter()
+      error =>
+//         !error.resolved &&
+//         Date.now() - new Date(error.context.timestamp).getTime() 
+
+          < 300000 // Last 5 minutes,
+
+    }
+  }
+  /**
+   * Clear error state;
+   */
+
+      }
+  }
+  /**
+   * Clean up old errors;
+   */
+
+      }
+  }
+  /**
+   * Get error statistics;
+   */
+
+      errorsByCategory[error.category] =
+        (errorsByCategory[error.category] || 0) + 1
+      errorsBySeverity[error.severity] =
+
+      .filter(error => !error.resolved)
+//       .sort()
+        (a, b) =>
+//           new Date(b.context.timestamp).getTime() -
+//           new Date(a.context.timestamp).getTime()
+//       )
+
+  totalErrors: this.errors.length,
+//       errorsByType,
+//       errorsByCategory,
+//       errorsBySeverity,
+
+  }
+  /**
+   * Export error data;
+   */
+
+  errors: this.errors,
+        statistics: this.getErrorStatistics(),
+        config: this.config,
+        timestamp: new Date().toISOString()
+      },
+//       null,
+//       2,
+)
+  }
+  /**
+   * Manually report error;
+   */
   public reportError(message: string, context?: Partial;
           <ErrorContext>): string {// TODO: Add content;}
 }
@@ -1085,4 +5154,5 @@ export {// TODO: Add content;}
   type ErrorContext,
   type ErrorHandlerConfig;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

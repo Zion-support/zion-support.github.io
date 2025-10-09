@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { describe, it, expect, beforeEach } from '@jest/globals';
-
-describe('performanceMonitoring', () => {
-=======
 import {// TODO: Add content;}
 }
 //   recordMetric,
@@ -16,21 +11,13 @@ import {// TODO: Add content;}
 } from '../performanceMonitoring';
 describe('performanceMonitoring', () => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   beforeEach(() => {
     // Setup before each test
   });
-<<<<<<< HEAD
 
-  it('should pass basic test', () => {
-    expect(true).toBe(true);
+  beforeEach(() => {
+    // Setup before each test
   });
-
-  it('should handle basic functionality', () => {
-    const result = 1 + 1;
-    expect(result).toBe(2);
-
-=======
   describe('recordMetric', () => {// TODO: Add content;}
 }
     it('should record metrics', () => {// TODO: Add content;}
@@ -162,14 +149,7 @@ const metrics = getMetrics();
 }
       // Good performance metrics;
       recordMetric('FCP', 1000); // 
-          
-          
-          
-          
-          
-          
-          
-          
+
           < 1800 = good;
       recordMetric('LCP', 2000); //  
           < 2500 = good;
@@ -256,6 +236,6 @@ const metrics = getMetrics();
       recordMetric('CLS', 0.3); // Poor;
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   });
 });
+};

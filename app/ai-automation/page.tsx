@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';

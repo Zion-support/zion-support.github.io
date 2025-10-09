@@ -1,30 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-
-=======
 import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {const iotServices = [}
     {// TODO: Add content;}
@@ -103,14 +77,7 @@ title: 'IoT Data Management',
   ];
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -140,15 +107,7 @@ Schedule Demo;
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Our IoT & Edge Services?
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
               <p className="text-xl text-gray-600">
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;
@@ -257,8 +216,8 @@ href="mailto:kleber@ziontechgroup.com"
                 ✉️ kleber@ziontechgroup.com;
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default PagePage;
+};

@@ -3,45 +3,27 @@
  * Cache Manager;
  * Provides in-memory and localStorage caching with TTL support;
  */
-<<<<<<< HEAD
-export enum CacheStorage {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
 export enum CacheStorage {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Memory = 'memory',
   LocalStorage = 'localStorage',
   SessionStorage = 'sessionStorage'
 }
-<<<<<<< HEAD
-export interface CacheOptions {
-    // TODO: Add content
-  }
-  ttl?: number; // Time to live in milliseconds
-  storage?: CacheStorage
-  compress?: boolean
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
 }
-export interface CacheConfig {
-    // TODO: Add content
-  }
-  storage?: CacheStorage
-  defaultTTL?: number
-}
-export interface CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T> {
-    // TODO: Add content
-  }
-=======
 export interface CacheOptions {// TODO: Add content;}
 }
   ttl?: number; // Time to live in milliseconds;
@@ -56,50 +38,55 @@ export interface CacheConfig {// TODO: Add content;}
 export interface CacheEntry;
           <T> {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   value: T;,
     timestamp: number;,
     ttl: number
 }
-<<<<<<< HEAD
-export interface CacheStats {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
 export interface CacheStats {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   hits: number;,
     misses: number;,
     hitRate: number;,
     count: number;,
     entries: number
 }
-<<<<<<< HEAD
-export class CacheManager {
-    // TODO: Add content
-  }
-  private memoryCache: Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, CacheEntry<unknown>> = new Map()
-  private readonly defaultTTL: number
-  private readonly storage: CacheStorage
-  private cleanupInterval: NodeJS.Timeout | null = null
-  private stats = { hits: 0, misses: 0 }
-  constructor(_config: CacheConfig = {}) {
-    // TODO: Add content
-  }
-    this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes
-    this.storage = config.storage || CacheStorage.Memory
-    this.startCleanup()
-=======
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
 export class CacheManager {// TODO: Add content;}
 }
   private memoryCache: Map;
@@ -113,22 +100,37 @@ export class CacheManager {// TODO: Add content;}
     this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes;
     this.storage = config.storage || CacheStorage.Memory;
     this.startCleanup();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Start periodic cleanup of expired entries;
    */
-<<<<<<< HEAD
-  private startCleanup(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    if (typeof window === 'undefined') return
-    this.cleanupInterval = setInterval(() => {
-    // TODO: Add content
-  }
-      this.cleanup()
-    }, 60 * 1000); // Run every minute
-=======
+  /**
+   * Start periodic cleanup of expired entries;
+   */
   private startCleanup(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -136,94 +138,91 @@ export class CacheManager {// TODO: Add content;}
 }
       this.cleanup();
     }, 60 * 1000); // Run every minute;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Stop cleanup interval;
    */
-<<<<<<< HEAD
-  stopCleanup(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    if (this.cleanupInterval) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      clearInterval(this.cleanupInterval)
-      this.cleanupInterval = null
-=======
+  /**
+   * Stop cleanup interval;
+   */
   stopCleanup(): void {// TODO: Add content;}
 }
     if (this.cleanupInterval) {// TODO: Add content;}
 }
       clearInterval(this.cleanupInterval);
       this.cleanupInterval = null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Remove expired entries;
    */
-<<<<<<< HEAD
-  private cleanup(): void {
-    // Clean memory cache
-    for (const [key, entry] of this.memoryCache.entries()) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      if (this.isExpired(entry, now)) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        this.memoryCache.delete(key)
-      }
+  /**
+   * Stop cleanup interval;
+   */
+
     }
-    // Clean localStorage
-    if (typeof window !== 'undefined' && window.localStorage) {
-    // TODO: Add content
   }
-      const keysToRemove: string[] = []
-      for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < localStorage.length; i++) {
-    // TODO: Add content
-  }
-        const key = localStorage.key(i)
-        if (key && key.startsWith('cache_')) {
-    // TODO: Add content
-  }
-          try {
-    // TODO: Add content
-  }
-            const item = localStorage.getItem(key)
-            if (item) {
-    // TODO: Add content
-  }
-              const entry = JSON.parse(item) as CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <unknown>
-              if (this.isExpired(entry, now)) {
-    // TODO: Add content
-  }
-                keysToRemove.push(key)
-              }
-            }
-          } catch {
-    // TODO: Add content
-  }
-            keysToRemove.push(key)
-=======
+  /**
+   * Remove expired entries;
+   */
   private cleanup(): void {// Clean memory cache;}
     for (const [key, entry] of this.memoryCache.entries()) {// TODO: Add content;}
 }
@@ -257,7 +256,6 @@ export class CacheManager {// TODO: Add content;}
           } catch {// TODO: Add content;}
 }
             keysToRemove.push(key);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
       }
@@ -268,82 +266,184 @@ export class CacheManager {// TODO: Add content;}
   /**
    * Check if cache entry is expired;
    */
-<<<<<<< HEAD
-  private isExpired(entry: CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <unknown>, now = Date.now()): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    if (entry.ttl === Infinity) return false
-    return now - entry.timestamp > entry.ttl
-=======
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
   private isExpired(entry: CacheEntry;
           <unknown>, now = Date.now()): boolean {// TODO: Add content;}
 }
     if (entry.ttl === Infinity) return false;
     return now - entry.timestamp > entry.ttl;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get storage key with prefix;
    */
-<<<<<<< HEAD
-  private getStorageKey(key: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    return `cache_${key}`
-=======
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
   private getStorageKey(key: string): string {// TODO: Add content;}
 }
     return `cache_${key}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Set cache entry;
    */
-<<<<<<< HEAD
-  set
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(key: string, value: T, options: { ttl?: number } = {}): void {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL
-    const entry: CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T> = {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-//       value,
-      timestamp: Date.now(),
-//       ttl
+  /**
+   * Stop cleanup interval;
+   */
+
     }
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count')
-    if (this.storage === CacheStorage.Memory) {
-    // TODO: Add content
   }
-      this.memoryCache.set(key, entry)
-=======
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
   set;
           <T>(key: string, value: T, options: { ttl?: number } = {}): void {// TODO: Add content;}
 }
@@ -359,26 +459,74 @@ export class CacheManager {// TODO: Add content;}
     if (this.storage === CacheStorage.Memory) {// TODO: Add content;}
 }
       this.memoryCache.set(key, entry);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      try {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))
-      } catch (error) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-        logger.error('Failed to set localStorage cache', error)
-        // Fallback to memory cache
-        this.memoryCache.set(key, entry)
-=======
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
 ) {// TODO: Add content;}
 }
       try {// TODO: Add content;}
@@ -389,27 +537,81 @@ export class CacheManager {// TODO: Add content;}
         logger.error('Failed to set localStorage cache', error);
         // Fallback to memory cache;
         this.memoryCache.set(key, entry);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      try {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry))
-      } catch (error) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-        logger.error('Failed to set sessionStorage cache', error)
-        // Fallback to memory cache
-        this.memoryCache.set(key, entry)
-=======
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
 ) {// TODO: Add content;}
 }
       try {// TODO: Add content;}
@@ -420,51 +622,89 @@ export class CacheManager {// TODO: Add content;}
         logger.error('Failed to set sessionStorage cache', error);
         // Fallback to memory cache;
         this.memoryCache.set(key, entry);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
   /**
    * Get cache entry;
    */
-<<<<<<< HEAD
-  get
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(key: string): T | undefined {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count')
-    let entry: CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T> | null = null
-    if (this.storage === CacheStorage.Memory) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      entry = (this.memoryCache.get(key) as CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T> | undefined) || null
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
   get;
           <T>(key: string): T | undefined {// TODO: Add content;}
 }
@@ -475,38 +715,92 @@ export class CacheManager {// TODO: Add content;}
 }
       entry = (this.memoryCache.get(key) as CacheEntry;
           <T> | undefined) || null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 // window.localStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      try {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        const item = localStorage.getItem(this.getStorageKey(key))
-        if (item) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-          entry = JSON.parse(item) as CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>
+  /**
+   * Remove expired entries;
+   */
+
+          }
         }
-      } catch (error) {
-    // TODO: Add content
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
   }
-        logger.error('Failed to get localStorage cache', error)
-=======
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
 ) {// TODO: Add content;}
 }
       try {// TODO: Add content;}
@@ -520,55 +814,99 @@ export class CacheManager {// TODO: Add content;}
       } catch (error) {// TODO: Add content;}
 }
         logger.error('Failed to get localStorage cache', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      try {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        const item = sessionStorage.getItem(this.getStorageKey(key))
-        if (item) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-          entry = JSON.parse(item) as CacheEntry
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>
+  /**
+   * Remove expired entries;
+   */
+
+          }
         }
-      } catch (error) {
-    // TODO: Add content
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
   }
-        logger.error('Failed to get sessionStorage cache', error)
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
       }
     }
-    if (!entry) {
-    // TODO: Add content
   }
-      this.stats.misses++
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count')
-      return undefined
-    }
-    if (this.isExpired(entry)) {
-    // TODO: Add content
-  }
-      this.delete(key)
-      this.stats.misses++
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count')
-      return undefined
-=======
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
 ) {// TODO: Add content;}
 }
       try {// TODO: Add content;}
@@ -596,7 +934,6 @@ export class CacheManager {// TODO: Add content;}
       this.stats.misses++;
       performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');
       return undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.stats.hits++
     performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
@@ -605,111 +942,707 @@ export class CacheManager {// TODO: Add content;}
   /**
    * Check if key exists and is not expired;
    */
-<<<<<<< HEAD
-  has(key: string): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    return this.get(key) !== undefined
-=======
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
   has(key: string): boolean {// TODO: Add content;}
 }
     return this.get(key) !== undefined;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Delete a cache entry;
    */
-<<<<<<< HEAD
-  delete(key: string): void {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    if (this.storage === CacheStorage.Memory) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      this.memoryCache.delete(key)
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
   delete(key: string): void {// TODO: Add content;}
 }
     if (this.storage === CacheStorage.Memory) {// TODO: Add content;}
 }
       this.memoryCache.delete(key);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     } else if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
-  }
-      localStorage.removeItem(this.getStorageKey(key))
-=======
-) {// TODO: Add content;}
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
 }
-      localStorage.removeItem(this.getStorageKey(key));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
+  }
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+
+      }
+    }
   }
-      sessionStorage.removeItem(this.getStorageKey(key))
-=======
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+) {// TODO: Add content;}
+}
+      localStorage.removeItem(this.getStorageKey(key));
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
+  }
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
 ) {// TODO: Add content;}
 }
       sessionStorage.removeItem(this.getStorageKey(key));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Clear all cache entries;
    */
-<<<<<<< HEAD
-  clear(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    if (this.storage === CacheStorage.Memory) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      this.memoryCache.clear()
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
   clear(): void {// TODO: Add content;}
 }
     if (this.storage === CacheStorage.Memory) {// TODO: Add content;}
 }
       this.memoryCache.clear();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     if ()
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
 //       window.localStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      const keysToRemove: string[] = []
-      for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < localStorage.length; i++) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        const key = localStorage.key(i)
-        if (key && key.startsWith('cache_')) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-          keysToRemove.push(key)
-=======
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
 ) {// TODO: Add content;}
 }
       const keysToRemove: string[] = [];
@@ -720,7 +1653,6 @@ export class CacheManager {// TODO: Add content;}
         if (key && key.startsWith('cache_')) {// TODO: Add content;}
 }
           keysToRemove.push(key);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
       keysToRemove.forEach(key => localStorage.removeItem(key))
@@ -729,29 +1661,139 @@ export class CacheManager {// TODO: Add content;}
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
 //       window.sessionStorage,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-      const keysToRemove: string[] = []
-      for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < sessionStorage.length; i++) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-        const key = sessionStorage.key(i)
-        if (key && key.startsWith('cache_')) {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-          keysToRemove.push(key)
-=======
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
 ) {// TODO: Add content;}
 }
       const keysToRemove: string[] = [];
@@ -762,7 +1804,6 @@ export class CacheManager {// TODO: Add content;}
         if (key && key.startsWith('cache_')) {// TODO: Add content;}
 }
           keysToRemove.push(key);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key))
@@ -779,41 +1820,156 @@ export class CacheManager {// TODO: Add content;}
     fn: () => T | Promise;
           <T>,
     options: { ttl?: number } = {}
-<<<<<<< HEAD
-  ): T | Promise<T> {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    const cached = this.get
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(key)
-    if (cached !== undefined) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      return cached
+  /**
+   * Stop cleanup interval;
+   */
+
     }
-    const start = performance.now()
-    const value = fn()
-    const duration = performance.now() - start
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
-    // Handle both sync and async values
-    if (value instanceof Promise) {
-    // TODO: Add content
   }
-      return value.then(resolvedValue => {
-    // TODO: Add content
-  }
-        this.set(key, resolvedValue, options)
-        return resolvedValue
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
       }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
   )
-=======
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
   ): T | Promise<T> {// TODO: Add content;}
 }
     const cached = this.get;
@@ -834,7 +1990,6 @@ export class CacheManager {// TODO: Add content;}
         this.set(key, resolvedValue, options);
         return resolvedValue;
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.set(key, value, options)
     return value
@@ -848,25 +2003,170 @@ export class CacheManager {// TODO: Add content;}
     fn: () => Promise;
           <T> | T,
     options: { ttl?: number } = {}
-<<<<<<< HEAD
-  ): Promise<T> {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    const cached = this.get
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(key)
-    if (cached !== undefined) {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      return cached
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
   ): Promise<T> {// TODO: Add content;}
 }
     const cached = this.get;
@@ -874,7 +2174,6 @@ export class CacheManager {// TODO: Add content;}
     if (cached !== undefined) {// TODO: Add content;}
 }
       return cached;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     const start = performance.now()
     const value = await fn()
@@ -890,23 +2189,192 @@ export class CacheManager {// TODO: Add content;}
           <TArgs extends unknown[], TResult>()
     fn: (...args: TArgs) => TResult,
     options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
-<<<<<<< HEAD
-  ): (...args: TArgs) => TResult {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    const { keyGenerator, ...cacheOptions } = options
-    return (...args: TArgs): TResult => {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-      const key = keyGenerator
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
+
+    }
+    const start = performance.now()
+    const value = await fn()
+    const duration = performance.now() - start
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Memoize a function with caching;
+   */
+//   memoize;
+          <TArgs extends unknown[], TResult>()
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {// TODO: Add content;}
 }
     const { keyGenerator, ...cacheOptions } = options;
     return (...args: TArgs): TResult => {// TODO: Add content;}
 }
       const key = keyGenerator;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         ? keyGenerator(...args)
         : `memoize_${fn.name}_${JSON.stringify(args)}`
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult
@@ -915,95 +2383,603 @@ export class CacheManager {// TODO: Add content;}
   /**
    * Get cache statistics;
    */
-<<<<<<< HEAD
-  getStatistics(): CacheStats {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-    const total = this.stats.hits + this.stats.misses
-    return {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-=======
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
+
+    }
+    const start = performance.now()
+    const value = await fn()
+    const duration = performance.now() - start
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Memoize a function with caching;
+   */
+//   memoize;
+          <TArgs extends unknown[], TResult>()
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+
+//         ? keyGenerator(...args)
+        : `memoize_${fn.name}_${JSON.stringify(args)}`
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult
+    }
+  }
+  /**
+   * Get cache statistics;
+   */
   getStatistics(): CacheStats {// TODO: Add content;}
 }
     const total = this.stats.hits + this.stats.misses;
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   hits: this.stats.hits,
       misses: this.stats.misses,
       hitRate: total > 0 ? this.stats.hits / total : 0,
       count: this.memoryCache.size,
-<<<<<<< HEAD
-      entries: this.memoryCache.size
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
+  }
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
     }
-=======
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
+
+    }
+    const start = performance.now()
+    const value = await fn()
+    const duration = performance.now() - start
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Memoize a function with caching;
+   */
+//   memoize;
+          <TArgs extends unknown[], TResult>()
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+
+//         ? keyGenerator(...args)
+        : `memoize_${fn.name}_${JSON.stringify(args)}`
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult
+    }
+  }
+  /**
+   * Get cache statistics;
+   */
+
+  hits: this.stats.hits,
+      misses: this.stats.misses,
+      hitRate: total > 0 ? this.stats.hits / total : 0,
+      count: this.memoryCache.size,
       entries: this.memoryCache.size;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get cache count;
    */
-<<<<<<< HEAD
-  getStats(): {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-  memorySize: number;,
-    localStorageSize: number;,
-    sessionStorageSize: number
-  } {
-    // TODO: Add content
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
   }
-    let localStorageSize = 0
-    let sessionStorageSize = 0
-    if (typeof window !== 'undefined') {
-    // TODO: Add content
+  /**
+   * Stop cleanup interval;
+   */
+
+    }
   }
-      if (window.localStorage) {
-    // TODO: Add content
-  }
-        for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < localStorage.length; i++) {
-    // TODO: Add content
-  }
-          const key = localStorage.key(i)
-          if (key && key.startsWith('cache_')) {
-    // TODO: Add content
-  }
-            localStorageSize++
+  /**
+   * Remove expired entries;
+   */
+
           }
         }
       }
-      if (window.sessionStorage) {
-    // TODO: Add content
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
   }
-        for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < sessionStorage.length; i++) {
-    // TODO: Add content
+  /**
+   * Check if cache entry is expired;
+   */
+
   }
-          const key = sessionStorage.key(i)
-          if (key && key.startsWith('cache_')) {
-    // TODO: Add content
+  /**
+   * Get storage key with prefix;
+   */
+
   }
-            sessionStorageSize++
-=======
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
+
+    }
+    const start = performance.now()
+    const value = await fn()
+    const duration = performance.now() - start
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Memoize a function with caching;
+   */
+//   memoize;
+          <TArgs extends unknown[], TResult>()
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+
+//         ? keyGenerator(...args)
+        : `memoize_${fn.name}_${JSON.stringify(args)}`
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult
+    }
+  }
+  /**
+   * Get cache statistics;
+   */
+
+  hits: this.stats.hits,
+      misses: this.stats.misses,
+      hitRate: total > 0 ? this.stats.hits / total : 0,
+      count: this.memoryCache.size,
+
+  }
+  /**
+   * Get cache count;
+   */
   getStats(): {// TODO: Add content;}
 };
   memorySize: number;,
@@ -1036,27 +3012,221 @@ export class CacheManager {// TODO: Add content;}
           if (key && key.startsWith('cache_')) {// TODO: Add content;}
 }
             sessionStorageSize++;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
       }
     }
-<<<<<<< HEAD
-    return {
-    // TODO: Add content
+'use client'
+/**
+ * Cache Manager;
+ * Provides in-memory and localStorage caching with TTL support;
+ */
+
+  Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
+}
+
+  value: T;,
+    timestamp: number;,
+    ttl: number
+}
+
+  hits: number;,
+    misses: number;,
+    hitRate: number;,
+    count: number;,
+    entries: number
+}
+
   }
-  memorySize: this.memoryCache.size,
-//       localStorageSize,
-//       sessionStorageSize
+  /**
+   * Start periodic cleanup of expired entries;
+   */
+
+  }
+  /**
+   * Stop cleanup interval;
+   */
+
     }
-=======
+  }
+  /**
+   * Remove expired entries;
+   */
+
+          }
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    logger.debug('Cache cleanup completed')
+  }
+  /**
+   * Check if cache entry is expired;
+   */
+
+  }
+  /**
+   * Get storage key with prefix;
+   */
+
+  }
+  /**
+   * Set cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+      }
+    }
+  }
+  /**
+   * Get cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+// window.localStorage,
+
+      }
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    return entry.value
+  }
+  /**
+   * Check if key exists and is not expired;
+   */
+
+  }
+  /**
+   * Delete a cache entry;
+   */
+
+    } else if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+    } else if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+    }
+  }
+  /**
+   * Clear all cache entries;
+   */
+
+    }
+    if ()
+      this.storage === CacheStorage.LocalStorage &&
+      typeof window !== 'undefined' &&
+//       window.localStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => localStorage.removeItem(key))
+    }
+    if ()
+      this.storage === CacheStorage.SessionStorage &&
+      typeof window !== 'undefined' &&
+//       window.sessionStorage,
+
+        }
+      }
+      keysToRemove.forEach(key => sessionStorage.removeItem(key))
+    }
+    logger.info('Cache cleared', 'CacheManager', { storage: this.storage }
+  )
+  }
+  /**
+   * Get or set with function (handles both sync and async)
+   */
+//   getOrSet;
+          <T>()
+    key: string,
+    fn: () => T | Promise;
+          <T>,
+    options: { ttl?: number } = {}
+
+    }
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Get or set with async function;
+   */
+//   async getOrSetAsync;
+          <T>()
+    key: string,
+    fn: () => Promise;
+          <T> | T,
+    options: { ttl?: number } = {}
+
+    }
+    const start = performance.now()
+    const value = await fn()
+    const duration = performance.now() - start
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    this.set(key, value, options)
+    return value
+  }
+  /**
+   * Memoize a function with caching;
+   */
+//   memoize;
+          <TArgs extends unknown[], TResult>()
+    fn: (...args: TArgs) => TResult,
+    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
+
+//         ? keyGenerator(...args)
+        : `memoize_${fn.name}_${JSON.stringify(args)}`
+      return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult
+    }
+  }
+  /**
+   * Get cache statistics;
+   */
+
+  hits: this.stats.hits,
+      misses: this.stats.misses,
+      hitRate: total > 0 ? this.stats.hits / total : 0,
+      count: this.memoryCache.size,
+
+  }
+  /**
+   * Get cache count;
+   */
+
+          }
+        }
+      }
+    }
     return {// TODO: Add content;}
 };
   memorySize: this.memoryCache.size,
 //       localStorageSize,
 //       sessionStorageSize;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 export const cacheManager = new CacheManager()
+};

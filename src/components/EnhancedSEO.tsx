@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
-interface SEOProps {
-=======
 interface SEOProps {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   title?: string;
   description?: string;
   keywords?: string[];
   canonicalUrl?: string;
-<<<<<<< HEAD
-=======
+
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -28,22 +27,18 @@ interface SEOProps {// TODO: Add content;}
 }
 const EnhancedSEO: React.FC;
           <SEOProps> = ({// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+
+}
 
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI and IT solutions for modern enterprises',
-  keywords = ['AI', 'IT Solutions', 'Technology', 'Enterprise'],
-  canonicalUrl
-}) => {
-
-  useEffect(() => {
-    // Update document title
-    document.title = title;
-=======
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
 //   canonicalUrl,
@@ -63,7 +58,6 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 }) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     
     // Update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -73,32 +67,25 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       document.head.appendChild(metaDescription);
     }
     metaDescription.setAttribute('content', description);
-    
-<<<<<<< HEAD
-    // Update meta keywords
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-    
-    // Update canonical URL
-    if (canonicalUrl) {
-      let canonical = document.querySelector('link[rel="canonical"]');
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonical);
-      }
-      canonical.setAttribute('href', canonicalUrl);
-    }
-  }, [title, description, keywords, canonicalUrl]);
 
-  return null;
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
 
-=======
+}
+
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+    
           <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title><meta name="description" content={fullDescription} /><meta name="keywords" content={keywordsString} /><meta name="author" content={author} /><meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /><meta name="language" content={lang} /><link rel="canonical" href={canonicalUrl} />
@@ -123,73 +110,23 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       )}
       {/* Preconnect to external domains */}
 <link rel="preconnect" href="https:// fonts.googleapis.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="preconnect" href="https:// fonts.gstatic.com" crossOrigin="anonymous" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="preconnect" href="https:// www.google-analytics.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="preconnect" href="https:// www.googletagmanager.com" />
       {/* DNS Prefetch */}
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="dns-prefetch" href="// fonts.googleapis.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="dns-prefetch" href="// www.google-analytics.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           <link rel="dns-prefetch" href="// www.googletagmanager.com" />
-          
-          
-          
-          
-          
-          
-          
-          
+
           </Helmet>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 };
 
 export default EnhancedSEO;
+};

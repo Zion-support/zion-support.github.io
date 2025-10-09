@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface MicroSAASCardProps {
-
-  // Add props here
-
-=======
 'use client';
 interface MicroSAASCardProps {// TODO: Add content;}
 }
@@ -27,25 +19,14 @@ interface MicroSAASCardProps {// TODO: Add content;}
 }
 const MicroSAASCard: React.FC;
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
-<<<<<<< HEAD
 
-    <div className="microsaascard">
-      {/* Component content */}
+}
 
-=======
-    
-          
-          
-          
-          
-          
-          
-          
+  return (
+
           <div>Coming Soon</div>
   )
     
@@ -115,9 +96,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
 
 export default MicroSAASCard;
+};

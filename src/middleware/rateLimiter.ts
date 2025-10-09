@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-// TypeScript file - rateLimiter
-export default {};
-
-=======
 'use client';
 /**
  * Rate Limiting Middleware;
@@ -158,4 +152,5 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
       );
     // Request allowed - headers can be added to response later;
 return null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

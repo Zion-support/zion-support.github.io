@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react';}
 'use client';
 import React, { useState } from 'react';
@@ -66,28 +60,14 @@ const handleInputChange = (e: React.ChangeEvent;)
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
 
-=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -190,15 +170,7 @@ Creating Account...
                   ) : ()
 // 'Create Account'
                   )}
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </form>
               <div className="mt-8 text-center">
                   Already have an account?{' '}
@@ -238,10 +210,10 @@ Join thousands of businesses already using our AI and IT solutions;
                   <div className="text-2xl font-bold text-white">Microsoft</div>
                   <div className="text-2xl font-bold text-white">Google</div>
                   <div className="text-2xl font-bold text-white">Amazon</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
 
 export default PagePage;
+};

@@ -9,25 +9,17 @@
 export function debounce<T extends (...args: unknown[]) => unknown>(),
     func: T,
   wait: number,
-<<<<<<< HEAD
-): (...args: Parameters
-          <T>) => void {
-    // TODO: Add content
-  }
-  let timeout: NodeJS.Timeout | null = null
-  return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>) {
-      timeout = null
-      func(...args)
-=======
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
 ): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 }
@@ -39,7 +31,6 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
     if (timeout) {// TODO: Add content;}
 }
       clearTimeout(timeout);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     if (timeout) {
     // TODO: Add content
@@ -56,31 +47,34 @@ export function throttle;
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
   limit: number,
-<<<<<<< HEAD
-): (...args: Parameters
-          <T>) => void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  let inThrottle: boolean
-  return function executedFunction(...args: Parameters
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>) {
-    // TODO: Add content
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
   }
-    if (!inThrottle) {
-    // TODO: Add content
-  }
-      func(...args)
-      inThrottle = true
-      setTimeout(() => (inThrottle = false), limit)
-=======
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
 ): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 }
@@ -93,7 +87,6 @@ export function throttle;
       func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
@@ -103,43 +96,44 @@ export function throttle;
 export function memoize;
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
-<<<<<<< HEAD
-): T {
-    // TODO: Add content
-  }
-  const cache = new Map
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, ReturnType<T>>()
-  return ((...args: Parameters<T>): ReturnType<T> => {
-    // TODO: Add content
-  }
-    const key = JSON.stringify(args)
-    if (cache.has(key)) {
-    // TODO: Add content
-  }
-      return cache.get(key)!
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
     }
-    const result = func(...args) as ReturnType
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>
-    cache.set(key, result)
-    return result
-  }) as T
-=======
+    if (timeout) {
+    // TODO: Add content
+  }
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
 ): T {// TODO: Add content;}
 }
   const cache = new Map;
@@ -156,7 +150,6 @@ export function memoize;
     cache.set(key, result);
     return result;
   }) as T;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Lazy load a component with dynamic import;
@@ -165,17 +158,59 @@ export function lazyLoad<T extends React.ComponentType<unknown>>()
   importFunc: () => Promise;
           <{ default: T }>,
   fallback?: React.ReactNode,
-<<<<<<< HEAD
-): React.LazyExoticComponent<T> {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
-=======
+  }
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
 ): React.LazyExoticComponent<T> {// TODO: Add content;}
 }
   const LazyComponent = React.lazy(importFunc);
   if (fallback) {// TODO: Add content;}
 }
     return LazyComponent;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   const LazyComponent = React.lazy(importFunc)
   if (fallback) {
@@ -193,20 +228,76 @@ export async function measureTime;
   name: string,
   func: () => T | Promise;
           <T>
-<<<<<<< HEAD
-): Promise<{ result: T; duration: number }> {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  const start = performance.now()
-  const result = await func()
-  const duration = performance.now() - start
-=======
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
+    // TODO: Add content
+  }
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
 ): Promise<{ result: T; duration: number }> {// TODO: Add content;}
 }
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   return { result, duration }
 }
@@ -219,23 +310,84 @@ export async function batchAsync;
   operation: (item: T) => Promise;
           <R>,
   batchSize = 10,
-<<<<<<< HEAD
-): Promise<R[]> {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  const results: R[] = []
-  for (let _i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < items.length; i += batchSize) {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
-=======
+  }
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
 ): Promise<R[]> {// TODO: Add content;}
 }
   const results: R[] = [];
@@ -245,7 +397,6 @@ export async function batchAsync;
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     const batch = items.slice(i, i + batchSize)
     const batchResults = await Promise.all(batch.map(operation))
@@ -256,33 +407,95 @@ export async function batchAsync;
 /**
  * Create a request animation frame loop;
  */
-<<<<<<< HEAD
-export function rafLoop(callback: (time: number) => boolean | void): () => void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  let rafId: number
-  let running = true
-  function loop(time: number) {
-    // TODO: Add content
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
   }
-    if (!running) return
-    const shouldContinue = callback(time)
-    if (shouldContinue !== false) {
-    // TODO: Add content
-  }
-      rafId = requestAnimationFrame(loop)
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
     }
   }
-  rafId = requestAnimationFrame(loop)
-  return () => {
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    running = false
-    if (rafId) {
-    // TODO: Add content
+    return LazyComponent
   }
-      cancelAnimationFrame(rafId)
-=======
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
 export function rafLoop(callback: (time: number) => boolean | void): () => void {// TODO: Add content;}
 }
   let rafId: number;
@@ -303,7 +516,6 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     if (rafId) {// TODO: Add content;}
 }
       cancelAnimationFrame(rafId);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
@@ -313,19 +525,105 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 export function runWhenIdle()
   callback: () => void,
   options?: IdleRequestOptions,
-<<<<<<< HEAD
-): number {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    return window.requestIdleCallback(callback, options)
+    return LazyComponent
   }
-  // Fallback for browsers that don't support requestIdleCallback
-  if (typeof window !== 'undefined') {
-    // TODO: Add content
-=======
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
 ): number {// TODO: Add content;}
 }
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {// TODO: Add content;}
@@ -336,7 +634,6 @@ export function runWhenIdle()
   if (typeof window !== 'undefined') {// TODO: Add content;}
 }
     return (window as Window).setTimeout(callback, 1) as unknown as number;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     return (window as Window).setTimeout(callback, 1) as unknown as number
   }
@@ -345,22 +642,114 @@ export function runWhenIdle()
 /**
  * Cancel idle callback;
  */
-<<<<<<< HEAD
-export function cancelIdle(id: number): void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  if (typeof window !== 'undefined') {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    if ('cancelIdleCallback' in window) {
-    // TODO: Add content
+    return LazyComponent
   }
-      window.cancelIdleCallback(id)
-    } else {
-    // TODO: Add content
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
   }
-      (window as Window).clearTimeout(id)
-=======
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
 export function cancelIdle(id: number): void {// TODO: Add content;}
 }
   if (typeof window !== 'undefined') {// TODO: Add content;}
@@ -371,61 +760,127 @@ export function cancelIdle(id: number): void {// TODO: Add content;}
     } else {// TODO: Add content;}
 }
       (window as Window).clearTimeout(id);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
 /**
  * Virtual scroll helper;
  */
-<<<<<<< HEAD
-export class VirtualScroller
-          
-          
-          
-          
-          
-          
-          
-          
-          <T> {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  private itemHeight: number
-  private containerHeight: number
-  private items: T[]
-  constructor(items: T[], itemHeight: number, containerHeight: number) {
-    // TODO: Add content
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
   }
-    this.items = items
-    this.itemHeight = itemHeight
-    this.containerHeight = containerHeight
-  }
-  getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
-    // TODO: Add content
-  }
-    const start = Math.floor(scrollTop / this.itemHeight)
-    const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight)
-    const offsetY = start * this.itemHeight
-    return {
-    // TODO: Add content
-  }
-  start: Math.max(0, start),
-      end: Math.min(this.items.length, end),
-//       offsetY
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
     }
   }
-  getVisibleItems(scrollTop: number): T[] {
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    const { start, end } = this.getVisibleRange(scrollTop)
-    return this.items.slice(start, end)
+    return LazyComponent
   }
-  getTotalHeight(): number {
-    // TODO: Add content
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
   }
-    return this.items.length * this.itemHeight
-=======
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
 export class VirtualScroller;
           <T> {// TODO: Add content;}
 }
@@ -458,7 +913,6 @@ export class VirtualScroller;
   getTotalHeight(): number {// TODO: Add content;}
 }
     return this.items.length * this.itemHeight;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
@@ -467,38 +921,130 @@ export class VirtualScroller;
 export function setupLazyImages()
   selector = 'img[data-src]',
   options?: IntersectionObserverInit,
-<<<<<<< HEAD
-): () => void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  const images = document.querySelectorAll
-          
-          
-          
-          
-          
-          
-          
-          
-          <HTMLImageElement>(selector)
-  const observer = new IntersectionObserver((entries) => {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    entries.forEach((entry) => {
-    // TODO: Add content
+    return LazyComponent
   }
-      if (entry.isIntersecting) {
-    // TODO: Add content
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
   }
-        const img = entry.target as HTMLImageElement
-        const src = img.dataset['src']
-        if (src) {
-    // TODO: Add content
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
   }
-          img['src'] = src
-          img.removeAttribute('data-src')
-          observer.unobserve(img)
-=======
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
 ): () => void {// TODO: Add content;}
 }
   const images = document.querySelectorAll;
@@ -516,7 +1062,6 @@ export function setupLazyImages()
           img['src'] = src;
           img.removeAttribute('data-src');
           observer.unobserve(img);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -528,30 +1073,142 @@ export function setupLazyImages()
 /**
  * Preload critical resources;
  */
-<<<<<<< HEAD
-export function preloadResources(resources: Array
-          
-          
-          
-          
-          
-          
-          
-          
-          <{ url: string; as: string }>): void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  resources.forEach(({ url, as }) => {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    const link = document.createElement('link')
-    link.rel = 'preload'
-    link.href = url
-    link.as = as
-    document.head.appendChild(link)
+    return LazyComponent
   }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
   )
-=======
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
 export function preloadResources(resources: Array;
           <{ url: string; as: string }>): void {// TODO: Add content;}
 }
@@ -563,27 +1220,151 @@ export function preloadResources(resources: Array;
     link.as = as;
     document.head.appendChild(link);
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Check if code splitting is supported;
  */
-<<<<<<< HEAD
-export function supportsCodeSplitting(): boolean {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  // Dynamic imports are supported in modern browsers
-  // We can check by testing if Function constructor accepts import syntax
-  try {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    new Function('return import("data:text/javascript,")')
-    return true
-  } catch {
-    // TODO: Add content
+    return LazyComponent
   }
-    return false
-=======
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
 export function supportsCodeSplitting(): boolean {// TODO: Add content;}
 }
   // Dynamic imports are supported in modern browsers;
@@ -595,54 +1376,320 @@ export function supportsCodeSplitting(): boolean {// TODO: Add content;}
   } catch {// TODO: Add content;}
 }
     return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
  * Optimize bundle loading;
  */
-<<<<<<< HEAD
-export function prefetchBundle(url: string): void {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  const link = document.createElement('link')
-  link.rel = 'prefetch'
-  link.href = url
-  document.head.appendChild(link)
-=======
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
+    // TODO: Add content
+  }
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
+
+  }
+}
+/**
+ * Optimize bundle loading;
+ */
 export function prefetchBundle(url: string): void {// TODO: Add content;}
 }
   const link = document.createElement('link');
   link.rel = 'prefetch';
   link.href = url;
   document.head.appendChild(link);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Memory usage monitor;
  */
-<<<<<<< HEAD
-export function getMemoryUsage(): {
-    // TODO: Add content
-  }
-  used: number;,
-    total: number;,
-    limit: number
-} | null {
-    // TODO: Add content
-  }
-  if ('memory' in performance) {
-    // TODO: Add content
-  }
-    const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-    return {
-    // TODO: Add content
-  }
-  used: memory.usedJSHeapSize,
-      total: memory.totalJSHeapSize,
-      limit: memory.jsHeapSizeLimit
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
     }
-=======
+    if (timeout) {
+    // TODO: Add content
+  }
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
+    // TODO: Add content
+  }
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
+
+  }
+}
+/**
+ * Optimize bundle loading;
+ */
+
+}
+/**
+ * Memory usage monitor;
+ */
 export function getMemoryUsage(): {// TODO: Add content;}
 };
   used: number;,
@@ -659,40 +1706,171 @@ export function getMemoryUsage(): {// TODO: Add content;}
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   return null
 }
 /**
  * FPS Monitor;
  */
-<<<<<<< HEAD
-export class FPSMonitor {
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
     // TODO: Add content
   }
-  private _frames: number = 0
-  private lastTime: number = performance.now()
-  private fps: number = 0
-  private rafId: number = 0
-  start(callback?: (fps: number) => void): void {
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
+}
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-    const loop = () => {
-    // TODO: Add content
+    return LazyComponent
   }
-      const now = performance.now()
-      this.frames++
-      if (now >= this.lastTime + 1000) {
-    // TODO: Add content
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
   }
-        this.fps = Math.round((this.frames * 1000) / (now - this.lastTime))
-        this.frames = 0
-        this.lastTime = now
-        if (callback) {
-    // TODO: Add content
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
   }
-          callback(this.fps)
-=======
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
+
+  }
+}
+/**
+ * Optimize bundle loading;
+ */
+
+}
+/**
+ * Memory usage monitor;
+ */
+
+  }
+  return null
+}
+/**
+ * FPS Monitor;
+ */
 export class FPSMonitor {// TODO: Add content;}
 }
   private _frames: number = 0;
@@ -713,33 +1891,178 @@ export class FPSMonitor {// TODO: Add content;}
         if (callback) {// TODO: Add content;}
 }
           callback(this.fps);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
       this.rafId = requestAnimationFrame(loop)
     }
     this.rafId = requestAnimationFrame(loop)
   }
-<<<<<<< HEAD
-  stop(): void {
-    // TODO: Add content
-  }
-    if (this.rafId) {
-    // TODO: Add content
-  }
-      cancelAnimationFrame(this.rafId)
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
     }
-  }
-  getFPS(): number {
+    if (timeout) {
     // TODO: Add content
   }
-    return this.fps
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
   }
 }
-export default {
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
     // TODO: Add content
   }
-=======
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
+
+  }
+}
+/**
+ * Optimize bundle loading;
+ */
+
+}
+/**
+ * Memory usage monitor;
+ */
+
+  }
+  return null
+}
+/**
+ * FPS Monitor;
+ */
+
+        }
+      }
+      this.rafId = requestAnimationFrame(loop)
+    }
+    this.rafId = requestAnimationFrame(loop)
+  }
   stop(): void {// TODO: Add content;}
 }
     if (this.rafId) {// TODO: Add content;}
@@ -754,7 +2077,6 @@ export default {
 }
 export default {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   debounce,
 //   throttle,
 //   memoize,
@@ -770,10 +2092,189 @@ export default {// TODO: Add content;}
 //   supportsCodeSplitting,
 //   prefetchBundle,
 //   getMemoryUsage,
-<<<<<<< HEAD
-//   FPSMonitor
+'use client'
+/**
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
+ */
+/**
+ * Debounce function to limit execution rate;
+ */
+export function debounce<T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  wait: number,
+
+    }
+    if (timeout) {
+    // TODO: Add content
+  }
+      clearTimeout(timeout)
+    }
+    timeout = setTimeout(later, wait)
+  }
 }
-=======
+/**
+ * Throttle function to limit execution rate;
+ */
+export function throttle;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+  limit: number,
+
+    }
+  }
+}
+/**
+ * Memoize function results;
+ */
+export function memoize;
+          <T extends (...args: unknown[]) => unknown>(),
+    func: T,
+
+}
+/**
+ * Lazy load a component with dynamic import;
+ */
+export function lazyLoad<T extends React.ComponentType<unknown>>()
+  importFunc: () => Promise;
+          <{ default: T }>,
+  fallback?: React.ReactNode,
+
+  }
+  const LazyComponent = React.lazy(importFunc)
+  if (fallback) {
+    // TODO: Add content
+  }
+    return LazyComponent
+  }
+  return LazyComponent
+}
+/**
+ * Measure function execution time;
+ */
+export async function measureTime;
+          <T>()
+  name: string,
+  func: () => T | Promise;
+          <T>
+
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  return { result, duration }
+}
+/**
+ * Batch async operations;
+ */
+export async function batchAsync;
+          <T, R>()
+  items: T[],
+  operation: (item: T) => Promise;
+          <R>,
+  batchSize = 10,
+
+  }
+    const batch = items.slice(i, i + batchSize)
+    const batchResults = await Promise.all(batch.map(operation))
+    results.push(...batchResults)
+  }
+  return results
+}
+/**
+ * Create a request animation frame loop;
+ */
+
+    }
+  }
+}
+/**
+ * Idle callback wrapper;
+ */
+export function runWhenIdle()
+  callback: () => void,
+  options?: IdleRequestOptions,
+
+  }
+    return (window as Window).setTimeout(callback, 1) as unknown as number
+  }
+  return 0
+}
+/**
+ * Cancel idle callback;
+ */
+
+    }
+  }
+}
+/**
+ * Virtual scroll helper;
+ */
+
+  }
+}
+/**
+ * Image lazy loading helper;
+ */
+export function setupLazyImages()
+  selector = 'img[data-src]',
+  options?: IntersectionObserverInit,
+
+        }
+      }
+    }
+  )
+  }, options)
+  images.forEach((img) => observer.observe(img))
+  return () => observer.disconnect()
+}
+/**
+ * Preload critical resources;
+ */
+
+}
+/**
+ * Check if code splitting is supported;
+ */
+
+  }
+}
+/**
+ * Optimize bundle loading;
+ */
+
+}
+/**
+ * Memory usage monitor;
+ */
+
+  }
+  return null
+}
+/**
+ * FPS Monitor;
+ */
+
+        }
+      }
+      this.rafId = requestAnimationFrame(loop)
+    }
+    this.rafId = requestAnimationFrame(loop)
+  }
+
+//   debounce,
+//   throttle,
+//   memoize,
+//   lazyLoad,
+//   measureTime,
+//   batchAsync,
+//   rafLoop,
+//   runWhenIdle,
+//   cancelIdle,
+//   VirtualScroller,
+//   setupLazyImages,
+//   preloadResources,
+//   supportsCodeSplitting,
+//   prefetchBundle,
+//   getMemoryUsage,
 //   FPSMonitor;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

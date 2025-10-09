@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface SystemMonitorProps {
-  // Add props here
-}
-
-const SystemMonitor: React.FC<SystemMonitorProps> = () => {
-  return (
-    <div className="systemmonitor">
-      {/* Component content */}
-    </div>
-  );
-};
-
-=======
 'use client';
 /**
  * System Monitor Component;
@@ -24,7 +7,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics;
 const collectPerformanceMetrics = () => {
 import { performanceOptimizer } from '../utils/performanceOptimizer';
-const __collectPerformanceMetrics = () => {// TODO: Add content;}
 }
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
@@ -35,7 +17,6 @@ const __collectPerformanceMetrics = () => {// TODO: Add content;}
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
   };
 // Helper functions;
-const calculatePerformanceScore = () => {// TODO: Add content;}
 }
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
@@ -236,15 +217,7 @@ className={`h-2 rounded-full ${}
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
           <div className="space-y-2 max-h-64 overflow-y-auto">
             {metrics.errors.recent.map((error) => ()}
@@ -270,5 +243,5 @@ className={`h-2 rounded-full ${}
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => ()}
           <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default SystemMonitor;
+};

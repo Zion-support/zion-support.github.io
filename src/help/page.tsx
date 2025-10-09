@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default PagePage;
-=======
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users, Users from 'lucide-react';}
 'use client';
 import React, { useState } from 'react';
@@ -93,15 +62,7 @@ const categories = [
       description: 'Connect with other users and share knowledge',
       icon: Users,
       responseTime: 'Community driven'
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <MessageSquare className="w-5 h-5 mr-2" />
 // Contact Support;
           </a>
@@ -116,4 +77,5 @@ const categories = [
       <Footer />
     </>
 export default HelpPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

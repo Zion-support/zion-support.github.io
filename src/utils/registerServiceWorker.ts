@@ -1,45 +1,30 @@
 /**
  * Service Worker Registration Utility;
  */
-<<<<<<< HEAD
-export interface ServiceWorkerConfig {
-    // TODO: Add content
-  }
-  onSuccess?: (registration: ServiceWorkerRegistration) => void
-  onUpdate?: (registration: ServiceWorkerRegistration) => void
-  onError?: (error: Error) => void
-=======
+/**
+ * Service Worker Registration Utility;
+ */
 export interface ServiceWorkerConfig {// TODO: Add content;}
 }
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Register service worker with lifecycle callbacks;
  */
 export async function registerServiceWorker()
   _config: ServiceWorkerConfig = {}
-<<<<<<< HEAD
-): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <ServiceWorkerRegistration | undefined> {
-    // TODO: Add content
-  }
-  // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    // TODO: Add content
-  }
-    return
-=======
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
 ): Promise;
           <ServiceWorkerRegistration | undefined> {// TODO: Add content;}
 }
@@ -47,93 +32,27 @@ export async function registerServiceWorker()
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {// TODO: Add content;}
 }
     return;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 // Only register in production or if explicitly enabled;
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-<<<<<<< HEAD
-  )
-  // Use isLocalhost for conditional logic if needed
-  if (isLocalhost) {
-    // TODO: Add content
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
   }
-    }
-  try {
-    // TODO: Add content
-  }
-    // Wait for page to load
-    await new Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void>((resolve) => {
-    // TODO: Add content
-  }
-      if (document.readyState === 'complete') {
-      } else {
-    // TODO: Add content
-  }
-        window.addEventListener('load', () => resolve())
-      }
-    }
-  )
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {
-    // TODO: Add content
-  }
-  scope: '/'
-    }
-  )
-    // Handle updates
-    registration.addEventListener('updatefound', () => {
-    // TODO: Add content
-  }
-      const installingWorker = registration.installing
-      if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {
-    // TODO: Add content
-  }
-        if (installingWorker.state === 'installed') {
-    // TODO: Add content
-  }
-          if (navigator.serviceWorker.controller) {
-    // TODO: Add content
-  }
-            // New update available
-            if (config.onUpdate) {
-    // TODO: Add content
-  }
-              config.onUpdate(registration)
-            }
-          } else {
-    // TODO: Add content
-  }
-            // Content cached for offline use
-            if (config.onSuccess) {
-    // TODO: Add content
-  }
-              config.onSuccess(registration)
-            }
-          }
-        }
-      }
-  )
-    }
-  )
-    return registration
-  } catch (error) {
-    // // console.error('[SW] Registration failed:', error)
-    if (config.onError && error instanceof Error) {
-    // TODO: Add content
-  }
-      config.onError(error)
-=======
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
   // Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {// TODO: Add content;}
@@ -187,41 +106,35 @@ export async function registerServiceWorker()
     if (config.onError && error instanceof Error) {// TODO: Add content;}
 }
       config.onError(error);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
 /**
  * Unregister service worker;
  */
-<<<<<<< HEAD
-export async function unregisterServiceWorker(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <boolean> {
-    // TODO: Add content
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
   }
-  if (!('serviceWorker' in navigator)) {
-    // TODO: Add content
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+
+    }
   }
-    return false
-  }
-  try {
-    // TODO: Add content
-  }
-    const registration = await navigator.serviceWorker.ready
-    const result = await registration.unregister()
-    return result
-  } catch (error) {
-// // console.error('[SW] Unregistration failed:', error)
-    return false
-=======
+}
+/**
+ * Unregister service worker;
+ */
 export async function unregisterServiceWorker(): Promise;
           <boolean> {// TODO: Add content;}
 }
@@ -236,38 +149,40 @@ export async function unregisterServiceWorker(): Promise;
     return result;
   } catch (error) {// // console.error('[SW] Unregistration failed:', error);}
     return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
  * Check for service worker updates;
  */
-<<<<<<< HEAD
-export async function checkForUpdates(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <void> {
-    // TODO: Add content
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
   }
-  if (!('serviceWorker' in navigator)) {
-    // TODO: Add content
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+
+    }
   }
-    return
+}
+/**
+ * Unregister service worker;
+ */
+
   }
-  try {
-    // TODO: Add content
-  }
-    const registration = await navigator.serviceWorker.ready
-    await registration.update()
-    } catch (error) {
-// // console.error('[SW] Update check failed:', error)
-=======
+}
+/**
+ * Check for service worker updates;
+ */
 export async function checkForUpdates(): Promise;
           <void> {// TODO: Add content;}
 }
@@ -280,22 +195,51 @@ export async function checkForUpdates(): Promise;
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
     } catch (error) {// // console.error('[SW] Update check failed:', error);}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }
 /**
  * Skip waiting and activate new service worker;
  */
-<<<<<<< HEAD
-export function skipWaiting(): void {
-    // TODO: Add content
-=======
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
+  }
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+
+    }
+  }
+}
+/**
+ * Unregister service worker;
+ */
+
+  }
+}
+/**
+ * Check for service worker updates;
+ */
+
+  }
+}
+/**
+ * Skip waiting and activate new service worker;
+ */
 export function skipWaiting(): void {// TODO: Add content;}
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {// TODO: Add content;}
 }
     return;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     // TODO: Add content
@@ -308,16 +252,59 @@ export function skipWaiting(): void {// TODO: Add content;}
 /**
  * Clear all caches;
  */
-<<<<<<< HEAD
-export function clearCaches(): void {
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
+  }
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+
+    }
+  }
+}
+/**
+ * Unregister service worker;
+ */
+
+  }
+}
+/**
+ * Check for service worker updates;
+ */
+
+  }
+}
+/**
+ * Skip waiting and activate new service worker;
+ */
+
+  }
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     // TODO: Add content
-=======
+  }
+    return
+  }
+  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' }
+  )
+}
+/**
+ * Clear all caches;
+ */
 export function clearCaches(): void {// TODO: Add content;}
 }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {// TODO: Add content;}
 }
     return;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     // TODO: Add content
@@ -330,58 +317,67 @@ export function clearCaches(): void {// TODO: Add content;}
 /**
  * Get service worker registration status;
  */
-<<<<<<< HEAD
-export async function getServiceWorkerStatus(): Promise
-          
-          
-          
-          
-          
-          
-          
-          
-          <{
-    // TODO: Add content
+/**
+ * Service Worker Registration Utility;
+ */
+
+}
+/**
+ * Register service worker with lifecycle callbacks;
+ */
+export async function registerServiceWorker()
+  _config: ServiceWorkerConfig = {}
+
   }
-  supported: boolean;,
-    registered: boolean;,
-    active: boolean
-}> {
-    // TODO: Add content
-  }
-  if (!('serviceWorker' in navigator)) {
-    // TODO: Add content
-  }
-    return {
-    // TODO: Add content
-  }
-  supported: false,
-      registered: false,
-      active: false
+// Only register in production or if explicitly enabled;
+    window.location.hostname === 'localhost' ||
+      window.location.hostname === '[::1]' ||
+      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+
     }
   }
-  try {
+}
+/**
+ * Unregister service worker;
+ */
+
+  }
+}
+/**
+ * Check for service worker updates;
+ */
+
+  }
+}
+/**
+ * Skip waiting and activate new service worker;
+ */
+
+  }
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     // TODO: Add content
   }
-    const registration = await navigator.serviceWorker.getRegistration()
-    return {
+    return
+  }
+  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' }
+  )
+}
+/**
+ * Clear all caches;
+ */
+
+  }
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     // TODO: Add content
   }
-  supported: true,
-      registered: !!registration,
-      active: !!registration?.active
-    }
-  } catch {
-    // TODO: Add content
+    return
   }
-    return {
-    // TODO: Add content
+  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' }
+  )
   }
-  supported: true,
-      registered: false,
-      active: false
-    }
-=======
+/**
+ * Get service worker registration status;
+ */
 export async function getServiceWorkerStatus(): Promise;
           <{// TODO: Add content;}
 };
@@ -416,6 +412,5 @@ export async function getServiceWorkerStatus(): Promise;
       registered: false,
       active: false;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
 }

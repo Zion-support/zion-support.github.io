@@ -13,3 +13,4 @@ const LoadingComponents: React.FC<LoadingComponentsProps> = () => {
 };
 
 export default LoadingComponents;
+};

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface NavigationProps {
-  // Add props here
-}
-
-const Navigation: React.FC<NavigationProps> = () => {
-  return (
-    <div className="navigation">
-      {/* Component content */}
-    </div>
-
-  );
-};
-
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, MapPin, Home } from 'lucide-react';
@@ -35,19 +17,11 @@ const Navigation: React.FC = () => {return (}
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const closeAllMenus = () => {// TODO: Add content;}
 }
     setIsOpen(false);
     setServicesOpen(false);
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -58,14 +32,7 @@ const Navigation: React.FC = () => {return (}
 //         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20'
         : 'bg-transparent'
     }`}>
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className="container mx-auto px-4"><div className="flex items-center justify-between h-16">
           {/* Logo */}
 <Link to="/" className="flex items-center space-x-2 group"><div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300"><span className="text-white font-bold text-lg">Z</span></div><div><h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1><p className="text-xs text-cyan-400">AI & IT Solutions</p></div></Link>
@@ -143,16 +110,9 @@ const Navigation: React.FC = () => {return (}
                   target="_blank"
                   rel="noopener noreferrer" className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
                 >
-          
-          
-          
-          
-          
-          
-          
-          
+
           <MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
       </div></nav>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default Navigation;
+};

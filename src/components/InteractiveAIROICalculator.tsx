@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface InteractiveAIROICalculatorProps {
-  // Add props here
-}
-
-const InteractiveAIROICalculator: React.FC<InteractiveAIROICalculatorProps> = () => {
-  return (
-    <div className="interactiveairoicalculator">
-      {/* Component content */}
-    </div>
-
-  );
-};
-
-=======
 'use client';
 import React, { useState } from 'react';
 const InteractiveAIROICalculator: React.FC = () => {return (}
@@ -28,7 +10,6 @@ const InteractiveAIROICalculator: React.FC = () => {return (}
   const calculateROI = () => {const annualSavings = (currentCost * efficiencyGain) / 100;}
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
-  const _calculateROI = () => {// TODO: Add content;}
 }
     const _annualSavings = (currentCost * efficiencyGain) / 100;
     const _totalSavings = annualSavings * (timeframe / 12);
@@ -37,14 +18,7 @@ const InteractiveAIROICalculator: React.FC = () => {return (}
   };
   const roi = calculateROI();
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -59,15 +33,7 @@ const InteractiveAIROICalculator: React.FC = () => {return (}
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
 // Current Annual Cost ($)
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           </label>
                 <input
 type='number'
@@ -75,15 +41,7 @@ type='number'
                   onChange={e => setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 // />
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
 Expected Efficiency Gain (%)
                   type='range'
@@ -116,5 +74,5 @@ Expected Efficiency Gain (%)
                 </p>
     </section>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default InteractiveAIROICalculator;
+};

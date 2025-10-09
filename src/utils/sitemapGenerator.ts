@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-// Sitemap generator utility
-export interface SitemapUrl {
-    // TODO: Add content
-  }
-  loc: string
-  lastmod?: string
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
-}
-export const _generateSitemap = (urls: SitemapUrl[]): string => {
-    // TODO: Add content
-  }
-  const baseUrl = 'https://ziontechgroup.com'
-  const currentDate = new Date().toISOString().split('T')[0]
-=======
 // Sitemap generator utility;
 export interface SitemapUrl {// TODO: Add content;}
 };
@@ -26,39 +10,21 @@ export const _generateSitemap = (urls: SitemapUrl[]): string => {// TODO: Add co
 }
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString().split('T')[0];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   const sitemap = `
-          
-          
-          
-          
-          
-          
-          
-          
+
           <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
-<<<<<<< HEAD
-${urls
-  .map((url) => {
-    // TODO: Add content
-  }
-    const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`
-=======
+
+  const sitemap = `
+
+          <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
 ${urls;}
   .map((url) => {// TODO: Add content;}
 }
     const fullUrl = url.loc.startsWith('http') ? url.loc : `${baseUrl}${url.loc}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     return `  
-          
-          
-          
-          
-          
-          
-          
-          
+
           <url>
     <loc>${fullUrl}</loc>
     <lastmod>${url.lastmod || currentDate}</lastmod>
@@ -68,16 +34,28 @@ ${urls;}
   }
   )
   .join('\n')}
-<<<<<<< HEAD
-</urlset>`
-  return sitemap
-=======
+
+  const sitemap = `
+
+          <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">
+
+    return `  
+
+          <url>
+    <loc>${fullUrl}</loc>
+    <lastmod>${url.lastmod || currentDate}</lastmod>
+    <changefreq>${url.changefreq || 'weekly'}</changefreq>
+    <priority>${url.priority || 0.8}</priority>
+  </url>`
+  }
+  )
+  .join('\n')}
 </urlset>`;
   return sitemap;
 };
 // Define all the pages for the sitemap;
 export const getAllPages = (): SitemapUrl[] => {// TODO: Add content;}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 // Define all the pages for the sitemap
 export const getAllPages = (): SitemapUrl[] => {

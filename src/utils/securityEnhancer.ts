@@ -3,20 +3,11 @@
  * Basic security optimization utilities;
  */
 
-<<<<<<< HEAD
-interface SecurityConfig {
-  enableCSP: boolean
-  enableHTTPS: boolean
-  enableXSSProtection: boolean
-  enableCSRFProtection: boolean
-  enableContentSecurityPolicy: boolean
-}
+/**
+ * Security Enhancer;
+ * Basic security optimization utilities;
+ */
 
-class SecurityEnhancer {
-  private config: SecurityConfig
-  constructor(config?: SecurityConfig) {
-    this.config = config || {
-=======
 interface SecurityConfig {enableCSP: boolean;}
   enableHTTPS: boolean;
   enableXSSProtection: boolean;
@@ -26,7 +17,6 @@ interface SecurityConfig {enableCSP: boolean;}
 
 class SecurityEnhancer {private config: SecurityConfig;}
   constructor(config?: SecurityConfig) {this.config = config || {}
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       enableCSP: true,
       enableHTTPS: true,
       enableXSSProtection: true,
@@ -36,20 +26,20 @@ class SecurityEnhancer {private config: SecurityConfig;}
     this.init()
   }
 
-<<<<<<< HEAD
-  private init(): void {
-    // Initialize security enhancements
-    this.setupSecurityHeaders()
+/**
+ * Security Enhancer;
+ * Basic security optimization utilities;
+ */
+
+      enableCSP: true,
+      enableHTTPS: true,
+      enableXSSProtection: true,
+      enableCSRFProtection: true,
+      enableContentSecurityPolicy: true,
+    }
+    this.init()
   }
 
-  private setupSecurityHeaders(): void {
-    if (typeof document !== 'undefined') {
-      // Add security headers via meta tags
-      const metaCSP = document.createElement('meta')
-      metaCSP.setAttribute('http-equiv', 'Content-Security-Policy')
-      metaCSP.setAttribute('content', "default-src 'self'")
-      document.head.appendChild(metaCSP)
-=======
   private init(): void {// Initialize security enhancements;}
     this.setupSecurityHeaders();
   }
@@ -60,7 +50,6 @@ class SecurityEnhancer {private config: SecurityConfig;}
       metaCSP.setAttribute('http-equiv', 'Content-Security-Policy');
       metaCSP.setAttribute('content', "default-src 'self'");
       document.head.appendChild(metaCSP);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 
@@ -69,3 +58,4 @@ class SecurityEnhancer {private config: SecurityConfig;}
 }
 
 export default SecurityEnhancer
+};

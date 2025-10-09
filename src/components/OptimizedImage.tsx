@@ -1,18 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface OptimizedImageProps {
-
-  // Add props here
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = () => {
-  return (
-    <div className="optimizedimage">
-      {/* Component content */}
-    </div>
-
-=======
 interface OptimizedImageProps {// TODO: Add content;}
 };
   src: string;,
@@ -86,25 +73,16 @@ const getOptimizedSrc = () => {// TODO: Add content;}
     // like Cloudinary, ImageKit, or Next.js Image Optimization;
     return src;
   };
-  const handleLoad = () => {// TODO: Add content;}
 }
     setIsLoaded(true);
     onLoad?.();
   };
-  const handleError = () => {// TODO: Add content;}
 }
     setHasError(true);
     onError?.();
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -152,18 +130,10 @@ onError={handleError} className={`transition-opacity duration-300 ${}
           }}
 //         />
       )}
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default OptimizedImage;
+};

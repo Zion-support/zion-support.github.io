@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface ContentPreviewCardProps {
-
-  // Add props here
-}
-
-const ContentPreviewCard: React.FC<ContentPreviewCardProps> = () => {
-  return (
-    <div className="contentpreviewcard">
-      {/* Component content */}
-    </div>
-
-=======
 interface ContentPreviewCardProps {// TODO: Add content;}
 };
   id: string;
@@ -68,14 +53,7 @@ const ContentPreviewCard: React.FC;
     return colors[category] || colors.default;
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -85,15 +63,7 @@ const ContentPreviewCard: React.FC;
       featured ? 'ring-2 ring-indigo-200' : ''
     }`}>
       {/* Image/Visual Header */}
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}>
         <div className="text-center text-white">
           <div className="text-6xl mb-2">{image}</div>
@@ -173,8 +143,8 @@ const ContentPreviewCard: React.FC;
         </div>
       </div>
     </article>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default ContentPreviewCard;
+};

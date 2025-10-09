@@ -13,3 +13,4 @@ const ScrollToTop: React.FC<ScrollToTopProps> = () => {
 };
 
 export default ScrollToTop;
+};

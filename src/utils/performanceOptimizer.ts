@@ -8,16 +8,19 @@
   performance: (message: string, data: Record;
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
-<<<<<<< HEAD
-}
-interface PerformanceMetrics {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };
 interface PerformanceMetrics {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
@@ -33,14 +36,34 @@ interface PerformanceMetrics {// TODO: Add content;}
   ttfb?: number
   memory?: number
 }
-<<<<<<< HEAD
-interface OptimizationConfig {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
 interface OptimizationConfig {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: boolean;,
     enableCodeSplitting: boolean;,
     enableImageOptimization: boolean;,
@@ -48,60 +71,142 @@ interface OptimizationConfig {// TODO: Add content;}
     enableCompression: boolean
 }
 interface PerformanceConfig extends OptimizationConfig {}
-<<<<<<< HEAD
-class PerformanceOptimizer {
-    // TODO: Add content
-  }
-  private _metrics: PerformanceMetrics = {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
 class PerformanceOptimizer {// TODO: Add content;}
 }
   private _metrics: PerformanceMetrics = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     bundleSize: 0,
     cacheHitRate: 0,
-<<<<<<< HEAD
-    lazyLoading: false
-  }
-  private config: OptimizationConfig = {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
     lazyLoading: false;
   };
   private config: OptimizationConfig = {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableLazyLoading: true,
     enableCodeSplitting: true,
     enableImageOptimization: true,
     enableCaching: true,
-<<<<<<< HEAD
-    enableCompression: true
-  }
-  private observers: PerformanceObserver[] = []
-  private isMonitoring: boolean = false
-  constructor(config?: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <OptimizationConfig>) {
-    // TODO: Add content
-  }
-    this.config = { ...this.config, ...config }
-    this.initializePerformanceMonitoring()
-=======
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
     enableCompression: true;
   };
   private observers: PerformanceObserver[] = [];
@@ -111,27 +216,60 @@ class PerformanceOptimizer {// TODO: Add content;}
 }
     this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Initialize performance monitoring;
    */
-<<<<<<< HEAD
-  private initializePerformanceMonitoring(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return
-    // Monitor page load performance
-    window.addEventListener('load', () => {
-    // TODO: Add content
-  }
-      this.measureLoadTime()
-      this.measureMemoryUsage()
-    }
-  )
-    // Monitor render performance
-    this.measureRenderTime()
-=======
+  /**
+   * Initialize performance monitoring;
+   */
   private initializePerformanceMonitoring(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -143,44 +281,132 @@ class PerformanceOptimizer {// TODO: Add content;}
     });
     // Monitor render performance;
     this.measureRenderTime();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Public init method for external initialization;
    */
-<<<<<<< HEAD
-  public init(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    this.initializePerformanceMonitoring()
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
   public init(): void {// TODO: Add content;}
 }
     this.initializePerformanceMonitoring();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Measure page load time;
    */
-<<<<<<< HEAD
-  private measureLoadTime(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined' || !window.performance) return
-    if (typeof window.performance.getEntriesByType !== 'function') return
-    try {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart
-      }
-    } catch (error) {
-    // TODO: Add content
-  }
-=======
+  /**
+   * Measure page load time;
+   */
   private measureLoadTime(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !window.performance) return;
@@ -194,144 +420,77 @@ class PerformanceOptimizer {// TODO: Add content;}
       }
     } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
   }
   /**
    * Measure render time using PerformanceObserver;
    */
-<<<<<<< HEAD
-  private measureRenderTime(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined') return
-    try {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-    // TODO: Add content
-  }
-          if (entry.entryType === 'measure') {
-    // TODO: Add content
-  }
-            this.metrics.renderTime = entry.duration
-          }
-        }
-  )
+  /**
+   * Measure page load time;
+   */
+
       }
-  )
-      observer.observe({ entryTypes: ['measure'] }
-  )
-      this.observers.push(observer)
-    } catch (error) {
-    // TODO: Add content
   }
-      // PerformanceObserver may not support 'measure' entryType in some environments
-      }
-  }
-  private observeLCP() {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        const entries = list.getEntries()
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime
-      }
-  )
-      observer.observe({ entryTypes: ['largest-contentful-paint'] }
-  )
-//       this.observers.push(observer)
-    } catch {
-    // TODO: Add content
-  }
-      // Ignore if not supported
-    }
-  }
-  private observeFID() {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-    // TODO: Add content
-  }
-          const fidEntry = entry as PerformanceEntry & { processingStart: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-        }
-  )
-      }
-  )
-      observer.observe({ entryTypes: ['first-input'] }
-  )
-//       this.observers.push(observer)
-    } catch {
-    // TODO: Add content
-  }
-      // Ignore if not supported
-    }
-  }
-  private observeCLS() {
-    // TODO: Add content
-  }
-    try {
-const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-    // TODO: Add content
-  }
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
-          if (!clsEntry.hadRecentInput) {
-    // TODO: Add content
-  }
-            clsValue += clsEntry.value
-          }
-        }
-  )
-        this.metrics.cls = clsValue
-      }
-  )
-      observer.observe({ entryTypes: ['layout-shift'] }
-  )
-//       this.observers.push(observer)
-    } catch {
-    // TODO: Add content
-  }
-      // Ignore if not supported
-    }
-  }
-  private observeFCP() {
-    // TODO: Add content
-  }
-    try {
-    // TODO: Add content
-  }
-      const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-    // TODO: Add content
-  }
-          if (entry.name === 'first-contentful-paint') {
-    // TODO: Add content
-  }
-            this.metrics.fcp = entry.startTime
-=======
+  /**
+   * Measure render time using PerformanceObserver;
+   */
   private measureRenderTime(): void {// TODO: Add content;}
 }
     // Check if PerformanceObserver exists (may not be available in test environments)
@@ -426,7 +585,6 @@ const observer = new PerformanceObserver((list) => {
           if (entry.name === 'first-contentful-paint') {// TODO: Add content;}
 }
             this.metrics.fcp = entry.startTime;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -435,32 +593,81 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['paint'] }
   )
 //       this.observers.push(observer)
-<<<<<<< HEAD
-    } catch {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-      // Ignore if not supported
-    }
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-  private observeTTFB() {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-    try {
-    // TODO: Add content
+  /**
+   * Measure page load time;
+   */
+
+      }
   }
-      const observer = new PerformanceObserver((list) => {
-    // TODO: Add content
-  }
-        const entries = list.getEntries()
-        entries.forEach((entry: PerformanceEntry) => {
-    // TODO: Add content
-  }
-          const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
-          if (navEntry.responseStart > 0) {
-    // TODO: Add content
-  }
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-=======
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
     } catch {// TODO: Add content;}
 }
       // Ignore if not supported;
@@ -479,7 +686,6 @@ const observer = new PerformanceObserver((list) => {
           if (navEntry.responseStart > 0) {// TODO: Add content;}
 }
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
   )
@@ -488,25 +694,90 @@ const observer = new PerformanceObserver((list) => {
       observer.observe({ entryTypes: ['navigation'] }
   )
 //       this.observers.push(observer)
-<<<<<<< HEAD
-    } catch {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-      // Ignore if not supported
-    }
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-  private observeMemory() {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-    if (typeof window !== 'undefined' && 'memory' in performance) {
-    // TODO: Add content
+  /**
+   * Measure page load time;
+   */
+
+      }
   }
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
-      if (memory) {
-    // TODO: Add content
-  }
-        this.metrics.memoryUsage = memory.usedJSHeapSize
-=======
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
     } catch {// TODO: Add content;}
 }
       // Ignore if not supported;
@@ -520,34 +791,103 @@ const observer = new PerformanceObserver((list) => {
       if (memory) {// TODO: Add content;}
 }
         this.metrics.memoryUsage = memory.usedJSHeapSize;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
   /**
    * Measure memory usage;
    */
-<<<<<<< HEAD
-  private measureMemoryUsage(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined' || !('memory' in window.performance)) return
-    const memory = (window.performance as Performance & {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      memory?: {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-  usedJSHeapSize: number;,
-    totalJSHeapSize: number;,
-    jsHeapSizeLimit: number
+  /**
+   * Measure page load time;
+   */
+
       }
-    }).memory
-    if (memory) {
-    // TODO: Add content
   }
-      this.metrics.memoryUsage = memory.usedJSHeapSize
-=======
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
   private measureMemoryUsage(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !('memory' in window.performance)) return;
@@ -563,44 +903,108 @@ const observer = new PerformanceObserver((list) => {
     if (memory) {// TODO: Add content;}
 }
       this.metrics.memoryUsage = memory.usedJSHeapSize;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Optimize images for better performance;
    */
-<<<<<<< HEAD
-  public optimizeImages(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return
-    if (!this.config.enableImageOptimization) return
-    const images = document.querySelectorAll('img')
-    images.forEach((img) => {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      // Add loading="lazy" for better performance
-      if (!img.hasAttribute('loading')) {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        img.setAttribute('loading', 'lazy')
+  /**
+   * Measure page load time;
+   */
+
       }
-      // Add proper alt text if missing
-      if (!img.hasAttribute('alt')) {
-    // TODO: Add content
   }
-        img.setAttribute('alt', 'Zion Tech Group content')
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
       }
-      // Optimize image format
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
-    // TODO: Add content
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
   }
-        // Convert to WebP if supported
-        if (this.supportsWebP()) {
-    // TODO: Add content
+  /**
+   * Measure memory usage;
+   */
+
+    }
   }
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp')
-=======
+  /**
+   * Optimize images for better performance;
+   */
   public optimizeImages(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -625,7 +1029,6 @@ const observer = new PerformanceObserver((list) => {
         if (this.supportsWebP()) {// TODO: Add content;}
 }
           img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -634,16 +1037,112 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Check if browser supports WebP;
    */
-<<<<<<< HEAD
-  private supportsWebP(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return false
-    const canvas = document.createElement('canvas')
-    canvas.width = 1
-    canvas.height = 1
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
   private supportsWebP(): boolean {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return false;
@@ -651,45 +1150,121 @@ const observer = new PerformanceObserver((list) => {
     canvas.width = 1;
     canvas.height = 1;
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Setup lazy loading for better performance;
    */
-<<<<<<< HEAD
-  public setupLazyLoading(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return
-    if (!this.config.enableLazyLoading) return
-    // Intersection Observer for lazy loading
-    if ('IntersectionObserver' in window) {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      const lazyObserver = new IntersectionObserver((entries) => {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        entries.forEach((entry) => {
-    // TODO: Add content
+  /**
+   * Measure page load time;
+   */
+
+      }
   }
-          if (entry.isIntersecting) {
-    // TODO: Add content
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
   }
-            const element = entry.target as HTMLElement
-            const src = element.getAttribute('data-lazy')
-            if (src) {
-    // TODO: Add content
+  /**
+   * Measure memory usage;
+   */
+
+    }
   }
-              if (element.tagName === 'IMG') {
-    // TODO: Add content
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
   }
-                (element as HTMLImageElement).src = src
-              } else {
-    // TODO: Add content
+  /**
+   * Check if browser supports WebP;
+   */
+
   }
-                element.style.backgroundImage = `url(${src})`
-=======
+  /**
+   * Setup lazy loading for better performance;
+   */
   public setupLazyLoading(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -714,47 +1289,267 @@ const observer = new PerformanceObserver((list) => {
               } else {// TODO: Add content;}
 }
                 element.style.backgroundImage = `url(${src})`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
               }
               element.removeAttribute('data-lazy')
               lazyObserver.unobserve(element)
             }
           }
-<<<<<<< HEAD
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
+  }
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
         }
   )
       }
   )
-      lazyElements.forEach((element) => {
-    // TODO: Add content
-  }
-        lazyObserver.observe(element)
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
       }
   )
-=======
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
         });
       });
       lazyElements.forEach((element) => {// TODO: Add content;}
 }
         lazyObserver.observe(element);
       });
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     this.metrics.lazyLoading = true
   }
   /**
    * Enable code splitting for better performance;
    */
-<<<<<<< HEAD
-  enableCodeSplitting(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (!this.config.enableCodeSplitting) return
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
   enableCodeSplitting(): void {// TODO: Add content;}
 }
     if (!this.config.enableCodeSplitting) return;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations;
     if (process.env.NODE_ENV === 'development') { }
@@ -762,24 +1557,138 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Enable caching strategies;
    */
-<<<<<<< HEAD
-  enableCaching(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (!this.config.enableCaching) return
-    if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-    // Register service worker for caching
-//     navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-        if (process.env.NODE_ENV === 'development') { }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
       }
   )
-      .catch((error) => {
-    // TODO: Add content
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
   }
-=======
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
   enableCaching(): void {// TODO: Add content;}
 }
     if (!this.config.enableCaching) return;
@@ -792,7 +1701,6 @@ const observer = new PerformanceObserver((list) => {
       })
       .catch((error) => {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         if (process.env.NODE_ENV === 'development') { }
       }
   )
@@ -800,36 +1708,298 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Get current performance metrics;
    */
-<<<<<<< HEAD
-  getMetrics(): PerformanceMetrics {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    return { ...this.metrics }
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
   getMetrics(): PerformanceMetrics {// TODO: Add content;}
 }
     return { ...this.metrics };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get performance score (0-100)
    */
-<<<<<<< HEAD
-  getPerformanceScore(): number {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    let score = 100
-    // Deduct points for slow load times
-    if (this.metrics.loadTime > 3000) score -= 20
-    else if (this.metrics.loadTime > 2000) score -= 10
-    // Deduct points for slow render times
-    if (this.metrics.renderTime > 100) score -= 15
-    else if (this.metrics.renderTime > 50) score -= 5
-    // Deduct points for high memory usage
-    if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB
-    else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB
-    return Math.max(0, score)
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
   getPerformanceScore(): number {// TODO: Add content;}
 }
     let score = 100;
@@ -843,47 +2013,323 @@ const observer = new PerformanceObserver((list) => {
     if (this.metrics.memoryUsage > 50 * 1024 * 1024) score -= 15; // 50MB;
     else if (this.metrics.memoryUsage > 30 * 1024 * 1024) score -= 5; // 30MB;
     return Math.max(0, score);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate performance report;
    */
-<<<<<<< HEAD
-  generateReport(): string {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    const score = this.getPerformanceScore()
-    return `Performance Score: ${score}`
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
   generateReport(): string {// TODO: Add content;}
 }
     const score = this.getPerformanceScore();
     return `Performance Score: ${score}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Lazy load images for better performance;
    */
-<<<<<<< HEAD
-  lazyLoadImages(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return
-    const images = document.querySelectorAll('img[data-src]')
-    const imageObserver = new IntersectionObserver((entries) => {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      entries.forEach(entry => {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        if (entry.isIntersecting) {
-    // TODO: Add content
+  /**
+   * Measure page load time;
+   */
+
+      }
   }
-          const img = entry.target as HTMLImageElement
-          img.src = img.dataset.src || ''
-          img.removeAttribute('data-src')
-          imageObserver.unobserve(img)
-=======
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
   lazyLoadImages(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -898,7 +2344,6 @@ const observer = new PerformanceObserver((list) => {
           img.src = img.dataset.src || '';
           img.removeAttribute('data-src');
           imageObserver.unobserve(img);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
   )
@@ -910,31 +2355,173 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Add critical resource hints;
    */
-<<<<<<< HEAD
-  addCriticalResourceHints(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined') return
-    const criticalResources = [
-  // TODO: Add items
-]
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-      { href: '/css/critical.css', as: 'style' },
-    ]
-    criticalResources.forEach(resource => {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource.href
-      link.as = resource.as
-      if (resource.type) link.type = resource.type
-      if (resource.crossorigin) link.crossOrigin = resource.crossorigin
-      document.head.appendChild(link)
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
     }
   )
-    logger.info('Critical resource hints added', 'PerformanceOptimizer')
-=======
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
   addCriticalResourceHints(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -955,22 +2542,182 @@ const observer = new PerformanceObserver((list) => {
       document.head.appendChild(link);
     });
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Measure page load metrics;
    */
-<<<<<<< HEAD
-  measurePageLoad(): PerformanceMetrics | null {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    if (typeof window === 'undefined' || !('performance' in window)) return null
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-    if (!navigation) return null
-    return {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-=======
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
   measurePageLoad(): PerformanceMetrics | null {// TODO: Add content;}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return null;
@@ -978,7 +2725,6 @@ const observer = new PerformanceObserver((list) => {
     if (!navigation) return null;
     return {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   loadTime: this.metrics.loadTime,
       renderTime: this.metrics.renderTime,
       memoryUsage: this.metrics.memoryUsage,
@@ -990,45 +2736,385 @@ const observer = new PerformanceObserver((list) => {
       lcp: this.metrics.lcp || 0,
       fid: this.metrics.fid || 0,
       cls: this.metrics.cls || 0,
-<<<<<<< HEAD
-      fmp: this.metrics.fmp || 0
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
+  }
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
     }
-=======
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
       fmp: this.metrics.fmp || 0;
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Report web vitals;
    */
-<<<<<<< HEAD
-  reportWebVitals(metrics: PerformanceMetrics): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    logger.performance('Web Vitals reported', metrics as unknown as Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>, 'PerformanceOptimizer')
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      Object.entries(metrics).forEach(([key, value]) => {
-    // TODO: Add content
+  /**
+   * Public init method for external initialization;
+   */
+
   }
-        if (typeof value === 'number') {
-    // TODO: Add content
+  /**
+   * Measure page load time;
+   */
+
+      }
   }
-          (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {
-    // TODO: Add content
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
   }
-=======
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+
+  }
+  /**
+   * Report web vitals;
+   */
   reportWebVitals(metrics: PerformanceMetrics): void {// TODO: Add content;}
 }
     logger.performance('Web Vitals reported', metrics as unknown as Record;
@@ -1042,7 +3128,6 @@ const observer = new PerformanceObserver((list) => {
 }
           (window as unknown as { gtag: Function }).gtag('event', 'web_vitals', {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   metric_name: key,
             metric_value: value,
             metric_rating: value;
@@ -1057,39 +3142,428 @@ const observer = new PerformanceObserver((list) => {
   /**
    * Cleanup observers and resources;
    */
-<<<<<<< HEAD
-  public cleanup(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-    this.isMonitoring = false
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+
+  }
+  /**
+   * Report web vitals;
+   */
+
+  metric_name: key,
+            metric_value: value,
+            metric_rating: value;
+          < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          }
+  )
+        }
+      }
+  )
+    }
+  }
+  /**
+   * Cleanup observers and resources;
+   */
   public cleanup(): void {// TODO: Add content;}
 }
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.isMonitoring = false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Generate comprehensive performance report;
    */
-<<<<<<< HEAD
-  generateComprehensiveReport(): string {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    const score = this.getPerformanceScore()
-    const metrics = this.getMetrics()
-    return `
-// Performance Report - Zion Tech Group Website
-Performance Score: ${score}/100
-Load Time: ${metrics.loadTime.toFixed(2)}ms
-Render Time: ${metrics.renderTime.toFixed(2)}ms
-Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-Bundle Size: ${metrics.bundleSize}KB
-Cache Hit Rate: ${metrics.cacheHitRate}%
-=======
+  /**
+   * Initialize performance monitoring;
+   */
+
+  }
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+
+  }
+  /**
+   * Report web vitals;
+   */
+
+  metric_name: key,
+            metric_value: value,
+            metric_rating: value;
+          < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          }
+  )
+        }
+      }
+  )
+    }
+  }
+  /**
+   * Cleanup observers and resources;
+   */
+
+  }
+  /**
+   * Generate comprehensive performance report;
+   */
   generateComprehensiveReport(): string {// TODO: Add content;}
 }
     const score = this.getPerformanceScore();
@@ -1102,7 +3576,6 @@ Render Time: ${metrics.renderTime.toFixed(2)}ms;
 Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
 Bundle Size: ${metrics.bundleSize}KB;
 Cache Hit Rate: ${metrics.cacheHitRate}%;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   Recommendations:
 ${score;}
           < 80 ? '- Consider optimizing images and enabling compression' : ''}
@@ -1113,18 +3586,226 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
   /**
    * Optimize the entire application;
    */
-<<<<<<< HEAD
-  optimize(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance optimization utilities for the Zion Tech Group website;
+ * Provides tools for monitoring and optimizing application performance;
+ */
+// Simple logger for performance optimizer;
+  info: (message: string, context?: string) => console.log('[INFO]', message, context),
+  performance: (message: string, data: Record;
+          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+  error: (message: string, error: Error) => console.error('[ERROR]', message, error)
+
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    bundleSize: number;,
+    cacheHitRate: number;,
+    lazyLoading: boolean
+  firstContentfulPaint?: number
+  fcp?: number
+  lcp?: number
+  fid?: number
+  cls?: number
+  fmp?: number
+  ttfb?: number
+  memory?: number
+}
+
+  enableLazyLoading: boolean;,
+    enableCodeSplitting: boolean;,
+    enableImageOptimization: boolean;,
+    enableCaching: boolean;,
+    enableCompression: boolean
+}
+interface PerformanceConfig extends OptimizationConfig {}
+
+  loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    cacheHitRate: 0,
+
+  enableLazyLoading: true,
+    enableCodeSplitting: true,
+    enableImageOptimization: true,
+    enableCaching: true,
+
   }
-    this.optimizeImages()
-    this.enableCodeSplitting()
-    this.enableCaching()
-    if (process.env.NODE_ENV === 'development') {
-    // TODO: Add content
+  /**
+   * Initialize performance monitoring;
+   */
+
   }
-      logger.info('Performance optimization completed')
-=======
+  /**
+   * Public init method for external initialization;
+   */
+
+  }
+  /**
+   * Measure page load time;
+   */
+
+      }
+  }
+  /**
+   * Measure render time using PerformanceObserver;
+   */
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['paint'] }
+  )
+//       this.observers.push(observer)
+
+          }
+        }
+  )
+      }
+  )
+      observer.observe({ entryTypes: ['navigation'] }
+  )
+//       this.observers.push(observer)
+
+      }
+    }
+  }
+  /**
+   * Measure memory usage;
+   */
+
+    }
+  }
+  /**
+   * Optimize images for better performance;
+   */
+
+        }
+      }
+    }
+  )
+  }
+  /**
+   * Check if browser supports WebP;
+   */
+
+  }
+  /**
+   * Setup lazy loading for better performance;
+   */
+
+              }
+              element.removeAttribute('data-lazy')
+              lazyObserver.unobserve(element)
+            }
+          }
+
+    }
+    this.metrics.lazyLoading = true
+  }
+  /**
+   * Enable code splitting for better performance;
+   */
+
+    // This would typically be handled by the bundler (Vite/Webpack)
+    // Here we can add runtime optimizations;
+    if (process.env.NODE_ENV === 'development') { }
+  }
+  /**
+   * Enable caching strategies;
+   */
+
+        if (process.env.NODE_ENV === 'development') { }
+      }
+  )
+  }
+  /**
+   * Get current performance metrics;
+   */
+
+  }
+  /**
+   * Get performance score (0-100)
+   */
+
+  }
+  /**
+   * Generate performance report;
+   */
+
+  }
+  /**
+   * Lazy load images for better performance;
+   */
+
+        }
+      }
+  )
+    }
+  )
+    images.forEach(img => imageObserver.observe(img))
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+  }
+  /**
+   * Add critical resource hints;
+   */
+
+  }
+  /**
+   * Measure page load metrics;
+   */
+
+  loadTime: this.metrics.loadTime,
+      renderTime: this.metrics.renderTime,
+      memoryUsage: this.metrics.memoryUsage,
+      bundleSize: this.metrics.bundleSize,
+      cacheHitRate: this.metrics.cacheHitRate,
+      lazyLoading: this.metrics.lazyLoading,
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: this.metrics.fcp || 0,
+      lcp: this.metrics.lcp || 0,
+      fid: this.metrics.fid || 0,
+      cls: this.metrics.cls || 0,
+
+  }
+  /**
+   * Report web vitals;
+   */
+
+  metric_name: key,
+            metric_value: value,
+            metric_rating: value;
+          < 100 ? 'good' : value < 300 ? 'needs-improvement' : 'poor'
+          }
+  )
+        }
+      }
+  )
+    }
+  }
+  /**
+   * Cleanup observers and resources;
+   */
+
+  }
+  /**
+   * Generate comprehensive performance report;
+   */
+
+  Recommendations:
+${score;}
+          < 80 ? '- Consider optimizing images and enabling compression' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+    `.trim()
+  }
+  /**
+   * Optimize the entire application;
+   */
   optimize(): void {// TODO: Add content;}
 }
     this.optimizeImages();
@@ -1133,10 +3814,10 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
     if (process.env.NODE_ENV === 'development') {// TODO: Add content;}
 }
       logger.info('Performance optimization completed');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
 }
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer()
 export default PerformanceOptimizer
+};

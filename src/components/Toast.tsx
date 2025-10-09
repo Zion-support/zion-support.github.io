@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-
-interface ToastProps {
-  // Add props here
-}
-
-const Toast: React.FC<ToastProps> = () => {
-  return (
-    <div className="toast">
-      {/* Component content */}
-
-=======
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {// TODO: Add content;}
@@ -61,7 +47,6 @@ const Toast: React.FC;
         return 'bg-gray-800 text-white';
     }
   };
-  const getIcon = () => {// TODO: Add content;}
 }
     switch (type) {// TODO: Add content;}
 }
@@ -78,14 +63,7 @@ const Toast: React.FC;
     }
   };
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -94,15 +72,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       role="alert"
       aria-live="polite"
 // >
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
@@ -116,19 +86,11 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
         aria-label="Close notification"
 //       >
 //
-      
-          
-          
-          
-          
-          
-          
-          
-          
+
           </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     </div>
   );
 };
 
 export default Toast;
+};

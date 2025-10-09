@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';}
 const AnalyticsToolsPage: React.FC = () => {const analyticsTools = [}
@@ -19,30 +17,14 @@ const AnalyticsToolsPage: React.FC = () => {const analyticsTools = [}
       features: ['User behavior tracking', 'Conversion analysis', 'Traffic insights', 'Performance metrics', 'Custom events', 'Real-time monitoring'],
       icon: '',
       category: 'Web Analytics',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
 
-=======
-    
-          
-          
-          
-          
-          
-          
-          
+  return (
+
           <div>Coming Soon</div>
   )
     
@@ -57,22 +39,17 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
 // AI Analytics Tools;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
 
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
+  return (
+
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
           </p>
-        </section>
-      </main>
-      <Footer />
-    </div>
-
-=======
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -151,8 +128,8 @@ Call (302) 464-0950;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default PagePage;
+};

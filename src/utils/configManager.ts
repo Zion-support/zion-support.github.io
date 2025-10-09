@@ -3,24 +3,11 @@
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
-<<<<<<< HEAD
-export type Environment = 'development' | 'staging' | 'production' | 'test'
-export interface AppConfig {
-    // TODO: Add content
-  }
-  environment: Environment;,
-    api: {
-    // TODO: Add content
-  }
-  baseURL: string;,
-    timeout: number;,
-    retryAttempts: number;,
-    enableCaching: boolean
-  }
-  features: {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {// TODO: Add content;}
 };
@@ -34,42 +21,22 @@ export interface AppConfig {// TODO: Add content;}
   };
   features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: boolean;,
     enableErrorReporting: boolean;,
     enablePerformanceMonitoring: boolean;,
     enableAccessibility: boolean;,
     enableSEO: boolean;,
-<<<<<<< HEAD
-    enablePWA: boolean
-  }
-  performance: {
-    // TODO: Add content
-  }
-  enableCodeSplitting: boolean;,
-    enableLazyLoading: boolean;,
-    enableImageOptimization: boolean;,
-    enableCaching: boolean
-  }
-  security: {
-    // TODO: Add content
-  }
-  enableCSP: boolean;,
-    enableCORS: boolean;,
-    enableRateLimiting: boolean;,
-    maxRequestsPerMinute: number
-  }
-  ui: {
-    // TODO: Add content
-  }
-  theme: 'light' | 'dark' | 'auto';,
-    language: string;,
-    timezone: string
-  }
-  logging: {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
     enablePWA: boolean;
   };
   performance: {// TODO: Add content;}
@@ -94,34 +61,63 @@ export interface AppConfig {// TODO: Add content;}
   };
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'debug' | 'info' | 'warn' | 'error';,
     enableConsole: boolean;,
     enableNetwork: boolean
   }
 }
   environment: 'development',
-<<<<<<< HEAD
-  api: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
   api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true;
   },
-<<<<<<< HEAD
-  features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
   features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -129,75 +125,249 @@ export interface AppConfig {// TODO: Add content;}
     enableSEO: true,
     enablePWA: true;
   },
-<<<<<<< HEAD
-  performance: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
   performance: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
     enableCaching: true;
   },
-<<<<<<< HEAD
-  security: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
   security: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 100;
   },
-<<<<<<< HEAD
-  ui: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
   ui: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   theme: 'auto',
     language: 'en',
     timezone: 'UTC'
   },
-<<<<<<< HEAD
-  logging: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'info',
     enableConsole: true,
     enableNetwork: false;
   }
-<<<<<<< HEAD
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
 }
-const developmentConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig> = {
-    // TODO: Add content
-  }
   environment: 'development',
-  api: {
-    // TODO: Add content
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
 };
 const developmentConfig: Partial;
           <AppConfig> = {// TODO: Add content;}
@@ -205,20 +375,73 @@ const developmentConfig: Partial;
   environment: 'development',
   api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: 'http://localhost:3000/api',
     timeout: 30000,
     retryAttempts: 1,
     enableCaching: false;
   },
-<<<<<<< HEAD
-  features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
   features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -226,37 +449,153 @@ const developmentConfig: Partial;
     enableSEO: false,
     enablePWA: false;
   },
-<<<<<<< HEAD
-  logging: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'debug',
     enableConsole: true,
     enableNetwork: false;
   }
-<<<<<<< HEAD
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
 }
-const stagingConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig> = {
-    // TODO: Add content
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-  environment: 'staging',
-  api: {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
 };
 const stagingConfig: Partial;
           <AppConfig> = {// TODO: Add content;}
@@ -264,20 +603,92 @@ const stagingConfig: Partial;
   environment: 'staging',
   api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: 'https://staging-api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true;
   },
-<<<<<<< HEAD
-  features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
   features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -285,37 +696,191 @@ const stagingConfig: Partial;
     enableSEO: true,
     enablePWA: true;
   },
-<<<<<<< HEAD
-  logging: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'info',
     enableConsole: true,
     enableNetwork: true;
   }
-<<<<<<< HEAD
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
 }
-const productionConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig> = {
-    // TODO: Add content
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-  environment: 'production',
-  api: {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
 };
 const productionConfig: Partial;
           <AppConfig> = {// TODO: Add content;}
@@ -323,20 +888,91 @@ const productionConfig: Partial;
   environment: 'production',
   api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: 'https://api.ziontech.com',
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true;
   },
-<<<<<<< HEAD
-  features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
-  features: {// TODO: Add content;}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -344,50 +980,373 @@ const productionConfig: Partial;
     enableSEO: true,
     enablePWA: true;
   },
-<<<<<<< HEAD
-  logging: {
-    // TODO: Add content
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
   }
-=======
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+  features: {// TODO: Add content;}
+};
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'error',
     enableConsole: false,
     enableNetwork: true;
   },
-<<<<<<< HEAD
-  security: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
   security: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 60;
   }
-<<<<<<< HEAD
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
 }
-const testConfig: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig> = {
-    // TODO: Add content
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-  environment: 'test',
-  api: {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
 };
 const testConfig: Partial;
           <AppConfig> = {// TODO: Add content;}
@@ -395,20 +1354,136 @@ const testConfig: Partial;
   environment: 'test',
   api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: 'http://localhost:3000/api',
     timeout: 5000,
     retryAttempts: 0,
     enableCaching: false;
   },
-<<<<<<< HEAD
-  features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
   features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: false,
     enableErrorReporting: false,
     enablePerformanceMonitoring: false,
@@ -416,50 +1491,279 @@ const testConfig: Partial;
     enableSEO: false,
     enablePWA: false;
   },
-<<<<<<< HEAD
-  logging: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
   logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'error',
     enableConsole: false,
     enableNetwork: false;
   }
-<<<<<<< HEAD
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
 }
-export class ConfigManager {
-    // TODO: Add content
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-  private static instance: ConfigManager
-  private config: AppConfig
-  private environment: Environment
-  private overrides: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig> = {}
-  constructor() {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-    this.environment = this.detectEnvironment()
-    this.config = this.loadConfig()
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
   }
-  static getInstance(): ConfigManager {
-    // TODO: Add content
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
   }
-    if (!ConfigManager.instance) {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
   }
-      ConfigManager.instance = new ConfigManager()
-=======
 };
 export class ConfigManager {// TODO: Add content;}
 }
@@ -478,28 +1782,160 @@ export class ConfigManager {// TODO: Add content;}
     if (!ConfigManager.instance) {// TODO: Add content;}
 }
       ConfigManager.instance = new ConfigManager();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return ConfigManager.instance
   }
   /**
    * Detect current environment;
    */
-<<<<<<< HEAD
-  private detectEnvironment(): Environment {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    if (typeof process !== 'undefined') {
-    switch (this.environment) {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
   private detectEnvironment(): Environment {// TODO: Add content;}
 }
     if (typeof process !== 'undefined') {switch (this.environment) {}
   // TODO: Add content;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       case 'development':
         config = this.mergeConfig(config, developmentConfig)
         break
@@ -513,53 +1949,332 @@ export class ConfigManager {// TODO: Add content;}
         config = this.mergeConfig(config, testConfig)
         break
     }
-<<<<<<< HEAD
-    // Apply overrides
-    config = this.mergeConfig(config, this.overrides)
-    return config
-=======
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
     // Apply overrides;
     config = this.mergeConfig(config, this.overrides);
     return config;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Deep merge two config objects;
    */
-<<<<<<< HEAD
-  private mergeConfig(base: AppConfig, override: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig>): AppConfig {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    const result = { ...base } as AppConfig
-//     (Object.keys(override) as Array
-          
-          
-          
-          
-          
-          
-          
-          
-          <keyof AppConfig>).forEach()
-      
-          <K extends keyof AppConfig>(key: K) => {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-        const value = override[key]
-        if (value !== undefined) {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-          const baseValue = result[key]
-=======
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
   private mergeConfig(base: AppConfig, override: Partial;
           <AppConfig>): AppConfig {// TODO: Add content;}
 }
@@ -573,7 +2288,6 @@ export class ConfigManager {// TODO: Add content;}
         if (value !== undefined) {// TODO: Add content;}
 }
           const baseValue = result[key];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           if ()
             typeof value === 'object' &&
 //             !Array.isArray(value) &&
@@ -581,23 +2295,182 @@ export class ConfigManager {// TODO: Add content;}
             typeof baseValue === 'object' &&
 //             !Array.isArray(baseValue) &&
             baseValue !== null,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-            result[key] = Object.assign({}, baseValue, value) as typeof baseValue
-          } else {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-            result[key] = value as typeof baseValue
-=======
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
 ) {// TODO: Add content;}
 }
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {// TODO: Add content;}
 }
             result[key] = value as typeof baseValue;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           }
         }
       }
@@ -607,50 +2480,186 @@ export class ConfigManager {// TODO: Add content;}
   /**
    * Get configuration value;
    */
-<<<<<<< HEAD
-  get
-          
-          
-          
-          
-          
-          
-          
-          
-          <K extends keyof AppConfig>(key: K): AppConfig[K]
-// get
-          
-          
-          
-          
-          
-          
-          
-          
-          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-    key: K,
-    nestedKey: NK,
-): AppConfig[K][NK]
-// get
-          
-          
-          
-          
-          
-          
-          
-          
-          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
-    key: K,
-    nestedKey?: NK,
-): AppConfig[K] | AppConfig[K][NK] {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    if (nestedKey !== undefined) {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-      return this.config[key][nestedKey]
-=======
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
   get;
           <K extends keyof AppConfig>(key: K): AppConfig[K];
 // get;
@@ -667,105 +2676,812 @@ export class ConfigManager {// TODO: Add content;}
     if (nestedKey !== undefined) {// TODO: Add content;}
 }
       return this.config[key][nestedKey];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return this.config[key]
   }
   /**
    * Set configuration value;
    */
-<<<<<<< HEAD
-  set
-          
-          
-          
-          
-          
-          
-          
-          
-          <K extends keyof AppConfig>(key: K, value: AppConfig[K]): void
-// set
-          
-          
-          
-          
-          
-          
-          
-          
-=======
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
   set;
           <K extends keyof AppConfig>(key: K, value: AppConfig[K]): void;
 // set;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKey: NK,
     value: AppConfig[K][NK]
-<<<<<<< HEAD
-  ): void
-// set
-          
-          
-          
-          
-          
-          
-          
-          
-=======
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
+  }
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
   ): void;
 // set;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     key: K,
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
-<<<<<<< HEAD
-  ): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    if (value !== undefined && typeof nestedKeyOrValue === 'string') {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-      const currentValue = this.config[key]
-=======
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
   ): void {// TODO: Add content;}
 }
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {// TODO: Add content;}
 }
       const currentValue = this.config[key];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       if ()
         typeof currentValue === 'object' &&
 //         !Array.isArray(currentValue) &&
         currentValue !== null,
-<<<<<<< HEAD
-) {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-        this.config[key] = Object.assign({}, currentValue, {
-    // TODO: Add content
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-          [nestedKeyOrValue]: value
-        }) as AppConfig[K]
-      } else {
-    // TODO: Add content
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
   }
-        // If current value is not an object, create a new object by merging with default
-const defaultValue = this.getDefaultForKey(key)
-        this.config[key] = Object.assign({}, defaultValue, {
-    // TODO: Add content
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
   }
-          [nestedKeyOrValue]: value
-        }) as AppConfig[K]
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
       }
-    } else {
-    // TODO: Add content
+  )
+    return result
   }
-      this.config[key] = nestedKeyOrValue as AppConfig[K]
-=======
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
 ) {// TODO: Add content;}
 }
         this.config[key] = Object.assign({}, currentValue, {// TODO: Add content;}
@@ -784,33 +3500,219 @@ const defaultValue = this.getDefaultForKey(key);
     } else {// TODO: Add content;}
 }
       this.config[key] = nestedKeyOrValue as AppConfig[K];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Get default value for a config key;
    */
-<<<<<<< HEAD
-  private getDefaultForKey
-          
-          
-          
-          
-          
-          
-          
-          
-          <K extends keyof AppConfig>(key: K): AppConfig[K] {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    const defaultValues: AppConfig = {
-    // TODO: Add content
-  }
+}
   environment: 'development',
-      api: {
-    // TODO: Add content
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
   }
-=======
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
   private getDefaultForKey;
           <K extends keyof AppConfig>(key: K): AppConfig[K] {// TODO: Add content;}
 }
@@ -819,20 +3721,227 @@ const defaultValue = this.getDefaultForKey(key);
   environment: 'development',
       api: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   baseURL: '',
         timeout: 30000,
         retryAttempts: 3,
         enableCaching: true;
       },
-<<<<<<< HEAD
-      features: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
       features: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableAnalytics: false,
         enableErrorReporting: true,
         enablePerformanceMonitoring: false,
@@ -840,52 +3949,951 @@ const defaultValue = this.getDefaultForKey(key);
         enableSEO: true,
         enablePWA: false;
       },
-<<<<<<< HEAD
-      performance: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
       performance: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
         enableCaching: true;
       },
-<<<<<<< HEAD
-      security: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
       security: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
         maxRequestsPerMinute: 100;
       },
-<<<<<<< HEAD
-      ui: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
       ui: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   theme: 'light',
         language: 'en',
         timezone: 'UTC'
       },
-<<<<<<< HEAD
-      logging: {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
       logging: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   level: 'info',
         enableConsole: true,
         enableNetwork: false;
@@ -896,291 +4904,4383 @@ const defaultValue = this.getDefaultForKey(key);
   /**
    * Get full configuration;
    */
-<<<<<<< HEAD
-  getConfig(): AppConfig {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return { ...this.config }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
   getConfig(): AppConfig {// TODO: Add content;}
 }
     return { ...this.config };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get environment;
    */
-<<<<<<< HEAD
-  getEnvironment(): Environment {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.environment
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
   getEnvironment(): Environment {// TODO: Add content;}
 }
     return this.environment;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if feature is enabled;
    */
-<<<<<<< HEAD
-  isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.config.features[feature]
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {// TODO: Add content;}
 }
     return this.config.features[feature];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Enable feature;
    */
-<<<<<<< HEAD
-  enableFeature(feature: keyof AppConfig['features']): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    this.config.features[feature] = true
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
   enableFeature(feature: keyof AppConfig['features']): void {// TODO: Add content;}
 }
     this.config.features[feature] = true;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Disable feature;
    */
-<<<<<<< HEAD
-  disableFeature(feature: keyof AppConfig['features']): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    this.config.features[feature] = false
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
   disableFeature(feature: keyof AppConfig['features']): void {// TODO: Add content;}
 }
     this.config.features[feature] = false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get API configuration;
    */
-<<<<<<< HEAD
-  getAPIConfig() {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return { ...this.config.api }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
   getAPIConfig() {// TODO: Add content;}
 }
     return { ...this.config.api };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Update API configuration;
    */
-<<<<<<< HEAD
-  updateAPIConfig(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig['api']>): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    this.config.api = { ...this.config.api, ...config }
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
   updateAPIConfig(config: Partial;
           <AppConfig['api']>): void {// TODO: Add content;}
 }
     this.config.api = { ...this.config.api, ...config };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if in production;
    */
-<<<<<<< HEAD
-  isProduction(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.environment === 'production'
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
   isProduction(): boolean {// TODO: Add content;}
 }
     return this.environment === 'production';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if in development;
    */
-<<<<<<< HEAD
-  isDevelopment(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.environment === 'development'
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
   isDevelopment(): boolean {// TODO: Add content;}
 }
     return this.environment === 'development';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if in test;
    */
-<<<<<<< HEAD
-  isTest(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.environment === 'test'
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
   isTest(): boolean {// TODO: Add content;}
 }
     return this.environment === 'test';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Check if in staging;
    */
-<<<<<<< HEAD
-  isStaging(): boolean {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return this.environment === 'staging'
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
+
+  }
+  /**
+   * Check if in staging;
+   */
   isStaging(): boolean {// TODO: Add content;}
 }
     return this.environment === 'staging';
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Override configuration;
    */
-<<<<<<< HEAD
-  override(config: Partial
-          
-          
-          
-          
-          
-          
-          
-          
-          <AppConfig>): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    this.overrides = config
-    this.config = this.loadConfig()
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
+
+  }
+  /**
+   * Check if in staging;
+   */
+
+  }
+  /**
+   * Override configuration;
+   */
   override(config: Partial;
           <AppConfig>): void {// TODO: Add content;}
 }
     this.overrides = config;
     this.config = this.loadConfig();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Reset configuration;
    */
-<<<<<<< HEAD
-  reset(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    this.overrides = {}
-    this.config = this.loadConfig()
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
+
+  }
+  /**
+   * Check if in staging;
+   */
+
+  }
+  /**
+   * Override configuration;
+   */
+
+  }
+  /**
+   * Reset configuration;
+   */
   reset(): void {// TODO: Add content;}
 }
     this.overrides = {};
     this.config = this.loadConfig();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Export configuration as JSON;
    */
-<<<<<<< HEAD
-  export(): string {
-    // TODO: Add content
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
-    return JSON.stringify(this.config, null, 2)
-=======
+}
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
+
+  }
+  /**
+   * Check if in staging;
+   */
+
+  }
+  /**
+   * Override configuration;
+   */
+
+  }
+  /**
+   * Reset configuration;
+   */
+
+  }
+  /**
+   * Export configuration as JSON;
+   */
   export(): string {// TODO: Add content;}
 }
     return JSON.stringify(this.config, null, 2);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Validate configuration;
    */
-<<<<<<< HEAD
-  validate(): { valid: boolean; errors: string[] } {
-    // TODO: Add content
-  }
-    const errors: string[] = []
-    // Validate API configuration
-    if (!this.config.api.baseURL) {
-    // TODO: Add content
-  }
-      errors.push('API baseURL is required')
-    }
-    if (this.config.api.timeout 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 1000) {
-    // TODO: Add content
-  }
-      errors.push('API timeout must be at least 1000ms')
-    }
-    if (this.config.api.retryAttempts 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 0) {
-    // TODO: Add content
-  }
-      errors.push('API retryAttempts must be non-negative')
-    }
-    // Validate security configuration
-    if (this.config.security.maxRequestsPerMinute 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 1) {
-    // TODO: Add content
-  }
-      errors.push('Security maxRequestsPerMinute must be at least 1')
-    }
-    return {
-    // TODO: Add content
-  }
-  valid: errors.length === 0,
-//       errors
-    }
+'use client'
+/**
+ * Configuration Manager;
+ * Centralized configuration management with environment-based settings;
+ */
+
+  enableAnalytics: boolean;,
+    enableErrorReporting: boolean;,
+    enablePerformanceMonitoring: boolean;,
+    enableAccessibility: boolean;,
+    enableSEO: boolean;,
+
+  level: 'debug' | 'info' | 'warn' | 'error';,
+    enableConsole: boolean;,
+    enableNetwork: boolean
   }
 }
-// Export singleton instance
-export const configManager = ConfigManager.getInstance()
-=======
+  environment: 'development',
+
+  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  enableCodeSplitting: true,
+    enableLazyLoading: true,
+    enableImageOptimization: true,
+    enableCaching: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 100;
+  },
+
+  theme: 'auto',
+    language: 'en',
+    timezone: 'UTC'
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 30000,
+    retryAttempts: 1,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'debug',
+    enableConsole: true,
+    enableNetwork: false;
+  }
+
+  baseURL: 'https://staging-api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'info',
+    enableConsole: true,
+    enableNetwork: true;
+  }
+
+  baseURL: 'https://api.ziontech.com',
+    timeout: 30000,
+    retryAttempts: 3,
+    enableCaching: true;
+  },
+
+  enableAnalytics: true,
+    enableErrorReporting: true,
+    enablePerformanceMonitoring: true,
+    enableAccessibility: true,
+    enableSEO: true,
+    enablePWA: true;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: true;
+  },
+
+  enableCSP: true,
+    enableCORS: true,
+    enableRateLimiting: true,
+    maxRequestsPerMinute: 60;
+  }
+
+  baseURL: 'http://localhost:3000/api',
+    timeout: 5000,
+    retryAttempts: 0,
+    enableCaching: false;
+  },
+
+  enableAnalytics: false,
+    enableErrorReporting: false,
+    enablePerformanceMonitoring: false,
+    enableAccessibility: true,
+    enableSEO: false,
+    enablePWA: false;
+  },
+
+  level: 'error',
+    enableConsole: false,
+    enableNetwork: false;
+  }
+
+    }
+    return ConfigManager.instance
+  }
+  /**
+   * Detect current environment;
+   */
+
+      case 'development':
+        config = this.mergeConfig(config, developmentConfig)
+        break
+      case 'staging':
+        config = this.mergeConfig(config, stagingConfig)
+        break
+      case 'production':
+        config = this.mergeConfig(config, productionConfig)
+        break
+      case 'test':
+        config = this.mergeConfig(config, testConfig)
+        break
+    }
+
+  }
+  /**
+   * Deep merge two config objects;
+   */
+
+          if ()
+            typeof value === 'object' &&
+//             !Array.isArray(value) &&
+            value !== null &&
+            typeof baseValue === 'object' &&
+//             !Array.isArray(baseValue) &&
+            baseValue !== null,
+
+          }
+        }
+      }
+  )
+    return result
+  }
+  /**
+   * Get configuration value;
+   */
+
+    }
+    return this.config[key]
+  }
+  /**
+   * Set configuration value;
+   */
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKey: NK,
+    value: AppConfig[K][NK]
+
+          <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
+    key: K,
+    nestedKeyOrValue: NK | AppConfig[K],
+    value?: AppConfig[K][NK]
+
+      if ()
+        typeof currentValue === 'object' &&
+//         !Array.isArray(currentValue) &&
+        currentValue !== null,
+
+    }
+  }
+  /**
+   * Get default value for a config key;
+   */
+
+  baseURL: '',
+        timeout: 30000,
+        retryAttempts: 3,
+        enableCaching: true;
+      },
+
+  enableAnalytics: false,
+        enableErrorReporting: true,
+        enablePerformanceMonitoring: false,
+        enableAccessibility: true,
+        enableSEO: true,
+        enablePWA: false;
+      },
+
+  enableCodeSplitting: true,
+        enableLazyLoading: true,
+        enableImageOptimization: true,
+        enableCaching: true;
+      },
+
+  enableCSP: true,
+        enableCORS: false,
+        enableRateLimiting: true,
+        maxRequestsPerMinute: 100;
+      },
+
+  theme: 'light',
+        language: 'en',
+        timezone: 'UTC'
+      },
+
+  level: 'info',
+        enableConsole: true,
+        enableNetwork: false;
+      }
+    }
+    return defaultValues[key]
+  }
+  /**
+   * Get full configuration;
+   */
+
+  }
+  /**
+   * Get environment;
+   */
+
+  }
+  /**
+   * Check if feature is enabled;
+   */
+
+  }
+  /**
+   * Enable feature;
+   */
+
+  }
+  /**
+   * Disable feature;
+   */
+
+  }
+  /**
+   * Get API configuration;
+   */
+
+  }
+  /**
+   * Update API configuration;
+   */
+
+  }
+  /**
+   * Check if in production;
+   */
+
+  }
+  /**
+   * Check if in development;
+   */
+
+  }
+  /**
+   * Check if in test;
+   */
+
+  }
+  /**
+   * Check if in staging;
+   */
+
+  }
+  /**
+   * Override configuration;
+   */
+
+  }
+  /**
+   * Reset configuration;
+   */
+
+  }
+  /**
+   * Export configuration as JSON;
+   */
+
+  }
+  /**
+   * Validate configuration;
+   */
   validate(): { valid: boolean; errors: string[] } {// TODO: Add content;}
 }
     const errors: string[] = [];
@@ -1214,4 +9314,5 @@ export const configManager = ConfigManager.getInstance()
 }
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

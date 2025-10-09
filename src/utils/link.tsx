@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-interface LinkProps {
-    // TODO: Add content
-  }
-=======
 interface LinkProps {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   href: string;,
     children: React.ReactNode
   className?: string
@@ -14,24 +8,18 @@ interface LinkProps {// TODO: Add content;}
   onClick?: () => void
   'aria-label'?: string
 }
-<<<<<<< HEAD
-export const Link: React.FC
-          
-          
-          
-          
-          
-          
-          
-          
-          <LinkProps> = ({
-    // TODO: Add content
-  }
-=======
+
+  href: string;,
+    children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string
+}
 export const Link: React.FC;
           <LinkProps> = ({// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   href,
 //   children,
 //   className,
@@ -42,31 +30,35 @@ export const Link: React.FC;
 //   ...props;
 }) => {if (onClick) {}
     }
-<<<<<<< HEAD
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-    // TODO: Add content
-  }
-      e.preventDefault()
-      window.location.href = href
-=======
+
+  href: string;,
+    children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string
+}
+
+//   href,
+//   children,
+//   className,
+//   target,
+//   rel,
+//   onClick,
+  'aria-label': ariaLabel,
+//   ...props;
+}) => {if (onClick) {}
+    }
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {// TODO: Add content;}
 }
       e.preventDefault();
       window.location.href = href;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -80,16 +72,9 @@ export const Link: React.FC;
       {...props}
 // >
       {children}
-    
-          
-          
-          
-          
-          
-          
-          
-          
+
           </a>
   )
 }
 export default Link
+};

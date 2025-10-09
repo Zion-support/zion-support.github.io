@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';}
 'use client';
 import React from 'react';
@@ -56,28 +50,14 @@ const PartnersPage: React.FC = () => {const partnerTypes = [}
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 
-const PagePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
-        </section>
-      </main>
 
-=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -88,15 +68,7 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // We work with industry-leading technology partners to deliver comprehensive solutions;
 //               that drive innovation and business success.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
           </div>
           {/* Partner Types */}
@@ -119,15 +91,7 @@ const PagePage: React.FC = () => {
           {/* Partnership Benefits */}
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 // Why Partner With Us?
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => ()}
@@ -164,15 +128,7 @@ const PagePage: React.FC = () => {
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-                
-          
-          
-          
-          
-          
-          
-          
-          
+
           <Handshake className="w-5 h-5 mr-2" />
 // Become a Partner;
           </a>
@@ -184,10 +140,10 @@ const PagePage: React.FC = () => {
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Footer />
     </div>
   );
 };
 
 export default PagePage;
+};

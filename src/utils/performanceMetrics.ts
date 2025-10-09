@@ -3,50 +3,27 @@
  * Performance Metrics Utility;
  * Advanced performance tracking and monitoring for web applications;
  */
-<<<<<<< HEAD
-export interface PerformanceMetric {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
 export interface PerformanceMetric {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: string;,
     value: number;,
     unit: string;,
     timestamp: Date;,
-<<<<<<< HEAD
-    category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-  metadata?: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown>
-}
-export interface WebVitalsMetrics {
-    // TODO: Add content
-  }
-  FCP?: number; // First Contentful Paint
-  LCP?: number; // Largest Contentful Paint
-  FID?: number; // First Input Delay
-  CLS?: number; // Cumulative Layout Shift
-  TTFB?: number; // Time to First Byte
-  INP?: number; // Interaction to Next Paint
-}
-export interface PerformanceReport {
-    // TODO: Add content
-  }
-  metrics: PerformanceMetric[];,
-    webVitals: WebVitalsMetrics;,
-    summary: {
-    // TODO: Add content
-  }
-=======
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
     category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
   metadata?: Record;
           <string, unknown>;
@@ -66,7 +43,6 @@ export interface PerformanceReport {// TODO: Add content;}
     webVitals: WebVitalsMetrics;,
     summary: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   avgLoadTime: number;,
     totalMetrics: number;,
     performanceScore: number;,
@@ -74,31 +50,24 @@ export interface PerformanceReport {// TODO: Add content;}
   }
   timestamp: Date
 }
-<<<<<<< HEAD
-export class PerformanceMetrics {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-  private static instance: PerformanceMetrics
-  private metrics: PerformanceMetric[] = []
-  private _webVitals: WebVitalsMetrics = {}
-  private observers: PerformanceObserver[] = []
-  constructor() {
-    // TODO: Add content
-  }
-    if (typeof window !== 'undefined') {
-    // TODO: Add content
-  }
-      this.initializeObservers()
-    }
-  }
-  static getInstance(): PerformanceMetrics {
-    // TODO: Add content
-  }
-    if (!PerformanceMetrics.instance) {
-    // TODO: Add content
-  }
-      PerformanceMetrics.instance = new PerformanceMetrics()
-=======
+  timestamp: Date
+}
 export class PerformanceMetrics {// TODO: Add content;}
 }
   private static instance: PerformanceMetrics;
@@ -117,34 +86,37 @@ export class PerformanceMetrics {// TODO: Add content;}
     if (!PerformanceMetrics.instance) {// TODO: Add content;}
 }
       PerformanceMetrics.instance = new PerformanceMetrics();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return PerformanceMetrics.instance
   }
   /**
    * Initialize performance observers;
    */
-<<<<<<< HEAD
-  private initializeObservers(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-      try {
-// Navigation timing
-          for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-            if (entry.entryType === 'navigation') {
-    // TODO: Add content
-  }
-              const navEntry = entry as PerformanceNavigationTiming
-              this.recordMetric({
-    // TODO: Add content
-  }
-=======
+  /**
+   * Initialize performance observers;
+   */
   private initializeObservers(): void {// TODO: Add content;}
 }
     // Observe navigation timing;
@@ -158,20 +130,44 @@ export class PerformanceMetrics {// TODO: Add content;}
               const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'pageLoadTime',
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms',
                 timestamp: new Date(),
                 category: 'load',
-<<<<<<< HEAD
-                metadata: {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
                 metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart;
                 }
@@ -179,27 +175,45 @@ export class PerformanceMetrics {// TODO: Add content;}
   )
             }
           }
-<<<<<<< HEAD
-        }
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
+  }
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
   )
-        navObserver.observe({ entryTypes: ['navigation'] }
-  )
-        this.observers.push(navObserver)
-        // Paint timing
-const paintObserver = new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-          for (const entry of list.getEntries()) {
-    // TODO: Add content
-  }
-            if (entry.name === 'first-contentful-paint') {
-    // TODO: Add content
-  }
-              this.webVitals.FCP = entry.startTime
-              this.recordMetric({
-    // TODO: Add content
-  }
-=======
+            }
+          }
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
@@ -213,7 +227,6 @@ const paintObserver = new PerformanceObserver(list => {// TODO: Add content;}
               this.webVitals.FCP = entry.startTime;
               this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'FCP',
                 value: entry.startTime,
                 unit: 'ms',
@@ -223,26 +236,55 @@ const paintObserver = new PerformanceObserver(list => {// TODO: Add content;}
   )
             }
           }
-<<<<<<< HEAD
-        }
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
+  }
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
   )
-        paintObserver.observe({ entryTypes: ['paint'] }
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
   )
-        this.observers.push(paintObserver)
-        // Largest Contentful Paint
-const lcpObserver = new PerformanceObserver(list => {
-    // TODO: Add content
-  }
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {
-    // TODO: Add content
-  }
-            this.webVitals.LCP = lastEntry.startTime
-            this.recordMetric({
-    // TODO: Add content
-  }
-=======
+            }
+          }
         });
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver);
@@ -256,7 +298,6 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
             this.webVitals.LCP = lastEntry.startTime;
             this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'LCP',
               value: lastEntry.startTime,
               unit: 'ms',
@@ -265,25 +306,64 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
             }
   )
           }
-<<<<<<< HEAD
-        }
-  )
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
-  )
-        this.observers.push(lcpObserver)
-// Layout Shift
-        const clsObserver = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-            if ((entry as LayoutShift).hadRecentInput) continue
-            clsValue += (entry as LayoutShift).value
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
           }
-          this.webVitals.CLS = clsValue
-          this.recordMetric({
-    // TODO: Add content
-  }
-=======
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
@@ -297,48 +377,158 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
           this.webVitals.CLS = clsValue;
           this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'CLS',
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
             category: 'runtime'
-<<<<<<< HEAD
-          }
-  )
-        }
-  )
-        clsObserver.observe({ entryTypes: ['layout-shift'] }
-  )
-        this.observers.push(clsObserver)
-      } catch (error) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
     }
   }
   /**
    * Record a custom performance metric;
    */
-<<<<<<< HEAD
-  recordMetric(metric: PerformanceMetric): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    this.metrics.push(metric)
-    // Keep only last 1000 metrics
-    if (this.metrics.length > 1000) {
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-      this.metrics.shift()
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
   recordMetric(metric: PerformanceMetric): void {// TODO: Add content;}
 }
     this.metrics.push(metric);
@@ -346,23 +536,88 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
     if (this.metrics.length > 1000) {// TODO: Add content;}
 }
       this.metrics.shift();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   /**
    * Record page load time;
    */
-<<<<<<< HEAD
-  recordPageLoad(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    if (typeof window === 'undefined') return
-    const perfData = window.performance.timing
-    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart
-    this.recordMetric({
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
   recordPageLoad(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -370,20 +625,96 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'pageLoad',
       value: pageLoadTime,
       unit: 'ms',
       timestamp: new Date(),
       category: 'load',
-<<<<<<< HEAD
-      metadata: {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
         serverResponse: perfData.responseEnd - perfData.requestStart,
@@ -395,32 +726,213 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Record network request timing;
    */
-<<<<<<< HEAD
-  recordNetworkRequest(url: string, duration: number, status: number): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    this.recordMetric({
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
   recordNetworkRequest(url: string, duration: number, status: number): void {// TODO: Add content;}
 }
     this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'networkRequest',
       value: duration,
       unit: 'ms',
       timestamp: new Date(),
       category: 'network',
-<<<<<<< HEAD
-      metadata: {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
       metadata: {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         url,
 //         status;
       }
@@ -430,17 +942,117 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Record memory usage;
    */
-<<<<<<< HEAD
-  recordMemoryUsage(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    if (typeof window === 'undefined') return
-    if (!(performance as PerformanceWithMemory).memory) return
-    const memory = (performance as PerformanceWithMemory).memory
-    this.recordMetric({
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
   recordMemoryUsage(): void {// TODO: Add content;}
 }
     if (typeof window === 'undefined') return;
@@ -448,20 +1060,130 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
     const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: 'memoryUsage',
       value: memory.usedJSHeapSize,
       unit: 'bytes',
       timestamp: new Date(),
       category: 'memory',
-<<<<<<< HEAD
-      metadata: {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
       metadata: {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
         percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
@@ -472,26 +1194,134 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Measure function execution time;
    */
-<<<<<<< HEAD
-  measureFunction
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(name: string, fn: () => T): T {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    const startTime = performance.now()
-    const result = fn()
-    const endTime = performance.now()
-    this.recordMetric({
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
   measureFunction;
           <T>(name: string, fn: () => T): T {// TODO: Add content;}
 }
@@ -500,7 +1330,6 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
     const endTime = performance.now();
     this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: `function:${name}`,
       value: endTime - startTime,
       unit: 'ms',
@@ -513,26 +1342,147 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Measure async function execution time;
    */
-<<<<<<< HEAD
-  async measureAsyncFunction
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(name: string, fn: () => Promise<T>): Promise<T> {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    const startTime = performance.now()
-    const result = await fn()
-    const endTime = performance.now()
-    this.recordMetric({
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
   async measureAsyncFunction;
           <T>(name: string, fn: () => Promise<T>): Promise<T> {// TODO: Add content;}
 }
@@ -541,7 +1491,6 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
     const endTime = performance.now();
     this.recordMetric({// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   name: `async:${name}`,
       value: endTime - startTime,
       unit: 'ms',
@@ -554,81 +1503,673 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Get all metrics;
    */
-<<<<<<< HEAD
-  getMetrics(): PerformanceMetric[] {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    return [...this.metrics]
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
   getMetrics(): PerformanceMetric[] {// TODO: Add content;}
 }
     return [...this.metrics];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get metrics by category;
    */
-<<<<<<< HEAD
-  getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    return this.metrics.filter(m => m.category === category)
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {// TODO: Add content;}
 }
     return this.metrics.filter(m => m.category === category);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Get Web Vitals;
    */
-<<<<<<< HEAD
-  getWebVitals(): WebVitalsMetrics {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    return { ...this.webVitals }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
   getWebVitals(): WebVitalsMetrics {// TODO: Add content;}
 }
     return { ...this.webVitals };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Calculate performance score (0-100)
    */
-<<<<<<< HEAD
-  calculatePerformanceScore(): number {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    let score = 100
-    // FCP scoring
-    if (this.webVitals.FCP) {
-    // TODO: Add content
-  }
-      if (this.webVitals.FCP > 3000) score -= 20
-      else if (this.webVitals.FCP > 1800) score -= 10
+  timestamp: Date
+}
+
     }
-    // LCP scoring
-    if (this.webVitals.LCP) {
-    // TODO: Add content
+    return PerformanceMetrics.instance
   }
-      if (this.webVitals.LCP > 4000) score -= 25
-      else if (this.webVitals.LCP > 2500) score -= 12
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
     }
-    // CLS scoring
-    if (this.webVitals.CLS) {
-    // TODO: Add content
   }
-      if (this.webVitals.CLS > 0.25) score -= 20
-      else if (this.webVitals.CLS > 0.1) score -= 10
+  /**
+   * Record a custom performance metric;
+   */
+
     }
-    // FID scoring
-    if (this.webVitals.FID) {
-    // TODO: Add content
   }
-      if (this.webVitals.FID > 300) score -= 15
-      else if (this.webVitals.FID > 100) score -= 8
-=======
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
   calculatePerformanceScore(): number {// TODO: Add content;}
 }
     let score = 100;
@@ -655,79 +2196,971 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
 }
       if (this.webVitals.FID > 300) score -= 15;
       else if (this.webVitals.FID > 100) score -= 8;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return Math.max(0, Math.min(100, score))
   }
   /**
    * Get performance recommendations;
    */
-<<<<<<< HEAD
-  getRecommendations(): string[] {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    const recommendations: string[] = []
-    if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-=======
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
   getRecommendations(): string[] {// TODO: Add content;}
 }
     const recommendations: string[] = [];
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       recommendations.push()
 //         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
       )
     }
-<<<<<<< HEAD
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       recommendations.push()
 //         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
       )
     }
-<<<<<<< HEAD
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       recommendations.push()
 //         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
       )
     }
-<<<<<<< HEAD
-    if (this.webVitals.FID && this.webVitals.FID > 100) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-      recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution')
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
     if (this.webVitals.FID && this.webVitals.FID > 100) {// TODO: Add content;}
 }
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     const networkMetrics = this.getMetricsByCategory('network')
     const avgNetworkTime =
-<<<<<<< HEAD
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
-    if (avgNetworkTime > 500) {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //       recommendations.push()
 //         'Optimize network requests - consider caching and reducing payload sizes'
       )
@@ -737,21 +3170,211 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Generate performance report;
    */
-<<<<<<< HEAD
-  generateReport(): PerformanceReport {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    const loadMetrics = this.getMetricsByCategory('load')
-    const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0
-    return {
-    // TODO: Add content
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
   }
-  metrics: this.getMetrics(),
-      webVitals: this.getWebVitals(),
-      summary: {
-    // TODO: Add content
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
   }
-=======
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
+
+//       recommendations.push()
+//         'Optimize network requests - consider caching and reducing payload sizes'
+      )
+    }
+    return recommendations
+  }
+  /**
+   * Generate performance report;
+   */
   generateReport(): PerformanceReport {// TODO: Add content;}
 }
     const loadMetrics = this.getMetricsByCategory('load');
@@ -762,7 +3385,6 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
       webVitals: this.getWebVitals(),
       summary: {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
@@ -774,59 +3396,687 @@ const lcpObserver = new PerformanceObserver(list => {// TODO: Add content;}
   /**
    * Export metrics as JSON;
    */
-<<<<<<< HEAD
-  exportMetrics(): string {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    return JSON.stringify(this.generateReport(), null, 2)
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
+
+//       recommendations.push()
+//         'Optimize network requests - consider caching and reducing payload sizes'
+      )
+    }
+    return recommendations
+  }
+  /**
+   * Generate performance report;
+   */
+
+//         avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
+        recommendations: this.getRecommendations()
+      },
+      timestamp: new Date()
+    }
+  }
+  /**
+   * Export metrics as JSON;
+   */
   exportMetrics(): string {// TODO: Add content;}
 }
     return JSON.stringify(this.generateReport(), null, 2);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Clear all metrics;
    */
-<<<<<<< HEAD
-  clearMetrics(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    this.metrics = []
-    this.webVitals = {}
-=======
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
+
+//       recommendations.push()
+//         'Optimize network requests - consider caching and reducing payload sizes'
+      )
+    }
+    return recommendations
+  }
+  /**
+   * Generate performance report;
+   */
+
+//         avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
+        recommendations: this.getRecommendations()
+      },
+      timestamp: new Date()
+    }
+  }
+  /**
+   * Export metrics as JSON;
+   */
+
+  }
+  /**
+   * Clear all metrics;
+   */
   clearMetrics(): void {// TODO: Add content;}
 }
     this.metrics = [];
     this.webVitals = {};
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
   /**
    * Cleanup observers;
    */
-<<<<<<< HEAD
-  cleanup(): void {
-    // TODO: Add content
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
   }
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = []
-  }
+  timestamp: Date
 }
-// Type for performance.memory
-interface PerformanceWithMemory extends Performance {
-    // TODO: Add content
+
+    }
+    return PerformanceMetrics.instance
   }
-  memory: {
-// usedJSHeapSize: number
-// totalJSHeapSize: number
-// jsHeapSizeLimit: number
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
   }
-}
-// Type for LayoutShift
-interface LayoutShift extends PerformanceEntry {
-    // TODO: Add content
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
   }
-=======
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
+
+//       recommendations.push()
+//         'Optimize network requests - consider caching and reducing payload sizes'
+      )
+    }
+    return recommendations
+  }
+  /**
+   * Generate performance report;
+   */
+
+//         avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
+        recommendations: this.getRecommendations()
+      },
+      timestamp: new Date()
+    }
+  }
+  /**
+   * Export metrics as JSON;
+   */
+
+  }
+  /**
+   * Clear all metrics;
+   */
+
+  }
+  /**
+   * Cleanup observers;
+   */
   cleanup(): void {// TODO: Add content;}
 }
     this.observers.forEach(observer => observer.disconnect());
@@ -844,14 +4094,241 @@ interface PerformanceWithMemory extends Performance {// TODO: Add content;}
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   value: number;,
     hadRecentInput: boolean
 }
-<<<<<<< HEAD
-// Export singleton instance
-export const performanceMetrics = PerformanceMetrics.getInstance()
-=======
+'use client'
+/**
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
+ */
+
+  name: string;,
+    value: number;,
+    unit: string;,
+    timestamp: Date;,
+
+  avgLoadTime: number;,
+    totalMetrics: number;,
+    performanceScore: number;,
+    recommendations: string[]
+  }
+  timestamp: Date
+}
+
+    }
+    return PerformanceMetrics.instance
+  }
+  /**
+   * Initialize performance observers;
+   */
+
+  name: 'pageLoadTime',
+                value: navEntry.loadEventEnd - navEntry.fetchStart,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load',
+
+  domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
+                  domInteractive: navEntry.domInteractive - navEntry.fetchStart;
+                }
+              }
+  )
+            }
+          }
+
+  name: 'FCP',
+                value: entry.startTime,
+                unit: 'ms',
+                timestamp: new Date(),
+                category: 'load'
+              }
+  )
+            }
+          }
+
+  name: 'LCP',
+              value: lastEntry.startTime,
+              unit: 'ms',
+              timestamp: new Date(),
+              category: 'load'
+            }
+  )
+          }
+
+  name: 'CLS',
+            value: clsValue,
+            unit: 'score',
+            timestamp: new Date(),
+            category: 'runtime'
+
+        }
+    }
+  }
+  /**
+   * Record a custom performance metric;
+   */
+
+    }
+  }
+  /**
+   * Record page load time;
+   */
+
+  name: 'pageLoad',
+      value: pageLoadTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'load',
+
+  dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
+        tcpConnection: perfData.connectEnd - perfData.connectStart,
+        serverResponse: perfData.responseEnd - perfData.requestStart,
+        domParsing: perfData.domComplete - perfData.domLoading;
+      }
+    }
+  )
+  }
+  /**
+   * Record network request timing;
+   */
+
+  name: 'networkRequest',
+      value: duration,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'network',
+
+//         url,
+//         status;
+      }
+    }
+  )
+  }
+  /**
+   * Record memory usage;
+   */
+
+  name: 'memoryUsage',
+      value: memory.usedJSHeapSize,
+      unit: 'bytes',
+      timestamp: new Date(),
+      category: 'memory',
+
+  total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit,
+        percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;
+      }
+    }
+  )
+  }
+  /**
+   * Measure function execution time;
+   */
+
+  name: `function:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Measure async function execution time;
+   */
+
+  name: `async:${name}`,
+      value: endTime - startTime,
+      unit: 'ms',
+      timestamp: new Date(),
+      category: 'runtime'
+    }
+  )
+    return result
+  }
+  /**
+   * Get all metrics;
+   */
+
+  }
+  /**
+   * Get metrics by category;
+   */
+
+  }
+  /**
+   * Get Web Vitals;
+   */
+
+  }
+  /**
+   * Calculate performance score (0-100)
+   */
+
+    }
+    return Math.max(0, Math.min(100, score))
+  }
+  /**
+   * Get performance recommendations;
+   */
+
+//       recommendations.push()
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+      )
+    }
+
+//       recommendations.push()
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+      )
+    }
+
+//       recommendations.push()
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+      )
+    }
+
+    }
+    const networkMetrics = this.getMetricsByCategory('network')
+    const avgNetworkTime =
+
+//       recommendations.push()
+//         'Optimize network requests - consider caching and reducing payload sizes'
+      )
+    }
+    return recommendations
+  }
+  /**
+   * Generate performance report;
+   */
+
+//         avgLoadTime,
+        totalMetrics: this.metrics.length,
+        performanceScore: this.calculatePerformanceScore(),
+        recommendations: this.getRecommendations()
+      },
+      timestamp: new Date()
+    }
+  }
+  /**
+   * Export metrics as JSON;
+   */
+
+  }
+  /**
+   * Clear all metrics;
+   */
+
+  }
+  /**
+   * Cleanup observers;
+   */
+
+  value: number;,
+    hadRecentInput: boolean
+}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

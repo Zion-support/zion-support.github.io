@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AnalyticsProps {
-  // Add props here
-}
-
-const Analytics: React.FC<AnalyticsProps> = () => {
-  return (
-    <div className="analytics">
-      {/* Component content */}
-    </div>
-  );
-};
-
-=======
 'use client';
 import React, { useEffect } from 'react';
 const Analytics: React.FC = () => {useEffect(() => {}
@@ -133,5 +117,5 @@ declare global {// TODO: Add content;}
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 export default Analytics;
+};

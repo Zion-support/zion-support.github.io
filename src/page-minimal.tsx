@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-
-
-import React from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-
-const PageMinimalPage: React.FC = () => {
-  return (
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page Minimal
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Blog Post
-          </p>
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This blog post is under development. Please check back soon for the full content.
-          </p>
-        </section>
-
-      </main>
-      <Footer />
-    </div>
-=======
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star } from 'lucide-react';
 export const _metadata = {// TODO: Add content;}
@@ -40,14 +11,7 @@ import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 export default function HomePage() {// TODO: Add content;}
 }
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
@@ -83,15 +47,7 @@ Home;
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
 // Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
 //               and enterprise IT solutions that drive growth, efficiency, and innovation.
-            
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -111,15 +67,7 @@ Home;
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Zion Tech Group?
-              
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
               <p className="text-xl text-gray-600">
                 We deliver measurable results through innovative AI solutions;
@@ -167,8 +115,8 @@ Ready to Transform Your Business?
               <p className="text-gray-400 text-sm">
 © 2026 Zion Tech Group. All rights reserved.
       </footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default PageMinimalPage;
+};

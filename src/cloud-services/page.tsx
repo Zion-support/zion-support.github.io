@@ -2,13 +2,6 @@ import React from 'react';
 import { Cloud, Shield, Zap, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-
-const PagePage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-
-=======
 const CloudServicesPage: React.FC = () => {return (}
     <div>Coming Soon</div>
   );
@@ -56,40 +49,33 @@ const CloudServicesPage: React.FC = () => {return (}
 //     'Global CDN'
   ];
   return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
-<<<<<<< HEAD
 
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-=======
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Cloud Services;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
           </p>
-<<<<<<< HEAD
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
 
-=======
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+
+          </h1>
+          <p className="text-xl text-cyan-400 mb-8 font-medium">
+            Coming Soon
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
@@ -144,27 +130,11 @@ const CloudServicesPage: React.FC = () => {return (}
         <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
           <h2 className="text-3xl font-bold text-white mb-4">
 // Ready to Transform Your Infrastructure?
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
 // Let our cloud experts help you migrate, optimize, and secure your cloud infrastructure.
-          
-          
-          
-          
-          
-          
-          
-          
-          
+
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -180,7 +150,6 @@ const CloudServicesPage: React.FC = () => {return (}
 //               Get Free Consultation;
           </a>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         </section>
       </main>
       <Footer />
@@ -189,3 +158,4 @@ const CloudServicesPage: React.FC = () => {return (}
 };
 
 export default PagePage;
+};

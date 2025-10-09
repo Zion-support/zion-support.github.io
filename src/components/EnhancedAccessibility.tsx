@@ -1,17 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-interface EnhancedAccessibilityProps {
-  // Add props here
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = () => {
-  return (
-    <div className="enhancedaccessibility">
-      {/* Component content */}
-    </div>
-
-=======
 interface AccessibilitySettings {// TODO: Add content;}
 };
   highContrast: boolean;
@@ -197,25 +185,21 @@ const toggleHighContrast = () => {// TODO: Add content;}
     saveSettings(newSettings);
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
   };
-  const toggleLargeText = () => {// TODO: Add content;}
 }
     const newSettings = { ...settings, largeText: !settings.largeText };
     saveSettings(newSettings);
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
   };
-  const toggleReducedMotion = () => {// TODO: Add content;}
 }
     const newSettings = { ...settings, reducedMotion: !settings.reducedMotion };
     saveSettings(newSettings);
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
   };
-  const toggleScreenReader = () => {// TODO: Add content;}
 }
     const newSettings = { ...settings, screenReader: !settings.screenReader };
     saveSettings(newSettings);
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
   };
-  const toggleFocusVisible = () => {// TODO: Add content;}
 }
     const newSettings = { ...settings, focusVisible: !settings.focusVisible };
     saveSettings(newSettings);
@@ -235,7 +219,6 @@ const toggleHighContrast = () => {// TODO: Add content;}
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
   };
 // Reset all settings;
-  const resetSettings = () => {highContrast: false,}
       largeText: false,
       reducedMotion: false,
       screenReader: false,
@@ -249,14 +232,7 @@ const toggleHighContrast = () => {// TODO: Add content;}
   if (!isVisible) {// TODO: Add content;}
 }
     return (
-    
-          
-          
-          
-          
-          
-          
-          
+
           <div>Coming Soon</div>
   )
       
@@ -336,8 +312,8 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red
         >
           Reset Settings;
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   );
 };
 
 export default EnhancedAccessibility;
+};

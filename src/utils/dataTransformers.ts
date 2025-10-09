@@ -6,34 +6,14 @@
 /**
  * Deep clone an object;
  */
-<<<<<<< HEAD
-export function deepClone<T>(obj: T): T {
-    // TODO: Add content
-  }
-  if (obj === null || typeof obj !== 'object') {
-    // TODO: Add content
-  }
-    return obj
-  }
-  if (obj instanceof Date) {
-    // TODO: Add content
-  }
-    return new Date(obj.getTime()) as unknown as T
-  }
-  if (obj instanceof Array) {
-    // TODO: Add content
-  }
-    return obj.map(item => deepClone(item)) as unknown as T
-  }
-  if (obj instanceof Object) {
-    for (const key in obj) {
-    // TODO: Add content
-  }
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-    // TODO: Add content
-  }
-        clonedObj[key] = deepClone(obj[key])
-=======
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
 export function deepClone<T>(obj: T): T {// TODO: Add content;}
 }
   if (obj === null || typeof obj !== 'object') {// TODO: Add content;}
@@ -54,7 +34,6 @@ export function deepClone<T>(obj: T): T {// TODO: Add content;}
       if (Object.prototype.hasOwnProperty.call(obj, key)) {// TODO: Add content;}
 }
         clonedObj[key] = deepClone(obj[key]);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
     return clonedObj
@@ -64,29 +43,24 @@ export function deepClone<T>(obj: T): T {// TODO: Add content;}
 /**
  * Deep merge two objects;
  */
-<<<<<<< HEAD
-export function deepMerge
-          
-          
-          
-          
-          
-          
-          
-          
-          <T extends Record<string, unknown>>(target: T, source: Partial<T>): T {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const output = { ...target }
-  for (const key in source) {
-    // TODO: Add content
-  }
-    if (Object.prototype.hasOwnProperty.call(source, key)) {
-    // TODO: Add content
-  }
-      const sourceValue = source[key]
-      const targetValue = output[key]
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
 export function deepMerge;
           <T extends Record<string, unknown>>(target: T, source: Partial<T>): T {// TODO: Add content;}
 }
@@ -97,7 +71,6 @@ export function deepMerge;
 }
       const sourceValue = source[key];
       const targetValue = output[key];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       if ()
 //         sourceValue &&
         typeof sourceValue === 'object' &&
@@ -105,41 +78,76 @@ export function deepMerge;
 //         targetValue &&
         typeof targetValue === 'object' &&
 //         !Array.isArray(targetValue)
-<<<<<<< HEAD
-      ) {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
       ) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         output[key] = deepMerge()
 //           targetValue as Record;
           <string, unknown>,
 // sourceValue as Record;
           <string, unknown>
-<<<<<<< HEAD
-        ) as T[Extract<keyof T, string>]
-      } else {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-        output[key] = sourceValue as T[Extract
-          
-          
-          
-          
-          
-          
-          
-          
-          <keyof T, string>]
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
         ) as T[Extract<keyof T, string>];
       } else {// TODO: Add content;}
 }
         output[key] = sourceValue as T[Extract;
           <keyof T, string>];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
@@ -153,32 +161,52 @@ export function flattenObject()
           <string, unknown>,
   prefix = '',
   separator = '.'
-<<<<<<< HEAD
-): Record<string, unknown> {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const flattened: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown> = {}
-  for (const key in obj) {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-    // TODO: Add content
-  }
-      const value = obj[key]
-      const newKey = prefix ? `${prefix}${separator}${key}` : key
-      if (value && typeof value === 'object' && !Array.isArray(value)) {
-    // TODO: Add content
-  }
-=======
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
 ): Record<string, unknown> {// TODO: Add content;}
 }
   const flattened: Record;
@@ -191,23 +219,65 @@ export function flattenObject()
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //         Object.assign()
 //           flattened,
 //           flattenObject(value as Record;
           <string, unknown>, newKey, separator)
-<<<<<<< HEAD
-        )
-      } else {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-        flattened[newKey] = value
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
         );
       } else {// TODO: Add content;}
 }
         flattened[newKey] = value;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
     }
   }
@@ -220,59 +290,70 @@ export function unflattenObject()
   obj: Record;
           <string, unknown>,
   separator = '.'
-<<<<<<< HEAD
-): Record<string, unknown> {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const result: Record
-          
-          
-          
-          
-          
-          
-          
-          
-          <string, unknown> = {}
-  for (const key in obj) {
-    // TODO: Add content
-  }
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-    // TODO: Add content
-  }
-      const keys = key.split(separator)
-      for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < keys.length; i++) {
-    // TODO: Add content
-  }
-        const k = keys[i]
-        if (i === keys.length - 1) {
-    // TODO: Add content
-  }
-          current[k] = obj[key]
-        } else {
-    // TODO: Add content
-  }
-          current[k] = current[k] || {}
-          current = current[k] as Record
-          
-          
-          
-          
-          
-          
-          
-          
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
           <string, unknown>
-=======
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
 ): Record<string, unknown> {// TODO: Add content;}
 }
   const result: Record;
@@ -294,7 +375,6 @@ export function unflattenObject()
           current[k] = current[k] || {};
           current = current[k] as Record;
           <string, unknown>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
         }
       }
     }
@@ -307,29 +387,83 @@ export function unflattenObject()
 export function pick<T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
   keys: K[]
-<<<<<<< HEAD
-): Pick
-          <T, K> {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const result = {} as Pick
-          
-          
-          
-          
-          
-          
-          
-          
-          <T, K>
-  keys.forEach(key => {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-    if (key in obj) {
-    // TODO: Add content
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
   }
-      result[key] = obj[key]
-=======
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
 ): Pick;
           <T, K> {// TODO: Add content;}
 }
@@ -340,7 +474,6 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
     if (key in obj) {// TODO: Add content;}
 }
       result[key] = obj[key];
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
   }
   )
@@ -353,29 +486,96 @@ export function omit;
           <T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
   keys: K[]
-<<<<<<< HEAD
-): Omit
-          <T, K> {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const result = { ...obj }
-  keys.forEach(key => {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-    delete result[key]
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
   }
   )
-  return result as Omit
-          
-          
-          
-          
-          
-          
-          
-          
-          <T, K>
-=======
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
 ): Omit;
           <T, K> {// TODO: Add content;}
 }
@@ -386,7 +586,6 @@ export function omit;
   });
   return result as Omit;
           <T, K>;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Group array items by a key;
@@ -394,19 +593,104 @@ export function omit;
 export function groupBy<T>()
   array: T[],
   key: keyof T | ((item: T) => string | number)
-<<<<<<< HEAD
-): Record
-          <string, T[]> {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return array.reduce()
-    (result, item) => {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key])
-      (result[groupKey] = result[groupKey] || []).push(item)
-      return result
-=======
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
 ): Record;
           <string, T[]> {// TODO: Add content;}
 }
@@ -416,7 +700,6 @@ export function groupBy<T>()
       const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
       (result[groupKey] = result[groupKey] || []).push(item);
       return result;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     },
     {} as Record;
           <string, T[]>
@@ -425,25 +708,113 @@ export function groupBy<T>()
 /**
  * Get unique items from an array;
  */
-<<<<<<< HEAD
-export function unique<T>(array: T[], key?: keyof T): T[] {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  if (!key) {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-    return Array.from(new Set(array))
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
   }
-  const seen = new Set()
-  return array.filter(item => {
-    // TODO: Add content
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
   }
-    const value = item[key]
-    if (seen.has(value)) {
-    // TODO: Add content
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
   }
-      return false
-=======
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
 export function unique<T>(array: T[], key?: keyof T): T[] {// TODO: Add content;}
 }
   if (!key) {// TODO: Add content;}
@@ -457,7 +828,6 @@ export function unique<T>(array: T[], key?: keyof T): T[] {// TODO: Add content;
     if (seen.has(value)) {// TODO: Add content;}
 }
       return false;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     seen.add(value)
     return true
@@ -473,36 +843,129 @@ export function sortBy;
   keys: Array;
           <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = []
-<<<<<<< HEAD
-): T[] {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return [...array].sort((a, b) => {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-    for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < keys.length; i++) {
-    // TODO: Add content
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
   }
-      const key = keys[i]
-      const order = orders[i] || 'asc'
-      const aVal = typeof key === 'function' ? key(a) : a[key]
-      const bVal = typeof key === 'function' ? key(b) : b[key]
-      // Handle comparison with type safety
-      if (aVal == null || bVal == null) {
-    // TODO: Add content
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
   }
-        if (aVal == null && bVal == null) continue
-        return aVal == null ? 1 : -1
-=======
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
 ): T[] {// TODO: Add content;}
 }
   return [...array].sort((a, b) => {// TODO: Add content;}
@@ -519,30 +982,138 @@ export function sortBy;
 }
         if (aVal == null && bVal == null) continue;
         return aVal == null ? 1 : -1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
       }
       // Convert to comparable values
 const aComp =
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-<<<<<<< HEAD
-//           ? aVal
-          : String(aVal)
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-//           ? bVal
-          : String(bVal)
-      if (aComp 
-          
-          
-          
-          
-          
-          
-          
-          
-          < bComp) return order === 'asc' ? -1 : 1
-      if (aComp > bComp) return order === 'asc' ? 1 : -1
-=======
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
+  }
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
 //           ? aVal;
           : String(aVal);
       const bComp =
@@ -552,7 +1123,6 @@ const aComp =
       if (aComp;
           < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
     }
     return 0
   }
@@ -561,23 +1131,143 @@ const aComp =
 /**
  * Chunk array into smaller arrays;
  */
-<<<<<<< HEAD
-export function chunk<T>(array: T[], size: number): T[][] {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const chunks: T[][] = []
-  for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < array.length; i += size) {
-    // TODO: Add content
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
 export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content;}
 }
   const chunks: T[][] = [];
@@ -585,7 +1275,6 @@ export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content;
           < array.length; i += size) {// TODO: Add content;}
 }
     chunks.push(array.slice(i, i + size));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     chunks.push(array.slice(i, i + size))
   }
@@ -594,33 +1283,152 @@ export function chunk<T>(array: T[], size: number): T[][] {// TODO: Add content;
 /**
  * Zip multiple arrays together;
  */
-<<<<<<< HEAD
-export function zip
-          
-          
-          
-          
-          
-          
-          
-          
-          <T>(...arrays: T[][]): T[][] {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const length = Math.max(...arrays.map(arr => arr.length))
-  const result: T[][] = []
-  for (let i = 0; i 
-          
-          
-          
-          
-          
-          
-          
-          
-          < length; i++) {
-    // TODO: Add content
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
 export function zip;
           <T>(...arrays: T[][]): T[][] {// TODO: Add content;}
 }
@@ -630,7 +1438,6 @@ export function zip;
           < length; i++) {// TODO: Add content;}
 }
     result.push(arrays.map(arr => arr[i]));
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
   }
     result.push(arrays.map(arr => arr[i]))
   }
@@ -639,26 +1446,161 @@ export function zip;
 /**
  * Format bytes to human readable string;
  */
-<<<<<<< HEAD
-export function formatBytes(bytes: number, decimals = 2): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  if (bytes === 0) return '0 Bytes'
-  const k = 1024
-  const dm = decimals 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 0 ? 0 : decimals
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB']
-  const i = Math.floor(Math.log(bytes) / Math.log(k))
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
 export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add content;}
 }
   if (bytes === 0) return '0 Bytes';
@@ -668,36 +1610,342 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Format number with separators;
  */
-<<<<<<< HEAD
-export function formatNumber(num: number, locale = 'en-US'): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return new Intl.NumberFormat(locale).format(num)
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
 export function formatNumber(num: number, locale = 'en-US'): string {// TODO: Add content;}
 }
   return new Intl.NumberFormat(locale).format(num);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Format currency;
  */
-<<<<<<< HEAD
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return new Intl.NumberFormat(locale, {
-    // TODO: Add content
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
   }
-  style: 'currency',
-//     currency
-  }).format(amount)
-=======
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
 export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {// TODO: Add content;}
 }
   return new Intl.NumberFormat(locale, {// TODO: Add content;}
@@ -705,7 +1953,6 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
   style: 'currency',
 //     currency;
   }).format(amount);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Format date;
@@ -714,53 +1961,367 @@ export function formatDate()
   date: Date | string | number,
   options: Intl.DateTimeFormatOptions = {},
   locale = 'en-US'
-<<<<<<< HEAD
-): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  return new Intl.DateTimeFormat(locale, options).format(d)
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
 ): string {// TODO: Add content;}
 }
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
   return new Intl.DateTimeFormat(locale, options).format(d);
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Format relative time;
  */
-<<<<<<< HEAD
-export function formatRelativeTime(date: Date | string | number): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date
-  const now = new Date()
-  const diff = now.getTime() - d.getTime()
-  const seconds = Math.floor(diff / 1000)
-  const minutes = Math.floor(seconds / 60)
-  const hours = Math.floor(minutes / 60)
-  const days = Math.floor(hours / 24)
-  const weeks = Math.floor(days / 7)
-  const months = Math.floor(days / 30)
-  const years = Math.floor(days / 365)
-  if (seconds 
-          
-          
-          
-          
-          
-          
-          
-          
-          < 60) return 'just now'
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`
-  return `${years} year${years > 1 ? 's' : ''} ago`
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
 export function formatRelativeTime(date: Date | string | number): string {// TODO: Add content;}
 }
   const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
@@ -781,61 +2342,596 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
   if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
   if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
   return `${years} year${years > 1 ? 's' : ''} ago`;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Truncate string;
  */
-<<<<<<< HEAD
-export function truncate(str: string, length: number, suffix = '...'): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  if (str.length 
-          
-          
-          
-          
-          
-          
-          
-          
-          <= length) return str
-  return str.substring(0, length - suffix.length) + suffix
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
 export function truncate(str: string, length: number, suffix = '...'): string {// TODO: Add content;}
 }
   if (str.length;
           <= length) return str;
   return str.substring(0, length - suffix.length) + suffix;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Capitalize first letter;
  */
-<<<<<<< HEAD
-export function capitalize(str: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase()
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
 export function capitalize(str: string): string {// TODO: Add content;}
 }
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Convert to title case;
  */
-<<<<<<< HEAD
-export function titleCase(str: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return str
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
 export function titleCase(str: string): string {// TODO: Add content;}
 }
   return str;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     .toLowerCase()
 //     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -844,16 +2940,212 @@ export function titleCase(str: string): string {// TODO: Add content;}
 /**
  * Convert to kebab case;
  */
-<<<<<<< HEAD
-export function kebabCase(str: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return str
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
+
+//     .toLowerCase()
+//     .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+/**
+ * Convert to kebab case;
+ */
 export function kebabCase(str: string): string {// TODO: Add content;}
 }
   return str;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     .replace(/([a-z])([A-Z])/g, '$1-$2')
 //     .replace(/[\s_]+/g, '-')
     .toLowerCase()
@@ -861,42 +3153,670 @@ export function kebabCase(str: string): string {// TODO: Add content;}
 /**
  * Convert to camel case;
  */
-<<<<<<< HEAD
-export function camelCase(str: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase())
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
+
+//     .toLowerCase()
+//     .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+/**
+ * Convert to kebab case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+//     .replace(/[\s_]+/g, '-')
+    .toLowerCase()
+}
+/**
+ * Convert to camel case;
+ */
 export function camelCase(str: string): string {// TODO: Add content;}
 }
   return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 /**
  * Convert to snake case;
  */
-<<<<<<< HEAD
-export function snakeCase(str: string): string {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-  return str
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
+
+//     .toLowerCase()
+//     .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+/**
+ * Convert to kebab case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+//     .replace(/[\s_]+/g, '-')
+    .toLowerCase()
+}
+/**
+ * Convert to camel case;
+ */
+
+}
+/**
+ * Convert to snake case;
+ */
 export function snakeCase(str: string): string {// TODO: Add content;}
 }
   return str;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //     .replace(/([a-z])([A-Z])/g, '$1_$2')
 //     .replace(/[\s-]+/g, '_')
     .toLowerCase()
 }
-<<<<<<< HEAD
-export default {
-    // TODO: Add content
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
   }
-=======
+  return obj
+}
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
+
+//     .toLowerCase()
+//     .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+/**
+ * Convert to kebab case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+//     .replace(/[\s_]+/g, '-')
+    .toLowerCase()
+}
+/**
+ * Convert to camel case;
+ */
+
+}
+/**
+ * Convert to snake case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1_$2')
+//     .replace(/[\s-]+/g, '_')
+    .toLowerCase()
+}
 export default {// TODO: Add content;}
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 //   deepClone,
 //   deepMerge,
 //   flattenObject,
@@ -918,10 +3838,250 @@ export default {// TODO: Add content;}
 //   titleCase,
 //   kebabCase,
 //   camelCase,
-<<<<<<< HEAD
-//   snakeCase
+'use client'
+/**
+ * Data Transformation Utilities;
+ * Provides utilities for transforming and formatting data;
+ */
+/**
+ * Deep clone an object;
+ */
+
+      }
+    }
+    return clonedObj
+  }
+  return obj
 }
-=======
+/**
+ * Deep merge two objects;
+ */
+
+      if ()
+//         sourceValue &&
+        typeof sourceValue === 'object' &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
+        typeof targetValue === 'object' &&
+//         !Array.isArray(targetValue)
+
+        output[key] = deepMerge()
+//           targetValue as Record;
+          <string, unknown>,
+// sourceValue as Record;
+          <string, unknown>
+
+      }
+    }
+  }
+  return output
+}
+/**
+ * Flatten a nested object;
+ */
+export function flattenObject()
+  obj: Record;
+          <string, unknown>,
+  prefix = '',
+  separator = '.'
+
+//         Object.assign()
+//           flattened,
+//           flattenObject(value as Record;
+          <string, unknown>, newKey, separator)
+
+      }
+    }
+  }
+  return flattened
+}
+/**
+ * Unflatten a flattened object;
+ */
+export function unflattenObject()
+  obj: Record;
+          <string, unknown>,
+  separator = '.'
+
+        }
+      }
+    }
+  }
+  return result
+}
+/**
+ * Pick specific keys from an object;
+ */
+export function pick<T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+    }
+  }
+  )
+  return result
+}
+/**
+ * Omit specific keys from an object;
+ */
+export function omit;
+          <T extends Record<string, unknown>, K extends keyof T>()
+  obj: T,
+  keys: K[]
+
+}
+/**
+ * Group array items by a key;
+ */
+export function groupBy<T>()
+  array: T[],
+  key: keyof T | ((item: T) => string | number)
+
+    },
+    {} as Record;
+          <string, T[]>
+  )
+}
+/**
+ * Get unique items from an array;
+ */
+
+    }
+    seen.add(value)
+    return true
+  }
+  )
+}
+/**
+ * Sort array by multiple keys;
+ */
+export function sortBy;
+          <T>()
+  array: T[],
+  keys: Array;
+          <keyof T | ((item: T) => unknown)>,
+  orders: Array<'asc' | 'desc'> = []
+
+      }
+      // Convert to comparable values
+const aComp =
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
+
+    }
+    return 0
+  }
+  )
+}
+/**
+ * Chunk array into smaller arrays;
+ */
+
+  }
+    chunks.push(array.slice(i, i + size))
+  }
+  return chunks
+}
+/**
+ * Zip multiple arrays together;
+ */
+
+  }
+    result.push(arrays.map(arr => arr[i]))
+  }
+  return result
+}
+/**
+ * Format bytes to human readable string;
+ */
+
+}
+/**
+ * Format number with separators;
+ */
+
+}
+/**
+ * Format currency;
+ */
+
+}
+/**
+ * Format date;
+ */
+export function formatDate()
+  date: Date | string | number,
+  options: Intl.DateTimeFormatOptions = {},
+  locale = 'en-US'
+
+}
+/**
+ * Format relative time;
+ */
+
+}
+/**
+ * Truncate string;
+ */
+
+}
+/**
+ * Capitalize first letter;
+ */
+
+}
+/**
+ * Convert to title case;
+ */
+
+//     .toLowerCase()
+//     .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+/**
+ * Convert to kebab case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+//     .replace(/[\s_]+/g, '-')
+    .toLowerCase()
+}
+/**
+ * Convert to camel case;
+ */
+
+}
+/**
+ * Convert to snake case;
+ */
+
+//     .replace(/([a-z])([A-Z])/g, '$1_$2')
+//     .replace(/[\s-]+/g, '_')
+    .toLowerCase()
+}
+
+//   deepClone,
+//   deepMerge,
+//   flattenObject,
+//   unflattenObject,
+//   pick,
+//   omit,
+//   groupBy,
+//   unique,
+//   sortBy,
+//   chunk,
+//   zip,
+//   formatBytes,
+//   formatNumber,
+//   formatCurrency,
+//   formatDate,
+//   formatRelativeTime,
+//   truncate,
+//   capitalize,
+//   titleCase,
+//   kebabCase,
+//   camelCase,
 //   snakeCase;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
+
+};

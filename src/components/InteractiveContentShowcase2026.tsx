@@ -13,3 +13,4 @@ const InteractiveContentShowcase2026: React.FC<InteractiveContentShowcase2026Pro
 };
 
 export default InteractiveContentShowcase2026;
+};

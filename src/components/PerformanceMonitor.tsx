@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-
-=======
 interface PerformanceMetrics {// TODO: Add content;}
 };
   cls: number | null;,
     fcp: number | null;,
     lcp: number | null;,
     ttfb: number | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-aee0
 }
 
 interface PerformanceProps {
@@ -61,3 +50,4 @@ const PerformanceMonitor: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => 
 };
 
 export default PerformanceMonitor;
+};
