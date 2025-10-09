@@ -244,8 +244,6 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
-=======
           </div>
 
           {/* Micro SAAS Services Grid */}
@@ -297,73 +295,57 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             </Suspense>
-<<<<<<< HEAD
+          </div>
 
+          {/* Additional Services Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="text-5xl mb-6 text-center">🔄</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Autonomous Systems</h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  Self-managing and self-optimizing systems for enterprise operations and infrastructure.
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔒</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Cybersecurity</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Advanced cybersecurity solutions with threat detection, vulnerability assessment, and 24/7 monitoring.
                 </p>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 mb-2">Starting at $2,500/month</div>
-                  <a href="/autonomous-systems" className="text-green-600 hover:text-green-700 font-medium">
+                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">Starting at $1,299/month</div>
+                  <a href="/cybersecurity" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                     Learn More →
                   </a>
                 </div>
               </article>
             </Suspense>
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-1ed2
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-d65f
-          </div>
 
-          {/* Additional Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </article>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Data Analytics</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Comprehensive data analytics and business intelligence solutions with AI-powered insights.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $799/month</div>
+                  <a href="/data-analytics" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
 
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• DevOps & CI/CD</li>
-                <li>• 24/7 Monitoring</li>
-              </ul>
-            </article>
+            <Suspense fallback={<ServiceCardSkeleton />}>
+              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🚀</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">DevOps</h3>
+                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
+                  Complete DevOps solutions with CI/CD pipelines, infrastructure as code, and automated deployment.
+                </p>
+                <div className="text-center">
+                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $799/month</div>
+                  <a href="/devops" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
+                    Learn More →
+                  </a>
+                </div>
+              </article>
+            </Suspense>
           </div>
           
           <div className="text-center mt-8">
