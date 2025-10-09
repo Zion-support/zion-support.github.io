@@ -65,7 +65,7 @@ class Logger {
   /**
    * Log an error message
    */
-  error(
+//   error(
     message: string,
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
@@ -97,7 +97,7 @@ class Logger {
   /**
    * Core logging method
    */
-  private log(
+//   private log(
     level: LogLevel,
     message: string,
     context?: LogContext,
@@ -109,10 +109,10 @@ class Logger {
     }
     const _logEntry: LogMetadata = {
       timestamp: new Date().toISOString(),
-      level,
-      message,
-      context,
-      ...metadata
+//       level,
+//       message,
+//       context,
+//       ...metadata
     };
     // Format the log entry
     const _formattedMessage = this.formatLogEntry(logEntry);

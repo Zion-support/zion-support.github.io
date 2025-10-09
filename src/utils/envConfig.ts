@@ -24,7 +24,7 @@ class EnvironmentConfig {
     // Safely access environment variables with defaults
     const _nodeEnv = (process.env['NODE_ENV'] || 'development') as EnvConfig['nodeEnv'];
     return {
-      nodeEnv,
+//       nodeEnv,
       apiUrl:
         process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
@@ -82,7 +82,7 @@ class EnvironmentConfig {
     }
     return {
       valid: missing.length === 0,
-      missing
+//       missing
     };
   }
   /**

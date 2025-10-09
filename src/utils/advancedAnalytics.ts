@@ -180,8 +180,8 @@ class AdvancedAnalytics {
           category: 'engagement',
           action: 'scroll',
           value: Math.round(
-            (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-          ),
+//             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+//           ),
           timestamp: new Date().toISOString(),
           sessionId: this.currentSession.id,
           userId: this.getUserId(),
@@ -189,8 +189,8 @@ class AdvancedAnalytics {
           metadata: {
             scrollY: window.scrollY,
             scrollPercentage: Math.round(
-              (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-            )
+//               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+//             )
           }
         };
         this.trackEvent(scrollEvent);
@@ -284,7 +284,7 @@ class AdvancedAnalytics {
       // Track navigation timing
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType(
-          'navigation'
+//           'navigation'
         )[0] as PerformanceNavigationTiming;
         const performanceEvent: UserEvent = {
           id: this.generateEventId(),
@@ -299,7 +299,7 @@ class AdvancedAnalytics {
           metadata: {
             loadTime: navigation.loadEventEnd - navigation.loadEventStart,
             domContentLoaded:
-              navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             firstByte: navigation.responseStart - navigation.requestStart
           }
         };
@@ -404,12 +404,12 @@ class AdvancedAnalytics {
     // Create label
     let label = id || className || text?.substring(0, 50) || tagName;
     return {
-      category,
-      label,
-      tagName,
-      id,
-      className,
-      text
+//       category,
+//       label,
+//       tagName,
+//       id,
+//       className,
+//       text
     };
   }
   /**
@@ -418,7 +418,7 @@ class AdvancedAnalytics {
   private isDownloadLink(link: HTMLAnchorElement): boolean {
     return (
       link.download !== '' ||
-      !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
+//       !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
       link.getAttribute('data-download') === 'true'
     );
   }
@@ -506,7 +506,7 @@ class AdvancedAnalytics {
     );
     const pageViews = events.filter(e => e.type === 'page_view');
     const topPages = pageViews
-      .reduce(
+//       .reduce(
         (acc, event) => {
           const existing = acc.find(p => p.url === event.url);
           if (existing) {
@@ -517,17 +517,17 @@ class AdvancedAnalytics {
           return acc;
         },
         [] as Array<{ url: string; views: number }>
-      )
+//       )
       .sort((a, b) => b.views - a.views);
     const conversions = events.filter(e => e.category === 'conversion').length;
     const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
     return {
       session: this.currentSession,
-      totalEvents,
-      eventsByType,
-      eventsByCategory,
+//       totalEvents,
+//       eventsByType,
+//       eventsByCategory,
       topPages: topPages.slice(0, 10),
-      conversionRate
+//       conversionRate
     };
   }
   /**
@@ -551,7 +551,7 @@ class AdvancedAnalytics {
   endSession(): void {
     this.currentSession.endTime = new Date().toISOString();
     this.currentSession.duration =
-      new Date(this.currentSession.endTime).getTime() -
+//       new Date(this.currentSession.endTime).getTime() -
       new Date(this.currentSession.startTime).getTime();
     // Send session data
     if (this.isOnline) {

@@ -111,9 +111,9 @@ export class CacheManager {
   set<T>(key: string, value: T, options: { ttl?: number } = {}): void {
     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
     const entry: CacheEntry<T> = {
-      value,
+//       value,
       timestamp: Date.now(),
-      ttl
+//       ttl
     };
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {
@@ -121,7 +121,7 @@ export class CacheManager {
     } else if (
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage
+//       window.localStorage
     ) {
       try {
         localStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
@@ -133,7 +133,7 @@ export class CacheManager {
     } else if (
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage
+//       window.sessionStorage
     ) {
       try {
         sessionStorage.setItem(this.getStorageKey(key), JSON.stringify(entry));
@@ -155,7 +155,7 @@ export class CacheManager {
     } else if (
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage
+//       window.localStorage
     ) {
       try {
         const item = localStorage.getItem(this.getStorageKey(key));
@@ -168,7 +168,7 @@ export class CacheManager {
     } else if (
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage
+//       window.sessionStorage
     ) {
       try {
         const item = sessionStorage.getItem(this.getStorageKey(key));
@@ -209,13 +209,13 @@ export class CacheManager {
     } else if (
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage
+//       window.localStorage
     ) {
       localStorage.removeItem(this.getStorageKey(key));
     } else if (
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage
+//       window.sessionStorage
     ) {
       sessionStorage.removeItem(this.getStorageKey(key));
     }
@@ -230,7 +230,7 @@ export class CacheManager {
     if (
       this.storage === CacheStorage.LocalStorage &&
       typeof window !== 'undefined' &&
-      window.localStorage
+//       window.localStorage
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
@@ -244,7 +244,7 @@ export class CacheManager {
     if (
       this.storage === CacheStorage.SessionStorage &&
       typeof window !== 'undefined' &&
-      window.sessionStorage
+//       window.sessionStorage
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
@@ -260,7 +260,7 @@ export class CacheManager {
   /**
    * Get or set with function (handles both sync and async)
    */
-  getOrSet<T>(
+//   getOrSet<T>(
     key: string,
     fn: () => T | Promise<T>,
     options: { ttl?: number } = {}
@@ -286,7 +286,7 @@ export class CacheManager {
   /**
    * Get or set with async function
    */
-  async getOrSetAsync<T>(
+//   async getOrSetAsync<T>(
     key: string,
     fn: () => Promise<T> | T,
     options: { ttl?: number } = {}
@@ -305,14 +305,14 @@ export class CacheManager {
   /**
    * Memoize a function with caching
    */
-  memoize<TArgs extends unknown[], TResult>(
+//   memoize<TArgs extends unknown[], TResult>(
     fn: (...args: TArgs) => TResult,
     options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
   ): (...args: TArgs) => TResult {
     const { keyGenerator, ...cacheOptions } = options;
     return (...args: TArgs): TResult => {
       const key = keyGenerator
-        ? keyGenerator(...args)
+//         ? keyGenerator(...args)
         : `memoize_${fn.name}_${JSON.stringify(args)}`;
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     };
@@ -360,8 +360,8 @@ export class CacheManager {
     }
     return {
       memorySize: this.memoryCache.size,
-      localStorageSize,
-      sessionStorageSize
+//       localStorageSize,
+//       sessionStorageSize
     };
   }
 }

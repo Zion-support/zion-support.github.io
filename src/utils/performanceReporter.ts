@@ -27,27 +27,27 @@ class PerformanceReporter {
    */
   init(config?: { enabled?: boolean; reportInterval?: number }): void {
     if (typeof window === 'undefined') {
-      return
+//       return
     }
     this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
     if (!this.isEnabled) {
-      return
+//       return
     }
     // Monitor Core Web Vitals
-    this.monitorWebVitals()
+//     this.monitorWebVitals()
     // Monitor navigation timing
-    this.monitorNavigationTiming()
+//     this.monitorNavigationTiming()
     // Monitor resource timing
-    this.monitorResourceTiming()
+//     this.monitorResourceTiming()
     // Setup periodic reporting
     if (config?.reportInterval) {
       this.reportingInterval = setInterval(() => {
-        this.report()
+//         this.report()
       }, config.reportInterval)
     }
     // Report on page unload
     window.addEventListener('beforeunload', () => {
-      this.report()
+//       this.report()
     })
   }
   /**
@@ -55,7 +55,7 @@ class PerformanceReporter {
    */
   private monitorWebVitals(): void {
     if (typeof PerformanceObserver === 'undefined') {
-      return
+//       return
     }
     try {
       // Largest Contentful Paint (LCP)
@@ -88,7 +88,7 @@ class PerformanceReporter {
             clsValue += (entry as any).value;
           }
         })
-        this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
+//         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
       })
       clsObserver.observe({ type: 'layout-shift', buffered: true })
       // First Contentful Paint (FCP)
@@ -96,7 +96,7 @@ class PerformanceReporter {
         const entries = entryList.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
+//             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
           }
         })
       })
@@ -110,7 +110,7 @@ class PerformanceReporter {
    */
   private monitorNavigationTiming(): void {
     if (typeof window === 'undefined' || !window.performance) {
-      return
+//       return
     }
     window.addEventListener('load', () => {
       setTimeout(() => {
@@ -118,13 +118,13 @@ class PerformanceReporter {
         if (navigation) {
           // Time to First Byte (TTFB)
           const ttfb = navigation.responseStart - navigation.requestStart
-          this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
+//           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
           // DOM Content Loaded
           const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-          this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
+//           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
           // Load Complete
           const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
-          this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
+//           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
         }
       }, 0)
     })
@@ -134,7 +134,7 @@ class PerformanceReporter {
    */
   private monitorResourceTiming(): void {
     if (typeof window === 'undefined' || !window.performance) {
-      return
+//       return
     }
     window.addEventListener('load', () => {
       setTimeout(() => {
@@ -143,7 +143,7 @@ class PerformanceReporter {
         const slowResources = resources
           .filter((resource) => resource.duration > 1000)
           .sort((a, b) => b.duration - a.duration)
-          .slice(0, 10)
+//           .slice(0, 10)
         slowResources.forEach((resource) => {
           logger.warn('Slow resource detected', {
             name: resource.name,
@@ -159,18 +159,18 @@ class PerformanceReporter {
    */
   private addMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
     const metric: PerformanceMetric = {
-      name,
-      value,
-      rating,
+//       name,
+//       value,
+//       rating,
       timestamp: Date.now()
     };
-    this.metrics.push(metric)
+//     this.metrics.push(metric)
     // Log poor performing metrics
     if (rating === 'poor') {
       logger.warn(`Poor ${name} performance`, { value, rating })
     }
     // Send to analytics
-    this.sendToAnalytics(metric)
+//     this.sendToAnalytics(metric)
   }
   /**
    * Get performance rating based on thresholds
@@ -202,7 +202,7 @@ class PerformanceReporter {
    */
   private sendToAnalytics(metric: PerformanceMetric): void {
     if (typeof window === 'undefined') {
-      return
+//       return
     }
     // Google Analytics
     if (typeof gtag === 'function') {
@@ -225,7 +225,7 @@ class PerformanceReporter {
     const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
     return {
       metrics: this.metrics,
-      navigation,
+//       navigation,
       resources: resources.slice(0, 50), // Limit to 50 resources
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
@@ -237,11 +237,11 @@ class PerformanceReporter {
    */
   report(): void {
     if (!this.isEnabled) {
-      return
+//       return
     }
     const report = this.generateReport()
     if (!report) {
-      return
+//       return
     }
     logger.info('Performance Report', {
       metrics: report.metrics,
@@ -260,7 +260,7 @@ class PerformanceReporter {
    */
   destroy(): void {
     if (this.reportingInterval) {
-      clearInterval(this.reportingInterval)
+//       clearInterval(this.reportingInterval)
     }
     this.metrics = []
   }

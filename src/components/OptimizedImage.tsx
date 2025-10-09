@@ -17,19 +17,19 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
+//   src,
+//   alt,
+//   width,
+//   height,
   className = '',
   priority = false,
   quality = 75,
   placeholder = 'empty',
-  blurDataURL,
+//   blurDataURL,
   sizes = '100vw',
   loading = 'lazy',
-  onLoad,
-  onError,
+//   onLoad,
+//   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -86,7 +86,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
+//     >
       {/* Blur placeholder */}
       {placeholder === 'blur' && blurDataURL && !isLoaded && (
         <div
@@ -94,7 +94,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           style={{
             backgroundImage: `url(${blurDataURL})`,
           }}
-        />
+//         />
       )}
 
       {/* Loading skeleton */}
@@ -128,7 +128,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             height: '100%',
             objectFit: 'cover',
           }}
-        />
+//         />
       )}
     </div>
   );

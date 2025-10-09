@@ -13,16 +13,16 @@ export interface SecurityHeadersConfig {
 export const _defaultSecurityHeaders: SecurityHeadersConfig = {
   // Content Security Policy
   contentSecurityPolicy: [
-    "default-src 'self'",
+//     "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
+//     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https: blob:",
     "font-src 'self' data:",
     "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests',
+//     "frame-ancestors 'none'",
+//     "base-uri 'self'",
+//     "form-action 'self'",
+//     'upgrade-insecure-requests',
   ].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
@@ -43,7 +43,7 @@ export const _defaultSecurityHeaders: SecurityHeadersConfig = {
     'accelerometer=()',
     'gyroscope=()',
     'magnetometer=()',
-  ].join(', ')
+//   ].join(', ')
 };
 /**
  * Get security headers as key-value pairs
@@ -84,8 +84,8 @@ export function getNextSecurityHeaders(
 ): Array<{ key: string; value: string }> {
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({
-    key,
-    value
+//     key,
+//     value
   }));
 }
 export default defaultSecurityHeaders;

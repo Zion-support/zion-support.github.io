@@ -146,17 +146,17 @@ const BlockchainPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Blockchain & Web3 Services
+//                 Blockchain & Web3 Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-orange-100 max-w-3xl mx-auto">
-                Build the future of decentralized applications with cutting-edge blockchain technology
+//                 Build the future of decentralized applications with cutting-edge blockchain technology
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
-                  Explore Web3 Solutions
+//                   Explore Web3 Solutions
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
-                  Schedule Consultation
+//                   Schedule Consultation
                 </button>
               </div>
             </div>
@@ -168,10 +168,10 @@ const BlockchainPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our Blockchain Services?
+//                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert blockchain developers delivering secure, scalable, and innovative Web3 solutions
+//                 Expert blockchain developers delivering secure, scalable, and innovative Web3 solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -234,7 +234,7 @@ const BlockchainPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates
+//                           Save up to 50% vs market rates
                         </div>
                       </div>
 
@@ -274,7 +274,7 @@ const BlockchainPage: React.FC = () => {
                       </div>
 
                       <button className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors">
-                        Get Blockchain Consultation
+//                         Get Blockchain Consultation
                       </button>
                     </div>
                   ))}
@@ -288,10 +288,10 @@ const BlockchainPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Blockchain Capabilities
+//                 Our Blockchain Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive blockchain solutions covering all aspects of Web3 development
+//                 Comprehensive blockchain solutions covering all aspects of Web3 development
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -333,7 +333,7 @@ const BlockchainPage: React.FC = () => {
         <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Build the Future of Web3?
+//               Ready to Build the Future of Web3?
             </h2>
             <p className="text-xl mb-8 text-orange-100">
               Contact our blockchain experts for a free consultation and custom Web3 strategy
@@ -342,14 +342,14 @@ const BlockchainPage: React.FC = () => {
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
+//               >
+//                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
+//               >
+//                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-orange-200">

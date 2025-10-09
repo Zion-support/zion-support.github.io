@@ -80,7 +80,7 @@ const HelpPage: React.FC = () => {
         icon: BookOpen,
         color: 'text-blue-400'
       }
-    ],
+//     ],
     'troubleshooting': [
       {
         title: 'Common Login Issues and Solutions',
@@ -118,7 +118,7 @@ const HelpPage: React.FC = () => {
         icon: HelpCircle,
         color: 'text-red-400'
       }
-    ],
+//     ],
     'billing': [
       {
         title: 'Understanding Your Bill',
@@ -156,7 +156,7 @@ const HelpPage: React.FC = () => {
         icon: CheckCircle,
         color: 'text-green-400'
       }
-    ],
+//     ],
     'technical': [
       {
         title: 'API Documentation and Examples',
@@ -194,7 +194,7 @@ const HelpPage: React.FC = () => {
         icon: MessageSquare,
         color: 'text-purple-400'
       }
-    ]
+//     ]
   };
 
   const resources = [
@@ -291,8 +291,8 @@ const HelpPage: React.FC = () => {
   };
 
   const filteredArticles = getCurrentArticles().filter(article =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    article.description.toLowerCase().includes(searchTerm.toLowerCase())
+//     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//     article.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -303,11 +303,11 @@ const HelpPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Help Center
+//               Help Center
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers, get support, and learn how to make the most of our AI and IT services. 
-              We're here to help you succeed.
+//               Find answers, get support, and learn how to make the most of our AI and IT services. 
+//               We're here to help you succeed.
             </p>
           </div>
 
@@ -321,7 +321,7 @@ const HelpPage: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg"
-              />
+//               />
             </div>
           </div>
 
@@ -337,7 +337,7 @@ const HelpPage: React.FC = () => {
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+//                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
                 </button>
@@ -368,14 +368,14 @@ const HelpPage: React.FC = () => {
                     <span className={`px-2 py-1 rounded text-xs ${
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
+//                       'bg-red-500/20 text-red-400'
                     }`}>
                       {article.difficulty}
                     </span>
                   </div>
                   
                   <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
-                    Read Article
+//                     Read Article
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </button>
                 </div>
@@ -386,7 +386,7 @@ const HelpPage: React.FC = () => {
           {/* Resources */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Additional Resources
+//               Additional Resources
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
@@ -405,7 +405,7 @@ const HelpPage: React.FC = () => {
           {/* Support Channels */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Get Support
+//               Get Support
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
@@ -420,7 +420,7 @@ const HelpPage: React.FC = () => {
                     <div>Response: {channel.responseTime}</div>
                   </div>
                   <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">
-                    Contact Now
+//                     Contact Now
                   </button>
                 </div>
               ))}
@@ -430,7 +430,7 @@ const HelpPage: React.FC = () => {
           {/* FAQ */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Frequently Asked Questions
+//               Frequently Asked Questions
             </h2>
             <div className="max-w-4xl mx-auto">
               <div className="space-y-6">
@@ -447,33 +447,33 @@ const HelpPage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Still Need Help?
+//               Still Need Help?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find what you're looking for? Our support team is here to help you 
-              with any questions or issues you might have.
+//               Can't find what you're looking for? Our support team is here to help you 
+//               with any questions or issues you might have.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <MessageSquare className="w-5 h-5 mr-2" />
-                Contact Support
+//                 Contact Support
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

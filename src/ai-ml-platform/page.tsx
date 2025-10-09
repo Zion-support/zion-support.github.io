@@ -42,12 +42,12 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for individual developers',
       features: [
-        'Up to 5 models',
-        'Basic ML tools',
-        'Email support',
-        'Standard compute',
-        'Basic analytics'
-      ],
+//         'Up to 5 models',
+//         'Basic ML tools',
+//         'Email support',
+//         'Standard compute',
+//         'Basic analytics'
+//       ],
       popular: false
     },
     {
@@ -56,13 +56,13 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for development teams',
       features: [
-        'Up to 25 models',
-        'Advanced ML tools',
-        'Priority support',
-        'High-performance compute',
-        'Advanced analytics',
-        'Team collaboration'
-      ],
+//         'Up to 25 models',
+//         'Advanced ML tools',
+//         'Priority support',
+//         'High-performance compute',
+//         'Advanced analytics',
+//         'Team collaboration'
+//       ],
       popular: true
     },
     {
@@ -71,14 +71,14 @@ const AIMLPlatformPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited models',
-        'Premium ML features',
-        '24/7 support',
-        'Custom compute',
-        'Custom analytics',
-        'White-label options',
-        'API access'
-      ],
+//         'Unlimited models',
+//         'Premium ML features',
+//         '24/7 support',
+//         'Custom compute',
+//         'Custom analytics',
+//         'White-label options',
+//         'API access'
+//       ],
       popular: false
     }
   ];
@@ -103,14 +103,14 @@ const AIMLPlatformPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI ML platform solutions that will transform your business.
+//             Coming Soon - Advanced AI ML platform solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+//               Contact Us
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+//               Learn More
             </button>
           </div>
         </div>

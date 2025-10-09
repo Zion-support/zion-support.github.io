@@ -37,7 +37,7 @@ export const mockFetch = (
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({
         ok: status >= 200 && status < 300,
-        status,
+//         status,
         headers: new Headers(headers),
         json: async () => response,
         text: async () => JSON.stringify(response)
@@ -83,8 +83,8 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {
   if (typeof global !== 'undefined') {
     Object.defineProperty(global, 'window', {
       value: {
-        ...global.window,
-        ...overrides
+//         ...global.window,
+//         ...overrides
       },
       writable: true
     });
@@ -99,7 +99,7 @@ export const createMockPerformance = (): Performance => {
     now: () => Date.now(),
     mark: (name: string) => {
       entries.push({
-        name,
+//         name,
         entryType: 'mark',
         startTime: Date.now(),
         duration: 0,
@@ -108,7 +108,7 @@ export const createMockPerformance = (): Performance => {
     },
     measure: (name: string, _startMark?: string, _endMark?: string) => {
       entries.push({
-        name,
+//         name,
         entryType: 'measure',
         startTime: Date.now(),
         duration: 100,
@@ -140,7 +140,7 @@ export const createMockPerformance = (): Performance => {
 export const generateTestData = {
   string: (length = 10): string => {
     return Math.random()
-      .toString(36)
+//       .toString(36)
       .substring(2, length + 2);
   },
   number: (min = 0, max = 100): number => {
@@ -267,17 +267,17 @@ export const measureExecutionTime = async <T>(
   return { result, duration };
 };
 export default {
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime
+//   wait,
+//   waitFor,
+//   mockFetch,
+//   createMockStorage,
+//   mockWindow,
+//   createMockPerformance,
+//   generateTestData,
+//   deepClone,
+//   deepEqual,
+//   ConsoleSpy,
+//   createDeferred,
+//   retryWithBackoff,
+//   measureExecutionTime
 };

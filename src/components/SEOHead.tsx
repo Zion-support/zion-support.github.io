@@ -20,8 +20,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData,
-  canonical,
+//   structuredData,
+//   canonical,
   noindex = false,
   nofollow = false,
 }) => {

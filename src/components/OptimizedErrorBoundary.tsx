@@ -14,8 +14,8 @@ interface State {
   errorId: string;
 }
 class OptimizedErrorBoundary extends Component<
-  OptimizedErrorBoundaryProps,
-  State
+//   OptimizedErrorBoundaryProps,
+//   State
 > {
   private resetTimeoutId: number | null = null;
   constructor(props: OptimizedErrorBoundaryProps) {
@@ -30,14 +30,14 @@ class OptimizedErrorBoundary extends Component<
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+//       error,
+//       errorInfo
     });
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -65,8 +65,8 @@ class OptimizedErrorBoundary extends Component<
       }
     }
     if (
-      hasError &&
-      resetOnPropsChange &&
+//       hasError &&
+//       resetOnPropsChange &&
       prevProps.children !== this.props.children
     ) {
       this.resetErrorBoundary();
@@ -126,7 +126,7 @@ class OptimizedErrorBoundary extends Component<
           errorInfo={this.state.errorInfo}
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
-        />
+//         />
       );
     }
     return this.props.children;
@@ -149,18 +149,18 @@ const ErrorFallback = memo<ErrorFallbackProps>(
               fill='none'
               stroke='currentColor'
               viewBox='0 0 24 24'
-            >
+//             >
               <path
                 strokeLinecap='round'
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
-              />
+//               />
             </svg>
           </div>
         </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-          Something went wrong
+//           Something went wrong
         </h1>
         <p className='text-gray-600 mb-4'>
           We&apos;re sorry, but something unexpected happened. Please try again.
@@ -168,7 +168,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         {process.env['NODE_ENV'] === 'development' && error && (
           <details className='mb-4 text-left'>
             <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
-              Error Details (Development)
+//               Error Details (Development)
             </summary>
             <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
               <div className='mb-2'>
@@ -193,14 +193,14 @@ const ErrorFallback = memo<ErrorFallbackProps>(
           <button
             onClick={onRetry}
             className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-          >
-            Try Again
+//           >
+//             Try Again
           </button>
           <button
             onClick={() => window.location.reload()}
             className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
-          >
-            Reload Page
+//           >
+//             Reload Page
           </button>
         </div>
         {errorId && (
@@ -208,7 +208,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
         )}
       </div>
     </div>
-  )
+//   )
 );
 ErrorFallback.displayName = 'ErrorFallback';
 export default OptimizedErrorBoundary;

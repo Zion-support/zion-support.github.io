@@ -81,8 +81,8 @@ class AdvancedCache<T = unknown> {
       this.evictLRU();
     }
     this.cache.set(key, {
-      value,
-      expiry,
+//       value,
+//       expiry,
       hits: 0,
       lastAccessed: Date.now()
     });
@@ -181,7 +181,7 @@ class AdvancedCache<T = unknown> {
     this.cache.forEach((entry, key) => {
       totalHits += entry.hits;
       entries.push({
-        key,
+//         key,
         hits: entry.hits,
         age: now - entry.lastAccessed
       });
@@ -194,7 +194,7 @@ class AdvancedCache<T = unknown> {
     };
   }
   // Utility method for async operations with caching
-  public async getOrFetch<R extends T>(
+//   public async getOrFetch<R extends T>(
     key: string,
     fetcher: () => Promise<R>,
     ttl?: number

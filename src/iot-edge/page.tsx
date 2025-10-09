@@ -148,17 +148,17 @@ const IoTEdgePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IoT & Edge Computing Services
+//                 IoT & Edge Computing Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto">
-                Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
+//                 Connect, monitor, and optimize your operations with intelligent IoT and edge computing solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
-                  Explore IoT Solutions
+//                   Explore IoT Solutions
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
-                  Schedule Demo
+//                   Schedule Demo
                 </button>
               </div>
             </div>
@@ -170,10 +170,10 @@ const IoTEdgePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Our IoT & Edge Services?
+//                 Why Choose Our IoT & Edge Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
+//                 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -236,7 +236,7 @@ const IoTEdgePage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 40% vs market rates
+//                           Save up to 40% vs market rates
                         </div>
                       </div>
 
@@ -276,7 +276,7 @@ const IoTEdgePage: React.FC = () => {
                       </div>
 
                       <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
-                        Get IoT Consultation
+//                         Get IoT Consultation
                       </button>
                     </div>
                   ))}
@@ -290,10 +290,10 @@ const IoTEdgePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our IoT & Edge Capabilities
+//                 Our IoT & Edge Capabilities
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics
+//                 Comprehensive IoT solutions covering device management, edge computing, and intelligent analytics
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -335,7 +335,7 @@ const IoTEdgePage: React.FC = () => {
         <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Connect Your World?
+//               Ready to Connect Your World?
             </h2>
             <p className="text-xl mb-8 text-cyan-100">
               Contact our IoT experts for a free consultation and custom connected solution strategy
@@ -344,14 +344,14 @@ const IoTEdgePage: React.FC = () => {
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-flex items-center"
-              >
-                📞 +1 302 464 0950
+//               >
+//                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com
+//               >
+//                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
             <div className="mt-8 text-sm text-cyan-200">

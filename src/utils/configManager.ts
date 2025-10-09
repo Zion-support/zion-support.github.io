@@ -235,17 +235,17 @@ export class ConfigManager {
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
     const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(
+//     (Object.keys(override) as Array<keyof AppConfig>).forEach(
       <K extends keyof AppConfig>(key: K) => {
         const value = override[key];
         if (value !== undefined) {
           const baseValue = result[key];
           if (
             typeof value === 'object' &&
-            !Array.isArray(value) &&
+//             !Array.isArray(value) &&
             value !== null &&
             typeof baseValue === 'object' &&
-            !Array.isArray(baseValue) &&
+//             !Array.isArray(baseValue) &&
             baseValue !== null
           ) {
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
@@ -261,11 +261,11 @@ export class ConfigManager {
    * Get configuration value
    */
   get<K extends keyof AppConfig>(key: K): AppConfig[K];
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
+//   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
     nestedKey: NK
   ): AppConfig[K][NK];
-  get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
+//   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
     nestedKey?: NK
   ): AppConfig[K] | AppConfig[K][NK] {
@@ -278,12 +278,12 @@ export class ConfigManager {
    * Set configuration value
    */
   set<K extends keyof AppConfig>(key: K, value: AppConfig[K]): void;
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
+//   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
     nestedKey: NK,
     value: AppConfig[K][NK]
   ): void;
-  set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
+//   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(
     key: K,
     nestedKeyOrValue: NK | AppConfig[K],
     value?: AppConfig[K][NK]
@@ -292,7 +292,7 @@ export class ConfigManager {
       const currentValue = this.config[key];
       if (
         typeof currentValue === 'object' &&
-        !Array.isArray(currentValue) &&
+//         !Array.isArray(currentValue) &&
         currentValue !== null
       ) {
         this.config[key] = Object.assign({}, currentValue, {
@@ -461,7 +461,7 @@ export class ConfigManager {
     }
     return {
       valid: errors.length === 0,
-      errors
+//       errors
     };
   }
 }

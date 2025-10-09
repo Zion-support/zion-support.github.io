@@ -125,9 +125,9 @@ class PerformanceMonitoringService {
   private recordWebVital(name: keyof WebVitals, value: number): void {
     const rating = this.getRating(name, value);
     const metric: PerformanceMetric = {
-      name,
-      value,
-      rating,
+//       name,
+//       value,
+//       rating,
       timestamp: Date.now()
     };
     this.webVitals[name] = metric;
@@ -158,9 +158,9 @@ class PerformanceMonitoringService {
    */
   recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {
     const metric: CustomMetric = {
-      name,
-      value,
-      unit,
+//       name,
+//       value,
+//       unit,
       timestamp: Date.now()
     };
     this.customMetrics.push(metric);
@@ -242,10 +242,10 @@ class PerformanceMonitoringService {
       recommendations.push('Improve Time to First Byte by optimizing server response time');
     }
     return {
-      score,
+//       score,
       webVitals: this.webVitals,
       customMetrics: this.customMetrics,
-      recommendations
+//       recommendations
     };
   }
   /**
@@ -345,7 +345,7 @@ export const recordMetric = (name: string, value: number, unit: MetricUnit = Met
       average: value,
       min: value,
       max: value,
-      unit,
+//       unit,
       rating: getRating(name, value)
     });
   }

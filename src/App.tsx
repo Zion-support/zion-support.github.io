@@ -132,14 +132,14 @@ const App: React.FC = () => {
           numberOfEmployees: '50-100',
           industry: 'Technology',
           services: [
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
+//             'AI Solutions',
+//             'Quantum Computing',
+//             'Autonomous Systems',
+//             'Digital Transformation',
+//             'Cloud Services',
+//             'Automation',
+//             'Business Intelligence'
+//           ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
@@ -322,8 +322,8 @@ const NotFoundPage: React.FC = () => (
       <a
         href="/"
         className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-      >
-        Go Home
+//       >
+//         Go Home
       </a>
     </div>
   </div>

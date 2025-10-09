@@ -9,11 +9,11 @@ export interface ToastProps {
   show: boolean;
 }
 const Toast: React.FC<ToastProps> = ({
-  message,
+//   message,
   type = 'success',
   duration = 3000,
-  onClose,
-  show
+//   onClose,
+//   show
 }) => {
   const [isVisible, setIsVisible] = useState(show);
   useEffect(() => {
@@ -63,7 +63,7 @@ const Toast: React.FC<ToastProps> = ({
       className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
       aria-live="polite"
-    >
+//     >
       <span className="text-xl font-bold">{getIcon()}</span>
       <span>{message}</span>
       <button
@@ -73,8 +73,8 @@ const Toast: React.FC<ToastProps> = ({
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
-      >
-        ✕
+//       >
+//         ✕
       </button>
     </div>
   );
@@ -98,8 +98,8 @@ export const useToast = () => {
     setToast(prev => ({ ...prev, show: false }));
   };
   return {
-    toast,
-    showToast,
-    hideToast
+//     toast,
+//     showToast,
+//     hideToast
   };
 };

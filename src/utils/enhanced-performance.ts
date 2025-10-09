@@ -198,7 +198,7 @@ export class PerformanceMonitor {
     const webVitals = this.getWebVitals();
     
     return {
-      webVitals,
+//       webVitals,
       resources: this.getResourceStats(),
       memory: this.getMemoryStats(),
       timestamp: Date.now(),
@@ -252,11 +252,11 @@ export class PerformanceMonitor {
 
 // Types
 
-  PerformanceReport, 
-  ResourceStats, 
-  MemoryStats, 
-  PerformanceWithMemory, 
-  LayoutShift 
+//   PerformanceReport, 
+//   ResourceStats, 
+//   MemoryStats, 
+//   PerformanceWithMemory, 
+//   LayoutShift 
 } from '../types/app.types';
 
 // Utility Functions

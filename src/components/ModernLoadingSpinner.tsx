@@ -26,14 +26,14 @@ const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
-    animate-spin
-    border-2
-    border-current
-    border-t-transparent
-    rounded-full
+//     animate-spin
+//     border-2
+//     border-current
+//     border-t-transparent
+//     rounded-full
   `;
   const containerClasses = fullScreen
-    ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
+//     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4';
   return (
     <div className={containerClasses} role="status" aria-label="Loading">

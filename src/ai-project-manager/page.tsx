@@ -47,12 +47,12 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small teams',
       features: [
-        'Up to 5 projects',
-        'Basic AI planning',
-        'Team collaboration',
-        'Email support',
-        'Basic analytics'
-      ],
+//         'Up to 5 projects',
+//         'Basic AI planning',
+//         'Team collaboration',
+//         'Email support',
+//         'Basic analytics'
+//       ],
       popular: false
     },
     {
@@ -61,13 +61,13 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 25 projects',
-        'Advanced AI planning',
-        'Full team collaboration',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations'
-      ],
+//         'Up to 25 projects',
+//         'Advanced AI planning',
+//         'Full team collaboration',
+//         'Priority support',
+//         'Advanced analytics',
+//         'Custom integrations'
+//       ],
       popular: true
     },
     {
@@ -76,14 +76,14 @@ const AiProjectManagerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited projects',
-        'Premium AI features',
-        'Enterprise collaboration',
-        '24/7 support',
-        'Custom analytics',
-        'White-label options',
-        'API access'
-      ],
+//         'Unlimited projects',
+//         'Premium AI features',
+//         'Enterprise collaboration',
+//         '24/7 support',
+//         'Custom analytics',
+//         'White-label options',
+//         'API access'
+//       ],
       popular: false
     }
   ];
@@ -108,14 +108,14 @@ const AiProjectManagerPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI project management solutions that will transform your business.
+//             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+//               Contact Us
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+//               Learn More
             </button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 /**
  * Enhanced Error Reporting Utility
@@ -49,7 +50,7 @@ export class ErrorReporter {
   /**
    * Report an error with full context
    */
-  reportError(
+//   reportError(
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
     context?: Record<string, unknown>
@@ -60,7 +61,7 @@ export class ErrorReporter {
       timestamp: new Date().toISOString(),
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity,
+//       severity,
       context: this.config.captureContext ? context : undefined
     };
     // Track error frequency
@@ -171,8 +172,8 @@ export class ErrorReporter {
         stats: this.getErrorStats(),
         errors: this.errorQueue
       },
-      null,
-      2
+//       null,
+//       2
     );
   }
 }
@@ -196,7 +197,7 @@ export const captureComponentError = (
 ): void => {
   const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {
-    componentName,
+//     componentName,
     componentStack: errorInfo.componentStack
   });
 };

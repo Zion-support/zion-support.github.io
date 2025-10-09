@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 /**
  * Accessibility Checker Utility
@@ -109,7 +110,7 @@ export class AccessibilityChecker {
       issueCount: this.issues.length,
       issues: [...this.issues],
       timestamp: new Date(),
-      score
+//       score
     };
   }
   /**
@@ -264,8 +265,8 @@ export class AccessibilityChecker {
       const target = link.getAttribute('target');
       if (
         target === '_blank' &&
-        !ariaLabel?.includes('new window') &&
-        !text?.includes('(opens in new window)')
+//         !ariaLabel?.includes('new window') &&
+//         !text?.includes('(opens in new window)')
       ) {
         this.addIssue({
           type: 'new-window-no-warning',
@@ -416,29 +417,29 @@ export class AccessibilityChecker {
    */
   private checkARIA(element: Element): void {
     const elementsWithAria = element.querySelectorAll(
-      '[role], [aria-label], [aria-labelledby], [aria-describedby]'
+//       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
     );
     elementsWithAria.forEach(el => {
       const role = el.getAttribute('role');
       // Check for invalid ARIA roles
       const validRoles = [
-        'alert',
-        'button',
-        'checkbox',
-        'dialog',
-        'link',
-        'navigation',
-        'region',
-        'search',
-        'tabpanel',
-        'banner',
-        'complementary',
-        'contentinfo',
-        'form',
-        'main',
-        'article',
-        'note',
-        'presentation',
+//         'alert',
+//         'button',
+//         'checkbox',
+//         'dialog',
+//         'link',
+//         'navigation',
+//         'region',
+//         'search',
+//         'tabpanel',
+//         'banner',
+//         'complementary',
+//         'contentinfo',
+//         'form',
+//         'main',
+//         'article',
+//         'note',
+//         'presentation',
       ];
       if (role && !validRoles.includes(role)) {
         this.addIssue({
@@ -499,7 +500,7 @@ export class AccessibilityChecker {
   private addIssue(issue: Omit<A11yIssue, 'id'>): void {
     this.issues.push({
       id: this.generateIssueId(),
-      ...issue
+//       ...issue
     });
   }
   /**

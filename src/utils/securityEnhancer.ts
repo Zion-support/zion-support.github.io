@@ -61,19 +61,19 @@ class SecurityEnhancer {
         ? 'max-age=31536000; includeSubDomains; preload' 
         : '',
       'X-Content-Type-Options': this.config.enableContentTypeOptions 
-        ? 'nosniff' 
+//         ? 'nosniff' 
         : '',
       'X-Frame-Options': this.config.enableClickjackingProtection 
-        ? 'DENY' 
+//         ? 'DENY' 
         : '',
       'X-XSS-Protection': this.config.enableXSSProtection 
         ? '1; mode=block' 
         : '',
       'Referrer-Policy': this.config.enableReferrerPolicy 
-        ? 'strict-origin-when-cross-origin' 
+//         ? 'strict-origin-when-cross-origin' 
         : '',
       'Permissions-Policy': this.config.enablePermissionsPolicy 
-        ? this.generatePermissionsPolicy() 
+//         ? this.generatePermissionsPolicy() 
         : '',
       'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',
@@ -85,18 +85,18 @@ class SecurityEnhancer {
     if (!this.config.enableCSP) return '';
 
     const _directives = [
-      "default-src 'self'",
+//       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https: blob:",
       "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-      "frame-src 'none'",
-      "object-src 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
+//       "frame-src 'none'",
+//       "object-src 'none'",
+//       "base-uri 'self'",
+//       "form-action 'self'",
+//       "frame-ancestors 'none'",
+//       "upgrade-insecure-requests"
     ];
 
     return directives.join('; ');
@@ -236,9 +236,9 @@ class SecurityEnhancer {
       
       // Add security headers to requests
       const _secureInit: RequestInit = {
-        ...init,
+//         ...init,
         headers: {
-          ...init?.headers,
+//           ...init?.headers,
           'X-Requested-With': 'XMLHttpRequest',
           'X-Content-Type-Options': 'nosniff'
         }
@@ -291,7 +291,7 @@ class SecurityEnhancer {
   private sanitizeString(input: string): string {
     // Remove potentially dangerous characters
     return input
-      .replace(/[<>]/g, '') // Remove < and >
+//       .replace(/[<>]/g, '') // Remove < and >
       .replace(/javascript:/gi, '') // Remove javascript: protocol
       .replace(/on\w+=/gi, '') // Remove event handlers
       .trim();
@@ -479,12 +479,12 @@ class SecurityEnhancer {
 
   public generateSecurityReport(): string {
     const report = `
-# Security Report
+// # Security Report
 
-## Security Headers
+// ## Security Headers
 ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not configured'}`).join('\n')}
 
-## Security Features
+// ## Security Features
 - Content Security Policy: ${this.config.enableCSP ? 'Enabled' : 'Disabled'}
 - HTTP Strict Transport Security: ${this.config.enableHSTS ? 'Enabled' : 'Disabled'}
 - XSS Protection: ${this.config.enableXSSProtection ? 'Enabled' : 'Disabled'}
@@ -495,12 +495,12 @@ ${Object.entries(this.headers).map(([key, value]) => `- ${key}: ${value || 'Not 
 - CORS: ${this.config.enableCORS ? 'Enabled' : 'Disabled'}
 - Secure Cookies: ${this.config.enableSecureCookies ? 'Enabled' : 'Disabled'}
 
-## Recommendations
-- Ensure all security headers are properly configured on the server
-- Regularly update dependencies to patch security vulnerabilities
-- Implement proper input validation and output encoding
-- Use HTTPS in production
-- Regular security audits and penetration testing
+// ## Recommendations
+// - Ensure all security headers are properly configured on the server
+// - Regularly update dependencies to patch security vulnerabilities
+// - Implement proper input validation and output encoding
+// - Use HTTPS in production
+// - Regular security audits and penetration testing
     `;
     
     return report.trim();

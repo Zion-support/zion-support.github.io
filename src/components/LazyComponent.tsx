@@ -23,7 +23,7 @@ export const _withLazyLoading = <P extends object>(
 
 // Lazy component wrapper with intersection observer
 const LazyComponent: React.FC<LazyComponentProps> = ({
-  children,
+//   children,
   fallback = <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
@@ -45,8 +45,8 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
         }
       },
       {
-        threshold,
-        rootMargin,
+//         threshold,
+//         rootMargin,
       }
     );
 
@@ -64,7 +64,7 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
           {children}
         </Suspense>
       ) : (
-        fallback
+//         fallback
       )}
     </div>
   );
@@ -112,8 +112,8 @@ export const preloadCriticalResources = () => {
 
   // Preload critical images
   const imagePreloads = [
-    '/og-image.jpg',
-    '/favicon.ico',
+//     '/og-image.jpg',
+//     '/favicon.ico',
   ];
 
   imagePreloads.forEach((src) => {

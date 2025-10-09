@@ -9,7 +9,7 @@ const SecurityPage: React.FC = () => {
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Security
+//               Security
             </h1>
             <p className="text-xl text-gray-300 mb-8">
               Comprehensive security solutions for your business

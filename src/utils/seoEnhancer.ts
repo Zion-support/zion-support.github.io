@@ -201,7 +201,7 @@ class SEOEnhancer {
           name: 'Home',
           item: this.baseUrl
         }
-      ]
+//       ]
     };
 
     // Add breadcrumb structured data
@@ -255,7 +255,7 @@ Allow: /
 
 Sitemap: ${this.baseUrl}/sitemap.xml
 
-# Disallow admin areas
+// # Disallow admin areas
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
@@ -276,9 +276,9 @@ Disallow: /private/`;
   private optimizeLCP(): void {
     // Preload critical resources
     const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
+//       '/assets/index.css',
+//       '/assets/vendor.js',
+//       '/assets/index.js'
     ];
 
     criticalResources.forEach(resource => {

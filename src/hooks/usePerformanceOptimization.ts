@@ -12,16 +12,16 @@ export const _usePerformanceOptimization = () => {
       return null;
     }
     const navigation = performance.getEntriesByType(
-      'navigation'
+//       'navigation'
     )[0] as PerformanceNavigationTiming;
     const _paintEntries = performance.getEntriesByType('paint');
     const _metrics: PerformanceMetrics = {
       loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
+//         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0,
       firstContentfulPaint:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
-          ?.startTime || 0,
+//           ?.startTime || 0,
       largestContentfulPaint: 0,
       cumulativeLayoutShift: 0,
       firstInputDelay: 0
@@ -118,8 +118,8 @@ export const _usePerformanceOptimization = () => {
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
   return {
-    measurePerformance,
-    optimizeImages,
-    preloadCriticalResources
+//     measurePerformance,
+//     optimizeImages,
+//     preloadCriticalResources
   };
 };

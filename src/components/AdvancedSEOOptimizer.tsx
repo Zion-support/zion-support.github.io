@@ -30,9 +30,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData,
+//   structuredData,
   author = 'Zion Tech Group',
-  publishedTime,
+//   publishedTime,
   modifiedTime = new Date().toISOString(),
   section = 'Technology',
   tags = [],
@@ -43,8 +43,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   nofollow = false,
   breadcrumbs = [],
   faqData = [],
-  organizationData,
-  websiteData
+//   organizationData,
+//   websiteData
 }) => {
   useEffect(() => {
     // Update page title

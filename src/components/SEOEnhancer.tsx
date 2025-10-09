@@ -14,7 +14,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
-  children
+//   children
 }) => {
   const _structuredData = {
     "@context": "https://schema.org",
@@ -27,14 +27,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "numberOfEmployees": "50-100",
     "industry": "Technology",
     "services": [
-      "AI Solutions",
-      "Quantum Computing", 
-      "Autonomous Systems",
-      "Digital Transformation",
-      "Cloud Services",
-      "Automation",
-      "Business Intelligence"
-    ],
+//       "AI Solutions",
+//       "Quantum Computing", 
+//       "Autonomous Systems",
+//       "Digital Transformation",
+//       "Cloud Services",
+//       "Automation",
+//       "Business Intelligence"
+//     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
@@ -45,7 +45,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
-    ],
+//     ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -68,7 +68,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           "billingIncrement": "P1M"
         }
       }
-    ],
+//     ],
     "serviceArea": {
       "@type": "GeoCircle",
       "geoMidpoint": {

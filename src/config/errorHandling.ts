@@ -36,10 +36,10 @@ export const _errorHandlingConfig: ErrorConfig = {
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
-    /ResizeObserver loop/i,
-    /Non-Error promise rejection captured/i,
-    /Loading chunk \d+ failed/i,
-  ],
+//     /ResizeObserver loop/i,
+//     /Non-Error promise rejection captured/i,
+//     /Loading chunk \d+ failed/i,
+//   ],
   severityThreshold: ErrorSeverity.LOW
 };
 export const _errorMessages = {
@@ -64,7 +64,7 @@ export const _errorMessages = {
   }
 };
 export class AppError extends Error {
-  constructor(
+//   constructor(
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,

@@ -43,14 +43,14 @@ const CareersPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Competitive salary and equity',
-    'Comprehensive health insurance',
-    'Flexible remote work options',
-    'Professional development budget',
-    'Unlimited PTO',
-    'Latest technology equipment',
-    'Team building events',
-    'Mentorship programs'
+//     'Competitive salary and equity',
+//     'Comprehensive health insurance',
+//     'Flexible remote work options',
+//     'Professional development budget',
+//     'Unlimited PTO',
+//     'Latest technology equipment',
+//     'Team building events',
+//     'Mentorship programs'
   ];
 
   return (
@@ -59,7 +59,7 @@ const CareersPage: React.FC = () => {
         <h1 className="text-4xl font-bold text-white mb-4">Careers</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced careers solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
+//           Contact Us
         </a>
       </div>
     </div>

@@ -24,10 +24,10 @@ const PerformanceDashboard: React.FC = () => {
   useEffect(() => {
     const _updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation'
+//         'navigation'
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
+//         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
       // Measure render time
       const renderStart = performance.now();
@@ -55,10 +55,10 @@ const PerformanceDashboard: React.FC = () => {
         requestAnimationFrame(measureFPS);
       }
       setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps
+//         loadTime,
+//         renderTime,
+//         memoryUsage,
+//         fps
       });
     };
     updateMetrics();
@@ -71,8 +71,8 @@ const PerformanceDashboard: React.FC = () => {
       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-      >
-        Show Performance
+//       >
+//         Show Performance
       </button>
     );
   }
@@ -83,8 +83,8 @@ const PerformanceDashboard: React.FC = () => {
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
-        >
-          ×
+//         >
+//           ×
         </button>
       </div>
       <div className="space-y-3">

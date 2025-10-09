@@ -26,7 +26,7 @@ const SignupPage: React.FC = () => {
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
-      ...prev,
+//       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
@@ -73,12 +73,12 @@ const SignupPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Free 14-day trial',
-    'No setup fees',
-    '24/7 expert support',
-    'Custom integrations',
-    'Scalable solutions',
-    'Regular updates'
+//     'Free 14-day trial',
+//     'No setup fees',
+//     '24/7 expert support',
+//     'Custom integrations',
+//     'Scalable solutions',
+//     'Regular updates'
   ];
 
   return (
@@ -91,10 +91,10 @@ const SignupPage: React.FC = () => {
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account
+//                   Create Your Account
                 </h1>
                 <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions
+//                   Join thousands of businesses transforming with AI and IT solutions
                 </p>
               </div>
 
@@ -102,7 +102,7 @@ const SignupPage: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name
+//                       First Name
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -111,15 +111,15 @@ const SignupPage: React.FC = () => {
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        required
+//                         required
                         className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name"
-                      />
+//                       />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Last Name
+//                       Last Name
                     </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -128,17 +128,17 @@ const SignupPage: React.FC = () => {
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        required
+//                         required
                         className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your last name"
-                      />
+//                       />
                     </div>
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+//                     Email Address
                   </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -147,16 +147,16 @@ const SignupPage: React.FC = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+//                       required
                       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your email"
-                    />
+//                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Company Name
+//                     Company Name
                   </label>
                   <div className="relative">
                     <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -167,13 +167,13 @@ const SignupPage: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your company name"
-                    />
+//                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Phone Number
+//                     Phone Number
                   </label>
                   <div className="relative">
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -184,13 +184,13 @@ const SignupPage: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Enter your phone number"
-                    />
+//                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Password
+//                     Password
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -199,15 +199,15 @@ const SignupPage: React.FC = () => {
                       name="password"
                       value={formData.password}
                       onChange={handleInputChange}
-                      required
+//                       required
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Create a password"
-                    />
+//                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                    >
+//                     >
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
@@ -215,7 +215,7 @@ const SignupPage: React.FC = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Confirm Password
+//                     Confirm Password
                   </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -224,15 +224,15 @@ const SignupPage: React.FC = () => {
                       name="confirmPassword"
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
-                      required
+//                       required
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Confirm your password"
-                    />
+//                     />
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                    >
+//                     >
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
@@ -245,17 +245,17 @@ const SignupPage: React.FC = () => {
                       name="agreeToTerms"
                       checked={formData.agreeToTerms}
                       onChange={handleInputChange}
-                      required
+//                       required
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    />
+//                     />
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover:text-cyan-300">
-                        Terms of Service
+//                         Terms of Service
                       </a>{' '}
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover:text-cyan-300">
-                        Privacy Policy
+//                         Privacy Policy
                       </a>
                     </span>
                   </label>
@@ -267,7 +267,7 @@ const SignupPage: React.FC = () => {
                       checked={formData.subscribeNewsletter}
                       onChange={handleInputChange}
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    />
+//                     />
                     <span className="ml-2 text-sm text-gray-300">
                       Subscribe to our newsletter for updates and tips
                     </span>
@@ -278,14 +278,14 @@ const SignupPage: React.FC = () => {
                   type="submit"
                   disabled={isLoading}
                   className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
+//                 >
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Creating Account...
+//                       Creating Account...
                     </div>
                   ) : (
-                    'Create Account'
+//                     'Create Account'
                   )}
                 </button>
               </form>
@@ -296,8 +296,8 @@ const SignupPage: React.FC = () => {
                   <a
                     href="/login"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                  >
-                    Sign in here
+//                   >
+//                     Sign in here
                   </a>
                 </p>
               </div>
@@ -307,11 +307,11 @@ const SignupPage: React.FC = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today
+//                   Transform Your Business Today
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI and IT solutions 
-                  to achieve unprecedented growth and efficiency.
+//                   Join thousands of businesses already using our AI and IT solutions 
+//                   to achieve unprecedented growth and efficiency.
                 </p>
               </div>
 
@@ -345,7 +345,7 @@ const SignupPage: React.FC = () => {
 
               <div className="text-center">
                 <p className="text-gray-400 text-sm mb-4">
-                  Trusted by 1000+ companies worldwide
+//                   Trusted by 1000+ companies worldwide
                 </p>
                 <div className="flex justify-center items-center space-x-6 opacity-60">
                   <div className="text-2xl font-bold text-white">Microsoft</div>

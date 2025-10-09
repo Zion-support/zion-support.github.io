@@ -17,16 +17,16 @@ interface ContentPreviewCardProps {
 }
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   // id,
-  title,
-  description,
-  category,
-  readTime,
-  date,
-  path,
-  image,
+//   title,
+//   description,
+//   category,
+//   readTime,
+//   date,
+//   path,
+//   image,
   featured = false,
-  stats,
-  excerpt
+//   stats,
+//   excerpt
 }) => {
   const _formatNumber = (num: number): string => {
     if (num >= 1000) {
@@ -61,7 +61,7 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
         {featured && (
           <div className="absolute top-4 left-4">
             <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
-              ⭐ Featured
+//               ⭐ Featured
             </span>
           </div>
         )}
@@ -122,8 +122,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <Link
             href={path}
             className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-          >
-            Read Article
+//           >
+//             Read Article
             <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

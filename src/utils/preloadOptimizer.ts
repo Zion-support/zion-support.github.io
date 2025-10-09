@@ -15,20 +15,20 @@ export const _preloadCriticalResources = () => {
     link.as = 'style'
     link.href = href
     link.crossOrigin = 'anonymous'
-    document.head.appendChild(link)
+//     document.head.appendChild(link)
   })
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.jpg',
-    '/images/logo.png',
-    '/images/favicon.ico'
+//     '/images/hero-bg.jpg',
+//     '/images/logo.png',
+//     '/images/favicon.ico'
   ];
   criticalImages.forEach(src => {
     const link = document.createElement('link')
     link.rel = 'preload'
     link.as = 'image'
     link.href = src
-    document.head.appendChild(link)
+//     document.head.appendChild(link)
   })
 }
 export const preloadRoute = (route: string) => {
@@ -45,7 +45,7 @@ export const preloadRoute = (route: string) => {
       const link = document.createElement('link')
       link.rel = 'prefetch'
       link.href = resource
-      document.head.appendChild(link)
+//       document.head.appendChild(link)
     })
   }
 }
@@ -54,7 +54,7 @@ export const optimizeImages = () => {
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {
-    img.setAttribute('loading', 'lazy')
+//     img.setAttribute('loading', 'lazy')
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
@@ -64,8 +64,8 @@ export const optimizeImages = () => {
           const img = entry.target as HTMLImageElement
           if (img.dataset['src']) {
             img['src'] = img.dataset['src']
-            img.removeAttribute('data-src')
-            imageObserver.unobserve(img)
+//             img.removeAttribute('data-src')
+//             imageObserver.unobserve(img)
           }
         }
       })
@@ -79,15 +79,15 @@ export const optimizeThirdPartyScripts = () => {
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {
-    script.setAttribute('defer', '')
+//     script.setAttribute('defer', '')
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-      loadAnalytics()
+//       loadAnalytics()
     })
   } else {
-    loadAnalytics()
+//     loadAnalytics()
   }
 }
 const loadAnalytics = () => {
@@ -95,5 +95,5 @@ const loadAnalytics = () => {
   const gaScript = document.createElement('script')
   gaScript.async = true
   gaScript['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID'
-  document.head.appendChild(gaScript)
+//   document.head.appendChild(gaScript)
 }

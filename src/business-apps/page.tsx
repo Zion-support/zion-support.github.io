@@ -128,23 +128,23 @@ const BusinessAppsPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Business Applications
+//             Business Applications
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive business applications powered by AI to streamline your operations and drive growth
+//             Comprehensive business applications powered by AI to streamline your operations and drive growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Get Custom App
+//             >
+//               Get Custom App
             </a>
             <a
               href="/micro-saas"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-            >
-              View Micro SAAS
+//             >
+//               View Micro SAAS
             </a>
           </div>
         </section>
@@ -152,7 +152,7 @@ const BusinessAppsPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Why Choose Our Business Apps?
+//             Why Choose Our Business Apps?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="cyber-card hologram-card p-6 text-center">
@@ -199,7 +199,7 @@ const BusinessAppsPage: React.FC = () => {
                         <span className="text-sm text-gray-400">Market: {app.marketPrice}</span>
                       </div>
                       <div className="text-sm text-green-400 font-semibold text-center">
-                        Save up to 50% vs market rates
+//                         Save up to 50% vs market rates
                       </div>
                     </div>
 
@@ -236,8 +236,8 @@ const BusinessAppsPage: React.FC = () => {
                       <a
                         href="/contact"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
-                      >
-                        Get This App
+//                       >
+//                         Get This App
                       </a>
                     </div>
                   </div>
@@ -249,23 +249,23 @@ const BusinessAppsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Need a Custom Business App?
+//             Need a Custom Business App?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We can build custom business applications tailored to your specific needs and requirements
+//             We can build custom business applications tailored to your specific needs and requirements
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Get Custom Quote
+//             >
+//               Get Custom Quote
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-            >
-              Call (302) 464-0950
+//             >
+//               Call (302) 464-0950
             </a>
           </div>
         </section>

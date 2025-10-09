@@ -14,10 +14,10 @@ interface ResponsiveContainerProps {
 }
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
+//   children,
   className = '',
   breakpoints = {},
-  fallback,
+//   fallback,
 }) => {
   const [isClient, setIsClient] = useState(false);
   const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg');
@@ -99,10 +99,10 @@ export const useBreakpoint = () => {
   const isLargeDesktop = useMediaQuery({ minWidth: 1280 });
 
   return {
-    isMobile,
-    isTablet,
-    isDesktop,
-    isLargeDesktop,
+//     isMobile,
+//     isTablet,
+//     isDesktop,
+//     isLargeDesktop,
     current: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm',
   };
 };

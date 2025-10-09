@@ -24,7 +24,7 @@ export interface ApiResponse<T = unknown> {
   headers: Headers;
 }
 export class ApiError extends Error {
-  constructor(
+//   constructor(
     message: string,
     public status: number,
     public response?: unknown
@@ -59,8 +59,8 @@ class ApiClient {
     config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
+//       ...config,
+//       url,
       method: 'GET'
     });
   }
@@ -73,8 +73,8 @@ class ApiClient {
     config: Omit<RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
+//       ...config,
+//       url,
       method: 'POST',
       body: JSON.stringify(data)
     });
@@ -88,8 +88,8 @@ class ApiClient {
     config: Omit<RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
+//       ...config,
+//       url,
       method: 'PUT',
       body: JSON.stringify(data)
     });
@@ -102,8 +102,8 @@ class ApiClient {
     config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
+//       ...config,
+//       url,
       method: 'DELETE'
     });
   }
@@ -116,8 +116,8 @@ class ApiClient {
     config: Omit<RequestConfig, 'url' | 'method'> = {}
   ): Promise<ApiResponse<T>> {
     return this.request<T>({
-      ...config,
-      url,
+//       ...config,
+//       url,
       method: 'PATCH',
       body: JSON.stringify(data)
     });
@@ -127,14 +127,14 @@ class ApiClient {
    */
   private async request<T>(config: RequestConfig): Promise<ApiResponse<T>> {
     const {
-      url,
+//       url,
       method = 'GET',
       headers = {},
       cacheOptions: cacheConfig,
       skipCache = false,
       retries = this.config.retries,
       timeout = this.config.timeout,
-      ...fetchConfig
+//       ...fetchConfig
     } = config;
     const _fullUrl = url.startsWith('http') ? url : `${this.config.baseURL}${url}`;
     const cacheKey = `${method}:${fullUrl}`;
@@ -161,11 +161,11 @@ class ApiClient {
     while (attempt < retries) {
       try {
         const response = await fetch(fullUrl, {
-          ...fetchConfig,
-          method,
+//           ...fetchConfig,
+//           method,
           headers: {
-            ...this.config.headers,
-            ...headers
+//             ...this.config.headers,
+//             ...headers
           },
           signal: controller.signal
         });
@@ -174,8 +174,8 @@ class ApiClient {
         if (!response.ok) {
           throw new ApiError(
             `HTTP ${response.status}: ${response.statusText}`,
-            response.status,
-            await response.text()
+//             response.status,
+//             await response.text()
           );
         }
         const contentType = response.headers.get('content-type');
@@ -190,7 +190,7 @@ class ApiClient {
           cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
         return {
-          data,
+//           data,
           status: response.status,
           statusText: response.statusText,
           headers: response.headers
@@ -203,14 +203,14 @@ class ApiClient {
           if (error instanceof ApiError && error.status >= 500) {
             logCritical(`API request failed after ${retries} attempts`, error as Error, {
               url: fullUrl,
-              method,
-              attempt
+//               method,
+//               attempt
             });
           } else {
             logError(`API request failed`, error as Error, {
               url: fullUrl,
-              method,
-              attempt
+//               method,
+//               attempt
             });
           }
         }
@@ -253,10 +253,10 @@ class ApiClient {
    */
   setConfig(config: Partial<ApiClientConfig>): void {
     this.config = {
-      ...this.config,
-      ...config,
+//       ...this.config,
+//       ...config,
       headers: {
-        ...this.config.headers,
+//         ...this.config.headers,
         ...(config.headers || {})
       }
     };

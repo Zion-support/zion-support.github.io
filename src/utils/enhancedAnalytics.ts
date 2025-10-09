@@ -53,9 +53,9 @@ class EnhancedAnalytics {
     if (this.isInitialized) return;
     this.isInitialized = true;
     this.userProperties = {
-      ...this.userProperties,
+//       ...this.userProperties,
       sessionId: this.sessionId,
-      ...config
+//       ...config
     };
     // Track initialization
     this.trackEvent({
@@ -69,15 +69,15 @@ class EnhancedAnalytics {
   }
   public setUserProperties(properties: UserProperties): void {
     this.userProperties = {
-      ...this.userProperties,
-      ...properties
+//       ...this.userProperties,
+//       ...properties
     };
   }
   public trackEvent(event: AnalyticsEvent): void {
     const enrichedEvent: AnalyticsEvent = {
-      ...event,
+//       ...event,
       metadata: {
-        ...event.metadata,
+//         ...event.metadata,
         sessionId: this.sessionId,
         timestamp: new Date().toISOString(),
         url: typeof window !== 'undefined' ? window.location.href : ''
@@ -95,13 +95,13 @@ class EnhancedAnalytics {
   private sendToGtag(event: AnalyticsEvent): void {
     if (
       typeof window !== 'undefined' &&
-      (
+//       (
         window as {
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
-      ).gtag
+//       ).gtag
     ) {
-      (
+//       (
         window as unknown as {
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
@@ -109,7 +109,7 @@ class EnhancedAnalytics {
         event_category: event.category,
         event_label: event.label,
         value: event.value,
-        ...event.metadata
+//         ...event.metadata
       });
     }
   }
@@ -127,9 +127,9 @@ class EnhancedAnalytics {
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({
       category: 'User Interaction',
-      action,
-      label,
-      value
+//       action,
+//       label,
+//       value
     });
   }
   public trackError(error: Error, context?: Record<string, unknown>): void {
@@ -139,7 +139,7 @@ class EnhancedAnalytics {
       label: error.message,
       metadata: {
         stack: error.stack,
-        ...context
+//         ...context
       }
     });
   }
@@ -149,7 +149,7 @@ class EnhancedAnalytics {
       action: metric,
       value: Math.round(value),
       metadata: {
-        rating
+//         rating
       }
     });
   }
@@ -157,13 +157,13 @@ class EnhancedAnalytics {
     this.trackEvent({
       category: 'Conversion',
       action: conversionType,
-      value,
+//       value,
       metadata: {
         conversionId: `conv-${Date.now()}`
       }
     });
   }
-  public trackCustomEvent(
+//   public trackCustomEvent(
     category: string,
     action: string,
     label?: string,
@@ -171,11 +171,11 @@ class EnhancedAnalytics {
     metadata?: Record<string, unknown>
   ): void {
     this.trackEvent({
-      category,
-      action,
-      label,
-      value,
-      metadata
+//       category,
+//       action,
+//       label,
+//       value,
+//       metadata
     });
   }
   private flush(): void {

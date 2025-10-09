@@ -22,7 +22,7 @@ const PartnersPage: React.FC = () => {
         { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
         { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
         { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
-      ]
+//       ]
     },
     {
       title: 'Solution Partners',
@@ -37,7 +37,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
         { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
-      ]
+//       ]
     },
     {
       title: 'Integration Partners',
@@ -52,7 +52,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
-      ]
+//       ]
     }
   ];
 
@@ -85,12 +85,12 @@ const PartnersPage: React.FC = () => {
       level: 'Platinum',
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
-        'Joint marketing and sales initiatives',
-        'Co-development of solutions',
-        'Priority support and resources',
-        'Executive relationship management',
-        'Custom pricing and terms'
-      ],
+//         'Joint marketing and sales initiatives',
+//         'Co-development of solutions',
+//         'Priority support and resources',
+//         'Executive relationship management',
+//         'Custom pricing and terms'
+//       ],
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-500/10'
     },
@@ -99,12 +99,12 @@ const PartnersPage: React.FC = () => {
       level: 'Gold',
       description: 'Technology integration and solution delivery partnerships',
       benefits: [
-        'Technical integration support',
-        'Joint solution development',
-        'Marketing support and co-marketing',
-        'Training and certification',
-        'Preferred pricing'
-      ],
+//         'Technical integration support',
+//         'Joint solution development',
+//         'Marketing support and co-marketing',
+//         'Training and certification',
+//         'Preferred pricing'
+//       ],
       color: 'text-gray-400',
       bgColor: 'bg-gray-500/10'
     },
@@ -113,12 +113,12 @@ const PartnersPage: React.FC = () => {
       level: 'Silver',
       description: 'Reseller and referral partnerships for market expansion',
       benefits: [
-        'Reseller program access',
-        'Sales training and support',
-        'Marketing materials and tools',
-        'Lead sharing and referrals',
-        'Competitive margins'
-      ],
+//         'Reseller program access',
+//         'Sales training and support',
+//         'Marketing materials and tools',
+//         'Lead sharing and referrals',
+//         'Competitive margins'
+//       ],
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
     }
@@ -132,11 +132,11 @@ const PartnersPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners
+//               Our Partners
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We work with industry-leading technology partners to deliver comprehensive solutions 
-              that drive innovation and business success.
+//               We work with industry-leading technology partners to deliver comprehensive solutions 
+//               that drive innovation and business success.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ const PartnersPage: React.FC = () => {
           {/* Partnership Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Partner With Us?
+//               Why Partner With Us?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -188,7 +188,7 @@ const PartnersPage: React.FC = () => {
           {/* Partnership Tiers */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Partnership Tiers
+//               Partnership Tiers
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnershipTiers.map((tier, index) => (
@@ -214,33 +214,33 @@ const PartnersPage: React.FC = () => {
           {/* Become a Partner CTA */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Become Our Partner
+//               Become Our Partner
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success. 
-              Let's build the future together.
+//               Let's build the future together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <Handshake className="w-5 h-5 mr-2" />
-                Become a Partner
+//                 Become a Partner
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

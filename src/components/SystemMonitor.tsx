@@ -184,7 +184,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const handleExport = () => {
     if (!metrics) return;
     const exportData = {
-      metrics,
+//       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
       timestamp: new Date().toISOString()
@@ -242,8 +242,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             <button
               onClick={handleExport}
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Export Data
+//             >
+//               Export Data
             </button>
           )}
         </div>
@@ -371,7 +371,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-                ></div>
+//                 ></div>
               </div>
             </div>
           </div>

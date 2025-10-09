@@ -58,7 +58,7 @@ class SEOOptimizer {
   generateTitle(pageTitle?: string): string {
     const _title = pageTitle || this.currentPageData?.title || this.config.defaultTitle;
     return title.includes(this.config.siteName) 
-      ? title 
+//       ? title 
       : `${title} | ${this.config.siteName}`;
   }
   /**
@@ -67,7 +67,7 @@ class SEOOptimizer {
   generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription;
     return description.length > 160 
-      ? description.substring(0, 157) + '...' 
+//       ? description.substring(0, 157) + '...' 
       : description;
   }
   /**
@@ -271,7 +271,7 @@ class SEOOptimizer {
     return `User-agent: *
 Allow: /
 Sitemap: ${this.config.siteUrl}/sitemap.xml
-# Disallow admin and private areas
+// # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/

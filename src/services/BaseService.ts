@@ -35,7 +35,7 @@ export class BaseService {
       retries: 3,
       cache: false,
       cacheDuration: 300000, // 5 minutes
-      ...options
+//       ...options
     };
   }
   /**
@@ -65,7 +65,7 @@ export class BaseService {
   protected setInCache<T>(key: string, data: T): void {
     if (!this.options.cache) return;
     this.cache.set(key, {
-      data,
+//       data,
       timestamp: Date.now()
     });
   }
@@ -101,7 +101,7 @@ export class BaseService {
     } catch (error) {
       logger.error('GET request failed', error as Error, {
         component: 'BaseService',
-        endpoint
+//         endpoint
       });
       throw error;
     }
@@ -120,7 +120,7 @@ export class BaseService {
     } catch (error) {
       logger.error('POST request failed', error as Error, {
         component: 'BaseService',
-        endpoint
+//         endpoint
       });
       throw error;
     }
@@ -139,7 +139,7 @@ export class BaseService {
     } catch (error) {
       logger.error('PUT request failed', error as Error, {
         component: 'BaseService',
-        endpoint
+//         endpoint
       });
       throw error;
     }
@@ -158,7 +158,7 @@ export class BaseService {
     } catch (error) {
       logger.error('PATCH request failed', error as Error, {
         component: 'BaseService',
-        endpoint
+//         endpoint
       });
       throw error;
     }
@@ -177,7 +177,7 @@ export class BaseService {
     } catch (error) {
       logger.error('DELETE request failed', error as Error, {
         component: 'BaseService',
-        endpoint
+//         endpoint
       });
       throw error;
     }
@@ -188,7 +188,7 @@ export class BaseService {
   protected handleError(error: Error, context?: Record<string, unknown>): never {
     logger.error('Service error', error, {
       component: this.constructor.name,
-      ...context
+//       ...context
     });
     throw error;
   }

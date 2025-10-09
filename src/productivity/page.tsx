@@ -128,23 +128,23 @@ const ProductivityPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Productivity Tools
+//             Productivity Tools
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            AI-powered productivity tools to streamline your workflow, boost efficiency, and achieve more in less time
+//             AI-powered productivity tools to streamline your workflow, boost efficiency, and achieve more in less time
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Get Productivity Suite
+//             >
+//               Get Productivity Suite
             </a>
             <a
               href="/micro-saas"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-            >
-              View All Tools
+//             >
+//               View All Tools
             </a>
           </div>
         </section>
@@ -152,7 +152,7 @@ const ProductivityPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-            Why Choose Our Productivity Tools?
+//             Why Choose Our Productivity Tools?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="cyber-card hologram-card p-6 text-center">
@@ -199,7 +199,7 @@ const ProductivityPage: React.FC = () => {
                         <span className="text-sm text-gray-400">Market: {tool.marketPrice}</span>
                       </div>
                       <div className="text-sm text-green-400 font-semibold text-center">
-                        Save up to 50% vs market rates
+//                         Save up to 50% vs market rates
                       </div>
                     </div>
 
@@ -236,8 +236,8 @@ const ProductivityPage: React.FC = () => {
                       <a
                         href="/contact"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all text-sm inline-block"
-                      >
-                        Get This Tool
+//                       >
+//                         Get This Tool
                       </a>
                     </div>
                   </div>
@@ -249,23 +249,23 @@ const ProductivityPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-            Ready to Boost Your Productivity?
+//             Ready to Boost Your Productivity?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get started with our productivity tools and transform how you work
+//             Get started with our productivity tools and transform how you work
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >
-              Get Started Today
+//             >
+//               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all"
-            >
-              Call (302) 464-0950
+//             >
+//               Call (302) 464-0950
             </a>
           </div>
         </section>

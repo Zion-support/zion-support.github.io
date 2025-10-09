@@ -8,12 +8,12 @@ export const _securityHeaders = {
     directives: {
       defaultSrc: ["'self'"],
       scriptSrc: [
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
+//         "'self'",
+//         "'unsafe-inline'",
+//         "'unsafe-eval'",
         'https://www.googletagmanager.com',
         'https://www.google-analytics.com',
-      ],
+//       ],
       styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
       fontSrc: ["'self'", 'https://fonts.gstatic.com'],
       imgSrc: ["'self'", 'data:', 'https:', 'blob:'],
@@ -81,7 +81,7 @@ export const validationPatterns = {
  */
 export function sanitizeInput(input: string): string {
   return input
-    .replace(/[<>]/g, '') // Remove < and >
+//     .replace(/[<>]/g, '') // Remove < and >
     .replace(/javascript:/gi, '') // Remove javascript: protocol
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
     .trim();
@@ -114,13 +114,13 @@ export function generateSecureToken(_length: number = 32): string {
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
 export default {
-  securityHeaders,
-  rateLimitConfig,
-  corsConfig,
-  sessionConfig,
-  validationPatterns,
-  sanitizeInput,
-  validateEmail,
-  validateUrl,
-  generateSecureToken
+//   securityHeaders,
+//   rateLimitConfig,
+//   corsConfig,
+//   sessionConfig,
+//   validationPatterns,
+//   sanitizeInput,
+//   validateEmail,
+//   validateUrl,
+//   generateSecureToken
 };

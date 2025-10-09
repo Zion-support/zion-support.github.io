@@ -53,13 +53,13 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for individuals',
       features: [
-        'Unlimited receipts',
-        'Basic AI categorization',
-        'Expense reports',
-        'Mobile app access',
-        'Email support',
-        '1 year data retention'
-      ],
+//         'Unlimited receipts',
+//         'Basic AI categorization',
+//         'Expense reports',
+//         'Mobile app access',
+//         'Email support',
+//         '1 year data retention'
+//       ],
       popular: false
     },
     {
@@ -68,15 +68,15 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for small businesses',
       features: [
-        'Up to 10 users',
-        'Advanced AI features',
-        'Team collaboration',
-        'Custom categories',
-        'Priority support',
-        'API access',
-        'Advanced reporting',
-        '2 years data retention'
-      ],
+//         'Up to 10 users',
+//         'Advanced AI features',
+//         'Team collaboration',
+//         'Custom categories',
+//         'Priority support',
+//         'API access',
+//         'Advanced reporting',
+//         '2 years data retention'
+//       ],
       popular: true
     },
     {
@@ -85,15 +85,15 @@ const ExpenseTrackerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited users',
-        'Premium AI features',
-        'Custom workflows',
-        'Advanced integrations',
-        'Dedicated support',
-        'White-label options',
-        'Unlimited data retention',
-        'Custom compliance rules'
-      ],
+//         'Unlimited users',
+//         'Premium AI features',
+//         'Custom workflows',
+//         'Advanced integrations',
+//         'Dedicated support',
+//         'White-label options',
+//         'Unlimited data retention',
+//         'Custom compliance rules'
+//       ],
       popular: false
     }
   ];
@@ -142,29 +142,29 @@ const ExpenseTrackerPage: React.FC = () => {
             <Receipt className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Expense Tracker
+//             AI Expense Tracker
           </h1>
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Smart Financial Management
+//             Smart Financial Management
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your expense management with AI-powered receipt scanning, automated categorization, 
-            and intelligent financial insights. Save time, reduce errors, and gain complete control 
-            over your business finances.
+//             Transform your expense management with AI-powered receipt scanning, automated categorization, 
+//             and intelligent financial insights. Save time, reduce errors, and gain complete control 
+//             over your business finances.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+//             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Free Trial
+//             >
+//               Start Free Trial
             </Link>
           </div>
         </div>
@@ -196,7 +196,7 @@ const ExpenseTrackerPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful Expense Management Features
+//             Powerful Expense Management Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -213,7 +213,7 @@ const ExpenseTrackerPage: React.FC = () => {
         {/* Integrations Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Integrates with Your Tools
+//             Integrates with Your Tools
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
@@ -229,18 +229,18 @@ const ExpenseTrackerPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+//             Simple, Transparent Pricing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-cyan-400 scale-105' 
+//                 plan.popular 
+//                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
-                    Most Popular
+//                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -258,11 +258,11 @@ const ExpenseTrackerPage: React.FC = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
+//                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover:from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
                 }`}>
-                  Get Started
+//                   Get Started
                 </button>
               </div>
             ))}
@@ -272,7 +272,7 @@ const ExpenseTrackerPage: React.FC = () => {
         {/* Testimonials */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            What Our Customers Say
+//             What Our Customers Say
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
@@ -296,25 +296,25 @@ const ExpenseTrackerPage: React.FC = () => {
         {/* CTA Section */}
         <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Master Your Expenses?
+//             Ready to Master Your Expenses?
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using AI Expense Tracker to streamline financial 
-            management and gain better control over their spending.
+//             Join thousands of businesses using AI Expense Tracker to streamline financial 
+//             management and gain better control over their spending.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"
-            >
+//             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950
             </a>
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-            >
-              Start Free Trial
+//             >
+//               Start Free Trial
             </Link>
           </div>
         </section>

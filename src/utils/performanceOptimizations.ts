@@ -36,10 +36,10 @@ export const useIntersectionObserver = (
         ? new IntersectionObserver(callback, {
             threshold: 0.1,
             rootMargin: '50px',
-            ...options
+//             ...options
           })
         : null,
-    [callback, options]
+//     [callback, options]
   );
   const observe = useCallback(
     (element: Element | null) => {
@@ -49,7 +49,7 @@ export const useIntersectionObserver = (
       }
       return () => {};
     },
-    [observer]
+//     [observer]
   );
   const disconnect = useCallback(() => {
     if (observer) {
@@ -67,7 +67,7 @@ export const useLazyImage = (src: string, placeholder?: string) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isError, setIsError] = useState(false);
   const { observe } = useIntersectionObserver(
-    useCallback(
+//     useCallback(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
@@ -83,8 +83,8 @@ export const useLazyImage = (src: string, placeholder?: string) => {
           }
         });
       },
-      [src, isLoaded, isError]
-    )
+//       [src, isLoaded, isError]
+//     )
   );
   return { imageSrc, isLoaded, isError, observe };
 };
@@ -105,8 +105,8 @@ export const usePerformanceMonitoring = () => {
       const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
       setMetrics({
-        fcp,
-        lcp,
+//         fcp,
+//         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart
       });
     };
@@ -206,10 +206,10 @@ export const useBundleSizeMonitoring = () => {
         }
       });
       setBundleSize({
-        totalSize,
-        jsSize,
-        cssSize,
-        imageSize
+//         totalSize,
+//         jsSize,
+//         cssSize,
+//         imageSize
       });
     };
     // Calculate after page load
@@ -225,13 +225,13 @@ export const useBundleSizeMonitoring = () => {
   return bundleSize;
 };
 export default {
-  debounce,
-  throttle,
-  useIntersectionObserver,
-  useLazyImage,
-  usePerformanceMonitoring,
-  useMemoryMonitoring,
-  preloadResource,
-  preloadCriticalResources,
-  useBundleSizeMonitoring
+//   debounce,
+//   throttle,
+//   useIntersectionObserver,
+//   useLazyImage,
+//   usePerformanceMonitoring,
+//   useMemoryMonitoring,
+//   preloadResource,
+//   preloadCriticalResources,
+//   useBundleSizeMonitoring
 };

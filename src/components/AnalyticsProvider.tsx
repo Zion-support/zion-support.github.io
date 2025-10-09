@@ -16,7 +16,7 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
+//   children,
   trackingId = 'G-XXXXXXXXXX',
   enableDebug = false,
 }) => {
@@ -127,10 +127,10 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   const _contextValue: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUserId,
-    setUserProperties,
+//     trackEvent,
+//     trackPageView,
+//     setUserId,
+//     setUserProperties,
   };
 
   return (

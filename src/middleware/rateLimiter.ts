@@ -27,7 +27,7 @@ export class RateLimiter {
       message: 'Too many requests, please try again later.',
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
-      ...config
+//       ...config
     };
     // Cleanup old entries every minute
     setInterval(() => this.cleanup(), 60000);

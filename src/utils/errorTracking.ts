@@ -80,15 +80,15 @@ class ErrorTrackingService {
   /**
    * Track an error with metadata
    */
-  trackError(
+//   trackError(
     error: Error,
     metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
     const _errorId = this.generateErrorId(error.message);
     const timestamp = Date.now();
     const _fullMetadata: ErrorMetadata = {
-      ...metadata,
-      timestamp,
+//       ...metadata,
+//       timestamp,
       stackTrace: error.stack,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined
@@ -122,7 +122,7 @@ class ErrorTrackingService {
     logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {
       error_id: errorId,
       category: metadata.category,
-      ...metadata.context
+//       ...metadata.context
     });
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {
@@ -224,9 +224,9 @@ class ErrorTrackingService {
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {
       total: errors.length,
-      byCategory,
-      bySeverity,
-      topErrors
+//       byCategory,
+//       bySeverity,
+//       topErrors
     };
   }
   /**
@@ -254,22 +254,22 @@ export const trackError = (error: Error, options?: Partial<Omit<ErrorMetadata, '
   const category = options?.category || ErrorCategory.Runtime;
   const severity = options?.severity || ErrorSeverity.Medium;
   return errorTracking.trackError(error, {
-    ...options,
-    category,
-    severity
+//     ...options,
+//     category,
+//     severity
   });
 };
 export const getErrorStatistics = () => {
   const stats = errorTracking.getStatistics();
   const errors = errorTracking.getErrors().map(error => ({
-    ...error,
+//     ...error,
     context: error.metadata.context
   }));
   return {
     total: stats.total,
     byCategory: stats.byCategory,
     bySeverity: stats.bySeverity,
-    errors
+//     errors
   };
 };
 export const clearErrorHistory = () => errorTracking.clearErrors();

@@ -22,7 +22,7 @@ export interface A11yWarning {
 }
 class AccessibilityService {
   // Check color contrast ratio
-  public checkColorContrast(
+//   public checkColorContrast(
     foreground: string,
     background: string
   ): {
@@ -84,8 +84,8 @@ class AccessibilityService {
     // Check for missing form labels
     document.querySelectorAll('input, select, textarea').forEach(input => {
       const hasLabel =
-        input.hasAttribute('aria-label') ||
-        input.hasAttribute('aria-labelledby') ||
+//         input.hasAttribute('aria-label') ||
+//         input.hasAttribute('aria-labelledby') ||
         document.querySelector(`label[for="${input.id}"]`);
       if (!hasLabel) {
         errors.push({
@@ -166,9 +166,9 @@ class AccessibilityService {
     // Calculate score (100 - errors * 10 - warnings * 2)
     const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
     return {
-      errors,
-      warnings,
-      score
+//       errors,
+//       warnings,
+//       score
     };
   }
   // Add keyboard navigation helpers
@@ -261,7 +261,7 @@ class AccessibilityService {
       style.display === 'none' ||
       style.visibility === 'hidden' ||
       style.opacity === '0' ||
-      element.hasAttribute('hidden') ||
+//       element.hasAttribute('hidden') ||
       element.getAttribute('aria-hidden') === 'true'
     );
   }

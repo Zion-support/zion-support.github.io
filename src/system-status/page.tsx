@@ -9,10 +9,10 @@ const SystemStatusPage: React.FC = () => {
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              System Status
+//               System Status
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Real-time status of our systems
+//               Real-time status of our systems
             </p>
           </div>
         </section>

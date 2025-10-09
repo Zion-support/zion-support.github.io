@@ -133,7 +133,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       let _maxScrollDepth = 0;
       const handleScroll = () => {
         const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+//           (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
         );
         
         if (scrollDepth > maxScrollDepth) {

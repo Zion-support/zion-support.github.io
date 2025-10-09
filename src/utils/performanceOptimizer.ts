@@ -117,7 +117,7 @@ class PerformanceOptimizer {
         this.metrics.lcp = lastEntry.startTime
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
-      this.observers.push(observer)
+//       this.observers.push(observer)
     } catch {
       // Ignore if not supported
     }
@@ -132,7 +132,7 @@ class PerformanceOptimizer {
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
-      this.observers.push(observer)
+//       this.observers.push(observer)
     } catch {
       // Ignore if not supported
     }
@@ -151,7 +151,7 @@ class PerformanceOptimizer {
         this.metrics.cls = clsValue
       })
       observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer)
+//       this.observers.push(observer)
     } catch {
       // Ignore if not supported
     }
@@ -167,7 +167,7 @@ class PerformanceOptimizer {
         })
       })
       observer.observe({ entryTypes: ['paint'] })
-      this.observers.push(observer)
+//       this.observers.push(observer)
     } catch {
       // Ignore if not supported
     }
@@ -184,7 +184,7 @@ class PerformanceOptimizer {
         })
       })
       observer.observe({ entryTypes: ['navigation'] })
-      this.observers.push(observer)
+//       this.observers.push(observer)
     } catch {
       // Ignore if not supported
     }
@@ -296,7 +296,7 @@ class PerformanceOptimizer {
     if (!this.config.enableCaching) return;
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
     // Register service worker for caching
-    navigator.serviceWorker.register('/sw.js')
+//     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
         if (process.env.NODE_ENV === 'development') { }
       })
@@ -427,7 +427,7 @@ class PerformanceOptimizer {
     const score = this.getPerformanceScore();
     const metrics = this.getMetrics();
     return `
-Performance Report - Zion Tech Group Website
+// Performance Report - Zion Tech Group Website
 Performance Score: ${score}/100
 Load Time: ${metrics.loadTime.toFixed(2)}ms
 Render Time: ${metrics.renderTime.toFixed(2)}ms

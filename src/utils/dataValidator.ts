@@ -22,7 +22,7 @@ export interface ValidationResult {
   errors: Record<string, string[]>;
 }
 export class ValidationError extends Error {
-  constructor(
+//   constructor(
     message: string,
     public field: string,
     public errors: string[]
@@ -135,7 +135,7 @@ export function createCustomValidator<T>(
   return (value: T) => {
     const isValid = validator(value);
     return {
-      isValid,
+//       isValid,
       errors: isValid ? [] : [message]
     };
   };
@@ -190,13 +190,13 @@ export function validateForm<T extends Record<string, unknown>>(
     if (fieldErrors.length > 0) {
       errors[field] = fieldErrors;
       // Track validation errors
-      errorTracking.trackError(
+//       errorTracking.trackError(
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {
           category: ErrorCategory.Validation,
           severity: ErrorSeverity.Low,
           context: {
-            field,
+//             field,
             errors: fieldErrors
           }
         }
@@ -205,7 +205,7 @@ export function validateForm<T extends Record<string, unknown>>(
   }
   return {
     isValid: Object.keys(errors).length === 0,
-    errors
+//     errors
   };
 }
 /**
@@ -239,7 +239,7 @@ export const ValidationRulesBuilder = {
   }),
   pattern: (pattern: RegExp, message: string): ValidationRule<string> => ({
     validate: (value: string) => pattern.test(value),
-    message
+//     message
   }),
   range: (min: number, max: number): ValidationRule<number> => ({
     validate: (value: number) => validateNumberRange(value, min, max),
@@ -247,7 +247,7 @@ export const ValidationRulesBuilder = {
   }),
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,
-    message
+//     message
   })
 };
 // Legacy class-based API for backward compatibility

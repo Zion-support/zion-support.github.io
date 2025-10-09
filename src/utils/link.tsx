@@ -9,14 +9,14 @@ interface LinkProps {
   'aria-label'?: string;
 }
 export const Link: React.FC<LinkProps> = ({
-  href,
-  children,
-  className,
-  target,
-  rel,
-  onClick,
+//   href,
+//   children,
+//   className,
+//   target,
+//   rel,
+//   onClick,
   'aria-label': ariaLabel,
-  ...props
+//   ...props
 }) => {
   const _handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
@@ -37,7 +37,7 @@ export const Link: React.FC<LinkProps> = ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >
+//     >
       {children}
     </a>
   );

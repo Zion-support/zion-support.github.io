@@ -24,7 +24,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
       {service.popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
-            Most Popular
+//             Most Popular
           </span>
         </div>
       )}
@@ -86,8 +86,8 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = ({ service }) => {
           <a
             href={service.link || 'mailto:kleber@ziontechgroup.com'}
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
-          >
-            Get Started
+//           >
+//             Get Started
             <ArrowRight className="w-4 h-4 ml-2" />
           </a>
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>

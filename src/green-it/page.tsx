@@ -41,11 +41,11 @@ const GreenITPage: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: [
-        'PUE (Power Usage Effectiveness) optimization',
-        'Renewable energy integration',
-        'Cooling system optimization',
-        'Smart power management'
-      ],
+//         'PUE (Power Usage Effectiveness) optimization',
+//         'Renewable energy integration',
+//         'Cooling system optimization',
+//         'Smart power management'
+//       ],
       impact: 'Reduce energy consumption by up to 40%',
       pricing: 'Starting at $2,500/month'
     },
@@ -55,11 +55,11 @@ const GreenITPage: React.FC = () => {
       icon: Cloud,
       color: 'text-blue-400',
       features: [
-        'Carbon footprint monitoring',
-        'Green cloud migration',
-        'Resource optimization',
-        'Renewable energy sourcing'
-      ],
+//         'Carbon footprint monitoring',
+//         'Green cloud migration',
+//         'Resource optimization',
+//         'Renewable energy sourcing'
+//       ],
       impact: 'Reduce carbon footprint by up to 60%',
       pricing: 'Starting at $1,800/month'
     },
@@ -69,11 +69,11 @@ const GreenITPage: React.FC = () => {
       icon: Recycle,
       color: 'text-green-400',
       features: [
-        'Equipment refurbishment',
-        'Responsible disposal',
-        'Asset tracking and optimization',
-        'Circular economy implementation'
-      ],
+//         'Equipment refurbishment',
+//         'Responsible disposal',
+//         'Asset tracking and optimization',
+//         'Circular economy implementation'
+//       ],
       impact: 'Extend equipment lifecycle by 50%',
       pricing: 'Starting at $1,200/month'
     },
@@ -83,11 +83,11 @@ const GreenITPage: React.FC = () => {
       icon: Code,
       color: 'text-purple-400',
       features: [
-        'Energy-efficient coding practices',
-        'Performance optimization',
-        'Resource usage monitoring',
-        'Sustainable architecture design'
-      ],
+//         'Energy-efficient coding practices',
+//         'Performance optimization',
+//         'Resource usage monitoring',
+//         'Sustainable architecture design'
+//       ],
       impact: 'Reduce software energy consumption by 30%',
       pricing: 'Starting at $1,500/month'
     },
@@ -97,11 +97,11 @@ const GreenITPage: React.FC = () => {
       icon: Users,
       color: 'text-cyan-400',
       features: [
-        'Virtual desktop infrastructure',
-        'Collaboration tools optimization',
-        'Energy-efficient hardware',
-        'Digital workspace management'
-      ],
+//         'Virtual desktop infrastructure',
+//         'Collaboration tools optimization',
+//         'Energy-efficient hardware',
+//         'Digital workspace management'
+//       ],
       impact: 'Reduce commuting emissions by 80%',
       pricing: 'Starting at $800/month'
     },
@@ -111,11 +111,11 @@ const GreenITPage: React.FC = () => {
       icon: Globe,
       color: 'text-emerald-400',
       features: [
-        'Carbon footprint tracking',
-        'Energy consumption monitoring',
-        'Sustainability reporting',
-        'Environmental compliance'
-      ],
+//         'Carbon footprint tracking',
+//         'Energy consumption monitoring',
+//         'Sustainability reporting',
+//         'Environmental compliance'
+//       ],
       impact: 'Achieve 100% environmental transparency',
       pricing: 'Starting at $600/month'
     }
@@ -127,44 +127,44 @@ const GreenITPage: React.FC = () => {
       title: 'Cost Savings',
       description: 'Reduce operational costs through energy efficiency and resource optimization',
       details: [
-        'Up to 40% reduction in energy costs',
-        'Lower maintenance and replacement costs',
-        'Improved resource utilization',
-        'Reduced waste management costs'
-      ]
+//         'Up to 40% reduction in energy costs',
+//         'Lower maintenance and replacement costs',
+//         'Improved resource utilization',
+//         'Reduced waste management costs'
+//       ]
     },
     {
       icon: Leaf,
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
       details: [
-        '60% reduction in carbon emissions',
-        '50% less electronic waste',
-        '100% renewable energy options',
-        'Carbon neutral operations'
-      ]
+//         '60% reduction in carbon emissions',
+//         '50% less electronic waste',
+//         '100% renewable energy options',
+//         'Carbon neutral operations'
+//       ]
     },
     {
       icon: Award,
       title: 'Compliance & Certification',
       description: 'Meet environmental regulations and achieve sustainability certifications',
       details: [
-        'ISO 14001 environmental management',
-        'LEED certification support',
-        'Carbon Trust certification',
-        'ESG reporting compliance'
-      ]
+//         'ISO 14001 environmental management',
+//         'LEED certification support',
+//         'Carbon Trust certification',
+//         'ESG reporting compliance'
+//       ]
     },
     {
       icon: Users,
       title: 'Brand Reputation',
       description: 'Enhance your brand image and attract environmentally conscious customers',
       details: [
-        'Improved brand perception',
-        'Customer loyalty increase',
-        'Investor confidence boost',
-        'Talent attraction and retention'
-      ]
+//         'Improved brand perception',
+//         'Customer loyalty increase',
+//         'Investor confidence boost',
+//         'Talent attraction and retention'
+//       ]
     }
   ];
 
@@ -233,11 +233,11 @@ const GreenITPage: React.FC = () => {
       challenge: 'High energy consumption in data centers',
       solution: 'Implemented energy-efficient data center design with renewable energy integration',
       results: [
-        '45% reduction in energy consumption',
-        '$2.3M annual cost savings',
-        'Carbon neutral operations achieved',
-        'LEED Platinum certification obtained'
-      ],
+//         '45% reduction in energy consumption',
+//         '$2.3M annual cost savings',
+//         'Carbon neutral operations achieved',
+//         'LEED Platinum certification obtained'
+//       ],
       icon: Factory,
       color: 'text-blue-400'
     },
@@ -247,11 +247,11 @@ const GreenITPage: React.FC = () => {
       challenge: 'Large carbon footprint from IT operations',
       solution: 'Green cloud migration and sustainable IT asset management',
       results: [
-        '55% reduction in carbon emissions',
-        '60% improvement in energy efficiency',
-        'ISO 14001 certification achieved',
-        'Enhanced brand reputation'
-      ],
+//         '55% reduction in carbon emissions',
+//         '60% improvement in energy efficiency',
+//         'ISO 14001 certification achieved',
+//         'Enhanced brand reputation'
+//       ],
       icon: Building,
       color: 'text-green-400'
     }
@@ -265,10 +265,10 @@ const GreenITPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions
+//               Green IT Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your IT infrastructure into a sustainable, environmentally friendly system 
+//               Transform your IT infrastructure into a sustainable, environmentally friendly system 
               that reduces costs while protecting our planet.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -312,7 +312,7 @@ const GreenITPage: React.FC = () => {
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+//                 >
                   <tab.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{tab.name}</span>
                 </button>
@@ -324,7 +324,7 @@ const GreenITPage: React.FC = () => {
           {activeTab === 'solutions' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Green IT Solutions
+//                 Our Green IT Solutions
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {greenSolutions.map((solution, index) => (
@@ -363,8 +363,8 @@ const GreenITPage: React.FC = () => {
                       <a
                         href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                      >
-                        Learn More
+//                       >
+//                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
                     </div>
@@ -377,7 +377,7 @@ const GreenITPage: React.FC = () => {
           {activeTab === 'benefits' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Benefits of Green IT
+//                 Benefits of Green IT
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {benefits.map((benefit, index) => (
@@ -408,7 +408,7 @@ const GreenITPage: React.FC = () => {
           {activeTab === 'certifications' && (
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-                Our Certifications
+//                 Our Certifications
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {certifications.map((cert, index) => (
@@ -428,7 +428,7 @@ const GreenITPage: React.FC = () => {
           {/* Case Studies */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Success Stories
+//               Success Stories
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study, index) => (
@@ -468,33 +468,33 @@ const GreenITPage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Go Green?
+//               Ready to Go Green?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey towards sustainable IT operations. Get a free environmental 
+//               Start your journey towards sustainable IT operations. Get a free environmental 
               assessment and discover how much you can save while protecting the planet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <Leaf className="w-5 h-5 mr-2" />
-                Get Free Assessment
+//                 Get Free Assessment
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

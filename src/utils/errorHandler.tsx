@@ -92,7 +92,7 @@ export class ErrorHandler {
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       componentStack: errorInfo?.componentStack ?? undefined,
-      context,
+//       context,
       resolved: false,
       retryCount: 0
     };
@@ -256,7 +256,7 @@ export class ErrorHandler {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...error,
+//           ...error,
           timestamp: error.timestamp.toISOString()
         })
       });
@@ -295,7 +295,7 @@ export class ErrorHandler {
           font-size: 18px;
           cursor: pointer;
           margin-left: 10px;
-        ">×</button>
+//         ">×</button>
       </div>
     `;
     document.body.appendChild(notification);
@@ -327,7 +327,7 @@ export class ErrorHandler {
   private shouldRetry(error: AppError): boolean {
     return (
       error.type === ErrorType.NETWORK &&
-      error.retryCount! < this.config.maxRetries &&
+//       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
     );
   }
@@ -414,11 +414,11 @@ export class ErrorHandler {
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {
-      total,
-      resolved,
-      unresolved,
-      byType,
-      bySeverity
+//       total,
+//       resolved,
+//       unresolved,
+//       byType,
+//       bySeverity
     };
   }
   /**
@@ -459,7 +459,7 @@ export class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return (
-        this.props.fallback || (
+//         this.props.fallback || (
           <div style={{ padding: '20px', textAlign: 'center' }}>
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
@@ -473,11 +473,11 @@ export class ErrorBoundary extends React.Component<
                 borderRadius: '4px',
                 cursor: 'pointer'
               }}
-            >
-              Try again
+//             >
+//               Try again
             </button>
           </div>
-        )
+//         )
       );
     }
     return this.props.children;
@@ -490,24 +490,24 @@ export const useErrorHandler = () => {
     (error: Error, context?: Record<string, unknown>) => {
       return errorHandler.handleError(error, undefined, context);
     },
-    [errorHandler]
+//     [errorHandler]
   );
   const handleNetworkError = useCallback(
     (error: Error, url: string, status?: number) => {
       return errorHandler.handleNetworkError(error, url, status);
     },
-    [errorHandler]
+//     [errorHandler]
   );
   const handleValidationError = useCallback(
     (field: string, message: string, value?: unknown) => {
       return errorHandler.handleValidationError(field, message, value);
     },
-    [errorHandler]
+//     [errorHandler]
   );
   return {
-    handleError,
-    handleNetworkError,
-    handleValidationError,
+//     handleError,
+//     handleNetworkError,
+//     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()

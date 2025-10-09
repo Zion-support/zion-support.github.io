@@ -17,21 +17,21 @@ interface ImageProps {
   onError?: () => void;
 }
 export const Image: React.FC<ImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
+//   src,
+//   alt,
+//   width,
+//   height,
+//   className,
   priority = false,
   _quality = 75,
   _placeholder = 'empty',
-  _blurDataURL,
+//   _blurDataURL,
   fill = false,
-  sizes,
-  style,
-  onLoad,
-  onError,
-  ...props
+//   sizes,
+//   style,
+//   onLoad,
+//   onError,
+//   ...props
 }) => {
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -44,7 +44,7 @@ export const Image: React.FC<ImageProps> = ({
     if (onError) onError();
   }, [onError]);
   const imageStyle: React.CSSProperties = {
-    ...style,
+//     ...style,
     ...(fill && {
       position: 'absolute',
       top: 0,
@@ -60,7 +60,7 @@ export const Image: React.FC<ImageProps> = ({
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
-      >
+//       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
     );
@@ -78,7 +78,7 @@ export const Image: React.FC<ImageProps> = ({
       onLoad={handleLoad}
       onError={handleError}
       {...props}
-    />
+//     />
   );
 };
 export default Image;

@@ -81,20 +81,20 @@ class AccessibilityEnhancer {
 
   private updateFocusableElements(): void {
     const selectors = [
-      'a[href]',
+//       'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
       '[tabindex]:not([tabindex="-1"])',
-      'area[href]',
-      'iframe',
-      'object',
-      'embed'
+//       'area[href]',
+//       'iframe',
+//       'object',
+//       'embed'
     ];
 
     this.focusableElements = Array.from(
-      document.querySelectorAll(selectors.join(', '))
+//       document.querySelectorAll(selectors.join(', '))
     ) as HTMLElement[];
 
     this.metrics.focusableElements = this.focusableElements.length;
@@ -106,11 +106,11 @@ class AccessibilityEnhancer {
       
       if (e.shiftKey) {
         this.currentFocusIndex = this.currentFocusIndex > 0 
-          ? this.currentFocusIndex - 1 
+//           ? this.currentFocusIndex - 1 
           : this.focusableElements.length - 1;
       } else {
         this.currentFocusIndex = this.currentFocusIndex < this.focusableElements.length - 1 
-          ? this.currentFocusIndex + 1 
+//           ? this.currentFocusIndex + 1 
           : 0;
       }
 
@@ -202,7 +202,7 @@ class AccessibilityEnhancer {
       const icon = button.querySelector('svg, i, [class*="icon"]');
       if (icon && !button.textContent?.trim()) {
         const iconName = icon.getAttribute('data-icon') || 
-                        icon.getAttribute('aria-label') || 
+//                         icon.getAttribute('aria-label') || 
                         'button';
         button.setAttribute('aria-label', iconName);
       }
@@ -327,11 +327,11 @@ class AccessibilityEnhancer {
         right: 0;
         bottom: 0;
         background: repeating-linear-gradient(
-          45deg,
-          transparent,
-          transparent 2px,
-          currentColor 2px,
-          currentColor 4px
+//           45deg,
+//           transparent,
+//           transparent 2px,
+//           currentColor 2px,
+//           currentColor 4px
         );
         opacity: 0.3;
         pointer-events: none;
@@ -406,7 +406,7 @@ class AccessibilityEnhancer {
     const imagesWithAlt = document.querySelectorAll('img[alt]:not([alt=""])');
     
     this.metrics.altTextCoverage = images.length > 0 
-      ? (imagesWithAlt.length / images.length) * 100 
+//       ? (imagesWithAlt.length / images.length) * 100 
       : 100;
   }
 
@@ -418,7 +418,7 @@ class AccessibilityEnhancer {
     });
 
     this.metrics.keyboardAccessibility = interactiveElements.length > 0 
-      ? (accessibleElements.length / interactiveElements.length) * 100 
+//       ? (accessibleElements.length / interactiveElements.length) * 100 
       : 100;
   }
 
@@ -427,7 +427,7 @@ class AccessibilityEnhancer {
     const elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby], [aria-describedby], [role]');
     
     this.metrics.screenReaderCompatibility = elements.length > 0 
-      ? (elementsWithAria.length / elements.length) * 100 
+//       ? (elementsWithAria.length / elements.length) * 100 
       : 0;
   }
 
@@ -540,9 +540,9 @@ class AccessibilityEnhancer {
 
   public generateReport(): string {
     const report = `
-# Accessibility Report
+// # Accessibility Report
 
-## Metrics
+// ## Metrics
 - Focusable Elements: ${this.metrics.focusableElements}
 - Heading Structure: ${this.metrics.headingStructure ? 'Valid' : 'Invalid'}
 - Color Contrast: ${this.metrics.colorContrast.toFixed(1)}%
@@ -550,7 +550,7 @@ class AccessibilityEnhancer {
 - Keyboard Accessibility: ${this.metrics.keyboardAccessibility.toFixed(1)}%
 - Screen Reader Compatibility: ${this.metrics.screenReaderCompatibility.toFixed(1)}%
 
-## Recommendations
+// ## Recommendations
 ${this.metrics.headingStructure ? '' : '- Fix heading structure hierarchy'}
 ${this.metrics.colorContrast < 80 ? '- Improve color contrast ratios' : ''}
 ${this.metrics.altTextCoverage < 100 ? '- Add alt text to all images' : ''}

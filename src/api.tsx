@@ -37,26 +37,26 @@ const API: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             API{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Documentation
+//               Documentation
             </span>
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Comprehensive API documentation for integrating with Zion Tech Group's powerful services
-            and data endpoints.
+//             and data endpoints.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-            >
-              Get API Key
+//             >
+//               Get API Key
               <span className="ml-2">→</span>
             </Link>
             <Link
               href="#endpoints"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
-            >
-              View Endpoints
+//             >
+//               View Endpoints
               <span className="ml-2">⚛️</span>
             </Link>
           </div>
@@ -72,7 +72,7 @@ const API: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">RESTful APIs</h3>
               <p className="text-gray-600">
                 Clean, intuitive REST endpoints following industry best practices for easy
-                integration.
+//                 integration.
               </p>
             </div>
             <div className="text-center">
@@ -81,8 +81,8 @@ const API: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
               <p className="text-gray-600">
-                Enterprise-grade security with 99.9% uptime guarantee and comprehensive error
-                handling.
+//                 Enterprise-grade security with 99.9% uptime guarantee and comprehensive error
+//                 handling.
               </p>
             </div>
             <div className="text-center">
@@ -105,16 +105,16 @@ const API: React.FC = () => {
               <div
                 key={index}
                 className="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500"
-              >
+//               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div className="flex items-center space-x-4 mb-2 md:mb-0">
                     <span
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
                         endpoint.method === 'GET'
-                          ? 'bg-green-100 text-green-800'
+//                           ? 'bg-green-100 text-green-800'
                           : 'bg-blue-100 text-blue-800'
                       }`}
-                    >
+//                     >
                       {endpoint.method}
                     </span>
                     <code className="text-lg font-mono text-gray-800">{endpoint.endpoint}</code>
@@ -148,22 +148,22 @@ const API: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Ready to integrate with our APIs? Get your API key and start building amazing
-              applications.
+//               Ready to integrate with our APIs? Get your API key and start building amazing
+//               applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get API Key
+//               >
+//                 Get API Key
                 <span className="ml-2">→</span>
               </Link>
               <Link
                 href="https://docs.ziontechgroup.com"
                 className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
-              >
-                View Full Docs
+//               >
+//                 View Full Docs
                 <span className="ml-2">⚛️</span>
               </Link>
             </div>

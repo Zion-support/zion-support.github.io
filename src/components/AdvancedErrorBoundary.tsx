@@ -28,8 +28,8 @@ interface ErrorReport {
   sessionId: string;
 }
 class AdvancedErrorBoundary extends Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
+//   ErrorBoundaryProps,
+//   ErrorBoundaryState
 > {
   private retryCount = 0;
   private maxRetries = 3;
@@ -45,21 +45,21 @@ class AdvancedErrorBoundary extends Component<
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
-      error,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+//       error,
+//       errorInfo
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       logger.error('Error Boundary caught an error', { 
         context: 'ErrorBoundary', 
         error: error.message,
-        errorInfo 
+//         errorInfo 
       });
     }
     // Call custom error handler
@@ -74,8 +74,8 @@ class AdvancedErrorBoundary extends Component<
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const _errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      error,
-      errorInfo,
+//       error,
+//       errorInfo,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -164,21 +164,21 @@ class AdvancedErrorBoundary extends Component<
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
-                  >
+//                   >
                     <path
                       strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                    />
+//                     />
                   </svg>
                 </div>
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
-                  Oops! Something went wrong
+//                   Oops! Something went wrong
                 </h2>
                 <p className='mt-2 text-sm text-gray-600'>
                   We&apos;re sorry, but something unexpected happened. Our team
-                  has been notified.
+//                   has been notified.
                 </p>
               </div>
               {process.env.NODE_ENV === 'development' && (
@@ -195,7 +195,7 @@ class AdvancedErrorBoundary extends Component<
                     </p>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
-                        Stack Trace
+//                         Stack Trace
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
                         {this.state.error?.stack}
@@ -203,7 +203,7 @@ class AdvancedErrorBoundary extends Component<
                     </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
-                        Component Stack
+//                         Component Stack
                       </summary>
                       <pre className='mt-2 text-xs overflow-auto'>
                         {this.state.errorInfo?.componentStack}
@@ -214,37 +214,37 @@ class AdvancedErrorBoundary extends Component<
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
-                  this.retryCount < this.maxRetries && (
+//                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
                       className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                    >
+//                     >
                       Try Again ({this.maxRetries - this.retryCount} attempts
-                      left)
+//                       left)
                     </button>
                   )}
                 <button
                   onClick={this.handleReload}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Reload Page
+//                 >
+//                   Reload Page
                 </button>
                 <button
                   onClick={this.handleGoHome}
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
-                  Go to Homepage
+//                 >
+//                   Go to Homepage
                 </button>
               </div>
               <div className='mt-6 text-center'>
                 <p className='text-xs text-gray-500'>
-                  If this problem persists, please contact our support team
+//                   If this problem persists, please contact our support team
                   at&nbsp;
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >
-                    kleber@ziontechgroup.com
+//                   >
+//                     kleber@ziontechgroup.com
                   </a>
                 </p>
               </div>

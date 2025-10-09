@@ -44,11 +44,11 @@ export const _performanceConfig = {
   // Resource hints
   preload: [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-  ],
+//   ],
   prefetch: [
-    '/api/health',
-    '/api/config',
-  ],
+//     '/api/health',
+//     '/api/config',
+//   ],
   // Image optimization
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

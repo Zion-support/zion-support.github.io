@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * Advanced User Experience Enhancer
  * Comprehensive UX optimization utilities
@@ -430,7 +431,7 @@ class UserExperienceEnhancer {
   private setupServiceWorker(): void {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+//         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
             console.log('SW registered: ', registration);
           })
@@ -660,9 +661,9 @@ class UserExperienceEnhancer {
 
   public generateUXReport(): string {
     const report = `
-# User Experience Report
+// # User Experience Report
 
-## Metrics
+// ## Metrics
 - Page Load Time: ${this.metrics.pageLoadTime.toFixed(2)}ms
 - Interaction Time: ${this.metrics.interactionTime.toFixed(2)}ms
 - Bounce Rate: ${this.metrics.bounceRate.toFixed(1)}%
@@ -670,7 +671,7 @@ class UserExperienceEnhancer {
 - Accessibility Score: ${this.metrics.accessibilityScore}/100
 - Performance Score: ${this.metrics.performanceScore}/100
 
-## Features
+// ## Features
 - Smooth Scrolling: ${this.config.enableSmoothScrolling ? 'Enabled' : 'Disabled'}
 - Loading States: ${this.config.enableLoadingStates ? 'Enabled' : 'Disabled'}
 - Error Boundaries: ${this.config.enableErrorBoundaries ? 'Enabled' : 'Disabled'}
@@ -682,7 +683,7 @@ class UserExperienceEnhancer {
 - Dark Mode: ${this.config.enableDarkMode ? 'Enabled' : 'Disabled'}
 - Animations: ${this.config.enableAnimations ? 'Enabled' : 'Disabled'}
 
-## Recommendations
+// ## Recommendations
 ${this.metrics.pageLoadTime > 3000 ? '- Optimize page load time' : ''}
 ${this.metrics.accessibilityScore < 80 ? '- Improve accessibility features' : ''}
 ${this.metrics.userSatisfaction < 80 ? '- Address user satisfaction issues' : ''}

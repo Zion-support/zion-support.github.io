@@ -8,8 +8,8 @@ interface SkeletonProps {
 }
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
-  width,
-  height,
+//   width,
+//   height,
   rounded = false,
   animated = true
 }) => {
@@ -22,7 +22,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
       style={{ width, height }}
       role="status"
       aria-label="Loading content"
-    >
+//     >
       <span className="sr-only">Loading...</span>
     </div>
   );
@@ -43,7 +43,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
         key={index}
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
-      />
+//       />
     ))}
   </div>
 );
@@ -55,7 +55,7 @@ export const ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({
     style={{ aspectRatio }}
     role="status"
     aria-label="Loading image"
-  >
+//   >
     <span className="sr-only">Loading image...</span>
   </div>
 );
@@ -87,7 +87,7 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
         key={rowIndex} 
         className="grid gap-4 mb-2" 
         style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
-      >
+//       >
         {Array.from({ length: columns }).map((_, colIndex) => (
           <Skeleton key={colIndex} height="16px" />
         ))}

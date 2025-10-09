@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
@@ -12,7 +13,7 @@ export const _useErrorMonitoring = () => {
     (error: Error, context?: string) => {
       trackError(error, context);
     },
-    [trackError]
+//     [trackError]
   );
   useEffect(() => {
     // Global error handler
@@ -26,8 +27,8 @@ export const _useErrorMonitoring = () => {
     const handleUnhandledRejection = (event: unknown) => {
       const rejectionEvent = event as { reason: unknown };
       const error =
-        rejectionEvent.reason instanceof Error
-          ? rejectionEvent.reason
+//         rejectionEvent.reason instanceof Error
+//           ? rejectionEvent.reason
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
@@ -41,7 +42,7 @@ export const _useErrorMonitoring = () => {
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
     // Expose React error handler globally for error boundaries
-    (
+//     (
       window as Window & {
         __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
       }
@@ -54,7 +55,7 @@ export const _useErrorMonitoring = () => {
     };
   }, [reportError]);
   return {
-    reportError
+//     reportError
   };
 };
 export default useErrorMonitoring;

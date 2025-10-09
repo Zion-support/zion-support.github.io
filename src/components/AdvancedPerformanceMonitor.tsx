@@ -13,7 +13,7 @@ interface PerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
+//   onMetricsUpdate,
   enableRealTimeMonitoring = true
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -54,11 +54,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             if (
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
-              'startTime' in entry
+//               'startTime' in entry
             ) {
               const fidEntry = entry as PerformanceEventTiming;
               setMetrics(prev => ({
-                ...prev,
+//                 ...prev,
                 fid: _fidEntry.processingStart - _fidEntry.startTime
               }));
             }
@@ -80,7 +80,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
-              'value' in entry
+//               'value' in entry
             ) {
               const clsEntry = entry as LayoutShift;
               if (!_clsEntry.hadRecentInput) {
@@ -101,17 +101,17 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const navigationEntries = performance.getEntriesByType?.('navigation') || [];
       const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
       const ttfb = _navigationEntry
-        ? _navigationEntry.responseStart - _navigationEntry.requestStart
+//         ? _navigationEntry.responseStart - _navigationEntry.requestStart
         : null;
       // Measure Memory Usage
       const memory =
         (performance as Performance & { memory?: { usedJSHeapSize: number } })
           .memory?.usedJSHeapSize || null;
       setMetrics(prev => ({
-        ...prev,
+//         ...prev,
         fcp: _fcp,
-        ttfb,
-        memory
+//         ttfb,
+//         memory
       }));
     } catch (error) {
        
@@ -147,7 +147,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined') return;
     // Use web-vitals library if available
     try {
-      import('web-vitals')
+//       import('web-vitals')
         .then(webVitals => {
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
           if (onCLS) {
@@ -192,10 +192,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       clearInterval(interval);
     };
   }, [
-    enableRealTimeMonitoring,
-    measureWebVitals,
-    measureResourceTiming,
-    measureCoreWebVitals,
+//     enableRealTimeMonitoring,
+//     measureWebVitals,
+//     measureResourceTiming,
+//     measureCoreWebVitals,
   ]);
   useEffect(() => {
     if (onMetricsUpdate) {
@@ -206,28 +206,28 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const getPerformanceRecommendations = useCallback(() => {
     const recommendations: string[] = [];
     if (metrics.fcp && metrics.fcp > 1800) {
-      recommendations.push(
-        'First Contentful Paint is slow. Consider optimizing critical rendering path.'
+//       recommendations.push(
+//         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
       );
     }
     if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
-        'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
+//       recommendations.push(
+//         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
       );
     }
     if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
-        'First Input Delay is high. Reduce JavaScript execution time.'
+//       recommendations.push(
+//         'First Input Delay is high. Reduce JavaScript execution time.'
       );
     }
     if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
-        'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
+//       recommendations.push(
+//         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
       );
     }
     if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
-        'Time to First Byte is slow. Optimize server response time.'
+//       recommendations.push(
+//         'Time to First Byte is slow. Optimize server response time.'
       );
     }
     return recommendations;

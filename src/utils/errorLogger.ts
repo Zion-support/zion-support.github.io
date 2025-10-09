@@ -25,7 +25,7 @@ class ErrorLogger {
   /**
    * Log an error with context
    */
-  log(
+//   log(
     message: string,
     _severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
@@ -33,10 +33,10 @@ class ErrorLogger {
   ): void {
     const entry: ErrorLogEntry = {
       timestamp: new Date().toISOString(),
-      severity,
-      message,
-      error,
-      context,
+//       severity,
+//       message,
+//       error,
+//       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack
@@ -91,7 +91,7 @@ class ErrorLogger {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...entry,
+//           ...entry,
           error: entry.error
             ? {
                 message: entry.error.message,

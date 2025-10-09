@@ -23,7 +23,7 @@ export const _validationRules = {
    */
   required: (message = 'This field is required'): ValidationRule<string> => ({
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
-    message
+//     message
   }),
   /**
    * Validate email format
@@ -33,7 +33,7 @@ export const _validationRules = {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);
     },
-    message
+//     message
   }),
   /**
    * Validate minimum length
@@ -57,7 +57,7 @@ export const _validationRules = {
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
-    message
+//     message
   }),
   /**
    * Validate URL format
@@ -71,7 +71,7 @@ export const _validationRules = {
         return false;
       }
     },
-    message
+//     message
   }),
   /**
    * Validate number range
@@ -85,14 +85,14 @@ export const _validationRules = {
    */
   pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({
     validate: (value: string) => regex.test(value),
-    message
+//     message
   }),
   /**
    * Validate custom condition
    */
   custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     validate: validator,
-    message
+//     message
   }),
   /**
    * Validate password strength
@@ -108,7 +108,7 @@ export const _validationRules = {
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
     },
-    message
+//     message
   }),
   /**
    * Validate matching fields (e.g., password confirmation)
@@ -147,7 +147,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   }
   return {
     valid: errors.length === 0,
-    errors
+//     errors
   };
 }
 /**
@@ -193,8 +193,8 @@ export function getFormErrors<T extends Record<string, unknown>>(
  */
 export function sanitizeInput(input: string): string {
   return input
-    .trim()
-    .replace(/[<>]/g, '') // Remove potential HTML tags
+//     .trim()
+//     .replace(/[<>]/g, '') // Remove potential HTML tags
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
 }
 /**

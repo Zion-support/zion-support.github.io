@@ -165,9 +165,9 @@ class PerformanceEnhancer {
     if (!this.config.enablePrefetching) return;
 
     const criticalResources = [
-      '/assets/index.css',
-      '/assets/vendor.js',
-      '/assets/index.js'
+//       '/assets/index.css',
+//       '/assets/vendor.js',
+//       '/assets/index.js'
     ];
 
     criticalResources.forEach(resource => {
@@ -183,7 +183,7 @@ class PerformanceEnhancer {
 
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
+//         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
             console.log('SW registered: ', registration);
           })
@@ -236,11 +236,11 @@ class PerformanceEnhancer {
   public optimizeBundle(): void {
     // Dynamic imports for non-critical components
     const lazyComponents = [
-      'ContentPromotionBanner',
-      'ContentCarousel',
-      'DynamicContentShowcase',
-      'ContentStatistics',
-      'ContentNewsletterSignup'
+//       'ContentPromotionBanner',
+//       'ContentCarousel',
+//       'DynamicContentShowcase',
+//       'ContentStatistics',
+//       'ContentNewsletterSignup'
     ];
 
     lazyComponents.forEach(component => {

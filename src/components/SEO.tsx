@@ -28,14 +28,14 @@ export interface SEOProps {
 const _defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
-    'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+//     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
-    'AI',
-    'artificial intelligence',
-    'enterprise solutions',
-    'digital transformation',
-    'IT services',
-  ],
+//     'AI',
+//     'artificial intelligence',
+//     'enterprise solutions',
+//     'digital transformation',
+//     'IT services',
+//   ],
   image: 'https://ziontechgroup.com/og-image.jpg',
   url: 'https://ziontechgroup.com',
   type: 'website' as const,
@@ -44,18 +44,18 @@ const _defaultSEO = {
 };
 
 export const SEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
-  image,
-  url,
+//   title,
+//   description,
+//   keywords,
+//   image,
+//   url,
   type = defaultSEO.type,
-  author,
-  publishDate,
-  modifiedDate,
-  canonical,
+//   author,
+//   publishDate,
+//   modifiedDate,
+//   canonical,
   noIndex = false,
-  structuredData,
+//   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [],
@@ -66,9 +66,9 @@ export const SEO: React.FC<SEOProps> = ({
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
     url: url || defaultSEO.url,
-    type,
-    twitterCard,
-    locale,
+//     type,
+//     twitterCard,
+//     locale,
   };
 
   // Generate structured data

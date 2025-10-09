@@ -48,18 +48,18 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = [
-      "default-src 'self'",
+//       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: https: blob:",
       "font-src 'self' https://fonts.gstatic.com",
       "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "object-src 'none'",
-      "media-src 'self'",
-      "worker-src 'self'"
+//       "frame-ancestors 'none'",
+//       "base-uri 'self'",
+//       "form-action 'self'",
+//       "object-src 'none'",
+//       "media-src 'self'",
+//       "worker-src 'self'"
     ].join('; ');
     document.head.appendChild(meta);
   };

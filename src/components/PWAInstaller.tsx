@@ -74,7 +74,7 @@ const PWAInstaller: React.FC = () => {
             onClick={handleDismiss}
             className="text-gray-400 hover:text-white transition-colors"
             aria-label="Dismiss install prompt"
-          >
+//           >
             <X className="w-4 h-4" />
           </button>
         </div>
@@ -82,14 +82,14 @@ const PWAInstaller: React.FC = () => {
           <button
             onClick={handleInstallClick}
             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-          >
-            Install Now
+//           >
+//             Install Now
           </button>
           <button
             onClick={handleDismiss}
             className="w-full bg-transparent border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 hover:text-white transition-all duration-300 text-sm"
-          >
-            Not Now
+//           >
+//             Not Now
           </button>
         </div>
         <div className="mt-3 text-xs text-gray-400">

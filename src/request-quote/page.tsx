@@ -21,46 +21,46 @@ const RequestQuotePage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const _serviceTypes = [
-    'AI Services',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Micro SAAS Solutions',
-    'Digital Transformation',
-    'Custom Development',
-    'Consulting Services',
-    'Other'
+//     'AI Services',
+//     'IT Infrastructure',
+//     'Cybersecurity',
+//     'Cloud Migration',
+//     'Micro SAAS Solutions',
+//     'Digital Transformation',
+//     'Custom Development',
+//     'Consulting Services',
+//     'Other'
   ];
 
   const projectSizes = [
-    'Small (1-10 employees)',
-    'Medium (11-100 employees)',
-    'Large (101-1000 employees)',
-    'Enterprise (1000+ employees)'
+//     'Small (1-10 employees)',
+//     'Medium (11-100 employees)',
+//     'Large (101-1000 employees)',
+//     'Enterprise (1000+ employees)'
   ];
 
   const timelines = [
-    'ASAP',
-    '1-3 months',
-    '3-6 months',
-    '6-12 months',
-    '12+ months',
-    'Flexible'
+//     'ASAP',
+//     '1-3 months',
+//     '3-6 months',
+//     '6-12 months',
+//     '12+ months',
+//     'Flexible'
   ];
 
   const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
+//     'Under $10,000',
+//     '$10,000 - $50,000',
+//     '$50,000 - $100,000',
+//     '$100,000 - $500,000',
+//     '$500,000+',
+//     'To be discussed'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+//       ...prev,
       [name]: value
     }));
   };
@@ -133,11 +133,11 @@ const RequestQuotePage: React.FC = () => {
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>
               <h1 className="text-4xl font-bold text-white mb-6 neon-text">
-                Quote Request Submitted!
+//                 Quote Request Submitted!
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Thank you for your interest in our services. We've received your quote request 
-                and will get back to you within 24 hours with a detailed proposal.
+//                 and will get back to you within 24 hours with a detailed proposal.
               </p>
               <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
@@ -160,16 +160,16 @@ const RequestQuotePage: React.FC = () => {
                 <a
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                >
+//                 >
                   <Phone className="w-5 h-5 mr-2" />
-                  Contact Us
+//                   Contact Us
                 </a>
                 <a
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                >
+//                 >
                   <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home
+//                   Back to Home
                 </a>
               </div>
             </div>
@@ -188,11 +188,11 @@ const RequestQuotePage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote
+//               Request a Quote
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
-              Our experts will provide you with a comprehensive proposal within 24 hours.
+//               Our experts will provide you with a comprehensive proposal within 24 hours.
             </p>
           </div>
 
@@ -206,38 +206,38 @@ const RequestQuotePage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name *
+//                         Full Name *
                       </label>
                       <input
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        required
+//                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
-                      />
+//                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
+//                         Email Address *
                       </label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        required
+//                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
-                      />
+//                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name
+//                         Company Name
                       </label>
                       <input
                         type="text"
@@ -246,11 +246,11 @@ const RequestQuotePage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your company name"
-                      />
+//                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
+//                         Phone Number
                       </label>
                       <input
                         type="tel"
@@ -259,22 +259,22 @@ const RequestQuotePage: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
-                      />
+//                       />
                     </div>
                   </div>
 
                   {/* Project Information */}
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Type *
+//                       Service Type *
                     </label>
                     <select
                       name="serviceType"
                       value={formData.serviceType}
                       onChange={handleInputChange}
-                      required
+//                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                    >
+//                     >
                       <option value="">Select a service type</option>
                       {serviceTypes.map((type, index) => (
                         <option key={index} value={type}>{type}</option>
@@ -285,14 +285,14 @@ const RequestQuotePage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size
+//                         Project Size
                       </label>
                       <select
                         name="projectSize"
                         value={formData.projectSize}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      >
+//                       >
                         <option value="">Select project size</option>
                         {projectSizes.map((size, index) => (
                           <option key={index} value={size}>{size}</option>
@@ -301,14 +301,14 @@ const RequestQuotePage: React.FC = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline
+//                         Timeline
                       </label>
                       <select
                         name="timeline"
                         value={formData.timeline}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      >
+//                       >
                         <option value="">Select timeline</option>
                         {timelines.map((timeline, index) => (
                           <option key={index} value={timeline}>{timeline}</option>
@@ -319,14 +319,14 @@ const RequestQuotePage: React.FC = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range
+//                       Budget Range
                     </label>
                     <select
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                    >
+//                     >
                       <option value="">Select budget range</option>
                       {budgetRanges.map((range, index) => (
                         <option key={index} value={range}>{range}</option>
@@ -336,22 +336,22 @@ const RequestQuotePage: React.FC = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Description *
+//                       Project Description *
                     </label>
                     <textarea
                       name="description"
                       value={formData.description}
                       onChange={handleInputChange}
-                      required
+//                       required
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
-                    />
+//                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements
+//                       Specific Requirements
                     </label>
                     <textarea
                       name="requirements"
@@ -360,21 +360,21 @@ const RequestQuotePage: React.FC = () => {
                       rows={3}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Any specific technical requirements, integrations, or constraints..."
-                    />
+//                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
+//                   >
                     {isSubmitting ? (
                       <div className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Submitting...
+//                         Submitting...
                       </div>
                     ) : (
-                      'Request Quote'
+//                       'Request Quote'
                     )}
                   </button>
                 </form>
@@ -423,27 +423,27 @@ const RequestQuotePage: React.FC = () => {
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
                 <p className="text-gray-300 text-sm mb-4">
-                  For urgent inquiries or immediate assistance, contact us directly.
+//                   For urgent inquiries or immediate assistance, contact us directly.
                 </p>
                 <div className="space-y-3">
                   <a
                     href="tel:+13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+//                   >
                     <Phone className="w-4 h-4 mr-2" />
                     <span className="text-sm">(302) 464-0950</span>
                   </a>
                   <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+//                   >
                     <Mail className="w-4 h-4 mr-2" />
                     <span className="text-sm">kleber@ziontechgroup.com</span>
                   </a>
                   <a
                     href="/contact"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
+//                   >
                     <MessageSquare className="w-4 h-4 mr-2" />
                     <span className="text-sm">Contact Form</span>
                   </a>

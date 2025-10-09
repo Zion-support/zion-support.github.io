@@ -17,11 +17,11 @@ export const _useRouter = () => {
     window.location.reload();
   }, []);
   return {
-    push,
-    replace,
-    back,
-    forward,
-    refresh
+//     push,
+//     replace,
+//     back,
+//     forward,
+//     refresh
   };
 };
 export const usePathname = () => {

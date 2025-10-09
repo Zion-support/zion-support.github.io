@@ -65,11 +65,11 @@ const AIComputerVisionPage: React.FC = () => {
       price: '$499/month',
       description: 'Perfect for small projects',
       features: [
-        'Up to 1,000 images/month',
-        'Basic models',
-        'Email support',
-        'Standard API'
-      ],
+//         'Up to 1,000 images/month',
+//         'Basic models',
+//         'Email support',
+//         'Standard API'
+//       ],
       popular: false
     },
     {
@@ -77,12 +77,12 @@ const AIComputerVisionPage: React.FC = () => {
       price: '$1,999/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 images/month',
-        'Advanced models',
-        'Priority support',
-        'Custom training',
-        'API access'
-      ],
+//         'Up to 10,000 images/month',
+//         'Advanced models',
+//         'Priority support',
+//         'Custom training',
+//         'API access'
+//       ],
       popular: true
     },
     {
@@ -90,12 +90,12 @@ const AIComputerVisionPage: React.FC = () => {
       price: 'Custom',
       description: 'For large organizations',
       features: [
-        'Unlimited images',
-        'Custom models',
-        'Dedicated support',
-        'On-premise deployment',
-        'White-label solutions'
-      ],
+//         'Unlimited images',
+//         'Custom models',
+//         'Dedicated support',
+//         'On-premise deployment',
+//         'White-label solutions'
+//       ],
       popular: false
     }
   ];
@@ -108,29 +108,29 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-            AI Computer Vision
+//             AI Computer Vision
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Advanced Visual Intelligence Solutions
+//             Advanced Visual Intelligence Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            Transform your business with cutting-edge computer vision technology. From object detection to facial recognition, 
-            our AI-powered visual intelligence solutions help you see and understand the world like never before.
+//             Transform your business with cutting-edge computer vision technology. From object detection to facial recognition, 
+//             our AI-powered visual intelligence solutions help you see and understand the world like never before.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="/contact"
               className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-            >
-              Get Started
+//             >
+//               Get Started
             </a>
             <a
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+//             >
               <Eye className="w-5 h-5" />
-              +1 302 464 0950
+//               +1 302 464 0950
             </a>
           </div>
         </section>
@@ -138,7 +138,7 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Core Capabilities
+//             Core Capabilities
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -203,7 +203,7 @@ const AIComputerVisionPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Choose Your Plan
+//             Choose Your Plan
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -212,7 +212,7 @@ const AIComputerVisionPage: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
-                      Most Popular
+//                       Most Popular
                     </div>
                   </div>
                 )}
@@ -232,12 +232,12 @@ const AIComputerVisionPage: React.FC = () => {
                 <a
                   href="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'cyber-button'
+//                     plan.popular
+//                       ? 'cyber-button'
                       : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
-                >
-                  Get Started
+//                 >
+//                   Get Started
                 </a>
               </div>
             ))}
@@ -248,24 +248,24 @@ const AIComputerVisionPage: React.FC = () => {
         <section className="text-center">
           <div className="cyber-card p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-              Ready to See the Future?
+//               Ready to See the Future?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Transform your business with AI-powered computer vision solutions that see, understand, and act.
+//               Transform your business with AI-powered computer vision solutions that see, understand, and act.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >
-                Start Your Vision Journey
+//               >
+//                 Start Your Vision Journey
               </a>
               <a
                 href="/demo"
                 className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-              >
+//               >
                 <Camera className="w-5 h-5" />
-                Request Demo
+//                 Request Demo
               </a>
             </div>
           </div>

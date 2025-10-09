@@ -23,8 +23,8 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
+//       isScrolled 
+//         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -43,10 +43,10 @@ const Navigation: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
+//               Home
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
+//               About
             </Link>
             {/* Services Dropdown */}
             <div className="relative group">
@@ -65,16 +65,16 @@ const Navigation: React.FC = () => {
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">AI Services</h4>
                         <div className="space-y-2">
                           <Link to="/ai-analytics" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Analytics
+//                             AI Analytics
                           </Link>
                           <Link to="/ai-automation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Automation
+//                             AI Automation
                           </Link>
                           <Link to="/ai-content-generation" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Content Generation
+//                             AI Content Generation
                           </Link>
                           <Link to="/ai-customer-support" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            AI Customer Support
+//                             AI Customer Support
                           </Link>
                         </div>
                       </div>
@@ -84,16 +84,16 @@ const Navigation: React.FC = () => {
                         <h4 className="text-cyan-400 font-semibold mb-3 text-sm uppercase tracking-wide">IT Services</h4>
                         <div className="space-y-2">
                           <Link to="/it-services" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            IT Services
+//                             IT Services
                           </Link>
                           <Link to="/cloud-migration" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            Cloud Migration
+//                             Cloud Migration
                           </Link>
                           <Link to="/devops" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            DevOps
+//                             DevOps
                           </Link>
                           <Link to="/cybersecurity" className="block text-white hover:text-cyan-400 transition-colors text-sm py-1" onClick={closeAllMenus}>
-                            Cybersecurity
+//                             Cybersecurity
                           </Link>
                         </div>
                       </div>
@@ -103,8 +103,8 @@ const Navigation: React.FC = () => {
                         to="/services"
                         className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         onClick={closeAllMenus}
-                      >
-                        View All Services
+//                       >
+//                         View All Services
                       </Link>
                     </div>
                   </div>
@@ -116,11 +116,11 @@ const Navigation: React.FC = () => {
               to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
-            >
-              Case Studies
+//             >
+//               Case Studies
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
+//               Contact
             </Link>
 
             {/* CTA Button */}
@@ -128,9 +128,9 @@ const Navigation: React.FC = () => {
               to="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
-            >
+//             >
               <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
+//               (302) 464-0950
             </Link>
           </div>
 
@@ -140,7 +140,7 @@ const Navigation: React.FC = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-cyan-400 transition-colors"
               aria-label="Toggle menu"
-            >
+//             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -157,29 +157,29 @@ const Navigation: React.FC = () => {
                   to="/"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-                >
-                  Home
+//                 >
+//                   Home
                 </Link>
                 <Link
                   to="/about"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-                >
-                  About
+//                 >
+//                   About
                 </Link>
                 <Link
                   to="/services"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-                >
-                  Services
+//                 >
+//                   Services
                 </Link>
                 <Link
                   to="/contact"
                   className="block text-white hover:text-cyan-400 transition-colors py-2"
                   onClick={closeAllMenus}
-                >
-                  Contact
+//                 >
+//                   Contact
                 </Link>
               </div>
 
@@ -189,14 +189,14 @@ const Navigation: React.FC = () => {
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
+//                 >
                   <Phone className="w-5 h-5" />
                   <span>(302) 464-0950</span>
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
+//                 >
                   <span>kleber@ziontechgroup.com</span>
                 </a>
                 <a
@@ -204,7 +204,7 @@ const Navigation: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-3 text-white hover:text-cyan-400 transition-colors"
-                >
+//                 >
                   <MapPin className="w-5 h-5" />
                   <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
                 </a>

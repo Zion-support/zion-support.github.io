@@ -14,7 +14,7 @@ export const metadata = {
         height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026'
       }
-    ]
+//     ]
   },
   twitter: {
     card: 'summary_large_image',

@@ -7,21 +7,21 @@ export default function AI2026AutonomousAgentFactoriesPage() {
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              🤖 AUTONOMOUS AGENT FACTORIES • 2026
+//               🤖 AUTONOMOUS AGENT FACTORIES • 2026
             </span>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation
             </h1>
             <p className="text-gray-600 text-lg">
-              Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems
+//               Revolutionary autonomous agent factories achieving 95% enterprise automation rates through self-replicating AI systems
             </p>
           </div>
           <div className="prose max-w-none">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Agent Factory Revolution</h2>
             <p className="text-gray-700 mb-6">
-              Autonomous agent factories represent the future of enterprise automation, delivering 
+//               Autonomous agent factories represent the future of enterprise automation, delivering 
               <strong>95% automation rates</strong> through <strong>self-replicating AI systems</strong> 
-              and <strong>advanced agent orchestration</strong>.
+//               and <strong>advanced agent orchestration</strong>.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="bg-blue-50 p-6 rounded-lg text-center">
@@ -79,8 +79,8 @@ export default function AI2026AutonomousAgentFactoriesPage() {
             </ul>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Start Your Agent Factory Revolution</h2>
             <p className="text-gray-700 mb-6">
-              Ready to achieve autonomous agent factories? Our breakthrough technologies 
-              can transform your enterprise and deliver unprecedented automation.
+//               Ready to achieve autonomous agent factories? Our breakthrough technologies 
+//               can transform your enterprise and deliver unprecedented automation.
             </p>
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Begin Your Agent Factory Transformation</h3>
@@ -91,12 +91,12 @@ export default function AI2026AutonomousAgentFactoriesPage() {
                 <a 
                   href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Agent Factory Assessment
+//                   Get Agent Factory Assessment
                 </a>
                 <a 
                   href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
-                  Explore AI Services
+//                   Explore AI Services
                 </a>
               </div>
             </div>

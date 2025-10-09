@@ -37,11 +37,11 @@ const AISocialMediaManagerPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Increase engagement by 300%',
-    'Save 20+ hours per week',
-    'Grow followers by 150%',
-    'Boost brand awareness by 200%',
-    'Improve content performance by 250%'
+//     'Increase engagement by 300%',
+//     'Save 20+ hours per week',
+//     'Grow followers by 150%',
+//     'Boost brand awareness by 200%',
+//     'Improve content performance by 250%'
   ];
 
   const platforms = [
@@ -60,12 +60,12 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        '3 social media accounts',
-        '50 posts per month',
-        'Basic AI content generation',
-        'Standard analytics',
-        'Email support'
-      ],
+//         '3 social media accounts',
+//         '50 posts per month',
+//         'Basic AI content generation',
+//         'Standard analytics',
+//         'Email support'
+//       ],
       popular: false
     },
     {
@@ -74,13 +74,13 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing brands',
       features: [
-        '10 social media accounts',
-        'Unlimited posts',
-        'Advanced AI features',
-        'Detailed analytics',
-        'Priority support',
-        'Team collaboration'
-      ],
+//         '10 social media accounts',
+//         'Unlimited posts',
+//         'Advanced AI features',
+//         'Detailed analytics',
+//         'Priority support',
+//         'Team collaboration'
+//       ],
       popular: true
     },
     {
@@ -89,13 +89,13 @@ const AISocialMediaManagerPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited accounts',
-        'Unlimited posts',
-        'Full AI suite',
-        'Custom analytics',
-        '24/7 support',
-        'White-label options'
-      ],
+//         'Unlimited accounts',
+//         'Unlimited posts',
+//         'Full AI suite',
+//         'Custom analytics',
+//         '24/7 support',
+//         'White-label options'
+//       ],
       popular: false
     }
   ];
@@ -108,22 +108,22 @@ const AISocialMediaManagerPage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-pink-500/10 rounded-full text-pink-400 text-sm font-medium mb-6">
               <Share2 className="w-4 h-4 mr-2" />
-              AI-Powered Social Media Management
+//               AI-Powered Social Media Management
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager
+//               AI Social Media Manager
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Automate your social media presence with AI that creates, schedules, and optimizes 
-              content across all platforms to maximize engagement and grow your audience.
+//               Automate your social media presence with AI that creates, schedules, and optimizes 
+//               content across all platforms to maximize engagement and grow your audience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center">
-                Start Free Trial
+//                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
-                Watch Demo
+//                 Watch Demo
               </button>
             </div>
           </div>
@@ -135,10 +135,10 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              All Platforms, One Solution
+//               All Platforms, One Solution
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all your social media accounts from a single, intelligent dashboard
+//               Manage all your social media accounts from a single, intelligent dashboard
             </p>
           </div>
           
@@ -162,10 +162,10 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful AI Features
+//               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to streamline your social media management
+//               Leverage cutting-edge AI technology to streamline your social media management
             </p>
           </div>
           
@@ -192,10 +192,10 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Results
+//               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of brands who have transformed their social media presence
+//               Join thousands of brands who have transformed their social media presence
             </p>
           </div>
           
@@ -212,13 +212,13 @@ const AISocialMediaManagerPage: React.FC = () => {
 
           <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-2xl p-8 text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Social Media?
+//               Ready to Transform Your Social Media?
             </h3>
             <p className="text-gray-300 mb-6">
-              Start your free trial today and experience the power of AI-driven social media management
+//               Start your free trial today and experience the power of AI-driven social media management
             </p>
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
-              Get Started Now
+//               Get Started Now
             </button>
           </div>
         </div>
@@ -229,23 +229,23 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+//               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your social media needs
+//               Choose the plan that fits your social media needs
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
+//                 plan.popular 
+//                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
                   : 'border-slate-700/50'
               }`}>
                 {plan.popular && (
                   <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
-                    Most Popular
+//                     Most Popular
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -263,7 +263,7 @@ const AISocialMediaManagerPage: React.FC = () => {
                   ))}
                 </ul>
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
+//                   plan.popular
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                 }`}>
@@ -279,17 +279,17 @@ const AISocialMediaManagerPage: React.FC = () => {
       <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+//             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of brands already using AI Social Media Manager to grow their presence
+//             Join thousands of brands already using AI Social Media Manager to grow their presence
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300">
-              Start Free Trial
+//               Start Free Trial
             </button>
             <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
-              Contact Sales
+//               Contact Sales
             </button>
           </div>
         </div>

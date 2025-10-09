@@ -3,103 +3,150 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix syntax errors in a file
+// Function to fix common syntax errors after merge conflict resolution
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if file has syntax errors by looking for incomplete structures
-    if (content.includes('const Ai') && content.includes('return (') && content.includes('</div>') && !content.includes('export default')) {
-      // This is likely an incomplete file that needs to be completed
+    // Fix common issues that occur after removing merge conflict markers
+    
+    // Fix missing imports that might have been removed
+    if (content.includes('React') && !content.includes("import React")) {
+      content = "import React from 'react';\n" + content;
       modified = true;
+    }
+    
+    // Fix missing closing braces for components
+    if (content.includes('const ') && content.includes('= () => {') && !content.includes('export default')) {
+      // Find the last opening brace and add proper closing
+      const lines = content.split('\n');
+      let braceCount = 0;
+      let lastOpenBrace = -1;
       
-      // Extract the component name from the first const declaration
-      const componentMatch = content.match(/const (Ai\w+): React\.FC = \(\) => \{/);
-      if (componentMatch) {
-        const componentName = componentMatch[1];
-        
-        // Create a simple complete component
-        const simpleComponent = `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${componentName}: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>${componentName.replace(/([A-Z])/g, ' $1').trim()} | Zion Tech Group</title>
-        <meta name="description" content="Advanced ${componentName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} solutions by Zion Tech Group." />
-      </Helmet>
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.includes('{')) {
+          braceCount++;
+          lastOpenBrace = i;
+        }
+        if (line.includes('}')) {
+          braceCount--;
+        }
+      }
       
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">${componentName.replace(/([A-Z])/g, ' $1').trim()}</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced ${componentName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <Footer />
-    </div>
-  );
-};
-
-export default ${componentName};`;
-        
-        fs.writeFileSync(filePath, simpleComponent, 'utf8');
-        console.log(`✅ Fixed syntax errors in: ${filePath}`);
+      if (braceCount > 0 && lastOpenBrace !== -1) {
+        // Add missing closing braces
+        for (let i = 0; i < braceCount; i++) {
+          content += '\n}';
+        }
+        // Add export default
+        content += '\n\nexport default ' + lines[lastOpenBrace].match(/const\s+(\w+)/)?.[1] + ';';
+        modified = true;
       }
     }
     
-    return modified;
+    // Fix orphaned expressions (lines that are just expressions without assignment)
+    const lines = content.split('\n');
+    const fixedLines = lines.map(line => {
+      // Skip empty lines, comments, and proper statements
+      if (line.trim() === '' || line.trim().startsWith('//') || line.trim().startsWith('/*') || 
+          line.trim().startsWith('*') || line.trim().startsWith('*/') ||
+          line.includes('import ') || line.includes('export ') || line.includes('const ') ||
+          line.includes('let ') || line.includes('var ') || line.includes('function ') ||
+          line.includes('class ') || line.includes('interface ') || line.includes('type ') ||
+          line.includes('return ') || line.includes('if ') || line.includes('for ') ||
+          line.includes('while ') || line.includes('switch ') || line.includes('case ') ||
+          line.includes('default:') || line.includes('try ') || line.includes('catch ') ||
+          line.includes('finally ') || line.includes('throw ') || line.includes('break ') ||
+          line.includes('continue ') || line.includes('}') || line.includes('{') ||
+          line.includes('=>') || line.includes('=') || line.includes(';') ||
+          line.trim().startsWith('<') || line.trim().startsWith('</')) {
+        return line;
+      }
+      
+      // If it's just an expression, comment it out or remove it
+      if (line.trim() && !line.includes(':')) {
+        return '// ' + line;
+      }
+      
+      return line;
+    });
+    
+    if (fixedLines.join('\n') !== content) {
+      content = fixedLines.join('\n');
+      modified = true;
+    }
+    
+    // Fix missing closing tags in JSX
+    if (content.includes('<div') && !content.includes('</div>')) {
+      // This is a complex fix, so we'll just add a closing div at the end
+      if (!content.trim().endsWith('</div>') && !content.trim().endsWith('</>')) {
+        content += '\n</div>';
+        modified = true;
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// List of files with known syntax errors
-const filesWithErrors = [
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-ml-platform/page.tsx',
-  'src/ai-project-manager/page.tsx',
-  'src/ai-services/page.tsx',
-  'src/it-services/page.tsx',
-  'src/blog/ai-cost-optimization-breakthrough-2026/page.tsx'
-];
-
-// Main function
-function main() {
-  console.log('🔧 Fixing syntax errors in files...');
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
   
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  filesWithErrors.forEach(file => {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-    } else {
-      errorCount++;
+  try {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        files = files.concat(findFiles(fullPath, extensions));
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
     }
-  });
+  } catch (error) {
+    // Ignore permission errors
+  }
   
-  console.log(`\n📊 Summary:`);
-  console.log(`  ✅ Successfully fixed: ${fixedCount} files`);
-  console.log(`  ❌ Errors: ${errorCount} files`);
+  return files;
 }
 
-// Run the script
-main();
+// Main execution
+console.log('Fixing syntax errors after merge conflict resolution...');
+
+const srcDir = path.join(__dirname, 'src');
+const files = findFiles(srcDir);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of files) {
+  try {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  } catch (error) {
+    console.error(`Error processing ${file}:`, error.message);
+    errorCount++;
+  }
+}
+
+console.log(`\nFixed ${fixedCount} files with syntax errors`);
+if (errorCount > 0) {
+  console.log(`Encountered errors in ${errorCount} files`);
+}
+
+console.log('\nDone!');

@@ -41,7 +41,7 @@ export class ApiCache {
   /**
    * Fetch with caching and deduplication
    */
-  async fetch<T>(
+//   async fetch<T>(
     url: string,
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
@@ -62,10 +62,10 @@ export class ApiCache {
     }
     // Create new request with retry logic
     const requestPromise = this.fetchWithRetry<T>(
-      url,
-      options,
-      mergedConfig.maxRetries,
-      mergedConfig.retryDelay
+//       url,
+//       options,
+//       mergedConfig.maxRetries,
+//       mergedConfig.retryDelay
     );
     // Store pending request
     if (mergedConfig.deduplicate) {
@@ -87,7 +87,7 @@ export class ApiCache {
   /**
    * Fetch with retry logic
    */
-  private async fetchWithRetry<T>(
+//   private async fetchWithRetry<T>(
     url: string,
     options: RequestInit,
     maxRetries: number,
@@ -100,15 +100,15 @@ export class ApiCache {
         // Retry on 5xx errors and 429 (rate limit)
         if (
           (response.status >= 500 || response.status === 429) &&
-          attempt < maxRetries
+//           attempt < maxRetries
         ) {
           await this.delay(retryDelay * attempt); // Exponential backoff
           return this.fetchWithRetry<T>(
-            url,
-            options,
-            maxRetries,
-            retryDelay,
-            attempt + 1
+//             url,
+//             options,
+//             maxRetries,
+//             retryDelay,
+//             attempt + 1
           );
         }
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -120,11 +120,11 @@ export class ApiCache {
       if (attempt < maxRetries) {
         await this.delay(retryDelay * attempt);
         return this.fetchWithRetry<T>(
-          url,
-          options,
-          maxRetries,
-          retryDelay,
-          attempt + 1
+//           url,
+//           options,
+//           maxRetries,
+//           retryDelay,
+//           attempt + 1
         );
       }
       throw error;
@@ -148,14 +148,14 @@ export class ApiCache {
    */
   getStats() {
     return {
-      ...this.cache.stats(),
+//       ...this.cache.stats(),
       pendingRequests: this.pendingRequests.size
     };
   }
   /**
    * Prefetch data
    */
-  async prefetch<T>(
+//   async prefetch<T>(
     url: string,
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
@@ -222,8 +222,8 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.fetch<T>(`${baseUrl}${path}`, { ...defaultOptions, ...options, method: 'GET' }),
     post: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
-        ...defaultOptions,
-        ...options,
+//         ...defaultOptions,
+//         ...options,
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -234,8 +234,8 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       }),
     put: <T>(path: string, body: unknown, options?: RequestInit) =>
       cache.fetch<T>(`${baseUrl}${path}`, {
-        ...defaultOptions,
-        ...options,
+//         ...defaultOptions,
+//         ...options,
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

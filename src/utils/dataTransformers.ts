@@ -37,16 +37,16 @@ export function deepMerge<T extends Record<string, unknown>>(target: T, source: 
       const sourceValue = source[key];
       const targetValue = output[key];
       if (
-        sourceValue &&
+//         sourceValue &&
         typeof sourceValue === 'object' &&
-        !Array.isArray(sourceValue) &&
-        targetValue &&
+//         !Array.isArray(sourceValue) &&
+//         targetValue &&
         typeof targetValue === 'object' &&
-        !Array.isArray(targetValue)
+//         !Array.isArray(targetValue)
       ) {
         output[key] = deepMerge(
-          targetValue as Record<string, unknown>,
-          sourceValue as Record<string, unknown>
+//           targetValue as Record<string, unknown>,
+//           sourceValue as Record<string, unknown>
         ) as T[Extract<keyof T, string>];
       } else {
         output[key] = sourceValue as T[Extract<keyof T, string>];
@@ -69,9 +69,9 @@ export function flattenObject(
       const value = obj[key];
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {
-        Object.assign(
-          flattened,
-          flattenObject(value as Record<string, unknown>, newKey, separator)
+//         Object.assign(
+//           flattened,
+//           flattenObject(value as Record<string, unknown>, newKey, separator)
         );
       } else {
         flattened[newKey] = value;
@@ -188,11 +188,11 @@ export function sortBy<T>(
       // Convert to comparable values
       const aComp =
         typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-          ? aVal
+//           ? aVal
           : String(aVal);
       const bComp =
         typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-          ? bVal
+//           ? bVal
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
@@ -244,7 +244,7 @@ export function formatNumber(num: number, locale = 'en-US'): string {
 export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
   return new Intl.NumberFormat(locale, {
     style: 'currency',
-    currency
+//     currency
   }).format(amount);
 }
 /**
@@ -298,8 +298,8 @@ export function capitalize(str: string): string {
  */
 export function titleCase(str: string): string {
   return str
-    .toLowerCase()
-    .split(' ')
+//     .toLowerCase()
+//     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
@@ -308,8 +308,8 @@ export function titleCase(str: string): string {
  */
 export function kebabCase(str: string): string {
   return str
-    .replace(/([a-z])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
+//     .replace(/([a-z])([A-Z])/g, '$1-$2')
+//     .replace(/[\s_]+/g, '-')
     .toLowerCase();
 }
 /**
@@ -323,31 +323,31 @@ export function camelCase(str: string): string {
  */
 export function snakeCase(str: string): string {
   return str
-    .replace(/([a-z])([A-Z])/g, '$1_$2')
-    .replace(/[\s-]+/g, '_')
+//     .replace(/([a-z])([A-Z])/g, '$1_$2')
+//     .replace(/[\s-]+/g, '_')
     .toLowerCase();
 }
 export default {
-  deepClone,
-  deepMerge,
-  flattenObject,
-  unflattenObject,
-  pick,
-  omit,
-  groupBy,
-  unique,
-  sortBy,
-  chunk,
-  zip,
-  formatBytes,
-  formatNumber,
-  formatCurrency,
-  formatDate,
-  formatRelativeTime,
-  truncate,
-  capitalize,
-  titleCase,
-  kebabCase,
-  camelCase,
-  snakeCase
+//   deepClone,
+//   deepMerge,
+//   flattenObject,
+//   unflattenObject,
+//   pick,
+//   omit,
+//   groupBy,
+//   unique,
+//   sortBy,
+//   chunk,
+//   zip,
+//   formatBytes,
+//   formatNumber,
+//   formatCurrency,
+//   formatDate,
+//   formatRelativeTime,
+//   truncate,
+//   capitalize,
+//   titleCase,
+//   kebabCase,
+//   camelCase,
+//   snakeCase
 };

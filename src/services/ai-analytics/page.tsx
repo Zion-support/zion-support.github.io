@@ -14,44 +14,44 @@ const AIAnalyticsPage: React.FC = () => {
       title: 'Predictive Analytics',
       description: 'Forecast future trends and outcomes with advanced machine learning algorithms',
       benefits: [
-        '95% accuracy in predictions',
-        'Real-time data processing',
-        'Automated trend detection',
-        'Custom prediction models'
-      ]
+//         '95% accuracy in predictions',
+//         'Real-time data processing',
+//         'Automated trend detection',
+//         'Custom prediction models'
+//       ]
     },
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
       benefits: [
-        'Live data visualization',
-        'Customizable metrics',
-        'Mobile-responsive design',
-        'Role-based access control'
-      ]
+//         'Live data visualization',
+//         'Customizable metrics',
+//         'Mobile-responsive design',
+//         'Role-based access control'
+//       ]
     },
     {
       icon: Target,
       title: 'Automated Reporting',
       description: 'Generate comprehensive reports automatically with AI-powered insights',
       benefits: [
-        'Scheduled report generation',
-        'Natural language summaries',
-        'Executive briefings',
-        'Custom report templates'
-      ]
+//         'Scheduled report generation',
+//         'Natural language summaries',
+//         'Executive briefings',
+//         'Custom report templates'
+//       ]
     },
     {
       icon: Zap,
       title: 'Anomaly Detection',
       description: 'Identify unusual patterns and potential issues before they impact your business',
       benefits: [
-        'Real-time anomaly alerts',
-        'Pattern recognition',
-        'Risk assessment',
-        'Automated responses'
-      ]
+//         'Real-time anomaly alerts',
+//         'Pattern recognition',
+//         'Risk assessment',
+//         'Automated responses'
+//       ]
     }
   ];
 
@@ -89,12 +89,12 @@ const AIAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses getting started with AI analytics',
       features: [
-        'Up to 10 data sources',
-        'Basic dashboards',
-        'Monthly reports',
-        'Email support',
-        'Standard integrations'
-      ],
+//         'Up to 10 data sources',
+//         'Basic dashboards',
+//         'Monthly reports',
+//         'Email support',
+//         'Standard integrations'
+//       ],
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
     },
@@ -104,13 +104,13 @@ const AIAnalyticsPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses with complex analytics needs',
       features: [
-        'Up to 50 data sources',
-        'Advanced dashboards',
-        'Real-time reporting',
-        'Priority support',
-        'Custom integrations',
-        'API access'
-      ],
+//         'Up to 50 data sources',
+//         'Advanced dashboards',
+//         'Real-time reporting',
+//         'Priority support',
+//         'Custom integrations',
+//         'API access'
+//       ],
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
       popular: true
@@ -121,14 +121,14 @@ const AIAnalyticsPage: React.FC = () => {
       period: '',
       description: 'Tailored solutions for large organizations with extensive requirements',
       features: [
-        'Unlimited data sources',
-        'Custom dashboards',
-        'Real-time analytics',
-        '24/7 dedicated support',
-        'Custom development',
-        'On-premise deployment',
-        'SLA guarantees'
-      ],
+//         'Unlimited data sources',
+//         'Custom dashboards',
+//         'Real-time analytics',
+//         '24/7 dedicated support',
+//         'Custom development',
+//         'On-premise deployment',
+//         'SLA guarantees'
+//       ],
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/10'
     }
@@ -165,11 +165,11 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services
+//               AI Analytics Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-              Make data-driven decisions that drive growth and optimize performance.
+//               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+//               Make data-driven decisions that drive growth and optimize performance.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center text-cyan-400">
@@ -190,7 +190,7 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Key Features
+//               Key Features
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
@@ -220,7 +220,7 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Use Cases */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Use Cases
+//               Use Cases
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {useCases.map((useCase, index) => (
@@ -238,7 +238,7 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Pricing */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans
+//               Pricing Plans
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
@@ -246,7 +246,7 @@ const AIAnalyticsPage: React.FC = () => {
                   {tier.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                        Most Popular
+//                         Most Popular
                       </span>
                     </div>
                   )}
@@ -269,12 +269,12 @@ const AIAnalyticsPage: React.FC = () => {
                   <a
                     href="/contact"
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
-                      tier.popular
+//                       tier.popular
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
                     }`}
-                  >
-                    Get Started
+//                   >
+//                     Get Started
                   </a>
                 </div>
               ))}
@@ -284,7 +284,7 @@ const AIAnalyticsPage: React.FC = () => {
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our AI Analytics?
+//               Why Choose Our AI Analytics?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -302,33 +302,33 @@ const AIAnalyticsPage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Data?
+//               Ready to Transform Your Data?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Start your journey with AI analytics today. Get a free consultation and discover 
-              how our platform can revolutionize your business intelligence.
+//               Start your journey with AI analytics today. Get a free consultation and discover 
+//               how our platform can revolutionize your business intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <BarChart className="w-5 h-5 mr-2" />
-                Get Free Consultation
+//                 Get Free Consultation
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

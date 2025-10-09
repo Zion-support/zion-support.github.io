@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, cla
     <article
       className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
       role="article"
-    >
+//     >
       {icon && (
         <div className="mb-4 text-indigo-600" aria-hidden="true">
           {icon}

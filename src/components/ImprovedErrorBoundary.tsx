@@ -29,7 +29,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error
+//       error
     };
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
@@ -48,7 +48,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     }
     // Update state with error details
     this.setState((prevState) => ({
-      errorInfo,
+//       errorInfo,
       errorCount: prevState.errorCount + 1
     }));
     // Log to console in development
@@ -130,22 +130,22 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 onClick={this.resetErrorBoundary}
                 style={styles.button}
                 aria-label="Try Again"
-              >
-                Try Again
+//               >
+//                 Try Again
               </button>
               <button
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Reload Page"
-              >
-                Reload Page
+//               >
+//                 Reload Page
               </button>
               <button
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}
                 aria-label="Go to Homepage"
-              >
-                Go Home
+//               >
+//                 Go Home
               </button>
             </div>
             {this.state.errorCount > 1 && (

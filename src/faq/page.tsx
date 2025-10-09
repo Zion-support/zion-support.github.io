@@ -13,7 +13,7 @@ const FAQPage: React.FC = () => {
 
   const _toggleItem = (index: number) => {
     setOpenItems(prev => 
-      prev.includes(index) 
+//       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
     );
@@ -39,7 +39,7 @@ const FAQPage: React.FC = () => {
           question: 'Do you offer custom solutions?',
           answer: 'Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to develop solutions that perfectly fit your requirements and objectives.'
         }
-      ]
+//       ]
     },
     {
       category: 'AI Services',
@@ -60,7 +60,7 @@ const FAQPage: React.FC = () => {
           question: 'Can you integrate AI with our existing systems?',
           answer: 'Absolutely! We specialize in integrating AI solutions with existing enterprise systems, ensuring seamless operation and minimal disruption to your current workflows.'
         }
-      ]
+//       ]
     },
     {
       category: 'IT Services',
@@ -81,7 +81,7 @@ const FAQPage: React.FC = () => {
           question: 'What cybersecurity services do you provide?',
           answer: 'We provide comprehensive cybersecurity services including threat detection, vulnerability assessment, security monitoring, compliance management, and incident response.'
         }
-      ]
+//       ]
     },
     {
       category: 'Micro SAAS Solutions',
@@ -102,7 +102,7 @@ const FAQPage: React.FC = () => {
           question: 'Can Micro SAAS solutions be customized?',
           answer: 'Yes, while our Micro SAAS solutions are ready-to-use, they can be customized to better fit your specific business processes and requirements.'
         }
-      ]
+//       ]
     },
     {
       category: 'Pricing & Billing',
@@ -123,7 +123,7 @@ const FAQPage: React.FC = () => {
           question: 'Do you offer discounts for long-term contracts?',
           answer: 'Yes, we offer attractive discounts for annual contracts and long-term partnerships. Contact us to discuss the best pricing options for your needs.'
         }
-      ]
+//       ]
     },
     {
       category: 'Support & Contact',
@@ -144,16 +144,16 @@ const FAQPage: React.FC = () => {
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
         }
-      ]
+//       ]
     }
   ];
 
   const filteredData = faqData.map(category => ({
-    ...category,
+//     ...category,
     questions: category.questions.filter(q => 
-      q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
+//       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+//     )
   })).filter(category => category.questions.length > 0);
 
   return (
@@ -164,10 +164,10 @@ const FAQPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Frequently Asked Questions
+//               Frequently Asked Questions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Find answers to common questions about our AI and IT services, pricing, and support.
+//               Find answers to common questions about our AI and IT services, pricing, and support.
             </p>
             
             {/* Search Bar */}
@@ -179,7 +179,7 @@ const FAQPage: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
+//               />
             </div>
           </div>
 
@@ -200,7 +200,7 @@ const FAQPage: React.FC = () => {
                         <button
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
-                        >
+//                         >
                           <span className="text-white font-medium pr-4">{item.question}</span>
                           {isOpen ? (
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -224,32 +224,32 @@ const FAQPage: React.FC = () => {
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Still Have Questions?
+//               Still Have Questions?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
+//               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950
+//                 Call (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
               <a
                 href="/contact"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <MessageSquare className="w-4 h-4 mr-2" />
-                Contact Form
+//                 Contact Form
               </a>
             </div>
           </div>

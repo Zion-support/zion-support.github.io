@@ -68,10 +68,10 @@ const DeveloperToolsPage: React.FC = () => {
         <section className="pt-24 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Developer Tools
+//               Developer Tools
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity
+//               AI-powered development tools that accelerate your coding workflow and improve productivity
             </p>
             
             {/* Stats */}
@@ -118,7 +118,7 @@ const DeveloperToolsPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Our Developer Tools
+//               Our Developer Tools
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {devTools.map((tool, index) => (
@@ -163,8 +163,8 @@ const DeveloperToolsPage: React.FC = () => {
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
-                    >
-                      Get Started Now
+//                     >
+//                       Get Started Now
                     </a>
                   </div>
                 </div>
@@ -177,23 +177,23 @@ const DeveloperToolsPage: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Supercharge Your Development?
+//               Ready to Supercharge Your Development?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Join thousands of developers who have accelerated their productivity with our AI-powered tools.
+//               Join thousands of developers who have accelerated their productivity with our AI-powered tools.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-              >
-                Call (302) 464-0950
+//               >
+//                 Call (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-              >
-                Email Us
+//               >
+//                 Email Us
               </a>
             </div>
           </div>

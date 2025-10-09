@@ -100,7 +100,7 @@ const Footer: React.FC = memo(() => {
                 </div>
               </div>
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+//                 Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
               </p>
               
               {/* Contact Info */}
@@ -108,13 +108,13 @@ const Footer: React.FC = memo(() => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
-                    +1 302 464-0950
+//                     +1 302 464-0950
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-cyan-400" />
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
-                    kleber@ziontechgroup.com
+//                     kleber@ziontechgroup.com
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -155,7 +155,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={service.url}
                       className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {service.name}
                     </Link>
@@ -166,8 +166,8 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/ai-services" 
                     className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
-                    View All AI Services →
+//                   >
+//                     View All AI Services →
                   </Link>
                 </li>
               </ul>
@@ -182,7 +182,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={service.url}
                       className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {service.name}
                     </Link>
@@ -193,8 +193,8 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/it-services" 
                     className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
-                    View All IT Services →
+//                   >
+//                     View All IT Services →
                   </Link>
                 </li>
               </ul>
@@ -209,7 +209,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={service.url}
                       className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {service.name}
                     </Link>
@@ -220,8 +220,8 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     to="/micro-saas" 
                     className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
-                    View All Micro SAAS →
+//                   >
+//                     View All Micro SAAS →
                   </Link>
                 </li>
               </ul>
@@ -239,7 +239,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={service.url}
                       className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {service.name}
                     </Link>
@@ -258,7 +258,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={link.url}
                       className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.name}
                     </Link>
@@ -276,7 +276,7 @@ const Footer: React.FC = memo(() => {
                     <Link 
                       to={link.url}
                       className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
-                    >
+//                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.name}
                     </Link>
@@ -322,7 +322,7 @@ const Footer: React.FC = memo(() => {
                     key={index}
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-                  >
+//                   >
                     {link.name}
                   </Link>
                 ))}

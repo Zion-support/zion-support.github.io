@@ -75,7 +75,7 @@ const SolutionsPage: React.FC = () => {
         icon: Zap,
         color: 'text-yellow-400'
       }
-    ],
+//     ],
     it: [
       {
         title: 'Cloud Migration',
@@ -109,7 +109,7 @@ const SolutionsPage: React.FC = () => {
         icon: BarChart,
         color: 'text-orange-400'
       }
-    ],
+//     ],
     security: [
       {
         title: 'Cybersecurity Suite',
@@ -143,7 +143,7 @@ const SolutionsPage: React.FC = () => {
         icon: Users,
         color: 'text-blue-400'
       }
-    ],
+//     ],
     automation: [
       {
         title: 'Business Process Automation',
@@ -177,7 +177,7 @@ const SolutionsPage: React.FC = () => {
         icon: BarChart,
         color: 'text-green-400'
       }
-    ]
+//     ]
   };
 
   const benefits = [
@@ -211,11 +211,11 @@ const SolutionsPage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions
+//               Our Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Comprehensive technology solutions designed to transform your business operations 
-              and drive innovation across every aspect of your organization.
+//               Comprehensive technology solutions designed to transform your business operations 
+//               and drive innovation across every aspect of your organization.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ const SolutionsPage: React.FC = () => {
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+//                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
                 </button>
@@ -279,8 +279,8 @@ const SolutionsPage: React.FC = () => {
                     <a
                       href="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                    >
-                      Learn More
+//                     >
+//                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
@@ -292,7 +292,7 @@ const SolutionsPage: React.FC = () => {
           {/* Benefits Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Solutions?
+//               Why Choose Our Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -310,33 +310,33 @@ const SolutionsPage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+//               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get a free consultation and discover how our solutions can revolutionize your operations 
-              and drive unprecedented growth.
+//               Get a free consultation and discover how our solutions can revolutionize your operations 
+//               and drive unprecedented growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
+//                 Get Free Consultation
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

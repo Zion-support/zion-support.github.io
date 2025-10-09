@@ -6,7 +6,7 @@ export const _usePerformanceMonitoring = () => {
     (name: string, value: number) => {
       trackPerformance(name, value);
     },
-    [trackPerformance]
+//     [trackPerformance]
   );
   useEffect(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
@@ -23,7 +23,7 @@ export const _usePerformanceMonitoring = () => {
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(
+//         entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime;
@@ -36,8 +36,8 @@ export const _usePerformanceMonitoring = () => {
       let __clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach(
-          (
+//         entries.forEach(
+//           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
               value?: number;
@@ -106,13 +106,13 @@ export const _usePerformanceMonitoring = () => {
     const handleLoad = () => {
       if (typeof window === 'undefined') return;
       const navigation = performance.getEntriesByType(
-        'navigation'
+//         'navigation'
       )[0] as PerformanceNavigationTiming;
       if (navigation) {
         const metrics = {
           domContentLoaded:
-            navigation.domContentLoadedEventEnd -
-            navigation.domContentLoadedEventStart,
+//             navigation.domContentLoadedEventEnd -
+//             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart
@@ -126,7 +126,7 @@ export const _usePerformanceMonitoring = () => {
     return () => window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
   return {
-    reportMetric
+//     reportMetric
   };
 };
 export default usePerformanceMonitoring;

@@ -166,7 +166,7 @@ export class VirtualScroller<T> {
     return {
       start: Math.max(0, start),
       end: Math.min(this.items.length, end),
-      offsetY
+//       offsetY
     };
   }
   getVisibleItems(scrollTop: number): T[] {
@@ -287,20 +287,20 @@ export class FPSMonitor {
   }
 }
 export default {
-  debounce,
-  throttle,
-  memoize,
-  lazyLoad,
-  measureTime,
-  batchAsync,
-  rafLoop,
-  runWhenIdle,
-  cancelIdle,
-  VirtualScroller,
-  setupLazyImages,
-  preloadResources,
-  supportsCodeSplitting,
-  prefetchBundle,
-  getMemoryUsage,
-  FPSMonitor
+//   debounce,
+//   throttle,
+//   memoize,
+//   lazyLoad,
+//   measureTime,
+//   batchAsync,
+//   rafLoop,
+//   runWhenIdle,
+//   cancelIdle,
+//   VirtualScroller,
+//   setupLazyImages,
+//   preloadResources,
+//   supportsCodeSplitting,
+//   prefetchBundle,
+//   getMemoryUsage,
+//   FPSMonitor
 };

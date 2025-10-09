@@ -10,7 +10,7 @@ const EmptyComponent = () => null;
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
-  )
+//   )
 );
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const ContentPromotion = lazy(() =>
@@ -40,28 +40,28 @@ export default function OptimizedHomePage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                AI Enterprise Transformation
+//                 AI Enterprise Transformation
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                  That Delivers Results
+//                   That Delivers Results
                 </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
-                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
-                autonomous systems, and digital transformation services.
+//                 Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
+//                 70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+//                 autonomous systems, and digital transformation services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-                >
-                  Get Your Free AI Assessment
+//                 >
+//                   Get Your Free AI Assessment
                 </a>
                 <a
                   href="/case-studies"
                   className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
-                >
-                  View Success Stories
+//                 >
+//                   View Success Stories
                 </a>
               </div>
             </div>

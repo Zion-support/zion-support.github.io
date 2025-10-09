@@ -135,7 +135,7 @@ export default function BlogPage() {
 
   const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
   const filteredPosts = selectedCategory === 'all' 
-    ? posts 
+//     ? posts 
     : posts.filter(post => post.category === selectedCategory);
 
   const featuredPosts = posts.filter(post => post.featured);
@@ -170,7 +170,7 @@ const BlogPage: React.FC = () => {
         <h1 className="text-4xl font-bold text-white mb-4">Blog</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced blog solutions</p>
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-          Contact Us
+//           Contact Us
         </a>
       </div>
     </div>

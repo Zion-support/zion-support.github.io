@@ -68,7 +68,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
-      duration
+//       duration
     });
     return result;
   } catch (error) {
@@ -77,7 +77,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
-      duration
+//       duration
     });
     throw error;
   }
@@ -115,7 +115,7 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
     };
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {
       component: 'ErrorHandlingMiddleware',
-      ...standardError
+//       ...standardError
     });
     throw standardError;
   }
@@ -174,9 +174,9 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
       } catch (error) {
         lastError = error as Error;
         if (attempt < maxRetries) {
-          logger.warn(
+//           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,
-            'RetryMiddleware',
+//             'RetryMiddleware',
             {
               component: 'RetryMiddleware',
               url: context.request.url
@@ -195,7 +195,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
     return await Promise.race([
-      next(),
+//       next(),
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
     ]);
   };
@@ -229,22 +229,22 @@ export const transformResponseMiddleware = (
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
   const executor = new MiddlewareExecutor();
   return executor
-    .use(loggingMiddleware)
-    .use(errorHandlingMiddleware)
-    .use(authMiddleware)
-    .use(timeoutMiddleware(30000))
+//     .use(loggingMiddleware)
+//     .use(errorHandlingMiddleware)
+//     .use(authMiddleware)
+//     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
 }
 export default {
-  MiddlewareExecutor,
-  loggingMiddleware,
-  authMiddleware,
-  errorHandlingMiddleware,
-  rateLimitMiddleware,
-  cachingMiddleware,
-  retryMiddleware,
-  timeoutMiddleware,
-  transformRequestMiddleware,
-  transformResponseMiddleware,
-  createDefaultMiddlewareChain
+//   MiddlewareExecutor,
+//   loggingMiddleware,
+//   authMiddleware,
+//   errorHandlingMiddleware,
+//   rateLimitMiddleware,
+//   cachingMiddleware,
+//   retryMiddleware,
+//   timeoutMiddleware,
+//   transformRequestMiddleware,
+//   transformResponseMiddleware,
+//   createDefaultMiddlewareChain
 };

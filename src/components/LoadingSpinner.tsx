@@ -10,7 +10,7 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  className,
+//   className,
   text = 'Loading...',
   fullScreen = false,
 }) => {
@@ -25,12 +25,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
       <div
         className={cn(
-          'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
-          sizeClasses[size]
+//           'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
+//           sizeClasses[size]
         )}
         role="status"
         aria-label="Loading"
-      />
+//       />
       {text && (
         <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">
           {text}

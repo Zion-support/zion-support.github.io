@@ -1,10 +1,11 @@
+import React from 'react';
 import './globals.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
 import Analytics from './components/Analytics';
 export default function RootLayout({
-  children,
+//   children,
 }: {
   children: React.ReactNode;
 }) {
@@ -19,14 +20,14 @@ export default function RootLayout({
     numberOfEmployees: '50-100',
     industry: 'Technology',
     services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
+//       'AI Solutions',
+//       'Quantum Computing',
+//       'Autonomous Systems',
+//       'Digital Transformation',
+//       'Cloud Services',
+//       'Automation',
+//       'Business Intelligence'
+//     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
@@ -37,7 +38,7 @@ export default function RootLayout({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    ],
+//     ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -73,7 +74,7 @@ export default function RootLayout({
           billingIncrement: 'P1M'
         }
       }
-    ],
+//     ],
     serviceArea: {
       '@type': 'GeoCircle',
       geoMidpoint: {
@@ -111,7 +112,7 @@ export default function RootLayout({
             description: 'Cloud migration and infrastructure optimization services'
           }
         }
-      ]
+//       ]
     }
   };
   return (
@@ -176,7 +177,7 @@ export default function RootLayout({
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+//         />
       </head>
       <body className='antialiased'>
         <ErrorBoundary>

@@ -172,8 +172,8 @@ export class PerformanceMetrics {
       timestamp: new Date(),
       category: 'network',
       metadata: {
-        url,
-        status
+//         url,
+//         status
       }
     });
   }
@@ -280,18 +280,18 @@ export class PerformanceMetrics {
   getRecommendations(): string[] {
     const recommendations: string[] = [];
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
-      recommendations.push(
-        'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
+//       recommendations.push(
+//         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources'
       );
     }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
-      recommendations.push(
-        'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
+//       recommendations.push(
+//         'Improve Largest Contentful Paint (LCP) - optimize largest element loading'
       );
     }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
-      recommendations.push(
-        'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
+//       recommendations.push(
+//         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds'
       );
     }
     if (this.webVitals.FID && this.webVitals.FID > 100) {
@@ -301,8 +301,8 @@ export class PerformanceMetrics {
     const avgNetworkTime =
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
-      recommendations.push(
-        'Optimize network requests - consider caching and reducing payload sizes'
+//       recommendations.push(
+//         'Optimize network requests - consider caching and reducing payload sizes'
       );
     }
     return recommendations;
@@ -317,7 +317,7 @@ export class PerformanceMetrics {
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
       summary: {
-        avgLoadTime,
+//         avgLoadTime,
         totalMetrics: this.metrics.length,
         performanceScore: this.calculatePerformanceScore(),
         recommendations: this.getRecommendations()

@@ -18,7 +18,7 @@ interface PerformanceMonitorProps {
 }
 
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate,
+//   onMetricsUpdate,
   enableReporting = true,
   reportInterval = 10000,
 }) => {
@@ -216,11 +216,11 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     const report = {
       timestamp: new Date().toISOString(),
-      metrics,
-      performanceScore,
-      resourceMetrics,
-      memoryUsage,
-      networkInfo,
+//       metrics,
+//       performanceScore,
+//       resourceMetrics,
+//       memoryUsage,
+//       networkInfo,
       userAgent: navigator.userAgent,
       url: window.location.href,
     };
@@ -289,8 +289,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
-        >
-          ×
+//         >
+//           ×
         </button>
       </div>
       
@@ -339,7 +339,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       </div>
       
       <div className="mt-2 text-gray-400 text-xs">
-        Press Ctrl+Shift+P to toggle
+//         Press Ctrl+Shift+P to toggle
       </div>
     </div>
   );

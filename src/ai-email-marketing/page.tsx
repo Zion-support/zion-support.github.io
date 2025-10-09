@@ -36,11 +36,11 @@ const AIEmailMarketingPage: React.FC = () => {
   ];
 
   const benefits = [
-    'Increase open rates by 200%',
-    'Boost click-through rates by 150%',
-    'Reduce unsubscribe rates by 60%',
-    'Improve conversion rates by 180%',
-    'Save 15+ hours per week'
+//     'Increase open rates by 200%',
+//     'Boost click-through rates by 150%',
+//     'Reduce unsubscribe rates by 60%',
+//     'Improve conversion rates by 180%',
+//     'Save 15+ hours per week'
   ];
 
   const emailTypes = [
@@ -59,13 +59,13 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        '1,000 subscribers',
-        '10,000 emails/month',
-        'Basic AI features',
-        'Email templates',
-        'Basic analytics',
-        'Email support'
-      ],
+//         '1,000 subscribers',
+//         '10,000 emails/month',
+//         'Basic AI features',
+//         'Email templates',
+//         'Basic analytics',
+//         'Email support'
+//       ],
       popular: false
     },
     {
@@ -74,14 +74,14 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        '10,000 subscribers',
-        '100,000 emails/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced analytics',
-        'Priority support',
-        'A/B testing'
-      ],
+//         '10,000 subscribers',
+//         '100,000 emails/month',
+//         'Advanced AI features',
+//         'Custom templates',
+//         'Advanced analytics',
+//         'Priority support',
+//         'A/B testing'
+//       ],
       popular: true
     },
     {
@@ -90,14 +90,14 @@ const AIEmailMarketingPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited subscribers',
-        'Unlimited emails',
-        'Full AI suite',
-        'White-label options',
-        'Custom integrations',
-        'Dedicated support',
-        'Advanced automation'
-      ],
+//         'Unlimited subscribers',
+//         'Unlimited emails',
+//         'Full AI suite',
+//         'White-label options',
+//         'Custom integrations',
+//         'Dedicated support',
+//         'Advanced automation'
+//       ],
       popular: false
     }
   ];
@@ -122,14 +122,14 @@ const AIEmailMarketingPage: React.FC = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Coming Soon - Advanced AI email marketing solutions that will transform your business.
+//             Coming Soon - Advanced AI email marketing solutions that will transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us
+//               Contact Us
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More
+//               Learn More
             </button>
           </div>
         </div>

@@ -179,7 +179,7 @@ export class EnhancedLogger {
    * }
    * ```
    */
-  public error(
+//   public error(
     message: string,
     data?: Record<string, unknown>,
     error?: Error,
@@ -203,7 +203,7 @@ export class EnhancedLogger {
    * @param error - Optional Error object for stack trace
    * @param source - Optional source identifier
    */
-  public fatal(
+//   public fatal(
     message: string,
     data?: Record<string, unknown>,
     error?: Error,
@@ -250,13 +250,13 @@ export class EnhancedLogger {
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);
-    this.info(
+//     this.info(
       `Performance: ${markName}`,
       {
         duration: `${duration.toFixed(2)}ms`,
-        ...data
+//         ...data
       },
-      'PerformanceMonitor'
+//       'PerformanceMonitor'
     );
     return duration;
   }
@@ -270,7 +270,7 @@ export class EnhancedLogger {
    * @param source - Optional source
    * @param stack - Optional stack trace
    */
-  private log(
+//   private log(
     level: LogLevel,
     message: string,
     data?: Record<string, unknown>,
@@ -281,12 +281,12 @@ export class EnhancedLogger {
     if (level < this.config.minLevel) return;
     const logEntry: LogEntry = {
       id: this.generateLogId(),
-      level,
-      message,
+//       level,
+//       message,
       timestamp: new Date(),
-      data,
-      source,
-      stack,
+//       data,
+//       source,
+//       stack,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
       environment: this.config.environment
@@ -392,7 +392,7 @@ export class EnhancedLogger {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          ...entry,
+//           ...entry,
           timestamp: entry.timestamp.toISOString()
         })
       });
@@ -487,8 +487,8 @@ export class EnhancedLogger {
     });
     return {
       total: this.logs.length,
-      byLevel,
-      bySource
+//       byLevel,
+//       bySource
     };
   }
   /**
@@ -513,11 +513,11 @@ export class EnhancedLogger {
   public exportLogs(): string {
     return JSON.stringify(
       this.logs.map(log => ({
-        ...log,
+//         ...log,
         timestamp: log.timestamp.toISOString()
       })),
-      null,
-      2
+//       null,
+//       2
     );
   }
 }

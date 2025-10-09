@@ -142,7 +142,7 @@ export class APIInterceptor {
       // Parse response data
       const data = await this.parseResponse<T>(finalResponse);
       return {
-        data,
+//         data,
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
@@ -221,10 +221,10 @@ export class APIInterceptor {
    */
   private prepareRequest(config: RequestConfig): RequestConfig {
     return {
-      ...config,
+//       ...config,
       headers: {
-        ...this.config.headers,
-        ...config.headers
+//         ...this.config.headers,
+//         ...config.headers
       },
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
@@ -335,8 +335,8 @@ export class APIInterceptor {
     const expired = entries.length - valid;
     return {
       total: entries.length,
-      valid,
-      expired,
+//       valid,
+//       expired,
       size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)
     };
   }

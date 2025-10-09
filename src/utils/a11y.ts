@@ -76,10 +76,10 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
   const tabindex = element.getAttribute('tabindex');
   const role = element.getAttribute('role');
   const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes(
-    element.tagName.toLowerCase()
+//     element.tagName.toLowerCase()
   );
   return (
-    isInteractive ||
+//     isInteractive ||
     (tabindex !== null && tabindex !== '-1') ||
     (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
   );
@@ -121,7 +121,7 @@ export function getContrastRatio(color1: string, color2: string): number {
     const [r, g, b] = rgb.map(val => {
       const normalized = val / 255;
       return normalized <= 0.03928
-        ? normalized / 12.92
+//         ? normalized / 12.92
         : Math.pow((normalized + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
@@ -278,3 +278,7 @@ export class FocusManager {
     focusable?.focus();
   }
 }
+
+}
+
+export default undefined;

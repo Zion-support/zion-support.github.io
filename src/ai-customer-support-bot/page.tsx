@@ -41,12 +41,12 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI responses',
-        'Email support',
-        'Basic analytics',
-        'Standard integrations'
-      ],
+//         'Up to 1,000 conversations/month',
+//         'Basic AI responses',
+//         'Email support',
+//         'Basic analytics',
+//         'Standard integrations'
+//       ],
       popular: false
     },
     {
@@ -55,13 +55,13 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI responses',
-        'Priority support',
-        'Advanced analytics',
-        'Custom integrations',
-        'Multi-language support'
-      ],
+//         'Up to 10,000 conversations/month',
+//         'Advanced AI responses',
+//         'Priority support',
+//         'Advanced analytics',
+//         'Custom integrations',
+//         'Multi-language support'
+//       ],
       popular: true
     },
     {
@@ -70,14 +70,14 @@ const AICustomerSupportBotPage: React.FC = () => {
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
-        'Premium AI features',
-        '24/7 support',
-        'Custom analytics',
-        'White-label options',
-        'API access',
-        'Custom training'
-      ],
+//         'Unlimited conversations',
+//         'Premium AI features',
+//         '24/7 support',
+//         'Custom analytics',
+//         'White-label options',
+//         'API access',
+//         'Custom training'
+//       ],
       popular: false
     }
   ];
@@ -102,8 +102,8 @@ const AICustomerSupportBotPage: React.FC = () => {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">AI Customer Support Bot</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
-            natural language and escalates complex issues to human agents seamlessly.
+//             Provide exceptional customer support 24/7 with our intelligent AI chatbot that understands 
+//             natural language and escalates complex issues to human agents seamlessly.
           </p>
         </div>
 
@@ -142,7 +142,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-                    Most Popular
+//                     Most Popular
                   </div>
                 )}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
@@ -159,7 +159,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                   ))}
                 </ul>
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-                  Get Started
+//                   Get Started
                 </button>
               </div>
             ))}
@@ -169,14 +169,14 @@ const AICustomerSupportBotPage: React.FC = () => {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to discuss your support needs and get a custom AI solution.
+//             Contact our experts to discuss your support needs and get a custom AI solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Schedule Demo
+//               Schedule Demo
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              View Case Studies
+//               View Case Studies
             </button>
           </div>
         </div>

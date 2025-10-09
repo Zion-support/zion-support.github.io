@@ -27,7 +27,7 @@ const ScrollToTop: React.FC = () => {
       onClick={scrollToTop}
       className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
       aria-label="Scroll to top"
-    >
+//     >
       <ArrowUp className="w-5 h-5" />
     </button>
   );

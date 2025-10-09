@@ -32,7 +32,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
       hasError: true, 
-      error,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
       isRetrying: false
@@ -40,8 +40,8 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+//       error,
+//       errorInfo
     });
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -105,7 +105,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
             size="lg" 
             text="Retrying..." 
             fullScreen={true}
-          />
+//           />
         );
       }
       return (
@@ -113,10 +113,10 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
           <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center">
             <div className="text-6xl mb-6">⚠️</div>
             <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
+//               Oops! Something went wrong
             </h1>
             <p className="text-gray-300 mb-6">
-              We encountered an unexpected error. Our team has been notified and is working to fix it.
+//               We encountered an unexpected error. Our team has been notified and is working to fix it.
             </p>
             <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left">
               <h3 className="text-white font-semibold mb-2">Error Details:</h3>
@@ -136,7 +136,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   onClick={this.handleRetry}
                   className="cyber-button"
                   aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
-                >
+//                 >
                   🔄 Try Again ({this.maxRetries - this.state.retryCount} left)
                 </button>
               )}
@@ -144,21 +144,21 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 onClick={this.handleReload}
                 className="cyber-button"
                 aria-label="Reload the entire page"
-              >
-                🔄 Reload Page
+//               >
+//                 🔄 Reload Page
               </button>
               <a
                 href="/contact"
                 className="cyber-button"
                 aria-label="Contact support for help with this error"
-              >
-                📞 Contact Support
+//               >
+//                 📞 Contact Support
               </a>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
               <details className="mt-6 text-left">
                 <summary className="text-white cursor-pointer hover:text-cyan-400">
-                  Technical Details (Development)
+//                   Technical Details (Development)
                 </summary>
                 <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
                   {this.state.error.stack}

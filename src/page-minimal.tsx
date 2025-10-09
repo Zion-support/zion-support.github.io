@@ -17,21 +17,21 @@ export default function HomePage() {
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
               <Link href="/" className="text-2xl font-bold text-gray-900">
-                Zion Tech Group
+//                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-900 hover:text-blue-600">
-                Home
+//                 Home
               </Link>
               <Link href="/services" className="text-gray-900 hover:text-blue-600">
-                Services
+//                 Services
               </Link>
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
-                Blog
+//                 Blog
               </Link>
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
-                Contact
+//                 Contact
               </Link>
             </nav>
           </div>
@@ -42,26 +42,26 @@ export default function HomePage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Transform Your Business with
+//               Transform Your Business with
               <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
-              and enterprise IT solutions that drive growth, efficiency, and innovation.
+//               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+//               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-              >
-                Explore Our Services
+//               >
+//                 Explore Our Services
                 <Link className="w-5 h-5 ml-2" />
               </Link>
               <a href="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-              >
+//               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
+//                 Call +1 302 464 0950
               </a>
             </div>
           </div>
@@ -71,10 +71,10 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Zion Tech Group?
+//                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600">
-                We deliver measurable results through innovative AI solutions
+//                 We deliver measurable results through innovative AI solutions
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
@@ -83,7 +83,7 @@ export default function HomePage() {
                   <CheckCircle className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Proven Results
+//                   Proven Results
                 </h3>
                 <p className="text-gray-600">
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
@@ -94,10 +94,10 @@ export default function HomePage() {
                   <Star className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Expert Team
+//                   Expert Team
                 </h3>
                 <p className="text-gray-600">
-                  Our team of AI experts and engineers brings decades of experience in enterprise transformation.
+//                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
               </div>
               <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -105,10 +105,10 @@ export default function HomePage() {
                   <Link className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Fast Implementation
+//                   Fast Implementation
                 </h3>
                 <p className="text-gray-600">
-                  Get your AI solutions up and running quickly with our streamlined implementation process.
+//                   Get your AI solutions up and running quickly with our streamlined implementation process.
                 </p>
               </div>
             </div>
@@ -118,24 +118,24 @@ export default function HomePage() {
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
+//               Ready to Transform Your Business?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your success.
+//               Let's discuss how our AI solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
-              >
-                Get Started Today
+//               >
+//                 Get Started Today
                 <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
-              >
-                View Our Blog
+//               >
+//                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -158,7 +158,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
-                © 2026 Zion Tech Group. All rights reserved.
+//                 © 2026 Zion Tech Group. All rights reserved.
               </p>
             </div>
           </div>

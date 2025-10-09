@@ -180,8 +180,8 @@ const MarketplacePage: React.FC = () => {
   };
 
   const filteredItems = getCurrentItems().filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchTerm.toLowerCase())
+//     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+//     item.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const stats = [
@@ -242,10 +242,10 @@ const MarketplacePage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace
+//               Zion Tech Marketplace
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover, compare, and purchase AI and IT solutions from verified vendors. 
+//               Discover, compare, and purchase AI and IT solutions from verified vendors. 
               Find the perfect tools, talent, and equipment for your business needs.
             </p>
           </div>
@@ -274,11 +274,11 @@ const MarketplacePage: React.FC = () => {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
+//                 />
               </div>
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters
+//                 Filters
               </button>
             </div>
 
@@ -293,7 +293,7 @@ const MarketplacePage: React.FC = () => {
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
-                >
+//                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}</span>
                 </button>
@@ -427,7 +427,7 @@ const MarketplacePage: React.FC = () => {
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Marketplace?
+//               Why Choose Our Marketplace?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -445,33 +445,33 @@ const MarketplacePage: React.FC = () => {
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Find Your Perfect Solution?
+//               Ready to Find Your Perfect Solution?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Browse our marketplace to discover the tools, talent, and equipment you need 
-              to transform your business with cutting-edge technology.
+//               Browse our marketplace to discover the tools, talent, and equipment you need 
+//               to transform your business with cutting-edge technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-              >
+//               >
                 <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping
+//                 Start Shopping
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
+//                 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
+//               >
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us
+//                 Email Us
               </a>
             </div>
           </div>

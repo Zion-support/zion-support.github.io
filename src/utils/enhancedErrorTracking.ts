@@ -51,7 +51,7 @@ class EnhancedErrorTracker {
       message: error.message,
       stack: error.stack,
       context: {
-        ...context,
+//         ...context,
         sessionId: this.sessionId
       },
       timestamp: new Date().toISOString(),
@@ -73,13 +73,13 @@ class EnhancedErrorTracker {
   private sendToAnalytics(error: TrackedError): void {
     if (
       typeof window !== 'undefined' &&
-      (
+//       (
         window as {
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
-      ).gtag
+//       ).gtag
     ) {
-      (
+//       (
         window as unknown as {
           gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;
         }
@@ -108,7 +108,7 @@ class EnhancedErrorTracker {
     });
     return {
       total: this.errors.length,
-      byComponent,
+//       byComponent,
       recent: this.errors.slice(-10)
     };
   }

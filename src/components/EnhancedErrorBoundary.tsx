@@ -29,15 +29,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error,
+//       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
+//       error,
+//       errorInfo,
     });
 
     // Log error to console in development
@@ -135,7 +135,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
     };
 
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+//     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         alert('Error details copied to clipboard');
       })
@@ -158,10 +158,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
               <h1 className="text-2xl font-bold text-white mb-2">
-                Oops! Something went wrong
+//                 Oops! Something went wrong
               </h1>
               <p className="text-gray-300 mb-4">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+//                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
             </div>
 
@@ -170,25 +170,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors duration-200"
-                >
+//                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
-                  Try Again
+//                   Try Again
                 </button>
                 
                 <button
                   onClick={this.handleReload}
                   className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-                >
+//                 >
                   <RefreshCw className="w-4 h-4 mr-2" />
-                  Reload Page
+//                   Reload Page
                 </button>
                 
                 <button
                   onClick={this.handleGoHome}
                   className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors duration-200"
-                >
+//                 >
                   <Home className="w-4 h-4 mr-2" />
-                  Go Home
+//                   Go Home
                 </button>
               </div>
 
@@ -198,7 +198,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     Error ID: <code className="text-cyan-400">{this.state.errorId}</code>
                   </p>
                   <p className="text-xs text-gray-500">
-                    Please include this ID when contacting support.
+//                     Please include this ID when contacting support.
                   </p>
                 </div>
               )}
@@ -207,7 +207,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <details className="mt-6 text-left">
                   <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2 flex items-center">
                     <Bug className="w-4 h-4 mr-2" />
-                    Technical Details
+//                     Technical Details
                   </summary>
                   <div className="mt-2 p-4 bg-slate-900/50 rounded-lg">
                     <pre className="text-xs text-gray-300 whitespace-pre-wrap overflow-auto max-h-40">
@@ -218,8 +218,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                     <button
                       onClick={this.copyErrorDetails}
                       className="mt-2 text-xs text-cyan-400 hover:text-cyan-300"
-                    >
-                      Copy Error Details
+//                     >
+//                       Copy Error Details
                     </button>
                   </div>
                 </details>
@@ -230,7 +230,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>
                 If this problem persists, please contact our support team at{' '}
                 <a href="mailto:support@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                  support@ziontechgroup.com
+//                   support@ziontechgroup.com
                 </a>
               </p>
             </div>

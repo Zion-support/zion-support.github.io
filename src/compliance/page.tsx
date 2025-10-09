@@ -56,9 +56,9 @@ const CompliancePage: React.FC = () => {
               <Link 
                 to="/privacy" 
                 className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-              >
+//               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Privacy Policy
+//                 Back to Privacy Policy
               </Link>
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
@@ -70,12 +70,12 @@ const CompliancePage: React.FC = () => {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Commitment to Compliance
+//                 Our Commitment to Compliance
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                At Zion Tech Group, we maintain the highest standards of compliance and security. 
+//                 At Zion Tech Group, we maintain the highest standards of compliance and security. 
                 Our certifications and adherence to industry standards ensure your data is protected 
-                and our services meet the most stringent requirements.
+//                 and our services meet the most stringent requirements.
               </p>
             </div>
 
@@ -98,7 +98,7 @@ const CompliancePage: React.FC = () => {
           {/* Compliance Areas */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
-              Compliance Areas
+//               Compliance Areas
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {complianceAreas.map((area, index) => (
@@ -126,17 +126,17 @@ const CompliancePage: React.FC = () => {
           {/* Contact Section */}
           <section className="bg-blue-50 rounded-lg p-8 text-center">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Questions About Our Compliance?
+//               Questions About Our Compliance?
             </h2>
             <p className="text-gray-600 mb-6">
-              Our compliance team is available to answer any questions about our certifications, 
-              security measures, or data protection practices.
+//               Our compliance team is available to answer any questions about our certifications, 
+//               security measures, or data protection practices.
             </p>
             <a
               href="mailto:compliance@ziontechgroup.com"
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-            >
-              Contact Compliance Team
+//             >
+//               Contact Compliance Team
             </a>
             <div className="mt-8 text-sm text-blue-200">
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
