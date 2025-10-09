@@ -15,6 +15,15 @@ const Footer: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer' },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance' },
+    { name: 'AI Energy Management', href: '/ai-energy-management' },
+    { name: 'AI Talent Acquisition', href: '/ai-talent-acquisition' },
+    { name: 'AI Risk Management', href: '/ai-risk-management' },
+    { name: 'AI Customer Experience', href: '/ai-customer-experience' },
+    { name: 'AI Compliance Manager', href: '/ai-compliance-manager' },
+    { name: 'AI Innovation Lab', href: '/ai-innovation-lab' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
@@ -28,6 +37,17 @@ const Footer: React.FC = () => {
 
   const aiServices = [
     { name: 'Machine Learning', href: '/ai-ml' },
+    { name: 'Quantum AI Computing', href: '/ai-quantum' },
+    { name: 'Autonomous Systems AI', href: '/ai-autonomous' },
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery' },
+    { name: 'AI Climate Solutions', href: '/ai-climate' },
+    { name: 'AI Space Technology', href: '/ai-space' },
+    { name: 'AI Financial Trading', href: '/ai-trading' },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+    { name: 'AI Healthcare', href: '/ai-healthcare' },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing' },
+    { name: 'AI Education', href: '/ai-education' },
+    { name: 'AI Agriculture', href: '/ai-agriculture' },
     { name: 'Natural Language Processing', href: '/ai-nlp' },
     { name: 'Computer Vision', href: '/ai-vision' },
     { name: 'AI Automation', href: '/ai-automation' },
@@ -39,13 +59,23 @@ const Footer: React.FC = () => {
 
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration' },
+    { name: 'Enterprise Architecture', href: '/enterprise-architecture' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Data Center Solutions', href: '/data-center' },
+    { name: 'Edge Computing', href: '/edge-computing' },
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: '5G Network Solutions', href: '/5g-solutions' },
+    { name: 'AR/VR Development', href: '/ar-vr-development' },
+    { name: 'IoT Solutions', href: '/iot-solutions' },
+    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure' },
+    { name: 'Green IT Solutions', href: '/green-it' },
     { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
     { name: 'Database Services', href: '/database' },
     { name: 'Mobile App Development', href: '/mobile-development' },
     { name: 'Web Development', href: '/web-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
   ];
 
   const socialLinks = [

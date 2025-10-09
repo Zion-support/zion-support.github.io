@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Home, Settings, Brain, Cpu, BarChart, MessageSquare, PieChart, Mail as MailIcon, Bot, Code, Video, Mic, Zap, TrendingUp, FileText, DollarSign, Eye, Cube, Shield, Cloud, Database, Smartphone, Lock, Truck, Search, Users, Smile, FileCheck, Lightbulb, Atom, Wifi, Leaf, Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +25,15 @@ const Navigation: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: Brain },
+    { name: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: Truck },
+    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Search },
+    { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap },
+    { name: 'AI Talent Acquisition', href: '/ai-talent-acquisition', icon: Users },
+    { name: 'AI Risk Management', href: '/ai-risk-management', icon: Shield },
+    { name: 'AI Customer Experience', href: '/ai-customer-experience', icon: Smile },
+    { name: 'AI Compliance Manager', href: '/ai-compliance-manager', icon: FileCheck },
+    { name: 'AI Innovation Lab', href: '/ai-innovation-lab', icon: Lightbulb },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
@@ -40,6 +49,17 @@ const Navigation: React.FC = () => {
 
   const aiServices = [
     { name: 'Machine Learning', href: '/ai-ml', icon: Brain },
+    { name: 'Quantum AI Computing', href: '/ai-quantum', icon: Cpu },
+    { name: 'Autonomous Systems AI', href: '/ai-autonomous', icon: Car },
+    { name: 'AI Drug Discovery', href: '/ai-drug-discovery', icon: Stethoscope },
+    { name: 'AI Climate Solutions', href: '/ai-climate', icon: Globe },
+    { name: 'AI Space Technology', href: '/ai-space', icon: Plane },
+    { name: 'AI Financial Trading', href: '/ai-trading', icon: TrendingUp },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Education', href: '/ai-education', icon: GraduationCap },
+    { name: 'AI Agriculture', href: '/ai-agriculture', icon: Home },
     { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare },
     { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap },
@@ -51,13 +71,23 @@ const Navigation: React.FC = () => {
 
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
+    { name: 'Enterprise Architecture', href: '/enterprise-architecture', icon: Building },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap },
+    { name: 'Data Center Solutions', href: '/data-center', icon: Database },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Cpu },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Atom },
+    { name: '5G Network Solutions', href: '/5g-solutions', icon: Wifi },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Gamepad2 },
+    { name: 'IoT Solutions', href: '/iot-solutions', icon: Cpu },
+    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
+    { name: 'AI Infrastructure', href: '/ai-infrastructure', icon: Brain },
+    { name: 'Green IT Solutions', href: '/green-it', icon: Leaf },
     { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
     { name: 'Database Services', href: '/database', icon: Database },
     { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
     { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
   ];
 
   return (
