@@ -18,7 +18,8 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
+      { name: 'AI Meeting Intelligence Pro', url: '/ai-meeting-intelligence', description: 'AI-powered meeting insights' },
+      { name: 'AI Document Intelligence Pro', url: '/ai-document-intelligence', description: 'Smart document processing' },
       { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
       { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
     ],
@@ -31,6 +32,8 @@ const Footer: React.FC = () => {
     ],
     'Business & Finance': [
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
+      { name: 'AI Invoice Processor Pro', url: '/ai-invoice-processor', description: 'Automated invoice processing' },
+      { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer', description: 'Intelligent contract analysis' },
       { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
       { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
       { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
@@ -47,6 +50,8 @@ const Footer: React.FC = () => {
     ],
     'Analytics': [
       { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
+      { name: 'AI Customer Insights Pro', url: '/ai-customer-insights', description: 'Deep customer analysis' },
+      { name: 'AI Market Research Pro', url: '/ai-market-research', description: 'Intelligent market analysis' },
       { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
       { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
     ],
@@ -63,6 +68,21 @@ const Footer: React.FC = () => {
     ],
     'Sales': [
       { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    ],
+    'HR & Operations': [
+      { name: 'AI Recruitment Assistant Pro', url: '/ai-recruitment-assistant', description: 'AI-powered hiring' },
+      { name: 'AI Inventory Optimizer Pro', url: '/ai-inventory-optimizer', description: 'Smart inventory management' },
+      { name: 'AI Performance Optimizer Pro', url: '/ai-performance-optimizer', description: 'Business performance optimization' }
+    ],
+    'Compliance & Risk': [
+      { name: 'AI Compliance Monitor Pro', url: '/ai-compliance-monitor', description: 'Automated compliance monitoring' },
+      { name: 'AI Risk Assessment Pro', url: '/ai-risk-assessment', description: 'Comprehensive risk analysis' },
+      { name: 'AI Quality Assurance Pro', url: '/ai-quality-assurance-pro', description: 'Automated quality testing' }
+    ],
+    'Sustainability & Innovation': [
+      { name: 'AI Sustainability Tracker Pro', url: '/ai-sustainability-tracker', description: 'ESG tracking & reporting' },
+      { name: 'AI Innovation Hub Pro', url: '/ai-innovation-hub', description: 'AI-powered innovation management' },
+      { name: 'AI Energy Monitor Pro', url: '/ai-energy-monitor', description: 'Smart energy management' }
     ]
   };
 

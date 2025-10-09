@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp, AlertTriangle, Lightbulb } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,8 +68,9 @@ const Navigation: React.FC = () => {
 
   const microSAASServices = [
     // Productivity & Management
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
-    { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
+    { name: 'AI Meeting Intelligence Pro', href: '/ai-meeting-intelligence', icon: MessageSquare, category: 'Productivity' },
+    { name: 'AI Document Intelligence Pro', href: '/ai-document-intelligence', icon: FileText, category: 'Productivity' },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
     
@@ -84,6 +85,8 @@ const Navigation: React.FC = () => {
     
     // Business & Finance
     { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
+    { name: 'AI Invoice Processor Pro', href: '/ai-invoice-processor', icon: FileText, category: 'Finance' },
+    { name: 'AI Contract Analyzer Pro', href: '/ai-contract-analyzer', icon: FileText, category: 'Legal' },
     { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
     { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
     { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
@@ -102,6 +105,8 @@ const Navigation: React.FC = () => {
     
     // Analytics & Data
     { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
+    { name: 'AI Customer Insights Pro', href: '/ai-customer-insights', icon: Eye, category: 'Analytics' },
+    { name: 'AI Market Research Pro', href: '/ai-market-research', icon: TrendingUp, category: 'Research' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
     
     // Creative & Media
@@ -114,6 +119,21 @@ const Navigation: React.FC = () => {
     // Health & Wellness
     { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
     { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
+    
+    // HR & Operations
+    { name: 'AI Recruitment Assistant Pro', href: '/ai-recruitment-assistant', icon: Users, category: 'HR' },
+    { name: 'AI Inventory Optimizer Pro', href: '/ai-inventory-optimizer', icon: BarChart, category: 'Operations' },
+    { name: 'AI Performance Optimizer Pro', href: '/ai-performance-optimizer', icon: TrendingUp, category: 'Performance' },
+    
+    // Compliance & Risk
+    { name: 'AI Compliance Monitor Pro', href: '/ai-compliance-monitor', icon: Shield, category: 'Compliance' },
+    { name: 'AI Risk Assessment Pro', href: '/ai-risk-assessment', icon: AlertTriangle, category: 'Risk Management' },
+    { name: 'AI Quality Assurance Pro', href: '/ai-quality-assurance-pro', icon: CheckCircle, category: 'Quality' },
+    
+    // Sustainability & Innovation
+    { name: 'AI Sustainability Tracker Pro', href: '/ai-sustainability-tracker', icon: Globe, category: 'Sustainability' },
+    { name: 'AI Innovation Hub Pro', href: '/ai-innovation-hub', icon: Lightbulb, category: 'Innovation' },
+    { name: 'AI Energy Monitor Pro', href: '/ai-energy-monitor', icon: Zap, category: 'Sustainability' },
     
     // Sales & Business
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
