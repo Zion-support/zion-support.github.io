@@ -1,6 +1,40 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, API, SDK, Framework, Library, Tool, Platform, Service, Solution, Product, Technology, Innovation, Digital, Transformation, Automation, Optimization, Efficiency, Productivity, Growth, Success, Future, Next, Generation, Advanced, Cutting, Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, Disruptive, Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, Network, Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, Computing, Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, NFT, Metaverse, AR, VR, IoT, 5G, 6G, Cybersecurity, Privacy, GDPR, Compliance, Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, G.Skill, ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink, Intel, AMD, NVIDIA, Qualcomm, MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink } from 'lucide-react';
+import { 
+  Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, 
+  BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, 
+  Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, 
+  Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, 
+  Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, 
+  GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, 
+  Calculator, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, Atom, 
+  Rocket, Microscope, Layers, Server, Network, HardDrive, Wifi, Monitor, 
+  Keyboard, Mouse, Headphones, Printer, Scanner, Router, Switch, Firewall, 
+  Antivirus, Backup, Recovery, Migration, Integration, Consulting, Support, 
+  Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, 
+  Testing, Quality, Performance, Scalability, Reliability, Availability, 
+  Monitoring, Alerting, Logging, Analytics, Reporting, Dashboard, API, SDK, 
+  Framework, Library, Tool, Platform, Service, Solution, Product, Technology, 
+  Innovation, Digital, Transformation, Automation, Optimization, Efficiency, 
+  Productivity, Growth, Success, Future, Next, Generation, Advanced, Cutting, 
+  Edge, State, Art, Revolutionary, Breakthrough, Game, Changing, Disruptive, 
+  Innovative, Intelligent, Smart, AI, ML, Deep, Learning, Neural, Network, 
+  Algorithm, Model, Data, Science, Analytics, Big, Data, Cloud, Computing, 
+  Edge, Computing, Quantum, Computing, Blockchain, Cryptocurrency, NFT, 
+  Metaverse, AR, VR, IoT, Cybersecurity, Privacy, GDPR, Compliance, 
+  Regulatory, Standards, Best, Practices, Methodology, Process, Workflow, 
+  Pipeline, Architecture, Design, Pattern, Framework, Methodology, Agile, 
+  DevOps, CI, CD, Microservices, Serverless, Container, Kubernetes, Docker, 
+  AWS, Azure, GCP, IBM, Oracle, Salesforce, Microsoft, Google, Amazon, Apple, 
+  Facebook, Meta, Twitter, LinkedIn, Instagram, TikTok, YouTube, Netflix, 
+  Spotify, Uber, Airbnb, Tesla, SpaceX, OpenAI, Anthropic, Google, DeepMind, 
+  NVIDIA, Intel, AMD, Qualcomm, ARM, Apple, Samsung, Huawei, Xiaomi, OnePlus, 
+  Sony, LG, Dell, HP, Lenovo, Asus, Acer, MSI, Razer, Logitech, Corsair, 
+  SteelSeries, HyperX, Kingston, Samsung, WD, Seagate, Crucial, 
+  ASUS, Gigabyte, MSI, EVGA, Zotac, Sapphire, PowerColor, XFX, ASRock, 
+  Biostar, ECS, Foxconn, Supermicro, Tyan, Intel, AMD, NVIDIA, Qualcomm, 
+  MediaTek, Broadcom, Marvell, Realtek, Atheros, Ralink 
+} from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -574,7 +608,7 @@ const HomePage: React.FC = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         {/* Neon Grid Overlay */}
         <div className="absolute inset-0" style={{
