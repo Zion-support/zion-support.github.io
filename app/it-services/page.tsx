@@ -430,8 +430,3 @@ const ITServicesPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default ITServicesPage;
-=======
-export default ITServicesPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-6747

@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Briefcase } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,227 +71,53 @@ const Navigation: React.FC = memo(() => {
             </div>
           </Link>
 
-<<<<<<< HEAD
-          {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium">
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="p-6">
-                  <div className="grid grid-cols-2 gap-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index}>
-                        <div className="flex items-center space-x-2 mb-3">
-                          <category.icon className={`w-5 h-5 ${category.color}`} />
-                          <h3 className="text-white font-semibold">{category.title}</h3>
-                        </div>
-                        <div className="space-y-2">
-                          {category.services.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Pricing
-            </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Blog
-            </Link>
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
-            </Link>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <Link
-                to="/"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium"
-                onClick={closeAllMenus}
-              >
-                About
-              </Link>
-              
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index}>
-                        <div className="flex items-center space-x-2 mb-2">
-                          <category.icon className={`w-4 h-4 ${category.color}`} />
-                          <h4 className="text-cyan-400 font-semibold text-sm">{category.title}</h4>
-                        </div>
-                        <div className="ml-6 space-y-1">
-                          {category.services.map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-=======
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {Object.entries(navigation).map(([category, items]) => (
-              <div
-                key={category}
-                className="relative group"
-                onMouseEnter={() => setServicesOpen(category === 'Services')}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors py-2">
+              <div key={category} className="relative group">
+                <button className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors">
                   <span>{category}</span>
                   <ChevronDown className="w-4 h-4" />
                 </button>
                 
-                {servicesOpen && category === 'Services' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2 z-50">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-lg rounded-xl border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="p-4">
                     {items.map((item, index) => (
                       <Link
                         key={index}
                         to={item.href}
-                        className="flex items-center space-x-3 px-4 py-3 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors group/item"
                       >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
+                        <item.icon className="w-5 h-5 text-cyan-400 group-hover/item:text-cyan-300" />
+                        <span className="text-white group-hover/item:text-cyan-300">{item.name}</span>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover/item:text-cyan-400 ml-auto opacity-0 group-hover/item:opacity-100 transition-all" />
                       </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
                     ))}
                   </div>
-                )}
+                </div>
               </div>
             ))}
-          </div>
-
-<<<<<<< HEAD
-              <Link
-                to="/pricing"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium"
-                onClick={closeAllMenus}
-              >
-                Pricing
-              </Link>
-              <Link
-                to="/blog"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="block text-white hover:text-cyan-400 transition-colors font-medium"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
-              
-              <div className="pt-4 border-t border-cyan-400/20">
-                <Link
-                  to="/contact"
-                  className="block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-=======
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-4 text-sm">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>(302) 464-0950</span>
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="flex items-center space-x-1 text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span>info@ziontechgroup.com</span>
-              </a>
-            </div>
+            
             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              to="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors"
             >
-              Get Quote
+              Pricing
             </Link>
+            
+            <a
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call Now</span>
+            </a>
           </div>
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle mobile menu"
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -299,54 +125,52 @@ const Navigation: React.FC = memo(() => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden border-t border-white/10 py-4">
-            <div className="space-y-4">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-lg border-t border-white/10">
+            <div className="px-4 py-6 space-y-4">
               {Object.entries(navigation).map(([category, items]) => (
                 <div key={category}>
-                  <h3 className="text-cyan-400 font-semibold mb-2 px-4">{category}</h3>
-                  <div className="space-y-1">
-                    {items.map((item, index) => (
-                      <Link
-                        key={index}
-                        to={item.href}
-                        className="flex items-center space-x-3 px-4 py-2 text-sm hover:bg-slate-700/50 transition-colors text-gray-300"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <item.icon className="w-4 h-4" />
-                        <span>{item.name}</span>
-                      </Link>
-                    ))}
-                  </div>
+                  <button
+                    onClick={() => setServicesOpen(!servicesOpen)}
+                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors py-2"
+                  >
+                    <span className="font-semibold">{category}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  {servicesOpen && (
+                    <div className="ml-4 space-y-2">
+                      {items.map((item, index) => (
+                        <Link
+                          key={index}
+                          to={item.href}
+                          className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors py-2"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          <item.icon className="w-4 h-4" />
+                          <span>{item.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
               
-              {/* Mobile Contact Info */}
-              <div className="border-t border-white/10 pt-4 px-4">
-                <div className="space-y-2">
-                  <a
-                    href="tel:+13024640950"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>(302) 464-0950</span>
-                  </a>
-                  <a
-                    href="mailto:info@ziontechgroup.com"
-                    className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>info@ziontechgroup.com</span>
-                  </a>
-                </div>
-                <Link
-                  to="/contact"
-                  className="block mt-4 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-700 hover:to-purple-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Quote
->>>>>>> cursor/website-audit-and-update-with-deployment-6747
-                </Link>
-              </div>
+              <Link
+                to="/pricing"
+                className="block text-white hover:text-cyan-400 transition-colors py-2"
+                onClick={() => setIsOpen(false)}
+              >
+                Pricing
+              </Link>
+              
+              <a
+                href="tel:+13024640950"
+                className="block bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                <Phone className="w-4 h-4 inline mr-2" />
+                Call (302) 464-0950
+              </a>
             </div>
           </div>
         )}

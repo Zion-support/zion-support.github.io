@@ -517,5 +517,4 @@ export async function validateAsync(validato,
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error instanceof Error ? error.message : 'Validation failed' };
   }
-}"`
->>>>>>> origin/main
+}
