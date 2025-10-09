@@ -1,48 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, Users, Award, Clock } from 'lucide-react';
+
 const ContentStatistics: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const stats = [
     {
-      number: "500+",
-      label: "Projects Completed",
-      description: "Successfully delivered AI and IT solutions"
+      icon: TrendingUp,
+      value: '300%',
+      label: 'Average ROI Increase',
+      description: 'Our clients see significant returns on their AI investments'
     },
     {
-      number: "99.9%",
-      label: "Uptime Guarantee",
-      description: "Reliable infrastructure and services"
+      icon: Users,
+      value: '500+',
+      label: 'Happy Clients',
+      description: 'Businesses that have transformed with our solutions'
     },
     {
-      number: "24/7",
-      label: "Expert Support",
-      description: "Round-the-clock technical assistance"
+      icon: Award,
+      value: '15+',
+      label: 'Industry Awards',
+      description: 'Recognition for our innovative technology solutions'
     },
     {
-      number: "50+",
-      label: "Micro SAAS Apps",
-      description: "Ready-to-use business applications"
+      icon: Clock,
+      value: '24/7',
+      label: 'Support Available',
+      description: 'Round-the-clock assistance for all our clients'
     }
   ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <section className="mb-16" aria-labelledby="stats-heading">
-      <h2 id="stats-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
-        Our Impact
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-        {stats.map((stat, index) => (
-          <div key={index} className="cyber-card hologram-card p-6 text-center">
-            <div className="text-3xl sm:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-              {stat.number}
+    <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Our Impact in Numbers</h2>
+          <p className="text-xl text-blue-100">Measurable results that speak for themselves</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className={`text-center transform transition-all duration-700 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+              style={{ transitionDelay: `${index * 100}ms` }}
+            >
+              <div className="bg-white/10 backdrop-blur-sm rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-10 h-10 text-white" />
+              </div>
+              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-lg font-semibold text-blue-100 mb-2">{stat.label}</div>
+              <div className="text-sm text-blue-200">{stat.description}</div>
             </div>
-            <div className="text-lg font-semibold text-white mb-2">
-              {stat.label}
-            </div>
-            <div className="text-sm text-gray-300">
-              {stat.description}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
+
 export default ContentStatistics;
