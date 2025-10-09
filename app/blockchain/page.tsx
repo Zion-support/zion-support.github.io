@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Link, Shield, Zap, Users, BarChart, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Blockchain & Web3 Services - Zion Tech Group',

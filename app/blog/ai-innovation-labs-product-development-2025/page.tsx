@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
@@ -115,11 +116,11 @@ const InnovationLabsPage: React.FC = () => {
                 Join leading companies transforming product development with AI-powered innovation
               </p>
               <div className="space-x-4">
-                <Link to="/contact"
+                <Link href="/contact"
                   className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
                   Schedule Innovation Assessment
                 </Link>
-                <Link to="/services"
+                <Link href="/services"
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </Link>

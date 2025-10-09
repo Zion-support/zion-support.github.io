@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Code, Smartphone, Zap, Shield, BarChart, Database, Cloud } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Mobile App Development | Zion Tech Group',

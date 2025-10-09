@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle, Users, ShoppingCart, BarChart, Shield, Zap } from 'lucide-react';
+import { CheckCircle, Users, ShoppingCart, BarChart, BarChart3, Shield, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI E-commerce Solutions | Zion Tech Group',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Link, Shield, Zap, Users, BarChart, Globe, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Blockchain & Web3 Services - Zion Tech Group',
@@ -143,7 +143,7 @@ const BlockchainWeb3Page: React.FC = () => {
       technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management']
     }
   ];
-  // const categories = [...new Set(blockchainServices.map(service => service.category))];
+  const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
         {/* Hero Section */}

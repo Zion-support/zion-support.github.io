@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database } from 'lucide-react';
+import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Cybersecurity Services - Zion Tech Group',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Settings, Zap, BarChart, Shield, Users, Bot, Workflow, TrendingUp, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Workflow Automation Services | Zion Tech Group',
