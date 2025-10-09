@@ -1,21 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft, ArrowRight, Target, TrendingUp, Users, Zap, CheckCircle, Star } from 'lucide-react';
-
-
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
       </header>
-
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -25,31 +22,27 @@ export default function ServicesAdvertisingPage() {
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Advertising Solutions
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Advertising Services
             </h1>
-            
             <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
               Revolutionize Your Marketing with 300% ROI Guaranteed
             </p>
-            
             <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
               Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy, 
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven 
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact"
+                href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
               >
                 Start Free Consultation
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
               <Link 
-                to="#services"
+                href="#services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 View Our Services
@@ -58,7 +51,6 @@ export default function ServicesAdvertisingPage() {
           </div>
         </div>
       </section>
-
       {/* Key Metrics */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -90,7 +82,6 @@ export default function ServicesAdvertisingPage() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -208,7 +199,6 @@ export default function ServicesAdvertisingPage() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -325,7 +315,6 @@ export default function ServicesAdvertisingPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -337,14 +326,14 @@ export default function ServicesAdvertisingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
             >
               Get Free Assessment
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link 
-              to="/case-studies"
+              href="/case-studies"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
             >
               View Success Stories

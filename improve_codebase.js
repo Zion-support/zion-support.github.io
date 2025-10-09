@@ -75,8 +75,7 @@ class CodebaseImprover {constructor() {
           'Enhanced TypeScript configuration with stricter settings'}
         );
       }
-//     } catch (error) {}
-  }
+//     } catch () {}}
   //Improve Vite configuration
 //   improveViteConfig() {const viteConfigPath = 'vite.config.ts'
     let _content = this.readFile(viteConfigPath);
@@ -173,8 +172,7 @@ class PerformanceMonitor {private metrics: PerformanceMetrics[] = [];
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-//       } catch (error) {}
-    }
+//       } catch () {}}
   }
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
@@ -401,8 +399,7 @@ export const errorHandler = new ErrorHandler()`;
       if (this.writeFile(packageJsonPath, JSON.stringify(packageJson, null) 2))
       ) {this.improvements.push('Enhanced package.json with better scripts')}
       }
-//     } catch (error) {}
-  }
+//     } catch () {}}
   //Create comprehensive build script
 //   createBuildScript() {const buildScriptContent = `#!/bin/bash
 # Comprehensive Build and Test Script

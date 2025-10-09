@@ -1,6 +1,4 @@
 import React from 'react';
-
-
 export default function AboutPage() {
   return (
     <>
@@ -14,7 +12,6 @@ export default function AboutPage() {
               Leading the future of AI and IT solutions
             </p>
           </div>
-
           <div className='prose prose-lg max-w-none'>
             <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-4'>
@@ -31,7 +28,6 @@ export default function AboutPage() {
                 to deliver solutions that drive real business value.
               </p>
             </div>
-
             <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                 Our Expertise
@@ -75,7 +71,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-
             <div className='bg-white rounded-lg shadow-lg p-8'>
               <h2 className='text-2xl font-bold text-gray-900 mb-4'>
                 Why Choose Us

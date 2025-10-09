@@ -1,12 +1,11 @@
+'use client';
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-
 import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
-
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
@@ -21,14 +20,12 @@ export interface HealthCheck {
   duration?: number;
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
-
 class HealthCheckService {
   private checks: Map<string, HealthCheckFunction> = new Map()
   private startTime: number = Date.now()
   private lastCheckTime: number = 0
   private cachedStatus?: HealthStatus
   private cacheTimeout: number = 5000; // 5 seconds
-
   constructor() {
     this.registerDefaultChecks()
   }
@@ -38,10 +35,8 @@ class HealthCheckService {
   private registerDefaultChecks(): void {
     // Memory usage check
     this.register('memory', this.checkMemory.bind(this))
-
     // Performance check
     this.register('performance', this.checkPerformance.bind(this))
-
     // Browser API availability check
     if (typeof window !== 'undefined') {
       this.register('browser-apis', this.checkBrowserAPIs.bind(this))
@@ -68,7 +63,6 @@ class HealthCheckService {
    */
   async runChecks(): Promise<HealthStatus> {
     const now = Date.now()
-
     // Return cached status if still valid
     if (
       this.cachedStatus &&
@@ -77,14 +71,12 @@ class HealthCheckService {
       return this.cachedStatus
     }
     const checks: HealthCheck[] = []
-    
     // Run all checks
     for (const [name, checkFn] of this.checks.entries()) {
       try {
         const startTime = performance.now()
         const check = await checkFn()
         const duration = performance.now() - startTime
-        
         checks.push({
           ...check,
           name,
@@ -102,7 +94,6 @@ class HealthCheckService {
     // Determine overall status
     const hasFailures = checks.some((c) => c.status === 'fail')
     const hasWarnings = checks.some((c) => c.status === 'warn')
-    
     let status: 'healthy' | 'degraded' | 'unhealthy'
     if (hasFailures) {
       status = 'unhealthy'
@@ -120,7 +111,6 @@ class HealthCheckService {
     // Cache the result
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
-
     // Log unhealthy status
     if (status === 'unhealthy') {
       logger.error('Application health check failed', { healthStatus })
@@ -148,10 +138,8 @@ class HealthCheckService {
     }
     try {
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
-
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
-
       if (usedPercent > 90) {
         status = 'fail'
         message = `Critical memory usage: ${usedPercent.toFixed(1)}%`
@@ -185,10 +173,8 @@ class HealthCheckService {
     try {
       const report = performanceMonitor.getReport()
       const { poor, needsImprovement, good } = report.summary
-
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-
       if (poor > 0) {
         status = 'warn'
       }
@@ -224,15 +210,12 @@ class HealthCheckService {
       'console',
       'navigator'
     ]
-
     const missingAPIs: string[] = []
-
     requiredAPIs.forEach((api) => {
       if (typeof window !== 'undefined' && !(api in window)) {
         missingAPIs.push(api)
       }
     })
-
     if (missingAPIs.length > 0) {
       return {
         name: 'browser-apis',
@@ -254,12 +237,10 @@ class HealthCheckService {
     try {
       const testKey = '_health_check_test'
       const testValue = 'test'
-
       // Test localStorage
       localStorage.setItem(testKey, testValue)
       const retrieved = localStorage.getItem(testKey)
       localStorage.removeItem(testKey)
-
       if (retrieved !== testValue) {
         return {
           name: 'storage',
@@ -282,7 +263,7 @@ class HealthCheckService {
       return {
         name: 'storage',
         status: 'pass',
-        message: 'Storage working correctly',
+        message: 'Storage working correctly'
       };
     } catch {
       return {
@@ -307,7 +288,6 @@ class HealthCheckService {
     const minutes = Math.floor(seconds / 60)
     const hours = Math.floor(minutes / 60)
     const days = Math.floor(hours / 24)
-
     if (days > 0) {
       return `${days}d ${hours % 24}h ${minutes % 60}m`
     } else if (hours > 0) {
@@ -328,7 +308,6 @@ class HealthCheckService {
 }
 // Export singleton instance
 export const healthCheck = new HealthCheckService()
-
 // Export convenience functions
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
@@ -336,5 +315,4 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
   healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-
 export default healthCheck

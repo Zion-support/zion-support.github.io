@@ -4,13 +4,11 @@
  */
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return
-
   // Preload critical fonts
   const fontPreloads = [
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
   ];
-
   fontPreloads.forEach(href => {
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -19,14 +17,12 @@ export const preloadCriticalResources = () => {
     link.crossOrigin = 'anonymous'
     document.head.appendChild(link)
   })
-
   // Preload critical images
   const criticalImages = [
     '/images/hero-bg.jpg',
     '/images/logo.png',
     '/images/favicon.ico'
   ];
-
   criticalImages.forEach(src => {
     const link = document.createElement('link')
     link.rel = 'preload'
@@ -37,7 +33,6 @@ export const preloadCriticalResources = () => {
 }
 export const preloadRoute = (route: string) => {
   if (typeof window === 'undefined') return
-
   // Preload route-specific resources
   const routeResources = {
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
@@ -56,13 +51,11 @@ export const preloadRoute = (route: string) => {
 }
 export const optimizeImages = () => {
   if (typeof window === 'undefined') return
-
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {
     img.setAttribute('loading', 'lazy')
   })
-
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {
@@ -77,20 +70,17 @@ export const optimizeImages = () => {
         }
       })
     })
-
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
 export const optimizeThirdPartyScripts = () => {
   if (typeof window === 'undefined') return
-
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {
     script.setAttribute('defer', '')
   })
-
   // Load analytics after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {

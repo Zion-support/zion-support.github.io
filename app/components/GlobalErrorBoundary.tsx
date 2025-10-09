@@ -1,166 +1,117 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { logger } from '../../src/utils/logger';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  onReset?: () => void;
 }
-
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
-
-/**
- * Global Error Boundary with improved error handling and recovery
- */
-export class GlobalErrorBoundary extends Component<Props, State> {
-  private resetTimeout: ReturnType<typeof setTimeout> | null = null;
-
+class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0,
-    };
+    this.state = { hasError: false };
   }
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error details
-    logger.error('Error caught by boundary', {
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-    });
-
-    // Update state
-    this.setState(prevState => ({
-      errorInfo,
-      errorCount: prevState.errorCount + 1,
-    }));
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Auto-recovery after 5 seconds if error count is low
-    if (this.state.errorCount < 3) {
-      this.resetTimeout = setTimeout(() => {
-        this.handleReset();
-      }, 5000);
-    }
-  }
-
-  componentWillUnmount(): void {
-    if (this.resetTimeout) {
-      clearTimeout(this.resetTimeout);
-    }
-  }
-
-  handleReset = (): void => {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
+      error,
+      errorInfo
     });
-
-    if (this.props.onReset) {
-      this.props.onReset();
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
+    // In production, you might want to send this to an error reporting service
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+  }
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
-  render(): ReactNode {
+  render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
-      // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 px-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
-            <div className="text-center mb-6">
-              <div className="w-20 h-20 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
-                <svg
-                  className="w-10 h-10 text-red-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                  />
-                </svg>
-              </div>
-              <h1 className="text-3xl font-bold text-white mb-2">Oops! Something went wrong</h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry for the inconvenience. Our team has been notified and is working on a
-                fix.
-              </p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full text-center">
+            {/* Error Icon */}
+            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-
-            {/* Show error details in development/debugging mode */}
-            {this.state.error && (
-              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
-                <h3 className="text-lg font-semibold text-red-400 mb-2">Error Details:</h3>
-                <p className="text-sm text-gray-300 font-mono mb-2">{this.state.error.message}</p>
-                {this.state.error.stack && (
-                  <details className="text-xs text-gray-400 mt-2">
-                    <summary className="cursor-pointer hover:text-gray-300">Stack Trace</summary>
-                    <pre className="mt-2 p-2 bg-black/20 rounded overflow-x-auto">
-                      {this.state.error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
+            {/* Error Message */}
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            {/* Error Details (Development Only) */}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-4 bg-slate-800 rounded-lg text-xs text-red-300 font-mono overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
+              </details>
             )}
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* Action Buttons */}
+            <div className="space-y-3">
               <button
-                onClick={this.handleReset}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200"
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-medium"
               >
                 Try Again
               </button>
               <button
-                onClick={() => (window.location.href = '/')}
-                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors duration-200"
+                onClick={() => window.location.reload()}
+                className="w-full bg-slate-700 text-white px-6 py-3 rounded-lg hover:bg-slate-600 transition-colors duration-300 font-medium"
               >
-                Go to Homepage
+                Refresh Page
               </button>
+              <a
+                href="/"
+                className="block w-full bg-transparent border border-gray-600 text-gray-300 px-6 py-3 rounded-lg hover:bg-slate-800 hover:text-white transition-all duration-300 font-medium"
+              >
+                Go Home
+              </a>
             </div>
-
-            {this.state.errorCount >= 3 && (
-              <p className="mt-6 text-center text-sm text-yellow-400">
-                ⚠️ Multiple errors detected. Please refresh the page or contact support.
+            {/* Contact Information */}
+            <div className="mt-8 pt-6 border-t border-gray-700">
+              <p className="text-sm text-gray-400 mb-2">
+                Need help? Contact our support team:
               </p>
-            )}
+              <a
+                href="tel:+13024640950"
+                className="text-cyan-400 hover:text-cyan-300 font-medium"
+              >
+                (302) 464-0950
+              </a>
+            </div>
           </div>
         </div>
       );
     }
-
     return this.props.children;
   }
 }
-
-export default GlobalErrorBoundary;
+export { GlobalErrorBoundary };

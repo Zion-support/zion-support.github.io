@@ -1,9 +1,9 @@
+'use client';
 import React from 'react'
 /**
  * Security Enhancer
  * Provides comprehensive security utilities and monitoring
  */
-
 interface SecurityConfig {
   enableCSP: boolean;
   enableHSTS: boolean;
@@ -23,7 +23,6 @@ class SecurityEnhancer {
   private config: SecurityConfig;
   private metrics: SecurityMetrics;
   private eventListeners: Array<() => void> = [];
-
   constructor(config: Partial<SecurityConfig> = {}) {
     this.config = {
       enableCSP: true,
@@ -45,7 +44,6 @@ class SecurityEnhancer {
   }
   private initializeSecurity(): void {
     if (typeof window === 'undefined') return
-
     this.setupContentSecurityPolicy()
     this.setupXSSProtection()
     this.setupCSRFProtection()
@@ -54,7 +52,6 @@ class SecurityEnhancer {
   }
   private setupContentSecurityPolicy(): void {
     if (!this.config.enableContentSecurityPolicy) return
-
     const csp = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
@@ -66,7 +63,6 @@ class SecurityEnhancer {
       "base-uri 'self'",
       "form-action 'self'"
     ].join('; ')
-
     const meta = document.createElement('meta')
     meta.httpEquiv = 'Content-Security-Policy'
     meta.content = csp
@@ -74,7 +70,6 @@ class SecurityEnhancer {
   }
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return
-
     const meta = document.createElement('meta')
     meta.httpEquiv = 'X-XSS-Protection'
     meta.content = '1; mode=block'
@@ -82,11 +77,9 @@ class SecurityEnhancer {
   }
   private setupCSRFProtection(): void {
     if (!this.config.enableCSRFProtection) return
-
     // Generate CSRF token
     const token = this.generateCSRFToken()
     document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
-    
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
@@ -130,26 +123,22 @@ class SecurityEnhancer {
               const element = node as Element
               if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
                 this.metrics.securityViolations++
-                console.warn('Suspicious inline script detected')
-              }
+                }
             }
           })
         }
       })
     })
-
     observer.observe(document.body, {
       childList: true,
-      subtree: true,
+      subtree: true
     })
-
     this.eventListeners.push(() => observer.disconnect())
   }
   private monitorNetworkRequests(): void {
     const originalFetch = window.fetch
     window.fetch = async (input, init) => {
       const url = typeof input === 'string' ? input : input instanceof Request ? input.url : input.toString()
-      
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
@@ -176,7 +165,6 @@ class SecurityEnhancer {
       { name: 'Referrer-Policy', content: 'strict-origin-when-cross-origin' },
       { name: 'Permissions-Policy', content: 'camera=(), microphone=(), geolocation=()' }
     ]
-
     headers.forEach(header => {
       const meta = document.createElement('meta')
       meta.httpEquiv = header.name
@@ -211,7 +199,6 @@ class SecurityEnhancer {
   public generateSecurePassword(length: number = 16): string {
     const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*'
     let password = ''
-    
     for (let i = 0; i < length; i++) {
       password += charset.charAt(Math.floor(Math.random() * charset.length))
     }
@@ -245,6 +232,5 @@ Security Report:
 }
 // Export singleton instance
 export const securityEnhancer = new SecurityEnhancer()
-
 // Export class for custom instances
 export { SecurityEnhancer, type SecurityConfig, type SecurityMetrics }

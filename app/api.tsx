@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import Link from 'next/link';
 const API: React.FC = () => {
   const apiEndpoints = [
     {
@@ -8,31 +7,30 @@ const API: React.FC = () => {
       endpoint: '/api/content',
       description: 'Get all content',
       parameters: ['limit', 'offset'],
-      response: 'JSON array of content objects',
+      response: 'JSON array of content objects'
     },
     {
       method: 'POST',
       endpoint: '/api/auth/login',
       description: 'Authenticate user credentials',
       parameters: ['email', 'password'],
-      response: 'Authentication token',
+      response: 'Authentication token'
     },
     {
       method: 'GET',
       endpoint: '/api/analytics',
       description: 'Get analytics and metrics',
       parameters: ['date_range', 'metrics'],
-      response: 'Analytics data object',
+      response: 'Analytics data object'
     },
     {
       method: 'POST',
       endpoint: '/api/content',
       description: 'Create new content',
       parameters: ['title', 'content', 'type'],
-      response: 'Created content object',
+      response: 'Created content object'
     },
   ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
@@ -49,14 +47,14 @@ const API: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/contact"
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
             >
               Get API Key
               <span className="ml-2">→</span>
             </Link>
             <Link
-              to="#endpoints"
+              href="#endpoints"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center"
             >
               View Endpoints
@@ -65,7 +63,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
@@ -101,7 +98,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div id="endpoints" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
@@ -148,7 +144,6 @@ const API: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -159,14 +154,14 @@ const API: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 Get API Key
                 <span className="ml-2">→</span>
               </Link>
               <Link
-                to="https://docs.ziontechgroup.com"
+                href="https://docs.ziontechgroup.com"
                 className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors inline-flex items-center"
               >
                 View Full Docs
@@ -179,5 +174,4 @@ const API: React.FC = () => {
     </div>
   );
 };
-
 export default API;

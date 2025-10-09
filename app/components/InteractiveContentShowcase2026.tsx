@@ -1,9 +1,7 @@
+'use client';
 import React, { useState } from 'react';
-
-
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-
   const tabs = [
     {
       title: "AI Innovation",
@@ -26,7 +24,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
       icon: "📊"
     }
   ];
-
   return (
     <section className='bg-gray-50 py-16 rounded-2xl'>
       <div className='container mx-auto px-4'>
@@ -39,7 +36,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
             with our advanced solutions.
           </p>
         </div>
-
         <div className='max-w-4xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-2 mb-8'>
             {tabs.map((tab, index) => (
@@ -57,7 +53,6 @@ const InteractiveContentShowcase2026: React.FC = () => {
               </button>
             ))}
           </div>
-
           <div className='bg-white p-8 rounded-2xl shadow-lg'>
             <div className='text-center'>
               <div className='text-6xl mb-4'>{tabs[activeTab].icon}</div>
@@ -74,5 +69,4 @@ const InteractiveContentShowcase2026: React.FC = () => {
     </section>
   );
 };
-
 export default InteractiveContentShowcase2026;

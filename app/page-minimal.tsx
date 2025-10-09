@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Phone, CheckCircle, Star } from 'lucide-react';
-
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
 };
-
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -15,28 +13,27 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center">
-              <Link to="/" className="text-2xl font-bold text-gray-900">
+              <Link href="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
               </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link to="/" className="text-gray-900 hover:text-blue-600">
+              <Link href="/" className="text-gray-900 hover:text-blue-600">
                 Home
               </Link>
-              <Link to="/services" className="text-gray-900 hover:text-blue-600">
+              <Link href="/services" className="text-gray-900 hover:text-blue-600">
                 Services
               </Link>
-              <Link to="/blog" className="text-gray-900 hover:text-blue-600">
+              <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
               </Link>
-              <Link to="/contact" className="text-gray-900 hover:text-blue-600">
+              <Link href="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
               </Link>
             </nav>
           </div>
         </div>
       </header>
-
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -51,7 +48,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
+                href="/services"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Explore Our Services
@@ -66,7 +63,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,7 +74,6 @@ export default function HomePage() {
                 We deliver measurable results through innovative AI solutions
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
@@ -91,7 +86,6 @@ export default function HomePage() {
                   Our AI solutions have delivered 300% ROI and 70% cost reduction for enterprise clients.
                 </p>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-green-600" />
@@ -103,7 +97,6 @@ export default function HomePage() {
                   Our team of AI experts and engineers brings decades of experience in enterprise transformation.
                 </p>
               </div>
-              
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                   <Link className="w-6 h-6 text-purple-600" />
@@ -118,7 +111,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -130,14 +122,14 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
               >
                 Get Started Today
                 <Link className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/blog"
+                href="/blog"
                 className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
               >
                 View Our Blog
@@ -147,7 +139,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,10 +148,10 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Enterprise Transformation
             </p>
             <div className="flex justify-center space-x-6">
-              <Link to="/services" className="text-gray-400 hover:text-white">Services</Link>
-              <Link to="/about" className="text-gray-400 hover:text-white">About</Link>
-              <Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link>
-              <Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
+              <Link href="/services" className="text-gray-400 hover:text-white">Services</Link>
+              <Link href="/about" className="text-gray-400 hover:text-white">About</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white">Privacy</Link>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800">
               <p className="text-gray-400 text-sm">
@@ -173,5 +164,4 @@ export default function HomePage() {
     </div>
   );
 };
-
 export default HomePage;

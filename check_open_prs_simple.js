@@ -41,9 +41,6 @@ async function main() {
     console.log(`📋 Found ${prs.length} open PR(s):`);
     prs.forEach(pr => {
 
-
-
-
     });
   }
 }

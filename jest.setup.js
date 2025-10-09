@@ -1,8 +1,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
-=======
-const _React = require('react');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
+const React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment
@@ -10,7 +8,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 // Mock files that use import.meta.env
-jest.mock('./src/utils/logger.ts', () => ({
+jest.mock('./app/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),
     info: jest.fn(),
@@ -20,18 +18,18 @@ jest.mock('./src/utils/logger.ts', () => ({
   },
 }));
 
-jest.mock('./src/utils/analytics.ts', () => ({
+jest.mock('./app/utils/analytics.ts', () => ({
   trackEvent: jest.fn(),
   trackPageView: jest.fn(),
   initAnalytics: jest.fn(),
 }));
 
-jest.mock('./src/utils/errorTracking.ts', () => ({
+jest.mock('./app/utils/errorTracking.ts', () => ({
   reportError: jest.fn(),
   initErrorReporting: jest.fn(),
 }));
 
-jest.mock('./src/hooks/usePerformance.ts', () => ({
+jest.mock('./app/hooks/usePerformance.ts', () => ({
   usePerformance: jest.fn(() => ({
     metrics: {},
     optimize: jest.fn(),
@@ -47,9 +45,8 @@ jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
 
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
-<<<<<<< HEAD
   const actual = jest.requireActual('react-router-dom');
-  const mockReact = require('react');origin/cursor/fix-errors-and-merge-to-main-6395
+  const React = require('react');
   return {
     ...actual,
     useNavigate: () => jest.fn(),
@@ -61,11 +58,9 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
-      const React = require('react');
       return React.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
@@ -80,21 +75,9 @@ jest.mock('react-router-dom', () => {
         initialEntries: ['/'],
         initialIndex: 0,
       });
-      const React = require('react');
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
-<<<<<<< HEAD
-=======
-    Link: ({ children, to, ...props }) => {
-      const _React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
-    NavLink: ({ children, to, ...props }) => {
-      const _React = require('react');
-      return React.createElement('a', { href: to, ...props }, children);
-    },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6395
   };
 });
 
@@ -125,7 +108,7 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Suppress console errors in tests
-const _originalError = console.error;
+const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if (
