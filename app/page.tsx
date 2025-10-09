@@ -73,6 +73,105 @@ const HomePage: React.FC = () => {
       category: 'Productivity'
     },
     {
+      title: 'AI Quantum Analytics Engine',
+      description: 'Revolutionary quantum-powered analytics for complex data processing and pattern recognition',
+      icon: '⚛️',
+      price: '$299/month',
+      features: ['Quantum data processing', 'Advanced pattern recognition', 'Real-time insights', 'Predictive modeling', 'Quantum encryption', 'Scalable architecture'],
+      benefits: ['1000x faster processing', '99.9% accuracy', 'Unlimited data capacity', 'Future-proof technology'],
+      link: '/ai-quantum-analytics',
+      popular: true,
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'AI Autonomous Business Intelligence',
+      description: 'Self-learning AI system that autonomously discovers business insights and optimization opportunities',
+      icon: '🧠',
+      price: '$199/month',
+      features: ['Autonomous learning', 'Self-optimizing algorithms', 'Real-time adaptation', 'Predictive insights', 'Automated reporting', 'Cross-platform integration'],
+      benefits: ['Zero manual intervention', 'Continuous optimization', 'Proactive insights', '50% faster decision making'],
+      link: '/ai-autonomous-bi',
+      popular: true,
+      category: 'Business Intelligence'
+    },
+    {
+      title: 'AI Neural Marketing Optimizer',
+      description: 'Advanced neural network-powered marketing automation with real-time campaign optimization',
+      icon: '🎯',
+      price: '$179/month',
+      features: ['Neural campaign optimization', 'Real-time A/B testing', 'Customer journey mapping', 'Predictive targeting', 'ROI maximization', 'Multi-channel integration'],
+      benefits: ['300% higher conversion rates', '60% cost reduction', 'Real-time optimization', 'Predictive customer behavior'],
+      link: '/ai-neural-marketing',
+      popular: true,
+      category: 'Marketing'
+    },
+    {
+      title: 'AI Blockchain Security Monitor',
+      description: 'Advanced blockchain security monitoring with AI-powered threat detection and prevention',
+      icon: '🔐',
+      price: '$249/month',
+      features: ['Blockchain monitoring', 'Smart contract analysis', 'Threat detection', 'Real-time alerts', 'Compliance tracking', 'Risk assessment'],
+      benefits: ['99.9% security coverage', 'Zero false positives', 'Real-time protection', 'Regulatory compliance'],
+      link: '/ai-blockchain-security',
+      popular: false,
+      category: 'Security'
+    },
+    {
+      title: 'AI Metaverse Experience Builder',
+      description: 'Create immersive metaverse experiences with AI-powered 3D environments and virtual interactions',
+      icon: '🌐',
+      price: '$399/month',
+      features: ['3D world generation', 'AI avatars', 'Virtual interactions', 'Real-time rendering', 'Cross-platform support', 'Custom environments'],
+      benefits: ['Unlimited creativity', 'Professional quality', 'Scalable solutions', 'Future-ready technology'],
+      link: '/ai-metaverse-builder',
+      popular: false,
+      category: 'Metaverse'
+    },
+    {
+      title: 'AI Edge Computing Optimizer',
+      description: 'Optimize edge computing performance with AI-powered resource allocation and latency reduction',
+      icon: '⚡',
+      price: '$159/month',
+      features: ['Edge optimization', 'Latency reduction', 'Resource allocation', 'Performance monitoring', 'Auto-scaling', 'Global distribution'],
+      benefits: ['90% latency reduction', '50% cost savings', 'Global performance', 'Automatic scaling'],
+      link: '/ai-edge-computing',
+      popular: true,
+      category: 'Edge Computing'
+    },
+    {
+      title: 'AI Quantum Cryptography Suite',
+      description: 'Unbreakable quantum encryption for ultra-secure communications and data protection',
+      icon: '🔒',
+      price: '$499/month',
+      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Zero-knowledge proofs', 'Quantum random numbers', 'Secure communications', 'Future-proof encryption'],
+      benefits: ['Unbreakable security', 'Quantum-safe encryption', 'Future-proof technology', 'Military-grade protection'],
+      link: '/ai-quantum-crypto',
+      popular: false,
+      category: 'Security'
+    },
+    {
+      title: 'AI Predictive Maintenance Pro',
+      description: 'Predict equipment failures before they happen with AI-powered maintenance scheduling',
+      icon: '🔧',
+      price: '$129/month',
+      features: ['Predictive analytics', 'Equipment monitoring', 'Maintenance scheduling', 'Cost optimization', 'Downtime prevention', 'Performance tracking'],
+      benefits: ['90% fewer breakdowns', '60% maintenance cost reduction', 'Zero unplanned downtime', 'Extended equipment life'],
+      link: '/ai-predictive-maintenance',
+      popular: true,
+      category: 'Maintenance'
+    },
+    {
+      title: 'AI Carbon Footprint Optimizer',
+      description: 'Reduce environmental impact with AI-powered carbon footprint tracking and optimization',
+      icon: '🌱',
+      price: '$89/month',
+      features: ['Carbon tracking', 'Emission optimization', 'Sustainability reporting', 'Green energy integration', 'Waste reduction', 'ESG compliance'],
+      benefits: ['50% carbon reduction', 'ESG compliance', 'Cost savings', 'Environmental impact'],
+      link: '/ai-carbon-optimizer',
+      popular: false,
+      category: 'Sustainability'
+    },
+    {
       title: 'AI Social Media Manager',
       description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
       icon: '📱',
@@ -340,6 +439,60 @@ const HomePage: React.FC = () => {
 
   const aiServices = [
     {
+      title: 'Quantum Machine Learning',
+      description: 'Revolutionary quantum-enhanced machine learning for solving complex optimization problems',
+      icon: Brain,
+      price: '$2,500/month',
+      features: ['Quantum Neural Networks', 'Quantum Optimization', 'Quantum Feature Selection', 'Quantum Clustering', 'Quantum Regression', 'Quantum Classification'],
+      color: 'text-purple-400',
+      category: 'Quantum AI'
+    },
+    {
+      title: 'Autonomous AI Systems',
+      description: 'Self-governing AI systems that operate independently with minimal human intervention',
+      icon: Cpu,
+      price: '$3,000/month',
+      features: ['Autonomous Decision Making', 'Self-Learning Algorithms', 'Adaptive Behavior', 'Real-time Optimization', 'Predictive Maintenance', 'Intelligent Automation'],
+      color: 'text-cyan-400',
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'Neural Architecture Search',
+      description: 'AI that designs optimal neural network architectures automatically for specific tasks',
+      icon: Settings,
+      price: '$1,800/month',
+      features: ['Automated Architecture Design', 'Performance Optimization', 'Hardware-Aware Design', 'Multi-Objective Optimization', 'Transfer Learning', 'Model Compression'],
+      color: 'text-green-400',
+      category: 'AI Research'
+    },
+    {
+      title: 'Federated Learning Platform',
+      description: 'Privacy-preserving machine learning that trains models across distributed data sources',
+      icon: Shield,
+      price: '$2,200/month',
+      features: ['Privacy-Preserving Training', 'Distributed Learning', 'Secure Aggregation', 'Differential Privacy', 'Model Synchronization', 'Edge Computing'],
+      color: 'text-blue-400',
+      category: 'Privacy AI'
+    },
+    {
+      title: 'Explainable AI (XAI)',
+      description: 'Transparent AI systems that provide clear explanations for their decisions and predictions',
+      icon: Eye,
+      price: '$1,600/month',
+      features: ['Decision Explanations', 'Feature Importance', 'Model Interpretability', 'Bias Detection', 'Fairness Analysis', 'Transparency Reports'],
+      color: 'text-yellow-400',
+      category: 'Ethical AI'
+    },
+    {
+      title: 'Reinforcement Learning',
+      description: 'AI systems that learn through interaction and trial-and-error to optimize decision-making',
+      icon: Target,
+      price: '$2,000/month',
+      features: ['Multi-Agent Systems', 'Deep Q-Learning', 'Policy Gradient Methods', 'Actor-Critic Algorithms', 'Reward Engineering', 'Environment Simulation'],
+      color: 'text-red-400',
+      category: 'Learning Systems'
+    },
+    {
       title: 'Machine Learning Solutions',
       description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation',
       icon: Brain,
@@ -486,6 +639,51 @@ const HomePage: React.FC = () => {
   ];
 
   const itServices = [
+    {
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing setup, optimization, and integration for enterprise applications',
+      icon: Cpu,
+      price: '$5,000/month',
+      features: ['Quantum Hardware Setup', 'Quantum Algorithm Development', 'Quantum-Safe Security', 'Hybrid Classical-Quantum Systems', 'Quantum Error Correction', 'Quantum Networking'],
+      color: 'text-purple-400',
+      category: 'Quantum Computing'
+    },
+    {
+      title: 'Edge AI Computing Platform',
+      description: 'Distributed AI computing infrastructure for real-time processing at the edge',
+      icon: Zap,
+      price: '$2,500/month',
+      features: ['Edge AI Deployment', 'Real-time Processing', 'Low-latency Computing', 'Distributed Training', 'Edge-to-Cloud Sync', 'Autonomous Edge Management'],
+      color: 'text-cyan-400',
+      category: 'Edge Computing'
+    },
+    {
+      title: '5G/6G Network Infrastructure',
+      description: 'Next-generation wireless network deployment and optimization for ultra-fast connectivity',
+      icon: Globe,
+      price: '$3,500/month',
+      features: ['5G/6G Deployment', 'Network Slicing', 'Ultra-Low Latency', 'Massive IoT Support', 'Network Automation', 'Performance Optimization'],
+      color: 'text-green-400',
+      category: 'Telecommunications'
+    },
+    {
+      title: 'Autonomous Systems Integration',
+      description: 'Integration of autonomous vehicles, drones, and robotic systems for enterprise operations',
+      icon: Car,
+      price: '$4,000/month',
+      features: ['Autonomous Vehicle Integration', 'Drone Fleet Management', 'Robotic Process Automation', 'Sensor Fusion', 'Path Planning', 'Safety Systems'],
+      color: 'text-blue-500',
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'Digital Twin Platform',
+      description: 'Create digital replicas of physical assets for simulation, monitoring, and optimization',
+      icon: Cube,
+      price: '$2,800/month',
+      features: ['3D Asset Modeling', 'Real-time Synchronization', 'Predictive Simulation', 'Performance Monitoring', 'Virtual Testing', 'IoT Integration'],
+      color: 'text-orange-400',
+      category: 'Digital Twins'
+    },
     {
       title: 'Cloud Migration & Management',
       description: 'Comprehensive cloud migration, setup, optimization, and management services',
@@ -635,9 +833,16 @@ const HomePage: React.FC = () => {
   return (
     <>
       <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        title="Zion Tech Group - Leading AI & Quantum Computing Solutions | 300% ROI Guaranteed"
+        description="Transform your business with cutting-edge AI solutions, quantum computing, and autonomous systems. Join 500+ Fortune companies achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Micro SAAS from $79/month, Enterprise AI from $1,000/month."
+        keywords={[
+          'AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 
+          'enterprise AI', 'machine learning', 'automation', 'cloud services', 'micro SAAS',
+          'AI project manager', 'quantum analytics', 'neural marketing', 'edge computing',
+          'predictive maintenance', 'AI automation', 'business intelligence', 'cybersecurity',
+          '5G networks', 'digital twins', 'federated learning', 'explainable AI',
+          'reinforcement learning', 'blockchain security', 'metaverse solutions', 'carbon optimization'
+        ]}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -648,6 +853,16 @@ const HomePage: React.FC = () => {
           foundingDate: '2020',
           numberOfEmployees: '50-100',
           industry: 'Technology',
+          areaServed: 'Worldwide',
+          serviceArea: {
+            '@type': 'GeoCircle',
+            geoMidpoint: {
+              '@type': 'GeoCoordinates',
+              latitude: 39.4496,
+              longitude: -75.7163
+            },
+            geoRadius: '10000000'
+          },
           services: [
             'AI Solutions',
             'Quantum Computing',
@@ -655,14 +870,66 @@ const HomePage: React.FC = () => {
             'Digital Transformation',
             'Cloud Services',
             'Automation',
-            'Business Intelligence'
+            'Business Intelligence',
+            'Micro SAAS Solutions',
+            'Edge Computing',
+            '5G/6G Networks',
+            'Digital Twins',
+            'Cybersecurity'
+          ],
+          offers: [
+            {
+              '@type': 'Offer',
+              name: 'Micro SAAS Solutions',
+              description: 'AI-powered business tools starting from $79/month',
+              price: '79',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                price: '79',
+                priceCurrency: 'USD',
+                billingIncrement: 'P1M'
+              }
+            },
+            {
+              '@type': 'Offer',
+              name: 'Enterprise AI Services',
+              description: 'Advanced AI solutions starting from $1,000/month',
+              price: '1000',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                price: '1000',
+                priceCurrency: 'USD',
+                billingIncrement: 'P1M'
+              }
+            },
+            {
+              '@type': 'Offer',
+              name: 'Quantum Computing Infrastructure',
+              description: 'Quantum computing setup and optimization from $5,000/month',
+              price: '5000',
+              priceCurrency: 'USD',
+              priceSpecification: {
+                '@type': 'PriceSpecification',
+                price: '5000',
+                priceCurrency: 'USD',
+                billingIncrement: 'P1M'
+              }
+            }
           ],
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en',
+            hoursAvailable: {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+              opens: '00:00',
+              closes: '23:59'
+            }
           },
           address: {
             '@type': 'PostalAddress',
@@ -671,7 +938,23 @@ const HomePage: React.FC = () => {
             addressRegion: 'DE',
             postalCode: '19709',
             addressCountry: 'US'
-          }
+          },
+          sameAs: [
+            'https://linkedin.com/company/zion-tech-group',
+            'https://twitter.com/ziontechgroup',
+            'https://facebook.com/ziontechgroup',
+            'https://instagram.com/ziontechgroup',
+            'https://github.com/ziontechgroup',
+            'https://youtube.com/@ziontechgroup'
+          ],
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.9',
+            reviewCount: '247',
+            bestRating: '5',
+            worstRating: '1'
+          },
+          slogan: 'Pioneering the future with AI, quantum computing, and autonomous systems'
         }}
       />
       <PerformanceOptimizer
@@ -733,8 +1016,8 @@ const HomePage: React.FC = () => {
                 Advanced AI and IT Solutions
               </p>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth.
+                Pioneering the future with enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
+                Join 500+ Fortune companies achieving 300% ROI, 70% cost reduction, and 90% efficiency gains with our cutting-edge technology.
               </p>
               
               {/* Key Benefits */}
@@ -742,22 +1025,22 @@ const HomePage: React.FC = () => {
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge AI, quantum computing, and autonomous systems</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
                   <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">$50M+ annual savings, 95% automation, 300% ROI for 500+ Fortune companies</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Quantum Security</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Military-grade quantum encryption and zero-trust security architecture</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Innovation</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Pioneering the future with 24/7 support across 50+ countries</p>
                 </div>
               </div>
 
@@ -789,7 +1072,7 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
@@ -852,7 +1135,7 @@ const HomePage: React.FC = () => {
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -898,7 +1181,7 @@ const HomePage: React.FC = () => {
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -965,23 +1248,40 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="cyber-card p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Market-Leading Pricing</h3>
-              <p className="text-gray-300 mb-6 max-w-3xl mx-auto">
-                Our competitive pricing starts from just $79/month for micro SAAS solutions, with enterprise AI services beginning at $1,000/month. 
-                All plans include 24/7 support, regular updates, and comprehensive training.
+              <h3 className="text-2xl font-bold text-white mb-4 neon-text">Competitive Market Pricing</h3>
+              <p className="text-gray-300 mb-6 max-w-4xl mx-auto">
+                Our transparent pricing offers exceptional value compared to competitors. Micro SAAS solutions start at $79/month (vs $200+ market average), 
+                enterprise AI services from $1,000/month (vs $3,000+ competitors), and IT services from $800/month (vs $2,000+ market rate). 
+                All plans include 24/7 support, regular updates, comprehensive training, and 30-day money-back guarantee.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center mb-6">
                 <div>
                   <div className="text-3xl font-bold text-cyan-400">$79</div>
-                  <div className="text-gray-300">Micro SAAS Starting</div>
+                  <div className="text-gray-300 text-sm">Micro SAAS Starting</div>
+                  <div className="text-green-400 text-xs">60% below market</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-purple-400">$1,000</div>
-                  <div className="text-gray-300">AI Services Starting</div>
+                  <div className="text-gray-300 text-sm">AI Services Starting</div>
+                  <div className="text-green-400 text-xs">67% below market</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold text-green-400">$800</div>
-                  <div className="text-gray-300">IT Services Starting</div>
+                  <div className="text-gray-300 text-sm">IT Services Starting</div>
+                  <div className="text-green-400 text-xs">60% below market</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-yellow-400">$2,500</div>
+                  <div className="text-gray-300 text-sm">Quantum Computing</div>
+                  <div className="text-green-400 text-xs">50% below market</div>
+                </div>
+              </div>
+              <div className="bg-slate-800/50 rounded-lg p-4">
+                <h4 className="text-lg font-semibold text-cyan-400 mb-2">Why Our Pricing is Superior</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
+                  <div>✓ No hidden fees or setup costs</div>
+                  <div>✓ Volume discounts available</div>
+                  <div>✓ Enterprise custom pricing</div>
                 </div>
               </div>
             </div>

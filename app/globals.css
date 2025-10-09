@@ -665,6 +665,118 @@ body {
   }
 }
 
+/* Quantum Card */
+.quantum-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.quantum-card:hover::before {
+  left: 100%;
+}
+
+.quantum-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  box-shadow: 
+    0 0 30px rgba(139, 92, 246, 0.2),
+    inset 0 0 30px rgba(139, 92, 246, 0.05);
+  transform: translateY(-5px);
+}
+
+/* Energy Pulse */
+.energy-pulse {
+  animation: energy-pulse 3s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(139, 92, 246, 0.2),
+      inset 0 0 5px rgba(139, 92, 246, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.4),
+      inset 0 0 20px rgba(139, 92, 246, 0.1);
+  }
+}
+
+/* Enhanced Responsive Grid */
+@media (max-width: 1536px) {
+  .grid-cols-2xl\:5 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1280px) {
+  .grid-cols-xl\:4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-cols-lg\:3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-sm\:2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 480px) {
+  .cyber-card,
+  .quantum-card {
+    margin-bottom: 0.75rem;
+  }
+  
+  .cyber-card h3,
+  .quantum-card h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  .cyber-card p,
+  .quantum-card p {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+  }
+  
+  .cyber-card ul,
+  .quantum-card ul {
+    font-size: 0.75rem;
+  }
+  
+  .cyber-card .text-lg,
+  .quantum-card .text-lg {
+    font-size: 1rem;
+  }
+}
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,

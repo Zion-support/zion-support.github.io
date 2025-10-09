@@ -15,37 +15,39 @@ const Footer: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager' },
+    { name: 'AI Quantum Analytics', href: '/ai-quantum-analytics' },
+    { name: 'AI Autonomous BI', href: '/ai-autonomous-bi' },
+    { name: 'AI Neural Marketing', href: '/ai-neural-marketing' },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing' },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
-    { name: 'AI Video Generator', href: '/ai-video-generation' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing' },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance' },
     { name: 'AI Sales Automation', href: '/ai-sales-automation' },
     { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor' },
   ];
 
   const aiServices = [
+    { name: 'Quantum Machine Learning', href: '/ai-quantum-ml' },
+    { name: 'Autonomous AI Systems', href: '/ai-autonomous' },
+    { name: 'Neural Architecture Search', href: '/ai-nas' },
+    { name: 'Federated Learning', href: '/ai-federated' },
+    { name: 'Explainable AI', href: '/ai-xai' },
+    { name: 'Reinforcement Learning', href: '/ai-rl' },
     { name: 'Machine Learning', href: '/ai-ml' },
     { name: 'Natural Language Processing', href: '/ai-nlp' },
-    { name: 'Computer Vision', href: '/ai-vision' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
   ];
 
   const itServices = [
+    { name: 'Quantum Computing', href: '/quantum-computing' },
+    { name: 'Edge AI Computing', href: '/edge-ai' },
+    { name: '5G/6G Networks', href: '/5g-networks' },
+    { name: 'Autonomous Systems', href: '/autonomous-systems' },
+    { name: 'Digital Twin Platform', href: '/digital-twins' },
     { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/mobile-development' },
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
   ];
 
   const socialLinks = [

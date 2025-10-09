@@ -25,39 +25,39 @@ const Navigation: React.FC = () => {
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
+    { name: 'AI Quantum Analytics', href: '/ai-quantum-analytics', icon: Cpu },
+    { name: 'AI Autonomous BI', href: '/ai-autonomous-bi', icon: Brain },
+    { name: 'AI Neural Marketing', href: '/ai-neural-marketing', icon: Target },
     { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
     { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
     { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Zap },
+    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
     { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign },
   ];
 
   const aiServices = [
+    { name: 'Quantum Machine Learning', href: '/ai-quantum-ml', icon: Cpu },
+    { name: 'Autonomous AI Systems', href: '/ai-autonomous', icon: Settings },
+    { name: 'Neural Architecture Search', href: '/ai-nas', icon: Brain },
+    { name: 'Federated Learning', href: '/ai-federated', icon: Shield },
+    { name: 'Explainable AI', href: '/ai-xai', icon: Eye },
+    { name: 'Reinforcement Learning', href: '/ai-rl', icon: Target },
     { name: 'Machine Learning', href: '/ai-ml', icon: Brain },
     { name: 'Natural Language Processing', href: '/ai-nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/ai-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Cube },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis', icon: Mic },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
   ];
 
   const itServices = [
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
+    { name: 'Edge AI Computing', href: '/edge-ai', icon: Zap },
+    { name: '5G/6G Networks', href: '/5g-networks', icon: Globe },
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Car },
+    { name: 'Digital Twin Platform', href: '/digital-twins', icon: Cube },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Settings },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
     { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database', icon: Database },
-    { name: 'Mobile App Development', href: '/mobile-development', icon: Smartphone },
-    { name: 'Web Development', href: '/web-development', icon: Code },
-    { name: 'Blockchain Solutions', href: '/blockchain', icon: Lock },
   ];
 
   return (
