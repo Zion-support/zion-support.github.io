@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -53,7 +54,6 @@ const Navigation: React.FC = () => {
       services: [
         { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
         { name: 'AI Marketing', path: '/ai-marketing', description: 'AI-powered marketing automation' },
-        { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
         { name: 'AI Healthcare', path: '/ai-healthcare', description: 'Medical AI solutions' },
         { name: 'AI Fintech', path: '/ai-fintech', description: 'Financial AI applications' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI content creation' },
@@ -67,12 +67,12 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
         { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Advanced predictive modeling' },
-        { name: 'AI Image Recognition', path: '/ai-image-recognition', description: 'Computer vision solutions' },
-        { name: 'AI Voice Processing', path: '/ai-voice-processing', description: 'Speech recognition & synthesis' },
-        { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine', description: 'Personalized recommendations' },
-        { name: 'AI Sentiment Analysis', path: '/ai-sentiment-analysis', description: 'Real-time sentiment analysis' },
-        { name: 'AI Research Assistant', path: '/ai-research-assistant', description: 'AI-powered research tools' }
+        { name: 'AI Writing Assistant', path: '/ai-writing-assistant', description: 'AI writing tools' },
+        { name: 'AI Scheduler', path: '/ai-scheduler', description: 'Smart scheduling solutions' },
+        { name: 'AI Email Assistant', path: '/ai-email-assistant', description: 'Email automation' },
+        { name: 'AI CRM', path: '/ai-crm', description: 'AI-powered CRM' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'Build custom chatbots' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'Advanced analytics' }
       ]
     },
     {
@@ -89,15 +89,9 @@ const Navigation: React.FC = () => {
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
-        { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
-        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
-        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
-        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
+        { name: 'Enterprise Solutions', path: '/enterprise', description: 'Large-scale IT solutions' },
+        { name: 'Compliance', path: '/compliance', description: 'Regulatory compliance' },
+        { name: 'Security', path: '/security', description: 'Advanced security' }
       ]
     },
     {
@@ -112,13 +106,10 @@ const Navigation: React.FC = () => {
         { name: 'Business Apps', path: '/business-apps', description: 'Productivity applications' },
         { name: 'Marketing Tools', path: '/marketing-tools', description: 'Marketing automation' },
         { name: 'Analytics Tools', path: '/analytics-tools', description: 'Business intelligence' },
-        { name: 'Communication Tools', path: '/communication-tools', description: 'Team collaboration' },
         { name: 'Productivity Tools', path: '/productivity', description: 'Time management & efficiency' },
-        { name: 'HR & Recruitment', path: '/hr-recruitment-tools', description: 'Human resources solutions' },
-        { name: 'Customer Support', path: '/customer-support-tools', description: 'Support & service tools' },
-        { name: 'Sales & CRM', path: '/sales-crm-tools', description: 'Sales management tools' },
-        { name: 'Project Management', path: '/project-management-tools', description: 'Project planning & tracking' },
-        { name: 'Content Creation', path: '/content-creation-tools', description: 'Content & media tools' }
+        { name: 'Smart Analytics', path: '/smart-analytics', description: 'Advanced analytics' },
+        { name: 'Expense Tracker', path: '/expense-tracker', description: 'Expense management' },
+        { name: 'Task Manager Pro', path: '/task-manager-pro', description: 'Task management' }
       ]
     },
     {
@@ -134,12 +125,8 @@ const Navigation: React.FC = () => {
         { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices' },
         { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
         { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
-        { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
-        { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Blockchain', path: '/blockchain', description: 'Blockchain solutions' },
+        { name: 'IoT Edge', path: '/iot-edge', description: 'Edge computing' }
       ]
     }
   ];
@@ -231,6 +218,14 @@ const Navigation: React.FC = () => {
             </div>
 
             <Link 
+              href="/pricing" 
+              className="font-medium transition-colors hover:text-cyan-400 text-white"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+
+            <Link 
               href="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
@@ -244,6 +239,22 @@ const Navigation: React.FC = () => {
               onClick={closeAllMenus}
             >
               Blog
+            </Link>
+
+            <Link
+              href="/demo"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Demo
+            </Link>
+
+            <Link
+              href="/api-docs"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              API Docs
             </Link>
 
             <Link
@@ -332,6 +343,14 @@ const Navigation: React.FC = () => {
               </div>
 
               <Link
+                href="/pricing"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+
+              <Link
                 href="/case-studies"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
                 onClick={closeAllMenus}
@@ -345,6 +364,14 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+
+              <Link
+                href="/demo"
+                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
+                onClick={closeAllMenus}
+              >
+                Demo
               </Link>
 
               <Link
