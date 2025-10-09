@@ -14,7 +14,7 @@ const PerformanceOptimizer: React.FC = () => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = font;
-        link.as = 'style';
+        (link as HTMLLinkElement).as = 'style';
         link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
       });
@@ -107,11 +107,31 @@ const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'web-vitals' in window) {
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log);
-        getFID(console.log);
-        getFCP(console.log);
-        getLCP(console.log);
-        getTTFB(console.log);
+        getCLS((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('CLS:', metric);
+          }
+        });
+        getFID((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('FID:', metric);
+          }
+        });
+        getFCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('FCP:', metric);
+          }
+        });
+        getLCP((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('LCP:', metric);
+          }
+        });
+        getTTFB((metric) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('TTFB:', metric);
+          }
+        });
       });
     }
   }, []);
@@ -120,11 +140,11 @@ const PerformanceOptimizer: React.FC = () => {
   const optimizeMemory = useCallback(() => {
     // Clear unused event listeners periodically
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const memory = (performance as any).memory;
+      const memory = (performance as unknown as { memory: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available
         if ('gc' in window) {
-          (window as any).gc();
+          (window as unknown as { gc: () => void }).gc();
         }
       }
     }
