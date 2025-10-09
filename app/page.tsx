@@ -550,6 +550,21 @@ const HomePage: React.FC = () => {
           <ContentPromotionBanner />
         </Suspense>
 
+        {/* Content Statistics */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+          <ContentStatistics />
+        </Suspense>
+
+        {/* Content Carousel */}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse"></div>}>
+          <ContentCarousel />
+        </Suspense>
+
+        {/* Dynamic Content Showcase */}
+        <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse"></div>}>
+          <DynamicContentShowcase />
+        </Suspense>
+
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
           <section
@@ -874,6 +889,11 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
+
+        {/* Newsletter Signup */}
+        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse"></div>}>
+          <ContentNewsletterSignup />
+        </Suspense>
 
         <Footer />
       </div>
