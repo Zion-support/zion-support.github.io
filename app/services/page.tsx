@@ -1,347 +1,245 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Star, CheckCircle } from 'lucide-react';
+
+import { Helmet } from 'react-helmet-async';
+
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
-      description: 'Affordable, powerful AI-driven tools for modern businesses. Start from $79/month.',
-      icon: '💻',
-      link: '/micro-saas',
-      features: ['12+ Ready-to-use Tools', 'AI-Powered Automation', 'Instant Setup', '24/7 Support'],
-      price: 'Starting at $79/month',
-      popular: true
-    },
-    {
       title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions including ML, NLP, and computer vision.',
-      icon: '🤖',
-      link: '/ai-services',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $1,500/month'
-    },
-    {
-      title: 'AI Marketing Solutions',
-      description: 'Revolutionary AI-powered marketing automation, ad optimization, and content generation.',
-      icon: '📢',
-      link: '/ai-marketing',
-      features: ['Ad Optimization', 'Content Generation', 'Social Media AI', 'Email Marketing AI'],
-      price: 'Starting at $199/month',
-      popular: true
-    },
-    {
-      title: 'AI Business Automation',
-      description: 'Intelligent automation of business processes with decision-making capabilities.',
-      icon: '⚙️',
-      link: '/ai-automation',
-      features: ['Workflow Automation', 'Process Intelligence', 'Decision Automation', 'Exception Handling'],
-      price: 'Starting at $399/month'
-    },
-    {
-      title: 'AI Healthcare Solutions',
-      description: 'Cutting-edge AI solutions for medical imaging, drug discovery, and personalized medicine.',
-      icon: '🏥',
-      link: '/ai-healthcare',
-      features: ['Medical Imaging AI', 'Drug Discovery', 'Personalized Medicine', 'Clinical Decision Support'],
-      price: 'Starting at $1,999/month'
-    },
-    {
-      title: 'AI Fintech Solutions',
-      description: 'Revolutionary AI-powered financial services including trading, fraud detection, and risk management.',
-      icon: '💰',
-      link: '/ai-fintech',
-      features: ['Algorithmic Trading', 'Fraud Detection', 'Credit Scoring', 'Wealth Management'],
-      price: 'Starting at $1,499/month'
+      icon: Brain,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      services: [
+        { name: 'AI Consulting & Strategy', price: '$2,500/month', description: 'Comprehensive AI strategy development and implementation planning', features: ['AI Roadmap Development', 'Technology Assessment', 'ROI Analysis', 'Implementation Planning'] },
+        { name: 'Machine Learning Solutions', price: '$1,500/month', description: 'Custom ML models for predictive analytics and decision-making', features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring'] },
+        { name: 'Natural Language Processing', price: '$1,200/month', description: 'Advanced NLP solutions for text analysis and language understanding', features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'] },
+        { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
+        { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
+        { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
+      ]
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud, security, DevOps, and infrastructure.',
-      icon: '⚙️',
-      link: '/it-services',
-      features: ['Cloud Infrastructure', 'Cybersecurity', 'DevOps & CI/CD', 'Database Administration'],
-      price: 'Starting at $1,200/month'
+      icon: Cpu,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      services: [
+        { name: 'IT Infrastructure', price: '$999/month', description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee', features: ['Server Management', 'Network Setup', 'Security Hardening', 'Backup Solutions'] },
+        { name: 'Cloud Services', price: '$1,299/month', description: 'Cloud migration, setup, and optimization services', features: ['AWS/Azure/GCP Setup', 'Migration Services', 'Cost Optimization', 'Security Configuration'] },
+        { name: 'Cybersecurity', price: '$1,599/month', description: 'Advanced security solutions with threat detection and prevention', features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response'] },
+        { name: 'DevOps & CI/CD', price: '$1,199/month', description: 'Streamlined development workflows with automated testing and deployment', features: ['CI/CD Pipelines', 'Automated Testing', 'Container Orchestration', 'Monitoring Setup'] },
+        { name: 'Database Services', price: '$899/month', description: 'Database design, optimization, and management with AI-powered tuning', features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'] },
+        { name: 'Network Services', price: '$1,099/month', description: 'Network design, implementation, and monitoring solutions', features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'] }
+      ]
     },
     {
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum computing capabilities for complex problem solving.',
-      icon: '⚛️',
-      link: '/quantum-computing',
-      features: ['Quantum Algorithms', 'Quantum Security', 'Optimization', 'Simulation'],
-      price: 'Custom Pricing'
+      title: 'Micro SAAS Solutions',
+      icon: Zap,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      services: [
+        { name: 'AI Code Review Assistant', price: '$199/month', description: 'Automated code analysis and quality improvement suggestions', features: ['Code Quality Analysis', 'Security Vulnerability Detection', 'Performance Optimization', 'Best Practice Recommendations'] },
+        { name: 'AI SEO Optimizer', price: '$299/month', description: 'AI-powered SEO analysis and optimization recommendations', features: ['Keyword Research', 'Content Optimization', 'Technical SEO', 'Competitor Analysis'] },
+        { name: 'AI Analytics Dashboard', price: '$399/month', description: 'Business intelligence and analytics with AI insights', features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Automated Reports'] },
+        { name: 'AI Marketing Automation', price: '$249/month', description: 'Marketing automation and campaign optimization tools', features: ['Email Campaigns', 'Social Media Management', 'Lead Scoring', 'A/B Testing'] },
+        { name: 'AI Document Processing', price: '$179/month', description: 'Intelligent document analysis and data extraction', features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation'] },
+        { name: 'AI Customer Support Bot', price: '$149/month', description: 'Automated customer support and ticket management', features: ['24/7 Support', 'Ticket Routing', 'Knowledge Base', 'Escalation Management'] },
+        { name: 'AI Content Generator', price: '$199/month', description: 'AI-powered content creation for blogs, social media, and marketing', features: ['Blog Writing', 'Social Media Posts', 'Email Templates', 'Ad Copy Generation'] },
+        { name: 'AI Data Visualization', price: '$299/month', description: 'Advanced data visualization and reporting tools', features: ['Interactive Charts', 'Custom Dashboards', 'Real-time Updates', 'Export Options'] },
+        { name: 'AI Email Assistant', price: '$99/month', description: 'Smart email management and response suggestions', features: ['Email Classification', 'Response Suggestions', 'Scheduling', 'Follow-up Reminders'] },
+        { name: 'AI Lead Generation', price: '$349/month', description: 'Automated lead generation and qualification system', features: ['Lead Scoring', 'Contact Discovery', 'Email Outreach', 'CRM Integration'] },
+        { name: 'AI Sales Automation', price: '$399/month', description: 'Intelligent sales process automation and optimization', features: ['Sales Pipeline Management', 'Deal Tracking', 'Forecasting', 'Performance Analytics'] },
+        { name: 'AI E-commerce Solutions', price: '$499/month', description: 'AI-powered e-commerce optimization and management', features: ['Product Recommendations', 'Price Optimization', 'Inventory Management', 'Customer Insights'] }
+      ]
     },
     {
-      title: 'Autonomous Systems',
-      description: 'Self-managing and self-optimizing systems for enterprise operations.',
-      icon: '🔄',
-      link: '/autonomous-systems',
-      features: ['Self-Healing Infrastructure', 'Automated Operations', 'Intelligent Monitoring', 'Adaptive Learning'],
-      price: 'Starting at $2,500/month'
+      title: 'Specialized Solutions',
+      icon: Sparkles,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      services: [
+        { name: 'Quantum Computing', price: 'Custom', description: 'Next-generation quantum algorithms and quantum security implementations', features: ['Quantum Algorithm Development', 'Quantum Security', 'Optimization Problems', 'Research & Development'] },
+        { name: 'Autonomous Systems', price: 'Custom', description: 'Self-managing and self-optimizing systems for enterprise operations', features: ['Self-Healing Systems', 'Predictive Maintenance', 'Resource Optimization', 'Performance Monitoring'] },
+        { name: 'Blockchain & Web3', price: '$1,999/month', description: 'Decentralized solutions, smart contracts, and Web3 applications', features: ['Smart Contract Development', 'DApp Creation', 'Token Economics', 'DeFi Solutions'] },
+        { name: 'IoT & Edge Computing', price: '$1,499/month', description: 'Connected devices and edge computing solutions', features: ['Device Management', 'Edge Analytics', 'Real-time Processing', 'Security Implementation'] },
+        { name: 'Business Intelligence', price: '$1,799/month', description: 'Data-driven insights and predictive analytics for decision-making', features: ['Data Warehousing', 'ETL Processes', 'Advanced Analytics', 'Executive Dashboards'] },
+        { name: 'Robotics Solutions', price: 'Custom', description: 'Intelligent robotic solutions for manufacturing and service industries', features: ['Robotic Process Automation', 'Computer Vision Integration', 'Human-Robot Collaboration', 'Maintenance Systems'] }
+      ]
+    }
+  ];
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: 'Proven ROI',
+      description: 'Average 300% ROI with measurable business impact and cost savings'
     },
     {
-      title: 'Business Intelligence',
-      description: 'Data-driven insights and analytics for strategic decision making.',
-      icon: '📊',
-      link: '/business-intelligence',
-      features: ['Real-time Analytics', 'Data Visualization', 'Reporting', 'Dashboard Creation'],
-      price: 'Starting at $1,800/month'
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security and compliance for all solutions and data'
     },
     {
-      title: 'Blockchain & Web3',
-      description: 'Decentralized applications, smart contracts, and Web3 solutions.',
-      icon: '🔗',
-      link: '/blockchain',
-      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Web3 Applications'],
-      price: 'Starting at $8,000/project'
+      icon: Clock,
+      title: '24/7 Support',
+      description: 'Round-the-clock support and monitoring for all services'
     },
     {
-      title: 'IoT & Edge Computing',
-      description: 'Connected devices, edge analytics, and industrial IoT solutions.',
-      icon: '📱',
-      link: '/iot-edge',
-      features: ['Device Management', 'Edge Analytics', 'Industrial IoT', 'Smart Cities'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Robotics & Automation',
-      description: 'Intelligent robots, RPA, and advanced automation solutions.',
-      icon: '🤖',
-      link: '/robotics',
-      features: ['RPA Solutions', 'Industrial Robots', 'Service Robots', 'AI-Powered Automation'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'AI Data Analytics',
-      description: 'Advanced AI-powered analytics platform providing real-time insights and predictive modeling.',
-      icon: '📊',
-      link: '/ai-data-analytics',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Business Intelligence', 'Data Visualization'],
-      price: 'Starting at $1,299/month'
-    },
-    {
-      title: 'AI Cybersecurity',
-      description: 'AI-powered security solutions with threat detection, SOC services, and compliance management.',
-      icon: '🔒',
-      link: '/ai-cybersecurity',
-      features: ['AI Threat Detection', 'SOC Services', 'Vulnerability Assessment', 'Compliance Automation'],
-      price: 'Starting at $2,499/month'
-    },
-    {
-      title: 'AI Workflow Automation',
-      description: 'Intelligent automation platform that streamlines business processes with AI-powered workflows.',
-      icon: '🤖',
-      link: '/ai-workflow-automation',
-      features: ['Process Automation', 'RPA Solutions', 'Workflow Optimization', 'Exception Handling'],
-      price: 'Starting at $399/month'
-    },
-    {
-      title: 'AI Cloud Infrastructure',
-      description: 'AI-powered cloud services including migration, optimization, security, and monitoring.',
-      icon: '☁️',
-      link: '/ai-cloud-infrastructure',
-      features: ['Cloud Migration', 'Cost Optimization', 'DevOps Automation', 'Security Management'],
-      price: 'Starting at $2,999/month'
-    },
-    {
-      title: 'AI E-commerce Solutions',
-      description: 'Revolutionary AI-powered e-commerce platform with personalization, inventory management, and automated customer service.',
-      icon: '🛒',
-      link: '/ai-ecommerce-solutions',
-      features: ['AI Personalization', 'Inventory Management', 'Payment Processing', 'Marketing Automation'],
-      price: 'Starting at $1,999/month'
-    },
-    {
-      title: 'AI Mobile App Development',
-      description: 'Complete mobile app development with AI integration, machine learning capabilities, and intelligent features.',
-      icon: '📱',
-      link: '/ai-mobile-app-development',
-      features: ['Native Development', 'AI Integration', 'Cross-platform', 'Analytics'],
-      price: 'Starting at $4,999/project'
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Advanced security services including threat detection and compliance.',
-      icon: '🛡️',
-      link: '/cybersecurity',
-      features: ['Threat Detection', 'Penetration Testing', 'Zero Trust Security', 'SOC Services'],
-      price: 'Starting at $2,500/month'
+      icon: Users,
+      title: 'Expert Team',
+      description: 'World-class engineers and data scientists with proven track records'
     }
   ];
 
-  const additionalServices = [
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless cloud transformation with zero downtime and cost optimization.',
-      icon: '☁️',
-      features: ['Zero Downtime', 'Cost Optimization', 'Security Enhancement', 'Scalability'],
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection and incident response.',
-      icon: '🔒',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management']
-    },
-    {
-      title: 'DevOps & Automation',
-      description: 'Automated deployment pipelines and infrastructure as code solutions.',
-      icon: '🔄',
-      features: ['CI/CD Pipelines', 'Infrastructure Automation', 'Monitoring & Alerting', 'Testing Automation']
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Advanced data analytics and business intelligence solutions.',
-      icon: '📈',
-      features: ['Data Warehouse Design', 'ETL Development', 'Dashboard Creation', 'Predictive Modeling']
-    },
-    {
-      title: 'API Development',
-      description: 'Custom API development and third-party integration services.',
-      icon: '🔌',
-      features: ['RESTful APIs', 'GraphQL Development', 'Third-party Integrations', 'API Documentation']
-    },
-    {
-      title: 'Consulting',
-      description: 'Expert guidance and strategic planning for digital transformation.',
-      icon: '💡',
-      features: [
-        'Strategic Planning',
-        'Technology Assessment',
-        'Implementation Support',
-        'Training',
-      ],
-    },
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services including machine learning, automation, cloud infrastructure, and specialized solutions. Starting at $99/month." />
+        <meta name="keywords" content="ai services, it services, machine learning, automation, cloud services, cybersecurity, micro saas, specialized solutions" />
+      </Helmet>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Comprehensive AI, IT, and micro SAAS solutions designed to transform your business
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-                Get Free Consultation
-              </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                View All Services
-              </button>
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business operations and drive innovation.
+          </p>
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Services</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-green-400 mb-2">$99</div>
+              <div className="text-gray-300">Starting Price</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
+              <div className="text-gray-300">Average ROI</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support</div>
+            </div>
+          </div>
+          {/* Contact Info */}
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-5 h-5" />
+                <span className="text-white font-medium">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-5 h-5" />
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-5 h-5" />
+                <span className="text-white font-medium">Middletown, DE</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      {/* Main Service Categories */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Service Categories
-            </h2>
-            <p className="text-xl text-gray-600">
-              Choose from our comprehensive range of technology solutions
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceCategories.map((service, index) => (
-              <div key={index} className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow relative ${service.popular ? 'ring-2 ring-blue-500' : ''}`}>
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
+      {/* Service Categories */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Service Categories
+          </h2>
+          <div className="space-y-16">
+            {serviceCategories.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card">
+                <div className="flex items-center mb-8">
+                  <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
+                    <category.icon className={`w-8 h-8 ${category.color}`} />
                   </div>
-                )}
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                  <div>
+                    <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
+                    <p className="text-gray-300">Comprehensive solutions for your business needs</p>
+                  </div>
                 </div>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.services.map((service, serviceIndex) => (
+                    <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
+                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                      <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                      
+                      {/* Features */}
+                      <div className="mb-4">
+                        <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
+                        <ul className="space-y-1">
+                          {service.features.map((feature, featureIndex) => (
+                            <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                              <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                        <a
+                          href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
+                          className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                        >
+                          Get Started
+                        </a>
+                      </div>
+                    </div>
                   ))}
-                </ul>
-                <Link 
-                  to={service.link}
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center justify-center"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Additional Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Services
-            </h2>
-            <p className="text-xl text-gray-600">
-              Specialized solutions for specific business needs
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {additionalServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+      {/* Benefits Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Why Choose Our Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Contact us today for a free consultation and custom solution recommendations
+          <p className="text-xl text-purple-100 mb-8">
+            Get started with our services today and see the difference AI and IT solutions can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <a
               href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              📞 +1 302 464 0950
+              Call (302) 464-0950
             </a>
-            <a 
+            <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              ✉️ kleber@ziontechgroup.com
+              Email Us
             </a>
-          </div>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>

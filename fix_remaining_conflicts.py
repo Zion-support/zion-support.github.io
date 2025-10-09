@@ -1,156 +1,119 @@
 #!/usr/bin/env python3
 """
-Advanced script to resolve complex merge conflicts
+Comprehensive script to fix all remaining merge conflicts
 """
 import os
 import re
 import glob
 
-def clean_conflict_markers(content):
-    """Clean all types of conflict markers from content"""
-    # Remove all conflict markers and their content
-    patterns = [
-        r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+',
-        r'<<<<<<< HEAD.*?=======.*?>>>>>>>',
-        r'<<<<<<< HEAD.*?=======',
-        r'=======.*?>>>>>>> [^\n]+',
-        r'=======.*?>>>>>>>',
-        r'^<<<<<<< HEAD.*$',
-        r'^=======.*$',
-        r'^>>>>>>> .*$',
-    ]
-    
-    for pattern in patterns:
-        content = re.sub(pattern, '', content, flags=re.MULTILINE | re.DOTALL)
-    
-    # Clean up extra whitespace and empty lines
-    content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-    content = re.sub(r'^\s*\n', '', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_navigation_file(file_path):
-    """Special handling for Navigation.tsx"""
+def clean_conflicts_in_file(file_path):
+    """Clean all merge conflict markers from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Clean conflict markers
-        content = clean_conflict_markers(content)
+        original_content = content
         
-        # Fix specific issues in Navigation.tsx
-        # Remove duplicate/malformed lines
+        # Remove all conflict markers and keep the content after =======
+        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> [^\n]+', r'\1', content, flags=re.DOTALL)
+        
+        # Pattern 2: Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Pattern 3: Remove standalone markers
+        content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
+        content = re.sub(r'^>>>>>>> [^\n]+\n?', '', content, flags=re.MULTILINE)
+        
+        # Clean up duplicate imports and empty lines
         lines = content.split('\n')
         cleaned_lines = []
+        seen_imports = set()
+        in_import_block = False
         
-        for i, line in enumerate(lines):
-            # Skip malformed lines
-            if '=======' in line and 'Zion Tech Group' not in line:
-                continue
-            if line.strip() == '=======':
-                continue
-            if '>>>>>>>' in line and 'cursor/' in line:
-                continue
-            if '<<<<<<< HEAD' in line:
-                continue
+        for line in lines:
+            stripped = line.strip()
             
-            cleaned_lines.append(line)
+            # Handle import statements
+            if stripped.startswith('import ') or stripped.startswith('from '):
+                if stripped not in seen_imports:
+                    cleaned_lines.append(line)
+                    seen_imports.add(stripped)
+                in_import_block = True
+            elif stripped == '' and in_import_block:
+                # Skip empty lines in import block
+                continue
+            elif stripped != '':
+                in_import_block = False
+                cleaned_lines.append(line)
+            else:
+                cleaned_lines.append(line)
         
         content = '\n'.join(cleaned_lines)
         
-        # Fix the logo section specifically
-        content = re.sub(
-            r'<Link to="/" className="text-2xl font-bold text-blue-600 flex items-center">\s*<span className="text-3xl mr-2">⚡</span>=======\s*<Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">\s*<span className="text-3xl mr-2">⚡</span>\s*Zion Tech Group\s*</Link>',
-            '<Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">\n            <span className="text-3xl mr-2">⚡</span>\n            Zion Tech Group\n          </Link>',
-            content,
-            flags=re.DOTALL
-        )
+        # Remove excessive empty lines
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
         
-        print(f"✅ Fixed Navigation.tsx")
-        return True
-        
-    except Exception as e:
-        print(f"❌ Error fixing Navigation.tsx: {e}")
         return False
-
-def fix_enhanced_error_boundary(file_path):
-    """Special handling for EnhancedErrorBoundary.tsx"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Clean conflict markers
-        content = clean_conflict_markers(content)
-        
-        # Fix any remaining issues
-        content = re.sub(r'>>>>>>> cursor/[^\n]+', '', content)
-        content = re.sub(r'<<<<<<< HEAD', '', content)
-        content = re.sub(r'=======', '', content)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        print(f"✅ Fixed EnhancedErrorBoundary.tsx")
-        return True
         
     except Exception as e:
-        print(f"❌ Error fixing EnhancedErrorBoundary.tsx: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix remaining conflicts"""
-    print("🔧 Fixing remaining merge conflicts...")
-    
-    # Fix specific problematic files
-    files_to_fix = [
+    """Main function to clean all conflicts"""
+    # Files that still have conflicts
+    problem_files = [
+        'app/components/AccessibilityEnhancer.tsx',
+        'app/components/Footer.tsx', 
+        'app/components/PerformanceMonitor.tsx',
         'app/components/Navigation.tsx',
-        'app/components/EnhancedErrorBoundary.tsx'
+        'app/micro-saas/page.tsx',
+        'app/utils/accessibilityChecker.ts',
+        'src/types/guards.ts',
+        'src/types/app.types.ts',
+        'src/utils/enhanced-performance.ts'
     ]
     
-    for file_path in files_to_fix:
+    files_cleaned = 0
+    
+    for file_path in problem_files:
         if os.path.exists(file_path):
-            if 'Navigation' in file_path:
-                fix_navigation_file(file_path)
-            elif 'EnhancedErrorBoundary' in file_path:
-                fix_enhanced_error_boundary(file_path)
+            print(f"Cleaning {file_path}")
+            if clean_conflicts_in_file(file_path):
+                files_cleaned += 1
+                print(f"  ✅ Cleaned")
+            else:
+                print(f"  ℹ️  No changes needed")
         else:
-            print(f"⚠️  File not found: {file_path}")
+            print(f"  ❌ File not found: {file_path}")
     
-    # Clean up all remaining files with simple conflict marker removal
-    patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.jsx',
-        '**/*.js'
-    ]
+    print(f"\nCleaned {files_cleaned} files")
     
-    all_files = []
-    for pattern in patterns:
-        all_files.extend(glob.glob(pattern, recursive=True))
+    # Final verification
+    remaining_conflicts = []
+    for file_path in problem_files:
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                    remaining_conflicts.append(file_path)
+            except:
+                pass
     
-    for file_path in all_files:
-        if 'node_modules' in file_path or '.git' in file_path:
-            continue
-            
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                cleaned_content = clean_conflict_markers(content)
-                
-                if cleaned_content != content:
-                    with open(file_path, 'w', encoding='utf-8') as f:
-                        f.write(cleaned_content)
-                    print(f"✅ Cleaned {file_path}")
-                    
-        except Exception as e:
-            print(f"⚠️  Could not process {file_path}: {e}")
-    
-    print("\n✅ Conflict resolution complete!")
+    if remaining_conflicts:
+        print(f"\n⚠️  {len(remaining_conflicts)} files still have conflicts:")
+        for file_path in remaining_conflicts:
+            print(f"  - {file_path}")
+    else:
+        print("\n🎉 All conflicts resolved!")
 
 if __name__ == "__main__":
     main()

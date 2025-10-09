@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'component_size_report'}
       });
     };
-//   } catch (error) {console.error('❌ component_size_report function failed: ') error
+//   } catch (error) {// console.error('❌ component_size_report function failed: ') error
       }
     return {
       statusCode: 500,

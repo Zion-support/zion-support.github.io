@@ -10,21 +10,12 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
 import SEOEnhancer from './components/SEOEnhancer';
-import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-// const InteractiveContentShowcase2026 = lazy(
-//   () => import('./components/InteractiveContentShowcase2026')
-// );
-// const InteractiveAIROICalculator = lazy(
-//   () => import('./components/InteractiveAIROICalculator')
-// );
 
 // Lazy load pages for better performance
 const _HomePage = lazy(() => import('./page'));
@@ -70,6 +61,7 @@ const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
 import { logger } from './utils/logger';
+import { performanceOptimizer } from './utils/performanceOptimizer';
 
 // Styles
 import './globals.css';
@@ -80,60 +72,54 @@ const App: React.FC = () => {
     logger.info('initialized', { component: 'App' });
 
     // Initialize performance monitoring
-    lazyLoadImages();
-    preloadCriticalResources();
-    performanceOptimizer.init();
-    performanceMonitor.init();
-    
-    // Initialize SEO optimization
-    seoOptimizer.init();
-    
-    // Initialize accessibility enhancements
-    accessibilityEnhancer.init();
-    
-    // Initialize Web Vitals monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const pageLoadMetrics = collectPerformanceMetrics();
-      const metrics = performanceOptimizer.getMetrics();
-      // const performanceMetrics = performanceMonitor.getMetrics();
+    if (typeof window !== 'undefined') {
+      // Lazy load images
+      const lazyLoadImages = () => {
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target as HTMLImageElement;
+              img.src = img.dataset.src || '';
+              img.classList.remove('lazy');
+              observer.unobserve(img);
+            }
+          });
+        });
+        images.forEach(img => imageObserver.observe(img));
+      };
+
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        const criticalResources = [
+          '/fonts/inter.woff2',
+          '/css/critical.css'
+        ];
+        criticalResources.forEach(resource => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.href = resource;
+          link.as = resource.endsWith('.css') ? 'style' : 'font';
+          document.head.appendChild(link);
+        });
+      };
+
+      // Initialize performance monitoring
+      performanceOptimizer.init();
       
-      if (pageLoadMetrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics collected:', pageLoadMetrics);
-      }
-      if (metrics) {
-        // eslint-disable-next-line no-console
-        console.log('Performance metrics:', metrics);
-      }
-      // Performance metrics logging removed for production
-    }
-    
-    // Log performance and accessibility metrics periodically
-    const metricsInterval = setInterval(() => {
-<<<<<<< HEAD
-      // const performanceMetrics = performanceMonitor.getMetrics();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
+      // Log performance metrics in development
       if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line no-console
-        console.log('Performance Score:', performanceMonitor.getScore());
-        // eslint-disable-next-line no-console
-        console.log('Accessibility Score:', accessibilityMetrics.overallScore);
+        setTimeout(() => {
+          const metrics = performanceOptimizer.getMetrics();
+          const score = performanceOptimizer.getScore();
+          console.log('Performance metrics:', metrics);
+          console.log('Performance score:', score);
+        }, 2000);
       }
-    }, 30000);
+    }
     
     logger.info('performance monitoring initialized', { component: 'App' });
     logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring', { component: 'App' });
-
-    return () => {
-      // Cleanup
-      performanceOptimizer.cleanup();
-      performanceMonitor.cleanup();
-      accessibilityEnhancer.cleanup();
-      clearInterval(metricsInterval);
-    };
   }, []);
 
   return (

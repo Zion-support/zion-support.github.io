@@ -1,131 +1,100 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix remaining issues in a file
+// Function to recursively find all .tsx and .ts files
+function findFiles(dir, extensions = ['.tsx', '.ts']) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      results = results.concat(findFiles(filePath, extensions));
+    } else if (extensions.some(ext => file.endsWith(ext))) {
+      results.push(filePath);
+    }
+  });
+  
+  return results;
+}
+
+// Function to fix remaining issues
 function fixRemainingIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix href to to in Link components (more comprehensive)
-    const hrefToToRegex = /<Link\s+([^>]*?)href={['"]([^'"]+)['"]}([^>]*?)>/g;
-    content = content.replace(hrefToToRegex, (match, before, href, after) => {
-      modified = true;
-      return `<Link ${before}to={'${href}'}${after}>`;
-    });
-
-    // Fix remaining href attributes in Link components
-    const hrefAttributeRegex = /href={['"]([^'"]+)['"]}/g;
-    content = content.replace(hrefAttributeRegex, (match, href) => {
-      // Only replace if it's inside a Link component
-      const beforeMatch = content.substring(0, content.indexOf(match));
-      const lastLinkOpen = beforeMatch.lastIndexOf('<Link');
-      const lastLinkClose = beforeMatch.lastIndexOf('>');
-      
-      if (lastLinkOpen > lastLinkClose) {
-        modified = true;
-        return `to={'${href}'}`;
-      }
-      return match;
-    });
-
-    // Remove Metadata type references
-    const metadataRegex = /export\s+const\s+metadata:\s*Metadata\s*=/g;
-    content = content.replace(metadataRegex, (match) => {
-      modified = true;
-      return '// export const metadata: Metadata = // Removed for Vite';
-    });
-
-    // Fix dynamic imports that weren't caught
-    const dynamicRegex = /const\s+(\w+)\s+=\s+dynamic\(/g;
-    content = content.replace(dynamicRegex, (match, varName) => {
-      modified = true;
-      return `const ${varName} = lazy(`;
-    });
-
-    // Fix dynamic import closing
-    const dynamicCloseRegex = /,\s*\{\s*loading:\s*\(\)\s+=>\s+<(\w+)Skeleton\s*\/>,\s*\}\);?/g;
-    content = content.replace(dynamicCloseRegex, (match, skeletonName) => {
-      modified = true;
-      return `);`;
-    });
-
-    // Add React import if missing and we have JSX
-    if (content.includes('<') && content.includes('>') && !content.includes('import React')) {
+    
+    // Fix merge conflict markers
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       const lines = content.split('\n');
-      let insertIndex = 0;
+      const cleanedLines = [];
+      let inConflict = false;
       
-      // Find the first import statement or add at the beginning
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('import ')) {
-          insertIndex = i;
-          break;
+      for (const line of lines) {
+        if (line.includes('<<<<<<< HEAD') || line.includes('=======') || line.includes('>>>>>>>')) {
+          inConflict = !inConflict;
+          continue;
+        }
+        if (!inConflict) {
+          cleanedLines.push(line);
         }
       }
       
-      if (!content.includes('import React')) {
-        lines.splice(insertIndex, 0, "import React from 'react';");
-        content = lines.join('\n');
-        modified = true;
-      }
+      content = cleanedLines.join('\n');
+      modified = true;
     }
-
-    // Add lazy import if we have lazy usage
-    if (content.includes('lazy(') && !content.includes('import { lazy }')) {
+    
+    // Fix origin/ references
+    if (content.includes('origin/')) {
+      content = content.replace(/origin\/[a-zA-Z0-9-]+/g, '');
+      modified = true;
+    }
+    
+    // Remove metadata export from client components
+    if (content.includes("'use client'") && content.includes('export const metadata')) {
+      // Remove the entire metadata export
+      content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
+      modified = true;
+    }
+    
+    // Fix duplicate export default issues
+    const exportDefaultMatches = content.match(/export default/g);
+    if (exportDefaultMatches && exportDefaultMatches.length > 1) {
+      // Keep only the first export default
       const lines = content.split('\n');
-      let insertIndex = 0;
-      
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].startsWith('import ')) {
-          insertIndex = i;
-          break;
+      let foundFirst = false;
+      for (let i = lines.length - 1; i >= 0; i--) {
+        if (lines[i].includes('export default') && !lines[i].includes('function') && !lines[i].includes('const')) {
+          if (foundFirst) {
+            lines.splice(i, 1);
+            modified = true;
+          } else {
+            foundFirst = true;
+          }
         }
       }
-      
-      lines.splice(insertIndex, 0, "import { lazy } from 'react';");
       content = lines.join('\n');
-      modified = true;
     }
-
+    
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
-    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Find all TypeScript/JavaScript files in the app directory
-const patterns = [
-  'app/**/*.tsx',
-  'app/**/*.ts',
-  'app/**/*.jsx',
-  'app/**/*.js'
-];
+// Main execution
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
-let totalFixed = 0;
+console.log(`Found ${files.length} files to check...`);
 
-patterns.forEach(pattern => {
-  const files = glob.sync(pattern, { cwd: process.cwd() });
-  
-  files.forEach(file => {
-    // Skip certain directories
-    if (file.includes('node_modules') || 
-        file.includes('.next') || 
-        file.includes('dist') ||
-        file.includes('build')) {
-      return;
-    }
-    
-    if (fixRemainingIssues(file)) {
-      totalFixed++;
-    }
-  });
+files.forEach(file => {
+  fixRemainingIssues(file);
 });
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
+console.log('Remaining issues fixes completed!');

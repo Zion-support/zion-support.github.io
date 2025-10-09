@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "jsxImportSource": "react",
-    "strict": false,
+    "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
@@ -74,13 +74,11 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "src/**/*",
-    "App.tsx",
-    "components/**/*",
-    "api/**/*.ts",
-    "api/**/*.js",
-    "*.ts",
-    "*.tsx"
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
