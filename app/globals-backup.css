@@ -56,13 +56,47 @@ body {
   background-image: 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: gridMove 20s linear infinite;
+  background-size: 20px 20px;
+  position: relative;
 }
 
-@keyframes gridMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 50px 50px; }
+.cyber-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Neural Network Background */
+.neural-network-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.neural-network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: neuralPulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes neuralPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
 }
 
 /* Matrix Rain Effect */
@@ -252,7 +286,53 @@ body {
   left: 100%;
 }
 
-/* Cyber Button Styles */
+/* Cyber Scan Line Effect */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Advanced Futuristic Effects */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
 .cyber-button {
   position: relative;
   display: inline-flex;
@@ -274,7 +354,7 @@ body {
 
 .cyber-button:hover {
   background: linear-gradient(45deg, #00e6e6, #2563eb, #7c3aed);
-  box-shadow: 0 25px 50px -12px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 20px 25px -5px rgba(0, 255, 255, 0.4);
   transform: scale(1.05);
 }
 
@@ -418,31 +498,6 @@ body {
   pointer-events: none;
 }
 
-/* Advanced Futuristic Effects */
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 2s ease-in-out infinite;
-}
-
-.animate-slide-up {
-  animation: slideInUp 0.6s ease-out;
-}
-
-.animate-slide-left {
-  animation: slideInLeft 0.6s ease-out;
-}
-
-.animate-slide-right {
-  animation: slideInRight 0.6s ease-out;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.5s ease-out;
-}
-
 /* Loading Animations */
 @keyframes fadeInUp {
   from {
@@ -459,25 +514,56 @@ body {
   animation: fadeInUp 0.6s ease-out;
 }
 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, var(--primary-cyan), var(--primary-purple));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink));
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .cyber-grid {
+    background-size: 15px 15px;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  
   .cyber-card {
     padding: 1rem;
   }
   
   .cyber-button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
   }
 }
 
 @media (max-width: 480px) {
   .cyber-grid {
-    background-size: 20px 20px;
+    background-size: 10px 10px;
   }
   
   .neon-text {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   
   .cyber-text {
@@ -490,7 +576,7 @@ body {
   }
   
   .cyber-button {
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
 }
