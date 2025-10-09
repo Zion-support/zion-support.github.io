@@ -578,9 +578,14 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
-Score: ${metrics.score}/100
-Issues Found: ${metrics.issues.length}
-Recommendations: ${metrics.recommendations.length}
+Overall Score: ${metrics.overallScore || 'N/A'}
+Focusable Elements: ${metrics.focusableElements || 0}
+Images Without Alt: ${metrics.imagesWithoutAlt || 0}
+Links Without Text: ${metrics.linksWithoutText || 0}
+Headings Without Content: ${metrics.headingsWithoutContent || 0}
+Color Contrast Issues: ${metrics.colorContrastIssues || 0}
+Keyboard Navigation Score: ${metrics.keyboardNavigationScore || 0}
+Screen Reader Score: ${metrics.screenReaderScore || 0}
 `;
   }
 }

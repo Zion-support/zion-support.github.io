@@ -559,5 +559,21 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    
+    let report = `Accessibility Report:\n\n`;
+    report += `Total Issues: ${this.issues.length}\n`;
+    report += `Critical: ${this.getIssuesBySeverity(A11ySeverity.CRITICAL).length}\n`;
+    report += `Serious: ${this.getIssuesBySeverity(A11ySeverity.SERIOUS).length}\n`;
+    report += `Moderate: ${this.getIssuesBySeverity(A11ySeverity.MODERATE).length}\n`;
+    report += `Minor: ${this.getIssuesBySeverity(A11ySeverity.MINOR).length}\n\n`;
+    
+    this.issues.forEach((issue, index) => {
+      report += `${index + 1}. ${issue.message}\n`;
+      report += `   Severity: ${issue.severity}\n`;
+      report += `   WCAG Level: ${issue.wcagLevel}\n`;
+      report += `   Element: ${issue.element}\n\n`;
+    });
+    
+    return report;
   }
 }

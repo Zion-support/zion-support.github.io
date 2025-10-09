@@ -559,3 +559,21 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+    
+    let report = `Accessibility Report:\n\n`;
+    report += `Total Issues: ${this.issues.length}\n`;
+    report += `Critical: ${this.getIssuesBySeverity('critical').length}\n`;
+    report += `High: ${this.getIssuesBySeverity('high').length}\n`;
+    report += `Medium: ${this.getIssuesBySeverity('medium').length}\n`;
+    report += `Low: ${this.getIssuesBySeverity('low').length}\n\n`;
+    
+    this.issues.forEach((issue, index) => {
+      report += `${index + 1}. ${issue.message}\n`;
+      report += `   Severity: ${issue.severity}\n`;
+      report += `   WCAG Level: ${issue.wcagLevel}\n`;
+      report += `   Element: ${issue.element}\n\n`;
+    });
+    
+    return report;
+  }
+}
