@@ -1,309 +1,152 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  featured: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-}
+import { ArrowRight, Calendar, Clock, User } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
-  const [featuredPosts, setFeaturedPosts] = useState<BlogPost[]>([]);
-  const [recentPosts, setRecentPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Mock data - in a real app, this would come from an API
-  const blogPosts: BlogPost[] = [
+  const contentItems = [
     {
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
-      readTime: '15 min read',
-      date: '2025-01-15',
-      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      featured: true,
-      stats: { views: 12500, engagement: 94 }
+      id: 1,
+      title: 'Latest AI Breakthrough',
+      description: 'Revolutionary machine learning algorithm that processes data 10x faster than traditional methods.',
+      category: 'AI Innovation',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      author: 'Dr. Sarah Chen',
+      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop',
+      link: '/blog/ai-breakthrough-2024'
     },
     {
-      id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
-      readTime: '50 min read',
-      date: '2025-01-28',
-      path: '/blog/ai-enterprise-transformation-2025',
-      featured: true,
-      stats: { views: 18750, engagement: 97 }
+      id: 2,
+      title: 'Quantum Computing Milestone',
+      description: 'Achieved quantum supremacy in optimization problems, opening new possibilities for enterprise solutions.',
+      category: 'Quantum Computing',
+      date: '2024-01-12',
+      readTime: '7 min read',
+      author: 'Prof. Michael Zhang',
+      image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=250&fit=crop',
+      link: '/blog/quantum-milestone-2024'
     },
     {
-      id: 'ai-2026-autonomous-enterprise-architecture',
-      title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-      description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
-      category: 'Architecture',
-      readTime: '12 min read',
-      date: '2026-01-15',
-      path: '/blog/ai-2026-autonomous-enterprise-architecture',
-      featured: true,
-      stats: { views: 8900, engagement: 91 }
+      id: 3,
+      title: 'Autonomous Systems Update',
+      description: 'New self-managing infrastructure reduces operational costs by 60% while improving reliability.',
+      category: 'Autonomous Systems',
+      date: '2024-01-10',
+      readTime: '6 min read',
+      author: 'Alex Rodriguez',
+      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop',
+      link: '/blog/autonomous-systems-update'
     },
     {
-      id: 'ai-2026-autonomous-agent-factories',
-      title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
-      readTime: '18 min read',
-      date: '2026-02-01',
-      path: '/blog/ai-2026-autonomous-agent-factories',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
-    },
-    {
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      featured: false,
-      stats: { views: 6500, engagement: 85 }
-    },
-    {
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
-      category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
-      path: '/blog/ai-cost-optimization-breakthrough-2026',
-      featured: false,
-      stats: { views: 9800, engagement: 92 }
+      id: 4,
+      title: 'Cybersecurity Innovation',
+      description: 'AI-powered threat detection system prevents 99.9% of cyber attacks in real-time.',
+      category: 'Cybersecurity',
+      date: '2024-01-08',
+      readTime: '4 min read',
+      author: 'Lisa Thompson',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop',
+      link: '/blog/cybersecurity-innovation'
     }
   ];
 
   useEffect(() => {
-    // Simulate loading
-    const timer = setTimeout(() => {
-      setFeaturedPosts(blogPosts.filter(post => post.featured));
-      setRecentPosts(blogPosts.filter(post => !post.featured).slice(0, 3));
-      setLoading(false);
-    }, 500);
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+    }, 4000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearInterval(timer);
+  }, [contentItems.length]);
 
-  const formatNumber = (num: number): string => {
-    if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'k';
-    }
-    return num.toString();
-  };
-
-  if (loading) {
-    return (
-      <div className="bg-white py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="h-8 bg-gray-200 rounded w-64 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-4 bg-gray-200 rounded w-96 mx-auto animate-pulse"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  const currentItem = contentItems[currentIndex];
 
   return (
-    <div className="bg-white py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+    <section className="py-16 bg-gradient-to-br from-gray-900/40 to-slate-900/40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Latest AI Insights & Breakthroughs
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Latest Insights & Innovations
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover cutting-edge AI trends, enterprise transformation strategies, and revolutionary 
-            technologies that are reshaping the future of business.
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Stay ahead of the curve with our latest research, case studies, and technological breakthroughs.
           </p>
         </div>
 
-        {/* Featured Content */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            🌟 Featured Content
-          </h3>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredPosts.map((post, index) => (
-              <article
-                key={post.id}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 ${
-                  index === 0 ? 'lg:col-span-2' : ''
-                }`}
-              >
-                <div className="relative">
-                  <div className={`h-48 bg-gradient-to-br ${
-                    index === 0 ? 'from-indigo-500 to-purple-600' :
-                    index === 1 ? 'from-green-500 to-blue-600' :
-                    'from-purple-500 to-pink-600'
-                  } flex items-center justify-center`}>
-                    <div className="text-white text-center">
-                      <div className="text-4xl mb-2">
-                        {index === 0 ? '🚀' : index === 1 ? '💰' : '🏗️'}
-                      </div>
-                      <div className="text-sm font-medium opacity-90">{post.category}</div>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {post.readTime}
-                    </span>
-                  </div>
-                  {post.stats && (
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {formatNumber(post.stats.views)} views
-                      </span>
-                    </div>
-                  )}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl">
+            <div className="md:flex">
+              {/* Image */}
+              <div className="md:w-1/2">
+                <img
+                  src={currentItem.image}
+                  alt={currentItem.title}
+                  className="w-full h-64 md:h-full object-cover"
+                />
+              </div>
+              
+              {/* Content */}
+              <div className="md:w-1/2 p-8">
+                <div className="flex items-center mb-4">
+                  <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    {currentItem.category}
+                  </span>
                 </div>
                 
-                <div className="p-6">
-                  <h4 className={`font-bold text-gray-900 mb-3 ${
-                    index === 0 ? 'text-2xl' : 'text-xl'
-                  }`}>
-                    {post.title}
-                  </h4>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-gray-500">{post.date}</span>
-                    {post.stats && (
-                      <div className="flex items-center space-x-2">
-                        <span className="text-sm text-green-600 font-medium">
-                          {post.stats.engagement}% engagement
-                        </span>
-                      </div>
-                    )}
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {currentItem.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {currentItem.description}
+                </p>
+                
+                <div className="flex items-center text-sm text-gray-400 mb-6 space-x-4">
+                  <div className="flex items-center">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {new Date(currentItem.date).toLocaleDateString()}
                   </div>
-                  
-                  <Link
-                    href={post.path}
-                    className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium"
-                  >
-                    Read Full Article
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Recent Content */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
-            📚 Recent Articles
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentPosts.map((post, index) => (
-              <article
-                key={post.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="h-32 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="text-2xl mb-1">
-                      {index === 0 ? '🤖' : index === 1 ? '🧠' : '💰'}
-                    </div>
-                    <div className="text-xs font-medium opacity-90">{post.category}</div>
+                  <div className="flex items-center">
+                    <Clock className="w-4 h-4 mr-1" />
+                    {currentItem.readTime}
+                  </div>
+                  <div className="flex items-center">
+                    <User className="w-4 h-4 mr-1" />
+                    {currentItem.author}
                   </div>
                 </div>
                 
-                <div className="p-4">
-                  <h4 className="font-bold text-gray-900 mb-2 text-lg line-clamp-2">
-                    {post.title}
-                  </h4>
-                  <p className="text-gray-600 mb-3 text-sm line-clamp-2">
-                    {post.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs text-gray-500">{post.readTime}</span>
-                    {post.stats && (
-                      <span className="text-xs text-green-600 font-medium">
-                        {post.stats.engagement}% engagement
-                      </span>
-                    )}
-                  </div>
-                  
-                  <Link
-                    href={post.path}
-                    className="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium text-sm"
-                  >
-                    Read More
-                    <svg className="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Explore All Content
-            </h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Discover our complete library of AI insights, enterprise transformation guides, 
-              and cutting-edge technology breakthroughs.
-            </p>
-            <div className="space-x-4">
-              <Link
-                href="/blog"
-                className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                View All Articles
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold border-2 border-indigo-600 hover:bg-indigo-50 transition-colors"
-              >
-                Get Custom Insights
-              </Link>
+                <a
+                  href={currentItem.link}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-200"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+              </div>
             </div>
+          </div>
+
+          {/* Content Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {contentItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                  index === currentIndex
+                    ? 'bg-cyan-400 scale-125'
+                    : 'bg-gray-600 hover:bg-gray-500'
+                }`}
+                aria-label={`Go to content ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
