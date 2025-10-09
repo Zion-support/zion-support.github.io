@@ -26,22 +26,26 @@ const Navigation: React.FC = () => {
   ];
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code },
-    { name: 'AI Video Generator', href: '/ai-video-generation', icon: Video },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: TrendingUp },
-    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer', icon: DollarSign },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection', icon: Shield },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Palette },
-    { name: 'AI Music Composition', href: '/ai-music-composition', icon: Music },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: PieChart, category: 'Analytics' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, category: 'Marketing' },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Customer Service' },
+    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Content Creation' },
+    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Mic, category: 'Content Creation' },
+    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, category: 'Automation' },
+    { name: 'AI Sales Automation Hub', href: '/ai-sales-automation', icon: TrendingUp, category: 'Sales' },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content Creation' },
+    { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor', icon: DollarSign, category: 'Finance' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield, category: 'Security' },
+    { name: 'AI Fashion Design Studio', href: '/ai-fashion-design', icon: Palette, category: 'Design' },
+    { name: 'AI Music Composition Suite', href: '/ai-music-composition', icon: Music, category: 'Content Creation' },
+    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Heart, category: 'Health & Wellness' },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', icon: ShoppingCart, category: 'E-commerce' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
+    { name: 'AI Personal Assistant', href: '/ai-personal-assistant', icon: Bot, category: 'Productivity' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: Target, category: 'Marketing' },
   ];
 
   const aiServices = [
@@ -110,37 +114,47 @@ const Navigation: React.FC = () => {
               </button>
               
               {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-4">
-                    {/* Micro SAAS Services */}
+              <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-400/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <div className="p-6">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    {/* Micro SAAS Services by Category */}
                     <div>
-                      <h3 className="text-cyan-400 font-semibold mb-2 text-sm">Micro SAAS Solutions</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a
-                            key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span className="text-xs">{service.name}</span>
-                          </a>
+                      <h3 className="text-cyan-400 font-semibold mb-4 text-sm border-b border-cyan-400/20 pb-2">Micro SAAS Solutions</h3>
+                      <div className="space-y-3">
+                        {['Productivity', 'Marketing', 'Analytics', 'Content Creation'].map((category) => (
+                          <div key={category}>
+                            <h4 className="text-xs font-medium text-gray-400 mb-2 uppercase tracking-wide">{category}</h4>
+                            <div className="space-y-1">
+                              {microSAASServices
+                                .filter(service => service.category === category)
+                                .slice(0, 3)
+                                .map((service) => (
+                                <a
+                                  key={service.name}
+                                  href={service.href}
+                                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
+                                >
+                                  <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
+                                  <span className="text-xs">{service.name}</span>
+                                </a>
+                              ))}
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
                     
                     {/* AI Services */}
                     <div>
-                      <h3 className="text-purple-400 font-semibold mb-2 text-sm">AI Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
-                        {aiServices.slice(0, 4).map((service) => (
+                      <h3 className="text-purple-400 font-semibold mb-4 text-sm border-b border-purple-400/20 pb-2">AI Services</h3>
+                      <div className="space-y-1">
+                        {aiServices.map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-purple-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -149,15 +163,15 @@ const Navigation: React.FC = () => {
                     
                     {/* IT Services */}
                     <div>
-                      <h3 className="text-green-400 font-semibold mb-2 text-sm">IT Services</h3>
-                      <div className="grid grid-cols-1 gap-1">
+                      <h3 className="text-green-400 font-semibold mb-4 text-sm border-b border-green-400/20 pb-2">IT Services</h3>
+                      <div className="space-y-1">
                         {itServices.map((service) => (
                           <a
                             key={service.name}
                             href={service.href}
-                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50"
+                            className="flex items-center space-x-2 text-gray-300 hover:text-green-400 transition-colors duration-200 py-1 px-2 rounded hover:bg-slate-700/50 group"
                           >
-                            <service.icon className="w-3 h-3" />
+                            <service.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-200" />
                             <span className="text-xs">{service.name}</span>
                           </a>
                         ))}
@@ -165,13 +179,19 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-gray-600">
-                    <a
-                      href="/services"
-                      className="block text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                    >
-                      View All Services →
-                    </a>
+                  <div className="mt-6 pt-4 border-t border-gray-600">
+                    <div className="flex justify-between items-center">
+                      <a
+                        href="/services"
+                        className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium flex items-center space-x-1"
+                      >
+                        <span>View All Services</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </a>
+                      <div className="text-xs text-gray-400">
+                        {microSAASServices.length + aiServices.length + itServices.length} Total Services
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

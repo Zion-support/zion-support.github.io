@@ -413,6 +413,10 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .cyber-card::before {
@@ -500,8 +504,13 @@ body {
     font-size: 1.75rem;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     padding: 1.25rem;
+  }
+  
+  .cyber-glow::after {
+    border-radius: 16px;
   }
 }
 
@@ -514,12 +523,17 @@ body {
     font-size: 1.5rem;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     padding: 1rem;
   }
   
   .futuristic-glow {
     padding: 1rem;
+  }
+  
+  .cyber-glow::after {
+    border-radius: 14px;
   }
 }
 
@@ -532,7 +546,8 @@ body {
     font-size: 1.25rem;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     margin-bottom: 1rem;
     padding: 0.875rem;
   }
@@ -548,6 +563,14 @@ body {
   .neural-network-bg::before {
     opacity: 0.3;
   }
+  
+  .cyber-glow::after {
+    border-radius: 12px;
+  }
+  
+  .quantum-card::before {
+    animation-duration: 6s;
+  }
 }
 
 @media (max-width: 640px) {
@@ -559,7 +582,8 @@ body {
     font-size: 1.125rem;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     padding: 0.75rem;
   }
   
@@ -570,6 +594,14 @@ body {
   .cyber-button {
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
+  }
+  
+  .cyber-glow::after {
+    border-radius: 10px;
+  }
+  
+  .quantum-card::before {
+    animation-duration: 4s;
   }
 }
 
@@ -586,7 +618,8 @@ body {
     background-size: 25px 25px;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     padding: 0.625rem;
   }
   
@@ -597,6 +630,14 @@ body {
   .cyber-button {
     padding: 0.625rem 1.25rem;
     font-size: 0.8125rem;
+  }
+  
+  .cyber-glow::after {
+    border-radius: 8px;
+  }
+  
+  .quantum-card::before {
+    animation-duration: 3s;
   }
 }
 
@@ -609,7 +650,8 @@ body {
     font-size: 0.875rem;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     padding: 0.5rem;
   }
   
@@ -620,6 +662,14 @@ body {
   .cyber-button {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
+  }
+  
+  .cyber-glow::after {
+    border-radius: 6px;
+  }
+  
+  .quantum-card::before {
+    animation-duration: 2s;
   }
 }
 
@@ -689,6 +739,189 @@ body {
   }
 }
 
+/* Quantum Card */
+.quantum-card {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgba(139, 92, 246, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+  animation: quantum-rotate 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.quantum-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes quantum-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.quantum-card:hover {
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow: 
+    0 0 40px rgba(139, 92, 246, 0.3),
+    inset 0 0 40px rgba(139, 92, 246, 0.1);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Energy Pulse */
+.energy-pulse {
+  animation: energy-pulse 3s ease-in-out infinite;
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(139, 92, 246, 0.2),
+      inset 0 0 20px rgba(139, 92, 246, 0.05);
+  }
+  50% {
+    box-shadow: 
+      0 0 40px rgba(139, 92, 246, 0.4),
+      inset 0 0 40px rgba(139, 92, 246, 0.1);
+  }
+}
+
+/* Holographic Effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(139, 92, 246, 0.1),
+    rgba(236, 72, 153, 0.1),
+    rgba(0, 255, 255, 0.1)
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cyber Glow Enhancement */
+.cyber-glow {
+  position: relative;
+}
+
+.cyber-glow::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #00ffff, #8b5cf6, #ec4899, #00ffff);
+  background-size: 400% 400%;
+  border-radius: 18px;
+  z-index: -1;
+  animation: cyber-glow-rotate 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cyber-glow:hover::after {
+  opacity: 1;
+}
+
+@keyframes cyber-glow-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Neural Network Enhancement */
+.neural-network-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
+  animation: neural-flow 12s ease-in-out infinite;
+}
+
+@keyframes neural-flow {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+/* Matrix Rain Enhancement */
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 0, 0.03) 2px,
+      rgba(0, 255, 0, 0.03) 4px
+    );
+  animation: matrix-fall-vertical 4s linear infinite;
+}
+
+@keyframes matrix-fall-vertical {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Particle Field Enhancement */
+.particle-field::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1px 1px at 25px 25px, rgba(0, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 75px 75px, rgba(139, 92, 246, 0.4), transparent),
+    radial-gradient(1px 1px at 125px 125px, rgba(236, 72, 153, 0.4), transparent);
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  animation: particle-float-reverse 25s linear infinite;
+}
+
+@keyframes particle-float-reverse {
+  0% { transform: translateY(100px); }
+  100% { transform: translateY(-100px); }
+}
+
 /* Print Styles */
 @media print {
   .cyber-grid,
@@ -704,7 +937,8 @@ body {
     text-shadow: none !important;
   }
   
-  .cyber-card {
+  .cyber-card,
+  .quantum-card {
     border: 1px solid black !important;
     background: white !important;
   }

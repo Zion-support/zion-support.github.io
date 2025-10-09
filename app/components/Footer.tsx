@@ -16,20 +16,20 @@ const Footer: React.FC = () => {
   ];
 
   const microSAASServices = [
-    { name: 'AI Project Manager', href: '/ai-project-manager' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing' },
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot' },
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation' },
-    { name: 'AI Video Generator', href: '/ai-video-generation' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation' },
-    { name: 'AI Content Writer', href: '/ai-content-writer' },
-    { name: 'AI Financial Advisor', href: '/ai-financial-analyzer' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
-    { name: 'AI Fashion Design', href: '/ai-fashion-design' },
-    { name: 'AI Music Composition', href: '/ai-music-composition' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach' },
+    { name: 'AI Project Manager Pro', href: '/ai-project-manager', category: 'Productivity' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', category: 'Marketing' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', category: 'Analytics' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', category: 'Marketing' },
+    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', category: 'Customer Service' },
+    { name: 'AI Video Generator Pro', href: '/ai-video-generation', category: 'Content Creation' },
+    { name: 'AI Sales Automation Hub', href: '/ai-sales-automation', category: 'Sales' },
+    { name: 'AI Content Writer Pro', href: '/ai-content-writer', category: 'Content Creation' },
+    { name: 'AI Financial Advisor Pro', href: '/ai-financial-advisor', category: 'Finance' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', category: 'Security' },
+    { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer', category: 'E-commerce' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', category: 'Marketing' },
+    { name: 'AI Personal Assistant', href: '/ai-personal-assistant', category: 'Productivity' },
+    { name: 'AI Marketing Automation', href: '/ai-marketing-automation', category: 'Marketing' },
   ];
 
   const aiServices = [
@@ -134,18 +134,29 @@ const Footer: React.FC = () => {
           {/* Micro SAAS Services */}
           <div>
             <h3 className="text-lg font-semibold text-cyan-400 mb-4">Micro SAAS Solutions</h3>
-            <ul className="space-y-2">
-              {microSAASServices.map((service) => (
-                <li key={service.name}>
-                  <a
-                    href={service.href}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {service.name}
-                  </a>
-                </li>
+            <div className="space-y-4">
+              {['Productivity', 'Marketing', 'Content Creation', 'Analytics'].map((category) => (
+                <div key={category}>
+                  <h4 className="text-sm font-medium text-cyan-300 mb-2">{category}</h4>
+                  <ul className="space-y-1">
+                    {microSAASServices
+                      .filter(service => service.category === category)
+                      .slice(0, 3)
+                      .map((service) => (
+                      <li key={service.name}>
+                        <a
+                          href={service.href}
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group"
+                        >
+                          <ArrowRight className="w-3 h-3 mr-1 group-hover:translate-x-1 transition-transform duration-300" />
+                          {service.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* AI & IT Services */}

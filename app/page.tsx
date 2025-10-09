@@ -59,278 +59,458 @@ const HomePage: React.FC = () => {
   const microSAASServices = [
     {
       title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment',
+      description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Achieve 40% faster project delivery with 85% accuracy in timeline predictions.',
       icon: '📊',
       price: '$99/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Real-time reporting', 'Integration hub'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction', 'Faster delivery', 'Better team coordination'],
       link: '/ai-project-manager',
       popular: true,
-      category: 'Productivity'
+      category: 'Productivity',
+      marketPrice: '$199/month',
+      savings: '50% off'
     },
     {
       title: 'AI Social Media Manager',
-      description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis',
+      description: 'Automate your social media with AI-powered content creation, smart scheduling, and audience analysis. Generate 200% more engagement with 20+ hours saved weekly.',
       icon: '📱',
       price: '$79/month',
-      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Hashtag optimization', 'Competitor analysis'],
-      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI'],
+      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Hashtag optimization', 'Competitor analysis', 'Multi-platform posting', 'Brand voice training'],
+      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '50% better ROI', 'Consistent posting', 'Viral content creation'],
       link: '/ai-social-media-manager',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$149/month',
+      savings: '47% off'
     },
     {
       title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling',
+      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling. Drive 45% revenue increase through data-driven decisions.',
       icon: '📈',
       price: '$149/month',
-      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reports'],
-      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', 'Faster decision making'],
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reports', 'Data visualization', 'Automated alerts'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', 'Faster decision making', 'Real-time insights', 'Predictive accuracy'],
       link: '/ai-analytics',
       popular: true,
-      category: 'Analytics'
+      category: 'Analytics',
+      marketPrice: '$299/month',
+      savings: '50% off'
     },
     {
       title: 'AI Email Marketing Suite',
-      description: 'Transform your email marketing with AI-powered content generation, automation, and personalization',
+      description: 'Transform your email marketing with AI-powered content generation, automation, and personalization. Achieve 65% higher open rates and 40% revenue growth.',
       icon: '📧',
       price: '$99/month',
-      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns', 'A/B testing', 'Personalization engine'],
-      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', 'Better deliverability'],
+      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns', 'A/B testing', 'Personalization engine', 'Deliverability optimization', 'Template library'],
+      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', 'Better deliverability', 'Higher conversions', 'Automated workflows'],
       link: '/ai-email-marketing',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$199/month',
+      savings: '50% off'
     },
     {
       title: 'AI Customer Support Bot',
-      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot and sentiment analysis',
+      description: 'Provide 24/7 intelligent customer support with AI-powered chatbot and sentiment analysis. Handle 80% of queries automatically with 90% faster response times.',
       icon: '🤖',
       price: '$149/month',
-      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Sentiment analysis'],
-      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', 'Reduced support costs'],
+      features: ['Natural language processing', '24/7 availability', 'Human handoff', 'Analytics & insights', 'Multi-language support', 'Sentiment analysis', 'Knowledge base integration', 'Custom training'],
+      benefits: ['90% response time reduction', '45% satisfaction increase', '80% queries handled automatically', 'Reduced support costs', '24/7 availability', 'Consistent service quality'],
       link: '/ai-customer-support-bot',
       popular: true,
-      category: 'Customer Service'
+      category: 'Customer Service',
+      marketPrice: '$299/month',
+      savings: '50% off'
     },
     {
       title: 'AI Code Review Assistant',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization',
+      description: 'Advanced automated code analysis with AI-powered bug detection, security scanning, and optimization. Reduce bugs by 70% and save 15+ hours weekly.',
       icon: '🔍',
       price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration', 'Code quality metrics', 'Refactoring suggestions'],
-      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Faster development cycles'],
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration', 'Code quality metrics', 'Refactoring suggestions', 'Style guide enforcement', 'Documentation generation'],
+      benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality', 'Faster development cycles', 'Security compliance', 'Team consistency'],
       link: '/ai-code-generation',
       popular: false,
-      category: 'Development'
+      category: 'Development',
+      marketPrice: '$179/month',
+      savings: '50% off'
     },
     {
       title: 'AI Video Generator Pro',
-      description: 'Create professional videos with AI-powered editing, content generation, and voice synthesis',
+      description: 'Create professional videos with AI-powered editing, content generation, and voice synthesis. Reduce production time by 90% while maintaining professional quality.',
       icon: '🎥',
       price: '$199/month',
-      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support', 'Template library', 'Brand customization'],
-      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports', 'Cost-effective production'],
+      features: ['AI video editing', 'Auto-generated content', 'Voice synthesis', 'Multi-language support', 'Template library', 'Brand customization', '4K rendering', 'Social media optimization'],
+      benefits: ['90% time reduction', 'Professional quality', 'Unlimited exports', 'Cost-effective production', 'Multiple formats', 'Brand consistency'],
       link: '/ai-video-generation',
       popular: true,
-      category: 'Content Creation'
+      category: 'Content Creation',
+      marketPrice: '$399/month',
+      savings: '50% off'
     },
     {
       title: 'AI Voice Cloning Studio',
-      description: 'Create realistic voice clones for content creation, accessibility, and multilingual support',
+      description: 'Create realistic voice clones for content creation, accessibility, and multilingual support. Achieve 99% voice accuracy with natural intonation.',
       icon: '🎤',
       price: '$129/month',
-      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration', 'Emotion control', 'Accent adaptation'],
-      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing', 'Natural intonation'],
+      features: ['High-quality voice cloning', 'Multiple voice options', 'Real-time synthesis', 'API integration', 'Emotion control', 'Accent adaptation', 'Voice training', 'Custom voices'],
+      benefits: ['99% voice accuracy', 'Multiple languages', 'Real-time processing', 'Natural intonation', 'Custom branding', 'Accessibility support'],
       link: '/ai-voice-cloning',
       popular: false,
-      category: 'Content Creation'
+      category: 'Content Creation',
+      marketPrice: '$259/month',
+      savings: '50% off'
     },
     {
       title: 'AI Workflow Automation',
-      description: 'Automate complex business processes with intelligent workflow management and exception handling',
+      description: 'Automate complex business processes with intelligent workflow management and exception handling. Achieve 80% process automation with 60% cost reduction.',
       icon: '⚡',
       price: '$179/month',
-      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard', 'Custom triggers', 'Integration hub'],
-      benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring', 'Error reduction'],
+      features: ['Process automation', 'Smart routing', 'Exception handling', 'Analytics dashboard', 'Custom triggers', 'Integration hub', 'Workflow designer', 'Approval workflows'],
+      benefits: ['80% process automation', '60% cost reduction', 'Real-time monitoring', 'Error reduction', 'Faster processing', 'Better compliance'],
       link: '/ai-workflow-automation',
       popular: true,
-      category: 'Automation'
+      category: 'Automation',
+      marketPrice: '$359/month',
+      savings: '50% off'
     },
     {
       title: 'AI Fashion Design Studio',
-      description: 'Create stunning fashion designs with AI-powered design tools and trend analysis',
+      description: 'Create stunning fashion designs with AI-powered design tools and trend analysis. Reduce design time by 50% while staying ahead of trends.',
       icon: '👗',
       price: '$159/month',
-      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation', '3D visualization', 'Fabric simulation'],
-      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity', 'Market insights'],
+      features: ['AI design generation', 'Trend analysis', 'Color matching', 'Pattern creation', '3D visualization', 'Fabric simulation', 'Size optimization', 'Sustainability scoring'],
+      benefits: ['50% design time reduction', 'Trend-aware designs', 'Unlimited creativity', 'Market insights', '3D previews', 'Sustainable options'],
       link: '/ai-fashion-design',
       popular: false,
-      category: 'Design'
+      category: 'Design',
+      marketPrice: '$319/month',
+      savings: '50% off'
     },
     {
       title: 'AI Music Composition Suite',
-      description: 'Compose original music with AI-powered composition tools and royalty-free licensing',
+      description: 'Compose original music with AI-powered composition tools and royalty-free licensing. Create unlimited professional-quality tracks without copyright issues.',
       icon: '🎵',
       price: '$119/month',
-      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music', 'Mood matching', 'Collaboration tools'],
-      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues', 'Custom branding'],
+      features: ['AI composition', 'Multiple genres', 'Instrument simulation', 'Royalty-free music', 'Mood matching', 'Collaboration tools', 'Mastering services', 'Custom branding'],
+      benefits: ['Unlimited compositions', 'Professional quality', 'No copyright issues', 'Custom branding', 'Multiple genres', 'Easy collaboration'],
       link: '/ai-music-composition',
       popular: false,
-      category: 'Content Creation'
+      category: 'Content Creation',
+      marketPrice: '$239/month',
+      savings: '50% off'
     },
     {
       title: 'AI Fitness Coach Pro',
-      description: 'Personalized fitness coaching with AI-powered workout plans and nutrition guidance',
+      description: 'Personalized fitness coaching with AI-powered workout plans and nutrition guidance. Achieve better results with personalized recommendations.',
       icon: '💪',
       price: '$89/month',
-      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting', 'Wearable integration', 'Community features'],
-      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling', 'Health insights'],
+      features: ['Personalized workouts', 'Progress tracking', 'Nutrition advice', 'Goal setting', 'Wearable integration', 'Community features', 'Video demonstrations', 'Health monitoring'],
+      benefits: ['Better results', 'Motivation boost', 'Flexible scheduling', 'Health insights', 'Personalized plans', 'Progress tracking'],
       link: '/ai-fitness-coach',
       popular: false,
-      category: 'Health & Wellness'
+      category: 'Health & Wellness',
+      marketPrice: '$179/month',
+      savings: '50% off'
     },
     {
       title: 'AI Sales Automation Hub',
-      description: 'Boost sales with AI-powered lead generation, conversion optimization, and CRM integration',
+      description: 'Boost sales with AI-powered lead generation, conversion optimization, and CRM integration. Generate 35% more leads with 50% higher conversion rates.',
       icon: '💰',
       price: '$199/month',
-      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration', 'Pipeline management', 'Performance analytics'],
-      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth', 'Better lead quality'],
+      features: ['Lead scoring', 'Automated follow-ups', 'Sales forecasting', 'CRM integration', 'Pipeline management', 'Performance analytics', 'Email sequences', 'Call scheduling'],
+      benefits: ['35% more leads', '50% conversion increase', '25% revenue growth', 'Better lead quality', 'Automated follow-ups', 'Sales insights'],
       link: '/ai-sales-automation',
       popular: true,
-      category: 'Sales'
+      category: 'Sales',
+      marketPrice: '$399/month',
+      savings: '50% off'
     },
     {
       title: 'AI Data Visualization Pro',
-      description: 'Transform complex data into interactive visualizations and storytelling dashboards',
+      description: 'Transform complex data into interactive visualizations and storytelling dashboards. Make data-driven decisions with stunning presentations.',
       icon: '📊',
       price: '$139/month',
-      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling', 'Collaborative features', 'Export options'],
-      benefits: ['Faster insights', 'Better decisions', 'Stunning presentations', 'Data democratization'],
+      features: ['Interactive dashboards', 'Real-time visualization', 'Custom charts', 'Data storytelling', 'Collaborative features', 'Export options', 'Template library', 'Advanced analytics'],
+      benefits: ['Faster insights', 'Better decisions', 'Stunning presentations', 'Data democratization', 'Real-time updates', 'Easy sharing'],
       link: '/ai-data-visualization',
       popular: false,
-      category: 'Analytics'
+      category: 'Analytics',
+      marketPrice: '$279/month',
+      savings: '50% off'
     },
     {
       title: 'AI 3D Generation Studio',
-      description: 'Create 3D models and environments with AI technology for games, VR, and AR applications',
+      description: 'Create 3D models and environments with AI technology for games, VR, and AR applications. Generate professional 3D content in minutes.',
       icon: '🎮',
       price: '$249/month',
-      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support', 'Physics simulation', 'Rendering optimization'],
-      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom', 'Industry standards'],
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support', 'Physics simulation', 'Rendering optimization', 'Asset library', 'Export options'],
+      benefits: ['Professional 3D content', 'Time savings', 'Creative freedom', 'Industry standards', 'Multiple formats', 'Easy integration'],
       link: '/ai-3d-generation',
       popular: false,
-      category: 'Design'
+      category: 'Design',
+      marketPrice: '$499/month',
+      savings: '50% off'
     },
     {
       title: 'AI Customer Support Pro',
-      description: 'Advanced customer support with AI-powered ticket management and sentiment analysis',
+      description: 'Advanced customer support with AI-powered ticket management and sentiment analysis. Resolve issues faster with higher satisfaction rates.',
       icon: '🎧',
       price: '$169/month',
-      features: ['Ticket automation', 'Sentiment analysis', 'Knowledge base', 'Multi-channel support', 'Escalation management', 'Performance metrics'],
-      benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability', 'Reduced workload'],
+      features: ['Ticket automation', 'Sentiment analysis', 'Knowledge base', 'Multi-channel support', 'Escalation management', 'Performance metrics', 'Live chat integration', 'Customer insights'],
+      benefits: ['Faster resolution', 'Higher satisfaction', '24/7 availability', 'Reduced workload', 'Better insights', 'Consistent service'],
       link: '/ai-customer-support',
       popular: true,
-      category: 'Customer Service'
+      category: 'Customer Service',
+      marketPrice: '$339/month',
+      savings: '50% off'
     },
     {
       title: 'AI Content Writer Pro',
-      description: 'Generate high-quality content with AI-powered writing assistance and SEO optimization',
+      description: 'Generate high-quality content with AI-powered writing assistance and SEO optimization. Produce 10x more content with consistent brand voice.',
       icon: '✍️',
       price: '$79/month',
-      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization', 'Plagiarism check', 'Tone adjustment'],
-      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency', 'Quality assurance'],
+      features: ['Blog posts', 'Social media content', 'Product descriptions', 'SEO optimization', 'Plagiarism check', 'Tone adjustment', 'Content calendar', 'Brand voice training'],
+      benefits: ['10x content output', 'SEO optimized', 'Brand voice consistency', 'Quality assurance', 'Multiple formats', 'Time savings'],
       link: '/ai-content-writer',
       popular: true,
-      category: 'Content Creation'
+      category: 'Content Creation',
+      marketPrice: '$159/month',
+      savings: '50% off'
     },
     {
       title: 'AI Inventory Manager Pro',
-      description: 'Optimize inventory with AI-powered demand forecasting and supply chain management',
+      description: 'Optimize inventory with AI-powered demand forecasting and supply chain management. Reduce inventory by 30% while maintaining 99% stock accuracy.',
       icon: '📦',
       price: '$149/month',
-      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Analytics dashboard', 'Supplier management', 'Cost optimization'],
-      benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts', 'Reduced carrying costs'],
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder alerts', 'Analytics dashboard', 'Supplier management', 'Cost optimization', 'Multi-location support', 'Integration hub'],
+      benefits: ['30% inventory reduction', '99% stock accuracy', 'Zero stockouts', 'Reduced carrying costs', 'Better forecasting', 'Supplier optimization'],
       link: '/ai-inventory-manager',
       popular: false,
-      category: 'Operations'
+      category: 'Operations',
+      marketPrice: '$299/month',
+      savings: '50% off'
     },
     {
       title: 'AI HR Assistant Pro',
-      description: 'Streamline HR processes with AI-powered recruitment, management, and employee analytics',
+      description: 'Streamline HR processes with AI-powered recruitment, management, and employee analytics. Hire 50% faster with better candidate matching.',
       icon: '👥',
       price: '$189/month',
-      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking', 'Skills assessment', 'Retention insights'],
-      benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias', 'Improved retention'],
+      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking', 'Skills assessment', 'Retention insights', 'Onboarding automation', 'Compliance monitoring'],
+      benefits: ['50% faster hiring', 'Better candidate matching', 'Reduced bias', 'Improved retention', 'Automated processes', 'Better insights'],
       link: '/ai-hr-assistant',
       popular: false,
-      category: 'Human Resources'
+      category: 'Human Resources',
+      marketPrice: '$379/month',
+      savings: '50% off'
     },
     {
       title: 'AI Financial Advisor Pro',
-      description: 'Personalized financial planning with AI-powered investment advice and risk management',
+      description: 'Personalized financial planning with AI-powered investment advice and risk management. Optimize your portfolio with professional-grade analysis.',
       icon: '💼',
       price: '$299/month',
-      features: ['Portfolio analysis', 'Risk assessment', 'Tax optimization', 'Retirement planning', 'Market insights', 'Goal tracking'],
-      benefits: ['Better returns', 'Risk management', 'Tax savings', 'Financial security'],
+      features: ['Portfolio analysis', 'Risk assessment', 'Tax optimization', 'Retirement planning', 'Market insights', 'Goal tracking', 'Investment recommendations', 'Tax planning'],
+      benefits: ['Better returns', 'Risk management', 'Tax savings', 'Financial security', 'Personalized advice', 'Market insights'],
       link: '/ai-financial-advisor',
       popular: false,
-      category: 'Finance'
+      category: 'Finance',
+      marketPrice: '$599/month',
+      savings: '50% off'
     },
     {
       title: 'AI Legal Assistant Pro',
-      description: 'Legal document analysis and contract review with AI technology and compliance monitoring',
+      description: 'Legal document analysis and contract review with AI technology and compliance monitoring. Review contracts 10x faster with 99% accuracy.',
       icon: '⚖️',
       price: '$399/month',
-      features: ['Contract analysis', 'Legal research', 'Document generation', 'Compliance checking', 'Risk assessment', 'Case law research'],
-      benefits: ['Faster reviews', 'Risk identification', 'Cost savings', 'Compliance assurance'],
+      features: ['Contract analysis', 'Legal research', 'Document generation', 'Compliance checking', 'Risk assessment', 'Case law research', 'Document templates', 'Legal insights'],
+      benefits: ['Faster reviews', 'Risk identification', 'Cost savings', 'Compliance assurance', 'Better accuracy', 'Time savings'],
       link: '/ai-legal-assistant',
       popular: false,
-      category: 'Legal'
+      category: 'Legal',
+      marketPrice: '$799/month',
+      savings: '50% off'
     },
     {
       title: 'AI SEO Optimizer',
-      description: 'Boost your website rankings with AI-powered SEO analysis and optimization recommendations',
+      description: 'Boost your website rankings with AI-powered SEO analysis and optimization recommendations. Increase organic traffic by 200% with data-driven strategies.',
       icon: '🔍',
       price: '$129/month',
-      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Link building'],
-      benefits: ['Higher rankings', 'More organic traffic', 'Better visibility', 'Competitive advantage'],
+      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis', 'Rank tracking', 'Link building', 'Site audit', 'Performance monitoring'],
+      benefits: ['Higher rankings', 'More organic traffic', 'Better visibility', 'Competitive advantage', 'Data-driven insights', 'Automated optimization'],
       link: '/ai-seo-optimizer',
       popular: true,
-      category: 'Marketing'
+      category: 'Marketing',
+      marketPrice: '$259/month',
+      savings: '50% off'
     },
     {
       title: 'AI Translation Hub',
-      description: 'Professional translation services with AI-powered accuracy and cultural adaptation',
+      description: 'Professional translation services with AI-powered accuracy and cultural adaptation. Translate 100+ languages with 99% accuracy and cultural sensitivity.',
       icon: '🌐',
       price: '$159/month',
-      features: ['100+ languages', 'Cultural adaptation', 'Industry-specific terms', 'Real-time translation', 'Quality assurance', 'API integration'],
-      benefits: ['99% accuracy', 'Cultural sensitivity', 'Faster delivery', 'Cost effective'],
+      features: ['100+ languages', 'Cultural adaptation', 'Industry-specific terms', 'Real-time translation', 'Quality assurance', 'API integration', 'Document translation', 'Voice translation'],
+      benefits: ['99% accuracy', 'Cultural sensitivity', 'Faster delivery', 'Cost effective', 'Multiple formats', 'Real-time processing'],
       link: '/ai-translation-hub',
       popular: false,
-      category: 'Communication'
+      category: 'Communication',
+      marketPrice: '$319/month',
+      savings: '50% off'
     },
     {
       title: 'AI Security Monitor',
-      description: 'Advanced cybersecurity monitoring with AI-powered threat detection and response',
+      description: 'Advanced cybersecurity monitoring with AI-powered threat detection and response. Protect your business with 24/7 monitoring and instant threat response.',
       icon: '🛡️',
       price: '$199/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security analytics', '24/7 monitoring'],
-      benefits: ['Proactive protection', 'Faster response', 'Compliance assurance', 'Risk reduction'],
+      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance monitoring', 'Security analytics', '24/7 monitoring', 'Automated response', 'Risk assessment'],
+      benefits: ['Proactive protection', 'Faster response', 'Compliance assurance', 'Risk reduction', '24/7 monitoring', 'Automated defense'],
       link: '/ai-security-monitor',
       popular: true,
-      category: 'Security'
+      category: 'Security',
+      marketPrice: '$399/month',
+      savings: '50% off'
     },
     {
       title: 'AI E-commerce Optimizer',
-      description: 'Optimize your online store with AI-powered product recommendations and conversion optimization',
+      description: 'Optimize your online store with AI-powered product recommendations and conversion optimization. Increase conversions by 40% and revenue by 25%.',
       icon: '🛒',
       price: '$179/month',
-      features: ['Product recommendations', 'Price optimization', 'Inventory management', 'Customer segmentation', 'A/B testing', 'Analytics dashboard'],
-      benefits: ['Higher conversions', 'Increased revenue', 'Better customer experience', 'Data-driven decisions'],
+      features: ['Product recommendations', 'Price optimization', 'Inventory management', 'Customer segmentation', 'A/B testing', 'Analytics dashboard', 'Personalization engine', 'Cart abandonment recovery'],
+      benefits: ['Higher conversions', 'Increased revenue', 'Better customer experience', 'Data-driven decisions', 'Personalized shopping', 'Optimized pricing'],
       link: '/ai-ecommerce-optimizer',
       popular: true,
-      category: 'E-commerce'
+      category: 'E-commerce',
+      marketPrice: '$359/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Real Estate Analyzer',
+      description: 'Analyze real estate markets with AI-powered property valuation, market trends, and investment recommendations. Make smarter property investments with data-driven insights.',
+      icon: '🏠',
+      price: '$199/month',
+      features: ['Property valuation', 'Market analysis', 'Investment recommendations', 'Rental yield calculations', 'Neighborhood insights', 'Price predictions', 'Risk assessment', 'Portfolio optimization'],
+      benefits: ['Better investment decisions', 'Accurate valuations', 'Market insights', 'Risk reduction', 'Higher returns', 'Data-driven analysis'],
+      link: '/ai-real-estate-analyzer',
+      popular: false,
+      category: 'Real Estate',
+      marketPrice: '$399/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize your supply chain with AI-powered demand forecasting, logistics optimization, and supplier management. Reduce costs by 25% while improving efficiency.',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Demand forecasting', 'Logistics optimization', 'Supplier management', 'Inventory optimization', 'Route planning', 'Cost analysis', 'Risk assessment', 'Performance monitoring'],
+      benefits: ['25% cost reduction', 'Better efficiency', 'Improved forecasting', 'Risk mitigation', 'Optimized routes', 'Supplier optimization'],
+      link: '/ai-supply-chain-optimizer',
+      popular: false,
+      category: 'Supply Chain',
+      marketPrice: '$499/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Healthcare Assistant',
+      description: 'AI-powered healthcare solutions for patient monitoring, diagnosis support, and treatment recommendations. Improve patient outcomes with intelligent healthcare technology.',
+      icon: '🏥',
+      price: '$299/month',
+      features: ['Patient monitoring', 'Diagnosis support', 'Treatment recommendations', 'Health analytics', 'Risk assessment', 'Medication management', 'Appointment scheduling', 'Health insights'],
+      benefits: ['Better patient outcomes', 'Faster diagnosis', 'Improved care', 'Risk reduction', 'Efficient workflows', 'Data-driven insights'],
+      link: '/ai-healthcare-assistant',
+      popular: false,
+      category: 'Healthcare',
+      marketPrice: '$599/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Education Platform',
+      description: 'Personalized learning experiences with AI-powered curriculum adaptation, progress tracking, and intelligent tutoring. Improve learning outcomes by 60% with personalized education.',
+      icon: '🎓',
+      price: '$149/month',
+      features: ['Personalized learning', 'Progress tracking', 'Adaptive curriculum', 'Intelligent tutoring', 'Assessment tools', 'Learning analytics', 'Content generation', 'Skill assessment'],
+      benefits: ['60% better outcomes', 'Personalized learning', 'Adaptive curriculum', 'Progress tracking', 'Engaging content', 'Skill development'],
+      link: '/ai-education-platform',
+      popular: false,
+      category: 'Education',
+      marketPrice: '$299/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Marketing Automation',
+      description: 'Comprehensive marketing automation with AI-powered campaign optimization, lead nurturing, and conversion tracking. Increase marketing ROI by 300% with intelligent automation.',
+      icon: '📢',
+      price: '$199/month',
+      features: ['Campaign automation', 'Lead nurturing', 'Conversion tracking', 'A/B testing', 'Audience segmentation', 'Content optimization', 'Email marketing', 'Social media automation'],
+      benefits: ['300% ROI increase', 'Automated campaigns', 'Better targeting', 'Higher conversions', 'Time savings', 'Data-driven optimization'],
+      link: '/ai-marketing-automation',
+      popular: true,
+      category: 'Marketing',
+      marketPrice: '$399/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Quality Assurance',
+      description: 'Automated quality testing with AI-powered defect detection, performance monitoring, and compliance checking. Reduce defects by 80% while improving product quality.',
+      icon: '✅',
+      price: '$179/month',
+      features: ['Automated testing', 'Defect detection', 'Performance monitoring', 'Compliance checking', 'Quality metrics', 'Test case generation', 'Regression testing', 'Quality reporting'],
+      benefits: ['80% fewer defects', 'Better quality', 'Faster testing', 'Compliance assurance', 'Automated processes', 'Quality insights'],
+      link: '/ai-quality-assurance',
+      popular: false,
+      category: 'Quality Assurance',
+      marketPrice: '$359/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Energy Management',
+      description: 'Optimize energy consumption with AI-powered monitoring, forecasting, and optimization. Reduce energy costs by 30% while improving sustainability.',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Energy monitoring', 'Consumption forecasting', 'Optimization recommendations', 'Cost analysis', 'Sustainability tracking', 'Renewable integration', 'Smart grid management', 'Carbon footprint analysis'],
+      benefits: ['30% cost reduction', 'Better efficiency', 'Sustainability improvement', 'Smart optimization', 'Cost savings', 'Environmental impact'],
+      link: '/ai-energy-management',
+      popular: false,
+      category: 'Energy',
+      marketPrice: '$399/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with AI-powered recommendations, price optimization, and itinerary management. Plan perfect trips with personalized recommendations.',
+      icon: '✈️',
+      price: '$99/month',
+      features: ['Trip planning', 'Price optimization', 'Itinerary management', 'Recommendation engine', 'Booking automation', 'Travel alerts', 'Budget tracking', 'Experience suggestions'],
+      benefits: ['Perfect trips', 'Cost savings', 'Time efficiency', 'Personalized recommendations', 'Automated booking', 'Better experiences'],
+      link: '/ai-travel-planner',
+      popular: false,
+      category: 'Travel',
+      marketPrice: '$199/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Event Management',
+      description: 'Streamline event planning with AI-powered logistics, attendee management, and optimization. Organize successful events with 50% less effort and 40% better outcomes.',
+      icon: '🎉',
+      price: '$149/month',
+      features: ['Event planning', 'Attendee management', 'Logistics optimization', 'Vendor coordination', 'Budget tracking', 'Performance analytics', 'Registration automation', 'Feedback analysis'],
+      benefits: ['50% less effort', '40% better outcomes', 'Automated processes', 'Better planning', 'Cost optimization', 'Improved experiences'],
+      link: '/ai-event-management',
+      popular: false,
+      category: 'Events',
+      marketPrice: '$299/month',
+      savings: '50% off'
+    },
+    {
+      title: 'AI Personal Assistant',
+      description: 'Your intelligent personal assistant for scheduling, task management, and productivity optimization. Boost productivity by 60% with AI-powered assistance.',
+      icon: '🤖',
+      price: '$79/month',
+      features: ['Smart scheduling', 'Task management', 'Email automation', 'Calendar optimization', 'Reminder system', 'Productivity insights', 'Voice commands', 'Integration hub'],
+      benefits: ['60% productivity boost', 'Better organization', 'Time savings', 'Automated tasks', 'Smart reminders', 'Efficient workflows'],
+      link: '/ai-personal-assistant',
+      popular: true,
+      category: 'Productivity',
+      marketPrice: '$159/month',
+      savings: '50% off'
     }
   ];
 
@@ -835,9 +1015,9 @@ const HomePage: React.FC = () => {
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {microSAASServices.map((service, index) => (
-                <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                <article key={index} className={`cyber-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''} cyber-glow`}>
                   {service.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">
@@ -876,7 +1056,15 @@ const HomePage: React.FC = () => {
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-400 mb-2 neon-text">{service.price}</div>
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <div className="text-lg font-bold text-cyan-400 neon-text">{service.price}</div>
+                      {service.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                      )}
+                    </div>
+                    {service.savings && (
+                      <div className="text-xs text-green-400 font-semibold mb-2">{service.savings}</div>
+                    )}
                     <a 
                       href={service.link} 
                       className="cyber-button px-4 py-2 text-sm font-medium transition-all duration-300 hover:scale-105"
@@ -902,9 +1090,9 @@ const HomePage: React.FC = () => {
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {aiServices.map((service, index) => (
-                <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
+                <article key={index} className="quantum-card p-4 sm:p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -952,9 +1140,9 @@ const HomePage: React.FC = () => {
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-12">
               {itServices.map((service, index) => (
-                <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <article key={index} className="cyber-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 cyber-glow">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
