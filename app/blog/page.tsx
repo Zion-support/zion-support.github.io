@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Calendar, Clock, User, Tag, Search, Filter, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { User, Tag, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

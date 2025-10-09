@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
+
+import { Lock } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {
   const securityServices = [
     {
