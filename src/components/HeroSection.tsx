@@ -1,84 +1,90 @@
 'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Play, Phone } from 'lucide-react';
+
 interface HeroSectionProps {
-  // TODO: Add content
-}
   isLoaded: boolean;
   isVisible: boolean;
   onPhoneClick: () => void;
 }
+
 const HeroSection: React.FC<HeroSectionProps> = ({ isLoaded, isVisible, onPhoneClick }) => {
-  // TODO: Add content
-}
   return (
-  // TODO: Add parameters,
-)
-    <section;
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
-  // TODO: Add content
-}
-//         isLoaded && isVisible
-//           ? 'opacity-100 translate-y-0'
+    <section
+      className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+        isLoaded && isVisible
+          ? 'opacity-100 translate-y-0'
           : 'opacity-0 translate-y-8'
       }`}
       aria-labelledby="hero-heading"
-//     >
+    >
       <div className="max-w-6xl mx-auto">
         <h1
           id="hero-heading"
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
           data-text="Zion Tech Group"
-//         >
-//           Zion Tech Group
+        >
+          Zion Tech Group
         </h1>
-        <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-//           Advanced AI and IT Solutions
+        
+        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+          Leading the future of AI and IT solutions. Transform your business with 
+          cutting-edge technology, quantum computing, and autonomous systems.
         </p>
-        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-//           Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-//           Transform your business with our cutting-edge technology and achieve unprecedented growth.
-        </p>
-        {/* Key Benefits */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
-          <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl mb-3"></div>
-            <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-          </div>
-          <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl mb-3"></div>
-            <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-          </div>
-          <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-            <div className="text-2xl sm:text-3xl mb-3"></div>
-            <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-          </div>
-          <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-            <div className="text-2xl sm:text-3xl mb-3"></div>
-            <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-          </div>
-        </div>
-        {/* CTA Buttons */}
-        <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a
-            href="tel:+13024640950"
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Link
+            to="/contact"
+            className="group bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center"
+          >
+            Get Started
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          
+          <button
             onClick={onPhoneClick}
-            className="cyber-button w-full sm:w-auto text-center"
-            aria-label="Call us at (302) 464-0950"
-//           >
-             Call: (302) 464-0950
-          </a>
-          <a
-            href="/contact"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-//           >
-//             Get Free Consultation
-          </a>
+            className="group bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center"
+          >
+            <Play className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform" />
+            Watch Demo
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Phone className="h-6 w-6 text-cyan-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">AI Solutions</h3>
+            <p className="text-gray-400 text-sm">
+              Advanced artificial intelligence and machine learning solutions for enterprise.
+            </p>
+          </div>
+
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <ArrowRight className="h-6 w-6 text-cyan-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">IT Services</h3>
+            <p className="text-gray-400 text-sm">
+              Comprehensive IT infrastructure and cloud solutions for modern businesses.
+            </p>
+          </div>
+
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Play className="h-6 w-6 text-cyan-400" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
+            <p className="text-gray-400 text-sm">
+              Cutting-edge technology and digital transformation services.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default HeroSection;
