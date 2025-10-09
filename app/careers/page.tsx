@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MapPin, Clock, CheckCircle } from 'lucide-react';

@@ -1,40 +1,39 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
+  showDetails?: boolean;
+  enableReporting?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
   retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries: number;
+  private maxRetries = 3;
 
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0
     };
-    this.maxRetries = props.maxRetries || 3;
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { 
-      hasError: true, 
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      retryCount: 0
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error
     };
   }
 
@@ -43,232 +42,127 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
-<<<<<<< HEAD
 
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-    
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
+    // Report error if enabled
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-<<<<<<< HEAD
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-    // Enhanced error reporting
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
-    if (this.props.enableErrorReporting) {
+    if (this.props.enableReporting) {
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-<<<<<<< HEAD
-
-    // Error reporting logic would go here
-    console.error('Error reported:', error, errorInfo);
+    // In a real application, you would send this to an error reporting service
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Example: Send to error reporting service
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: true
+      });
+    }
   };
 
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: undefined,
-        errorInfo: undefined,
+        error: null,
+        errorInfo: null,
         retryCount: prevState.retryCount + 1
       }));
     }
-=======
-    // Enhanced error reporting logic
-    const errorReport = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error:', error);
-      console.error('Error Info:', errorInfo);
-      console.error('Component Stack:', errorInfo.componentStack);
-      console.groupEnd();
-    }
-
-    // Send to error reporting service (implement as needed)
-    try {
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      // eslint-disable-next-line no-console
-      console.log('Error Report:', errorReport);
-      // Example: Send to error reporting service
-      // await fetch('/api/errors', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(errorReport)
-      // });
-    } catch (reportingError) {
-      console.error('Failed to report error:', reportingError);
-    }
-  };
-  private getUserId = (): string | null => {
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
-  };
-  private getSessionId = (): string => {
-    let sessionId = sessionStorage.getItem('sessionId');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
   private handleReload = () => {
-    window.location.reload();
+    if (typeof window !== 'undefined') {
+      window.location.reload();
+    }
   };
+
   private handleGoHome = () => {
-    window.location.href = '/';
-  };
-  private copyErrorDetails = () => {
-    const errorDetails = {
-      errorId: this.state.errorId,
-      message: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: window.location.href,
-    };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {
-        // Show success message
-        const button = document.getElementById('copy-error-details');
-        if (button) {
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-          setTimeout(() => {
-            button.textContent = originalText;
-          }, 2000);
-        }
-      })
-      .catch(() => {
-        // eslint-disable-next-line no-console
-        console.warn('Failed to copy error details');
-      });
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
+    if (typeof window !== 'undefined') {
+      window.location.href = '/';
+    }
   };
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>Error ID: {this.state.errorId}</p>
-          {this.state.retryCount < this.maxRetries && (
-            <button onClick={this.handleRetry}>
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}
- cursor/analyze-improve-and-deploy-application-cde4
-=======
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-      const { retryCount, error, errorId } = this.state;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const _canRetry = retryCount < this.maxRetries;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-      const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
-      const canRetry = retryCount < this.maxRetries;
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
-      const canRetry = retryCount < this.maxRetries;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
+            <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <AlertTriangle className="w-8 h-8 text-red-600" />
+            </div>
+            
+            <h1 className="text-xl font-semibold text-gray-900 mb-2">
               Oops! Something went wrong
             </h1>
+            
             <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Please try again.
             </p>
-            <div className="space-y-4">
-              {canRetry && (
+
+            {this.props.showDetails && this.state.error && (
+              <div className="bg-gray-100 rounded-lg p-4 mb-6 text-left">
+                <h3 className="font-semibold text-gray-900 mb-2">Error Details:</h3>
+                <p className="text-sm text-gray-600 font-mono">
+                  {this.state.error.message}
+                </p>
+                {this.state.errorInfo && (
+                  <details className="mt-2">
+                    <summary className="text-sm text-gray-500 cursor-pointer">
+                      Stack Trace
+                    </summary>
+                    <pre className="text-xs text-gray-500 mt-2 overflow-auto">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  </details>
+                )}
+              </div>
+            )}
+
+            <div className="space-y-3">
+              {this.state.retryCount < this.maxRetries && (
                 <button
                   onClick={this.handleRetry}
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                  className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
                 >
-                  Try Again ({this.maxRetries - retryCount} attempts left)
+                  <RefreshCw className="w-4 h-4 mr-2" />
+                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
                 </button>
               )}
+              
               <button
                 onClick={this.handleReload}
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+                className="w-full bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors flex items-center justify-center"
               >
-                Try Again
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Reload Page
               </button>
+              
               <button
                 onClick={this.handleGoHome}
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                className="w-full border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center"
               >
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && error && (
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-                <button
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
-                </button>
-              </details>
-            )}
+
+            <div className="mt-6 pt-4 border-t border-gray-200">
+              <p className="text-xs text-gray-500">
+                If this problem persists, please contact support.
+              </p>
+            </div>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-dd19
         </div>
       );
     }

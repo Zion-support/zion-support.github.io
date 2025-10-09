@@ -4,30 +4,42 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
-    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions', featured: true },
+    { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation', featured: true },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Intelligent process automation', featured: true },
     { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI solutions' },
     { name: 'AI Fintech', url: '/ai-fintech', description: 'Financial AI applications' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Interactive data visualization' },
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI platforms' },
+    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+    { name: 'AI Sales Automation', url: '/ai-sales-automation', description: 'Sales process automation' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' }
   ];
 
   const itServices = [
-    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
-    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure' },
-    { name: 'Micro SAAS', url: '/micro-saas', description: '50+ ready-to-use apps' },
+    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support', featured: true },
+    { name: 'IT Infrastructure', url: '/it-infrastructure', description: 'Enterprise infrastructure', featured: true },
+    { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud migration & setup', featured: true },
     { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
-    { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'Cloud migration & setup' },
-    { name: 'E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce platforms' },
-    { name: 'Mobile App Development', url: '/ai-mobile-app-development', description: 'Mobile applications' },
-    { name: 'Database Services', url: '/ai-data-analytics', description: 'Database management' }
+    { name: 'DevOps', url: '/devops', description: 'DevOps automation' },
+    { name: 'Database Services', url: '/database', description: 'Database management' },
+    { name: 'Network Services', url: '/networking', description: 'Network infrastructure' },
+    { name: 'Compliance', url: '/compliance', description: 'Regulatory compliance' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ ready-to-use apps', featured: true },
+    { name: 'Business Apps', url: '/business-apps', description: 'Productivity applications' },
+    { name: 'Developer Tools', url: '/developer-tools', description: 'AI-powered dev tools' },
+    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
+    { name: 'Productivity', url: '/productivity', description: 'Productivity enhancement tools' }
   ];
 
   const specializedServices = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing' },
+    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Next-gen computing', featured: true },
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
@@ -82,7 +94,7 @@ const Footer: React.FC = memo(() => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
@@ -157,7 +169,7 @@ const Footer: React.FC = memo(() => {
               AI Services
             </h3>
             <ul className="space-y-3">
-              {aiServices.map((service, index) => (
+              {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.url}
@@ -165,7 +177,10 @@ const Footer: React.FC = memo(() => {
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div>
-                      <div className="font-medium">{service.name}</div>
+                      <div className="font-medium flex items-center">
+                        {service.name}
+                        {service.featured && <span className="ml-1 text-xs text-yellow-400">★</span>}
+                      </div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
                         {service.description}
                       </div>
@@ -179,11 +194,11 @@ const Footer: React.FC = memo(() => {
           {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Code className="w-5 h-5 mr-2 text-cyan-400" />
+              <Cloud className="w-5 h-5 mr-2 text-cyan-400" />
               IT Services
             </h3>
             <ul className="space-y-3">
-              {itServices.map((service, index) => (
+              {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link
                     href={service.url}
@@ -191,7 +206,39 @@ const Footer: React.FC = memo(() => {
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <div>
-                      <div className="font-medium">{service.name}</div>
+                      <div className="font-medium flex items-center">
+                        {service.name}
+                        {service.featured && <span className="ml-1 text-xs text-yellow-400">★</span>}
+                      </div>
+                      <div className="text-xs text-gray-400 group-hover:text-gray-300">
+                        {service.description}
+                      </div>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SAAS & Emerging Tech */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Code className="w-5 h-5 mr-2 text-cyan-400" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3 mb-8">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    href={service.url}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
+                  >
+                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div>
+                      <div className="font-medium flex items-center">
+                        {service.name}
+                        {service.featured && <span className="ml-1 text-xs text-yellow-400">★</span>}
+                      </div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
                         {service.description}
                       </div>
@@ -201,23 +248,21 @@ const Footer: React.FC = memo(() => {
               ))}
             </ul>
 
-            {/* Emerging Technologies */}
-            <div className="mt-8">
-              <h4 className="text-md font-semibold mb-4 text-gray-200">Emerging Tech</h4>
-              <ul className="space-y-2">
-                {specializedServices.slice(0, 4).map((tech, index) => (
-                  <li key={index}>
-                    <Link
-                      href={tech.url}
-                      className="flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group"
-                    >
-                      <Zap className="w-3 h-3 group-hover:scale-110 transition-transform" />
-                      <span>{tech.name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <h4 className="text-md font-semibold mb-4 text-gray-200">Emerging Tech</h4>
+            <ul className="space-y-2">
+              {specializedServices.slice(0, 4).map((tech, index) => (
+                <li key={index}>
+                  <Link
+                    href={tech.url}
+                    className="flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 group"
+                  >
+                    <Zap className="w-3 h-3 group-hover:scale-110 transition-transform" />
+                    <span>{tech.name}</span>
+                    {tech.featured && <span className="text-xs text-yellow-400">★</span>}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Company & Support */}
