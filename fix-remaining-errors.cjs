@@ -1,76 +1,88 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+// List of files that need to be fixed
+const filesToFix = [
+  'app/ai-data-visualization/page.tsx',
+  'app/it-services/page.tsx',
+  'app/micro-saas/page.tsx'
+];
+
+// Function to create a clean page template
+function createCleanPage(filePath, pageName, title, description, keywords) {
+  const cleanContent = `'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { Zap, Settings, Clock, Users, CheckCircle, ArrowRight, Star, Brain, Shield, Target, TrendingUp } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Phone, Mail, Zap, Brain, Shield, Target, TrendingUp, Users, BarChart, Clock, Settings } from 'lucide-react';
 
-const AIWorkflowAutomationPage: React.FC = () => {
+const ${pageName}: React.FC = () => {
   const features = [
     {
+      icon: Brain,
+      title: 'Advanced AI Technology',
+      description: 'Cutting-edge AI solutions that transform your business operations.',
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Automated Decision Making']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Robust security measures to protect your data and operations.',
+      benefits: ['Data Encryption', 'Access Control', 'Threat Detection', 'Compliance']
+    },
+    {
       icon: Zap,
-      title: 'Intelligent Process Automation',
-      description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
-      benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
-    },
-    {
-      icon: Settings,
-      title: 'Workflow Designer',
-      description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
-      benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
-    },
-    {
-      icon: Clock,
-      title: 'Real-time Monitoring',
-      description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
-      benefits: ['Live Dashboard', 'Performance Metrics', 'Error Tracking', 'Alert System']
+      title: 'High Performance',
+      description: 'Optimized solutions that deliver exceptional performance and reliability.',
+      benefits: ['Fast Processing', 'Scalability', 'Uptime Guarantee', 'Real-time Monitoring']
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborate with your team on workflow design and management with role-based access control.',
-      benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
+      title: 'Expert Support',
+      description: 'Dedicated support team to help you succeed with our solutions.',
+      benefits: ['24/7 Support', 'Expert Consultation', 'Training', 'Documentation']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$399/month',
-      description: 'Perfect for small teams',
-      features: ['Up to 10 workflows', 'Basic automation', 'Email support', 'Standard templates']
+      price: '$299/month',
+      description: 'Perfect for small businesses',
+      features: ['Basic features', 'Email support', 'Standard templates', 'Up to 5 users']
     },
     {
       name: 'Professional',
       price: '$799/month',
       description: 'Ideal for growing businesses',
-      features: ['Up to 50 workflows', 'Advanced AI features', 'Priority support', 'API access', 'Custom integrations']
+      features: ['Advanced features', 'Priority support', 'API access', 'Custom integrations', 'Up to 25 users']
     },
     {
       name: 'Enterprise',
-      price: '$1,599/month',
+      price: '$1,999/month',
       description: 'For large organizations',
-      features: ['Unlimited workflows', 'Custom development', 'Advanced analytics', '24/7 support', 'Dedicated account manager']
+      features: ['All features', '24/7 support', 'Custom development', 'Dedicated account manager', 'Unlimited users']
     }
   ];
 
   const benefits = [
-    'Reduce manual work by up to 80%',
-    'Improve process efficiency by 300%',
-    'Eliminate human errors',
-    'Scale operations without adding staff',
+    'Increase efficiency by 40%',
+    'Reduce costs by 30%',
+    'Improve accuracy by 50%',
+    'Scale operations easily',
     '24/7 automated operations',
-    'Real-time process monitoring'
+    'Real-time insights'
   ];
 
   return (
     <>
       <SEOOptimizer
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Transform your business processes with intelligent AI workflow automation. Reduce manual work, improve efficiency, and scale operations."
-        keywords={['AI workflow automation', 'process automation', 'business automation', 'workflow optimization', 'AI automation']}
-        canonicalUrl="https://ziontechgroup.com/ai-workflow-automation"
+        title="${title}"
+        description="${description}"
+        keywords={${JSON.stringify(keywords)}}
+        canonicalUrl="https://ziontechgroup.com/${filePath.replace('app/', '').replace('/page.tsx', '')}"
       />
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -78,11 +90,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <section className="pt-24 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Workflow Automation
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business processes with intelligent AI-powered workflow automation. 
-              Reduce manual work, improve efficiency, and scale operations without adding staff.
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -133,7 +144,7 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <section className="py-16 px-4 bg-slate-800/50">
           <div className="container mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose AI Workflow Automation?
+              Why Choose Our Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
@@ -182,10 +193,10 @@ const AIWorkflowAutomationPage: React.FC = () => {
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="container mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Automate Your Workflows?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Start your AI workflow automation journey today and transform your business processes.
+              Transform your business with our advanced solutions today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -211,4 +222,51 @@ const AIWorkflowAutomationPage: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomationPage;
+export default ${pageName};`;
+
+  return cleanContent;
+}
+
+// Fix each file
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const pageName = filePath.split('/').pop().replace('.tsx', '').replace('page', 'Page');
+  const routeName = filePath.replace('app/', '').replace('/page.tsx', '');
+  
+  let title, description, keywords;
+  
+  switch(routeName) {
+    case 'ai-data-visualization':
+      title = 'AI Data Visualization';
+      description = 'Transform your data into actionable insights with advanced AI-powered visualization tools.';
+      keywords = ['AI data visualization', 'data analytics', 'business intelligence', 'data insights', 'visualization tools'];
+      break;
+    case 'it-services':
+      title = 'IT Services';
+      description = 'Comprehensive IT solutions including infrastructure, support, and digital transformation services.';
+      keywords = ['IT services', 'IT support', 'infrastructure', 'digital transformation', 'technology solutions'];
+      break;
+    case 'micro-saas':
+      title = 'Micro SAAS Solutions';
+      description = 'Powerful micro SAAS applications that solve specific business problems with AI-powered tools.';
+      keywords = ['micro saas', 'saas solutions', 'business apps', 'productivity tools', 'AI tools'];
+      break;
+    default:
+      title = 'Zion Tech Group Solutions';
+      description = 'Advanced technology solutions for modern businesses.';
+      keywords = ['technology solutions', 'AI', 'automation', 'digital transformation'];
+  }
+  
+  const cleanContent = createCleanPage(filePath, pageName, title, description, keywords);
+  
+  // Backup original file
+  if (fs.existsSync(fullPath)) {
+    fs.copyFileSync(fullPath, fullPath + '.backup');
+  }
+  
+  // Write clean content
+  fs.writeFileSync(fullPath, cleanContent);
+  console.log(`Fixed: ${filePath}`);
+});
+
+console.log('All files have been fixed!');
