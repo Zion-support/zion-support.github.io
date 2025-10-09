@@ -78,7 +78,7 @@ const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-  }, [enableConsoleLogging]);
+  }, []);
   return (
     <div className="performance-monitor">
       <h3>Performance Metrics</h3>
@@ -88,7 +88,7 @@ const PerformanceMonitor: React.FC = () => {
         <div>CLS: {metrics.cls || 'N/A'}</div>
         <div>FCP: {metrics.fcp || 'N/A'}</div>
         <div>TTFB: {metrics.ttfb || 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage}MB</div>
+        <div>Memory: N/A</div>
       </div>
     </div>
   );

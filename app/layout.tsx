@@ -1,6 +1,7 @@
 import './globals.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
+// import { HelmetProvider } from 'react-helmet-async';
 export default function RootLayout({
   children,
 }: {
@@ -149,6 +150,7 @@ export default function RootLayout({
         <meta name='msapplication-config' content='/browserconfig.xml' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        <meta name="metadataBase" content="https://ziontechgroup.com" />
         {/* Resource hints for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
