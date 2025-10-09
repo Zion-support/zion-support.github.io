@@ -94,7 +94,11 @@ const Navigation: React.FC = () => {
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
         { name: 'Managed IT Services', path: '/managed-it', description: '24/7 IT management' },
         { name: 'IT Training', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' }
+        { name: 'IT Project Management', path: '/it-project-management', description: 'IT project delivery' },
+        { name: 'Performance Optimization', path: '/performance-optimization', description: 'System performance tuning' },
+        { name: 'Backup & Recovery', path: '/backup-recovery', description: 'Data protection services' },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', description: 'Large-scale IT solutions' },
+        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure design' }
       ]
     },
     {
