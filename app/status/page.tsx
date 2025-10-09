@@ -252,10 +252,14 @@ const StatusPage: React.FC = () => {
                 <div className="mt-4">
                   <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(service.status)}`}>
                     {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+<<<<<<< HEAD
                   </span>
 
 
                 </div>
+=======
+                  </span>                </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be
               </div>
             ))}
           </div>
@@ -339,6 +343,7 @@ const StatusPage: React.FC = () => {
             This status page is updated every minute. For more information, contact our support team.
           </p>
         </div>
+<<<<<<< HEAD
       </section>
 
 
@@ -349,3 +354,10 @@ const StatusPage: React.FC = () => {
 export default StatusPage;
 
 
+=======
+      </section>    </div>
+  );
+};
+
+export default StatusPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be

@@ -24,10 +24,16 @@ const DevelopertoolsPage: React.FC = () => {
       </main>
       
       <Footer />
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be
     </div>
   );
 };
 
 export default DevelopertoolsPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-03be
