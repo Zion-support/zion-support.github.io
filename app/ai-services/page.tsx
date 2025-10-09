@@ -272,7 +272,6 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Edge Computing Solutions',
       description: 'Deploy AI models at the edge for real-time processing, reduced latency, and offline capabilities.',
       icon: '⚡',
-<<<<<<< HEAD
       price: 'Starting at $6,500/month',
       features: ['Grid optimization', 'Renewable integration', 'Demand response', 'Energy storage', 'Load forecasting'],
       benefits: ['Improve grid efficiency', 'Integrate renewables', 'Reduce energy costs'],
@@ -620,9 +619,7 @@ const AIServicesPage: React.FC = () => {
       benefits: ['Improve city services', 'Enhance citizen experience', 'Optimize resources'],
       marketPrice: '$15,000-40,000/month',
       category: 'Smart City AI',
-      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms']
-=======
-      price: '$1,700/month',
+      technologies: ['City Data Integration', 'Citizen Services', 'Custom City Models', 'IoT Networks', 'Analytics Platforms'],
       features: [
         'Edge Model Deployment',
         'Real-time Inference',
@@ -641,7 +638,6 @@ const AIServicesPage: React.FC = () => {
       category: 'Edge AI',
       technologies: ['TensorFlow Lite', 'ONNX', 'OpenVINO', 'NVIDIA Jetson', 'Raspberry Pi', 'Edge Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
->>>>>>> eb805111b9a39d156e248671e5cb99c5fd811fd8
     }
   ];
 
