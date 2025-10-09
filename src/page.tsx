@@ -60,41 +60,41 @@ const HomePage: React.FC = () => {
   const microSAASServices = [
     {
       title: 'AI Project Manager',
-      description: 'Intelligent project planning with AI-powered resource optimization and timeline prediction',
+      description: 'Revolutionary project management platform powered by advanced AI algorithms that optimize resource allocation, predict project risks, and automate workflow management for maximum efficiency and success.',
       icon: '📊',
       price: '$99/month',
-      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration'],
-      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
+      features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization'],
+      benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '50% faster project completion'],
       link: '/ai-project-manager',
       popular: true
     },
     {
       title: 'AI Social Media Manager',
-      description: 'Automate your social media with AI-powered content creation and smart scheduling',
+      description: 'Transform your social media presence with our cutting-edge AI platform that creates engaging content, optimizes posting schedules, and provides deep audience insights to maximize your brand impact across all platforms.',
       icon: '📱',
       price: '$79/month',
-      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence'],
-      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
+      features: ['AI content creation', 'Smart scheduling', 'Analytics & insights', 'Audience intelligence', 'Multi-platform management', 'Trend analysis'],
+      benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach', '60% better content performance'],
       link: '/ai-social-media-manager',
       popular: true
     },
     {
       title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics',
+      description: 'Unlock the power of your data with our intelligent analytics platform that uses machine learning to identify patterns, predict trends, and provide actionable insights that drive business growth and competitive advantage.',
       icon: '📈',
       price: '$149/month',
-      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
-      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
+      features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking', 'Predictive modeling', 'Custom reporting'],
+      benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift', '90% faster decision making'],
       link: '/ai-analytics-dashboard',
       popular: true
     },
     {
       title: 'AI Email Marketing',
-      description: 'Transform your email marketing with AI-powered content generation and automation',
+      description: 'Revolutionize your email marketing strategy with our AI-powered platform that creates personalized, high-converting email campaigns, optimizes send times, and delivers exceptional ROI through intelligent automation and segmentation.',
       icon: '📧',
       price: '$99/month',
-      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns'],
-      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved'],
+      features: ['AI content generation', 'Smart segmentation', 'Advanced analytics', 'Automated campaigns', 'A/B testing', 'Personalization engine'],
+      benefits: ['65% open rate increase', '40% revenue growth', '80% time saved', '300% better engagement'],
       link: '/ai-email-marketing',
       popular: true
     },
@@ -116,6 +116,106 @@ const HomePage: React.FC = () => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
+      popular: false
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial planning and investment recommendations powered by AI',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Market analysis', 'Automated rebalancing'],
+      benefits: ['25% better returns', '60% risk reduction', '24/7 monitoring'],
+      link: '/ai-financial-advisor',
+      popular: true
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Streamline HR processes with AI-powered recruitment and employee management',
+      icon: '👥',
+      price: '$129/month',
+      features: ['Resume screening', 'Interview scheduling', 'Performance tracking', 'Employee insights'],
+      benefits: ['50% faster hiring', '30% better candidate matches', '40% HR time saved'],
+      link: '/ai-hr-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Inventory Manager',
+      description: 'Optimize inventory levels with AI-powered demand forecasting and automation',
+      icon: '📦',
+      price: '$159/month',
+      features: ['Demand forecasting', 'Automated reordering', 'Waste reduction', 'Cost optimization'],
+      benefits: ['35% inventory reduction', '20% cost savings', '95% stockout prevention'],
+      link: '/ai-inventory-manager',
+      popular: false
+    },
+    {
+      title: 'AI Legal Assistant',
+      description: 'Automate legal document review and contract analysis with AI',
+      icon: '⚖️',
+      price: '$299/month',
+      features: ['Contract analysis', 'Legal research', 'Document generation', 'Compliance monitoring'],
+      benefits: ['80% faster document review', '90% accuracy in analysis', '60% legal cost reduction'],
+      link: '/ai-legal-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered logistics and demand planning',
+      icon: '🚚',
+      price: '$249/month',
+      features: ['Route optimization', 'Demand planning', 'Supplier management', 'Risk assessment'],
+      benefits: ['30% cost reduction', '25% faster delivery', '40% efficiency gain'],
+      link: '/ai-supply-chain-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation and safety monitoring for online platforms',
+      icon: '🛡️',
+      price: '$179/month',
+      features: ['Real-time monitoring', 'Content classification', 'Automated actions', 'Compliance reporting'],
+      benefits: ['99% accuracy', '90% faster response', '24/7 monitoring'],
+      link: '/ai-content-moderation',
+      popular: false
+    },
+    {
+      title: 'AI Voice Assistant',
+      description: 'Custom voice-enabled AI assistant for business operations and customer service',
+      icon: '🎤',
+      price: '$199/month',
+      features: ['Voice recognition', 'Natural conversations', 'Multi-language support', 'Integration APIs'],
+      benefits: ['60% faster interactions', '40% customer satisfaction', '24/7 availability'],
+      link: '/ai-voice-assistant',
+      popular: true
+    },
+    {
+      title: 'AI Fraud Detection',
+      description: 'Advanced fraud detection and prevention using machine learning algorithms',
+      icon: '🔒',
+      price: '$229/month',
+      features: ['Real-time detection', 'Pattern recognition', 'Risk scoring', 'Automated alerts'],
+      benefits: ['95% fraud detection', '80% false positive reduction', 'Real-time protection'],
+      link: '/ai-fraud-detection',
+      popular: false
+    },
+    {
+      title: 'AI Translation Service',
+      description: 'Real-time translation and localization services powered by advanced AI',
+      icon: '🌐',
+      price: '$89/month',
+      features: ['100+ languages', 'Real-time translation', 'Context awareness', 'Industry-specific terms'],
+      benefits: ['99% accuracy', 'Instant translation', 'Cost-effective'],
+      link: '/ai-translation-service',
+      popular: false
+    },
+    {
+      title: 'AI Video Analytics',
+      description: 'Advanced video analysis and insights for security and business intelligence',
+      icon: '📹',
+      price: '$189/month',
+      features: ['Object detection', 'Behavior analysis', 'Facial recognition', 'Real-time alerts'],
+      benefits: ['90% accuracy', '24/7 monitoring', 'Automated insights'],
+      link: '/ai-video-analytics',
       popular: false
     }
   ];
@@ -152,6 +252,38 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'Deep Learning Solutions',
+      description: 'Advanced neural networks for complex pattern recognition and analysis',
+      icon: Cpu,
+      price: '$2,200/month',
+      features: ['Neural Network Design', 'Deep Learning Models', 'GPU Optimization', 'Model Training'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'AI Data Science',
+      description: 'Comprehensive data science solutions with AI-powered insights',
+      icon: BarChart,
+      price: '$1,800/month',
+      features: ['Data Mining', 'Statistical Analysis', 'Predictive Modeling', 'Business Intelligence'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'AI Cybersecurity',
+      description: 'AI-powered security solutions for threat detection and prevention',
+      icon: Shield,
+      price: '$2,500/month',
+      features: ['Threat Detection', 'Anomaly Detection', 'Security Analytics', 'Incident Response'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'AI Healthcare Solutions',
+      description: 'Medical AI solutions for diagnosis, treatment, and patient care',
+      icon: Heart,
+      price: '$3,000/month',
+      features: ['Medical Imaging', 'Diagnostic AI', 'Treatment Planning', 'Patient Monitoring'],
+      color: 'text-pink-400'
     }
   ];
 
@@ -187,6 +319,54 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'IT Infrastructure',
+      description: 'Enterprise-grade IT infrastructure with 99.9% uptime guarantee',
+      icon: Cpu,
+      price: '$999/month',
+      features: ['Server Management', 'Network Setup', 'Security Hardening', 'Backup Solutions'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'Network Services',
+      description: 'Network design, implementation, and monitoring solutions',
+      icon: Globe,
+      price: '$1,099/month',
+      features: ['Network Design', 'Implementation', 'Monitoring', 'Troubleshooting'],
+      color: 'text-cyan-400'
+    },
+    {
+      title: 'Mobile App Development',
+      description: 'Native and cross-platform mobile applications with modern technologies',
+      icon: Smartphone,
+      price: '$1,800/month',
+      features: ['iOS/Android Apps', 'Cross-platform', 'UI/UX Design', 'App Store Optimization'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'Web Development',
+      description: 'Modern web applications with responsive design and optimal performance',
+      icon: Code,
+      price: '$1,200/month',
+      features: ['Frontend Development', 'Backend Development', 'API Integration', 'Performance Optimization'],
+      color: 'text-yellow-400'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation services',
+      icon: Target,
+      price: '$1,500/month',
+      features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Change Management'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'Data Center Services',
+      description: 'Comprehensive data center solutions and colocation services',
+      icon: Building,
+      price: '$2,200/month',
+      features: ['Colocation', 'Managed Services', 'Disaster Recovery', '24/7 Support'],
+      color: 'text-gray-400'
     }
   ];
 
@@ -269,10 +449,10 @@ const HomePage: React.FC = () => {
           <ContentPromotionBanner />
         </Suspense>
 
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+        <main id="main-content" className="container mx-auto px-4 py-8 sm:py-12 lg:py-16 pt-20 sm:pt-24" role="main">
           {/* Hero Section */}
           <section
-            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+            className={`text-center mb-12 sm:mb-16 lg:mb-20 transition-all duration-1000 cyber-scan-line ${
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -282,72 +462,72 @@ const HomePage: React.FC = () => {
             <div className="max-w-6xl mx-auto">
               <h1 
                 id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 cyber-text-3d neon-pulse glitch"
                 data-text="Zion Tech Group"
               >
                 Zion Tech Group
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
+              <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-6 sm:mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
                 Advanced AI and IT Solutions
               </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
                 Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
                 Transform your business with our cutting-edge technology and achieve unprecedented growth.
               </p>
               
               {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-8 sm:mb-12">
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">AI-Powered Solutions</h3>
+                  <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">AI-Powered Solutions</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Proven Results</h3>
+                  <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Proven Results</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
                 </div>
                 <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Enterprise Security</h3>
+                  <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Enterprise Security</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
                 </div>
-                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                <div className="futuristic-glow neural-pattern p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3 neon-pulse">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg neon-text">Global Reach</h3>
+                  <h3 className="font-bold text-white mb-3 text-sm sm:text-base lg:text-lg neon-text">Global Reach</h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
                 <a
                   href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  className="cyber-button px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold hover:scale-105 transition-all duration-300 w-full sm:w-auto text-center"
                 >
                   Get Started Today
                 </a>
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 w-full sm:w-auto"
                 >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-sm sm:text-base">+1 302 464 0950</span>
                 </a>
               </div>
             </div>
           </section>
 
           {/* Micro SAAS Services Section */}
-          <section className="mb-16" aria-labelledby="micro-saas-heading">
+          <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="micro-saas-heading">
             <h2 id="micro-saas-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               Micro SAAS Solutions
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Powerful, affordable AI-powered tools designed for modern businesses
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {microSAASServices.map((service, index) => (
                 <article key={index} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {service.popular && (
@@ -402,15 +582,15 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* AI Services Section */}
-          <section className="mb-16" aria-labelledby="ai-services-heading">
+          <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="ai-services-heading">
             <h2 id="ai-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               AI Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Advanced artificial intelligence solutions for enterprise applications
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -448,15 +628,15 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* IT Services Section */}
-          <section className="mb-16" aria-labelledby="it-services-heading">
+          <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="it-services-heading">
             <h2 id="it-services-heading" className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
               IT Services
             </h2>
-            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-lg text-gray-300 text-center mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
               Comprehensive IT solutions for modern enterprise infrastructure
             </p>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {itServices.map((service, index) => (
                 <article key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
@@ -494,12 +674,12 @@ const HomePage: React.FC = () => {
           </section>
 
           {/* Contact Information */}
-          <section className="mb-16" aria-labelledby="contact-heading">
+          <section className="mb-12 sm:mb-16 lg:mb-20" aria-labelledby="contact-heading">
             <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold text-white mb-8 text-center neon-text">
               Get In Touch
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <div className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
                 <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
