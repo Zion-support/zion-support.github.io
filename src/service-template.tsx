@@ -1,48 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Phone, Mail } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
-const AIServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
-      icon: Brain,
-      features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Machine Learning Solutions',
-      description: 'Custom machine learning models and algorithms for your business needs',
-      icon: Zap,
-      features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price: 'Starting at $1,500/month'
-    },
-    {
-      title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security and compliance solutions',
-      icon: Shield,
-      features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      title: 'AI Analytics & Insights',
-      description: 'Advanced analytics and business intelligence powered by AI',
-      icon: BarChart,
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
-      price: 'Starting at $800/month'
-    }
-  ];
+interface ServicePageProps {
+  title: string;
+  description: string;
+  icon: React.ComponentType<any>;
+  services: Array<{
+    title: string;
+    description: string;
+    icon: React.ComponentType<any>;
+    features: string[];
+    price: string;
+  }>;
+  benefits: string[];
+}
 
-  const benefits = [
-    '300% Average ROI Increase',
-    '95% Process Automation',
-    '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
-  ];
-
+const ServicePage: React.FC<ServicePageProps> = ({ title, description, icon: Icon, services, benefits }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -51,10 +27,10 @@ const AIServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Services
+            {title}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to transform your business operations and drive innovation
+            {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -107,7 +83,7 @@ const AIServicesPage: React.FC = () => {
         {/* Benefits Section */}
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our AI Services?
+            Why Choose Our {title}?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -125,10 +101,10 @@ const AIServicesPage: React.FC = () => {
         <section className="container mx-auto px-4 py-16">
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business with AI?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our AI solutions can revolutionize your operations.
+              Get a free consultation and discover how our solutions can revolutionize your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -155,4 +131,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default ServicePage;

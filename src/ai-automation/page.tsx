@@ -4,43 +4,29 @@ import { Brain, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIServicesPage: React.FC = () => {
+const AIAutomationPage: React.FC = () => {
   const services = [
     {
-      title: 'AI Strategy & Consulting',
-      description: 'Comprehensive AI strategy development and implementation consulting',
-      icon: Brain,
-      features: ['AI Readiness Assessment', 'Strategic Planning', 'Implementation Roadmap', 'ROI Analysis'],
-      price: 'Starting at $2,500/month'
-    },
-    {
-      title: 'Machine Learning Solutions',
-      description: 'Custom machine learning models and algorithms for your business needs',
+      title: 'Process Automation',
+      description: 'Automate repetitive business processes with intelligent decision-making capabilities',
       icon: Zap,
-      features: ['Custom Model Development', 'Data Preprocessing', 'Model Training', 'Performance Optimization'],
-      price: 'Starting at $1,500/month'
+      features: ['Workflow Design', 'Rule Engine', 'Exception Handling', 'Performance Monitoring'],
+      price: 'Starting at $399/month'
     },
     {
-      title: 'AI Security & Compliance',
-      description: 'Enterprise-grade AI security and compliance solutions',
-      icon: Shield,
-      features: ['AI Security Audit', 'Compliance Framework', 'Risk Assessment', 'Security Monitoring'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      title: 'AI Analytics & Insights',
-      description: 'Advanced analytics and business intelligence powered by AI',
-      icon: BarChart,
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
-      price: 'Starting at $800/month'
+      title: 'Document Processing',
+      description: 'Intelligent document processing and data extraction using AI',
+      icon: Brain,
+      features: ['OCR Technology', 'Data Extraction', 'Classification', 'Validation'],
+      price: 'Starting at $299/month'
     }
   ];
 
   const benefits = [
-    '300% Average ROI Increase',
     '95% Process Automation',
     '50% Cost Reduction',
-    '99.9% Uptime Guarantee'
+    '300% Efficiency Gain',
+    '24/7 Operation'
   ];
 
   return (
@@ -48,13 +34,12 @@ const AIServicesPage: React.FC = () => {
       <Navigation />
       
       <main className="pt-20">
-        {/* Hero Section */}
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Services
+            AI Automation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI solutions designed to transform your business operations and drive innovation
+            Intelligent automation solutions that transform your business processes with AI-powered decision making
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -74,7 +59,6 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
         <section className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -104,10 +88,9 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our AI Services?
+            Why Choose Our AI Automation?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
@@ -120,34 +103,6 @@ const AIServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="container mx-auto px-4 py-16">
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free consultation and discover how our AI solutions can revolutionize your operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Consultation
-              </Link>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
-            </div>
-          </div>
-        </section>
       </main>
 
       <Footer />
@@ -155,4 +110,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default AIAutomationPage;

@@ -1,11 +1,5 @@
-<<<<<<< HEAD:src/components/Navigation.tsx
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD:src/components/Navigation.tsx
-import { Link } from 'react-router-dom';
-=======
 import React, { useState, useEffect, memo } from 'react';
-import Link from 'next/link';
->>>>>>> cursor/analyze-improve-and-deploy-application-4e50:app/components/Navigation.tsx
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = memo(() => {
@@ -90,13 +84,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Intelligent sales processes' },
         { name: 'AI Data Visualization', path: '/ai-data-visualization', description: 'Advanced data visualization' },
         { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'AI-powered lead generation' },
-        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform' },
-        { name: 'AI Computer Vision', path: '/ai-computer-vision', description: 'Advanced computer vision' },
-        { name: 'AI Natural Language Processing', path: '/ai-nlp', description: 'Advanced NLP solutions' },
-        { name: 'AI Robotics Platform', path: '/ai-robotics', description: 'Intelligent robotics' },
-        { name: 'AI Research & Development', path: '/ai-research-development', description: 'Custom AI R&D' },
-        { name: 'AI Edge Computing', path: '/ai-edge-computing', description: 'AI at the edge' }
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing' }
       ]
     },
     {
@@ -115,13 +103,7 @@ const Navigation: React.FC = memo(() => {
         { name: 'Network Solutions', path: '/network-solutions', description: 'Network infrastructure' },
         { name: 'System Administration', path: '/system-administration', description: 'System management' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic IT planning' },
-        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' },
-        { name: 'IT Training & Certification', path: '/it-training', description: 'Staff development' },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure-design', description: 'Custom infrastructure' },
-        { name: 'IT Performance Monitoring', path: '/it-performance-monitoring', description: 'Real-time monitoring' },
-        { name: 'IT Disaster Recovery', path: '/it-disaster-recovery', description: 'Disaster recovery' },
-        { name: 'IT Automation', path: '/it-automation', description: 'IT process automation' },
-        { name: 'Global IT Support', path: '/global-it-support', description: 'Worldwide support' }
+        { name: 'IT Support & Maintenance', path: '/it-support', description: '24/7 IT management' }
       ]
     },
     {
@@ -131,38 +113,6 @@ const Navigation: React.FC = memo(() => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-        { name: 'AI-Powered CRM', path: '/ai-crm', description: 'Intelligent CRM with AI insights' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics', description: 'Real-time business intelligence' },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite' },
-        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', description: 'No-code chatbot creation' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Automated email campaigns' },
-        { name: 'AI Mobile App Builder', path: '/ai-mobile-builder', description: 'AI-assisted app development' },
-        { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'Automated SEO analysis' },
-        { name: 'AI Invoice Generator', path: '/ai-invoice-generator', description: 'Automated invoicing' },
-        { name: 'AI Lead Scoring', path: '/ai-lead-scoring', description: 'Intelligent lead qualification' },
-        { name: 'AI Sales Forecasting', path: '/ai-sales-forecasting', description: 'Advanced sales predictions' },
-        { name: 'AI E-commerce Optimizer', path: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' },
-        { name: 'AI Design Assistant', path: '/ai-design-assistant', description: 'AI-powered design tool' },
-        { name: 'AI Document Processor', path: '/ai-document-processor', description: 'Intelligent document processing' },
-        { name: 'AI Security Monitor', path: '/ai-security-monitor', description: 'Real-time security monitoring' },
-        { name: 'AI Performance Tracker', path: '/ai-performance-tracker', description: 'Comprehensive performance tracking' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant', description: 'Custom voice assistants' },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media' },
-        { name: 'AI HR Assistant', path: '/ai-hr-assistant', description: 'Intelligent HR management' },
-        { name: 'AI Inventory Manager', path: '/ai-inventory-manager', description: 'Smart inventory management' },
-        { name: 'AI Customer Insights', path: '/ai-customer-insights', description: 'Deep customer insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Process automation' },
-        { name: 'AI A/B Testing Platform', path: '/ai-ab-testing', description: 'Advanced A/B testing' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', description: 'Future outcome predictions' }
-      ]
-    },
-    {
-      title: 'Specialized',
-      icon: Zap,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50',
-      hoverColor: 'hover:bg-orange-100',
-      services: [
         { name: 'Quantum Computing', path: '/quantum-computing', description: 'Next-gen computing' },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
         { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions' },
@@ -171,12 +121,18 @@ const Navigation: React.FC = memo(() => {
         { name: 'Robotics', path: '/robotics', description: 'Intelligent robots' },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences' },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions' },
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' },
-        { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping' },
-        { name: 'Sustainability Tech', path: '/sustainability-tech', description: 'Green technology solutions' },
-        { name: 'Future Technologies', path: '/future-technologies', description: 'Emerging tech solutions' }
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization' }
       ]
     }
+  ];
+
+  const mainNavItems = [
+    { name: 'Home', path: '/', icon: '🏠' },
+    { name: 'About', path: '/about', icon: '👥' },
+    { name: 'Services', path: '/services', icon: '⚙️' },
+    { name: 'Case Studies', path: '/case-studies', icon: '📊' },
+    { name: 'Blog', path: '/blog', icon: '📝' },
+    { name: 'Contact', path: '/contact', icon: '📞' }
   ];
 
   return (
@@ -188,7 +144,7 @@ const Navigation: React.FC = memo(() => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-lg">Z</span>
             </div>
@@ -200,10 +156,10 @@ const Navigation: React.FC = memo(() => {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex space-x-8">
-            <Link href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
             </Link>
 
@@ -220,58 +176,60 @@ const Navigation: React.FC = memo(() => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-2">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <category.icon className={`w-4 h-4 ${category.color}`} />
-                          <span className="text-sm font-semibold text-white">{category.title}</span>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-2xl opacity-100 visible transition-all duration-300 transform translate-y-0">
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-white mb-4 neon-text">Our Services</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      {serviceCategories.map((category, index) => (
+                        <div key={index} className="space-y-2">
+                          <div className="flex items-center space-x-2 mb-2">
+                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                            <span className="text-sm font-semibold text-white">{category.title}</span>
+                          </div>
+                          <div className="space-y-2">
+                            {category.services.slice(0, 6).map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                to={service.path}
+                                className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
+                                onClick={closeAllMenus}
+                              >
+                                <div className="font-medium">{service.name}</div>
+                                <div className="text-xs text-gray-500">
+                                  {service.description}
+                                </div>
+                              </Link>
+                            ))}
+                            {category.services.length > 6 && (
+                              <Link
+                                to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                                className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
+                                onClick={closeAllMenus}
+                              >
+                                View All →
+                              </Link>
+                            )}
+                          </div>
                         </div>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block px-3 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cyan-400 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              <div className="font-medium">{service.name}</div>
-                              <div className="text-xs text-gray-500 group-hover:text-purple-500">
-                                {service.description}
-                              </div>
-                            </Link>
-                          ))}
-                          {category.services.length > 6 && (
-                            <Link
-                              href={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                              className="block px-3 py-2 text-sm text-purple-600 hover:bg-purple-50 rounded-lg transition-colors font-medium"
-                              onClick={closeAllMenus}
-                            >
-                              View All →
-                            </Link>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="border-t border-gray-700 mt-6 pt-4 px-6">
-                    <Link
-                      href="/services"
-                      className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
+                      ))}
+                    </div>
+                    <div className="border-t border-gray-700 mt-6 pt-4">
+                      <Link
+                        to="/services"
+                        className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
+                        onClick={closeAllMenus}
+                      >
+                        View All Services
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
             </div>
 
             <Link 
-              href="/case-studies" 
+              to="/case-studies" 
               className="font-medium transition-colors hover:text-cyan-400 text-white"
               onClick={closeAllMenus}
             >
@@ -279,7 +237,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              href="/blog"
+              to="/blog"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -287,7 +245,7 @@ const Navigation: React.FC = memo(() => {
             </Link>
 
             <Link
-              href="/contact"
+              to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
@@ -296,7 +254,7 @@ const Navigation: React.FC = memo(() => {
 
             {/* CTA Button */}
             <Link
-              href="/contact"
+              to="/contact"
               className="cyber-button inline-flex items-center"
               onClick={closeAllMenus}
             >
@@ -317,99 +275,6 @@ const Navigation: React.FC = memo(() => {
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-sm rounded-lg mt-2">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
-              >
-                About
-              </Link>
-
-              {/* Mobile Services */}
-              <div>
-                <button
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Brain className="w-4 h-4" />
-                    <span>Services</span>
-                  </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {servicesOpen && (
-                  <div className="mt-2 ml-4 space-y-2">
-                    {serviceCategories.map((category, categoryIndex) => (
-                      <div key={categoryIndex}>
-                        <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
-                        <div className="ml-4 space-y-1">
-                          {category.services.slice(0, 3).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              href={service.path}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
-                            >
-                              {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
-                            </Link>
-                          ))}
-                          <Link
-                            href="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          >
-                            View All →
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-            >
-              <Phone className="w-4 h-4" />
-              <span className="text-sm font-medium">+1 302 464 0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-pink-400 hover:text-pink-300 transition-colors duration-300"
-            >
-              <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Email</span>
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button px-4 py-2 text-sm font-medium"
-            >
-              Get Started
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-300"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
@@ -420,13 +285,42 @@ const Navigation: React.FC = memo(() => {
                 {mainNavItems.map((item) => (
                   <Link
                     key={item.name}
-                    href={item.path}
+                    to={item.path}
                     onClick={closeAllMenus}
                     className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                   >
                     <span className="text-lg">{item.icon}</span>
                     <span className="font-medium">{item.name}</span>
                   </Link>
+                ))}
+              </div>
+
+              {/* Services for Mobile */}
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-3 neon-text">Services</h3>
+                {serviceCategories.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="mb-4">
+                    <div className="text-sm font-medium text-cyan-400 mb-2">{category.title}</div>
+                    <div className="ml-4 space-y-1">
+                      {category.services.slice(0, 3).map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}
+                          className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-1"
+                          onClick={closeAllMenus}
+                        >
+                          {typeof service.icon === 'string' ? service.icon : <service.icon className="w-3 h-3 inline mr-1" />} {service.name}
+                        </Link>
+                      ))}
+                      <Link
+                        to="/services"
+                        className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                        onClick={closeAllMenus}
+                      >
+                        View All →
+                      </Link>
+                    </div>
+                  </div>
                 ))}
               </div>
 

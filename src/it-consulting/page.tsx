@@ -4,7 +4,7 @@ import { Brain, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const Database: React.FC = () => {
+const ItConsulting: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -12,10 +12,10 @@ const Database: React.FC = () => {
       <main className="pt-20">
         <section className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Database
+            It Consulting
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Database management and optimization services
+            Strategic IT consulting and technology advisory services
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -68,4 +68,4 @@ const Database: React.FC = () => {
   );
 };
 
-export default Database;
+export default ItConsulting;
