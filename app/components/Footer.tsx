@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Phone, Mail, MapPin, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube, ArrowRight } from 'lucide-react';
+import { Phone, Mail, MapPin, Brain, Facebook, Twitter, Linkedin, Instagram, Github, Youtube, ArrowRight, Home, Settings, Cpu } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -29,23 +29,23 @@ const Footer: React.FC = () => {
   const aiServices = [
     { name: 'Machine Learning', href: '/ai-ml' },
     { name: 'Natural Language Processing', href: '/ai-nlp' },
-    { name: 'Computer Vision', href: '/ai-vision' },
+    { name: 'Computer Vision', href: '/ai-data-visualization' },
     { name: 'AI Automation', href: '/ai-automation' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Synthesis', href: '/ai-voice-synthesis' },
-    { name: 'AI Fraud Detection', href: '/ai-fraud-detection' },
+    { name: 'AI Voice Synthesis', href: '/ai-voice-cloning' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor' },
   ];
 
   const itServices = [
     { name: 'Cloud Migration', href: '/cloud-migration' },
     { name: 'IT Consulting', href: '/it-consulting' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/mobile-development' },
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'Cybersecurity', href: '/ai-security-monitor' },
+    { name: 'DevOps & CI/CD', href: '/it-services' },
+    { name: 'Database Services', href: '/it-services' },
+    { name: 'Mobile App Development', href: '/it-services' },
+    { name: 'Web Development', href: '/it-services' },
+    { name: 'Blockchain Solutions', href: '/it-services' },
   ];
 
   const socialLinks = [
