@@ -578,3 +578,25 @@ class AccessibilityEnhancer {
     const metrics = this.getMetrics();
     return `
 Accessibility Report:
+- Focusable Elements: ${metrics.focusableElements}
+- Images Without Alt: ${metrics.imagesWithoutAlt}
+- Links Without Text: ${metrics.linksWithoutText}
+- Headings Without Content: ${metrics.headingsWithoutContent}
+- Color Contrast Issues: ${metrics.colorContrastIssues}
+- Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100
+- Screen Reader Score: ${metrics.screenReaderScore}/100
+- Overall Score: ${metrics.overallScore}/100
+`;
+  }
+
+  /**
+   * Cleanup resources
+   */
+  destroy(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+    this.isInitialized = false;
+  }
+}
+
+export default AccessibilityEnhancer;

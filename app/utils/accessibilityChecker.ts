@@ -559,3 +559,24 @@ export class AccessibilityChecker {
     if (this.issues.length === 0) {
       return 'No accessibility issues found. Great job!';
     }
+
+    const report = [
+      `Accessibility Report - ${new Date().toLocaleDateString()}`,
+      `Total Issues: ${this.issues.length}`,
+      `Overall Score: ${this.calculateScore()}/100`,
+      '',
+      'Issues by Severity:',
+      ...Object.values(A11ySeverity).map(severity => {
+        const count = this.getIssuesBySeverity(severity).length;
+        return `  ${severity}: ${count}`;
+      }),
+      '',
+      'Detailed Issues:',
+      ...this.issues.map(issue => 
+        `- [${issue.severity}] ${issue.type}: ${issue.message}`
+      )
+    ];
+
+    return report.join('\n');
+  }
+}
