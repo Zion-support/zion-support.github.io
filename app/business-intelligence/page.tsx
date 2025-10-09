@@ -36,6 +36,7 @@ const BusinessIntelligencePage: React.FC = () => {
       technologies: ['Snowflake', 'BigQuery', 'Redshift', 'Azure Synapse', 'Talend']
     }
   ];
+<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -180,3 +181,5 @@ const BusinessIntelligencePage: React.FC = () => {
 };
 
 export default BusinessIntelligencePage;
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-7165

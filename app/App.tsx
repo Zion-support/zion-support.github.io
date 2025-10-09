@@ -46,6 +46,28 @@ const _AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-developme
 const _ITServicesPage = lazy(() => import('./it-services/page'));
 const _MicroSAASPage = lazy(() => import('./micro-saas/page'));
 const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const _CloudServicesPage = lazy(() => import('./cloud-services/page'));
+const _DevOpsPage = lazy(() => import('./devops/page'));
+const _DatabasePage = lazy(() => import('./database/page'));
+const _NetworkingPage = lazy(() => import('./networking/page'));
+
+// Additional Pages
+const _SecurityPage = lazy(() => import('./security/page'));
+const _CareersPage = lazy(() => import('./careers/page'));
+const _SupportPage = lazy(() => import('./support/page'));
+const _CookiesPage = lazy(() => import('./cookies/page'));
+const _GDPRPage = lazy(() => import('./gdpr/page'));
+const _CompliancePage = lazy(() => import('./compliance/page'));
+const _StatusPage = lazy(() => import('./status/page'));
+const _SystemStatusPage = lazy(() => import('./system-status/page'));
+const _DocsPage = lazy(() => import('./docs/page'));
+const _APIPage = lazy(() => import('./api/page'));
+const _APIDocsPage = lazy(() => import('./api-docs/page'));
+const _NewsPage = lazy(() => import('./news/page'));
+const _DeveloperToolsPage = lazy(() => import('./developer-tools/page'));
+const _BusinessAppsPage = lazy(() => import('./business-apps/page'));
+const _ProductivityPage = lazy(() => import('./productivity/page'));
+const _MarketingToolsPage = lazy(() => import('./marketing-tools/page'));
 
 // Specialized Technology Pages
 const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
@@ -171,6 +193,28 @@ const App: React.FC = () => {
                         <Route path="/it-services" element={<_ITServicesPage />} />
                         <Route path="/micro-saas" element={<_MicroSAASPage />} />
                         <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+                        <Route path="/cloud-services" element={<_CloudServicesPage />} />
+                        <Route path="/devops" element={<_DevOpsPage />} />
+                        <Route path="/database" element={<_DatabasePage />} />
+                        <Route path="/networking" element={<_NetworkingPage />} />
+                        
+                        {/* Additional Routes */}
+                        <Route path="/security" element={<_SecurityPage />} />
+                        <Route path="/careers" element={<_CareersPage />} />
+                        <Route path="/support" element={<_SupportPage />} />
+                        <Route path="/cookies" element={<_CookiesPage />} />
+                        <Route path="/gdpr" element={<_GDPRPage />} />
+                        <Route path="/compliance" element={<_CompliancePage />} />
+                        <Route path="/status" element={<_StatusPage />} />
+                        <Route path="/system-status" element={<_SystemStatusPage />} />
+                        <Route path="/docs" element={<_DocsPage />} />
+                        <Route path="/api" element={<_APIPage />} />
+                        <Route path="/api-docs" element={<_APIDocsPage />} />
+                        <Route path="/news" element={<_NewsPage />} />
+                        <Route path="/developer-tools" element={<_DeveloperToolsPage />} />
+                        <Route path="/business-apps" element={<_BusinessAppsPage />} />
+                        <Route path="/productivity" element={<_ProductivityPage />} />
+                        <Route path="/marketing-tools" element={<_MarketingToolsPage />} />
                         
                         {/* Specialized Technology Routes */}
                         <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
