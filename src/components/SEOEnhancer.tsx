@@ -1,13 +1,13 @@
 interface SEOEnhancerProps {
   // TODO: Add content
-}
+ }
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   children: React.ReactNode;
-}
+ }
 const SEOEnhancer: React.FC
           
           
@@ -19,19 +19,19 @@ const SEOEnhancer: React.FC
           
           <SEOEnhancerProps> = ({
   // TODO: Add content
-}
+ }
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, business intelligence, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
+  image = "https: //ziontechgroup.com/og-image.jpg",
+  url = "https: //ziontechgroup.com",
 //   children
 }) => {
-    "@context": "https://schema.org",
+    "@context": "https: //schema.org",
     "@type": "TechCompany",
     "name": "Zion Tech Group",
     "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": "https: //ziontechgroup.com/logo.png",
     "description": description,
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
@@ -49,7 +49,7 @@ const SEOEnhancer: React.FC
 //     ],
     "contactPoint": {
   // TODO: Add content
-}
+ }
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "Customer Service",
@@ -59,12 +59,12 @@ const SEOEnhancer: React.FC
     "sameAs": [
   // TODO: Add items,
 ]
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https: //twitter.com/ziontechgroup",
+      "https: //linkedin.com/company/ziontechgroup"
 //     ],
     "address": {
   // TODO: Add content
-}
+ }
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -77,7 +77,7 @@ const SEOEnhancer: React.FC
 ]
       {
   // TODO: Add content
-}
+ }
         "@type": "Offer",
         "category": "AI Solutions",
         "description": "Enterprise AI solutions, digital transformation, and cloud services",
@@ -85,7 +85,7 @@ const SEOEnhancer: React.FC
         "priceCurrency": "USD",
         "priceSpecification": {
   // TODO: Add content
-}
+ }
           "@type": "PriceSpecification",
           "price": "1500",
           "priceCurrency": "USD",
@@ -95,11 +95,11 @@ const SEOEnhancer: React.FC
 //     ],
     "serviceArea": {
   // TODO: Add content
-}
+ }
       "@type": "GeoCircle",
       "geoMidpoint": {
   // TODO: Add content
-}
+ }
         "@type": "GeoCoordinates",
         "latitude": "39.8283",
         "longitude": "-75.5795"
@@ -116,7 +116,7 @@ const SEOEnhancer: React.FC
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
     
           <>

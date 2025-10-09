@@ -9,7 +9,7 @@ interface AccessibilityConfig {
   enableHighContrast: boolean;
   enableFocusIndicators: boolean;
   enableAriaLabels: boolean;
-}
+ }
 
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
@@ -51,7 +51,7 @@ class AccessibilityEnhancer {
         *:focus {
           outline: 2px solid #0066cc;
           outline-offset: 2px;
-        }
+         }
       `;
       document.head.appendChild(style);
     }

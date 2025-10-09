@@ -1,11 +1,11 @@
 interface ServiceCardProps {
   // TODO: Add content
-};
+ };
   title: string;,
     description: string;
   icon?: React.ReactNode;
   className?: string;
-}
+ }
 /**
  * Reusable ServiceCard component with accessibility features
  */
@@ -20,7 +20,7 @@ const ServiceCard: React.FC
           
           <ServiceCardProps> = ({ title, description, icon, className = '' }) => {
   // TODO: Add content
-}
+ }
   return (
     
           
@@ -30,11 +30,11 @@ const ServiceCard: React.FC
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
     
           <article;
-className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}
+className={`bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow duration-300 ${className }`}
       role="article"
 // >
       {icon && ()
@@ -47,7 +47,7 @@ className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow 
           
           
           
-          <div className="mb-4 text-indigo-600" aria-hidden="true">
+          <div className="mb-4 text-indigo-600" aria-hidden="true"></div>
           {icon}
         </div>
       )}

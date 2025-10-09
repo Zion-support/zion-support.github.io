@@ -14,7 +14,7 @@ interface UXConfig {
   enablePushNotifications: boolean;
   enableDarkMode: boolean;
   enableAnimations: boolean;
-}
+ }
 
 interface UXMetrics {
   pageLoadTime: number;
@@ -23,7 +23,7 @@ interface UXMetrics {
   userSatisfaction: number;
   accessibilityScore: number;
   performanceScore: number;
-}
+ }
 
 class UserExperienceEnhancer {
   private config: UXConfig;

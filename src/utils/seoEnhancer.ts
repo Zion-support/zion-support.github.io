@@ -17,7 +17,7 @@ interface SEOConfig {
   author?: string;
   publisher?: string;
   lastModified?: string;
-}
+ }
 
 class SEOEnhancer {
   private config: SEOConfig;
@@ -25,7 +25,7 @@ class SEOEnhancer {
   constructor(config: SEOConfig) {
     this.config = config;
     this.init();
-  }
+   }
 
   private init(): void {
     // Initialize SEO enhancements

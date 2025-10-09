@@ -23,7 +23,7 @@ const App: React.FC = () => {
       setIsInitialized(true);
     }, 1000);
     
-    return () => clearTimeout(timer);
+    => clearTimeout(timer);
   }, []);
 
   if (!isInitialized) {
@@ -31,8 +31,8 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <Routes>
+    <div className="App"></div>
+      </div>
         <Route path="/" element={<HomePage />} />
       </Routes>
     </div>

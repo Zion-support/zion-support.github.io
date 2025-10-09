@@ -1,7 +1,7 @@
 'use client';
 interface BeforeInstallPromptEvent extends Event {
   // TODO: Add content
-}
+ }
   prompt(): Promise
           
           
@@ -12,6 +12,6 @@ interface BeforeInstallPromptEvent extends Event {
           
           
           <void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'  }>;
 }
 export default PWAInstaller;

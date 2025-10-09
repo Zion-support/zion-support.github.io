@@ -9,7 +9,7 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
   // TODO: Add content
-};
+ };
   title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
@@ -26,7 +26,7 @@ const AIServicesPage: React.FC = () => {
       icon: BarChart,
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month'
-    }
+     }
   ];
   const benefits = [
     '300% Average ROI Increase',
@@ -42,18 +42,18 @@ const AIServicesPage: React.FC = () => {
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+          </div></div>
+      </div>
         <title>AI Services | Zion Tech Group</title>
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Services</h1>
+      <div className="container mx-auto px-4 py-16"></div>
+        </div></div>
+          </div>AI Services</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Coming Soon - Advanced AI services solutions that will transform your business.
           
@@ -66,8 +66,8 @@ const AIServicesPage: React.FC = () => {
           
           
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            </div>
 // Contact Us
             
           
@@ -82,8 +82,8 @@ const AIServicesPage: React.FC = () => {
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
 Learn More
           </div>
-      <Footer />
+      </div>
   );
-};
+ };
 export default AiServicesPage;
 export default AIServicesPage;

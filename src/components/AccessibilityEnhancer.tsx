@@ -9,7 +9,7 @@ interface AccessibilityEnhancerProps {
   enableSkipLinks?: boolean;
   enableKeyboardNav?: boolean;
   enableFocusIndicators?: boolean;
-}
+ }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
@@ -58,7 +58,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       *:focus {
         outline: 2px solid #4F46E5;
         outline-offset: 2px;
-      }
+       }
     `;
     document.head.appendChild(style);
   };

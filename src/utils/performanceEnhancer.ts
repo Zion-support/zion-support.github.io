@@ -10,7 +10,7 @@ interface PerformanceMetrics {
   fcp: number;
   ttfb: number;
   tbt: number;
-}
+ }
 
 interface OptimizationConfig {
   enableImageOptimization: boolean;
@@ -21,7 +21,7 @@ interface OptimizationConfig {
   enableResourceHints: boolean;
   enableCompression: boolean;
   enableCaching: boolean;
-}
+ }
 
 class PerformanceEnhancer {
   private config: OptimizationConfig;
@@ -30,7 +30,7 @@ class PerformanceEnhancer {
   constructor(config: OptimizationConfig) {
     this.config = config;
     this.init();
-  }
+   }
 
   private init(): void {
     // Initialize performance monitoring
@@ -44,13 +44,13 @@ class PerformanceEnhancer {
           const entries = list.getEntries();
           entries.forEach((entry) => {
             // Process performance entries
-            console.log('Performance entry:', entry.name, entry.duration);
+            console.log('Performance entry: ', entry.name, entry.duration);
           });
         });
         
         observer.observe({ entryTypes: ['measure', 'navigation'] });
       } catch (error) {
-        console.warn('PerformanceObserver not supported:', error);
+        console.warn('PerformanceObserver not supported: ', error);
       }
     }
   }

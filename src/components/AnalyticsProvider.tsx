@@ -1,7 +1,7 @@
 
 interface AnalyticsContextType {
   // TODO: Add content
-};
+ };
   trackEvent: (eventName: string, parameters?: Record
           
           
@@ -18,11 +18,11 @@ interface AnalyticsContextType {
 }
 interface AnalyticsProviderProps {
   // TODO: Add content
-};
+ };
   children: React.ReactNode;
   trackingId?: string;
   enableDebug?: boolean;
-}
+ }
 export const AnalyticsProvider: React.FC
           
           
@@ -34,52 +34,52 @@ export const AnalyticsProvider: React.FC
           
           <AnalyticsProviderProps> = ({
   // TODO: Add content
-}
+ }
 //   children,
   trackingId = 'G-XXXXXXXXXX',
   enableDebug = false,
 }) => {
   // TODO: Add content
-}
+ }
   const [isInitialized, setIsInitialized] = useState(false);
   useEffect(() => {
   // TODO: Add content
-}
+ }
     if (typeof window === 'undefined') return;
     // Initialize Google Analytics;
 const initAnalytics = () => {
   // TODO: Add content
-}
+ }
       if (!trackingId || trackingId === 'G-XXXXXXXXXX') {
   // TODO: Add content
-}
+ }
         if (enableDebug) {
 // console.warn('Analytics: No valid tracking ID provided');
-        }
+         }
         return;
       }
       // Load Google Analytics script;
 const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      script.src = `https: //www.googletagmanager.com/gtag/js?id=${trackingId }`;
       document.head.appendChild(script);
       // Initialize gtag
       (window as any).dataLayer = (window as any).dataLayer || [];
       (window as any).gtag = function() {
   // TODO: Add content
-}
+ }
         (window as any).dataLayer.push(arguments);
       };
       (window as any).gtag('js', new Date());
       (window as any).gtag('config', trackingId, {
   // TODO: Add content
-};
+ };
   page_title: document.title,
         page_location: window.location.href,
       });
       setIsInitialized(true);
       if (enableDebug) {
-// console.log('Analytics initialized with tracking ID:', trackingId);
+// console.log('Analytics initialized with tracking ID: ', trackingId);
       }
     };
   }, [trackingId, enableDebug]);
@@ -94,30 +94,30 @@ const script = document.createElement('script');
           
           <string, unknown>) => {
   // TODO: Add content
-}
+ }
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDebug) {
-// console.log('Analytics Event:', eventName, parameters);
+// console.log('Analytics Event: ', eventName, parameters);
     }
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void  }).gtag) {
   // TODO: Add content
-}
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', eventName, parameters);
+ }
+      (window as unknown as { gtag: (...args: unknown[]) => void  }).gtag('event', eventName, parameters);
     }
   };
   const trackPageView = (pageName: string, pagePath?: string) => {
   // TODO: Add content
-}
+ }
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDebug) {
-// console.log('Analytics Page View:', pageName, pagePath);
+// console.log('Analytics Page View: ', pageName, pagePath);
     }
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void  }).gtag) {
   // TODO: Add content
-}
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'page_view', {
+ }
+      (window as unknown as { gtag: (...args: unknown[]) => void  }).gtag('event', 'page_view', {
   // TODO: Add content
-};
+ };
   page_title: pageName,
         page_location: pagePath || window.location.href,
       });
@@ -125,14 +125,14 @@ const script = document.createElement('script');
   };
   const setUserId = (userId: string) => {
   // TODO: Add content
-}
+ }
     if (!isInitialized || typeof window === 'undefined') return;
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void  }).gtag) {
   // TODO: Add content
-}
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('config', trackingId, {
+ }
+      (window as unknown as { gtag: (...args: unknown[]) => void  }).gtag('config', trackingId, {
   // TODO: Add content
-};
+ };
   user_id: userId,
       });
     }
@@ -148,35 +148,35 @@ const script = document.createElement('script');
           
           <string, unknown>) => {
   // TODO: Add content
-}
+ }
     if (!isInitialized || typeof window === 'undefined') return;
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void  }).gtag) {
   // TODO: Add content
-}
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('set', properties);
+ }
+      (window as unknown as { gtag: (...args: unknown[]) => void  }).gtag('set', properties);
     }
   };
   const trackError = (error: Error, context?: string) => {
   // TODO: Add content
-}
+ }
     if (!isInitialized || typeof window === 'undefined') return;
     if (enableDebug) {
   // TODO: Add content
-}
+ }
       // eslint-disable-next-line no-console
-      // console.error('Analytics Error:', error, context);
+      // console.error('Analytics Error: ', error, context);
     }
-    if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
+    if ((window as unknown as { gtag: (...args: unknown[]) => void  }).gtag) {
   // TODO: Add content
-}
-      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
+ }
+      (window as unknown as { gtag: (...args: unknown[]) => void  }).gtag('event', 'exception', {
   // TODO: Add content
-};
+ };
   description: error.message,
         fatal: false,
         custom_map: {
   // TODO: Add content
-};
+ };
   context: context || 'unknown',
         },
       });
@@ -196,7 +196,7 @@ trackEvent,
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
     
           <AnalyticsContext.Provider value={contextValue}>
@@ -206,11 +206,11 @@ trackEvent,
 };
 export const useAnalytics = (): AnalyticsContextType => {
   // TODO: Add content
-}
+ }
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
   // TODO: Add content
-}
+ }
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;

@@ -5,22 +5,22 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const MarketplacePage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   );
-};
+ };
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 const categories = [
     {
   // TODO: Add content
-};
+ };
   id: 'products',
       name: 'Products',
       icon: ShoppingCart,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description: 'AI-powered software products and solutions'
-    },
+     },
       id: 'talent',
       name: 'Talent',
       icon: Users,
@@ -73,7 +73,7 @@ const categories = [
           
           
           
-          <ShoppingCart className="w-5 h-5 mr-2" />
+          </div>
 // Start Shopping
               
           

@@ -4,19 +4,16 @@ import {Star, Phone} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ItConsulting: React.FC = () => {
+   };
   return (
-    <div>Coming Soon</div>
-  );
-};
-  return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="pt-20">
-        <section className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+          </div></div>
+      </div>
+      <main className="pt-20"></main>
+        <section className="container mx-auto px-4 py-16 text-center"></section>
+          </section>
 // It Consulting
           
           
@@ -40,11 +37,8 @@ const ItConsulting: React.FC = () => {
           
           
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
-// >
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            </div>
               
           
           
@@ -82,10 +76,10 @@ const ItConsulting: React.FC = () => {
           
           </a>
           </div>
-        </section>
-        <section className="container mx-auto px-4 py-16">
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+        </div>
+        <section className="container mx-auto px-4 py-16"></section>
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
 // Ready to Get Started?
             
           
@@ -97,10 +91,10 @@ const ItConsulting: React.FC = () => {
           
           
           </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            </h2>
               Contact us today for a free consultation and discover how our solutions can help your business.
       </main>
       <Footer />
   );
-};
+ };
 export default ItConsulting;

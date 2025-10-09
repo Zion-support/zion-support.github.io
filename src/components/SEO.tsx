@@ -5,7 +5,7 @@
  */
 export interface SEOProps {
   // TODO: Add content
-}
+ }
   title?: string;
   description?: string;
   keywords?: string[];
@@ -29,11 +29,10 @@ export interface SEOProps {
           <string, unknown>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+  alternateLocales?: { locale: string; url: string  }[];
 }
   title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+  description: // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keywords: [
   // TODO: Add items,
 ]
@@ -60,7 +59,7 @@ export const SEO: React.FC
           
           <SEOProps> = ({
   // TODO: Add content
-}
+ }
 //   title,
 //   description,
 //   keywords,
@@ -78,11 +77,11 @@ export const SEO: React.FC
   alternateLocales = [],
 }) => {
   // TODO: Add content
-}
+ }
   const seo = {
   // TODO: Add content
-};
-  title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
+ };
+  title: title ? `${title } | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
     image: image || defaultSEO.image,
@@ -94,10 +93,10 @@ export const SEO: React.FC
   // Generate structured data;
 const generateStructuredData = () => {
   // TODO: Add content
-}
+ }
     if (structuredData) {
   // TODO: Add content
-}
+ }
       return structuredData;
     }
     const baseStructuredData: Record
@@ -111,8 +110,8 @@ const generateStructuredData = () => {
           
           <string, unknown> = {
   // TODO: Add content
-}
-      '@context': 'https://schema.org',
+ }
+      '@context': 'https: //schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
@@ -121,22 +120,22 @@ const generateStructuredData = () => {
     };
     if (author) {
   // TODO: Add content
-}
+ }
       baseStructuredData.author = {
   // TODO: Add content
-}
+ }
         '@type': 'Person',
         name: author,
       };
     }
     if (publishDate) {
   // TODO: Add content
-}
+ }
       baseStructuredData.datePublished = publishDate;
     }
     if (modifiedDate) {
   // TODO: Add content
-}
+ }
       baseStructuredData.dateModified = modifiedDate;
     }
     return baseStructuredData;

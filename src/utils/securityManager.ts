@@ -5,15 +5,15 @@
  */
 export class SecurityManager {
   // TODO: Add content
-}
+ }
   private static instance: SecurityManager;
-  private constructor() {}
+  private constructor() { }
   static getInstance(): SecurityManager {
   // TODO: Add content
-}
+ }
     if (!SecurityManager.instance) {
   // TODO: Add content
-}
+ }
       SecurityManager.instance = new SecurityManager();
     }
     return SecurityManager.instance;
@@ -23,7 +23,7 @@ export class SecurityManager {
    */
   sanitizeInput(input: string): string {
   // TODO: Add content
-}
+ }
     return input
 //       .replace(/[
           
@@ -35,7 +35,7 @@ export class SecurityManager {
           
           
           <>]/g, '')
-      .replace(/javascript:/gi, '')
+      .replace(/javascript: /gi, '')
       .replace(/on\w+=/gi, '')
       .trim();
   }
@@ -44,17 +44,17 @@ export class SecurityManager {
    */
   sanitizeUrl(url: string): string {
   // TODO: Add content
-}
+ }
     try {
-      if (!['http:', 'https:'].includes(parsed.protocol)) {
+      if (!['http: ', 'https: '].includes(parsed.protocol)) {
   // TODO: Add content
-}
+ }
         throw new Error('Invalid protocol');
       }
       return parsed.toString();
     } catch {
   // TODO: Add content
-}
+ }
       return '';
     }
   }
@@ -63,15 +63,15 @@ export class SecurityManager {
    */
   generateSecureToken(_length: number = 32): string {
   // TODO: Add content
-}
+ }
     const array = new Uint8Array(length);
     if (typeof window !== 'undefined' && window.crypto) {
   // TODO: Add content
-}
+ }
       window.crypto.getRandomValues(array);
     } else {
   // TODO: Add content
-}
+ }
       // Fallback for Node.js environment;
 const crypto = require('crypto');
       crypto.randomFillSync(array);
@@ -83,7 +83,7 @@ const crypto = require('crypto');
    */
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {
   // TODO: Add content
-}
+ }
     const now = Date.now();
     const windowStart = now - windowMs;
     // Simple in-memory rate limiting (replace with Redis in production)
@@ -93,7 +93,7 @@ const crypto = require('crypto');
 const validRequests = requests.filter((time: number) => time > windowStart);
     if (validRequests.length >= limit) {
   // TODO: Add content
-}
+ }
       return false;
     }
     validRequests.push(now);
@@ -111,10 +111,10 @@ const validRequests = requests.filter((time: number) => time > windowStart);
           
           <string, number[]> {
   // TODO: Add content
-}
+ }
     if (!global._rateLimitStorage) {
   // TODO: Add content
-}
+ }
       global._rateLimitStorage = new Map();
     }
     return global._rateLimitStorage;

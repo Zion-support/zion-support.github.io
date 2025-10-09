@@ -7,7 +7,7 @@ const AIAutomationPage: React.FC = () => {
 const features = [
     {
   // TODO: Add content
-};
+ };
   icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
@@ -15,7 +15,7 @@ const features = [
     },
     {
   // TODO: Add content
-};
+ };
   icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
@@ -23,7 +23,7 @@ const features = [
     },
     {
   // TODO: Add content
-};
+ };
   icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
@@ -31,7 +31,7 @@ const features = [
     },
     {
   // TODO: Add content
-};
+ };
   icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
@@ -43,7 +43,7 @@ const features = [
 ];;
     {
   // TODO: Add content
-};
+ };
   name: 'Starter',
       price: '$1,400',
       period: '/month',
@@ -58,10 +58,10 @@ const features = [
 //         'Basic analytics'
 //       ],
       popular: false
-    },
+     },
     {
   // TODO: Add content
-};
+ };
   name: 'Professional',
       price: '$2,800',
       period: '/month',
@@ -77,10 +77,10 @@ const features = [
 //         'Workflow optimization'
 //       ],
       popular: true
-    },
+     },
     {
   // TODO: Add content
-};
+ };
   name: 'Enterprise',
       price: '$5,600',
       period: '/month',
@@ -97,15 +97,15 @@ const features = [
 //         'Dedicated support'
 //       ],
       popular: false
-    }
+     }
   ];
   const stats = [
   // TODO: Add items
 ];;
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
+    { icon: Users, value: '200+', label: 'Automated Processes'  },
+    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase'  },
+    { icon: Clock, value: '60%', label: 'Time Saved'  },
+    { icon: Star, value: '4.9/5', label: 'Client Rating'  }
   ];
   return (
     
@@ -116,18 +116,18 @@ const features = [
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
     
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+          </div></div>
+      </div>
         <title>AI Automation Solutions | Zion Tech Group</title>
         <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Automation Solutions</h1>
+      <div className="container mx-auto px-4 py-16"></div>
+        </div></div>
+          </div>AI Automation Solutions</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 // Transform your business with intelligent automation that handles complex processes,
 //             optimizes workflows, and makes smart decisions 24/7.
@@ -142,21 +142,21 @@ const features = [
           
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
           {stats.map((stat, index) => ()
             
-          <div key={index} className="text-center">
+          <div key={index} className="text-center"></div>
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div className="text-3xl font-bold text-white mb-2"></div>{stat.value}</div>
+              <div className="text-gray-300"></div>{stat.label}</div>
             </div>
           ))}
         </div>
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
+        </div></div>
+          {features.map((feature;;, index) => ()
             
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-              <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
+          </div></div>
+              </div>
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
@@ -171,15 +171,15 @@ const features = [
             </div>
           ))}
         </div>
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+        </div></div>
+          </div></h2>Pricing Plans</h2>
+          <div className="grid md: grid-cols-3 gap-8"></div>
             {pricingPlans.map((plan, index) => ()
               
-          <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {plan.popular && ()
                   
-          <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4"></div>
 // Most Popular
                   
           
@@ -192,9 +192,9 @@ const features = [
           
           </div>
                 )}
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
-                <div className="text-3xl font-bold text-white mb-1">
-                  {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
+                </div>{plan.name}</h3>
+                <div className="text-3xl font-bold text-white mb-1"></div>
+                  {plan.price}</div>{plan.period}</span>
                 </div>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -206,7 +206,7 @@ const features = [
                     </li>
                   ))}
                 </ul>
-                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+                <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
 // Get Started
                 
           
@@ -219,12 +219,12 @@ const features = [
           
           </button>
               </div>
-            ))}
+            )) }
           </div>
         </div>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8">
+        <div className="text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h2>Ready to Automate Your Business?</h2>
+          </h2>
 // Contact our experts to discuss your automation needs and get a custom solution.
           
           
@@ -236,8 +236,8 @@ const features = [
           
           
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            </div>
 // Schedule Consultation
             
           
@@ -267,5 +267,5 @@ const features = [
       <Footer />
     </div>
   );
-};
+ };
 export default AIAutomationPage;

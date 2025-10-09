@@ -5,21 +5,21 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const HelpPage: React.FC = () => {
   return (
-    <div>Coming Soon</div>
+    <div></div>Coming Soon</div>
   );
-};
+ };
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [
     {
   // TODO: Add content
-};
+ };
   id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10'
-    },
+     },
       id: 'troubleshooting',
       name: 'Troubleshooting',
       icon: HelpCircle,
@@ -31,11 +31,11 @@ const categories = [
       icon: MessageSquare,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10'
-    }
+     }
   ];
   const helpArticles = {
   // TODO: Add content
-}
+ }
     'getting-started': [;
   title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
@@ -74,7 +74,7 @@ const categories = [
           
           
           
-          <MessageSquare className="w-5 h-5 mr-2" />
+          </div>
 // Contact Support
               
           

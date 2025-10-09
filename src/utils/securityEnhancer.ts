@@ -9,7 +9,7 @@ interface SecurityConfig {
   enableXSSProtection: boolean;
   enableCSRFProtection: boolean;
   enableContentSecurityPolicy: boolean;
-}
+ }
 
 class SecurityEnhancer {
   private config: SecurityConfig;

@@ -1,17 +1,17 @@
 'use client';
 interface PerformanceMetrics {
   // TODO: Add content
-};
+ };
   loadTime: number;,
     domContentLoaded: number;,
     firstContentfulPaint: number;,
     largestContentfulPaint: number;,
     cumulativeLayoutShift: number;,
     firstInputDelay: number;
-}
+ }
 export const _usePerformance = () => {
   // TODO: Add content
-}
+ }
   const [metrics, setMetrics] = useState
           
           
@@ -25,11 +25,11 @@ export const _usePerformance = () => {
   const [isMonitoring, setIsMonitoring] = useState(false);
   useEffect(() => {
   // TODO: Add content
-}
+ }
     if (typeof window === 'undefined' || !('performance' in window)) return;
     const measurePerformance = () => {
   // TODO: Add content
-}
+ }
       const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming;
@@ -41,48 +41,47 @@ export const _usePerformance = () => {
       // Measure CLS (Cumulative Layout Shift)
       if ('PerformanceObserver' in window) {
   // TODO: Add content
-}
+ }
         const observer = new PerformanceObserver(list => {
   // TODO: Add content
-}
+ }
           for (const entry of list.getEntries()) {
   // TODO: Add content
-}
+ }
             if ()
               entry.entryType === 'layout-shift' &&
-              !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput,
+              !(entry as unknown as { hadRecentInput: boolean  }).hadRecentInput,
 ) {
   // TODO: Add content
-}
-              cumulativeLayoutShift += (entry as unknown as { value: number }).value;
+ }
+              cumulativeLayoutShift += (entry as unknown as { value: number  }).value;
             }
           }
         });
-        observer.observe({ entryTypes: ['layout-shift'] });
+        observer.observe({ entryTypes: ['layout-shift']  });
       }
       // Measure FID (First Input Delay)
       if ('PerformanceObserver' in window) {
   // TODO: Add content
-}
+ }
         const observer = new PerformanceObserver(list => {
   // TODO: Add content
-}
+ }
           for (const entry of list.getEntries()) {
   // TODO: Add content
-}
+ }
             if (entry.entryType === 'first-input') {
   // TODO: Add content
-}
+ }
               firstInputDelay =
-                (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
+                (entry as unknown as { processingStart: number  }).processingStart - entry.startTime;
             }
           }
         });
-        observer.observe({ entryTypes: ['first-input'] });
+        observer.observe({ entryTypes: ['first-input']  });
       }
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
-        domContentLoaded:
-//           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        domContentLoaded: //           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 //         firstContentfulPaint,
 //         largestContentfulPaint,
 //         cumulativeLayoutShift,
@@ -116,12 +115,12 @@ export const _usePerformance = () => {
     if (document.readyState === 'complete') {
     } else {
   // TODO: Add content
-}
+ }
       window.addEventListener('load', measurePerformance);
     }
     return () => {
   // TODO: Add content
-}
+ }
       window.removeEventListener('load', measurePerformance);
     };
   }, []);

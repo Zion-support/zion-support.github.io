@@ -1,16 +1,16 @@
 export default function NotFound() {
 return (
-    <div>
-      <div>
+    <div></div>
+      <div></div>
         {/* Error Code */}
-        <div>
+        <div></div>
           <h1 className="text-9xl font-bold text-white/20 mb-4">404</h1>
-          <div className="text-6xl mb-4">🔍</div>
+          <div className="text-6xl mb-4"></div>🔍</div>
         </div>
         {/* Error Message */}
-        <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h2>
-          <p className="text-lg text-gray-600">
+        <div></div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4"></h2>Page Not Found</h2>
+          </h2>
             The page you're looking for doesn't exist or has been moved.
 // Don't worry, let's get you back on track!
           
@@ -25,13 +25,13 @@ return (
           </p>
         </div>
         {/* Popular Pages */}
-        <div>
+        <div></div>
           {popularPages.map((page, index) => ()
             
           <Link
               key={index}
               href={page.href}
-              className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 text-left"
+              className="block p-6 bg-white rounded-lg shadow-md hover: shadow-lg transition-shadow duration-300 text-left"
 // >
               
           
@@ -42,7 +42,7 @@ return (
           
           
           
-          <div className="text-3xl mb-3">{page.icon}</div>
+          <div className="text-3xl mb-3"></div>{page.icon }</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {page.title}
               </h3>
@@ -53,10 +53,10 @@ return (
           ))}
         </div>
         {/* Action Buttons */}
-        <div>
+        <div></div>
           <Link
             href="/"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300"
 >
             <Home className="w-4 h-4 mr-2" />Go Home</Link>
           <Link
@@ -67,4 +67,4 @@ return (
         </div>
       </div>
     </div>)
-}
+ }

@@ -5,7 +5,7 @@
  */
 export interface EnvConfig {
   // TODO: Add content
-};
+ };
   nodeEnv: 'development' | 'production' | 'test';,
     apiUrl: string;
   apiKey?: string;,
@@ -14,15 +14,15 @@ export interface EnvConfig {
     logLevel: 'debug' | 'info' | 'warn' | 'error';
   sentryDsn?: string;
   gaTrackingId?: string;
-}
+ }
 class EnvironmentConfig {
   // TODO: Add content
-}
+ }
   private config: EnvConfig;
   private isInitialized = false;
   constructor() {
   // TODO: Add content
-}
+ }
     this.config = this.loadConfig();
     this.isInitialized = true;
   }
@@ -30,19 +30,17 @@ class EnvironmentConfig {
 // Safely access environment variables with defaults
     return {
   // TODO: Add content
-}
+ }
 //       nodeEnv,
-      apiUrl:
-        process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
+      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api',
       apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY,
-      enableAnalytics:
-        process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',
       enableLogging: nodeEnv !== 'test',
       logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID
-    };
+     };
   }
   /**
    * Get the entire configuration object
@@ -58,7 +56,7 @@ class EnvironmentConfig {
           
           <EnvConfig> {
   // TODO: Add content
-}
+ }
     return Object.freeze({ ...this.config });
   }
   /**
@@ -75,7 +73,7 @@ class EnvironmentConfig {
           
           <K extends keyof EnvConfig>(key: K): EnvConfig[K] {
   // TODO: Add content
-}
+ }
     return this.config[key];
   }
   /**
@@ -83,7 +81,7 @@ class EnvironmentConfig {
    */
   public isProduction(): boolean {
   // TODO: Add content
-}
+ }
     return this.config.nodeEnv === 'production';
   }
   /**
@@ -91,7 +89,7 @@ class EnvironmentConfig {
    */
   public isDevelopment(): boolean {
   // TODO: Add content
-}
+ }
     return this.config.nodeEnv === 'development';
   }
   /**
@@ -99,7 +97,7 @@ class EnvironmentConfig {
    */
   public isTest(): boolean {
   // TODO: Add content
-}
+ }
     return this.config.nodeEnv === 'test';
   }
   /**
@@ -107,25 +105,25 @@ class EnvironmentConfig {
    */
   public validate(requiredVars: (keyof EnvConfig)[]): {
   // TODO: Add content
-};
+ };
   valid: boolean;,
     missing: string[];
-  } {
+   } {
   // TODO: Add content
-}
+ }
     const missing: string[] = [];
     for (const varName of requiredVars) {
   // TODO: Add content
-}
+ }
       if (!this.config[varName]) {
   // TODO: Add content
-}
+ }
         missing.push(varName);
       }
     }
     return {
   // TODO: Add content
-};
+ };
   valid: missing.length === 0,
 //       missing
     };
@@ -144,7 +142,7 @@ class EnvironmentConfig {
           
           <string, string> {
   // TODO: Add content
-}
+ }
     const headers: Record
           
           
@@ -156,12 +154,12 @@ class EnvironmentConfig {
           
           <string, string> = {
   // TODO: Add content
-}
+ }
       'Content-Type': 'application/json'
     };
     if (this.config.apiKey) {
   // TODO: Add content
-}
+ }
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
     }
     return headers;
@@ -171,14 +169,14 @@ class EnvironmentConfig {
    */
   public logConfig(): void {
   // TODO: Add content
-}
+ }
     if (this.isDevelopment()) {
   // TODO: Add content
-}
+ }
       console.group(' Environment Configuration');
       console.table({
   // TODO: Add content
-};
+ };
   Environment: this.config.nodeEnv,
         'API URL': this.config.apiUrl,
         'Analytics Enabled': this.config.enableAnalytics,

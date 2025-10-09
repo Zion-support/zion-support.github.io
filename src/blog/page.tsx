@@ -5,7 +5,7 @@ import Link from 'next/link';
 import ContentPreviewCard from '../components/ContentPreviewCard';
 interface BlogPost {
   // TODO: Add content
-};
+ };
   id: string;
     title: string;
     description: string;
@@ -17,14 +17,14 @@ interface BlogPost {
     featured: boolean;
   stats?: {
   // TODO: Add content
-};
+ };
   views: number;,
     engagement: number;
-  };
+   };
 }
 export default function BlogPage() {
   // TODO: Add content
-}
+ }
   const [posts, setPosts] = useState
           
           
@@ -42,7 +42,7 @@ export default function BlogPage() {
 ]
     {
   // TODO: Add content
-};
+ };
   id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
       description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
@@ -52,7 +52,7 @@ export default function BlogPage() {
       path: '/blog/ai-enterprise-transformation-2025',
       image: '',
       featured: true,
-      stats: { views: 18750, engagement: 97 }
+      stats: { views: 18750, engagement: 97  }
     },
       id: 'ai-2025-2026-mega-trends-breakthrough',
       title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',

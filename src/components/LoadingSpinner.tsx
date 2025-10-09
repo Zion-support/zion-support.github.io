@@ -1,7 +1,7 @@
 'use client';
 interface LoadingSpinnerProps {
   // TODO: Add content
-}
+ }
   size?: 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
   text?: string;
@@ -18,7 +18,7 @@ const LoadingSpinner: React.FC
           
           <LoadingSpinnerProps> = ({
   // TODO: Add content
-}
+ }
   size = 'md',
 //   className,
   text = 'Loading...',
@@ -39,15 +39,8 @@ const LoadingSpinner: React.FC
           
           
           
-          <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
-      <div;
-className={cn()
-// 'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
-//           sizeClasses[size]
-        )}
-        role="status"
-        aria-label="Loading"
-//       />
+          <div className={cn('flex flex-col items-center justify-center gap-3', className)}></div>
+      </div></div>
       {text && ()
         
           
@@ -58,15 +51,15 @@ className={cn()
           
           
           
-          <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">
-          {text}
+          </div>
+          {text;;}
         </p>
       )}
     </div>
   );
   if (fullScreen) {
   // TODO: Add content
-}
+ }
     return (
     
           
@@ -76,11 +69,11 @@ className={cn()
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
       
-          <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        {spinner}
+          </div></div>
+        {spinner;;}
       </div>
     );
   }

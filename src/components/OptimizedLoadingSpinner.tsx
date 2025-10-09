@@ -1,7 +1,7 @@
 'use client';
 interface OptimizedLoadingSpinnerProps {
   // TODO: Add content
-}
+ }
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   className?: string;
@@ -20,14 +20,14 @@ const OptimizedLoadingSpinner: React.FC
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg: 'w-12 h-12'
-    };
+     };
     const colorClasses = {
   // TODO: Add content
-};
+ };
   primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white: 'text-white'
-    };
+     };
     return (
     
           
@@ -37,14 +37,14 @@ const OptimizedLoadingSpinner: React.FC
           
           
           
-          <div>Coming Soon</div>
+          <div></div>Coming Soon</div>
   )
       
           <div;
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status"
         aria-label="Loading"
-// >
+// ></div>
         
           
           
@@ -58,7 +58,7 @@ className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
 className="animate-spin"
           fill="none"
           viewBox="0 0 24 24"
-          xmlns="http:// www.w3.org/2000/svg"
+          xmlns="http: // www.w3.org/2000/svg"
 //         >
           
           
@@ -103,7 +103,7 @@ className="opacity-75"
           </svg>
       </div>
     );
-  }
+   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 export default OptimizedLoadingSpinner;

@@ -4,7 +4,7 @@ const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
   // TODO: Add content
-};
+ };
   icon: Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
@@ -28,7 +28,7 @@ icon: TrendingUp,
       icon: MessageSquare,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
-    }
+     }
   ];
   const benefits = [
 'Increase engagement by 300%',
@@ -37,12 +37,12 @@ icon: TrendingUp,
     'Boost brand awareness by 200%',
     'Improve content performance by 250%'
   const platforms = [
-    { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
-    { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
-    { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
-    { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
-    { name: 'TikTok', icon: '🎵', color: 'text-black' },
-    { name: 'YouTube', icon: '📺', color: 'text-red-500' }
+    { name: 'Facebook', icon: '📘', color: 'text-blue-500'  },
+    { name: 'Instagram', icon: '📷', color: 'text-pink-500'  },
+    { name: 'Twitter', icon: '🐦', color: 'text-blue-400'  },
+    { name: 'LinkedIn', icon: '💼', color: 'text-blue-600'  },
+    { name: 'TikTok', icon: '🎵', color: 'text-black'  },
+    { name: 'YouTube', icon: '📺', color: 'text-red-500'  }
   const pricing = [;
   name: 'Starter',
       price: '$29',
@@ -62,9 +62,9 @@ icon: TrendingUp,
       name: 'Professional',
       price: '$79',
       description: 'Ideal for growing brands',
-                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
+                    ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover: from-pink-600 hover:to-purple-700'
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
-                  {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                  {plan.popular ? 'Start Free Trial' : 'Get Started' }
       {/* CTA Section */}
       
           
@@ -75,13 +75,13 @@ icon: TrendingUp,
           
           
           
-          <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></section>
+        <div className="container mx-auto max-w-4xl text-center"></div>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
 Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
   );
-};
+ };
 export default AISocialMediaManagerPage;
