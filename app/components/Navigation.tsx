@@ -2,11 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Sidebar from './Sidebar';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText, Eye, MessageSquare, Bot, Microscope, Video, Music, Store, TestTube, MessageCircle, Key, Shirt, Activity, Mic, Box } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -254,7 +250,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
     { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' }
+    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Machine Learning', href: '/ai-ml-platform', icon: Cpu, description: 'ML Platform' },
+    { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Computer Vision' },
+    { name: 'AI NLP', href: '/ai-nlp', icon: MessageSquare, description: 'Natural Language' },
+    { name: 'AI Robotics', href: '/ai-robotics', icon: Bot, description: 'AI Robotics' },
+    { name: 'AI Research', href: '/ai-research-development', icon: Microscope, description: 'AI R&D' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Cpu, description: 'Edge AI' }
   ];
 
   const itServices = [
@@ -265,7 +267,17 @@ const Navigation: React.FC = () => {
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Networking', href: '/networking', icon: Globe, description: 'Network Solutions' },
     { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' }
+    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
+    { name: 'System Integration', href: '/system-integration', icon: Code, description: 'API Integration' },
+    { name: 'Identity Management', href: '/identity-access-management', icon: Lock, description: 'Access Control' },
+    { name: 'Global IT Services', href: '/global-it-services', icon: Globe, description: 'Worldwide Support' },
+    { name: 'IT Automation', href: '/it-automation', icon: Zap, description: 'Process Automation' },
+    { name: 'Performance Monitoring', href: '/it-performance-monitoring', icon: BarChart, description: 'System Monitoring' },
+    { name: 'Disaster Recovery', href: '/it-disaster-recovery', icon: Shield, description: 'Backup & Recovery' },
+    { name: 'Security Audit', href: '/it-security-audit', icon: Lock, description: 'Security Assessment' },
+    { name: 'Mobile Device Management', href: '/mobile-device-management', icon: Smartphone, description: 'Device Management' },
+    { name: 'Cloud Security', href: '/cloud-security', icon: Cloud, description: 'Cloud Protection' },
+    { name: 'IT Help Desk', href: '/it-help-desk', icon: Users, description: 'Technical Support' }
   ];
 
   const microSaasServices = [
@@ -285,7 +297,25 @@ const Navigation: React.FC = () => {
     { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development AI' },
     { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
     { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Management' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' }
+    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
+    { name: 'AI Code Generator', href: '/ai-code-generator', icon: Code, description: 'AI Code Generation' },
+    { name: 'AI Video Creator', href: '/ai-video-creator', icon: Video, description: 'Video Production' },
+    { name: 'AI Music Composer', href: '/ai-music-composer', icon: Music, description: 'Music Generation' },
+    { name: 'AI App Builder', href: '/ai-app-builder', icon: Smartphone, description: 'App Development' },
+    { name: 'AI Market Research', href: '/ai-market-research', icon: BarChart, description: 'Market Analysis' },
+    { name: 'AI Store Optimizer', href: '/ai-store-optimizer', icon: Store, description: 'E-commerce Optimization' },
+    { name: 'AI Data Pipeline', href: '/ai-data-pipeline', icon: Database, description: 'Data Processing' },
+    { name: 'AI A/B Testing', href: '/ai-ab-testing', icon: TestTube, description: 'Testing Platform' },
+    { name: 'AI Website Builder', href: '/ai-website-builder', icon: Globe, description: 'Website Creation' },
+    { name: 'AI Live Chat', href: '/ai-live-chat', icon: MessageCircle, description: 'Customer Chat' },
+    { name: 'AI Growth Hacker', href: '/ai-growth-hacker', icon: TrendingUp, description: 'Growth Strategies' },
+    { name: 'AI Password Manager', href: '/ai-password-manager', icon: Key, description: 'Password Security' },
+    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, description: 'Email Management' },
+    { name: 'AI Fashion Design', href: '/ai-fashion-design', icon: Shirt, description: 'Fashion AI' },
+    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Activity, description: 'Fitness AI' },
+    { name: 'AI Voice Cloning', href: '/ai-voice-cloning', icon: Mic, description: 'Voice Synthesis' },
+    { name: 'AI Video Generation', href: '/ai-video-generation', icon: Video, description: 'Video AI' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D Creation' }
   ];
 
   const emergingTech = [
@@ -294,8 +324,12 @@ const Navigation: React.FC = () => {
     { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
     { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
     { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' }
->>>>>>> cursor/website-audit-and-update-with-deployment-11c2
+    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
+    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Eye, description: 'Immersive Tech' },
+    { name: 'Smart Cities', href: '/smart-cities', icon: Globe, description: 'Urban Tech' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, description: 'Business Modernization' },
+    { name: 'Innovation Labs', href: '/innovation-labs', icon: Microscope, description: 'R&D Services' },
+    { name: 'Sustainability Tech', href: '/sustainability-tech', icon: Globe, description: 'Green Technology' }
   ];
 
   return (
