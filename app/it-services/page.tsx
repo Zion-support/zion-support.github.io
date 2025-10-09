@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Cloud, Shield, Database, Settings } from 'lucide-react';
@@ -468,3 +469,6 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ITServicesPage;
+=======
+import React from "react"; export default function Page() { return <div>IT Services</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 const DynamicContentShowcase: React.FC = () => {
   const features = [
@@ -60,3 +61,6 @@ const DynamicContentShowcase: React.FC = () => {
   );
 };
 export default DynamicContentShowcase;
+=======
+import React from "react"; export default function DynamicContentShowcase() { return <div>Showcase</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

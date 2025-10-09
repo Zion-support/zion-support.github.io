@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 <<<<<<< HEAD
@@ -268,3 +269,6 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+=======
+import React from "react"; export default function Page() { return <div>Services</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

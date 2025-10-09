@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 const ContentPromotionBanner: React.FC = () => {
   return (
@@ -14,3 +15,6 @@ const ContentPromotionBanner: React.FC = () => {
   );
 };
 export default ContentPromotionBanner;
+=======
+import React from "react"; export default function ContentPromotionBanner() { return <div>Banner</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

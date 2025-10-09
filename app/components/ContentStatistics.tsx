@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 const ContentStatistics: React.FC = () => {
   const stats = [
@@ -46,3 +47,6 @@ const ContentStatistics: React.FC = () => {
   );
 };
 export default ContentStatistics;
+=======
+import React from "react"; export default function ContentStatistics() { return <div>Statistics</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

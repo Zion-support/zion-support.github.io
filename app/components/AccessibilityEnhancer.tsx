@@ -6,8 +6,11 @@ interface AccessibilityEnhancerProps {
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+<<<<<<< HEAD
   enableSkipLinks?: boolean;
   enableARIALabels?: boolean;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -15,6 +18,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true,
+<<<<<<< HEAD
   enableSkipLinks = true,
   enableARIALabels = true
 }) => {
@@ -30,6 +34,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableSkipLinks]);
 
+=======
+}) => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
   // Add keyboard navigation
   const handleKeyDown = useCallback((event: KeyboardEvent) => {
     if (enableKeyboardNavigation) {
@@ -117,6 +124,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableFocusManagement]);
 
+<<<<<<< HEAD
   // Add ARIA labels and roles
   useEffect(() => {
     if (enableARIALabels) {
@@ -217,6 +225,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableScreenReaderSupport]);
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
   return null;
 };
 

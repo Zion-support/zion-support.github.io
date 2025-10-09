@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
@@ -286,3 +287,6 @@ const CompliancePage: React.FC = () => {
   );
 };
 export default CompliancePage;
+=======
+import React from "react"; export default function Page() { return <div>Compliance</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

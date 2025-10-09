@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 export const metadata = {
@@ -160,3 +161,6 @@ export default function AICostOptimizationBreakthrough2026() {
     </div>
   );
 };
+=======
+import React from "react"; export default function Page() { return <div>Blog Post</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

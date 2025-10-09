@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -298,3 +299,6 @@ const AIDocumentProcessingPage: React.FC = () => {
   );
 };
 export default AIDocumentProcessingPage;
+=======
+import React from "react"; export default function Page() { return <div>Page</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

@@ -149,8 +149,12 @@ const HomePage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <h1 
               id="hero-heading" 
+<<<<<<< HEAD
               className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
               data-text="Zion Tech Group"
+=======
+              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text"
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
             >
               Zion Tech Group
             </h1>
@@ -775,7 +779,12 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Advanced AI Services Grid */}
+=======
+
+          {/* New AI Services Grid */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
           <div className="mb-12">
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Advanced AI Services
@@ -1052,6 +1061,7 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="mb-16" aria-labelledby="micro-saas-heading">
@@ -1293,6 +1303,8 @@ const HomePage: React.FC = () => {
               </article>
             </div>
           </div>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
         </section>
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
@@ -1468,7 +1480,11 @@ const HomePage: React.FC = () => {
       </main>
       {/* Footer */}
       <Footer />
+<<<<<<< HEAD
     </div>
+=======
+      </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
     </>
   );
 };

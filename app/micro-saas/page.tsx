@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
@@ -3544,3 +3545,6 @@ const MicroSAASPage: React.FC = () => {
   );
 };
 export default MicroSAASPage;
+=======
+import React from "react"; export default function Page() { return <div>Micro SAAS</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

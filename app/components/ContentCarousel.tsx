@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 const ContentCarousel: React.FC = () => {
@@ -91,3 +92,6 @@ const ContentCarousel: React.FC = () => {
   );
 };
 export default ContentCarousel;
+=======
+import React from "react"; export default function ContentCarousel() { return <div>Carousel</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

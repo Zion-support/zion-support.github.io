@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
@@ -74,3 +75,6 @@ const ContentNewsletterSignup: React.FC = () => {
   );
 };
 export default ContentNewsletterSignup;
+=======
+import React from "react"; export default function ContentNewsletterSignup() { return <div>Newsletter</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 /**
@@ -120,3 +121,6 @@ const OfflinePage: React.FC = () => {
   );
 };
 export default OfflinePage;
+=======
+import React from "react"; export default function Page() { return <div>Offline</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
