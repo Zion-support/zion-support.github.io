@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { CheckCircle } from 'lucide-react';
 
 const BusinessIntelligencePage: React.FC = () => {
@@ -138,3 +137,159 @@ const BusinessIntelligencePage: React.FC = () => {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
+              Business Intelligence Solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
+              Transform your data into actionable insights with our advanced BI platform
+            </p>
+            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
+              Unlock the power of your data with comprehensive business intelligence solutions. 
+              From real-time dashboards to predictive analytics, we help you make data-driven decisions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <a
+                href="tel:+13024640950"
+                className="cyber-button inline-flex items-center justify-center"
+              >
+                📞 Call Now: (302) 464-0950
+              </a>
+              <a
+                href="/contact"
+                className="cyber-button inline-flex items-center justify-center"
+                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+              >
+                Get Free Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+              Business Intelligence Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive BI solutions to transform your data into strategic insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {biServices.map((service, index) => (
+              <div key={index} className="cyber-card hologram-card">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                    <span className="text-sm text-gray-400">Market: {service.marketPrice}</span>
+                  </div>
+                  <div className="text-sm text-green-400 font-semibold">
+                    Save up to 60% vs market rates
+                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-4">
+                  <h4 className="font-semibold text-white mb-2">Technologies:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-2">Business Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex gap-2">
+                  <a 
+                    href="tel:+13024640950"
+                    className="flex-1 bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors text-center"
+                  >
+                    Call Now
+                  </a>
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="flex-1 border border-cyan-600 text-cyan-600 py-2 px-4 rounded-lg font-semibold hover:bg-cyan-50 transition-colors text-center"
+                  >
+                    Email Us
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            Ready to Transform Your Data Strategy?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Start making data-driven decisions with our comprehensive business intelligence solutions. 
+            Contact us for a free consultation and custom BI strategy.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center justify-center"
+            >
+              📞 Call Now: (302) 464-0950
+            </a>
+            <a
+              href="/contact"
+              className="cyber-button inline-flex items-center justify-center"
+              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
+            >
+              Get Free Consultation
+            </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-400">
+            <p>✓ Free consultation • ✓ Custom BI strategy • ✓ No commitment required</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default BusinessIntelligencePage;

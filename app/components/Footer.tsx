@@ -1,8 +1,5 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
-=======
 import { 
   Phone, 
   Mail, 
@@ -25,7 +22,6 @@ import {
   Instagram,
   Youtube
 } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-82ba
 
 const Footer: React.FC = memo(() => {
   const aiServices = [
@@ -87,10 +83,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Compliance', url: '/compliance' }
   ];
 
-<<<<<<< HEAD
-  return (
-    <footer className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white">
-=======
   const socialLinks = [
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },

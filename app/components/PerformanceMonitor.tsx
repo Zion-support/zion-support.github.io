@@ -33,23 +33,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const [, setPerformanceScore] = useState(0);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // const _reportWebVitals = (_metric: { name: string; value: number }) => {
-    //   // Log to console in development (only on client side)
-    //   if (typeof window !== 'undefined' && enableConsoleLogging) {
-    //     logger.info('Web Vital captured', { name: _metric.name, value: _metric.value });
-    //   }
-    // };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     const updateMetrics = () => {
       const currentMetrics: PerformanceMetrics = {
         lcp: null,
@@ -97,61 +80,68 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
 
-<<<<<<< HEAD
     const getPerformanceScore = (currentMetrics: PerformanceMetrics): number => {
       let score = 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (metrics.renderTime > 1500) score -= 15;
-      if (metrics.loadTime > 3000) score -= 20;
-      if (metrics.memoryUsage > 50) score -= 10;
-      return Math.max(0, score);    };
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-    const metrics: PerformanceMetrics = {
-      lcp: null,
-      fid: null,
-      cls: null,
-      fcp: null,
-<<<<<<< HEAD
-      ttfb: null
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
-      if (currentMetrics.renderTime > 1500) score -= 15;
-      if (currentMetrics.loadTime > 3000) score -= 20;
       if (currentMetrics.memoryUsage > 50) score -= 10;
       return Math.max(0, score);
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-ea96
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-012c
-=======
-      ttfb: null,
->>>>>>> cursor/fix-errors-and-merge-to-main-bd1c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2152
     };
 
-<<<<<<< HEAD
     // Measure Core Web Vitals
     const measureWebVitals = () => {
       // LCP - Largest Contentful Paint
-=======
-    // Initial metrics update
-    updateMetrics();
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // FID - First Input Delay
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const firstEntry = entries[0];
+        setMetrics(prev => ({ ...prev, fid: firstEntry.processingStart - firstEntry.startTime }));
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // CLS - Cumulative Layout Shift
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+        }
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // FCP - First Contentful Paint
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // TTFB - Time to First Byte
+      const navigationObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const navEntry = entries[0];
+        if (navEntry) {
+          setMetrics(prev => ({ ...prev, ttfb: navEntry.responseStart - navEntry.requestStart }));
+        }
+      });
+      navigationObserver.observe({ entryTypes: ['navigation'] });
+    };
 
     // Set up interval for periodic updates
     const interval = setInterval(updateMetrics, reportInterval);
 
     // Set up performance observers
     const setupPerformanceObservers = () => {
-      // Observe LCP
->>>>>>> cursor/fix-errors-and-merge-to-main-1e5f
       if ('PerformanceObserver' in window) {
         try {
           const lcpObserver = new PerformanceObserver((list) => {
