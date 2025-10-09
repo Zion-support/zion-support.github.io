@@ -5,17 +5,17 @@ import { Phone, Mail, MapPin, Brain, Cloud, Shield, Code, BarChart, Users, Zap, 
 const Footer: React.FC = () => {
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI-powered content creation' },
+    { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart customer management' },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI solutions' },
+    { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial AI tools' },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'AI mobile development' },
+    { name: 'AI Cybersecurity Shield', url: '/ai-cybersecurity', description: 'AI security solutions' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'Smart marketing tools' },
+    { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Intelligent task management' },
+    { name: 'AI Expense Tracker', url: '/expense-tracker', description: 'Smart expense management' },
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
-    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
-    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' }
   ];
 
   const aiServices = [
@@ -23,44 +23,39 @@ const Footer: React.FC = () => {
     { name: 'Natural Language Processing', url: '/nlp', description: 'Text analysis & understanding' },
     { name: 'Computer Vision', url: '/computer-vision', description: 'Image & video analysis' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'Quantum AI Computing', url: '/quantum-ai', description: 'Next-gen algorithms' },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI-powered security' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI applications' },
-    { name: 'AI Fintech Solutions', url: '/ai-fintech', description: 'Financial AI services' },
-    { name: 'AI Mobile App Development', url: '/ai-mobile-app-development', description: 'Smart mobile apps' },
-    { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
-    { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
-    { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+    { name: 'AI Analytics', url: '/ai-analytics', description: 'Data insights & analytics' },
+    { name: 'AI Content Writer', url: '/ai-content-writer', description: 'AI content creation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'Intelligent support' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
+    { name: 'AI Fraud Detection', url: '/ai-fraud-detection', description: 'Fraud prevention' },
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process optimization' },
+    { name: 'AI Video Generation', url: '/ai-video-generation', description: 'AI video creation' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Voice synthesis' }
   ];
 
   const itServices = [
-    { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Advanced security solutions' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Automated workflows' },
-    { name: 'Database Services', url: '/database-services', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Enterprise networking' },
-    { name: 'IT Support & Helpdesk', url: '/it-support', description: '24/7 technical support' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
+    { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
-    { name: 'Compliance & Governance', url: '/compliance', description: 'Regulatory compliance' },
-    { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
-    { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
-    { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
+    { name: 'Web Development', url: '/web-development', description: 'Modern web applications' },
+    { name: 'Machine Learning', url: '/machine-learning', description: 'ML solutions' },
+    { name: 'Natural Language Processing', url: '/nlp', description: 'NLP solutions' },
+    { name: 'Computer Vision', url: '/computer-vision', description: 'CV solutions' },
+    { name: 'AI Services', url: '/ai-services', description: 'AI solutions' },
+    { name: 'Services Overview', url: '/services', description: 'All services' }
   ];
 
   const specializedServices = [
-    { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum algorithms' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'Blockchain & Web3', url: '/blockchain', description: 'Decentralized solutions' },
-    { name: 'IoT & Edge Computing', url: '/iot-edge', description: 'Connected devices' },
-    { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', url: '/robotics', description: 'Intelligent automation' },
-    { name: 'Enterprise Solutions', url: '/enterprise', description: 'Enterprise-grade solutions' },
-    { name: 'Analytics Tools', url: '/analytics-tools', description: 'Advanced analytics' },
-    { name: 'Business Apps', url: '/business-apps', description: 'Custom business apps' },
-    { name: 'Expense Tracker Pro', url: '/expense-tracker', description: 'AI expense management' },
-    { name: 'Task Manager Pro', url: '/task-manager-pro', description: 'AI task management' },
-    { name: 'Smart Analytics', url: '/smart-analytics', description: 'Intelligent analytics' }
+    { name: 'Specialized Services', url: '/specialized-services', description: 'Advanced solutions' },
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'AI content creation' },
+    { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM' },
+    { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI' },
+    { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial AI' },
+    { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile AI' },
+    { name: 'AI Cybersecurity Shield', url: '/ai-cybersecurity', description: 'Security AI' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'Marketing AI' },
+    { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Task AI' },
+    { name: 'AI Expense Tracker', url: '/expense-tracker', description: 'Expense AI' }
   ];
 
   const additionalServices = [
@@ -68,37 +63,37 @@ const Footer: React.FC = () => {
     { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
     { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
     { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-    { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
+    { name: 'AI Video Generation', url: '/ai-video-generation', description: 'AI video creation' },
+    { name: 'AI Voice Cloning', url: '/ai-voice-cloning', description: 'Voice synthesis' }
   ];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
-    { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
-    { name: 'Demo', url: '/demo' }
+    { name: 'Services', url: '/services' },
+    { name: 'AI Services', url: '/ai-services' },
+    { name: 'IT Services', url: '/it-services' },
+    { name: 'Specialized Services', url: '/specialized-services' }
   ];
 
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
-    { name: 'Support Center', url: '/support' },
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Status Page', url: '/status' },
-    { name: 'System Health', url: '/system-status' }
+    { name: 'About Us', url: '/about' },
+    { name: 'Services', url: '/services' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' }
   ];
 
   const legalLinks = [
-    { name: 'Privacy Policy', url: '/privacy' },
-    { name: 'Terms of Service', url: '/terms' },
-    { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'GDPR Compliance', url: '/gdpr' },
-    { name: 'Security', url: '/security' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Contact Us', url: '/contact' },
+    { name: 'About Us', url: '/about' },
+    { name: 'Services', url: '/services' },
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' }
   ];
 
   return (
