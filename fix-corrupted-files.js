@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
 //Function to fix corrupted syntax by removing extra commas and spaces
 function fixCorruptedSyntax(content) {

@@ -1,6 +1,4 @@
-import { execSync } from 'child_process';
 import fs from 'fs';
-import path from 'path';
 
 // // 1. Fix AdvancedSEOOptimizer component props
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';

@@ -2,7 +2,7 @@
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
  */
-export const performanceConfig = {
+export const _performanceConfig = {
   // Core Web Vitals thresholds
   metrics: {
     lcp: {

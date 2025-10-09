@@ -1,4 +1,3 @@
-import React from "react";
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
     {

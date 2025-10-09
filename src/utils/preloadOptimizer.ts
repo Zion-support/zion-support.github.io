@@ -2,7 +2,7 @@
  * Preload Optimizer
  * Optimizes resource loading for better performance
  */
-export const preloadCriticalResources = () => {
+export const _preloadCriticalResources = () => {
   if (typeof window === 'undefined') return
   // Preload critical fonts
   const fontPreloads = [

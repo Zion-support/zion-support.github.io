@@ -6,7 +6,7 @@
 /**
  * Wait for a specified amount of time
  */
-export const wait = (ms: number): Promise<void> => {
+export const _wait = (ms: number): Promise<void> => {
   return new Promise(resolve => setTimeout(resolve, ms));
 };
 /**
@@ -243,7 +243,7 @@ export const retryWithBackoff = async <T>(
   initialDelay = 1000
 ): Promise<T> => {
   let lastError: Error;
-  for (let i = 0; i < maxRetries; i++) {
+  for (let _i = 0; i < maxRetries; i++) {
     try {
       return await fn();
     } catch (error) {

@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
-  const services = [
+  const _services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',

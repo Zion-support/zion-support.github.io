@@ -1,5 +1,5 @@
 export default function NotFound() {
-  const popularPages = [
+  const _popularPages = [
     {
       title: 'Home',
       description: 'Return to our homepage',

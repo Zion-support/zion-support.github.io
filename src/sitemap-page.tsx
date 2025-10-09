@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 const SitemapPage: React.FC = () => {
-  const pages = [
+  const _pages = [
     { url: '/', title: 'Home', priority: '1.0' },
     { url: '/about', title: 'About Us', priority: '0.8' },
     { url: '/services', title: 'All Services', priority: '0.9' },

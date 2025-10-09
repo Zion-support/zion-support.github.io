@@ -2,7 +2,7 @@
  * Security Configuration
  * Defines security headers and policies for the application
  */
-export const securityHeaders = {
+export const _securityHeaders = {
   // Content Security Policy
   contentSecurityPolicy: {
     directives: {
@@ -107,7 +107,7 @@ export function generateSecureToken(length: number = 32): string {
     window.crypto.getRandomValues(array);
   } else {
     // Fallback for non-browser environments
-    for (let i = 0; i < length; i++) {
+    for (let _i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
   }

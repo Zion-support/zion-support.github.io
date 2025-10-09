@@ -48,9 +48,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-  const optimizeImages = () => {
+  const _optimizeImages = () => {
     const images = document.querySelectorAll('img');
-    let optimized = 0;
+    let _optimized = 0;
     
     images.forEach((img) => {
       // Add loading="lazy" for images below the fold

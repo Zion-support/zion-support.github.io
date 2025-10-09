@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 /**
  * Enhanced Error Handling System
  * Provides comprehensive error tracking, reporting, and recovery mechanisms
@@ -52,7 +51,7 @@ class EnhancedErrorHandler {
   private errors: ErrorReport[] = [];
   private errorCounts: Map<string, number> = new Map();
   private errorCategories: Map<string, number> = new Map();
-  private lastErrorTime: number = 0;
+  private _lastErrorTime: number = 0;
   private errorRateLimit: number = 0;
   private isInitialized: boolean = false;
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
@@ -122,7 +121,7 @@ class EnhancedErrorHandler {
       'error',
       event => {
         if (event.target !== window) {
-          const target = event.target as HTMLElement & {
+          const _target = event.target as HTMLElement & {
             src?: string;
             href?: string;
           };
@@ -416,7 +415,7 @@ class EnhancedErrorHandler {
    * Get session ID
    */
   private getSessionId(): string {
-    let sessionId = sessionStorage.getItem('error_session_id');
+    let _sessionId = sessionStorage.getItem('error_session_id');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);

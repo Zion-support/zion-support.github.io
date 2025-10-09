@@ -13,7 +13,7 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
   return function executedFunction(...args: Parameters<T>) {
-    const later = () => {
+    const _later = () => {
       timeout = null;
       func(...args);
     };
@@ -91,7 +91,7 @@ export async function batchAsync<T, R>(
   batchSize = 10
 ): Promise<R[]> {
   const results: R[] = [];
-  for (let i = 0; i < items.length; i += batchSize) {
+  for (let _i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
@@ -257,7 +257,7 @@ export function getMemoryUsage(): {
  * FPS Monitor
  */
 export class FPSMonitor {
-  private frames: number = 0;
+  private _frames: number = 0;
   private lastTime: number = performance.now();
   private fps: number = 0;
   private rafId: number = 0;

@@ -84,7 +84,7 @@ class SecurityEnhancer {
   private generateCSP(): string {
     if (!this.config.enableCSP) return '';
 
-    const directives = [
+    const _directives = [
       "default-src 'self'",
       "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
@@ -235,7 +235,7 @@ class SecurityEnhancer {
       const url = typeof input === 'string' ? input : input instanceof URL ? input.toString() : input.url;
       
       // Add security headers to requests
-      const secureInit: RequestInit = {
+      const _secureInit: RequestInit = {
         ...init,
         headers: {
           ...init?.headers,
@@ -252,7 +252,7 @@ class SecurityEnhancer {
     if (!this.config.enableSecureCookies) return;
 
     // Set secure cookie attributes
-    let cookieValue = document.cookie;
+    let _cookieValue = document.cookie;
     
     // Override cookie setting to ensure security
     Object.defineProperty(document, 'cookie', {

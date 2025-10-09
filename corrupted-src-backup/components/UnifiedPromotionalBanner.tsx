@@ -1,4 +1,3 @@
-import React from "react";
 export, interface, FeaturedItem {
 tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;

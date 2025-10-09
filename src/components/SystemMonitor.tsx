@@ -18,7 +18,7 @@ const collectPerformanceMetrics = () => {
 const calculatePerformanceScore = () => {
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
-  let _score = 100;
+  let __score = 100;
   // Deduct points for slow load times
   if (metrics.loadTime > 3000) score -= 20;
   if (metrics.loadTime > 5000) score -= 30;

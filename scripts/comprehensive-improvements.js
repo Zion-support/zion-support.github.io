@@ -217,7 +217,6 @@ export default defineConfig({
 fs.writeFileSync(viteConfigPath, improvedViteConfig);
 // // 6. Create performance monitoring setup
 // const performanceSetup = `// Performance monitoring setup
-import { analytics } from './src/utils/analytics';
 import { errorHandler } from './src/utils/errorHandler';
 import performanceOptimizer from './src/utils/performanceOptimizer';
 

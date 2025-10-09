@@ -18,13 +18,13 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Analytics from './components/Analytics';
 
 // Lazy load components for better performance
-const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
-const InteractiveContentShowcase2026 = lazy(
-  () => import('./components/InteractiveContentShowcase2026')
-);
-const InteractiveAIROICalculator = lazy(
-  () => import('./components/InteractiveAIROICalculator')
-);
+// const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
+// const InteractiveContentShowcase2026 = lazy(
+//   () => import('./components/InteractiveContentShowcase2026')
+// );
+// const InteractiveAIROICalculator = lazy(
+//   () => import('./components/InteractiveAIROICalculator')
+// );
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -94,7 +94,7 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const pageLoadMetrics = collectPerformanceMetrics();
       const metrics = performanceOptimizer.getMetrics();
-      const performanceMetrics = performanceMonitor.getMetrics();
+      const _performanceMetrics = performanceMonitor.getMetrics();
       
       if (pageLoadMetrics) {
         // eslint-disable-next-line no-console
@@ -104,15 +104,15 @@ const App: React.FC = () => {
         // eslint-disable-next-line no-console
         console.log('Performance metrics:', metrics);
       }
-      if (performanceMetrics) {
+      if (_performanceMetrics) {
         // eslint-disable-next-line no-console
-        console.log('Core Web Vitals:', performanceMetrics);
+        console.log('Core Web Vitals:', _performanceMetrics);
       }
     }
     
     // Log performance and accessibility metrics periodically
     const metricsInterval = setInterval(() => {
-      const performanceMetrics = performanceMonitor.getMetrics();
+      const _performanceMetrics = performanceMonitor.getMetrics();
       const accessibilityMetrics = accessibilityEnhancer.getMetrics();
       
       if (process.env.NODE_ENV === 'development') {

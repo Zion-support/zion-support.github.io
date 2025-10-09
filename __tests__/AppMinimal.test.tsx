@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 // Jest globals are available in test environment
 import '@testing-library/jest-dom';
-import React from 'react';
 
 describe('AppMinimal', () => {
   it('renders without crashing', () => {

@@ -568,7 +568,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedInnovativeService {;
   id: string;
   name: string;
@@ -1448,7 +1447,6 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
-import { ServiceVariant } from '../types/service-variants';
 export interface AdvancedInnovativeService {;
   id: string;
   name: string;

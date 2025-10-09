@@ -1,4 +1,3 @@
-import { execSync } from 'child_process';
 
 // // Check for accessibility issues
 // try {

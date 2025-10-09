@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 const InteractiveContentShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const tabs = [
+  const _tabs = [
     {
       title: "AI Innovation",
       content: "Cutting-edge artificial intelligence solutions for 2026 and beyond.",

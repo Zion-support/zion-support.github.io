@@ -40,6 +40,8 @@ export class RateLimiter {
   check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
     const now = Date.now();
     const record = this.requests.get(identifier);
+    const now = Date.now();
+    const record = this.requests.get(identifier);
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;

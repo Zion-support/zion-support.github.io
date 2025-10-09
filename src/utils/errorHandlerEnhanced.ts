@@ -12,7 +12,7 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor)
   }
 }
-export const errorHandler = (error: AppError | Error) => {
+export const _errorHandler = (error: AppError | Error) => {
   const isDevelopment = process.env.NODE_ENV === 'development'
   const appError = error instanceof AppError ? error : new AppError(error.message)
   console.error({

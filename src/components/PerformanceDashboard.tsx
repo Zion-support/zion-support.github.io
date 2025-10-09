@@ -22,7 +22,7 @@ const PerformanceDashboard: React.FC = () => {
   });
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    const updateMetrics = () => {
+    const _updateMetrics = () => {
       const navigation = performance.getEntriesByType(
         'navigation'
       )[0] as PerformanceNavigationTiming;
@@ -33,7 +33,7 @@ const PerformanceDashboard: React.FC = () => {
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
       // Measure memory usage
-      let _memoryUsage = 0;
+      let __memoryUsage = 0;
       if ('memory' in performance) {
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;

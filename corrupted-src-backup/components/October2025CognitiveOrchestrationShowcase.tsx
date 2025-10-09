@@ -1,4 +1,3 @@
-import React from "react";
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
 return (
 <section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">
@@ -10,7 +9,6 @@ return (
 </d, i, v>
 <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
 Cognitive, Orchestratio, n: The, Future, of Enterprise, A, I;
-import React from "react";';
 const, October2025CognitiveOrchestrationShowcas, e: Rea, c, t.FC = () => {
 return (
 <section, className="w-full, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4, m, b-8">";

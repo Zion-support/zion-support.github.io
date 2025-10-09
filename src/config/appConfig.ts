@@ -31,7 +31,7 @@ export interface AppConfig {
     enableXSSProtection: boolean;
   };
 }
-const config: AppConfig = {
+const _config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
     version: '1.0.0',

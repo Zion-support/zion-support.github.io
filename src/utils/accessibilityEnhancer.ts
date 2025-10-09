@@ -26,7 +26,7 @@ class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: A11yMetrics;
   private focusableElements: HTMLElement[] = [];
-  private currentFocusIndex: number = 0;
+  private _currentFocusIndex: number = 0;
 
   constructor(config: AccessibilityConfig) {
     this.config = config;
@@ -69,7 +69,7 @@ class AccessibilityEnhancer {
     });
 
     // Update focusable elements on DOM changes
-    const observer = new MutationObserver(() => {
+    const _observer = new MutationObserver(() => {
       this.updateFocusableElements();
     });
 
@@ -136,7 +136,7 @@ class AccessibilityEnhancer {
       const items = Array.from(parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]'));
       const currentIndex = items.indexOf(activeElement);
       
-      let nextIndex = currentIndex;
+      let _nextIndex = currentIndex;
       
       switch (e.key) {
         case 'ArrowUp':

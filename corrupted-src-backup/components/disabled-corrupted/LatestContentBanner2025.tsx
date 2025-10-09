@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 const LatestContentBanner202, 5: React.FC = () => {
   const latestArticle, s = [
     {

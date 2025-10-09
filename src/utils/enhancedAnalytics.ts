@@ -18,7 +18,7 @@ export interface UserProperties {
 }
 class EnhancedAnalytics {
   private queue: AnalyticsEvent[] = [];
-  private userProperties: UserProperties = {};
+  private _userProperties: UserProperties = {};
   private sessionId: string;
   private isInitialized = false;
   private batchSize = 10;
@@ -224,5 +224,4 @@ class EnhancedAnalytics {
   }
 }
 // Export singleton instance
-export const analytics = new EnhancedAnalytics();
 export default analytics;

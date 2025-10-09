@@ -28,7 +28,7 @@ export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
   private cache: Map<string, CacheEntry<unknown>> = new Map();
-  constructor(baseUrl: string, options: ServiceOptions = {}) {
+  constructor(baseUrl: string, _options: ServiceOptions = {}) {
     this.baseUrl = baseUrl;
     this.options = {
       timeout: 30000,
@@ -42,6 +42,7 @@ export class BaseService {
    * Check if cached data is still valid
    */
   protected isCacheValid(key: string): boolean {
+    const entry = this.cache.get(key);
     const entry = this.cache.get(key);
     if (!entry) return false;
     const age = Date.now() - entry.timestamp;

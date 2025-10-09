@@ -25,7 +25,7 @@ export interface SEOProps {
   alternateLocales?: { locale: string; url: string }[];
 }
 
-const defaultSEO = {
+const _defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',

@@ -2,7 +2,6 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
 // Get all TypeScript and JavaScript files
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {

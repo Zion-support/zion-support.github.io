@@ -19,7 +19,7 @@ const Toast: React.FC<ToastProps> = ({
   useEffect(() => {
     setIsVisible(show);
     if (show && duration > 0) {
-      const timer = setTimeout(() => {
+      const _timer = setTimeout(() => {
         setIsVisible(false);
         if (onClose) {
           onClose();
@@ -80,26 +80,3 @@ const Toast: React.FC<ToastProps> = ({
   );
 };
 export default Toast;
-// Toast Hook for easy usage
-export const useToast = () => {
-  const [toast, setToast] = useState<{
-    show: boolean;
-    message: string;
-    type: ToastType;
-  }>({
-    show: false,
-    message: '',
-    type: 'success'
-  });
-  const showToast = (message: string, type: ToastType = 'success') => {
-    setToast({ show: true, message, type });
-  };
-  const hideToast = () => {
-    setToast(prev => ({ ...prev, show: false }));
-  };
-  return {
-    toast,
-    showToast,
-    hideToast
-  };
-};

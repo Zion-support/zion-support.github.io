@@ -39,8 +39,8 @@ export class MiddlewareExecutor {
    * Execute middleware chain
    */
   async execute(context: MiddlewareContext): Promise<unknown> {
-    let index = 0;
-    const next = async (): Promise<unknown> => {
+    let _index = 0;
+    const _next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
         return context.response?.data;
       }

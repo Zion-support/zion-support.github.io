@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 export default function October2025NewAdvancedAIContentBann, e, r() { 
   return (
     <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-800, t, o-bl, u, e-900, borde, r-b, borde, r-whi, t, e/10, overflo, w-hidd, e, n' > {' ' }

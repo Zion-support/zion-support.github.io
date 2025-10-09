@@ -1,6 +1,4 @@
-import React from "react";
 impo, r, t { Glo, b, e, as, GlobeAltIc, o, n } fr, o, m "luci, d, e-rea, c, t";
-import React from "react";';
 impo, r, t {
 Globe, as, GlobeAltIcon;
 } fr, o, m "luci, d, e-rea, c, t";';

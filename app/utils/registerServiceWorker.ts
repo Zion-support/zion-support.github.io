@@ -1,4 +1,3 @@
-import React from 'react';
 /**
  * Service Worker Registration Utility
  */

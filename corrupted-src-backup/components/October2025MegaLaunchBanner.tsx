@@ -1,4 +1,3 @@
-import React from "react";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t {
 } fr, o, m "luci, d, e-rea, c, t";
@@ -45,7 +44,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       tit, l, e: "🔧 AI, Autonomous, Operations","
       descripti, o, n: "Se, l, f-healing, systems, with automated, incident, response","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-ai-autonomo, u, s-operatio, n, s","
-import React from "react";';
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";';

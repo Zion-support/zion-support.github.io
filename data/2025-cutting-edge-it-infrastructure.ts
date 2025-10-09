@@ -504,7 +504,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     rating: 4.9,
     reviews: 4;
 ],
-import { ServiceVariant } from '../types/service-variants';
 export interface CuttingEdgeITInfrastructureService {;
   id: string;
   name: string;
@@ -776,7 +775,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 ;
   }
 ];
-import { ServiceVariant } from '../types/service-variants';
 export interface CuttingEdgeITInfrastructureService {;
   id: string;
   name: string;

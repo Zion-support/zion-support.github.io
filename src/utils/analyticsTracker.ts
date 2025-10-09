@@ -41,7 +41,7 @@ class AnalyticsTracker {
    */
   trackEvent(event: AnalyticsEvent): void {
     if (typeof window === 'undefined') return;
-    const track = () => {
+    const _track = () => {
       if (window.gtag) {
         window.gtag('event', event.action, {
           event_category: event.category,

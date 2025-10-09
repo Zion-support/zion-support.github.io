@@ -1,5 +1,3 @@
-import React from "react";
-import React from "react";';
 const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   const, futureTechArticle, s = [
     {

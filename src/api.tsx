@@ -1,6 +1,6 @@
 import React from 'react';
 const API: React.FC = () => {
-  const apiEndpoints = [
+  const _apiEndpoints = [
     {
       method: 'GET',
       endpoint: '/api/content',

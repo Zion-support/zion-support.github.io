@@ -1,5 +1,4 @@
 import https from 'https';
-import http from 'http';
 import { URL } from 'url';
 import fs from 'fs';
 

@@ -1,6 +1,3 @@
-import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 
 // // 1. Performance Optimizations
 // // Update package.json with performance optimizations
@@ -20,8 +17,6 @@ packageJson.scripts = {
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script
 // const performanceScript = `import { execSync } from 'child_process';
-import fs from 'fs';
-import path from 'path';
 
 // // Optimize images
 // try {

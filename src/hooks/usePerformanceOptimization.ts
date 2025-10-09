@@ -6,7 +6,7 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number;
   firstInputDelay: number;
 }
-export const usePerformanceOptimization = () => {
+export const _usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       return null;
@@ -36,7 +36,7 @@ export const usePerformanceOptimization = () => {
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
     // Measure CLS
-    let _clsValue = 0;
+    let __clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const layoutShiftEntry = entry as PerformanceEntry & {
