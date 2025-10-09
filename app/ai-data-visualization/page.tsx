@@ -1,48 +1,48 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { Target, Brain, Users, ArrowRight, CheckCircle, Star, Shield, Clock, Zap, TrendingUp } from 'lucide-react';
+import { BarChart3, Eye, TrendingUp, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 
-const AILeadGenerationPage: React.FC = () => {
+const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI Lead Scoring',
-      description: 'Intelligent lead scoring that identifies high-value prospects automatically',
-      benefits: ['Behavioral analysis', 'Predictive scoring', 'Priority ranking']
+      icon: BarChart3,
+      title: 'Interactive Dashboards',
+      description: 'Create stunning, interactive dashboards that bring your data to life',
+      benefits: ['Real-time updates', 'Custom visualizations', 'Drill-down capabilities']
     },
     {
-      icon: Target,
-      title: 'Smart Targeting',
-      description: 'AI-powered audience targeting and segmentation for maximum conversion',
-      benefits: ['Demographic analysis', 'Interest mapping', 'Behavioral targeting']
+      icon: Eye,
+      title: 'AI-Powered Insights',
+      description: 'Automatically discover patterns and insights in your data with AI',
+      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive insights']
     },
     {
-      icon: Users,
-      title: 'Lead Nurturing',
-      description: 'Automated lead nurturing campaigns that convert prospects into customers',
-      benefits: ['Email sequences', 'Content personalization', 'Follow-up automation']
+      icon: TrendingUp,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics tools for deep data exploration and analysis',
+      benefits: ['Statistical analysis', 'Trend forecasting', 'Correlation analysis']
     }
   ];
 
-  const leadSources = [
+  const visualizationTypes = [
     {
-      title: 'Website Visitors',
-      description: 'Convert website visitors into qualified leads with smart forms and tracking',
-      icon: Target,
-      features: ['Visitor tracking', 'Smart forms', 'Behavioral triggers']
-    },
-    {
-      title: 'Social Media',
-      description: 'Generate leads from social media platforms with targeted campaigns',
-      icon: Users,
-      features: ['Social listening', 'Engagement tracking', 'Lead capture']
-    },
-    {
-      title: 'Content Marketing',
-      description: 'Attract and convert leads through valuable content and gated resources',
+      title: 'Business Intelligence',
+      description: 'Executive dashboards and KPI monitoring for strategic decision making',
       icon: TrendingUp,
-      features: ['Content offers', 'Lead magnets', 'Nurture sequences']
+      features: ['KPI dashboards', 'Executive reports', 'Performance metrics']
+    },
+    {
+      title: 'Operational Analytics',
+      description: 'Real-time operational data visualization and monitoring',
+      icon: Zap,
+      features: ['Live monitoring', 'Alert systems', 'Process optimization']
+    },
+    {
+      title: 'Customer Analytics',
+      description: 'Customer behavior and engagement visualization and analysis',
+      icon: Users,
+      features: ['Customer journeys', 'Engagement metrics', 'Segmentation analysis']
     }
   ];
 
@@ -54,30 +54,31 @@ const AILeadGenerationPage: React.FC = () => {
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mr-4">
-                <Target className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
+                <BarChart3 className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-5xl font-bold text-white neon-text">
-                AI Lead Generation
+                AI Data Visualization
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Generate high-quality leads at scale with our AI-powered lead generation platform. 
-              Increase your lead volume by 300% while improving quality and conversion rates.
+              Transform complex data into compelling visual stories with our AI-powered 
+              data visualization platform. Create interactive dashboards, discover hidden 
+              insights, and make data-driven decisions with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >
-                Generate More Leads
+                Start Visualizing
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 href="/demo"
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
               >
-                See It In Action
+                View Live Demo
               </Link>
             </div>
           </div>
@@ -88,17 +89,17 @@ const AILeadGenerationPage: React.FC = () => {
       <div className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Intelligent Lead Generation</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Advanced Data Visualization</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI lead generation platform combines machine learning, behavioral analysis, 
-              and automated nurturing to deliver qualified leads consistently.
+              Our AI data visualization platform combines powerful analytics with 
+              intuitive design to make complex data accessible and actionable.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-8 text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -117,26 +118,26 @@ const AILeadGenerationPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Lead Sources Section */}
+      {/* Visualization Types Section */}
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Multi-Channel Lead Generation</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Visualization Solutions</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Capture leads from multiple sources and channels with our comprehensive platform
+              Create the perfect visualization for any data type or business need
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {leadSources.map((source, index) => (
+            {visualizationTypes.map((type, index) => (
               <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform duration-300">
                 <div className="flex items-center mb-4">
-                  <source.icon className="w-8 h-8 text-pink-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{source.title}</h3>
+                  <type.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-xl font-bold text-white">{type.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-6">{source.description}</p>
+                <p className="text-gray-300 mb-6">{type.description}</p>
                 <ul className="space-y-2">
-                  {source.features.map((feature, featureIndex) => (
+                  {type.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
@@ -154,15 +155,15 @@ const AILeadGenerationPage: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Lead Generation?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Data Visualization?</h2>
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-4 mt-1">
                     <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">300% More Leads</h3>
-                    <p className="text-gray-300">Average increase in qualified lead volume</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Instant Insights</h3>
+                    <p className="text-gray-300">Discover patterns and insights in seconds, not hours</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -170,8 +171,8 @@ const AILeadGenerationPage: React.FC = () => {
                     <Shield className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Higher Quality</h3>
-                    <p className="text-gray-300">AI-powered qualification ensures better lead quality</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Easy to Use</h3>
+                    <p className="text-gray-300">No coding required - drag and drop interface</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -179,24 +180,24 @@ const AILeadGenerationPage: React.FC = () => {
                     <Clock className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">24/7 Generation</h3>
-                    <p className="text-gray-300">Continuous lead generation without manual intervention</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Real-time Updates</h3>
+                    <p className="text-gray-300">Always see the latest data with live updates</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="cyber-card p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Ready to Generate More Leads?</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">Ready to Visualize Your Data?</h3>
               <p className="text-gray-300 mb-6">
-                Get a free lead generation audit and discover how many more qualified 
-                leads you could be generating.
+                Transform your data into actionable insights with our AI-powered 
+                visualization platform. Get started with a free trial.
               </p>
               <div className="space-y-4">
                 <Link
                   href="/contact"
                   className="cyber-button w-full inline-flex items-center justify-center py-3"
                 >
-                  Get Free Audit
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
@@ -215,11 +216,11 @@ const AILeadGenerationPage: React.FC = () => {
       <div className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Stop Missing Out on Leads
+            Make Data-Driven Decisions
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Don't let potential customers slip through the cracks. Our AI lead generation 
-            platform will help you capture, qualify, and convert more prospects.
+            Don't let valuable insights hide in your data. Our AI visualization platform 
+            will help you see patterns, trends, and opportunities you never knew existed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -242,4 +243,4 @@ const AILeadGenerationPage: React.FC = () => {
   );
 };
 
-export default AILeadGenerationPage;
+export default AIDataVisualizationPage;
