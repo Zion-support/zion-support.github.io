@@ -13,7 +13,10 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Workflow optimization' },
+    { name: 'AI CRM Automation', url: '/ai-crm-automation', description: 'AI-powered CRM automation' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Intelligent project management' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI customer service automation' }
   ];
   const itServices = [
     { name: 'IT Services', url: '/it-services', description: 'Comprehensive IT support' },
@@ -28,7 +31,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Blockchain & Web3', url: '/blockchain-web3', description: 'Decentralized solutions' },
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing', description: 'Connected devices' },
     { name: 'Business Intelligence', url: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' }
+    { name: 'Robotics', url: '/robotics', description: 'Robotic solutions' },
+    { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless cloud migration' },
+    { name: 'Network Security', url: '/network-security', description: 'Advanced network security' }
   ];
   const companyLinks = [
     { name: 'About Us', url: '/about' },

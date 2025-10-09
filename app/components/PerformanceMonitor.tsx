@@ -78,7 +78,7 @@ const PerformanceMonitor: React.FC = () => {
     } else {
       window.addEventListener('load', measurePerformance);
     }
-  }, [enableConsoleLogging]);
+  }, []);
   return (
     <div className="performance-monitor">
       <h3>Performance Metrics</h3>

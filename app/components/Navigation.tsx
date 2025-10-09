@@ -43,7 +43,10 @@ const Navigation: React.FC = () => {
         { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data insights' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI security solutions' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' }
+        { name: 'AI Mobile App Development', path: '/ai-mobile-app-development', description: 'Mobile AI applications' },
+        { name: 'AI CRM Automation', path: '/ai-crm-automation', description: 'AI-powered CRM automation' },
+        { name: 'AI Project Management', path: '/ai-project-management', description: 'Intelligent project management' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'AI customer service automation' }
       ]
     },
     {
@@ -60,7 +63,9 @@ const Navigation: React.FC = () => {
         { name: 'DevOps', path: '/devops', description: 'DevOps automation' },
         { name: 'Database Services', path: '/database', description: 'Database management' },
         { name: 'Network Services', path: '/networking', description: 'Network infrastructure' },
-        { name: 'System Administration', path: '/system-admin', description: 'System management' }
+        { name: 'System Administration', path: '/system-admin', description: 'System management' },
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud migration' },
+        { name: 'Network Security', path: '/network-security', description: 'Advanced network security' }
       ]
     },
     {

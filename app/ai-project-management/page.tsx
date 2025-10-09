@@ -1,58 +1,58 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, UserCheck, DollarSign, PieChart, GitBranch, Timer, AlertTriangle, Headphones, Bot, ThumbsUp } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, UserCheck, DollarSign, PieChart, GitBranch, Timer, AlertTriangle } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
+const AIProjectManagementPage: React.FC = () => {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: 'AI Chatbot Assistant',
-      description: 'Intelligent 24/7 chatbot that understands context, provides instant answers, and escalates complex issues to human agents.',
-      benefits: ['Instant response time', '24/7 availability', 'Handle 80% of queries automatically', 'Multilingual support']
-    },
-    {
       icon: <Brain className="w-6 h-6" />,
-      title: 'Smart Ticket Routing',
-      description: 'AI-powered ticket classification and routing to the most qualified agent based on expertise and workload.',
-      benefits: ['Faster resolution times', 'Better agent utilization', 'Improved customer satisfaction', 'Reduced escalations']
+      title: 'AI Task Prioritization',
+      description: 'Intelligent task ranking based on deadlines, dependencies, team capacity, and business impact.',
+      benefits: ['Reduce project delays by 50%', 'Optimize resource allocation', 'Improve team productivity']
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Sentiment Analysis',
-      description: 'Real-time analysis of customer emotions and satisfaction levels to prioritize urgent cases and improve service quality.',
-      benefits: ['Proactive issue detection', 'Improved customer experience', 'Better agent guidance', 'Reduced churn risk']
+      icon: <Timer className="w-6 h-6" />,
+      title: 'Smart Time Tracking',
+      description: 'Automatic time tracking with AI-powered insights on productivity patterns and bottlenecks.',
+      benefits: ['Accurate time reporting', 'Identify productivity gaps', 'Better project estimation']
     },
     {
-      icon: <Headphones className="w-6 h-6" />,
-      title: 'Voice AI Support',
-      description: 'Advanced voice recognition and natural language processing for phone support with intelligent call routing.',
-      benefits: ['Natural conversation flow', 'Reduced wait times', 'Better call quality', 'Multilingual voice support']
+      icon: <GitBranch className="w-6 h-6" />,
+      title: 'Risk Prediction',
+      description: 'AI algorithms predict project risks and suggest mitigation strategies before issues occur.',
+      benefits: ['Prevent 80% of project failures', 'Early warning system', 'Proactive problem solving']
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: 'Team Optimization',
+      description: 'AI-powered team matching and workload balancing for optimal project performance.',
+      benefits: ['Better team collaboration', 'Reduced burnout', 'Higher quality deliverables']
     },
     {
       icon: <BarChart className="w-6 h-6" />,
       title: 'Predictive Analytics',
-      description: 'AI-driven insights to predict customer issues, optimize support processes, and improve service quality.',
-      benefits: ['Proactive problem solving', 'Better resource planning', 'Improved efficiency', 'Data-driven decisions']
+      description: 'Advanced analytics to forecast project completion, budget needs, and resource requirements.',
+      benefits: ['Accurate project forecasting', 'Better budget planning', 'Improved decision making']
     },
     {
-      icon: <ThumbsUp className="w-6 h-6" />,
-      title: 'Knowledge Base AI',
-      description: 'Intelligent knowledge management with automatic content updates, smart search, and personalized recommendations.',
-      benefits: ['Self-service success', 'Reduced support tickets', 'Always up-to-date content', 'Better user experience']
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: 'Smart Communication',
+      description: 'AI-powered communication optimization with automated updates and stakeholder notifications.',
+      benefits: ['Reduce meeting time by 40%', 'Improve transparency', 'Better stakeholder engagement']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
+      name: 'Team',
       price: '$199/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 tickets/month',
-        'Basic AI chatbot',
-        'Email support',
-        'Basic analytics',
-        'Knowledge base',
+        'Up to 10 team members',
+        'Basic AI features',
+        'Project templates',
+        'Time tracking',
+        'Basic reporting',
         'Email support',
         'Mobile app access'
       ],
@@ -60,32 +60,32 @@ const AICustomerSupportPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$499/month',
-      description: 'Ideal for growing companies',
+      price: '$399/month',
+      description: 'Ideal for growing teams',
       features: [
-        'Up to 10,000 tickets/month',
+        'Up to 50 team members',
         'Advanced AI features',
-        'Voice support',
-        'Sentiment analysis',
         'Custom workflows',
+        'Risk prediction',
+        'Advanced analytics',
         'Priority support',
         'API access',
-        'Advanced reporting'
+        'Integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299/month',
+      price: '$799/month',
       description: 'For large organizations',
       features: [
-        'Unlimited tickets',
+        'Unlimited team members',
         'Full AI suite',
-        'Custom integrations',
+        'Custom development',
         'Dedicated support',
         'White-label options',
         'Advanced security',
-        'Custom development',
+        'Custom integrations',
         'Training & onboarding'
       ],
       popular: false
@@ -94,24 +94,24 @@ const AICustomerSupportPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'CustomerFirst Inc.',
-      role: 'Customer Success Manager',
-      content: 'AI Customer Support reduced our response time by 75% and increased customer satisfaction scores by 40%.',
+      name: 'David Kim',
+      company: 'TechFlow Solutions',
+      role: 'Project Manager',
+      content: 'AI Project Management helped us complete projects 30% faster while maintaining higher quality standards.',
       rating: 5
     },
     {
-      name: 'Robert Garcia',
-      company: 'TechSupport Pro',
-      role: 'Support Director',
-      content: 'The AI chatbot handles most queries instantly, allowing our team to focus on complex issues that need human touch.',
+      name: 'Lisa Martinez',
+      company: 'InnovateCorp',
+      role: 'Director of Operations',
+      content: 'The risk prediction feature saved us from multiple project disasters. It\'s like having a crystal ball!',
       rating: 5
     },
     {
-      name: 'Amanda Thompson',
-      company: 'ServiceExcellence Corp',
-      role: 'VP of Customer Experience',
-      content: 'Sentiment analysis and smart routing have transformed our support quality. Customers love the instant, accurate responses.',
+      name: 'James Wilson',
+      company: 'ScaleUp Ventures',
+      role: 'CTO',
+      content: 'Team optimization and smart communication features transformed how we work together. Highly recommended!',
       rating: 5
     }
   ];
@@ -119,10 +119,10 @@ const AICustomerSupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support platform. Reduce response time by 75%, increase satisfaction by 40%, and provide 24/7 intelligent support." />
-        <meta name="keywords" content="AI customer support, chatbot, customer service automation, support ticket system, AI helpdesk, customer experience" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-support" />
+        <title>AI Project Management - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered project management platform. Complete projects 30% faster, predict risks, and optimize team performance with intelligent automation." />
+        <meta name="keywords" content="AI project management, project automation, team optimization, risk prediction, smart project tools, AI PM software" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-project-management" />
       </Head>
 
       <div className="container mx-auto px-4 py-16 pt-24">
@@ -130,15 +130,15 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text">
-              AI Customer Support
+              AI Project Management
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Intelligent 24/7 Customer Support with AI-Powered Automation
+              Intelligent Project Management with AI-Powered Insights
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Transform your customer support with AI-driven automation, intelligent chatbots, and smart ticket routing. 
-              Reduce response time by 75%, increase satisfaction by 40%, and provide exceptional 24/7 support 
-              with our cutting-edge customer service platform.
+              Transform your project management with AI-driven automation, risk prediction, and team optimization. 
+              Complete projects 30% faster, reduce delays by 50%, and boost team productivity with our 
+              cutting-edge project management platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -160,23 +160,23 @@ const AICustomerSupportPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Why Choose AI Customer Support?
+            Why Choose AI Project Management?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card p-6 text-center">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-3">75% Faster Response</h3>
-              <p className="text-gray-300">AI-powered automation provides instant responses to customer queries.</p>
+              <h3 className="text-xl font-bold text-white mb-3">30% Faster Completion</h3>
+              <p className="text-gray-300">AI optimization and automation accelerate project delivery significantly.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">😊</div>
-              <h3 className="text-xl font-bold text-white mb-3">40% Higher Satisfaction</h3>
-              <p className="text-gray-300">Intelligent support and personalized responses improve customer experience.</p>
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold text-white mb-3">50% Fewer Delays</h3>
+              <p className="text-gray-300">Predictive risk management prevents issues before they impact timelines.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">🕒</div>
-              <h3 className="text-xl font-bold text-white mb-3">24/7 Availability</h3>
-              <p className="text-gray-300">Round-the-clock AI support ensures customers always get help when needed.</p>
+              <div className="text-4xl mb-4">👥</div>
+              <h3 className="text-xl font-bold text-white mb-3">Optimized Teams</h3>
+              <p className="text-gray-300">AI-powered team matching and workload balancing maximize productivity.</p>
             </div>
           </div>
         </section>
@@ -277,10 +277,10 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Project Management?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses already using AI Customer Support to provide exceptional service 24/7.
+              Join thousands of teams already using AI Project Management to deliver projects faster and more efficiently.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -307,4 +307,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportPage;
+export default AIProjectManagementPage;

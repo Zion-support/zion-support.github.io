@@ -1,6 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle } from 'lucide-react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { CheckCircle, Shield, Zap, Target, Star, Coins, Brain, BarChart, Cpu } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {
@@ -139,11 +140,11 @@ const BlockchainPage: React.FC = () => {
   const categories = [...new Set(blockchainServices.map(service => service.category))];
   return (
     <>
-      <Helmet>
+      <Head>
         <title>Blockchain & Web3 Services - Zion Tech Group</title>
         <meta name="description" content="Advanced blockchain and Web3 services including smart contracts, DeFi, NFTs, and enterprise blockchain solutions." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, Web3, cryptocurrency, token development" />
-      </Helmet>
+      </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-orange-600 to-red-700 text-white py-20">

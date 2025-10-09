@@ -1,74 +1,70 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-//Mapping of broken imports to correct imports
-const iconMappings = {
-  rrowleft: 'ArrowLeft',
-  alendar: 'Calendar',
-  ser: 'User',
-  lock: 'Clock',
-  ag: 'Tag',
-  rendingup: 'TrendingUp',
-  ollarsign: 'DollarSign',
-  sers: 'Users',
-  arget: 'Target',
-  rain: 'Brain',
-  ap: 'Zap',
-  hield: 'Shield',
-  rrowright: 'ArrowRight',
-  og: 'Log',
-  pu: 'Cpu',
-  lobe: 'Globe',
-  ocket: 'Rocket',
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen',
-};
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-//Function to fix imports in a file
-function fixImportsInFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
+// Function to recursively find all .tsx files
+function findTsxFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      results = results.concat(findTsxFiles(filePath));
+    } else if (file.endsWith('.tsx')) {
+      results.push(filePath);
+    }
+  });
+  
+  return results;
+}
 
-    //Fix lucide-react imports
-    for (const [broken, correct] of Object.entries(iconMappings)) {
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-      //       const newImport = `lucide-react`;
+// Find all .tsx files in the app directory
+const tsxFiles = findTsxFiles(path.join(__dirname, 'app'));
 
-      if (content.includes(oldImport)) {
+let fixedCount = 0;
+
+tsxFiles.forEach(filePath => {
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+  
+  // Check if Link is used but not imported
+  if (content.includes('<Link') && !content.includes("import Link from 'next/link'")) {
+    const importMatch = content.match(/import React from 'react';\nimport Head from 'next\/head';/);
+    if (importMatch) {
+      content = content.replace(
+        "import React from 'react';\nimport Head from 'next/head';",
+        "import React from 'react';\nimport Head from 'next/head';\nimport Link from 'next/link';"
+      );
+      modified = true;
+    }
+  }
+  
+  // Check if Database is used but not imported
+  if (content.includes('<Database') && !content.includes('Database')) {
+    const lucideMatch = content.match(/import { ([^}]+) } from 'lucide-react';/);
+    if (lucideMatch) {
+      const existingImports = lucideMatch[1];
+      if (!existingImports.includes('Database')) {
         content = content.replace(
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
+          `import { ${existingImports} } from 'lucide-react';`,
+          `import { ${existingImports}, Database } from 'lucide-react';`
         );
         modified = true;
       }
     }
+  }
+  
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed imports in ${path.relative(__dirname, filePath)}`);
+    fixedCount++;
+  }
+});
 
-    //Fix Link imports if missing
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
-      content = "import Link from 'next/link';\n" + content;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      //       }
-  } catch (error) {
-    //     }
-}
-
-//Get all blog files
-// const blogDir = '/workspace/app/blog';
-const files = fs
-  .readdirSync(blogDir, { recursive: true })
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
-
-// Process each file
-files.forEach(fixImportsInFile);
-
-// 
+console.log(`Import fixes completed! Fixed ${fixedCount} files.`);

@@ -1,92 +1,122 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, UserCheck, DollarSign, PieChart, GitBranch, Timer, AlertTriangle, Headphones, Bot, ThumbsUp } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Cloud, Database, Server, Lock } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: 'AI Chatbot Assistant',
-      description: 'Intelligent 24/7 chatbot that understands context, provides instant answers, and escalates complex issues to human agents.',
-      benefits: ['Instant response time', '24/7 availability', 'Handle 80% of queries automatically', 'Multilingual support']
+      icon: <Cloud className="w-6 h-6" />,
+      title: 'Multi-Cloud Strategy',
+      description: 'Comprehensive cloud migration planning and execution across AWS, Azure, and Google Cloud platforms.',
+      benefits: ['Avoid vendor lock-in', 'Optimize costs', 'Improve reliability', 'Enhanced security']
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: 'Smart Ticket Routing',
-      description: 'AI-powered ticket classification and routing to the most qualified agent based on expertise and workload.',
-      benefits: ['Faster resolution times', 'Better agent utilization', 'Improved customer satisfaction', 'Reduced escalations']
+      icon: <Database className="w-6 h-6" />,
+      title: 'Database Migration',
+      description: 'Seamless migration of databases with zero downtime and data integrity guarantees.',
+      benefits: ['Zero data loss', 'Minimal downtime', 'Performance optimization', 'Backup strategies']
     },
     {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Sentiment Analysis',
-      description: 'Real-time analysis of customer emotions and satisfaction levels to prioritize urgent cases and improve service quality.',
-      benefits: ['Proactive issue detection', 'Improved customer experience', 'Better agent guidance', 'Reduced churn risk']
+      icon: <Server className="w-6 h-6" />,
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using modern IaC tools.',
+      benefits: ['Consistent deployments', 'Version control', 'Faster provisioning', 'Reduced errors']
     },
     {
-      icon: <Headphones className="w-6 h-6" />,
-      title: 'Voice AI Support',
-      description: 'Advanced voice recognition and natural language processing for phone support with intelligent call routing.',
-      benefits: ['Natural conversation flow', 'Reduced wait times', 'Better call quality', 'Multilingual voice support']
+      icon: <Lock className="w-6 h-6" />,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security implementation with compliance frameworks (SOC2, HIPAA, GDPR).',
+      benefits: ['Enhanced security', 'Compliance ready', 'Audit trails', 'Risk mitigation']
     },
     {
       icon: <BarChart className="w-6 h-6" />,
-      title: 'Predictive Analytics',
-      description: 'AI-driven insights to predict customer issues, optimize support processes, and improve service quality.',
-      benefits: ['Proactive problem solving', 'Better resource planning', 'Improved efficiency', 'Data-driven decisions']
+      title: 'Performance Optimization',
+      description: 'Cloud-native optimization for maximum performance and cost efficiency.',
+      benefits: ['Faster applications', 'Reduced costs', 'Better scalability', 'Improved reliability']
     },
     {
-      icon: <ThumbsUp className="w-6 h-6" />,
-      title: 'Knowledge Base AI',
-      description: 'Intelligent knowledge management with automatic content updates, smart search, and personalized recommendations.',
-      benefits: ['Self-service success', 'Reduced support tickets', 'Always up-to-date content', 'Better user experience']
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Disaster Recovery',
+      description: 'Comprehensive backup and disaster recovery solutions for business continuity.',
+      benefits: ['Business continuity', 'Data protection', 'Quick recovery', 'Peace of mind']
+    }
+  ];
+
+  const migrationSteps = [
+    {
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Comprehensive analysis of current infrastructure and migration strategy development.',
+      duration: '1-2 weeks'
+    },
+    {
+      step: '02',
+      title: 'Design & Architecture',
+      description: 'Cloud architecture design and security framework implementation.',
+      duration: '2-3 weeks'
+    },
+    {
+      step: '03',
+      title: 'Migration Execution',
+      description: 'Phased migration with minimal downtime and continuous monitoring.',
+      duration: '2-4 weeks'
+    },
+    {
+      step: '04',
+      title: 'Testing & Optimization',
+      description: 'Comprehensive testing and performance optimization.',
+      duration: '1-2 weeks'
+    },
+    {
+      step: '05',
+      title: 'Go-Live & Support',
+      description: 'Production deployment and ongoing support and monitoring.',
+      duration: 'Ongoing'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$199/month',
+      name: 'Small Business',
+      price: '$2,999',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 tickets/month',
-        'Basic AI chatbot',
+        'Up to 10 servers',
+        'Basic cloud migration',
         'Email support',
-        'Basic analytics',
-        'Knowledge base',
-        'Email support',
-        'Mobile app access'
+        'Standard security',
+        '30-day support',
+        'Documentation'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$499/month',
+      name: 'Enterprise',
+      price: '$9,999',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 tickets/month',
-        'Advanced AI features',
-        'Voice support',
-        'Sentiment analysis',
-        'Custom workflows',
+        'Up to 50 servers',
+        'Advanced migration',
         'Priority support',
-        'API access',
-        'Advanced reporting'
+        'Enhanced security',
+        '90-day support',
+        'Training included',
+        'Custom architecture'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$1,299/month',
+      name: 'Custom',
+      price: 'Contact Us',
       description: 'For large organizations',
       features: [
-        'Unlimited tickets',
-        'Full AI suite',
-        'Custom integrations',
+        'Unlimited servers',
+        'Full migration suite',
         'Dedicated support',
-        'White-label options',
-        'Advanced security',
+        'Enterprise security',
+        '1-year support',
         'Custom development',
-        'Training & onboarding'
+        'White-label options'
       ],
       popular: false
     }
@@ -94,24 +124,24 @@ const AICustomerSupportPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'CustomerFirst Inc.',
-      role: 'Customer Success Manager',
-      content: 'AI Customer Support reduced our response time by 75% and increased customer satisfaction scores by 40%.',
+      name: 'Mark Stevens',
+      company: 'TechCorp Solutions',
+      role: 'CTO',
+      content: 'Cloud migration was seamless with zero downtime. Our applications run 40% faster and costs are down 30%.',
       rating: 5
     },
     {
-      name: 'Robert Garcia',
-      company: 'TechSupport Pro',
-      role: 'Support Director',
-      content: 'The AI chatbot handles most queries instantly, allowing our team to focus on complex issues that need human touch.',
+      name: 'Sarah Johnson',
+      company: 'InnovateTech',
+      role: 'IT Director',
+      content: 'The team handled our complex multi-cloud migration perfectly. Security and compliance were top-notch.',
       rating: 5
     },
     {
-      name: 'Amanda Thompson',
-      company: 'ServiceExcellence Corp',
-      role: 'VP of Customer Experience',
-      content: 'Sentiment analysis and smart routing have transformed our support quality. Customers love the instant, accurate responses.',
+      name: 'David Chen',
+      company: 'ScaleUp Ventures',
+      role: 'VP of Engineering',
+      content: 'Infrastructure as Code approach made everything so much easier to manage. Highly recommended!',
       rating: 5
     }
   ];
@@ -119,10 +149,10 @@ const AICustomerSupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support platform. Reduce response time by 75%, increase satisfaction by 40%, and provide 24/7 intelligent support." />
-        <meta name="keywords" content="AI customer support, chatbot, customer service automation, support ticket system, AI helpdesk, customer experience" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-support" />
+        <title>Cloud Migration Services - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud migration services. Seamless migration to AWS, Azure, Google Cloud with zero downtime and enhanced security." />
+        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud, infrastructure migration, cloud services" />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-migration" />
       </Head>
 
       <div className="container mx-auto px-4 py-16 pt-24">
@@ -130,15 +160,15 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text">
-              AI Customer Support
+              Cloud Migration Services
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Intelligent 24/7 Customer Support with AI-Powered Automation
+              Seamless Cloud Migration with Zero Downtime
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Transform your customer support with AI-driven automation, intelligent chatbots, and smart ticket routing. 
-              Reduce response time by 75%, increase satisfaction by 40%, and provide exceptional 24/7 support 
-              with our cutting-edge customer service platform.
+              Migrate your infrastructure to the cloud with confidence. Our expert team ensures zero downtime, 
+              enhanced security, and optimal performance across AWS, Azure, and Google Cloud platforms. 
+              Transform your business with our proven migration methodology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -151,7 +181,7 @@ const AICustomerSupportPage: React.FC = () => {
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
-                Get Free Demo
+                Get Free Assessment
               </a>
             </div>
           </div>
@@ -160,31 +190,54 @@ const AICustomerSupportPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Why Choose AI Customer Support?
+            Why Choose Our Cloud Migration Services?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card p-6 text-center">
               <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-3">75% Faster Response</h3>
-              <p className="text-gray-300">AI-powered automation provides instant responses to customer queries.</p>
+              <h3 className="text-xl font-bold text-white mb-3">Zero Downtime</h3>
+              <p className="text-gray-300">Seamless migration with minimal business disruption and continuous operations.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">😊</div>
-              <h3 className="text-xl font-bold text-white mb-3">40% Higher Satisfaction</h3>
-              <p className="text-gray-300">Intelligent support and personalized responses improve customer experience.</p>
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-white mb-3">Enhanced Security</h3>
+              <p className="text-gray-300">Enterprise-grade security implementation with compliance frameworks.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">🕒</div>
-              <h3 className="text-xl font-bold text-white mb-3">24/7 Availability</h3>
-              <p className="text-gray-300">Round-the-clock AI support ensures customers always get help when needed.</p>
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-bold text-white mb-3">Cost Optimization</h3>
+              <p className="text-gray-300">Reduce infrastructure costs by up to 40% with optimized cloud architecture.</p>
             </div>
+          </div>
+        </section>
+
+        {/* Migration Process */}
+        <section className="mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+            Our Migration Process
+          </h2>
+          <div className="space-y-8">
+            {migrationSteps.map((step, index) => (
+              <div key={index} className="flex items-start space-x-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-cyan-400 text-black rounded-full flex items-center justify-center text-xl font-bold">
+                    {step.step}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 mb-2">{step.description}</p>
+                  <p className="text-cyan-400 font-medium">Duration: {step.duration}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Powerful AI Features
+            Comprehensive Migration Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -210,7 +263,7 @@ const AICustomerSupportPage: React.FC = () => {
         {/* Pricing Section */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Simple, Transparent Pricing
+            Transparent Pricing
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -277,10 +330,10 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Migrate to the Cloud?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses already using AI Customer Support to provide exceptional service 24/7.
+              Join hundreds of businesses that have successfully migrated to the cloud with our expert guidance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -307,4 +360,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportPage;
+export default CloudMigrationPage;

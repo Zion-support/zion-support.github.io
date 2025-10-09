@@ -1,58 +1,57 @@
 import React from 'react';
 import Head from 'next/head';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, UserCheck, DollarSign, PieChart, GitBranch, Timer, AlertTriangle, Headphones, Bot, ThumbsUp } from 'lucide-react';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Calendar, UserCheck, DollarSign, PieChart } from 'lucide-react';
 
-const AICustomerSupportPage: React.FC = () => {
+const AICRMServicePage: React.FC = () => {
   const features = [
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: 'AI Chatbot Assistant',
-      description: 'Intelligent 24/7 chatbot that understands context, provides instant answers, and escalates complex issues to human agents.',
-      benefits: ['Instant response time', '24/7 availability', 'Handle 80% of queries automatically', 'Multilingual support']
-    },
-    {
       icon: <Brain className="w-6 h-6" />,
-      title: 'Smart Ticket Routing',
-      description: 'AI-powered ticket classification and routing to the most qualified agent based on expertise and workload.',
-      benefits: ['Faster resolution times', 'Better agent utilization', 'Improved customer satisfaction', 'Reduced escalations']
+      title: 'AI Lead Scoring',
+      description: 'Intelligent lead qualification using machine learning algorithms to identify high-value prospects automatically.',
+      benefits: ['Increase conversion by 40%', 'Reduce manual qualification time', 'Improve sales efficiency']
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Sentiment Analysis',
-      description: 'Real-time analysis of customer emotions and satisfaction levels to prioritize urgent cases and improve service quality.',
-      benefits: ['Proactive issue detection', 'Improved customer experience', 'Better agent guidance', 'Reduced churn risk']
-    },
-    {
-      icon: <Headphones className="w-6 h-6" />,
-      title: 'Voice AI Support',
-      description: 'Advanced voice recognition and natural language processing for phone support with intelligent call routing.',
-      benefits: ['Natural conversation flow', 'Reduced wait times', 'Better call quality', 'Multilingual voice support']
+      title: 'Automated Follow-ups',
+      description: 'Smart email sequences and follow-up campaigns triggered by customer behavior and engagement patterns.',
+      benefits: ['Never miss a follow-up', 'Personalized communication', 'Increase response rates by 60%']
     },
     {
       icon: <BarChart className="w-6 h-6" />,
       title: 'Predictive Analytics',
-      description: 'AI-driven insights to predict customer issues, optimize support processes, and improve service quality.',
-      benefits: ['Proactive problem solving', 'Better resource planning', 'Improved efficiency', 'Data-driven decisions']
+      description: 'Advanced analytics to predict customer lifetime value, churn risk, and optimal engagement timing.',
+      benefits: ['Reduce churn by 35%', 'Increase customer LTV', 'Data-driven decisions']
     },
     {
-      icon: <ThumbsUp className="w-6 h-6" />,
-      title: 'Knowledge Base AI',
-      description: 'Intelligent knowledge management with automatic content updates, smart search, and personalized recommendations.',
-      benefits: ['Self-service success', 'Reduced support tickets', 'Always up-to-date content', 'Better user experience']
+      icon: <Calendar className="w-6 h-6" />,
+      title: 'Smart Scheduling',
+      description: 'AI-powered meeting scheduling that considers all parties\' preferences and availability.',
+      benefits: ['Save 5+ hours/week', 'Reduce scheduling conflicts', 'Improve meeting attendance']
+    },
+    {
+      icon: <UserCheck className="w-6 h-6" />,
+      title: 'Customer Segmentation',
+      description: 'Automatic customer grouping based on behavior, preferences, and purchase patterns.',
+      benefits: ['Targeted marketing campaigns', 'Personalized experiences', 'Higher engagement rates']
+    },
+    {
+      icon: <DollarSign className="w-6 h-6" />,
+      title: 'Revenue Forecasting',
+      description: 'Accurate revenue predictions using historical data and market trends.',
+      benefits: ['Better financial planning', 'Identify growth opportunities', 'Reduce forecasting errors']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199/month',
+      price: '$299/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 tickets/month',
-        'Basic AI chatbot',
-        'Email support',
+        'Up to 1,000 contacts',
+        'Basic AI lead scoring',
+        'Email automation',
         'Basic analytics',
-        'Knowledge base',
         'Email support',
         'Mobile app access'
       ],
@@ -60,13 +59,12 @@ const AICustomerSupportPage: React.FC = () => {
     },
     {
       name: 'Professional',
-      price: '$499/month',
+      price: '$599/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 tickets/month',
+        'Up to 10,000 contacts',
         'Advanced AI features',
-        'Voice support',
-        'Sentiment analysis',
+        'Predictive analytics',
         'Custom workflows',
         'Priority support',
         'API access',
@@ -79,14 +77,13 @@ const AICustomerSupportPage: React.FC = () => {
       price: '$1,299/month',
       description: 'For large organizations',
       features: [
-        'Unlimited tickets',
+        'Unlimited contacts',
         'Full AI suite',
         'Custom integrations',
         'Dedicated support',
         'White-label options',
         'Advanced security',
-        'Custom development',
-        'Training & onboarding'
+        'Custom development'
       ],
       popular: false
     }
@@ -94,24 +91,24 @@ const AICustomerSupportPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Lee',
-      company: 'CustomerFirst Inc.',
-      role: 'Customer Success Manager',
-      content: 'AI Customer Support reduced our response time by 75% and increased customer satisfaction scores by 40%.',
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      role: 'Sales Director',
+      content: 'AI CRM Automation increased our lead conversion by 45% and saved us 20 hours per week on manual tasks.',
       rating: 5
     },
     {
-      name: 'Robert Garcia',
-      company: 'TechSupport Pro',
-      role: 'Support Director',
-      content: 'The AI chatbot handles most queries instantly, allowing our team to focus on complex issues that need human touch.',
+      name: 'Michael Chen',
+      company: 'GrowthCorp',
+      role: 'VP of Sales',
+      content: 'The predictive analytics helped us identify high-value prospects before our competitors. Game changer!',
       rating: 5
     },
     {
-      name: 'Amanda Thompson',
-      company: 'ServiceExcellence Corp',
-      role: 'VP of Customer Experience',
-      content: 'Sentiment analysis and smart routing have transformed our support quality. Customers love the instant, accurate responses.',
+      name: 'Emily Rodriguez',
+      company: 'ScaleUp Solutions',
+      role: 'Marketing Manager',
+      content: 'Automated follow-ups and personalized campaigns increased our customer engagement by 60%.',
       rating: 5
     }
   ];
@@ -119,10 +116,10 @@ const AICustomerSupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Head>
-        <title>AI Customer Support - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered customer support platform. Reduce response time by 75%, increase satisfaction by 40%, and provide 24/7 intelligent support." />
-        <meta name="keywords" content="AI customer support, chatbot, customer service automation, support ticket system, AI helpdesk, customer experience" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-customer-support" />
+        <title>AI CRM Automation - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered CRM automation platform. Increase sales by 40%, reduce manual work, and boost customer engagement with intelligent automation." />
+        <meta name="keywords" content="AI CRM, CRM automation, sales automation, lead scoring, customer management, AI sales tools" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-crm-automation" />
       </Head>
 
       <div className="container mx-auto px-4 py-16 pt-24">
@@ -130,15 +127,15 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center mb-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 holographic-text">
-              AI Customer Support
+              AI CRM Automation
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Intelligent 24/7 Customer Support with AI-Powered Automation
+              Revolutionary AI-Powered Customer Relationship Management
             </p>
             <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Transform your customer support with AI-driven automation, intelligent chatbots, and smart ticket routing. 
-              Reduce response time by 75%, increase satisfaction by 40%, and provide exceptional 24/7 support 
-              with our cutting-edge customer service platform.
+              Transform your sales process with intelligent automation, predictive analytics, and AI-driven insights. 
+              Increase conversions by 40%, reduce manual work by 70%, and boost customer engagement with our 
+              cutting-edge CRM platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -160,23 +157,23 @@ const AICustomerSupportPage: React.FC = () => {
         {/* Key Benefits */}
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Why Choose AI Customer Support?
+            Why Choose AI CRM Automation?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-3">75% Faster Response</h3>
-              <p className="text-gray-300">AI-powered automation provides instant responses to customer queries.</p>
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold text-white mb-3">40% Increase in Sales</h3>
+              <p className="text-gray-300">AI-powered lead scoring and automation boost conversion rates significantly.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">😊</div>
-              <h3 className="text-xl font-bold text-white mb-3">40% Higher Satisfaction</h3>
-              <p className="text-gray-300">Intelligent support and personalized responses improve customer experience.</p>
+              <div className="text-4xl mb-4">⏰</div>
+              <h3 className="text-xl font-bold text-white mb-3">70% Time Savings</h3>
+              <p className="text-gray-300">Automate repetitive tasks and focus on high-value activities.</p>
             </div>
             <div className="cyber-card p-6 text-center">
-              <div className="text-4xl mb-4">🕒</div>
-              <h3 className="text-xl font-bold text-white mb-3">24/7 Availability</h3>
-              <p className="text-gray-300">Round-the-clock AI support ensures customers always get help when needed.</p>
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-xl font-bold text-white mb-3">60% Better Engagement</h3>
+              <p className="text-gray-300">Personalized communication and optimal timing improve customer relationships.</p>
             </div>
           </div>
         </section>
@@ -277,10 +274,10 @@ const AICustomerSupportPage: React.FC = () => {
         <section className="text-center">
           <div className="cyber-card p-8 max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Sales Process?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Join thousands of businesses already using AI Customer Support to provide exceptional service 24/7.
+              Join thousands of businesses already using AI CRM Automation to boost their sales and customer engagement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -307,4 +304,4 @@ const AICustomerSupportPage: React.FC = () => {
   );
 };
 
-export default AICustomerSupportPage;
+export default AICRMServicePage;
