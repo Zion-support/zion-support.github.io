@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
     // AI-Powered Developer Tools
@@ -1668,7 +1665,6 @@ const MicroSAASPage: React.FC = () => {
     }
   ];
   
-<<<<<<< HEAD
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const realEstateSaaS = [
     {
@@ -3400,28 +3396,6 @@ const MicroSAASPage: React.FC = () => {
     { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
     { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
   ];
-=======
-  // const categories = [
-  //   { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-  //   { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-  //   { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-  //   { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-  //   { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-  //   { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-  //   { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-  //   { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-  //   { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-  //   { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-  //   { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-  //   { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-  //   { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-  //   { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-  //   { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-  //   { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-  //   { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-  //   { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
-  // ];
->>>>>>> cursor/fix-errors-and-merge-to-main-33f8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

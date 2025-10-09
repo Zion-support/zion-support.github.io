@@ -8,33 +8,23 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix a specific file
-function fixFile(filePath) {
+// Function to fix duplicate function declarations
+function fixDuplicateDeclarations(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
-    
-    // Fix missing function declarations
-    if (content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
-      content = content.replace(/import React from 'react';\n([^}]*?)return \(/g, (match, imports) => {
-        const fileName = path.basename(filePath, '.tsx');
-        const componentName = fileName.split('-').map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-        return `import React from 'react';\n${imports}\nconst ${componentName}: React.FC = () => {\n  return (`;
-      });
-    }
     
     // Fix duplicate function declarations
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name}: React.FC = () => {`;
     });
     
+    // Fix duplicate const declarations
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name} = () => {`;
     });
     
-    // Fix missing closing braces
+    // Fix missing closing braces in simple cases
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
       const lines = body.split('\n');
       let openBraces = 0;
@@ -60,18 +50,10 @@ function fixFile(filePath) {
       return match;
     });
     
-    // Fix missing closing braces for JSX
-    content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
-      if (tag.includes('<div') && !match.includes('</div>')) {
-        return match + '</div>';
-      }
-      return match;
-    });
-    
     // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed duplicates in: ${filePath}`);
       return true;
     }
     
@@ -114,7 +96,7 @@ function findFiles(dir) {
 }
 
 // Main execution
-console.log('🔧 Fixing all remaining issues...');
+console.log('🔍 Scanning for files with duplicate declarations...');
 const srcDir = path.join(__dirname, 'src');
 const files = findFiles(srcDir);
 
@@ -122,20 +104,20 @@ console.log(`Found ${files.length} files to check`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixFile(file)) {
+  if (fixDuplicateDeclarations(file)) {
     fixedCount++;
   }
 }
 
-console.log(`✅ Fixed issues in ${fixedCount} files`);
+console.log(`✅ Fixed duplicates in ${fixedCount} files`);
 
-// Run build to check if issues are resolved
-console.log('\n🔍 Running build to check results...');
+// Run linting to check results
+console.log('\n🔍 Running linting to check results...');
 try {
-  execSync('pnpm run build', { stdio: 'pipe' });
-  console.log('✅ Build successful!');
+  execSync('pnpm run lint', { stdio: 'pipe' });
+  console.log('✅ Linting passed!');
 } catch (error) {
-  console.log('⚠️  Build still has some issues, but many should be resolved');
+  console.log('⚠️  Linting found some issues, but duplicates should be resolved');
 }
 
-console.log('\n🎉 Issue fixing complete!');
+console.log('\n🎉 Duplicate fixing complete!');

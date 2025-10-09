@@ -14,18 +14,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Fix missing function declarations
-    if (content.includes('return (') && !content.includes('const ') && !content.includes('function ')) {
-      content = content.replace(/import React from 'react';\n([^}]*?)return \(/g, (match, imports) => {
-        const fileName = path.basename(filePath, '.tsx');
-        const componentName = fileName.split('-').map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-        return `import React from 'react';\n${imports}\nconst ${componentName}: React.FC = () => {\n  return (`;
-      });
-    }
-    
-    // Fix duplicate function declarations
+    // Remove duplicate function declarations
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
       return `const ${name}: React.FC = () => {`;
     });

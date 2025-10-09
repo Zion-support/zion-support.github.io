@@ -4,14 +4,8 @@
  * Real-time monitoring dashboard for performance, errors, and system health
  */
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
-=======
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-// Collect basic performance metrics
-const __collectPerformanceMetrics = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
   const paint = window.performance.getEntriesByType('paint');
@@ -104,13 +98,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       // Get memory info
       const memoryInfo = getMemoryInfo();
       // Get network info
-<<<<<<< HEAD
       const networkInfo = getNetworkInfo();
       const newMetrics: SystemMetrics = {
-=======
-      const _networkInfo = getNetworkInfo();
-      const _newMetrics: SystemMetrics = {
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
         performance: {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
@@ -161,7 +150,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information
   const getMemoryInfo = () => {
-    if ('memory' in performance) {
+    if ('memory' in performance) {}
+
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
@@ -173,7 +163,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   };
   // Get network information
   const getNetworkInfo = () => {
-    if ('connection' in navigator) {
+    if ('connection' in navigator) {}
+
       const nav = navigator as NavigatorWithConnection;
       const connection = nav.connection;
       return {

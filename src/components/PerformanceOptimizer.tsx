@@ -77,7 +77,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   };
 
   const setupLazyLoading = () => {
-    if ('IntersectionObserver' in window) {
+    if ('IntersectionObserver' in window) {}
+
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {

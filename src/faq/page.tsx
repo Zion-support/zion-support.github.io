@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d933
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -192,7 +187,7 @@ const FAQPage: React.FC = () => {
                   {category.category}
                 </h2>
                 <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
+                  {category.questions.map((item, itemIndex) => {</div>
                     const globalIndex = categoryIndex * 100 + itemIndex;
                     const isOpen = openItems.includes(globalIndex);
                     
@@ -262,6 +257,4 @@ const FAQPage: React.FC = () => {
 };
 
 export default FAQPage;
-=======
 import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4c2f

@@ -193,7 +193,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   const addAdditionalSEOTags = () => {
     // Add viewport meta tag if not present
-    if (!document.querySelector('meta[name="viewport"]')) {
+    if (!document.querySelector('meta[name="viewport"]')) {}
+
       const viewport = document.createElement('meta');
       viewport.name = 'viewport';
       viewport.content = 'width=device-width, initial-scale=1.0, viewport-fit=cover';
