@@ -5,12 +5,8 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
-<<<<<<< HEAD
 import SEOHead from './components/SEOHead';
 import ErrorBoundary from './components/ErrorBoundary';
-=======
-import SEOOptimizer from './components/SEOOptimizer';
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
 
 export default function RootLayout({
   children,
@@ -181,7 +177,6 @@ export default function RootLayout({
         />
       </head>
       <body className='antialiased'>
-<<<<<<< HEAD
         <ErrorBoundary>
           <GlobalErrorBoundary>
             <AnalyticsProvider>
@@ -194,19 +189,6 @@ export default function RootLayout({
             </AnalyticsProvider>
           </GlobalErrorBoundary>
         </ErrorBoundary>
-=======
-        <GlobalErrorBoundary>
-          <AnalyticsProvider>
-            <AccessibilityEnhancer>
-              <PerformanceMonitor />
-              <PerformanceOptimizer />
-              <SEOOptimizer />
-              <PWAInstaller />
-              {children}
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
-        </GlobalErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-187f
       </body>
     </html>
   );
