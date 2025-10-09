@@ -1,4 +1,15 @@
 
+import React, { memo, Suspense, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import FuturisticHero from './app/components/FuturisticHero';
+import ServiceCard from './app/components/ServiceCard';
+import ContentCarousel from './app/components/ContentCarousel';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import SEOOptimizer from './app/components/SEOOptimizer';
+
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -170,11 +181,13 @@ export default function App() {
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
-          <div className="min-h-screen bg-white">
+          <div className="min-h-screen bg-slate-900 cyber-grid">
+            <Navigation />
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={
                   <>
+                    <FuturisticHero />
                     <UnifiedContentPromotion />
                     <InteractiveAIROICalculator />
                     <ContentShowcase />
@@ -189,6 +202,9 @@ export default function App() {
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
               </Routes>
             </Suspense>
+            <Footer />
+            <PerformanceMonitor />
+            <SEOOptimizer />
           </div>
         </Router>
       </HelmetProvider>
