@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
       price: '$149/month',
       features: ['AI-powered insights', 'Real-time dashboards', 'Advanced analytics', 'User behavior tracking'],
       benefits: ['45% revenue increase', '60% productivity boost', '30% conversion lift'],
-      link: '/ai-analytics-dashboard',
+      link: '/ai-analytics',
       popular: true
     },
     {
@@ -119,6 +119,146 @@ const HomePage: React.FC = () => {
       features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Git integration'],
       benefits: ['70% fewer bugs', '15+ hours saved/week', 'Improved code quality'],
       link: '/ai-code-generation',
+      popular: false
+    },
+    {
+      title: 'AI Video Generator',
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated production',
+      icon: '🎬',
+      price: '$199/month',
+      features: ['AI video editing', 'Voice synthesis', 'Auto-captioning', 'Template library'],
+      benefits: ['80% faster video production', '60% cost reduction', 'Professional quality output'],
+      link: '/ai-video-generation',
+      popular: true
+    },
+    {
+      title: 'AI Voice Cloning',
+      description: 'Create realistic voice clones for content creation, audiobooks, and presentations',
+      icon: '🎤',
+      price: '$299/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Emotion control', 'Multi-language support'],
+      benefits: ['95% voice accuracy', 'Unlimited voice generation', 'Professional voice quality'],
+      link: '/ai-voice-cloning',
+      popular: false
+    },
+    {
+      title: 'AI 3D Generation',
+      description: 'Generate stunning 3D models, animations, and visualizations with AI technology',
+      icon: '🎨',
+      price: '$399/month',
+      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'Rendering optimization'],
+      benefits: ['90% faster 3D creation', 'Professional quality', 'Unlimited generations'],
+      link: '/ai-3d-generation',
+      popular: false
+    },
+    {
+      title: 'AI Music Composer',
+      description: 'Create original music, soundtracks, and audio content with AI-powered composition',
+      icon: '🎵',
+      price: '$179/month',
+      features: ['Original music generation', 'Genre selection', 'Instrument arrangement', 'Royalty-free output'],
+      benefits: ['Unlimited music creation', 'Professional quality', 'Custom compositions'],
+      link: '/ai-music-composition',
+      popular: false
+    },
+    {
+      title: 'AI Fashion Designer',
+      description: 'Design clothing, accessories, and fashion items with AI-powered creative tools',
+      icon: '👗',
+      price: '$249/month',
+      features: ['Fashion design', 'Pattern generation', 'Color matching', 'Trend analysis'],
+      benefits: ['Unlimited designs', 'Trend forecasting', 'Professional output'],
+      link: '/ai-fashion-design',
+      popular: false
+    },
+    {
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness training, nutrition planning, and health monitoring with AI',
+      icon: '💪',
+      price: '$129/month',
+      features: ['Personalized workouts', 'Nutrition planning', 'Progress tracking', 'Health monitoring'],
+      benefits: ['Custom fitness plans', 'Real-time coaching', 'Health insights'],
+      link: '/ai-fitness-coach',
+      popular: false
+    },
+    {
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent workflow management',
+      icon: '⚡',
+      price: '$199/month',
+      features: ['Process automation', 'Workflow design', 'Integration management', 'Performance monitoring'],
+      benefits: ['70% process efficiency', '90% error reduction', 'Unlimited automations'],
+      link: '/ai-workflow-automation',
+      popular: true
+    },
+    {
+      title: 'AI Data Visualization',
+      description: 'Create stunning data visualizations and interactive dashboards with AI assistance',
+      icon: '📊',
+      price: '$159/month',
+      features: ['Auto-chart generation', 'Interactive dashboards', 'Data storytelling', 'Export options'],
+      benefits: ['90% faster visualization', 'Professional charts', 'Unlimited visualizations'],
+      link: '/ai-data-visualization',
+      popular: false
+    },
+    {
+      title: 'AI Sales Automation',
+      description: 'Automate sales processes, lead scoring, and customer relationship management',
+      icon: '💰',
+      price: '$229/month',
+      features: ['Lead scoring', 'Sales forecasting', 'CRM automation', 'Pipeline management'],
+      benefits: ['50% more sales', '80% time saved', 'Better lead quality'],
+      link: '/ai-sales-automation',
+      popular: true
+    },
+    {
+      title: 'AI Document Processor',
+      description: 'Intelligent document analysis, data extraction, and automated processing',
+      icon: '📄',
+      price: '$119/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Workflow automation'],
+      benefits: ['95% accuracy', '80% time saved', 'Unlimited processing'],
+      link: '/ai-document-processor',
+      popular: false
+    },
+    {
+      title: 'AI SEO Optimizer',
+      description: 'AI-powered SEO analysis, keyword research, and content optimization',
+      icon: '🔍',
+      price: '$89/month',
+      features: ['Keyword research', 'Content optimization', 'Technical SEO', 'Competitor analysis'],
+      benefits: ['300% SEO improvement', 'Higher rankings', 'More organic traffic'],
+      link: '/ai-seo-optimizer',
+      popular: false
+    },
+    {
+      title: 'AI Inventory Manager',
+      description: 'Intelligent inventory management with demand forecasting and optimization',
+      icon: '📦',
+      price: '$169/month',
+      features: ['Demand forecasting', 'Stock optimization', 'Reorder automation', 'Analytics dashboard'],
+      benefits: ['40% inventory reduction', '99% stock accuracy', 'Cost optimization'],
+      link: '/ai-inventory-manager',
+      popular: false
+    },
+    {
+      title: 'AI HR Assistant',
+      description: 'Automate HR processes, candidate screening, and employee management',
+      icon: '👥',
+      price: '$189/month',
+      features: ['Resume screening', 'Interview scheduling', 'Employee analytics', 'Performance tracking'],
+      benefits: ['70% faster hiring', 'Better candidate matching', 'HR efficiency'],
+      link: '/ai-hr-assistant',
+      popular: false
+    },
+    {
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial planning, investment advice, and budget optimization',
+      icon: '💳',
+      price: '$299/month',
+      features: ['Financial planning', 'Investment analysis', 'Budget optimization', 'Risk assessment'],
+      benefits: ['Better financial decisions', 'Portfolio optimization', 'Risk management'],
+      link: '/ai-financial-advisor',
       popular: false
     }
   ];
@@ -155,6 +295,54 @@ const HomePage: React.FC = () => {
       price: '$1,400/month',
       features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'],
       color: 'text-cyan-400'
+    },
+    {
+      title: 'Deep Learning Solutions',
+      description: 'Advanced neural networks for complex pattern recognition and prediction',
+      icon: Brain,
+      price: '$2,200/month',
+      features: ['Neural Network Design', 'Deep Learning Models', 'Pattern Recognition', 'Advanced Analytics'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'AI Chatbots & Conversational AI',
+      description: 'Intelligent conversational agents for customer service and support',
+      icon: MessageSquare,
+      price: '$1,600/month',
+      features: ['Natural Conversations', 'Multi-language Support', 'Context Understanding', 'Human Handoff'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis for business intelligence',
+      icon: BarChart,
+      price: '$1,800/month',
+      features: ['Demand Forecasting', 'Risk Assessment', 'Trend Analysis', 'Business Intelligence'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'AI Content Generation',
+      description: 'Automated content creation for marketing, documentation, and communication',
+      icon: FileText,
+      price: '$1,300/month',
+      features: ['Content Writing', 'Documentation', 'Marketing Copy', 'Technical Writing'],
+      color: 'text-teal-400'
+    },
+    {
+      title: 'AI Data Mining',
+      description: 'Extract valuable insights from large datasets using advanced AI techniques',
+      icon: Database,
+      price: '$1,700/month',
+      features: ['Data Extraction', 'Pattern Discovery', 'Insight Generation', 'Data Visualization'],
+      color: 'text-red-400'
+    },
+    {
+      title: 'AI Recommendation Systems',
+      description: 'Personalized recommendation engines for e-commerce and content platforms',
+      icon: Target,
+      price: '$1,900/month',
+      features: ['Personalization', 'Product Recommendations', 'Content Curation', 'User Behavior Analysis'],
+      color: 'text-yellow-400'
     }
   ];
 
@@ -190,6 +378,54 @@ const HomePage: React.FC = () => {
       price: '$899/month',
       features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening'],
       color: 'text-purple-400'
+    },
+    {
+      title: 'IT Infrastructure Management',
+      description: 'Complete IT infrastructure design, implementation, and management',
+      icon: Cpu,
+      price: '$1,499/month',
+      features: ['Server Management', 'Network Design', 'Hardware Optimization', 'Performance Monitoring'],
+      color: 'text-cyan-400'
+    },
+    {
+      title: 'Software Development',
+      description: 'Custom software development and application modernization',
+      icon: Code,
+      price: '$1,799/month',
+      features: ['Custom Applications', 'API Development', 'Legacy Modernization', 'Mobile Apps'],
+      color: 'text-orange-400'
+    },
+    {
+      title: 'Data Center Solutions',
+      description: 'Enterprise data center design, implementation, and management',
+      icon: Building,
+      price: '$2,199/month',
+      features: ['Data Center Design', 'Power Management', 'Cooling Systems', 'Disaster Recovery'],
+      color: 'text-indigo-400'
+    },
+    {
+      title: 'Network Security',
+      description: 'Comprehensive network security solutions and monitoring',
+      icon: Lock,
+      price: '$1,399/month',
+      features: ['Firewall Management', 'VPN Setup', 'Network Monitoring', 'Intrusion Detection'],
+      color: 'text-pink-400'
+    },
+    {
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting and technology roadmapping',
+      icon: Target,
+      price: '$1,099/month',
+      features: ['Technology Assessment', 'Strategic Planning', 'Vendor Management', 'Digital Transformation'],
+      color: 'text-teal-400'
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud platforms with minimal downtime',
+      icon: Cloud,
+      price: '$1,699/month',
+      features: ['Migration Planning', 'Data Transfer', 'Application Migration', 'Post-Migration Support'],
+      color: 'text-yellow-400'
     }
   ];
 
