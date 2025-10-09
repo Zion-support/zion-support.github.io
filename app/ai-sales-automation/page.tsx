@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+=======
+>>>>>>> origin/main
 import React from 'react';
-import { CheckCircle, Star, TrendingUp, Users, Target, BarChart3 } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Target, BarChart3, Zap } from 'lucide-react';
+
 const AISalesAutomationPage: React.FC = () => {
   const features = [
     {
@@ -27,6 +34,7 @@ const AISalesAutomationPage: React.FC = () => {
       benefits: ['Process optimization', 'Performance insights', 'Best practice recommendations', 'ROI tracking']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -82,6 +90,7 @@ const AISalesAutomationPage: React.FC = () => {
       popular: false
     }
   ];
+
   const testimonials = [
     {
       name: 'Robert Johnson',
@@ -105,12 +114,14 @@ const AISalesAutomationPage: React.FC = () => {
       rating: 5
     }
   ];
+
   const stats = [
     { number: '60%', label: 'Increase in Close Rate' },
     { number: '3x', label: 'Higher Response Rates' },
     { number: '40%', label: 'Time Saved on Follow-ups' },
     { number: '95%', label: 'Lead Scoring Accuracy' }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -129,6 +140,7 @@ const AISalesAutomationPage: React.FC = () => {
               predicts outcomes, and automates follow-ups. Increase close rates by 60% 
               while saving 40% of your time on manual tasks.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="tel:+13024640950"
@@ -144,6 +156,7 @@ const AISalesAutomationPage: React.FC = () => {
                 Get Free Demo
               </a>
             </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -156,6 +169,7 @@ const AISalesAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -167,6 +181,7 @@ const AISalesAutomationPage: React.FC = () => {
               Everything you need to automate and optimize your sales process
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -192,6 +207,7 @@ const AISalesAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* How It Works Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -203,6 +219,7 @@ const AISalesAutomationPage: React.FC = () => {
               Transform your sales process in just 3 simple steps
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -234,6 +251,7 @@ const AISalesAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -245,6 +263,7 @@ const AISalesAutomationPage: React.FC = () => {
               Choose the plan that fits your sales team size and volume. All plans include our core AI features.
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -287,6 +306,7 @@ const AISalesAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -298,6 +318,7 @@ const AISalesAutomationPage: React.FC = () => {
               Join thousands of sales teams who have transformed their performance with AI
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -316,6 +337,7 @@ const AISalesAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -349,4 +371,12 @@ const AISalesAutomationPage: React.FC = () => {
     </div>
   );
 };
+
+<<<<<<< HEAD
 export default AISalesAutomationPage;
+=======
+import React from "react"; export default function Page() { return <div>Page</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+export default AISalesAutomationPage;
+>>>>>>> origin/main

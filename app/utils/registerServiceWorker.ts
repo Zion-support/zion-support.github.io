@@ -36,7 +36,7 @@ export async function registerServiceWorker(
       }
     });
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
-      scope: '/',
+      scope: '/'
     });
     // Handle updates
     registration.addEventListener('updatefound', () => {
@@ -60,7 +60,6 @@ export async function registerServiceWorker(
     });
     return registration;
   } catch (error) {
-    console.error('[SW] Registration failed:', error);
     if (config.onError && error instanceof Error) {
       config.onError(error);
     }
@@ -78,7 +77,6 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     const result = await registration.unregister();
     return result;
   } catch (error) {
-    console.error('[SW] Unregistration failed:', error);
     return false;
   }
 }
@@ -93,8 +91,7 @@ export async function checkForUpdates(): Promise<void> {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
     } catch (error) {
-    console.error('[SW] Update check failed:', error);
-  }
+    }
 }
 /**
  * Skip waiting and activate new service worker
@@ -126,7 +123,7 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: false,
       registered: false,
-      active: false,
+      active: false
     };
   }
   try {
@@ -134,13 +131,13 @@ export async function getServiceWorkerStatus(): Promise<{
     return {
       supported: true,
       registered: !!registration,
-      active: !!registration?.active,
+      active: !!registration?.active
     };
   } catch {
     return {
       supported: true,
       registered: false,
-      active: false,
+      active: false
     };
   }
 }

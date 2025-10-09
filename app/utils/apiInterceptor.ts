@@ -15,8 +15,7 @@ class ErrorHandler {
     return ErrorHandler.instance;
   }
   handleNetworkError(error: Error, url: string, config?: unknown): void {
-    console.error('Network error:', { error: error.message, url, config });
-  }
+    }
 }
 export interface APIConfig {
   baseURL: string;
@@ -69,7 +68,7 @@ export class APIInterceptor {
       enableCaching: config.enableCaching ?? true,
       cacheTimeout: config.cacheTimeout || 300000, // 5 minutes
       headers: config.headers || {},
-      interceptors: config.interceptors || {},
+      interceptors: config.interceptors || {}
     };
     this.errorHandler = ErrorHandler.getInstance();
   }
@@ -126,7 +125,7 @@ export class APIInterceptor {
         method: finalConfig.method,
         headers: this.buildHeaders(finalConfig),
         body: finalConfig.body ? JSON.stringify(finalConfig.body) : undefined,
-        signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout),
+        signal: this.createAbortSignal(finalConfig.timeout || this.config.timeout)
       };
       const response = await fetch(url, fetchOptions);
       const duration = performance.now() - startTime;
@@ -148,7 +147,7 @@ export class APIInterceptor {
         status: finalResponse.status,
         statusText: finalResponse.statusText,
         headers: finalResponse.headers,
-        config: finalConfig,
+        config: finalConfig
       };
     } catch (error) {
       const duration = performance.now() - startTime;
@@ -226,11 +225,11 @@ export class APIInterceptor {
       ...config,
       headers: {
         ...this.config.headers,
-        ...config.headers,
+        ...config.headers
       },
       timeout: config.timeout || this.config.timeout,
       retryAttempts: config.retryAttempts ?? this.config.retryAttempts,
-      cache: config.cache ?? this.config.enableCaching,
+      cache: config.cache ?? this.config.enableCaching
     };
   }
   /**
@@ -307,7 +306,7 @@ export class APIInterceptor {
     this.cache.set(key, {
       data: response,
       timestamp: Date.now(),
-      expiresAt: Date.now() + this.config.cacheTimeout,
+      expiresAt: Date.now() + this.config.cacheTimeout
     });
   }
   /**
@@ -339,7 +338,7 @@ export class APIInterceptor {
       total: entries.length,
       valid,
       expired,
-      size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0),
+      size: entries.reduce((sum, e) => sum + JSON.stringify(e.data).length, 0)
     };
   }
   /**

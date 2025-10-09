@@ -7,7 +7,7 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4,
+  FATAL = 4
 }
 export interface LogContext {
   component?: string;
@@ -112,7 +112,7 @@ class Logger {
       level,
       message,
       context,
-      ...metadata,
+      ...metadata
     };
     // Format the log entry
     const formattedMessage = this.formatLogEntry(logEntry);
@@ -155,17 +155,13 @@ class Logger {
     const styles = this.getConsoleStyles(level);
     switch (level) {
       case LogLevel.DEBUG:
-        console.debug(`%c${message}`, styles, entry);
         break;
       case LogLevel.INFO:
-        console.info(`%c${message}`, styles, entry);
         break;
       case LogLevel.WARN:
-        console.warn(`%c${message}`, styles, entry);
         break;
       case LogLevel.ERROR:
       case LogLevel.FATAL:
-        console.error(`%c${message}`, styles, entry);
         break;
     }
   }
@@ -200,8 +196,7 @@ class Logger {
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(entry)
     // }).catch(err => {
-    //   console.error('Failed to send log to service:', err);
-    // });
+    //   // });
   }
   /**
    * Get string representation of log level

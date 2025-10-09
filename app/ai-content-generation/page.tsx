@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+=======
+>>>>>>> origin/main
 import React from 'react';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
+
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {
@@ -95,6 +101,7 @@ const AIContentGenerationPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+
   const features = [
     {
       icon: <Zap className="w-6 h-6" />,
@@ -121,6 +128,7 @@ const AIContentGenerationPage: React.FC = () => {
       benefits: ['Global reach', 'Cultural adaptation', 'Language accuracy', 'Local market optimization']
     }
   ];
+
   const processSteps = [
     {
       step: 1,
@@ -147,6 +155,7 @@ const AIContentGenerationPage: React.FC = () => {
       icon: <BarChart className="w-6 h-6" />
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
         {/* Hero Section */}
@@ -175,6 +184,7 @@ const AIContentGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -186,6 +196,7 @@ const AIContentGenerationPage: React.FC = () => {
                 Choose from our comprehensive suite of AI-powered content generation services
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {contentServices.map((service, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
@@ -196,12 +207,14 @@ const AIContentGenerationPage: React.FC = () => {
                       <p className="text-gray-600">{service.description}</p>
                     </div>
                   </div>
+
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-3xl font-bold text-blue-600">{service.price}</span>
                       <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                     </div>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Features:</h4>
                     <ul className="space-y-2">
@@ -213,6 +226,7 @@ const AIContentGenerationPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-2">
@@ -224,6 +238,7 @@ const AIContentGenerationPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -234,6 +249,7 @@ const AIContentGenerationPage: React.FC = () => {
                       ))}
                     </div>
                   </div>
+
                   <div className="border-t pt-4">
                     <p className="text-sm text-gray-600">{service.contactInfo}</p>
                   </div>
@@ -242,6 +258,7 @@ const AIContentGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -253,6 +270,7 @@ const AIContentGenerationPage: React.FC = () => {
                 Our advanced AI technology delivers superior content generation capabilities
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -271,6 +289,7 @@ const AIContentGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* Process Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -282,6 +301,7 @@ const AIContentGenerationPage: React.FC = () => {
                 Our streamlined process makes AI content generation simple and efficient
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center">
@@ -298,6 +318,7 @@ const AIContentGenerationPage: React.FC = () => {
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -320,4 +341,12 @@ const AIContentGenerationPage: React.FC = () => {
       </div>
   );
 };
+<<<<<<< HEAD
 export default AIContentGenerationPage;
+=======
+import React from "react"; export default function Page() { return <div>Page</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+
+export default AIContentGenerationPage;
+>>>>>>> origin/main

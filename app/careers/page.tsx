@@ -1,8 +1,11 @@
+<<<<<<< HEAD
+import React from "react"; export default function Page() { return <div>Careers</div>; }
+=======
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Link from 'next/link';
-import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+import { Users, MapPin, Clock, CheckCircle } from 'lucide-react';
+
 const CareersPage: React.FC = () => {
   const positions = [
     {
@@ -30,6 +33,7 @@ const CareersPage: React.FC = () => {
       description: 'Protect and secure our clients digital assets'
     }
   ];
+
   const benefits = [
     'Competitive Salary',
     'Health Insurance',
@@ -38,9 +42,11 @@ const CareersPage: React.FC = () => {
     'Flexible Hours',
     'Stock Options'
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
+      
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Join Our Team</h1>
@@ -49,6 +55,7 @@ const CareersPage: React.FC = () => {
             innovative AI and IT solutions that transform businesses worldwide.
           </p>
         </section>
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -71,6 +78,7 @@ const CareersPage: React.FC = () => {
             ))}
           </div>
         </section>
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us?</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -85,8 +93,11 @@ const CareersPage: React.FC = () => {
           </div>
         </section>
       </main>
+      
       <Footer />
     </div>
   );
 };
+
 export default CareersPage;
+>>>>>>> origin/main

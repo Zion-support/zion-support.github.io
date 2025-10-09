@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+'use client';
+=======
+>>>>>>> origin/main
 import React from 'react';
-import { CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
+
 const AIDataVisualizationPage: React.FC = () => {
   const features = [
     {
@@ -27,6 +34,7 @@ const AIDataVisualizationPage: React.FC = () => {
       benefits: ['Story templates', 'Auto-narration', 'Export options', 'Presentation mode']
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -82,6 +90,7 @@ const AIDataVisualizationPage: React.FC = () => {
       popular: false
     }
   ];
+
   const testimonials = [
     {
       name: 'Alex Thompson',
@@ -105,12 +114,14 @@ const AIDataVisualizationPage: React.FC = () => {
       rating: 5
     }
   ];
+
   const stats = [
     { number: '85%', label: 'Faster Insights' },
     { number: '60%', label: 'Time Saved' },
     { number: '95%', label: 'Accuracy Rate' },
     { number: '24/7', label: 'Real-time Updates' }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -128,6 +139,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Create interactive dashboards, generate AI-powered insights, and tell compelling data stories. 
               Turn complex data into actionable insights that drive business growth.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="tel:+13024640950"
@@ -143,6 +155,7 @@ const AIDataVisualizationPage: React.FC = () => {
                 Get Free Demo
               </a>
             </div>
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -155,6 +168,7 @@ const AIDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -166,6 +180,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Everything you need to visualize and analyze your data with AI
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {features.map((feature, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -191,6 +206,7 @@ const AIDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Chart Types Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -202,6 +218,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Choose from 50+ chart types and visualizations to tell your data story
             </p>
           </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center cyber-card">
               <div className="text-4xl mb-4">📊</div>
@@ -246,6 +263,7 @@ const AIDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -257,6 +275,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Choose the plan that fits your data visualization needs. All plans include our core AI features.
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -299,6 +318,7 @@ const AIDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
         <div className="container mx-auto px-4">
@@ -310,6 +330,7 @@ const AIDataVisualizationPage: React.FC = () => {
               Join thousands of data professionals who have transformed their analytics with AI
             </p>
           </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="cyber-card hologram-card">
@@ -328,6 +349,7 @@ const AIDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -361,4 +383,12 @@ const AIDataVisualizationPage: React.FC = () => {
     </div>
   );
 };
+
+<<<<<<< HEAD
 export default AIDataVisualizationPage;
+=======
+import React from "react"; export default function Page() { return <div>Page</div>; }
+>>>>>>> cursor/website-audit-and-update-with-deployment-af41
+=======
+export default AIDataVisualizationPage;
+>>>>>>> origin/main

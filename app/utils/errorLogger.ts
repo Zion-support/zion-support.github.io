@@ -7,7 +7,7 @@ export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
-  CRITICAL = 'critical',
+  CRITICAL = 'critical'
 }
 export interface ErrorLogEntry {
   timestamp: string;
@@ -39,7 +39,7 @@ class ErrorLogger {
       context,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack,
+      stackTrace: error?.stack
     };
     // Add to internal log
     this.logs.push(entry);
@@ -63,12 +63,11 @@ class ErrorLogger {
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
       [ErrorSeverity.HIGH]: 'color: #fb923c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold',
+      [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'
     };
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {
-      console.error('Error:', entry.error);
-    }
+      }
     if (entry.context) {
       }
     if (entry.stackTrace) {
@@ -88,7 +87,7 @@ class ErrorLogger {
       await fetch(endpoint, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           ...entry,
@@ -96,15 +95,14 @@ class ErrorLogger {
             ? {
                 message: entry.error.message,
                 name: entry.error.name,
-                stack: entry.error.stack,
+                stack: entry.error.stack
               }
-            : undefined,
-        }),
+            : undefined
+        })
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      console.error('Failed to send error to external service:', error);
-    }
+      }
   }
   /**
    * Get recent logs

@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {try {
         function: 'external_link_check_runner'}
       });
     };
-//   } catch (error) {console.error('❌ external_link_check_runner function failed: ') error
+//   } catch (error) {// console.error('❌ external_link_check_runner function failed: ') error
       }
     return {
       statusCode: 500,
