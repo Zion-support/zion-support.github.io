@@ -1,13 +1,13 @@
-import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react';
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail,  Building,  Handshake,  Award,  Globe,  Users,  Star,  CheckCircle from 'lucide-react'
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
       icon: Building,
@@ -15,7 +15,7 @@ const PartnersPage: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       partners: [
   // TODO: Add items,
-];
+]
         { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '' },
         { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '' },
         { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '' },
@@ -34,7 +34,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
         { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
         { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
-        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' };
+        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
   title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
@@ -47,7 +47,7 @@ const PartnersPage: React.FC = () => {
         { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
         { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
     }
-  ];
+  ]
   const benefits = [
 icon: Globe,
       title: 'Global Reach',
@@ -71,7 +71,7 @@ icon: Globe,
       description: 'Long-term strategic relationships with joint go-to-market initiatives',
       benefits: [
   // TODO: Add items,
-];
+]
 //         'Joint marketing and sales initiatives',
 //         'Co-development of solutions',
 //         'Priority support and resources',
@@ -148,9 +148,8 @@ icon: Globe,
           </div>
           {/* Partner Types */}
           <div className="mb-16">
-            {partnerTypes.map((type, index) => ()
-              
-          <div key={index} className="mb-12">
+            {partnerTypes.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-8">
                   <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
                     <type.icon className={`w-6 h-6 ${type.color}`} />
@@ -158,8 +157,7 @@ icon: Globe,
                     <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>
                     <p className="text-gray-300">{type.description}</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {type.partners.map((partner, partnerIndex) => ()
-                    
+                  {type.partners.map((feature, index) => (
           <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
                       <div className="text-3xl mb-3">{partner.logo}</div>
                       <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>
@@ -179,9 +177,8 @@ icon: Globe,
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => ()
-                
-          <div key={index} className="text-center">
+              {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
@@ -189,17 +186,15 @@ icon: Globe,
 {/* Partnership Tiers */}
               Partnership Tiers
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {partnershipTiers.map((tier, index) => ()
-                
+              {partnershipTiers.map((feature, index) => (
           <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
                   <div className="text-center mb-6">
                     <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
                     <p className="text-gray-300 text-sm">{tier.description}</p>
                   <ul className="space-y-3">
-                    {tier.benefits.map((benefit, benefitIndex) => ()
-                      
-          <li key={benefitIndex} className="flex items-start">
+                    {tier.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300 text-sm">{benefit}</span>
                       </li>
@@ -247,6 +242,6 @@ icon: Globe,
                 Email Us
       <Footer />
     </>
-  );
-};
-export default PartnersPage;
+  )
+}
+export default PartnersPage

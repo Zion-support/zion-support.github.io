@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CompliancePage: React.FC = () => {
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
@@ -12,19 +12,18 @@ const CompliancePage: React.FC = () => {
     { name: 'HIPAA Compliant', status: 'Certified' },
     { name: 'PCI DSS Level 1', status: 'Certified' },
     { name: 'NIST Framework', status: 'Implemented' }
-  ];
+  ]
   const complianceAreas = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Shield,
+    icon: Shield,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures including encryption, access controls, and privacy by design.',
       features: ['Data Encryption', 'Access Controls', 'Privacy by Design', 'Data Minimization', 'Right to Erasure', 'Data Portability']
     },
-      icon: FileText,
+    {
+    icon: FileText,
       title: 'Regulatory Compliance',
       description: 'Full compliance with major regulations including GDPR, CCPA, HIPAA, and industry-specific requirements.',
       features: ['GDPR Compliance', 'CCPA Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Industry Standards', 'Regular Audits']
@@ -111,9 +110,8 @@ const CompliancePage: React.FC = () => {
           </p>
             {/* Certifications Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {certifications.map((cert, index) => ()
-                
-          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500">
+              {certifications.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center justify-between">
                     <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>
                     <div className="flex items-center text-green-600">
@@ -124,17 +122,15 @@ const CompliancePage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">
 Compliance Areas
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {complianceAreas.map((area, index) => ()
-                
-          <div key={index} className="bg-white rounded-lg shadow-md p-8">
+              {complianceAreas.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                       <area.icon className="w-6 h-6 text-blue-600" />
                     <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>
                   <p className="text-gray-600 mb-4">{area.description}</p>
                   <ul className="space-y-2">
-                    {area.features.map((feature, featureIndex) => ()
-                      
+                    {area.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
@@ -156,6 +152,6 @@ Compliance Areas
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
         </main>
         <Footer />
-  );
-};
-export default CompliancePage;
+  )
+}
+export default CompliancePage

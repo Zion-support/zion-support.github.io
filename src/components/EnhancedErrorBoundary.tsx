@@ -1,20 +1,20 @@
 
 interface Props {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
-  enableReporting?: boolean;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  showDetails?: boolean
+  enableReporting?: boolean
 }
 interface State {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: boolean;,
     error: Error | null;,
     errorInfo: ErrorInfo | null;,
-    errorId: string | null;
+    errorId: string | null
 }
 class EnhancedErrorBoundary extends Component
           
@@ -26,20 +26,20 @@ class EnhancedErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   constructor(props: Props) {
-  // TODO: Add content
-}
-    super(props);
+    // TODO: Add content
+  }
+    super(props)
     this.state = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
-    };
+    }
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -51,40 +51,41 @@ class EnhancedErrorBoundary extends Component
           
           
           <State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo,
-    });
+    }
+  )
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-// console.error('Error Boundary caught an error:', error, errorInfo);
+// console.error('Error Boundary caught an error:', error, errorInfo)
     }
     // Report error to monitoring service
     if (this.props.enableReporting !== false) {
-  // TODO: Add content
-}
-      this.reportError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.reportError(error, errorInfo)
     }
     // Call custom error handler
-    this.props.onError?.(error, errorInfo);
+    this.props.onError?.(error, errorInfo)
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
- errorId: this.state.errorId,
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    errorId: this.state.errorId,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -93,98 +94,102 @@ class EnhancedErrorBoundary extends Component
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId(),
-    };
+    }
     // Send to error reporting service
-    this.sendErrorReport(errorReport);
+    this.sendErrorReport(errorReport)
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   description: error.message,
         fatal: false,
         custom_map: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   error_id: this.state.errorId,
         },
-      });
+      }
+  )
     }
-  };
+  }
   private sendErrorReport = (errorReport: any) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // In a real application, you would send this to your error reporting service
     // For now, we'll just log it
     if (!sessionId) {
-  // TODO: Add content
-}
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
+    // TODO: Add content
+  }
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      sessionStorage.setItem('sessionId', sessionId)
     }
-    return sessionId;
-  };
+    return sessionId
+  }
   private handleRetry = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
-    });
-  };
+    }
+  )
+  }
   private handleReload = () => {
-  // TODO: Add content
-}
-    window.location.reload();
-  };
+    // TODO: Add content
+  }
+    window.location.reload()
+  }
   private handleGoHome = () => {
-  // TODO: Add content
-}
-    window.location.href = '/';
-  };
+    // TODO: Add content
+  }
+    window.location.href = '/'
+  }
   private copyErrorDetails = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const errorDetails = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-    };
+    }
 //     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
-  // TODO: Add content
-}
-        alert('Error details copied to clipboard');
-      })
+    // TODO: Add content
+  }
+        alert('Error details copied to clipboard')
+      }
+  )
       .catch(() => {
-  // TODO: Add content
-}
-        alert('Failed to copy error details');
-      });
-  };
+    // TODO: Add content
+  }
+        alert('Failed to copy error details')
+      }
+  )
+  }
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Use custom fallback if provided
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
-      const { retryCount, error, errorId } = this.state;
+      const { retryCount, error, errorId } = this.state
       const canRetry = retryCount 
           
           
@@ -194,7 +199,7 @@ class EnhancedErrorBoundary extends Component
           
           
           
-          < this.maxRetries;
+          < this.maxRetries
       return (
     <div>Coming Soon</div>
   )
@@ -386,9 +391,9 @@ class EnhancedErrorBoundary extends Component
             </div>
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

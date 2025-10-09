@@ -1,16 +1,16 @@
-import React from 'react';
-import {  Code,  Zap,  BarChart,  Target,  Users,  TrendingUp } from 'lucide-react';
+import React from 'react'
+import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const _devTools = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
       icon: Code,
@@ -19,8 +19,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $99/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'API Testing Suite',
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
@@ -29,8 +29,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $149/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'Database Management Tool',
       description: 'Advanced database administration and optimization',
       icon: BarChart,
@@ -39,8 +39,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $199/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
       icon: Target,
@@ -49,8 +49,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $299/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'Code Review Assistant',
       description: 'AI-powered code review and quality assurance',
       icon: Users,
@@ -59,8 +59,8 @@ const DeveloperToolsPage: React.FC = () => {
       price: 'Starting at $79/month'
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'Performance Profiler',
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,
@@ -68,7 +68,7 @@ const DeveloperToolsPage: React.FC = () => {
       benefits: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       price: 'Starting at $179/month'
     }
-  ];
+  ]
   return (
     
           
@@ -85,8 +85,7 @@ const DeveloperToolsPage: React.FC = () => {
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />
-      </Helmet>
+        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         {/* Hero Section */}
@@ -170,13 +169,11 @@ const DeveloperToolsPage: React.FC = () => {
           
           </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {devTools.map((tool, index) => ()
-                
-          <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              {devTools.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <tool.icon className="w-8 h-8 text-white" />
-                    </div>
+                      <tool .icon className="w-8 h-8 text-white" /></div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}</h3>
                     <p className="text-gray-600 text-sm">{tool.description}</p>
                   </div>
@@ -186,8 +183,7 @@ const DeveloperToolsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
-                      {tool.features.map((feature, featureIndex) => ()
-                        
+                      {tool.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                           {feature}
@@ -198,9 +194,8 @@ const DeveloperToolsPage: React.FC = () => {
                   <div className="mb-6">
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                     <ul className="space-y-1">
-                      {tool.benefits.map((benefit, benefitIndex) => ()
-                        
-          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                      {tool.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -290,9 +285,8 @@ const DeveloperToolsPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <Footer />
-      </div>
+        <Footer /></div>
     </>
-  );
-};
-export default DeveloperToolsPage;
+  )
+}
+export default DeveloperToolsPage

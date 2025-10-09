@@ -1,13 +1,13 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 const RequestQuotePage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: '',
     email: '',
     company: '',
@@ -18,12 +18,13 @@ const RequestQuotePage: React.FC = () => {
     budget: '',
     description: '',
     requirements: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  }
+  )
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const _serviceTypes = [
   // TODO: Add items
-];;
+]
 //     'AI Services',
 //     'IT Infrastructure',
 //     'Cybersecurity',
@@ -33,35 +34,35 @@ const RequestQuotePage: React.FC = () => {
 //     'Custom Development',
 //     'Consulting Services',
 //     'Other'
-  ];
+  ]
   const projectSizes = [
   // TODO: Add items
-];;
+]
 //     'Small (1-10 employees)',
 //     'Medium (11-100 employees)',
 //     'Large (101-1000 employees)',
 //     'Enterprise (1000+ employees)'
-  ];
+  ]
   const timelines = [
   // TODO: Add items
-];;
+]
 //     'ASAP',
 //     '1-3 months',
 //     '3-6 months',
 //     '6-12 months',
 //     '12+ months',
 //     'Flexible'
-  ];
+  ]
   const budgetRanges = [
   // TODO: Add items
-];;
+]
 //     'Under $10,000',
 //     '$10,000 - $50,000',
 //     '$50,000 - $100,000',
 //     '$100,000 - $500,000',
 //     '$500,000+',
 //     'To be discussed'
-  ];
+  ]
   const handleInputChange = (e: React.ChangeEvent
           
           
@@ -72,93 +73,77 @@ const RequestQuotePage: React.FC = () => {
           
           
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
-    const { name, value } = e.target;
+    // TODO: Add content
+  }
+    const { name, value } = e.target
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
-    e.preventDefault();
-    setIsSubmitting(true);
+    // TODO: Add content
+  }
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+  }
   const benefits = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Calculator,
+    icon: Calculator,
       title: 'Free Quote',
       description: 'Get a detailed, no-obligation quote within 24 hours'
     },
     {
-  // TODO: Add content
-};
-  icon: Clock,
+    icon: Clock,
       title: 'Quick Response',
       description: 'We respond to all quote requests within 4 hours'
     },
     {
-  // TODO: Add content
-};
-  icon: CheckCircle,
+    icon: CheckCircle,
       title: 'Transparent Pricing',
       description: 'Clear, detailed pricing with no hidden fees'
     },
     {
-  // TODO: Add content
-};
-  icon: Star,
+    icon: Star,
       title: 'Expert Consultation',
       description: 'Free consultation with our technology experts'
     }
-  ];
+  ]
   const whyChooseUs = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Users,
+    icon: Users,
       title: '50+ Successful Projects',
       description: 'Proven track record of delivering results'
     },
     {
-  // TODO: Add content
-};
-  icon: Award,
+    icon: Award,
       title: '300% Average ROI',
       description: 'Our clients see significant returns on investment'
     },
     {
-  // TODO: Add content
-};
-  icon: Clock,
+    icon: Clock,
       title: '24/7 Support',
       description: 'Round-the-clock support for all our clients'
     },
     {
-  // TODO: Add content
-};
-  icon: Star,
+    icon: Star,
       title: '99.9% Uptime',
       description: 'Reliable, high-performance solutions'
     }
-  ];
+  ]
   if (isSubmitted) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           
@@ -177,8 +162,7 @@ const RequestQuotePage: React.FC = () => {
           <div className="container mx-auto px-4 py-16 pt-24">
             <div className="max-w-2xl mx-auto text-center">
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-green-400" />
-              </div>
+                <CheckCircle className="w-10 h-10 text-green-400" /></div>
               <h1 className="text-4xl font-bold text-white mb-6 neon-text">
 // Quote Request Submitted!
               
@@ -278,7 +262,7 @@ const RequestQuotePage: React.FC = () => {
         </div>
         <Footer />
       </>
-    );
+    )
   }
   return (
     <div>Coming Soon</div>
@@ -337,25 +321,14 @@ const RequestQuotePage: React.FC = () => {
           
           
           </label>
-                      <input;
-type="text"
+                      <input type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-// required;
+// required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
-//                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                       /></div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Email Address *
@@ -369,25 +342,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                      <input;
-type="email"
+                      <input type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-// required;
+// required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
-//                       />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                       /></div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -403,24 +365,13 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                      <input;
-type="text"
+                      <input type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your company name"
-// />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+// /></div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Phone Number
@@ -434,24 +385,13 @@ type="text"
           
           
           </label>
-                      <input;
-type="tel"
+                      <input type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your phone number"
-// />
-                    
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+// /></div>
                   </div>
                   {/* Project Information */}
                   <div>
@@ -471,7 +411,7 @@ type="tel"
                       name="serviceType"
                       value={formData.serviceType}
                       onChange={handleInputChange}
-// required;
+// required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 //                     >
                       
@@ -484,8 +424,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => ()
-                        
+                      {serviceTypes.map((feature, index) => (
           <option key={index} value={type}>{type}</option>
                       ))}
                     </select>
@@ -520,8 +459,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => ()
-                          
+                        {projectSizes.map((feature, index) => (
           <option key={index} value={size}>{size}</option>
                         ))}
                       </select>
@@ -555,8 +493,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => ()
-                          
+                        {timelines.map((feature, index) => (
           <option key={index} value={timeline}>{timeline}</option>
                         ))}
                       </select>
@@ -591,8 +528,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => ()
-                        
+                      {budgetRanges.map((feature, index) => (
           <option key={index} value={range}>{range}</option>
                       ))}
                     </select>
@@ -610,25 +546,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                    <textarea
-                      name="description"
+                    <textarea name="description"
                       value={formData.description}
                       onChange={handleInputChange}
 // required
                       rows={4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
-//                     />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
+//                     /></div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
 // Specific Requirements
@@ -642,25 +567,14 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           
           
           </label>
-                    <textarea
-                      name="requirements"
+                    <textarea name="requirements"
                       value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Any specific technical requirements, integrations, or constraints..."
-// />
-                  
-          
-          
-          
-          
-          
-          
-          
-          
-          </div>
-                  <button;
+// /></div>
+                  <button
 type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -710,12 +624,10 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
                 <div className="space-y-4">
-                  {benefits.map((benefit, index) => ()
-                    
-          <div key={index} className="flex items-start">
+                  {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <benefit.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
+                        <benefit .icon className="w-4 h-4 text-cyan-400" /></div>
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
                         <p className="text-xs text-gray-300">{benefit.description}</p>
@@ -728,12 +640,10 @@ type="submit"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
                 <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => ()
-                    
-          <div key={index} className="flex items-start">
+                  {whyChooseUs.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <item.icon className="w-4 h-4 text-purple-400" />
-                      </div>
+                        <item .icon className="w-4 h-4 text-purple-400" /></div>
                       <div>
                         <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
                         <p className="text-xs text-gray-300">{item.description}</p>
@@ -814,6 +724,6 @@ type="submit"
       </div>
       <Footer />
     </>
-  );
-};
-export default RequestQuotePage;
+  )
+}
+export default RequestQuotePage

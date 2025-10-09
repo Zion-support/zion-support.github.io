@@ -1,26 +1,26 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 const UltimateBusinessIntelligence2025Banner = () => {
 import { Link } from 'react-router-dom';
 const _UltimateBusinessIntelligence2025Banner = () => {
-  // TODO: Add content
-}
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+    // TODO: Add content
+  }
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [isVisible, setIsVisible] = useState(true)
   const content = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   id: 'ultimate-business-intelligence-revolution',
       title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
-      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
       metrics: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   efficiency: '300%',
         accuracy: '99.7%',
         timeline: '6 months',
@@ -35,7 +35,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {
       id: 'enterprise-automation-2025',
       title: 'Enterprise Automation Suite 2025',
       description: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
-      url: '/services/automation',;
+      url: '/services/automation',
       type: 'Service',
                   {tag}
             {/* CTA Buttons */}
@@ -60,19 +60,10 @@ const _UltimateBusinessIntelligence2025Banner = () => {
             { value: '30,000%', label: 'Average ROI' },
             { value: '99.9%', label: 'Success Rate' },
             { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => ()
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          <div key={index} className="text-center">
+          ].map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
-  );
-export default UltimateBusinessIntelligence2025Banner;
+  )
+export default UltimateBusinessIntelligence2025Banner

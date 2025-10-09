@@ -1,14 +1,14 @@
-'use client';
+'use client'
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
 interface Props {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
   resetKeys?: Array
           
           
@@ -18,15 +18,15 @@ interface Props {
           
           
           
-          <string | number>;
+          <string | number>
 }
 interface State {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: boolean;,
     error: Error | null;,
     errorInfo: ErrorInfo | null;,
-    errorCount: number;
+    errorCount: number
 }
 class ImprovedErrorBoundary extends Component
           
@@ -38,20 +38,20 @@ class ImprovedErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   constructor(props: Props) {
-  // TODO: Add content
-}
-    super(props);
+    // TODO: Add content
+  }
+    super(props)
     this.state = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null,
       errorCount: 0
-    };
+    }
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -63,51 +63,52 @@ class ImprovedErrorBoundary extends Component
           
           
           <State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: true,
 //       error
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Log error to console for debugging
     console.error('Error caught by ImprovedErrorBoundary:', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   message: error.message,
       stack: error.stack,
       component: errorInfo.componentStack ?? undefined,
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    });
+    }
+  )
     // Call custom error handler if provided
     if (this.props.onError) {
-  // TODO: Add content
-}
-      this.props.onError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.props.onError(error, errorInfo)
     }
     // Update state with error details
     this.setState((prevState) => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       errorInfo,
       errorCount: prevState.errorCount + 1
-    }));
+    }))
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     }
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record
           
           
@@ -118,66 +119,68 @@ class ImprovedErrorBoundary extends Component
           
           
           <string, unknown>) => void } }).Sentry.captureException(error, {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         contexts: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           react: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   componentStack: errorInfo.componentStack
           }
         }
-      });
+      }
+  )
     }
   }
   componentDidUpdate(prevProps: Props): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
-      );
+      )
       if (resetKeysChanged && this.state.hasError) {
-  // TODO: Add content
-}
-        this.resetErrorBoundary();
+    // TODO: Add content
+  }
+        this.resetErrorBoundary()
       }
     }
   }
   resetErrorBoundary = (): void => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null
-    });
-  };
+    }
+  )
+  }
   handleReload = (): void => {
-  // TODO: Add content
-}
-    window.location.reload();
-  };
+    // TODO: Add content
+  }
+    window.location.reload()
+  }
   handleGoHome = (): void => {
-  // TODO: Add content
-}
-    window.location.href = '/';
-  };
+    // TODO: Add content
+  }
+    window.location.href = '/'
+  }
   render(): ReactNode {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Use custom fallback if provided
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
       // Default error UI
       return (
@@ -281,17 +284,17 @@ class ImprovedErrorBoundary extends Component
             )}
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 const styles = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   container: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   minHeight: '100vh',
     display: 'flex',
     alignItems: 'center',
@@ -301,8 +304,8 @@ const styles = {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },
   content: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   maxWidth: '600px',
     width: '100%',
     backgroundColor: 'white',
@@ -312,30 +315,30 @@ const styles = {
     textAlign: 'center' as const
   },
   icon: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   fontSize: '48px',
     marginBottom: '20px'
   },
   title: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   fontSize: '24px',
     fontWeight: 'bold',
     color: '#333',
     marginBottom: '16px'
   },
   message: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   fontSize: '16px',
     color: '#666',
     marginBottom: '32px',
     lineHeight: '1.6'
   },
   details: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   textAlign: 'left' as const,
     marginBottom: '24px',
     backgroundColor: '#f9f9f9',
@@ -344,27 +347,27 @@ const styles = {
     border: '1px solid #e0e0e0'
   },
   summary: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   cursor: 'pointer',
     fontWeight: 'bold',
     marginBottom: '12px',
     userSelect: 'none' as const
   },
   errorDetails: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   fontSize: '14px'
   },
   errorMessage: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   marginBottom: '12px',
     color: '#d32f2f'
   },
   stack: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   backgroundColor: '#f5f5f5',
     padding: '12px',
     borderRadius: '4px',
@@ -375,16 +378,16 @@ const styles = {
     wordBreak: 'break-all' as const
   },
   actions: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   display: 'flex',
     gap: '12px',
     justifyContent: 'center',
     flexWrap: 'wrap' as const
   },
   button: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   padding: '12px 24px',
     fontSize: '16px',
     fontWeight: '500',
@@ -396,15 +399,15 @@ const styles = {
     transition: 'background-color 0.2s'
   },
   secondaryButton: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   backgroundColor: '#6c757d'
   },
   errorCount: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   marginTop: '24px',
     fontSize: '14px',
     color: '#999'
   }
-};
+}

@@ -1,24 +1,24 @@
 
 interface SEOProps {
-  // TODO: Add content
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterSite?: string;
-  structuredData?: unknown;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+    // TODO: Add content
+  }
+  title?: string
+  description?: string
+  keywords?: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  twitterSite?: string
+  structuredData?: unknown
+  noindex?: boolean
+  nofollow?: boolean
+  lang?: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 const EnhancedSEO: React.FC
           
@@ -30,8 +30,8 @@ const EnhancedSEO: React.FC
           
           
           <SEOProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
@@ -50,8 +50,8 @@ const EnhancedSEO: React.FC
 //   section,
   tags = [],
 }) => {
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+  const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords
   return (
     
           
@@ -77,8 +77,7 @@ const EnhancedSEO: React.FC
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => ()
-        
+      {tags.length > 0 && tags.map((feature, index) => (
           <meta key={index} property="article:tag" content={tag} />
       ))}
       {/* Structured Data */}
@@ -145,16 +144,7 @@ const EnhancedSEO: React.FC
           
           
           
-          <link rel="dns-prefetch" href="// www.googletagmanager.com" />
-          
-          
-          
-          
-          
-          
-          
-          
-          </Helmet>
-  );
-};
-export default EnhancedSEO;
+          <link rel="dns-prefetch" href="// www.googletagmanager.com" /></Helmet>
+  )
+}
+export default EnhancedSEO

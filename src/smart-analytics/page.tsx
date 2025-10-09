@@ -1,17 +1,16 @@
-import React from 'react';
-import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users,  BarChart,  Brain,  Zap,  Shield from 'lucide-react';
+import React from 'react'
+import { BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users, Shield from 'lucide-react'
 import { Link } from 'react-router-dom';
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: BarChart,
+      icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.',
       benefit: 'Make decisions 10x faster'
     },
-      icon: Brain,
+    {
+    icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent recommendations and predictions based on your data patterns and industry benchmarks.',
       benefit: 'Discover hidden opportunities',
@@ -26,7 +25,7 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
       benefit: '100% data protection'
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Professional',
       price: '$799',
@@ -61,16 +60,15 @@ const SmartAnalyticsPage: React.FC = () => {
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-400">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                 </ul>
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
                       : 'bg-gray-600 text-white hover:bg-gray-700'
@@ -108,6 +106,6 @@ const SmartAnalyticsPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 <MapPin className="w-5 h-5 mr-2 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-  );
-};
-export default SmartAnalyticsPage;
+  )
+}
+export default SmartAnalyticsPage

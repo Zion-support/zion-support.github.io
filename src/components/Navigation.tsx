@@ -1,30 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import {Menu, X, Phone, MapPin, Home} from 'lucide-react';
+import { Menu, X, Phone, MapPin, Home } from 'lucide-react';
 const Navigation: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  )
+}
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const _handleScroll = () => {
-  // TODO: Add content
-}
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    // TODO: Add content
+  }
+      setIsScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   const closeAllMenus = () => {
-  // TODO: Add content
-}
-    setIsOpen(false);
-    setServicesOpen(false);
+    // TODO: Add content
+  }
+    setIsOpen(false)
+    setServicesOpen(false)
   return (
     
           
@@ -38,8 +38,8 @@ const Navigation: React.FC = () => {
   )
     
           <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       isScrolled
 //         ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-400/20'
         : 'bg-transparent'
@@ -139,5 +139,5 @@ const Navigation: React.FC = () => {
           
           <MapPin className="w-5 h-5" /><span>364 E Main St STE 1008<br />Middletown, DE 19709</span></a></div></div></div>
       </div></nav>
-  );
-export default Navigation;
+  )
+export default Navigation

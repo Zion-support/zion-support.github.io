@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award from 'lucide-react'
 const ITTrainingPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: GraduationCap,
+      icon: GraduationCap,
       title: 'Certification Programs',
       description: 'Industry-recognized IT certification training programs',
-      benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications'];
+      benefits: ['Microsoft certifications', 'AWS certifications', 'Cisco certifications']
     },
-      icon: BookOpen,
+    {
+    icon: BookOpen,
       title: 'Custom Training',
       description: 'Tailored training programs for your specific needs',
       benefits: ['Custom curriculum', 'On-site training', 'Online learning']
@@ -21,7 +20,7 @@ const ITTrainingPage: React.FC = () => {
       description: 'Learn from industry experts and certified professionals',
       benefits: ['Real-world experience', 'Industry insights', 'Mentorship']
     }
-  ];
+  ]
   return (
     
           
@@ -110,8 +109,7 @@ const ITTrainingPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
-              
+            {features.map((feature, index) => (
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -121,8 +119,7 @@ const ITTrainingPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-                    
+                  {feature.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -131,6 +128,6 @@ const ITTrainingPage: React.FC = () => {
                 </ul>
       </main>
       <Footer />
-  );
-};
-export default ITTrainingPage;
+  )
+}
+export default ITTrainingPage

@@ -1,7 +1,7 @@
 // Metadata removed for Vite compatibility
 export default function AI2026AprilRevolutionaryBreakthrough() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           
@@ -38,5 +38,5 @@ export default function AI2026AprilRevolutionaryBreakthrough() {
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-  );
-};
+  )
+}

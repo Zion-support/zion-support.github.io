@@ -1,7 +1,7 @@
 
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, Star} from 'lucide-react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, Star } from 'lucide-react';
 const ProductivityPage: React.FC = () => {
       return (
     <div>
@@ -62,8 +62,7 @@ const ProductivityPage: React.FC = () => {
                       <div>Save up to 50% vs market rates</div>
                       <h5 className="font-semibold text-white mb-2 text-sm">Key Features:</h5>
                       <ul className="space-y-1">
-                        {tool.features.slice(0, 3).map((feature, featureIndex) => ()
-                          
+                        {tool.features.slice(0, 3).map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-xs text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {feature}
@@ -74,8 +73,7 @@ const ProductivityPage: React.FC = () => {
                         )}
                       </ul>
                       <h5 className="font-semibold text-white mb-2 text-sm">Benefits:</h5>
-                        {tool.benefits.map((benefit, benefitIndex) => ()
-                          
+                        {tool.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                             <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" />
                             {benefit}
@@ -90,7 +88,6 @@ className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 round
               href="tel:+13024640950"
             >Call (302) 464-0950</a>
       </main>
-      <Footer />
-</div>);
+      <Footer /></div>)
 }
 export default ProductivityPage

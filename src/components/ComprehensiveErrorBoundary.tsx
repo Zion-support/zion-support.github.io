@@ -1,24 +1,24 @@
-'use client';
-import ModernLoadingSpinner from './ModernLoadingSpinner';
+'use client'
+import ModernLoadingSpinner from './ModernLoadingSpinner'
 interface Props {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
-  showRetryButton?: boolean;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableErrorReporting?: boolean
+  maxRetries?: number
+  showRetryButton?: boolean
 }
 interface State {
-  // TODO: Add content
-};
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+    // TODO: Add content
+  }
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
   errorId?: string;,
     retryCount: number;,
-    isRetrying: boolean;
+    isRetrying: boolean
 }
 class ComprehensiveErrorBoundary extends Component
           
@@ -30,22 +30,22 @@ class ComprehensiveErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
-  private maxRetries: number;
+    // TODO: Add content
+  }
+  private maxRetries: number
   constructor(props: Props) {
-  // TODO: Add content
-}
-    super(props);
+    // TODO: Add content
+  }
+    super(props)
     this.state = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       retryCount: 0,
       isRetrying: false,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-    this.maxRetries = props.maxRetries || 3;
+    }
+    this.maxRetries = props.maxRetries || 3
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -57,36 +57,37 @@ class ComprehensiveErrorBoundary extends Component
           
           
           <State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0,
       isRetrying: false
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
-    });
+    }
+  )
     if (this.props.onError) {
-  // TODO: Add content
-}
-      this.props.onError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.props.onError(error, errorInfo)
     }
     if (this.props.enableErrorReporting) {
-  // TODO: Add content
-}
-      this.reportError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.reportError(error, errorInfo)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
@@ -99,33 +100,34 @@ class ComprehensiveErrorBoundary extends Component
       userAgent: navigator.userAgent,
       url: window.location.href,
       retryCount: this.state.retryCount
-    };
+    }
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       (window as any).gtag('event', 'exception', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   description: error.message,
         fatal: false,
         custom_map: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   error_id: this.state.errorId,
           retry_count: this.state.retryCount
         }
-      });
+      }
+  )
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       }
-  };
+  }
   private handleRetry = async () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.retryCount 
           
           
@@ -136,41 +138,42 @@ class ComprehensiveErrorBoundary extends Component
           
           
           < this.maxRetries) {
-  // TODO: Add content
-}
-      this.setState({ isRetrying: true });
+    // TODO: Add content
+  }
+      this.setState({ isRetrying: true }
+  )
       // Simulate retry delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000))
       this.setState(prevState => ({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
         error: undefined,
         errorInfo: undefined,
         retryCount: prevState.retryCount + 1,
         isRetrying: false
-      }));
+      }))
     }
-  };
+  }
   private handleReload = () => {
-  // TODO: Add content
-}
-    window.location.reload();
-  };
+    // TODO: Add content
+  }
+    window.location.reload()
+  }
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
       if (this.state.isRetrying) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         return (
     
           
@@ -188,7 +191,7 @@ class ComprehensiveErrorBoundary extends Component
             text="Retrying..."
             fullScreen={true}
 // />
-        );
+        )
       }
       return (
     
@@ -316,8 +319,8 @@ class ComprehensiveErrorBoundary extends Component
             )}
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }

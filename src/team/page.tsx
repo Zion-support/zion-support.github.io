@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 const TeamPage: React.FC = () => {
 import { Linkedin, Mail, Phone, Award, Users, Brain, Code, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
   const _teamMembers = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: 'Kleber Santos',
       role: 'CEO & Founder',
       bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
@@ -36,10 +36,10 @@ import Footer from '../components/Footer';
       email: 'lisa@ziontechgroup.com',
       expertise: ['Client Relations', 'Project Management', 'Customer Success']
     }
-  ];
+  ]
   const stats = [
   // TODO: Add items
-];;
+]
     { number: '50+', label: 'Team Members', icon: Users },
     { number: '15+', label: 'Years Experience', icon: Award },
     { number: '100+', label: 'AI Projects', icon: Brain },
@@ -73,6 +73,6 @@ import Footer from '../components/Footer';
           
           </a>
       </div>
-  );
-};
-export default TeamPage;
+  )
+}
+export default TeamPage

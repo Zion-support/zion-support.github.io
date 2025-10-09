@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
-import {Star, Phone} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Star, Phone } from 'lucide-react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const Docs: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   return (
     <div>Coming Soon</div>
   )
@@ -101,6 +101,6 @@ const Docs: React.FC = () => {
               Contact us today for a free consultation and discover how our solutions can help your business.
       </main>
       <Footer />
-  );
-};
-export default Docs;
+  )
+}
+export default Docs

@@ -1,19 +1,19 @@
-import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users,  BookOpen,  HelpCircle,  MessageSquare,  Video,  Mail,  Users from 'lucide-react';
-'use client';
+import { HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users, Users from 'lucide-react'
+'use client'
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const HelpPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [activeCategory, setActiveCategory] = useState('getting-started');
+  )
+}
+  const [searchTerm, setSearchTerm] = useState('')
+  const [activeCategory, setActiveCategory] = useState('getting-started')
 const categories = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   id: 'getting-started',
       name: 'Getting Started',
       icon: BookOpen,
@@ -32,11 +32,11 @@ const categories = [
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10'
     }
-  ];
+  ]
   const helpArticles = {
-  // TODO: Add content
-}
-    'getting-started': [;
+    // TODO: Add content
+  }
+    'getting-started': [
   title: 'Setting Up Your First Dashboard',
         description: 'Step-by-step instructions for creating and customizing your analytics dashboard',
         readTime: '3 min read',
@@ -96,4 +96,4 @@ const categories = [
                 Email Us
       <Footer />
     </>
-export default HelpPage;
+export default HelpPage

@@ -1,7 +1,7 @@
 // Metadata removed for Vite compatibility
 export default function AutonomousBusinessIntelligenceBreakthrough() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           
@@ -39,5 +39,5 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
                   href="/services" className="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg border-2 border-indigo-600 hover:bg-indigo-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-  );
-};
+  )
+}

@@ -1,12 +1,12 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Cloud ,  Shield,  Server,  BarChart,  Users from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+import { Cloud, Shield, Server, BarChart, Users from 'lucide-react'
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Server, Database, BarChart, Users } from 'lucide-react';
-const ItServicesPage: React.FC = () => {,
- title: 'Advanced Threat Protection',
+const ItServicesPage: React.FC = () => {
+    title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
       icon: Shield,
       features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Security monitoring', 'Compliance reporting', 'Penetration testing'],
@@ -38,7 +38,7 @@ const ItServicesPage: React.FC = () => {,
       benefits: ['Strategic guidance', 'Cost optimization', 'Risk mitigation', 'Technology alignment'],
       technologies: ['IT Strategy', 'Architecture Design', 'Vendor Management', 'Project Management'],
     }
-  ];
+  ]
   return (
     <div>Coming Soon</div>
   )
@@ -46,8 +46,7 @@ const ItServicesPage: React.FC = () => {,
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." />
-      </Helmet>
+        <meta name="description" content="Advanced IT services solutions by Zion Tech Group." /></Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -81,6 +80,6 @@ const ItServicesPage: React.FC = () => {,
 Learn More
           </div>
       <Footer />
-  );
-};
-export default ITServicesPage;
+  )
+}
+export default ITServicesPage

@@ -1,19 +1,19 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award,  ShoppingCart,  Users from 'lucide-react';
-'use client';
+import { ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award, Users from 'lucide-react'
+'use client'
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const MarketplacePage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
+  )
+}
+  const [activeCategory, setActiveCategory] = useState('products')
+  const [searchTerm, setSearchTerm] = useState('')
 const categories = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   id: 'products',
       name: 'Products',
       icon: ShoppingCart,
@@ -94,4 +94,4 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer />
-export default MarketplacePage;
+export default MarketplacePage

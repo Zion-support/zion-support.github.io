@@ -1,2 +1,2 @@
 
-export default ContentShowcase;
+export default ContentShowcase

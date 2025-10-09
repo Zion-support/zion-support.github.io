@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {Database, Shield, BarChart, Settings, CheckCircle, Star,  Database,  Shield,  Settings from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Database, Shield, BarChart, Settings, CheckCircle, Star,  Database,  Shield,  Settings from 'lucide-react'
 const DatabaseManagementPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Database,
+      icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
-      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening'];
+      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
     },
-      icon: Shield,
+    {
+    icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for your data assets',
       benefits: ['Encryption', 'Access control', 'Audit logging']
@@ -21,7 +20,7 @@ const DatabaseManagementPage: React.FC = () => {
       description: 'Automated database maintenance and updates',
       benefits: ['Automated backups', 'Patch management', 'Health checks']
     }
-  ];
+  ]
   return (
     
           
@@ -101,8 +100,7 @@ const DatabaseManagementPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
-              
+            {features.map((feature, index) => (
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -112,8 +110,7 @@ const DatabaseManagementPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-                    
+                  {feature.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -122,6 +119,6 @@ const DatabaseManagementPage: React.FC = () => {
                 </ul>
       </main>
       <Footer />
-  );
-};
-export default DatabaseManagementPage;
+  )
+}
+export default DatabaseManagementPage

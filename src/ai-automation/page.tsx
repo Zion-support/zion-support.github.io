@@ -1,49 +1,41 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
-import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {Shield,  Settings,  Zap,  Shield,  Clock,  Users,  TrendingUp,  Star from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIAutomationPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
-      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation'];
+      benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
     },
     {
-  // TODO: Add content
-};
-  icon: Zap,
+    icon: Zap,
       title: 'Workflow Optimization',
       description: 'AI-powered workflow analysis and optimization for maximum productivity',
       benefits: ['60% time savings', 'Smart routing', 'Dynamic optimization']
     },
     {
-  // TODO: Add content
-};
-  icon: Shield,
+    icon: Shield,
       title: 'Decision Trees',
       description: 'Advanced decision-making algorithms for complex business scenarios',
       benefits: ['Consistent decisions', 'Risk mitigation', 'Compliance assurance']
     },
     {
-  // TODO: Add content
-};
-  icon: Clock,
+    icon: Clock,
       title: 'Exception Handling',
       description: 'Intelligent handling of exceptions and edge cases in automated processes',
       benefits: ['Smart escalation', 'Context awareness', 'Learning capabilities']
     }
-  ];
+  ]
   const pricingPlans = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: 'Starter',
       price: '$1,400',
       period: '/month',
@@ -60,8 +52,8 @@ const features = [
       popular: false
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: 'Professional',
       price: '$2,800',
       period: '/month',
@@ -79,8 +71,8 @@ const features = [
       popular: true
     },
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: 'Enterprise',
       price: '$5,600',
       period: '/month',
@@ -98,15 +90,19 @@ const features = [
 //       ],
       popular: false
     }
-  ];
+  ]
   const stats = [
   // TODO: Add items
-];;
-    { icon: Users, value: '200+', label: 'Automated Processes' },
-    { icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
-    { icon: Clock, value: '60%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'Client Rating' }
-  ];
+]
+    {
+    icon: Users, value: '200+', label: 'Automated Processes' },
+    {
+    icon: TrendingUp, value: '80%', label: 'Efficiency Increase' },
+    {
+    icon: Clock, value: '60%', label: 'Time Saved' },
+    {
+    icon: Star, value: '4.9/5', label: 'Client Rating' }
+  ]
   return (
     
           
@@ -122,8 +118,7 @@ const features = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Automation Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." />
-      </Helmet>
+        <meta name="description" content="Transform your business with our advanced AI automation solutions. Process automation, workflow optimization, and intelligent decision-making." /></Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -143,9 +138,8 @@ const features = [
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => ()
-            
-          <div key={index} className="text-center">
+          {stats.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
@@ -153,16 +147,14 @@ const features = [
           ))}
         </div>
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
-            
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+          {features.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => ()
-                  
-          <li key={benefitIndex} className="flex items-center text-gray-300">
+                {feature.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
                   </li>
@@ -174,8 +166,7 @@ const features = [
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => ()
-              
+            {pricingPlans.map((feature, index) => (
           <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && ()
                   
@@ -198,8 +189,7 @@ const features = [
                 </div>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {feature}
@@ -264,8 +254,7 @@ const features = [
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
-  );
-};
-export default AIAutomationPage;
+      <Footer /></div>
+  )
+}
+export default AIAutomationPage

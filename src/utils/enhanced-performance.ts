@@ -1,15 +1,15 @@
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
+import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer'
 import type {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
  */
  * Performance Observer Wrapper
 export class PerformanceMonitor {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   private metrics: Map
           
           
@@ -19,47 +19,52 @@ export class PerformanceMonitor {
           
           
           
-          <string, number[]> = new Map();
-  private observers: PerformanceObserver[] = [];
+          <string, number[]> = new Map()
+  private observers: PerformanceObserver[] = []
   constructor() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-  // TODO: Add content
-}
-      this.initializeObservers();
+    // TODO: Add content
+  }
+      this.initializeObservers()
     }
    * Initialize performance observers
   private initializeObservers(): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
         for (const entry of list.getEntries()) {
-  // TODO: Add content
-}
-          this.recordMetric('navigation', entry.duration);
-      });
-      navObserver.observe({ entryTypes: ['navigation'] });
-      this.observers.push(navObserver);
-          this.recordMetric('resource', entry.duration);
-      resourceObserver.observe({ entryTypes: ['resource'] });
-      this.observers.push(resourceObserver);
-          this.recordMetric(entry.name, entry.startTime);
-      paintObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(paintObserver);
-          const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          this.recordMetric('fid', fid);
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
+    // TODO: Add content
+  }
+          this.recordMetric('navigation', entry.duration)
+      }
+  )
+      navObserver.observe({ entryTypes: ['navigation'] }
+  )
+      this.observers.push(navObserver)
+          this.recordMetric('resource', entry.duration)
+      resourceObserver.observe({ entryTypes: ['resource'] }
+  )
+      this.observers.push(resourceObserver)
+          this.recordMetric(entry.name, entry.startTime)
+      paintObserver.observe({ entryTypes: ['paint'] }
+  )
+      this.observers.push(paintObserver)
+          const fidEntry = entry as PerformanceEventTiming
+          const fid = fidEntry.processingStart - fidEntry.startTime
+          this.recordMetric('fid', fid)
+      fidObserver.observe({ entryTypes: ['first-input'] }
+  )
+      this.observers.push(fidObserver)
 // Types
 //   PerformanceReport,
 //   ResourceStats,
 //   MemoryStats,
 //   PerformanceWithMemory,
 //   LayoutShift
-} from '../types/app.types';
+} from '../types/app.types'
 // Utility Functions
  * Throttle function
 export function throttle
@@ -74,17 +79,18 @@ export function throttle
           <T extends (...args: unknown[]) => any>(
  * Request idle callback wrapper
 export function runWhenIdle(callback: () => void, timeout = 1000): void {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   if (typeof window === 'undefined') {
-    return;
+    return
   if ('requestIdleCallback' in window) {
-  // TODO: Add content
-}
-    window.requestIdleCallback(callback, { timeout });
+    // TODO: Add content
+  }
+    window.requestIdleCallback(callback, { timeout }
+  )
   } else {
-  // TODO: Add content
-}
-    setTimeout(callback, 0);
+    // TODO: Add content
+  }
+    setTimeout(callback, 0)
 * Default performance monitor instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor()

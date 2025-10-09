@@ -1,13 +1,13 @@
-'use client';
-export type ToastType = 'success' | 'error' | 'warning' | 'info';
+'use client'
+export type ToastType = 'success' | 'error' | 'warning' | 'info'
 export interface ToastProps {
-  // TODO: Add content
-};
-  message: string;
-  type?: ToastType;
-  duration?: number;
+    // TODO: Add content
+  }
+  message: string
+  type?: ToastType
+  duration?: number
   onClose?: () => void;,
-    show: boolean;
+    show: boolean
 }
 const Toast: React.FC
           
@@ -19,67 +19,67 @@ const Toast: React.FC
           
           
           <ToastProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   message,
   type = 'success',
   duration = 3000,
 //   onClose,
 //   show
 }) => {
-  // TODO: Add content
-}
-  const [isVisible, setIsVisible] = useState(show);
+    // TODO: Add content
+  }
+  const [isVisible, setIsVisible] = useState(show)
   useEffect(() => {
-  // TODO: Add content
-}
-    setIsVisible(show);
+    // TODO: Add content
+  }
+    setIsVisible(show)
     if (show && duration > 0) {
-setIsVisible(false);
+setIsVisible(false)
         if (onClose) {
         }
-      }, duration);
-      return () => clearTimeout(timer);
+      }, duration)
+      return () => clearTimeout(timer)
     }
-    return undefined;
-  }, [show, duration, onClose]);
-  if (!isVisible) return null;
+    return undefined
+  }, [show, duration, onClose])
+  if (!isVisible) return null
   const getToastStyles = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (type) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case 'success':
-        return 'bg-green-600 text-white';
+        return 'bg-green-600 text-white'
       case 'error':
-        return 'bg-red-600 text-white';
+        return 'bg-red-600 text-white'
       case 'warning':
-        return 'bg-yellow-500 text-white';
+        return 'bg-yellow-500 text-white'
       case 'info':
-        return 'bg-blue-600 text-white';
+        return 'bg-blue-600 text-white'
       default:
-        return 'bg-gray-800 text-white';
+        return 'bg-gray-800 text-white'
     }
-  };
+  }
   const getIcon = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     switch (type) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       case 'success':
-        return '';
+        return ''
       case 'error':
-        return '';
+        return ''
       case 'warning':
-        return '';
+        return ''
       case 'info':
-        return '';
+        return ''
       default:
-        return '';
+        return ''
     }
-  };
+  }
   return (
     
           
@@ -92,7 +92,7 @@ setIsVisible(false);
           <div>Coming Soon</div>
   )
     
-          <div;
+          <div
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert"
       aria-live="polite"
@@ -110,10 +110,10 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
       <span>{message}</span>
       <button
         onClick={() => {
-  // TODO: Add content
-}
-          setIsVisible(false);
-          if (onClose) onClose();
+    // TODO: Add content
+  }
+          setIsVisible(false)
+          if (onClose) onClose()
         }}
         className="ml-4 hover:opacity-80 transition-opacity"
         aria-label="Close notification"
@@ -130,6 +130,6 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           </button>
     </div>
-  );
-};
-export default Toast;
+  )
+}
+export default Toast

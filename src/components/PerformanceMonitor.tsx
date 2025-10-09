@@ -1,10 +1,10 @@
 
 interface PerformanceMetrics {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   cls: number | null;,
     fcp: number | null;,
     lcp: number | null;,
-    ttfb: number | null;
+    ttfb: number | null
 }
-export default PerformanceMonitor;
+export default PerformanceMonitor

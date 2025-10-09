@@ -1,6 +1,6 @@
 export default function Page() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -50,7 +50,7 @@ export default function Page() {
       <section className='py-16'>
         <div>
           <h2>Release Safety Model</h2>
-<p>Operational safety hinges on three primitives: hard;
+<p>Operational safety hinges on three primitives: hard
             budgets, lightweight approvals and KPI-linked canaries that trigger
             automatic rollback when thresholds are breached.
           </p>
@@ -111,8 +111,7 @@ export default function Page() {
           
           
           
-          <RefreshCw />
-            </Link>
+          <RefreshCw /></Link>
           </div>
         </div>
       </section>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import { Star } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility;
+// Metadata removed for Vite compatibility
 export default function AI2026EnterpriseBreakthrough() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           
@@ -44,5 +44,5 @@ export default function AI2026EnterpriseBreakthrough() {
             </p><button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
               Get Started Today
             </button></div></div></div></div>
-  );
-};
+  )
+}

@@ -1,8 +1,8 @@
-'use client';
+'use client'
 import { Link } from 'react-router-dom';
 export default function AIAutonomousBusinessSystems2026() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           
@@ -63,20 +63,20 @@ export default function AIAutonomousBusinessSystems2026() {
               <li>• <strong>Zero human errors</strong> in automated processes</li>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
               <pre className="text-sm text-gray-800 overflow-x-auto">{`Autonomous Business System Stack:
-├── AI/ML Platform;
-│   ├── TensorFlow & PyTorch;
-│   ├── Reinforcement Learning;
-│   └── Neural Architecture Search;
-├── Process Automation;
-│   ├── Workflow Orchestration;
-│   ├── Business Process Management;
-│   └── Event-Driven Architecture;
-├── Monitoring & Control;
-│   ├── Real-time Analytics;
-│   ├── Predictive Maintenance;
-│   └── Autonomous Healing;
-└── Infrastructure;
-    ├── Edge Computing;
+├── AI/ML Platform
+│   ├── TensorFlow & PyTorch
+│   ├── Reinforcement Learning
+│   └── Neural Architecture Search
+├── Process Automation
+│   ├── Workflow Orchestration
+│   ├── Business Process Management
+│   └── Event-Driven Architecture
+├── Monitoring & Control
+│   ├── Real-time Analytics
+│   ├── Predictive Maintenance
+│   └── Autonomous Healing
+└── Infrastructure
+    ├── Edge Computing
     ├── Cloud-native Architecture
     └── High Availability Systems`}
               </pre>

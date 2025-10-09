@@ -1,12 +1,11 @@
-import React from 'react';
-import { Brain, Shield, Target, Users ,  Brain,  Shield,  Target,  Users from 'lucide-react';
+import React from 'react'
+import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const AboutPage: React.FC = () => {
   const team = [
-    {,
- name: 'Kleber Santos',
+    {
+      name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
       bio: 'Visionary leader with 15+ years in AI and technology innovation.',
@@ -23,15 +22,13 @@ const AboutPage: React.FC = () => {
       image: '/images/team/michael.jpg',
       bio: 'AI researcher and developer with expertise in deep learning and NLP.',
     }
-  ];
-
+  ]
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
     { number: '5+', label: 'Years Experience' },
     { number: '99%', label: 'Client Satisfaction' }
-  ];
-
+  ]
   const values = [
     {
       icon: Brain,
@@ -39,22 +36,21 @@ const AboutPage: React.FC = () => {
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
     },
     {
-      icon: Shield,
+    icon: Shield,
       title: 'Security',
       description: 'Your data and systems are protected with enterprise-grade security measures.',
     },
     {
-      icon: Target,
+    icon: Target,
       title: 'Results',
       description: 'We focus on delivering measurable business outcomes and ROI.',
     },
     {
-      icon: Users,
+    icon: Users,
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.',
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -70,7 +66,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
@@ -131,10 +127,9 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
+                    <value .icon className="w-8 h-8 text-white" /></div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {value.title}
                   </h3>
@@ -160,11 +155,10 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                      <Users className="w-16 h-16 text-gray-600" />
-                    </div>
+                      <Users className="w-16 h-16 text-gray-600" /></div>
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -209,9 +203,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default AboutPage;
+      <Footer /></div>
+  )
+}
+export default AboutPage

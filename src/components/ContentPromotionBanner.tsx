@@ -1,1 +1,1 @@
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

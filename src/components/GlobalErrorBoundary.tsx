@@ -1,16 +1,16 @@
-'use client';
+'use client'
 interface Props {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
 }
 interface State {
-  // TODO: Add content
-};
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+    // TODO: Add content
+  }
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 class GlobalErrorBoundary extends Component
           
@@ -22,51 +22,54 @@ class GlobalErrorBoundary extends Component
           
           
           <Props, State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   constructor(props: Props) {
-  // TODO: Add content
-}
-    super(props);
-    this.state = { hasError: false };
+    // TODO: Add content
+  }
+    super(props)
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {
-  // TODO: Add content
-}
-    return { hasError: true, error };
+    // TODO: Add content
+  }
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
-    });
+    }
+  )
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       }
     // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // Example: errorReportingService.captureException(error, { extra: errorInfo }
+  )
   }
   handleRetry = () => {
-  // TODO: Add content
-}
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
+    // TODO: Add content
+  }
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined }
+  )
+  }
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
       return (
     
@@ -85,8 +88,7 @@ class GlobalErrorBoundary extends Component
             {/* Error Icon */}
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
               <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" /></svg>
             </div>
             {/* Error Message */}
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -207,10 +209,10 @@ class GlobalErrorBoundary extends Component
             </div>
           </div>
         </div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
-export { GlobalErrorBoundary };
-export default GlobalErrorBoundary;
+export { GlobalErrorBoundary }
+export default GlobalErrorBoundary

@@ -1,6 +1,6 @@
-'use client';
+'use client'
 // Performance optimization utilities
-// Debounce utility for performance;
+// Debounce utility for performance
 export const _debounce = 
           
           
@@ -15,9 +15,9 @@ export const _debounce =
   wait: number,
 ): ((...args: Parameters
           <T>) => void) => {
-  // TODO: Add content
-}
-  let timeout: NodeJS.Timeout;
+    // TODO: Add content
+  }
+  let timeout: NodeJS.Timeout
   return (...args: Parameters
           
           
@@ -28,13 +28,13 @@ export const _debounce =
           
           
           <T>) => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func(...args), wait)
+  }
 }
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-// Throttle utility for performance;
+// Throttle utility for performance
 export const throttle = 
           
           
@@ -49,9 +49,9 @@ export const throttle =
   limit: number,
 ): ((...args: Parameters
           <T>) => void) => {
-  // TODO: Add content
-}
-  let inThrottle: boolean;
+    // TODO: Add content
+  }
+  let inThrottle: boolean
   return (...args: Parameters
           
           
@@ -62,110 +62,112 @@ export const throttle =
           
           
           <T>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (!inThrottle) {
-  // TODO: Add content
-}
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
+    // TODO: Add content
+  }
+      func(...args)
+      inThrottle = true
+      setTimeout(() => (inThrottle = false), limit)
     }
-  };
-};
-// Intersection Observer hook for lazy loading;
+  }
+}
+// Intersection Observer hook for lazy loading
 export const useIntersectionObserver = ()
   callback: (entries: IntersectionObserverEntry[]) => void,
   _options: IntersectionObserverInit = {}
 ) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const observer = useMemo()
     () =>
       typeof window !== 'undefined'
         ? new IntersectionObserver(callback, {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   threshold: 0.1,
             rootMargin: '50px',
 //             ...options
-          })
+          }
+  )
         : null,
 //     [callback, options]
-  );
+  )
   const observe = useCallback()
     (element: Element | null) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (observer && element) {
-  // TODO: Add content
-}
-        observer.observe(element);
-        return () => observer.unobserve(element);
+    // TODO: Add content
+  }
+        observer.observe(element)
+        return () => observer.unobserve(element)
       }
-      return () => {};
+      return () => {}
     },
 //     [observer]
-  );
+  )
   const disconnect = useCallback(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (observer) {
-  // TODO: Add content
-}
-      observer.disconnect();
+    // TODO: Add content
+  }
+      observer.disconnect()
     }
-  }, [observer]);
+  }, [observer])
   useEffect(() => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+    return () => disconnect()
+  }, [disconnect])
+  return { observe, disconnect }
 }
-    return () => disconnect();
-  }, [disconnect]);
-  return { observe, disconnect };
-};
-// Image lazy loading hook;
+// Image lazy loading hook
 export const useLazyImage = (src: string, placeholder?: string) => {
-  // TODO: Add content
-}
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
+    // TODO: Add content
+  }
+  const [imageSrc, setImageSrc] = useState(placeholder || '')
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isError, setIsError] = useState(false)
   const { observe } = useIntersectionObserver()
 //     useCallback()
       (entries) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.isIntersecting && !isLoaded && !isError) {
-  // TODO: Add content
-}
-            const img = new Image();
+    // TODO: Add content
+  }
+            const img = new Image()
             img.onload = () => {
-  // TODO: Add content
-}
-              setImageSrc(src);
-              setIsLoaded(true);
-            };
+    // TODO: Add content
+  }
+              setImageSrc(src)
+              setIsLoaded(true)
+            }
             img.onerror = () => {
-  // TODO: Add content
-}
-              setIsError(true);
-            };
-            img.src = src;
+    // TODO: Add content
+  }
+              setIsError(true)
+            }
+            img.src = src
           }
-        });
+        }
+  )
       },
 //       [src, isLoaded, isError]
 //     )
-  );
-  return { imageSrc, isLoaded, isError, observe };
-};
-// Performance monitoring hook;
-export const usePerformanceMonitoring = () => {
-  // TODO: Add content
+  )
+  return { imageSrc, isLoaded, isError, observe }
 }
+// Performance monitoring hook
+export const usePerformanceMonitoring = () => {
+    // TODO: Add content
+  }
   const [metrics, setMetrics] = useState
           
           
@@ -176,66 +178,69 @@ export const usePerformanceMonitoring = () => {
           
           
           <{
-  // TODO: Add content
-}
-    fcp?: number;
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    ttfb?: number;
-  }>({});
+    // TODO: Add content
+  }
+    fcp?: number
+    lcp?: number
+    fid?: number
+    cls?: number
+    ttfb?: number
+  }>({}
+  )
   useEffect(() => {
-  // TODO: Add content
-}
-    if (typeof window === 'undefined') return;
+    // TODO: Add content
+  }
+    if (typeof window === 'undefined') return
     const updateMetrics = () => {
-  // TODO: Add content
-}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
+    // TODO: Add content
+  }
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const paint = performance.getEntriesByType('paint')
+      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
       setMetrics({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         fcp,
 //         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart
-      });
-    };
+      }
+  )
+    }
     // Monitor performance after page load
     if (document.readyState === 'complete') {
     } else {
-  // TODO: Add content
-}
-      window.addEventListener('load', updateMetrics);
+    // TODO: Add content
+  }
+      window.addEventListener('load', updateMetrics)
     }
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-  // TODO: Add content
-}
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
-      });
+    // TODO: Add content
+  }
+        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
+        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
+        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
+        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
+        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+      }
+  )
     }
     return () => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+      window.removeEventListener('load', updateMetrics)
+    }
+  }, [])
+  return metrics
 }
-      window.removeEventListener('load', updateMetrics);
-    };
-  }, []);
-  return metrics;
-};
-// Memory usage monitoring;
+// Memory usage monitoring
 export const useMemoryMonitoring = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [memoryInfo, setMemoryInfo] = useState
           
           
@@ -246,66 +251,68 @@ export const useMemoryMonitoring = () => {
           
           
           <{
-  // TODO: Add content
-}
-    usedJSHeapSize?: number;
-    totalJSHeapSize?: number;
-    jsHeapSizeLimit?: number;
-  }>({});
+    // TODO: Add content
+  }
+    usedJSHeapSize?: number
+    totalJSHeapSize?: number
+    jsHeapSizeLimit?: number
+  }>({}
+  )
   useEffect(() => {
-  // TODO: Add content
-}
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
+    // TODO: Add content
+  }
+    if (typeof window === 'undefined' || !('memory' in performance)) return
     const updateMemoryInfo = () => {
-  // TODO: Add content
-}
-      const memory = (performance as any).memory;
+    // TODO: Add content
+  }
+      const memory = (performance as any).memory
       if (memory) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         setMemoryInfo({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
           jsHeapSizeLimit: memory.jsHeapSizeLimit
-        });
+        }
+  )
       }
-    };
-    const interval = setInterval(updateMemoryInfo, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  return memoryInfo;
-};
-// Resource preloading utility;
+    }
+    const interval = setInterval(updateMemoryInfo, 5000)
+    return () => clearInterval(interval)
+  }, [])
+  return memoryInfo
+}
+// Resource preloading utility
 export const preloadResource = (href: string, as: string) => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+  if (typeof window === 'undefined') return
+  const link = document.createElement('link')
+  link.rel = 'preload'
+  link.href = href
+  link.as = as
+  document.head.appendChild(link)
 }
-  if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-};
-// Critical resource preloading;
+// Critical resource preloading
 export const preloadCriticalResources = () => {
-  // TODO: Add content
-}
-  if (typeof window === 'undefined') return;
+    // TODO: Add content
+  }
+  if (typeof window === 'undefined') return
   // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
+  preloadResource('/fonts/inter-var.woff2', 'font')
+  preloadResource('/fonts/inter-var.woff', 'font')
   // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
+  preloadResource('/images/hero-bg.webp', 'image')
+  preloadResource('/images/logo.svg', 'image')
   // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style');
-};
-// Bundle size monitoring;
-export const useBundleSizeMonitoring = () => {
-  // TODO: Add content
+  preloadResource('/styles/critical.css', 'style')
 }
+// Bundle size monitoring
+export const useBundleSizeMonitoring = () => {
+    // TODO: Add content
+  }
   const [bundleSize, setBundleSize] = useState
           
           
@@ -316,70 +323,73 @@ export const useBundleSizeMonitoring = () => {
           
           
           <{
-  // TODO: Add content
-}
-    totalSize?: number;
-    jsSize?: number;
-    cssSize?: number;
-    imageSize?: number;
-  }>({});
+    // TODO: Add content
+  }
+    totalSize?: number
+    jsSize?: number
+    cssSize?: number
+    imageSize?: number
+  }>({}
+  )
   useEffect(() => {
-  // TODO: Add content
-}
-    if (typeof window === 'undefined') return;
+    // TODO: Add content
+  }
+    if (typeof window === 'undefined') return
     const calculateBundleSize = () => {
-  // TODO: Add content
-}
-      const resources = performance.getEntriesByType('resource');
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
+    // TODO: Add content
+  }
+      const resources = performance.getEntriesByType('resource')
+      let jsSize = 0
+      let cssSize = 0
+      let imageSize = 0
       resources.forEach((resource) => {
-  // TODO: Add content
-}
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
-        totalSize += size;
+    // TODO: Add content
+  }
+        const size = (resource as PerformanceResourceTiming).transferSize || 0
+        totalSize += size
         if (resource.name.includes('.js')) {
-  // TODO: Add content
-}
-          jsSize += size;
+    // TODO: Add content
+  }
+          jsSize += size
         } else if (resource.name.includes('.css')) {
-  // TODO: Add content
-}
-          cssSize += size;
+    // TODO: Add content
+  }
+          cssSize += size
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-  // TODO: Add content
-}
-          imageSize += size;
+    // TODO: Add content
+  }
+          imageSize += size
         }
-      });
+      }
+  )
       setBundleSize({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         totalSize,
 //         jsSize,
 //         cssSize,
 //         imageSize
-      });
-    };
+      }
+  )
+    }
     // Calculate after page load
     if (document.readyState === 'complete') {
     } else {
-  // TODO: Add content
-}
-      window.addEventListener('load', calculateBundleSize);
+    // TODO: Add content
+  }
+      window.addEventListener('load', calculateBundleSize)
     }
     return () => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+      window.removeEventListener('load', calculateBundleSize)
+    }
+  }, [])
+  return bundleSize
 }
-      window.removeEventListener('load', calculateBundleSize);
-    };
-  }, []);
-  return bundleSize;
-};
 export default {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   debounce,
 //   throttle,
 //   useIntersectionObserver,
@@ -389,4 +399,4 @@ export default {
 //   preloadResource,
 //   preloadCriticalResources,
 //   useBundleSizeMonitoring
-};
+}

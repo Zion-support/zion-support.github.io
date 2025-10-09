@@ -1,17 +1,17 @@
 
-'use client';
+'use client'
 /**
  * Offline Page
  * Displayed when the user is offline and tries to access a page
  */
 const OfflinePage: React.FC = () => {
 const handleRetry = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
   const handleGoHome = () => {
-  // TODO: Add content
-}
-    window.location.href = '/';
+    // TODO: Add content
+  }
+    window.location.href = '/'
   return (
     
           
@@ -27,8 +27,7 @@ const handleRetry = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
         <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center">
-          <WifiOff className="w-8 h-8 text-orange-400" />
-        </div>
+          <WifiOff className="w-8 h-8 text-orange-400" /></div>
         <h1 className="text-2xl font-bold text-white mb-4">
 // You're Offline
         
@@ -83,5 +82,5 @@ onClick={handleGoHome}
           <p className="text-xs text-gray-400">
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.
-  );
-export default OfflinePage;
+  )
+export default OfflinePage

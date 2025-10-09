@@ -1,1 +1,1 @@
-export default ContentStatistics;
+export default ContentStatistics

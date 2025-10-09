@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Settings, Target, BarChart, Shield, CheckCircle, Star,  Settings,  Target,  Shield from 'lucide-react'
 const ITInfrastructureDesignPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'Infrastructure Design',
       description: 'Custom IT infrastructure design and architecture',
-      benefits: ['Scalable design', 'High availability', 'Performance optimization'];
+      benefits: ['Scalable design', 'High availability', 'Performance optimization']
     },
-      icon: Target,
+    {
+    icon: Target,
       title: 'Capacity Planning',
       description: 'Strategic capacity planning and resource allocation',
       benefits: ['Growth planning', 'Resource optimization', 'Cost analysis']
@@ -21,7 +20,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
       description: 'Security-first infrastructure design principles',
       benefits: ['Security architecture', 'Compliance design', 'Risk mitigation']
     }
-  ];
+  ]
   return (
     
           
@@ -101,8 +100,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
-              
+            {features.map((feature, index) => (
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -112,8 +110,7 @@ const ITInfrastructureDesignPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-                    
+                  {feature.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -122,6 +119,6 @@ const ITInfrastructureDesignPage: React.FC = () => {
                 </ul>
       </main>
       <Footer />
-  );
-};
-export default ITInfrastructureDesignPage;
+  )
+}
+export default ITInfrastructureDesignPage

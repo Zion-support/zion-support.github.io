@@ -1,58 +1,50 @@
-import React from 'react';
-import {  Cloud,  Shield,  Zap,  BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Cloud, Shield, Zap, BarChart } from 'lucide-react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const CloudServicesPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const _services = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Cloud,
+    icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamless migration of your infrastructure to leading cloud platforms',
       features: ['AWS Migration', 'Azure Migration', 'Google Cloud Migration', 'Zero Downtime']
     },
     {
-  // TODO: Add content
-};
-  icon: Shield,
+    icon: Shield,
       title: 'Cloud Security',
       description: 'Comprehensive security solutions for your cloud infrastructure',
       features: ['Identity Management', 'Data Encryption', 'Compliance', 'Threat Detection']
     },
     {
-  // TODO: Add content
-};
-  icon: Zap,
+    icon: Zap,
       title: 'Auto Scaling',
       description: 'Dynamic resource allocation based on demand',
       features: ['Load Balancing', 'Resource Optimization', 'Cost Management', 'Performance Monitoring']
     },
     {
-  // TODO: Add content
-};
-  icon: BarChart,
+    icon: BarChart,
       title: 'Cloud Analytics',
       description: 'Advanced analytics and monitoring for cloud resources',
       features: ['Real-time Monitoring', 'Cost Analytics', 'Performance Metrics', 'Predictive Insights']
     }
-  ];
+  ]
   const benefits = [
   // TODO: Add items
-];;
+]
 //     '99.9% Uptime Guarantee',
 //     '24/7 Expert Support',
 //     'Cost Optimization',
 //     'Scalable Infrastructure',
 //     'Enhanced Security',
 //     'Global CDN'
-  ];
+  ]
   return (
     
           
@@ -132,15 +124,13 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Cloud Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => ()
-              
-          <div key={index} className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
+            {services.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <service.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => ()
-                    
+                  {service.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
@@ -155,12 +145,10 @@ const CloudServicesPage: React.FC = () => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Our Cloud Services?</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {benefits.map((benefit, index) => ()
-              
-          <div key={index} className="text-center">
+            {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
+                  <CheckCircle className="w-8 h-8 text-white" /></div>
                 <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
@@ -226,8 +214,7 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
-  );
-};
-export default CloudServicesPage;
+      <Footer /></div>
+  )
+}
+export default CloudServicesPage

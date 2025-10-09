@@ -1,4 +1,4 @@
-'use client';
+'use client'
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => ()
   
@@ -15,6 +15,6 @@ const ServiceCardSkeleton: React.FC = memo(() => ()
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-export default ServicesSection;
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+export default ServicesSection

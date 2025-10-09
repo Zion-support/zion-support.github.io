@@ -1,35 +1,34 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone ,  Users,  TrendingUp,  Shield from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const testPagetsx: React.FC = () => {
   const _features = [
-    {,
- icon: Users,
+    {
+      icon: Users,
       title: 'Advanced Features',
       description: 'Cutting-edge solutions powered by artificial intelligence and machine learning',
-      benefits: ['Improved efficiency', 'Better results', 'Cost savings'];
+      benefits: ['Improved efficiency', 'Better results', 'Cost savings']
     },
     {
-      icon: TrendingUp,
+    icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'Optimized performance and scalability for enterprise-grade applications',
       benefits: ['Faster processing', 'Better scalability', 'Enhanced reliability']
     },
     {
-      icon: Shield,
+    icon: Shield,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with full compliance and data protection',
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>testtsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced testtsx solutions powered by AI and cutting-edge technology" />
-      </Helmet>
+        <meta name="description" content="Advanced testtsx solutions powered by AI and cutting-edge technology" /></Helmet>
       <Navigation />
       <main className="pt-20">
         {/* Hero Section */}
@@ -57,7 +56,7 @@ const testPagetsx: React.FC = () => {
             <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {_features.map((feature, index) => (
-                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -85,8 +84,7 @@ const testPagetsx: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
-  );
-};
-export default testPagetsx;
+      <Footer /></div>
+  )
+}
+export default testPagetsx

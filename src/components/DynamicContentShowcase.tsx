@@ -1,1 +1,1 @@
-export default DynamicContentShowcase;
+export default DynamicContentShowcase

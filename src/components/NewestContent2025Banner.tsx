@@ -1,2 +1,2 @@
 
-export default NewestContent2025Banner;
+export default NewestContent2025Banner

@@ -1,30 +1,30 @@
-import React from 'react';
-'use client';
-import React, { useState, useEffect, useMemo } from 'react';
-import Link from 'next/link';
-import ContentPreviewCard from '../components/ContentPreviewCard';
+import React from 'react'
+'use client'
+import React, { useState, useEffect, useMemo } from 'react'
+import Link from 'next/link'
+import ContentPreviewCard from '../components/ContentPreviewCard'
 interface BlogPost {
-  // TODO: Add content
-};
-  id: string;
-    title: string;
-    description: string;
+    // TODO: Add content
+  }
+  id: string
+    title: string
+    description: string
     category: string;,
     readTime: string;,
     date: string;,
     path: string;,
     image: string;,
-    featured: boolean;
+    featured: boolean
   stats?: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   views: number;,
-    engagement: number;
-  };
+    engagement: number
+  }
 }
 export default function BlogPage() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [posts, setPosts] = useState
           
           
@@ -34,15 +34,15 @@ export default function BlogPage() {
           
           
           
-          <BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+          <BlogPost[]>([])
+  const [loading, setLoading] = useState(true)
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const blogPosts: BlogPost[] = useMemo(() => [
   // TODO: Add items,
 ]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   id: 'ai-enterprise-transformation-2025',
       title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
       description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',

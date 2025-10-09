@@ -1,10 +1,10 @@
-import React from 'react';
-import {CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe} from 'lucide-react';
+import React from 'react'
+import { CheckCircle, Star, Wifi, Zap, Shield, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',
       icon: '',
@@ -76,8 +76,8 @@ title: 'IoT Data Management',
       category: 'Data Management',
       technologies: ['Time Series DB', 'Apache Kafka', 'Apache Spark', 'Data Lakes', 'ETL Tools']
     }
-  ];
-  const categories = [...new Set(iotServices.map(service => service.category))];
+  ]
+  const categories = [...new Set(iotServices.map(service => service.category))]
   return (
     
           
@@ -181,9 +181,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {iotServices
                   .filter(service => service.category === category)
-                  .map((service, index) => ()
-                    
-          <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  .map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                       <div className="text-4xl mb-4">{service.icon}</div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
@@ -195,8 +194,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
 Save up to 40% vs market rates
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
                         <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => ()
-                            
+                          {service.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
@@ -205,16 +203,14 @@ Save up to 40% vs market rates
                         </ul>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => ()
-                            
+                          {service.technologies.map((feature, index) => (
           <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
-                          {service.benefits.map((benefit, benefitIndex) => ()
-                            
-          <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          {service.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
                               {benefit}
 <button className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">
@@ -273,6 +269,6 @@ href="mailto:kleber@ziontechgroup.com"
                 ✉️ kleber@ziontechgroup.com
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-  );
-};
-export default IoTEdgePage;
+  )
+}
+export default IoTEdgePage

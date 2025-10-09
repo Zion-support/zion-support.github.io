@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Zap,  BarChart from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Zap,  BarChart from 'lucide-react'
 const DevOpsCICDPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Settings,
+      icon: Settings,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines',
-      benefits: ['Automated testing', 'Continuous deployment', 'Quality gates'];
+      benefits: ['Automated testing', 'Continuous deployment', 'Quality gates']
     },
-      icon: Zap,
+    {
+    icon: Zap,
       title: 'Infrastructure as Code',
       description: 'Manage infrastructure through code and automation',
       benefits: ['Version control', 'Reproducible environments', 'Cost optimization']
@@ -21,7 +20,7 @@ const DevOpsCICDPage: React.FC = () => {
       description: 'Comprehensive monitoring and performance analytics',
       benefits: ['Real-time monitoring', 'Performance metrics', 'Alerting']
     }
-  ];
+  ]
   return (
     
           
@@ -101,8 +100,7 @@ const DevOpsCICDPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
-              
+            {features.map((feature, index) => (
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -112,8 +110,7 @@ const DevOpsCICDPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-                    
+                  {feature.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -122,6 +119,6 @@ const DevOpsCICDPage: React.FC = () => {
                 </ul>
       </main>
       <Footer />
-  );
-};
-export default DevOpsCICDPage;
+  )
+}
+export default DevOpsCICDPage

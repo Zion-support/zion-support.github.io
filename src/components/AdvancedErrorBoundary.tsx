@@ -1,36 +1,36 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 interface ErrorBoundaryState {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: boolean;,
     error: Error | null;,
     errorInfo: ErrorInfo | null;,
-    errorId: string | null;
+    errorId: string | null
 }
 interface ErrorBoundaryProps {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  enableErrorReporting?: boolean
+  enableRetry?: boolean
 }
 interface ErrorReport {
-  // TODO: Add content
-};
-  errorId: string | null;
-    error: Error;
-    errorInfo: ErrorInfo;
-    message: string;
-    stack: string | undefined;
+    // TODO: Add content
+  }
+  errorId: string | null
+    error: Error
+    errorInfo: ErrorInfo
+    message: string
+    stack: string | undefined
     componentStack: string | null | undefined;,
     timestamp: string;,
     userAgent: string;,
     url: string;,
     userId: string | null;,
-    sessionId: string;
+    sessionId: string
 }
 class AdvancedErrorBoundary extends Component
           
@@ -45,22 +45,22 @@ class AdvancedErrorBoundary extends Component
 // ErrorBoundaryProps,
 //   ErrorBoundaryState
 > {
-  // TODO: Add content
-}
-  private retryCount = 0;
-  private maxRetries = 3;
+    // TODO: Add content
+  }
+  private retryCount = 0
+  private maxRetries = 3
   constructor(props: ErrorBoundaryProps) {
-  // TODO: Add content
-}
-    super(props);
+    // TODO: Add content
+  }
+    super(props)
     this.state = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null,
       errorId: null
-    };
+    }
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -72,56 +72,58 @@ class AdvancedErrorBoundary extends Component
           
           
           <ErrorBoundaryState> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
-    });
+    }
+  )
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.error('Error Boundary caught an error', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   context: 'ErrorBoundary',
         error: error.message,
 //         errorInfo
-      });
+      }
+  )
     }
     // Call custom error handler
     if (this.props.onError) {
-  // TODO: Add content
-}
-      this.props.onError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.props.onError(error, errorInfo)
     }
     // Report error to external service
     if (this.props.enableErrorReporting) {
-  // TODO: Add content
-}
-      this.reportError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.reportError(error, errorInfo)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const _errorReport: ErrorReport = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   errorId: this.state.errorId || this.generateErrorId(),
 //       error,
 //       errorInfo,
@@ -133,82 +135,84 @@ class AdvancedErrorBoundary extends Component
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId()
-    };
+    }
     // Send to error reporting service
-    this.sendErrorReport(errorReport);
-  };
+    this.sendErrorReport(errorReport)
+  }
   private getUserId = (): string | null => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Try to get user ID from localStorage or other sources
     try {
-  // TODO: Add content
-}
-      return localStorage.getItem('userId') || null;
+    // TODO: Add content
+  }
+      return localStorage.getItem('userId') || null
     } catch {
-  // TODO: Add content
-}
-      return null;
+    // TODO: Add content
+  }
+      return null
     }
-  };
+  }
   private getSessionId = (): string => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Generate or retrieve session ID
     try {
-  // TODO: Add content
-}
-      let _sessionId = sessionStorage.getItem('sessionId');
+    // TODO: Add content
+  }
+      let _sessionId = sessionStorage.getItem('sessionId')
       if (!sessionId) {
-  // TODO: Add content
-}
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
+    // TODO: Add content
+  }
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+        sessionStorage.setItem('sessionId', sessionId)
       }
-      return sessionId;
+      return sessionId
     } catch {
-  // TODO: Add content
-}
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    // TODO: Add content
+  }
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-  };
+  }
   private generateErrorId = (): string => {
-  // TODO: Add content
-}
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
+    // TODO: Add content
+  }
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  }
   private sendErrorReport = async (errorReport: ErrorReport) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     try {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Send to your error reporting service
       await fetch('/api/errors', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   method: 'POST',
         headers: {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(errorReport)
-      });
+      }
+  )
     } catch (reportError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       logger.error('Failed to send error report', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   context: 'ErrorReporting',
         error: reportError
-      });
+      }
+  )
     }
-  };
+  }
   private handleRetry = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.retryCount 
           
           
@@ -219,40 +223,41 @@ class AdvancedErrorBoundary extends Component
           
           
           < this.maxRetries) {
-  // TODO: Add content
-}
-      this.retryCount++;
+    // TODO: Add content
+  }
+      this.retryCount++
       this.setState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
         error: null,
         errorInfo: null,
         errorId: null
-      });
+      }
+  )
     }
-  };
+  }
   private handleReload = () => {
-  // TODO: Add content
-}
-    window.location.reload();
-  };
+    // TODO: Add content
+  }
+    window.location.reload()
+  }
   private handleGoHome = () => {
-  // TODO: Add content
-}
-    window.location.href = '/';
-  };
+    // TODO: Add content
+  }
+    window.location.href = '/'
+  }
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Custom fallback UI
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
       // Default error UI
       return (
@@ -269,8 +274,7 @@ class AdvancedErrorBoundary extends Component
                     fill='none'
                     viewBox='0 0 24 24'
                     stroke='currentColor'
-                  ><path
-                      strokeLinecap='round'
+                  ><path strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
@@ -334,14 +338,14 @@ onClick={this.handleReload} className='w-full flex justify-center py-2 px-4 bord
                   Go to Homepage
                 </button></div><div className='mt-6 text-center'><p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
-                  at&nbsp;
+                  at&nbsp
                   <a
                     href='mailto:kleber@ziontechgroup.com' className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
                   </a></p></div></div></div></div>
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }

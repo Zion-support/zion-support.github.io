@@ -1,18 +1,18 @@
-import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp,  Leaf,  Target,  Zap,  Cloud,  Recycle,  Code,  Users,  Globe,  TrendingUp,  Factory,  Building from 'lucide-react';
-'use client';
+import { Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp, Cloud, Code, Factory, Building from 'lucide-react'
+'use client'
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const GreenITPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [activeTab, setActiveTab] = useState('solutions');
+  )
+}
+  const [activeTab, setActiveTab] = useState('solutions')
 const tabs = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   id: 'solutions',
       name: 'Green Solutions',
       icon: Leaf,
@@ -30,7 +30,7 @@ const tabs = [
       icon: Zap,
       features: [
   // TODO: Add items,
-];
+]
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -97,7 +97,7 @@ const tabs = [
         'Lower maintenance and replacement costs',
         'Improved resource utilization',
         'Reduced waste management costs'
-      ];
+      ]
       title: 'Environmental Impact',
       description: 'Significantly reduce your organization\'s carbon footprint and environmental impact',
         '60% reduction in carbon emissions',
@@ -220,9 +220,8 @@ const tabs = [
                 <span className="font-medium">Certified Solutions</span>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => ()
-              
-          <div key={index} className="text-center">
+            {stats.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                   <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
@@ -231,14 +230,13 @@ const tabs = [
           {/* Tabs */}
           <div className="mb-12">
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {tabs.map((tab) => ()
-                
+              {tabs.map((feature, index) => (
           <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
                     activeTab === tab.id
                       ? `${tab.bgColor} ${tab.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
@@ -273,9 +271,8 @@ const tabs = [
           
           </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {greenSolutions.map((solution, index) => ()
-                  
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+                {greenSolutions.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className="flex items-start mb-4">
                       <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
                         <solution.icon className={`w-6 h-6 ${solution.color}`} />
@@ -285,8 +282,7 @@ const tabs = [
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
                       <ul className="space-y-1">
-                        {solution.features.map((feature, featureIndex) => ()
-                          
+                        {solution.features.map((feature, index) => (
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
@@ -297,35 +293,30 @@ const tabs = [
                     <div className="flex items-center justify-between">
                       <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
-                      <a
-                        href="/contact"
+                      <a href="/contact"
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
 Learn More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
+                        <ArrowRight className="w-4 h-4 ml-1" /></a>
           )}
           {activeTab === 'benefits' && (
 Benefits of Green IT
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => ()
-                  
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+                {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4">
                         <benefit.icon className="w-6 h-6 text-cyan-400" />
                       <div>
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300 mb-4">{benefit.description}</p>
                     <ul className="space-y-2">
-                      {benefit.details.map((detail, detailIndex) => ()
-                        
+                      {benefit.details.map((feature, index) => (
           <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
 {activeTab === 'certifications' && (
                 Our Certifications
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {certifications.map((cert, index) => ()
-                  
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center">
+                {certifications.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <cert.icon className={`w-8 h-8 ${cert.color}`} />
                     <h3 className="text-lg font-semibold text-white mb-2">{cert.name}</h3>
@@ -343,8 +334,7 @@ Benefits of Green IT
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:</h4>
                     <p className="text-gray-300 text-sm mb-3">{study.solution}</p>
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Results:</h4>
-                      {study.results.map((result, resultIndex) => ()
-                        
+                      {study.results.map((feature, index) => (
           <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
 {/* CTA Section */}
@@ -376,6 +366,6 @@ Get Free Assessment
                 Email Us
       <Footer />
     </>
-  );
-};
-export default GreenITPage;
+  )
+}
+export default GreenITPage

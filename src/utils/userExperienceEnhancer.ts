@@ -4,31 +4,30 @@
  */
 
 interface UXConfig {
-  enableSmoothScrolling: boolean;
-  enableLoadingStates: boolean;
-  enableErrorBoundaries: boolean;
-  enableAnalytics: boolean;
-  enableNotifications: boolean;
-  enableProgressiveWebApp: boolean;
-  enableOfflineSupport: boolean;
-  enablePushNotifications: boolean;
-  enableDarkMode: boolean;
-  enableAnimations: boolean;
+  enableSmoothScrolling: boolean
+  enableLoadingStates: boolean
+  enableErrorBoundaries: boolean
+  enableAnalytics: boolean
+  enableNotifications: boolean
+  enableProgressiveWebApp: boolean
+  enableOfflineSupport: boolean
+  enablePushNotifications: boolean
+  enableDarkMode: boolean
+  enableAnimations: boolean
 }
 
 interface UXMetrics {
-  pageLoadTime: number;
-  interactionTime: number;
-  bounceRate: number;
-  userSatisfaction: number;
-  accessibilityScore: number;
-  performanceScore: number;
+  pageLoadTime: number
+  interactionTime: number
+  bounceRate: number
+  userSatisfaction: number
+  accessibilityScore: number
+  performanceScore: number
 }
 
 class UserExperienceEnhancer {
-  private config: UXConfig;
-  private metrics: UXMetrics;
-
+  private config: UXConfig
+  private metrics: UXMetrics
   constructor(config?: UXConfig) {
     this.config = config || {
       enableSmoothScrolling: true,
@@ -41,8 +40,7 @@ class UserExperienceEnhancer {
       enablePushNotifications: false,
       enableDarkMode: false,
       enableAnimations: true,
-    };
-    
+    }
     this.metrics = {
       pageLoadTime: 0,
       interactionTime: 0,
@@ -50,32 +48,31 @@ class UserExperienceEnhancer {
       userSatisfaction: 0,
       accessibilityScore: 0,
       performanceScore: 0,
-    };
-    
-    this.init();
+    }
+    this.init()
   }
 
   private init(): void {
     // Initialize UX enhancements
-    this.setupSmoothScrolling();
-    this.setupLoadingStates();
+    this.setupSmoothScrolling()
+    this.setupLoadingStates()
   }
 
   private setupSmoothScrolling(): void {
     if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {
-      document.documentElement.style.scrollBehavior = 'smooth';
+      document.documentElement.style.scrollBehavior = 'smooth'
     }
   }
 
   private setupLoadingStates(): void {
     if (typeof document !== 'undefined' && this.config.enableLoadingStates) {
       // Add loading state management
-      console.log('Loading states enabled');
+      console.log('Loading states enabled')
     }
   }
 
   public getMetrics(): UXMetrics {
-    return this.metrics;
+    return this.metrics
   }
 
   public cleanup(): void {
@@ -83,4 +80,4 @@ class UserExperienceEnhancer {
   }
 }
 
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancer

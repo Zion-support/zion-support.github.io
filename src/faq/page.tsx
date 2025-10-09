@@ -1,28 +1,28 @@
-import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare } from 'lucide-react';
+'use client'
+import React, { useState } from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const FAQPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [searchTerm, setSearchTerm] = useState('');
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  )
+}
+  const [searchTerm, setSearchTerm] = useState('')
+  const [openItems, setOpenItems] = useState<number[]>([])
 const toggleItem = (index: number) => {
     setOpenItems(prev =>
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    );
-  };
+    )
+  }
   const faqData = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   category: 'General Questions',
       questions: [,
 
@@ -84,16 +84,16 @@ const toggleItem = (index: number) => {
           answer: 'Yes, we provide comprehensive remote support services, allowing us to assist you quickly and efficiently without the need for on-site visits.'
           question: 'How quickly do you respond to support requests?',
           answer: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
-  ];
+  ]
   const filteredData = faqData.map(category => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //     ...category,
     questions: category.questions.filter(q =>
 //       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
-  })).filter(category => category.questions.length > 0);
+  })).filter(category => category.questions.length > 0)
   return (
     
           
@@ -139,7 +139,7 @@ const toggleItem = (index: number) => {
             {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input;
+              <input
 type="text"
                 placeholder="Search FAQs..."
                 value={searchTerm}
@@ -158,27 +158,17 @@ type="text"
           </div>
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => ()
-              
+            {filteredData.map((feature, index) => (
           <div key={categoryIndex} className="mb-12">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>
                 <div className="space-y-4">
                   {category.questions.map((item, itemIndex) => {
-  // TODO: Add content
-}
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-                    const isOpen = openItems.includes(globalIndex);
-                      
-          
-          
-          
-          
-          
-          
-          
-          
+    // TODO: Add content
+  }
+                    const globalIndex = categoryIndex * 100 + itemIndex
+                    const isOpen = openItems.includes(globalIndex)
           <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button
                           onClick={() => toggleItem(globalIndex)}
@@ -240,4 +230,4 @@ type="text"
                 Contact Form
       <Footer />
     </>
-export default FAQPage;
+export default FAQPage

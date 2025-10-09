@@ -1,16 +1,16 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe,  Shield,  Award,  Globe from 'lucide-react';
-'use client';
+import { Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe, Globe from 'lucide-react'
+'use client'
 import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const SignupPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   firstName: '',
     lastName: '',
     email: '',
@@ -20,10 +20,11 @@ const SignupPage: React.FC = () => {
     confirmPassword: '',
     agreeToTerms: false,
     subscribeNewsletter: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  }
+  )
+  const [showPassword, setShowPassword] = useState(false)
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
 const handleInputChange = (e: React.ChangeEvent
           
           
@@ -34,52 +35,51 @@ const handleInputChange = (e: React.ChangeEvent
           
           
           <HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+    }))
+  }
   const handleSubmit = async (e: React.FormEvent) => {
-  // TODO: Add content
-}
-    e.preventDefault();
+    // TODO: Add content
+  }
+    e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
-  // TODO: Add content
-}
-      alert('Passwords do not match');
-      return;
+    // TODO: Add content
+  }
+      alert('Passwords do not match')
+      return
     }
     if (!formData.agreeToTerms) {
-  // TODO: Add content
-}
-      alert('Please agree to the terms and conditions');
-    setIsLoading(true);
+    // TODO: Add content
+  }
+      alert('Please agree to the terms and conditions')
+    setIsLoading(true)
     // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
+    await new Promise(resolve => setTimeout(resolve, 2000))
+    setIsLoading(false)
     // Redirect to dashboard or home page
-    window.location.href = '/';
+    window.location.href = '/'
   const features = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Shield,
+    icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance'
     },
-icon: Award,
+    {
+    icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
 
       icon: Globe,
       title: 'Global Support',
       description: '24/7 support and services across multiple time zones'
-  ];
+  ]
   const benefits = [
 'Free 14-day trial',
     'No setup fees',
@@ -149,12 +149,12 @@ icon: Award,
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input;
+                      <input
 type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-// required;
+// required
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your first name"
 />
@@ -300,9 +300,8 @@ Sign in here
 Join thousands of businesses already using our AI and IT solutions
                   to achieve unprecedented growth and efficiency.
               <div className="space-y-6">
-                {features.map((feature, index) => ()
-                  
-          <div key={index} className="flex items-start">
+                {features.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-cyan-400" />
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
@@ -313,9 +312,8 @@ Join thousands of businesses already using our AI and IT solutions
                   What You Get:
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => ()
-                    
-          <div key={index} className="flex items-center text-sm text-gray-300">
+                  {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
 <div className="text-center">
@@ -327,5 +325,5 @@ Join thousands of businesses already using our AI and IT solutions
                   <div className="text-2xl font-bold text-white">Amazon</div>
       <Footer />
     </>
-  );
-export default SignupPage;
+  )
+export default SignupPage

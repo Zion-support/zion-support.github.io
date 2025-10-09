@@ -1,7 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { Phone, Mail, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, CheckCircle, TrendingUp, Users, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Bot, Music, Video, CreditCard, Car, Train, Home, Heart, GraduationCap } from 'lucide-react';
-
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -48,8 +47,7 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
+                <Brain className="w-6 h-6 text-white" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
               <p className="text-gray-600">
                 Advanced artificial intelligence solutions to automate and optimize your business processes.
@@ -58,8 +56,7 @@ const HomePage: React.FC = () => {
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Cloud className="w-6 h-6 text-white" />
-              </div>
+                <Cloud className="w-6 h-6 text-white" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cloud Services</h3>
               <p className="text-gray-600">
                 Scalable cloud infrastructure and migration services for modern businesses.
@@ -68,8 +65,7 @@ const HomePage: React.FC = () => {
 
             <div className="bg-gray-50 p-8 rounded-lg">
               <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
+                <Shield className="w-6 h-6 text-white" /></div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cybersecurity</h3>
               <p className="text-gray-600">
                 Comprehensive security solutions to protect your digital assets and data.
@@ -106,7 +102,6 @@ const HomePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default HomePage;
+  )
+}
+export default HomePage

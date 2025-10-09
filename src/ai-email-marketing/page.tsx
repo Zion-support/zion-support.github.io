@@ -1,23 +1,22 @@
-import React from 'react';
-import { Mail, Target, Send, BarChart, Users, TrendingUp ,  Mail,  Target,  Send,  BarChart,  Users,  TrendingUp from 'lucide-react';
+import React from 'react'
+import { Mail, Target, Send, BarChart, Users, TrendingUp, TrendingUp from 'lucide-react'
 const AiEmailMarketingPage: React.FC = () => {
-import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
+import {Mail, CheckCircle, ArrowRight, Star } from 'lucide-react';
 const AIEmailMarketingPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const _features = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Mail,
+    icon: Mail,
       title: 'AI Content Generation',
       description: 'Automatically create compelling email content that resonates with your audience'
     },
-icon: Target,
+    {
+    icon: Target,
       title: 'Smart Segmentation',
       description: 'AI-powered audience segmentation for highly targeted campaigns',
 
@@ -37,7 +36,7 @@ icon: Target,
       title: 'A/B Testing',
       description: 'Intelligent A/B testing with AI-powered optimization'
     }
-  ];
+  ]
   const benefits = [
 'Increase open rates by 200%',
     'Boost click-through rates by 150%',
@@ -51,14 +50,14 @@ icon: Target,
     { name: 'Transactional', icon: '📧', description: 'Order confirmations and receipts' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers' },
     { name: 'Educational', icon: '📚', description: 'Value-driven content series' }
-  const pricing = [;
+  const pricing = [
   name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-];
+]
 //         '1,000 subscribers',
 //         '10,000 emails/month',
 //         'Basic AI features',
@@ -91,8 +90,8 @@ icon: Target,
         'Dedicated support',
         'Advanced automation'
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
   return (
     
           
@@ -108,8 +107,7 @@ import Footer from '../components/Footer';
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Email Marketing | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
-      </Helmet>
+        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." /></Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -143,7 +141,7 @@ import Footer from '../components/Footer';
 Learn More
           </div>
       <Footer />
-  );
-};
-export default AiEmailMarketingPage;
-export default AIEmailMarketingPage;
+  )
+}
+export default AiEmailMarketingPage
+export default AIEmailMarketingPage

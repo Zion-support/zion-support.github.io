@@ -1,15 +1,14 @@
-import React from 'react';
-import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react';
+import React from 'react'
+import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare,  Share2,  TrendingUp,  Users,  Calendar,  BarChart,  MessageSquare from 'lucide-react'
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Share2,
+      icon: Share2,
       title: 'AI Content Creation',
       description: 'Automatically generate engaging posts, captions, and hashtags for all platforms'
     },
-icon: TrendingUp,
+    {
+    icon: TrendingUp,
       title: 'Trend Analysis',
       description: 'Real-time trend monitoring and content suggestions based on viral topics',
 
@@ -29,7 +28,7 @@ icon: TrendingUp,
       title: 'Auto-Responses',
       description: 'Intelligent chatbot responses and comment management'
     }
-  ];
+  ]
   const benefits = [
 'Increase engagement by 300%',
     'Save 20+ hours per week',
@@ -43,14 +42,14 @@ icon: TrendingUp,
     { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
     { name: 'TikTok', icon: '🎵', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-500' }
-  const pricing = [;
+  const pricing = [
   name: 'Starter',
       price: '$29',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
   // TODO: Add items,
-];
+]
 //         '3 social media accounts',
 //         '50 posts per month',
 //         'Basic AI content generation',
@@ -82,6 +81,6 @@ Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of brands already using AI Social Media Manager to grow their presence
               Contact Sales
-  );
-};
-export default AISocialMediaManagerPage;
+  )
+}
+export default AISocialMediaManagerPage

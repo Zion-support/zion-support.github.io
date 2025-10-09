@@ -1,18 +1,17 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap from 'lucide-react';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Globe, Headphones, Shield, Zap, CheckCircle, Star,  Globe,  Headphones,  Zap from 'lucide-react'
 const GlobalITSupportPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Globe,
+      icon: Globe,
       title: 'Global Coverage',
       description: '24/7 IT support across multiple time zones',
-      benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support'];
+      benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
     },
-      icon: Headphones,
+    {
+    icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
       benefits: ['Always available', 'Fast response', 'Expert technicians']
@@ -21,7 +20,7 @@ const GlobalITSupportPage: React.FC = () => {
       description: 'Quick problem resolution and escalation',
       benefits: ['Fast resolution', 'Escalation procedures', 'SLA guarantees']
     }
-  ];
+  ]
   return (
     
           
@@ -101,8 +100,7 @@ const GlobalITSupportPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => ()
-              
+            {features.map((feature, index) => (
           <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -112,8 +110,7 @@ const GlobalITSupportPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => ()
-                    
+                  {feature.benefits.map((feature, index) => (
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
@@ -122,6 +119,6 @@ const GlobalITSupportPage: React.FC = () => {
                 </ul>
       </main>
       <Footer />
-  );
-};
-export default GlobalITSupportPage;
+  )
+}
+export default GlobalITSupportPage

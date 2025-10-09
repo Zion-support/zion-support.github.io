@@ -1,7 +1,7 @@
-'use client';
+'use client'
 export default function AIEmailAssistantPage() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -358,7 +358,6 @@ export default function AIEmailAssistantPage() {
           </div>
         </section>
       </main>
-        <Footer />
-      </div>
-  );
-};
+        <Footer /></div>
+  )
+}

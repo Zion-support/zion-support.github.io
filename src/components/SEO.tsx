@@ -1,22 +1,22 @@
-'use client';
+'use client'
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
  */
 export interface SEOProps {
-  // TODO: Add content
-}
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
+    // TODO: Add content
+  }
+  title?: string
+  description?: string
+  keywords?: string[]
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product' | 'profile'
+  author?: string
+  publishDate?: string
+  modifiedDate?: string
+  canonical?: string
+  noIndex?: boolean
   structuredData?: Record
           
           
@@ -26,10 +26,10 @@ export interface SEOProps {
           
           
           
-          <string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
-  alternateLocales?: { locale: string; url: string }[];
+          <string, unknown>
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
+  locale?: string
+  alternateLocales?: { locale: string; url: string }[]
 }
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
@@ -48,7 +48,7 @@ export interface SEOProps {
   type: 'website' as const,
   locale: 'en_US',
   twitterCard: 'summary_large_image' as const,
-};
+}
 export const SEO: React.FC
           
           
@@ -59,8 +59,8 @@ export const SEO: React.FC
           
           
           <SEOProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   title,
 //   description,
 //   keywords,
@@ -77,11 +77,11 @@ export const SEO: React.FC
   locale = defaultSEO.locale,
   alternateLocales = [],
 }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const seo = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
     keywords: keywords || defaultSEO.keywords,
@@ -90,15 +90,15 @@ export const SEO: React.FC
 //     type,
 //     twitterCard,
 //     locale,
-  };
-  // Generate structured data;
+  }
+  // Generate structured data
 const generateStructuredData = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (structuredData) {
-  // TODO: Add content
-}
-      return structuredData;
+    // TODO: Add content
+  }
+      return structuredData
     }
     const baseStructuredData: Record
           
@@ -110,37 +110,37 @@ const generateStructuredData = () => {
           
           
           <string, unknown> = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       '@context': 'https://schema.org',
       '@type': type === 'article' ? 'Article' : 'WebPage',
       headline: seo.title,
       description: seo.description,
       url: seo.url,
       image: seo.image,
-    };
+    }
     if (author) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       baseStructuredData.author = {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         '@type': 'Person',
         name: author,
-      };
+      }
     }
     if (publishDate) {
-  // TODO: Add content
-}
-      baseStructuredData.datePublished = publishDate;
+    // TODO: Add content
+  }
+      baseStructuredData.datePublished = publishDate
     }
     if (modifiedDate) {
-  // TODO: Add content
-}
-      baseStructuredData.dateModified = modifiedDate;
+    // TODO: Add content
+  }
+      baseStructuredData.dateModified = modifiedDate
     }
-    return baseStructuredData;
-  };
-  return null;
-};
-export default SEO;
+    return baseStructuredData
+  }
+  return null
+}
+export default SEO

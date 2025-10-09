@@ -1,2 +1,2 @@
 
-export default UnifiedContentPromotion;
+export default UnifiedContentPromotion

@@ -1,18 +1,17 @@
-'use client';
-import React from 'react';
-import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone,  CheckSquare,  Users,  Zap,  BarChart from 'lucide-react';
+'use client'
+import React from 'react'
+import { CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone, BarChart from 'lucide-react'
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: CheckSquare,
+      icon: CheckSquare,
       title: 'AI Task Prioritization',
       description: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefit: 'Increase productivity by 40%'
     },
-      icon: Users,
+    {
+    icon: Users,
       title: 'Team Collaboration',
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
@@ -27,7 +26,7 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Comprehensive analytics on productivity patterns, team performance, and project success metrics.',
       benefit: 'Data-driven improvements'
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Team',
       price: '$49',
@@ -57,8 +56,7 @@ const TaskManagerProPage: React.FC = () => {
       <section className="container mx-auto px-4 py-16 pt-24">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
-            <CheckSquare className="w-10 h-10 text-white" />
-          </div>
+            <CheckSquare className="w-10 h-10 text-white" /></div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 // Task Manager Pro
           
@@ -139,9 +137,8 @@ Start Free Trial
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => ()
-              
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+            {features.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
@@ -151,20 +148,18 @@ Start Free Trial
         {/* Integrations Section */}
 Works with Your Tools
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => ()
-              
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
+            {integrations.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-4xl mb-3">{integration.icon}</div>
                 <h3 className="text-lg font-bold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
 {/* Pricing Section */}
             Simple, Transparent Pricing
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => ()
-              
+            {pricingPlans.map((feature, index) => (
           <div key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                 plan.popular
 //                   ? 'border-cyan-400 scale-105'
                   : 'border-slate-700 hover:border-cyan-500/50'
@@ -188,8 +183,7 @@ Most Popular
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
                   <span className="text-gray-300">{plan.period}</span>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
@@ -203,12 +197,10 @@ Most Popular
         {/* Testimonials */}
             What Our Users Say
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => ()
-              
-          <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            {testimonials.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => ()
-                    
+                  {[...Array(testimonial.rating)].map((feature, index) => (
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
@@ -222,6 +214,6 @@ Most Popular
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more,
             work smarter, and reach their goals faster.
-  );
-};
-export default TaskManagerProPage;
+  )
+}
+export default TaskManagerProPage

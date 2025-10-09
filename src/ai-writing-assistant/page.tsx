@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 const AIWritingAssistantPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   return (
     <div>Coming Soon</div>
   )
@@ -25,8 +25,8 @@ const AIWritingAssistantPage: React.FC = () => {
           
           </a>
       </div>
-  );
+  )
 }
-export default AiWritingAssistantPage;
-};
-export default AIWritingAssistantPage;
+export default AiWritingAssistantPage
+}
+export default AIWritingAssistantPage

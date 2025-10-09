@@ -1,2 +1,2 @@
-'use client';
-export default InteractiveContentShowcase2026;
+'use client'
+export default InteractiveContentShowcase2026

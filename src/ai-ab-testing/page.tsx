@@ -1,30 +1,28 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { TestTube, Target, Settings, CheckCircle ,  TestTube,  Target,  Settings from 'lucide-react';
-
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 const AIABTestingPage: React.FC = () => {
   const features = [
-    {,
- icon: TestTube,
+    {
+      icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation'];
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
     },
     {
-      icon: Target,
+    icon: Target,
       title: 'Multivariate Testing',
       description: 'Advanced multivariate testing capabilities',
       benefits: ['Multiple variants', 'Complex testing', 'Interaction analysis']
     },
     {
-      icon: Settings,
+    icon: Settings,
       title: 'Analytics & Reporting',
       description: 'Comprehensive testing analytics and reporting',
       benefits: ['Test metrics', 'Performance reports', 'Insight generation']
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -65,8 +63,7 @@ const AIABTestingPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
+                  <feature .icon className="w-8 h-8 text-white" /></div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>
@@ -86,9 +83,7 @@ const AIABTestingPage: React.FC = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </div>
-  );
-};
-
-export default AIABTestingPage;
+      <Footer /></div>
+  )
+}
+export default AIABTestingPage

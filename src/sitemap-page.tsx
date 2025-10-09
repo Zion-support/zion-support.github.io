@@ -1,2 +1,2 @@
 
-export default SitemapPage;
+export default SitemapPage

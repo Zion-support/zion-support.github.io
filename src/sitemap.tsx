@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 const getAllPages = () => {
   return [
     { url: '/', priority: 1.0, changefreq: 'daily' },
@@ -8,10 +8,10 @@ const getAllPages = () => {
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
     { url: '/about', priority: 0.7, changefreq: 'monthly' },
     { url: '/blog', priority: 0.8, changefreq: 'weekly' },
-  ];
-};
+  ]
+}
 const generateSitemap = (pages: Array<{ url: string; priority: number; changefreq: string }>) => {
-  const baseUrl = 'https:// ziontechgroup.com';
+  const baseUrl = 'https:// ziontechgroup.com'
   const sitemap = `
           
           
@@ -37,8 +37,8 @@ ${pages.map(page => `
     <priority>${page.priority}</priority>
     <changefreq>${page.changefreq}</changefreq>
   </url>`).join('\n')}
-</urlset>`;
-  return sitemap;
+</urlset>`
+  return sitemap
   return (
     <div>Coming Soon</div>
   )
@@ -46,5 +46,5 @@ ${pages.map(page => `
           <div>
       <pre>{sitemap}</pre>
     </div>
-  );
-export default Sitemap;
+  )
+export default Sitemap

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 const AICustomerSupportPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   return (
     <div>Coming Soon</div>
   )
@@ -25,7 +25,7 @@ const AICustomerSupportPage: React.FC = () => {
           
           </a>
       </div>
-  );
-};
-export default AiCustomerSupportPage;
-export default AICustomerSupportPage;
+  )
+}
+export default AiCustomerSupportPage
+export default AICustomerSupportPage

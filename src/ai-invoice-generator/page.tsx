@@ -1,20 +1,19 @@
-import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon,  Brain,  Zap,  BarChart,  Smartphone,  ShoppingCart,  Building from 'lucide-react';
-'use client';
+import { Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon, Building from 'lucide-react'
+'use client'
 import React, { memo } from 'react';
-import Navigation from '../../components/Navigation';
-import Footer from '../../components/Footer';
-import SEOOptimizer from '../../components/SEOOptimizer';
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
+import SEOOptimizer from '../../components/SEOOptimizer'
 const AIInvoiceGeneratorPage: React.FC = memo(() => {
   const features = [
     {
-  // TODO: Add content
-};
-  icon: Brain,
+      icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
-      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency'];
+      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
     },
-      icon: Zap,
+    {
+    icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
       benefits: ['Real-time generation', 'Batch processing', 'Template optimization', 'Error reduction']
@@ -27,7 +26,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Professional',
       price: '$79',
@@ -35,7 +34,7 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       title: 'E-commerce Businesses',
       description: 'Automate invoice generation for online sales with AI-powered order processing.',
       icon: ShoppingCart,
-      benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management'];
+      benefits: ['Order integration', 'Inventory tracking', 'Tax calculations', 'Customer management']
       title: 'Agencies & Studios',
       description: 'Manage complex client billing with AI that handles multiple projects and billing structures.',
       icon: Building,
@@ -166,17 +165,15 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
 Our AI invoice generator combines cutting-edge technology with user-friendly design
                   to revolutionize your billing process.
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => ()
-                  
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                {features.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-purple-400" />
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => ()
-                        
-          <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      {feature.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -188,9 +185,8 @@ Our AI invoice generator combines cutting-edge technology with user-friendly des
 Whether you're a freelancer or a large enterprise, our AI invoice generator
                   adapts to your specific needs and industry requirements.
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => ()
-                  
-          <div key={index} className="text-center group">
+                {useCases.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <useCase.icon className="w-8 h-8 text-white" />
                     <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
@@ -203,11 +199,10 @@ Whether you're a freelancer or a large enterprise, our AI invoice generator
                   Choose the plan that fits your business needs. All plans include our core AI features
                   with no hidden fees or setup costs.
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => ()
-                  
+                {pricingPlans.map((feature, index) => (
           <div key={index} className={`relative rounded-lg p-8 ${
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //                     plan.popular
 //                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400'
                       : 'bg-slate-800/50 border border-slate-700'
@@ -233,8 +228,7 @@ Most Popular
                         <span className="text-4xl font-bold text-white">{plan.price}</span>
                         <span className="text-gray-400 ml-1">{plan.period}</span>
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => ()
-                        
+                      {plan.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
@@ -247,17 +241,15 @@ Most Popular
                   Loved by Businesses Worldwide
                   See how our AI invoice generator is transforming businesses across industries.
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => ()
-                  
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                {testimonials.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                     <div className="flex items-center mb-4">
                       <div className="text-2xl mr-3">{testimonial.avatar}</div>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => ()
-                        
+                      {[...Array(testimonial.rating)].map((feature, index) => (
           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"</p>
 {/* CTA Section */}
@@ -277,7 +269,8 @@ Most Popular
         </main>
         <Footer />
     </>
-  );
-});
-AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage';
-export default AIInvoiceGeneratorPage;
+  )
+}
+  )
+AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage'
+export default AIInvoiceGeneratorPage

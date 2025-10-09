@@ -1,1 +1,1 @@
-export default LoadingSpinner;
+export default LoadingSpinner

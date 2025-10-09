@@ -1,12 +1,12 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 // import { Metadata } from 'next'; // Removed for Vite
-// Metadata removed for Vite compatibility;
+// Metadata removed for Vite compatibility
 export default function AutonomousBusinessProcessesBlog() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
 
           
@@ -48,5 +48,5 @@ export default function AutonomousBusinessProcessesBlog() {
                   href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-  );
-};
+  )
+}

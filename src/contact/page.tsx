@@ -1,25 +1,26 @@
-'use client';
-import React, { useState } from 'react';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
+'use client'
+import React, { useState } from 'react'
+import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield,  Users,  Award,  TrendingUp,  Shield from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import React from 'react'
 const ContactPage: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
+  )
+}
   const [formData, setFormData] = useState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
     message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  }
+  )
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const _handleInputChange = (e: React.ChangeEvent
           
           
@@ -30,33 +31,33 @@ const ContactPage: React.FC = () => {
           
           
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-  // TODO: Add content
-}
-    const { name, value } = e.target;
+    // TODO: Add content
+  }
+    const { name, value } = e.target
     setFormData(prev => ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
   const handleSubmit = (e: React.FormEvent) => {
-  // TODO: Add content
-}
-    e.preventDefault();
+    // TODO: Add content
+  }
+    e.preventDefault()
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    // console.log('Form submitted:', formData)
+    setIsSubmitted(true)
     // Reset form after 3 seconds
     setTimeout(() => {
-  // TODO: Add content
-}
-      setIsSubmitted(false);
+    // TODO: Add content
+  }
+      setIsSubmitted(false)
       setFormData({
-}, 3000);
+}, 3000)
   const services = [
   // TODO: Add items
-];;
+]
 //     'AI Services',
 //     'IT Services',
 //     'Micro SAAS Solutions',
@@ -67,14 +68,18 @@ const ContactPage: React.FC = () => {
 //     'Mobile App Development',
 //     'Custom Development',
 //     'Other'
-  ];
+  ]
   const achievements = [
   // TODO: Add items
-];;
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+]
+    {
+    icon: Users, text: '100+ Happy Clients' },
+    {
+    icon: Award, text: '50+ Successful Projects' },
+    {
+    icon: TrendingUp, text: '300% Average ROI' },
+    {
+    icon: Shield, text: '99.9% Uptime Guarantee' }
   return (
     
           
@@ -104,5 +109,5 @@ const ContactPage: React.FC = () => {
           
           </a>
       </div>
-  );
-export default ContactPage;
+  )
+export default ContactPage

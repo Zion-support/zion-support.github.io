@@ -1,26 +1,26 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 const InteractiveAIROICalculator: React.FC = () => {
   return (
     <div>Coming Soon</div>
-  );
-};
-  const [currentCost, setCurrentCost] = useState(100000);
-  const [efficiencyGain, setEfficiencyGain] = useState(70);
-  const [timeframe, setTimeframe] = useState(12);
-  const calculateROI = () => {
-    const annualSavings = (currentCost * efficiencyGain) / 100;
-    const totalSavings = annualSavings * (timeframe / 12);
-    const roi = ((totalSavings - currentCost) / currentCost) * 100;
-  const _calculateROI = () => {
-  // TODO: Add content
+  )
 }
-    const _annualSavings = (currentCost * efficiencyGain) / 100;
-    const _totalSavings = annualSavings * (timeframe / 12);
-    const _roi = ((totalSavings - currentCost) / currentCost) * 100;
-    return Math.max(0, roi);
-  };
-  const roi = calculateROI();
+  const [currentCost, setCurrentCost] = useState(100000)
+  const [efficiencyGain, setEfficiencyGain] = useState(70)
+  const [timeframe, setTimeframe] = useState(12)
+  const calculateROI = () => {
+    const annualSavings = (currentCost * efficiencyGain) / 100
+    const totalSavings = annualSavings * (timeframe / 12)
+    const roi = ((totalSavings - currentCost) / currentCost) * 100
+  const _calculateROI = () => {
+    // TODO: Add content
+  }
+    const _annualSavings = (currentCost * efficiencyGain) / 100
+    const _totalSavings = annualSavings * (timeframe / 12)
+    const _roi = ((totalSavings - currentCost) / currentCost) * 100
+    return Math.max(0, roi)
+  }
+  const roi = calculateROI()
   return (
     
           
@@ -63,7 +63,7 @@ const InteractiveAIROICalculator: React.FC = () => {
           
           
           </label>
-                <input;
+                <input
 type='number'
                   value={currentCost}
                   onChange={e => setCurrentCost(Number(e.target.value))}
@@ -118,5 +118,5 @@ Expected Efficiency Gain (%)
                   Expected return on investment over {timeframe} months
                 </p>
     </section>
-  );
-export default InteractiveAIROICalculator;
+  )
+export default InteractiveAIROICalculator

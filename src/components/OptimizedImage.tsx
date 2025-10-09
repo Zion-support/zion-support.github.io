@@ -1,20 +1,20 @@
 
 interface OptimizedImageProps {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   src: string;,
-    alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
-  onLoad?: () => void;
-  onError?: () => void;
+    alt: string
+  width?: number
+  height?: number
+  className?: string
+  priority?: boolean
+  quality?: number
+  placeholder?: 'blur' | 'empty'
+  blurDataURL?: string
+  sizes?: string
+  loading?: 'lazy' | 'eager'
+  onLoad?: () => void
+  onError?: () => void
 }
 const OptimizedImage: React.FC
           
@@ -26,8 +26,8 @@ const OptimizedImage: React.FC
           
           
           <OptimizedImageProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   src,
 //   alt,
 //   width,
@@ -42,66 +42,67 @@ const OptimizedImage: React.FC
 //   onLoad,
 //   onError,
 }) => {
-  // TODO: Add content
-}
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+    // TODO: Add content
+  }
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
   // Intersection Observer for lazy loading
   useEffect(() => {
-  // TODO: Add content
-}
-    if (priority || isInView) return;
+    // TODO: Add content
+  }
+    if (priority || isInView) return
     const observer = new IntersectionObserver()
       (entries) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         entries.forEach((entry) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           if (entry.isIntersecting) {
-  // TODO: Add content
-}
-            setIsInView(true);
-            observer.disconnect();
+    // TODO: Add content
+  }
+            setIsInView(true)
+            observer.disconnect()
           }
-        });
+        }
+  )
       },
       {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   rootMargin: '50px',
         threshold: 0.1,
       }
-    );
+  )
     if (imgRef.current) {
-  // TODO: Add content
-}
-      observer.observe(imgRef.current);
+    // TODO: Add content
+  }
+      observer.observe(imgRef.current)
     }
-    return () => observer.disconnect();
-  }, [priority, isInView]);
-  // Generate optimized image URL;
+    return () => observer.disconnect()
+  }, [priority, isInView])
+  // Generate optimized image URL
 const getOptimizedSrc = () => {
-  // TODO: Add content
-}
-    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4=';
+    // TODO: Add content
+  }
+    if (!isInView) return blurDataURL || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB2aWV3Qm94PSIwIDAgMSAxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmM2Y0ZjYiLz48L3N2Zz4='
     // In a real implementation, you would use an image optimization service
     // like Cloudinary, ImageKit, or Next.js Image Optimization
-    return src;
-  };
+    return src
+  }
   const handleLoad = () => {
-  // TODO: Add content
-}
-    setIsLoaded(true);
-    onLoad?.();
-  };
+    // TODO: Add content
+  }
+    setIsLoaded(true)
+    onLoad?.()
+  }
   const handleError = () => {
-  // TODO: Add content
-}
-    setHasError(true);
-    onError?.();
-  };
+    // TODO: Add content
+  }
+    setHasError(true)
+    onError?.()
+  }
   return (
     
           
@@ -131,8 +132,8 @@ const getOptimizedSrc = () => {
           
           <div className="absolute inset-0 bg-cover bg-center filter blur-sm scale-110"
           style={{
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   backgroundImage: `url(${blurDataURL})`,
           }}
 //         />
@@ -169,8 +170,8 @@ onError={handleError} className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   width: '100%',
             height: '100%',
             objectFit: 'cover',
@@ -187,6 +188,6 @@ onError={handleError} className={`transition-opacity duration-300 ${
           
           
           </div>
-  );
-};
-export default OptimizedImage;
+  )
+}
+export default OptimizedImage

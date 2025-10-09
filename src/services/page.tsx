@@ -1,23 +1,22 @@
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 const ServicesPage: React.FC = () => {
-import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react';
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car,  Brain,  Zap,  BarChart,  Database,  Lock,  BarChart3,  ShoppingCart,  TrendingUp,  Users,  Clock from 'lucide-react'
   const _aiServices = [
   // TODO: Add items
-];;
+]
     {
-  // TODO: Add content
-};
-  icon: Brain,
+    icon: Brain,
       title: 'AI Services',
       description: 'Comprehensive AI solutions for every business need',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       price: 'Starting at $1,500/month',
       popular: true
     },
-      icon: Zap,
+    {
+    icon: Zap,
       title: 'AI Automation',
       description: 'Intelligent process automation and workflow optimization',
       features: ['Workflow Automation', 'Smart Scheduling', 'Process Optimization', 'Task Management'],
@@ -30,7 +29,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       features: ['Predictive Analytics', 'Data Visualization', 'Business Intelligence', 'Real-time Insights'],
       price: 'Starting at $1,800/month',
     }
-  ];
+  ]
   const itServices = [
       icon: Database,
       title: 'Database Management',
@@ -68,7 +67,7 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
       description: 'Quick implementation with minimal downtime'
   const stats = [
   // TODO: Add items
-];;
+]
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -102,6 +101,6 @@ import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChar
           
           </a>
       </div>
-  );
-};
-export default ServicesPage;
+  )
+}
+export default ServicesPage

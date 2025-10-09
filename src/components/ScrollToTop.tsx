@@ -1,2 +1,2 @@
-'use client';
-export default ScrollToTop;
+'use client'
+export default ScrollToTop

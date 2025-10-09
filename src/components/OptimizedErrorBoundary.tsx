@@ -1,11 +1,11 @@
-'use client';
+'use client'
 interface OptimizedErrorBoundaryProps {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  resetOnPropsChange?: boolean
   resetKeys?: Array
           
           
@@ -15,15 +15,15 @@ interface OptimizedErrorBoundaryProps {
           
           
           
-          <string | number>;
+          <string | number>
 }
 interface State {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: boolean;,
     error: Error | null;,
     errorInfo: ErrorInfo | null;,
-    errorId: string;
+    errorId: string
 }
 class OptimizedErrorBoundary extends Component
           
@@ -38,21 +38,21 @@ class OptimizedErrorBoundary extends Component
 // OptimizedErrorBoundaryProps,
 //   State
 > {
-  // TODO: Add content
-}
-  private resetTimeoutId: number | null = null;
+    // TODO: Add content
+  }
+  private resetTimeoutId: number | null = null
   constructor(props: OptimizedErrorBoundaryProps) {
-  // TODO: Add content
-}
-    super(props);
+    // TODO: Add content
+  }
+    super(props)
     this.state = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
       error: null,
       errorInfo: null,
       errorId: ''
-    };
+    }
   }
   static getDerivedStateFromError(error: Error): Partial
           
@@ -64,58 +64,59 @@ class OptimizedErrorBoundary extends Component
           
           
           <State> {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: true,
 //       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     this.setState({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //       error,
 //       errorInfo
-    });
+    }
+  )
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     }
     // Call custom error handler if provided
     if (this.props.onError) {
-  // TODO: Add content
-}
-      this.props.onError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.props.onError(error, errorInfo)
     }
     // Send error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
-  // TODO: Add content
-}
-      this.reportError(error, errorInfo);
+    // TODO: Add content
+  }
+      this.reportError(error, errorInfo)
     }
   }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-  // TODO: Add content
-}
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
+    // TODO: Add content
+  }
+    const { resetKeys, resetOnPropsChange } = this.props
+    const { hasError } = this.state
     if (hasError && prevProps.resetKeys !== resetKeys) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (resetKeys && prevProps.resetKeys) {
           (key, index) => key !== prevProps.resetKeys?.[index]
-        );
+        )
         if (hasResetKeyChanged) {
-  // TODO: Add content
-}
-          this.resetErrorBoundary();
+    // TODO: Add content
+  }
+          this.resetErrorBoundary()
         }
       }
     }
@@ -124,31 +125,31 @@ class OptimizedErrorBoundary extends Component
 //       resetOnPropsChange &&
       prevProps.children !== this.props.children,
 ) {
-  // TODO: Add content
-}
-      this.resetErrorBoundary();
+    // TODO: Add content
+  }
+      this.resetErrorBoundary()
     }
   }
   componentWillUnmount() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.resetTimeoutId) {
-  // TODO: Add content
-}
-      clearTimeout(this.resetTimeoutId);
+    // TODO: Add content
+  }
+      clearTimeout(this.resetTimeoutId)
     }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       const gtag = ()
         window as unknown as {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   gtag: (),
     command: string,
             action: string,
@@ -162,59 +163,61 @@ class OptimizedErrorBoundary extends Component
           
           
           <string, unknown>
-          ) => void;
+          ) => void
         }
-      ).gtag;
+      ).gtag
       gtag('event', 'exception', {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   description: error.message,
         fatal: false,
         custom_map: {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      }
+  )
     }
-  };
+  }
   private resetErrorBoundary = () => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.resetTimeoutId) {
-  // TODO: Add content
-}
-      clearTimeout(this.resetTimeoutId);
+    // TODO: Add content
+  }
+      clearTimeout(this.resetTimeoutId)
     }
     this.resetTimeoutId = window.setTimeout(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       this.setState({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   hasError: false,
         error: null,
         errorInfo: null,
         errorId: ''
-      });
-    }, 100);
-  };
+      }
+  )
+    }, 100)
+  }
   private handleRetry = () => {
-  // TODO: Add content
-}
-    this.resetErrorBoundary();
-  };
+    // TODO: Add content
+  }
+    this.resetErrorBoundary()
+  }
   render() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (this.state.hasError) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       if (this.props.fallback) {
-  // TODO: Add content
-}
-        return this.props.fallback;
+    // TODO: Add content
+  }
+        return this.props.fallback
       }
       return (
     
@@ -234,18 +237,18 @@ class OptimizedErrorBoundary extends Component
           errorId={this.state.errorId}
           onRetry={this.handleRetry}
 // />
-      );
+      )
     }
-    return this.props.children;
+    return this.props.children
   }
 }
 interface ErrorFallbackProps {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   error: Error | null;,
     errorInfo: ErrorInfo | null;,
     errorId: string;,
-    onRetry: () => void;
+    onRetry: () => void
 }
 const ErrorFallback = memo
           
@@ -263,7 +266,7 @@ const ErrorFallback = memo
       <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
         <div className='mb-4'>
           <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
-            <svg;
+            <svg
 className='w-6 h-6 text-red-600'
               fill='none'
               stroke='currentColor'
@@ -278,22 +281,11 @@ className='w-6 h-6 text-red-600'
           
           
           
-          <path
-                strokeLinecap='round'
+          <path strokeLinecap='round'
                 strokeLinejoin='round'
                 strokeWidth={2}
                 d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
-// />
-            
-          
-          
-          
-          
-          
-          
-          
-          
-          </svg>
+// /></svg>
           </div>
         </div>
         <h1 className='text-xl font-semibold text-gray-900 mb-2'>
@@ -385,5 +377,5 @@ className='w-6 h-6 text-red-600'
       </div>
     </div>
 //   )
-);
-ErrorFallback.displayName = 'ErrorFallback';
+)
+ErrorFallback.displayName = 'ErrorFallback'

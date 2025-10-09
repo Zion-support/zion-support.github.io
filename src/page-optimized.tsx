@@ -1,31 +1,32 @@
-'use client';
-import React, { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-// Fallback component;
-const EmptyComponent = () => null;
+'use client'
+import React, { lazy } from 'react'
+import SEOOptimizer from './components/SEOOptimizer'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+import PerformanceMonitor from './components/PerformanceMonitor'
+// Fallback component
+const EmptyComponent = () => null
 // Lazy load heavy components - these may not exist, so make them optional
 const UnifiedBanner = lazy(() =>
-  import('./components/NewestContent2025Banner').catch(() =>;
+  import('./components/NewestContent2025Banner').catch(() =>
     import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
 //   )
-);
+)
 const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-  // TODO: Add content
-}
-    return { default: EmptyComponent } as { default: React.ComponentType };
-  })
+    // TODO: Add content
+  }
+    return { default: EmptyComponent } as { default: React.ComponentType }
+  }
+  )
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   default: EmptyComponent
   }))
 export default function OptimizedHomePage() {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (
     
           
@@ -41,8 +42,7 @@ export default function OptimizedHomePage() {
           <div className="min-h-screen bg-white">
       <SEOOptimizer />
       <AccessibilityEnhancer>
-        <div />
-      </AccessibilityEnhancer>
+        <div /></AccessibilityEnhancer>
       <PerformanceMonitor />
       {/* Main Content */}
       <main className="relative">
@@ -111,4 +111,4 @@ View Success Stories
               </div>
         </section>
       </main>
-};
+}

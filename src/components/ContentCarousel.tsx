@@ -1,1 +1,1 @@
-export default ContentCarousel;
+export default ContentCarousel

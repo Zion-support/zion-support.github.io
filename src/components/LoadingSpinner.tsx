@@ -1,11 +1,11 @@
-'use client';
+'use client'
 interface LoadingSpinnerProps {
-  // TODO: Add content
-}
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  className?: string;
-  text?: string;
-  fullScreen?: boolean;
+    // TODO: Add content
+  }
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  className?: string
+  text?: string
+  fullScreen?: boolean
 }
 const LoadingSpinner: React.FC
           
@@ -17,8 +17,8 @@ const LoadingSpinner: React.FC
           
           
           <LoadingSpinnerProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size = 'md',
 //   className,
   text = 'Loading...',
@@ -28,7 +28,7 @@ const LoadingSpinner: React.FC
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16',
-  };
+  }
   const spinner = ()
     
           
@@ -40,7 +40,7 @@ const LoadingSpinner: React.FC
           
           
           <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
-      <div;
+      <div
 className={cn()
 // 'border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin',
 //           sizeClasses[size]
@@ -63,10 +63,10 @@ className={cn()
         </p>
       )}
     </div>
-  );
+  )
   if (fullScreen) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           
@@ -82,8 +82,8 @@ className={cn()
           <div className="fixed inset-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
       </div>
-    );
+    )
   }
-  return spinner;
-};
-export default LoadingSpinner;
+  return spinner
+}
+export default LoadingSpinner

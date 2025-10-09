@@ -1,15 +1,15 @@
-import React from 'react';
-import { Brain, Zap, Shield, BarChart ,  Brain,  Zap,  BarChart from 'lucide-react';
+import React from 'react'
+import { Brain, Zap, Shield, BarChart, BarChart from 'lucide-react'
 import { Link } from 'react-router-dom';
-import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AIServicesPage: React.FC = () => {
   const services = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
       icon: Brain,
@@ -27,7 +27,7 @@ const AIServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Automated Reporting'],
       price: 'Starting at $800/month'
     }
-  ];
+  ]
   const benefits = [
     '300% Average ROI Increase',
     '95% Process Automation',
@@ -48,8 +48,7 @@ const AIServicesPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
-      </Helmet>
+        <meta name="description" content="Advanced AI services solutions by Zion Tech Group." /></Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -83,7 +82,7 @@ const AIServicesPage: React.FC = () => {
 Learn More
           </div>
       <Footer />
-  );
-};
-export default AiServicesPage;
-export default AIServicesPage;
+  )
+}
+export default AiServicesPage
+export default AIServicesPage

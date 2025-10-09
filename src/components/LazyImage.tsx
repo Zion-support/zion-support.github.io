@@ -1,16 +1,16 @@
-'use client';
+'use client'
 interface LazyImageProps {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   src: string;,
-    alt: string;
-  className?: string;
-  placeholder?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
+    alt: string
+  className?: string
+  placeholder?: string
+  width?: number
+  height?: number
+  priority?: boolean
+  onLoad?: () => void
+  onError?: () => void
 }
 const LazyImage: React.FC
           
@@ -22,8 +22,8 @@ const LazyImage: React.FC
           
           
           <LazyImageProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   src,
 //   alt,
 //   className,
@@ -34,52 +34,52 @@ const LazyImage: React.FC
 //   onLoad,
 //   onError,
 }) => {
-  // TODO: Add content
-}
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+    // TODO: Add content
+  }
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const [hasError, setHasError] = useState(false)
   useEffect(() => {
-  // TODO: Add content
-}
-    if (priority) return;
+    // TODO: Add content
+  }
+    if (priority) return
     const observer = new IntersectionObserver()
       ([entry]) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (entry.isIntersecting) {
-  // TODO: Add content
-}
-          setIsInView(true);
-          observer.disconnect();
+    // TODO: Add content
+  }
+          setIsInView(true)
+          observer.disconnect()
         }
       },
       {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   threshold: 0.1,
         rootMargin: '50px',
       }
-    );
+  )
     if (imgRef.current) {
-  // TODO: Add content
-}
-      observer.observe(imgRef.current);
+    // TODO: Add content
+  }
+      observer.observe(imgRef.current)
     }
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()
+  }, [priority])
   const handleLoad = () => {
-  // TODO: Add content
-}
-    setIsLoaded(true);
-    onLoad?.();
-  };
+    // TODO: Add content
+  }
+    setIsLoaded(true)
+    onLoad?.()
+  }
   const handleError = () => {
-  // TODO: Add content
-}
-    setHasError(true);
-    onError?.();
-  };
+    // TODO: Add content
+  }
+    setHasError(true)
+    onError?.()
+  }
   return (
     
           
@@ -147,6 +147,6 @@ const LazyImage: React.FC
         </>
       )}
     </div>
-  );
-};
-export default LazyImage;
+  )
+}
+export default LazyImage

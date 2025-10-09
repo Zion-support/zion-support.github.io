@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react';
+import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin,  TrendingUp,  Target,  BarChart,  Brain from 'lucide-react'
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   title: 'AI Business Intelligence',
       price: '$399/month',
       description: 'Advanced business intelligence with AI-powered insights and predictive analytics.',
@@ -34,7 +34,7 @@ const AnalyticsToolsPage: React.FC = () => {
       icon: '',
       category: 'Financial Analytics'
     }
-  ];
+  ]
   const benefits = [
       icon: TrendingUp,
       title: 'Data-Driven Decisions',
@@ -67,8 +67,7 @@ const AnalyticsToolsPage: React.FC = () => {
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
-        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
-      </Helmet>
+        <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" /></Helmet>
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -126,9 +125,8 @@ const AnalyticsToolsPage: React.FC = () => {
           
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {analyticsTools.map((tool, index) => ()
-              
-          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+            {analyticsTools.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-4">{tool.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
@@ -138,8 +136,7 @@ const AnalyticsToolsPage: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => ()
-                      
+                    {tool.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
@@ -166,9 +163,8 @@ const AnalyticsToolsPage: React.FC = () => {
       {/* Benefits Section */}
 Why Choose Our Analytics Tools?
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => ()
-              
-          <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
+            {benefits.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -186,6 +182,6 @@ Call (302) 464-0950
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
               Email Us
-  );
-};
-export default AnalyticsToolsPage;
+  )
+}
+export default AnalyticsToolsPage

@@ -1,11 +1,11 @@
-'use client';
+'use client'
 interface ModernLoadingSpinnerProps {
-  // TODO: Add content
-}
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'accent';
-  text?: string;
-  fullScreen?: boolean;
+    // TODO: Add content
+  }
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  color?: 'primary' | 'secondary' | 'accent'
+  text?: string
+  fullScreen?: boolean
 }
 const ModernLoadingSpinner: React.FC
           
@@ -17,8 +17,8 @@ const ModernLoadingSpinner: React.FC
           
           
           <ModernLoadingSpinnerProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   size = 'md',
   color = 'primary',
   text = 'Loading...',
@@ -28,14 +28,14 @@ const ModernLoadingSpinner: React.FC
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
-  };
+  }
   const colorClasses = {
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent: 'text-pink-400'
-  };
+  }
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -44,10 +44,10 @@ const ModernLoadingSpinner: React.FC
 //     border-current
 //     border-t-transparent
 //     rounded-full
-  `;
+  `
   const containerClasses = fullScreen
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4';
+    : 'flex items-center justify-center p-4'
   return (
     
           
@@ -73,6 +73,6 @@ const ModernLoadingSpinner: React.FC
       </div>
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  );
-};
-export default ModernLoadingSpinner;
+  )
+}
+export default ModernLoadingSpinner

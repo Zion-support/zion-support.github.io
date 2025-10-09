@@ -1,14 +1,14 @@
-import LoadingSpinner from './LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner'
 interface LazyComponentProps {
-  // TODO: Add content
-};
-  children: ReactNode;
-  fallback?: ReactNode;
-  delay?: number;
-  threshold?: number;
-  rootMargin?: string;
+    // TODO: Add content
+  }
+  children: ReactNode
+  fallback?: ReactNode
+  delay?: number
+  threshold?: number
+  rootMargin?: string
 }
-// Higher-order component for lazy loading;
+// Higher-order component for lazy loading
 export const _withLazyLoading = 
           
           
@@ -23,8 +23,8 @@ export const _withLazyLoading =
           <P>,
   fallback?: ReactNode,
 ) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return (props: P) => ()
     
           
@@ -36,11 +36,10 @@ export const _withLazyLoading =
           
           
           <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} />
-    </Suspense>
-  );
-};
-// Lazy component wrapper with intersection observer;
+      <Component {...props} /></Suspense>
+  )
+}
+// Lazy component wrapper with intersection observer
 const LazyComponent: React.FC
           
           
@@ -51,8 +50,8 @@ const LazyComponent: React.FC
           
           
           <LazyComponentProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //   children,
   fallback = 
           
@@ -68,10 +67,10 @@ const LazyComponent: React.FC
   threshold = 0.1,
   rootMargin = '50px',
 }) => {
-  // TODO: Add content
-}
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
+    // TODO: Add content
+  }
+  const [isVisible, setIsVisible] = React.useState(false)
+  const [isLoaded, setIsLoaded] = React.useState(false)
   const elementRef = React.useRef
           
           
@@ -81,40 +80,40 @@ const LazyComponent: React.FC
           
           
           
-          <HTMLDivElement>(null);
+          <HTMLDivElement>(null)
   React.useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     const observer = new IntersectionObserver()
       ([entry]) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
         if (entry.isIntersecting) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
           setTimeout(() => {
-  // TODO: Add content
-}
-            setIsVisible(true);
-            setIsLoaded(true);
-          }, delay);
-          observer.disconnect();
+    // TODO: Add content
+  }
+            setIsVisible(true)
+            setIsLoaded(true)
+          }, delay)
+          observer.disconnect()
         }
       },
       {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
 //         threshold,
 //         rootMargin,
       }
-    );
+  )
     if (elementRef.current) {
-  // TODO: Add content
-}
-      observer.observe(elementRef.current);
+    // TODO: Add content
+  }
+      observer.observe(elementRef.current)
     }
-    return () => observer.disconnect();
-  }, [delay, threshold, rootMargin]);
+    return () => observer.disconnect()
+  }, [delay, threshold, rootMargin])
   return (
     
           
@@ -146,9 +145,9 @@ const LazyComponent: React.FC
           
           
           </div>
-  );
-};
-// Preload function for critical components;
+  )
+}
+// Preload function for critical components
 export const preloadComponent = (importFunction: () => Promise
           
           
@@ -159,16 +158,16 @@ export const preloadComponent = (importFunction: () => Promise
           
           
           <any>) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   return () => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+    const component = lazy(importFunction)
+    return component
+  }
 }
-    const component = lazy(importFunction);
-    return component;
-  };
-};
-// Lazy load with preloading;
+// Lazy load with preloading
 export const createLazyComponent = 
           
           
@@ -183,9 +182,9 @@ export const createLazyComponent =
           <{ default: ComponentType<P> }>,
   fallback?: ReactNode,
 ) => {
-  // TODO: Add content
-}
-  const LazyComponent = lazy(importFunction);
+    // TODO: Add content
+  }
+  const LazyComponent = lazy(importFunction)
   return (props: P) => ()
     
           
@@ -197,46 +196,47 @@ export const createLazyComponent =
           
           
           <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} />
-    </Suspense>
-  );
-};
-// Critical resource preloader;
-export const preloadCriticalResources = () => {
-  // TODO: Add content
+      <LazyComponent {...props} /></Suspense>
+  )
 }
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
+// Critical resource preloader
+export const preloadCriticalResources = () => {
+    // TODO: Add content
+  }
+  if (typeof window === 'undefined') return
+  // Preload critical fonts
 const fontPreloads = [
   // TODO: Add items
-];;
+]
     'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap',
     'https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap',
-  ];
+  ]
   fontPreloads.forEach((href) => {
-  // TODO: Add content
-}
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = href;
-    document.head.appendChild(link);
-  });
-  // Preload critical images;
+    // TODO: Add content
+  }
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'style'
+    link.href = href
+    document.head.appendChild(link)
+  }
+  )
+  // Preload critical images
 const imagePreloads = [
   // TODO: Add items
-];;
+]
 //     '/og-image.jpg',
 //     '/favicon.ico',
-  ];
+  ]
   imagePreloads.forEach((src) => {
-  // TODO: Add content
+    // TODO: Add content
+  }
+    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.as = 'image'
+    link.href = src
+    document.head.appendChild(link)
+  }
+  )
 }
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
-};
-export default LazyComponent;
+export default LazyComponent

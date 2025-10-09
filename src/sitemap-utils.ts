@@ -1,4 +1,4 @@
-// Mock functions for sitemap generation;
+// Mock functions for sitemap generation
 export const getAllPages = () => [
   // TODO: Add items,
 ]
@@ -6,7 +6,7 @@ export const getAllPages = () => [
   { path: '/services', priority: 0.8 },
   { path: '/contact', priority: 0.7 },
   { path: '/about', priority: 0.6 }
-];
+]
 export const generateSitemap = (pages: Array
           
           
@@ -17,9 +17,9 @@ export const generateSitemap = (pages: Array
           
           
           <{ path: string; priority: number }>) => {
-  // TODO: Add content
-}
-  const baseUrl = 'https://ziontechgroup.com';
+    // TODO: Add content
+  }
+  const baseUrl = 'https://ziontechgroup.com'
   let sitemap = '
           
           
@@ -29,11 +29,11 @@ export const generateSitemap = (pages: Array
           
           
           
-          <?xml version="1.0" encoding="UTF-8"?>\n';
-  sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">\n';
+          <?xml version="1.0" encoding="UTF-8"?>\n'
+  sitemap += '<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">\n'
   pages.forEach(page => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     sitemap += `  
           
           
@@ -43,18 +43,19 @@ export const generateSitemap = (pages: Array
           
           
           
-          <url>\n`;
-    sitemap += `    <loc>${baseUrl}${page.path}</loc>\n`;
-    sitemap += `    <priority>${page.priority}</priority>\n`;
-    sitemap += `  </url>\n`;
-  });
-  sitemap += '</urlset>';
-  return sitemap;
-};
-// This would typically be handled by a server-side route
-// For now, we'll create a static sitemap.xml file;
-export const generateStaticSitemap = () => {
-  // TODO: Add content
+          <url>\n`
+    sitemap += `    <loc>${baseUrl}${page.path}</loc>\n`
+    sitemap += `    <priority>${page.priority}</priority>\n`
+    sitemap += `  </url>\n`
+  }
+  )
+  sitemap += '</urlset>'
+  return sitemap
 }
-  return generateSitemap(getAllPages());
-};
+// This would typically be handled by a server-side route
+// For now, we'll create a static sitemap.xml file
+export const generateStaticSitemap = () => {
+    // TODO: Add content
+  }
+  return generateSitemap(getAllPages())
+}

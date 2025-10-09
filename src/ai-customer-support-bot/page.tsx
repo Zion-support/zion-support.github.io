@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react'
 import { Helmet } from 'react-helmet-async';
-import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone,  Bot,  MessageSquare,  BarChart,  Users,  TrendingUp,  Clock,  Star from 'lucide-react';
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone, BarChart, Star from 'lucide-react'
+import { Bot } from 'lucide-react';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const AICustomerSupportBotPage: React.FC = () => {
 const features = [
     {
-  // TODO: Add content
-};
-  icon: Bot,
+      icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
-      benefits: ['90% response time reduction', 'Instant responses', 'Always available'];
+      benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
-      icon: MessageSquare,
+    {
+    icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
@@ -23,7 +22,7 @@ const features = [
       description: 'Comprehensive analytics to track performance and improve customer experience',
       benefits: ['Real-time analytics', 'Performance tracking', 'Continuous improvement']
     }
-  ];
+  ]
   const pricingPlans = [
       name: 'Professional',
       price: '$299',
@@ -48,11 +47,15 @@ const features = [
         'Custom training'
   const stats = [
   // TODO: Add items
-];;
-    { icon: Users, value: '1,000+', label: 'Happy Customers' },
-    { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
-    { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
-    { icon: Star, value: '4.8/5', label: 'Customer Rating' }
+]
+    {
+    icon: Users, value: '1,000+', label: 'Happy Customers' },
+    {
+    icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
+    {
+    icon: Clock, value: '45%', label: 'Satisfaction Increase' },
+    {
+    icon: Star, value: '4.8/5', label: 'Customer Rating' }
   return (
     
           
@@ -68,8 +71,7 @@ const features = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group</title>
-        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
-      </Helmet>
+        <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." /></Helmet>
       <Navigation />
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -89,32 +91,28 @@ const features = [
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => ()
-            
-          <div key={index} className="text-center">
+          {stats.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {features.map((feature, index) => ()
-            
-          <div key={index} className="bg-slate-800/50 rounded-lg p-6">
+          {features.map((feature, index) => (
+          <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
               <feature.icon className="h-10 w-10 text-cyan-400 mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300 mb-4">{feature.description}</p>
               <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => ()
-                  
-          <li key={benefitIndex} className="flex items-center text-gray-300">
+                {feature.benefits.map((feature, index) => (
+          <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
                   </li>
               </ul>
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => ()
-              
+            {pricingPlans.map((feature, index) => (
           <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                 {plan.popular && ()
                   
@@ -126,8 +124,7 @@ Most Popular
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => ()
-                    
+                  {plan.features.map((feature, index) => (
           <li key={featureIndex} className="flex items-center text-gray-300">
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
@@ -152,7 +149,7 @@ Most Popular
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
       <Footer />
-  );
-};
-export default AiCustomerSupportBotPage;
-export default AICustomerSupportBotPage;
+  )
+}
+export default AiCustomerSupportBotPage
+export default AICustomerSupportBotPage

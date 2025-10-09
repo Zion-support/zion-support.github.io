@@ -1,25 +1,25 @@
 
 interface AccessibilitySettings {
-  // TODO: Add content
-};
-  highContrast: boolean;
+    // TODO: Add content
+  }
+  highContrast: boolean
     largeText: boolean;,
     reducedMotion: boolean;,
     screenReader: boolean;,
     focusVisible: boolean;,
     zoomLevel: number;,
-    colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    colorBlind: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia'
 }
 interface AccessibilityProps {
-  // TODO: Add content
-}
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableReducedMotion?: boolean;
-  enableColorBlindSupport?: boolean;
-  enableZoomControl?: boolean;
+    // TODO: Add content
+  }
+  enableKeyboardNavigation?: boolean
+  enableScreenReader?: boolean
+  enableHighContrast?: boolean
+  enableFocusManagement?: boolean
+  enableReducedMotion?: boolean
+  enableColorBlindSupport?: boolean
+  enableZoomControl?: boolean
 }
 const EnhancedAccessibility: React.FC
           
@@ -31,8 +31,8 @@ const EnhancedAccessibility: React.FC
           
           
           <AccessibilityProps> = ({
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
@@ -41,8 +41,8 @@ const EnhancedAccessibility: React.FC
   enableColorBlindSupport = true,
   enableZoomControl = true,
 }) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
   const [settings, setSettings] = useState
           
           
@@ -53,8 +53,8 @@ const EnhancedAccessibility: React.FC
           
           
           <AccessibilitySettings>({
-  // TODO: Add content
-};
+    // TODO: Add content
+  }
   highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -62,222 +62,223 @@ const EnhancedAccessibility: React.FC
     focusVisible: true,
     zoomLevel: 100,
     colorBlind: 'none',
-  });
-  const [isVisible, setIsVisible] = useState(false);
+  }
+  )
+  const [isVisible, setIsVisible] = useState(false)
   // Load settings from localStorage
   useEffect(() => {
     if (savedSettings) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       try {
-  // TODO: Add content
-}
-        setSettings(JSON.parse(savedSettings));
+    // TODO: Add content
+  }
+        setSettings(JSON.parse(savedSettings))
       } catch (error) {
-        // console.error('Failed to load accessibility settings:', error);
+        // console.error('Failed to load accessibility settings:', error)
       }
     }
-  }, []);
-  // Save settings to localStorage;
+  }, [])
+  // Save settings to localStorage
 const saveSettings = useCallback((newSettings: AccessibilitySettings) => {
-  // TODO: Add content
-}
-    setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
+    // TODO: Add content
+  }
+    setSettings(newSettings)
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
+  }, [])
   // Apply high contrast mode
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.highContrast) {
-  // TODO: Add content
-}
-      document.documentElement.classList.add('high-contrast');
+    // TODO: Add content
+  }
+      document.documentElement.classList.add('high-contrast')
     } else {
-  // TODO: Add content
-}
-      document.documentElement.classList.remove('high-contrast');
+    // TODO: Add content
+  }
+      document.documentElement.classList.remove('high-contrast')
     }
-  }, [settings.highContrast]);
+  }, [settings.highContrast])
   // Apply large text mode
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.largeText) {
-  // TODO: Add content
-}
-      document.documentElement.style.fontSize = '1.2rem';
+    // TODO: Add content
+  }
+      document.documentElement.style.fontSize = '1.2rem'
     } else {
-  // TODO: Add content
-}
-      document.documentElement.style.fontSize = '1rem';
+    // TODO: Add content
+  }
+      document.documentElement.style.fontSize = '1rem'
     }
-  }, [settings.largeText]);
+  }, [settings.largeText])
   // Apply reduced motion
   useEffect(() => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     if (settings.reducedMotion) {
-  // TODO: Add content
-}
-      document.documentElement.classList.add('reduced-motion');
+    // TODO: Add content
+  }
+      document.documentElement.classList.add('reduced-motion')
     } else {
-  // TODO: Add content
-}
-      document.documentElement.classList.remove('reduced-motion');
+    // TODO: Add content
+  }
+      document.documentElement.classList.remove('reduced-motion')
     }
-  }, [settings.reducedMotion]);
+  }, [settings.reducedMotion])
   // Apply color blind support
   useEffect(() => {
-  // TODO: Add content
-}
-    document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
-  }, [settings.colorBlind]);
+    // TODO: Add content
+  }
+    document.documentElement.setAttribute('data-color-blind', settings.colorBlind)
+  }, [settings.colorBlind])
   // Apply zoom level
   useEffect(() => {
-  // TODO: Add content
-}
-    document.documentElement.style.zoom = `${settings.zoomLevel}%`;
-  }, [settings.zoomLevel]);
+    // TODO: Add content
+  }
+    document.documentElement.style.zoom = `${settings.zoomLevel}%`
+  }, [settings.zoomLevel])
   // Keyboard navigation
   useEffect(() => {
-  // TODO: Add content
-}
-    if (!enableKeyboardNavigation) return;
+    // TODO: Add content
+  }
+    if (!enableKeyboardNavigation) return
     const handleKeyDown = (e: KeyboardEvent) => {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {
-  // TODO: Add content
-}
-        e.preventDefault();
-        const mainContent = document.querySelector('main, [role="main"]');
+    // TODO: Add content
+  }
+        e.preventDefault()
+        const mainContent = document.querySelector('main, [role="main"]')
         if (mainContent) {
-  // TODO: Add content
-}
-          (mainContent as HTMLElement).focus();
+    // TODO: Add content
+  }
+          (mainContent as HTMLElement).focus()
         }
       }
       // Toggle accessibility panel
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {
-  // TODO: Add content
-}
-        e.preventDefault();
-        setIsVisible(prev => !prev);
+    // TODO: Add content
+  }
+        e.preventDefault()
+        setIsVisible(prev => !prev)
       }
       // Escape key to close panel
       if (e.key === 'Escape' && isVisible) {
-  // TODO: Add content
-}
-        setIsVisible(false);
+    // TODO: Add content
+  }
+        setIsVisible(false)
       }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation, isVisible]);
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [enableKeyboardNavigation, isVisible])
   // Focus management
   useEffect(() => {
-  // TODO: Add content
-}
-    if (!enableFocusManagement) return;
+    // TODO: Add content
+  }
+    if (!enableFocusManagement) return
     const handleFocusIn = (e: FocusEvent) => {
-  // TODO: Add content
-}
-      const target = e.target as HTMLElement;
+    // TODO: Add content
+  }
+      const target = e.target as HTMLElement
       if (target && settings.focusVisible) {
-  // TODO: Add content
-}
-        target.classList.add('focus-visible');
+    // TODO: Add content
+  }
+        target.classList.add('focus-visible')
       }
-    };
+    }
     const handleFocusOut = (e: FocusEvent) => {
-  // TODO: Add content
-}
-      const target = e.target as HTMLElement;
+    // TODO: Add content
+  }
+      const target = e.target as HTMLElement
       if (target) {
-  // TODO: Add content
-}
-        target.classList.remove('focus-visible');
+    // TODO: Add content
+  }
+        target.classList.remove('focus-visible')
       }
-    };
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    }
+    document.addEventListener('focusin', handleFocusIn)
+    document.addEventListener('focusout', handleFocusOut)
     return () => {
-  // TODO: Add content
-}
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [enableFocusManagement, settings.focusVisible]);
-  // Screen reader announcements;
+    // TODO: Add content
+  }
+      document.removeEventListener('focusin', handleFocusIn)
+      document.removeEventListener('focusout', handleFocusOut)
+    }
+  }, [enableFocusManagement, settings.focusVisible])
+  // Screen reader announcements
 const announceToScreenReader = useCallback((message: string) => {
-  // TODO: Add content
-}
-    if (!enableScreenReader) return;
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
+    // TODO: Add content
+  }
+    if (!enableScreenReader) return
+    const announcement = document.createElement('div')
+    announcement.setAttribute('aria-live', 'polite')
+    announcement.setAttribute('aria-atomic', 'true')
+    announcement.className = 'sr-only'
+    announcement.textContent = message
+    document.body.appendChild(announcement)
     setTimeout(() => {
-  // TODO: Add content
-}
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [enableScreenReader]);
-  // Toggle functions;
+    // TODO: Add content
+  }
+      document.body.removeChild(announcement)
+    }, 1000)
+  }, [enableScreenReader])
+  // Toggle functions
 const toggleHighContrast = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, highContrast: !settings.highContrast };
-    saveSettings(newSettings);
-    announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, highContrast: !settings.highContrast }
+    saveSettings(newSettings)
+    announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`)
+  }
   const toggleLargeText = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, largeText: !settings.largeText };
-    saveSettings(newSettings);
-    announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, largeText: !settings.largeText }
+    saveSettings(newSettings)
+    announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`)
+  }
   const toggleReducedMotion = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, reducedMotion: !settings.reducedMotion };
-    saveSettings(newSettings);
-    announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, reducedMotion: !settings.reducedMotion }
+    saveSettings(newSettings)
+    announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`)
+  }
   const toggleScreenReader = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, screenReader: !settings.screenReader };
-    saveSettings(newSettings);
-    announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, screenReader: !settings.screenReader }
+    saveSettings(newSettings)
+    announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`)
+  }
   const toggleFocusVisible = () => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, focusVisible: !settings.focusVisible };
-    saveSettings(newSettings);
-    announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, focusVisible: !settings.focusVisible }
+    saveSettings(newSettings)
+    announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`)
+  }
   const adjustZoom = (delta: number) => {
-  // TODO: Add content
-}
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
-    const newSettings = { ...settings, zoomLevel: newZoom };
-    saveSettings(newSettings);
-    announceToScreenReader(`Zoom level set to ${newZoom}%`);
-  };
+    // TODO: Add content
+  }
+    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta))
+    const newSettings = { ...settings, zoomLevel: newZoom }
+    saveSettings(newSettings)
+    announceToScreenReader(`Zoom level set to ${newZoom}%`)
+  }
   const setColorBlind = (type: AccessibilitySettings['colorBlind']) => {
-  // TODO: Add content
-}
-    const newSettings = { ...settings, colorBlind: type };
-    saveSettings(newSettings);
-    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
-  };
+    // TODO: Add content
+  }
+    const newSettings = { ...settings, colorBlind: type }
+    saveSettings(newSettings)
+    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`)
+  }
 // Reset all settings
   const resetSettings = () => {
       highContrast: false,
@@ -287,13 +288,13 @@ const toggleHighContrast = () => {
       focusVisible: true,
       zoomLevel: 100,
       colorBlind: 'none',
-    };
-    saveSettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to default');
-  };
+    }
+    saveSettings(defaultSettings)
+    announceToScreenReader('Accessibility settings reset to default')
+  }
   if (!isVisible) {
-  // TODO: Add content
-}
+    // TODO: Add content
+  }
     return (
     
           
@@ -311,7 +312,7 @@ const toggleHighContrast = () => {
         aria-label="Open accessibility settings"
         title="Open accessibility settings (Alt + A)"
 ><Eye className="w-5 h-5" /></button>
-    );
+    )
   }
   return (
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button
@@ -398,6 +399,6 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600 hover:bg-red
         >
           Reset Settings
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  );
-};
-export default EnhancedAccessibility;
+  )
+}
+export default EnhancedAccessibility
