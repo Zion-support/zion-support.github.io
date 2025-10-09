@@ -1,3 +1,4 @@
+'use client';
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
@@ -86,7 +87,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     initAnalytics();
     trackPageView();
     trackInteractions();
-
 
     window.addEventListener('popstate', handleRouteChange);
 

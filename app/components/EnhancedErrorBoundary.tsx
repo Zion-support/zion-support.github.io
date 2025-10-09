@@ -43,6 +43,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo
     });
+<<<<<<< HEAD
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -50,17 +51,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Call custom error handler if provided
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
+<<<<<<< HEAD
     // Enhanced error reporting
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-cde4
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
+<<<<<<< HEAD
     // Enhanced error reporting logic
     const errorReport = {
       message: error.message,
@@ -208,6 +216,38 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
+=======
+    // Error reporting logic would go here
+    console.error('Error reported:', error, errorInfo);
+  };
+
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+      }));
+    }
+  };
+
+  render() {
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="error-boundary">
+          <h2>Something went wrong</h2>
+          <p>Error ID: {this.state.errorId}</p>
+          {this.state.retryCount < this.maxRetries && (
+            <button onClick={this.handleRetry}>
+              Retry ({this.maxRetries - this.state.retryCount} attempts left)
+            </button>
+          )}
+>>>>>>> cursor/analyze-improve-and-deploy-application-cde4
         </div>
       );
     }

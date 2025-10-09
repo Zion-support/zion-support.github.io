@@ -78,7 +78,6 @@ const _IoTEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
 
 // Additional Pages
 const _BlogPage = lazy(() => import('./blog-index'));
-const _GuidesPage = lazy(() => import('./guides/page'));
 const _SitemapPage = lazy(() => import('./sitemap/page'));
 
 // Utils
@@ -226,7 +225,6 @@ const App: React.FC = () => {
                         
                         {/* Additional Routes */}
                         <Route path="/blog" element={<_BlogPage />} />
-                        <Route path="/guides" element={<_GuidesPage />} />
                         <Route path="/sitemap" element={<_SitemapPage />} />
                       </Routes>
                     </Suspense>
