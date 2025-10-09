@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -6,11 +5,41 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const HomePage = lazy(() => import('./page'));
 
 // Import enhancement utilities
+import {Routes, Route} from 'react-router-dom';
 import PerformanceEnhancer from './utils/performanceEnhancer';
 import SEOEnhancer from './utils/seoEnhancer';
 import AccessibilityEnhancer from './utils/accessibilityEnhancer';
 import SecurityEnhancer from './utils/securityEnhancer';
 import UserExperienceEnhancer from './utils/userExperienceEnhancer';
+import ITServicesPage from './it-services/page';
+import ITInfrastructurePage from './it-infrastructure/page';
+import CybersecurityPage from './cybersecurity/page';
+import CloudMigrationPage from './cloud-migration/page';
+import DevOpsPage from './devops/page';
+import DatabasePage from './database/page';
+import NetworkingPage from './networking/page';
+import AICRMPage from './ai-crm/page';
+import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
+import AIChatbotBuilderPage from './ai-chatbot-builder/page';
+import AIEmailMarketingPage from './ai-email-marketing/page';
+import AIWritingAssistantPage from './ai-writing-assistant/page';
+import TeamPage from './team/page';
+import CareersPage from './careers/page';
+import NewsPage from './news/page';
+import AboutPage from './about/page';
+import ContactPage from './contact/page';
+import ServicesPage from './services/page';
+import BlogPage from './blog/page';
+import CaseStudiesPage from './case-studies/page';
+import AICustomerSupportBotPage from './ai-customer-support-bot/page';
+import AICodeGenerationPage from './ai-code-generation/page';
+import AISocialMediaManagerPage from './ai-social-media-manager/page';
+import AIMLPlatformPage from './ai-ml-platform/page';
+
+'use client';
+
+const _HomePage = lazy(() => import('../app/page'));
+
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -19,7 +48,6 @@ const LoadingSpinner: React.FC = () => (
       <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
       <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
     </div>
-  </div>
 );
 
 // AI Services Pages
@@ -41,19 +69,7 @@ import AILeadGenerationPage from './ai-lead-generation/page';
 import AIDocumentProcessingPage from './ai-document-processing/page';
 
 // IT Services Pages
-import ITServicesPage from './it-services/page';
-import ITInfrastructurePage from './it-infrastructure/page';
-import CybersecurityPage from './cybersecurity/page';
-import CloudMigrationPage from './cloud-migration/page';
-import DevOpsPage from './devops/page';
-import DatabasePage from './database/page';
-import NetworkingPage from './networking/page';
 // Micro SAAS Pages
-import AICRMPage from './ai-crm/page';
-import AIAnalyticsDashboardPage from './ai-analytics-dashboard/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIEmailMarketingPage from './ai-email-marketing/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
 
 // Specialized Solutions Pages
 import QuantumComputingPage from './quantum-computing/page';
@@ -64,16 +80,11 @@ import BusinessIntelligencePage from './business-intelligence/page';
 import RoboticsPage from './robotics/page';
 
 // Company Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import AboutPage from './about/page';
-import ContactPage from './contact/page';
-import ServicesPage from './services/page';
-import BlogPage from './blog/page';
-import CaseStudiesPage from './case-studies/page';
 
 // Support Pages
+
+
+
 
 // Additional Pages
 import PricingPage from './pricing/page';
@@ -81,54 +92,14 @@ import DemoPage from './demo/page';
 import ConsultationPage from './consultation/page';
 
 // AI Services
-import AIServicesPage from './ai-services/page';
-import AIMarketingPage from './ai-marketing/page';
-import AIAutomationPage from './ai-automation/page';
-import AIHealthcarePage from './ai-healthcare/page';
-import AIFintechPage from './ai-fintech/page';
-import AIContentGenerationPage from './ai-content-generation/page';
-import AIDataAnalyticsPage from './ai-data-analytics/page';
-import AICybersecurityPage from './ai-cybersecurity/page';
-import AIWorkflowAutomationPage from './ai-workflow-automation/page';
-import AIMobileAppDevelopmentPage from './ai-mobile-app-development/page';
-import AIEcommerceSolutionsPage from './ai-ecommerce-solutions/page';
-import AICustomerSupportPage from './ai-customer-support/page';
-import AISalesAutomationPage from './ai-sales-automation/page';
-import AIDataVisualizationPage from './ai-data-visualization/page';
-import AILeadGenerationPage from './ai-lead-generation/page';
-import AIDocumentProcessingPage from './ai-document-processing/page';
 
 // Additional AI Services
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AICodeGenerationPage from './ai-code-generation/page';
-import AISocialMediaManagerPage from './ai-social-media-manager/page';
-import AIChatbotBuilderPage from './ai-chatbot-builder/page';
-import AIWritingAssistantPage from './ai-writing-assistant/page';
-import AICRMPage from './ai-crm/page';
-import AIMLPlatformPage from './ai-ml-platform/page';
 
 // Specialized Solutions
-import QuantumComputingPage from './quantum-computing/page';
-import AutonomousSystemsPage from './autonomous-systems/page';
-import BlockchainWeb3Page from './blockchain-web3/page';
-import IoTEdgeComputingPage from './iot-edge-computing/page';
-import BusinessIntelligencePage from './business-intelligence/page';
-import RoboticsPage from './robotics/page';
 
-// Company Pages
-import TeamPage from './team/page';
-import CareersPage from './careers/page';
-import NewsPage from './news/page';
-import PricingPage from './pricing/page';
-import DemoPage from './demo/page';
-import ConsultationPage from './consultation/page';
 
-// Support Pages
-// AI Services Pages
 import AIProjectManagerPage from './ai-project-manager/page';
-import AICustomerSupportBotPage from './ai-customer-support-bot/page';
-import AIAutomationPage from './ai-automation/page';
-import AIMLPlatformPage from './ai-ml-platform/page';
+
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
@@ -200,12 +171,10 @@ const App: React.FC = () => {
             postalCode: '19709',
             addressCountry: 'US'
           }
-        },
         robots: 'index, follow',
         language: 'en',
         author: 'Zion Tech Group',
         publisher: 'Zion Tech Group'
-      });
 
       // Initialize accessibility enhancer
       const accessibilityEnhancer = new AccessibilityEnhancer({
@@ -216,7 +185,6 @@ const App: React.FC = () => {
         enableReducedMotion: true,
         enableColorBlindSupport: true,
         enableVoiceControl: true
-      });
 
       // Initialize security enhancer
       const securityEnhancer = new SecurityEnhancer({
@@ -229,7 +197,6 @@ const App: React.FC = () => {
         enablePermissionsPolicy: true,
         enableCORS: true,
         enableSecureCookies: true
-      });
 
       // Initialize UX enhancer
       const uxEnhancer = new UserExperienceEnhancer({
@@ -243,7 +210,6 @@ const App: React.FC = () => {
         enablePushNotifications: false,
         enableDarkMode: true,
         enableAnimations: true
-      });
 
       setEnhancers({
         performance: performanceEnhancer,
@@ -251,7 +217,6 @@ const App: React.FC = () => {
         accessibility: accessibilityEnhancer,
         security: securityEnhancer,
         ux: uxEnhancer
-      });
 
       // Optimize for Core Web Vitals
       seoEnhancer.optimizeForCoreWebVitals();
@@ -259,18 +224,16 @@ const App: React.FC = () => {
       // Generate reports (for development)
       if (process.env.NODE_ENV === 'development') {
         // Reports generated silently in development
-      }
 
       setIsInitialized(true);
     } catch {
       // Silently handle enhancer initialization errors
       setIsInitialized(true); // Continue even if enhancers fail
-    }
+      // Continue even if enhancers fail
   };
 
   if (!isInitialized) {
     return <LoadingSpinner />;
-  }
 
   return (
     <Router>
@@ -342,21 +305,15 @@ const App: React.FC = () => {
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         
         {/* AI Services Routes */}
-        <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
-        <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-        <Route path="/ai-automation" element={<AIAutomationPage />} />
         <Route path="/ai-ml-platform" element={<AIMLPlatformPage />} />
         
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
-  );
-};
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center">
-    <div className="text-center">
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
@@ -366,8 +323,5 @@ const NotFoundPage: React.FC = () => (
       >
         Go Home
       </a>
-    </div>
-  </div>
-);
 
 export default App;

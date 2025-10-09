@@ -1,4 +1,7 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
+import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -10,19 +13,14 @@ const AICustomerSupportBotPage: React.FC = () => {
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
       benefits: ['90% response time reduction', 'Instant responses', 'Always available']
     },
-    {
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
       benefits: ['Human-like conversations', 'Context awareness', 'Multi-language support']
-    },
-    {
       icon: Users,
       title: 'Human Handoff',
       description: 'Seamless escalation to human agents when complex issues arise',
       benefits: ['Smart escalation', 'Seamless transitions', 'Expert support']
-    },
-    {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Comprehensive analytics to track performance and improve customer experience',
@@ -31,7 +29,6 @@ const AICustomerSupportBotPage: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
       name: 'Starter',
       price: '$149',
       period: '/month',
@@ -44,28 +41,19 @@ const AICustomerSupportBotPage: React.FC = () => {
         'Standard integrations'
       ],
       popular: false
-    },
-    {
       name: 'Professional',
       price: '$299',
-      period: '/month',
       description: 'Ideal for growing companies',
-      features: [
         'Up to 10,000 conversations/month',
         'Advanced AI responses',
         'Priority support',
         'Advanced analytics',
         'Custom integrations',
         'Multi-language support'
-      ],
       popular: true
-    },
-    {
       name: 'Enterprise',
       price: '$599',
-      period: '/month',
       description: 'For large organizations',
-      features: [
         'Unlimited conversations',
         'Premium AI features',
         '24/7 support',
@@ -73,17 +61,12 @@ const AICustomerSupportBotPage: React.FC = () => {
         'White-label options',
         'API access',
         'Custom training'
-      ],
-      popular: false
-    }
-  ];
 
   const stats = [
     { icon: Users, value: '1,000+', label: 'Happy Customers' },
     { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
     { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
     { icon: Star, value: '4.8/5', label: 'Customer Rating' }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -109,9 +92,7 @@ const AICustomerSupportBotPage: React.FC = () => {
               <stat.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-            </div>
           ))}
-        </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -125,13 +106,8 @@ const AICustomerSupportBotPage: React.FC = () => {
                     <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                     {benefit}
                   </li>
-                ))}
               </ul>
-            </div>
-          ))}
-        </div>
 
-        <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-8">Pricing Plans</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -139,48 +115,33 @@ const AICustomerSupportBotPage: React.FC = () => {
                 {plan.popular && (
                   <div className="bg-cyan-400 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
-                  </div>
                 )}
                 <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-white mb-1">
                   {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
-                </div>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {feature}
-                    </li>
-                  ))}
-                </ul>
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover:bg-cyan-600 transition-colors">
                   Get Started
                 </button>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Contact our experts to discuss your support needs and get a custom AI solution.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Schedule Demo
-            </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               View Case Studies
-            </button>
-          </div>
-        </div>
-      </div>
       
       <Footer />
-    </div>
   );
 };
 
+
+export default AiCustomerSupportBotPage;
 export default AICustomerSupportBotPage;

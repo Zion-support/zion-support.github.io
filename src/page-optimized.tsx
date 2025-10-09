@@ -15,12 +15,10 @@ const ContentPromotion = lazy(() =>
   import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
     return { default: EmptyComponent } as { default: React.ComponentType };
   })
-);
 const ContentShowcase = lazy(() =>
   import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
     default: EmptyComponent
   }))
-);
 export default function OptimizedHomePage() {
   return (
     <div className="min-h-screen bg-white">
@@ -54,17 +52,10 @@ export default function OptimizedHomePage() {
                 >
                   Get Your Free AI Assessment
                 </a>
-                <a
                   href="/case-studies"
                   className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
-                >
                   View Success Stories
-                </a>
               </div>
-            </div>
-          </div>
         </section>
       </main>
-    </div>
-  );
 };

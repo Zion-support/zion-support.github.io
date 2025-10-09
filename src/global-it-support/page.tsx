@@ -1,6 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import {Globe, Headphones, Shield, Zap, CheckCircle, Star} from 'lucide-react';
+
 
 const GlobalITSupportPage: React.FC = () => {
   const features = [
@@ -10,19 +12,14 @@ const GlobalITSupportPage: React.FC = () => {
       description: '24/7 IT support across multiple time zones',
       benefits: ['Worldwide coverage', 'Local expertise', 'Multi-language support']
     },
-    {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
       benefits: ['Always available', 'Fast response', 'Expert technicians']
-    },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Enterprise-grade security and compliance support',
       benefits: ['Security monitoring', 'Compliance support', 'Risk management']
-    },
-    {
       icon: Zap,
       title: 'Rapid Response',
       description: 'Quick problem resolution and escalation',
@@ -45,7 +42,6 @@ const GlobalITSupportPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Get comprehensive IT support wherever you are in the world. Our global team of experts provides 
             24/7 support across all time zones with local expertise and multi-language capabilities.
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -54,13 +50,10 @@ const GlobalITSupportPage: React.FC = () => {
             >
               Get Started
             </a>
-            <a
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               <Globe className="w-5 h-5" />
               +1 302 464 0950
-            </a>
           </div>
         </section>
 
@@ -74,13 +67,11 @@ const GlobalITSupportPage: React.FC = () => {
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
-                </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
@@ -89,14 +80,9 @@ const GlobalITSupportPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
 
       <Footer />
-    </div>
   );
 };
 

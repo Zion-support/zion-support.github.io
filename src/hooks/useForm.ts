@@ -3,6 +3,7 @@
  * useForm Hook
  * Provides form state management and validation
  */
+// import { logger } from '../utils/logger';
 import {
   ValidationRule,
   validateField,
@@ -33,7 +34,6 @@ export interface UseFormReturn<T extends Record<string, unknown>> {
   resetForm: () => void;
   validateField: (field: keyof T) => void;
   validateAllFields: () => boolean;
-}
 export function useForm<T extends Record<string, unknown>>({
   initialValues, validationSchema = {}, onSubmit: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig<T>): UseFormReturn<T> {
@@ -72,33 +72,21 @@ export function useForm<T extends Record<string, unknown>>({
       let fieldValue: unknown = value;
       if (type === 'checkbox' && 'checked' in e.target) {
         fieldValue = (e.target as HTMLInputElement).checked;
-      }
       setValues(prev => ({
-        ...prev,
         [fieldName]: fieldValue
-      }));
       // Validate on change if enabled
       if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0);
-      }
-    },
     [validateOnChange, touched, validateSingleField]
-  );
   // Handle input blur
   const handleBlur = useCallback(
-    (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
       const fieldName = e.target.name as keyof T;
       setTouched(prev => ({
-        ...prev,
         [fieldName]: true
-      }));
       // Validate on blur if enabled
       if (validateOnBlur) {
         validateSingleField(fieldName);
-      }
-    },
     [validateOnBlur, validateSingleField]
-  );
   // Handle form submission
   const handleSubmit = useCallback(
     async (e: React.FormEvent<HTMLFormElement>) => {
@@ -109,51 +97,34 @@ export function useForm<T extends Record<string, unknown>>({
         return acc;
       }, {} as Record<keyof T, boolean>);
       setTouched(allTouched);
-      // Validate all fields
       const isValid = validateAllFields();
       if (!isValid) {
         return;
-      }
       setIsSubmitting(true);
       try {
         await onSubmit(values);
       } catch (error) {
       } finally {
         setIsSubmitting(false);
-      }
-    },
     [values, validateAllFields]
-  );
   // Set field value programmatically
   const setFieldValue = useCallback((field: keyof T, value: T[keyof T]) => {
-    setValues(prev => ({
-      ...prev,
       [field]: value
-    }));
     if (validateOnChange && touched[field]) {
       setTimeout(() => validateSingleField(field), 0);
-    }
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically
   const setFieldError = useCallback((field: keyof T, fieldErrors: string[]) => {
-    setErrors(prev => ({
-      ...prev,
       [field]: fieldErrors
-    }));
   }, []);
   // Set field touched programmatically
   const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
-    setTouched(prev => ({
-      ...prev,
       [field]: isTouched
-    }));
-  }, []);
   // Reset form to initial values
   const resetForm = useCallback(() => {
     setValues(initialValues);
     setErrors({} as Record<keyof T, string[]>);
     setTouched({} as Record<keyof T, boolean>);
-    setIsSubmitting(false);
   }, [initialValues]);
   // Check if form is valid
   const isValid = Object.keys(errors).length === 0 || 
@@ -174,4 +145,3 @@ export function useForm<T extends Record<string, unknown>>({
     validateField: validateSingleField,
     validateAllFields
   };
-}

@@ -1,5 +1,7 @@
 'use client';
 import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+import {Phone, Mail, MapPin, ArrowRight, Cloud, Code, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   
@@ -23,7 +25,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network design and implementation' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT planning' },
     { name: 'IT Support & Maintenance', url: '/it-support', description: '24/7 IT support and maintenance' }
-  ];
 
   const microSaasServices = [
     { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
@@ -34,7 +35,6 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
     { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
     { name: 'AI Lead Scoring', url: '/ai-lead-scoring', description: 'Intelligent lead qualification' }
-  ];
 
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
@@ -45,7 +45,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Autonomous Systems', url: '/autonomous-systems', description: 'Self-managing systems' },
     { name: 'AR/VR Solutions', url: '/ar-vr-solutions', description: 'Immersive experiences' },
     { name: 'Smart Cities', url: '/smart-cities', description: 'Urban technology solutions' }
-  ];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -54,7 +53,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' },
     { name: 'Contact', url: '/contact' }
-  ];
 
   const supportLinks = [
     { name: 'Help Center', url: '/help' },
@@ -64,7 +62,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Status Page', url: '/status' },
     { name: 'System Requirements', url: '/requirements' },
     { name: 'Troubleshooting', url: '/troubleshooting' }
-  ];
 
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
@@ -73,7 +70,6 @@ const Footer: React.FC = memo(() => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
-  ];
 
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20 relative overflow-hidden">
@@ -114,30 +110,15 @@ const Footer: React.FC = memo(() => {
             {/* IT Services */}
             <div><h3 className="text-lg font-semibold mb-6 text-blue-400 neon-text">IT Services</h3><ul className="space-y-3">
                 {itServices.slice(0, 8).map((service, index) => (
-                  <li key={index}><Link 
                       to={service.url} className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
-                    </Link><p className="text-xs text-gray-500 ml-5">{service.description}</p></li>
-                ))}
-                <li><Link 
                     to="/it-services" className="text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
                     View All IT Services →
-                  </Link></li></ul></div>
 
             {/* Micro SAAS Solutions */}
             <div><h3 className="text-lg font-semibold mb-6 text-green-400 neon-text">Micro SAAS</h3><ul className="space-y-3">
                 {microSaasServices.slice(0, 8).map((service, index) => (
-                  <li key={index}><Link 
                       to={service.url} className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
-                    </Link><p className="text-xs text-gray-500 ml-5">{service.description}</p></li>
-                ))}
-                <li><Link 
                     to="/micro-saas" className="text-green-400 hover:text-green-300 transition-colors duration-300 text-sm font-medium flex items-center"
-                  >
                     View All Micro SAAS →
                   </Link></li></ul></div></div>
 
@@ -146,34 +127,20 @@ const Footer: React.FC = memo(() => {
             {/* Emerging Technologies */}
             <div><h3 className="text-lg font-semibold mb-6 text-purple-400 neon-text">Emerging Tech</h3><ul className="space-y-3">
                 {emergingTech.slice(0, 6).map((service, index) => (
-                  <li key={index}><Link 
                       to={service.url} className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {service.name}
-                    </Link><p className="text-xs text-gray-500 ml-5">{service.description}</p></li>
-                ))}
               </ul></div>
 
             {/* Company Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-pink-400 neon-text">Company</h3><ul className="space-y-3">
                 {companyLinks.map((link, index) => (
-                  <li key={index}><Link 
                       to={link.url} className="text-gray-300 hover:text-pink-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.name}
                     </Link></li>
-                ))}
-              </ul></div>
 
             {/* Support Links */}
             <div><h3 className="text-lg font-semibold mb-6 text-orange-400 neon-text">Support</h3><ul className="space-y-3">
                 {supportLinks.map((link, index) => (
-                  <li key={index}><Link 
                       to={link.url} className="text-gray-300 hover:text-orange-400 transition-colors duration-300 text-sm group flex items-center"
-                    ><ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                      {link.name}
-                    </Link></li>
-                ))}
               </ul></div></div>
 
           {/* Stats Section */}
@@ -187,10 +154,7 @@ const Footer: React.FC = memo(() => {
                   <Link 
                     key={index}
                     to={link.url} className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
-                  >
-                    {link.name}
                   </Link>
-                ))}
               </div></div></div></div></div></footer>
   );
 });

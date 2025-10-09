@@ -120,8 +120,7 @@ export default ErrorBoundary;
 try {
 //   const perfMonitorPath = './src/components/PerformanceMonitor.tsx';
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   fs.writeFileSync(perfMonitorPath, content);
 //   } catch (err) {
 //   }
@@ -141,8 +140,7 @@ try {
 try {
 //   const errorHandlerPath = './src/utils/errorHandler.ts';
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   // Ensure all comment blocks are closed
 //   const openComments = (content.match(/\/\*/g) || []).length;
 //   const closeComments = (content.match(/\*\//g) || []).length;
@@ -156,8 +154,7 @@ try {
 try {
 //   const appPath = './App.tsx';
   // Remove merge conflict markers
-  content = content.replace(/^<<<<<<< .*$/gm, '');
-  content = content.replace(/^
+  content = content.replace(/^  content = content.replace(/^
   fs.writeFileSync(appPath, content);
 //   } catch (err) {
 //   }

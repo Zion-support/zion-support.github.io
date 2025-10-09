@@ -1,5 +1,8 @@
 import React from 'react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
+import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -11,19 +14,14 @@ const AIMLPlatformPage: React.FC = () => {
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
     },
-    {
       icon: TrendingUp,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics and monitoring for machine learning models',
       benefits: ['Real-time monitoring', 'Performance tracking', 'Model optimization']
-    },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security and compliance for your machine learning infrastructure',
       benefits: ['Data encryption', 'Access controls', 'Audit trails']
-    },
-    {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative tools for data scientists and ML engineers',
@@ -32,7 +30,6 @@ const AIMLPlatformPage: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
       name: 'Developer',
       price: '$999',
       period: '/month',
@@ -45,28 +42,19 @@ const AIMLPlatformPage: React.FC = () => {
         'Basic analytics'
       ],
       popular: false
-    },
-    {
       name: 'Team',
       price: '$2,499',
-      period: '/month',
       description: 'Ideal for development teams',
-      features: [
         'Up to 25 models',
         'Advanced ML tools',
         'Priority support',
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-      ],
       popular: true
-    },
-    {
       name: 'Enterprise',
       price: '$4,999',
-      period: '/month',
       description: 'For large organizations',
-      features: [
         'Unlimited models',
         'Premium ML features',
         '24/7 support',
@@ -74,17 +62,12 @@ const AIMLPlatformPage: React.FC = () => {
         'Custom analytics',
         'White-label options',
         'API access'
-      ],
-      popular: false
-    }
-  ];
 
   const stats = [
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -107,14 +90,12 @@ const AIMLPlatformPage: React.FC = () => {
             </button>
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-            </button>
           </div>
-        </div>
-      </div>
       
       <Footer />
-    </div>
   );
 };
 
+
+export default AiMlPlatformPage;
 export default AIMLPlatformPage;

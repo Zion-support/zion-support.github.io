@@ -33,7 +33,6 @@ export default function RootLayout({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    ],
     address: {
       '@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
@@ -41,7 +40,6 @@ export default function RootLayout({
       addressRegion: 'DE',
       postalCode: '19709',
       addressCountry: 'US',
-    },
     offers: [
       {
         '@type': 'Offer',
@@ -51,64 +49,31 @@ export default function RootLayout({
         priceCurrency: 'USD',
         priceSpecification: {
           '@type': 'PriceSpecification',
-          price: '1500',
-          priceCurrency: 'USD',
           billingIncrement: 'P1M'
         }
-      },
-      {
-        '@type': 'Offer',
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '2500',
-          priceCurrency: 'USD',
-          billingIncrement: 'P1M'
-        }
-      }
-    ],
     serviceArea: {
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude: '-75.5795'
-      },
       geoRadius: '1000000'
-    },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [
-        {
-          '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
             name: 'Digital Automation',
             description: 'Process automation and workflow optimization services'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
             name: 'Cloud Infrastructure',
             description: 'Cloud migration and infrastructure optimization services'
-          }
-        }
       ]
-    }
   };
   return (
     <html lang='en'>
@@ -183,4 +148,5 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+
+export default RootLayout;

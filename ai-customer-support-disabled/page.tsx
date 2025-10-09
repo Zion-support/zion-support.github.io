@@ -246,7 +246,6 @@ const AICustomerSupportPage2: React.FC = () => {
         <Footer />
       </div>
     </div>
-    </>
   );
 };
 

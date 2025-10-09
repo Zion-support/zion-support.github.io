@@ -1,4 +1,6 @@
 import React from 'react';
+import { Star } from 'lucide-react';
+// import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AI2026EnterpriseBreakthrough() {
   return (
@@ -14,17 +16,13 @@ export default function AI2026EnterpriseBreakthrough() {
                 Autonomous Operations
               </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
                 Intelligent Automation
-              </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
                 Business Value Creation
-              </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-cyan-400" />
                 Revolutionary Technology
               </li></ul></div><div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8"><h2 className="text-3xl font-bold text-white mb-6">Benefits</h2><ul className="space-y-4 text-gray-300"><li className="flex items-center gap-3"><Star className="w-5 h-5 text-green-400" />
                 Increased Efficiency
               </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-green-400" />
                 Cost Reduction
-              </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-green-400" />
                 Enhanced Productivity
-              </li><li className="flex items-center gap-3"><Star className="w-5 h-5 text-green-400" />
                 Future-Ready Solutions
               </li></ul></div></div>
         {/* CTA Section */}

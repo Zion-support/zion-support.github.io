@@ -1,6 +1,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import {Bot, Cpu, Settings, Shield, CheckCircle, Star} from 'lucide-react';
+
 
 const AIRoboticsPage: React.FC = () => {
   const features = [
@@ -10,19 +12,14 @@ const AIRoboticsPage: React.FC = () => {
       description: 'AI-powered robots that learn and adapt to their environment',
       benefits: ['Autonomous operation', 'Learning capabilities', 'Adaptive behavior']
     },
-    {
       icon: Cpu,
       title: 'Advanced Control Systems',
       description: 'Sophisticated control algorithms for precise robot movement',
       benefits: ['Precision control', 'Real-time processing', 'Safety systems']
-    },
-    {
       icon: Settings,
       title: 'Automated Workflows',
       description: 'Streamlined robotic processes for maximum efficiency',
       benefits: ['Process optimization', 'Error reduction', '24/7 operation']
-    },
-    {
       icon: Shield,
       title: 'Safety & Security',
       description: 'Built-in safety protocols and security measures',
@@ -45,7 +42,6 @@ const AIRoboticsPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Build the future with our AI-powered robotics platform. From autonomous manufacturing to intelligent service robots, 
             we provide the technology to create robots that think, learn, and adapt.
-          </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -54,13 +50,10 @@ const AIRoboticsPage: React.FC = () => {
             >
               Start Building
             </a>
-            <a
               href="tel:+13024640950"
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
               <Bot className="w-5 h-5" />
               +1 302 464 0950
-            </a>
           </div>
         </section>
 
@@ -74,13 +67,11 @@ const AIRoboticsPage: React.FC = () => {
               <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}
-                </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-xs text-gray-300">
@@ -89,14 +80,9 @@ const AIRoboticsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </section>
       </main>
 
       <Footer />
-    </div>
   );
 };
 
