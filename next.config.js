@@ -169,8 +169,9 @@ const nextConfig = {
   },
 
   experimental: {
-    optimizeCss: false,
-    optimizePackageImports: [],
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@heroicons/react', 'framer-motion'],
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'],
   },
 
   // Performance optimizations

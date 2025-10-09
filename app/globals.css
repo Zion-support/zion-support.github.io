@@ -70,6 +70,39 @@ img {
   decoding: async;
 }
 
+/* Lazy loading images */
+img[data-src] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[data-src].loaded {
+  opacity: 1;
+}
+
+/* Critical resource hints */
+.preload {
+  font-display: swap;
+}
+
+/* Performance optimizations */
+* {
+  will-change: auto;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
   *,
