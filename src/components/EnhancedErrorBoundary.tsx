@@ -62,10 +62,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     }
 
     // Send to error reporting service (implement as needed)
+<<<<<<< HEAD
     try {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
       //   bod,
   y: JSON.stringify(errorReport)
+=======
+    try {
+      // In a real app, you would send this to your error reporting service
+      // For now, we'll just log it
+       
+      // Example: Send to error reporting service
+      // await fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorReport)
+>>>>>>> origin/main
       // });
     } catch (reportingError) {/* TODO: Fix JSX expression */}
     }
@@ -93,8 +105,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           }, 2000);
         }
       })
+<<<<<<< HEAD
       .catch(() => {/* TODO: Fix JSX expression */}
       });
+=======
+      .catch(() => {
+         
+        });
+>>>>>>> origin/main
   };
 
   render() {/* TODO: Fix JSX expression */}
