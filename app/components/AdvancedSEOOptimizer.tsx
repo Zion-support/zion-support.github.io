@@ -197,17 +197,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
   useEffect(() => {
     // Track page performance
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        // Track performance metrics
-        if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          });
+    if (typeof window !== 'undefined' && 'performance' in window && typeof performance.getEntriesByType === 'function') {
+      try {
+        const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (perfData) {
+          // Track performance metrics
+          if (typeof (window as any).gtag === 'function') {
+            (window as any).gtag('event', 'page_load_performance', {
+              event_category: 'Performance',
+              event_label: 'Page Load',
+              value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
+            });
+          }
         }
+      } catch (error) {
+        // Performance API not available in test environment
+        console.debug('Performance tracking not available:', error);
       }
     }
   }, []);

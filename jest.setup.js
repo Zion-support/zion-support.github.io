@@ -36,12 +36,7 @@ jest.mock('./src/hooks/usePerformance.ts', () => ({
   })),
 }));
 
-jest.mock('./app/hooks/usePerformanceMonitoring.ts', () => ({
-  usePerformanceMonitoring: jest.fn(() => ({
-    metrics: {},
-    report: {},
-  })),
-}));
+// usePerformanceMonitoring hook mock removed - hook doesn't exist
 
 // Mock React Router (this is a Vite project, not Next.js)
 jest.mock('react-router-dom', () => {
