@@ -1,238 +1,151 @@
 'use client';
-// Performance optimization utilities
-import { useEffect, useCallback, useMemo, useState } from 'react';
-// Debounce utility for performance
-export const debounce = <T extends (...args: any[]) => any>(
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  };
-};
-// Throttle utility for performance
-export const throttle = <T extends (...args: any[]) => any>(
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-};
-// Intersection Observer hook for lazy loading
-export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  options: IntersectionObserverInit = {}
-) => {
-  const observer = useMemo(
-    () =>
-      typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {
-            threshold: 0.1,
-            rootMargin: '50px',
-            ...options
-          })
-        : null,
-    [callback, options]
-  );
-  const observe = useCallback(
-    (element: Element | null) => {
-      if (observer && element) {
-        observer.observe(element);
-        return () => observer.unobserve(element);
-      }
-      return () => {};
-    },
-    [observer]
-  );
-  const disconnect = useCallback(() => {
-    if (observer) {
-      observer.disconnect();
-    }
-  }, [observer]);
-  useEffect(() => {
-    return () => disconnect();
-  }, [disconnect]);
-  return { observe, disconnect };
-};
-// Image lazy loading hook
-export const useLazyImage = (src: string, placeholder?: string) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const { observe } = useIntersectionObserver(
-    useCallback(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !isLoaded && !isError) {
-            const img = new Image();
-            img.onload = () => {
-              setImageSrc(src);
-              setIsLoaded(true);
-            };
-            img.onerror = () => {
-              setIsError(true);
-            };
-            img.src = src;
-          }
-        });
-      },
-      [src, isLoaded, isError]
-    )
-  );
-  return { imageSrc, isLoaded, isError, observe };
-};
-// Performance monitoring hook
-export const usePerformanceMonitoring = () => {
-  const [metrics, setMetrics] = useState<{
-    fcp?: number;
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    ttfb?: number;
-  }>({});
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
-      setMetrics({
-        fcp,
-        lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart
-      });
-    };
-    // Monitor performance after page load
-    if (document.readyState === 'complete') {
-      updateMetrics();
-    } else {
-      window.addEventListener('load', updateMetrics);
-    }
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
-      });
-    }
-    return () => {
-      window.removeEventListener('load', updateMetrics);
-    };
-  }, []);
-  return metrics;
-};
-// Memory usage monitoring
-export const useMemoryMonitoring = () => {
-  const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize?: number;
-    totalJSHeapSize?: number;
-    jsHeapSizeLimit?: number;
-  }>({});
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = () => {
-      const memory = (performance as any).memory;
-      if (memory) {
-        setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
-        });
-      }
-    };
-    updateMemoryInfo();
-    const interval = setInterval(updateMemoryInfo, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  return memoryInfo;
-};
-// Resource preloading utility
-export const preloadResource = (href: string, as: string) => {
-  if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-};
+/**
+ * Advanced Performance Optimizations for Zion Tech Group
+ * Implements cutting-edge performance techniques
+ */
+
 // Critical resource preloading
 export const preloadCriticalResources = () => {
   if (typeof window === 'undefined') return;
-  // Preload critical fonts
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images
-  preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS
-  preloadResource('/styles/critical.css', 'style');
+
+  const criticalResources = [
+    { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
+    { href: '/css/critical.css', as: 'style' },
+    { href: '/js/vendor.js', as: 'script' },
+  ];
+
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource.href;
+    link.as = resource.as;
+    if (resource.type) link.type = resource.type;
+    if (resource.crossorigin) link.crossOrigin = resource.crossorigin;
+    document.head.appendChild(link);
+  });
 };
-// Bundle size monitoring
-export const useBundleSizeMonitoring = () => {
-  const [bundleSize, setBundleSize] = useState<{
-    totalSize?: number;
-    jsSize?: number;
-    cssSize?: number;
-    imageSize?: number;
-  }>({});
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const calculateBundleSize = () => {
-      const resources = performance.getEntriesByType('resource');
-      let totalSize = 0;
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
-      resources.forEach((resource) => {
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
-        totalSize += size;
-        if (resource.name.includes('.js')) {
-          jsSize += size;
-        } else if (resource.name.includes('.css')) {
-          cssSize += size;
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
-          imageSize += size;
+
+// Image optimization with WebP support
+export const optimizeImages = () => {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    // Add loading="lazy" for better performance
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    
+    // Add proper alt text if missing
+    if (!img.hasAttribute('alt')) {
+      img.setAttribute('alt', 'Zion Tech Group content');
+    }
+    
+    // Convert to WebP if supported
+    if (supportsWebP() && (img.src.includes('.jpg') || img.src.includes('.jpeg'))) {
+      img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
+    }
+  });
+};
+
+// Check WebP support
+const supportsWebP = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  const canvas = document.createElement('canvas');
+  canvas.width = 1;
+  canvas.height = 1;
+  return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+};
+
+// Advanced lazy loading with Intersection Observer
+export const setupAdvancedLazyLoading = () => {
+  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
+  const lazyElements = document.querySelectorAll('[data-lazy]');
+  const lazyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          const src = element.getAttribute('data-lazy');
+          if (src) {
+            if (element.tagName === 'IMG') {
+              (element as HTMLImageElement).src = src;
+            } else {
+              element.style.backgroundImage = `url(${src})`;
+            }
+            element.removeAttribute('data-lazy');
+            lazyObserver.unobserve(element);
+          }
         }
       });
-      setBundleSize({
-        totalSize,
-        jsSize,
-        cssSize,
-        imageSize
-      });
-    };
-    // Calculate after page load
-    if (document.readyState === 'complete') {
-      calculateBundleSize();
-    } else {
-      window.addEventListener('load', calculateBundleSize);
-    }
-    return () => {
-      window.removeEventListener('load', calculateBundleSize);
-    };
-  }, []);
-  return bundleSize;
+    },
+    { rootMargin: '50px' }
+  );
+
+  lazyElements.forEach((element) => {
+    lazyObserver.observe(element);
+  });
 };
-export default {
-  debounce,
-  throttle,
-  useIntersectionObserver,
-  useLazyImage,
-  usePerformanceMonitoring,
-  useMemoryMonitoring,
-  preloadResource,
-  preloadCriticalResources,
-  useBundleSizeMonitoring
+
+// Service Worker registration for caching
+export const registerServiceWorker = () => {
+  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
+
+  navigator.serviceWorker.register('/sw.js')
+    .then((registration) => {
+      // Service Worker registered successfully
+    })
+    .catch((error) => {
+      // Service Worker registration failed - handled silently
+    });
+};
+
+// Critical CSS inlining
+export const inlineCriticalCSS = () => {
+  if (typeof window === 'undefined') return;
+
+  const criticalCSS = `
+    /* Critical CSS for above-the-fold content */
+    .cyber-grid { background-image: linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px); background-size: 50px 50px; }
+    .neon-text { color: #00ffff; text-shadow: 0 0 10px #00ffff; }
+    .cyber-button { background: linear-gradient(45deg, #00ffff, #8b5cf6); border: none; padding: 12px 24px; border-radius: 8px; color: white; font-weight: 600; }
+  `;
+
+  const style = document.createElement('style');
+  style.textContent = criticalCSS;
+  document.head.appendChild(style);
+};
+
+// Performance monitoring
+export const monitorPerformance = () => {
+  if (typeof window === 'undefined' || !('performance' in window)) return;
+
+  // Monitor Core Web Vitals
+  const observer = new PerformanceObserver((list) => {
+    list.getEntries().forEach((entry) => {
+      if (entry.entryType === 'largest-contentful-paint') {
+        // Track LCP
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', 'web_vitals', {
+            metric_name: 'LCP',
+            metric_value: Math.round(entry.startTime),
+            metric_rating: entry.startTime < 2500 ? 'good' : entry.startTime < 4000 ? 'needs-improvement' : 'poor'
+          });
+        }
+      }
+    });
+  });
+
+  observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+};
+
+// Initialize all optimizations
+export const initializePerformanceOptimizations = () => {
+  preloadCriticalResources();
+  optimizeImages();
+  setupAdvancedLazyLoading();
+  registerServiceWorker();
+  inlineCriticalCSS();
+  monitorPerformance();
 };
