@@ -137,6 +137,7 @@ class HealthCheckService {
       };
     }
     try {
+      const memory = performance.memory;
       const usedPercent = (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`

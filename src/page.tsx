@@ -7,15 +7,19 @@ import {
   Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
   Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, 
   Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, 
-  Navigation, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
+  Navigation as NavIcon, PieChart, TrendingDown, Activity, Atom, Zap as Lightning, Target as Crosshair, 
   Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, 
   ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, 
   Rocket, Microscope, Layers, Database as DbIcon, Server, Network, Cpu as Processor, 
-  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Scanner, Router, 
-  Switch, Firewall, Antivirus, Backup, Recovery, Migration, Integration, Consulting, 
-  Support, Maintenance, Upgrade, Security, Compliance, Audit, Training, Documentation, 
-  Testing, Quality, Performance, Scalability, Reliability, Availability, Monitoring, 
-  Alerting, Logging, Analytics, Reporting, Dashboard
+  HardDrive, Wifi, Monitor, Keyboard, Mouse, Headphones, Printer, Router, 
+  ToggleLeft as Toggle, Shield as Firewall, Shield as Antivirus, Database as Backup, 
+  Database as Recovery, Database as Migration, Layers as Integration, Briefcase as Consulting, 
+  Users as Support, Settings as Maintenance, ArrowUp, Shield as SecurityIcon, 
+  Shield as Compliance, Shield as Audit, GraduationCap as Training, FileText as Documentation, 
+  CheckCircle as Testing, CheckCircle as Quality, Zap as Performance, BarChart as Scalability, 
+  CheckCircle as Reliability, CheckCircle as Availability, Monitor as Monitoring, 
+  AlertTriangle, FileText as Logging, BarChart as AnalyticsIcon, BarChart as Reporting, 
+  BarChart as Dashboard
 } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
