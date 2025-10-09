@@ -49,70 +49,71 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({
     }
 
     // Update canonical URL
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl);
     } else {
-      canonicalLink = document.createElement('link');
-      canonicalLink.setAttribute('rel', 'canonical');
-      canonicalLink.setAttribute('href', canonicalUrl);
-      document.head.appendChild(canonicalLink);
+      const link = document.createElement('link');
+      link.rel = 'canonical';
+      link.href = canonicalUrl;
+      document.head.appendChild(link);
     }
 
     // Update Open Graph tags
-    const updateMetaTag = (property: string, content: string) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', fullTitle);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:title');
+      meta.content = fullTitle;
+      document.head.appendChild(meta);
+    }
 
-    updateMetaTag('og:type', 'website');
-    updateMetaTag('og:url', canonicalUrl);
-    updateMetaTag('og:title', fullTitle);
-    updateMetaTag('og:description', description);
-    updateMetaTag('og:image', ogImage);
-    updateMetaTag('og:site_name', 'Zion Tech Group');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:description');
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
 
-    // Update Twitter tags
-    const updateTwitterTag = (name: string, content: string) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (meta) {
-        meta.setAttribute('content', content);
-      } else {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        meta.setAttribute('content', content);
-        document.head.appendChild(meta);
-      }
-    };
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:url');
+      meta.content = canonicalUrl;
+      document.head.appendChild(meta);
+    }
 
-    updateTwitterTag('twitter:card', twitterCard);
-    updateTwitterTag('twitter:url', canonicalUrl);
-    updateTwitterTag('twitter:title', fullTitle);
-    updateTwitterTag('twitter:description', description);
-    updateTwitterTag('twitter:image', ogImage);
-    updateTwitterTag('twitter:site', '@ziontechgroup');
-    updateTwitterTag('twitter:creator', '@ziontechgroup');
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    if (ogImage) {
+      ogImage.setAttribute('content', ogImage);
+    } else {
+      const meta = document.createElement('meta');
+      meta.setAttribute('property', 'og:image');
+      meta.content = ogImage;
+      document.head.appendChild(meta);
+    }
 
     // Add structured data
     if (structuredData) {
-      let script = document.querySelector('script[type="application/ld+json"]');
-      if (script) {
-        script.textContent = JSON.stringify(structuredData);
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.textContent = JSON.stringify(structuredData);
       } else {
-        script = document.createElement('script');
+        const script = document.createElement('script');
+>>>>>>> main
         script.type = 'application/ld+json';
         script.textContent = JSON.stringify(structuredData);
         document.head.appendChild(script);
       }
     }
-  }, [title, description, keywords, canonicalUrl, ogImage, twitterCard, structuredData, fullTitle]);
+  }, [title, description, keywords, canonicalUrl, ogImage, structuredData, fullTitle]);
 
   return null;
 });

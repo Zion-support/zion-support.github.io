@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
-  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -12,7 +11,6 @@ interface PerformanceMetrics {
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
-    inp: null,
     fcp: null,
     lcp: null,
     ttfb: null,
@@ -32,16 +30,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, inp: metric.value }));
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'INP',
-          value: Math.round(metric.value),
-        });
-      }
-    });
+<<<<<<< HEAD
 
     onFCP((metric) => {
       setMetrics(prev => ({ ...prev, fcp: metric.value }));
